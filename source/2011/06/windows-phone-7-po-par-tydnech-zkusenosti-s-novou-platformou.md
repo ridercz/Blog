@@ -1,0 +1,11 @@
+<!-- dcterms:identifier = riderweblog#258 -->
+<!-- dcterms:title = Windows Phone 7 po pár týdnech: Zkušenosti s novou platformou -->
+<!-- dcterms:abstract = Před dvěma týdny jsem si pořídil nový telefon, vybavený Windows Phone 7. Konkrétně se jedná o HTC Mozart 7. Platforma Windows Phone 7 je opředena mýty a tajemstvími. Většina článků vaří z vody, marketingových materiálů nebo předsudků autpra. Praktických a nezaujatých zkušeností se čtenář dobere jenom obtížně. -->
+<!-- np9:categoryId = 2 -->
+<!-- x4w:category = Lidé a jiná zvěř -->
+<!-- np9:authorId = 1 -->
+<!-- np9:authorEmail = michal.valasek@altairis.cz -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:created = 2011-06-03T10:23:11.047+02:00 -->
+<!-- dcterms:dateAccepted = 2011-06-11T00:28:45.95+02:00 -->
+

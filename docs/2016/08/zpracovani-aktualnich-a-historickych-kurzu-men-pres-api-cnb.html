@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zpracování aktuálních a historických kurzů měn přes API ČNB | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Kamarád Michal Bláha se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Zpracování aktuálních a historických kurzů měn přes API ČNB</h1>
+      <section class="article">
+        <p>amarád <a href="http://www.michalblaha.cz/">Michal Bláha</a> se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici nejenom jemu, ale i všem ostatním zájemcům..</p>
+<p>Aplikace využívá <a href="https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt">API České národní banky</a>. Ta publikuje v jednoduchém textovém formátu (v podstatě CSV, jenom se pro oddělení používá svislítko) aktuální i historické kurzy. Nevím jak daleko do minulosti, ale minimálně do roku 2000.</p>
+<p>Napsal jsem tedy <a href="https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87">třídu, která tato data stáhne, proparsuje a publikuje</a>.</p>
+<p>Z programátorského hlediska je to kód dost přímočarý a jednoduchý. Pozoruhodných je pouze pár drobností:</p>
+<ul>
+<li>Všechny čtyři třídy jsem vložil do jednoho souboru i s ukázkovou konzolovou aplikací. Což není obecně pro praxi příliš dobré řešení, ale pro ukázkový kód ideální. Vzhledem k jednoduchosti předpokládám, že si prostě třídy <code>CnbClient</code>, <code>CnbExchangeRateList</code> a <code>CnbExchangeRate</code> nakopírujete někam do svého projektu. Nedělal jsem z toho ani samostatné DLL s NuGet balíčkem, jak je to jednoduché.</li>
+<li>Obecně není dobrý nápad psát si vlastní parsování CSV, pokud dopředu neznáme přesný formát dat, může tam být quotování atp. Obvykle používám pro import a export knihovnu <a href="http://www.nuget.org/packages/CsvHelper/">CsvHelper</a>. Zde je ale formát natolik pevný, že jsem dal přednost jednoduchosti.</li>
+<li>Výsledek je předáván jako třída <code>CnbExchangeRateList</code>, což je potomek <code>ReadOnlyCollection</code>. Původně jsem chtěl vracet jenom <code>IEnumerable&lt;CnbExchangeRate&gt;</code>, ale pak jsem si uvědomil, že bych měl někde předávat i datum, k němuž byl vydán kurzovní lístek. Ten je obecně vydáván jenom v pracovních dnech a pokud se zeptáte na nepracovní den, vrátí API poslední platný. Datum, k němuž byl lístek vydán, je dostupný jako vlastnost <code>Date</code>.</li>
+<li>Klient je jednoduše napsaný jako asynchronní (metoda <code>GetRatesAsync</code>). Pro použití v synchronním prostředí jsem přidal wrapper <code>GetRates</code>, který se zeptá přímo na vlastnost <code>Result</code>.</li>
+<li>V testovací aplikaci lze vidět poměrně pokročilé využití string interpolation včetně zarovnávání a formátovacích řetězců, aby to vyrobilo hezkou tabulku.</li>
+<li>V přechodném období ČNB <a href="https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt?date=12.08.2000">publikovala</a> kromě kurzu EUR i přepočítané kurzy tehdejších národních měn. Ty moje třída ignoruje (zastaví zpracování na prvním prázdném řádku).</li>
+<li>Ošetření chyb není příliš robustní, resp. kód na první chybě zhavaruje a nepokouší se ji nějak řešit (např. pokračovat zpracováním dalšího řádku). To je záměr. U aplikace tohoto typu mohou nastat v zásadě pouze dva druhy chyb: buďto se nepodařilo data načíst vůbec (server ČNB je nedostupný atd.) nebo se je nepodařilo správně proparsovat. Ve druhém případě se nejspíše změnil formát, v němž jsou publikována a v takovém případě je lepší rovnou zhavarovat, než se z toho pokoušet nějak vylhat, protože by mohlo dojít k chybné interpretaci dat.</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

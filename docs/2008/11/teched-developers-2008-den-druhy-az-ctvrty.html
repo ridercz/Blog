@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TechEd Developers 2008: Den druhý až čtvrtý | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Konečně jsem získal dostatek času, abych sepsal zážitky z druhého až čtvrtého dne TechEdu." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>TechEd Developers 2008: Den druhý až čtvrtý</h1>
+      <section class="article">
+        <p>Konečně jsem získal dostatek času, abych sepsal zážitky z druhého až čtvrtého dne TechEdu.</p>
+<h2 id="internet-explorer-8">Internet Explorer 8</h2>
+<p>Smíšené pocity mám z Internet Exploreru 8. Líbí se mi vylepšení renderovacího engine a podobně. Smíšené pocity mám z různých vychytávek UI, jako například web slices, activities a podobně. Na první pohled to vypadá úžasně, ale tak nějak se nemohu naučit to používat (IE8 mám už delší dobu nainstalovaný). Nevím, zda jsem příliš konzervativní nebo jak, ale jediné funkce svého prohlížeče, které používám, jsou adresní řádek, back, forward, stop a reload.</p>
+<p>Výtečnou novinkou v IE8 je InPrivate browsing. Na jedno kliknutí se vám otevře nové okno, které nic nezaznamenává, neukládá historii, cache, všechno se smaže při zavření okna prohlížeče. Ideální pro páchání trestné činnosti a zejména pro různé návštěvy a práci na ne_zcela_důvěryhodných_počítačích. Jako jsou příkladně ty na CommNetu, veřejně přístupné stroje, kterých jsou po CCIB rozmístěny stovky. Hojně je používám, protože můj notebook je se svými rozměry a váhou spíše převozný než přenosný, takže si ho nechávám v hotelu, a já se připojuji k webovému rozhraní Exchange. Na počítačích je IE8 a já důsledně používám InPrivate.</p>
+<p>Provoz InPrivate režimu je indikován poměrně výraznou ikonou v adresním řádku. Když procházím kolem nekonečných řad počítačů, obsazených vývojáři z celé Evropy, nemohu se ubránit pohledu na jejich monitory. Je fascinující, že většina z nich dělá poměrně citlivé činnosti (jako například přihlašování do webmailu a podobně), ale InPrivate nepoužívá téměř nikdo. Obecně, adopce propagovaných technologií je překvapivě nízká. Každý tady má PDA a většina (mini)notebooky. Vypadá to místy jako mezinárodní sraz uživatelů Asus EEE PC. Nicméně přesto s sebou většina lidí nosí objemnou bichli s programem a poznámky si dělá na papír. V čem je asi chyba? A je to vůbec chyba?</p>
+<h2 id="geneva-server-framework-a-cardspace">&quot;Geneva&quot; server, framework a CardSpace</h2>
+<p>Hlavním lákadlem celého TechEdu je pro mne samozřejmě projekt Geneva. Lapidárně řečeno, nová verze ADFS, CardSpace a ještě něco navíc. Generace &quot;Geneva&quot; má být ve finální verzi k dispozici ve druhé polovině příštího roku a vypadá velmi, velmi slibně. Rozdíl mezi současnou verzí těchto technologií a Genevou je asi jako mezi .NET Frameworkem 1.0 a 2.0.</p>
+<p>O těchto věcech tady obšírně psát nebudu, toho si užijete do sytosti na přednáškách a článcích, až se vrátím do Prahy.</p>
+<h2 id="net-framework-4.0">.NET Framework 4.0</h2>
+<p>O nové verzi .NET Frameworku se hovoří hodně a obšírně. Některé věci mě naplňují nadšením, některé děsem. Mezi ty děsivé patří zejména plíživé prorůstání dynamických jazyků do C#, čímž se eminentně zvyšuje nebezpečí, že se z něj stane write-only jazyk. Z novinek subjektivně vybírám:</p>
+<p>Mechanismus pro explicitní určení klientského ID prvku (užitečné pro klientský JavaScript).</p>
+<p>Lepší renderování prvků, s ohledem na HTML (už aby to bylo).</p>
+<p>Vylepšení Entity Frameworku – entity mohou být jakékoliv třídy, nevyžadují podědění či speciální intrerface. Nový EF bude umět lazy loading a bude mít lepší podporu pro práci s uloženými procedurami a funkcemi. Takže bude konečně použitelný stejně snadno, jako LINQ-to-SQL.</p>
+<p>Předělaná logika viewstate. V současné verzi není možné ho by default vypnout na úrovni stránky/aplikace a zapnout jenom pro konkrétní prvky. Pokud chcete ViewState někde používat a někde ne, musíte ho na všech ostatních prvcích kromě vybraných explicitně zakázat, místo abyste ho explicitně povolili tam, kde ho chcete. Nový .NET Framework bude obsahovat podporu pro opačný scénář, že ViewState bude jenom tam, kde si ho výslovně vyžádáte.</p>
+<p>AJAX kam se podíváš. Podpora konzumace REST datových služeb (ATOM feedy) z JavaScriptu a obousměrný databinding na straně klienta. Na jednu stranu je to velmi působivé a rozhodně čistší, než současný ASP.NET AJAX. Na stranu druhou od JavaScriptu uživatele tolik neodstiňuje a při špatné implementaci (kterých bude přehršel) je zaděláno na bezprecedentní bezpečnostní díry.</p>
+<p>Příští verze bude také projednou &quot;opravdová&quot; verze, tj. nikoliv nadstavba nad runtime verze 2.0. Zda je to dobře nebo špatně, těžko říct, ale určitě to bude přehlednější, než teď, kdy většina lidí neví, do které verze či service packu která technologie patří.</p>
+<p>Těmto změnám sekundují i odpovídající změny Visual Studia 2010. Pokud vás to zajímá, můžete si novinky osahat na CTP verzi, která je volně k dispozici v podobě <a href="http://go.microsoft.com/fwlink/?LinkId=129231" title="Visual Studio 2010 and .NET Framework 4.0 CTP">Virtual PC image</a>.</p>
+<h2 id="sladky-zivot-na-oblacku">Sladký život na obláčku</h2>
+<p>Nejoblíbenější buzz-words letošního TechEdu jsou pojmy jako &quot;mesh&quot;, &quot;cloud computing&quot; a Windows Azure. U posledních dvou jmenovaných chápu alespoň princip. Jsem sice velmi, velmi skeptický k tomu, že firmy budou nadšeně přesouvat kritické služby do imaginárního obláčku kdesi v Microsoftím datacentru v Chicagu, ale kdo ví. Koně jsou obecně přízemní, konzervativní a paranoidní stvoření. Nechodíme s hlavou v oblacích a zraky upřenými na azurovou oblohu.</p>
+<p>Co je to mesh jsem nepochopil ani po několika přednáškách a půlhodinové diskuzi s managerem projektu. Toho mé neustálé dotazy &quot;a k čemu je to vlastně dobré&quot;, dohnaly téměř k slzám. Lépe řečeno, co je mesh vím, ale nenašel jsem praktické využití a všechny uváděné příklady by bylo možné dle mého názoru mnohem efektivněji využít méně exotickými technologiemi.</p>
+<p>Poslední den TechEdu začal přes 38 minutami a dojmy z něj vám sdělím zase někdy večer.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

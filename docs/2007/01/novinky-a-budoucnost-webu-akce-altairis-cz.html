@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Novinky a budoucnost webu akce.altairis.cz | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Když jsem před zhruba půl rokem spouštěl web http://akce.altairis.cz/, byla moje představa o jeho smyslu a funkci jednoduchá. Chtěl jsem napsat systém, který by všem dal vědět, když se pořádaná akce, přesune nebo zruší. Počítal jsem s pár akcemi do roka. Jak už to bývá, trochu se to zvrhlo a shora uvedený web je prakticky největším kalendářem vývojářských akcí pro .NET. Rád bych vás seznámil s novinkami, které jsem na tomto webu spustil, a nebo které se plánují." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Novinky a budoucnost webu akce.altairis.cz</h1>
+      <section class="article">
+        <p>Když jsem před zhruba půl rokem spouštěl web <a href="http://akce.altairis.cz/">http://akce.altairis.cz/</a>, byla moje představa o jeho smyslu a funkci jednoduchá. Chtěl jsem napsat systém, který by všem dal vědět, když se pořádaná akce, přesune nebo zruší. Počítal jsem s pár akcemi do roka. Jak už to bývá, trochu se to zvrhlo a shora uvedený web je prakticky největším kalendářem vývojářských akcí pro .NET. Rád bych vás seznámil s novinkami, které jsem na tomto webu spustil, a nebo které se plánují.</p>
+<h2 id="co-je-noveho">Co je nového</h2>
+<p>Na základě několika vašich žádostí jsem přidal možnost zobrazit si seznam všech akcí přímo v Outlooku. Dosud jste si mohli u každé akce klepnutím na ikonku &quot;vložit do Outlooku&quot; vložit do kalendáře informaci o termínu jejího konání. Jak se ale počet akcí rozrůstá, je těžké si v nich udržet přehled.</p>
+<p>Novinkou v Outlooku 2007 je možnost zobrazit si kalendář publikovaný na webu. Ten se pak ukáže mezi ostatními kalendáři a můžete přehledně sledovat různé zdroje při plánování času.</p>
+<p><a href="/Files/20070125_webcal_hq.png"> <img src="/Files/20070125_webcal_lq.png" alt="Screenshot" /> </a></p>
+<p>Pokud používáte Outlook 2007, klepněte v seznamu akcí na odkaz <em><a href="webcal://akce.altairis.cz/WebServices/GetICS.ashx">zobrazit v Outlooku 2007</a></em> a tím se přihlásíte k automatické synchronizaci tohoto kalendáře. Bohužel mi není známo, jak by se nějakého podobného efektu dalo dosáhnout v předchozích verzích Outlooku.</p>
+<p>Dále pak jsem do testovacího provozu spustil automatické mailovátko, které vám ráno před akcí připomene, že jste se na ni přihlásit ráčili a případně že si máte vytiskout pozvánku.</p>
+<h2 id="co-se-chysta">Co se chystá</h2>
+<p>V první řadě geografická expanze a diverzifikace. Zhruba od poloviny roku bychom chtěli podobné akce jako v Praze pořádat i v Brně. Momentálně probíhá zajišťování prostor a obecně režimů spolupráce, protože v Brně bohužel Microsoft nemá pobočku, kterou bychom mohli okupovat.</p>
+<p>S tím souvisí také úprava systému, ve kterém si budete moci zvolit, akce v jakém regionu si přejete zobrazovat a případně posílat pozvánky e-mailem. Jsem si vědom toho, že Pražáky asi pozvánka na akci v Hradci dvakrát nezaujme a vice versa.</p>
+<h2 id="zaznamy-budou-a-nebudou">Záznamy budou a nebudou</h2>
+<p>Velice populární jsou záznamy z přednášek, které publikujeme na webu<a href="http://videoarchiv.altairis.cz/">videoarchiv.altairis.cz</a>. Nejčastější dotaz je, zda jsou a budou pořizovány ze stávajících a budoucích přednášek. Moje standardní odpověď je, že se je snažím pořizovat ze svých vlastních přednášek, ale nejsem schopen k tomu přimět ostatní. A ani v mém případě to není stoprocentní.</p>
+<p>Problém spočívá především v tom, že softwarové nahrávání zvuku a obrazu je dost hardwarově náročné. Je náročné především na rychlost disku, což je obecně u notebooků problém. A programy jako SQL Server nebo Visual Studio nejsou také právě úsporné. Ve výsledku záznam způsobí, že můj notebook (Centrino Duo 1.8 GHz, 1 GB RAM) se plazí na hranici použitelnosti.</p>
+<p>Nahrávání pomocí HW zařízení je komplikované, protože minimální rozumné rozlišení pro záznam je 1024x768 bodů. Většina cenově dostupného zařízení pro zpracování videa ovšem běží v PALu, což je rozlišení 720x576. Při převzorkování se detaily (jako třeba zdrojový kód) stanou téměř nečitelnými. Záznam pomocí videokamery je v tomto směru ještě horší.</p>
+<p>Ve spolupráci s <a href="http://avc.siliconhill.cz/">Audiovizuálním centrem Silicon Hill</a>. se tento problém snažíme řešit a technologie kombinovat, ale bohužel to není triviální.</p>
+<h2 id="o-webu-akce.altairis.cz">O webu akce.altairis.cz</h2>
+<p>Mohlo by vás zajímat pár informací o webu akce.altairis.cz jako takovém. Momentálně je na něm registrováno 686 uživatelů, 60 akcí a 1834 registrovaných účastníků na akcích (nepočítaje v to situace, kdy náš systém nezajišťuje registrační služby a akce kde není registrace potřebná). Akce se konají na dvanácti místech a pořádá je celkem devět subjektů.</p>
+<p>Tento web používám také pro testování nových technologií. Jako první web v ČR a jeden z prvních na světě jsme na něm implementovali pro přihlašování technologii Identity Metasystem / InfoCard / CardSpace. V den uvedení jsem na této aplikaci také zkoušel finální verzi ASP.NET AJAX Extensions.</p>
+<p>Technologie, které na webu akce.altairis.cz používáme:</p>
+<ul>
+<li>Microsoft ASP.NET 2.0, Microsoft IIS 6.0, Microsoft SQL Server 2005.</li>
+<li>Microsoft Virtual Server 2005 R2.</li>
+<li>Microsoft .NET Framework 3.0 (Windows CardSpace).</li>
+<li>Microsoft AJAX Extensions + Futures + Control Toolkit (především v administraci).</li>
+<li>RSS (s několika standardními i vlastními rozšířeními pro komunikaci s dalšími aplikacemi).</li>
+<li>Řadu vlastních univerzálních HTTP modulů pro URL rewriting, odchytávání chyb, přepínání mezi šifrovanou a nešifrovanou komunikací a další.</li>
+<li>Microsoft VirtualEarth (interaktivní mapy míst, kde se akce konají).</li>
+<li>Vlastní membership, role a profile providery.</li>
+<li>CSS Friendly Control Adapters a vlastní adaptéry pro renderování rozumného výstupního HTML.</li>
+<li>Unikátní systém sledování účasti pomocí čárových kódů generovaných v .NETu.</li>
+</ul>
+<p>Ten seznam je dlouhý a myslím si, že ne nezajímavý. Vzpomínám si, že na TechEdu byla jedna z nejzajímavějších akcí &quot;<em>How we built the TechEd web site</em>&quot;. Myslím si, že je vždy dobré vědět, jak vzniká reálný systém, s jakými problémy se autoři potýkali a jak je vyřešili. Kromě toho se z feedbacku mohou poučit i sami autoři. Měli byste zájem o &quot;<em>how we built</em>&quot; session v případě webu akce.altairis.cz? Pokud ano, přihlašte se v komentářích.</p>
+<h2 id="podekovani">Poděkování</h2>
+<p>Této příležitosti bych chtěl využít k poděkování lidem, kteří se o vznik a rozvoj tohoto projektu zasloužili. Zejména pak (v nahodilém pořadí):</p>
+<ul>
+<li><em>Štěpánovi Bechynskému</em> z Microsoftu za poskytnutí prostor, technického zázemí, propagaci, cen do soutěží a všeobecnou podporu.</li>
+<li><em>Počítačové škole Gopas</em>, která sponzoruje občerstvení pro účastníky.</li>
+<li>Všem přednášejícím, zejména <em>Michalovi Bláhovi</em>, <em>Honzovi Šedovi</em> a <em>Tomáši Petříčkovi</em>.</li>
+<li>A především své životní lásce a partnerce, <em>Michaele Myshi Judasové.</em> Za obětavou péči o smečku našich serverů a hlavně za nebetyčnou trpělivost, kterou s mými šílenými a zpravidla též dost prodělečnými projekty má.</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

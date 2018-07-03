@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ViewState: Konfigurace a ochrana | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V předchozích dílech tohoto seriálu jsme se podívali na ViewState a ControlState. Nyní se budeme zabývat konfigurací celého systému a ochranou obsahu." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>ViewState: Konfigurace a ochrana</h1>
+      <section class="article">
+        <p>V předchozích dílech tohoto seriálu jsme se podívali na ViewState a ControlState. Nyní se budeme zabývat konfigurací celého systému a ochranou obsahu.</p>
+<h2 id="konfigurace">Konfigurace</h2>
+<p>Konfigurace ViewState mechanismu se provádí v souboru <code>web.config</code>, pomocí standardního konfiguračního modelu. Element <code>/configuration/system.web/pages</code> má několik konfiguračních atributů, které se týkají ViewState:</p>
+<ul>
+<li><strong><code>enableViewState</code></strong> (<code>true</code>/<code>false</code>) povoluje nebo zakazuje použití celého ViewState mechanismu, jak již bylo popsáno dříve. Výchozí nastavení je <code>true</code>.</li>
+<li><strong><code>enableViewStateMac</code></strong> (<code>true</code>/<code>false</code>) určuje, zda se mají data posílaná na klienta opatřit digitálním podpisem, který znemožní jejich modifikaci. Výchozí nastavení je <code>true</code>.</li>
+<li><strong><code>viewStateEncryptionMode</code></strong> (<code>Always</code>/<code>Auto</code>/<code>Never</code>) určuje, zda se mají data posílaná na klienta zašifrovat. Výchozí nastavení je <code>Auto</code>.</li>
+</ul>
+<p>Zabezpečením, tedy digitálním podpisem a šifrováním, se budu zabývat v další části.</p>
+<p>Všechny tři konfigurační vlastnosti lze nastavovat na úrovni celé aplikace (v souboru <code>web.config</code>, jak bylo popsáno výše) a nebo na úrovni konkrétní stránky či user controlu, jako atributy direktiv <code>@Page</code> či <code>@Control</code>, resp. jako vlastnosti příslušných tříd. Na úrovni jednotlivých ovládacích prvků lze ViewState pouze vypnout (pomocí nastavení <code>EnableViewState=&quot;false&quot;</code>).</p>
+<p>Pokud je ViewState na vyšší úrovni vypnuto, nelze ho na nižší zpětně zapnout. Pokud tedy chcete ViewState někde používat a někde ne, v současné verzi ASP.NET (3.5) ho musíte jednotlivě zakázat, ne jednotlivě povolit. Změnu v tomto směru přinese verze 4.0.</p>
+<h2 id="ochrana-obsahu">Ochrana obsahu</h2>
+<p>ViewState se na klientovi vyskytuje v podobě Base64 kódovaného řetězce. Bez ohledu na svou zdánlivou nesrozumitelnost je <a href="http://en.wikipedia.org/wiki/Base64">Base64</a> kódování, nikoliv šifra. Neslouží tedy k utajení obsahu, ale je jenom prostředkem, jak v textu (HTML kódu stránky) ukládat data, která jsou svou povahou binární. Onen &quot;blob&quot;, skrytý v poli <code>__VIEWSTATE</code> je možné snadno dekódovat a deserializovat, po Internetu se potuluje spousta nástrojů, které to umí.</p>
+<p>Obvykle chceme zabránit tomu, aby uživatel/útočník mohl ViewState modifikovat a v některých případech nechceme ani aby viděl obsah. Potřebujeme tedy obsah digitálně podepsat a/nebo zašifrovat.</p>
+<p>Digitální podpis – lépe řečeno výpočet <a href="http://www.aspnet.cz/Articles/146-hmac-hash-message-authentication-code.aspx">HMAC</a> – se řídí již výše zmíněnou vlastností <code>enableViewStateMac</code>. Pokud je nastavena na <code>true</code> (což je výchozí hodnota), je k ViewState připojen digitální podpis a pokud po odeslání hodnoty zpět nesouhlasí, ASP.NET vyhodí <code>ViewStateException</code>. Pro ověření se použijí hodnoty definované v konfigurační sekci <code>machineKey</code>: validační algoritmus určený atributem <code>validation</code> a klíč definovaný atributem <code>validationKey</code>. Výchozí nastavení je takové, že klíč se generuje náhodně a automaticky. Pokud máte cluster (webovou farmu), je nutné klíč nastavit na všech nodech stejně.</p>
+<p>Šifrování dat je poněkud komplikovanější záležitost, ježto vlastnost <code>viewStateEncryptionMode</code> může nabývat třech hodnot. Hodnoty <code>Always</code> a <code>Never</code> jsou dosti jasné: šifrování se v prvním případě použije vždy, ve druhém nikdy. Výchozí hodnota je ale <code>Auto</code>. Při ní se šifrování použije pouze pokud stránka obsahuje prvky, které si to výslovně vyžádaly – tj. nejpozději v průběhu fáze <code>PreRender</code> zavolaly metodu <code>RegisterRequiresViewStateEncryption</code>. Pro šifrování se použije opět klíč definovaný v sekci <code>machineKey</code> – tentokráte je to <code>decryptionKey</code>. I zde platí, že klíč je generován automaticky, což vám může vadit zejména na webové farmě.</p>
+<p>Občas se lze setkat s názorem, že ASP.NET je špatné a nedůvěryhodné, protože ViewState není dostatečně zabezpečené a vůbec. Ve skutečnosti, jako vždy, závisí na svéprávnosti správce. Z pohledu autora komponenty platí, že šifrování si můžete vyžádat, ale ne vynutit – pokud ho admin výslovně zakáže, máte smůlu. Z pohledu autora/správce aplikace platí, že nejlepší je moc se v tom nevrtat, pokud se mohu spolehnout na příčetnost autorů komponent. Nemohu-li, je možné za cenu zvýšení procesorové zátěže šifrovat všechno.</p>
+<p><em>V příštím a závěrečném článku se podíváme na změny, které v oblasti ViewState přináší ASP.NET 4.0.</em></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

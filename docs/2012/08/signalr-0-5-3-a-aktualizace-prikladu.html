@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SignalR 0.5.3 a aktualizace příkladů | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Dnes vyšla aktualizace knihovny SignalR na verzi 0.5.3. Obsahuje několik užitečných věcí, takže jsem aktualizoval příklady ze své přednášky." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>SignalR 0.5.3 a aktualizace příkladů</h1>
+      <section class="article">
+        <p>Dnes vyšla aktualizace knihovny <a href="http://www.signalr.net">SignalR</a> na verzi 0.5.3. Kompletní přehled novinek najdete na <a href="http://blogs.msdn.com/b/webdev/archive/2012/08/22/announcing-the-release-of-signalr-0-5-3.aspx">blogu web tools týmu</a>. Kromě odstranění několika chyb bylo přidáno lepší ošetření výjimek a poněkud změněn způsob práce s huby v jQuery klientovi.</p>
+<p>Původní způsob zůstává nadále funkční, ale přibyl nový, který je podobnější přístupu v C# klientovi. Tedy místo přímého přidávání metod lze odchytávat metodu &quot;on&quot; a pověsit na ni patřičný event handler. Mně se tento nový přístup líbí více, přijde mi &quot;systematičtější&quot;. Je také pro C# programátora jednodušší na naučení, a navíc kód pro klientskou a serverovou stranu je velmi podobný.</p>
+<p>Takto v nové verzi vypadá kód v C# klientovi:</p>
+<p>// Create SignalR hub var connection = new HubConnection(BASE_URL); var proxy = connection.CreateProxy(&quot;authChat&quot;); // Handle events proxy.On(&quot;userJoined&quot;, (string time, string userName) =&gt; { Console.WriteLine(&quot;[{0}] User {1} connected to chat&quot;, time, userName); }); // Connect to server Console.Write(&quot;Starting connection...&quot;); connection.Start().Wait(); Console.WriteLine(&quot;OK&quot;); // Authenticate Console.Write(&quot;Authenticating...&quot;); proxy.Invoke(&quot;authenticate&quot;, authCode).Wait(); Console.WriteLine(&quot;OK&quot;);</p>
+<p>Kód v JavaScriptu je prakticky tentýž:</p>
+<p var html="FormatString(&quot;&lt;div&gt;&lt;span&gt;[{time" userName>// Create connection and hub proxy var connection = $.hubConnection(); var proxy = connection.createProxy(&quot;authChat&quot;); // Handle event proxy.on(&quot;userJoined&quot;, function (time, userName) ]</span> <i>User  connected to chat.</i></div>&quot;, { time: time, userName: userName }); $(&quot;.chat&quot;).html(html + $(&quot;.chat&quot;).html()); }); // Connect to service and authenticate connection.start(function () { $(&quot;.chat&quot;).text(&quot;Authenticating...&quot;); proxy.invoke(&quot;authenticate&quot;, authCode); });</p>
+<p>Přepsal jsem poslední příklad ze své <a href="http://www.aspnet.cz/articles/396-signalr-realtime-web-v-asp-net">přednášky o SignalR</a> do nové syntaxe (a trochu vylepšil command line klienta), takže můžete obě řešení porovnat, nové příklady jsou ke stažení <a href="http://www.cdn.altairis.cz/Prednasky/20120824-signalr-0.5.3.zip">zde</a>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

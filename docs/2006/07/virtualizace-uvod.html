@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtualizace: Úvod | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití. První článek této série se zabývá konceptem virtualizace jako takovým." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Virtualizace: Úvod</h1>
+      <section class="article">
+        <p>Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití.</p>
+<p><img src="/Files/20060715-VirtualPC.png" alt="Okno Virtual PC" />První článek této série se zabývá konceptem virtualizace jako takovým.</p>
+<h2 id="co-je-virtualizace">Co je virtualizace</h2>
+<p>Virtualizací se v tomto kontextu myslí možnost provozovat v rámci jednoho fyzického počítače několik logických, oddělených instancí operačního systému (mnohdy různých operačních systémů). Využívá se toho, že výkon dnešních počítačů je pro běžné použití silně naddimenzovaný.</p>
+<p>Řešení pro virtualizaci je celá řada. Microsoftí řešení se jmenujen <a href="http://www.microsoft.com/windows/virtualpc/default.mspx">Virtual PC 2004</a> (pro běžné, klientské stanice) a <a href="http://www.microsoft.com/windowsserversystem/virtualserver/default.mspx">Virtual Server 2005 R2</a> (pro virtualizaci serverových řešení). Největší konkurencí je řada produktů <a href="http://www.vmware.com/">VMware</a>.</p>
+<p>Specifickým případem je projekt <a href="http://pearpc.sourceforge.net/">PearPC</a>, který umožňuje na x86 platformě emulovat PowerPC, tedy platformu Apple.</p>
+<p>Na linuxové platformě je populární software <a href="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/">Xen</a>, vyvíjený na University of Cambridge. Nativně umožňuje běh pouze upraveného operačního systému, je sice méně univerzální, ale zato velmi efektivní.</p>
+<p>Ve hře jsou dva důležité pojmy: <em>emulace</em> a <em>virtualizace</em>. V případě emulace je vše realizováno softwarově, bez nějaké zvláštní podpory hardware. Lze tak emulovat třeba i jinou hardwarovou platformu, jak je vidět například na výše zmíněném PearPC. To pomocí Intel x86 procesorů emuluje procesory Motorola PowerPC.</p>
+<p>Nové procesory od Intelu i AMD ovšem s provozem virtuálních strojů přímo počítají a mají pro ně přímo v hardware vestavěnou zvláštní podporu. Práce virtualizačního software je pak jednodušší, protože v řadě případů stačí &quot;jenom&quot; tuto podporu zprostředkovat. Tomuto režimu práce se říká <em>virtualizace</em>. Virtualizace je pak samozřejmě rychlejší než emulace.</p>
+<p>Z produktů Microsoft umí tuto hardwarovou podporu využít pouze Virtual Server 2005 R2 (důležité je tam právě to &quot;R2&quot;). Předchozí verze a Virtual PC umí pouze emulaci.</p>
+<h2 id="kdy-virtualni-pocitace-pouzit">Kdy virtuální počítače použít</h2>
+<p>Výhodou virtuálních počítačů je, že je můžete snadno vytvářet a zase rušit. Přitom z funkčního a síťového hlediska se jedná o plnohodnotné počítače, bootují, je v nich operační systém nezávislý na OS hostitelského stroje a podobně. Typické případy pro nasazení virtuálních počítačů jsou:</p>
+<h3 id="vyvoj-a-testovani">Vývoj a testování</h3>
+<p>Jednou z hlavních zásad stabilní pracovní stanice je: mít na ní minimum pochybného software. Ale co když si chcete otestovat nový program, zkusit novou verzi a přitom nevíte, jak se systém zachová? Můžete použít virtuální počítač a nainstalovat program do něj. Pokud se po vyzkoušení ukáže býti důvěryhodným, můžete jej pustit i na svou hlavní pracovní stanici.</p>
+<p>Ve virtuálním počítači můžete mít i jiný operační systém, než na svém fyzickém stroji. Chcete si vyzkoušet Linux, FreeBSD nebo třeba ReactOS? Máte možnost a nemusíte formátovat disk. Stejně tak můžete odzkoušet kompatibilitu svého software na jiné jazykové verzi operačního systému či na starší verzi OS.</p>
+<h3 id="stare-aplikace-bez-kterych-se-neobejdete">Staré aplikace, bez kterých se neobejdete</h3>
+<p>V řadě firem najdete někde v rohu zastrčený starší počítač, na němž běží Windows 95, protože firma k běhu nutně potřebuje nějaký speciální program (obvykle má něco společného s účetnictvím nebo něčím takovým). Jeho autor již před lety zanechal programování a věnuje se pěstování růží, případně byl zastřelen jedním z nespokojených zákazníků, ale firma bez tohoto obskurního kousku software prostě existovat nemůže.</p>
+<p>Řešením může být využití virtuálního počítače, do nějž nainstalujete onen historický OS a aplikaci. Při správném nastavení může být uživatelský komfort podobný prostému spuštění programu a uživatel ani nemusí vědět, že má za zády virtualizační technologii.</p>
+<h3 id="skoleni-a-prezentace">Školení a prezentace</h3>
+<p>Prostředí virtuálního počítače je stoprocentně kontrolované, opakovatelné a relativně nezávislé na vrtoších hardware. Proto se výtečně hodí na školení a předváděčky všeho druhu.</p>
+<h3 id="konsolidace-serveru">Konsolidace serverů</h3>
+<p>Zatímco předchozí použití zahrnovalo spíše instalaci Virtual PC, pro serverové nasazení je určen Virtual Server. Z bezpečnostních a organizačních důvodů je rozumné, aby byly různé agendy provozovány na oddělených serverech. S ohledem na zvyšující se výkon jednotlivých počítačů a technologie jako dual core procesory postačuje výkon jednoho počítače pro několik virtuálních serverů.</p>
+<p>Před nedávnem jsme dokončili konsolidaci serverů, kdy jsme deset fyzických serverů nahradili třemi a začali používat virtuální počítače (mimo jiné i web, který si právě prohlížíte, běží na virtuálu).</p>
+<h2 id="kdy-virtualni-pocitace-naopak-nepouzivat">Kdy virtuální počítače naopak nepoužívat</h2>
+<p>Obecně není dobrý nápad používatg virtuální počítače v případě, že vám hodně závisí na výkonu kde je velký počet I/O operací. Typicky například u databázových serverů a u hodně používaných poštovních serverů.</p>
+<h2 id="ke-stazeni">Ke stažení</h2>
+<ul>
+<li><a href="http://www.microsoft.com/windows/virtualpc/downloads/sp1.mspx">Microsoft Virtual PC 2004 +SP1</a></li>
+<li><a href="http://www.microsoft.com/windowsserversystem/virtualserver/software/default.mspx">Microsoft Virtual Server 2005 R2</a></li>
+</ul>
+<p><em>Příště se podíváme na Microsoft Virtual PC 2004, což je program pro &quot;běžné uživatele&quot; a virtualizaci na jejich pracovních stanicích. Do komentářů můžete psát dotazy a připomínky, budu na ně brát ohled při tvorbě dalších dílů tohoto seriálu.</em></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

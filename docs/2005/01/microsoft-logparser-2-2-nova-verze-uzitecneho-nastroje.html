@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Microsoft LogParser 2.2: Nová verze užitečného nástroje | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jedna z nenápadných Microsoftích utilitek se dočkala nové verze - a ta zvyšuje jeho použitelnost o řád." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Microsoft LogParser 2.2: Nová verze užitečného nástroje</h1>
+      <section class="article">
+        <p>Microsoft <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&amp;displaylang=en">uvolnil novou verzi</a> svého málo známého, ale o to užitečnějšího nástroje <strong>Microsoft LogParser</strong>. Tento program umí zpracovat v podstatě jakákoliv zdrojová data (zejména nejrůznější logy, jak již jeho název napovídá) a dotazovat se do nich pomocí SQL-like dotazů. Výsledek umí vygenerovat v mnoha různých formátech. Přibližnou představu vám může dát následující schéma činnosti:</p>
+<p><img src="/files/20050122-logparser-schema.png" alt="Schéma činnosti Microsoft LogParseru" title="Schéma činnosti Microsoft LogParseru" /></p>
+<p>LogParser není primárně určen ke generování obvyklých webserverových statistik (ne že by to neuměl, ale obvykle je jednodušší použít jiné nástroje). S výhodou ho můžete použít pokud potřebujete analyzovat logy s ohledem na nějaké speciální zadání či při řešení určitého problému.</p>
+<p>Výhodou je, že LogParser umí jako vstupní data zpracovat prakticky cokoliv. Obvyklé formáty užívané ve Windows umí zpracovávat nativně (logy IIS, eventlogy atd.), ostatní obvyklé textové formáty (data s oddělovačem, XML...) lze nakonfigurovat, pro formáty zcela obskurní je možno napsat COM plugin.</p>
+<p>LogParser sám obsahuje knihovnu logparser.dll, která může být použita jako COM komponenta, takže jeho funkčnost lze zahrnout do dalších programů.</p>
+ <h2>Použití log parseru k analýze logu web serveru</h2> 
+<p>Následujícím příkazem zpracujeme všechny logy nacházející se v <code>D:\TMP\wwwlogs</code> a vypíšeme seznam nejčastějších požadavků, které skončily chybou <em>404 Object not found</em>. Pokud se nějaký dotaz opakuje příliš často, pravděpodobně to má nějaký důvod, např. chybně zapsaný odkaz.</p>
+<p><code>LogParser &quot;SELECT TOP 50 cs-uri-stem AS URL, COUNT(*) AS Pocet FROM D:\TMP\wwwlogs\ex*.log WHERE sc-status=404 GROUP BY cs-uri-stem ORDER BY Pocet DESC&quot; -rtp:-1</code></p>
+<p>Následujícím příkazem vygenerujeme do souboru <code>D:\TMP\hits.gif</code> graf vývoje počtu požadavků (hits) v čase - po dnech.</p>
+<p><code>LogParser.exe &quot;SELECT date, COUNT(*) AS Hits INTO D:\TMP\hits.gif FROM D:\TMP\LogParserTestData\ex*.log GROUP BY date ORDER BY date&quot; -o:chart</code></p>
+<p>Prostřednictvím parametrů ve WHERE klauzuli lze spočítat počet pageviews (odfiltrováním obrázků, stylů a podobných &quot;systémových&quot; záležitostí) a lze měnit parametry grafu, takže výsledek může vypadat nějak takto (graf zachycuje časový vývoj pageviews/den na mém <a href="http://weblog.rider.cz/">osobním weblogu</a>):</p>
+<p><img src="/files/20050122-logparser-ukazkagrafu.png" alt="Ukázka grafu generovaného LogParserem" title="Ukázka grafu generovaného LogParserem" /></p>
+<p>Generování grafů probíhá prostřednictvím Office Web Components, takže musíte mít na daném počítači licenci MS Office.</p>
+ <h2>Použití log parseru k analýze jiných logů</h2> 
+<p>Chci používat LogParser k analýze logu mého mail serveru. Jako MTA používám XMail a jeho logy mají tvar dat oddělených tabulátorem, hodnoty jsou uzavřeny v uvozovkách. Typický řádek ze souboru tohoto typu vypadá nějak takhle:</p>
+<p><code>&quot;&quot; &quot;canis.bbg.altaircom.net&quot; &quot;222.232.226.66&quot; &quot;2005-01-21 23:57:54&quot; &quot;195.39.105.9&quot; &quot;altaircom.net&quot; &quot;ouqwtz@bxemail.com&quot; &quot;michal.valasek@altaircom.net&quot; &quot;S1D002A&quot; &quot;RECV=OK&quot; &quot;&quot; &quot;2897&quot; &quot;&quot;</code></p>
+<p>LogParser umí nativně s TSV (tab separated values) pracovat, ale nezná formát tohoto konkrétního souboru (který navíc neobsahuje hlavičku). Vytvořím si tedy pomocný soubor <code>header.tsv</code>, který bude obsahovat názvy sloupců oddělené tabulátorem:</p>
+<p><code>res1 server-name client-ip date server-ip domain from to smtp-id status authuser size client-name</code></p>
+<p>SQL (nebo spíše SQL-like) příkazy se nám stávají čím dál tím složitějšími. Naštěstí není nutno je psát přímo do příkazové řádky - je možno načíst je ze souboru. Pokud budu chtít vypsat počet mailů, které mým serverem prošly za den, použiji následujcí příkaz:</p>
+<p><code>LogParser -i:TSV file:D:\TMP\smtplogs\stats1.sql -headerRow:OFF -iHeaderFile:D:\TMP\smtplogs\header.tsv -rtp:-1</code></p>
+<p>Onen soubor <code>stats1.sql</code> bude obsahovat toto:</p>
+<p>SELECT TO_DATE(TO_TIMESTAMP(date, '&quot;yyyy-MM-dd hh:mm:ss&quot;')) AS Datum, COUNT(<em>) AS Pocet FROM D:\TMP\smtplogs\smtp-</em> WHERE status='&quot;RCPT=OK&quot;' GROUP BY Datum ORDER BY Datum</p>
+<p>Data mohu samozřejmě vyexportovat i do grafu nebo různě agregovat. Obsáhlejší příklady na analýzu logů XMailu najdete <a href="ftp://ftp.altaircom.net/outgoing/altaircom/logparser-xmail-samples.zip">zde</a>.</p>
+ <h2>Nejenom na logy</h2> 
+<p>Kromě logů v rozličných formátech lze jako vstupní data použít i takové zdroje jako filesystém, Active Directory nebo registry. Například následujícím příkazem lze na základě shodných MD5 hashů najít na disku shodné soubory:</p>
+<p><code>LogParser &quot;SELECT HASHMD5_FILE(Path) AS Hash, COUNT(*) AS NumberOfCopies FROM D:\TMP\*.* GROUP BY Hash HAVING NumberOfCopies &gt; 1&quot; -i:FS</code></p>
+<p>Stejně tak výstup lze ukládat nejenom do rozličných typů souborů, ale též posílat například na <a href="http://www.faqs.org/rfcs/rfc3164.html">SYSLOG</a> server, nebo je vkládat do libovolné SQL databáze přes ODBC.</p>
+ <h3>Související odkazy</h3> 
+<ul>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&amp;displaylang=en">Microsoft LogParser 2.2</a> - download <a href="http://www.securityfocus.com/infocus/1712">Forensic Log Parsing with Microsoft's LogParser</a> <a href="http://www.logparser.com/">LogParser.com</a> - knihovna odkazů a dalších zdrojů</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

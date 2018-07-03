@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtualizace: Jak připojit VHD soubor na Windows Vista | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="VHD soubory se nám utěšeně rozmáhají. Kromě Virtual PC a Virtual Serveru je najdete například i ve Windows Vista, protože do tohoto formátu se ukládají zálohy kompletního systému. Tím zajímavější může být možnost připojit si VHD soubor jako další harddisk k fyzickému počítači." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Virtualizace: Jak připojit VHD soubor na Windows Vista</h1>
+      <section class="article">
+        <p>VHD soubory se nám utěšeně rozmáhají. Kromě Virtual PC a Virtual Serveru je najdete například i ve Windows Vista, protože do tohoto formátu se ukládají zálohy kompletního systému. Tím zajímavější může být možnost připojit si VHD soubor jako další harddisk k fyzickému počítači.</p>
+<p>Takovou možnost vám nabízí utilitka <strong>VHDMount</strong>, která je součástí <em>Virtual Server 2005 R2 SP1 Beta 2</em>. Pokud chcete svoje VHD soubory připojovat k fyzickému počítači, postupujte následovně:</p>
+<ol>
+<li>Stáhněte si z Microsoft Connect <a href="https://connect.microsoft.com/programdetails.aspx?ProgramDetailsID=525">aktuální betaverzi Virtual Serveru se SP1</a>.</li>
+<li>Spusťte setup a nainstalujte si program. Nemusíte instalovat celý Virtual Server, pokud zvolíte Custom Install, máte možnost zvolit si pouze instalaci VHDMount.</li>
+<li>Vše potřebné nyní najdete ve složce C:\Program Files\Microsoft Virtual Server\Vhdmount. Příkazem <em>vhdmount /m C:\cesta\k\souboru.vhd</em> disk připojíte, pomocí <em>vhdmount /u C:\cesta\k\souboru.vhd</em> disk odpojíte.</li>
+</ol>
+<p>Pokud se vám nechce používat příkazovou řádku, můžete si příkazy pro mount a unmount <a href="http://blogs.msdn.com/virtual_pc_guy/archive/2006/09/01/734435.aspx">přidat do kontextového menu</a> pro VHD soubory.</p>
+<p><img src="/Files/20061217-vhdmount_vista.png" alt="VHD mount error" /></p>
+<p>Na Windows Vista z neznámých důvodů současná verze nefunguje a je potřeba si pomoci malým trikem.</p>
+<ol>
+<li>Připojte disk shora popsaným postupem. Vista zahlásí, že se jí nepodařilo nainstalovat hardware.</li>
+<li>Otevřete si computer management a v něm device manager. Klepněte pravým tlačítkem na &quot;Microsoft Virtual Server Storage Device&quot; a zvolte &quot;Update Driver Software&quot;.</li>
+<li>V dalším okně klepněte na &quot;Browse my computer for driver software&quot;.</li>
+<li>V dalším okně klepněte na &quot;Let me pick from a list...&quot;. Ze seznamu ovladačů vyberte &quot;Microsoft Virtual Server Storage Devices&quot;.</li>
+<li>Po nainstalování ovladačů je disk plně funkční, vidíte ho v Disk manageru a můžete mu přiřadit písmeno.</li>
+</ol>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

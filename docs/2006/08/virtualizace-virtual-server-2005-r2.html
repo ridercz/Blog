@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtualizace: Virtual Server 2005 R2 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V předchozím povídání o virtualizaci jsem vám představil program Virtual PC. To je dobré na interaktivní práci, ale nemůžete v něm provozovat &quot;ostré&quot; servery - a přitom právě jejich konsolidace je jedním z hnacích motorů virtualizace jako takové. Proto je tu &quot;větší bratříček&quot; jménem Virtual Server." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Virtualizace: Virtual Server 2005 R2</h1>
+      <section class="article">
+        <p>V <a href="/Articles/104-virtualizace-virtual-pc-2004.aspx">předchozím povídání o virtualizaci</a> jsem vám představil program Virtual PC. To je dobré na interaktivní práci, ale nemůžete v něm provozovat &quot;ostré&quot; servery - a přitom právě jejich konsolidace je jedním z hnacích motorů virtualizace jako takové. Proto je tu &quot;větší bratříček&quot; jménem <strong>Virtual Server</strong>.</p>
+<h2 id="servery-ktere-neexistuji">Servery, které neexistují</h2>
+<p>Když jsem na českém Internetu začínal, byly počítače dřevěné, šlapací a především <em>drahé</em>. Takže většina lidí - když už byli ochotni a schopni platit ty nehorázné poplatky za hosting - měla jenom jeden a ten dělal všechno: poštu, web, DNS, databázový server... Často ne právě s radostí: můj první server (poháněl ho Cyrixí klon Pentia o úžasné taktovací frekvenci 150 MHz a měl úžasných 64 MB RAM) skončil v plamenech.</p>
+<p>Časem se situace obrítila a počítače začaly být až urážlivě laciné. Není problém vybudovat mohutnou serverovou farmu a jednotlivé služby a zákazníky od sebe izolovat. Poplatky za konektivitu sice klesly, ale při větším počtu se vám může snadno stát, že budete platit víc za fyzické umístění stádečka počítačů, než za konektivitu.</p>
+<p>Rovněž výkon počítačů stoupá závratným tempem. Dnešní dvoujádrové 64-bitové procesory toho zvládnou opravdu hodně. Přesto je ale dobrý nápad mít různé funkce izolované na různých počítačích. Každý program má specifické nároky na paměť, na konfiguraci a tak dále.</p>
+<p>Zde se opět ke slovu dostanou virtuální počítače, tentokráte tedy virtuální servery. Základní idea je stejná jako v případě Virtual PC a byla nastíněna již <a href="/Articles/103-virtualizace-uvod.aspx">v prvním dílu tohoto seriálu</a>: v rámci jednoho fyzického počítače existuje několik virtuálních.</p>
+<h2 id="microsoft-virtual-server-2005-r2">Microsoft Virtual Server 2005 R2</h2>
+<p>Serverovým řešením pro virtualizaci je na platformě Microsoft program <strong><a href="http://www.microsoft.com/windowsserversystem/virtualserver/software/default.mspx">Virtual Server 2005 R2</a></strong>. S jistou mírou nepřesnosti můžeme říct, že má podobná &quot;střeva&quot; jako Virtual PC, pojednávané minule, ale má jiné rozhraní. Virtual PC předpokládá interaktivní práci, má standardní uživatelské rozhraní, běží v rámci uživatelovy session jako běžná GUI aplikace.</p>
+<p>Virtual Server oproti tomu předpokládá, že bude běžet na serveru, bez přímé interakce. Funguje jako služba (Windows service) a jeho virtuální stroje se mohou spouštět automaticky po startu systému. Správa (tedy vytváření virtuálních počítačů, sítí, jejich úpravy a podobně) probíhá přes webové rozhraní.</p>
+<p><a href="/files/20060825-virtualserver-hq.png"><img src="/files/20060825-virtualserver-lq.gif" alt="Rozhraní Virtual Serveru 2005 R2" /> </a></p>
+<p>Pro připojení na konzoli počítače slouží speciální VMRC klient. Vzdáleně připomíná klienta pro připojení k terminálovým službám, ale opravdu jenom vzdáleně. Sice umí fungovat po síti, ale použitý protokol je jiný, stejně jako účel.</p>
+<p>Připojení na virtuální server není zdaleka tak schopné a pohodlné, jako práce s rozhraním Virtual PC nebo přes terminál. Nefunguje sdílení schránky, přenozsy souborů, změna velikosti okna za běhu a tak dále. U serverů se předpokládá, že pro přístup k nim se bude především používat prostředků nainstalovaného operačního systému, tj. že si nainstalujete virtuální server a pro práci na něm se budete připojovat např. přes RDP (terminálové služby, vzdálená plocha).</p>
+<h2 id="rozdil-mezi-virtual-pc-a-virtual-serverem">Rozdíl mezi Virtual PC a Virtual Serverem</h2>
+<p>Programy <em>Virtual PC</em> a <em>Virtual Server</em> mají podobné jádro (byť nikoliv stejné), ale různé určení a proto se liší jejich schopnosti.</p>
+<p><strong>Virtual PC 2004 SP1:</strong></p>
+<ul>
+<li>Je desktopové řešení.</li>
+<li>Předpokládá interakci s uživatelem.</li>
+<li>Má komfortní rozhraní pro práci, sdílení schránky, drag and drop přenos souborů atd.</li>
+<li>Má omezené možnosti vytváření virtuálních sítí.</li>
+<li>Podporuje pouze virtuální IDE řadiče, takže v počítači můžete mít nejvýše čtyři zařízení, z toho nejvýše jednu CD/DVD mechaniku.</li>
+<li>Má virtuální zvukovou kartu.</li>
+<li>Je optimalizován pro současný běh jednoho virtuálního počítače.</li>
+</ul>
+<p><strong>Virtual Server 2005 R2:</strong></p>
+<ul>
+<li>Je serverové řešení.</li>
+<li>Běží jako služba.</li>
+<li>Nemá příliš komfortní rozhraní, nepředpokládá se interaktivní práce.</li>
+<li>Má široké možnosti vytváření a propojování virtuálních sítí.</li>
+<li>Podporuje virtuální IDE a SCSI řadiče, může tedy mít připojeno velké množství disků a CD/DVD mechanik.</li>
+<li>Nepodporuje zvukovou kartu.</li>
+<li>Má širší možnosti automatizované správy a dohledování, podporuje skriptování, WMI a podobně.</li>
+<li>Je optimalizován pro současný běh více virtuálních počítačů.</li>
+<li>Podporuje více operačních systémů, včetně některých distribucí Linuxu.</li>
+</ul>
+<p>Podrobnější popis rozdílů mezi těmito programy najdete <a href="http://www.microsoft.com/windowsserversystem/virtualserver/techinfo/vsvsvpc.mspx">na webu Microsoftu</a>.</p>
+<h2 id="kompatibilita">Kompatibilita</h2>
+<p>Oba dva programy používají stejný formát pro virtuální hard disky (VHD). Konfigurační soubory (VMC) jsou také kompatibilní, pokud přihlédnete ke shora uvedeným rozdílům, tj. např. před přenosem PC -&gt; Server zakážete zvukovou kartu.</p>
+<p>V zásadě kompatibilní jsou i Virtual Machine Additions, i když i tam jsou samozřejmě rozdíly vycházející z odlišností popsaných výše. Nicméně je možné například nainstalovat ve Virtual PC počítač, přenést jeho obraz na server a tam ho spustit, případně naopak.</p>
+<h2 id="licence">Licence</h2>
+<p>Virtual Server 2005 R2 sám o sobě je k dispozici k downloadu zdarma. Z hlediska licencování dalších programů obecně nehraje roli, zda počítač, na kterém je SW nainstalován, je virtuální nebo fyzický, k běhu software ve virtuálním počítači tedy potřebujete stejnou licenci, jako pro fyzický PC.</p>
+<p>V případě <strong>Windows Serveru 2003 Enterprise Edition</strong> nicméně platí, že kromě jedné fyzické můžete provozovat ještě čtyři další virtuální instance Windows. Tato podpora není vázána na konkrétní virtualizační technologii, vztahuje se na vás tedy i v případě, že používáte např. VMWare ESX Server (který je sám sobě operačním systémem).</p>
+<p>Od 1. října 2006 bude též platit, že v případě <strong>Datacenter Edition</strong> můžete virtuálních serverů provozovat <a href="http://www.microsoft.com/windowsserver2003/evaluation/news/bulletins/datacenterhighavail.mspx">neomezený počet</a>.</p>
+<h2 id="podpora-non-windows-os">Podpora non-Windows OS</h2>
+<p>Jak již bylo řečeno dříve, virtualizace znamená kompletní reprezentaci počítače. Obecně tedy můžete do virtuálního počítače nainstalovat jakýkoliv operační systém pro x86 platofrmu. Nejsou tomu kladena žádná licenční ani úmyslná technologická omezení. V praxi nicméně některé (zejména starší) operační systémy do virtuálního počítače nainstalovat nejdou. Na adrese <a href="http://vpc.visualwin.com/">http://vpc.visualwin.com/</a> můžete najít seznam bezmála patnácti set operačních systémů, které byly testovány na kompatibilitu s Virtual PC (a z nich 273 neběží, nicméně o většině z nich jsem v životě neslyšel).</p>
+<p>Oficiálně podporovaných operačních systémů je samozřejmě mnohem méně. Vyznačují se tím, že jsou pro ně k dispozici Virtual Machine Additions a technická podpora. K dispozici jsou i pro <a href="http://www.microsoft.com/windowsserversystem/virtualserver/evaluation/linuxguestsupport/default.mspx">některé distribuce Linuxu</a>.</p>
+<h2 id="odkazy">Odkazy</h2>
+<ul>
+<li><a href="http://www.microsoft.com/windowsserversystem/virtualserver/software/default.mspx">Virtual Server 2005 R2</a> je volně ke stažení</li>
+<li><a href="http://www.microsoft.com/windowsserversystem/virtualserver/downloads/servicepack.mspx">Service Pack 1, beta 1</a></li>
+<li><a href="http://www.microsoft.com/windowsserversystem/virtualserver/evaluation/linuxguestsupport/default.mspx">Virtual Machine Additions for Linux</a></li>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=BF21F798-9B10-40DC-BCDD-4A8358CCE94D">MOM Management Pack</a></li>
+</ul>
+<p>Existuje též nástroj jménem <a href="http://www.microsoft.com/windowsserversystem/virtualserver/evaluation/vsmt.mspx">Virtual Server 2005 Migration Toolkit</a>, který by měl umožnit snadnou migraci fyzického serveru do virtuálního prostředí. Osobně s ním ale nemám žádnou zkušenost. Pokud vy ano, podělte se.</p>
+<h2 id="specialni-poznamka-k-vmware">Speciální poznámka k VMWare</h2>
+<p>V komentářích se často objevuje jméno konkurenčního produktu, VMWare. Píšu o Virtual PC a Virtual Serveru, protože ho narozdíl od VMWare znám a používám. VMWare jsem naposledy viděl v nějaké verze 2.0 nebo tak nějak. Bohužel tedy nejsem schopen se k němu nijak vyjádřit. Pokud někdo napíše o tomto SW nějaké pojednání, rád na něj odkážu a nebo ho zde zveřejním.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

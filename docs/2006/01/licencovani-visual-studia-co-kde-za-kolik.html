@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Licencování Visual Studia: co, kde, za kolik... | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Dlouhodobě se nijak netajím s názorem, že vývojářský software Microsoftu je mnohem snazší ukrást, než koupit. Ba co více, ono je obvykle téměř nemožné snadno zjistit, kolik že vlastně stojí. Proto jsem, za laskavé spolupráce spřátelených odborníků, sepsal tento článek, který popíše aktuální stav ohledně Visual Studia a Microsoft SQL Serveru." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Licencování Visual Studia: co, kde, za kolik...</h1>
+      <section class="article">
+        <p>Dlouhodobě se nijak netajím s názorem, že vývojářský software Microsoftu je mnohem snazší ukrást, než koupit. Ba co více, ono je obvykle téměř nemožné snadno zjistit, kolik že vlastně stojí. Proto jsem, za laskavé spolupráce spřátelených odborníků, sepsal tento článek, který popíše aktuální stav ohledně Visual Studia a Microsoft SQL Serveru.</p>
+<h2 id="pruvodce-edicemi-microsoft-visual-studia">Průvodce edicemi Microsoft Visual Studia</h2>
+<p>Hlavním vývojářským nástrojem od Microsoftu je Visual Studio 2005. To se vyskytuje ve čtyřech hlavních edicích. Budu se jim věnovat dosti podrobně a říkat i zdánlivé triviality – vím na co se lidé ptají, co je pro jednoho samozřejmé, jinému tak připadat nebude.</p>
+<h3 id="express-editions">Express Editions</h3>
+<p>Formálně pojednáno nepatří vývojové nástroje Express mezi edice Visual Studia. Pojednáno prakticky však nepochybně ano. Jejich hlavním znakem jest, že jsou až na další k dispozici zdarma.</p>
+<p>Ono „další“ znamená, že oficiální stanovisko Microsoftu je, že cena Express edice je $ 49, ale po dobu jednoho roku od uvedení (tedy do listopadu 2006) je možno je stáhnout zdarma. Licence sama je trvalá, takže i pokud MS po roce další stahování znemožní, budete moci tyto edice používat nadále. Osobně jsem přesvědčen že k žádnému zpoplatnění nikdy reálně nedojde a že se jedná o poslední křeč Microsoftu před porušením letité tradice nedávat vývojové nástroje zdarma.</p>
+<p>První rodinu Express nástrojů tvoří samostatné jazyky: <strong>Visual Basic .NET Express</strong>, <strong>Visual C# Express</strong>, <strong>Visual J# Express</strong> a <strong>Visual C++ Express.</strong> Je to prostředí určené pro vývoj běžných desktopových aplikací v daném programovacím jazyce.</p>
+<p>Pro vývoj webových aplikací je tu <strong>Visual Web Developer Express</strong>. Pro vývoj webových aplikací v něm můžete použít VB.NET a nebo C#, VWD podporuje obojí.</p>
+<p>Zcela samostatnou kapitolou je <strong>Microsoft SQL Server 2005 Express</strong>. Nevztahuje se na něj shora uvedená obezlička chytré horákyně „zadarmo i za peníze“ a bude oficiálně k dispozici zdarma na věky věkův. Jedná se totiž o následovníka SQL Server Desktop Engine, alias MSDE. Jedná se o odlehčenou verzi SQL Serveru, omezení jsou přehledně shrnuta <a href="http://www.teratrax.com/articles/sql_server_2005_express.html">v článku na webu Terratrax</a>. Výhodou je, že k Express edici je k dispozici i základní nástroj pro správu, <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en">Management Studio Express</a>.</p>
+<p>Express edice jsou jediné, kde jsou jazyky a platformy v oddělených produktech. Všechny vyšší edice obsahují všechno v jednom, vývoj pro web i desktop, ve všech jazycích a tak dále. Dále pak nemůžete psát programy pro mobilní zařízení (Pocket PC), add-iny pro Microsoft Office a Visual Studio a 64bitové aplikace.</p>
+<p>S výjimkou shora uvedených neexistují žádná další omezení. Z hlediska licenčního můžete vyvíjet jaké aplikace chcete, komerční, open source, freeware, jak je libo. Z hlediska technologického také neexistují žádná omezení, aplikace mohou být libovolně složité, kompilátor je ve všech edicích stejné. Stejná (v Express edicích i ve „velkém“ VS 2005) je i logika ovládání a formáty projektových souborů. Nic vám tedy nebrání začít pracovat v Expressu a přejít později na VS nebo naopak.</p>
+<p>Pokud to potřebujete, můžete si na počítač nainstalovat Express edic několik, a to i pokud máte nainstalované „velké“ Visual Studio. Osobně mám na počítači nainstalován VB.NET Express, VWD Express a Visual Studio 2005 Team Edition. Za prvé abych věděl co všechno Express edice umí a za druhé protože VWD je menší, rychlejší a zabírá méně paměti – na většinu práce používám VWD místo velkého Studia.</p>
+<h3 id="visual-studio-standard-edition">Visual Studio Standard Edition</h3>
+<p>Jedná se o základní verzi VS. Od Expressu se odlišuje především tím, že je „všechno v jednom“. Dále pak má schopnější uživatelské rozhraní (pluginy, možnost používat source control systems atd.). Umí též kompilovat programy pro kapesní počítače a platformu x64.</p>
+<h3 id="visual-studio-professional-edition">Visual Studio Professional Edition</h3>
+<p>Nejviditelnějším skokem proti Standardu je, že součástí je licence na Microsoft SQL Server 2005 Developer Edition (ve Standardu je pořád jenom Express). S tím souvisí i přítomnost pokročilejších nástrojů pro práci s databází a vývoj databázových aplikací. Zároveň umí remote debugging.</p>
+<h3 id="visual-studio-tools-for-office">Visual Studio Tools for Office</h3>
+<p>Tato edice je určena speciálně pro vývoj aplikací rozšiřujících Microsoft Office. Je křížencem mezi Standard a Professional, ale umožňuje pouze vývoj pro Office. Součástí je kromě SQL Serveru 2005 Developer Edition též licence na redistribuci Access runtime. Podporuje pouze Visual Basic a C#.</p>
+<h3 id="visual-studio-team-system">Visual Studio Team System</h3>
+<p>Vlajková loď Microsoftu v oblasti vývojových nástrojů. Umí úplně všechno, co předchozí edice (včetně vývoje pro Office). Jako jediná edice umožňuje vývoj pro serverovou 64-bitovou platformu Itanium.</p>
+<p>Její hlavní smysl ale spočívá v silné podpoře pro týmovou spolupráci pomocí VS Team Foundation Serveru, tedy pro vývoj ve větších firmách. Dále pak obsahuje mocné nástroje pro testování: statickou analýzu, unit testing atd.</p>
+<h2 id="co-za-to">Co za to?</h2>
+<p>Nejzábavnější část celého procesu pořizování vývojových nástrojů nastane ve chvíli, kdy víte co chcete a začnete se zajímat o to kdo vám to prodá – a hlavně za kolik. Přirozená reakce je, že se podíváte do ceníku svého oblíbeného dodavatele počítačovin. První (a dosti pravděpodobná) možnost je, že tam VS 2005 nenajdete vůbec. Opačným extrémem je, že tam najdete několik desítek řádků, které se liší jedním až třemi písmenky a cenou v širokém rozpětí od padesáti korun po půl miliónu, což vám asi mnoho k užitku nebude.</p>
+<p>Přes houževnatý odpor se mi pro vás podařilo v průběhu křížového výslechu třetího stupně získat i nějaká konkrétní čísla. Cena Visual Studia 2005 ve verzi Standard je okolo devíti tisíc bez DPH. Professional stojí tisíc zhruba pětadvacet, případně čtyřicet i ročním předplatným MSDN.</p>
+<p>Shora uvedené údaje byly doprovázeny rozličným nezapamatovatelným pakliže a jestliže. Cena může být mnohem nižší v případě upgrade (a upgradovat se dá za různých podmínek z ledasčeho, včetně neaktuálních verzí a konkurenčních nástrojů). Jiné ceny platí pro předplatné na více než jeden rok, jiné pro školství a studenty, jiné pro orgány státní správy a samosprávy a podobně.</p>
+<p>Licenční politika Microsoftu je neustále se měnící džunglí speciálních nabídek, upgradů, multilicencí a předplatných, v níž přežije jenom ten nejsilnější. Je dosti pravděpodobné, že některou z těchto nabídek můžete využít, i když o tom možná ani nevíte. Proto doporučuji držet se úsloví <em>líná huba, holé neštěstí</em> a <em>drzé čelo lepší než poplužní dvůr</em> a zeptat se u odborníků.</p>
+<p>To může znamenat informační linku Microsoftu, ale ještě lépe MSDN infocentrum, které v ČR provozuje společnost Daquas (web mají na <a href="http://www.daquas.cz/">www.daquas.cz</a>, ale radši tam nechoďte dokud se mi nepodaří je přesvědčit že chtějí abych jim udělal nový :-) Sestylizujte tedy pečlivě svůj dotaz a odešlete ho na adresu <a href="mailto:msdn@daquas.cz">msdn@daquas.cz</a>.</p>
+<p>Buďte ovšem připraveni na to, že v odpověď budete podrobeni přísnému křížovému výslechu, jehož cílem bude zjistit, zda nespadáte do některé z momentálně protěžovaných skupin. Odpovídejte podrobně a pravdivě, je to ve vašem vlastním zájmu.</p>
+<p>Na tomto webu srdnatě hájím zájmy těch nejmenších. Nemám samozřejmě na mysli děti – chmurnou budoucnost národa, ale osamocemé vývojářské vlky, začínající firmičky a podobně. Podezíravě jsem se tedy ptal, zda se se mnou bude někdo bavit, i když chci <em>jednu</em> licenci Standard edice Visual Studia a nebudu mít kšeft za milión? Dostalo se mi ujištění že bude. Na tyto dotazy jsou v MSDN infocentru Daquasu cvičení a jsou za to údajně i placeni.</p>
+<h2 id="vyzva-misto-zaveru">Výzva místo závěru</h2>
+<p>Pokud máte nějaké dotazy, týkající se licencování vývojářských nástrojů, napište je do diskuze k tomuto článku. Negarantuji jejich zodpovězení, ale budeme se snažit a případně z odpovědí zkompiluji další článek.</p>
+<p>Za pomoc při přípravě tohoto článku děkuji Igoru Vítovi (mimochodem MVP pro Fox Pro) a jeho krásné kolegyni z Daquasu, jejíý jméno jsem bohužel již úspěšně zapomněl.</p>
+<h3 id="souvisejici-odkazy">Související odkazy:</h3>
+<ul>
+<li><a href="http://msdn.microsoft.com/vstudio/products/compare/default.aspx">Porovnání edic Visual Studia 2005</a></li>
+<li><a href="http://www.daquas.cz/quas/">Daquasí časopis Quas</a>, obsahující rozličné informace o právě vypuknuvších akcích, FAQ a podobně</li>
+<li><a href="http://weblog.rider.cz/entry/article-20051109.aspx">ASP.NET 2.0: Nechejte maličkých přijíti ke mně… </a>– zamyšlení nad politikou Microsoftu v oblasti vývojových nástrojů na mém osobním weblogu</li>
+<li><a href="/entry/article-20051114.aspx#192050">Zdejší článek k uvedení Express nástrojů</a></li>
+<li><a href="http://msdn.microsoft.com/vstudio/express/">Stažení Express edic</a> z webu Microsoftu</li>
+<li><a href="/entry/article-20051220.aspx#164258">MSDN Connection: Vánoční dárek od Microsoftu</a> – pokud se vám nechce stahovat, objednejte si DVD s knížkou zdarma</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

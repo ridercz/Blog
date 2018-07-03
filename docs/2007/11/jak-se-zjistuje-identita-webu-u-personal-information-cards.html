@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak se zjišťuje identita webu u Personal Information Cards? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Zajištění soukromí uživatelů je jedním z hlavích cílů technologie Information Cards (CardSpace). V případě osobních (unmanaged) karet jsou různým webům zaslány různé údaje, takže provozovatelé těchto webů je nemohou spojit nebo zneužít. Proces zjišťování identity webů je ale dosti komplikovaný. Pojďme se na něj podívat podrobně a zabývejme se důsledky, které z něj plynou." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Jak se zjišťuje identita webu u Personal Information Cards?</h1>
+      <section class="article">
+        <h2 id="pozor-tento-clanek-je-jiz-neaktualni">Pozor, tento článek je již neaktuální</h2>
+<p>Problém popisovaný v tomto článku byl vyřešen v ISIP 1.5. Podrobnější informace najdete v <a href="/Articles/216-reseni-problemu-s-identitou-webu-u-personal-information-cards.aspx">novém článku</a>.</p>
+<h2 id="jemny-uvod-do-information-cards">Jemný úvod do Information Cards</h2>
+<p>Technologie Information Cards, ve Windows implementována pod názvem CardSpace, si klade za cíl vyřešit různé dosud přetrvávající problémy autentizace na Internetu - převážně v případě webových aplikací. Drtivá většina současných webů používá jednofaktorovou autentizaci, založenou na sdíleném tajemství, nebo chcete-li na znalosti hesla.</p>
+<p>Tento přístup má ale jednu velkou nevýhodu: protože uživatelé typicky používají totéž uživatelské jméno a heslo ve více systémech, může kompromitace jednoho z nich ohrozit i ostatní. Pokud se svým obvyklým loginem a heslem zaregistrujete na webu, jehož provozovatel je neschopný (a útočník získá jeho databázi) nebo zločinný (sám se stane útočníkem), budou ohroženy i další weby, jejichž provozovatelé v tom ovšem budou celkem nevinně.</p>
+<p>Řešení tohoto problému spočívá v použití směrových (domain-specific) identifikátorů. Tedy takových údajů, které jsou platné jenom v rámci jednoho systému a mimo něj jsou bezcenné. Triviální implementace spočívá například v tom, že bychom pro jeden každý web náhodně vygenerovali unikátní uživatelské jméno a heslo.</p>
+<p>To je ovšem pro běžné smrtelníky nereálná, pročež nám musí přijít na pomoc technologie, příkladně v podobě Information Cards. Použití osobních (unmanaged) karet probíhá následujícím způsobem:</p>
+<p>Služba ke které se přihlašujete (relying party, RP) si vyžádá zaslání údajů o vás. Osobní karty umožňují předání kontaktních údajů (jako je jméno, e-mail atd.), ale tyto údaje nejsou nijak ověřovány, nelze je použít pro autentizaci uživatele. Pro tento účel slouží váš veřejný klíč a PPID - private personal identifier. Podle vašeho veřejného klíče, případně kombinace klíče a PPID, vás RP identifikuje a autentizuje.</p>
+<p>Váš veřejný klíč a PPID je ale pro každý web jiný. Tyto údaje nejsou využitelné jinde, než na webu, pro který byly vygenerovány. Kdokoliv je libovolným způsobem získá, nemůže je použít k přihlášení k jinému webu, byť vy se k němu přihlašujete toutéž kartou. Pokud dají provozovatelé dvou webů dohromady své databáze, v každé budete mít jiné PPID a jiný veřejný klíč. Nebudou tedy schopni tyto databáze mezi sebou propojit. To je žádoucí efekt - chrání vaše soukromí. Pokud je žádoucí databáze propojovat, máme možnost použít managed karty a vlastního identity providera, kde jsou pravidla hry jiná.</p>
+<h2 id="zjisteni-totoznosti-webu">Zjištění totožnosti webu</h2>
+<p>Proces probíhá tak, že se zjistí, k jakému webu se připojujete - identifikuje se, a v některých případech (při SSL připojení) též autentizuje pomocí certifikátu serveru. Zjištěné údaje se potom použijí k vygenerování vašeho klíče a PPID, který se pak webu pošle. Tím je zaručeno, že tentýž web dostane vždy tytéž údaje, ale různé weby vždy různé.</p>
+<p>Nejdůležitějším místem celého mechanismu tedy je, na základě čeho weby prohlásíme za totožné či různé. V tomto směru mohou nastat tyto možnosti:</p>
+<ol>
+<li>připojení přes HTTPS (SSL) a je použit EV (Extended Validation) certifikát,</li>
+<li>připojení přes HTTPS (SSL) a je použit běžný (non-EV) certifikát s uvedením údajů o žadateli,</li>
+<li>připojení přes HTTPS (SSL) a je použit běžný (non-EV) certifikát bez uvedení údajů o žadateli,</li>
+<li>připojení přes HTTP, žádný certifikát není k dispozici.</li>
+</ol>
+<p>V každém z těchto případů se postupuje jinak a každé z těchto řešení má svá úskalí.</p>
+<h3 id="https-s-ev-certifikatem">HTTPS s EV certifikátem</h3>
+<p>Certifikáty s rozšířenou validací (Extended Validation, EV) jsou relativní novinkou. Při jejich vydání je žadatel podrobně prověřován: ověřuje se název firmy, sídlo, zda je žádající osoba oprávněna jednat za společnost atd. Celý proces je poměrně komplikovaný, administrativně náročný a drahý - ceny EV certifikátů se pohybují řádově ve stovkách dolarů a jejich získání může trvat i několik měsíců.</p>
+<p><img src="http://www.aspnet.cz/Files/20071127-20071124-EVCert_5.png" alt="EV certifikát" /></p>
+<p>Vizuálně se EV certifikát projeví tak, že se adresní řádek zbarví do zelena (v IE a Mozille) a v jeho pravé části se střídá název společnosti, které certifikát patří (na shora uvedeném obrázku je to Microsoft) a název certifikační autority, která jej vydala (VeriSign).</p>
+<p>V tomto případě se z certifikátu vezmou údaje o názvu společnosti (O), místě (L), státu (S) a zemi (C). Výsledný řetězec u certifikátu na obrázku by byl: <code>|O=&quot;Microsoft Corporation&quot;|L=&quot;Redmond&quot;|S=&quot;Washington&quot;|C=&quot;US&quot;|</code>. Z něj se pak spočítá SHA256 hash a ten se použije jako identifikátor relying party.</p>
+<h3 id="https-s-beznym-ne-ev-certifikatem-kde-ale-jsou-uvedeny-udaje-o-zadateli">HTTPS s běžným (ne-EV) certifikátem, kde ale jsou uvedeny údaje o žadateli</h3>
+<p>Nižším stupněm, dnes ale zřídkakdy viděným, jest standardní certifikát, který sice nemá EV příznak, ale obsahuje údaje o žadateli - název společnosti, sídlo atd. Tyto certifikáty jsou levnější a jejich získání je jednodušší. Prohlížeč vám v takovém případě zobrazí jenom ikonku se zámečkem, s podbarvováním se IE neunavuje vůbec, Firefox použije decentní a nenápadnou žlutou.</p>
+<p>V tomto případě se k výše uvedenému identifikátoru přidá ještě distinguished name všech certifikačních autorit, které CA vydaly a výsledný řetězec, ze kterého se bude počítat SHA256 hash, bude vypadat nějak takto: <code>|ChainElement=&quot;OU=Contoso Trust, Inc., O=Contoso Corporation, C=US&quot;|ChainElement=&quot;OU=Contoso Internet Authority&quot;|O=&quot;Microsoft&quot;|L=&quot;Redmond&quot;|S=&quot;Washington&quot;|C=&quot;US&quot;|</code>.</p>
+<h3 id="https-s-certifikatem-kde-nejsou-uvedeny-udaje-o-zadateli">HTTPS s certifikátem, kde nejsou uvedeny údaje o žadateli</h3>
+<p>Nejlevnější a nejběžnější typ SSL certifikátu. Stojí řádově desítky dolarů a jejich získání je téměř okamžité. Neověřuje se totiž vůbec identita žadatele ale jenom zda má kontrolu nad serverem, jehož název je uveden v Common Name (CN) certifikátu. Zpravidla tak, že žadateli CA pošle soubor s ověřovacím kódem, který je nutno na server nahrát na určené místo a na základě toho je ověřeno, že žadatel má nad serverem kontrolu.</p>
+<p>Údaje jako název společnosti a adresa nejsou v certifikátu uvedeny, obvykle tam najdete jenom poznámku ve smyslu &quot;Domain control validated&quot; nebo něco podobného.</p>
+<p>V tomto případě se jako identifikátor použije SHA256 hash veřejného klíče, další údaje v certifikátu se ignorují.</p>
+<h3 id="http-zadny-certifikat-neni-k-dispozici">HTTP, žádný certifikát není k dispozici</h3>
+<p>V budoucnu nás čeká možnost používat InfoCards i pro přihlašování na weby, které neběží přes SSL. Potřebná podpora na straně serveru je součástí Microsoft .NET Frameworku 3.5, u klienta bude podle <a href="http://blogs.msdn.com/card/archive/2007/09/25/deploy-cardspace-on-your-site-without-a-ssl-certificate.aspx">blogu CardSpace týmu</a> součástí Windows Vista SP1 a speciálního patche na IE7. V takovém případě se jako identifikátor použije SHA256 hash z názvu serveru (hostname, případně IP adresy).</p>
+<h2 id="problemy-ze-shora-uvedeneho-vyplyvajici">Problémy ze shora uvedeného vyplývající</h2>
+<p>Ze shora uvedeného popisu vyplývají situace, kdy bude jeden web po změně certifikátu (třeba při jeho obnovení) považován za web jiný než předtím a dostane tedy jiný PPID a veřejný klíč. Pokud se tak stane, web najednou nedokáže své uživatele identifikovat a bude nutné provést přiřazení karet k uživatelským účtům znovu. Kdy se tak stane, závisí na vlastnostech připojení, viz výše.</p>
+<p><strong>Pokud získáte EV certifikát, nesmíte se přejmenovat nebo přestěhovat.</strong> To je omezení vcelku přijatelné, i když může poněkud zaskočit některé firmy, které mají ve zvyku každou chvíl se přejmenovat (zdravíme Credit Suisse aka Winterthur aka AXA). Je nicméně otázkou, nakolik bude EV certifikační procedura dostupná pro české společnosti. V tomto okamžiku mi není známo, že by nějaká česká společnost EV certifikát měla, a návody na webech CA většinou nepočítají se společnostmi mimo USA, UK a podobně.</p>
+<p><strong>Pokud máte běžný certifikát s údaji o žadateli, jste na věky svázáni se svou certifikační autoritou.</strong> Pokud ji změnite, změní se i vaše identita. Stejně tak pokud se vaše CA přejmenuje, sloučí nebo osamostatní, což je jev poměrně častý.</p>
+<p><strong>Pokud máte běžný certifikát bez údajů o žadateli, přijdete o údaje při vypršení jeho platnosti.</strong> Certifikát sice lze obnovit (renew) bez změny klíče, ale zatím všechny certifikační autority, se kterými jsem se setkal, chtěly vystavit při obnovení certifikátu novou žádost s novým klíčem, což je z hlediska bezpečnosti i obecně výhodnější.</p>
+<p><strong>Pokud nemáte certifikát žádný, jste na tom paradoxně skoro nejlépe.</strong> Dokud nezměníte název (hostname) svého webu, je identifikován vždy stejně. Zaplatíte ale sníženou bezpečností a dostupností. Data nejsou při přenosu šifrována, takže je kdokoliv může odposlechnout. Možnost zneužití odposlechnutých údajů je snížena, protože podle toho co jsem slyšel, je platnost zprávy omezena na několik minut (přesně nevím, specifikaci nemám), ale ne vyloučena. Rovněž není nijak zajištěno ověření vaší identity. Zatímco použití SSL vás ochrání proti útokům typu DNS hijacking a cache poisoning, při běžné HTTP komunikaci vás InfoCards ochrání pouze proti přehlédnutí na straně uživatele (typu &quot;překlepové&quot; adresy atd.).</p>
+<p>V současné době je ale tato poslední možnost spíše teoretická, protože chybí podpora na straně klienta a očekává se až za celkem dlouhou dobu.</p>
+<h2 id="jak-z-toho-ven">Jak z toho ven?</h2>
+<p>Nastíněný problém lze řešit v zásadě dvěma způsoby. Buďto se mu můžeme snažit předejít a nebo se s ním smíříme a z občasné ztráty asociace karty s uživatelem učiníme běžný stav.</p>
+<p>Pokud budeme chtít tomuto stavu předcházet, je klíčovým parametrem vhodná volba certifikátu, CA, potažmo dostatečně dlouhá doba jeho platnosti, pokud mám to naše CA umožní. Nejbezpečnější cesta je v tomto ohledu EV certifikát, což ale nebude pro většinu firem cesta přijatelná. Ve všech ostatních případech jsme do jisté míry vydáni na milost certifikační autoritě, nebo nemáme SSL.</p>
+<p>Druhá možnost je přijmout tento proces a naučit se s ním žít. A po každé změně certifikátu (tedy nejčastěji jednou za rok) si prostě přiřadit kartu znovu. Pokud systém uvidí neznámé PPID, ale známou mailovou adresu, může nabídnout uživateli, že tuto kartu e-mailem ověří a přiřadí k jeho účtu, stejně jako se tak děje při registraci, případně u normálního hesla v okamžiku, kdy ho uživatel zapomene. V podstatě automatizovat proces, který stejně v systému musí být přítomen pro případ, že uživatel o kartu přijde, například při havárii počítače. Ostatně, jednou za rok si ověřit, že je mailová adresa stále funkční a stále patří uživateli, není zase tak špatný nápad.</p>
+<h2 id="radosti-pionyru">Radosti pionýrů</h2>
+<p>Byl jsem první v republice a jeden z prvních na světě, kdo CardSpace na svém webu (<a href="http://akce.altairis.cz/">http://akce.altairis.cz/</a>) v ostrém provozu naimplementoval. Je tedy logické, že jsem jeden z prvních, kdo si na tom nabije čumák. Ostatně, to už je osud early adopterů.</p>
+<p>Na druhou stranu: výše uvedený postup identifikace webu příliš nechápu. Očekával jsem, že klíčovým parametrem pro běžné (ne-EV) scénáře bude common name, tedy název web serveru, a že nebude záležet na certifikační autoritě, která certifikát vydala. Ostatně, takové byly i mé informace v dobách bety a jako takové jsem je šířil dál, za což se tímto postiženým omlouvám. Myslím si, že shora uvedený postup má nějaké radionální vysvětlení, ale zatím se mi ho nepodařilo zjistit.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

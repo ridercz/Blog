@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webový vývoj trochu jinak - WAP a WDP | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Pokud vám zcela nevyhovuje mírně chaotický způsob, jakým Visual Studio 2005 zachází s webovými projekty, mohou se vám hodit dva pluginy od Microsoftu: Web Application Projects (WAP) a Web Deployment Projects (WDP)." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Webový vývoj trochu jinak - WAP a WDP</h1>
+      <section class="article">
+        <p>V jedničkové verzi ASP.NET byl vývoj webových aplikací sice zcela jiný než v ASP 3.0, ale zároveň celkem snadno pochopitelný: veškerý back-endový kód se zkompiloval do jedné dynamické knihovny a předmětné DLLko se nakopírovalo na web server, spolu s ASPX soubory, které obsahovaly HTML kód a definice server controls.</p>
+<p>V případě ASP.NET 2.0 je situace poněkud složitější. Standardně máte na výběr ze třech možností:</p>
+<p><strong>XCopy Deployment</strong> - na server nahráváte kompletní zdrojový kód (ASPX i VB/CS soubory, tak jak je píšete). ASP.NET runtime si je při prvním požadavku zkompiluje a drží si je zkompilované v cache, dokud se aplikace nerestartuje, nebo dokud se zdrojové soubory nezmění. Tento postup se nejčastěji využívá při vývoji (v tomto režimu běží aplikace ve vývojovém serveru který je součástí VS/VWD 2005). Toto je také jediný model, který můžete nativně použít, pokud nemáte VS 2005, ale jenom Visual Web Developer Express.</p>
+<p><strong>Publishing - site updateable.</strong> Pokud z menu ve Visual Studiu zvolíte <em>Publish Web Site</em> a zaškrtnete <em>allow this site to be updateable</em>, provede se v podstatě to, co je popsáno o odstavec výše, ale najednou. Na server pak naráváte hromádku DLLek (zjednodušeně řečeno: pro každou stránku jedno) a ASPX souborů. Tento model se v zásadě podobá chování z verze 1.x, pouze výsledkem není jedna knihovna, ale celé jejich stádečko.</p>
+<p>Při běhu aplikace pak dojde ke zvláštnímu stavu, kdy je část kódu (to, co jste napsali vy) k dispozici ve zkompilované podobě. Druhá část (reprezentace serverových ovládacích prvků) se pak generuje dynamicky podle ASPX souboru. To je důvod, proč je v definici backendových tgříd pro stránky uvedeno klíčové slovo <em>partial class</em> - třída je rozdělená, půlka se generuje dynamicky za běhu, druhá je už zkompilovaná.</p>
+<p><strong>Publishing - not updateable.</strong> Pokud ve stejném dialogu zrušíte zaškrtnutí pole <em>allow this site to be updateable</em>, situace se razantně změní. Celá aplikace, včetně HTML kódu se zkompiluje do dynamických knihoven. Výsledkem publikace jsou sice i ASPX soubory, ale jsou prázdné. Z hlediska .NET Frameworku nemají význam a můžete je smazat (mohou ale, při určitém nastavení, mít význam pro Internet Information Services).</p>
+<h2 id="web-application-projects">Web Application Projects</h2>
+<p>Pokud vám výše popsané chování nevyhovuje, případně se vám nelíbí, že VS 2005 přisupuje k webovým projektům stylem &quot;co projekt, to adresář&quot; a zahrne do projektu vše, co v dané složce vidí, připravil pro vás Microsoft <strong><a href="http://msdn.microsoft.com/asp.net/reference/infrastructure/wap/"><strong>Web Application Projects (WAP)</strong></a></strong>. To je doplněk do VS 2005, který vám umožní vyvíjet i v nové verzi projekty &quot;postaru&quot;. Součástí projektu bude jen to, co do něj explicitně zahrnete a výsledkem bude jedna DLL knihovna.</p>
+<p>WAP můžete ocenit též v případě, že chcete snadno zmigrovat webovou aplikaci napsanou v .NET 1.x pod aktuální verzi 2.0. Pokud se tímto typem projektů chcete obšírněji zabývat, doporučuji vám prostudovat si <a href="http://webproject.scottgu.com/">stránku s příklady a tutoriály</a>, kterou provozuje můj oblíbenec Scott Guthrie.</p>
+<h2 id="web-deployment-projects">Web Deployment Projects</h2>
+<p>Pokud vám nový přístup k webovým projektům vyhovuje, ale chtěli byste mít větší kontrolu nad procesem nasazení aplikací, neměl by vaší pozornosti uniknout jiný doplněk: <strong><a href="http://msdn.microsoft.com/asp.net/reference/infrastructure/wdp/"><strong>Web Deployment Projects (WDP)</strong></a></strong>. Tento nástroj vám umožní podrobně nastavovat, v jaké podobě se bude vyskytovat zkompilovaný kód. Můžete vygenerovat jednu DLL pro celou aplikaci, pro každou stránku, podle adresářů... Jedná se v zásadě o schopnější náhradu výše zmiňované funkce <em>publish web site</em>.</p>
+<p>Pro pořádek jenom připomínám, že všechny zde popsané nástroje se instalují pouze na vývojovou stanici, kde je Visual Studio. Na serveru pro WAP nebo WDP žádnou speciální podporu nepotřebujete,</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

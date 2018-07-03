@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tajemství souboru app_offline.htm | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Magické schopnosti souboru app_offline.htm, přítomné v ASP.NET od verze 2.0, vám mohou usnadnit nasazení a upgrade aplikací." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Tajemství souboru app_offline.htm</h1>
+      <section class="article">
+        <p>Tenhle článek jsem se chystal napsat už pěkně dlouho, ale vždycky mi do toho něco vlezlo. Týká se tajemného souboru <em>app_offline.htm</em>.</p>
+<p>Princip jeho fungování je ve skutečnosti velice prostý. Pokud do rootu webové aplikace umístíte soubor, který se jmenuje <em>app_offline.htm</em> (název je nutné přesně dodržet, s jiným to fungovat nebude), stanou se dvě věci:</p>
+<ol>
+<li>Ukončí se běh celé aplikace a zruší se její AppDomain.</li>
+<li>Veškeré požadavky, které by aplikace jinak vyřizovala (typicky tedy požadavky na soubory .aspx, .ashx atd.) budou vyřízeny tak, že žadatel obdrží obsah souboru <em>app_offline.htm</em>.</li>
+</ol>
+<p>Ukončení aplikace budete typicky využívat v případě, že chcete aplikaci, nebo její části, upgradovat. Uvolní se totiž všechny soubory, které by aplikace mohla používat, uzavřou se všechna databázová spojení atd. Do souboru byste měli též zapsat nějaký smysluplný text, který vašim uživatelům sdělí, že se jedná o plánovaný výpadek a že nemají propadat panice.</p>
+<p>I když informace sama je většinou svou podstatou stručná, velikost souboru by měla být větší než 512 bajtů. Ne z hlediska ASP.NET (aplikaci vám shodí i prázdný soubor, na jeho obsahu nezáleží), ale protože Internet Explorer v případě chybových stavů s odpovědí kratší než 512 bajtů zobrazí svou vlastní generickou chybovou hlášku (obávané “Stránku nelze zobrazit”) a ne vámi definovaný text. Inspiraci můžete načerpat například v <a href="http://www.aspnet.cz/_app_offline.htm">jeho znění na tomto serveru</a> (mám ve zvyku tento soubor ve všech aplikacích trvale uchovávat a jenom ho přejmenovat, když není třeba, proto to podtržítko na začátku).</p>
+<p>Takovéto odstavení aplikace vám také umožní aktualizovat ad-hoc připojený databázový soubor v případě user instance SQL Serveru Express. Ovšem pouze za předpokladu, že jste jejím jediným uživatelem.</p>
+<p>Poté, co upgrade dokončíte, stačí soubor <em>app_offline.htm</em> smazat a nebo přejmenovat. První další požadavek na danou aplikaci ji znovu nastartuje.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

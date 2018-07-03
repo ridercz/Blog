@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Příklady a ukázkové databáze pro Microsoft SQL Server 2005 a 2008 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Doba, kdy součástí každé instalace databázového serveru byly ukázkové databáze pubs a Northwind naštěstí již dávno skončila. Ukázkovou databázi AdventureWorks si nyní musíte stáhnout a nainstalovat zvlášť, nachází se na CodePlexu." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Příklady a ukázkové databáze pro Microsoft SQL Server 2005 a 2008</h1>
+      <section class="article">
+        <p>Doba, kdy součástí každé instalace databázového serveru byly ukázkové databáze <code>pubs</code> a <code>Northwind</code> naštěstí již dávno skončila. Ukázkovou databáze <code>AdventureWorks</code> si nyní musíte stáhnout a nainstalovat zvlášť. O škodlivosti předinstalovaných příkladů by se dalo napsat mnohé. Ostatně, kdo spravoval IIS 4.0 mi jistě dá za pravdu, že pokud jeden ručně neodstranil z produkčního serveru příklady, děly se podivuhodné věci - protože příklady obsahovaly roztomilou sbírku bezpečnostních chyb.</p>
+<p>U SQL Serveru o žádných konkrétních nevím, leč jistě nejsem sám, kdo si svého času myslel, že databáze jménem <code>pubs</code> je - stejně jako <code>master</code>, <code>model</code>, <code>msdb</code> a <code>tempdb</code> - cosi systémového, na co by běžný smrtelník raději neměl sahat.</p>
+<p>V případě SQL Serveru 2005 a 2008 si musíte příklady explicitně stáhnout a nainstalovat, prahnete-li po nich. Ta správná adresa je <a href="http://codeplex.com/SqlServerSamples/" title="http://codeplex.com/SqlServerSamples">http://codeplex.com/SqlServerSamples/</a>. Najdete na ní kompletní sbírku příkladů pro rozličné funkce SQL Serveru a rovněž několik verzí databáze <code>AdventureWorks</code>.</p>
+<p>Novinkou, alespoň tedy pro mne, je zjednodušená databáze <code>AdventureWorksLT</code>. Má mnohem jednodušší strukturu a také objem - stahujete dvě mega místo třiceti.</p>
+<p>Upozorňuji, že instalace vám jenom datové soubory nakopíruje na správné místo (typicky do složky <code>C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data</code>), ale neattachne je, takže nebudou v SQL Serveru vidět. Musíte si je tedy připojit ručně, případně je zkopírovat do aplikačního adresáře a attachnout přes user instance.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

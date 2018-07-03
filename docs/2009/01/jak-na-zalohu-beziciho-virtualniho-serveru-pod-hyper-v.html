@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak na zálohu běžícího virtuálního serveru pod Hyper-V | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jednou z velkých výhod virtualizačních technologií je snadnost zálohování. Stačí spustit zálohu fyzického serveru a máme zazálohovány i virtuální stroje na něm běžící. Tolik tedy praví teorie. V praxi to bývá poněkud složitější." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Jak na zálohu běžícího virtuálního serveru pod Hyper-V</h1>
+      <section class="article">
+        <p>Jednou z velkých výhod virtualizačních technologií je snadnost zálohování. Stačí spustit zálohu fyzického serveru a máme zazálohovány i virtuální stroje na něm běžící. Tolik tedy praví teorie. V praxi to bývá poněkud složitější.</p>
+<h2 id="o-zalohovani-virtualu-obecne">O zálohování virtuálů obecně</h2>
+<p>Obecně lze zálohování virtuálního stroje provádět dvěma způsoby. Při prvním z nich zapomeneme na to, že počítač je virtuální a zazálohujeme ho stejně jako fyzický stroj. Tedy nainstalujeme do něj příslušný zálohovací program, agenta či co a zálohujeme jako obvykle. Elegantnější řešení spočívá v tom, že si uvědomíme, že virtuání server není v podstatě nic jiného, než několik souborů na disku a že si můžeme spoustu práce ušetřit tím, že tyto soubory prostě zkopírujeme jinam.</p>
+<p>Nejjednodušší řešení tedy spočívá v tom, že virtuální stroj zastavíme, zkopírujeme příslušné VHD soubory a virtuální stroj zase spustíme. To je jednoduché a elegantní (skriptů na programové zastavení a spuštění virtuálního počítače je na webu spousta), ale nevýhodou je downtime. Po dobu zálohování, a to může trvat dlouhé minuty, je server offline. Nejlepší by tedy bylo umět zazálohovat běžící virtuální server, aniž by bylo třeba tento zastavovat nebo jinak zvlášť opečovávat. Dobrá zpráva: jde to. Špatná zpráva: nikdo vám neřekne přesně jak. Tedy až na mne :)</p>
+<h3 id="sugestivni-zatacka-ke-snapshotum">Sugestivní zatáčka ke snapshotům</h3>
+<p>Hyper-V disponuje slibně vypadající technologií &quot;snapshotů&quot;. Jedním stručným povelem lze vytvořit snapshot běžícího počítače a kdykoliv se k němu pak vrátit. Což o to, funkcionalita je to pěkná, ale <strong>nechrání před selháním disku na hostitelském (fyzickém) stroji</strong>. Snapshot je užitečný, pokud se chystáte páchat zhůvěřilosti ve virtuálu a chcete mít možnost se vrátit zpět (a i zde jsou jisté drobné zádrhele, o nichž si můžete podrobně přečíst <a href="http://itbloggen.se/cs/blogs/micke/archive/2008/09/20/like-snapshots-in-hyper-v-please-read-this.aspx">v článku mého MVP kolegy</a>). Ale nezachrání vás, když se disk fyzického serveru odebéře do věčných lovišť.</p>
+<h2 id="jak-na-zalohu-pomoci-shadow-copy">Jak na zálohu pomocí Shadow Copy</h2>
+<p>Skutečná cesta k on-line zálohování vede přes Shadow Copy. Shadow copy je funkce, která vám umožní zálohovat i otevřené a průběžně se měnící soubory tím, že vytvoří jejich dočasnou &quot;zmraženou&quot; kopii, kterou pak můžete zkopírovat, kam je jen libo.</p>
+<p>Pro práci se shadow copy slouží ve Windows 2008 program <code>DISKSHADOW.EXE</code>. Tento jest lze spustit buďto v interaktivním režimu, kdy mu ručně zadáváte příkazy, a nebo v režimu dávkovém, kdy tytéž příkazy zapíšete do textového souboru a ten tomuto programu vecpete do chřtánu pomocí parametrů příkazového řádku.</p>
+<p>Obecná idea zálohování Hyper-V stroje je následující:</p>
+<ol>
+<li>Na všech discích, kde máte data virtuálních strojů (tedy typicky systémový disk, kde je konfigurace a datové disky, kde je VHD) povolíte shadow copy.</li>
+<li>Vytvoříte shadow copy, tj. v podstatě vytvoříte dočasnou kopii stavu tak, jak je právě <em>teď</em>.</li>
+<li>Tuto shadow copy si přimountujete jako další disk (buďto další písmenko a nebo si můžete vytvořit NTFS junction point a namapovat to do prázdného adresáře).</li>
+<li>Z této shadow copy potom běžnými prostředky okopírujete data někam do pryč, na jiný disk.</li>
+<li>Shadow copy opět odmountujete.</li>
+<li>Shadow copy můžete explicitně zrušit. Pokud tak neučiníte, postará se o to příležitostně operační systém sám, drží si jich jenom omezený počet.</li>
+</ol>
+<p>Praktická bezobslužná implementace jest ovšem poněkud komplikovaná, s ohledem na dočasnou a nestálou povahu stínových kopií. Potřebujete udělat hned několik věcí:</p>
+<ol>
+<li>Spustit hlavní dávkový soubor, který udělá přípravné práce a spustí <code>DISKSHADOW.EXE</code> se sadou příkazů, které vytvoří kopii, přimountují ji a zase odmountují.</li>
+<li>V této sadě příkazů želbohu nemůžete zkopírovat soubory, protože to <code>DISKSHADOW.EXE</code> neumí. Umí ale zavolat v rámci dávky externí dávkový soubor, který to udělá.</li>
+<li>Po dokončení běhu dávky se pak vrátíme zpět do hlavního souboru a uklidíme po sobě.</li>
+</ol>
+<h2 id="konkretni-implementace">Konkrétní implementace</h2>
+<p>Představme si následující situaci: máme jeden fyzický Hyper-V server a na něm větší množství virtuálů. Fyzický server má tři disky:</p>
+<ul>
+<li><strong>C:</strong> – na něm je operační systém a také uložená konfigurační data Hyper-V serverů, a to v adresáři <code>C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines</code>.</li>
+<li><strong>D:</strong> – zde se nacházejí systémové disky virtuálních strojů, v adresáři <code>D:\SystemVHD</code>.</li>
+<li><strong>E:</strong> – zde se nacházejí datové disky virtuálních strojů, v adresáři <code>E:\DataVHD</code>.</li>
+</ul>
+<p>Zálohování chceme provádět &quot;křížem&quot;, tedy že data z <strong>D:</strong> zkopírujeme na <strong>E:</strong> a naopak. Konfiguraci (je malá) zkopírujeme na <strong>D:</strong> i na <strong>E:</strong>. Tím dosáhneme toho, že při selhání kteréhokoliv z disků budeme mít k dispozici kompletní data.</p>
+<p>Aby byla situace zábavnější, chceme udržovat vždy dvě poslední zálohy, nazvěme je třeba &quot;SetA&quot; a &quot;SetB&quot;. Toto opatření zajistí, že i pokud by došlo k selhání v průběhu zálohy, budeme mít k dispozici &quot;poslední dobrá&quot; data odminula.</p>
+<p>To celé lze zařídit celkem jednoduše, pomocí jednoho dávkového souboru, jedné sady příkazů pro <code>DISKSHADOW.EXE</code> a pár pomocných souborů, které si dle potřeby vytvoříme a zase smažeme.</p>
+<p>Hlavní magie se děje v souboru <code>C:\Backup\HVBS\backup.cmd</code>, který vypadá následovně:</p>
+ <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt"> 
+<p>@ECHO OFF</p>
+<p>SET HVBS_SEQMARKERFILE=C:\Backup\HVBS\sequence.marker</p>
+<p>SET HVBS_PHAMARKERFILE=C:\Backup\HVBS\phase.marker</p>
+<p>SET HVBS_LOGFILE=C:\Backup\HVBS\last.log</p>
+<p>IF EXIST %HVBS_PHAMARKERFILE% GOTO PHASE2</p>
+<p>:PHASE1</p>
+<p>CLS</p>
+<p>ECHO Hyper-V Backup Script version 1.0 (2009-01-03)</p>
+<p>ECHO Copyright (c) Michal A. Valasek - Altairis, 2008-2009</p>
+<p>ECHO.</p>
+<p>ECHO == Running backup phase #1 ==</p>
+<p>ECHO This is a marker file for determining backup phase. Do not delete. &gt; %HVBS_PHAMARKERFILE%</p>
+<p>ECHO Determining backup sequence...</p>
+<p>IF EXIST %HVBS_SEQMARKERFILE% (</p>
+<p>  DEL %HVBS_SEQMARKERFILE%</p>
+<p>  SET HVBS_SEQ=SetB</p>
+<p>) ELSE (</p>
+<p>  ECHO This is a marker file for determining backup sequence. &gt; %HVBS_SEQMARKERFILE%</p>
+<p>  SET HVBS_SEQ=SetA</p>
+<p>)</p>
+<p>ECHO This is backup sequence &quot;%HVBS_SEQ%&quot;</p>
+<p>ECHO [%DATE%%TIME%] Backup sequence &quot;%HVBS_SEQ%&quot; started &gt; %HVBS_LOGFILE%</p>
+<p>ECHO Deleting metadata...</p>
+<p>DEL C:\Backup\HVBS*.cab</p>
+<p>ECHO Preparing mount points...</p>
+<p>MKDIR C:\Backup\HVBS\mnt.c</p>
+<p>MKDIR C:\Backup\HVBS\mnt.d</p>
+<p>MKDIR C:\Backup\HVBS\mnt.e</p>
+<p>ECHO Creating backup directories...</p>
+<p>MKDIR D:\Backup-%HVBS_SEQ%\CFG</p>
+<p>MKDIR D:\Backup-%HVBS_SEQ%\VHD</p>
+<p>MKDIR E:\Backup-%HVBS_SEQ%\CFG</p>
+<p>MKDIR E:\Backup-%HVBS_SEQ%\VHD</p>
+<p>ECHO Running diskshadow...</p>
+<p>ECHO [%DATE%%TIME%] Running diskshadow script &gt;&gt; %HVBS_LOGFILE%</p>
+<p>DISKSHADOW /S C:\Backup\HVBS\backup.dsh</p>
+<p>ECHO [%DATE%%TIME%] DISKSHADOW completed with errorlevel %ERRORLEVEL% &gt;&gt; %HVBS_LOGFILE%</p>
+<p>GOTO PHASE3</p>
+<p>:PHASE2</p>
+<p>ECHO == Running backup phase #2 ==</p>
+<p>DEL %HVBS_PHAMARKERFILE%</p>
+<p>ECHO [%DATE%%TIME%] Entering phase 2 &gt;&gt; %HVBS_LOGFILE%</p>
+<p>ECHO Copying configuration #1...</p>
+<p>ROBOCOPY &quot;C:\Backup\HVBS\mnt.c\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines&quot; &quot;D:\Backup-%HVBS_SEQ%\CFG&quot; *.xml /MIR /NJH /NJS /ETA</p>
+<p>ECHO [%DATE%%TIME%] ROBOCOPY #1 completed with errorlevel %ERRORLEVEL% &gt;&gt; %HVBS_LOGFILE%</p>
+<p>ECHO Copying configuration #2...</p>
+<p>ROBOCOPY &quot;C:\Backup\HVBS\mnt.c\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines&quot; &quot;E:\Backup-%HVBS_SEQ%\CFG&quot; *.xml /MIR /NJH /NJS /ETA</p>
+<p>ECHO [%DATE%%TIME%] ROBOCOPY #2 completed with errorlevel %ERRORLEVEL% &gt;&gt; %HVBS_LOGFILE%</p>
+<p>ECHO Copying system VHDs...</p>
+<p>ROBOCOPY &quot;C:\Backup\HVBS\mnt.d\SystemVHD&quot; &quot;E:\Backup-%HVBS_SEQ%\VHD&quot; /MIR /NJH /NJS /ETA</p>
+<p>ECHO [%DATE%%TIME%] ROBOCOPY #3 completed with errorlevel %ERRORLEVEL% &gt;&gt; %HVBS_LOGFILE%</p>
+<p>ECHO Copying data VHDs...</p>
+<p>ROBOCOPY &quot;C:\Backup\HVBS\mnt.e\DataVHD&quot; &quot;D:\Backup-%HVBS_SEQ%\VHD&quot; /MIR /NJH /NJS /ETA</p>
+<p>ECHO [%DATE%%TIME%] ROBOCOPY #4 completed with errorlevel %ERRORLEVEL% &gt;&gt; %HVBS_LOGFILE%</p>
+<p>GOTO END</p>
+<p>:PHASE3</p>
+<p>ECHO == Running backup phase #3 ==</p>
+<p>ECHO [%DATE%%TIME%] Entering phase 3 &gt;&gt; %HVBS_LOGFILE%</p>
+<p>ECHO Deleting mount points...</p>
+<p>RMDIR C:\Backup\HVBS\mnt.c</p>
+<p>RMDIR C:\Backup\HVBS\mnt.d</p>
+<p>RMDIR C:\Backup\HVBS\mnt.e</p>
+<p>ECHO [%DATE%%TIME%] Backup sequence &quot;%HVBS_SEQ%&quot; completed &gt;&gt; %HVBS_LOGFILE%</p>
+<p>ECHO Backup script completed!</p>
+<p>:END</p>
+ </div> 
+<p>Pomocným fámulem jest soubor <code>C:\Backup\HVBS\backup.dsh</code>, jehož obsah je dost stručný:</p>
+ <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt"> 
+<p>set context persistent</p>
+<p>add volume C: alias drive_c</p>
+<p>add volume D: alias drive_d</p>
+<p>add volume E: alias drive_E</p>
+<p>set verbose on</p>
+<p>create</p>
+<p>expose %drive_c% C:\Backup\HVBS\mnt.c</p>
+<p>expose %drive_d% C:\Backup\HVBS\mnt.d</p>
+<p>expose %drive_e% C:\Backup\HVBS\mnt.e</p>
+<p>exec C:\Backup\HVBS\backup.cmd</p>
+<p>unexpose C:\Backup\HVBS\mnt.c</p>
+<p>unexpose C:\Backup\HVBS\mnt.d</p>
+<p>unexpose C:\Backup\HVBS\mnt.e</p>
+ </div> 
+<p>Dále pak si skript v průběhu své činnosti vytvoří a zase smaže soubory <code>C:\Backup\HVBS\sequence.marker</code> a <code>C:\Backup\HVBS\phase.marker</code>. Postup činnosti zálohovacího skriptu je poměrně prostý:</p>
+<ol>
+<li>Spustíme (patrně pomocí Task Scheduleru) dávku <code>backup.cmd</code>.</li>
+<li>Ta zjistí, že neexistuje soubor <code>phase.marker</code> a pokračuje tedy fází 1.</li>
+<li>Shora uvedený soubor <code>phase.marker</code> vytvoříme (na jeho obsahu nezáleží, pouze na tom, zda existuje nebo ne).</li>
+<li>V závislosti na (ne)existenci souboru <code>sequence.marker</code> určíme název cílového adresáře jako &quot;<code>SetA</code>&quot; nebo &quot;<code>SetB</code>&quot; a soubor se vytvoří nebo smaže, takže tyto názvy se cyklicky střídají.</li>
+<li>Vytvoříme prázdné adresáře <code>C:\Backup\HVBS\mnt.c</code> až <code>C:\Backup\HVBS\mnt.e</code>. Na ně později namapujeme vytvořené kopie.</li>
+<li>Spustíme <code>DISKSHADOW.EXE</code> a předáme mu dávku příkazů <code>C:\Backup\HVBS\backup.dsh</code>.</li>
+<li>V rámci této dávky je znovu spuštěna ve druhé kopii dávka <code>backup.cmd</code>. Protože ale nyní existuje soubor <code>phase.marker</code>, přeskočí se již provedená fáze 1 a spustí se fáze 2.</li>
+<li>V ní pomocí ROBOCOPY.EXE zkopírujeme co jen kam potřebujeme. Jen v cestě místo písmen disků použejem dříve vytvořené adresáře &quot;<code>mnt.c</code>&quot;, &quot;<code>mnt.d</code>&quot; a &quot;<code>mnt.e</code>&quot;.</li>
+<li>Nezapomeneme smazat soubor <code>phase.marker</code>, aby se příště dávka spustila zase od začátku a dávku ukončíme.</li>
+<li>V běhu pokračuje první instance <code>backup.cmd</code>, která pokračuje fází 3, ve které se už neděje nic zásadního, jenom po sobě uklidíme a smažeme nyní již nepotřebné prázdné adresáře.</li>
+</ol>
+<p>Výsledkem této činnosti je, že při každém spuštění skriptu se nám vytvoří jedna záloha, cyklicky pojmenovaná &quot;<code>D/E:\Backup-SetA</code>&quot; a &quot;<code>D/E:\Backup-SetB</code>&quot;. Virtuální počítače o této činnosti nevědí a nevyžaduje se od nich žádná aktivní spolupráce. Pouze musejí mít nainstalované Integration components (tj. &quot;Virtual Machine Additions pro Hyper-V&quot;). Nemají-li, bezvýpadkově je zálohovat nelze a v průběhu zálohy budou zapauzovány a potí znovu rozběhnuty. Nebo by alespoň měly být, nezkoušel jsem to, protože žádný server bez IC nemám.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Chaos Generator: machine keys, klíče, hesla dle libosti | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Při vývoji a nasazení aplikací potřebujeme často trochu chaosu. Tím nemyslím příspěvky našich spolupracovníků, ale náhodně generované klíče či hesla. K jejich generování lze použít řadu různých programů a online služeb, ale já osobně s nimi z různých důvodů nejsem spokojen. Takže jsem napsal a zprovoznil vlastní nástroj, který lze považovat za swiss-army knife pro všechny případy, kdy toužíme po chaosu. A zároveň může sloužit jako inspirace pro tvorbu uživatelského rozhraní pomocí jQuery UI." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>ASP.NET Chaos Generator: machine keys, klíče, hesla dle libosti</h1>
+      <section class="article">
+        <p>Při vývoji a nasazení aplikací potřebujeme často trochu chaosu. Tím nemyslím příspěvky našich spolupracovníků, ale náhodně generované klíče či hesla. K jejich generování lze použít řadu různých programů a online služeb, ale já osobně s nimi z různých důvodů nejsem spokojen. Takže jsem napsal a zprovoznil vlastní nástroj, který lze považovat za swiss-army knife pro všechny případy, kdy toužíme po chaosu. A zároveň může sloužit jako inspirace pro tvorbu uživatelského rozhraní pomocí jQuery UI.</p>
+<p>Online verzi aplikace najdete na adrese <a href="http://chaos.aspnet.cz">chaos.aspnet.cz</a>. Tamtéž si (na záložce <em>About</em>) můžete stáhnout zdrojový kód celé aplikace. A co umí?</p>
+<h2 id="generovani-machine-keys-i-pro.net-4.0">Generování machine keys i pro .NET 4.0</h2>
+<p>Prakticky pro každou ASP.NET aplikaci potřebujete vygenerovat klíče pro <em>machineKeys</em> sekci. Generátorů MachineKeys klíčů se po internetu toulá spousta, ale nenašel jsem žádný, který by podporoval i nové algoritmy, které jsou součástí ASP.NET 4.0.</p>
+<h2 id="generovani-hesel">Generování hesel</h2>
+<p>Rovněž generátorů hesel je na Internetu spousta, ale když je potřebuju najít, žádný vhodný se mi nikdy pod ruku nedostane. Můj generátor umí automaticky vytvářet hesla libovolné délky a složitosti, přičemž zaručuje, že hesla nebudou obsahovat znaky, které lze vizuálně snadno zaměnit, jako 1/I/l nebo 0/O.</p>
+<h2 id="univerzalni-generator-klicu-a-nahodnych-dat">Univerzální generátor klíčů a náhodných dat</h2>
+<p>Tohle je funkce, která mi chyběla nejvíc. Můžete zadat požadovaný počet klíčů a jejich délku (v bitech nebo bajtech) a program je umí vygenerovat v řadě různých formátů:</p>
+<ul>
+<li><strong>DEC array</strong> je pole bajtů v desítkové soustavě, oddělených řárkami, třeba pro zkopírování do zdrojového kódu.</li>
+<li><strong>HEX array</strong> je totéž, ale bajty jsou v šestnáctkové soustavě, v 0x00 notaci.</li>
+<li><strong>Base16</strong> generuje klíč jako sekvenci šestnáctkových číslic 0-F (velká nebo malá písmena). Tenhle formát je používán machineKeys (i když na ty mám zvláštní generátor), ale třeba se typicky zadává i při konfiguraci WiFi sítě.</li>
+<li><strong>Base64</strong> je kódování široce používané na mnoha místech.</li>
+<li><strong>UrlBase64</strong> je jeho varianta, která je bezpečná i pro použití v rámci URL, protože znaky + a / byly nahrazeny - a _.</li>
+</ul>
+<h2 id="rozhrani-jquery-ui">Rozhraní jQuery UI</h2>
+<p>Pro tvorubu uživatelského rozhraní jsem použil knihovnu jQuery UI a aplikace ukazuje, jak je možné ji zkombinovat s ASP.NET Web Forms. Aplikace přirom není na JavaScriptu závislá a &quot;degrades gracefully&quot; – pokud JavaScript nefunguje, zobrazí sice jednoduché, ale plně funkční rozhraní</p>
+<h2 id="trida-chaoshelper-pro-vase-aplikace">Třída ChaosHelper pro vaše aplikace</h2>
+<p>Jádrem aplikace je jednoduchá třída <em>ChaosHelper</em>, která poskytuje uživatelsky přítulné metody pro generování náhodných dat v různých formátech. Používá přitom třídu <em>RNGCryptoServiceProvider</em>, tedy kryptograficky bezpečný generátor náhodných čísel (více o něm najdete v článku <a href="http://www.aspnet.cz/articles/142-prilis-sporadany-svet">Příliš spořádaný svět</a>).</p>
+<p>Tuto třídu můžete použít i samostatně ve vlastních aplikacích, pokud budou vyžadovat generování klíčů či hesel.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

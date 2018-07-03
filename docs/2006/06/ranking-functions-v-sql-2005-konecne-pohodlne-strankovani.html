@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ranking functions v SQL 2005 - konečně pohodlné stránkování | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Verze 2005 přinesla do SQL Serveru řadu užitečných novinek. Jednou z nich jest též implementace tzv. ranking functions - dalo by se to překládat např. jako hodnotící funkce. Takové funkce jsou celkem čtyři a využijete je především, pokud chcete vypisovat z databáze pouze část záznamů. Vyloženě školním příkladem je využití funkce ROW_NUMBER() pro stránkování výpisů. Znamená to, že nebudeme muset nadále závidět uživatelům MySQL jejich SELECT LIMIT a budeme se moci štastně vzdát šílených stránkovacích procedur realizovaných pomocí rozličných kombinací SELECT TOP." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Ranking functions v SQL 2005 - konečně pohodlné stránkování</h1>
+      <section class="article">
+        <p>Verze 2005 přinesla do SQL Serveru řadu užitečných novinek. Jednou z nich jest též implementace tzv. <em>ranking functions</em> - dalo by se to překládat např. jako <em>hodnotící funkce</em>. Takové funkce jsou celkem čtyři a využijete je především, pokud chcete vypisovat z databáze pouze část záznamů. Vyloženě školním příkladem je využití funkce <code>ROW_NUMBER()</code> pro stránkování výpisů. Znamená to, že nebudeme muset nadále závidět uživatelům MySQL jejich <code>SELECT LIMIT</code> a budeme se moci štastně vzdát šílených stránkovacích procedur realizovaných pomocí rozličných kombinací <code>SELECT TOP</code>.</p>
+<h2 id="row_number">ROW_NUMBER()</h2>
+<p>Funkce <code>ROW_NUMBER()</code> slouží nepříliš překvapivě k vrácení čísla řádku, k sekvenčnímu číslování. Jednoduchý dotaz (nad tabulkou <code>Person.Contact</code> z ukázkové databáze <code>AdventureWorks</code>) s využitím této funkce může vypadat takto:</p>
+<p><code>SELECT LastName, FirstName, EmailAddress, ROW_NUMBER() OVER (ORDER BY LastName) AS RowNumber FROM Person.Contact ORDER BY LastName</code></p>
+<p>Výsledek bude obsahovat pole RowNumber, ve kterém bude sekvenční číslo, stoupající od jedné. My zpravidla ovšem nechceme toto číslo získat, ale spíše se podle něj zařídit - zkonstruovat odpovídající podmínku. Ranking functions ovšem není možné použít ve <code>WHERE</code> části dotazu, proto si musíme pomoci malým trikem:</p>
+<p><code>WITH X AS (SELECT LastName, FirstName, EmailAddress, ROW_NUMBER() OVER (ORDER BY LastName) AS RowNumber FROM Person.Contact) SELECT * FROM X WHERE X.RowNumber BETWEEN 21 AND 40 ORDER BY X.LastName</code></p>
+<p>Pomocí klíčového slova WITH si vytvoříme poddotaz, na který aplikujeme požadovanou podmínku, v našem případě touhu po záznamech 21-40, tedy hypotetické druhé stránce při stránkování po dvaceti.</p>
+<h2 id="rank-a-dense_rank">RANK() a DENSE_RANK()</h2>
+<p>Funkce <code>RANK()</code> a <code>DENSE_RANK()</code> jsou o něco složitější. Nevracejí totiž číslo řádku, ale pořadí hodnoty. Provedeme si drobnou demografickou analýzu jmen kontaktů firmy <em>Adventure Works</em> - budeme zjišťovat, jaká křestní jména se mezi nimi nejčastěji vyskytují. Použijeme k tomu následující dotaz, obsahující všechny dosud představené funkce:</p>
+<p><code>SELECT FirstName, COUNT(*) AS PersonCount, ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS RowNumber, RANK() OVER (ORDER BY COUNT(*) DESC) AS Rank, DENSE_RANK() OVER (ORDER BY COUNT(*) DESC) AS DenseRank FROM Person.Contact GROUP BY FirstName ORDER BY PersonCount DESC</code></p>
+<p>Výsledek tohoto dotazu (resp. jeho úvodní část) bude vypadat takto:</p>
+ <table style="MARGIN-LEFT: auto; MARGIN-RIGHT: auto"><colgroup><col><col style="TEXT-ALIGN: right" span="4"></colgroup><thead> <tr><th>FirstName</th><th>PersonCount</th><th>RowNumber</th><th>Rank</th><th>DenseRank</th></tr></thead> <tbody> <tr> <td>Richard</td> <td>103</td> <td>1</td> <td>1</td> <td>1</td></tr> <tr> <td>Katherine</td> <td>99</td> <td>2</td> <td>2</td> <td>2</td></tr> <tr> <td>Marcus</td> <td>97</td> <td>3</td> <td>3</td> <td>3</td></tr> <tr> <td>James</td> <td>97</td> <td>4</td> <td>3</td> <td>3</td></tr> <tr> <td>Jennifer</td> <td>96</td> <td>5</td> <td>5</td> <td>4</td></tr> <tr> <td>Dalton</td> <td>93</td> <td>6</td> <td>6</td> <td>5</td></tr> <tr> <td>Alexandra</td> <td>93</td> <td>7</td> <td>6</td> <td>5</td></tr> <tr> <td>Lucas</td> <td>93</td> <td>8</td> <td>6</td> <td>5</td></tr> <tr> <td>Morgan</td> <td>92</td> <td>9</td> <td>9</td> <td>6</td></tr> <tr> <td>Isabella</td> <td>92</td> <td>10</td> <td>9</td> <td>6</td></tr> <tr> <td>Seth</td> <td>92</td> <td>11</td> <td>9</td> <td>6</td></tr> <tr> <td>Natalie</td> <td>91</td> <td>12</td> <td>12</td> <td>7</td></tr> <tr> <td>Robert</td> <td>90</td> <td>13</td> <td>13</td> <td>8</td></tr> <tr> <td>Eduardo</td> <td>90</td> <td>14</td> <td>13</td> <td>8</td></tr> <tr> <td>Sydney</td> <td>90</td> <td>15</td> <td>13</td> <td>8</td></tr> <tr> <td>Kaitlyn</td> <td>90</td> <td>16</td> <td>13</td> <td>8</td></tr> <tr> <td>Ian</td> <td>89</td> <td>17</td> <td>17</td> <td>9</td></tr> <tr> <td>Julia</td> <td>89</td> <td>18</td> <td>17</td> <td>9</td></tr> <tr> <td>Xavier</td> <td>88</td> <td>19</td> <td>19</td> <td>10</td></tr> <tr> <td>Chloe</td> <td>88</td> <td>20</td> <td>19</td> <td>10</td></tr></tbody></table>
+<ul>
+<li>Sloupec <code>PersonCount</code> obsahuje počet osob obdařených daným křestním jménem.</li>
+<li>Sloupec <code>RowNumber</code> obsahuje výsledek nám již známé funkce <code>ROW_NUMBER()</code>, tedy souvislou číselnou řadu stoupající po jedné.</li>
+<li>Sloupec <code>Rank</code>, jako výsledek stejnojmenné funce, obsahuje pořadí sledované hodnoty (počtu osob). Vidíme, že s hodnotou 97 se jména Marcus a James dělí o třetí místo. Čtvrtá příčka zůstává neobsazena a pokračujeme až jménem Jennifer, které obsadilo pátou pozici.</li>
+<li>Posledním je sloupec <code>DenseRank</code>. Funkce <code>DENSE_RANK()</code> vrací stejný typ výsledku jako předchozí, ale nepřeskakuje &quot;nevyužitá&quot; místa -- o třetí místo se jména dělí a Jennifer je na místě čtvrtém.</li>
+</ul>
+<h2 id="ntile">NTILE()</h2>
+<p>Poslední ranking function, <code>NTILE()</code>, rozdělí výsledek do určeného počtu skupin (<em>n-tin</em>, jako např. <em>pětin</em> pro n=5) a vrátí číslo oné <em>n-tiny</em>.</p>
+<h2 id="partition-by">PARTITION BY</h2>
+<p>Ve všech shora uvedených funkcích můžete použít klauzuli <code>PARTITION BY</code>. V takovém případě se pořadí (atd.) počítá pouze v rámci v této klauzuli specifikované podmínky. Jedná se o jakousi obdobu klauzule <code>GROUP BY</code>. Pokud bychom v tabulce <code>Person.Contact</code> měli ještě sloupeček <code>Country</code> (což bohužel nemáme) mohli bychom statistiku rozšířit na jednotlivé země právě podle <code>PARTITION BY Country</code>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

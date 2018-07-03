@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak úspěšně provozovat ASP.NET 1.1 a 2.0 B2 na jednom stroji | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Návod na testování Whidbey aplikací souběžně s verzí 1.1" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Jak úspěšně provozovat ASP.NET 1.1 a 2.0 B2 na jednom stroji</h1>
+      <section class="article">
+        <p>Pokud chcete provozovat na jednom serveru ASP.NET verze 1.1 a 2.0 Beta 2 (Whidbey), je to možné. Mapování jednotlivých verzí ve struktuře IIS (na jednotlivé virtuální servery a adresáře) je na sobě naprosto nezávislé. Jedinou podmínkou je, že různé verze nemohou běžet v jednom <em>Application Poolu</em>.</p>
+<p>Postup je tedy následující:</p>
+ <ol> <li>V IIS Manageru vytvořte nový application pool. Ve stromu vlevo klepněte pravým tlačítkem na <em>Application Pools</em> a v menu zvolte <em>New > Application Pool</em>. Ponechte defaultní nastavení a pojmenujte ho třeba <em>WhidbeyAppPool</em>.</li> <li>Vytvořte nový virtuální web server (adresář). Poté si otevřete jeho vlastnosti. Na záložce <em>Home Directory</em> zvolte v listboxu dříve vytvořený pool. Dále pak na záložce ASP.NET (objeví se při instalaci Whidbey runtime) zvolte jako <em>ASP.NET version</em> 2.0.50215.0 (nebo takovou jakou máte nainstalovanou).</li></ol> 
+<p>V tomto okamžiku je už všechno nastaveno a patřičný web bude fungovat pod runtime 2.0, všechno ostatní pojede na stávající 1.1 verzi.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

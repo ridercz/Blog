@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bezpečné načítání hodnot z query stringu podruhé | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V komentáři k mému předchozím článku o query string parametrech nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Bezpečné načítání hodnot z query stringu podruhé</h1>
+      <section class="article">
+        <p>V komentáři k mému článku <a href="/entry/article-20051109.aspx">Vytváření vlastních parametrů podruhé - &quot;bezpečný&quot; query string parametr</a> nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network.</p>
+ <ul> <li>[Stáhněte si jeho kód (C#) spolu s mou ukázkovou aplikací ve VB.NET i v C# (10 kB)](/files/20051123-QueryStringParser.zip)</li></ul> 
+<p>Idea tohoto řešení je jednoduchá: Deklarujete si třídu, která reprezentuje parametry dané stránky. Pomocí atributu Arguments definujete, zda je daný parametr povinný, případně jakou má defaultní hodnotu:</p>
+<p>protected class QueryStringArguments { [Argument(ArgumentType.NonRequired, ParamName=&quot;StringParameter&quot;, DefaultValue=&quot;Defaultní hodnota nepovinného parametru&quot;)] public string StringParameter; [Argument(ArgumentType.Required, ParamName = &quot;IntParameter&quot;)] public int IntParameter; }</p>
+<p>Ve shora uvedené třídě jsem deklaroval dva parametry. Jeden je celočíselný a povinný, druhý je řetězcový, nepovinný s defaultní hodnotou.</p>
+<p>V samotné stránce pak zavoláte metodu <em>QueryStringParser.ParseArguments</em>, která se pokusí naplnit tuto třídu hodnotami z query stringu. Pokud se jí to povede, získáte silně typovou sadu nastavení. Pokud ne (protože chybí povinné parametry, případně nesouhlasí typy), dojde k chybě.</p>
+<p>Toto řešení velice elegantním způsobem řeší načítání parametrů procedurálně, tedy z vašeho kódu.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

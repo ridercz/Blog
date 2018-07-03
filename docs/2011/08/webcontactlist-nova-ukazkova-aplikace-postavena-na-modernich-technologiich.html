@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WebContactList: Nová ukázková aplikace postavená na moderních technologiích | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Abych si je všechny vyzkoušel a otestoval, rozhodl jsem se napsat jednoduchou aplikaci, využívající aktuální technologie a postupy ze světa ASP.NET Web Forms. Pokud vás zajímá, nabízím její popis a zdrojový kód ke stažení. Aktualizováno: živé demo" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>WebContactList: Nová ukázková aplikace postavená na moderních technologiích</h1>
+      <section class="article">
+        <p>Abych si je všechny vyzkoušel a otestoval, rozhodl jsem se napsat jednoduchou aplikaci, využívající aktuální technologie a postupy ze světa ASP.NET Web Forms. Aplikace sama je vcelku triviální, je to webový seznam kontaktů, využívající dvě tabulky v databázi. Jednoduchou aplikaci jsem zvolil záměrně, abych se nemusel příliš zabývat tím, co aplikace reálně dělá, ale mohl se soustředit na technologie, použité pro její vývoj.</p>
+<p>Takže co aplikace využívá?</p>
+<h2 id="vyvojove-nastroje">Vývojové nástroje</h2>
+<p>Pro práci s aplikací budete potřebovat <strong>Microsoft Visual Studio 2010 SP1</strong> nebo volně dostupný <strong><a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-web-developer-express">Visual Web Developer Express 2010 SP1</a></strong>. Doporučuji nainstalovat i <a href="http://learn.iis.net/page.aspx/868/iis-express-overview/">IIS Express</a> a <a href="http://visualstudiogallery.msdn.microsoft.com/a15c3ce9-f58f-42b7-8668-53f6cdc2cd83">Web Standards Update</a>.</p>
+<p>Využívám některé externí knihovny, které jsou referencovány pomocí <a href="http://www.nuget.org/">Nugetu</a>, takže doporučuji nainstalovat i jeho add-in. Obecně pro instalaci vývojového prostředí doporučuji použít <a href="http://www.microsoft.com/web/">Web Platform Installer</a>, je to cesta nejmenšího odporu.</p>
+<h2 id="pouzite-technologie">Použité technologie</h2>
+<h3 id="asp.net-web-forms-4.0">ASP.NET Web Forms 4.0</h3>
+<p>Aplikace je postavena na nejnovější verzi ASP.NET Web Forms a .NET Frameworku 4.0. Využívá novinek v renderování ovládacích prvků a generuje čistý HTML kód.</p>
+<h3 id="sql-server-compact-edition-4.0">SQL Server Compact Edition 4.0</h3>
+<p>Jako databázi používám nikoliv &quot;velký&quot; SQL Server, ale (relativní) novinku – SQL Server Compact Edition. To je embedded databáze, která je vhodná pro menší weby (menší jak objemem databáze, tak zatížením). Výhodou je, že se nemusí instalovat, nikde neběží externí služba atd.</p>
+<p>Vzhledem k tomu, že naše aplikace má celkem tři tabulky (dvě na data a jednu se seznamem uživatelů), je pro použití SQL Express horkým kandidátem.</p>
+<h3 id="ado.net-entity-framework">ADO.NET Entity Framework</h3>
+<p>Při návrhu aplikace jsem použil ADO.NET Entity Framework 4.0. Použil jsem klasickou metodu &quot;database first&quot;, ne <a href="http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx">nejnovější sexy code first</a>, protože aplikace je už poněkud starší a v době jejího vzniku ještě RTM verze Code First neexistovala. Kromě toho, tato metoda se také nehodí na všechno (i když zrovna pro takto jednoduchou aplikaci by své opodstatnění měla).</p>
+<h3 id="asp.net-dynamic-data">ASP.NET Dynamic Data</h3>
+<p>Aplikace využívá dynamické generování uživatelského rozhraní pomocí technologie Dynamic Data. Použitý datový model je bohatě otagován metadatovými atributy a uživatelské rozhraní pro zobrazení detailu a editace položek je generováno automaticky, na základě těchto metadat. Stejným způsobem jsou také zadávané data validována.</p>
+<p>Aplikace není na technolgii Dynamic Data postavená celá, kombinuje klasický přístup a dynamické generování UI. Podporu pro Dynamic Data získává pomocí mnou vytvořené a publikované varianty standardní Dynamic Data šablony, kterou si můžete stáhnout jako NuGet package <a href="http://www.nuget.org/List/Packages/Altairis.DynamicData.WebAppTemplates">Altairis.DynamicData.WebAppTemplates</a>.</p>
+<h3 id="url-routing">URL routing</h3>
+<p>Celá aplikace využívá URL routing. Nezadává se tedy přímo adresa ASPX web formu, jako fyzický název souboru, ale logická adresa, která se překládá na web formy a HTTP handlery. URL routing je mnohem schopnější obdoba URL rewritingu. Zatímci v případě rewritingu se jedná o hack, který trpí řadou problémů, URL routing je systematické řešení, které mimo jiné nativně řeší předávání parametrů v rámci cesty a automatické generování odkazů.</p>
+<h3 id="altairis.web.ui">Altairis.Web.UI</h3>
+<p>Za ta léta, co píšu ASP.NET aplikace, jsem si vytvořil knihovnu vlastních užitečných server controls a v podobě knihovny <a href="http://altairiswebui.codeplex.com/">Altairis.Web.UI</a> ji dal k dispozici jako open source. Můžete si ji nainstalovat i jako NuGet package <em>Altairis.Web.UI</em>.</p>
+<p>Knihovna obsahuje řadu jednoduchých, leč schopných server controls. V rámci aplikace využívám zejména AutoModeFormView, což je vylepšený FormView, který se umí automaticky přepínat mezi režimem editace a vkládání nového záznamu, a DataPagerExtender, což je lepší stránkovací prvek pro ListView.</p>
+<h3 id="altairis.web.security">Altairis.Web.Security</h3>
+<p>Další moje open source knihovna, také k nalezení na <a href="http://altairiswebsecurity.codeplex.com/">CodePlexu</a>. Obsahuje několik membership a role providerů. Mimo jiné též TableMembershipProvider, který umí fungovat proti jakékoliv databází, tedy i proti SQL Serveru Compact Edition. I tuto knihovnu si můžete nainstalovat pomocí NuGetu, její ID je (nepříliš překvapivě) <em>Altairis.Web.Security</em>.</p>
+<h3 id="jquery">jQuery</h3>
+<p>jQuery je JavaScriptová knihovna, která si klade za cíl učinit život JS programátora méně bolestným. Překlenuje rozdíly mezi jednotlivými prohlížeči a nabízí jednodušší řešení typických úloh. Ideální řešení pro líné programátory, kterým se JavaScript moc nelíbí a píší ho jenom v sebeobraně, jako já. Pro ASP.NET programátory je jQuery podstatné i tím, že se Microsoft zapojil do jeho vývoje, je pro něj podpora pro Visual Studio IntelliSense a podobně. Já ho v aplikaci využívám jenom decentně na pár drobností. Více informací najdete na <a href="http://www.jquery.com">www.jquery.com</a>.</p>
+<h3 id="jquery-ui">jQuery UI</h3>
+<p>jQuery UI je sada &quot;widgetů&quot;, ovládacích prvků napsaných pomocí JavaScriptu a jQuery. Fungují na principu neintruzivního JavaScriptu, tedy vytvoříte nějaký obecný HTML kód, který je v zásadě použitelný i samostatně a potom ho &quot;oživíte&quot; pomocí jQuery UI. Podrobnější informae najdete na <a href="http://www.jqueryui.com">www.jqueryui.com</a>.</p>
+<p>Kromě toho obsahuje i docela slušný CSS framework s řadou hotových témat a nástrojem Theme Roller k vytváření dalších. JQuery UI tak představuje docela dobrý způsob pro programátory, kteří nemají nervy a schopnosti na tvorbu designu, ale přesto by chtěli vytvářet oku lahodící aplikace. Web Contact List využívá jedno z vestavěných jQuery UI témat.</p>
+<p>Zároveň je aplikace napsaná tak, že je schopna fungovat i pokud je JavaScript vypnutý, nebo nefunkční, jenom se zjednoduší její vzhled, ale základní schopnosti zůstanou stejné. Následující dva obrázky ukazují aplikaci se zapnutým a vypnutím JavaScriptem:</p>
+<p><img src="http://www.aspnet.cz/Files/20110815-webcl_script_3.png" alt="Ukázka rozhraní s funkčním JavaScriptem" title="Ukázka rozhraní s funkčním JavaScriptem" /></p>
+<p><img src="http://www.aspnet.cz/Files/20110815-webcl_noscript_3.png" alt="Ukázka rozhraní s nefunkčním JavaScriptem" title="Ukázka rozhraní s nefunkčním JavaScriptem" /></p>
+<h3 id="html-5">HTML 5</h3>
+<p>Aplikace využívá HTML 5, ale velice konzervativně. Spousta lidí je excitovaná z takových věcí, jako je element canvas a rozličné multimediální obezličky, což se v reálných aplikacích využije jenom zřídkakdy. Já z HTML 5 využívám zejména data atributy, třeba pro potvrzení některých akcí (třeba pro odhlášení).</p>
+<h3 id="import-a-export-dat-v-csv-formatu">Import a export dat v CSV formátu</h3>
+<p>To není vyloženě nová technologie, spíš jedna z těch nejstarších. Ale nějak jsem testovací data do aplikace dostat musel a kromě toho požadavek na import a export dat je docela častý, takže se můžete inspirovat mým řešením.</p>
+<h2 id="zdrojove-kody-ke-stazeni">Zdrojové kódy ke stažení</h2>
+<p>Kompletní aplikaci včetně zdrojových kódů si můžete stáhnout zde: <strong><a href="/files/20110814-WebContactList.zip">20110814-WebContactList.zip</a></strong> (cca. 9 MB). Živé demo aplikace najdete na <a href="http://webcldemo.asp2.cz/"><strong>http://webcldemo.asp2.cz/</strong></a>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

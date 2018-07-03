@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Posílání mailů z Azure: Sendy, Amazon SES a ASP.NET | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Snažím se své nové projekty spouštět ve Windows Azure. Jednou z velkých bolestí nicméně zůstává velmi problematické posílání mailů z Azure Web Sites. Pro jednotlivé transakční maily jsem si řešení už napsal, ale ani to nestačí na odesílání tisíců nebo desetitisíců zpráv. Nicméně, našel jsem řešení." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Posílání mailů z Azure: Sendy, Amazon SES a ASP.NET</h1>
+      <section class="article">
+        <p>Snažím se své nové projekty spouštět ve Windows Azure. Jednou z velkých bolestí nicméně zůstává velmi problematické posílání mailů z Azure Web Sites. Pro jednotlivé transakční maily jsem si řešení už napsal, ale ani to nestačí na odesílání tisíců nebo desetitisíců zpráv. Nicméně, našel jsem řešení.</p>
+<p>To spočívá v kombinaci Sendy, Amazon Simple Email Service a jednoduchého ASP.NET klienta. Tento článek je návodem, jak to celé rozchodit taky.</p>
+<h2 id="sendy.co">Sendy.co</h2>
+<p>Sendy je webová aplikace pro správu mailing listů. Řeší správu distribučních seznamů, rozesílání mailů, zpracování nefunkčních e-mailů a odhlášení atd. Stojí 59 dolarů (jednorázově) a jsou to velmi dobře investované peníze, protože napsat podobně schopnou aplikaci by bylo dosti náročné a určitě dražší.</p>
+<p>Na jedné instalaci Sendy můžete provozovat neomezené množství mailing listů. Můžete tam dokonce vytvářet i podúčty zákazníkům a posílání mailů zpoplatňovat přes PayPal.</p>
+<p>Jedinou nevýhodou Sendy je v mých očích to, že je napsána v PHP a vyžaduje MySQL. Naštěstí, Azure Web Sites podporují PHP a k předplatnému dostanete jednu 20 MB MySQL databázi zdarma. Použití Azure není podmínkou, můžete si někde zaplatit laciný hosting, nebo si Sendy hostovat sami, pokud máte někde nějaké PHP a MySQL.</p>
+<p>Sendy oficiálně není na Windows platformě podporováno, nicméně fakticky funguje. Velmi podrobný návod napsal <a href="http://www.hanselman.com/blog/InstallingSendyAPHPAppOnWindowsAzureToSendInexpensiveNewsletterEmailViaAmazonSES.aspx">Scott Hanselman na svém blogu</a>. Já se PHP vyhýbám, jak jen to jde, ale přesto jsem podle něj byl schopen Sendy úspěšně rozchodit.</p>
+<p>Pro správnou funkčnost na Windows musíte (nad rámec odkazovaného návodu) provést záměnu všech řetězců</p>
+<p>$_SERVER['SCRIPT_FILENAME']</p>
+<p>za</p>
+<p>strtr($_SERVER['SCRIPT_FILENAME'], '\', '/')</p>
+<p>(tuto radu najdete v komentářích)</p>
+<h2 id="amazon-simple-email-service">Amazon Simple Email Service</h2>
+<p>O vlastní rozesílání mailů se stará Amazon SES. Jedná se o placenou službu, která stojí 0,10 USD za 1000 odeslaných mailů. Což je myslím velice dobrá cena. Zejména uvážíme-li, že se nejedná jenom o tupé odeslání mailu, ale i o jejich DKIM odesílání a zejména sledování chyb (zpráv o nedoručitelnosti) a stížností na odhlášení. To si všechno můžete udělat sami (a dělal jsem to), ale je to natolik komplikované, že je podle mého soudu lepší za to zaplatit Amazonu.</p>
+<p>SES má jednoduché API a můžete ho začlenit do svých ASP.NET aplikací, já jsem ho nicméně pouze <a href="http://sendy.co/get-started">podle návodu</a> propojil se Sendy a dál to neřešil.</p>
+<h2 id="asp.net-klient-pro-sendy-api">ASP.NET klient pro Sendy API</h2>
+<p>Pokud chcete uživatele do maling listů přidávat a odstraňovat z webu, můžete použít Sendy API. Je extrémně jednoduché. Existuje pro něj i .NET klient, ale ten mi přišel divný, tak jsem si napsal vlastního. Umí jenom uživatele přidat a odebrat z mailing listu, neumí odeslat zprávu (to Sendy nativně nepodporuje, byť existuje jakýsi add-in, který by to měl dělat). Já nicméně nic takového nebudu v dohledné době potřebovat, zprávy budu posílat ručně přes webové GUI Sendy.</p>
+<p>Moje třída je jednoduchá. V konstruktoru jí předáte výchozí adresu instalace Sendy a pak zavoláte jenom metodu Subscribe nebo Unsubscribe. ID distribučního seznamu najdete ve výpisu, je to dlouhý Base64-kódovaný řetězec.</p>
+<p>Zdrojový kód třídy je následující:</p>
+<p>using System; using System.Net; using System.Web; public class Sendy { private const string PAYLOAD_FORMAT = &quot;email={0}&amp;list={1}&amp;boolean=true&quot;; private const string CONTENT_TYPE = &quot;application/x-www-form-urlencoded&quot;; private const string SUCCESS_STRING = &quot;1&quot;; public Uri BaseUri { get; private set; } public Sendy(Uri baseUri) { if (baseUri == null) throw new ArgumentNullException(&quot;baseUri&quot;); if (!baseUri.IsAbsoluteUri) throw new ArgumentException(&quot;The URI must be absolute.&quot;, &quot;baseUri&quot;); this.BaseUri = baseUri; } public void Subscribe(string email, string listId) { this.DoCommand(email, listId, &quot;subscribe&quot;); } public void Unsubscribe(string email, string listId) { this.DoCommand(email, listId, &quot;unsubscribe&quot;); } private void DoCommand(string email, string listId, string apiCommand) { if (email == null) throw new ArgumentNullException(&quot;email&quot;); if (string.IsNullOrWhiteSpace(email)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, &quot;email&quot;); if (listId == null) throw new ArgumentNullException(&quot;listId&quot;); if (string.IsNullOrWhiteSpace(listId)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, &quot;listId&quot;); // Prepare payload var payload = string.Format(PAYLOAD_FORMAT, HttpUtility.UrlEncode(email), // 0 HttpUtility.UrlEncode(listId)); // 1 // Prepare URI var uri = new Uri(this.BaseUri, new Uri(&quot;/&quot; + apiCommand, UriKind.Relative)); using (var wc = new WebClient()) { wc.Headers.Add(&quot;Content-Type&quot;, CONTENT_TYPE); var s = wc.UploadString(uri, payload); if (!s.Trim().Equals(SUCCESS_STRING)) throw new Exception(s); } } }</p>
+<p>Kombinací Sendy, Amazon SES a uvedeného API dokážete jednoduše a levně spravovat mailing listy v prostředí Windows Azure i lokálním.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

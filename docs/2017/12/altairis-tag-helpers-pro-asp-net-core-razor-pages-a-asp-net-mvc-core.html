@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Altairis Tag Helpers pro ASP.NET Core Razor Pages a ASP.NET MVC Core | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jako poněkud opožděný vánoční dárek jsem zveřejnil sadu užitečných tag helperů pro ASP.NET Core Razor Pages a ASP.NET MVC Core." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Altairis Tag Helpers pro ASP.NET Core Razor Pages a ASP.NET MVC Core</h1>
+      <section class="article">
+        <p>Jako poněkud opožděný vánoční dárek jsem zveřejnil sadu užitečných tag helperů pro ASP.NET Core Razor Pages a ASP.NET MVC Core. Je to sada drobných ale užitečných tag helperů, které přidávají nové pseudo-HTML elementy nebo atributy do Razor souborů. Mohou se vám hodit v praxi, případně jako inspirace pro tvorbu vlastních. Pokud vytvoříte nějaké další užitečné, budu rád pokud mi pošlete pull request.</p>
+<h2 id="instalace">Instalace</h2>
+<p>Knihovna je šířena pomocí NuGetu jako balíček <code>Altairis.TagHelpers</code>. Nainstalujte si jej pomocí package manageru.</p>
+<p>Poté je nutno tag helpery zaregistrovat, což jest učiniti přidáním direktivy <code>@addTagHelper *, Altairis.TagHelpers</code> do CSHTML souboru, kde je chcete používat, případně do <code>_ViewImports.cshtml</code>, pro registraci v celé aplikaci.</p>
+<h2 id="dostupne-tag-helpery">Dostupné tag helpery</h2>
+<ul>
+<li><code>GravatarTagHelper</code> přidává nový element <code>&lt;gravatar&gt;</code>, který zobrazí uživatelskou ikonu ze služby <a href="https://www.gravatar.com/">Gravatar</a>.</li>
+<li><code>RolesTagHelper</code> přidává všem elementům atributy <code>include-roles</code> a <code>exclude-roles</code>, pomocí kterých lze učinit element viditelný nebo neviditelný pro určité skupiny uživatelů.</li>
+<li><code>TimeTagHelper</code> rozšiřuje HTML5 element <code>&lt;time&gt;</code> o možnosti relativního formátování času.</li>
+<li><code>TrimLengthTagHelper</code> umožňuje zkrátit dlouhý obsah textu elementu.</li>
+<li><code>VisibleTagHelper</code> umožňuje podmíněně zakázat zobrazení elementu.</li>
+</ul>
+<p><strong>Zdrojové kódy a příklad najdete na <strong><a href="https://github.com/ridercz/Altairis.TagHelpers"><strong>GitHubu</strong></a></strong> a dokumentaci na <strong><a href="https://github.com/ridercz/Altairis.TagHelpers/wiki"><strong>tamní wiki</strong></a></strong>.</strong></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

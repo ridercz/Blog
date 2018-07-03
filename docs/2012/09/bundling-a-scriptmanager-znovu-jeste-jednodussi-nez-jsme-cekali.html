@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bundling a ScriptManager znovu: ještě jednodušší, než jsme čekali | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Na své přednášce o práci s JavaScriptem a v CSS jsem tvrdil, že mezi bundlingem a ScriptManagerem není žádné propojení a představil jsem dva způsoby, jak jej realizovat. Ukázalo se, že jsem se mýlil a že v nejnovější dostupné verzi takové propojení je a dokonce je automaticky funkční." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Bundling a ScriptManager znovu: ještě jednodušší, než jsme čekali</h1>
+      <section class="article">
+        <p>Na své <a href="http://www.aspnet.cz/articles/401-novinky-v-asp-net-4-5-novy-pristup-k-praci-s-javascriptem-a-css-zaznam-a-priklady">přednášce o práci s JavaScriptem a CSS v ASP.NET</a> jsem tvrdil, že mezi bundlingem a ScriptManagerem není žádné propojení a představil jsem dva způsoby, jak jej realizovat.</p>
+<p>Ukázalo se, že jsem se mýlil a že v nejnovější dostupné verzi takové propojení je a dokonce je automaticky funkční – děkuji Adamovi Hörzenbergerovi, že mne na to upozornil.</p>
+<p>Stačí prostě vytvořit bundle a zaregistrovat jeho ScriptResourceDefinition, například takto:</p>
+<p Path="~/bundles/SiteJs">// Local JavaScript files BundleTable.Bundles.Add(new ScriptBundle(&quot;<sub>/bundles/SiteJs&quot;).Include( &quot;</sub>/Scripts/site/*.js&quot;)); // Register script resource mapping for local JavaScript files ScriptManager.ScriptResourceMapping.AddDefinition(&quot;SiteBundle&quot;, new ScriptResourceDefinition );</p>
+<p>Poté se na něj můžete odkázat ze stránky pomocí ScriptManageru:</p>
+<p>&lt;asp:ScriptManager runat=&quot;server&quot;&gt; <Scripts> &lt;asp:ScriptReference Name=&quot;SiteBundle&quot; /&gt; </Scripts> &lt;/asp:ScriptManager&gt;</p>
+<p>To je vše. Hash pro cache busting se dopočítá automaticky.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

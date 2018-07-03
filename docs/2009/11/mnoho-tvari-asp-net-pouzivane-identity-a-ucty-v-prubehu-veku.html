@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mnoho tváří ASP.NET: Používané identity a účty v průběhu věků | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Často kladená otázka je: pod jakým účtem běží ASP.NET? Protože je často kladena, je i často zodpovídána, leč bohužel ne vždy správně a protože se odpověď s časem (a verzemi IIS) mění, odpověď může být neaktuální. Pojďme se podívat na vývoj a současný stav." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Mnoho tváří ASP.NET: Používané identity a účty v průběhu věků</h1>
+      <section class="article">
+        <p>Často kladená otázka je: pod jakým účtem běží ASP.NET? Protože je často kladena, je i často zodpovídána, leč bohužel ne vždy správně a protože se odpověď s časem (a verzemi IIS) mění, odpověď může být neaktuální. I já jsem na toto téma napsal před lety <a href="http://www.aspnet.cz/Articles/74-pod-jakym-uzivatelem-bezi-asp-net.aspx">článek</a>. Pojďme se na problematiku podívat poněkud hlouběji, včetně historického vývoje.</p>
+<h2 id="request-a-process-identity">Request a Process identity</h2>
+<p>Web server a ASP.NET při své činnosti využívá tři identity:</p>
+<ul>
+<li><strong>Request Identity</strong> je identita, pod níž běží kód, který je bezprostřední reakcí na konkrétní požadavek. Zjednodušeně řečeno, všechno mezi událostmi <code>BeginRequest</code> a <code>EndRequest</code>. Většina vaší aplikace a kódu, který napíšete, běží pod request identity.</li>
+<li><strong>Process Identity</strong> je identita worker procesu jako takového. Pod touto identitou běží vše, co není bezprostřední reakcí na konkrétní požadavek. Například události typu ukončení session nebo start a shutdown aplikace. Také callbacky všeho druhu – odstranění položky z cache, například.</li>
+<li><strong>Identita anonymního uživatele</strong> (IUSR) web serveru se ASP.NET jako takových netýká, ale použije se pro požadavky na všechno ostatní, tedy zejména na statické soubory, jako třeba obrázky nebo CSS styly. Použije se v případě, že je webový uživatel z hlediska Windows neznámý, tj. není například Basic autentizací přihlášen doménový nebo lokální uživatel.</li>
+</ul>
+<p>Níže v článku používám pojmy &quot;uživatel&quot; a &quot;identita&quot;. Jaký je mezi nimi rozdíl? Uživatel má klasický uživatelský účet, tak jak ho známe. Má také takzvaný uživatelský profil, což je adresář, akm se ukládají jeho nastavení. Má heslo a lze se jako on obvykle interaktivně přihlásit, prostě někam zadám jméno a heslo. Serverová Windows mají po instalaci typicky dva uživatele, první se jmenuje Guest a druhý Administrator. Uživatel může být buďto lokální (<code>NÁZEV_POČÍTAČE\jméno_uživatele</code>) nebo doménový (<code>NÁZEV_DOMÉNY\jméno_uživatele</code> nebo zřídka <code>jméno_uživatele@NÁZEV_DOMÉNY</code>).</p>
+<p>Identita je obsažnější pojem. Kromě uživatelů, zmíněných výše, jsou ještě speciální vestavěné systémové identity. Ty se poznají podle toho, že jejich authority (tj. část před zpětným lomítkem) je speciální řetězec, který obsahuje mezeru. Takže například <code>NT AUTHORITY\LOCAL SYSTEM</code>. Poslední dobou panuje (níže dokumentovaný) odklon od tendence používat pro služby speciální dedikované uživatele a místo toho se rojí právě tyto systémové identity. Na rozdíl od běžného uživatelského účtu nemají profil, nemají heslo a nelze se na ně interaktivně přihlásit. Při komunikaci s jinými počítači po síti pak daný požadavek vystupuje pod identitou počítače samotného. Lze tedy říct, který počítač požadavek vyslal, ale už ne jaká konkrétní systémová identita na něm je za něj zodpovědná.</p>
+<p>Tyto systémové identity také &quot;nejsou vidět&quot;. Nenajdete je v seznamu uživatelů v user manageru, nenajdete je ani při vyhledávání třeba při nastavení práv k souborům, musíte prostě vědět, jak se jmenují.</p>
+<p>Jaké konkrétní identity jsou pro request a process použity, záleží na verzi IIS a nastavení.</p>
+<h2 id="iis-5.x-windows-2000-windows-xp-32-bit">IIS 5.x (Windows 2000, Windows XP 32-bit)</h2>
+<p>Tato verze IIS nezná application pooly (více o nich dále). Obecně běží rozšíření web serveru jeho identitou. V případě běžných veřejně přístupných aplikací pod účtem anonymního uživatele, který se defaultně jmenuje <code>IUSR_názevserveru</code>.</p>
+<p>ASP.NET je výjimkou, která předznamenává application pooly, které se objeví v IIS 6.0. Neběží v rámci web serveru, ale v samostatném worker procesu, nezávislém na IIS. Jmenuje se <code>aspnet_wp.exe</code> a běží pod uživatelem jménem <code>ASPNET</code>, kterého vytvořil při instalaci setup .NET Frameworku.</p>
+<p>Výchozí nastavení je tedy:</p>
+<ul>
+<li>Identita anonymního uživatele je uživatel <code>IUSR_názevserveru</code>. Tuto identitu je možno změnit v nastavení IIS a to pro každou aplikaci (virtuální web server nebo web aplikaci) zvlášť.</li>
+<li>ASP.NET Process identity je uživatel <code>ASPNET</code>. Tuto identitu je možno změnit v <code>machine.config</code>u a nastavení je jednotné pro celý server, všechny aplikace mají tuto identitu stejnou.</li>
+<li>ASP.NET Request identity je, pokud neřeknete jinak, stejná jako process identity. Říct jinak lze pomocí impersonace ve <code>web.config</code>u, v elementu <code>/configuration/system.web/identity</code>. Pokud nastavíte atribut <code>impersonate</code> na <code>&quot;true&quot;</code>, podědí se identita od hostujícího webu, tj. např. na uživatele <code>IUSR_názevserveru</code>. Případně lze pomocí atributů <code>userName</code> a <code>password</code> zadat jméno a heslo jiného uživatele.</li>
+</ul>
+<p>Z důvodů popsaných výše je na IIS 5.x v podstatě nemožné provozovat bezpečný hosting více nezávislých aplikací, protože všechny mají stejnou process identity a nelze je od sebe oddělit.</p>
+<h2 id="iis-6.x-windows-server-2003-windows-xp-professional-64-bit">IIS 6.x (Windows Server 2003, Windows XP Professional 64-bit)</h2>
+<p>Zásadní změnou v této verzi IIS byl koncept worker processů a application poolů. Výše naznačená idea, že aplikace nepoběží v rámci web serveru, ale v samostatném worker procesu se osvědčila a byla rozšířena z ASP.NET i na další rozšíření. Nově tedy vše kromě statických souborů běží v procesu <code>W3WP.EXE</code>. A objevují se takzvané application pooly, což je organizačně-správní jednotka, prostřednictvím které IIS dokáže oddělovat aplikace, resp. skupiny aplikací, od sebe navzájem i od IIS samotného. Každý application pool má svůj vlastní <code>W3WP.EXE</code> (v rámci jednoho AP jich může být i více, ale to je nad rámec tohoto článku).</p>
+<p>Kromě mnoha jiných nastavení lze každému application poolu určit i pod jakou identitou mají běžet jeho worker procesy a tím i process identity ASP.NET aplikace.</p>
+<p>Výchozí nastavení a možnosti u těchto verzí tedy jsou:</p>
+<ul>
+<li>Identita anonymního uživatele je stále IUSR_názevserveru, zde se nic nemění.</li>
+<li>ASP.NET Process Identity je standardně <code>NT AUTHORITY\NETWORK SERVICE</code>. To je speciální identita (nikoliv běžný uživatel), pod kterou nově běží velká část služeb. Process Identity lze změnit v nastavení application poolu, a to pro každý pool zvlášť. Aby mohl být uživatel použit pro identitu AP, musí být členem skupiny <code>IIS_WPG</code> (IIS Worker Process Group).</li>
+<li>ASP.NET Request Identity je opět standardně stejná, jako process identity a lze ji změnit stejným postupem jako u předchozí verze.</li>
+</ul>
+<p>Na této verzi je tedy možný bezpečný hosting více zákazníků (resp. nezávislých aplikací) na jednom serveru, pokud má každý zákazník svůj application pool.</p>
+<h2 id="iis-7.0-windows-vista-windows-server-2008-a-iis-7.5-windows-7-windows-server-2008-r2">IIS 7.0 (Windows Vista, Windows Server 2008) a IIS 7.5 (Windows 7, Windows Server 2008 R2)</h2>
+<p>Mezi verzemi 6 a 7 doznal IIS zcela zásadních změn, ale základní systém worker processů a application poolů zůstal zachován – byl jenom rozšířen.</p>
+<ul>
+<li>Identita anonymního uživatele se změnila. Výchozí nastavení je, že se používá speciální identita <code>NT AUTHORITY\IUSR</code>. Impersonace se nově nastavuje zde, lze nastavit konkrétního uživatele a nebo že se použije identita application poolu.</li>
+<li>ASP.NET Process Identity je opět identita application poolu a platí, že může být změněna. Výchozí nastavení je ovšem jiné. Nepoužívá se již identita <code>NT AUTHORITY\NETWORK SERVICE</code> (ačkoliv je možné ji ručně nastavit), ale speciální smečka skrývající se v konfiguraci pod názvem <code>ApplicationPoolIdentity</code>. Pro každý application pool je automaticky vytvořena speciální identita jménem <code>IIS APPPOOL\názevpoolu</code>. Tj. pokud vytvoříte AP jménem <code>MujAP</code>, bude se automaticky použitá identita jmenovat <code>IIS APPPOOL\MujAP</code>. To znamená, že jednotlivé AP jsou od sebe automaticky izolovány, bez nutnosti pro ně vytvářet samostatné uživatele. Tato možnost zůstala samozřejmě zachována, pouze se změnil název skupiny, které by tento uživatel měl být členem: jmenuje se <code>IIS_IUSRS</code>.</li>
+<li>ASP.NET request identity je pro anonymní požadavky výše uvedené identita anonymního uživatele, tj. dle nastavení buď IUSR (výchozí) nebo identita AP.</li>
+</ul>
+<h2 id="typicka-pouziti-rady-a-doporuceni">Typická použití, rady a doporučení</h2>
+<p>Aplikace lze rozdělit do dvou základních skupin, které z nedostatku lepších pojmů nazvu &quot;intranetové&quot; a &quot;internetové&quot;, s vědomím toho, že se najdou výjimky oběma směry.</p>
+<p>Internetové aplikace mají z hlediska systému anonymní uživatele. Tj. identitu uživatele neznáme vůbec a nebo ji zpracováváme vlastními prostředky a OS o nich &quot;neví&quot;. Typický příklad je databáze uživatelů v SQL Serveru a přihlašování pomocí Forms Authentication. U těchto aplikací identitu aplikace nepředáváme dál (třeba na databázovou vrstvu) a je obvykle praktické, aby request identity a process identity ASP.NET aplikace byla totožná.</p>
+<p>Aplikace, které nazývám intranetovými, jsou zpravidla určeny omezenému a předem známému okruhu uživatelů, např. zaměstnanců. Jako uživatelskou databázi používají Active Directory nebo podobný systém a jejich uživatelé nejsou z hlediska systému anonymní. Zde máme v podstatě dvě možnosti, jakým můžeme přistupovat k bezpečnostní architektuře aplikace. Buďto postupujeme stejně jako ve výše uvedeném případě, tj. uživatele sice ověříme pomocí systémového účtu, ale aplikace sama pak běží pod nějakou vlastní identitou. Druhá možnost je, že identitu uživatele převememe a aplikace běží pod účtem toho uživatele, který se přihlásil a pod tímto účtem také přistupuje k dalším zdrojům, typicky k databázi. Zde se tedy request identity podědí od autentizovaného uživatele  (zakážeme anonymní přístup) a process identity bude jiná, speciální identita pro tu kterou aplikaci.</p>
+<p>Doufám, že se mi toto nepříliš jednoduché téma podařilo podat způsobem srozumitelným a pochopitelným. Chcete-li se v tomto oboru vzdělat hlouběji, vřele vám doporučuji svůj kurz o zabezpečení, který školím v Gopasu. Jeho kód je <a href="http://www.gopas.cz/kurzy/GOC36/">GOC36</a> a stále platí, že pokud uvedete při objednávce kód ASPNET.CZ, získáte slevu (a já provizi ;-).</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

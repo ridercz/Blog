@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Optimalizace HTML v ASP.NET Web Forms | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Častou výčitkou, která se na ASP.NET Web Forms snáší, je ošklivé HTML, které generují. Výčitka je to zhusta neoprávněná, protože i Web Forms umí generovat pěkné sémantické HTML, které lze snadno stylovat přes CSS. Je ale třeba správně chápat možnosti, které nám ASP.NET nabízí. V rámci tohoto článku se podíváme, jak na generování moderního HTML v ASP.NET Web Forms." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Optimalizace HTML v ASP.NET Web Forms</h1>
+      <section class="article">
+        <p>Častou výčitkou, která se na ASP.NET Web Forms snáší, je ošklivé HTML, které generují. Výčitka je to zhusta neoprávněná, protože i Web Forms umí generovat pěkné sémantické HTML, které lze snadno stylovat přes CSS. Je ale třeba správně chápat možnosti, které nám ASP.NET nabízí. V rámci tohoto článku se podíváme, jak na generování moderního HTML v ASP.NET Web Forms.</p>
+<p>Serverové ovládací prvky v ASP.NET lze rozdělit v zásadě do čtyř skupin, podle toho, jaké je jejich určení a jaký generují výsledný HTML kód.</p>
+<ul>
+<li><strong>Nevizuální prvky:</strong> Negenerují samy o sobě HTML kód žádný a slouží jenom k propojení ostatních pvků v rámci Web Forms infrastruktury. Typickým zástupcem jsou prvky jako <code>SqlDataSource</code>, <code>QueryStringParameter</code> a podobně. Tyto prvky nás z hlediska výsledného kódu nijak nezajímají a jako takové je tedy můžeme pominout. Do této skupiny patří také prvky <code>MultiView</code> a <code>View</code> (ty jenom řídí zobrazování vnořených prvků a samy nic nekreslí) nebo <code>Literal</code> a <code>Localize</code> (ty jenom zobrazí, co jim dáme, beze změny).</li>
+<li><strong>Jednoduché prvky:</strong> Zpravidla představují serverovou reprezentaci jednoho HTML elementu. Typickými zástupci jsou např. <code>Label</code>, <code>TextBox</code>, <code>Button</code> a podobné prvky. HTML markup jednoduchých prvků je zpravidla také jednoduchý a nepředstavuje problém. S komplexními prvky hraničí třeba <code>RadioButtonList</code> nebo <code>CheckBoxList</code>. Ty už dodávají kreativity více, ale i s nimi si lze poradit.</li>
+<li><strong>Komplexní prvky:</strong> Generují komplexní HTML kód, který je v nich &quot;zadrátovaný&quot; a sice je možné jej ovlivnit, ale rozhodně ne snadno. Právě jimi generovaný markup je to, co HTML puristy pobuřuje nejčastěji. Typickými zástupci této skupiny jsou prvky jako <code>Calendar</code>, <code>GridView</code>, <code>DetailsView</code>, <code>TreeView</code> a <code>Menu</code>.</li>
+<li><strong>Šablonovací prvky:</strong> Ve své podstatě nemají žádný vlastní HTML markup (<code>ListView</code> a <code>Repeater</code>) a jenom skládají dohromady kousky HTML zadané uživatelem. Záleží tedy na tom, jaké HTML uživatel zadá do šablon. Některé prvky (jako <code>FormView</code> nebo <code>Login</code>) jednak obsahují výchozí šablony (které bývají dost hrozné) a jednak generují trochu vlastního HTML &quot;okolo&quot; –  to ale můžeme snadno vypnout.</li>
+</ul>
+<p>Základním principem .NET Frameworku je &quot;něco za něco&quot;. Zpravidla máte na výběr z několika možností, jak nějaký úkol splnit. Některé jsou jednoduché a bezpracné (<code>GridView</code>), ale za jejich použití zaplatíte méně elegantním kódem a menší kontrolou nad ním. Jiné (<code>ListView</code>) vám sice dávají lepší kontrolu nad kódem, ale jsou na pochopení a použití náročnější a navíc se v ASP.NET objevily až později, např. ve verze 3.5 nebo 4.0.</p>
+<h2 id="jak-na-jednoduche-prvky">Jak na jednoduché prvky</h2>
+<p>Jednoduché prvky mají zpravidla jednoduchý a neurážející markup. Obvykle odpovídají jednomu nebo několika málo HTML elementům. Jednoduchá převodní tabulka mezi Web Forms  a HTML by mohla vypadat takto:</p>
+ <table><thead> <tr> <th>Web Forms</th> <th>HTML</th> </tr> </thead><tbody> <tr> <td>`<asp:Label>`</td> <td>`<span>`; pokud je definována vlastnost AssociatedControlId, pak `<label>`.</td> </tr> <tr> <td>`<asp:TextBox>`</td> <td>Podle vlastnosti `TextMode` buď `<input type="text">`, `<input type="password">` nebo `<textarea>`.</td> </tr> <tr> <td>`<asp:RadioButton>`</td> <td>`<input type="radio">`; pokud je definována vlastnost `Text`, tak také `<label>`.</td> </tr> <tr> <td>`<asp:CheckBox>`</td> <td>`<input type="checkbox">`; pokud je definována vlastnost `Text`, tak také `<label>`.</td> </tr> <tr> <td>`<asp:Button>`</td> <td>`<input type="submit">`</td> </tr> <tr> <td>`<asp:LinkButton>`</td> <td>`<a href="…">…</a>`</td> </tr> <tr> <td>`<asp:ImageButton>`</td> <td>`<input type="image">`</td> </tr> <tr> <td>`<asp:Image>`</td> <td>`<img src="…">`</td> </tr> <tr> <td>`<asp:HyperLink>`</td> <td>`<a href="…">…</a>`</td> </tr> <tr> <td>`<asp:DropDownList>`</td> <td>`<select size="1">`</td> </tr> <tr> <td>`<asp:ListView>`</td> <td>`<select size="n">`</td> </tr> <tr> <td>`<asp:*Validator>`</td> <td>`<span>` + validační JavaScript</td> </tr> <tr> <td>`<asp:ValidationSummary>`</td> <td>Záleží na nastavení, ale obvykle `<ul>` a `<li>`.</td> </tr> </tbody></table> 
+<p>Výše uvedené prvky nepředstavují obvykle z hlediska HTML markupu žádný problém. Generovaný HTML kód je jednoduchý, validní a přehledný. Jediná &quot;ošklivost&quot; jsou dlouhá a automaticky generovaná ID, která budou pojednána dále samostatně.</p>
+<p>Do rodiny jednoduchých prvků v zásadě patří ještě <code>CheckBoxList</code> a <code>RadioButtonList</code>. Zatímco výše zmíněné prvky <code>CheckBox</code> a <code>RadioButton</code> reprezentují jeden konkrétní ovládací prvek, tak tyto představují celou jejich kolekci. Pomocí vlastnosti <code>RepeatLayout</code> pak lze určit, jak mají být jednotlivé prvky poskládány. Výchozí hodnota – <code>Table</code> – je sice &quot;blbuvzdorná&quot;, ale z hlediska HTML markupu nejproblematičtější. V závislosti na požadovaném vyznění je zpravidla lepší zvolit <code>Flow</code>, <code>OrderedList</code> nebo <code>UnorderedList</code>.</p>
+<h2 id="co-s-komplexnimi-prvky">Co s komplexními prvky</h2>
+<p>Komplexní prvky jsou ty, které generují rozličné divoké HTML. Platíme tím za pohodlí, které nám přinášejí. V obecné rovině je podle mého názoru dobré je nepoužívat vůbec a nahradit je jinými technikami.</p>
+<p>Místo <code>GridView</code> lze použít <code>ListView</code> s patřičnými šablonami. Prvek <code>DetailsView</code> lze nahradit podle okolností buď opět prvkem <code>ListView</code> a nebo <code>FormView</code>. Nenahraditelné (resp. obtížně nahraditelné) jsou tyto prvky jenom ve scénářích typu ASP.NET Dynamic Data. Tam musíme při dynamickém generování UI krásné HTML oželet a nebo použít adaptéry, o nichž bude řeč později.</p>
+<p>Prvek <code>Calendar</code> je dle mého soudu lepší nepoužívat vůbec a nahradit jej nějakými vyskakovacími řešeními na bází JavaScriptu – např. z jQuery UI nebo Ajax Control Toolkitu.</p>
+<p>Pro prvky <code>TreeView</code> a <code>Menu</code> platí v zásadě totéž. Existují pro ně civilizující adaptéry, ale obecně bych se bez nich raději obešel.</p>
+<h2 id="sablonovaci-prvky">Šablonovací prvky</h2>
+<p>Do této kategorie patří především prvky <code>Repeater</code> (ten je v ASP.NET odjakživa) a <code>ListView</code> (od verze 3.5). Tyhle prvky nedělají nic jiného, než že skládají zadaná markup za sebe (<code>Repeater</code>) a nebo do sebe (<code>ListView</code>). <code>Repeater</code> umí data jenom jednoduše zobrazovat, <code>ListView</code> je plnohodnotná komponenta, která zvládá editaci, řazení, stránkování atd. Tyto prvky samy žádný markup negenerují a výsledný kód je tedy plně v rukách programátora.</p>
+<p>Dále pak sem patří komponenty odvozené od prvku <code>Wizard</code>. Nejčastěji tedy prvky týkající se membershippingu: <code>Login</code>, <code>ChangePassword</code>… A konečně prvek <code>FormView</code>. Tyhle komponenty mohou fungovat v zásadě ve dvou režimech: buďto se použije nějaký jejich výchozí vzhled, nebo můžete definovat vlastní šablony. Ty vestavěné bývají dost hrozné. Další problém s touto rodinkou prvků spočívá v tom, že i když si definujete vlastní šablonu, tak vám okolo ní prvky vytvoří obálku v podobě ošklivé tabulky. Tomu se dá zabránit opět pomocí adaptérů a nebo, od verze 4.0, přidáním atributu <code>RenderOuterTable=&quot;false&quot;</code>.</p>
+<h2 id="control-adapters">Control Adapters</h2>
+<p>Control adaptéry jsou technologie původně vymyšlená pro adaptivní rendering, tedy možnost měnit HTML kód podle toho, z jakého prohlížeče a zařízení uživatel přistupuje. Lze vytvořit vlastní třídu, která se pak postará o renderování, místo toho prvku samotného. Jedná se o jediný způsob, jak změnit HTML kód, který generují. Jejich smysl nicméně postupně mizí, se změnami, které přináší ASP.NET 4.0.</p>
+<p>Pokud se jim chcete věnovat, doporučuji nastudovat si fungování <a href="http://cssfriendly.codeplex.com/">CSS Friendly Control Adapters</a>. To je hotová sada adaptérů, původně od Microsoftu, nyní open source. Slouží k &quot;učesání&quot; výstupu běžných ASP.NET prvků.</p>
+<h2 id="zaverem">Závěrem</h2>
+<p>Ačkoliv je získání kontroly nad výsledným HTML kódem v případě ASP.NET Web Forms poněkud méně přímočaré, než např. v případě ASP.NET MVC, je možné. I pomocí ASP.NET Web Forms lze vytvářet stránky, které mají čistý a semanticky strukturovaný markup. Hodně tomu pomohla verze 4.0, kde se obejdeme i bez &quot;hardcore&quot; variant, jako jsou control adaptéry. V předchozích verzích byl přístup pravda poněkud komplikovanější.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

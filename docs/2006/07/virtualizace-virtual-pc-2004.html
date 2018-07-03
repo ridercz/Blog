@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtualizace: Virtual PC 2004 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití. Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy &quot;virtualizací pro normální lidi&quot;." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Virtualizace: Virtual PC 2004</h1>
+      <section class="article">
+        <p><img src="/Files/20060715-VirtualPC.png" alt="Okno Virtual PC" />Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití.</p>
+<p>Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy &quot;virtualizací pro normální lidi&quot;. <a href="/Articles/103-virtualizace-uvod.aspx">Předchozí díl</a> byl věnován obecnému úvodu do virtualizace.</p>
+<h2 id="ziskani-a-instalace">Získání a instalace</h2>
+<p>Program Virtual PC je k dispozici zdarma a můžete si ho <a href="http://www.microsoft.com/windows/virtualpc/downloads/sp1.mspx">stáhnout ze stránek Microsoftu</a>. Aktuální je verze 2004 SP1 (software na výše uvedeném linku už SP1 obsahuje).</p>
+<p>Instalace je bezproblémová a nevyžaduje žádná specifická nastavení ani znalosti.</p>
+<p>Hardwarové požadavky závisejí na tom, jaké virtuální počítače chcete provozovat a kolik jich bude. Samozřejmě platí &quot;čím více, tím lépe&quot;. Doporučuji dual-core procesor, ale nejkritičtějším bodem je jednoznačně paměť. Paměť, kterou chcete přidělit virtuálnímu počítači musíte mít na tom fyzickém, tj. pokud vytvoříte virtuální počítač s 512 MB RAM, sebere vám to 512 MB paměti na fyzickém stroji.</p>
+<p>Bez větších problémů jsem virtuální počítače provozoval na notebooku s 2 GHz procesorem a 1 GB paměti, měl jsem ale spuštěn vždy jenom jeden virtuální počítač současně. Za optimální konfiguraci považuji svoji současnou pracovní stanici: dual core procesor na 3 GHz a 2 GB operační paměti (té by mohlo být i víc).</p>
+<p>Počítejte rovněž s tím, že VPC je dosti velký žrout diskového prostoru. Virtuální hard disky jednotlivých počítačů jsou na disku ukládány jako samostatné soubory o velikosti několika gigabajtů.</p>
+<h2 id="jak-vypada-virtualni-pocitac">Jak vypadá virtuální počítač</h2>
+<p>Virtuální počítače typicky sestávají z několika souborů, rozlišených podle přípon:</p>
+<ul>
+<li>**VMC **jsou malé XML soubory, které popisují konfiguraci počítače.</li>
+<li>**VHD **jsou velké soubory, které reprezentují virtuální hard disky. Je jich několik typů, jak pojednáme později.</li>
+<li>**VFD **jsou obrazy disket, ale v životě jsem žádný neviděl.</li>
+<li><strong>VSV</strong> jsou dočasně existující soubory které vzniknou, pokud vypnete virtuální počítač a uložíte jeho stav. V takovém případě se obsah jeho paměti uloží do tohoto souboru. Podobá se to procesu hibernace který jistě znáte, pokud jste uživateli notebooku.</li>
+</ul>
+<h2 id="vytvoreni-a-konfigurace-virtualniho-pocitace">Vytvoření a konfigurace virtuálního počítače</h2>
+<p>Při prvním spuštění Virtual PC se spustí průvodce vytvořením virtuálního počítače. Kdykoliv později ho můžete spustit klepnutím na tlačítko &quot;New...&quot; v hlavním okně programu. V průběhu průvodce budete vyzváni k určení názvu a umístění souborů tohoto VPC. Ze shora uvedených důvodů vyberte disk, na kterém máte dost místa (a který je dost rychlý).</p>
+<p>Virtual PC se vás optá, jaký operační systém hodláte ve virtuálním počítači provozovat. Seznam OS je značně omezený a slouží v podstatě jenom k nastavení doporučené paměti, kterou stejně v dalším kroku můžete změnit. V žádném případě se nejedná o seznam podporovaných operačních systémů (pokud vás zajímá, můžete ho najít na <a href="http://vpc.visualwin.com/">webu Jonathana Maltze</a>).</p>
+<p>Pokud se týče paměti, závisí na tom, co chcete s daným virtuálním počítačem provádět. Pokud chcete jenom něco malého vyzkoušet, stačí dát minimum paměti pro daný OS. Pokud ve virtuálu chcete vyvíjet ve Visual Studiu, dejte paměti co nejvíc.</p>
+<p>Po vytvoření klepněte na tlačítko Settings. Otevře se vám okno, kde můžete podrobně nastavit všechny parametry:</p>
+<p><img src="/files/20060715-VpcSettings.gif" alt="Okno Virtual PC - nastavení" /></p>
+<p>Okno nastavení je poněkud zrádné v tom, že některé věci můžete (celkem logicky) nastavit pouze pokud je virtuální počítač vypnuté (paměť, disky...). Jiné ovšem pouze tehdy, pokud VPC běží a jsou na něm nainstalovány Virtual Machine Additions).</p>
+<p>K virtuálnímu počítači můžete připojit až tři virtuální hard disky v podobě VHD souborů nebo namapovaného fyzického disku. Disky jsou připojeny k virtuálnímu IDE řadiči, Virtual PC nepodporuje virtuální SCSI. Pokud povolíte &quot;undo disks&quot;, budou se změny ukládat do zvláštního souboru a při vypínání virtuálního počítače budete mít možnost změny nechat jak jsou, definitivně je potvrdit a nebo zrušit. Tato funkce je náročnější na diskový prostor, ale pro rozličné testování a pokusy může být velice užitečná.</p>
+<p>Virtuální CD/DVD nebo floppy mechanika se umí napojit na fyzickou mechaniku vašeho počítače a nebo připojit soubor s image (pro floppy VFD, pro CD/DVD standardní ISO).</p>
+<p>Obdobným způsobem lze připojit sériové a paralelní porty, což jsem ale v praxi nikdy nezkoušel.</p>
+<p>Velmi důležitá je sekce Networking. Počítač může mít až čtyři virtuální síťové karty, u nichž si můžete vybrat, v jakém režimu budou operovat:</p>
+<ul>
+<li><strong>Not connected</strong> - síťová karta není nikam připojena, počítač se chová, jako by do ní nebyl zasunut kabel.</li>
+<li><strong>Local only</strong> - bude vytvořena virtuální síť, která umožní komunikovat více současně spuštěným virtuálním počítačům mezi sebou. Nebude možno komunikovat s reálnou sítí ani s hostitelským počítačem.</li>
+<li><strong>Shared networking (NAT)</strong> - hostitelský počítač se bude chovat jako router s NATem. Virtuální počítač bude přes DHCP přidělenou adresu z rozsashu 192.168.131.x. Bude schopen se připojit na vnější síť, ale nikoliv naopak, protože jednoduchý NAT nepodporuje &quot;inbound port mapping&quot;.</li>
+<li><strong>Network adapter on the physical computer</strong> - pravděpodobně nejzajímavější řešení. Pomocí fyzické síťové karty hostitelského počítače se virtuální počítač připojí do fyzické sítě a bude se jí jevit jako další připojený počítač se vším všudy.</li>
+</ul>
+<p>Při použití poslední možnosti je nutné si uvědomit několik věcí:</p>
+<ul>
+<li>Síťová konfigurace virtuálního počítače bude podobná, jako konfigurace hostitelského. Pokud v síti běží DHCP, přidělí mu dynamicky adresu. Pokud v síti funguje statické přidělování adres, je nutné počítači takovou přidělit a nastavit.</li>
+<li>Vzhledem ke způsobu připojení je jakýkoliv softwarový firewall běžící na hostitelském stroji vůči virtuálnímu počítači neúčinný. Z hlediska zabezpečení je tedy nutno k virtuálnímu stroji přistupovat jako k fyzickému.</li>
+<li>Pokud přenášíte virtuální počítače mezi fyzickými, zkontrolujte si po přenosu nastavení této hodnoty, protože nastavení je vázáno na název síťové karty (který bude pravděpodobně odlišný).</li>
+</ul>
+<h2 id="spusteni-vpc-a-instalace-guest-os">Spuštění VPC a instalace guest OS</h2>
+<p><img src="/files/20060715-VpcBooting.gif" alt="Virtuální počítač bootuje" />Klepnutím na tlačítko Start virtuální počítač spustíte a začne bootovat. Musíte na něj nainstalovat operační systém, stejně jako na fyzický počítač.</p>
+<p>Nejčastěji budete postupovat tak, že si v menu <em>CD</em> připojíte fyzickou mechaniku (<em>Use Physical Drive</em>) nebo ISO image (<em>Capture ISO image</em>) a nabootujete z CD.</p>
+<p>Postup instalace je stejný, jako byste instalovali na skutečný počítač. Osobně zpravidla postupuji tak, že mám jeden &quot;master&quot; image s operačním systémem a ten pak používám k rychlému vytvoření &quot;pokusných&quot; strojů.</p>
+<p>Ke slovu se také dostanou utilitky typu <em>sysprep</em> (najdete ji na instalačním CD Windows) nebo <a href="http://www.sysinternals.com/Utilities/NewSid.html">NewSid</a> od SysInternals.</p>
+<p>Pokud do okna virtuálního počítače klepnete myší, zůstane myš &quot;zachycena&quot; v okně a nedostanete se ven. Abyste kurzor uvolnili, stiskněte naprázdno pravý <em>Alt</em> (bývá označen jako <em>AltGr</em>).</p>
+<p>AltGr je ve virtuálním počítači velmi důležitá klávesa. Obecně se jí říká <em>host key</em> a v nastavení ji můžete změnit; zpravidla se tak ale neděje. Používá se k různým &quot;systémovým&quot; účelům a lze tak do guest počítače &quot;poslat&quot; speciální klávesové zkratky typu CTRL-ALT-DEL.Nejpoužívanější klávesové zkratky jsou:</p>
+<ul>
+<li><em>AltGr + DEL</em> pošle do virtuálního počítače CTRL-ALT-DEL</li>
+<li><em>AltGr + ENTER</em> přepíná mezi full screen režimem a během v okně</li>
+<li><em>AltGr + P</em> zastaví (pause) a pak zase rozběhne (resume) virtuální stroj</li>
+<li><em>AltGr + R</em> vyresetuje virtuální stroj</li>
+</ul>
+<h2 id="virtual-machine-additions">Virtual Machine Additions</h2>
+<p>Virtual Machine Additions je balík software, který se instaluje do virtuálního počítače. Pokud je nainstalujete, výrazně tím zvýšíte výkon virtuálního počítače a komfort práce s ním.</p>
+<p>Virtual Machine Additions jsou dostupné pro následující operační systémy</p>
+<ul>
+<li><strong>Windows 95, 98, NT, Me, 2000, XP, 2003</strong> - standardní součást instalace</li>
+<li><strong>MS-DOS</strong> - standardní součást instalace, postup instalace pro VMA pro DOS najdete v <a href="http://support.microsoft.com/?kbid=833146">Q833146</a></li>
+<li><strong>OS/2</strong> - standardní součást instalace, nezkoušel jsem (nemáte někdo instalačky OS/2?)</li>
+<li><strong>Windows Vista</strong> - provoz Visty pod Virtual PC je spojen s řadou problémů a oficiálně není podporován. Jsou nicméně k dispozici polooficiální VMA pro Vistu. S některými beta verzemi Visty fungují, s jinými ne. Podrobnější informace najdete na blogu s příznačným podtitulem &quot;<em><a href="http://blogs.msdn.com/mikekol/archive/category/11647.aspx">Views on using an unreleased operating system on a computer that doesn't exist</a></em>&quot;.</li>
+<li><strong>RedHat a SuSE Linux</strong> - additions si můžete stáhnout <a href="http://www.microsoft.com/windowsserversystem/virtualserver/evaluation/linuxguestsupport/default.mspx">z webu Microsoftu</a>, kde také najdete konkrétní seznam podporovaných distribucí. Jsou určeny pro Virtual Server, ale údajně fungují i pod Virtual PC.</li>
+</ul>
+<p>Kromě neviditelných &quot;systémových&quot; vylepšení získáte instalací VM Additions (pro Windows) následující výhody:</p>
+<ul>
+<li>Standardní chování kurzoru myší (nezachytává se)</li>
+<li>Sdílení schránky (přenos dat mezi host OS a guest OS přes schránku)</li>
+<li>Mapování adresářů (sekce <em>Shared Folders</em> v Settings umožní namapovat adresář z host OS jako síťový disk v guest OS)</li>
+<li>Dynamická změna rozlišení (změnou velikosti okna měníte rozlišení v guest OS)</li>
+<li>Drag and drop přenos souborů (přetahováním můžete přenášet soubory mezi guest a host OS)</li>
+</ul>
+<p><em>Příště se podíváme na Microsoft Virtual Server 2005, což je řešení pro provoz virtuálních serverů. Do komentářů můžete psát dotazy a připomínky, budu na ně brát ohled při tvorbě dalších dílů tohoto seriálu.</em></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

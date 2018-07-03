@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak vyměnit v serveru disk za větší | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Byl jsem tázán na některé okolnosti výměny disku v serveru za větší. Vyzkoušel jsem si simulaci ve virtuálním počítači a říkám si, že by se popis postupu mohl hodit i někomu dalšímu." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Jak vyměnit v serveru disk za větší</h1>
+      <section class="article">
+        <p>Byl jsem tázán na některé okolnosti výměny disku v serveru za větší. Vyzkoušel jsem si simulaci ve virtuálním počítači a říkám si, že by se popis postupu mohl hodit i někomu dalšímu.</p>
+<p>Následující screenshot popisuje výchozí stav v Disk Managementu. Na serveru je operační systém Windows Server 2012 R2 (ale uvedený postup funguje bez ohledu na verzi Windows). Server má celkem tři fyzické disky: jeden je systémový a toho se naše změny týkat nebudou, další dva jsou v mirroru jako datové. Chceme oba dva disky vyměnit za větší – 10 GB na 20 GB (reálně na velikosti nezáleží, poměrně malou velikost jsem zvolil, aby demo bylo rychlejší). Výměnu chceme provést pokud možno za provozu bez výpadku, nebo jenom s minimálním výpadkem. Pokud server podporuje hot swap disků, lze vše provést za provozu, jinak je nutno server pro výměnu vypnout.</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_2.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb.png" alt="image" title="image" /></a></p>
+<p>Klepněte na mirror pravým tlačítkem a z kontextového menu zvolte <em>Break Mirrored Volume</em>.</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_4.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_1.png" alt="image" title="image" /></a></p>
+<p>Tím z jednoho logického disku <strong>E:</strong> vzniknou dva s tímtéž obsahem, <strong>E:</strong> a <strong>F:</strong>, jak je vidět na následujícím obrázku:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_6.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_2.png" alt="image" title="image" /></a></p>
+<p>Disk <strong>F:</strong> z počítače odstraňte a místo něj zapojte nový, větší. Původní disk se ukáže jako <em>Missing</em>. Z kontextového menu ho smažte:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_8.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_3.png" alt="image" title="image" /></a></p>
+<p>Nově vložený disk není inicializovaný. Klepněte na levou část pravým tlačítkem a z kontextového menu jej inicializujte:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_10.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_4.png" alt="image" title="image" /></a></p>
+<p>Nyní vytvoříme mirror dat z původního disku na část nově přidaného disku. Klepněte na <strong>E:</strong> pravým tlačítkem a z kontextového menu zvolte <em>Add Mirror</em>:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_12.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_5.png" alt="image" title="image" /></a></p>
+<p>V následném dialogu zvolte nově přidaný disk a klepněte na <em>Add Mirror</em>:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_14.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_6.png" alt="image" title="image" /></a></p>
+<p>Resynchronizace bude nějakou dobu trvat. Mohou to být i hodiny, v závislosti na rychlosti disků, jejich velikosti a objemu dat. Vyčkejte, dokud se stav nezmění na <em>Healthy</em>. Poté z kontextového menu opět zvolte <em>Break Mirrored Volume:</em></p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_16.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_7.png" alt="image" title="image" /></a></p>
+<p>Vyjměte starý disk, místo něj zapojte nový větší a odstraňte <em>Missing</em> svazek. Měli byste se dostat do následujícího stavu:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_18.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_8.png" alt="image" title="image" /></a></p>
+<p>Z kontextového menu nad <strong>E:</strong> zvolte <em>Extend Volume</em>:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_20.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_9.png" alt="image" title="image" /></a></p>
+<p>Pokud chcete využít celý disk, což je pravděpodobné, ponechte hodnoty v následném dialogu beze změny. Partition <strong>E:</strong> se rozšíří na celý disk. Výsledné zobrazení by mělo vypadat takto:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_22.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_10.png" alt="image" title="image" /></a></p>
+<p>Z kontextového menu nad <strong>E:</strong> zvolte <em>Add Mirror</em> a vytvořte znovu mirror. Resynchronizace bude opět nějakou dobu trvat, v závislosti na objemu dat:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_24.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_11.png" alt="image" title="image" /></a></p>
+<p>Ve výsledku budete mít opět mirror, tentokrát ovšem s novou velikostí disků:</p>
+<p><a href="http://www.aspnet.cz/Files/20180425-image_26.png"><img src="http://www.aspnet.cz/Files/20180425-image_thumb_12.png" alt="image" title="image" /></a></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

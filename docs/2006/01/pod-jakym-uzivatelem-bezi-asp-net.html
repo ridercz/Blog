@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pod jakým uživatelem běží ASP.NET? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Odpověď na otázku kladenou v titulku není - bohužel - zcela triviální. Proto se pojďme na uživatelské účty webových aplikací podívat poněkud zevrubněji." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Pod jakým uživatelem běží ASP.NET?</h1>
+      <section class="article">
+        <p>Odpověď na otázku kladenou v titulku není - bohužel - zcela triviální. Proto se pojďme na uživatelské účty podívat poněkud zevrubněji.</p>
+<h2 id="proc-nas-to-vubec-zajima">Proč nás to vůbec zajímá?</h2>
+<p>Identita, pod níž náš kód běží, je důležitá, pokud přistupujeme k souborům, nebo nedejbože síťovým prostředkům. Přístupová práva musejí být nastavena tak, aby umožňovala požadovanou aplikaci.</p>
+<p>Druhým zásadním důvodem je přístup k databázi na SQL Serveru, pokud se používá &quot;trusted security&quot;, neboli Windows authentication. Pak je nutné nastavit SQL Server tak, aby umožnil přístup patřičnému uživateli.</p>
+<p>Pod kterým uživatelem váš kód běží můžete zjistit následujícím způsobem:</p>
+<p>Dim UserName As String = System.Security.Principal.WindowsIdentity.GetCurrent().Name</p>
+<h2 id="asp.net-a-rozdvojeni-osobnosti">ASP.NET a rozdvojení osobnosti</h2>
+<p>Před příchodem technologie ASP.NET, ve starých ASP, byla odpověď na tuto otázku jasná: ASP skripty běžely v rámci web serveru a pod jeho účtem také běžely. Onen účet je pro anonymní požadavky nastavený uživatel (obvykle <code>IUSR_názevserveru</code>), pro autentizované požadavky uživatel, jehož jméno a heslo bylo zadáno.</p>
+<p>S příchodem ASP.NET už to tak jednoduché není, protože nyní ASP.NET aplikace neběží v rámci web serveru, ale v rámci svého vlastního &quot;pracovního procesu&quot; (worker process). V konečném důsledku tedy ASP.NET používá dvě identity, které mohou být stejné, nebo odlišné. Podívejme se na ně podrobněji</p>
+<h3 id="process-identity">Process Identity</h3>
+<p>Process Identity je účet, pod nímž běží worker process ASP.NET, tedy ASP.NET &quot;jako takové&quot;. V jeho kontextu jsou zpracovávány události v aplikaci, jako například <code>Application_Start</code> (v <code>global.asax</code>) a podobně. Také se pod tímto účtem spouštějí operace, vyvolané z ASP.NET spuštěním nového threadu.</p>
+<p>V případě IIS 5.0 (Windows 2000) a IIS 5.1 (Windows XP) je tímto účtem standardně uživatel <code>ASPNET</code>, vytvořený při instalaci .NET Frameworku. Toto nastavení lze změnit (pouze pro celý server) v souboru <code>machine.config</code>. Podrobnější informace na toto téma naleznete v <a href="http://support.microsoft.com/KB/Q317012/">Q317012</a>.</p>
+<p>IIS 6.0 (Windows 2003) přináší nový koncept &quot;Application Pools&quot;. Je možno založit několik poolů a každý z nich může běžet pod jiným uživatelským účtem. Standardně se používá speciální systémový účet <code>NETWORK SERVICE</code>.</p>
+<h3 id="request-identity">Request Identity</h3>
+<p>Pod účtem request identity se spouští kód v reakci na určitý konkrétní požadavek. Ve výchozím nastavení je request identity stejná, jako process identity - aplikace tedy běží pod uživatelem <code>ASPNET</code> nebo <code>NETWORK SERVICE</code>. Narozdíl od process identity ovšem může aplikace tuto hodnotu změnit, ve svém souboru <code>web.config</code> takzvanou impersonací.</p>
+<p>Pojem &quot;impersonace&quot; se česky překládá obvykle jako &quot;zosobnění&quot;, ale příhodnější výraz by byl &quot;vydávání se za (někoho)&quot;. Vaše aplikace se patřičným zápisem v konfiguračním souboru může vydávat buďto za konkrétního uživatele, nebo tuto hodnotu převezme z web serveru.</p>
+<?xml version="1.0"?> <configuration> <system.web> <identity impersonate="true" /> </system.web> </configuration>
+<p>Zapíšete-li do <code>web.configu</code> direktivu <code>&lt;identity impersonate=&quot;true&quot; /&gt;</code>, převezme váš kód identitu uživatele web serveru. Pro tu platí totéž, jako pro staré ASP 3.0. Pro přihlášeného uživatele se použije jeho identita, pro anonymního uživatele účet dle nastavení web serveru, standardně <code>IUSR_názevserveru</code>.</p>
+<p>Můžete impersonovat též konkrétního uživatele, a to zadáním jeho uživatelského jména a hesla:</p>
+<?xml version="1.0"?> <configuration> <system.web> <identity impersonate="true" userName="JohnDoe" password="P@s$w0rd" /> </system.web> </configuration>
+<h2 id="zvlastni-pripad-asp.net-development-server">Zvláštní případ: ASP.NET Development Server</h2>
+<p>Vše výše uvedené platí pro Microsoft Internet Information Services (IIS). Při vývoji aplikací pro ASP.NET 2.0 se ale často používá ASP.NET Development Server, který je součástí vývojového prostředí (Visual Studio 2005 nebo Visual Web Developer Express). Tento speciální vývojářský web server však běží v kontextu právě přihlášeného uživatele. Request identity i process identity je tedy vaše vlastní.</p>
+<p>Toto mějte na paměti, protože většina vývojářů pracuje pod účtem s administrátorskými oprávněními - a to znamená, že vaše webová aplikace běží jako admin také. To samo o sobě nepředstavuje žádné bezpečnostní riziko (protože ASP.NET Development Server nepřijímá požadavky ze sítě, ale jenom z lokálního počítače), ale pokud si to neuvědomíte, můžete se při ostrém nasazení dočkat nepříjemných překvapení.</p>
+<p>Ostatně - i mistr tesař se utne: tento článek píši pod dojmem několikahodinového zjišťování, proč mi jedna webová aplikace po nasazení na web server nefunguje jak má. Neuvědomil jsem si totiž, že spustím-li ze stránku nový thread, nespustí se pod request identity, ale pod process identity, která má v mém případě podstatně omezenější práva.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

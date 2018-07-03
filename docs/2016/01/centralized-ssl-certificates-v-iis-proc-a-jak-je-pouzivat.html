@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Centralized SSL Certificates v IIS: Proč a jak je používat | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Centralized SSL Certificates v IIS: Proč a jak je používat</h1>
+      <section class="article">
+        <p>Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat.</p>
+<h2 id="co-to-je-a-proc-to-chcete-pouzit">Co to je a proč to chcete použít?</h2>
+<p>Dosavadní typický způsob práce se serverovými certifikáty je, že se ukládají do systémového úložiště (certificate store). S ním se manipuluje pomocí speciálního API a GUI nástrojů. Což je fajn pokud HTTPS weby máte na svém serveru dva. Ale co když jich tam máte desítky nebo stovky? Případně máte serverů hodně a potřebujete certifikáty mezi nimi synchronizovat?</p>
+<p>V takovém případě by bylo lepší, kdyby certifikáty (a jejich privátní klíče) byly uloženy čistě souborově, na nějakém vhodném místě (nejlépe sdíleném). Pracovalo by se s nimi čistě pomocí standardní manipulace se soubory. No a přesně tuto funkcionalitu nabízí Centralized Certificate Store (CCS). Je určen zejména pro webové farmy (kde se všechny serveru odkazují na jedno síťové úložiště), ale s výhodou jej využijete i u většího hostingového serveru.</p>
+<p>Bohužel je v názvosloví poněkud zmatek. Někde se tato funkce jmenuje <em>Centralized SSL Certificates</em>, jinde <em>Central</em> (nebo <em>Centralized</em>) <em>Certificate Store</em> a různé další varianty. Jedná se ale vždy o tutéž věc.</p>
+<h2 id="prakticky-navod-krok-za-krokem">Praktický návod krok za krokem</h2>
+<p>Nabízím vám kompletní lab, návod krok za krokem, kterak rozjet hromadu HTTPS webů na IIS. Můžete si to vyzkoušet na nějakém virtuálu na hraní nebo třeba v Azure VM. Vše je připraveno pro Windows Server 2012 R2, ale mělo by to fungovat i na “R1”. V praxi samozřejmě nebudete používat tento postup celý, ale použijete jenom části, které budete potřebovat.</p>
+<p><strong>» Veškeré potřebné soubory najdete v archivu <a href="http://www.aspnet.cz/files/20160131-CCS.zip">20160131-CSS.zip</a>.</strong></p>
+<h3 id="vytvoreni-a-nastaveni-webu">Vytvoření a nastavení webů</h3>
+<p>Tento příklad počítá s tím, že máte kontrolu nad DNS resolvingem a dokážete si potřebné ukázkové DNS záznamy nasměrovat na IP adresu vašeho web serveru. Pokud takovou kontrolu nemáte nebo se s tím nechcete moc mazat a stačí vám lokálně fungující demo, stačí editovat obsah souboru <code>C:\Windows\System32\drivers\etc\hosts</code> (soubor nemá příponu). Přidejte na jeho konec následující text:</p>
+<p>127.0.0.1 <a href="http://www.northwind.com">www.northwind.com</a> 127.0.0.1 northwind.com 127.0.0.1 <a href="http://www.contoso.com">www.contoso.com</a> 127.0.0.1 contoso.com 127.0.0.1 <a href="http://www.example.com">www.example.com</a> 127.0.0.1 example.com 127.0.0.1 www1.example.com 127.0.0.1 www2.example.com 127.0.0.1 www3.example.com 127.0.0.1 www4.example.com 127.0.0.1 www5.example.com</p>
+<p>Tím zajistíte, že se DNS jména jako <code>northwind.com</code> apod. budou překládat na vámi určenou adresu. V tomto případě na <code>127.0.0.1</code>, tedy <code>localhost</code>.</p>
+<p>Dále pak si vytvořte osm ukázkových webů, se kterými budete dále pracovat. Budou to weby jménem <code>www1.contoso.com</code> až <code>www5.contoso.com</code> (název webu odpovídá host name, který na něj ukazuje). Dále pak webu <code>www.northwind.com</code>, <code>www.contoso.com</code> a <code>www.example.com</code>, přičemž na ně bude ukazovat příslušný hostname a zároveň totéž ve verzi bez <code>www</code> na začátku, tj. např. jen <code>northwind.com</code>.</p>
+<p>Na obsahu těchto webů nezáleží. Pokud je necháte prázdné, bude vám server vracet chybu 403, což z hlediska HTTPS nevadí. V souboru s příklady najdete stránku <code>default.aspx</code>, která vypíše základní informace o svém webu, takže ji můžete použít. Také tam najdete skript <code>1_create_websites.cmd</code>, který po spuštění weby vytvoří.</p>
+<p>Výsledek by měl v IIS manageru vypadat nějak takto:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-SNAGHTML51fe537.png"><img src="http://www.aspnet.cz/Files/20160131-SNAGHTML51fe537_thumb.png" alt="Screenshot" title="IIS Manager po vytvoření webů" /></a></p>
+<p>Pokud se nyní podíváte na některou z výše uvedených adres, web by měl fungovat a zobrazit váš obsah.</p>
+<h3 id="instalace-centralized-certificate-store">Instalace Centralized Certificate Store</h3>
+<p>CCS není součástí výchozí instalace, takže ho možná nemáte nainstalovaný. Ověřte si to tak, že se na úrovni web serveru podíváte na nainstalované snap-iny. Měli byste v sekci Management vidět ikonu Centralized Certificates:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-image_2.png"><img src="http://www.aspnet.cz/Files/20160131-image_thumb.png" alt="Screenshot" title="Centralized Certificates v IIS Manageru" /></a></p>
+<p>Pokud tomu tak není, musíte si to nainstalovat. Buďto pomocí rozhraní pro správu rolí ve Windows a nebo pomocí <a href="https://www.microsoft.com/web/platform/">Web Platform Installeru</a>:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-image_4.png"><img src="http://www.aspnet.cz/Files/20160131-image_thumb_1.png" alt="Screenshot" title="Instalace CCS pomocí Web Platform Installeru" /></a></p>
+<p>Dále vytvořte složku, do níž budete ukládat certifikáty. Například <code>C:\CentralCertStore</code>. Může být i na síťovém disku, zejména v případě webových farem. Nastavte této složce práva tak, aby se do ní dostal jenom vámi pro tento účel vytvořený uživatel. Pro účely demonstrace budu používat uživatele <code>Administrator</code>, ale to není dobrý nápad pro produkci.</p>
+<p>Poklepejte v IIS Manageru na ikonu <em>Centralized Certificates</em> a pak v pravém panelu na <em>Edit Feature Settings</em>. V následném dialogu nastavte cestu k úložišti a uživatelské jméno a heslo, které se má použít pro přístup k němu:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-image_6.png"><img src="http://www.aspnet.cz/Files/20160131-image_thumb_2.png" alt="Screenshot" title="Konfigurace CCS" /></a></p>
+<p>Pole v sekci <em>Certificate Private Key Password</em> nechte prázdná. Naše PFX soubory nebudeme chránit heslem. Na první pohled to vypadá jako bezpečnostní riziko, ale celý princip CCS tkví v souborovém systému a jeho ochraně. Dodatečné heslo sice lze zadat, ale musí být pro všechny PFX soubory stejné a pokud útočník získá přístup k nastavení serveru na takové úrovni, je to stejně game over.</p>
+<h3 id="ziskani-potrebnych-certifikatu">Získání potřebných certifikátů</h3>
+<p>V praxi budete postupovat podle instrukcí vámi zvolené certifikační autority. Podstatné je jenom to, abyste na konci měli k dispozici soubory ve formátu PFX, které budou obsahovat (pouze) serverový certifikát a jeho privátní klíč a nebudou chráněny heslem (nebo budou chráněny tím heslem, které jste zadali v předchozím kroku).</p>
+<p>Já pro náš příklad používám postup popsaný v článku <a href="http://www.aspnet.cz/articles/345-certifikacni-autorita-snadno-a-rychle">Certifikační autorita snadno a rychle</a>. Ve staženém souboru se o vygenerování ukázkových klíčů a nakopírování PFX souborů do adresáře <code>C:\CentralCertStore</code> postará dávka <code>2_make_all_certs.cmd</code>. Ta zároveň vytvoří testovací kořenovou certifikační autoritu a označí ji na daném počítači jako důvěryhodnou. Což rozhodně <em>nechcete</em> dělat na produkčním serveru!</p>
+<h3 id="spravne-pojmenovani-souboru">Správné pojmenování souborů</h3>
+<p>U CCS extrémně záleží na správném pojmenování souborů. Všechny musejí mít příponu <code>.pfx</code> a jejich název musí dodržovat následující pravidla:</p>
+<ul>
+<li>Název zásadně odpovídá použitému host name, s příponou <code>.pfx</code>.</li>
+<li>Pokud jeden certifikát obsluhuje několik různých host names (např. verzi s i bez “<code>www</code>” na začátku), musí se jeho soubor v adresáři nacházet dvakrát s odpovídajícími názvy.</li>
+<li>Pokud se jedná o wildcard certifikát, je hvězdička nahrazena podtržítkem. Tj. je-li certifikát vydán pro <code>*.example.com</code>, bude se odpovídající soubor jmenovat <code>_.example.com.pfx</code>.</li>
+</ul>
+<p>Poté co skončíte, měl by váš adresář vypadat nějak takto:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-SNAGHTML539bd9b.png"><img src="http://www.aspnet.cz/Files/20160131-SNAGHTML539bd9b_thumb.png" alt="Screenshot" title="Soubory v CCS adresáři" /></a></p>
+<h3 id="nastaveni-https-bindingu-webu">Nastavení HTTPS bindingu webu</h3>
+<p>Nyní můžete běžným způsobem nastavit HTTPS binding webu. Všimněte si, že vám přibylo nové zaškrtávací pole <em>Use Centralized Certificate Store</em> a pokud ho zaškrtnete, zmizí možnost (nutnost) vybrat konkrétní certifikát. Bude vybrán automaticky podle host name a názvu souboru:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-image_8.png"><img src="http://www.aspnet.cz/Files/20160131-image_thumb_3.png" alt="Screenshot" title="Ruční konfigurace HTTPS bindingu" /></a></p>
+<p>V tomto příkladu používám SNI (Server Name Indication) a všechny HTTPS weby mi běží na jedné IP adrese a portu. SNI nicméně používat nemusíte, máte-li dostatek IP adres (což nejspíš nemáte). Všechny současné prohlížeče SNI podporují.</p>
+<p>Pokud máte webů hodně, asi se vám nebude chtít je nastavovat takto po jednom. V takovém případě můžete použít PowerShell a HTTPS binding nastavovat z příkazové řádky následujícím příkazem:</p>
+<p><code>powershell New-WebBinding -Name www.northwind.com -Protocol https -Port 443 -HostHeader www.northwind.com -SslFlags 3</code></p>
+<p>Význam parametrů je následující:</p>
+<ul>
+<li><p><code>-Name</code> je logický název webu tak, jak je definován v IIS</p>
+</li>
+<li><p><code>-Protocol</code> je vždy (pro v článku popisované účely) <code>https</code></p>
+</li>
+<li><p><code>-Port</code> je ve výchozím nastavení <code>443</code></p>
+</li>
+<li><p><code>-HostHeader</code> je hostname při využití SNI</p>
+</li>
+<li><p><code>-SslFlags</code> je numerická hodnota, která nabývá následujících hodnot</p>
+<ul>
+<li><code>0</code> = vazba na IP:port, systémové úložiště certifikátů</li>
+<li><code>1</code> = použití SNI, systémové úložiště certifikátů</li>
+<li><code>2</code> = vazba na IP:port, CCS</li>
+<li><code>3</code> = použití SNI, CCS (což je náš případ)</li>
+</ul>
+</li>
+</ul>
+<p>Seznam webů včetně bindingů by měl nyní vypadat nějak takto (povšimněte si, že všem webům přibyly HTTPS bindingy):</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-SNAGHTML5ca5e25.png"><img src="http://www.aspnet.cz/Files/20160131-SNAGHTML5ca5e25_thumb.png" alt="Screenshot" title="Seznam webů s HTTPS bindingy" /></a></p>
+<h3 id="povoleni-ccs-v-http.sys">Povolení CCS v HTTP.SYS</h3>
+<p>Pokud nastavujete parametry pomocí GUI IIS Manageru, mělo by nyní vše začít fungovat, protože IIS Manager automaticky přidává potřebné nastavení do <code>HTTP.SYS</code>. Nicméně pokud jste přidali vazby z příkazové řádky, je nutné ručně napojit <code>HTTP.SYS</code> (komponenta operačního systému, která se stará o zpracování HTTP transakcí) na CCS.</p>
+<p>Zda byla vazba provedena zjistíte příkazem <code>netsh http show sslcert</code>:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-image_10.png"><img src="http://www.aspnet.cz/Files/20160131-image_thumb_4.png" alt="Screenshot" title="Kontrola vazby na HTTP.SYS" /></a></p>
+<p>Pokud je CCS navázán na <code>HTTP.SYS</code>, najdete v seznamu SSL certificate bindings položku, která má prázdný <code>Certificate Hash</code> a je uvozena <code>Central Certificate Store</code> s hodnotou, která odpovídá číslu portu. V případě že takovou položku nenajdete, musíte ji přidat následujícím příkazem:</p>
+<p><code>netsh http add sslcert ccs=443 appid={7276352B-8070-4B14-822A-4B72E20F0DBE}</code></p>
+<p>Hodnota za <code>appid=</code> je jakýkoliv GUID – jde o identifikátor bindingu a jediným požadavkem je, že musí být unikátní.</p>
+<p>Vytvoření bindingů v IIS i CCS dělá ve staženém souboru dávka <code>3_add_iis_bindings.cmd</code>.</p>
+<h3 id="kontrola-nastaveni">Kontrola nastavení</h3>
+<p>Když se nyní podíváte na snap-in Centralized Certificates, uvidíte seznam všech dostupných certifikátů:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-SNAGHTML5d3d760.png"><img src="http://www.aspnet.cz/Files/20160131-SNAGHTML5d3d760_thumb.png" alt="Screenshot" title="Výpis certifikátů v CCS" /></a></p>
+<p>Pokud se podíváte z browseru na kteroukoliv z adres pomocí protokolu HTTPS, zobrazí se vám stránka správně s použitím správného certifikátu:</p>
+<p><a href="http://www.aspnet.cz/Files/20160131-SNAGHTML5d5b5a6.png"><img src="http://www.aspnet.cz/Files/20160131-SNAGHTML5d5b5a6_thumb.png" alt="Screenshot" title="HTTPS web pomocí CCS" /></a></p>
+<p>Pokud budete nyní chtít provést jakoukoliv změnu (např. obnovu expirujícího certifikátu), stačí změnit příslušný soubor ve složce, do níž ukazuje konfigurace CCS. Změna se provede na všech napojených serverech zároveň.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vymazání posledních projektů na homepage VS/VWD 2005/2008 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Když si hraju s větším množstvím pokusných projektů a příkladů, esteticky mne uráží, že se jejich názvy drží v seznamu naposledy otevřených projektů na úvodní stránce Visual Studia. Vymazání tohoto seznamu je ale vemi snadné." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Vymazání posledních projektů na homepage VS/VWD 2005/2008</h1>
+      <section class="article">
+        <p>Když si hraju s větším množstvím pokusných projektů a příkladů, esteticky mne uráží, že se jejich názvy drží v seznamu naposledy otevřených projektů na úvodní stránce Visual Studia. Vymazání tohoto seznamu je ale vemi snadné.</p>
+<p>Údaje o posledních otevřených projektech se udržují v registrech a pomocí jednoduchého dávkového programu a konzolové utilitky REG.EXE (je součástí Windows) lze tyto údaje snadno vymazat:</p>
+ <div style="font-size: 11pt; background: white; color: black; font-family: consolas, courier new, monospace"> 
+<p>@ECHO OFF</p>
+<p>ECHO Cleaning MRU Projects for Visual Studio 2005...</p>
+<p>REG DELETE HKCU\Software\Microsoft\VisualStudio\8.0\ProjectMRUList /va /f</p>
+<p>ECHO Cleaning MRU Projects for Visual Studio 2008...</p>
+<p>REG DELETE HKCU\Software\Microsoft\VisualStudio\9.0\ProjectMRUList /va /f</p>
+<p>ECHO Cleaning MRU Projects for Visual Web Developer Express 2005...</p>
+<p>REG DELETE HKCU\Software\Microsoft\VWDExpress\8.0\ProjectMRUList</p>
+<p>ECHO Cleaning MRU Projects for Visual Web Developer Express 2008...</p>
+<p>REG DELETE HKCU\Software\Microsoft\VWDExpress\9.0\ProjectMRUList</p>
+</div> 
+<p>Výše uvedený soubor je univerzální, funguje pro Visual Studio 2005, 2008 a pro Visual Web Developer Express 2005 a 2008 (za informace stran express edic děkuji autorům komentářů).</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

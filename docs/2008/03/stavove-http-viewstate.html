@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Stavové HTTP: ViewState | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Web byl stvořen jako bezstavový a struktura HTTP a HTML tomu odpovídá. Pokud chceme tuto bezstavovost překlenout, existuje několik technik, které nám umožní toto omezení obejít. Poslední technikou, kterou budu v tomto seriálu zmiňovat, je ViewState." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Stavové HTTP: ViewState</h1>
+      <section class="article">
+        <p>V minulých dílech tohoto seriálu jsme se zabývali použitím <a href="http://www.aspnet.cz/Articles/191-stavove-http-cookies.aspx">cookies</a> a <a href="http://www.aspnet.cz/Articles/193-stavove-http-sessions.aspx">sessions</a> k překlenutí bezstavovosti HTTP. Poslední takovou technikou, o které se chci zmínit, je ViewState, která se od dříve uvedených dosti liší.</p>
+<p>Sessions a cookies slouží k předávání údajů mezi různými stránkami nebo dokonce (v případě cookies) i různými servery v téže doméně. ViewState nic takového neumí, slouží k uchovávání údajů mezi různými odesláními téhož formuláře, téže stránky.</p>
+<p>Pomocí ViewState si například GridView pamatuje, na které stránce se právě nachází a nebo jaká data byla nabindována z databáze. Obecně, veškeré hodnoty vlastností server controls se ukládají do ViewState</p>
+<h2 id="jak-viewstate-funguje">Jak ViewState funguje?</h2>
+<p>Cokoliv, co uložíte do kolekce ViewState se při renderingu stránky zpracuje následujícím způsobem:</p>
+<ol>
+<li><strong>Serailizuje</strong> se to - můžete tedy ukládat pouze serializovatelná data.</li>
+<li><strong>Zkomprimuje</strong> se to - jeden z rozdílů mezi ASP.NET verze 1.x a 2.0 je, že data se zkomprimují, což snižuje jejich objem.</li>
+<li><strong>Zašifruje</strong> se to - pokud to v konfiguraci explicitně nezakážete a control si to vyžádá, data se před uložením zašifrují pomocí symetrické šifry a machine key.</li>
+<li><strong>Podepíše</strong> se to - pokud to v konfiguraci explicitně nezakážete, výsledek se digitálně podepíše, aby se vyloučila možnost úmyslného nebo neúmyslného poškození dat při roundtripu přes klienta.</li>
+<li><strong>Zakóduje</strong> to to do Base64, čímž se celá ta věc převede na tisknutelné znaky.</li>
+</ol>
+<p>Výsledek tohoto procesu je potom někam uložen. Kam konkrétně závisí na zvoleném ViewState providerovi. ASP.NET obsahuje dva. Výchozí nastavení je takové, že se celá tato záležitost uloží do skrytého pole formuláře - do hidden fieldu, který se jmenuje &quot;<em>__VIEWSTATE</em>&quot;. Jiný provider umí ukládat tuto hodnotu do session.</p>
+<p>U toho se na chvíli zastavme. Proč tyto dvě &quot;konkurenční&quot; technologie propojovat? Inu, ony zase tak konkurenční nejsou a ve skutečnosti je použití session pro ukládáni ViewState jediná věc, ke které jsem tuto techniku kdy využil. Použití ViewState totiž znamená nárůst objemu přenášených dat, a to v některých případech dost značný. Pokud vyvíjíte aplikace pro mobilní zařízení, je pro vás objem dat dost podstatný.</p>
+<p>Kapesní počítače a mobilní telefony se zhusta připojují přes GPRS a podobné, a objem přenášených dat znamená velký problém, protože tyto technologie jsou pomalé a navíc uživatel za objem přenesených dat platí. Použití session je v tomto konkrétním případě prostě menší zlo.</p>
+<h2 id="viewstate-vs.controlstate">ViewState vs. ControlState</h2>
+<p>V ASP.NET 1.x jste měli na výběr pouze ze dvou možností. Buď jste ViewState nechali zapnutý a v takovém případě vám sice všechny controly fungovaly bez problémů, ale na druhou stranu vám razantně narostl objem přenášených dat. Nebo jste viewstate vypnuli, a přestala vám fungovat většina složitějších formulářů a muselo se to komplikovaně obcházet. Od verze ASP.NET 2.0 se pod hlavičkou ViewState skrývají v podstatě technologie dvě a nejste postaveni před volbu &quot;všechno nebo nic&quot;. Nově se objevuje pojem ControlState.</p>
+<p><strong>ViewState</strong> se používá pro ukládání těch dat, které by control sice rád po postbacku našel, ale dokáže se bez nich v případě nutnosti obejít. Tedy například data nabindovaná z databáze. Když je bude potřebovat, zeptá se na ně znovu. ViewState můžete, jako tvůrce aplikace, vypnout. Na úrovni celé aplikace, nebo na úrovni stránky či jednotlivého controlu.</p>
+<p><strong>ControlState</strong> vypnout nemůžete. Ukládají se tam údaje, které control nezbytně nutně potřebuje ke své činnosti - jako třeba číslo aktuální stránky u stránkovaného gridu. Autor controlu by měl tuto vlastnost využívat opravdu střídmě a v odůvodněných případech.</p>
+<p>ViewState i ControlState se ukládají na stejné místo, nerozeznáte je od sebe. To je také důvod, proč ani po vypnutí ViewState všude, kde vás napadne, stejně ono skryté pole &quot;__VIEWSTATE&quot; nezmizí. Obsahuje sice méně dat, ale pořád tam je. Obsahuje totiž právě control state.</p>
+<h2 id="vyhody-a-nevyhody">Výhody a nevýhody</h2>
+<h2 id="section"></h2>
+<h3 id="proc-viewstate-pouzivat">Proč ViewState používat?</h3>
+<ul>
+<li>Drží se filozofie HTTP, veškerá potřebná data jsou součástí requestu.</li>
+<li>Stejně se ho v podstatě nezbavíte.</li>
+<li>Je bezpečný, protože data jsou šifrovaná a digitálně podepsaná.</li>
+</ul>
+<h3 id="proc-viewstate-nepouzivat">Proč ViewState nepoužívat?</h3>
+<ul>
+<li>Zvyšuje objem přenášených dat, mnohdy velmi razantně.</li>
+<li>Zpracování objemných dat může být výkonově náročné.</li>
+</ul>
+<h3 id="doporuceni">Doporučení</h3>
+<ul>
+<li>ViewState vypněte v celé aplikaci, pro drtivou většinou případů si vystačíte s ControlState, kterého se stejně nezbavíte.</li>
+<li>V odůvodněných případech u složitých formulářů ViewState explicitně zapněte, pro ty prvky, pro které ho potřebujete.</li>
+<li>Pokud je pro vás extrémně důležitý objem přenášených dat, např. u aplikací pro mobilní zařízení, zvažte ukládání ViewState/ControlState do session.</li>
+</ul>
+<p><em>V zítřejším dokončení seriálu celou problematiku shrneme a zaměříme se na doporučená řešení obvyklých problémů (bez)stavovosti.</em></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

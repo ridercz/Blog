@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Forms authentication a session state - proč nejsou synchronní? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Ticket vystavení forms authentication modulem má danou platnost v minutách a lze nastavit, že bude &quot;sliding&quot;, tedy že platnost bude prodlužována při každém požadavku. Stejně tak session timeout se udává v minutách a také se prodlužuje při každém požadavku. Zdravý rozum tedy říká, že pokud oba parametry nastavím na stejnou hodnotu, budou tickety i sessions platit vždy stejnou dobu. Leč, není tomu tak. Pojďme se podívat na to, jak tyto mechanismy vlastně fungují." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Forms authentication a session state - proč nejsou synchronní?</h1>
+      <section class="article">
+        <p>Ticket vystavení forms authentication modulem má danou platnost v minutách a lze nastavit, že bude &quot;sliding&quot;, tedy že platnost bude prodlužována při každém požadavku. Stejně tak session timeout se udává v minutách a také se prodlužuje při každém požadavku. Zdravý rozum tedy říká, že pokud oba parametry nastavím na stejnou hodnotu, budou tickety i sessions platit vždy stejnou dobu. Leč, není tomu tak. Pojďme se podívat na to, jak tyto mechanismy vlastně fungují.</p>
+<h2 id="forms-authentication">Forms authentication</h2>
+<p>Mechanismus forms authentication funguje tak, že se uživateli při přihlášení vystaví &quot;autentizační ticket&quot;, který pak předává s každým požadavkem serveru a server dokáže podle něj uživatele ověřit. Tento ticket má z bezpečnostních důvodů časově omezenou platnost. Délka platnosti se nastavuje pomocí konfiguračního atributu <em>timeout</em> a standardně je dlouhá 30 minut.</p>
+<p>Pomocí konfiguračního atributu <em>slidingExpiration</em> můžete určit, od kterého okamžiku se tento čas bude počítat. Ve výchozím nastavení (<em>true</em>) platí, že pokud uživatel pokládá požadavky na aplikaci, platnost ticketu se průběžně prodlužuje. Často se to zjednodušeně vykládá tak, že platnost autentizačního ticketu je <em>timeout</em> minut od posledního požadavku. Nastavíte-li <em>slidingExpiration</em> na <em>false</em>, platnost ticketu se neprodlužuje a platí <em>timeout</em> minut od přihlášení.</p>
+<p>Implementace <em>slidingExpiration</em> je ovšem taková, že se ticket neobnovuje při každém požadavku, ale pouze tehdy, pokud již uplynula nejméně polovina jeho doby platnosti. Tato konstrukce tam je ze dvou důvodů: Internetový prohlížeč lze zpravidla nastavit tak, aby se při příchodu cookie (kde se autentizační ticket většinou ukládá) zeptal uživatele, zda ji chce přijmout, nebo nikoliv. Pokud by se při každém požadavku cookie obnovila, musel by uživatel tento dotaz zodpovídat neustále. Druhý důvod je výkonnostní: standardní implementace forms authentication funguje tak, že tvorba ticketu je relativně náročná, neboť je nutné ho zašifrovat a digitálně podepsat.</p>
+<h2 id="session-state">Session state</h2>
+<p>Session state má timeout také. Standardně je nastaven na 20 minut a počítá se od posledního požadavku na stránku. Přesněji řečeno: od posledního požadavku na HTTP handler, který session vyžaduje (implementuje interface <em>IRequiresSessionState</em>). Což sice standardně jsou všechny web formy (<em>.aspx), ale nemusí to být třeba váš generický handler (</em>.ashx).</p>
+<h2 id="co-z-toho-vyplyva">Co z toho vyplývá</h2>
+<p>Následující diagram zobrazuje situaci, která může nastat, pokud nastavíme platnost autentizačního ticketu i session na stejnou dobu - 20 minut.  Při prvním požadavku v čase T = 0 se vystaví autentizační ticket, který vyprší v T+20 a stejně tak se vytvoří nová session, která bude platná stejnou dobu.</p>
+<p><img src="http://www.aspnet.cz/Files/20080216-20080216-AuthMissing_3.png" alt="" /></p>
+<p>Pokud přijde v čase T+5 požadavek na běžnou stránku, prodlouží se řádně platnost session, která tedy vyprší až v čase T+25. Nicméně platnost autentizačního ticketu se neprodlouží, protože dosud neuplynula polovina doby jeho platnosti. Pokud tedy další požadavek přijde v době T+20 až T+25 (zvýrazněna žlutě), session bude stále k dispozici, ale uživatel už bude odhlášen.</p>
+<p><img src="http://www.aspnet.cz/Files/20080216-20080216-SessionMissing_3.png" alt="" /></p>
+<p>Druhý diagram zachycuje opačnou situaci. Počáteční stav je stejný, platnost ticketu i session začala v čase T=0. V čase T+15 přijala aplikace požadavek na stránku, která ale nevyžaduje session - handler neimplemenuje <em>IRequiresSessionState</em>. V takovém případě se sice prodlouží platnost autentizačního ticketu, ale nikoliv session. Pokud přijde další požadavek v čase T+20 až T+35 (opět zvýrazněn žlutě), dojde k opačné situaci, než minule. Uživatel bude přihlášen, ale session již nebude k dispozici a založí se nová (na diagramu se tak stalo v čase T+25).</p>
+<p>Mechanismy forms authentication a session state jsou na sobě naprosto nezávislé. Ukázali jsme si, že i při stejném nastavení hodnot <em>timeout</em> může nastat situace, kdy jedna z funkcí bude k dispozici a druhá nikoliv.</p>
+<p>Řešení je nasnadě: nepoužívejte session. A pokud už se rozhodnete ji používat, tak se nespoléhejte na to, že bude s čímkoliv synchronní, bez ohledu na to, jak nastavíte timeout.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

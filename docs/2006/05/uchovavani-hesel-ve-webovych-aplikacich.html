@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Uchovávání hesel ve webových aplikacích | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Ve většině případů jest povinností tvůrce aplikace, aby se ve vlastní režii postaral o bezpečné uložení přístupových hesel svých uživatelů. Tento článek se zabývá metodami jejich bezpečného ukládání a práce s nimi." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Uchovávání hesel ve webových aplikacích</h1>
+      <section class="article">
+        <p>Heslo francouzské revoluce „volnost, rovnost, bratrství“ se v případě webových aplikací příliš neujalo. Zpravidla je žádoucí, ne-li přímo nevyhnutelné, uživatele nějakým způsobem omezit a kastovat.</p>
+<p>V této souvislosti se setkáváme se třemi základními pojmy: identifikace, autentizace a autorizace. Identifikace je prostá odpověď na otázku „kdo jsi?“ – pokud napíšete k tomuto článku komentář, budete požádáni, abyste prozradili své jméno. V tomto případě se vámi zadaná hodnota nijak neprověřuje, ale zpravidla bývá identifikace následována autentizací (někdy se tento proces nazývá též autentifikace). To je v podstatě odpověď na výzvu „dokaž to!“. Posledním krokem tohoto řetězce bývá proces autorizace, v němž se na základě známé identity uživatele a nějakého systému práv rozhoduje, jaké operace mu bude dovoleno vykonat.</p>
+<p>V tomto článku nás bude zajímat autentizace, a to specificky autentizace pomocí hesla. Ve většině případů jest povinností tvůrce aplikace, aby se ve vlastní režii postaral o bezpečné uložení hesla. To lze zajistit různými způsoby.</p>
+<p>Zdánlivě nejjednodušší způsob je prostě heslo tak jak je uložit do databáze. Jedná se také o způsob nejhorší a nejméně bezpečný. Vinou špatného zabezpečení serveru, chyby, podplacení správce nebo desítkami dalších způsobů může útočník získat přístup k databázi či jejím zálohám.</p>
+<p>V takovém případě došlo k totální kompromitaci nejenom vašeho systému, ale též k ohrožení dalších účtů vašich uživatelů v systémech, se kterými nemáte nic společného. Velká část uživatelů totiž používá pro všechny systémy stejné heslo. Což je z hlediska bezpečnosti sice smutná, leč vcelku pochopitelná realita. Proto byste i v případě aplikace která není sama o sobě příliš důležitá, měli věnovat bezpečnému uložení hesel pozornost.</p>
+<h2 id="sifrovani">Šifrování</h2>
+<p>Jednou z možností je hesla před uložením do databáze zašifrovat. Tato možnost je jediná, kterou můžete použít v případě, že vámi používaný autentizační systém vyžaduje na serveru znalost hesla v otevřeném tvaru (například Digest authentication). S její implementací jsou ovšem spojeny značné obtíže, spočívající především v nezbytnosti nějak bezpečně uložit šifrovací klíč, který používáte. A nezapomenout ho pečlivě (a bezpečně) zazálohovat, protože pokud o něj přijdete, už nikdy žádného uživatele neověříte.</p>
+<p>Bohužel, v podmínkách běžného komerčního hostingu je bezpečné uložení šifrovacího klíče v podstatě nemožné. ASP.NET sice má v tomto směru rozličné možnosti, leč ty jsou založeny na DPAPI (Data Protection API) a předpokládají možnost spuštění utility z příkazového řádku nebo možnost vykonání jistých poměrně privilegovaných operací.</p>
+<p>Více informací:</p>
+<ul>
+<li><a href="http://msdn.microsoft.com/msdnmag/issues/06/05/ExtremeASPNET/">Rob Howard: Keeping Secrets in ASP.NET 2.0</a></li>
+<li><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000005.asp">How to: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI</a></li>
+<li><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000006.asp">How to: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA</a></li>
+</ul>
+<h2 id="hashovani">Hashování</h2>
+<p>Ve většině případů (například pokud používáte Basic nebo Forms autentizaci) nepotřebujete správné heslo znát. Potřebujete mít pouze možnost ověřit si, že heslo je stejné, jako to správné. K tomuto účelu můžete s výhodou využít hashování.</p>
+<p>Hashování je v podstatě výpočet kontrolního součtu. Slyšel jsem pro tento proces označení „matematická ráčna“, protože je jednosměrný: z daných dat spočítáte vždy stejný kontrolní součet (hash), ale neexistuje způsob, jak z hashe rekonstruovat zpět původní data.</p>
+<p>Nejznámější a nejrozšířenější hashovací algoritmy jsou SHA1 a MD5. Před nedávnem prolétla odbornými i mainstreamovými médii zpráva, že tyto algoritmy byly prolomeny. Je to pravda, ale ne úplně – objevený mechanismus neumožňuje rekonstruovat z hashe původní text, ale spíše umožňuje nalezení dvojic dat, majících stejný kontrolní součet. Pro náš účel jsou tyto algoritmy stále použitelné, i když s ohledem na budoucnost je vhodné zamýšlet se nad použitím pokročilejších algoritmů, jako například SHA512.</p>
+<p>Celková idea použití hashe pro ukládání hesel je taková, že v databázi uchováváte nikoliv hesla, ale jenim jejich hashe – kontrolní součty. Ověření hesla pak probíhá tím způsobem, že vypočítáte hash zadané hodnoty a výsledek se musí shodovat s uloženou hodnotou. Pokud se vaše databáze dostane do nepovolaných rukou, nezíská útočník hesla, ale toliko jejich hashe, které jsou mu teoreticky k ničemu, protože by je musel prolomit hrubou silou, tedy vyzkoušet všechny možné kombinace a spočítat pro ně hashe.</p>
+<p>Prakticky ale zneužít hashe lze. Oproti obecným bezpečnostním zásadám a doporučením uživatelé používají hesla krátká a odhadnutelná, případně nalezitelná ve slovníku. Na Internetu jsou volně ke stažení soubory, které obsahují seznamy obvyklých slov a hesel a k nim odpovídající hashe. Útočníkovi pak stačí porovnat tyto hashe s databází získanou útokem a slabá hesla odhalí.</p>
+<h2 id="hashovani-se-soli">Hashování se solí</h2>
+<p>Z tohoto důvodu se obvykle doporučuje používat takzvaný hash se solí. Tato metoda spočívá v tom, že se k heslu přidá ještě nějaký další text, „sůl“ (anglicky „salt“) a teprve z toho se spočítá hash. Na rozdíl od šifrovacího klíče nevyžaduje sůl nijakou zvláštní ochranu a utajení. Sama o sobě je „sůl“ k ničemu, slouží pouze k zamezení možnosti použít předpočítané slovníky hesel.</p>
+<p>Existují dva základní způsoby, jimiž lze „sůl“ použít. První je ten, že její hodnota je pro všechny uživatele v rámci aplikace stejná. Tak lze efektivně zabránit použití obecných slovníků předpočítaných hesel, ale pokud si útočník dá tu práci a spočítá si hesla s vaší solí, může pak takto vytvořený slovník použít proti všem uživatelským účtům.</p>
+<p>Doporučený postup je tedy takový, že „sůl“ je generována zvlášť, pro každého uživatele. Náročnost prolomení jednoho konkrétního účtu tím sice zůstane nezměněna, ale případný úspěch nijak nepomůže útočníkovi v útoku na další uživatele.</p>
+<h3 id="implementace-hashovani-se-soli">Implementace hashování se solí</h3>
+<p>Pokud tedy chcete používat posledně uvedenou metodu, použijte následující postup.</p>
+<p>Při vytváření uživatelského účtu:</p>
+<ol>
+<li>Vygenerujte náhodný řetězec, který se použije jako sůl (použijte třeba metodu <em>Membership.GeneratePassword()</em>). Na jeho délce příliš nezáleží, já osobně používám pět znaků.</li>
+<li>Spočítejte si hash z řetězce <em>Heslo + Sůl</em>.</li>
+<li>Do databáze uložte uživatelské jméno, sůl a vypočtený hash.</li>
+</ol>
+<p>Při ověření přihlášení:</p>
+<ol>
+<li>Načtěte z databáze sůl k danému uživatelskému jménu.</li>
+<li>Spočítejte si hash z řetězce <em>Heslo + Sůl</em>.</li>
+<li>Porovnejte, zda se vypočtená hodnota shoduje s hodnotou hashe, uloženou v databázi.</li>
+</ol>
+<p>Tento postup je zcela univerzální, můžete ho použít nezávisle na zvoleném hashovacím algoritmu.</p>
+<p>A dva malé tipy na konec:</p>
+<ul>
+<li>Ačkoliv se s hodnotami hashů obvykle setkáte jako s řetězcem šestnáctkových číslic (Base16 encode), jedná se nativně o prostý proud bitů. Pokud hash zakódujete metodou Base64, bude kratší.</li>
+<li>Navíc je hash vždycky stejně dlouhý (jeho délka vyplývá z použitého algoritmu). Můžete tedy po zakódování Base64 odstranit zbytečné výplňové znaky (padding, „=“) a k uložení v databázi použít pole typu char s pevnou délkou a ne obvyklý varchar.</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Přehled alternativních Membership, Role a Profile providerů pro ASP.NET | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Upozornění na novou verzi &quot;Altairis Simple ASP.NET SQL Providers&quot; a stručný přehled dalších alternativ k vestavěným providerům." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Přehled alternativních Membership, Role a Profile providerů pro ASP.NET</h1>
+      <section class="article">
+        <p>Za jeden z nejlepších nápadů v ASP.NET 2.0 považuji provider model, zejména pak Membership, Profile a Role providery. Vestavěná sbírka providerů ovšem není moc použitelná pro složitější aplikace. Nabízím vám tedy přehled alternativ.</p>
+<h2 id="altairis-simple-asp.net-sql-providers">Altairis Simple ASP.NET SQL Providers</h2>
+<p>Začnu samozřejmě svým vlastním dílkem, sbírkou Membership, Role a Profile providerů, jejichž cílem je poskytnout &quot;minimální implementaci&quot; založenou na jednoduché databázové struktuře. Jejich popis jsem zde již <a href="/Articles/115-altairis-simple-asp-net-sql-providers-ke-stazeni.aspx">zveřejnil před časem</a>.</p>
+<p>Nyní se tento produkt dočkal první &quot;production&quot; verze, kterou si můžete stáhnout na <a href="http://www.codeplex.com/AltairisWebProviders">CodePlexu</a>. Připomínky a chyby hlaste prosím tamtéž. Děkuji za spolupráci též Martinu Štěpánovi, který odhalil a promptně opravil několik chyb.</p>
+<h2 id="xml">XML</h2>
+<p>Pokud je na vás i jednoduchá DB struktura příliš, a rádi byste se obešli úplně bez databáze, mohla by vás zajímat sada providerů, kteři svá data ukládají do XML souborů. Najdete je v rámci projektu <a href="http://www.codeplex.com/MyWebPagesStarterKit">My Web Pages Starter Kit</a>.</p>
+<p>Tento projekt je mimo jiné zajímavý sám o sobě. Mimochodem, vytvořil jsem jeho českou lokalizaci (včetně překladu dokumentace), měla by být v dohledné době dostupná na shora uvedeném webu.</p>
+<h2 id="microsoft-access-mdb">Microsoft Access (MDB)</h2>
+<p>K dispozici je i <a href="http://download.microsoft.com/download/5/5/b/55bc291f-4316-4fd7-9269-dbf9edbaada8/sampleaccessproviders.vsi">implementace nad databází Microsoft Access</a> (potažmo MDB soubory). Osobně ale vřele nedoporučuji Access používat pro web, není na to stavěný a obvykle to dopadá špatně.</p>
+<h2 id="mysql">MySQL</h2>
+<p>Pokud používáte MySQL, může vás zajímat implementace membershipu a rolí pro tento server. Najdete ji pro změnu na <a href="http://www.codeproject.com/aspnet/MySQLMembershipProvider.asp">CodeProjectu</a>. Víc o ní nevím, MySQL nepoužívám.</p>
+<h2 id="odbc">ODBC</h2>
+<p>V MSDN najdete příklad implementace <a href="http://msdn2.microsoft.com/en-us/library/6tc47t75.aspx">Membership</a>, <a href="http://msdn2.microsoft.com/en-us/library/317sza4k.aspx">Role</a> a <a href="http://msdn2.microsoft.com/en-us/library/ta63b872.aspx">Profile</a> providerů proti jakémukoliv datovému zdroji, který je dostupný přes ODBC.</p>
+<h2 id="zdrojove-kody-vestavenych-provideru-a-dokumentace-k-nim">Zdrojové kódy vestavěných providerů a dokumentace k nim</h2>
+<p>Pokud vás zajímá, jak providery obecně fungují a chcete se podívat na jejich zdrojové kódy, máte možnost. Obsáhlá dokumentace a zdrojáky jsou nyní <a href="http://msdn2.microsoft.com/en-us/asp.net/aa336558.aspx">ke stažení na MSDN jako Provider Toolkit</a>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Certifikační autorita snadno a rychle | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V řadě případů potřebujeme rychle vytvořit nějaké testovací certifikáty či přímo jejich logickou sestavu. Dlouhá léta jsem pro tento účel používal OpenSSL, ale nyní jsem zjistil, že vhodný nástroj je přímo součástí Windows SDK." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Certifikační autorita snadno a rychle</h1>
+      <section class="article">
+        <p>V řadě případů potřebujeme rychle vytvořit nějaké testovací certifikáty či přímo jejich logickou sestavu. Dlouhá léta jsem pro tento účel používal OpenSSL, ale nyní jsem zjistil, že vhodný nástroj je přímo součástí Windows SDK. Dlouho jsem <code>makecert.exe</code> považoval jenom za nástroj pro vytváření self-signed certifikátů (jejichž použitelnost je obecně omezená), ale teď jsem s překvapením zjistil, že toho umí mnohem víc.</p>
+<p>S pomocí <code>makecert.exe</code> můžete vytvořit certifikační autoritu a jí podepsané serverové i klientské certifikáty. Tato utilita je součástí Windows SDK. To se vám nainstaluje s Visual Studiem a nebo si jej ve verzi pro Windows 7 a .NET 4.0 můžete stáhnout <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=6b6c21d2-2006-4afa-9702-529fa782d63b">z webu Microsoftu</a>. Nejlepší přehled všech dostupných verzí jsem našel na <a href="http://en.wikipedia.org/wiki/Microsoft_Windows_SDK">Wikipedii</a>. Po instalaci pak najdete utility v <code>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin</code> případně <code>C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin</code> (cesta obecně závisí na platformě a verzi instalovaného SDK, může být i jiná).</p>
+<h2 id="vytvoreni-klicu-a-self-signed-certifikatu-certifikacni-autority">Vytvoření klíčů a self-signed certifikátu certifikační autority</h2>
+<p>Prvním krokem je vytvoření certifikátu certifikační autority. K tomu použijeme následující příkaz:</p>
+<p><code>makecert -r -n &quot;CN=My Test Root CA&quot; -pe -sv root.pvk -a sha256 -m 120 -len 2048 -cy authority root.cer</code></p>
+<p>Význam parametrů je následující:</p>
+ <table><tbody> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-r`</td> <td>Vytvořit self-signed certifikát, tedy vystavovatel je stejný jako subjekt</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-n "CN=My Test Root CA"`</td> <td>Distinguished name v certifikátu. "CN" je common name, nejdůležitější parametr, ale zde můžete napsat jakkoliv složité DN.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-pe`</td> <td>Vygenerovaný soukromý klíč bude označen jako exportovatelný.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-sv root.pvk`</td> <td>Název souboru, do nějž bude uložen soukromý klíč.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-a sha256`</td> <td>Algoritmus použitý pro podpis. Výchozí hodnota je `sha1` (což je v nouzi ještě použitelné), pro nové certifikáty se doporučuje používat nejméně `sha256`. Rozhodně nepoužívejte `md5`.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-m 120`</td> <td>Doba platnosti certifikátu v měsících. Pro CA se obvykle nastavují delší hodnoty. Lze místo toho použít přepínače `-b` a `-e`, které umožňují určit přesně začátek a konec platnosti (datumy se udávají ve formátu mm/dd/yyyy). Tak lze vyrobit například expirovaný certifikát.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-len 2048`</td> <td>Délka klíče v bitech. Výchozí (a dnes již stěží přijatelná) je hodnota 1024 bitů, doporučuji používat 2048 nebi 4096.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-cy authority`</td> <td>Typ certifikátu může být `end` (koncový uživatel) nebo `authority` (certifikační autorita).</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`root.cer`</td> <td>Název souboru, kam bude uložen nový certifikát.</td> </tr> </tbody></table> 
+<p>Výsledkem tohoto příkazu budou soubory <code>root.pvk</code> a <code>root.cer</code>. První z nich představuje soukromý (tajný) klíč a měli byste ho střežit jako oko v hlavě, budete ho potřebovat pro další práci. Druhý je kořenový certifikát. Ten musíte naopak obvyklým způsobem nainstalovat do všech počítačů, které mají tuto CA pokládat za důvěryhodnou.</p>
+<h2 id="vytvoreni-klicu-a-certifikatu-pro-server">Vytvoření klíčů a certifikátu pro server</h2>
+<p>Druhým krokem je, že použijeme tuto CA pro vytvoření serverového certifikátu, typicky pro web server. Syntaxe je následující:</p>
+<p><code>makecert -iv root.pvk -ic root.cer -n &quot;CN=localhost&quot; -pe -sv server.pvk -a sha256 -len 2048 -m 12 -sky exchange -eku 1.3.6.1.5.5.7.3.1 server.cer</code></p>
+<p>Význam parametrů je:</p>
+ <table><tbody> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-iv root.pvk`</td> <td>Cesta k soukromému klíči CA.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-ic root.cer`</td> <td>Cesta k veřejnému klíči (certifikátu) CA.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-n "CN=localhost"`</td> <td>Opět distinguished name uvedený v certifikátu. Pro použití v rámci web serveru se musí obvykle CN rovnat DNS názvu serveru.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-pe`</td> <td>Vygenerovaný soukromý klíč bude označen jako exportovatelný.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-sv root.pvk`</td> <td>Název souboru, do nějž bude uložen soukromý klíč.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-a sha256`</td> <td>Algoritmus použitý pro podpis. Výchozí hodnota je `sha1` (což je v nouzi ještě použitelné), pro nové certifikáty se doporučuje používat nejméně `sha256`. Rozhodně nepoužívejte `md5`.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-m 12`</td> <td>Obecné certifikáty (serverové, klientské) se obvykle vystavují nak kratší dobu, v tomto případě na 12 měsíců.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-sky exchange`</td> <td>Typ klíče je typicky `signature` (pro elektronický podpis) nebo `exchange` (výměna klíčů, šifrování).</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`-eku 1.3.6.1.5.5.7.3.1`</td> <td>Numerické identifikátory (OID) účelů, pro které lze certifikát využít. V tomto případě OID `1.3.6.1.5.5.7.3.1` znamená Server Authentication.</td> </tr> <tr style="vertical-align: top"> <td style="white-space: nowrap">`server.cer`</td> <td>Název souboru, kam bude uložen nový certifikát.</td> </tr> </tbody></table> 
+<h2 id="vytvoreni-klicu-a-certifikatu-pro-klienta">Vytvoření klíčů a certifikátů pro klienta</h2>
+<p>Chcete-li používat autentizaci klientskými certifikáty, je nutné vygenerovat certifikát i pro klienta. Příkaz pro vygenerování je prakticky stejný, jako u serverového certifikátu:</p>
+<p><code>makecert -iv root.pvk -ic root.cer -n &quot;CN=John Q. Public, E=jqp@example.com&quot; -pe -sv client.pvk -a sha256 -len 2048 -m 12 -sky exchange -eku 1.3.6.1.5.5.7.3.2 client.cer</code></p>
+<p>Liší se jenom v jiném distinguished name (typicky udáváme nejméně jméno osoby a její e-mailovou adresu) a především v použitém OID, které má na konci dvojku - <code>1.3.6.1.5.5.7.3.2</code> znamená Client Authentication.</p>
+<h2 id="konverze-pvk-cer-na-pfx">Konverze PVK + CER na PFX</h2>
+<p>Pro serverovou a klientskou autentizaci potřebujeme certifikát naimportovat do úložiště včetně soukromého klíče. Samostatný PVK soubor nelze (alespoň pokud je mi známo) naimportovat přímo, takže oba klíče nejprve zkonvertujeme do formátu dle PKCS#12, tedy do souboru s příponou obvykle PFX nebo P12. K tomu použijeme další utilitu, která je součástí Windows SDK, a to <code>pvk2pfx.exe</code>:</p>
+<p><code>pvk2pfx -pvk client.pvk -spc client.cer -pfx client.pfx</code></p>
+<p>Význam parametrů je myslím poměrně jasný</p>
+<h2 id="varovani-na-zaver">Varování na závěr</h2>
+<p>Provozovat certifikační autoritu, opravdovou, pro reálné nasazení, je mnohem náročnější, než jenom spustit pár prográmků. Výše uvedené postupy představují jednoduché řešení pro pokusy, testy, vývoj a podobně, rozhodně se nejedná o postup doporučený pro běžnou práci.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

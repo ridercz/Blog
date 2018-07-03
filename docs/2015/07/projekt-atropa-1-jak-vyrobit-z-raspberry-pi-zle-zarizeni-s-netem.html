@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Projekt Atropa (1): Jak vyrobit z Raspberry Pi zlé zařízení s .NETem | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Projekt Atropa (1): Jak vyrobit z Raspberry Pi zlé zařízení s .NETem</h1>
+      <section class="article">
+        <p>Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod. Nechávám na posouzení laskavého čtenáře, zda to vyhodnotí jako okolnost polehčující nebo přitěžující.</p>
+<h2 id="proc-atropa">Proč Atropa?</h2>
+<p>Raspberry Pi je miniaturní jednodeskový mikropočítač, který je levný a snadno dostupný. Může na něm běžet kdeco, třeba Linux nebo speciální edice Windows 10. Posledně jmenovaný systém je teprve v plenkách, takže pokud chcete na RPi něco vážnějšího dělat, tak vám toho času nezbude, než si začít s Linuxem.</p>
+<p><a href="http://www.aspnet.cz/Files/20150713-atropa_rpihw_4.jpg"><img src="http://www.aspnet.cz/Files/20150713-atropa_rpihw_thumb_1.jpg" alt="Celkový pohled na Raspberry Pi" title="Celkový pohled na Raspberry Pi" /></a></p>
+<p>Abych se nemusel vzdávat své oblíbené technologie .NET, chtěl jsem vyzkoušet, jak je možné ASP.NET aplikace (psané pomocí nového ASP.NET 5) reálně provozovat na Linuxu za hranicemi dema.</p>
+<p>A protože se zabývám počítačovou bezpečností, napadlo mne z Raspberry Pi udělat &quot;zlý přístupový bod&quot; (rogue AP). Bude vysílat Wi-Fi, ke které když se někdo připojí, zobrazí se mu captive portál (jak je u mnoha připojení k Internetu běžné), kde se z oběti pokusím vylákat citlivé přihlašovací údaje.</p>
+<p>Nejsem sám, koho tato idea napadla. Na Raspberry Pi se dá nahrát kompletní Kali Linux včetně programu Mana Toolkit, který tohle všechno umí a ještě něco navíc. Nicméně, já si to chtěl zkusit naprogramovat v .NETu a navíc nastavit tak, aby celý program byl naprosto autonomní a fungoval bez obsluhy, jenom po připojení napájení, a aby fungoval i bez připojení k Internetu.</p>
+<p>A proč se to celé jmenuje Atropa? <em>Atropa Belladonna</em> je latinský název pro rulík zlomocný, prudce jedovatou rostlinu, která se vyskytuje téměř po celé Evropě, včetně České republiky. Odhaduje se, že otravy rulíkem zlomocným tvoří zhruba polovinu všech vážných otrav rostlinného původu na našem území. Raspberry jsou maliny, ale moje variace na toto téma není zase až tak chutná.</p>
+<p>Samozřejmě záleží na vás, jak se získanými informacemi naložíte. Drtivá většina postupů bude naprosto bez problémů použitelná pro vývoj jakékoliv, i mnohem hodnější, aplikace v ASP.NET pro RPi. &quot;Zlé&quot; věci budeme dělat jenom ve dvou dílech.</p>
+<h2 id="co-budete-potrebovat">Co budete potřebovat?</h2>
+<ul>
+<li><strong>Raspberry Pi.</strong> Já pracuji s <a href="https://www.alza.cz/raspberry-pi-2-d2307258.htm">RASPBERRY Pi 2 Model B</a>, ale měl by vám stačít i <a href="https://www.alza.cz/raspberry-pi-model-b-d2141877.htm">RASPBERRY Pi Model B+</a>. (Linky vedou na Alza.cz, ale RPi lze na menších e-shopech koupit výrazně levněji). Doporučuji si k němu koupit i nějakou krabičku.</li>
+<li><strong>Dostatečně silný zdroj s MicroUSB konektorem.</strong> Budete z něj napájet Raspberry a měl by mít alespoň 2 A. Já používám ke své spokojenosti 2 A zdroj od tabletu. Nabíječka na mobil vám téměř jistě stačit nebude.</li>
+<li><strong>MicroSD kartu.</strong> Používám 16 GB Class 10, ale měla by vám, stačit i menší, 8 GB určitě, možná i 4 GB. Také budete potřebovat patřičnou čtečku pro vaše PC a případně redukci z MicroSD na velkou SD.  Redukce bývá u některých karet přímo součástí balení.</li>
+<li><strong>Monitor s HDMI vstupem.</strong> To má většina novějších monitorů, případně vám stačí DVI nebo DisplayPort vstup a patřičná redukce/kabel.</li>
+<li><strong>USB klávesnice.</strong> Jakákoliv standardní klávesnice postačí.</li>
+<li><strong>USB Wi-Fi karta.</strong> Nejlépe se mi osvědčila karta <a href="https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm">TP-LINK TL-WN722N</a>. Je levná, široce kompatibilní (Raspbian s ní umí pracovat automaticky), má všechny funkce potřebné i pro pokročilejší Wi-Fi škození a externí anténu, místo které je možné připojit jinou.</li>
+</ul>
+<p>Dále pak budete potřebovat běžný počítač s v podstatě libovolným operačním systémem. Já používám poslední preview Windows 10, ale nesejde na tom, protože z tohoto PC budeme potřebovat jenom kopírovat souboryu a používat terminálový program. Využívat budeme též různý volně dostupný software, na který vás postupně upozorním v průběhu návodu.</p>
+<h2 id="co-se-naucite">Co se naučíte?</h2>
+<p>Seriál bude rozdělen do několika dílů, které budou vycházet postupně v týdenních intervalech. Cílovou skupinou jsou .NET programátoři, u kterých nepředpokládám žádnou zkušenost s Linuxem a podobnými věcmi, návody budou zcela konkrétní.</p>
+<p>Jednotlivé díly budou mít následující obsah:</p>
+<ol>
+<li>Úvod, který právě čtete.</li>
+<li>Zprovoznění Raspberry Pi a Raspbian Linuxu.</li>
+<li>Instalace a konfigurace Mono, ASP.NET 5 a rozchození první aplikace.</li>
+<li>Instalace a konfigurace nginx jako proxy a nastavení ASP.NET pro ostrý provoz.</li>
+<li>Instalace a konfigurace HostAPD, DnsMasq a captive portál pro WiFi.</li>
+<li>Tvorba captive portálu v ASP.NET 5.</li>
+<li>Návody, jak se útokům tohoto ražení bránit.</li>
+</ol>
+<p>Díly 1-4 jsou &quot;hodné&quot; a jejich výsledkem bude platforma, na které by měla běžet jakákoliv ASP.NET aplikace. Díly 5-6 jsou &quot;zlé&quot; a ukáží, jak uvedené technologie využívat k útokům na důvěřivé uživatele. Díl 7 je nejhodnější a ukáže vám, jak se bránit.</p>
+<h2 id="varovani">Varování</h2>
+<p><strong>Píšu o věcech, kterým příliš nerozumím.</strong> O Linuxu toho mnoho nevím a tento seriál je z velké části kompilátem návodů, které jsem našel někde jinde, upravil je a aktualizoval. Neříkám, že mnou zvolené řešení je nejlepší, nebo dokonce jediné možné. Rovněž se příliš nezabývám bezpečností, jelikož neočekávám, že by se na zařízení tohoto typu vyskytovala citlivá data provozovatele.</p>
+<p><strong>Píšu o věcech, které se rychle mění.</strong> Vycházejí nové verze knihoven, použitého software, ASP.NET je v betě… Možná vám něco nebude fungovat nebo se to bude chovat jinak, než mně. To byl můj největší problém, když jsem se řídil radami jiných. Odfiltrovat již neaktuální a zastaralé informace.</p>
+<p><strong>Použití výsledného zařízení může být za určitých okolností nelegální.</strong> Při reálném použití zařízení tohoto druhu se můžete dopustit široké škály trestných činů, příkladně neoprávněného přístupu k počítačovému systému a nosiči informací podle § 230 trestního zákona.</p>
+<p>Při – podle mého názoru nepřípadně extenzivním – výkladu zákona by se samotné vydání tohoto článku mohlo chápat jako trestný čin opatření a přechovávání přístupového zařízení a hesla k počítačovému systému a jiných takových dat dle § 231 TrZ. Já jsem přesvědčen, že se trestného činu nedopouštím. Jednak mým cílem není spáchat trestné činy dle § 182 a § 230 TrZ a také jsem přesvědče, že mé jednání má nulovou společenskou nebezpečnost. Naopak, jeho cílem je být společensky prospěšným.</p>
+<p>Živím se tím, že uživatele i programátory učím chovat se a jednat bezpečněji. Mám v tom dlouholetou praxi a její důležitou součástí je poznání, že mi lidé prostě nevěří. Myslí si, že kybernetické útoky jsou něco, co se děje jenom v amerických filmech, co zvládnou jenom špičkoví hackeři, kterých je v republice pět, a že k tomu potřebují sofistikované speciální vybavení za drahé peníze. Že jejich data nikomu nebudou za takovou věc stát. Vím, že mne účastníci mých kurzů začnou brát vážně teprve ve chvíli, kdy jim ukážu, že škodit se dá i s věcmi, které jsem jen tak našel po kapsách.</p>
+<p>Nic z toho, co zde popisuji, není novinka. Všechny tyto postupy jsou známé a používají se běžně, dlouhá léta a setkal jsem se s nimi jako s reálnými útoky &quot;in the wild&quot;. Doufám, že až si je sami vyzkoušíte, začnete je brát vážně.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Konfigurace v ASP.NET a IIS verze 6.0 a 7.0 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Aplikace psané v ASP.NET jsou ve své podstatě konfederace nezávislých tříd, kterou drží pohromadě konfigurace. Je to právě konfigurační systém .NET, který říká kdy se který modul má použít. S příchodem nové verze IIS (7.0 ve Windows Vista a Windows Server 2008) je konfigurační model .NETu ještě důležitější, protože se jeho prostřednictvím budou nastavovat i vlastnosti IIS jako takového." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Konfigurace v ASP.NET a IIS verze 6.0 a 7.0</h1>
+      <section class="article">
+        <p><em>Poznámka: Tento článek je první součástí seriálu o konfiguraci ASP.NET a vychází z <a href="http://akce.altairis.cz/Events/122.aspx">přednášky</a>, kterou jsem měl v Praze 30. srpna 2007. Nebyl z ní pořízen záznam a těm, kdož se jí nezúčastnili, by patrně nebyly pouhé slajdy k ničemu.</em></p>
+<p>O aplikacích psaných v &quot;nižších&quot; technologiích, jako je třeba klasické ASP nebo PHP s oblibou (a jistou mírou despektu, přiznávám) tvrdím, že se nejedná ani tak o aplikaci, jako spíše o volnou konfederaci nezávislých skriptů. Typicky totiž jednotlivé stránky aplikace nespojuje nic, až na pár include souborů.</p>
+<p>O ASP.NET aplikacích se nicméně dá dle stejného vzoru s trochou nadsázky říct, že jde o volnou konfederaci nezávislých tříd, kterou pohromadě drží konfigurační systém. .NET Framework je striktně objektová technologie, což umožňuje extrémní modularizaci jednotlivých aplikací. A je to právě konfigurace, která určuje, které moduly se mají použít a v jaký okamžik. Je proto důležité konfiguračnímu systému .NET porozumět a naučit se ho využívat. Jinak nebude vývoj větších aplikací povznášejícím zážitkem, ale krvavým bojem, ve kterém budete mít jako programátor dost nevýhodnou pozici.</p>
+<p>Stejný model, jaký používá .NET, používá i příští verze Microsoft Internet Information Services - IIS 7.0, která je součástí Windows Vista a bude součástí Windows Serveru 2008 (alias &quot;Longhorn&quot;).</p>
+<h2 id="konfigurace-asp.net">Konfigurace ASP.NET</h2>
+<p>Tři klíčové vlastnosti konfiguračních mechanismů v .NETu jsou hierarchie, univerzalita a rozšiřitelnost.</p>
+<ul>
+<li>Konfigurace je <strong>hierarchická</strong>, protože jednotlivé konfigurační soubory popisují pouze změnu od výchozí konfigurace, lépe řečeno od konfigurace &quot;dříve známé&quot;. To umožňuje udržovat konfigurační soubory na snesitelné velikosti, ačkoliv konfiguračních nastavení jsou tisíce. Dále pak tento model umožňuje nastavení konfigurace decentralizovat (s možným stanovením omezení), takže není nutno veškeré konfigurace provádět z moci administrátora serveru, ale lze je učinit součástí aplikace samé. Konfigurace je <strong>univerzální</strong>. Jednotný konfigurační model se používá pro nastavení všech částí .NET Frameworku. Základy a principy jsou v podstatě stejné pro webové aplikace, desktopové aplikace, služby, mobilní aplikace atd. Konfigurace je <strong>rozšiřitelná</strong>, protože je její model navržený tak, abyste do konfiguračních souborů mohli ukládat nejenom nastavení .NET Frameworku, ale i nastavení vaší aplikace nebo jednotlivých komponent. Konfigurační soubory jsou zapsány ve formátu XML a formát jednotlivých konfiguračních sekcí není pevně dán, syntaxe je v rukou jejich tvůrce.</li>
+</ul>
+<p>Základní konfigurace, platná pro všechny webové aplikace běžící na daném serveru, je uložena v souboru <em>machine.config</em>, který se nachází ve složce .NET Frameworku, typicky tedy v *%SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\CONFIG* (a to i v případě .NET Frameworku 3.0 nebo 3.5, protože i tyto verze používají jádro verze 2.0, pro více viz <a href="http://www.aspnet.cz/Articles/161-jeste-jednou-a-dukladneji-k-verzim-microsoft-net-frameworku.aspx">samostatný článek</a>).</p>
+<p>V téže složce se nachází ještě soubor <em>web.config</em>, kterému se obvykle říká <em>root web.config</em>. Jedná se v podstatě o vydělení konfigurační sekce system.web do samostatného souboru, z hlediska architektury je jeho role stejná, jako v případě <em>machine.configu</em>.</p>
+<p>Shora uvedené soubory byste měli modifikovat pouze výjimečně a pouze tehdy, víte-li dobře co a proč děláte. Veškeré další konfigurační soubory totiž popisují pouze změny od tohoto základu. A obecně předpokládají, že ta základní konfigurace bude výchozí, že bude odpovídat standardnímu nastavení .NET Frameworku. Pokud tedy v těchto základních souborech provedete nějaká opravdu divoká nastavení, podřízené aplikace to může poněkud zaskočit, protože očekávají poněkud... konformnější přístup.</p>
+<p>Další v pořadí je konfigurační soubor, který se nachází v rootu dané aplikace, tedy v rootu daného virtuálního webu nebo adresáře. Obvykle se označuje jako <em>~/web.config</em>, protože tilda (vlnovka) se v ASP.NET používá k označení kořene aplikace. Tento soubor určuje konfiguraci konkrétní aplikace a je to právě on, s nímž budete pracovat nejčastěji.</p>
+<p>Je-li aplikace členěna do podadresářů, mohou jednotlivé podadresáře obsahovat další soubory <em>web.config</em>, které obsahují nastavení platná pro konkrétní adresář a jeho případné podadresáře. Použití těchto &quot;podřízených&quot; <em>web.configů</em> jest spíše věcí osobního vkusu, protože stejného efektu lze dosáhnout přímo v aplikačním konfiguračním souboru pomocí elementu <em><location></em>, jímž lze omezit působnost určité části konfigurace.</p>
+<p> Osobně nicméně doporučuji dát vnořeným souborům přednost před psaním všeho do jednoho soubory. V první řadě se tím hlavní <em>web.config</em> zpřehledňuje a to je vždy pozitivní (ono je tam u složitějších aplikací i bez toho zmatku dost). Ve druhé řadě tím předejdete možným omylům z nepozornosti. Pokud adresář přejmenujete a konfigurace bude v něm, nic se nestane - bude prostě beze změny platná i pro nový název. Pokud ale použijete element <em><location></em> v aplikačním konfiguračním souboru, musíte změnu zaznamenat i zde. Pokud tak zapomenete učinit, můžete si v aplikaci vyrobit třeba i ošklivou bezpečnostní díru - například pokud se předmětná konfigurace týká nastavení URL autorizace.</p>
+<h2 id="konfigurace-iis-6.0">Konfigurace IIS 6.0</h2>
+<p><a href="http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis6.png"><img src="http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis6_thumb.png" alt="Konfigurace ASP.NET v IIS 6.0" /></a>V případě Internet Information Services verze 6.0 a nižší se konfigurace web serveru ukládá odděleně od konfigurace ASP.NET a je na ní obecně zcela nezávislá.</p>
+<p>Konfigurace IIS se ukládá v takzvané metabázi, což je samostatný konfigurační systém, který používá pouze IIS. Do verze 5.x včetně byla metabáze uchovávána jako binární soubor na disku a pokud došlo k jejímu poškození a neměli jste zálohu, byla sebevražda v některých případech celkem adekvátní reakcí.</p>
+<p>V případě IIS 6.0 se sice jedná o XML soubor, ale dobrovolný odchod ze života jako řešení kategoricky stále neodsuzujte. Rozhodně ne dříve, než se podíváte do souboru <em>%SYSTEMROOT%\system32\inetsrv\metabase.xml</em>. Formálně se sice o XML jedná, ale co do architektury se žádná velká hierarchie, přehlednost, rozšiřitelnost a další podobné zážitky s XML obvykle spojované nedostavují.</p>
+<p>Ruční nebo programová editace tohoto souboru se ze shora uvedených důvodů přiliš nedoporučuje. Ke správě se využívá GUI IIS Manageru, programově lze s konfigurací pracovat pomocí WMI a ADSI, což není upřímně řečeno příliš jednoduché, intuitivní ani povznášející.</p>
+<p>Z této architektury mimo jiné vyplývá, že některé věci (týkající se specificky .NETu) nastavujete pomocí konfiguračního modelu ASP.NET a *<em>.config</em> souborů popsaných výše a některé věci (nastavení web serveru jako takového) nastavujete pomocí IIS Manageru a ukládají se v metabázi. Občas se tato nastavení i duplikují - typicky např. reakce na chyby (chybové stránky) a podobně.</p>
+<h2 id="konfigurace-iis-7.0">Konfigurace IIS 7.0</h2>
+<p><a href="http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis7.png"><img src="http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis7_thumb.png" alt="Konfigurace ASP.NET v IIS 7.0" /></a>Nová verze Internet Information Services, IIS 7.0, která je součástí Windows Vista a bude součástí Windows Serveru 2008 přistupuje ke konfiguraci podstatně elegantnějším způsobem. Nepřehledná metabáze je nahrazena stejným systémem hierarchických konfiguračních souborů, jaké známe z .NETu.</p>
+<p>Na vrcholu hierarchie z hlediska IIS stojí soubor <em>ApplicationHost.config</em>, který najdeme v adresáři <em>%SYSTEMROOT%\system32\inetsrv\config</em>. Má podobnou roli jako machine.config, tedy popisuje výchozí konfiguraci. Zároveň také obsahuje seznam všech webů a virtuálních adresářů, které jsou na daném serveru provozovány.</p>
+<p>Další nastavení se poté zapisují do souborů <em>web.config</em> na úrovni aplikace nebo adresářů. Nově tak tyto soubory obsahují jak nastavení ASP.NET (typicky v sekci <em>system.web</em>) tak nastavení webového serveru, IIS, v sekci <em>system.webServer</em>. Koncepčně tato architektura připomíná systém &quot;.htaccess&quot; souborů, známý třeba z Apache.</p>
+<p>Poněkud mimo tento model stojí ještě soubor <em>Administration.config</em> (nachází se v témže adresáři jako <em>ApplicationHost.config</em>). Tento soubor popisuje konfiguraci <strong>administračních nástrojů</strong> IIS, tedy nikoliv serveru jako takového, ale GUI pro jeho správu. Nově lze totiž rozšiřovat i ty a psát konfigurační pluginy i do nich.</p>
+<p>Kromě GUI (vylepšeného IIS Manageru) lze konfiguraci provádět i pomocí řádkových příkazů a nově pomocí managed kódu a namespace <em>System.Web.Administration</em>. Možnost administrace pomocí WMI/ADSI zůstala zachována, pro zpětnou kompatibilitu a masochisty.</p>
+<h2 id="shrnuti">Shrnutí</h2>
+<p>Konfigurace .NETových aplikací obecně a ASP.NET zejména je zapisována do XML souborů, které jsou hierarchicky organizovány a jsou rozšiřitelné.</p>
+<p>V případě IIS 6.0 a nižších je konfigurace webového serveru ukládána na jiném místě a nastavuje se zcela jiným způsobem, přičemž v případě komplikovanějších aplikací je třeba tyto dva procesy koordinovat, což není triviální a někdy ani možné.</p>
+<p>Nová verze IIS 7.0 tyto konfigurační modely slučuje, resp. v ní IIS přebírá tentýž model jako ASP.NET, takže konfigurace bude uváděna v obou případech jednotně.</p>
+<p>V následných článcích se podíváme na strukturu konfiguračních souborů a možnosti jejího rozšíření.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

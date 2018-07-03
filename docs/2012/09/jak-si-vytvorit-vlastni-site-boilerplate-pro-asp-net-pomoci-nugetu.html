@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak si vytvořit vlastní site boilerplate pro ASP.NET pomocí NuGetu | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Pokaždé, když začínám vyvíjet nějaký nový projekt, strávím určitý čas základním nastavením projektu – instalací obvyklých NuGet balíčků, konfigurací ve web.configu, vytvořením základní master/content page struktury a podobně. Automatizovat tuto činnost se ukázalo být překvapivě komplikovaným, ale nakonec jsem to porazil. Nabízím vám návod, jak si vytvořit vlastní ASP.NET Site Boilerplate podle svých představ." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Jak si vytvořit vlastní site boilerplate pro ASP.NET pomocí NuGetu</h1>
+      <section class="article">
+        <p>Pokaždé, když začínám vyvíjet nějaký nový projekt, strávím určitý čas základním nastavením projektu – instalací obvyklých NuGet balíčků, konfigurací ve web.configu, vytvořením základní master/content page struktury a podobně. Automatizovat tuto činnost se ukázalo být překvapivě komplikovaným, ale nakonec jsem to porazil. Nabízím vám návod, jak si vytvořit vlastní ASP.NET Site Boilerplate podle svých představ.</p>
+<blockquote>
+<p><strong>Co je boilerplate?</strong> Úplně původně se jednalo o <a href="http://www.virtualmuseum.ca/Exhibitions/Railway/en/ag2.php?id=49&amp;pn=4">štítek s označením výrobce parních kotlů</a> s plasticky vyvedenými písmeny. Později se tento termín začal používat i při výrobě novin. Opakovaně používané části tiskovin, jako třeba inzeráty nebo syndikované články se začaly distribuovat v podobě hotového ocelového štočku, což zjednodušilo produkci. Termín &quot;boilerplate&quot; se přeneseně používá v případech, kdy máme nějakou obecnou šablonu, kterou používáme opakovaně.</p>
+</blockquote>
+<p>Pro běžný front-end takových šablon existuje celá řada, nejpopulárnější z nich je asi <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, ale pro ASP.NET jsem nic použitelného nenašel. Existují sice různé šablony (Project Templates) pro Visual Studio, ale ty zase nemají automatickou aktualizaci NuGet balíčků. Napadlo mne využít i NuGet samotný, ale i ten je třeba trochu znásilnit, aby dělal co je třeba.</p>
+<h2 id="project-templates-a-jejich-omezeni">Project Templates a jejich omezení</h2>
+<p>Na první pohled nejvýhodnějším řešením by bylo použití Project Templates (šablon projektů) ve Visual Studiu. Visual Studio obsahuje <a href="http://msdn.microsoft.com/en-us/library/0fyc0azh.aspx">řadu vestavěných šablon</a>, z nichž mi ovšem žádná nevyhovuje. Výchozí šablona <code>ASP.NET Web Application</code> toho obsahuje příliš mnoho a <code>ASP.NET Empty Web Application</code> zase příliš málo (přesněji nic).</p>
+<p>Vytvořit novou šablonu je <a href="http://msdn.microsoft.com/en-us/library/xkh1wxd8.aspx">překvapivě snadné</a> a stačí pár kliků v GUI. Napojit to na NuGet infrastrukturu je už poněkud složitější, ale <a href="http://docs.nuget.org/docs/reference/packages-in-visual-studio-templates">také je to možné</a>.</p>
+<p>Nicméně show stopper pro mne je, že šablona neumožňuje nainstalovat nejnovější dostupnou verzi NuGet balíčku, ale trvá na instalaci konkrétní verze. Motivace za tím je velmi ušlechtilá, protože nová verze nemusí být nutně kompatibilní se zbytkem projektu. Nicméně toto riziko jsem v zásadě ochoten nést. Rozhodně lépe, než že budu po vytvoření projektu muset ručně aktualizovat všechny balíčky.</p>
+<h2 id="nuget-sablony-a-jejich-omezeni">NuGet šablony a jejich omezení</h2>
+<p>Druhá moje volba byla vykašlat se na šablony a použít NuGet balíčky. Tj. že postup bude takový, že vytvořím prázdný projekt (<code>ASP.NET Empty Web Application</code>) a do něj nainstaluji NuGet balíček, který bude obsahovat vše potřebné. Tedy můj vlastní kód i odkazy na další NuGet balíčky, jako třeba jQuery, jQuery UI a další.</p>
+<p>Nepříjemné omezení pak ale spočívá v tom, že ony další NuGet balíčky nejdou odinstalovat, protože je na nich závislý ten hlavní balíček. A když odinstaluji ten, přijdu o další změny.</p>
+<p>Nicméně, existuje cesta, jak z toho ven: pokud balíček odinstalujete, smaže všechno, co sám přinesl, ale neodinstaluje balíčky, na kterých závisí. Problém se dá tedy vyřešit tak, že vytvoříte balíčky dva:</p>
+<ul>
+<li>Vnitřní (v mém případě se jmenuje <code>Altairis.SiteBoilerplate.Internal</code>), který obsahuje jenom vaše vlastní soubory s kódem, nastavení atd, ale neobsahuje žádné závislosti na jiných balíčcích.</li>
+<li>Vnější (v mém případě <code>Altairis.SiteBoilerplate</code>), který obsahuje pouze závislosti na další balíčky (včetně toho vnitřního), ale žádný vlastní obsah.</li>
+</ul>
+<p>Použití potom vypadá tak, že nainstalujete vnější balíček a hned jej zase odinstalujete. Nic se odinstalací nesmaže, protože balíček nemá žádný obsah), a ostatní balíčky, které nainstaloval, v projektu zůstanou – a dá se s nimi bez omezení jednotlivě pracovat.</p>
+<h2 id="kompletni-postup">Kompletní postup</h2>
+<p>Na konci článku najdete moje hotové balíčky, ale jejich sestava je vždy přísně individuální, takže předpokládám, že je nepoužijete tak, jak leží a běží, ale spíše si na jejich motivy vytvoříte vlastní. Proto popisuji krok za krokem postup, jak to udělat – můj postup si pak upravte podle potřeby.</p>
+<p>Můj postup je pro ASP.NET 4.5 a Visual Studio 2012, ale principy jsou totožné i pro starší verze.</p>
+<h3 id="vytvoreni-projektu-a-instalace-nuget-balicku">Vytvoření projektu a instalace NuGet balíčků</h3>
+<p>Začněte tím, že vytvoříte nový projekt podle šablony <code>ASP.NET Empty Web Site</code>, tj úplně prázdný. Pojmenujte ho libovolně, ale tak aby bylo pojmenování unikátní a nezaměnitelné s názvy jiných tříd, které budete používat – později jej budeme hledat a nahrazovat přes Find &amp; Replace. Výchozí název typu <code>WebApplication1</code> funguje velmi dobře.</p>
+<p>Poté nainstalujte NuGet balíčky, které používáte. V mém případě jsou to následující:</p>
+<ul>
+<li><code>[AspNet.ScriptManager.jQuery](http://www.jquery.com)</code> – jQuery, včetně registrace pro ScriptManager tak, jak ji vyžaduje nová validace v ASP.NET 4.5.</li>
+<li><code>[AspNet.ScriptManager.jQuery.UI.Combined](http://www.jqueryui.com)</code> – jQuery UI, opět včetně registrace pro ScriptManager, a výchozí skin.</li>
+<li><code>Microsoft.AspNet.ScriptManager.WebForms</code> – klientské skripty, které vyžaduje ASP.NET v podobě připravené pro bundling.</li>
+<li><code>[Altairis.Web.UI](http://altairiswebui.codeplex.com/)</code> – sbírka mých vlastních ovládacích prvků, které používám prakticky ve všech svých projektech.</li>
+<li><code>[Altairis.Web.Management](http://altairiswebmgmt.codeplex.com/)</code> – druhá moje knihovna, tentokrát obsahující různé HTTP moduly pro ošetřování chyb, přepínání mezi HTTP a HTTPS a další.</li>
+<li><code>Microsoft.AspNet.Web.Optimization</code> – knihovna od Microsoftu pro bundling a minifikaci JavaScriptu a CSS.</li>
+<li><code>[Modernizr](http://modernizr.com/)</code> – JavaScriptová knihovna, která umí detekovat podporu různých funkcí v prohlížečích a umí přidat podporu pro některé HTML5 sémantické elementy do starších prohlížečů.</li>
+</ul>
+<h3 id="registrace-v-global.asax">Registrace v GLOBAL.ASAX</h3>
+<p>S příchodem technologií jako je routing a bundling mi podezřele narůstá objem kódu v <code>Application_Start</code> v <code>GLOBAL.ASAX</code>, protože tam se to všechno registruje a inicializuje. Proto jsem se inspiroval ve výchozím projektu ASP.NET a vytvořil si za tímto účelem statické třídy v adresáři App_Start, které tyhle věci dělají a jenom se volají z původní metody <code>Application_Start</code>.</p>
+<p>Vytvořte tedy novou složku <code>App_Start</code> a v ní statickou třídu <code>RouteRegistration</code>. Ta bude obsahovat registrace routes, zatím je tam jenom jedna pro homepage:</p>
+<p>using System; using System.Web.Routing; namespace WebApplication1.App_Start { public static class RouteRegistration { public static void Start() { RouteTable.Routes.MapPageRoute(&quot;HomePage&quot;, &quot;&quot;, &quot;~/Pages/HomePage.aspx&quot;); } } }</p>
+<p>Následuje třída <code>ScriptRegistration</code>, která se stará o registraci JavaScriptů. Registruje celkem tři bundly:</p>
+<ul>
+<li><strong><code>~/bundles/WebFormsJs</code></strong> – balíček standardních WebForms skriptů v podobě, v jaké jej vyžaduje NuGet balíček <code>Microsoft.AspNet.ScriptManager.WebForms</code>. Ten se také postará o registraci pro ScriptManager pomocí <code>ScriptResourceDefinition</code>.</li>
+<li><strong><code>~/bundles/modernizr</code></strong> – bundle pro Modernizr. Zde se s registrací pro ScriptManager neobtěžujeme, protože Modernizr musí být natažený už v hlavičce.</li>
+<li><strong><code>~/bundles/SiteJs</code></strong> – bundle pro moje vlastní skripty, zahrnuje vše s cestou <code>~/Scripts/Site/*.js</code>. Vyhovuje mým potřebám (obvykle mám JavaScriptu málo, jednoduchý a společný pro celý web). Zároveň jej registrujeme pro ScriptManager pod logickým názvem <code>SiteBundle</code>.</li>
+</ul>
+<p>Zdrojový kód třídy <code>ScriptRegistration</code> je následující:</p>
+<p Path="~/bundles/SiteJs">using System; using System.Web.Optimization; using System.Web.UI; namespace WebApplication1.App_Start { public static class ScriptRegistration { public static void Start() { // Register bundles for ASP.NET infrastructure BundleTable.Bundles.Add(new ScriptBundle(&quot;<sub>/bundles/WebFormsJs&quot;).Include( &quot;</sub>/Scripts/WebForms/WebForms.js&quot;, &quot;<sub>/Scripts/WebForms/WebUIValidation.js&quot;, &quot;</sub>/Scripts/WebForms/MenuStandards.js&quot;, &quot;<sub>/Scripts/WebForms/Focus.js&quot;, &quot;</sub>/Scripts/WebForms/GridView.js&quot;, &quot;<sub>/Scripts/WebForms/DetailsView.js&quot;, &quot;</sub>/Scripts/WebForms/TreeView.js&quot;, &quot;<sub>/Scripts/WebForms/WebParts.js&quot;)); // Modernizr - useful for HTML5 support for older browser BundleTable.Bundles.Add(new ScriptBundle(&quot;</sub>/bundles/modernizr&quot;).Include( &quot;<sub>/Scripts/modernizr-*&quot;)); // Local JavaScript files BundleTable.Bundles.Add(new ScriptBundle(&quot;</sub>/bundles/SiteJs&quot;).Include( &quot;~/Scripts/site/*.js&quot;)); // Register script resource mapping for local JavaScript files ScriptManager.ScriptResourceMapping.AddDefinition(&quot;SiteBundle&quot;, new ScriptResourceDefinition ); } } }</p>
+<p>Poslední z trojice je třída <code>StyleRegistration</code>, která registruje bundle pro výchozí styl jQuery UI. Můžete sem také přidat svůj oblíbený CSS reset styl, pokud nějaký máte.</p>
+<p>using System; using System.Web.Optimization; namespace WebApplication1.App_Start { public static class StyleRegistration { public static void Start() { BundleTable.Bundles.Add(new StyleBundle(&quot;<sub>/content/themes/base/css&quot;).Include( // jQuery UI core &quot;</sub>/Content/themes/base/jquery.ui.core.css&quot;, // jQuery UI widgets &quot;<sub>/Content/themes/base/jquery.ui.accordion.css&quot;, &quot;</sub>/Content/themes/base/jquery.ui.autocomplete.css&quot;, &quot;<sub>/Content/themes/base/jquery.ui.button.css&quot;, &quot;</sub>/Content/themes/base/jquery.ui.datepicker.css&quot;, &quot;<sub>/Content/themes/base/jquery.ui.dialog.css&quot;, &quot;</sub>/Content/themes/base/jquery.ui.icons.css&quot;, &quot;<sub>/Content/themes/base/jquery.ui.progressbar.css&quot;, &quot;</sub>/Content/themes/base/jquery.ui.resizable.css&quot;, &quot;<sub>/Content/themes/base/jquery.ui.selectable.css&quot;, &quot;</sub>/Content/themes/base/jquery.ui.slider.css&quot;, &quot;<sub>/Content/themes/base/jquery.ui.tabs.css&quot;, // jQuery UI visual theme &quot;</sub>/Content/themes/base/jquery.ui.theme.css&quot;)); } } }</p>
+<p>Upravíme také <code>GLOBAL.ASAX</code>, která bude volat metody <code>Start</code> výše uvedených tříd:</p>
+<p>using System; using WebApplication1.App_Start; namespace WebApplication1 { public class Global : System.Web.HttpApplication { protected void Application_Start(object sender, EventArgs e) { // Register scripts, styles and routes ScriptRegistration.Start(); StyleRegistration.Start(); RouteRegistration.Start(); } } }</p>
+<h3 id="vytvoreni-master-a-content-page">Vytvoření Master a Content page</h3>
+<p>Vytvořte složku <code>~/Pages</code> a v ní master page jménem <code>Site.Master</code>. Její zdrojový kód vypadá takto:</p>
+<p>&lt;%@ Master Language=&quot;C#&quot; AutoEventWireup=&quot;true&quot; CodeBehind=&quot;Site.master.cs&quot; Inherits=&quot;WebApplication1.Pages.Site&quot; ViewStateMode=&quot;Disabled&quot; %&gt; <!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml"> <head runat="server"> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width" /> <title></title> &lt;asp:PlaceHolder runat=&quot;server&quot;&gt; &lt;%: Styles.Render(&quot;<sub>/Content/themes/base/css&quot;) %&gt; &lt;%: Scripts.Render(&quot;</sub>/bundles/modernizr&quot;) %&gt; &lt;/asp:PlaceHolder&gt; </head> <body> <form id="form1" runat="server"> &lt;asp:ScriptManager runat=&quot;server&quot; AjaxFrameworkMode=&quot;Disabled&quot; EnableCdn=&quot;true&quot;&gt; <Scripts> &lt;%-- jQuery --%&gt; &lt;asp:ScriptReference Name=&quot;jquery&quot; /&gt; &lt;asp:ScriptReference Name=&quot;jquery.ui.combined&quot; /&gt; &lt;%-- ASP.NET --%&gt; &lt;asp:ScriptReference Name=&quot;WebForms.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;<sub>/Scripts/WebForms/WebForms.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;WebUIValidation.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;</sub>/Scripts/WebForms/WebUIValidation.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;MenuStandards.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;<sub>/Scripts/WebForms/MenuStandards.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;GridView.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;</sub>/Scripts/WebForms/GridView.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;DetailsView.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;<sub>/Scripts/WebForms/DetailsView.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;TreeView.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;</sub>/Scripts/WebForms/TreeView.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;WebParts.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;<sub>/Scripts/WebForms/WebParts.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;Focus.js&quot; Assembly=&quot;System.Web&quot; Path=&quot;</sub>/Scripts/WebForms/Focus.js&quot; /&gt; &lt;asp:ScriptReference Name=&quot;WebFormsBundle&quot; /&gt; &lt;%-- Site JS --%&gt; &lt;asp:ScriptReference Name=&quot;SiteBundle&quot; /&gt; </Scripts> &lt;/asp:ScriptManager&gt; <header> <h1>Lorem Ipsum</h1> </header> <section> &lt;asp:ContentPlaceHolder ID=&quot;Main&quot; runat=&quot;server&quot; /&gt; </section> <footer> Copyright </footer> </form> </body> </html></p>
+<p>Co jsme v master page udělali?</p>
+<ul>
+<li>Nastavením <code>ViewStateMode=&quot;disabled&quot;</code> jsme vypnuli ViewState. Jednotlivé prvky si ho ale mohou znovu zapnout, pokud na tom budou trvat.</li>
+<li>Do hlavičky jsme přidali META tag, který na mobilních zařízeních vypne automatické zmenšování.</li>
+<li>Kromě toho jsme do hlavičky přidali odkaz na Modernizr a bundle se styly.</li>
+<li>Přidali jsme <code>ScriptManager</code> s odkazem na jQuery, jQuery UI, Web Forms skripty (ta složitá registrace je tam nutná, ale teď se mi nechce rozebírat proč) a naše vlastní skripty.</li>
+<li>No a konečně stránka obsahuje jeden obsahový <code>ContentPlaceholder</code> a základní strukturu HTML 5 tagů.</li>
+</ul>
+<p>Dále vytvoříme content page s názvem <code>~/Pages/HomePage.aspx</code>.V ní není nic převratného, já tam mám nějaké ukázkové HTML inspirované <a href="http://www.htmlipsum.com">HTMLipsum</a>, které mi pomůže při stylování.</p>
+<h3 id="vytvoreni-asp.net-tematu-pro-ucesani-html">Vytvoření ASP.NET tématu pro učesání HTML</h3>
+<p>Logika Themes ve Web Forms je nyní dost odsouvána na druhou kolej. Nicméně v něčem jsou Themes nenahraditelné, umožňují jednoduše učesat HTML generované ovládacími prvky, zrušit tabulky kolem některých prvků a podobně.</p>
+<p>Vytvořte nový skin file <code>~/App_Themes/Normalize/Normalize.skin</code> s následujícím obsahem:</p>
+<p>&lt;%-- Add sensible defaults to web form controls --%&gt; &lt;asp:Button runat=&quot;server&quot; CssClass=&quot;button&quot; /&gt; &lt;asp:TextBox runat=&quot;server&quot; CssClass=&quot;textbox&quot; /&gt; &lt;asp:DropDownList runat=&quot;server&quot; CssClass=&quot;textbox&quot; /&gt; &lt;asp:ListBox runat=&quot;server&quot; CssClass=&quot;textbox&quot; /&gt; &lt;asp:CheckBox runat=&quot;server&quot; CssClass=&quot;checkbox&quot; /&gt; &lt;asp:RadioButton runat=&quot;server&quot; CssClass=&quot;checkbox&quot; /&gt; &lt;asp:RadioButtonList runat=&quot;server&quot; CssClass=&quot;checklist&quot; RepeatLayout=&quot;UnorderedList&quot; /&gt; &lt;asp:CheckBoxList runat=&quot;server&quot; CssClass=&quot;checklist&quot; RepeatLayout=&quot;UnorderedList&quot; /&gt; &lt;asp:Login runat=&quot;server&quot; RenderOuterTable=&quot;false&quot; /&gt; &lt;asp:FormView runat=&quot;server&quot; RenderOuterTable=&quot;false&quot; /&gt; &lt;asp:ValidationSummary runat=&quot;server&quot; CssClass=&quot;validation&quot; /&gt; &lt;altairis:AutoModeFormView runat=&quot;server&quot; RenderOuterTable=&quot;false&quot; /&gt;</p>
+<h3 id="vytvoreni-prazdneho-vychoziho-skriptu">Vytvoření prázdného výchozího skriptu</h3>
+<p>Vytvořte skript v <code>~/Scripts/Site/core.js</code>. Vzhledem k bundlingu je jedno, jak se jmenuje, ale musí být v adresáři Site. Skript je fakticky prázdný, mám v něm jenom IntelliSense reference na jQuery, jQuery UI a Modernizr a základní jQuery konstrukt pro vodlání kódu po načtení dokumentu:</p>
+<p>/// <reference path="../jquery-1.8.0.js" /> /// <reference path="../jquery-ui-1.8.23.js" /> /// <reference path="../modernizr-2.5.3.js" /> $(function () );</p>
+<h3 id="nastaveni-ve-web.configu">Nastavení ve web.configu</h3>
+<p>Do web.configu přidejte libovolná nastavení, která chcete v projektu mít. Jako například:</p>
+<ul>
+<li>Vypnutí session state.</li>
+<li>Nastavení cache pro statický obsah.</li>
+<li>Nastavení správných MIME typů pro standardně nepodoporované typy (jako třeba .woff).</li>
+</ul>
+<h3 id="zkontrolujte-funkcnost-projektu">Zkontrolujte funkčnost projektu</h3>
+<p>Nyní si zkontrolujte, zda vám všechno funguje jak má, zda se všechno referencuje správně a dle vašich představ.</p>
+<h3 id="vytvoreni-vnitrniho-nuget-balicku">Vytvoření vnitřního NuGet balíčku</h3>
+<p>Proveďte v celém projektu Find &amp; Replace a nahraďte název projektu (<code>WebApplication1</code>) řetězcem <code>$rootnamespace$</code>. Na jeho místo se při aplikaci šablony doplní výchozí namespace vašeho projektu. Pozor, tímto krokem si projekt &quot;rozbijete&quot;, nepůjde nadále buildovat a nebude fungovat. To je v pořádku.</p>
+<p>Zavřete Visual Studio a smažte z adresáře svého projektu všechno, co nemá být součástí šablony, případně co je součástí vámi přidaných NuGet balíčků. Tj. zejména následující složky a soubory:</p>
+<ul>
+<li><code>App_Data</code></li>
+<li><code>bin</code></li>
+<li><code>obj</code></li>
+<li><code>Properties</code></li>
+<li>Všechno ve <code>Scripts</code>, až na <code>Site\core.js</code></li>
+<li><code>Packages.config</code></li>
+<li><code>Web.debug.config</code></li>
+<li><code>Web.release.config</code></li>
+<li><code>WebApplication1.csproj</code></li>
+<li><code>WebApplication1.csproj.user</code></li>
+</ul>
+<p>Otevřete si soubor <code>web.config</code> a vymažte z něj všechna nastavení, která jste do něj explicitně nezapsali. Tj. vše, co v něm je jako výchozí, nebo co do něj nahrály vámi používané NuGet balíčky. Mně z něj zůstalo následující torzo:</p>
+<?xml version="1.0" encoding="utf-8"?> <configuration> <system.web> <pages styleSheetTheme="Normalize"> <namespaces> <add namespace="System.Web.Optimization" /> </namespaces> </pages> <sessionState mode="Off" /> </system.web> <system.webServer> <modules runAllManagedModulesForAllRequests="true"> </modules> <staticContent> <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="365.00:00:00" /> </staticContent> <staticContent> <remove fileExtension=".ttf" /> <remove fileExtension=".eot" /> <remove fileExtension=".woff" /> <mimeMap fileExtension=".eot" mimeType="application/vnd.bw-fontobject" /> <mimeMap fileExtension=".ttf" mimeType="application/x-font-ttf" /> <mimeMap fileExtension=".woff" mimeType="application/x-woff" /> </staticContent> </system.webServer> </configuration>
+<p>Přejmenujte soubor <code>web.config</code> na <code>web.config.transform</code>. Tím zajistíte, že se sloučí s tím, co již v projektu máte a který modifikují ostatníé balíčky.</p>
+<p>Ke všem souborům s příponou <code>.aspx</code>, <code>.master</code> nebo <code>.cs</code> přidejte ještě příponu <code>.pp</code>. Tj. soubory se budou jmenovat nějak jako <code>HomePage.aspx.pp</code> a <code>HomePage.aspx.cs.pp</code>. Tím zajistíte, že se zpracují placeholdery jako <code>$rootnamespace$</code>.</p>
+<p>Libovolným způsobem, třeba pomocí GUI programu <a href="http://nuget.codeplex.com/releases">NuGet Package Explorer</a> vytvořte balíček <code>Altairis.SiteBoilerplate.Internal</code>. Do jeho složky content umistěte všechny soubory, které vám v projektu zbyly po výše popisované genocidě. Nenastavujte mu žádnou závislost na dalších balíčcích ani nic podobného.</p>
+<p>Můj <code>.nuspec</code> soubor vypadá takto:</p>
+<?xml version="1.0" encoding="utf-16"?> <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd"> <metadata> <id>Altairis.SiteBoilerplate.Internal</id> <version>1.0.0</version> <title>Altairis Site Boilerplate (Internal)</title> <authors>Altair</authors> <owners /> <iconUrl>http://www.cdn.altairis.cz/NuGet/icon-32x32.png</iconUrl> <requireLicenseAcceptance>false</requireLicenseAcceptance> <description>Bolerplate for new web site, includes common settings and NuGet packages.</description> <releaseNotes>This is the internal package.</releaseNotes> <copyright>Copyright (c) Altairis, 2012</copyright> <language>en-US</language> <tags>boilerplate</tags> </metadata> </package>
+<p>Uložte balíček pod názvem <code>Altairis.SiteBoilerplate.Internal.1.0.0.nupkg</code>.</p>
+<h3 id="vytvoreni-vnejsiho-nuget-balicku">Vytvoření vnějšího NuGet balíčku</h3>
+<p>Vytvořte nový NuGet balíček a pojmenujte ho <code>Altairis.SiteBoilerplate</code>. Tento balíček nebude mít žádný vlastní obsah, bude mít jenom závislosti na jiných balíčcích. Jako první uveďte <code>Altairis.SiteBoilerplate.Internal</code> vytvořený před chvílí. Poté zadejte všechny další balíčky, které jste použili.</p>
+<p>Můj <code>.nuspec</code> soubor vypadá takto:</p>
+<?xml version="1.0" encoding="utf-16"?> <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd"> <metadata> <id>Altairis.SiteBoilerplate</id> <version>1.0.0</version> <title>Altairis Site Boilerplate</title> <authors>Altair</authors> <owners /> <iconUrl>http://www.cdn.altairis.cz/NuGet/icon-32x32.png</iconUrl> <requireLicenseAcceptance>false</requireLicenseAcceptance> <description>Bolerplate for new web site, includes common settings and NuGet packages.</description> <releaseNotes>This is the public package.</releaseNotes> <copyright>Copyright (c) Altairis, 2012</copyright> <language>en-US</language> <tags>boilerplate</tags> <dependencies> <dependency id="Altairis.SiteBoilerplate.Internal" /> <dependency id="AspNet.ScriptManager.jQuery" /> <dependency id="AspNet.ScriptManager.jQuery.UI.Combined" /> <dependency id="Microsoft.AspNet.ScriptManager.WebForms" /> <dependency id="Altairis.Web.UI" /> <dependency id="Altairis.Web.Management" /> <dependency id="Microsoft.AspNet.Web.Optimization" /> <dependency id="Modernizr" /> </dependencies> </metadata> </package>
+<p>Uložte balíček pod názvem <code>Altairis.SiteBoilerplate.1.0.0.nupkg</code>.</p>
+<h3 id="vytvoreni-soukromeho-nuget-feedu">Vytvoření soukromého NuGet feedu</h3>
+<p>Vzhledem k poměrně specifické povaze těchto balíčků není vhodné je publikovat na nuget.org, ale je vhodné vytvořit si pro ně soukromý repozitář. Zde popíšu nejjednodušší způsob, lokální adresář, ale pro práci v týmu si můžete vytvořit i interní webový repozitář. Pokud nevíte jak, podívejte se na záznam z přednášky <a href="http://youtu.be/9Qbr19h_Un0">NuGet pro uživatele i autory komponent</a>.</p>
+<p>Oba dva balíčky (<code>*.nupkg</code>) nahrajte do libovolné složky někde na disku. V mém případě je to složka <code>C:\Users\altair\Projects\_NuGet</code>.</p>
+<p>Spusťte Visual Studio a v menu jděte do <code>Tools –&gt; Options –&gt; Package Manager –&gt; Package Sources</code>. Přidejte nový zdroj, pojmenuje ho třeba <code>Private</code> a jako cestu zadejte název výše uvedené složky.</p>
+<h3 id="pouziti-sablony-v-praxi">Použití šablony v praxi</h3>
+<ol>
+<li>Spusťte Visual Studio a vytvořte nový projekt podle šablony <code>ASP.NET Empty Web Site</code>.</li>
+<li>Otevřete okno Package Manager Console.</li>
+<li>Ujistěte se, že v rozbalovacím seznamu &quot;Package source&quot; máte vybráno &quot;All&quot;.</li>
+<li>Příkazem <code>install-package Altairis.SiteBoilerplate</code> nainstalujte balíček a všechny jeho závislosti.</li>
+<li>Po dokončení balíček zase odinstalujte příkazem <code>uninstall-package Altairis.SiteBoilerplate</code>.</li>
+</ol>
+<p>Tímto postupem jste do svého projektu nahráli nejnovější verze vámi používaných knihoven, svoje vlastní nastavení a všechno je ve stavu způsobilém další práce a případně odinstalace modulů, které zrovna v tomto konkrétním projektu nepotřebujete.</p>
+<p>Moje hotové šablony si můžete stáhnout <a href="/files/20120903-SiteBoilerplate.zip">zde</a>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

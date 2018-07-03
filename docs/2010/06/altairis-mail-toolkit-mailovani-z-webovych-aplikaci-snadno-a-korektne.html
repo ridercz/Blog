@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Altairis Mail Toolkit: mailování z webových aplikací snadno a korektně | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Poslat e-mail z .NET aplikace není žádná velká věda. Stačí zavolat System.Net.Mail.SmtpMail.Send. Ale posílat maily způsobem korektním a dlouhodobě udržitelným, to je větší oříšek. Zveřejnil jsem proto open source knihovnu, která řeší obvyklé problémy s tím spojené." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Altairis Mail Toolkit: mailování z webových aplikací snadno a korektně</h1>
+      <section class="article">
+        <p>Poslat e-mail z .NET aplikace není žádná velká věda. Stačí zavolat <em>System.Net.Mail.SmtpMail.Send</em>. Ale posílat maily způsobem korektním a dlouhodobě udržitelným, to je větší oříšek. Zveřejnil jsem proto open source knihovnu, která řeší obvyklé problémy s tím spojené.</p>
+<p>Dobrý systém pro rozesílání zpráv by měl mít následující vlastnosti:</p>
+<ul>
+<li><strong>Umístění textů e-mailových zpráv mimo kód.</strong> Aby při změně formulace mailu nebylo nutné přepisovat backendový kód. Zároveň je nutné řešit doplňování údajů do relevantních šablon e-mailů.</li>
+<li><strong>Jednotný formát všech zpráv.</strong> Společné hlavičky/nožičky napomáhají snadné identifikaci zprávy a třeba i automatickému třídění.</li>
+<li><strong>Lokalizace do více jazyků.</strong> Problém komplikuje i to, že mnohdy chceme zprávu odeslat v jiném jazyce, než jaký je aktuálně používán. Např. akce způsobená uživatelem anglické verze se má oznámit uživateli jehož preferovaným jazykem je čeština.</li>
+<li><strong>Korektní nastavení hlaviček původce.</strong> Tedy <em>From</em>, <em>Sender</em> a <em>Reply-To</em>.</li>
+<li><strong>Rozesílání e-mailů na více adres současně.</strong> Ve většině případů je vhodné maily více příjemcům rozesílat tak, aby o sobě jednotliví příjemci nevědli, tj. aby každý měl vlastní kopii se svou adresou v hlavičce <em>To</em>.</li>
+<li><strong>Jednoduchost odeslání mailu</strong> z kódu, ideálně na jeden příkaz/řádek.</li>
+<li><strong>Centralizace konfigurace</strong>, aby změnu parametrů nebylo nutné provádět na mnoha místech najednou.</li>
+</ul>
+<p>Kromě toho platí vše, co pro .NET aplikace všeobecně. Tedy maximální využití existujících standardů a infrastruktury, což zjednoduší zapojení do existujících struktur.</p>
+<h2 id="altairis-mail-toolkit">Altairis Mail Toolkit</h2>
+<p>Na základě zkušeností z předchozích projektů jsem vytvořil jednoduchou, ale celkem mocnou, komponentu jménem <strong>Altairis Mail Toolkit</strong>. Je k dispozici včetně zdrojového kódu a dokumentace na <a href="http://altairismailtoolkit.codeplex.com/">CodePlexu</a>. Řeší všechny výše uvedené problémy, s použitím standardních .NETových technik.</p>
+<p>Veškeré informace o formátu a textu mailů jsou <strong>uloženy ve standardních resource souborech</strong>. To elegantně řeší veškeré problémy spojené s lokalizací a umístěním textů zpráv mimo kód. Automaticky zajišťuje například možnost, aby text překládal neprogramátor jiným nástrojem, než Visual Studiem.</p>
+<p>Samotné rozesílání mailů za nás řeší .NET Framework, stačí ho jenom správně nastavit. Obšírnější pojednání o významu hlaviček <em>From</em>, <em>Reply-To</em> a <em>Sender</em> jest nalézti v <a href="http://www.ietf.org/rfc/rfc2822.txt">RFC 2822</a> a v poněkud zjednodušené formě jsem jej sepsal na <a href="http://altairismailtoolkit.codeplex.com/wikipage?title=E-mail%20basics&amp;referringTitle=Documentation">CodePlexu</a> (anglicky).</p>
+<p>Konfigurace je řešena pomocí standardního .NET konfiguračního modelu, pomocí vlastní konfigurační sekce <em>altairis.mailToolkit</em>.</p>
+<h2 id="vytvareni-sablon-v-resource-souborech">Vytváření šablon v resource souborech</h2>
+<p>Pro každou šablonu, tj. typ odesílaného mailu, je třeba vytvořit dva resource klíče. Jejich názvy začínají názvem šablony a následuje konfigurovatelný suffix – standardně <em>Subject</em> pro předmět zprávy a <em>Body</em> pro její text.</p>
+<p>Šablona může obsahovat placeholdery v klasickém tvaru dle metody <em>String.Format</em>, tj <em>{0}</em> atd.</p>
+<p>Kromě toho mohou existovat ještě další dva resource klíče, opět s konfigurovatelnými názvy, standardně <em>_SubjectFormat</em> a <em>_BodyFormat</em> (včetně úvodních podtržítek). Ty určují formát celé zprávy (předmětu a těla). Obsahují právě jeden placeholder <em>{0}</em>, kam se vloží celý zbytek textu.</p>
+<p>Načítání resources z cizí assembly je pravděpodobně technicky nejkomplikovanější úkon, zbytek je technologicky triviální.</p>
+<h2 id="odesilani-mailu">Odesílání mailů</h2>
+<p>Vlastní odeslání mailů z kódu realizují dvě metody statické třídy <em>Altairis.MailToolkit.Mailer</em>. Jmenují se SendTemplatedMessage a SendTemplatedMessages. Každá z nich má sbírku overloadů pro různé příležitosti, jejichž kompletní dokumentace je k dispozici <a href="http://altairismailtoolkit.codeplex.com/wikipage?title=Usage%20from%20code&amp;referringTitle=Documentation">online</a>.</p>
+<p>Pokud použijete overload se specifikací jazyka (<em>CultureInfo</em>), použije se příslušně lokalizovaná verze. Pokud je jazyk nastaven na null nebo se použije overload bez jeho určení, použije se aktuální <em>UiCulture</em>.</p>
+<p>Komponentu <strong>Altairis Mail Toolkit</strong> si včetně zdrojového kódu a dokumentace můžete stáhnout na <a href="http://altairismailtoolkit.codeplex.com/">altairismailtoolkit.codeplex.com</a>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

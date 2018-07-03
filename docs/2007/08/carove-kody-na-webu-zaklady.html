@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Čárové kódy na webu: Základy | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Od doby, co jsem na webu akce.altairis.cz spustil tisk pozvánek s čárovým kódem, byl jsem opakovaně dotazován na zkušenosti. Tento článek popisuje souhrnně zkušenosti a poznatky, ke kterým jsem dospěl. Může být užitečný všem, kdo chtějí implementovat čárové kódy ve svých webových aplikacích." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Čárové kódy na webu: Základy</h1>
+      <section class="article">
+        <p>Od doby, co jsem na webu <a href="http://akce.altairis.cz/">akce.altairis.cz</a> spustil tisk pozvánek s čárovým kódem, byl jsem opakovaně dotazován na zkušenosti. Tento článek popisuje souhrnně zkušenosti a poznatky, ke kterým jsem dospěl. Může být užitečný všem, kdo chtějí implementovat čárové kódy ve svých webových aplikacích.</p>
+<h2 id="co-jsou-carove-kody">Co jsou čárové kódy</h2>
+<p>Obecně čárové kódy představují možnost, jak zakódovat sekvenci číslic (případně i písmen a jiných znaků) do grafického symbolu. Ten je možné speciálním zařízením (čtečkou) přečíst. Výhoda spočívá v tom, že načtení čárového kódu je rychlejší než jeho ruční opisování a zároveň je méně náchylné k chybám.</p>
+<p>Norem pro generování čárových kódů existuje celá řada a zabývají se v zásadě třemi otázkami:</p>
+<ol>
+<li><strong>Definice kódování znaků do čar.</strong> Neboli jak daná data převést na čáry a mezery. To je část normy, kterou je nutné se bezpodmínečně zabývat. <strong>Definice technických podmínek čitelnosti.</strong> Určuje minimální a maximální rozměry kódu, velikost ochranného pásma (prázdné plochy, která by kolem kódu měla zůstat, aby čtečka dokázala kód najít a přečíst), kontrast světlého a tmavého bodu a podobně. Tato část se obecně na webu zajišťuje nejhůře, zvláště pokud se předpokládá, že si uživatelé budou kódy tisknout sami obecně na tiskárnách, které mají k dispozici, a tisk nebude probíhat v kontrolovaném prostředí a prověřeném hardware. <strong>Definice obsahu informace.</strong> Popisuje formát dat, která mají být kódována. Některé čárové kódy v sobě mají vestavěné mechanismy výpočtu kontrolního součtu, případně jsou určeny pro speciální aplikace, které určují formát uchovávaných dat.</li>
+</ol>
+<h2 id="typy-carovych-kodu">Typy čárových kódů</h2>
+<p>Existuje celá řada norem, ať už specializovaných nebo univerzálních. Mám zkušenosti s implementací třech hlavních norem: EAN13, Code 2/5 a Code39.</p>
+<h3 id="kody-ean">Kódy EAN</h3>
+<p>Čárové kódy dle normy GS1 (dříve EAN) najdete dnes téměř na čemkoliv, co se prodává v maloobchodě. GS1 je rozsáhlá sada standardů, jejichž cílem je zjednodušit logistiku při prodeji zboží. Popisuje metody pro označování spotřebitelských balení, velkoobchodních balení, formáty výměny dat atd. Nás bude pro tento okamžik zajímat pouze velmi malá část z celého tohoto systému - čárové kódy pro označování spotřebitelského balení zboží.</p>
+<p>Ty se vyskytují ve dvou variantách: EAN8 a EAN13. Obě umožňují zaznamenat číselný údaj o pevné délce - 7 nebo 12 číslic plus jedna kontrolní. Tato norma je konstruována jako velmi robustní, kombinace použitého kódování a povinného výpočtu kontrolní číslice prakticky znemožňuje jeho chybné načtení, i když je kód hodně poškozen. Výpočet kontrolní číslice při čtení obvykle provádí přímo sama čtečka, takže se kód načte buď správně, nebo vůbec ne.</p>
+<p>Norma stanovuje nejenom způsob kódování, ale velmi striktně též obsah kódovaných dat. Obsahuje kód země, kód výrobce a pak vlastní kód produktu, přičemž o přidělení kódu výrobce je třeba žádat zastřešující organizaci.</p>
+<p>Speciální případ představuje kódování ISBN (číselné kódy pro knihy), ISSN (totéž pro periodické publikace) a ISMN (hudební nosiče).</p>
+<p>Pro vnitřní použití norma povoluje použití EAN13 kódů, které začínají &quot;999&quot;. Nikdo vám samozřejmě nemůže technicky zabránit v tom, abyste generovali kódy jaké chcete, ale doporučuji vám, abyste toto doporučení respektovali.</p>
+<p>Kód EAN 13 používám právě na shora uvedeném webu <a href="http://akce.altairis.cz/">akce.altairis.cz</a>. Jeho struktura je následující: <em>999nnnnxxxxxc</em>. Začíná shora uvedenými třemi devítkami. Následující čtyři číslice (v obecné normě EAN slouží obecně k identifikaci výrobce) slouží k identifikaci konkrétní instance programu Nemesis Calendar, která kód vydala. Následujících pět číslic je pořadové číslo registrace, které odpovídá klíči v databázi. Poslední je kontrolní číslice, vypočítaná dle normy EAN.</p>
+<h3 id="kody-rodiny-25">Kódy rodiny 2/5</h3>
+<p>Velmi často používané jsou kódy z rodiny &quot;dva z pěti&quot;. Označují se jako &quot;Code25&quot;, &quot;Code 2/5&quot;, &quot;Code 2 of 5&quot; a podobně. Tyto kódy mají sPokpolečné to, že každý znak je tvořen pěti moduly (čárami nebo mezerami), z nichž vždy právě dva jsou široké a tři úzké. Tyto kódy umožňují zakódovat pouze číslice 0-9 a jsou univerzálně použitelné.</p>
+<ul>
+<li><strong>Code 25 Industrial</strong> je dle mého názoru nejjednodušší norma pro pochopení principu čárových kódů: každý znak je reprezentován sekvencí silných a slabých čar. Čáry jsou odděleny mezerami, které jsou vždy stejně široké a nenesou žádnou informaci. <strong>Code 25 Interleaved</strong> je úspornější variantou téhož. Pro kódování informace využívá nejenom čáry, ale též mezery. Jedná se v podstatě o &quot;dva kódy v sobě&quot;.</li>
+</ul>
+<h3 id="kody-rodiny-code39">Kódy rodiny Code39</h3>
+<p>Tato rodina umožňuje kódovat nejenom číslice, ale i písmena. Klasický kód <strong>Code39</strong> umožňuje kódovat číslice 0-9, písmena A-Z a některé speciální znaky (mezeru, -, ., $, /, + a %).</p>
+<p>Existuje i varianta <strong>Code 39 Full ASCII</strong>, která umožňuje kódovat všechny znaky základní sedmibitové ASCII tabulky (tedy ne diakritiku). Činí tak tím způsobem, že speciální znaky zapisuje jako kombinaci shora uvedených - např. &quot;<em>+B</em>&quot; znamená &quot;<em>b</em>&quot;. Jistá nevýhoda tohoto přístupu spočívá v tom, že z kódu samotného není poznat, zda se jedná o prostý Code39 nebo jeho Full ASCII variantu. Obvykle se nastavením čtečky určuje, zda má být Full ASCII podporováno nebo nikoliv.</p>
+<h2 id="jaky-kod-pouzit">Jaký kód použít?</h2>
+<p>V řadě případů nemáte na vybranou a musíte generovat kód podle určité normy (např. pokud tisknete přepravní doklady k zásilkám pro kurýrní služby a podobně). Pokud záleží čistě na vás, musíte zodpovědět následující otázky:</p>
+<p><strong>Co chci kódovat?</strong> Záleží na povaze informace (číslice, písmena) a její délce. Pokud chcete kódovat pouze číslice, máte na výběr z většího množství norem.</p>
+<p><strong>Co zvládne moje čtečka?</strong> Pokud se týče podporovaných norem, tak většina běžně dostupných čteček zvládá všechny shora uvedené formáty a řadu dalších, zde neuvedených (třeba Code128 a další). Důležitým parametrem ale může být maximální šířka čtecího pole, tedy jak velký kód (bavíme se o fyzických rozměrech) dokáže čtečka přečíst.</p>
+<p><strong>Jak bude kód tisknut a jak bude s vytištěným materiálem dále zacházeno?</strong> Obecně platí, že čím více dat zakódujeme, tím bude výsledný kód delší (nejedná-li se o kód typu EAN, který má pevně danou délku). Na druhou stranu platí, že čím jemnější kód bude (tj. čím tenčí bude jednotková šířka čáry a mezery), tím hůře se bude číst a dekódovat.</p>
+<p>Pokud budete kód tisknout na speciální tiskárně čárových kódů nebo kvalitní laserovce a výsledek se buďto hned použije a nebo třeba zalaminuje, lze použít jemný kód. Pokud se očekává, že kódy budou tisknuty na roztodivných tiskárnách pochybné kvality a posléze delší dobu nošeny po kapsách, je třeba použít hrubší kód a větší jednotkový rozměr. Pak ale naroste celková fyzická délka kódu a může se stát, že bude pro použitou čtečku příliš široký a nebude možné kód přečíst. To hrozí zejména u levných CCD čteček, které mívají maximální šířku kódu okolo 8 cm.</p>
+<h2 id="zkusenost-z-praxe">Zkušenost z praxe</h2>
+<p>V praxi tedy bude volba kódu kompromisem shora uvedených parametrů. V praxi se mi osvědčilo použití robustního kódu EAN13 o maximálním fyzickém rozměru (cca. 7 cm). I obyčejná laciná čtečka dokázala přečíst kódy vytištěné rozličným pochybným způsobem. Tedy např. s docházejícím tonerem (světlý tisk), na neseřízených inkoustových nebo jehličkových tiskárnách (roztřesené čáry), na recyklovaném neběleném papíře (šedý, nižší kontrast) i s tisky různě zmačkanými a natrženými.</p>
+<p>Z mnoha stovek pozvánek jsme měli problémy pouze v asi čtyřech případech, kdy byl kód zcela nečitelný a bylo nutné opsat číslice ručně.</p>
+<p>V dalším pokračování tohoto seriálu se podíváme na praktické aspekty generování čárových kódů a možnosti, které se nabízejí.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

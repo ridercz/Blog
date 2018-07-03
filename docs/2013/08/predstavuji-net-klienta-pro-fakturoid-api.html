@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Představuji .NET klienta pro Fakturoid API | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Léta jsem používal pro vystavování faktur a související činnosti vlastní webovou aplikaci. Teď jsem našel službu Fakturoid, která dělá totéž lépe a umí skoro všechno, co ta moje. A co neumí, to se dá napsat pomocí jejího API, pro které jsem napsal .NET klienta, kterého tímto dávám jako open source k dispozici." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Představuji .NET klienta pro Fakturoid API</h1>
+      <section class="article">
+        <p>Léta jsem používal pro vystavování faktur a související činnosti vlastní webovou aplikaci. Teď jsem našel službu <a href="http://www.fakturoid.cz/">Fakturoid</a>, která dělá totéž lépe a umí skoro všechno, co ta moje. A co neumí, to se dá napsat pomocí jejího API, pro které jsem napsal .NET klienta, kterého tímto dávám jako open source k dispozici.</p>
+<p>Fakturoid nabízí <a href="https://github.com/fakturoid/api">docela příjemné API</a>. Je to vcelku příčetné REST rozhraní s JSON serializací a docela dobře funguje s klientskou knihovnou pro ASP.NET Web API. Některé aspekty serializace jsou trochu podivné a nejsem si jist 100% správností typů (které nejsou publikované a je na fantazii implementátora, jak si s nimi poradí), ale v zásadě by to mělo fungovat.</p>
+<p>Rád bych poděkoval technické podpoře fakturoidího robota, protože je nejlepší, s jakou jsem se poslední dobou setkal. Odpovědi k věci a většinou prakticky obratem.</p>
+<p>Moje API najdete na <a href="https://github.com/ridercz/Fakturoid-API">GitHubu</a> (nojo, nakazil jsem se tou nemocí taky) a je k dispozici i jako NuGet balíček <strong abp="336">Altairis.Fakturoid.Client**.</p>
+<h2 id="ukazka-pouziti">Ukázka použití</h2>
+<p><a href="https://github.com/ridercz/Fakturoid-API/blob/master/Altairis.Fakturoid.Client.DemoApp/Program.cs">Ukázkovou aplikaci</a> (stejně jako <a href="https://github.com/ridercz/Fakturoid-API/blob/master/Documentation.chm?raw=true">dokumentaci</a>) najdete na GitHubu, já níže nabídnu jenom ukázku, jak se s knihovnou pracuje:</p>
+<p>// Vytvořit instanci API klienta var fc = new FakturoidContext(&quot;username&quot;, &quot;apitoken&quot;, &quot;Název aplikace (me@example.com)&quot;); // Vytvořit instanci třídy, která reprezentuje nový kontakt var newSubject = new JsonSubject { name = &quot;ACME, s. r. o.&quot;, street = &quot;Testovací 123&quot;, city = &quot;Praha&quot;, zip = &quot;11000&quot;, country = &quot;CZ&quot;, registration_no = &quot;12345678&quot;, vat_no = &quot;CZ12345678&quot;, email = &quot;acmecorp@mailinator.com&quot; }; // Pomocí API vytvořit kontakt a získat jeho ID var newSubjectId = fc.Subjects.Create(newSubject); // Vytvořit instanci třídy, která reprezentuje fakturu var newInvoice = new JsonInvoice { subject_id = newSubjectId, lines = new List<jsoninvoiceline abp="342">(), }; // Přidat do ní nějaké položky newInvoice.lines.Add(new JsonInvoiceLine { name = &quot;Položka 1&quot;, quantity = 1, unit_name = &quot;ks&quot;, unit_price = 100, vat_rate = 21 }); newInvoice.lines.Add(new JsonInvoiceLine { name = &quot;Položka 2&quot;, quantity = 3, unit_name = &quot;hod.&quot;, unit_price = 1234, vat_rate = 21 }); // Pomocí API fakturu vytvořit var newInvoiceId = context.Invoices.Create(newInvoice); // ...a odeslat e-mailem context.Invoices.SendMessage(newInvoiceId, InvoiceMessageType.InvoiceMessage);</jsoninvoiceline></p>
+<p>Základní tarif (omezený na 5 zákazníků, ale bez omezení na počet faktur) je zdarma, další jsou za ceny velmi nízké a uživatelsky přítulné, takže mohu doporučit minimálně na vyzkoušení.
+</strong></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

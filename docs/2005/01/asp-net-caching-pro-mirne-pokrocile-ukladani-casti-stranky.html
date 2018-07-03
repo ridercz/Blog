@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ASP.NET caching pro mírně pokročilé: Ukládání částí stránky | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V minulém zápisu jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů celých stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>ASP.NET caching pro mírně pokročilé: Ukládání částí stránky</h1>
+      <section class="article">
+        <p>V <a href="/entry/article-20050105.aspx">minulém zápisu</a> jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů <em>celých</em> stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly.</p>
+<p>Většina stránek obsahuje kromě &quot;originálního&quot; obsahu také stále se opakující hlavičku a patičku, menu a podobně. Tyto opakující se části zhusta obsahují též obsah sice generovaný dynamicky (příkladně seznam rubrik), ale zase ne aktualizovaný příliš často. Je praktické generovat seznam rubrik dynamicky (protože jinak na to při přidání nové rubriky zapomenete), ale rozhodně <em>není</em> praktické ho znovu načítat z databáze při každém požadavku na kteroukoliv stránku.</p>
+<p>ASP.NET umožňuje použít direktivu OutputCache nejenom v rámci ASPX stránek, ale i v rámci web user controlu - ASCX. Pro dynamicky generovaný seznam rubrik příkladně používám toto nastavení:</p>
+<p>&lt;%@ OutputCache Duration=&quot;1800&quot; Shared=&quot;true&quot; VaryByParam=&quot;none&quot; %&gt;</p>
+<p>Jest samozřejmé, že zatímco cacheování celých stránek je možno provádět na serveru, na klientovi či někde mezi nimi, pro cacheování částí stránky to neplatí - to lze provádět pouze na serveru. Použitím této technologie tedy neušetříte přenosové pásmo, ale &quot;jenom&quot; výkon serveru.</p>
+ <h2>Argumenty OutputCache pro ASCX</h2> 
+<p>Ačkoliv direktiva zůstává stejná, její parametry se u ASPX a ASCX liší. Možné jsou:</p>
+<p><code>Duration</code> - doba po kterou jest ukládati, v sekundách.</p>
+<p><code>Shared</code> (<code>True</code> nebo <code>False</code>, default <code>False</code>) - určuje, zda bude cacheovaná hodnota sdílena mezi různými ASPX stránkami. Tedy: Pokud je jeden ASCX control umístěn ve více ASPX stránkách, bude při nastavení <code>True</code> cacheována jedna kopie, při nastavení <code>False</code> tolik kopií, v kolika různých stránkách bude includováno. Používejte dle kontextu - menu všude stejné bude sdíleno, hlavička stránky dynamicky generující titulek asi ne.</p>
+<p><code>VaryByParam</code>, <code>VaryByCustom</code> - chová se úplně stejně jako při <a href="/entry/article-20050105.aspx">cacheování celých stránek</a>.</p>
+<p><code>VaryByControl</code> - umožňuje stanovit závislost na serverovém ovládacím prvku, jež je součástí ASCX controlu. To je vlastnost natolik obskurní, že jí budeme věnovat pozornost v následujícím samostatném oddílu.</p>
+ <h2>VaryByControl</h2> 
+<p>Jest nutno míti na paměti, že pokud je použito cacheování, kód v ASCX prvku se vůbec nevykoná a místo toho se použije již dříve vygenerovaný HTML kód. Což je dost nepříjemné v případě, že ASCX obsahuje sám o sobě nějakou funkčnost, závislou  příkladně na formulářových prvcích.</p>
+<p>V případě ASPX stránky lze požadovaného efektu dosáhnout prostřednictvím <code>VaryByParam</code>, protože při postbacku se data předávají jako formulářové parametry. V případě ASCX je to složitější - data se sice také předávají jako formulářové parametry, leč název polí není vždy jednoznačný, je generován dynamicky podle ID controlu. <code>VaryByParam</code> nelze tedy použít.</p>
+<p>Ukažme si to na příkladu. Mějmež web user control sestávající z textového pole, tlačítka a labelu:</p>
+<p> <asp:textbox id="TextBox1" runat="server"></asp:textbox> <asp:button id="Button1" runat="server" text="Button"></asp:button> </p> <p> <asp:label id="Label1" runat="server">Label</asp:label> </p> 
+<p>Jednořádkový obslužný kód v jeho Page_Load vypíše aktuální čas a hodnotu onoho textového pole:</p>
+<p>Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load Me.Label1.Text = &quot;Time = &quot; &amp; DateTime.Now.ToString() &amp; &quot;; Selected = &quot; &amp; Me.TextBox1.Text End Sub</p>
+<p>Pokud bychom použili cacheovací direktivu bez <code>VaryByControl</code>, výsledek by nebyl příliš uspokojivý: zobrazil by se ten text, který byl zadán v okamžiku, kdy se naposledy přegenerovala cache, veškerá další zadání by byla ignorována. Pročež použijeme tuto direktivu:</p>
+<p>&lt;%@ OutputCache Duration=&quot;60&quot; VaryByParam=&quot;none&quot; VaryByControl=&quot;TextBox1&quot; %&gt;</p>
+<p>Ta, jak račte klidně vyzkoušeti, zajistí cacheování v závislosti na hodnotě zadané do textového pole.</p>
+<p>V příštím díle si povíme o sofistikovanějším využití caching API, neb do cache nemusíte ukládat jenom generovaný výstup stránek, ale i jakákoliv jiná data (jsou-li serializovatelná).</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

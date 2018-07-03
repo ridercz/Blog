@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Local Storage: Sbohem cookies, sbohem session? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jedna z užitečných – a kupodivu i široce podporovaných – novinek v HTML 5 se jmenuje Local Storage. Nedostává se jí tolik pozornosti, jako videu nebo elementu canvas, nicméně podle mého názoru je podstatně užitečnější. Ukážeme si, jak funguje, k čemu je dobrá a na závěr vám nabídnu užitečný nástroj pro ladění." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Local Storage: Sbohem cookies, sbohem session?</h1>
+      <section class="article">
+        <p>Celá idea je ve skutečnosti velmi jednoduchá: local storage je úložiště na klientovi (ve webovém prohlížeči), kam si stránka může skriptem uložit libovolná data a potom je skriptem zase načíst. Přístup z klientského skriptu je přitom jediný možný. Data žijí jenom na klientově počítači, nepřenášejí se na server (za předpokladu, že si takový přenos sami nenaskriptujete).</p>
+<p>Webová aplikace si takto může uložit poměrně velké množství dat (současné prohlížeče umožňují 5 MB) a to na dlouhou dobu, prakticky na věky. Přesněji dokud si uživatel nesmaže data nebo nepřeinstaluje počítač, není mi známo, že by nějaký prohlížeč implementoval expiraci, ačkoliv <a href="http://dev.w3.org/html5/webstorage/#disk-space">specifikace s ní volitelně počítá</a>.</p>
+<p>Tato feature se občas nazývá i <strong>DOM storage</strong> nebo <strong>HTML5 storage</strong>. Nezaměňovat prosím s <a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a> nebo <a href="http://www.w3.org/TR/IndexedDB/">Indexed Database API</a>,to je něco úplně jiného a s mnohem menší podporou.</p>
+<p>A na začátek ještě jednu dobrou zprávu: podpora <strong>Local Storage</strong> je velmi široká, podporují ho následující prohlížeče:</p>
+<ul>
+<li>Interner Explorer 8.0+ (včetně Windows Phone)</li>
+<li>Mozilla Firefox 3.5+</li>
+<li>Apple Safari 4.0+ (iPhone 2.0+)</li>
+<li>Chrome 4.0+ (Android 2.0+)</li>
+<li>Opera 10.5+</li>
+</ul>
+<h2 id="nejsou-to-cookies">Nejsou to cookies?</h2>
+<p>Nejsou. Jedná se o zcela samostatnou technologii, která se cookies podobá v jednom jediném aspektu: ukládá si nějaká trvalejší data na klienta. Dva hlavní rozdíly jsou následující:</p>
+<p>Velikost cookies je hodně omezená. Omezení nejsou úplně jednoduchá, ale obecně se jedná o několik kilobajtů. Local Storage má v současných prohlížečích 5 MB.</p>
+<p>Cookies se posílají při každém HTTP požadavku na server. To je dobře i špatně. Dobře to je, protože s nimi můžete pracovat na serveru, třeba z ASP.NET. Špatně je to, protože tím narůstá objem přenášených dat, což v případě velkého objemu cookies a počtu návštěv může být velmi problematické (mimo jiné z tohoto důvodu se pro Content Delivery Networks používá jiná doména, než je mateřská, např. Facebook má <code>fbcdn.com</code>, Microsoft <code>aspnetcdn.com</code> atd.).</p>
+<h2 id="jak-to-funguje">Jak to funguje?</h2>
+<p>Prohlížeč, který podporuje Local Storage má ve třídě <code>window</code> dvě vlastnosti: <code>localStorage</code> a <code>sessionStorage</code>. O Session Storage tady ještě nebyla řeč a příliš ani nebude – jedná se totiž o Local Storage, jejíž obsah se ztratí při ukončení session, tedy při zavření okna prohlížeče (podobně jako u session cookies). Jinak úplně všechno, co budu psát o Local Storage platí i pro Session Storage.</p>
+<p>Úložiště je oddělené pro každý server (host name), resp. doménu. Ještě přesněji, pro každý <code>origin</code>, tedy zdroj. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html">Obšírnější pojednání</a> na toto téma jest nalézti na webu WHAT WG.</p>
+<p>Vlastnost <code>localStorage</code> je kolekce (nebo řečeno jazykem JavaScriptu asociativní pole), která má stringový klíč a stringovou hodnotu. Klíč může být jakýkoliv řetězec. Pamatujte na to, že jeho porovnávání je case sensitive. Hodnota je při vkládání automaticky převedena na string a jako takovou ji dostanete zpět. Pokud si tedy uložíte něco jiného, musíte to po načtení patřičně zpracovat.</p>
+<p>Kód pro vložení hodnoty do kolekce je jednoduchý:</p>
+<p>var localStorageSupported = &quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null; if (!localStorageSupported) { window.alert(&quot;Prohlížeč nepodporuje Local Storage!&quot;); } else { window.localStorage[&quot;foo&quot;] = &quot;bar&quot;; }</p>
+<p>Kód pro načtení hodnoty je velmi podobný:</p>
+<p>var localStorageSupported = &quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null; if (!localStorageSupported) { window.alert(&quot;Prohlížeč nepodporuje Local Storage!&quot;); } else { var foo = window.localStorage[&quot;foo&quot;]; window.alert(&quot;foo = &quot; + foo); }</p>
+<p>První řádek slouží k detekci podpory technologie prohlížečem. Pak je to obyčejná práce s kolekcí. Chcete-li, můžete použít i metody <code>getItem</code> a <code>setItem</code>. Pokud chcete odstranit položku z kolekce, použijte <code>removeItem</code>, pokud chcete smazat celé úložiště, použijte <code>clear</code>. Můžete využívat i <a href="http://dev.w3.org/html5/webstorage/#event-storage">události</a>, ale to je mimo rozsah tohoto článku.</p>
+<h2 id="k-cemu-je-to-dobre">K čemu je to dobré?</h2>
+<p>Úložiště Local Storage je užitečné pro řadu věcí a při správném použití může velmi ulehčit vašemu serveru a zpříjemnit uživatelům práci s vaší aplikací.</p>
+<p>Local Storage v některých případech můžete použít jako náhradu cookies. Když napíšete k tomuto článku komentář, uloží se údaje, které jste zadali, do cookie, abyste je nemuseli příště zadávat znovu (používám k tomu <a href="http://www.aspnet.cz/articles/244-zapamatovani-hodnoty-v-cookie-pomoci-control-extenderu">CookieExtender</a>). To ale zbytečně zatěžuje linku (i když vzhledem k počtu ASP.NET programátorů v zemích království českého mne to asi nezruinuje ;-) i server – doplňování se musí dít na straně serveru, i když k tomu fakticky není žádný důvod, jde čistě o klientskou věc. Kdybych to psal dneska, použil bych místo cookie Local Storage.</p>
+<p>Obecně, Local Storage se hodí k ukládání nedůležitých osobních nastavení, zejména anonymní povahy. Proč nedůležitých? Protože se na něj (jako na cokoliv na klientovi) nemůžete spolehnout. A anonymních? Local Storage žijí na straně klienta a na váš server se obecně nedostanou. Nemusíte řešit identifikaci a přihlašování uživatelů a podobně. Pokud jste nastavení schopni realizovat na straně klienta JavaScriptem, můžete to vyřešit takhle snadno.</p>
+<p>Ještě jednou bych rád zdůraznil, že se na Local Storage nemůžete spolehnout, a to v podstatě v žádném ohledu:</p>
+<ul>
+<li><strong>Local Storage nemusí fungovat.</strong> Uživatel může mít starý prohlížeč, případně se tato funkce dá vypnout (ačkoliv to <a href="http://webdevwonders.com/clear-dom-storage/">není jednoduché</a>). Také může mít vypnutý nebo z jiného důvodu nefunkční JavaScript.</li>
+<li><strong>Local Storage se může kdykoliv ztratit.</strong> Uživatel ho může smazat, změnit prohlížeč, přeinstalovat systém… Jakmile se něco takového stane, k hodnotám se nedostanete a nastavení se ztratí.</li>
+<li><strong>Local Storage může kdokoliv modifikovat.</strong> Kdokoliv znamená uživatele nebo někoho s přístupem k jeho počítači, případně k síti. Není tedy dobrý nápad ukládat data, která jsou z nějakého úhlu pohledu kritická.</li>
+</ul>
+<p>Přes tyto nevýhody může být local storage velmi platným pomocníkem, zejména pro &quot;nedůležité&quot; věci, které ale uživateli zpříjemní práci s vaší aplikací. Pokud si na klientovi napíšete patřičnou berličku, lze data poslat v nějak serializované podobě na server, což umožní obejít některé nevýhody. Například pokud se vaši uživatelé přihlašují, můžete jejich nastavení držet současně na serveru i v local storage a při přihlášení local storage synchronizovat. Tím zařídíte, že jakmile se uživatel přihlásí na &quot;čistém&quot; systému, dostane &quot;svoje&quot; data. Ta se přitom budou přenášet jenom jednou (při přihlášení), ne při každém požadavku, jako u cookies.</p>
+<h2 id="prakticky-priklad-neprectene-komentare">Praktický příklad: nepřečtené komentáře</h2>
+<p>Praktický příklad implementace najdete na tomto serveru. V noci na dnešek jsem nasadil novou verzi Nemesis, která umí indikovat komentáře, které přibyly od vaší poslední návštěvy. Jak to funguje? Na stránce se zobrazením článku a komentářů k němu se do local storage pod kód článku uloží aktuální počet komentářů. Na stránkách s výpisem seznamu příspěvků (třeba na <a href="/">homepage</a>) se potom JavaScriptem porovná aktuální počet komentářů s takto zapamatovanou hodnotou. Pokud jich je víc, tak se u článku zobrazí upozornění na nové komentáře.</p>
+<p>Konkrétní implementace využívá ještě jednu vlastnost HTML 5, a to jsou data atributy. Nově může každý HTML element mít neomezené množství &quot;vlastních&quot; atributů, které se mohou jmenovat jakkoliv, jenom musí začínat řetězcem <code>data-</code>. Na straně serveru jsem si tedy uložil u panelu pojmenovaného <code>comments</code> do těchto atributů ID aktuálního článku a počet komentářů.</p>
+<p>ASPX markup vypadá takto:</p>
+<p>&lt;asp:Panel ID=&quot;comments&quot; runat=&quot;server&quot; Visible='&lt;%# Eval(&quot;AllowComments&quot;) %&gt;' ClientIDMode=&quot;Static&quot; data-article-id='&lt;%# Eval(&quot;ArticleId&quot;) %&gt;' data-comment-count='&lt;%# Eval(&quot;Comments.Count&quot;) %&gt;'&gt; ... &lt;/asp:Panel&gt;</p>
+<p>Vygenerované HTML na straně klienta pak takto:</p>
+<div id="comments" data-article-id="334" data-comment-count="3"> ... </div>
+<p>Nutno připodotknout, že nic z toho není nezbytně nutné. ID článku i počet komentářů bych mohl zjistit z jiných věcí na stránce. Nicméně koně jsou vesměs stvoření líná, takže jsem šel cestou menšího odporu. Na straně klienta se pak spustí JavaScript, který pod klíčem <code>NemesisPublishing.ArticleCommentCount[334]</code> uloží hodnotu <code>3</code>. Syntaxe klíče s tečkami a hranatými závorkami je můj výmysl, chci v tom udělat nějaký systém, pro případ, že bych v budoucnu Local Storage využíval intenzivněji, tak aby se mi to nepohádalo.</p>
+<p>Příslušný úsek JavaScriptu vypadá takto (a využívá jQuery, není to čistý JavaScript):</p>
+<p>var comments = $(&quot;#comments&quot;); if (comments[0] != null &amp;&amp; 'localStorage' in window &amp;&amp; window['localStorage'] !== null) { var key = &quot;NemesisPublishing.ArticleCommentCount[&quot; + comments.data(&quot;article-id&quot;) + &quot;]&quot;; window.localStorage[key] = comments.data(&quot;comment-count&quot;); }</p>
+<p>Pokud element s požadovaným ID chybí, nic se neuloží (k článku jsou zakázané komentáře a tedy není pravděpodobné, že by nějaké přibyly).</p>
+<p>Na stránce s výpisem seznamu článků používám stejnou techniku (<code>data-</code> atributy), abych si v odkazu poznamenal číslo relevantního článku a současný počet komentářů. HTML zdroják vypadá takto (ve skutečnosti to vypadá trochu jinak, ale to není pro náš výklad podstatné, tak jsem to zjednodušil):</p>
+<p><a href="articles/334#comments" data-comment-aid="334" data-comment-count="3">3 komentáře</a></p>
+<p>Opět platí, že si usnadňuji práci, protože v JavaScriptu programuji nerad a nechce se mi moc se hrabat v HTML DOMu. JavaScript na dotyčné stránce vypadá takto:</p>
+<p>if (&quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null) { $(&quot;*[data-comment-aid]&quot;).each(function () { var key = &quot;NemesisPublishing.ArticleCommentCount[&quot; + <span class="math">(this).data(&quot;comment-aid&quot;) + &quot;]&quot;; if (window.localStorage[key] != null) { var currentCount = parseInt(</span>(this).data(&quot;comment-count&quot;)); var readCount = parseInt(window.localStorage[key]); if (currentCount &gt; readCount) { var newCount = currentCount - readCount; $(this).append(&quot; <span class='new'>&quot; + newCount + &quot; new<span>&quot;); } } }); }</p>
+<p>Tento skript je trochu složitější, než ten předchozí, ale ne o mnoho. Nejprve si ověřím, že Local Storage funguje a pak najdu všechny elementy, které mají atribut <code>data-comment-aid</code>. U všech těchto elementů pak zjistím, jaký je aktuální počet komentářů a jaký je poslední počet komentářů, které uživatel četl (resp. měl je zobrazené). Pokud se liší, zobrazím počet nových komentářů v textu odkazu.</p>
+<p>Toto řešení je velmi jednoduché a podle mého názoru velmi elegantní, a to z několika důvodů:</p>
+<ul>
+<li>Nijak nezatěžuje server ani linky. Serverovou část bych – kdybych nebyl líný – nemusel upravovat vůbec, teď je upravená minimálně.</li>
+<li>Neohrožuje soukromí uživatele. Veškeré zpracování se děje na straně klienta, uživatele nijak neindentifikuji a nespojuji si jeho požadavky.</li>
+<li>Nereaguje na uživatelovy vlastní komentáře. Pokud uživatel přidá nové komentář, automaticky se zvýší počet &quot;přečtených komentářů&quot;, protože se obnoví stránka.</li>
+<li>Degraduje s grácií (nebo znáte někdo lepší překlad pojmu &quot;degrade gracefully&quot;? ;-). Pokud uživatel nemá Local Storage nebo se prostě někde jinde něco zblázní, nejhoší věc, která může nastat, je, že se uživateli nezobrazí indikace nového komentáře, což není žádná tragédie.</li>
+</ul>
+<p>Celé řešení by šlo ještě dále vylepšit, například:</p>
+<ul>
+<li>Systém se může zakuckat, pokud nějaké komentáře smažu. To ale dělám tak jednou za čtvrtletí, takže tento problém nehodlám řešit.</li>
+<li>Server vám sice řekne, že přibyly nové komentáře, ale už vám neukáže, které to konkrétně jsou. Bylo by možné sledovat stav přečtení jednotlivých komentářů a reagovat na něj. To možná dopíšu, až nebudu mít nic lepšího na práci.</li>
+<li>Záznamy nijak nepročišťuji a neošetřuji chyby. Pokud se tedy přidělená kvóta vyčerpá, dojde k chybě. Tento problém ignoruji, protože objem ukládaných dat je tak malý, že zahlcení fakticky nehrozí. Nicméně pokud byste ukládali větší objemy dat, je dobré vymyslet nějaký mechanismus, jakým se již nepotřebné záznamy budou odstraňovat. Zde bych třeba mohl napsat složitější kód, který by uchovával údaje jenom pro např. 100 nejnověji vydaných článků (u starších je nepravděpodobné, že je uživatel najde ve výpisech a zároveň se zapojí do diskuze).</li>
+</ul>
+<h2 id="local-storage-explorer-a-session-storage-explorer">Local Storage Explorer a Session Storage Explorer</h2>
+<p>Nenašel jsem žádný nástroj, kterým bych mohl prohlížet a manipulovat obsah local storage. Tak jsem takový napsal. Sestává ze dvou HTML stránek (<code>lsexp.html</code> a <code>ssexp.html</code>), které se předpokládá, že si nahrajete na web, jehož storage chcete zkoumat. Když si tyto stránky zobrazíte, ukáže se vám seznam všech položek uložených v Local Storage (<code>lsexp.html</code>) nebo Session Storage (<code>ssexp.html</code>). Položky můžete odstraňovat, editovat a nebo celé úložiště vymazat. Oba soubory si můžete stáhnout a používat dle libosti.</p>
+<p>V době psaní tohoto článku jsou oba soubory nahrané i v rootu serveru <a href="http://www.aspnet.cz">www.aspnet.cz</a>, takže si můžete pohrát třeba právě s indikací nových komentářů. Při nějakém dalším update ty živé verze zase odstraním, takže se na jejich existenci moc nespoléhejte.</p>
+<ul>
+<li><a href="/files/20111013-local-storage-explorer.zip">20111013-local-storage-explorer.zip</a> (4kB – download)</li>
+<li><a href="/lsexp.html">Local Storage Explorer</a> (živý)</li>
+<li><a href="/ssexp.html">Session Storage Explorer</a> (živý)</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

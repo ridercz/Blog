@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Altairis Web Security Toolkit – nová verze 2.2.0 ke stažení | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Vydal jsem novou verzi své knihovny Altairis Web Security Toolkit (dříve Simple ASP.NET SQL Providers), kterí se stala vcelku populární. Přináší oproti minulé verzi řadu vylepšení a nově také nezávislost na databází a ověřenou kompatibilitu s novým SQL Serverem Compact Edition." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Altairis Web Security Toolkit – nová verze 2.2.0 ke stažení</h1>
+      <section class="article">
+        <p>Vydal jsem novou verzi své knihovny Altairis Web Security Toolkit (dříve Simple ASP.NET SQL Providers), kterí se stala vcelku populární. Přináší oproti minulé verzi řadu vylepšení a nově také nezávislost na databází a ověřenou kompatibilitu s novým SQL Serverem Compact Edition.</p>
+<h2 id="trocha-historie">Trocha historie</h2>
+<p>Verze ASP.NET 2.0 přinesla novinku v podobě membership, role a profile providerů. Bohužel, implementace providerů v .NET Frameworku je dost nešťastná: v zájmu maximální univerzálnosti použití jsou v podstatě nezkombinovatelné s čímkoliv jiným. Jejich tabulková struktura je dost nestandardní, nepřehledná a prakticky nepropojitelná se zbytkem databázové struktury, kterou aplikace může mít.</p>
+<p>Proto jsem se rozhodl napsat si vlastní providery, využívající mnohem jednodušší strukturu tabulek. Protože základem byla jednoduchost, nazval jsem je Simple SQL Providers. Toto moje řešení se docela zalíbilo a stalo se dosti populárním. Postupně jsem do této knihovny přidal ještě nějaké další věci, třeba modul pro basic autentizaci v IIS a jednoduchého providera pro ukládání dat do textových souborů.</p>
+<h2 id="nova-generace">Nová generace</h2>
+<p>Nyní jsem uvolnil masivně přepracovanou druhou verzi. Třídy <em>Simple</em>Provider* jsou sice nadále přítomny, ale novou generaci představují třídy Table*Provider. Základní změny jsou následující:</p>
+<ul>
+<li><strong>Naprostá databázová nezávislost:</strong> Původní verze podporovala jenom Microsoft SQL Server a ačkoliv bylo jednoduché ji upravit i pro jiné databáze, out-of-the-box to nešlo. Současná verze používá generické databázové třídy a měla by tedy fungovat s jakoukoliv databází, která rozumí jednoduchým SQL dotazům a má ADO.NET providera. Testoval jsem to proti SQL Servereu a SQL Compactu, budu vděčný, pokud otestujete i jiné databáze a případně dodáte přesný postup.</li>
+<li><strong>Podpora SQL Serveru Compact Edition:</strong> Microsoft před několika dny uvedl novou verzi svého embedded databázového nástroje. SQL CE 4.0 je – na rozdíl od předchozích verzí – přímo určena pro použití v rámci webových aplikací a hodí se pro nasazení v menším rozsahu. Nová verze mých providerů se SQL CE úspěšně funguje a je na to i příklad.</li>
+<li><strong>Standardní výpočet hashe:</strong> Původní verze stejně jako vestavěné providery pro výpočet HMAC používala stringové řetězení hesla se solí. Nová verze používá standardní třídu HMACSHA512. To má na jedné straně za následek nemožnost přímého upgradu z nižších verzí, na druhou stranu bude snadnější případný přechod na jiné providery nebo jiný hashovací algoritmus atd.</li>
+<li><strong>Zefektivnění ukládání dat:</strong> Původní verze ukládala hash hesla jako řetězec kódovaný pomocí Base64 (opět, v inspiraci vestavěným providerem). Aktuální verze ukládá hashe (a sůl) přímo v binárním tvaru.</li>
+<li><strong>Možnost konfigurovat názvy tabulek:</strong> Původní verze vyžadovala tabulky s pevnými jmény. Nová umožňuje tabulky <em>Users</em>, <em>Roles</em> a <em>RoleMemberships</em> pojmenovat libovolně.</li>
+<li>Korektnější podpora zakazování a povolování uživatelů (původní implementace nesystémově míchala &quot;enabled&quot; a &quot;locked out&quot;).</li>
+<li>Podpora metody <em>GetNumberOfUsersOnline</em>, o jejíž smysluplnosti si ovšem stále myslím své.</li>
+<li>Kompletní a úplná podpora impersonace v některých hostingových scénářích.</li>
+</ul>
+<p>Zůstává zachována původní jednoduchost a také hojně využívaná možnost do tabulek přidávat libovolné vlastní sloupečky, pokud jsou nullable a nebo mají defaultní hodnotu, což zapojení do vlastní tabulkové struktury dále zjednodušuje.</p>
+<p>Kromě &quot;tabulkových&quot; providerů obsahuje knihovna ještě <em>PlainTextMembershipProvider</em>, což je extrémně jednoduchý membership provider, ukládajicí svoje údaje do obyčejného textového souboru. Užitečný pro prozkoumání, jakže ten membershipping vlastně funguje a low-security scénáře.</p>
+<p>Další třídou je <strong>BasicAuthenticationModule</strong>, což je autentizační modul pro IIS, který implementuje běžnou HTTP Basic autentizaci, ovšem ve spolupráci s membership infrastrukturou (a tedy libovolným membership providerem, včetně těch výše uvedených). Podrobnější informace je možné nalézt v článku <a href="http://www.aspnet.cz/articles/84-modul-pro-basic-autentizaci-v-asp-net">Modul pro 'basic' autentizaci v ASP.NET</a>.</p>
+<h2 id="dostupnost-a-instalace">Dostupnost a instalace</h2>
+<p><strong>Altairis Web Security Toolkit</strong> si můžete stáhnout z CodePlexu. Na adrese <a href="http://altairiswebsecurity.codeplex.com/">http://altairiswebsecurity.codeplex.com/</a> si můžete stáhnout knihovnu, příklady, zdrojové kódy a je tam k dispozici i dokumentace. Pokud používáte NuGet (kterému se hodlám podrobněji věnovat v budoucnu), je komponenta i součástí <a href="http://www.nuget.org/">NuGet Gallery</a>, její ID je <em>Altairis.Web.Security</em>.</p>
+<p>Knihovna je licencována pod Microsoft Public License (Ms-PL), což umožňuje její použítí ve všech druzích aplikací (včetně komerčních) a též modifikaci.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WS-Security v praxi - jednoduchý příklad použití WSE 3.0 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Základní specifikace web services (WS-I) jest praktickým důkazem pravdivosti tvrzení, že v jednoduchosti je síla. Tato specifikace je ve své podstatě neuvěřitelně primitivní. To má ovšem za následek skutečnost, že webové služby podle ní sepsané neumějí spoustu užitečných věcí, které by bylo lze od nich očekávati, příkladně autentizaci. S tím se ovšem počítalo a existuje řešení." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>WS-Security v praxi - jednoduchý příklad použití WSE 3.0</h1>
+      <section class="article">
+        <p>Základní specifikace web services (WS-I) jest praktickým důkazem pravdivosti tvrzení, že v jednoduchosti je síla. Tato specifikace je ve své podstatě neuvěřitelně primitivní. To má ovšem za následek skutečnost, že webové služby podle ní sepsané neumějí spoustu užitečných věcí, které by bylo lze od nich očekávati, příkladně autentizaci. S tím se ovšem počítalo a existuje řešení.</p>
+<p>Webové služby jsou založeny na posílání XML dokumentů (obvykle přes HTTP). Což v praxi znamená, že je lze víceméně libovolně rozšiřovat. Všechny standardy založené na XML lze beztrestně rozšiřovat přidáním vlastních namespace. Vznikla proto řada doplňkových standardů. Z nich nás bude zajímat především standard <strong>WS-Security</strong>.</p>
+<p>Tento standard umožňuje (mimo jiné) s každým požadavkem posílat autentizační údaje, a toho právě budeme využívat.</p>
+<h2 id="web-services-enhancements-3.0">Web Services Enhancements 3.0</h2>
+<p>Chcete-li využívat dobrodiní rozšíření WS-Security (jakož i řady dalších) na platformě ASP.NET 2.0, musíte si nainstalovat softwarový balík Web Services Enhancements (WSE). Jeho aktuální verze má číslo 3.0 a můžete si ji <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=018a09fd-3a74-43c5-8ec1-8d789091255d&amp;DisplayLang=en">zdarma stáhnout</a> na webu Microsoftu.</p>
+<p>Verze WSE se vyznačují tím, že nejsou kumulativní, nejedná se o &quot;upgrade&quot;. Každá verze má svůj vlastní namespace (trojka <code>Microsoft.Web.Services3</code>) a implementuje různé standardy.</p>
+<p>Pro účely tohoto článku bych vám doporučil, abyste zvolili vývojářskou instalaci. Ta vám kromě runtime a dokumentace nainstaluje také plugin do Visual Studia 2005. Tento plugin bohužel není kompatibilní s Express edicemi vývojových nástrojů, nicméně součástí WSE jest i samostatný nástroj, který můžete použít.</p>
+<h3 id="tradicni-povzdech-nad-kvalitou-dokumentace">Tradiční povzdech nad kvalitou dokumentace</h3>
+<p>Instalace WSE je snadná. Zato pokračování... Za kvalitu dokumentace všeobecně a příkladů zejména by někdo v Microsoftu zasloužil nakopat. Nebo přinejmenším vysvětlit, že příklady mají být jednoduché, snadno pochopitelné, a pokud možno nikoliv zběsile provázané mezi sebou.</p>
+<p>Naštěstí situaci zachraňuje <a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/wss_ch3_impdirectauth_wse30.asp">tento poměrně dobrý článek</a> na MSDN. Z něho jsem vycházel při psaní tohoto článku, jakož i příkladů.</p>
+<p>Pokud už totiž někde narazíte na popis WSE, pak v roztodivných komplikovaných scénářích s napojením na Active Directory, s využitím klientských certifikátů a podobně. Já jsem se ovšem dostal do situace, kdy jsem potřeboval používat nikoliv certifikáty nebo AD, ale standardní membership databázi ASP.NET aplikací. Proto vznikl tento článek a s ním související příklady</p>
+<h3 id="predpokladane-znalosti-ctenare">Předpokládané znalosti čtenáře</h3>
+<p>Tento článek předpokládá, že laskavý čtenář disponuje jistými znalostmi a nevysvětuje tudíž základy. Předpokládá se, že kromě obecných základů práce ve Visual Studiu 2005 a ASP.NET obecně umíte pracovat s běžnými webovými službami a víte, jak fungují membership providery v ASP.NET 2.0.</p>
+<h2 id="serverova-cast">Serverová část</h2>
+<p>Naše ukázková webová služba sama o sobě nepředstavuje nižádnou ukázku programátorského umu. Založte si nový webový projekt a umístěte do něj novou webovou službu. Ponecháme onu ukázkovou metodu <code>HelloWorld()</code>, pro naše účely zcela postačuje. Zdrojový kód tedy vypadá nějak takto:</p>
+<p>Imports System.Web Imports System.Web.Services Imports System.Web.Services.Protocols &lt;WebService(Namespace:=&quot;http://tempuri.org/&quot;)&gt; _ &lt;WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)&gt; _ &lt;Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()&gt; _ Public Class WebService Inherits System.Web.Services.WebService &lt;WebMethod()&gt; _ Public Function HelloWorld() As String Return &quot;Hello World&quot; End Function End Class</p>
+<p>Chceme-li tuto metodu využívat, není třeba se v dané chvíli obtěžovat žádnými uživatelskými jmény a podobně. Ukázkovou aplikaci jistě dokážete vytvořit sami, jednu najdete v přiložených příkladech jako projekt <strong>UnsecureClient</strong>.</p>
+<p>Programový kód této webové služby již nebudeme dále modifikovat, pouze později přidáme jeden atribut. To je důležité - WSE 3.0 nativně používá tzv. politiky (policy), jimiž lze deklarativně určovat podmínky, za nichž lze volat tu kterou webovou službu. Připomíná to nastavení URL autorizace, kde pomocí direktiv v souboru <code>web.config</code> určujete, kteří uživatelé či skupiny mají právo přistupovat k té které části aplikace.</p>
+<h3 id="nastaveni-povolenych-protokolu">Nastavení povolených protokolů</h3>
+<p>Webové služby jest možno volati mnoha různými způsoby. Ač je pro ně nativní SOAP over HTTP, je možno je - kvůli kompatibilitě s tupějšími klienty - možno volat i pomocí prostých a nekomplikovaných HTTP požadavků metodami GET a POST. Pro naše účely ovšem potřebujeme pouze SOAP. Primitivnější metody nepodporují WSE rozšíření a jest tedy nutno zakázat jejich použití.</p>
+<p>Toto je <strong>velmi důležitý krok</strong>, protože jinak si vytvoříte roztomilou bezpečnostní díru. Z .NET klienta bude všechno chodit jak má (nativně používá SOAP), ale pokud si někdo vaši webovou službu zavolá metodou HTTP GET nebo POST z prohlížeče, může se do ní dostat.</p>
+<p>Seznam povolených protokolů můžeme měnit ve <code>web.config</code>u. Odstraníme z něj všechny protokoly s výjimkou <code>AnyHttpSoap</code> a <code>Documentation</code>. Posledně jmenovaný se stará o zobrazení informační stránky s popisem webové služby.</p>
+<?xml version="1.0" encoding="utf-8"?> <configuration> <system.web> <webServices> <protocols> <clear /> <add name="Documentation" /> <add name="AnyHttpSoap" /> </protocols> </webServices> </system.web> </configuration>
+<h3 id="vytvoreni-databaze-uzivatelu">Vytvoření databáze uživatelů</h3>
+<p>Naším cílem je učinit web services kompatibilní se standardními Membership Providery v ASP.NET 2.0. Můj příklad používá <code>SqlMembershipProvider</code> s databází na SQL Serveru Express, ale aplikace bude chodit s jakýmkoliv providerem, který se rozhodnete použít.</p>
+<p>Součástí naší politiky bude povolit přístup k webové službě pouze členům určité role. V mém příkladu se jmenuje &quot;<code>WebServiceUsers</code>&quot; a obsahuje jediného uživatele, jehož jméno je &quot;<code>DemoUser</code>&quot; a heslo &quot;<code>demo.password</code>&quot;. Vytvořte si tedy patřičné uživatele a role, nebo použijte mou databázi.</p>
+<h3 id="povoleni-wse-3.0-v-projektu">Povolení WSE 3.0 v projektu</h3>
+<p>Tvorba XML konfiguračních souborů a souborů s politikami není jednoduchá. Naštěstí WSE disponuje již zmiňovaným pluginem pro jejich vytváření. Klepněte pravým tlačítkem na projekt a z kontextového menu zvolte položku &quot;<strong>WSE Settings 3.0</strong>&quot;. Objeví se okno, v němž na záložce <strong>General</strong> zaškrtněte oba checkboxy:</p>
+<p><img src="/files/20060112-wse-01.png" alt="Screenshot" /></p>
+<p>Tímto krokem přidáte do konfiguračního souboru aplikace řadu nastavení, které povolí použití WSE 3.0, stejně jako referenci na odpovídající knihovnu.</p>
+<h3 id="tvorba-bezpecnostni-politiky">Tvorba bezpečnostní politiky</h3>
+<p>Dále je nutno vytvořit soubor pravidel, která budou stanovovat, kdo má právo přistupovat k naší službě. Přepněte se na záložku <strong>Policy</strong>, zaškrtněte <strong>Enable policy</strong> a klepněte na <strong>Add</strong> pro vytvoření nové politiky. Nějak vhodně si ji pojmenujte (například <code>MyServerPolicy</code>) a pokračujte spuštěním průvodce.</p>
+<p><img src="/files/20060112-wse-02.png" alt="Screenshot" /></p>
+<p>V prvním kroku je třeba zvolit, že chcete zabezpečit serverovou část - webovou službu (<strong>service application</strong>). Dále pak musíte zvolit formu autentizace. Zvolte <strong>Username</strong> - certifikáty a podobně si necháme na jindy.</p>
+<p><img src="/files/20060112-wse-03.png" alt="Screenshot" /></p>
+<p>Politika může (ale nemusí, pokud to chcete nastavit vlastními silami) zajistit též autorizaci, tedy povolit volání pouze určitým uživatelům nebo skupinám. Zaškrtněte <strong>Perform Authorization</strong> a povolte přístup skupině <code>WebServiceUsers</code>.</p>
+<p><img src="/files/20060112-wse-04.png" alt="Screenshot" /></p>
+<p>V posledním kroku průvodce můžete nastavit, zda se má SOAP zpráva podepsat, šifrovat či obojí. Použití podpisů a šifrování vyžaduje pokročilejší konfiguraci klíčů a podobně, proto v tomto okamžiku pro jednoduchost zvolíme &quot;<strong>None (rely on transport protection)</strong>&quot;. To znamená, že WSE nebude žádnou ze shora uvedených činností provádět, a že tedy uživatelské jméno a heslo poputuje sítí v otevřené podobě. Tomu je radno se vyhnout a pokud použijete tento postup, neměli byste k webové službě přistupovat přes obyčejné HTTP, ale přes jeho šifrovanou variantu HTTPS - tím přenesete zodpovědnost za šifrování na transportní vrstvu.</p>
+<p>Poklikáním na různé next a finish průvodce ukončíte.</p>
+<p>Řady souborů ve vaší aplikaci se rozmnožily o <code>~/wse3policyCache.config</code>. Tento soubor, vytvořený uvedeným průvodcem, obsahuje definci vaší bezpečnostní politiky. Můžete jej modifikovat stejně jako jste ho vytvořili, nebo přímo editovat jeho zdrojový kód. Rovněž <code>web.config</code> se rozrostl, a to právě o odkaz na tento soubor.</p>
+<h3 id="vytvoreni-a-pouziti-vlastniho-username-token-manageru">Vytvoření a použití vlastního username token manageru</h3>
+<p>WSE standardně disponuje pouze ověřováním proti systémové databázi uživatelů. Pokud se chcete ověřovat proti čemukoliv jinému (například proti databázi membership providera), musíte si sami napsat vlastní <code>UsernameTokenManager</code>, v němž si napíšete vlastní kód pro rozhodnutí, zda je ten který uživatel správný.</p>
+<p>Vytvoříme tedy třídu <code>MembershipUsernameTokenManager</code> a umístíme ji do namespace <code>WseDemo</code> (je nutno použít nějaký namespace, je vcelku jedno jaký). Tato třída bude dědit od <code>Microsoft.Web.Services3.Security.Tokens.UsernameTokenManager</code> a bude přepisovat toliko metodu <code>AuthenticateToken</code>:</p>
+<p>Namespace WseDemo Public Class MembershipUsernameTokenManager Inherits Microsoft.Web.Services3.Security.Tokens.UsernameTokenManager Protected Overrides Function AuthenticateToken(ByVal Token As Microsoft.Web.Services3.Security.Tokens.UsernameToken) As String ' Validate username and password using configured membership provider If Not Membership.ValidateUser(Token.Username, Token.Password) Then Return Nothing ' Create new principal based on user name Dim I As New System.Security.Principal.GenericIdentity(Token.Username) Dim P As New System.Security.Principal.GenericPrincipal(I, Roles.GetRolesForUser(Token.Username)) Token.Principal = P Return Token.Password End Function End Class End Namespace</p>
+<p>Tato metoda obdrží jako vstupní parametr <code>UsernameToken</code> a vrací řetězec<code>.</code>Pokud je autentizace úspěšná, vrací údaj předaný jako heslo (<code>Token.Password</code>); není-li, vrací <code>Nothing</code>, případně může vyhodit výjimku.</p>
+<p>Jest nutno si uvědomit, že dle implementace nemusí &quot;password&quot; být nutně heslo jako takové, může se jednat například o jeho hash a podobně.</p>
+<p>Protože používáme kromě autentizace i autorizaci pomocí rolí, následují tři řádky, kde načteme role uživateli přiřazené.</p>
+<p>Nyní je třeba způsobit, aby se námi pracně vytvořený manager vůbec spustil - respektive použil namísto standardního. Otevřete si proto opět konfigurační nástroj a na záložce <strong>Security</strong> v sekci <strong>Security Token Managers</strong> klepněte na tlačítko <strong>Add</strong>.</p>
+<p><img src="/files/20060112-wse-05.png" alt="Screenshot" /></p>
+<p>V objevivším se okně zadejte do položky <strong>Type</strong> plný název vámi vytvořené třídy (proto bylo nutno ji zažadit do namespace), v našem případě je to <code>WseDemo.MembershipUsernameTokenManager</code>. Další dvě položky určují, k jakému elementu ve zprávě se naše třída vztahuje. Namespace je <code>http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</code> a LocalName je <code>UsernameToken</code>.</p>
+<h3 id="aplikace-bezpecnostni-politiky">Aplikace bezpečnostní politiky</h3>
+<p>Posledním krokem na straně serveru je nutné zajistit, aby se námi vytvořená politika jménem <code>MyServerPolicy</code> aplikovala na naši webovou službu (politik můžete mít samozřejmě více pro různé služby). Jest tak učiniti pomocí atributu <code>Microsoft.Web.Services3.Policy</code>, jímž obohatíme definici třídy naší webové služby, takže kód bude vypadat takto:</p>
+<p>Imports System.Web Imports System.Web.Services Imports System.Web.Services.Protocols &lt;WebService(Namespace:=&quot;http://tempuri.org/&quot;)&gt; _ &lt;WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)&gt; _ &lt;Microsoft.Web.Services3.Policy(&quot;MyServerPolicy&quot;)&gt; _ &lt;Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()&gt; _ Public Class WebService Inherits System.Web.Services.WebService &lt;WebMethod()&gt; _ Public Function HelloWorld() As String Return &quot;Hello World&quot; End Function End Class</p>
+<h2 id="klientska-cast">Klientská část</h2>
+<p>Pokud se pokusíte naši webovou službu zavolat z &quot;normálního&quot; klienta, dojde k chybě. Klienta je nutno upravit, aby se naučil, jak že má posílat autentizační údaje. Vytvořte proto nový projekt typu <strong>Windows Application</strong>. Bude sestávat z formuláře na kterém budou dva text boxy (pro zadání jména a hesla) a jedno tlačítko pro zavolání webové služby.</p>
+<p>I v této aplikaci spusťte konfigurační nástroj WSE a na záložce <strong>General</strong> zaškrtněte Enable this project for <strong>Web Services Enhancements</strong>. Poté přejděte na záložku <strong>Policy</strong> a popsaným způsobem vytvořte klientskou politiku (bude se jmenovat <code>MyClientPolicy</code>). Hodnoty budou stejné jako u serveru, pouze budete zabezpečovat klientskou část. Ačkoli v průběhu průvodce budete moci zadat uživatelské jméno a heslo, nedělejte to, budeme ho nastavovat v kódu.</p>
+<p>Přidejte si běžným způsobem odkaz na webovou službu - pojmenujte ji třeba <code>HelloWorldService</code>. Visual Studio vytvoří tentokrát nikoliv jednu, ale dvě proxy třídy pro její volání. Ta která nás zajímá má na konci ještě přídomek <code>Wse</code>.</p>
+<p>Vlastní kód pro obsluhu stisknutého tlačítka je jednoduchý:</p>
+<p>Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click Dim MyToken As New Microsoft.Web.Services3.Security.Tokens.UsernameToken(Me.TextBoxUserName.Text, Me.TextBoxPassword.Text, Microsoft.Web.Services3.Security.Tokens.PasswordOption.SendPlainText) Dim HW As New HelloWorldService.WebServiceWse() HW.SetPolicy(&quot;MyClientPolicy&quot;) HW.SetClientCredential(MyToken) Dim Response As String = HW.HelloWorld() MsgBox(&quot;Web service returned: &quot; &amp; Response, MsgBoxStyle.Information) End Sub</p>
+<p>Při zadání chybného uživatelského jména či hesla dojde k výjimce, u živých aplikací je tedy vhodné ošetřit chybové stavy.</p>
+<h2 id="ponauceni-z-clanku-plynouci">Ponaučení z článku plynoucí</h2>
+<ol>
+<li>Základní specifikace webových služeb (WS-I) neobsahuje žádnou podporu pro předávání autentizačních údajů s požadavkem.</li>
+<li>Tento problém řeší rozšiřující standard WS-Security, který je v prostředí .NET přítomen v podobě balíku Web Services Enhancements, který je možno si zdarma stáhnout.</li>
+<li>Jaká pravidla se na tu kterou službu vztahují, jest určovati nejlépe deklarativně, pomocí tzv. politik (policy).</li>
+<li>Standardně s WSE dodávané třídy umožňují pouze autentizaci proti Windows databázi uživatelů a/nebo pomocí klientských certifikátů.</li>
+<li>Je nicméně snadné napsat si vlastní <code>UsernameTokenManager</code>, který může používat libovolnou databázi uživatelů.</li>
+</ol>
+<h3 id="odkazy">Odkazy</h3>
+<ul>
+<li><a href="/files/20060112-wse-samples.zip">Zdrojové kódy ke stažení</a></li>
+<li><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/wss_ch3_impdirectauth_wse30.asp">Článek o WSE na MSDN (anglicky)</a></li>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=018a09fd-3a74-43c5-8ec1-8d789091255d&amp;DisplayLang=en">Stažení WSE 3.0</a></li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

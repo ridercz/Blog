@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IIS Network Diagnostic Tools: Ping a Traceroute pro váš server | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy ping a traceroute (tracert). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Ukážeme si, jak takovou službu napsat v ASP.NET a provozovat na IIS." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>IIS Network Diagnostic Tools: Ping a Traceroute pro váš server</h1>
+      <section class="article">
+        <p>Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy <code>ping</code> a <code>traceroute</code> (<code>tracert</code>). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Jejich přehled najdete například na <a href="http://www.traceroute.org">www.traceroute.org</a>. Chce to ovšem trpělivost, řada serverů tamo uvedených je nefunkční.</p>
+<p>V zájmu rozmnožení jejich řad jsem napsal webovou aplikaci (přesněji modul pro IIS), který umožňuje jednoduše nabídnout možnost pingu a traceroute na jakémkoliv serveru. Jmenuje se <strong>IIS Network Diagnostic Tools</strong> a je zdarma ke stažení na <a href="http://iisnetdiag.codeplex.com/">http://iisnetdiag.codeplex.com/</a>.</p>
+<h2 id="co-umi-ping">Co umí PING</h2>
+<p>Příkaz <code>ping</code> funguje tak, že vygeneruje náhodná data (na Windows typicky 32 bajtů, neřeknete-li jinak) a jako ICMP echo request je pošle cílovému klientovi, tedy počítači, jehož dostupnost chcete ověřit. Ten tatáž data pošle v podobě ICMP echo reply zpátky. Pingající počítač pak dokáže zjistit, jak dlouho to trvalo, případně zda vůbec dostal odpověď.</p>
+<p>Ping má následující podstatné parametry:</p>
+<ul>
+<li><strong>Objem dat</strong> – nezáleží na jejich obsahu, ale na objemu. V mezních situacích se mohou sítě chovat různě pro malé a velké pakety.</li>
+<li><strong>Timeout</strong> – čas (obvykle udávaný v milisekundách) za který musí dorazit odpověď. Nedorazí-li, ping vypíše populární &quot;Request timed out&quot;.</li>
+<li><strong>Počet požadavků</strong> – vzhledem k povaze ICMP nemá zaslání jednoho paketu příliš velkou vypovídací hodnotu. Jeden ztracený ping nic neznamená. Typicky bych tedy pošleme větší množství a vyhodnocujeme je statisticky.</li>
+<li><strong>TTL</strong> – zákeřná a často nepochopená hodnota &quot;time to live&quot;. Nemá v zásadě nic společného s časem, ale je to počet &quot;skoků&quot;, které může request vykonat, tj. přes kolik routerů může požadavek projít. Pokud nedosáhne svého cíle před vypršením tohoto čísla, zobrazí se stav &quot;TTL expired in transit&quot;.</li>
+</ul>
+<p>Norma RFC1122 sice stanoví, že každý počítač musí ICMP echo request přijmout a také na něj odpovědět, ale v dnešní době je to bohapustá teorie a zbožné přání. Velké množství firewallů ping blokuje, z údajně bezpečnostních důvodů. Pokud vám tedy neznámý počítač neodpovídá na ping, samo o sobě to nic neznamená, klidně může běžet a fungovat.</p>
+<h2 id="co-umi-traceroute">Co umí TRACEROUTE</h2>
+<p>Příkaz <code>traceroute</code> (na Windows <code>tracert</code>) představuje jenom komplikovanější formu použití příkazu ping. Jeho cílem je zobrazit cestu, jakou pakety šly. Ping vám řekne jenom, jestli se k danému cílovému počítači dostanete, ale už ne, kde je problém. Traceroute ano.</p>
+<p>Postupuje tak, že opakovaně posílá <code>ping</code>, u kterého postupně zvyšuje parametr TTL. Tím vlastně &quot;pingá&quot; a odhaluje postupně všechny routery po cestě. Pokud některý neodpoví, nenechá se tím odradit a pošle další požadavek s TTL o jedna vyšším. Pokračuje, dokud mu neodpoví cílový stroj a nebo dokud není vyčerpán celkový počet pokusů (standardně 30).</p>
+<h2 id="iis-network-diagnostic-tools">IIS Network Diagnostic Tools</h2>
+<p>Funkcionalita PINGu je v .NETu součástí třídy <code>System.Net.NetworkInformation.Ping</code>. Je tedy velmi snadné si obě dvě služby napsat.  IIS Network Diagnostic Tools sestávají ze čtyř tříd:</p>
+<ul>
+<li><code>FormHandler</code> je HTTP handler, který umí zobrazit úvodní HTML formulář.</li>
+<li><code>PingHandler</code> je HTTP handler, který zobrazí výsledky PINGu.</li>
+<li><code>TraceRouteHandler</code> je HTTP handler, který zobrazí výsledky TRACEROUTE.</li>
+<li><code>ToolsHandlerFactory</code> je pomocná třída, handler factory, která rozděluje práci mezi tři výše uvedené handlery. Takže není nezbytné registrovat handlery samostatně, ale stačí zaregistrovat jednu factory.</li>
+</ul>
+<p>Aplikaci včetně zdrojového kódu si můžete stáhnout na <a href="http://iisnetdiag.codeplex.com/">iisnetdiag.codeplex.com</a>, naživo si  ji můžete vyzkoušet z našeho serveru v <a href="http://www7.v.altairis.cz/iisnetdiag.axd">ČR</a> nebo v <a href="http://www6.v.altairis.cz/iisnetdiag.axd">USA</a>.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

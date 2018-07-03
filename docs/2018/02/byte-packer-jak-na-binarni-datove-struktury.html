@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Byte packer – jak na binární datové struktury? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu BytePacker, která vám s tím pomůže." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Byte packer – jak na binární datové struktury?</h1>
+      <section class="article">
+        <p>Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu <code>BytePacker</code>, která vám s tím pomůže.</p>
+<p>Tento článek jsem napsal na základě diskuse s jedním začínajícím C# programátorem, který poněkud plaval v operacích s poli bajtů. Myslím si, že může být užitečný i mnoha dalším.</p>
+<p>Základní zadání je následující:</p>
+<ul>
+<li>Máme předem neurčené množství bloků binárních dat (polí <code>byte[]</code>).</li>
+<li>Neznáme délku jednotlivých bloků, víme jen že bude 1-255 bajtů.</li>
+<li>Neznáme počet jednotlivých bloků, víme jen že jich bude 2-256.</li>
+<li>Potřebujeme vytvořit datovou strukturu, která toto umožní rozumným způsobem uchovat a zpracovat.</li>
+</ul>
+<h2 id="ukladani-dat-s-predem-znamou-delkou">Ukládání dat s předem známou délkou</h2>
+<p>Pokud ukládáme data s předem známou délkou, je to jednoduché. Prostě je naskládáme za sebe a hotovo. Protože dopředu známe délku, dokážeme rozpoznat komu které bajty patří. </p>
+<p>Typickým příkladem bude např. situace, kdy budeme jako součást datové struktury uchovávat ID měřícího zařízení (dva bajty), vnitřní teplotu a vnější teplotu. Teplotu budeme uchovávat s přesností na půl stupně celsia. Pokud bychom data ukládali v XML, lze si představit například následující formát:</p>
+<measure id="1234" internalTemp="15.5" externalTemp="-3.5" />
+<p>V současné době je módní používat spíše JSON, v něm by to mohlo vypadat následovně:</p>
+<p>{ &quot;id&quot; : 1234, &quot;internalTemp&quot; : 15.5, &quot;externalTemp&quot; : -3.5 }</p>
+<p>Jak to ovšem uložit do co nejmenšího objemu dat, například budeme-li data chtít přenášet po LPWAN síti s omezeným objemem přenášených dat? Stačí nám k tomu prosté čtyři bajty. První a druhý bajt bude identifikátor měřící stanice. Třetí bajt bude vnitřní teplota a čtvrtý bajt vnější teplota.</p>
+<p>Jeden bajt může uchovávat hodnotu 0-255. Jak do toho zakódovat desetinnou a zápornou teplotu? Možností je několik. Zápornou hodnotu vyřešíme tím, že k teplotě ve stupních pro účely ukládání přičteme 127. Budeme tak schopni uchovávat teplotu od –127 °C (uloženo jako 0) po +128 °C (uloženo jako 255), což nám pro naši aplikaci postačí. Chceme-li uchovávat s přesností na půl stupně, stačí hodnotu před uložením ještě vynásobit dvěma. Tím se nám sice sníží rozsah na polovinu (od –63,5 °C do +64 °C), ale to je pořád dostačující. Vzorec pro převod teploty <code>t</code> na uloženou hodnotu s tedy bude <code>s = t * 2 + 127</code>. Opačný převod pak provedeme pomocí vzorečku <code>t = (s – 127) / 2</code>.</p>
+<ul>
+<li>ID zařízení (1234) budeme uchovávat jako dva bajty big endian, tj. <code>0x04</code>, <code>0xD2</code>.</li>
+<li>Interní teplota bude uložena jako <code>15.5 * 2 + 127 = 158 = 0x9E.</code></li>
+<li>Externí teplota jako <code>–3.5 * 2 + 127 = 120 = 0x78</code>.</li>
+</ul>
+<p>Výsledná datová struktura tedy bude <code>[0x04, 0xD2, 0x9E, 0x78]</code>, nebo stručněji zapsáno <code>0x04D29E78</code>. Obsahuje pouze holá data, žádné režijní údaje. Víme, že první dva bajty jsou ID zařízení, další je interní teplota a druhá externí teplota.</p>
+<h2 id="ukladani-dat-s-predem-neznamou-delkou">Ukládání dat s předem neznámou délkou</h2>
+<p>Neznáme-li dopředu délku uložených dat, pak jsou k dispozici pouze dvě metody. Buďto si jejich délku někam poznamenáme (typicky na začátek datové struktury) nebo použijeme oddělovače – takovou sekvenci, která se v datech samotných nikdy nemůže vyskytnout. Pohleďte příkladně na tuto sekvenci:</p>
+<p><code>0x11002222003333330044444444</code></p>
+<p>Ta obsahuje sekvence <code>0x11</code>, <code>0x2222,</code> <code>0x333333</code> a <code>0x44444444</code> oddělené nulami. Funguje to docela dobře, ovšem pouze do chvíle, kdy vlastní data nemohou obsahovat nulový bajt, na což se zpravidla nemůžeme spolehnout. Použijeme tedy jiný formát, který si bude délku jednotlivých bloků ukládat. Pro jednoduchost (abychom nemuseli řešit endian) budeme počítat s délkou bloku 0-255 bajtů. Tatáž data budou zakódována následovně:</p>
+<p><code>0x**01**11**02**2222**03**33333344444444</code></p>
+<p>Tučně zvýrazněné bajty určují délku následujícího bloku. Poslední blok (čtyři bajty <code>0x44</code>) délku uvedenou mít nemusí – jsou to &quot;všechna zbývající data&quot;.</p>
+<p>Nevýhodou tohoto přístupu je, že nedokážeme přímo přečíst konkrétní blok – vždy musíme přečíst data od začátku, protože jinak se nedozvíme, kde který blok začíná.</p>
+<p>Pokud ale známe počet bloků, můžeme datový formát vylepšit: všechny délky bloků napíšeme na začátek. Výsledek bude vypadat následovně:</p>
+<p><code>0x**010203**11222233333344444444</code></p>
+<p>Poslední vylepšení bude spočívat v tom, že i počet bloků můžeme uložit na začátek a zbavíme se tedy posledního omezení, že počet bloků musí být dopředu znám.</p>
+<p>Pohleďte na následující datovou strukturu:</p>
+<p><code>0x02**010203**11222233333344444444</code></p>
+<p>První bajt určuje počet specifikovaných délek bloků mínus jedna. Určuje tedy, kolik následujících bajtů (v tomto případě tři, zdůrazněné tučně) jsou délky. Následují data jednotlívých bloků, včetně posledního &quot;zbytkového&quot;.</p>
+<h2 id="trida-bytepacker">Třída BytePacker</h2>
+<p>Napsal jsem v C# komfortní třídu <code>BytePacker</code>, která dokáže datové struktury podle uvedeného vzoru vytvářet a zase rozebírat pomocí statických metod <code>Pack</code> a <code>Unpack</code>. Kód jsem ještě vylepšil o podporu práce s prefixem s pevně danou délkou – v praxi často používáme hybridní datové struktury, které mají část pevnou a část ne.</p>
+<ul>
+<li>Zdrojový kód třídy a ukázkové aplikace najdete jako <a href="https://gist.github.com/ridercz/b77c210cbb3bbe0b832b3a6d06a8ad86">gist na GitHubu</a>.</li>
+<li>Mírně zjednodušenou verzi (s pevně danou šířkou konzole) k živým experimentům pak najdete na <a href="https://dotnetfiddle.net/BiqaeN">DotNetFiddle</a>.</li>
+</ul>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

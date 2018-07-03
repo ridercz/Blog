@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Řešení problémů s identitou webu u Personal Information Cards | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Téměř přesně před rokem jsem si v článku Jak se zjišťuje identita webu u Personal Information Cards? stěžoval na to, že algoritmus pro výpočet identity relying party (tedy typicky webu) je špatný. Specifikace ISIP verze 1.5 tento problém řeší. Problém u Windows CardSpace řeší .NET Framework 3.5 SP1." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Řešení problémů s identitou webu u Personal Information Cards</h1>
+      <section class="article">
+        <p>Téměř přesně před rokem jsem si v článku <a href="http://www.aspnet.cz/Articles/171-jak-se-zjistuje-identita-webu-u-personal-information-cards.aspx">Jak se zjišťuje identita webu u Personal Information Cards?</a> stěžoval na to, že algoritmus pro výpočet identity relying party (tedy typicky webu) je špatný. Specifikace <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=b94817fc-3991-4dd0-8e85-b73e626f6764&amp;DisplayLang=en">ISIP verze 1.5</a> tento problém řeší. Problém u Windows CardSpace řeší .NET Framework 3.5 SP1.</p>
+<h2 id="v-cem-byl-problem">V čem byl problém?</h2>
+<p>Osobní (unmanaged) information cards používají jako základní identifikační prvek PPID – private personal identifier. Ten je unikátní vždy pro kombinaci konkrétní karty (uživatele) a relying party (webu). To je dobré z důvodu bezpečnosti a ochrany soukromí uživatele. Řeší to problém phishingu, protože i když phisher zmate uživatele a ten mu pošle kartu, získá útočník identifikátor platný jenom pro svůj web. A z hlediska ochrany soukromí si může být uživatel jist, že provozovatelé dvou webů nemohou jeho údaje za jeho zády propojit, protože PPID je pro každou stranu jiné.</p>
+<p>Klíčovým problémem je, jak se zjistí identita RP (relying party). Typicky se používají údaje ze SSL certifikátu. Způsob výpočtu popisuje dokument jménem Identity Selector Interoperability Profile. Tento ve své verzi 1.0 předepisoval postup, který defacto znamenal, že s každou změnou certifikátu se změnilo PPID. Podrobný rozbor problému najdete v <a href="http://www.aspnet.cz/Articles/171-jak-se-zjistuje-identita-webu-u-personal-information-cards.aspx">mém předchozím článku</a>.</p>
+<h2 id="jak-byl-vyresen">Jak byl vyřešen?</h2>
+<p>Byl změněn algoritmus výpočtu PPID. Nově platí, že:</p>
+<ul>
+<li>Algoritmus výpočtu pro <strong>HTTPS s EV certifikátem</strong> zůstal nezměněn. Identita se tedy vypočítá z DN komponent O, L, S a C, například tedy z řetězce <code>|O=&quot;Altairis, s.r.o.&quot;|L=&quot;Praha&quot;|S=&quot;&quot;|C=&quot;CZ&quot;|</code>.</li>
+<li>V případě <strong>HTTPS s certifikátem, kde jsou uvedenu údaje o žadateli, ale není EV</strong>, se algoritmus změnil. Nově se neuvažuje certifikační autorita. Řetězec je stejný jako pro EV, jenom se na začátek přidá string <code>|Non-EV</code>, tj. výsledek bude příkladně <code>|Non-EV|O=&quot;Altairis, s.r.o.&quot;|L=&quot;Praha&quot;|S=&quot;&quot;|C=&quot;CZ&quot;|</code>.</li>
+<li>V případě <strong>HTTPS s certifikátem, kde nejsou uvedeny údaje o žadateli, ale je uveden název serveru</strong>, se algoritmus také změnil. Použije se pouze Common Name, nepřihlíží se ke klíči, např. tedy <code>|CN=&quot;www.altairis.cz&quot;|</code>.</li>
+<li>V případě <strong>HTTP bez certifikátu</strong> se použije hostname serveru, převedený na malá písmena (např. tedy <code>www.altairis.cz</code>).</li>
+<li>Teprve v případě, že <strong>certifikát neobsahuje žádné údaje o žadateli ani serveru</strong> (takový jsem ještě neviděl) a nebo pokud <strong>není propojen s důvěryhodnou certifikační autoritou</strong>, použije se jeho veřejný klíč.</li>
+</ul>
+<p>To pro provozovatele webů znamená, že:</p>
+<ul>
+<li>Všechny weby stejného provozovatele, bez ohledu na adresu, budou mít stejné PPID (v případě standardního certifikátu, kde je uvedena identita žadatele). Žadatelé mohou svobodně měnit poskytovatele certifikačních služeb. Identita bude ale jiná pro EV a Non-EV weby téhoš subjektu.</li>
+<li>V případě &quot;desetidolarových&quot; certifikátů, kde se ověřuje jenom název serveru, se při změně certifikátu nezmění PPID. To zůstane na věky stejné (dokud je stejný název serveru).</li>
+<li>Pokud používají libovolný ne-EV certifikát, mají jednorázový problém: jakmile si klient nainstaluje identity selector podporující ISIP 1.5 (což v případě CardSpace znamená, že si nainstalují SP1 na .NET Framework 3.5, který bude co nevidět na Windows Update), změní se jim PPID. Protože CardSpace z NetFx 3.0 podporuje ISIP 1.0 a ten z NetFx 3.5 SP1 podporuje ISIP 1.5.</li>
+</ul>
+<p>Stávající provozovatelé webů budou tedy muset znovu asociovat PPID se svými uživateli, principiálně stejným způsobem jako při registraci a nebo při ztrátě karty.</p>
+<p>Obecně tento krok hodnotím velmi pozitivně, protože znamená výrazné usnadnění pozice RP pro malé weby, které nedosáhnou na EV certifikát. Spolu s uvedením &quot;Geneva&quot; Frameworku (který usnadní implementaci claims-based autentizačních mechanismů) se jedná o odstranění zásadní překážky akceptace karet na straně provozovatelů webů.</p>
+<p>Ještě je nutné učinit druhý krok: zajistit, aby identity selector, tedy například Windows CardSpace, byl uživatelsky přítulnější. Tedy menší, rychlejší a především pohodlnější. Uživatelé jsou líní a nebudou nové autentizační mechanismy používat, pokud to pro ně nebude jednodušší, než uživatelská jména a hesla. Proto je dobře, že právě toto je cílem připravované nové verze, CardSpace &quot;Geneva&quot;.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

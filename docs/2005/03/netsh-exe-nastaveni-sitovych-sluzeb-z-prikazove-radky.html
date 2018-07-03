@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>NETSH.EXE - nastavení síťových služeb z příkazové řádky | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Nastavovat komplikované filtrování portů na jednom počítači přes GUI je opruz. Dělat totéž na osmi je na sebevraždu." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>NETSH.EXE - nastavení síťových služeb z příkazové řádky</h1>
+      <section class="article">
+        <p>Poslední dobou se věnuji jistému šílenému projektu, jehož součástí bylo mimo jiné nainstalovat osm broadcastových serverů. Každý z nich má tři síťové karty připojené do třech různých sítí, a na každém rozhraní jsou nastavena jiná pravidla filtrování portů (firewallu). Společné mají jenom to, že jsou velmi komplikovaná.</p>
+<p>Nastavovat komplikované filtrování portů na jednom počítači přes GUI je opruz. Dělat totéž na osmi je na sebevraždu.</p>
+<p>Naštěstí je přímo součástí operačního systému řádková utilitka NETSH.EXE. Pomocí jejích příkazů můžete nastavit všechny parametry týkající se síťových rozhraní. Základní informace o něm najdete v <a href="http://support.microsoft.com/Default.aspx?kbid=242468">Q242468</a>.</p>
+<p>Nejjednodušším způsobem použití je pomocí příkazu <code>NETSH dump &gt; soubor.txt</code> vypsat vaši aktuální konfiguraci do souboru, vymazat vše co nepotřebujete, upravit zbytek a pak to zase příkazem <code>NETSH &lt; soubor.txt aplikovat</code>.</p>
+<p>Následující konfigurační soubor nastaví na rozhraní vnější sítě (pokud se bude jmenovat <em>LAC External</em>) poměrně restriktivní sadu pravidel:</p>
+<h1 id="ip-configuration-pushd-routing-ip-reset-set-loglevel-error-add-preferenceforprotocol-protolocal-preflevel1-add-preferenceforprotocol-protostatic-preflevel3-add-preferenceforprotocol-protonondod-preflevel5-add-preferenceforprotocol-protoautostatic-preflevel7-add-preferenceforprotocol-protonetmgmt-preflevel10-add-preferenceforprotocol-protoospf-preflevel110-add-preferenceforprotocol-protorip-preflevel120-add-interface-namelac-external-stateenable-add-interface-namelac-internal-stateenable-set-filter-namelac-external-fragcheckdisable-set-filter-namelac-internal-fragcheckdisable-add-interface-nameinternal-stateenable-set-filter-nameinternal-fragcheckdisable-add-interface-nameloopback-stateenable-set-filter-nameloopback-fragcheckdisable-zakazat-vse-co-neni-explicitne-povoleno-set-filter-namelac-external-filtertypeinput-actiondrop-povolit-tcp-established-add-filter-namelac-external-filtertypeinput-srcaddr0.0.0.0-srcmask0.0.0.0-dstaddr0.0.0.0-dstmask0.0.0.0-prototcp-est-srcport0-dstport0-povolit-http-80tcp-https-443tcp-smtp-25tcp-pop3-110tcp-pro-vsechny-add-filter-namelac-external-filtertypeinput-srcaddr0.0.0.0-srcmask0.0.0.0-dstaddr0.0.0.0-dstmask0.0.0.0-prototcp-srcport0-dstport80-add-filter-namelac-external-filtertypeinput-srcaddr0.0.0.0-srcmask0.0.0.0-dstaddr0.0.0.0-dstmask0.0.0.0-prototcp-srcport0-dstport443-add-filter-namelac-external-filtertypeinput-srcaddr0.0.0.0-srcmask0.0.0.0-dstaddr0.0.0.0-dstmask0.0.0.0-prototcp-srcport0-dstport25-add-filter-namelac-external-filtertypeinput-srcaddr0.0.0.0-srcmask0.0.0.0-dstaddr0.0.0.0-dstmask0.0.0.0-prototcp-srcport0-dstport110-povolit-pristup-na-terminal-jenom-ze-site-eurotel-priklad-add-filter-namelac-external-filtertypeinput-srcaddr160.218.0.0-srcmask255.255.0.0-dstaddr0.0.0.0-dstmask0.0.0.0-prototcp-srcport0-dstport3389-popd-end-of-ip-configuration">IP Configuration pushd routing ip reset set loglevel error add preferenceforprotocol proto=LOCAL preflevel=1 add preferenceforprotocol proto=STATIC preflevel=3 add preferenceforprotocol proto=NONDOD preflevel=5 add preferenceforprotocol proto=AUTOSTATIC preflevel=7 add preferenceforprotocol proto=NetMgmt preflevel=10 add preferenceforprotocol proto=OSPF preflevel=110 add preferenceforprotocol proto=RIP preflevel=120 add interface name=&quot;LAC External&quot; state=enable add interface name=&quot;LAC Internal&quot; state=enable set filter name=&quot;LAC External&quot; fragcheck=disable set filter name=&quot;LAC Internal&quot; fragcheck=disable add interface name=&quot;Internal&quot; state=enable set filter name=&quot;Internal&quot; fragcheck=disable add interface name=&quot;Loopback&quot; state=enable set filter name=&quot;Loopback&quot; fragcheck=disable # Zakázat vše, co není explicitně povoleno set filter name=&quot;LAC External&quot; filtertype=INPUT action=DROP # Povolit TCP-Established add filter name=&quot;LAC External&quot; filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP-EST srcport=0 dstport=0 # Povolit HTTP (80/tcp), HTTPS (443/tcp), SMTP (25/tcp), POP3 (110/tcp) pro všechny add filter name=&quot;LAC External&quot; filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=80 add filter name=&quot;LAC External&quot; filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=443 add filter name=&quot;LAC External&quot; filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=25 add filter name=&quot;LAC External&quot; filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=110 # Povolit přístup na terminál jenom ze sítě Eurotel (příklad) add filter name=&quot;LAC External&quot; filtertype=INPUT srcaddr=160.218.0.0 srcmask=255.255.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=3389 popd # End of IP configuration</h1>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

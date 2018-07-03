@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Skripty pro vytváření webů a uživatelů na IIS 7.0 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Na Microsoft Days jsem slíbil zveřejnit skripty, které používám pro správu svých web hostingových serverů, jmenovitě pro zakládání nového uživatele a přidání webu k existujícímu uživateli. Tady jsou." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Skripty pro vytváření webů a uživatelů na IIS 7.0</h1>
+      <section class="article">
+        <p>Na Microsoft Days jsem slíbil zveřejnit skripty, které používám pro správu svých web hostingových serverů, jmenovitě pro zakládání nového uživatele a přidání webu k existujícímu uživateli. Pokud jste na mé přednášce tamo nebyli, tak se jedná do jisté míry o logické pokračování video seriálu o konfiguraci hostingového serveru, kterou najdete na <a href="http://www.mstv.cz/">MSTV.CZ</a>. Vzhledem k tomu, že se jedná o úchylnou &quot;rich internet application&quot; v Silverlightu, nemohu vám poslat přímý odkaz na celý seriál, pouze návod:</p>
+<ol>
+<li>Vyberte oblast &quot;IT odborníci&quot;.</li>
+<li>V seznamu autorú vyberte &quot;Michal Altair Valášek&quot;</li>
+<li>V seznamu témat vyberte &quot;Hostování&quot;</li>
+</ol>
+<p>V archivu, který si můžete stáhnout na konci tohoto článku,  najdete dva soubory: <code>newcust.cmd</code> a <code>newsite.cmd</code>. Tyto soubory předpokládají, že budete mít architekturu podobnou, jako ve výše uvedeném seriálu, jenom nepočítají s během Application Poolu pod specifickým uživatelem, ale předpokládají automatickou identitu AP.</p>
+<p>Před použitím je třeba nastavit některé systémové proměnné, které najdete na začátku skriptů:</p>
+<ul>
+<li><code>APPCMD</code> je cesta k souboru appcmd.exe (musíte mít nainstalované IIS Management Script and Tools). Výchozí cesta je <code>%SYSTEMROOT%\System32\inetsrv\appcmd.exe</code> a téměř jistě nebude nutné ji měnit.</li>
+<li><code>ROOT_FOLDER</code> je cesta k adresáři, kde budou uloženy adresáře jednotlivých zákazníků. Výchozí hodnota je <code>D:\WWW-servers\LocalUser</code>.</li>
+<li><code>FTP_GROUP</code> je název uživatelské skupiny, která má obsahovat jednotlivé zákazníky (uživatele) a slouží k nastavení FTP přístupu. Výchozí hodnota je <code>Customers</code>.</li>
+</ul>
+<p>Skripty obecně pracují pouze s lokálními účty a skupinami. Pokud byste je chtěli používat v doménovém prostředí, je nutná jejich úprava.</p>
+<h2 id="newcust.cmd-vytvoreni-noveho-uzivatele">NEWCUST.CMD – vytvoření nového uživatele</h2>
+<p>Syntaxe je: <code>newcust hostname username password</code></p>
+<p>Tento skript slouží k založení nového zákazníka web hostingu a vytvoření prvního webu. Vykoná následující činnosti:</p>
+<ol>
+<li>Vytvoří application pool jménem <code>AP_username</code>.</li>
+<li>Vytvoří uživatele <code>username</code> s heslem <code>password</code>.</li>
+<li>Přidá tohoto uživatele do skupiny nastavené proměnnou FTP_GROUP (standardně <code>Customers</code>).</li>
+<li>Vytvoří pro tohoto uživatele datový adresář v cestě <code>ROOT_FOLDER</code>. Např. tedy <code>D:\WWW-Servers\LocalUser\username</code>.</li>
+<li>Nastaví v tomto adresáři práva &quot;full control&quot; uživateli <code>username</code> a identitě <code>IIS APPPOOL\AP_username</code>.</li>
+<li>Vytvoří adresář pro nový web, např. <code>D:\WWW-Servers\LocalUser\username\hostname</code>.</li>
+<li>Vytvoří nový virtuální web server jménem &quot;<code>username-hostname</code>&quot; a nasměruje ho do adresáře vytvořeného v předchozím kroku.</li>
+<li>Zařadí vytvořený web do application poolu &quot;<code>AP_username</code>&quot;</li>
+</ol>
+<h2 id="newsite.cmd-vytvoreni-noveho-webu-pro-existujiciho-uzivatele">NEWSITE.CMD – vytvoření nového webu pro existujícího uživatele</h2>
+<p>Syntaxe je: newsite hostname username</p>
+<p>Tento skript slouží k vytvoření nového webu pro existujícího uživatele (a přidání do jeho application poolu). Vykoná v zásadě pouze poslední tři kroky výše uvedeného skriptu, tj. vytvoří a nastaví nový web server.</p>
+<h2 id="implementacni-poznamka">Implementační poznámka</h2>
+<p>Výše uvedené skripty předpokládají dost konkrétní nastavení web serveru a je pravděpodobné, že pro vaše konkrétní prostředí bude třeba je upravit a to předpokládá jisté znalosti jak tohoto prostředí, tak tvorby dávkových souborů. Skripty poskytuji &quot;as is&quot; a nebudu k nim poskytovat žádnou podporu v komentářích a podobně. Nicméně s radostí vám jako placenou konzultaci vytvořím skripty vhodné pro vaše prostředí.</p>
+<p>**Skripty ke stažení zde: **<a href="http://www.aspnet.cz/files/20100924-iismgmt.zip"><strong>20100924-iismgmt.zip</strong></a></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

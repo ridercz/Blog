@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CodePlex podporuje TortoiseSVN – tentokrát doopravdy | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Microsoft už dva roky provozuje server CodePlex. Slouží k podpoře open source projektů, jejichž vývojářům poskytuje potřebnou infrastrukturu. Podpora pro Subversion byla jedním z nejčastejších požadavků. Po nesmělých klientských řešení nyní CodePlex podporuje Subversion nativně." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>CodePlex podporuje TortoiseSVN – tentokrát doopravdy</h1>
+      <section class="article">
+        <p>Microsoft už dva roky provozuje server <a href="http://www.codeplex.com/">CodePlex</a>. Slouží k podpoře open source projektů, jejichž vývojářům poskytuje potřebnou infrastrukturu. CodePlex podporuje sledování problémů, zveřejňování nových verzí a především code repository, nutnost v případě, že se má na projektu podílet větší množství lidí. Podobné služby nabízí například <a href="http://www.sourceforge.net/">SourceForge</a> nebo <a href="http://code.google.com/hosting/">Google Code</a>.</p>
+<p>CodePlex je postaven nad Team Foundation Serverem. To je nástroj velmi mocný, ale pro řadu uživatelů (včetně mne) až příliš komplexní a náročný na obsluhu. Stejně jako řada dalších programátorů dávám přednost systému <a href="http://subversion.tigris.org/">Subversion</a> a samostatnému klientskému nástroji <a href="http://tortoisesvn.tigris.org/">Tortoise SVN</a>. Podpora Subversion byla jednou z nejčastěji požadovaných nových funkcí.</p>
+<p>První vlaštovkou v tomto směru byl projekt <a href="http://www.codeplex.com/SvnBridge/">SvnBridge</a>. Jedná se o program, který běží na klientském počítači a v podstatě slouží jako překladač mezi SVN a TFS. SVN klient se připojí k lokálnímu počítači a komunikuje s programem, který požadavky překládá do formátu, kterému rozumí Team Foundation Server. Použití tohoto programu je také možné i proti jiným TFS než CodePlex. Počin to jest jistě chvályhodný, želbohu je však toto řešení mnohdy příliš komplikované.</p>
+<p>Před několika dny nicméně <a href="http://blogs.msdn.com/codeplex/archive/2008/09/14/codeplex-launches-support-for-tortoisesvn.aspx">CodePlex spustil přímou podporu</a>, bez nutnosti instalovat speciální klientský software. Ačkoliv důsledně operuje pouze s názvem TortoiseSVN, nikoliv Subversion, mělo by rozhraní z principu být použitelné i pro jiné klienty. Výhodou pak je, že tentýž repository je dostupný různými způsoby, takže jeden uživatel může používat TFS a jiný SVN. Read-only přístup je anonymní, pro změny musíte být členy projektu.</p>
+<p>Nadšeně jsem se jal tuto funkci využívat, načež jsem během prvního půl dne (resp. půli noci, při mém životním rytmu :-) objevil tři závažné chyby. K mému velkému a velmi příjemnému překvapení je vývojáři během jediného dne odstranili, ačkoliv jsem nepoužíval žádných speciálních kanálů a reportoval jsem to toliko prostředky dostupnými běžným smrtelníkům. Bystře jsem tedy na CodePlex nahrál jeden nový projekt, o kterém napíšu blíže zítra.</p>
+<p>Podrobný obrázkový návod najdete <a href="http://blogs.msdn.com/codeplex/archive/2008/09/14/codeplex-launches-support-for-tortoisesvn.aspx">na blogu CodePlex teamu</a>. Ostříleným uživatelům pak nepochybně postačí informace, že pro připojení ke svému projektu mají použít url <strong><a href="https://*n%C3%A1zev-projektu*.svn.codeplex.com/svn">https://*název-projektu*.svn.codeplex.com/svn</a></strong>. Uživatelské jméno a heslo pro zápis je stejné jako na web, tj. nemusíte zadávat jméno ve speciálním formátu, jako pro TFS.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

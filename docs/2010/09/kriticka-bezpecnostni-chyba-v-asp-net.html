@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kritická bezpečnostní chyba v ASP.NET | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V pátek byla zveřejněna kritická bezpečnostní chyba ve všech verzích ASP.NET, od 1.0 po 4.0 včetně. Dosud na ni neexistuje patch, jenom workaround, a ten je bohužel dosti pracný." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Kritická bezpečnostní chyba v ASP.NET</h1>
+      <section class="article">
+        <p>V pátek byla zveřejněna kritická bezpečnostní chyba ve <strong>všech verzích ASP.NET</strong>, od 1.0 po 4.0 včetně. Dosud na ni neexistuje patch, jenom workaround, a ten je bohužel dosti pracný.</p>
+<p>Abychom byli zcela korektní, tak původní příčina, známá jako &quot;Padding Oracle Exploit&quot; nemá v zásadě s ASP.NET nic společného, je to kryptografický útok, který zahrnuje rodinu symetrických algoritmů, zahrnující bohužel i AES – nejpoužívanější symetrický algoritmus dneška. Tímto problémem jsou zasaženy všechny webové frameworky a nejenom ony.</p>
+<p>Problém ASP.NET spočívá v tom, že využívá AES způsobem, který umožňuje tento problém využít mimo jiné k získání obsahu jinak chráněných souborů – zejména <em>web.config</em>. Tento soubor typicky obsahuje informace jako connection string a další, které mohou být dále zneužitelné různým způsobem.</p>
+<p>Podrobnější informace najdete na webu <a href="http://netifera.com/research/">netifera.com</a>.</p>
+<h2 id="workaround">Workaround</h2>
+<p>V okamžiku publikace tohoto článku <strong>neexistuje na tuto chybu pro ASP.NET oprava</strong>, ačkoliv na ní Microsoft usilovně pracuje. Existuje pouze workaround, který zavírá jeden známý směr útoku. Jeho podstatou je, aby server pro všechny HTTP chyby vracel stejné chybové hlášení (tedy nerozlišoval např. chyby 404 a 500).</p>
+<p>Nestačí pouze dodržovat best practices a mít povolené custom errors. Problém nespočívá v obsahu chybového hlášení, ale v prostém odlišení odpovědi &quot;nenalezeno&quot; a &quot;vnitřní chyba serveru&quot;.</p>
+<p><strong>Návod k aplikaci workaroundu najdete zde:</strong></p>
+<ul>
+<li><a href="http://www.microsoft.com/technet/security/advisory/2416728.mspx">Microsoft Security Advisory 2416728</a></li>
+<li><a href="http://weblogs.asp.net/scottgu/archive/2010/09/18/important-asp-net-security-vulnerability.aspx">Článek na blogu ScottGu</a></li>
+</ul>
+<p>Pozor! Čtěte a aplikujte pozorně!</p>
+<p>Problém zmíněného workaroundu je, že jej není možné aplikovat na celý server, ale je nutné opatchovat každou aplikaci zvlášť, což je dosti pracné. Pracuji na řešení pomocí globálně aplikovatelného HTTP modulu, ale mám s ním jisté problémy, takže není dosud k dispozici.</p>
+<h2 id="nic-se-neji-tak-horke">Nic se nejí tak horké…</h2>
+<p>Jistou uklidňující zprávou je, že v době vydání tohoto článku nebyl zatím k dispozici žádný hotový nástroj pro provedení útoku na ASP.NET aplikaci. Na <a href="http://netifera.com/research/">výše linkované stránce</a> je k nalezení POET (Padding Oracle Exploit Tool) ve verzi 1.0, která ASP.NET přímo nepodporuje.</p>
+<p>Také dosud <strong>nebyl zaznamenán žádný úspěšný útok na produkční aplikaci</strong>. Jediné co je k dispozici, je následující video na YouTube:</p>
+ <div style="padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 425px; padding-right: 0px; display: block; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:198ad0d7-2351-4f21-b387-8aa274accca9" class="wlWriterEditableSmartContent"><div>[![](http://www.aspnet.cz/Files/20100921-video9bec751ad1ef.jpg)](http://www.youtube.com/watch?v=yghiC_U2RaM)</div></div> 
+<p>Bohužel, tento uklidňující stav je pouze dočasný. Dá se předpokládat, že mechanismus pro úspěšný útok bude k dispozici v řádu hodin, nejvýše dnů. Doporučuji tedy okamžitě přijmout odpovídající opatření.</p>
+<h2 id="preventivni-opatreni">Preventivní opatření</h2>
+<p>Dopady útoku může zmínit šifrování kritických konfiguračních sekcí. Útočník sice získá konfigurační soubor, ale důležité údaje v něm budou zašifrované. Podrobnější informace najdete na MSDN:</p>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/zhhddkxy.aspx">Encrypting and Decrypting Configuration Sections</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/dtkwfdky.aspx">Walkthrough: Encrypting Configuration Information Using Protected Configuration</a></li>
+</ul>
+<p>Bohužel, v řadě scénářů je použití šifrování konfigurace nepoužitelné a ve zbytku dosti komplikované.</p>
+<p>Vzhledem k tomu, že realizace úspěšného útoku vyžaduje zaslání řádově desítek tisíc požadavků, lze ke zkomplikování útoku použít i <a href="http://www.iis.net/download/DynamicIPRestrictions">Dynamic IP Restrictions</a> modul pro IIS 7.0. Ten umožňuje dočasně dynamicky blokovat IP adresy, z nichž přichází velké množství požadavků. Jedná se ovšem pouze o zpomalení útoku, nikoliv jeho odvrácení.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

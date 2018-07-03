@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Let's Encrypt na Windows: PoC aplikace | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Let's Encrypt na Windows: PoC aplikace</h1>
+      <section class="article">
+        <p>V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace. Napíšeme jednoduchou proof of concept aplikaci, která projde procesem ověření totožnosti a vydání jednoho certifikátu.</p>
+<p>Pro komunikaci protokolem ACME použijeme <a href="https://github.com/fszlin/certes">Certes</a>, .NET kliente pro ACME protokol. Přišel mi srozumitelnější, než populárnější <a href="https://github.com/ebekker/ACMESharp">ACMESharp</a>. Součástí projektu Certes je i klient z příkazové řádky, který dělá část toho, co chceme. Pokud nechcete plně automatizovaný proces, podívejte se na něj, může vám být užitečné.</p>
+<p>Zdrojový kód mé aplikace najdete jako <a href="https://gist.github.com/ridercz/ce6473b9693402882a7ec56fb722ea0c">gist na GitHubu</a>. V podstatě jde o mírně upravený a rozšířený příklad, který najdete na stránkách projektu <a href="https://github.com/fszlin/certes#get-started">Certes</a>.</p>
+<p>Kód postupně dělá následující:</p>
+<ol>
+<li>Zaregistruje se pod definovanou e-mailovou adresou. V případě problémů (zejména expirovaného certifikátu, pro který nebyl vydán následný) vám na ni Let's Encrypt pošle zprávu.</li>
+<li>Odsouhlasí podmínky použití.</li>
+<li>Získá challenge pro daný host name.</li>
+<li>Počká, dokud challenge nenahrajete na správné místo a nestisknete ENTER.</li>
+<li>Vyžádá si ověření challenge (což může chvíli trvat).</li>
+<li>Pokud challenge uspěje, vygeneruje žádost o podpis certifikátu (Certificate Signing Request, CSR).</li>
+<li>Žádost odešle na server a nechá vystavit certifikát.</li>
+<li>Načte certifikát a zobrazí jeho vlastnosti.</li>
+<li>Vyexportuje certifikát do souboru CRT.</li>
+<li>Vyexportuje certifikát a privátní klíč do souboru PFX.</li>
+</ol>
+<p>Krátce se zastavíme u bodu č. 4, neboť tam musíte zasáhnout ručně. Challenge obsahuje dvě důležité informace: ID a samotný ověřovací řetězec. Ověřovací řetězec musí být nějakým způsobem zpřístupněn přes HTTP nebo HTTPS na ověřovaném host name na adrese <em>/.well-known/acme-challenge/<id></em>. Tj. budete-li ověřovat host name <em>example.com</em> a vygenerované ID bude <em>1234abcd</em>, musí být ověřovací řetězec dostupný na adrese <em><a href="http://example.com/.well-known/acme-challenge/1234abcd">http://example.com/.well-known/acme-challenge/1234abcd</a></em>.</p>
+<p>Požadovaný soubor lze snadno vytvořit pomocí příkazu echo, který stačí jenom spustit na serveru, kde je příslušný web hostován (ukázková aplikace nemusí být spuštěna na web serveru).</p>
+<p><a href="http://www.aspnet.cz/Files/20170115-AutoAcmeLogo_256_2.png"><img src="http://www.aspnet.cz/Files/20170115-AutoAcmeLogo_256_thumb.png" alt="AutoAcmeLogo_256" title="AutoAcmeLogo_256" /></a></p>
+<p>Zároveň tímto P. T. čtenářům představuji i logo projektu AutoAcme. Název protokolu ACME je také název <a href="https://en.wikipedia.org/wiki/Acme_Corporation">společnosti z grotesek Looney Tunes</a>. Jedním z nejlepších zákazníků společnosti Acme Corporation byl Wile E. Coyote a jedním z často se objevujících motivů byla právě kovadlina, dodaná společností ACME.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

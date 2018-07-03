@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Volně dostupné alternativy .NET Reflectoru | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V životě každého programátora dříve či později nastane situace, kdy musí sáhnout po dekompilačním nástroji, který z binární knihovny učiní čitelný kód ve vyšším programovacím jazyce. Po poměrně dlouhou dobu byla volba jasná – .NET Reflector. Nicméně firma Red Gate, která Reflector před časem koupila, už bezplatnou verzi Reflector nevyvíjí a neumožňuje používat a tedy nastal čas podívat se po alternativách." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Volně dostupné alternativy .NET Reflectoru</h1>
+      <section class="article">
+        <p>V životě každého programátora dříve či později nastane situace, kdy musí sáhnout po dekompilačním nástroji, který z binární knihovny učiní čitelný kód ve vyšším programovacím jazyce. Důvody k tomu mohou být různé, i když se zveřejněním zdrojového kódu .NET Frameworku jich část ubyla. Často je ale třeba zjistit, jak věci fungují, když dokumentace chybí a nebo se prostě jenom inspirovat náhledem na to, <em>jak to sakra udělali</em>.</p>
+<p>Po poměrně dlouhou dobu byla volba nástroje pro dekompilaci jasná – .NET Reflector, který před časem jako volně dostupný nástroj napsal a delší dobu vyvíjel Lutz Roeder. Nicméně tento nástroj před časem koupila firma Red Gate a poté, co se <a href="http://www.reflector.net/2011/04/why-we-reversed-some-of-our-reflector-decision/">nesplnila její očekávání stran synergických efektů</a> v podstatě zrušila jeho bezplatnou verzi. $ 35 není nijak závratná částka, ale pokud dekompilaci používáte jenom občas a nestojíte o hromadu pokročilých funkcí, mohou vás zajímat alternativy.</p>
+<p>Našel jsem tři bezplatné a s radostí se o ně podělím. Všechny jsou postavené okolo open source knihovny <a href="http://www.mono-project.com/Cecil">Mono.Cecil</a></p>
+<h2 id="devextras.codereflect">DevExtras.CodeReflect</h2>
+<p><a href="http://www.devextras.com/decompiler/" title="http://www.devextras.com/decompiler/">http://www.devextras.com/decompiler/</a></p>
+<p><a href="http://www.aspnet.cz/Files/20110912-codereflect_4.png"><img src="http://www.aspnet.cz/Files/20110912-codereflect_thumb_1.png" alt="Screenshot CodeReflect" title="Screenshot CodeReflect" /></a></p>
+<p>Velice jednoduchý nástroj, rozhraním i funkcemi připomíná první verze .NET Reflectoru. Výbava je skutečně jenom velmi základní, umí načíst vybrané assemblies a postupně je procházet. Stažení je zdarma a bezproblémové, aplikaci není nutné instalovat, stačí rozbalit a spustit. Zásadně mi vadí absence vyhledávání a nemožnost dekompilovat a zobrazit celou třídu najednou – buďto to nástroj neumí a nebo nevím, jak ho k tomu donutit. Také syntax highlighting není nijak skvělý.</p>
+<p>Aplikaci vyvíjí komerční firma, která mimo jiné vyvíjí obfuskátor, tedy nástroj, který má naopak dekompilaci zabraňovat.</p>
+<h2 id="ilspy">ILSpy</h2>
+<p><a href="http://wiki.sharpdevelop.net/ilspy.ashx" title="http://wiki.sharpdevelop.net/ilspy.ashx">http://wiki.sharpdevelop.net/ilspy.ashx</a></p>
+<p><a href="http://www.aspnet.cz/Files/20110912-ilspy_2.png"><img src="http://www.aspnet.cz/Files/20110912-ilspy_thumb.png" alt="Screenshot ILSpy" title="Screenshot ILSpy" /></a></p>
+<p>Další jednoduchý nástroj postavený také na knihovně Mono Cecil. Vzhledově se od předchozího téměř neliší. Pokud se funkcí týče, obsahuje jich pár navíc, z nichž asi nejpodstatnější bude možnost vyhledávání v kódu. Ani v ILSpy jsem nenašel možnost pohodlně rozbalit dekompilovaný kód celé třídy, ale zase má ze všech posuzovaných asi nejlepší syntax highlighting.</p>
+<p>ILSpy je open source, další z děťátek projektu <a href="http://www.sharpdevelop.net/">SharpDevelop</a>.</p>
+<h2 id="telerik-justdecompile">Telerik JustDecompile</h2>
+<p><a href="http://www.telerik.com/products/decompiler.aspx" title="http://www.telerik.com/products/decompiler.aspx">http://www.telerik.com/products/decompiler.aspx</a></p>
+<p><a href="http://www.aspnet.cz/Files/20110912-justdecompile_2.png"><img src="http://www.aspnet.cz/Files/20110912-justdecompile_thumb.png" alt="Screenshot JustDecompile" title="Screenshot JustDecompile" /></a></p>
+<p>Firma Telerik je vývojářům známa nejvíce jako výrobce komponent pro ASP.NET Web Forms, MVC, Windows Phone… Poslední dobou se snaží proniknout i do oblasti pomocných vývojových nástrojů programy jako JustMock a JustCode. Nově nabízí též program JustDecompile, který se mi i přes poněkud svébytné uživatelské rozhraní ze třech posuzovaných programů líbí nejvíc.</p>
+<p>JustDecompile umí všechno, co předchozí programy (i když syntax highlighting by mohl být lepší). Líbí se mi na něm zejména možnost ukládat a načítat sady knihoven, se kterým pracujete. Užitečná je též možnost vytvořit z assembly zpět projekt pro Visual Studio (C#). Nečekejte od ní zázraky, ale rozhodně se jedná o užitečnou schopnost, která se hodí zejména ve chvíli, kdy potřebujete s dekompilovaným kódem dál pracovat.</p>
+<p>Existuje pár dalších nástrojů, ale všechny, které jsem našel, jsou buď placené a nebo ve velmi raných fázích vývoje. Pro tento okamžik jsem si pro své dekompilační potřeby vybral JustDecompile od Teleriku, ale uvidíme, co přinese budoucnost.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

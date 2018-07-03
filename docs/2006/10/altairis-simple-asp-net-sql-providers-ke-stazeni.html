@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Altairis Simple ASP.NET SQL Providers ke stažení | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Provider object model v ASP.NET 2.0 představuje velký krok kupředu proti verzi 1.x. Vestavěné SQL providery jsou ovšem pro většinu aplikací prakticky nepoužitelné, protože vyžadují velice specifickou databázovou strukturu. Napsal jsem si vlastní providery, které nejsou sice tak univerzální, ale zato používají jednoduchou databázovou strukturu, propojitelnou snadno se zbytkem vaší databáze." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Altairis Simple ASP.NET SQL Providers ke stažení</h1>
+      <section class="article">
+        <p>Provider object model v ASP.NET 2.0 představuje velký krok kupředu proti verzi 1.x. Vestavěné SQL providery jsou ovšem pro většinu aplikací prakticky nepoužitelné, protože vyžadují velice specifickou databázovou strukturu.</p>
+<p>Hlavním motivem při tvorbě vestavěných providerů (jejichž <a href="http://weblogs.asp.net/scottgu/archive/2006/04/13/442772.aspx">zdrojové kódy jsou mimochodem volně dostupné</a>) byla naprostá univerzálnost. Databáze je tedy &quot;rozkročena&quot; velice široce, umožňuje uchovávat jakýkoliv serializovatelný typ v profilech, údaje více nezávislých aplikací v jedné struktuře tabulek a podobně.</p>
+<h2 id="altairis-simple-asp.net-sql-providers">Altairis Simple ASP.NET SQL Providers</h2>
+<p>Knihovna <strong>Altairis Simple ASP.NET SQL Providers</strong> obsahuje tři providery:</p>
+<ul>
+<li><em>Altairis.Web.Providers.SimpleSqlMemebrshipProvider</em> - membership provider pro správu uživatelů</li>
+<li><em>Altairis.Web.Providers.SimpleSqlProfileProvider</em> - profile provider pro uchovávání dalších údajů o uživatelích</li>
+<li><em>Altairis.Web.Providers.SimpleSqlRoleProvider</em> - role provider pro správu rolí a členství uživatelů v nich</li>
+</ul>
+<p>Moji provideři nejsou tak univerzální jako ty vestavěné. Nepodporují např. anonymní profily, mají pouze některé typy vlastností v profilech, neumí blokování účtů nebo více nezávislých aplikací v jedné databázi). Hlavním motivem při <em>jejich</em> tvorbě byla nicméně snadná integrace se zbytkem databázové struktury libovolné aplikace.</p>
+<p>Membership a Profile provider si vystačí každý s jednou tabulkou, Role provider potřebuje dvě. Ze shora uvedených důvodů nepoužívám ani uložené procedury a podobně. Rovněž je snadné tuto strukturu upravit, případně do ní přidat vlastní pole, které vaše aplikace využívá.</p>
+<h2 id="release-candidate-1-a-codeplex">Release Candidate 1 a CodePlex</h2>
+<p><a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=AltairisWebProviders"><img src="/Files/CodePlex.jpg" alt="CodePlex" /> </a></p>
+<p>Od samého počátku bylo mým záměrem tuto knihovnu zveřejnit, ale neustále jsem nebyl schopen k nim napsat nějakou dokumentaci a zejména udržovat publikovanou verzi projektu v aktuálním stavu. Microsoft nicméně spustil nový komunitní projekt <strong><a href="http://www.codeplex.com/"><strong>CodePlex</strong></a></strong>, kde existuje infrastruktura, která by mi tento úkol měla značně ulehčit.</p>
+<p>Tyto providery již delší dobu úspěšně používám na řadě svých projektů (včetně toho na který se právě díváte nebo známého webu <a href="http://akce.altairis.cz/">akce.altairis.cz</a>). Většina chyb by tedy měla být již vychytána.</p>
+<ul>
+<li><a href="http://www.codeplex.com/Release/ProjectReleases.aspx?ProjectName=AltairisWebProviders"><strong>Stažení poslední verze</strong> </a>(včetně dokumentace a příkladů)</li>
+<li><a href="http://www.codeplex.com/WorkItem/List.aspx?ProjectName=AltairisWebProviders"><strong>Issue tracker</strong> </a>(hlášení chyb a feature requestů)</li>
+</ul>
+<p>Můj plán je neomezovat se pouze na české vývojáře, pište proto prosím v angličtině. Pokud máte zájem podílet se na vývoji, i to je možné. Knihovna je zveřejněna pod <a href="http://www.codeplex.com/Project/License.aspx?ProjectName=AltairisWebProviders">Microsoft Shared Source Permissive License (MS-PL)</a>, což znamená, že její zdrojový kód můžete upravovat a šířit.</p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

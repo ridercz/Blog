@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Stavové HTTP: Cookies | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Web byl stvořen jako bezstavový a struktura HTTP a HTML tomu odpovídá. Pokud chceme tuto bezstavovost překlenout, existuje několik technik, které nám umožní toto omezení obejít. Nyní se podrobněji podíváme na první z nich: cookies." />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1>Stavové HTTP: Cookies</h1>
+      <section class="article">
+        <p>V <a href="/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx">minulém díle tohoto seriálu</a> jsme si řekli, že HTTP je protokol bezstavový a že jednou z technik, jak tuto bezstavovost obejít, je použití cookies.</p>
+<p>Cookies jsou jediná technika v HTTP, která je přímo navržená k tomu, abyste si mohli něco na klienta &quot;uložit&quot; a při dalším požadavku zase &quot;vyzvednout&quot;. Cookies fungují tak, že server pošle jako jednu z HTTP hlaviček odpovědi textový řetězec, který si prohlížeč uloží na disk a při dalším požadavku ho ve formě HTTP hlavičky pošle zpátky.</p>
+<p>To byl velmi zjednodušený náhled na celou problematiku, podrobnější informace o použití cookies v ASP.NET najdete v článku <strong><a href="/Articles/8-susenky-net.aspx">Sušenky.NET</a></strong> na tomto serveru.</p>
+<p>Do cookies můžete uložit pouze omezené množství dat. Zabrání vám v tom jednak omezení na straně prohlížeče (maximální velikost cookie se obvykle počítá v jednotkách kB, přesné číslo si nepamatuji) a druhak by vám v tom měl zabránit i zdravý rozum. Obsah cookie se přenáší s úplně každým požadavkem na váš server, a to i tehdy, když ho server vůbec nepotřebuje a nevyužije. Například při požadavcích na obrázky a další statická data. Což zvyšuje objem přenášených dat, za která obvykle tou či onou formou platíte.</p>
+<p>Cookies jsou v zásadě dvojího druhu: permanentní a per-session.</p>
+<h2 id="permanentni-cookies">Permanentní cookies</h2>
+<p>Permanentní cookies obsahují čas expirace (nastavený serverem, tedy vaší aplikací) a jsou ukládány na disk. Přežijí tedy zavření okna prohlížeče, restart počítače atd. Budou se posílat s každým požadavkem na server, dokud nevyprší a nebo dokud je uživatel ručně nesmaže.</p>
+<p>Pokud napíšete k nějakému článku na tomto serveru komentář, server si do cookie uloží údaje, které jste vyplnili do formuláře - jméno, e-mail, adresu webové stránky... Můžete si to ověřit, podívejte se na soubor, který je uložen ve vašem uživatelském profilu a jmenuje se nějak jako <em>vášlogin@www.aspnet[1].txt</em> (v mém případě - Windows Vista - je uložen v <em>C:\Users\Altair\AppData\Roaming\Microsoft\Windows\Cookies</em>).</p>
+<p>Když si tento soubor otevřete, tak tam shora uvedené údaje najdete, můžete si je přečíst (v případě tohoto serveru je to poněkud komplikované, protože jsou Base64 enkódovaná kvůli diakritice) a můžete je též změnit, případně celý soubor smazat.</p>
+<p>V tom spočívá hlavní slabost cookies: neměli byste do nich ukládat citlivé údaje a nemůžete se spolehnout na to, že je dostanete v pořádku a nepozměněná.</p>
+<h2 id="session-cookies">Session cookies</h2>
+<p>Per-session cookies nemají určený čas expirace a prohlížeč si je drží v paměti. V okamžiku zavření okna se nenávratně ztratí. Konkrétní obsah pojmu &quot;session&quot; závisí na použitém prohlížeči. Například Internet Explorer funguje tak, že si údaje pamatuje do zavření okna. Pokud si v téže instanci prohlížeče otevřete nové okno (Ctrl+N), bude mít stejnou sadu per-session cookies, jako to předešlé. Pokud uživatel ale otevře novou instanci IE (poklepe třeba na ikonku na ploše), bude mít tato instance samostatnou sadu per-session cookies.</p>
+<p>Druhý jmenovaný typ cookies je držen pouze v paměti, jeho neoprávněná změna je tedy o něco málo komplikovanější, není to tak jednoduché, jako přepsat TXT soubor (ne však nemožné). Na druhou stranu, jeho chování může být poněkud matoucí.</p>
+<h2 id="vyhody-a-nevyhody">Výhody a nevýhody</h2>
+<h3 id="proc-cookies-pouzivat">Proč cookies používat</h3>
+<ul>
+<li>Je to standardizovaná technologie, kterou dnes podporují prakticky všichni klienti, včetně mobilních zařízení a podobně.</li>
+<li>Použití cookies minimálně zatěžuje server.</li>
+<li>Jsou nezávislé na platformě, prohlížeči, jednu cookie můžete přečíst z jakékoliv serverové technologie, pokud chcete.</li>
+</ul>
+<h3 id="proc-cookies-nepouzivat">Proč cookies nepoužívat</h3>
+<ul>
+<li>Někteří uživatelé je mohou mít vypnuté. Pro vypínání first-hand cookies sice není žádný zásadní důvod a vypnout je je poměrně komplikované, ale přesto to někdo může udělat.</li>
+<li>Do cookie můžete uložit pouze celkem malé množství dat.</li>
+<li>Cookies se posílají s každým požadavkem, včetně požřadavků na statické stránky atd. V případě navštěvovaných webů a objemnějších cookies to může znamenat slušné zvýšení obejmu přenášených dat.</li>
+<li>Nemůžete se spolehnout na to, že se vám hodnota uložená v cookie vrátí v pořádku a nepoškozená. Uživatel nebo útočník ji může přečíst a modifikovat, pokud ji nějakým způsobem nezabezpečíte.</li>
+</ul>
+<h3 id="doporuceni">Doporučení</h3>
+<ul>
+<li>Pokud máte malé množství dat, použijte cookie - je to cesta nejmenšího odporu.</li>
+<li>Pokud váš web cookie vyžaduje, upozorněte na to uživatele. A nebo ještě lépe, vyzkoušejte si to, a pokud má cookie zakázané, zobrazte mu upozornění.</li>
+<li>U navštěvovanějších webů si pohrajte s nastavením parametrů <em>Path</em> a <em>Domain</em>. Zvažte použití samostatné domény pro statický obsah (tak to dělá většina velkých internetových služeb typu Passport, eBay nebo Google).</li>
+</ul>
+<p><em>Zítra vyjde další díl tohoto seriálu, který se bude podrobněji věnovat technologii Sessions.</em></p>
+
+      </section>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>
