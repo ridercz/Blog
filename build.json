@@ -1,0 +1,18 @@
+{
+  "SourceFolder": "source",
+  "TargetFolder": "docs",
+  "StaticFolder": "static",
+  "XsltFolder": "xslt",
+  "WorkFolder": "work",
+  "Transforms": {
+    "HomePage.xslt": "index.html",
+    "Archive.xslt": null,
+    "Articles.xslt": null,
+    "Categories.xslt": null,
+    "Serials.xslt": null
+  },
+  "TransformParameters": {
+    "PageSize": 10
+  },
+  "PrependHtmlDoctype": "<!DOCTYPE html>"
+}
