@@ -57,11 +57,23 @@
 
     <article>
       <header>
-        <a href="{@path}">
+        <a>
+          <xsl:attribute name="href">
+            <xsl:choose>
+              <xsl:when test="x4w:alternateUrl">
+                <xsl:value-of select="x4w:alternateUrl"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@path"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:attribute>
           <xsl:value-of select="dcterms:title" />
         </a>
       </header>
-      <xsl:value-of select="dcterms:abstract" />
+      <div>
+        <xsl:value-of select="dcterms:abstract" />
+      </div>
       <footer>
         <date>
           <xsl:value-of select="x4h:FormatDateTime(dcterms:dateAccepted, 'D', 'cs-CZ') "/>
