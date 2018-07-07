@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2004-10-30T01:15:03.99+02:00 -->
 <!-- dcterms:dateAccepted = 2004-10-30T01:15:03.99+02:00 -->
 
-![](/files/xnviewlogo.png)Teenageři se (prý) svým deníčkům svěřují s nešťastnými láskami a intimními tužbami. Já jsem se ve svém [minulém příspěvku](/entry/article-20041029.aspx) zkusil svěřit s problémem trochu jiné povahy - a světě div se, pomohlo to.
+![](https://www.cdn.altairis.cz/Blog/xnviewlogo.png)Teenageři se (prý) svým deníčkům svěřují s nešťastnými láskami a intimními tužbami. Já jsem se ve svém [minulém příspěvku](/entry/article-20041029.aspx) zkusil svěřit s problémem trochu jiné povahy - a světě div se, pomohlo to.
 
 Byl mi doporučen program [XnView](http://www.xnview.com/), který tímto doporučuji i vaší pozornosti. Vychází z ACD see, má jeho dobré vlastnosti a zatím jsem nenarazil na ty špatné. 
 

@@ -33,6 +33,6 @@ Aplikace je dostupná všem členům programu [MSDN Connection](https://www.micr
 
  <span id="ctl00_CPHC_LabelArticleTitle"> 
 
-*   <span id="ctl00_CPHC_LabelArticleTitle"> [Monitoring teploty: Sériová komunikace s hardwarem v .NET](/Articles/41-monitoring-teploty-seriova-komunikace-s-hardwarem-v-net.aspx) </span> 
-*   <span>  <span> [MSDN Connection: Vánoční dárek od Microsoftu](/Articles/68-msdn-connection-vanocni-darek-od-microsoftu.aspx) </span> 
+*   <span id="ctl00_CPHC_LabelArticleTitle"> [Monitoring teploty: Sériová komunikace s hardwarem v .NET](https://www.aspnet.cz/Articles/41-monitoring-teploty-seriova-komunikace-s-hardwarem-v-net.aspx) </span> 
+*   <span>  <span> [MSDN Connection: Vánoční dárek od Microsoftu](https://www.aspnet.cz/Articles/68-msdn-connection-vanocni-darek-od-microsoftu.aspx) </span> 
 *   </span>  </span>

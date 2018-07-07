@@ -17,7 +17,7 @@ MWSK si můžete stáhnout na serveru CodePlex: [http://www.codeplex.com/MyWebPa
 
 Přeložil jsem aplikaci samotnou i její dokumentaci do češtiny. Bohužel, při manipulaci nějak došlo k poškození souborů s dokumentací, takže tam není korektně zobrazená diakritika. Chyba se týká pouze dokumentace, ne překladu uživatelského rozhraní. Již jsem poslal na patřičná místa žádost o nápravu, ale nevím kdy bude vyslyšena.
 
- **Aktuální verzi 1.1.0 se správnou českou dokumentací jsem umístil i k sobě a můžete si ji stáhnout na následující adrese (má asi 6 MB): ** [ **http://www.aspnet.cz/files/20070109_MWSK110_fixed.zip** ](/files/20070109_MWSK110_fixed.zip) **.** 
+ **Aktuální verzi 1.1.0 se správnou českou dokumentací jsem umístil i k sobě a můžete si ji stáhnout na následující adrese (má asi 6 MB): ** [ **http://www.aspnet.cz/files/20070109_MWSK110_fixed.zip** ](https://www.cdn.altairis.cz/Blog/2007/20070109_MWSK110_fixed.zip) **.** 
 
 Pokud jste si stáhli verzi z CodePlexu, je náprava jednoduchá:
 

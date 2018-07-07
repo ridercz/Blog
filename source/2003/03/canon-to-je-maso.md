@@ -12,7 +12,7 @@ I navštívil jsem dnešního (quick look: ano, ještě dnešního) dne místní
 
 A hned naproti vchodu se mi naskytl následující pohled:
 
-![Fotografie (70 kB)](/files/canon_maso.jpg)
+![Fotografie (70 kB)](https://www.cdn.altairis.cz/Blog/canon_maso.jpg)
 
 Kdysi jsem si u Meinla v nouzi koupil šroubovák. Nepřežil zašroubování jednoho šroubu, neb se vyznačoval drolivostí, jakou zřídka najdeme u tvarohu. Nejsem si úplně jist, jakým způsobem by se projevovala inkoustová tiskárna tamtéž zakoupená, ale jsem si jist, že to nechci zkoušet.
 

@@ -6,19 +6,46 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Verze ASP.NET 2.0 přináší mimo jiné možnost velmi schopného deklarativního data bindingu. Pro parametrizaci dotazů můžete využít některé vestavěné zdroje (cookie, query string, session, profil...). Tento článek popisuje tvorb vlastního typu parametru, který vrcací uživatelské jméno." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Tvorba vlastního parametru pro data binding v ASP.NET 2.0</h1>
       <section class="article">
-        
+        <p>Verze ASP.NET 2.0 přináší mimo jiné možnost velmi schopného deklarativního data bindingu. Co je data binding asi většina ví - vygenerování obsahu nějakého zobrazovače (typicky třeba DataGrid/GridView) na základě přiřazeného datového zdroje a nějaké soustavy pravidel a šablon. Tím je programátor ušetřen psaní kódu, ve kterém postupně řádek po řádku procházel vrácená data a generoval jejich HTML reprezentaci.</p>
+<p>Ve verzích 1.x se prakticky veškerý data binding děl z backendového kódu, nějak takhle:</p>
+<p>Dim CMD As New SqlCommand(&quot;SELECT * FROM Tabulka&quot;, DB) Dim R as SqlDataReader = CMD.ExecuteReader(CloseConnection) Me.DataGrid1.DataSource = R Me.DataGrid1.DataBind() R.Close()</p>
+<p>Whidbey razí všude, kde je to možné, deklarativní přístup. Zamezuje nutnosti psát opakující se jednoduchý kód, a místo toho umožnit maximum věcí automatizovat, zapisovat parametricky. Shora uvedený příklad by bylo možno v nové verzi napsat nějak takhle:</p>
+<p>&lt;asp:GridView ID=&quot;GridView1&quot; runat=&quot;server&quot; DataSourceID=&quot;SqlDataSource1&quot; /&gt; &lt;asp:SqlDataSource ID=&quot;SqlDataSource1&quot; runat=&quot;server&quot; ConnectionString=&quot;&lt;%$ ConnectionStrings:MujConnectionString %&gt;&quot; SelectCommand=&quot;SELECT * FROM Tabulka&quot;/&gt;</p>
+<h2 id="deklarativni-generovani-parametru">Deklarativní generování parametrů</h2>
+<p>V praxi ale není nic tak jednoduché, jako v příkladech a prezentacích, a dotazy (či uložené procedury) mají parametry, které jest jim nutno předávati. Naštěstí .NET Framework myslí i na tohle. Jednotlivé datové zdroje mohou mít definovány rozličné parametry. Jejich hodnota jest pak před voláním dotazu naplněna podle stavu určeného zdroje. Standardně oním zdrojem může být:</p>
+<ul>
+<li>jiný ovládací prvek (<code>asp:ControlParameter</code>)</li>
+<li>cookie (<code>asp:CookieParameter</code>)</li>
+<li>formulářové pole předané metodou POST (<code>asp:FormParameter</code>)</li>
+<li>uživatelský profil (<code>asp:ProfileParameter</code>)</li>
+<li>query stringu (<code>asp:QueryStringParameter</code>)</li>
+<li>session (<code>asp:SessionParameter</code>)</li>
+<li>nic, hodnota zapsaná &quot;natvrdo&quot; (<code>asp:Parameter</code>)</li>
+</ul>
+<p>Pokud chcete, aby dotaz byl závislý na čemkoliv jiném, než jsou shora uvedené možnosti, existují dvě základní řešení. První je použít prostý <code>asp:Parameter</code> a jeho hodnotu nastavit z backendového kódu. Tím se ovšem připravujete o výhody deklarativního přístupu. Druhou možností je využít rozšiřitelnosti .NET Frameworku a napsat si vlastní typ parametru.</p>
+<h2 id="piseme-vlastni-parametr-usernameparameter">Píšeme vlastní parametr - UserNameParameter</h2>
+<p>Jednou z vlastností, které mi vyloženě chybí, je možnost použít jako parametr jméno právě přihlášeného uživatele. Dokážeme si s tím poradit poměrně snadno: Vytvoříme (v adresáři <code>App_Code</code>) novou třídu, nazvanou <code>UserNameParameter</code> a podědíme ji od prototypu <code>System.Web.UI.WebControls.Parameter</code>. Funkčnost dodáme přepsáním metody <code>Evaluate</code>. Patřičný kód bude vypadat nějak takhle:</p>
+<p>Namespace MyControls Public Class UserNameParameter Inherits System.Web.UI.WebControls.Parameter Protected Overrides Function Evaluate(ByVal Context As System.Web.HttpContext, ByVal Control As System.Web.UI.Control) As Object Return Context.User.Identity.Name End Function End Class End Namespace</p>
+<p>Třídu jsem umístil do namespace <code>MyControls</code>, protože to je nutné, aby bylo možno se na ni odkazovat z ASPX stránek (na názvu NS nezáleží, ale prostě musí být určen). Použití parametru ve stránce sestává ze dvou činností. Za prvé musíme ovládací prvek zaregistrovat, což učiníme tak, že na začátek stránky zapíšeme direktivu <code>@Register</code>. Posléze daný prvek prostě použijeme:</p>
+<p>&lt;%@ Register TagPrefix=&quot;My&quot; Namespace=&quot;MyControls&quot; %&gt; ... &lt;asp:GridView ID=&quot;GridView1&quot; runat=&quot;server&quot; DataSourceID=&quot;SqlDataSource1&quot; /&gt; &lt;asp:SqlDataSource ID=&quot;SqlDataSource1&quot; runat=&quot;server&quot; ConnectionString=&quot;&lt;%$ ConnectionStrings:NemesisForum_Data %&gt;&quot; SelectCommand=&quot;SELECT * FROM Tabulka WHERE Uzivatel=@Uzivatel&quot;&gt; <SelectParameters> &lt;my:UserNameParameter Name=&quot;Uzivatel&quot; /&gt; </SelectParameters> &lt;/asp:SqlDataSource&gt;</p>
+<p>Sluší se poznamenat, že shora uvedená metoda nemá podporu v průvodcích ve VS.NET/VWD. V těch uvidíte &quot;natvrdo&quot; pouze vestavěné parametry, podpora uživatelských se plánuje až do příští verze.</p>
+<h2 id="dotaz-do-plena">Dotaz do pléna</h2>
+<p>Novinky ve Whidbey, které se týkají data bindingu, mi přijdou velice užitečné a zajímavé. Nerad bych ale nosil sovy do Athén a psal o něčem, co všichni znají. Přejete si, abych se data bindingu ve Whidbey věnoval v některém z budoucích článků obšírněji?</p>
+
       </section>
     </main>
     <footer>

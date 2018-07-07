@@ -20,5 +20,5 @@ Druhý den mne vystřídá Jiří Peterka a bude rozprávět o **Podepisování 
 
 Celá akce se bude konat **31. 1. až 1. 2. 2012** v hotelu **Courtyard by Marriott Prague Flora**. Pořadatelem akce je [Institute for International Research](http://www.konference.cz/). Účastnický poplatek je 16 995 Kč, pro státní správu 10 995 Kč. Při uvedení kódu CD1161REF1 obdržíte 15 % slevu.
 
-*   [Kompletní bodový program semináře](/files/20120106-iir_program.pdf)
-*   [Pozvánka a přihlašovací formulář](/files/20120106-iir_prihlaska.pdf)
+*   [Kompletní bodový program semináře](https://www.cdn.altairis.cz/Blog/2012/20120106-iir_program.pdf)
+*   [Pozvánka a přihlašovací formulář](https://www.cdn.altairis.cz/Blog/2012/20120106-iir_prihlaska.pdf)

@@ -8,9 +8,9 @@
 <!-- dcterms:created = 2003-11-13T19:02:21+01:00 -->
 <!-- dcterms:dateAccepted = 2003-11-13T19:02:21+01:00 -->
 
-Seznámil jsem se s ním dosti kuriózním způsobem. Jednoho krásného dne před zhruba třemi lety mi zazvonil telefon a dívka, se kterou jsem v té době flirtoval (což je eufemistický výraz pro to, že jsem ji řezal jako koně :o) do něj pronesla památnou větu: <em>"Matka nás vyhodila z domova i se psem, můžeme k tobě přijet bydlet?"</em>
+Seznámil jsem se s ním dosti kuriózním způsobem. Jednoho krásného dne před zhruba třemi lety mi zazvonil telefon a dívka, se kterou jsem v té době flirtoval (což je eufemistický výraz pro to, že jsem ji řezal jako koně :o) do něj pronesla památnou větu: *"Matka nás vyhodila z domova i se psem, můžeme k tobě přijet bydlet?"*
 
-Kývnul jsem, a tak do mého života definitivně vstoupila [Mysh](http://www.bestijka.cz/) a její domácí miláček, bílý psí kříženec Dan.[![Dan](http://weblog.rider.cz/files/dandog_lq.jpg)](/files/dandog_hq.jpg)
+Kývnul jsem, a tak do mého života definitivně vstoupila [Mysh](http://www.bestijka.cz/) a její domácí miláček, bílý psí kříženec Dan.[![Dan](http://weblog.rider.cz/files/dandog_lq.jpg)](https://www.cdn.altairis.cz/Blog/dandog_hq.jpg)
 
 Ačkoliv jsem ho poznal již ve zralém věku jedenácti let, byl plný energie a moudrosti a klidu stáří také moc nepobral. Říkal jsem, že bych si přál mít v tak pokročilém věku tolik sil. A velmi často si přál, aby měl těch sil trochu méně - zejména proto, že vydržel velmi dlouho a velmi nahlas štěkat, což nepochybně potvrdí všechny naše návštěvy posledních let. Dělali jsme si legraci, že bude štěkat i na Zubatou, až si pro něj přijde.
 

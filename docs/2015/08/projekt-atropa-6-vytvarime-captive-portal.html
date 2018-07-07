@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V šestém dílu seriálu o vytvoření &quot;zlé maliny&quot; pro útoky sociálním inženýrstvím si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -21,11 +23,11 @@
         <p>V šestém dílu seriálu o vytvoření <a href="http://www.aspnet.cz/articles/5429-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">&quot;zlé maliny&quot; pro útoky sociálním inženýrstvím</a> si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6. Aplikace je poměrně triviální a nepochybně by téhož výsledku bylo možno dosáhnout i jednoduššími prostředky. Já jsem zvolil ASP.NET 5 a MVC 6, protože jsem chtěl novou platformu vyzkoušet a také zkusit na Linuxu rozběhnout z .NETu trochu víc, než obligátní &quot;Hello World!&quot;.</p>
 <h2 id="user-experience">User experience</h2>
 <p>Co bude naše aplikace dělat? Pokud se uživatel připojí k otevřenému Wi-Fi hotspotu, každý HTTP požadavek ho přenese na naši aplikaci. Ta mu ukáže úhledný dialog a nabídne, že se může připojit k Internetu, pokud se přihlásí pomocí služeb jako je Facebook, Twitter, Google Account, Microsoft Account nebo místní Seznam.cz:</p>
-<p><a href="http://www.aspnet.cz/Files/20150823-atropa-gate-step0_2.png"><img src="http://www.aspnet.cz/Files/20150823-atropa-gate-step0_thumb.png" alt="atropa-gate-step0" title="atropa-gate-step0" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step0_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step0_thumb.png" alt="atropa-gate-step0" title="atropa-gate-step0" /></a></p>
 <p>Seznam služeb je konfigurovatelný, pro změny stačí editovat soubor <code>config.json</code> a přidat správně pojmenovaný soubor s obrázkem. Poté, co uživatel klepnutím vybere službu, zobrazí se mu přihlašovací dialog a bude vyzván k zadání jména nebo hesla pro příslušnou službu:</p>
-<p><a href="http://www.aspnet.cz/Files/20150823-atropa-gate-step1_2.png"><img src="http://www.aspnet.cz/Files/20150823-atropa-gate-step1_thumb.png" alt="atropa-gate-step1" title="atropa-gate-step1" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step1_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step1_thumb.png" alt="atropa-gate-step1" title="atropa-gate-step1" /></a></p>
 <p>Bez ohledu na to, jaké heslo zadá, bude mu po odeslání zobrazena následující chybová stránka:</p>
-<p><a href="http://www.aspnet.cz/Files/20150823-atropa-gate-step2_4.png"><img src="http://www.aspnet.cz/Files/20150823-atropa-gate-step2_thumb_1.png" alt="atropa-gate-step2" title="atropa-gate-step2" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step2_4.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step2_thumb_1.png" alt="atropa-gate-step2" title="atropa-gate-step2" /></a></p>
 <p>Vše vypadá podle mého názoru velice elegantně a profesionálně. Upřímně řečeno, aplikace je minimálně po vizuální stránce a po stránce podpory pro mobilní zařízení napsána lépe, než většina skutečných přihlašovacích portálů.</p>
 <p>Na rozdíl od nich však uživateli Internet nezpřístupní, jenom zaznamená zadané jméno a heslo do obyčejného textového souboru.</p>
 <h2 id="konfigurace-aplikace">Konfigurace aplikace</h2>

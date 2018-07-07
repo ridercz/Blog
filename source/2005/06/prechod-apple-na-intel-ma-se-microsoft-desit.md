@@ -11,7 +11,7 @@
 
 Internet je plný zpráv o tom, že [Apple přechází na Intelovské procesory](http://www.pixy.cz/pixylophone/2005_06_archiv.html#1118100008). Osobně se mne tato záležitost netýká, ale myslím si, že řadě komentátorů uniká jedna zásadní věc: Tímto krokem se v brzké době stane Apple jediným konkurentem Microsoftu na trhu desktopových operačních systémů.
 
-V současné době pro obecného uživatele neexistuje alternativa k Microsoft Windows na desktopu. Různé variace Linuxu a podobných systémů <em>nejsou</em> konkurencí. Je jich moc, každá se ovládá jinak... Když dojde na získání srdce běžného uživatele, ona vychvalovaná diverzita a možnost přizpůsobení je spíše negativem nežli naopak (ostatně, podívejte se na nastavení počítačů běžných uživatelů: jen málokdo se dostane za vlastní tapetu na plochu a barvu titulkových lišt, o další přizpůsobování nemá zájem).
+V současné době pro obecného uživatele neexistuje alternativa k Microsoft Windows na desktopu. Různé variace Linuxu a podobných systémů *nejsou* konkurencí. Je jich moc, každá se ovládá jinak... Když dojde na získání srdce běžného uživatele, ona vychvalovaná diverzita a možnost přizpůsobení je spíše negativem nežli naopak (ostatně, podívejte se na nastavení počítačů běžných uživatelů: jen málokdo se dostane za vlastní tapetu na plochu a barvu titulkových lišt, o další přizpůsobování nemá zájem).
 
 Přitom ale reálně na Windows nejsou nijak vázáni. Soukromým uživatelům je jedno, zda používají IE nebo Mozillu, Word nebo OpenOffice... Používají to první, protože je to pro ně nejsnazší, nejdostupnější a nejsnáze se to naučí ovládat.
 

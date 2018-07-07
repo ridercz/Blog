@@ -11,7 +11,7 @@
 
 Na [weblogu české DPE Group](http://blogs.msdn.com/vyvojari/) zveřejnil Štěpán Bechyňský článek s [pozvánkou](http://blogs.msdn.com/vyvojari/archive/2006/06/05/617882.aspx) na dvě připravované prázdninové akce.
 
-Jako narozeninový dárek pro mne ;-), tedy **11. července 2006**, se plánuje povídání o **ASP.NET 3.0 (ATLAS) a technologii AJAX**, které bude jakýmsi pokračováním mých přednášek na téma návrhu GUI webových aplikací. První z nich se uskutečnila v Praze 26. dubna a její [záznam si můžete stáhnout](/Articles/90-zaznam-seminare-net-group-o-asp-net-2-0.aspx). Druhá se uskuteční [tento čtvrtek na WUG v Brně](http://www.wug.cz/Home/tabid/36/ctl/Detail/mid/417/ItemId/10/Default.aspx) a její záznam si budete moci stráhnout, pokud se mi podaří rozchodit bezdrátový mikrofon, který mi zatím odmítá poslušnost.
+Jako narozeninový dárek pro mne ;-), tedy **11. července 2006**, se plánuje povídání o **ASP.NET 3.0 (ATLAS) a technologii AJAX**, které bude jakýmsi pokračováním mých přednášek na téma návrhu GUI webových aplikací. První z nich se uskutečnila v Praze 26. dubna a její [záznam si můžete stáhnout](https://www.aspnet.cz/Articles/90-zaznam-seminare-net-group-o-asp-net-2-0.aspx). Druhá se uskuteční [tento čtvrtek na WUG v Brně](http://www.wug.cz/Home/tabid/36/ctl/Detail/mid/417/ItemId/10/Default.aspx) a její záznam si budete moci stráhnout, pokud se mi podaří rozchodit bezdrátový mikrofon, který mi zatím odmítá poslušnost.
 
 O mně je všeobecně známo, že AJAX mám obecně rád asi jako lepru, ale obávám se, že se mu prostě nevyhneme.
 

@@ -21,7 +21,7 @@ Takovou možnost vám nabízí utilitka **VHDMount**, která je součástí *Vir
 
 Pokud se vám nechce používat příkazovou řádku, můžete si příkazy pro mount a unmount [přidat do kontextového menu](http://blogs.msdn.com/virtual_pc_guy/archive/2006/09/01/734435.aspx) pro VHD soubory.
 
- ![VHD mount error](/Files/20061217-vhdmount_vista.png) 
+ ![VHD mount error](https://www.cdn.altairis.cz/Blog/2006/20061217-vhdmount_vista.png) 
 
 Na Windows Vista z neznámých důvodů současná verze nefunguje a je potřeba si pomoci malým trikem.
 

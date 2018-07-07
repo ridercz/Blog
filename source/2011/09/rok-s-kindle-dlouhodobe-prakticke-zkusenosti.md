@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2011-09-29T21:07:30.08+02:00 -->
 <!-- dcterms:dateAccepted = 2011-09-29T21:07:31+02:00 -->
 
-[![Kindle Keyboard with WiFi - model, který mám](http://www.weblog.rider.cz/Files/20110929-kindle_thumb.jpg "Kindle Keyboard with WiFi - model, který mám")](http://www.weblog.rider.cz/Files/20110929-kindle_2.jpg) 
+[![Kindle Keyboard with WiFi - model, který mám](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_thumb.jpg "Kindle Keyboard with WiFi - model, který mám")](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_2.jpg) 
 
 Amazon včera představil několik nových variant své e-bookové čtečky Kindle. Já Kindle vlastním už zhruba rok, tak jsem se rozhodl sepsat své praktické zkušenosti pro osvícení davů.
 
@@ -31,7 +31,7 @@ To je pro mne hlavní výhoda e-inku. LCD panel by mi nevadil, řeči o svícen�
 
 ## Jak se čte?
 
-[![Nastavení velikosti písma na Kindle](http://www.weblog.rider.cz/Files/20110929-screen_shot-6016_thumb.gif "Nastavení velikosti písma na Kindle")](http://www.weblog.rider.cz/Files/20110929-screen_shot-6016_2.gif)Jedním slovem výborně. Komfort při čtení na Kindle je *výrazně větší*, než při čtení papírové knihy. Klasický paperback musím držet otevřený, zpravidla to nejde jednou rukou a v případě silnějších svazků je to mnohdy dost komplikované. U Kindle jenom mačkám boční tlačítka pro otáčení stránek.
+[![Nastavení velikosti písma na Kindle](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6016_thumb.gif "Nastavení velikosti písma na Kindle")](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6016_2.gif)Jedním slovem výborně. Komfort při čtení na Kindle je *výrazně větší*, než při čtení papírové knihy. Klasický paperback musím držet otevřený, zpravidla to nejde jednou rukou a v případě silnějších svazků je to mnohdy dost komplikované. U Kindle jenom mačkám boční tlačítka pro otáčení stránek.
 
 Oceňuji a používám i možnost měnit velikost písma, podle toho, jak mi to zrovna vyhovuje s ohledem na světelné podmínky a míru únavy.
 
@@ -39,7 +39,7 @@ Kindle je malý, menší než většina mých knih. Kindle samotný je tak malý
 
 U [nového modelu bez klávesnice](http://www.amazon.com/Kindle-Wi-Fi-Ink-Display-international/dp/B0051QVF7A/) bych se obával, že to bude až moc malé. Kromě toho, nosit čtečku v zadní kapse kalhot tak, jak předvádí slečna na propagačním obrázku Amazonu, patrně bych ji brzo zlomil.
 
-[![Kindle v kapse u kalhot](http://www.weblog.rider.cz/Files/20110929-KT-slate-04-lg__V166940139__thumb.jpg "Kindle v kapse u kalhot")](http://www.weblog.rider.cz/Files/20110929-KT-slate-04-lg__V166940139__2.jpg)Nicméně to je věc osobního vkusu, dívám se na to pohledem stvoření obdařeného hnátami jako lopaty. Někdo, kdo má drobnější ručku může celou problematiku vnímat dost odlišně.
+[![Kindle v kapse u kalhot](https://www.cdn.altairis.cz/Blog/2011/20110929-KT-slate-04-lg__V166940139__thumb.jpg "Kindle v kapse u kalhot")](https://www.cdn.altairis.cz/Blog/2011/20110929-KT-slate-04-lg__V166940139__2.jpg)Nicméně to je věc osobního vkusu, dívám se na to pohledem stvoření obdařeného hnátami jako lopaty. Někdo, kdo má drobnější ručku může celou problematiku vnímat dost odlišně.
 
 Obecně, díky Kindle čtu mnohem víc, než předtím. Čtečku mám vždycky s sebou a vždycky mám co číst. Čtu rychle, takže nosit papírovou knihu s sebou nese ten negativní efekt, že se mi často stává, že papírovou knihu dočtu a musím ji po zbytek dne nosit s sebou a beztak nemám co ke čtení. U Kindle tohle nebezpečí nehrozí.
 
@@ -52,7 +52,7 @@ Většinu knih stahuji z různých českých zdrojů. Čtu převážně sci-fi a
 Nemám žádný konkrétní oblíbený zdroj, prostě napíšu do google něco jako "název knihy ebook" nebo "jméno autora ekniha". Tento postup není zcela spolehlivý a ani zcela bezproblémový. Někdy jsou knihy mizerně zformátované a nebo jenom prohnané OCR-kem, bez jakýchkoliv korektur, včetně čísel stránek a podobně. Obvykle stačí víc pokusů, pokud to nejde, tak nastoupí trocha ruční práce – převést do HTML/RTF, učesat ve Wordu a hotovo.
 
 Navíc hodně elektronických knih se po českém Internetu toulá v podobě "knihoven", kompletních archivů o stovkách položek. Takových knihoven mám stažených v současné době několik o objemu asi 4 GB (samozřejmě se spoustou duplicit). Většinou pokud na něco "dostanu chuť", stačí zapátrat v těchto knihovnách, upravit a číst. Ve stavu vhodném pro okamžitou konzumaci mám v tomto okamžiku asi 250 knih.
- [![Uživatelské rozhraní Calibre](http://www.weblog.rider.cz/Files/20110929-calibre_thumb.png "Uživatelské rozhraní Calibre")](http://www.weblog.rider.cz/Files/20110929-calibre_2.png) 
+ [![Uživatelské rozhraní Calibre](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_thumb.png "Uživatelské rozhraní Calibre")](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_2.png) 
 
 ## Calibre
 
@@ -63,7 +63,7 @@ K práci s knihami používám program [Calibre](http://calibre-ebook.com/). Pro
 Využívám asi tak jedno procento z toho, co Calibre umí. Používám jej na konverzi mezi jednotlivými formáty a na editaci metadat. Věština knih v češtině je k mání ve formátech PRC/PDB, Kindle má nejraději MOBI. Calibre umí konverzi těchto formátů bez problémů. 
 
 Ve výchozím nastavení jenom mrší českou diakritiku, protože většina PRC/PDB knih používá kódování Windows 1250. To se dá vyřešit právě konverzí do formátu MOBI a správným nastavením vstupního kódování:
- [![calibre_encoding](http://www.weblog.rider.cz/Files/20110929-calibre_encoding_thumb.png "calibre_encoding")](http://www.weblog.rider.cz/Files/20110929-calibre_encoding_2.png) 
+ [![calibre_encoding](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_encoding_thumb.png "calibre_encoding")](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_encoding_2.png) 
 
 ## WiFi nebo 3G?
 
@@ -93,7 +93,7 @@ Kdybych takto někam pravidelně cestoval, pravděpodobně bych předplatné vyu
 
 Rozhraní pro čtení knih na Kindle je geniální v tom, že v podstatě žádné není. Většinu plochy displeje zabírá text. Kromě něj se jenom na spodní straně nachází "progress bar", který ukazuje vaši polohu v textu knihy. "Otáčení stránek" se děje pomocí tlačítek se šipkami, které jsou na bocích Kindle. Na obou bocích jsou obě tlačítka, problém tedy nebudou mít ani leváci.
 
-[![Kindle v režimu čtení knihy](http://www.weblog.rider.cz/Files/20110929-screen_shot-6015_thumb.gif "Kindle v režimu čtení knihy")](http://www.weblog.rider.cz/Files/20110929-screen_shot-6015_2.gif) [![Seznam kategorií](http://www.weblog.rider.cz/Files/20110929-screen_shot-6019_thumb.gif "Seznam kategorií")](http://www.weblog.rider.cz/Files/20110929-screen_shot-6019_2.gif) [![Seznam knih v kategorii](http://www.weblog.rider.cz/Files/20110929-screen_shot-6018_thumb_1.gif "Seznam knih v kategorii")](http://www.weblog.rider.cz/Files/20110929-screen_shot-6018_4.gif) 
+[![Kindle v režimu čtení knihy](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6015_thumb.gif "Kindle v režimu čtení knihy")](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6015_2.gif) [![Seznam kategorií](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6019_thumb.gif "Seznam kategorií")](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6019_2.gif) [![Seznam knih v kategorii](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6018_thumb_1.gif "Seznam knih v kategorii")](https://www.cdn.altairis.cz/Blog/2011/20110929-screen_shot-6018_4.gif) 
 
 E-ink displej je pomalý a při "obracení stránky" displej problikne do černé. Několik lidí mi říkalo, že by jim to vadilo, ale je to efekt, kterého si všimnete jenom při testování, při běžném čtení ho ani nezaznamenám. Ostatně, při otáčení klasické stránky vám to tak "problikne", a podle mého názoru to trvá mnohem déle.
 
@@ -111,7 +111,7 @@ Tento problém částečně řeší [Kindle Collections](http://www.mobileread.c
 
 ## Co s novými modely?
 
-[![Kindle Touch](http://www.weblog.rider.cz/Files/20110929-KW-slate-03-lg__V166950133__thumb.jpg "Kindle Touch")](http://www.weblog.rider.cz/Files/20110929-KW-slate-03-lg__V166950133__2.jpg)Amazon nabízí (nebo bude nabízet) následující modely Kindle (v různých WiFi a WiFi+3G kombinacích atd.):
+[![Kindle Touch](https://www.cdn.altairis.cz/Blog/2011/20110929-KW-slate-03-lg__V166950133__thumb.jpg "Kindle Touch")](https://www.cdn.altairis.cz/Blog/2011/20110929-KW-slate-03-lg__V166950133__2.jpg)Amazon nabízí (nebo bude nabízet) následující modely Kindle (v různých WiFi a WiFi+3G kombinacích atd.):
 
 **Kindle Keyboard** – to je ten model, který mám a popisuji výše.
 

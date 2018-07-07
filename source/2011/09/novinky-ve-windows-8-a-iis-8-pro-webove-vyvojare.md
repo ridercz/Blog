@@ -32,7 +32,7 @@ Poslední problém, který jsem zatím nevyzkoušel, je funkčnost připojení g
 
 I serverová verze Windows 8 disponuje Metro rozhraním a je mu přizpůsobená i grafika některých administratčních nástrojů:
 
-[![Server Manager ve Windows 8](http://www.aspnet.cz/Files/20110924-win8_server_manager_thumb.png "Server Manager ve Windows 8")](http://www.aspnet.cz/Files/20110924-win8_server_manager_2.png)
+[![Server Manager ve Windows 8](https://www.cdn.altairis.cz/Blog/2011/20110924-win8_server_manager_thumb.png "Server Manager ve Windows 8")](https://www.cdn.altairis.cz/Blog/2011/20110924-win8_server_manager_2.png)
 
 I jejich schopnosti se opět sympaticky rozrostly, dashboard je přehlednější a vypadá to, že má víc funkcí, pro hromadnou správu více serverů a ukládání předdefinovaných konfiguračních šablon.
 
@@ -48,7 +48,7 @@ Tento problém se podujalo vyřešit rozšíření protkolu TLS, známé jako SN
 
 Jedná se o (relativně) nový standard, který současná verze IIS nepodporuje. IIS 8 již ano. Při vytváření SSL bindingu nyní můžete povolit SNI a zadat common name vhodného certifikátu:
 
-[![Nastavení SNI ve Windows 8](http://www.aspnet.cz/Files/20110924-win8_sni_thumb.png "Nastavení SNI ve Windows 8")](http://www.aspnet.cz/Files/20110924-win8_sni_2.png)
+[![Nastavení SNI ve Windows 8](https://www.cdn.altairis.cz/Blog/2011/20110924-win8_sni_thumb.png "Nastavení SNI ve Windows 8")](https://www.cdn.altairis.cz/Blog/2011/20110924-win8_sni_2.png)
 
 Jistou nevýhodou SNI je neúplná podpora na straně klientů. Na Windows XP nefunguje SNI v IE (libovolné verze) a v Safari (na Windows Vista a novějších to chodí). Rozpačitá je podpora v Androidu: zájemce o podrobnosti odkazuji na [issue tracker](http://code.google.com/p/android/issues/detail?id=12908), ve verzích Androidu nemám přehled. Nicméně i tak je SNI pro malé weby velký krok kupředu, pro zastaralé klienty se prostě použije nestandardní port nebo fallback na HTTP.
 
@@ -56,7 +56,7 @@ Jistou nevýhodou SNI je neúplná podpora na straně klientů. Na Windows XP ne
 
 Další novinka se také týká šifrovaného spojení v rozsáhlejších systémech. 
 
-[![Web Hosting Certificate Store](http://www.aspnet.cz/Files/20110924-win8_certmgmt_thumb_1.png "Web Hosting Certificate Store")](http://www.aspnet.cz/Files/20110924-win8_certmgmt_4.png)
+[![Web Hosting Certificate Store](https://www.cdn.altairis.cz/Blog/2011/20110924-win8_certmgmt_thumb_1.png "Web Hosting Certificate Store")](https://www.cdn.altairis.cz/Blog/2011/20110924-win8_certmgmt_4.png)
 
 Přibyl nový certificate store jménem *Web Hosting*, se kterým umí nativně pracovat i IIS Manager a tahat si serverové certifikáty z něj, místo z klasického *Personal* store. 
 

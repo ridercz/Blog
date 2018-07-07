@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Pro Martina Pavlise jsem řešil migraci jeho blogu ze SubTextu na Nemesis a narazil jsem na problém zachování stávajících odkazů pro velké množství článků. Typický úkol pro URL rewriting modul v IIS a RewriteMaps." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -26,9 +28,9 @@
 <p>Pokud je adres konečné množství a můžete vytvořit &quot;převodní tabulku&quot; mezi starými a novými adresami, máte vyhráno. Můžete použít rewritingový modul a <em>Rewrite Maps</em>.</p>
 <h2 id="rewrite-maps">Rewrite maps</h2>
 <p>Prvním krokem k úspěchu je získání &quot;převodní tabulky&quot;. Konkrétní postup závisí na vašem systému, já jsem použil vhodně naformulovaný dotaz do staré a nové databáze:</p>
-<p><a href="http://www.aspnet.cz/Files/20120115-rewritemap-1_2.png"><img src="http://www.aspnet.cz/Files/20120115-rewritemap-1_thumb.png" alt="rewritemap-1" title="rewritemap-1" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-1_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-1_thumb.png" alt="rewritemap-1" title="rewritemap-1" /></a></p>
 <p>Výsledek (ve spodním okně) se dá dobře zkopírovat do Excelu a tam s ním dále pracovat. Hardcore databázisti si vytvoří dotaz, který jim vygeneruje přímo XML, já většinou používám Excel a jeho vzorečky:</p>
-<p><a href="http://www.aspnet.cz/Files/20120115-rewritemap-2_2.png"><img src="http://www.aspnet.cz/Files/20120115-rewritemap-2_thumb.png" alt="rewritemap-2" title="rewritemap-2" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-2_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-2_thumb.png" alt="rewritemap-2" title="rewritemap-2" /></a></p>
 <p>Vygenerované XML potom obalím elementy <em>rewriteMaps</em> a <em>rewriteMap</em> (můžete jich mít vytvořeno více) a uložím jako soubor <em>RewriteMaps.config</em>, jehož obsah je přibližně následující:</p>
 <p><rewriteMaps> <rewriteMap name="OldArticles"> <add key="/archive/2004/12/13/147.aspx" value="/articles/1" /> <add key="/archive/2004/12/13/150.aspx" value="/articles/2" /> <add key="/archive/2004/12/14/151.aspx" value="/articles/3" /> <!-- Vypuštěno zhruba 850 řádků --> <add key="/archive/2012/01/01/Congratulations-2012-Microsoft-MVP.aspx" value="/articles/859-congratulations-2012-microsoft-mvp" /> </rewriteMap> </rewriteMaps></p>
 <p>Celý proces vytváření a referencování samostatného souboru bychom si v zásadě mohli odpustit, protože rewrite mapy lze psát přímo do <em>web.configu</em>. Nicméně rewrite mapy používáme typicky v případech, kdy psaní samostatných pravidel by bylo komplikované a nepřehledné, takže jsou obvykle dost rozsáhlé a <em>web.config</em> je pak  nepřehledný.</p>

@@ -10,11 +10,11 @@
 
 Tento zápis vznikl původně jako komentář k Alraunímu [zápisu o autorském právu](http://weblog.alraune.cz/ShowRecord.aspx?day=20040602). Nicméně svým rozsahem si časem vydobyl právo na samostatnou existenci.
 
-Praktická implementace práva autorského mne v různých obměnách už drahně let živí. A dost času jsem strávil přemýšlením nad tím, <em>proč jsou lidé spíš ochotni zaplatit za paletu papíru, než za to, že někdo sedí týden u kompu</em>.
+Praktická implementace práva autorského mne v různých obměnách už drahně let živí. A dost času jsem strávil přemýšlením nad tím, *proč jsou lidé spíš ochotni zaplatit za paletu papíru, než za to, že někdo sedí týden u kompu*.
 
 Myslím si, že důvodů je povícero a ty, na které si vzpomenu, zde před vás navrším.
 
-Prostá lidská přirozenost je ocenit to, na co si mohu sáhnout. Paleta potištěného papíru je hmatatelná. <em>Velmi</em> hmatatelná, jak vám jistě rád dosvědčí každý, kdo někdy přesouval větší množství tiskovin z místa na místo.
+Prostá lidská přirozenost je ocenit to, na co si mohu sáhnout. Paleta potištěného papíru je hmatatelná. *Velmi* hmatatelná, jak vám jistě rád dosvědčí každý, kdo někdy přesouval větší množství tiskovin z místa na místo.
 
 Intelektuální práce je často neviditelná. V případě programátora vidí uživatel jenom (obvykle celkem jednoduché) GUI klientského programu. Ne už ten složitý aplikační server, který nikým neviděn odvádí špinavou práci. V případě řekněme tiskovin průměrný zákazník nezná celý složitý proces vedoucí k hromadě potištěného papíru a instinktivně ho řadí někam do blízkosti stisku tlačítka "Tiskni" ve Wordu.
 
@@ -47,7 +47,7 @@ Primárním účelem ochrany autorských práv je zajistit autorům nárok na p�
 
 Bohužel, postupem času nastala situace, kdy byl tento účel popřen. Reálný zisk se z rukou skutečných autorů dostal do lepkavých pařátků různých prostředníků a manažerů. A bohužel s tím došlo k devalvaci samotného pojmu ochrany intelektuálního vlastnictví.
 
-Takže když tak poslouchám ty diskuze nakopal bych je všechny. Když jsem se onehdá zúčastnil microsoftí přednášky na téma <em>Linux competition</em>, musel jsem odejít před koncem, protože jinak bych musel mluvčího v rámci následné diskuze fyzicky inzultovat. Nehorázná manipulace pojmy free software, GNU, Linux, copyleft, open source byla jednak ukázkou čiré demagogie a druhak mojí osobní urážkou, jakožto autora mnoha open source programů.
+Takže když tak poslouchám ty diskuze nakopal bych je všechny. Když jsem se onehdá zúčastnil microsoftí přednášky na téma *Linux competition*, musel jsem odejít před koncem, protože jinak bych musel mluvčího v rámci následné diskuze fyzicky inzultovat. Nehorázná manipulace pojmy free software, GNU, Linux, copyleft, open source byla jednak ukázkou čiré demagogie a druhak mojí osobní urážkou, jakožto autora mnoha open source programů.
 
 Na druhou stranu, když se náhodou někde potkám s nějakým horlivým zastáncem Linuxu, zpravidla studentem prvního až druhého ročníku vysoké školy, který si nainstaloval RedHat a s velkou slávou místo Microshit Exploderu brousí po pornostránkách v Mozille, nakopal bych ho taky. Demagogie o svaté povinnosti komerční firmy psát dokonalý a otevřený software, a to pokud možno zadarmo, si s výše uvedenými výroky nikterak nezadá.
 

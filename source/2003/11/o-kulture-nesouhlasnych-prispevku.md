@@ -16,4 +16,4 @@ Nesouhlasné reakce jsou většinou výstřikem vulgárních slov: bez oslovení
 
 Netýká se to jenom mne, stačí se podívat na průměrné diskusní fórum u článku.
 
-Proč je tomu tak? Sám jsem napsal dost negativních reakcí a <em>právě proto</em>, že jsou negativní, jsem se vždy pokusil napsat je korektně a podložit je nějakou argumentací. Co si pisatel slibuje od zprávy, která má inteligenční i jazykovou úroveň žáka druhé třídy zvláštní školy?
+Proč je tomu tak? Sám jsem napsal dost negativních reakcí a *právě proto*, že jsou negativní, jsem se vždy pokusil napsat je korektně a podložit je nějakou argumentací. Co si pisatel slibuje od zprávy, která má inteligenční i jazykovou úroveň žáka druhé třídy zvláštní školy?

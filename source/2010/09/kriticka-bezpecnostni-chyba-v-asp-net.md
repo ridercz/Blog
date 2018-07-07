@@ -40,7 +40,7 @@ Problém zmíněného workaroundu je, že jej není možné aplikovat na celý s
 Jistou uklidňující zprávou je, že v době vydání tohoto článku nebyl zatím k dispozici žádný hotový nástroj pro provedení útoku na ASP.NET aplikaci. Na [výše linkované stránce](http://netifera.com/research/) je k nalezení POET (Padding Oracle Exploit Tool) ve verzi 1.0, která ASP.NET přímo nepodporuje. 
 
 Také dosud **nebyl zaznamenán žádný úspěšný útok na produkční aplikaci**. Jediné co je k dispozici, je následující video na YouTube:
- <div style="padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 425px; padding-right: 0px; display: block; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:198ad0d7-2351-4f21-b387-8aa274accca9" class="wlWriterEditableSmartContent"><div>[![](http://www.aspnet.cz/Files/20100921-video9bec751ad1ef.jpg)](http://www.youtube.com/watch?v=yghiC_U2RaM)</div></div> 
+ <div style="padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 425px; padding-right: 0px; display: block; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:198ad0d7-2351-4f21-b387-8aa274accca9" class="wlWriterEditableSmartContent"><div>[![](https://www.cdn.altairis.cz/Blog/2010/20100921-video9bec751ad1ef.jpg)](http://www.youtube.com/watch?v=yghiC_U2RaM)</div></div> 
 
 Bohužel, tento uklidňující stav je pouze dočasný. Dá se předpokládat, že mechanismus pro úspěšný útok bude k dispozici v řádu hodin, nejvýše dnů. Doporučuji tedy okamžitě přijmout odpovídající opatření.
 

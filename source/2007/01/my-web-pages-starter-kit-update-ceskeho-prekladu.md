@@ -9,6 +9,6 @@
 <!-- dcterms:created = 2007-01-27T03:28:04.32+01:00 -->
 <!-- dcterms:dateAccepted = 2007-01-27T03:28:04.32+01:00 -->
 
-Uživatel "vacan" mne upozornil, že v nové verzi **[**My Web Pages Starter Kitu**](/Articles/132-my-web-pages-starter-kit-jednoduchy-cms-v-cestine.aspx)** (1.1.1) je opět chyba v českém překladu. Způsobuje nemožnost smazat přidanou sekci kvůli JavaScriptové chybě. 
+Uživatel "vacan" mne upozornil, že v nové verzi **[**My Web Pages Starter Kitu**](https://www.aspnet.cz/Articles/132-my-web-pages-starter-kit-jednoduchy-cms-v-cestine.aspx)** (1.1.1) je opět chyba v českém překladu. Způsobuje nemožnost smazat přidanou sekci kvůli JavaScriptové chybě. 
 
-Zaslal jsem autorům opravenou verzi, ale je otázka, kdy bude oprava dostupná na hlavním webu. Proto jsem opravenou verzi vystavil i u sebe: [http://www.aspnet.cz/files/20070127_MWSK111_fixed.zip](/files/20070127_MWSK111_fixed.zip)
+Zaslal jsem autorům opravenou verzi, ale je otázka, kdy bude oprava dostupná na hlavním webu. Proto jsem opravenou verzi vystavil i u sebe: [http://www.aspnet.cz/files/20070127_MWSK111_fixed.zip](https://www.cdn.altairis.cz/Blog/2007/20070127_MWSK111_fixed.zip)

@@ -20,7 +20,7 @@ Před okénkem (jediným otevřeným) deset lidí, za okénkem čtyři poštovn�
 
 Rozhodl jsem se to neřešit, opřel jsem se o zeď, zavřel oči, zasunul do uší sluchátka a pustil si do nich již dříve zmiňovanou písničku [Take It Easy](http://weblog.rider.cz/ShowRecord.aspx?day=20030410) v naději, že mne přimeje nevměšovat se do akce a setrvat v klidu.
 
-Když jsem po deseti minutách oči zase otevřel, lidí bylo přede mnou znatelně méně. Protože nevybaveni uklidňující hudbou odešli, zatímco u přepážky stála ubohá naivní osoba, která podlehla reklamnímu heslu <strong>Poštovní spořitelna - váš dobrý soused</strong> a nyní se marně snažila dostat své peníze.
+Když jsem po deseti minutách oči zase otevřel, lidí bylo přede mnou znatelně méně. Protože nevybaveni uklidňující hudbou odešli, zatímco u přepážky stála ubohá naivní osoba, která podlehla reklamnímu heslu **Poštovní spořitelna - váš dobrý soused** a nyní se marně snažila dostat své peníze.
 
 Sňal jsem si sluchátka a k mým uším dolehla vzrušená debata mezi zákaznicí a poštovní úřednicí. Jednalo se o klasický poštovní evergreen: někde něco nefungovalo, zákaznice se dožadovala svých peněz a úřednice se bránila, že ona přece za nic nemůže.
 
@@ -30,7 +30,7 @@ Vzpomněl jsem si na obdobnou debatu, kterou jsem prožil toho památného dne, 
 
 Začal jsem se strašlivě smát. Udělal jsem tím vlastně dobrý skutek, protože obě dámy zapomněly na své spory a společnými silami se na mne vrhly. Vzhledem k tomu, že jsem se smíchy téměř dusil, vzdal jsem obranu a šel jsem si do blízkého KFC ulovit malý oběd.
 
-<em>Don't even try to understand...</em>
+*Don't even try to understand...*
 
 Abych nekončil tak negativisticky, podělím se s vámi o včerejší fotografii krásné dvojité duhy nad Jižním Městem:
 

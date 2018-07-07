@@ -13,7 +13,7 @@ Za jeden z nejlepších nápadů v ASP.NET 2.0 považuji provider model, zejmén
 
 ## Altairis Simple ASP.NET SQL Providers
 
-Začnu samozřejmě svým vlastním dílkem, sbírkou Membership, Role a Profile providerů, jejichž cílem je poskytnout "minimální implementaci" založenou na jednoduché databázové struktuře. Jejich popis jsem zde již [zveřejnil před časem](/Articles/115-altairis-simple-asp-net-sql-providers-ke-stazeni.aspx).
+Začnu samozřejmě svým vlastním dílkem, sbírkou Membership, Role a Profile providerů, jejichž cílem je poskytnout "minimální implementaci" založenou na jednoduché databázové struktuře. Jejich popis jsem zde již [zveřejnil před časem](https://www.aspnet.cz/Articles/115-altairis-simple-asp-net-sql-providers-ke-stazeni.aspx).
 
 Nyní se tento produkt dočkal první "production" verze, kterou si můžete stáhnout na [CodePlexu](http://www.codeplex.com/AltairisWebProviders). Připomínky a chyby hlaste prosím tamtéž. Děkuji za spolupráci též Martinu Štěpánovi, který odhalil a promptně opravil několik chyb.
 

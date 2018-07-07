@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2006-06-06T16:12:25.63+02:00 -->
 <!-- dcterms:dateAccepted = 2006-06-06T16:12:25.63+02:00 -->
 
-Dne **8. června 2006 (čtvrtek) v 17:00** se v Brně uskuteční v rámci aktivit [CsWUG](http://www.wug.cz/) moje přednáška o pokročilé tvorbě uživatelského rozhraní v ASP.NET 2.0. Můžete ji chápat jako volné pokračování [akce uskutečněné 26. 04. v Praze](/Articles/90-zaznam-seminare-net-group-o-asp-net-2-0.aspx).
+Dne **8. června 2006 (čtvrtek) v 17:00** se v Brně uskuteční v rámci aktivit [CsWUG](http://www.wug.cz/) moje přednáška o pokročilé tvorbě uživatelského rozhraní v ASP.NET 2.0. Můžete ji chápat jako volné pokračování [akce uskutečněné 26. 04. v Praze](https://www.aspnet.cz/Articles/90-zaznam-seminare-net-group-o-asp-net-2-0.aspx).
 
 Podíváme se na technologii site navigation controls a zároveň se podíváme na to, jak pomocí adaptérů změnit kód renderovaný ovládacími prvky ASP.NET tak, aby byl úhlednější a snáze stylovatelný pomocí CSS.
 

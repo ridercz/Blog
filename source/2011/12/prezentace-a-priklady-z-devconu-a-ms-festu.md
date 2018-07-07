@@ -18,10 +18,10 @@ Pro účastníky DevConu a MS Festu, stejně jako pro ostatní zájemce, nabíz�
 
 Život vývojáře ještě nikdy nebyl tak sladký, jako s ASP.NET 4.5 a příští verzí Visual Studia. Možná nejvýznamnější novinkou, kterou si představíme, je model binding - data binding, který opravdu zná význam svých dat. Automatická validace, která navíc nezaplevelí vaše stránky hromadou generovaného JavaScriptu. Pokud si je jím zaplevelíte sami, nabídne vám ASP.NET 4.5 jeho automatickou minifikaci, stejně jako v případě CSS. Nová klíčová slova async a await umožní psaní výkonných asynchronních aplikací i běžným smrtelníkům. No a konečně, nová verze Visual Studia přinese tolik vylepšení pro psaní aplikací, že se k verzi 2010 budete vracet jenom opravdu neradi.
 
-[Příklady a prezentace (5 MB)](/files/20111201-vNext.zip)
+[Příklady a prezentace (5 MB)](https://www.cdn.altairis.cz/Blog/2011/20111201-vNext.zip)
 
 ## Data v oblacích, nohy na zemi: Windows Azure Storage
 
 Když se mluví o platformě Windows Azure, obvykle je řeč o běhu aplikací v cloudu. Věděli jste ale, že azurové obláčky obsahují i kapacitně neomezené, velice výkonné a finančně výhodné bezpečné úložiště dat, které můžete využívat i z aplikací, které běží lokálně? Windows Azure Table Storage, Blob Storage a Queue storage mohou být užitečné i pro ty, kdo klasické cloud programování využívat nehodlají a nebo nemohou. V této přednášce se zaměříme právě na využití Azure úložiště - ať už aplikace sama běží v cloudu nebo nikoliv. 
 
-[Příklady a prezentace (3 MB)](/files/20111201-AzureStorage.zip)
+[Příklady a prezentace (3 MB)](https://www.cdn.altairis.cz/Blog/2011/20111201-AzureStorage.zip)

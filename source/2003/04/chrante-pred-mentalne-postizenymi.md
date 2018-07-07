@@ -10,9 +10,9 @@
 
 Ačkoliv jeden humorista dnes svět opustil, o zábavné okamžiky není nouze. Leckdy se však jedná o kouzlo nechtěného. Moje [bestijčí polovička](http://www.bestijka.cz) dnes zakoupila kuchyňské váhy. Jednu z mnoha vrstev obalu tvoří igelitvý sáček, nesoucí v odhadem deseti jazycích výstražný nápis:
 
-![](/files/sacek.jpg)
+![](https://www.cdn.altairis.cz/Blog/sacek.jpg)
 
-<strong>Plastové sáčky mohou být nebezpečné - riziko udušení. Uložte tento sáček mimo dosah kojenců, dětí a mentálně postižených.</strong> Na varování tohoto typu jsem už zvyklý, ale zajímalo by mne, jaké nařízení čí soudní rozhodnutí vedlo k zahrnutí mentálně postižených do výčtu rizikových osob.
+**Plastové sáčky mohou být nebezpečné - riziko udušení. Uložte tento sáček mimo dosah kojenců, dětí a mentálně postižených.** Na varování tohoto typu jsem už zvyklý, ale zajímalo by mne, jaké nařízení čí soudní rozhodnutí vedlo k zahrnutí mentálně postižených do výčtu rizikových osob.
 
 Ostatně, mám-li vycházet ze svých životních zkušeností, zařadil bych tam především osoby sice normální, ale oplývající blbými nápady.
 

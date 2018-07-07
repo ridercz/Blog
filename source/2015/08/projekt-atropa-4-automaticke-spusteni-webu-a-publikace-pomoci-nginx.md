@@ -45,7 +45,7 @@ Prvním příkazem (`cp`) zkopírujete soubor do adresáře `/etc/init.d` a pře
 
 Příkazem `sudo service kestrel_wifigate start` službu nastartujete (můžete také místo `start` využít příkazy `stop` a `restart`). Pokud vše dopadlo dobře, chvíli po spuštění služby najdete na adrese serveru a portu 5004 ukázkový ASP.NET 5 web. Pokud vše nedopadlo dobře, službu zastavte a podívejte se do souboru `~/www/wifigate/kestrel.log`, kde najdete, na co si Kestrel stěžuje.
 
-[![Ukázková stránka ASP.NET 5](http://www.aspnet.cz/Files/20150713-atropa_demopage_thumb.png "Ukázková stránka ASP.NET 5")](http://www.aspnet.cz/Files/20150713-atropa_demopage_2.png)
+[![Ukázková stránka ASP.NET 5](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_thumb.png "Ukázková stránka ASP.NET 5")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_2.png)
 
 Pokud chcete, aby služba startovala automaticky po rebootu (nejspíš ano), nastavte to příkazem `sudo update-rc.d kestrel_wifigate defaults`. Pokud budete chtít autostart zrušit, vypněte ho příkazem `sudo update-rc.d kestrel_wifigate remove`.
 
@@ -61,7 +61,7 @@ sudo apt-get install nginx -y sudo update-rc.d nginx defaults sudo service nginx
 
 První příkaz nginx nainstaluje, druhý nastaví automatické spouštění po startu pomocí init.d a třetí službu nastartuje. Když se nyní podíváte z webového prohlížeče na adresu Raspberry Pi s výchozím portem (80), uvidíte hlášku *Welcome to nginx!*:
 
-[![atropa_nginx](http://www.aspnet.cz/Files/20150713-atropa_nginx_thumb.png "atropa_nginx")](http://www.aspnet.cz/Files/20150713-atropa_nginx_2.png)
+[![atropa_nginx](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nginx_thumb.png "atropa_nginx")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nginx_2.png)
 
 My ovšem nechceme publikovat statický obsah (uložený mimochodem v adresáři `/usr/share/nginx/www/`), ale chceme nginx použít jako proxy pro Kestrel. Proto musíme upravit jeho konfiguraci.
 

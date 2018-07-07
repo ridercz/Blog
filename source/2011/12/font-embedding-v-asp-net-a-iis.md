@@ -28,7 +28,7 @@ V každém případě, moje oblíbené zdroje písem jsou:
 
 Nepochybně existují i další servery podobného zaměření, nicméně já osobně používám shora uvedené tři. Záměrně jsem se také zaměřil pouze na zdroje dostupné zdarma. Pokud máte další tipy, napište je do komentářů.
 
-[![Toto písmo má v podpoře nabodeníček ještě rezervy](http://www.aspnet.cz/Files/20111210-font-nocs_thumb.png "Toto písmo má v podpoře nabodeníček ještě rezervy")](http://www.aspnet.cz/Files/20111210-font-nocs_2.png)
+[![Toto písmo má v podpoře nabodeníček ještě rezervy](https://www.cdn.altairis.cz/Blog/2011/20111210-font-nocs_thumb.png "Toto písmo má v podpoře nabodeníček ještě rezervy")](https://www.cdn.altairis.cz/Blog/2011/20111210-font-nocs_2.png)
 
 Bohužel, na přítomnost českých znaků se nelze spolehnout a je nutné to otestovat. Naštěstí jak Font Squirrel tak Google Web Fonts umožňují zadat vlastní testovací text, takže hned vidíte, na čem jste. Doporučuji používat osvědčené "*Žluťoučký kůň úpěl ďábelské ódy*", neboť písmena **ť** a **ů** bývají problematická a dobře se na nich pozná, jak moc kvalitní práci autor odvedl.
 
@@ -49,7 +49,7 @@ V praxi obyvkle používám kombinaci EOT + WOFF + TTF, která pokrývá větši
 
 Pokud je vaším zdrojem písem Font Squirrel, můžete si stáhnout takzvaný **@font-face kit**, což je archiv, který obsahuje fonty ve vybraných formátech, CSS soubor a ukázkovou HTML stránku. Doporučuji ovšem změnit výchozí nastavení. V první řadě obsahuje i formát SVG, který nejspíš nebudete potřebovat, a ve druhé řadě je standardně zvolen subsetting pro angličtinu. Subsetting je funkce, která má za cíl zmenšovat velikost souboru s fontem tím, že se do výsledku vloží pouze znaky z potřebného jazyka. Pokud necháte výchozí nastavení, bude váš balíček obsahovat jenom anglické znaky, i když je třeba k dispozici čeština. V seznamu "Choose a Subset" tedy buďto vyberte češtinu (je-li k dispozici) nebo "Don't Subset". Nepoužívejte při stahování download manager, protože (alespoň ten můj) nastavení resetuje.
 
-[![Doporučené nastavení Font Squirrel @font-face kitu](http://www.aspnet.cz/Files/20111210-font-fsq_thumb.png "Doporučené nastavení Font Squirrel @font-face kitu")](http://www.aspnet.cz/Files/20111210-font-fsq_2.png)
+[![Doporučené nastavení Font Squirrel @font-face kitu](https://www.cdn.altairis.cz/Blog/2011/20111210-font-fsq_thumb.png "Doporučené nastavení Font Squirrel @font-face kitu")](https://www.cdn.altairis.cz/Blog/2011/20111210-font-fsq_2.png)
 
 Pokud jste ke svému fontu přišli jinde, Font Squirrel vám pomůže rovněž. Obsahuje totiž **@font-face generator**, kam můžete nahrát soubory s fonty a vygeneruje vám shora určený balíček. Ani v tomto případě se nemůžete spolehnout na výchozí nastavení a musíte klepnout na rozšířené volby (*expert*) a vypnout či správně nastavit subsetting a formáty.
 
@@ -75,7 +75,7 @@ Obsah všech **<H1>** bude nyní zobrazen vloženým písmem.
 
 Většina návodů končí u předchozího bodu, což je perfektně postačující ve chvíli, kdy potřebujete používat vložené písmo jenom na nadpisy nebo prostě výjimečně a v jednom jediném řezu (proto jsem ve výše uvedeném demu nastavil *font-weight: normal*, protože H1 je standardně tučně). Ale co když chcete používat i takové věci jako tučné (nebo naopak "lehké") písmo, kurzívu, případně jejich kombinace? 
 
-[![Rodina písem Anonymous Pro](http://www.aspnet.cz/Files/20111210-font-anonymous_thumb.png "Rodina písem Anonymous Pro")](http://www.aspnet.cz/Files/20111210-font-anonymous_2.png)
+[![Rodina písem Anonymous Pro](https://www.cdn.altairis.cz/Blog/2011/20111210-font-anonymous_thumb.png "Rodina písem Anonymous Pro")](https://www.cdn.altairis.cz/Blog/2011/20111210-font-anonymous_2.png)
 
 Browser si poradí: písmo uměle "ztuční" nebo "skloní". Což je ovšem zpravidla velmi ošklivé a působí to ohavně a neprofesionálně. Některá písma se vyskytují ve více variantách, speciálně vytvořených pro tučné písmo, kurzívu atd. Typicky se jedná o písma, kterým se říká "chlebová", určená jako základní pro hlavní text, nejenom pro nadpisy. Příkladem takového písma z nabídky Font Squirrel je třeba zajímavé neproporcionální písmo [Anonymous Pro](http://www.fontsquirrel.com/fonts/Anonymous-Pro), které je k dispozici ve čtyřech řezech: základní, tučné, kurzíva, tučná kurzíva.
 

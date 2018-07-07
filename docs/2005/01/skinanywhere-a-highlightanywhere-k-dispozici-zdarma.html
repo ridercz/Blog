@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="...aneb HTTP moduly v praxi: skinování a syntax highlighting ve vaší aplikaci, bez nutnosti cokoliv instalovat" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -19,12 +21,12 @@
       <h1>SkinAnywhere a HighlightAnywhere k dispozici zdarma</h1>
       <section class="article">
         <p>V rámci psaní článků o HTTP modulech jsem se rozhodl vydat dva své programy, <a href="http://software.altaircom.net/software/skinanywhere.aspx">SkinAnywhere</a> a <a href="http://software.altaircom.net/software/highlightanywhere.aspx">HighlightAnywhere</a>. Oba dva jsou k dispozici zdarma včetně zdrojového kódu, pod licencí LGPL. Ta vám umožní je implementovat do svých aplikací, a to i pokud mají kód uzavřený.</p>
- <h2>SkinAnywhere</h2> 
+<h2 id="skinanywhere">SkinAnywhere</h2>
 <p>Vzhledem ke schopnostem dnešních prohlížečů je velmi snadné nabízet tentýž web v několika vzhledových variantách (skinech). Není třeba modifikovat HTML kód, stačí jenom nahrát patřičný CSS stylesheet.</p>
 <p>Praktický příklad jest možno viděti na mém <a href="http://weblog.rider.cz/">soukromém blogu</a>.</p>
 <p>Prostřednictvím HTTP modulu je možno tuto funkcionalitu přidat do jakékoliv ASP.NET aplikace, aniž by bylo nutno ji modifikovat. Na základě konfigurace HTTP modul prohledá vygenerované HTML a nahradí odkaz na stylesheet svým vlastním.</p>
 <p>Stahujte na <a href="http://software.altaircom.net/software/skinanywhere.aspx">http://software.altaircom.net/software/skinanywhere.aspx</a></p>
- <h2>HighlightAnywhere</h2> 
+<h2 id="highlightanywhere">HighlightAnywhere</h2>
 <p>Publikujete-li na svých stránkách ukázky zdrojových kódů, je užitečné pokud mohou obsahovat tzv. <em>syntax highlighting</em>, tedy barevné zvýraznění určitých konstrukcí, jako například klíčových slov. Ať už je v HTML implementováno jakkoliv, učiní daný zdrojový kód dále víceméně needitovatelným, je-li vložen v nějakém článku, který by bylo později třeba upravit.</p>
 <p>Proto na tomto blogu používám HTTP modul, který automaticky provede syntax highlighting na každém textu, který je uzavřen do tagu <code>&lt;pre class=&quot;typ-zvyrazneni&quot;&gt;...&lt;/pre&gt;</code>.</p>
 <p>Vlastní zvýrazňování je realizováno open source (LGPL) knihovnou <a href="http://www.squishyweb.com/ware/products.asp?q=squishysyntax">SquishySyntaxHighlighter</a>, já jsem jenom napsal vhodný wrapper.</p>

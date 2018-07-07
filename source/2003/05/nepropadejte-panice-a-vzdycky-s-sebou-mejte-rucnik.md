@@ -20,11 +20,12 @@ Protože 25. května je takzvaný "Ručníkový den". Příznivci díla spisovat
 > 
 > Tento obrat ostatně pronikl i do stopařského slangu. Lze například říct: ‘Hele, sasuješ toho húpyho Forda Prefecta? To ti je teda frúd, kterej fakticky ví, kde má ručník.’ (sasovat = znát, brát na vědomí, seznámit se s, poznat po sexuální stránce; húpy = opravdu děsný frajer, frúd = opravdu děsně správný frajer).
 
-Neznalým jest třeba vysvětlit, co je vlastně <em>Stopařův průvodce po galaxii</em>. Jedná se o knihu, která se zejména mezi počítačovými šílenci stala kultovní. Teoreticky se jedná o science fiction, prakticky spíše o absurdní drama.
+Neznalým jest třeba vysvětlit, co je vlastně *Stopařův průvodce po galaxii*. Jedná se o knihu, která se zejména mezi počítačovými šílenci stala kultovní. Teoreticky se jedná o science fiction, prakticky spíše o absurdní drama.
 
-Stopařův průvodce po galaxii je kniha, která dokazuje nepravdivost hesla <em>Don't destroy the world in the first chapter -- you'll find you need it later</em> (Nezničte svět v první kapitole - později zjistíte, že ho ještě budete potřebovat). Země je totiž Vogonskou stabevní flotilou zničena hned v první kapitole pětidílné série. Což ovšem nemůže zabránit Fordu Perfectovi, redaktorovi Stopařova průvodce po galaxii (což je univerzální encyklopedie) a poslednímu přeživšímu pozemšťanovi, Arthuru Dentovi, aby prožili spoustu bláznivých a zcela absurdních situací. Ty dokazují, že je jedno, zda jsme na zemi nebo Betelgeuze, případně zda jednáme s lidmi nebo mimozemskou životní formou se sedmi chapadly a některé věci že se jen tak nezmění.
+Stopařův průvodce po galaxii je kniha, která dokazuje nepravdivost hesla *Don't destroy the world in the first chapter -- you'll find you need it later* (Nezničte svět v první kapitole - později zjistíte, že ho ještě budete potřebovat). Země je totiž Vogonskou stabevní flotilou zničena hned v první kapitole pětidílné série. Což ovšem nemůže zabránit Fordu Perfectovi, redaktorovi Stopařova průvodce po galaxii (což je univerzální encyklopedie) a poslednímu přeživšímu pozemšťanovi, Arthuru Dentovi, aby prožili spoustu bláznivých a zcela absurdních situací. Ty dokazují, že je jedno, zda jsme na zemi nebo Betelgeuze, případně zda jednáme s lidmi nebo mimozemskou životní formou se sedmi chapadly a některé věci že se jen tak nezmění.
 
 A v neposlední řadě se i dozvědí odpověď na Velkou otázku života, vesmíru a vůbec.
 
 Pokud tedy potkáte podivína s ručníkem, pak vězte, že jste potkali Stopaře.
- <ul> <li>[Více informací o Ručníkovém dnu](http://rucnik.ic.cz/) (česky) <li>[Oficiální stránka DNA](http://www.douglasadams.com/) (anglicky) <li>[MFAQ - Most Frequently Asked Questions](http://www.zootle.net/afda/mfaq.shtml) (anglicky) <li>[The Hitchhiker's Guide to the Galaxy](http://www.bbc.co.uk/dna/h2g2/) (anglicky)</li></ul>
+
+*   [Více informací o Ručníkovém dnu](http://rucnik.ic.cz/) (česky) [Oficiální stránka DNA](http://www.douglasadams.com/) (anglicky) [MFAQ - Most Frequently Asked Questions](http://www.zootle.net/afda/mfaq.shtml) (anglicky) [The Hitchhiker's Guide to the Galaxy](http://www.bbc.co.uk/dna/h2g2/) (anglicky)

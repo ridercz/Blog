@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2004-11-07T02:04:35.89+01:00 -->
 <!-- dcterms:dateAccepted = 2004-11-07T02:04:35.89+01:00 -->
 
-Když jsem byl malý, velmi jsem se těšil na předvečer oslav <strong>Velké říjnové socialistické revoluce</strong>. Národ vyrazil do ulic s lampióny. Plebs se svíčkou uvnitř, v technologicky pokročilejší domácnosti (jako ta naše) na štangli lepící páskou přilepili plochou baterii a dovnitř dali žárovičku.
+Když jsem byl malý, velmi jsem se těšil na předvečer oslav **Velké říjnové socialistické revoluce**. Národ vyrazil do ulic s lampióny. Plebs se svíčkou uvnitř, v technologicky pokročilejší domácnosti (jako ta naše) na štangli lepící páskou přilepili plochou baterii a dovnitř dali žárovičku.
 
 Moderní doba občanstvo s lampióny do ulic nevyhání. Namísto toho nám začátkem listopadu dopřává jiných kratochvilných povyražení. Příkladně pak voleb.
 
@@ -19,8 +19,8 @@ Takový [Klub chovatelů československého vlčáka](http://www.ceskoslovensky-
 
 Asi deset členů si myslí že jistý H. je vůl. Dalších deset si myslí že jistá S. je kráva. Vzájemné poštěkávání shora uvedených představuje větší část činnosti klubu. Zbylých sto osmdesát členů si v lepším případě myslí, že hovězí dobytek jsou oba a že by to mohli dát dohromady a klid by byl od obou. V horším případě si nemyslí nic, protože do klubu se přihlásili omylem, když přišli na svod a naznali že je lepší zaplatit členský poplatek než poplatek za svod, a víc už o nich nikdo neuslyší.
 
-Deset lidí kolem pana Upřímného brojí proti modrým tunelům. Deset lidí vymyslí kouzelný termín Grosstapo. Celá politická reprezentace a většina sdělovacích prostředků nedělá nic jiného. [Necelá třetina](http://www.volby.cz/pls/kz2004/kz4?xjazyk=CZ&xdatum=20041105) voličů na tu hru s větším či menším nadšením přistoupila. Zbytek národa si v lepším případě myslí, že si shora uvedení nemají co vyčítat a že nejlíp by bylo kdyby si je čert oba vzítí uráčil. V horším případě si nemyslí nic, protože je mu to upřímně jedno a dívá se na <em>Prásk!</em>.
+Deset lidí kolem pana Upřímného brojí proti modrým tunelům. Deset lidí vymyslí kouzelný termín Grosstapo. Celá politická reprezentace a většina sdělovacích prostředků nedělá nic jiného. [Necelá třetina](http://www.volby.cz/pls/kz2004/kz4?xjazyk=CZ&xdatum=20041105) voličů na tu hru s větším či menším nadšením přistoupila. Zbytek národa si v lepším případě myslí, že si shora uvedení nemají co vyčítat a že nejlíp by bylo kdyby si je čert oba vzítí uráčil. V horším případě si nemyslí nic, protože je mu to upřímně jedno a dívá se na *Prásk!*.
 
-Římští imperátoři pochopili, že lid si žádá <em>panem et circenses</em> a dali mu kus žvance a hry v cirku. My holt máme sociální dávky a volby. 
+Římští imperátoři pochopili, že lid si žádá *panem et circenses* a dali mu kus žvance a hry v cirku. My holt máme sociální dávky a volby. 
 
 Když nad tím tak uvažuju, ty lampióny vyšly levněji.

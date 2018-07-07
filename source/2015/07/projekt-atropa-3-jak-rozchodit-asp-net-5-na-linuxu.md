@@ -20,11 +20,11 @@ V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit "zl�
 
 Dnes je de facto podporován jenom jediný runtime (.NET Framework) a ASP.NET je závislé na řadě starých API pevně svázaných s Windows a IIS. Není prakticky možné provozovat ASP.NET na ničem jiném, než na Windows. Takhle vypadá ASP.NET dnes, ve verzi 4.5:
 
-[![atropa_aspnet_45](http://www.aspnet.cz/Files/20150713-atropa_aspnet_45_thumb.png "atropa_aspnet_45")](http://www.aspnet.cz/Files/20150713-atropa_aspnet_45_2.png)
+[![atropa_aspnet_45](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_aspnet_45_thumb.png "atropa_aspnet_45")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_aspnet_45_2.png)
 
 S ASP.NET 5 se architektura výrazně změní. Nová verze bude nezávislá na použitém operačním systému a Windows, Mac OS X a Linux budou chápány jako rovnocenné platformy. K dispozici budeme mít také na výběr ze třech různých platforem, kterým se říká DNX (.NET Execution Environment) a budou mít různé vlastnosti. A čistě na nich, bez závislosti na konkrétních legacy API, budou postaveny všechny webové technologie. Lze si to představit zhruba takto:
 
-[![atropa_aspnet_50](http://www.aspnet.cz/Files/20150713-atropa_aspnet_50_thumb.png "atropa_aspnet_50")](http://www.aspnet.cz/Files/20150713-atropa_aspnet_50_2.png)
+[![atropa_aspnet_50](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_aspnet_50_thumb.png "atropa_aspnet_50")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_aspnet_50_2.png)
 
 K dispozici máme v současné době celkem tři různá běhová prostředí - DNX:
 
@@ -82,7 +82,7 @@ Začneme tím, že vytvoříme v domácím adresáři aktuálního uživatele `p
 
 Poté vytvoříme v uvedeném adresáři definiční soubor `project.json`. K editaci souborů budeme obecně používat editor nano, protože je dosti komfortní a uživatelé Windows s ním budou nejspíše dost kompatibilní. Spusťte jej příkazem `nano ~/www/wifigate/project.json`.
 
-[![Editor Nano](http://www.aspnet.cz/Files/20150713-atropa_nano_thumb.png "Editor Nano")](http://www.aspnet.cz/Files/20150713-atropa_nano_2.png)
+[![Editor Nano](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nano_thumb.png "Editor Nano")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nano_2.png)
 
 Zadejte do souboru následující kód (nezapomeňte jej upravit, budete-li používat novější verzi, než `1.0.0-beta5`; k náhradě textu můžete v editoru Nano použít klávesovou zkratku *Ctrl+W Ctrl+R*):
 
@@ -104,7 +104,7 @@ Nyní konečně můžeme spustit projekt ve vestavěném serveru Kestrel, násle
 
 Spouštění bude chvíli trvat, ale poté, co se vypíše na konzoli "Started", můžeme se podívat na IP adresu RPi a port 5004 (zkonfigurovaný v `project.json`). Pokud jste vše udělali správně, měla by se vám zobrazit ukázková stránka ASP.NET 5:
 
-[![Ukázková stránka ASP.NET 5](http://www.aspnet.cz/Files/20150713-atropa_demopage_thumb.png "Ukázková stránka ASP.NET 5")](http://www.aspnet.cz/Files/20150713-atropa_demopage_2.png)
+[![Ukázková stránka ASP.NET 5](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_thumb.png "Ukázková stránka ASP.NET 5")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_2.png)
 
 Gratulujeme, právě jste zprovoznili ASP.NET 5 aplikaci na Raspberry Pi na Linuxu.
 

@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2006-03-15T14:35:57.673+01:00 -->
 <!-- dcterms:dateAccepted = 2006-03-15T14:35:57.673+01:00 -->
 
-Ve svém [článku o mailování z ASP.NET 2.0](/Articles/79-odesilani-e-mailu-z-prostredi-net-2-0.aspx) jsem napsal, že posílání mailů v HTML považuji za druhý nejhorší programátorský hřích. Tato zmínka vyvolala předpokládané dotazy, jaký že je tedy ten první nejhorší hřích, jakého se dle mého názoru může .NET vývojář dopustit. 
+Ve svém [článku o mailování z ASP.NET 2.0](https://www.aspnet.cz/Articles/79-odesilani-e-mailu-z-prostredi-net-2-0.aspx) jsem napsal, že posílání mailů v HTML považuji za druhý nejhorší programátorský hřích. Tato zmínka vyvolala předpokládané dotazy, jaký že je tedy ten první nejhorší hřích, jakého se dle mého názoru může .NET vývojář dopustit. 
 
 Když se podíváte do diskusních fór a konferencí, najdete poměrně dost dotazů typu: *Jak může moje ASP.NET aplikace pracovat se systémovým registrem na klientově počítači? Jak mohu zakázat použití tlačítka „Zpět“ v prohlížeči? Jak poznám, že uživatel opustil stránku zavřením prohlížeče, aniž by se odhlásil?*
 

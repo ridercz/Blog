@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2006-10-18T02:31:08.5+02:00 -->
 <!-- dcterms:dateAccepted = 2006-10-18T02:31:08.5+02:00 -->
 
- ![Počítačová škola GOPAS](/Files/20061018-gopas.jpg)Jak je minimálně některým z vás již známo, pracuji mimo jiné jako lektor pro [počítačovou školu Gopas](http://www.gopas.cz/). Naše spolupráce se slibně rozvíjí a to je dobrá zpráva i pro čtenáře webu ASPNET.CZ.
+ ![Počítačová škola GOPAS](https://www.cdn.altairis.cz/Blog/2006/20061018-gopas.jpg)Jak je minimálně některým z vás již známo, pracuji mimo jiné jako lektor pro [počítačovou školu Gopas](http://www.gopas.cz/). Naše spolupráce se slibně rozvíjí a to je dobrá zpráva i pro čtenáře webu ASPNET.CZ.
 
  **Pokud při objednávce jakéhokoliv kurzu v počítačové škole Gopas uvedete do poznámky slevový kód ASPNET.CZ, dostanete slevu 10% z kurzovného. Zároveň tím podpoříte provoz webu ASPNET.CZ a dalších souvisejících aktivit, jako jsou [videozáznamy](http://videoarchiv.altairis.cz/) a [volné akce pro veřejnost](http://akce.altairis.cz/).** 
 

@@ -5,12 +5,14 @@
     <title>Mozilla Firefox: Promarněná šance k nápravě polovičaté podpory standardů | ALTAIR.blog</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -20,7 +22,7 @@
         <p>Mnoho stránek již bylo popsáno úvahami o užitečnosti podpory webových standardů a o přístupnosti a snadné použitelnosti webů. Často z nich Microsoft se svým Internet Explorerem vychází co ten zlý tyran, pro jehož uživatele je vysvobozením z čirého světla open source pocházející Mozilla. Ve skutečnosti je to i ve své nejnovější verzi právě Mozilla, kdo minimálně na platformě Windows nabízí podporu standardů méně než polovičatou.</p>
 <p>Předpokládám, že po přečtení titulku a abstraktu si nezanedbatelná část mých věrných čtenářů vyhrnula virtuální rukávy, hotova smést mne smrští argumentů, hojně doprovázených linky na stránky W3C.</p>
 <p>Vážení čtenáři, neodjišťujte revolverů svých, nebudu mluvit o podpoře HTML, DHTML, XHTML, CSS ani jiných webových standardů. Chystám se totiž mluvit u uživatelském rozhraní, nebo chcete-li <acronym title="Graphical User Interface">GUI.</acronym></p>
- <h2>Nakažlivé skiny</h2> 
+<h2 id="nakazlive-skiny">Nakažlivé skiny</h2>
 <p>Poslední dobou se mezi aplikacemi (alespoň pro Windows) začíná šířit možná ne zhoubná, ale o to více obtěžující nemoc: skinování. Zhusta můžete svou oblíbenou aplikaci proměnit v retro televizor, slunečnici nebo rozšlápnutou žábu - dle osobních preferencí a úchylek.</p>
 <p>Zbaveni jha čtverhranných dialogových oken jste vtaženi do fascinujícího světa objevů a dobrodružství. Rozsáhlejší aplikace, zvláště pak v kombinaci s nějakým dostatečně kreativním skinem dokáží uživateli připravit celé hodiny zábavy. Je tohlencto <em>oné</em> funkční ovládací prvek nebo toliko výplod horečnaté představivosti grafika, sloužící ke zkrášlení pracovní plochy uživatele?</p>
 <p>Obzvláště zábavné pocity budí podobné aplikace v jenom mém známém, který nosí brýle s asi jedenácti dioptriemi. Má svá Windows nastavena na zobrazování velkých ikon a fontů. Jeho výkřiky nadšení a obdivu autorů předmětných aplikací se za vlahých večerů nesou na kilometry daleko.</p>
@@ -29,24 +31,24 @@
 <p>Existují doporučení, jak má vypadat uživatelské rozhraní aplikace pod Windows. Existují knihovny standardních ovládacích prvků, které lze k tomuto účelu snadno použít. Bohužel ale existují i programátoři, kteří jimi pohrdli a vydali se vlastní cestou.</p>
 <p>Pokud má paměť sahá, první zásadně rozšířenou aplikací, která takto znásilnila Windows, bylo ICQ. Pak už to následovalo v rychlém sledu a skončilo o Mozilly, jejíž vývojáři - patrně z nedostatku lepší zábavy - přepsali <em>úplně všechny</em> standardní ovládací prvky Windows.</p>
 <p>Myslím si, že schopnost skinování, tedy změny vzhledu, by měla zůstat vyhrazena window manageru, potažmo pak v případě Windows operačnímu systému. Všechny ostatní aplikace by měly tento vzhled akceptovat a přizpůsobit se mu.</p>
- <h2>Veselá je teorie, smutně šedavá realita</h2> 
+<h2 id="vesela-je-teorie-smutne-sedava-realita">Veselá je teorie, smutně šedavá realita</h2>
 <p>Pohleďte nicméně na dva následující obrázky. První zdařile vypodobňuje standardní ovládací prvek ListView v provedení odpovídajícím mému systémovému stylu:</p>
-<p><img src="/files/lvw_system.gif" alt="Systémový ListView" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/lvw_system.gif" alt="Systémový ListView" /></p>
 <p>Druhý obrázek ukazuje obdobný ovládací prvek v podání <a href="http://www.mozilla.org/">Mozilly Firefox 0.8</a>:</p>
-<p><img src="/files/lvw_firefox.gif" alt="ListView v Mozille Firefox" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/lvw_firefox.gif" alt="ListView v Mozille Firefox" /></p>
 <p>Ponechme stranou drobné vzhledové chyby scrollbaru spočívající v nedorozumění se Mozilly s mým systémovým skinem. Systémový ListView umožňuje spoustu zajímavých věcí. Například dvojklikem na rozdělovač jednotlivých sloupců mohu šířku toho <em>vlevo</em> automaticky nastavit tak, aby odpovídala obsahu. Klávesovou zkratkou Ctrl-Num+ pak mohu totéž udělat pro všechny sloupce. Obě tyto funkce bych v Mozille hledal marně. Sloupečky lze rozšiřovat toliko manuálně, poslední z nich pak pro jistotu nijak.</p>
 <p>Standardní dialogová okna Windows pro zobrazení vlastností - properties -mají ve spodní části tlačítka OK a Cancel (případně Apply) v uvedeném pořadí. Zobrazíte-li si ovšem například vlastnosti stránky v Mozille, najdete na místě předpokládaného zavíracího tlačítka vyvolání nápovědy.</p>
 <p>Všechno jsou to drobnosti: podivné ikonky, v drobnostech jiné ovládání panelů nástrojů... Můžeme se přít o tom, zda logika představená Mozillou je lepší či horší, ale to je bezpředmětné. Je jiná. A to samo o sobě stačí ke zmatení uživatele, který prostě čeká něco a dostane něco jiného.</p>
 <p>Rozmach skinování podle mého názoru úzce souvisí s masovým rozšířením uživatelů. Ubývá těch, pro které je počítač pracovním nástrojem, u kterého vyžadují pokud možno efektivitu. Naopak přibývají lidé, kterým na efektivitě práce s počítačem příliš nesejde, protože po něm chtějí, aby je bavil.</p>
 <p>Podobnými nestandardnostmi jsou pak biti hlavně zkušení uživatelé, kteří už znají všechny triky, Windows ovládají převážně klávesnicí a pracují víceméně poslepu. Průměrný uživatel patrně vůbec netuší o existenci klávesové zkratky Ctrl-Num+, takže její ztráty neželí.</p>
 <p>Ironické ovšem je, že napsat nestandardně se chovající aplikaci je podstatně náročnější, než držet se běžných postupů. Často se lze setkat s aplikacemi, které mají vyšperkované uživatelské rozhraní, ale obsahují - patrně z nedostatku času či zkušenosti - zásadní chyby funkčnosti.</p>
- <h2>Mýtus platformní nezávislosti</h2> 
+<h2 id="mytus-platformni-nezavislosti">Mýtus platformní nezávislosti</h2>
 <p>Častým argumentem zastánců nestandardního uživatelského rozhraní je platformní nezávislost. Taková Mozilla vypadá (prý, nezkoušel jsem to) stejně na Windows, Linuxu, MacOS...</p>
 <p>Osobně se mi při vyslechnutí pojmů typu &quot;platformní nezávislost&quot; či &quot;multiplatformní&quot; dělá pěna u úst. Platformní nezávislost je totiž taková softwarová varianta na téma &quot;one size fits all&quot;. Znamená, že daná aplikace pořádně nefunguje nikde, což nade vší pochybnost prokázala kdysi opěvovaná Java.</p>
-<p>V případě uživatelského rozhraní situace není tak horká: většina chyb je hned vidět, což vede programátory k pečlivosti. Nicméně stejné uživatelské rozhraní na více systémech nepředstavuje přílišnou <em>skutečnou </em>výhodu.</p>
+<p>V případě uživatelského rozhraní situace není tak horká: většina chyb je hned vidět, což vede programátory k pečlivosti. Nicméně stejné uživatelské rozhraní na více systémech nepředstavuje přílišnou *skutečnou *výhodu.</p>
 <p>Pravda, existují uživatelé, kteří střídají více operačních systémů a provozují v nich tutéž aplikaci. Ovšem existuje podstatně víc uživatelů, kteří mají jeden operační systém a v něm více aplikací. A pokud by každá z nich byla svou logikou ovládání originálem (byť multiplatformním), rychlosti práce na daném počítači by to příliš neprospělo.</p>
 <p>Ostatně i přínos pro uživatele více operačních systémů je poněkud sporný: většinou přece nepoužívají jenom jednu aplikaci, takže zde stejně odlišnosti jsou.</p>
- <h2>Závěrem</h2> 
+<h2 id="zaverem">Závěrem</h2>
 <p>Tenhle článek nemá být v žádném případě filipikou proti Mozille. Použil jsem tento program jenom jako jeden z nejviditelnějších příkladů. Musím říct, že s jistým smutkem, protože technologicky považuji Mozillu za podstatně vyspělejší browser, než Internet Explorer. A je to právě pochybné ovládání, na které si nehodlám zvykat, které mi brání v tom, abych ji začal používat.</p>
 <p>Nejnovější verze, Mozilla Firefox, se tvářila ze začátku slibně - hlavní okno už nevypadá jako UFO z jiného světa, ale jako běžná aplikace. Zaradoval jsem se, leč nadšení mne přešlo poté, co jsem se jal Firefox blíže zkoumat - vnitřnosti jsou pořád ta stará špatná ještěrka.</p>
 <p>Celou dobu mluvím pouze o systému Windows. Důvod je zcela prozaický: tento systém už nějaký pátek využívám, napsal jsem pro něj mnoho desítek aplikací se stovkami dialogových oken a vím jak jeho uživatelské rozhraní funguje. Předpokládám - nebo lépe řečeno v zájmu jejich uživatelů v to doufám - že i ostatní operační systémy mají nějaké ustálené konvence týkající se vytváření GUI aplikací.</p>

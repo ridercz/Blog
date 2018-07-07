@@ -15,12 +15,12 @@ Obvykle vcelku dobré chuti a nevábného vzhledu. Pomineme-li onen politování
 
 Za příklad vezměmež můj poslední kulinární počin: prefabrikovaný dort "Alibaba". Podle obrázku na obalu by výsledkem vašeho snažení mělo být toto:
 
-![Obrázek dortu ofotografovaný z krabice](/files/kolac_navod.jpg)
+![Obrázek dortu ofotografovaný z krabice](https://www.cdn.altairis.cz/Blog/kolac_navod.jpg)
 
 Ačkoliv za fotografii na obalu vděčíme samozřejmě kromě pekařského mistra též grafikovi a Adobe Photoshopu, podobné věci jest vídati vcelku pravidelně i v reálném světě - v cukrárnách, restauracích a podobně.
 
 I dodržel jsem přepečlivě předepsaný technologický postup, a výsledkem mé pečlivé snahy jest bylo toto:
 
-![Totéž v realitě](/files/kolac_realita.jpg)
+![Totéž v realitě](https://www.cdn.altairis.cz/Blog/kolac_realita.jpg)
 
 Ačkoliv to vypadá spíše jako nášlapná mina v maskovací úpravě "selská idyla", bylo to velmi dobré. Ale ten design je prostě... inovativní.

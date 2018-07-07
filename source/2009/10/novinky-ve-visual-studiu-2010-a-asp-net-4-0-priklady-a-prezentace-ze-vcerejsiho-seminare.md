@@ -9,10 +9,10 @@
 <!-- dcterms:created = 2009-10-06T14:28:14.027+02:00 -->
 <!-- dcterms:dateAccepted = 2009-10-06T14:28:14.027+02:00 -->
 
-![ASPNET4](http://www.aspnet.cz/Files/20091006-ASPNET4_3.png "ASPNET4") 
+![ASPNET4](https://www.cdn.altairis.cz/Blog/2009/20091006-ASPNET4_3.png "ASPNET4") 
 
 Jak jsem slíbil, dávám k dispozici prezentaci a příklady ze včerejší akce o novinkách v ASP.NET 4.0, která se konala v Bratislavě.
 
-Obojí si můžete stáhnout zde: [**20091006_NetFx4BA.zip**](http://www.aspnet.cz/files/20091006_NetFx4BA.zip) (1.5 MB)
+Obojí si můžete stáhnout zde: [**20091006_NetFx4BA.zip**](https://www.cdn.altairis.cz/Blog/2009/20091006_NetFx4BA.zip) (1.5 MB)
 
 *Na tomto místě bych rád ještě jednou upozornil, že uvedené příklady vám **nebudou fungovat** ve verzi Beta 1, která je volně dostupná. Jsou psané pro Betu 2, která bude volně dostupná během několika týdnů.*

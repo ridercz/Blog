@@ -9,16 +9,17 @@
 <!-- dcterms:created = 2005-01-06T06:40:36.86+01:00 -->
 <!-- dcterms:dateAccepted = 2005-01-06T06:40:36.86+01:00 -->
 
-V [minulém zápisu](/entry/article-20050105.aspx) jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů <em>celých</em> stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly.
+V [minulém zápisu](/entry/article-20050105.aspx) jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů *celých* stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly.
 
-Většina stránek obsahuje kromě "originálního" obsahu také stále se opakující hlavičku a patičku, menu a podobně. Tyto opakující se části zhusta obsahují též obsah sice generovaný dynamicky (příkladně seznam rubrik), ale zase ne aktualizovaný příliš často. Je praktické generovat seznam rubrik dynamicky (protože jinak na to při přidání nové rubriky zapomenete), ale rozhodně <em>není</em> praktické ho znovu načítat z databáze při každém požadavku na kteroukoliv stránku.
+Většina stránek obsahuje kromě "originálního" obsahu také stále se opakující hlavičku a patičku, menu a podobně. Tyto opakující se části zhusta obsahují též obsah sice generovaný dynamicky (příkladně seznam rubrik), ale zase ne aktualizovaný příliš často. Je praktické generovat seznam rubrik dynamicky (protože jinak na to při přidání nové rubriky zapomenete), ale rozhodně *není* praktické ho znovu načítat z databáze při každém požadavku na kteroukoliv stránku.
 
 ASP.NET umožňuje použít direktivu OutputCache nejenom v rámci ASPX stránek, ale i v rámci web user controlu - ASCX. Pro dynamicky generovaný seznam rubrik příkladně používám toto nastavení:
 
 <%@ OutputCache Duration="1800" Shared="true" VaryByParam="none" %>
 
 Jest samozřejmé, že zatímco cacheování celých stránek je možno provádět na serveru, na klientovi či někde mezi nimi, pro cacheování částí stránky to neplatí - to lze provádět pouze na serveru. Použitím této technologie tedy neušetříte přenosové pásmo, ale "jenom" výkon serveru.
- <h2>Argumenty OutputCache pro ASCX</h2> 
+
+## Argumenty OutputCache pro ASCX
 
 Ačkoliv direktiva zůstává stejná, její parametry se u ASPX a ASCX liší. Možné jsou:
 
@@ -29,7 +30,8 @@ Ačkoliv direktiva zůstává stejná, její parametry se u ASPX a ASCX liší. 
 `VaryByParam`, `VaryByCustom` - chová se úplně stejně jako při [cacheování celých stránek](/entry/article-20050105.aspx).
 
 `VaryByControl` - umožňuje stanovit závislost na serverovém ovládacím prvku, jež je součástí ASCX controlu. To je vlastnost natolik obskurní, že jí budeme věnovat pozornost v následujícím samostatném oddílu.
- <h2>VaryByControl</h2> 
+
+## VaryByControl
 
 Jest nutno míti na paměti, že pokud je použito cacheování, kód v ASCX prvku se vůbec nevykoná a místo toho se použije již dříve vygenerovaný HTML kód. Což je dost nepříjemné v případě, že ASCX obsahuje sám o sobě nějakou funkčnost, závislou  příkladně na formulářových prvcích.
 

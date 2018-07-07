@@ -20,11 +20,11 @@ Z konzole můžete nastartovat grafické rozhraní příkazem `startx`. Ale co k
 
 V takovém případě zadejte příkaz `sudo raspi-config`. Spustí se vám textové rozhraní, pomocí kterého můžete nastavit řadu paramerů. Mimo jiné tam najdete i volbu *Enable boot to Desktop/Scratch*:
 
-[![Utilita raspi-config: hlavní menu](http://www.aspnet.cz/Files/20150713-raspi_config_1_thumb.png "Utilita raspi-config: hlavní menu")](http://www.aspnet.cz/Files/20150713-raspi_config_1_2.png)
+[![Utilita raspi-config: hlavní menu](https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_1_thumb.png "Utilita raspi-config: hlavní menu")](https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_1_2.png)
 
 Po klepnutí na něj si můžete vybrat, zda se má bootovat do textové konzole, grafického prostředí nebo do programovacího jazyka Scratch (což je takový trochu lepší Karel nebo Logo, programovací jazyk pro děti):
 
-[![Utilita raspi-config: nastavení režimu bootu](http://www.aspnet.cz/Files/20150713-raspi_config_2_thumb.png "Utilita raspi-config: nastavení režimu bootu")](http://www.aspnet.cz/Files/20150713-raspi_config_2_2.png)
+[![Utilita raspi-config: nastavení režimu bootu](https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_2_thumb.png "Utilita raspi-config: nastavení režimu bootu")](https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_2_2.png)
 
 Po výběru požadovaného typu bootu zvolte *<Ok>* a *<Select>* a restartuje Rapberry.
 
@@ -48,12 +48,12 @@ Pokud se pokusíte připojit s výchozími nastaveními, nebude vám to fungovat
 
 Příkazem `mstsc` spusťte na Windows terminálového klienta a klepněte ve spodní části okna na šipku vedle *Show Options*. Přepněte se na záložku *Display* a nastavte jako barevnou hloubku *High Color (16 bit)*. Můžete také nastavit rozlišení, jaké chcete používat, pokud chcete, aby spojení běželo v okně a ne na plné obrazovce:
 
-[![Nastavení vlastností terminálového klienta](http://www.aspnet.cz/Files/20150713-mstsc_thumb.png "Nastavení vlastností terminálového klienta")](http://www.aspnet.cz/Files/20150713-mstsc_2.png)
+[![Nastavení vlastností terminálového klienta](https://www.cdn.altairis.cz/Blog/2015/20150713-mstsc_thumb.png "Nastavení vlastností terminálového klienta")](https://www.cdn.altairis.cz/Blog/2015/20150713-mstsc_2.png)
 
 Na záložce *General* zadejte název nebo IP adresu vašeho RPi za a klepněte na *Connect*. Budete vyzvání k potvrzení, že se chcete připojit pomocí nešifrovaného spojení  a poté se vám zobrazí přihlašovací dialog, kde zadejte své uživatelské jméno a heslo (výchozí je `pi` a `raspberry`):
 
-[![Přihlašovací dialog xrdp](http://www.aspnet.cz/Files/20150713-xrdp_dialog_thumb.png "Přihlašovací dialog xrdp")](http://www.aspnet.cz/Files/20150713-xrdp_dialog_2.png)
+[![Přihlašovací dialog xrdp](https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_dialog_thumb.png "Přihlašovací dialog xrdp")](https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_dialog_2.png)
 
 Poté budete úspěšně připojeni. Na posledním screenshotu vidíte, jak jsem přes terminál připojen na Raspberry, kde běží Midnight Commander, webový prohlížeč a LibreOffice Writer, který jsem nainstaloval z grafického prostředí pomocí Pi Store:
 
-[![RPi přes RDP](http://www.aspnet.cz/Files/20150713-xrdp_desktop_thumb.png "RPi přes RDP")](http://www.aspnet.cz/Files/20150713-xrdp_desktop_2.png)
+[![RPi přes RDP](https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_desktop_thumb.png "RPi přes RDP")](https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_desktop_2.png)

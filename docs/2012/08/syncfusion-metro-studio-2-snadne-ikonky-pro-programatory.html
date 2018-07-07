@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Prakticky každá webová aplikace potřebuje nějaké ikony. Ale kde je vzít a nekrást, zejména když vám Silk Icons už lezou krkem? Syncfusion nabízí program na generování ikon ve stylu Metro, s logikou přátelskou pro programátory a navíc zdarma." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -21,13 +23,13 @@
         <p>Prakticky každá webová aplikace (a nejen webová, samozřejmě) potřebuje nějaké ikony. V ideálním světě je vytváří grafik, potažmo UI designér. Reálně je často valná část návrhu UI nechána na programátorech, kteří vesměs nemají na hraní s ikonkami čas, schopnosti a nástroje.</p>
 <p>Existují hotové sady ikon (třeba <a href="http://www.famfamfam.com/lab/icons/silk/">Silk Icons</a>, které jsem zahrnul i do komponent v <a href="http://altairiswebui.codeplex.com">Altairis.Web.UI</a>), ale co když vám už lezou krkem, případně se vám esteticky nehodí do krámu, protože chcete navrhnout něco v novém &quot;Metro&quot; stylu?</p>
 <p>Společnost <a href="http://www.syncfusion.com/">SyncFusion</a>, známá především jako autor .NET komponent, relativně nedávno přišla s nástrojem pro generování a správu obrázků/ikon v jednoduchém Metro stylu. Nástroj propaguje jako &quot;developer friendly&quot; a je skutečně určen spíše pro programátory, než pro grafiky.</p>
-<p><a href="http://www.aspnet.cz/Files/20120824-metrostudio_2.png"><img src="http://www.aspnet.cz/Files/20120824-metrostudio_thumb.png" alt="Hlavní rozhraní programu" title="Hlavní rozhraní programu" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120824-metrostudio_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120824-metrostudio_thumb.png" alt="Hlavní rozhraní programu" title="Hlavní rozhraní programu" /></a></p>
 <p>Program v sobě obsahuje 1700 základních symbolů, které jsou řazeny do kategorií a které lze fulltextově prohledávat. Všechny symboly jsou v jednotném, jednoduchém stylu a jsou vektorové, takže je možné je libovolně zvětšovat a zmenšovat. Program také obsahuje funkci pro vyváření symbolů ze znaků libovolného fontu.</p>
 <p>Po výběru jednoho ze základních symbolů můžete editovat jeho velikost, barvu, úhel natočení, pozadí a další parametry:</p>
-<p><a href="http://www.aspnet.cz/Files/20120824-iconedit_2.png"><img src="http://www.aspnet.cz/Files/20120824-iconedit_thumb.png" alt="Rozhraní pro editaci symbolu" title="Rozhraní pro editaci symbolu" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120824-iconedit_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120824-iconedit_thumb.png" alt="Rozhraní pro editaci symbolu" title="Rozhraní pro editaci symbolu" /></a></p>
 <p>Výslednou kompozici pak můžete kopírovat do schránky jako obrázek (vhodné pro další práci v nějakém grafickém programu), nebo vyexportovat v řadě formátů. Nejpoužívanější budou asi klasické PNG/ICO, ale program podporuje i přímý export v podobě XAML markupu, což ocení zejména WPF vývojáři.</p>
 <p>U exportu zamrzí snad jenom nemožnost obrázek exportovat v nějakém běžném vektorovém formátu, nejlépe SVG. Je to překvapivé i vzhledem k tomu, že obrázky původně v SVG uloženy jsou.</p>
-<p><a href="http://www.aspnet.cz/Files/20120824-ilwp_2.png"><img src="http://www.aspnet.cz/Files/20120824-ilwp_thumb.png" alt="Projekty" title="Projekty" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120824-ilwp_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120824-ilwp_thumb.png" alt="Projekty" title="Projekty" /></a></p>
 <p>Prostým přetažením symbolu do levého dolního rohu můžete vytvářet též kolekce ikon – projekty, třeba pro konkrétní aplikaci. Takovou kolekci je možno též uložit jako CSS sprite pro použití v HTML. Bohužel vygenerované css je chybné, protože u pozičních informací chybí jednotky (px) a je tedy nutné je upravovat.</p>
 <p>Přes tyto drobné nevýhody ale Metro Studio doporučuji každému, kdo musí ikony tvořit či hledat a jejich kreslení nepatří mezi jeho koníčky. Aplikace je zdarma a můžete si ji stáhnout na adrese <a href="http://www.syncfusion.com/downloads/metrostudio" title="http://www.syncfusion.com/downloads/metrostudio">http://www.syncfusion.com/downloads/metrostudio</a>.</p>
 

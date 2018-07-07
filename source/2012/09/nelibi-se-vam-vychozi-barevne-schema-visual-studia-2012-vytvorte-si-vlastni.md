@@ -20,20 +20,20 @@ Nové barevné (nebo spíše nebarevné) schéma Visual Studia 2012 budí vášn
 
 Takto vypadá výchozí grafické téma, *Light*:
 
-[![VS2012: Light Theme](http://www.aspnet.cz/Files/20120906-vstheme_light_thumb.png "VS2012: Light Theme")](http://www.aspnet.cz/Files/20120906-vstheme_light_2.png)
+[![VS2012: Light Theme](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_light_thumb.png "VS2012: Light Theme")](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_light_2.png)
 
 Jak jsem již psal, mně velice vyhouje. Nicméně někteří programátoři dávají přednost světlému písmu na tmavém pozadí (které já pokládám za v podstatě nečitelné). Pro ně je určeno téma *Dark*:
 
-[![VS2012: Dark Theme](http://www.aspnet.cz/Files/20120906-vstheme_dark_thumb.png "VS2012: Dark Theme")](http://www.aspnet.cz/Files/20120906-vstheme_dark_2.png)
+[![VS2012: Dark Theme](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_dark_thumb.png "VS2012: Dark Theme")](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_dark_2.png)
 
 [Brian Chavez vytvořil nástroj](http://bchavez.bitarmory.com/archive/2012/08/27/modify-visual-studio-2012-dark-and-light-themes.aspx), který umožňuje tato témata editovat a nastavovat vlastní barvy jednotlivým částem UI. Na stránce je i odkaz na dvě témata, *Midnight* a *Visual Studio 2012 in 2010 Colors*.
 
 "Půlnoční" téma Midnight není kupodivu nijak extra tmavé, je jenom mírnou úpravou výchozího světlého skinu, posuďte sami:
 
-[![VS2012: Midnight Theme](http://www.aspnet.cz/Files/20120906-vstheme_midnight_thumb.png "VS2012: Midnight Theme")](http://www.aspnet.cz/Files/20120906-vstheme_midnight_2.png)
+[![VS2012: Midnight Theme](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_midnight_thumb.png "VS2012: Midnight Theme")](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_midnight_2.png)
 
 Poslední skin se, jak je patrno již z názvu, odkazuje na vizuální styl Visual Studia 2010:
 
-[![VS2012: 2010 Theme](http://www.aspnet.cz/Files/20120906-vstheme_vs2010_thumb.png "VS2012: 2010 Theme")](http://www.aspnet.cz/Files/20120906-vstheme_vs2010_2.png)
+[![VS2012: 2010 Theme](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_vs2010_thumb.png "VS2012: 2010 Theme")](https://www.cdn.altairis.cz/Blog/2012/20120906-vstheme_vs2010_2.png)
 
-Obě témata, spolu se zálohou těch stávajících, jsem pro jistotu zkopíroval na [svůj server](/files/20120906-VSThemes.zip). Instalace je jednoduchá, je to .reg soubor, který se jenom vloží do registru a restartuje se Visual Studio.
+Obě témata, spolu se zálohou těch stávajících, jsem pro jistotu zkopíroval na [svůj server](https://www.cdn.altairis.cz/Blog/2012/20120906-VSThemes.zip). Instalace je jednoduchá, je to .reg soubor, který se jenom vloží do registru a restartuje se Visual Studio.

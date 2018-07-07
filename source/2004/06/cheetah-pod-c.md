@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2004-06-27T23:00:05.783+02:00 -->
 <!-- dcterms:dateAccepted = 2004-06-27T23:00:05.783+02:00 -->
 
-Neuvěřitelné se stalo skutkem: <strong>Michal Martinka</strong> přepsal [osobní publikační systém Cheetah](/entry/article-20040621.aspx) z VB.NET do C#. Přestože to praktický význam příliš nemá, je to dobře protože kromě praktického použití má Cheetah sloužit i jako ukázkový a výukový program.
+Neuvěřitelné se stalo skutkem: **Michal Martinka** přepsal [osobní publikační systém Cheetah](/entry/article-20040621.aspx) z VB.NET do C#. Přestože to praktický význam příliš nemá, je to dobře protože kromě praktického použití má Cheetah sloužit i jako ukázkový a výukový program.
 
 Jsem rád, že se tak stalo, protože mé vlastní znalosti C# jsou nevalné (mám alergii na složené závorky ;-).
 

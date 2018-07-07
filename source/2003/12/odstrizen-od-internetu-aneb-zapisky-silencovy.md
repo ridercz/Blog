@@ -10,7 +10,7 @@
 
 Jsem již desátý den odstřižen od Internetu. Všechno začalo tím, že jsme se rozhodli přestěhovat. Jedna z prvních věcí, které jsem zařizoval, bylo přepojení internetové linky, poskytované společností UPC, do nového bytu. Informoval jsem se (v rámci [již popisovaného harakiri](http://weblog.rider.cz/ShowRecord.aspx?day=20031215)) o způsobech žádosti a termínech. Odpověď infolinky byla, že realizace zabere 7-10 dnů. Žádost jsem tedy odeslal faxem, jak bylo požadováno, 15.12.2003.
 
-Od té doby, až do dnešního rána, se situace měla tak, že můj drahý ISP žádost <em>zpracovával</em>. Že prý toho mají moc (to toho neměli moc, když jsem se ptal?) Snahy o upřesnění pojmu "zpracováváme", zejména pak s ohledem na přechod z vidu průběžného do vidu dokonavého.
+Od té doby, až do dnešního rána, se situace měla tak, že můj drahý ISP žádost *zpracovával*. Že prý toho mají moc (to toho neměli moc, když jsem se ptal?) Snahy o upřesnění pojmu "zpracováváme", zejména pak s ohledem na přechod z vidu průběžného do vidu dokonavého.
 
 Operátoři na callcentru UPC byli velmi přátelští, vstřícní, zdvořilí a velmi k ničemu. Je vidět, že jsou velmi dobře školeni, nebo se mi je dlouho nedařilo přimět k jakémukoliv konkrétnějšímu výroku než "zabýváme se tím a blíže neurčenou dobu se vám ozveme". Pravda, slyšel jsem ho v několika desítkách variant. 
 

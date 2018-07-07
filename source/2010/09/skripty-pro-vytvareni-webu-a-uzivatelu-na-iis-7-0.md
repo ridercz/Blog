@@ -53,4 +53,4 @@ Tento skript slouží k vytvoření nového webu pro existujícího uživatele (
 
 Výše uvedené skripty předpokládají dost konkrétní nastavení web serveru a je pravděpodobné, že pro vaše konkrétní prostředí bude třeba je upravit a to předpokládá jisté znalosti jak tohoto prostředí, tak tvorby dávkových souborů. Skripty poskytuji "as is" a nebudu k nim poskytovat žádnou podporu v komentářích a podobně. Nicméně s radostí vám jako placenou konzultaci vytvořím skripty vhodné pro vaše prostředí.
 
-**Skripty ke stažení zde: **[**20100924-iismgmt.zip**](http://www.aspnet.cz/files/20100924-iismgmt.zip)
+**Skripty ke stažení zde: **[**20100924-iismgmt.zip**](https://www.cdn.altairis.cz/Blog/2010/20100924-iismgmt.zip)

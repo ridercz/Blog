@@ -12,6 +12,6 @@ Projekt [Cheetah](/AboutCheetah.aspx), tedy software tohoto weblogu, má konečn
 
 Mimochodem, tady je jeho původní obrázek v celé své kráse:
 
-![gepard](/files/cheetah.gif)
+![gepard](https://www.cdn.altairis.cz/Blog/cheetah.gif)
 
 Tak teď ještě zlanařit někoho, aby mi namaloval logo pro SilverWolfa, což je připravovaná nová verze [galerie](http://gallery.rider.cz/) ;-)

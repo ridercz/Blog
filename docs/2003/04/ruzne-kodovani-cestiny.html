@@ -5,19 +5,32 @@
     <title>Různé kódování češtiny | ALTAIR.blog</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Různé kódování češtiny</h1>
       <section class="article">
-        
+        <p>Naivně jsem předpokládal, že bude stačit, když své stránky dám k dispozici ve standardizovaném kódování UTF-8 a poradí si s tím všechna mobilní i nemobilní zařízení.</p>
+<p>Díky <a href="http://www.elka.cz/edenik/">eLKa</a>, který byl tak laskav a na svém Palmu otestoval výše zmiňované mobilní rozhraní, jsem zjistil, že tomu tak není. Jeho Palm si s UTF-8 neporadil.</p>
+<p>V levé části stránky nyní najdete menu, ve kterém si můžete přepnout kódování pro web. Pro PDA je nutno upravit URL, a to tak, že na konec přidáte parametr &quot;<em>c=XXX</em>&quot;, kde &quot;<em>XXX</em>&quot; je patřičné kódování:</p>
+<ul>
+<li><strong>UTF-8:</strong> <a href="http://weblog.rider.cz/mobile/?c=utf">http://weblog.rider.cz/mobile/?c=utf</a></li>
+<li><strong>ISO 8859-1:</strong> <a href="http://weblog.rider.cz/mobile/?c=asc">http://weblog.rider.cz/mobile/?c=asc</a></li>
+<li><strong>ISO 8859-2:</strong> <a href="http://weblog.rider.cz/mobile/?c=iso">http://weblog.rider.cz/mobile/?c=iso</a></li>
+<li><strong>Windows-1250:</strong> <a href="http://weblog.rider.cz/mobile/?c=win">http://weblog.rider.cz/mobile/?c=win</a></li>
+</ul>
+<p>Kdyby nic, tak kódování ISO-8859-1 by mělo fungovat snad všude, protože neobsahuje speciální české znaky s nabodeníčky. Neřeknete-li jinak, bude se vše prezentovat v UTF-8.</p>
+<p>Pro správný provoz je nutné, aby vaše zařízení podporovalo cookies. Jsem v dané chvíli příliš líný, než abych přepisoval všechny linky a přidával k nim informaci o kódování, nebo to řešil nějak jinak.</p>
+
       </section>
     </main>
     <footer>

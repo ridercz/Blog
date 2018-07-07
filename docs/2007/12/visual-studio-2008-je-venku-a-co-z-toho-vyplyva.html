@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Před několika dny byla uveřejněna finální verze Microsoft .NET Frameworku 3.5 a Visual Studia 2008. Pojďme se podívat na to, co z toho vyplývá a jak náročný bude přechod." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -40,7 +42,7 @@
 <p>Weboví programátoři nicméně nepochybně ocení novinky obecně přítomné v .NETu a neomezující se jenom na web. Zejména samozřejmě mluvím o technologii Linq. Napsal jsem pomocí Linqu dvě aplikace a musím říct, že to je fakt bomba, všechno je strongly typed, funguje IntelliSense a vývoj aplikací jde kupředu výrazně rychleji. Pro mne osobně je Linq největším plusem a už se bez něj nehodlám obejít.</p>
 <p>Další užitečnou novinkou jsou extension methods. V principu se jedná o způsob, jak k existující třídě &quot;zvenčí&quot; přidat nové metody. Napsal jsem ukázkovou aplikací TraceGPS, která je hojně využívá. Tato aplikace je volně ke stažení pro členy programu <a href="https://www.microsoft.com/cze/msdn/connection/">MSDN Connection</a>.</p>
 <h2 id="vyvojove-nastroje-a-multitargeting">Vývojové nástroje a multitargeting</h2>
-<p><a href="http://www.aspnet.cz/Files/20071203-20071202-multitargeting_2.gif"><img src="http://www.aspnet.cz/Files/20071203-20071202-multitargeting_thumb.gif" alt="Výběr verze runtime ve Visual Studiu 2008" /></a> Jak je obvyklé, s novou verzí .NETu přichází i nová verze Visual Studia. Co ale není obvyklé je nová vlastnost pojmenovaná <em>multitargeting</em>. Předchozí verze vývojových nástrojů byly spjaty s konkrétní verzí .NET Frameworku. Jedinou výjimkou je Visual Studio 2005, které je navrženo pro .NET 2.0 a verzi 3.0 se ze shora uvedených důvodů nijak zvlášť nebrání (ale také ji nijak zvlášť nepodporuje).</p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2007/20071203-20071202-multitargeting_2.gif"><img src="https://www.cdn.altairis.cz/Blog/2007/20071203-20071202-multitargeting_thumb.gif" alt="Výběr verze runtime ve Visual Studiu 2008" /></a> Jak je obvyklé, s novou verzí .NETu přichází i nová verze Visual Studia. Co ale není obvyklé je nová vlastnost pojmenovaná <em>multitargeting</em>. Předchozí verze vývojových nástrojů byly spjaty s konkrétní verzí .NET Frameworku. Jedinou výjimkou je Visual Studio 2005, které je navrženo pro .NET 2.0 a verzi 3.0 se ze shora uvedených důvodů nijak zvlášť nebrání (ale také ji nijak zvlášť nepodporuje).</p>
 <p>Visual Studio 2008 ve všech svých edicích (včetně Express) umožňuje vyvíjet aplikace pro .NET 2.0, 3.0 a 3.5. Nových funkcí vývojového prostředí můžete tedy využívat i při vývoji 2.0 aplikací. Formát projektů je shodný s předchozí verzí, formát solutions ovšem nikoliv. Pokud tedy chcete projekt vyvíjet v obou verzích, potřebujete dva SLN soubory, ukazující ale na stejné projekty.</p>
 <p>Webové programátory patrně potěší zejména nový vizuální designér web formů. Populární split mode (zobrazení designéru a zdrojového kódu současně) já osobně moc nemusím ( ve výsledku není pořádvě vidět ani jedno), ale celkově se mi Visual Studio jeví být jaksi svižnější - a to jsem kvůli němu ani neupgradoval počítač, jak se bývalo s novou verzí VS milou tradicí. Výrazně vylepšena byla i práce s CSS a hlavně je k dispozici JavaScript intellisense.</p>
 <p>Poslední překážkou pro definitivní přechod pro mne byla neexistence Web Deployment Projects, a tato překážka padla 1. prosince s uvedením December CTP těchto. Více najdete na blogu <a href="http://blogs.msdn.com/webdevtools/archive/2007/12/01/web-deployment-projects-wdp-for-visual-studio-2008-december-2007-ctp-released.aspx">Web Development Tools teamu</a>.</p>

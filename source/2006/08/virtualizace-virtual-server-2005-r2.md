@@ -11,7 +11,7 @@
 <!-- dcterms:created = 2006-08-25T17:31:25.503+02:00 -->
 <!-- dcterms:dateAccepted = 2006-08-25T17:31:25.503+02:00 -->
 
-V [předchozím povídání o virtualizaci](/Articles/104-virtualizace-virtual-pc-2004.aspx) jsem vám představil program Virtual PC. To je dobré na interaktivní práci, ale nemůžete v něm provozovat "ostré" servery - a přitom právě jejich konsolidace je jedním z hnacích motorů virtualizace jako takové. Proto je tu "větší bratříček" jménem **Virtual Server**.
+V [předchozím povídání o virtualizaci](https://www.aspnet.cz/Articles/104-virtualizace-virtual-pc-2004.aspx) jsem vám představil program Virtual PC. To je dobré na interaktivní práci, ale nemůžete v něm provozovat "ostré" servery - a přitom právě jejich konsolidace je jedním z hnacích motorů virtualizace jako takové. Proto je tu "větší bratříček" jménem **Virtual Server**.
 
 ## Servery, které neexistují
 
@@ -21,7 +21,7 @@ Když jsem na českém Internetu začínal, byly počítače dřevěné, šlapac
 
 Rovněž výkon počítačů stoupá závratným tempem. Dnešní dvoujádrové 64-bitové procesory toho zvládnou opravdu hodně. Přesto je ale dobrý nápad mít různé funkce izolované na různých počítačích. Každý program má specifické nároky na paměť, na konfiguraci a tak dále.
 
-Zde se opět ke slovu dostanou virtuální počítače, tentokráte tedy virtuální servery. Základní idea je stejná jako v případě Virtual PC a byla nastíněna již [v prvním dílu tohoto seriálu](/Articles/103-virtualizace-uvod.aspx): v rámci jednoho fyzického počítače existuje několik virtuálních.
+Zde se opět ke slovu dostanou virtuální počítače, tentokráte tedy virtuální servery. Základní idea je stejná jako v případě Virtual PC a byla nastíněna již [v prvním dílu tohoto seriálu](https://www.aspnet.cz/Articles/103-virtualizace-uvod.aspx): v rámci jednoho fyzického počítače existuje několik virtuálních.
 
 ## Microsoft Virtual Server 2005 R2
 
@@ -29,7 +29,7 @@ Serverovým řešením pro virtualizaci je na platformě Microsoft program **[Vi
 
 Virtual Server oproti tomu předpokládá, že bude běžet na serveru, bez přímé interakce. Funguje jako služba (Windows service) a jeho virtuální stroje se mohou spouštět automaticky po startu systému. Správa (tedy vytváření virtuálních počítačů, sítí, jejich úpravy a podobně) probíhá přes webové rozhraní.
 
-[![Rozhraní Virtual Serveru 2005 R2](/files/20060825-virtualserver-lq.gif) ](/files/20060825-virtualserver-hq.png)
+[![Rozhraní Virtual Serveru 2005 R2](https://www.cdn.altairis.cz/Blog/2006/20060825-virtualserver-lq.gif) ](https://www.cdn.altairis.cz/Blog/2006/20060825-virtualserver-hq.png)
 
 Pro připojení na konzoli počítače slouží speciální VMRC klient. Vzdáleně připomíná klienta pro připojení k terminálovým službám, ale opravdu jenom vzdáleně. Sice umí fungovat po síti, ale použitý protokol je jiný, stejně jako účel.
 

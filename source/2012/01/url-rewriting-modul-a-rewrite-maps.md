@@ -28,11 +28,11 @@ Pokud je adres konečné množství a můžete vytvořit "převodní tabulku" me
 
 Prvním krokem k úspěchu je získání "převodní tabulky". Konkrétní postup závisí na vašem systému, já jsem použil vhodně naformulovaný dotaz do staré a nové databáze:
 
-[![rewritemap-1](http://www.aspnet.cz/Files/20120115-rewritemap-1_thumb.png "rewritemap-1")](http://www.aspnet.cz/Files/20120115-rewritemap-1_2.png)
+[![rewritemap-1](https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-1_thumb.png "rewritemap-1")](https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-1_2.png)
 
 Výsledek (ve spodním okně) se dá dobře zkopírovat do Excelu a tam s ním dále pracovat. Hardcore databázisti si vytvoří dotaz, který jim vygeneruje přímo XML, já většinou používám Excel a jeho vzorečky:
 
-[![rewritemap-2](http://www.aspnet.cz/Files/20120115-rewritemap-2_thumb.png "rewritemap-2")](http://www.aspnet.cz/Files/20120115-rewritemap-2_2.png)
+[![rewritemap-2](https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-2_thumb.png "rewritemap-2")](https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-2_2.png)
 
 Vygenerované XML potom obalím elementy *rewriteMaps* a *rewriteMap* (můžete jich mít vytvořeno více) a uložím jako soubor *RewriteMaps.config*, jehož obsah je přibližně následující:
 

@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-11-24T20:28:57+01:00 -->
 <!-- dcterms:dateAccepted = 2003-11-24T20:28:57+01:00 -->
 
-Ve své hlavní zpravodajské relaci <strong>Události</strong> odvysílala včera Česká televize reportáž, ve které její reportérka opakovaně obvinila filmovou společnost pro kterou pracuji, i mne osobně z podvodu.
+Ve své hlavní zpravodajské relaci **Události** odvysílala včera Česká televize reportáž, ve které její reportérka opakovaně obvinila filmovou společnost pro kterou pracuji, i mne osobně z podvodu.
 
 Podle reportáže jsme měli oklamat kastelána na na státním hradě Rožmberk a natočit zde bez jeho vědomí pornografický film. Natáčení údajně nebyl přítomen a nemohl mu zabránit, protože tuto smlouvu nebylo možné vypovědět. V závěru příspěvku redaktorka ČT varovala ostatní správce památkových objektů s tám, že podvodníci by se mohli pokusit oklamat i je.
 

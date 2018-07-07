@@ -6,20 +6,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití. Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy &quot;virtualizací pro normální lidi&quot;." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Virtualizace: Virtual PC 2004</h1>
       <section class="article">
-        <p><img src="/Files/20060715-VirtualPC.png" alt="Okno Virtual PC" />Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití.</p>
-<p>Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy &quot;virtualizací pro normální lidi&quot;. <a href="/Articles/103-virtualizace-uvod.aspx">Předchozí díl</a> byl věnován obecnému úvodu do virtualizace.</p>
+        <p><img src="https://www.cdn.altairis.cz/Blog/2006/20060715-VirtualPC.png" alt="Okno Virtual PC" />Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití.</p>
+<p>Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy &quot;virtualizací pro normální lidi&quot;. <a href="https://www.aspnet.cz/Articles/103-virtualizace-uvod.aspx">Předchozí díl</a> byl věnován obecnému úvodu do virtualizace.</p>
 <h2 id="ziskani-a-instalace">Získání a instalace</h2>
 <p>Program Virtual PC je k dispozici zdarma a můžete si ho <a href="http://www.microsoft.com/windows/virtualpc/downloads/sp1.mspx">stáhnout ze stránek Microsoftu</a>. Aktuální je verze 2004 SP1 (software na výše uvedeném linku už SP1 obsahuje).</p>
 <p>Instalace je bezproblémová a nevyžaduje žádná specifická nastavení ani znalosti.</p>
@@ -39,7 +41,7 @@
 <p>Virtual PC se vás optá, jaký operační systém hodláte ve virtuálním počítači provozovat. Seznam OS je značně omezený a slouží v podstatě jenom k nastavení doporučené paměti, kterou stejně v dalším kroku můžete změnit. V žádném případě se nejedná o seznam podporovaných operačních systémů (pokud vás zajímá, můžete ho najít na <a href="http://vpc.visualwin.com/">webu Jonathana Maltze</a>).</p>
 <p>Pokud se týče paměti, závisí na tom, co chcete s daným virtuálním počítačem provádět. Pokud chcete jenom něco malého vyzkoušet, stačí dát minimum paměti pro daný OS. Pokud ve virtuálu chcete vyvíjet ve Visual Studiu, dejte paměti co nejvíc.</p>
 <p>Po vytvoření klepněte na tlačítko Settings. Otevře se vám okno, kde můžete podrobně nastavit všechny parametry:</p>
-<p><img src="/files/20060715-VpcSettings.gif" alt="Okno Virtual PC - nastavení" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060715-VpcSettings.gif" alt="Okno Virtual PC - nastavení" /></p>
 <p>Okno nastavení je poněkud zrádné v tom, že některé věci můžete (celkem logicky) nastavit pouze pokud je virtuální počítač vypnuté (paměť, disky...). Jiné ovšem pouze tehdy, pokud VPC běží a jsou na něm nainstalovány Virtual Machine Additions).</p>
 <p>K virtuálnímu počítači můžete připojit až tři virtuální hard disky v podobě VHD souborů nebo namapovaného fyzického disku. Disky jsou připojeny k virtuálnímu IDE řadiči, Virtual PC nepodporuje virtuální SCSI. Pokud povolíte &quot;undo disks&quot;, budou se změny ukládat do zvláštního souboru a při vypínání virtuálního počítače budete mít možnost změny nechat jak jsou, definitivně je potvrdit a nebo zrušit. Tato funkce je náročnější na diskový prostor, ale pro rozličné testování a pokusy může být velice užitečná.</p>
 <p>Virtuální CD/DVD nebo floppy mechanika se umí napojit na fyzickou mechaniku vašeho počítače a nebo připojit soubor s image (pro floppy VFD, pro CD/DVD standardní ISO).</p>
@@ -58,7 +60,7 @@
 <li>Pokud přenášíte virtuální počítače mezi fyzickými, zkontrolujte si po přenosu nastavení této hodnoty, protože nastavení je vázáno na název síťové karty (který bude pravděpodobně odlišný).</li>
 </ul>
 <h2 id="spusteni-vpc-a-instalace-guest-os">Spuštění VPC a instalace guest OS</h2>
-<p><img src="/files/20060715-VpcBooting.gif" alt="Virtuální počítač bootuje" />Klepnutím na tlačítko Start virtuální počítač spustíte a začne bootovat. Musíte na něj nainstalovat operační systém, stejně jako na fyzický počítač.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060715-VpcBooting.gif" alt="Virtuální počítač bootuje" />Klepnutím na tlačítko Start virtuální počítač spustíte a začne bootovat. Musíte na něj nainstalovat operační systém, stejně jako na fyzický počítač.</p>
 <p>Nejčastěji budete postupovat tak, že si v menu <em>CD</em> připojíte fyzickou mechaniku (<em>Use Physical Drive</em>) nebo ISO image (<em>Capture ISO image</em>) a nabootujete z CD.</p>
 <p>Postup instalace je stejný, jako byste instalovali na skutečný počítač. Osobně zpravidla postupuji tak, že mám jeden &quot;master&quot; image s operačním systémem a ten pak používám k rychlému vytvoření &quot;pokusných&quot; strojů.</p>
 <p>Ke slovu se také dostanou utilitky typu <em>sysprep</em> (najdete ji na instalačním CD Windows) nebo <a href="http://www.sysinternals.com/Utilities/NewSid.html">NewSid</a> od SysInternals.</p>

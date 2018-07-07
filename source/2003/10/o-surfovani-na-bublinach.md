@@ -9,7 +9,9 @@
 <!-- dcterms:dateAccepted = 2003-10-20T20:08:11+02:00 -->
 
 Onehdá jsem se podíval na Lupu a našel tam dva perfektní články:
- <ul> <li>[Umění surfovat na bublinách](http://www.lupa.cz/clanek.php3?show=3067)</li> <li>[Vykašlete se na ocenění, soustřeďte se na zisk](http://www.lupa.cz/clanek.php3?show=2938)</li></ul> 
+
+*   [Umění surfovat na bublinách](http://www.lupa.cz/clanek.php3?show=3067)
+*   [Vykašlete se na ocenění, soustřeďte se na zisk](http://www.lupa.cz/clanek.php3?show=2938) 
 
 Jsou perfektní v tom, že bych asi jenom těžko dokázal precizněji formulovat zásady podnikání, které považuji za zvrácené a celkově (společensky i ekonomicky) škodlivé.
 
@@ -31,4 +33,4 @@ Nabídka mobilů je dnes širší, než kdy předtím. A nikdy předtím nebyl t
 
 Najít takový telefon je problém, hraničící s neřešitelností. Je strašně jednoduché nechat do telefonu doprogramovat grafické smajlíky. Ale vybavit ho firmwarem který nepadá a dostatečně výkonným procesorem, to je náročnější. A hůř se to propaguje v reklamách. Ach jo.
 
-Podle mne je právě fenomén <em>surfování na bublinách</em> příčinou problémů americké ekonomiky (kde už po Enrongate přišli na to, že něco je špatně). Uvidíme, kdy i v Evropě přijdeme na to, že přílišná orientace na zisk není dlouhodobě a trvale udržitelná.
+Podle mne je právě fenomén *surfování na bublinách* příčinou problémů americké ekonomiky (kde už po Enrongate přišli na to, že něco je špatně). Uvidíme, kdy i v Evropě přijdeme na to, že přílišná orientace na zisk není dlouhodobě a trvale udržitelná.

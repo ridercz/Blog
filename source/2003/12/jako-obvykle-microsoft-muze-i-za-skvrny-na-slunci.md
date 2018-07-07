@@ -10,9 +10,9 @@
 
 Do Microsoftu si taky kopne každý. Nejnověji [New York Times](http://www.nytimes.com/2003/12/14/magazine/14POWER.html?ex=1071982800&en=799ad449b398c2d7&ei=5062&partner=DIGIWEB.CZ), citující zprávu NASA o havárii Columbie. Jedním z viníků havárie je prý i Microsoft PowerPoint. Prý nutí lidi prezentovat data příliš zjednodušující formou atd.
 
-Se závěry článku v zásadě souhlasím. Nicméně popsané není problém PowerPointu. Je to problém prezentací obecně. PowerPoint, ačkoliv je nejrozšířenější, není jediný nástroj na dělání "<em>slajdů</em>". Problém je v obecné snaze na všechno udělat "prezentaci". 
+Se závěry článku v zásadě souhlasím. Nicméně popsané není problém PowerPointu. Je to problém prezentací obecně. PowerPoint, ačkoliv je nejrozšířenější, není jediný nástroj na dělání "*slajdů*". Problém je v obecné snaze na všechno udělat "prezentaci". 
 
-Když jsem se u Aliatelu snažil objednat pevnou linku, tak mi to jakási obchodnice chtěla "odprezentovat", ačkoliv nevěděla co je reverzní DNS záznam a nedokázala mi ani <em>zjistit</em>, jestli jsou nám schopni ho nastavit dle přání.
+Když jsem se u Aliatelu snažil objednat pevnou linku, tak mi to jakási obchodnice chtěla "odprezentovat", ačkoliv nevěděla co je reverzní DNS záznam a nedokázala mi ani *zjistit*, jestli jsou nám schopni ho nastavit dle přání.
 
 Nepochybně existují témata, která se dají snadno a dobře sdělit formou přednášky doprovázené slide show. Nicméně není jich mnoho a hlavně se touto formou nedají sdělit informace do hloubky. Zejména, pokud přednášející nepoužívá plátno za sebou pouze jako zpříjemňující pomůcku, ale jako hlavní zdroj informací.
 

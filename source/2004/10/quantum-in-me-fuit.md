@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2004-10-13T15:15:21.31+02:00 -->
 <!-- dcterms:dateAccepted = 2004-10-13T15:15:21.31+02:00 -->
 
-<h2>Náboženské intermezzo</h2> 
+## Náboženské intermezzo
 
 Jest všeobecně známo že poté, co první lidé v ráji snědli zakázané ovoce ze stromu poznání, pravil Bůh Adamovi:
 
@@ -25,7 +25,7 @@ V knize Genesis ovšem už není psáno, co se stalo potom:
 > 
 > Všemohoucí se zarazil. "Ehm, to poslední jsem vlastně chtěl říct až Pelištejcům," poškrábal se na pleši velebně ozdobené několika chomáčky bělostných vlasů. "Ale ono se to na vás hodí taky," dodal rychle a aby to zatušoval, odkvačil rychle cherubům říct aby si vzali ze skladu plamenné meče.
 
- <h2>Zpět do 21. století</h2> 
+## Zpět do 21. století
 
 [![Fotografie kabeláže](http://gallery.rider.cz/technology/the_den/20041013-023356-0000.jpg?w=225&h=300)](http://gallery.rider.cz/technology/the_den/20041013-023356-0000.jpg.xhtml)Na mém vztahu ke kabeláži, kterou stále považuji za [mírnější formu živelné pohromy](/entry/article-20030603.aspx#122336), se nic nezměnilo. Nicméně [Mysh](http://www.bestijka.cz/) mne soustředěným nátlakem přiměla k tomu, abych uklidil své doupě, přičemž hlavním bodem programu měla být též likvidace či alespoň civilizace kabeláže a drátoví. Vzhledem k tomu, že zde bydlíme už rok a za celou tu dobu doupě dobrodiní úklidu nezažilo, jsem kapituloval poměrně snadno.
 

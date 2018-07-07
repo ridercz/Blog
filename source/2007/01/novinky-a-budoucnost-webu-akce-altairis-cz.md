@@ -17,7 +17,7 @@ Na základě několika vašich žádostí jsem přidal možnost zobrazit si sezn
 
 Novinkou v Outlooku 2007 je možnost zobrazit si kalendář publikovaný na webu. Ten se pak ukáže mezi ostatními kalendáři a můžete přehledně sledovat různé zdroje při plánování času.
 
- [ ![Screenshot](/Files/20070125_webcal_lq.png) ](/Files/20070125_webcal_hq.png) 
+ [ ![Screenshot](https://www.cdn.altairis.cz/Blog/2007/20070125_webcal_lq.png) ](https://www.cdn.altairis.cz/Blog/2007/20070125_webcal_hq.png) 
 
 Pokud používáte Outlook 2007, klepněte v seznamu akcí na odkaz *[zobrazit v Outlooku 2007](webcal://akce.altairis.cz/WebServices/GetICS.ashx)* a tím se přihlásíte k automatické synchronizaci tohoto kalendáře. Bohužel mi není známo, jak by se nějakého podobného efektu dalo dosáhnout v předchozích verzích Outlooku.
 

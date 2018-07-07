@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Zajištění soukromí uživatelů je jedním z hlavích cílů technologie Information Cards (CardSpace). V případě osobních (unmanaged) karet jsou různým webům zaslány různé údaje, takže provozovatelé těchto webů je nemohou spojit nebo zneužít. Proces zjišťování identity webů je ale dosti komplikovaný. Pojďme se na něj podívat podrobně a zabývejme se důsledky, které z něj plynou." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -19,7 +21,7 @@
       <h1>Jak se zjišťuje identita webu u Personal Information Cards?</h1>
       <section class="article">
         <h2 id="pozor-tento-clanek-je-jiz-neaktualni">Pozor, tento článek je již neaktuální</h2>
-<p>Problém popisovaný v tomto článku byl vyřešen v ISIP 1.5. Podrobnější informace najdete v <a href="/Articles/216-reseni-problemu-s-identitou-webu-u-personal-information-cards.aspx">novém článku</a>.</p>
+<p>Problém popisovaný v tomto článku byl vyřešen v ISIP 1.5. Podrobnější informace najdete v <a href="https://www.aspnet.cz/Articles/216-reseni-problemu-s-identitou-webu-u-personal-information-cards.aspx">novém článku</a>.</p>
 <h2 id="jemny-uvod-do-information-cards">Jemný úvod do Information Cards</h2>
 <p>Technologie Information Cards, ve Windows implementována pod názvem CardSpace, si klade za cíl vyřešit různé dosud přetrvávající problémy autentizace na Internetu - převážně v případě webových aplikací. Drtivá většina současných webů používá jednofaktorovou autentizaci, založenou na sdíleném tajemství, nebo chcete-li na znalosti hesla.</p>
 <p>Tento přístup má ale jednu velkou nevýhodu: protože uživatelé typicky používají totéž uživatelské jméno a heslo ve více systémech, může kompromitace jednoho z nich ohrozit i ostatní. Pokud se svým obvyklým loginem a heslem zaregistrujete na webu, jehož provozovatel je neschopný (a útočník získá jeho databázi) nebo zločinný (sám se stane útočníkem), budou ohroženy i další weby, jejichž provozovatelé v tom ovšem budou celkem nevinně.</p>
@@ -39,7 +41,7 @@
 <p>V každém z těchto případů se postupuje jinak a každé z těchto řešení má svá úskalí.</p>
 <h3 id="https-s-ev-certifikatem">HTTPS s EV certifikátem</h3>
 <p>Certifikáty s rozšířenou validací (Extended Validation, EV) jsou relativní novinkou. Při jejich vydání je žadatel podrobně prověřován: ověřuje se název firmy, sídlo, zda je žádající osoba oprávněna jednat za společnost atd. Celý proces je poměrně komplikovaný, administrativně náročný a drahý - ceny EV certifikátů se pohybují řádově ve stovkách dolarů a jejich získání může trvat i několik měsíců.</p>
-<p><img src="http://www.aspnet.cz/Files/20071127-20071124-EVCert_5.png" alt="EV certifikát" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2007/20071127-20071124-EVCert_5.png" alt="EV certifikát" /></p>
 <p>Vizuálně se EV certifikát projeví tak, že se adresní řádek zbarví do zelena (v IE a Mozille) a v jeho pravé části se střídá název společnosti, které certifikát patří (na shora uvedeném obrázku je to Microsoft) a název certifikační autority, která jej vydala (VeriSign).</p>
 <p>V tomto případě se z certifikátu vezmou údaje o názvu společnosti (O), místě (L), státu (S) a zemi (C). Výsledný řetězec u certifikátu na obrázku by byl: <code>|O=&quot;Microsoft Corporation&quot;|L=&quot;Redmond&quot;|S=&quot;Washington&quot;|C=&quot;US&quot;|</code>. Z něj se pak spočítá SHA256 hash a ten se použije jako identifikátor relying party.</p>
 <h3 id="https-s-beznym-ne-ev-certifikatem-kde-ale-jsou-uvedeny-udaje-o-zadateli">HTTPS s běžným (ne-EV) certifikátem, kde ale jsou uvedeny údaje o žadateli</h3>

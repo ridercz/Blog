@@ -15,7 +15,7 @@ Je zcela v pořádku, že se občané svobodně rozhodnou pomoci svými penězi 
 
 Jsem ovšem zároveň realista a je mi jasné, že současné mezinárodní politické klima je takové, že skoro nejde nedat. V tomto kontextu tedy oceňuji, že se vláda omezila na víceméně symbolické gesto.
 
-<strong>Mohu zodpovědně a se vší vážností prohlásit, že oněch sto šedesát tisíc mrtvých z titulku Pixyho článku jest mně osobně srdečně ukradeno, o deseti tisících nemluvňat nemluvě.</strong>
+**Mohu zodpovědně a se vší vážností prohlásit, že oněch sto šedesát tisíc mrtvých z titulku Pixyho článku jest mně osobně srdečně ukradeno, o deseti tisících nemluvňat nemluvě.**
 
 Důvodů k tomu mám několik:
 
@@ -23,7 +23,7 @@ Jeden mrtvý je tragédie, milión mrtvých je statistika. Tento - tuším že S
 
 Existuje celá řada problémů, které považuji za závažnější a vzhledem k prostředí ve kterém žiji za aktuálnější. Když už zůstanu u velké vody, raději podpořím místní ZOO.
 
-Mimo jiné i proto, že jsem možná výjimka, ale vyloženě <em>nesnáším</em> citové vydírání. Pokud se se mne snaží někdo vytáhnout peníze či jakoukoliv pomoc dojemnými historkami (nejlépe o dětech), probouzí ve mně spíše agresivitu než cokoliv jiného.
+Mimo jiné i proto, že jsem možná výjimka, ale vyloženě *nesnáším* citové vydírání. Pokud se se mne snaží někdo vytáhnout peníze či jakoukoliv pomoc dojemnými historkami (nejlépe o dětech), probouzí ve mně spíše agresivitu než cokoliv jiného.
 
 Pokud má organizace poskytující humanitární pomoc fungovat s rozumnou efektivitou, musí fungovat na základě profesionality a rozumu, ne emocí. Na rozumné požadavky jsem ochoten reagovat: potřebujeme to a to, abychom mohli dělat to a to - konec. Chápu, že taková argumentace asi neplatí na většinu obyvatelstva a že je efektivnější útočit na city (i když sama činnost je racionální), ale v mých očích se takový spolek automaticky deklasuje.
 

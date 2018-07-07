@@ -27,7 +27,7 @@ Membership a Profile provider si vystačí každý s jednou tabulkou, Role provi
 
 ## Release Candidate 1 a CodePlex
 
-[![CodePlex](/Files/CodePlex.jpg) ](http://www.codeplex.com/Wiki/View.aspx?ProjectName=AltairisWebProviders)
+[![CodePlex](https://www.cdn.altairis.cz/Blog/CodePlex.jpg) ](http://www.codeplex.com/Wiki/View.aspx?ProjectName=AltairisWebProviders)
 
 Od samého počátku bylo mým záměrem tuto knihovnu zveřejnit, ale neustále jsem nebyl schopen k nim napsat nějakou dokumentaci a zejména udržovat publikovanou verzi projektu v aktuálním stavu. Microsoft nicméně spustil nový komunitní projekt **[**CodePlex**](http://www.codeplex.com/)**, kde existuje infrastruktura, která by mi tento úkol měla značně ulehčit.
 

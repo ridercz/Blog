@@ -20,7 +20,7 @@ Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl
 
 Raspberry Pi je miniaturní jednodeskový mikropočítač, který je levný a snadno dostupný. Může na něm běžet kdeco, třeba Linux nebo speciální edice Windows 10. Posledně jmenovaný systém je teprve v plenkách, takže pokud chcete na RPi něco vážnějšího dělat, tak vám toho času nezbude, než si začít s Linuxem. 
 
-[![Celkový pohled na Raspberry Pi](http://www.aspnet.cz/Files/20150713-atropa_rpihw_thumb_1.jpg "Celkový pohled na Raspberry Pi")](http://www.aspnet.cz/Files/20150713-atropa_rpihw_4.jpg)
+[![Celkový pohled na Raspberry Pi](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_thumb_1.jpg "Celkový pohled na Raspberry Pi")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_4.jpg)
 
 Abych se nemusel vzdávat své oblíbené technologie .NET, chtěl jsem vyzkoušet, jak je možné ASP.NET aplikace (psané pomocí nového ASP.NET 5) reálně provozovat na Linuxu za hranicemi dema.
 

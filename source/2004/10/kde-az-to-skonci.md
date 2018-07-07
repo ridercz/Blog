@@ -15,6 +15,6 @@ Ovšem s přibývajícím věkem se činnost našeho pejska mění. Od nesystema
 
 S údivem jsme nedávno zjistili, že si umí z láhve zubama a tlapami odšroubovat uzávěr, aby se dostala dovnitř. Zatím jí ještě plně přesně nedochází, že když láhev správným způsobem nakloní, vyteče jí obsah přímo do tlamy.
 
-Děsím se okamžiku, kdy si vlka začne z kuchyně brát <em>plné</em> lahve. Je hyperaktivní i v normálním stavu, nedovedu si představit, jak by se chovala nadopovaná kofeinem :)
+Děsím se okamžiku, kdy si vlka začne z kuchyně brát *plné* lahve. Je hyperaktivní i v normálním stavu, nedovedu si představit, jak by se chovala nadopovaná kofeinem :)
 
-Nyní ovšem směřuje své úsilí jiným směrem, lahve až na další pokořila. Velmi často ji můžeme najít jak stojí ve vaně a zkoumá kohoutek, ze kterého dokážeme vypustit ten nádherný proud vody, který se tak dobře lemtá. Máme pákovou baterii, takže až nás při příchodu domů přivítá vesele zurčíčí potůček, bude jasné, že Esta už objevila, že stačí jenom <em>takhle</em> strčit čumákem...
+Nyní ovšem směřuje své úsilí jiným směrem, lahve až na další pokořila. Velmi často ji můžeme najít jak stojí ve vaně a zkoumá kohoutek, ze kterého dokážeme vypustit ten nádherný proud vody, který se tak dobře lemtá. Máme pákovou baterii, takže až nás při příchodu domů přivítá vesele zurčíčí potůček, bude jasné, že Esta už objevila, že stačí jenom *takhle* strčit čumákem...

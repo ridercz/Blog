@@ -19,7 +19,7 @@ Předchozí povídání bylo věnováno **[Fredericku Forsythovi](/ShowRecord.as
 
 ## Dick Francis
 
- ![Fotografie Dicka Francise](/files/francis.jpg "Dick Francis na koni Possible, listopad 1950. Z knihy Dick Francis - Žokej steeplechase")Málokomu se podaří proslavit se za život v jednom oboru. Dicku Francisovi se to podařilo hned dvakrát.
+ ![Fotografie Dicka Francise](https://www.cdn.altairis.cz/Blog/francis.jpg "Dick Francis na koni Possible, listopad 1950. Z knihy Dick Francis - Žokej steeplechase")Málokomu se podaří proslavit se za život v jednom oboru. Dicku Francisovi se to podařilo hned dvakrát.
 
 V letech 1953-54 byl britským žokejem-šampiónem. Vyhrál více než 350 dostihů, ale jeho nejslavnějším dostihem byla Velká národní v roce 1956, kterou nevyhrál, když jeho kůň Devon Loch náhle zkolaboval na vítězné pozici krátce před cílem. 
 
@@ -33,7 +33,7 @@ Je obecně známo, že důležitou roli hrála ve Francisově tvorbě jeho žena
 
 Dick Francis je - nebo alespoň v devadesátých letech byl - jedním z nejprodávanějších autorů v ČR, a to i za minulého režimu. To je o to zvláštnější, že dostihy jsou u nás sportem nepříliš populárním.
 
- ![Obálka knihy Nervy](/files/francis_cover.jpg "Obálka knihy Nervy, vyd. Olympia, autor obálky M. Zhouf")Jsem přesvědčen o tom, že k úspěchu Francisových knih u nás výrazně přispěl jejich výborný překlad. Všechny překlady jsou dílem **[Doc. MUDr. Jaroslavy Moserové, DrSc](http://www.moserova.cz/)**. Mimochodem senátorky za Pardubice a někdejší [kandidátky na prezidentskou funkci](/ShowRecord.aspx?day=20030130).
+ ![Obálka knihy Nervy](https://www.cdn.altairis.cz/Blog/francis_cover.jpg "Obálka knihy Nervy, vyd. Olympia, autor obálky M. Zhouf")Jsem přesvědčen o tom, že k úspěchu Francisových knih u nás výrazně přispěl jejich výborný překlad. Všechny překlady jsou dílem **[Doc. MUDr. Jaroslavy Moserové, DrSc](http://www.moserova.cz/)**. Mimochodem senátorky za Pardubice a někdejší [kandidátky na prezidentskou funkci](/ShowRecord.aspx?day=20030130).
 
 Francisovy knihy jsou si v mnohem podobné: hlavním hrdinou je muž středních let. Zásadně čestný a přímý, i když někdy s temnějšími okamžiky minulosti. Většinou shodou náhod, často i proti své vůli, je vtažen do nečisté hry, kterou i přesto, že je fyzicky týrán, ukončí. Různorodost prostředí a vedlejších zápletek je však taková, že se knihy nezdají být stereotypními.
 

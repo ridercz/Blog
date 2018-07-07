@@ -54,4 +54,4 @@ Jsou vypsány následující termíny:
 *   Brno, 19-20. března 2007
 *   Praha, 2-3. dubna 2007 
 
-Cena kurzu je 7400 Kč (nebo 6660 Kč s [10% slevou pro čtenáře ASPNET.CZ](/Articles/116-sleva-na-vyvojarske-kurzy-pro-ctenare-aspnet-cz.aspx)). Přihlašovat se můžete přes [web počítačové školy Gopas](http://www.gopas.cz/).
+Cena kurzu je 7400 Kč (nebo 6660 Kč s [10% slevou pro čtenáře ASPNET.CZ](https://www.aspnet.cz/Articles/116-sleva-na-vyvojarske-kurzy-pro-ctenare-aspnet-cz.aspx)). Přihlašovat se můžete přes [web počítačové školy Gopas](http://www.gopas.cz/).

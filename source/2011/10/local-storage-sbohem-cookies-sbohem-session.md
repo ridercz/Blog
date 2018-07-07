@@ -119,6 +119,6 @@ Nenašel jsem žádný nástroj, kterým bych mohl prohlížet a manipulovat obs
 
 V době psaní tohoto článku jsou oba soubory nahrané i v rootu serveru [www.aspnet.cz](http://www.aspnet.cz), takže si můžete pohrát třeba právě s indikací nových komentářů. Při nějakém dalším update ty živé verze zase odstraním, takže se na jejich existenci moc nespoléhejte.
 
-*   [20111013-local-storage-explorer.zip](/files/20111013-local-storage-explorer.zip) (4kB – download)
+*   [20111013-local-storage-explorer.zip](https://www.cdn.altairis.cz/Blog/2011/20111013-local-storage-explorer.zip) (4kB – download)
 *   [Local Storage Explorer](/lsexp.html) (živý)
 *   [Session Storage Explorer](/ssexp.html) (živý)

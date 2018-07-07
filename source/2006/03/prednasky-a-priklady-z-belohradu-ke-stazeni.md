@@ -13,9 +13,9 @@ Pokud jde všechno podle plánu, začínám právě v okamžiku vydání tohoto 
 
 Obvykle na svých přednáškách slibuji, že dám příklady ke stažení a obvykle mi to docela dost dlouho trvá. Tentokrát jsem se rozhodl k tomu přistoupit opačně a využít vlastnosti svého nového publikačního systému, který umožňuje čánek vydat v nastavenou dobu.
 
- ![Tvorba UI v ASP.NET 2.0](/Files/20060315-Belohrad.png) 
+ ![Tvorba UI v ASP.NET 2.0](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad.png) 
 
 Zde tedy najdete prezentace a příklady, které budu předvádět:
 
-*   [ **Prezentace** (PPT ZIP 1.3 MB)](/files/20060315-Belohrad-Prezentace.zip) 
-*   [ **Příklady** (ZIP 8 MB)](/Files/20060315-Belohrad-Samples.zip) 
+*   [ **Prezentace** (PPT ZIP 1.3 MB)](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad-Prezentace.zip) 
+*   [ **Příklady** (ZIP 8 MB)](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad-Samples.zip) 

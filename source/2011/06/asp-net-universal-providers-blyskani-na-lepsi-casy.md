@@ -20,7 +20,7 @@ Nová generace providerů je založena na Entity Frameworku a je, jak již bylo 
 
 Má nižší nároky na databázovou strukturu, vyžaduje jenom šest tabulek (žádné uložené procedury a pohledy), a struktura tabulek je skoro příčetná:
 
-[![UniversalProviders](http://www.aspnet.cz/Files/20110630-UniversalProviders_thumb.png "UniversalProviders")](http://www.aspnet.cz/Files/20110630-UniversalProviders_2.png)
+[![UniversalProviders](https://www.cdn.altairis.cz/Blog/2011/20110630-UniversalProviders_thumb.png "UniversalProviders")](https://www.cdn.altairis.cz/Blog/2011/20110630-UniversalProviders_2.png)
 
 Bohužel i nadále zůstává plně zachována logika ukládání údajů více aplikací do jedné databáze, což činí propojení dat providera se zbytkem datové struktury poněkud komplikované. Rovněž je zachováno ukládání profilových vlastností serializovaně.
 

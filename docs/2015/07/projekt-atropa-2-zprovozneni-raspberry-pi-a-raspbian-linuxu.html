@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -19,7 +21,7 @@
       <h1>Projekt Atropa (2): Zprovoznění Raspberry Pi a Raspbian Linuxu</h1>
       <section class="article">
         <p>Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET. Oficiální návod ke zprovoznění (anglicky) najdete na webu <a href="https://www.raspberrypi.org/documentation/installation/">Raspberry Pi</a>.</p>
-<p>Nezapomeňte si přečíst <a href="/articles/5429-projekt-atropa-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">úvod k této sérii</a>, kde najdete seznam všeho potřebného a důležitá varování.</p>
+<p>Nezapomeňte si přečíst <a href="https://www.aspnet.cz/Articles/5429-projekt-atropa-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">úvod k této sérii</a>, kde najdete seznam všeho potřebného a důležitá varování.</p>
 <h2 id="co-budete-potrebovat">Co budete potřebovat?</h2>
 <ul>
 <li><strong>Raspberry Pi.</strong> Já pracuji s <a href="https://www.alza.cz/raspberry-pi-2-d2307258.htm">RASPBERRY Pi 2 Model B</a>, ale měl by vám stačít i <a href="https://www.alza.cz/raspberry-pi-model-b-d2141877.htm">RASPBERRY Pi Model B+</a>. (Linky vedou na Alza.cz, ale RPi lze na menších e-shopech koupit výrazně levněji). Doporučuji si k němu koupit i nějakou krabičku.</li>
@@ -33,7 +35,7 @@
 <h2 id="priprava-microsd-karty">Příprava MicroSD karty</h2>
 <p>Vložte MicroSD kartu do čtečky a připojte k počítači. Kartu je třeba zformátovat na FAT32 file systém. V zásadě k tomuto účelu můžete použít i běžné funkce operačního systému, nicméně lepší nápad je použít utilitu <a href="https://www.sdcard.org/downloads/formatter_4/">SD Formatter</a>, která je dílem SD Association a je určena speciálně pro práci s paměťovými kartami.</p>
 <p>Spusťte utilitu, vyberte patřičný disk a po klepnutí na tlačítko <em>Option</em> povolte <em>Format size adjustment</em>, čímž zformátujete celou kartu, nejen případnou první partition:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_sdformat_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_sdformat_thumb.png" alt="Formátování SD karty" title="Formátování SD karty" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_sdformat_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_sdformat_thumb.png" alt="Formátování SD karty" title="Formátování SD karty" /></a></p>
 <p>Nyní na kartu musíte nahrát správná data. Existují v zásadě tři postupy:</p>
 <ul>
 <li>Můžete použít NOOBS Lite, kdy na kartu nahrajete minimální množství dat a zbytek se dynamicky dotáhne při instalaci. Musíte mít ovšem Raspberry připojené k Internetu, nejlépe klasickým ethernetovým kabelem (nejsem si jist, zda to funguje přes Wi-Fi). Automaticky se dotáhne vše potřebné.</li>
@@ -44,13 +46,13 @@
 <p>Já budu v následujícím návodu používat první zmíněný postup a použiji tedy <a href="https://downloads.raspberrypi.org/NOOBS_lite_latest">NOOBS Lite</a>. Stáhněte si ZIP archiv, který má 22 MB a jeho obsah (nikoliv archiv samotný) uložte na SD kartu do rootu. V kořenovém adresáři musíte mít soubor <code>bootcode.bin</code> a další.</p>
 <h2 id="zapojeni-rpi">Zapojení RPi</h2>
 <p>Na následujícím obrázku vidíte zapojené Raspberry Pi model 2+ plné jeho kráse:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_rpihw_4.jpg"><img src="http://www.aspnet.cz/Files/20150713-atropa_rpihw_thumb_1.jpg" alt="Celkový pohled na Raspberry Pi" title="Celkový pohled na Raspberry Pi" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_4.jpg"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_thumb_1.jpg" alt="Celkový pohled na Raspberry Pi" title="Celkový pohled na Raspberry Pi" /></a></p>
 <p>V levém dolním rohu je připojena USB Wi-Fi, nad ní vede kabel k USB klávesnici, dále je ethernetový síťový kabel. Nahoře je HDMI kabel k monitoru a MicroUSB napájení (které zatím nepřipojujte) a vpravo uprostřed je ve spodní části desku MicroSD karta. RPi mám v průhledné krabičce, kterou si nicméně musíte koupit zvlášť a je vhodná spíše na dema, než na praktické použití.</p>
 <p>V pravé dolní části desky je červená LEDka (na fotce svítí). Pokud začne poblikávat, máte příliš slabý zdroj. Na monitoru se přitom v pravém horním rohu objeví duhový čtvereček. Nestabilita napájení může způsobovat značné problémy, takže si ve vlastním zájmu obstarejte kvalitní zdroj.</p>
 <p>Zasuňte MicroSD kartu a zapojte všechny kabely, napájení jako poslední.</p>
 <h2 id="instalace-operacniho-systemu">Instalace operačního systému</h2>
 <p>Raspberry Pi rychle nabootuje a na monitoru se vám zobrazí prostředí NOOBS, kde si můžete vybrat (mezerníkem) operační systémy, které chcete instalovat. Vyberte si Raspbian, což je speciální varianta Debianu pro Raspberry Pi. Stiskem klávesy I zahájíte instalaci.</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_rpinoobs_2.jpg"><img src="http://www.aspnet.cz/Files/20150713-atropa_rpinoobs_thumb.jpg" alt="Instalace operačního systému" title="Instalace operačního systému" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpinoobs_2.jpg"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpinoobs_thumb.jpg" alt="Instalace operačního systému" title="Instalace operačního systému" /></a></p>
 <p>Ta bude nějakou dobu trvat, přičemž přesnější kvantifikace oné doby záleží na rychlosti vašeho připojení k Internetu. Budou se stahovat zhruba dva gigabajty dat. Tak si běžte uvařit kafe. Nebo, máte-li ADSL nebo mobilní připojení, oběd o šesti chodech. Po dokončení stiskem klávesy Enter RPi restartujte.</p>
 <p>Po restartu se spustí textové menu. V něm si můžete změnit heslo (výchozí je uživatel <code>pi</code> s heslem <code>raspberry</code>, obojí je case sensitive). V International settings si můžete nastavit například časovou zónu (ale pozor, RPi nemá hodiny reálného času) a rozložení klávesnice. Až budete spokojeni, vyberte <em>Finish</em>.</p>
 <p>Po dokončení textové části setupu se vám ukáže příkazová řádka s promptem <code>pi@raspberrypi ~ $</code>. Počítač můžete používat s připojenou klávesnicí, monitorem a případně myší. K dispozici je celkem šest terminálů, mezi kterými se přepínáte pomocí klávesové zkratky <em>Alt+F1</em> až <em>Alt+F6</em>. Kromě textového můžete použít i grafické rozhraní (to spustíte příkazem <code>startx</code>).</p>
@@ -62,14 +64,14 @@
 <p>Maje cílové adresy, můžeme se připojit. K tomu potřebujete SSH klienta a nejčastěji se používá program jménem Putty. Stáhněte si <a href="http://the.earth.li/%7Esgtatham/putty/latest/x86/putty.zip">ZIP soubor</a> a někam ho rozbalte.</p>
 <p>Spusťte program <code>PUTTY.EXE</code>. Aby vše řádně fungovalo, je dobrý nápad nastavit některé parametry.</p>
 <p>V levé části klepněte na <em>Appearance</em> a zvolte si vašemu oku libou velikost a typ fontu. Já používám Consolas o velikost 14 bodů, ale já jsem napůl slepý, vám bude možná vyhovovat menší písmo.</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_putty_1_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_putty_1_thumb.png" alt="Konfigurace písma v Putty" title="Konfigurace písma v Putty" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_1_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_1_thumb.png" alt="Konfigurace písma v Putty" title="Konfigurace písma v Putty" /></a></p>
 <p>V sekci Translation si jako <em>Remote character set</em> vyberte UTF-8 a ve spodní části vyberte <em>Use Unicode Line Drawing Code Points</em>.</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_putty_2_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_putty_2_thumb.png" alt="Konfigurace kódování v Putty" title="Konfigurace kódování v Putty" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_2_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_2_thumb.png" alt="Konfigurace kódování v Putty" title="Konfigurace kódování v Putty" /></a></p>
 <p>V sekci Session zadejte jako název nebo IP adresu cílového zařízení dříve zjištěnou IP adresu a jako typ spojení SSH. Poté klepněte na <em>Default Settings</em> a <em>Save</em>, čímž nastavení uložíte jako výchozí.</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_putty_3_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_putty_3_thumb.png" alt="Parametry spojení v Putty" title="Parametry spojení v Putty" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_3_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_3_thumb.png" alt="Parametry spojení v Putty" title="Parametry spojení v Putty" /></a></p>
 <p>Nyní můžete klepnout na <em>Open</em> a připojit se. Při prvním připojení budete vyzváni k potvrzení správnosti SSH klíče, což potvrďte (bezpečnost zde v tomto okamžiku neřešíme, pro ostré nasazení je nutné vygenerovat vlastní klíč a ověřit si pomocí fingerprintu jeho pravost). Poté musíte zadat uživatelské jméno (<code>pi</code>) a heslo (<code>raspberry</code>, pokud jste ho dříve nezměnili).</p>
 <p>Poté budete úspěšně přihlášeni:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_putty_4_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_putty_4_thumb.png" alt="Přihlášení ke vzdálenému systému" title="Přihlášení ke vzdálenému systému" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_4_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_4_thumb.png" alt="Přihlášení ke vzdálenému systému" title="Přihlášení ke vzdálenému systému" /></a></p>
 <p>Tipy k použití Putty:</p>
 <ul>
 <li>Okno můžete myší zvětšovat a zmenšovat v obou směrech. Přizpůsobí se počet řádků a sloupců.</li>
@@ -91,7 +93,7 @@
 </ul>
 <p>Vše najednou a bez ptaní nainstalujete následujícím příkazem:</p>
 <p>sudo apt-get install mc lynx dnsutils -y</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_mc_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_mc_thumb.png" alt="Midnight Commander spustíte příkazem 'mc'" title="Midnight Commander spustíte příkazem 'mc'" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_thumb.png" alt="Midnight Commander spustíte příkazem 'mc'" title="Midnight Commander spustíte příkazem 'mc'" /></a></p>
 <h2 id="restart-a-vypnuti">Restart a vypnutí</h2>
 <p>Žádný počítač by se neměl vypínat vytažením napájení a Raspberry Pi není výjimkou. Pro vypnutí použijte příkaz <code>sudo shutdown -hP now</code> a pro restart <code>sudo reboot</code>. Pokud se chcete jenom odhlásit ze vzdáleného terminálu, zavřete okno Putty nebo použijte příkaz <code>logout</code>.</p>
 

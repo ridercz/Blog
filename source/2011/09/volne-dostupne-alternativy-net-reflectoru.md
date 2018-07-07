@@ -22,7 +22,7 @@ Našel jsem tři bezplatné a s radostí se o ně podělím. Všechny jsou posta
 
 [http://www.devextras.com/decompiler/](http://www.devextras.com/decompiler/ "http://www.devextras.com/decompiler/")
 
-[![Screenshot CodeReflect](http://www.aspnet.cz/Files/20110912-codereflect_thumb_1.png "Screenshot CodeReflect")](http://www.aspnet.cz/Files/20110912-codereflect_4.png)
+[![Screenshot CodeReflect](https://www.cdn.altairis.cz/Blog/2011/20110912-codereflect_thumb_1.png "Screenshot CodeReflect")](https://www.cdn.altairis.cz/Blog/2011/20110912-codereflect_4.png)
 
 Velice jednoduchý nástroj, rozhraním i funkcemi připomíná první verze .NET Reflectoru. Výbava je skutečně jenom velmi základní, umí načíst vybrané assemblies a postupně je procházet. Stažení je zdarma a bezproblémové, aplikaci není nutné instalovat, stačí rozbalit a spustit. Zásadně mi vadí absence vyhledávání a nemožnost dekompilovat a zobrazit celou třídu najednou – buďto to nástroj neumí a nebo nevím, jak ho k tomu donutit. Také syntax highlighting není nijak skvělý.
 
@@ -32,7 +32,7 @@ Aplikaci vyvíjí komerční firma, která mimo jiné vyvíjí obfuskátor, tedy
 
 [http://wiki.sharpdevelop.net/ilspy.ashx](http://wiki.sharpdevelop.net/ilspy.ashx "http://wiki.sharpdevelop.net/ilspy.ashx")
 
-[![Screenshot ILSpy](http://www.aspnet.cz/Files/20110912-ilspy_thumb.png "Screenshot ILSpy")](http://www.aspnet.cz/Files/20110912-ilspy_2.png)
+[![Screenshot ILSpy](https://www.cdn.altairis.cz/Blog/2011/20110912-ilspy_thumb.png "Screenshot ILSpy")](https://www.cdn.altairis.cz/Blog/2011/20110912-ilspy_2.png)
 
 Další jednoduchý nástroj postavený také na knihovně Mono Cecil. Vzhledově se od předchozího téměř neliší. Pokud se funkcí týče, obsahuje jich pár navíc, z nichž asi nejpodstatnější bude možnost vyhledávání v kódu. Ani v ILSpy jsem nenašel možnost pohodlně rozbalit dekompilovaný kód celé třídy, ale zase má ze všech posuzovaných asi nejlepší syntax highlighting.
 
@@ -42,7 +42,7 @@ ILSpy je open source, další z děťátek projektu [SharpDevelop](http://www.sh
 
 [http://www.telerik.com/products/decompiler.aspx](http://www.telerik.com/products/decompiler.aspx "http://www.telerik.com/products/decompiler.aspx")
 
-[![Screenshot JustDecompile](http://www.aspnet.cz/Files/20110912-justdecompile_thumb.png "Screenshot JustDecompile")](http://www.aspnet.cz/Files/20110912-justdecompile_2.png)
+[![Screenshot JustDecompile](https://www.cdn.altairis.cz/Blog/2011/20110912-justdecompile_thumb.png "Screenshot JustDecompile")](https://www.cdn.altairis.cz/Blog/2011/20110912-justdecompile_2.png)
 
 Firma Telerik je vývojářům známa nejvíce jako výrobce komponent pro ASP.NET Web Forms, MVC, Windows Phone… Poslední dobou se snaží proniknout i do oblasti pomocných vývojových nástrojů programy jako JustMock a JustCode. Nově nabízí též program JustDecompile, který se mi i přes poněkud svébytné uživatelské rozhraní ze třech posuzovaných programů líbí nejvíc.
 

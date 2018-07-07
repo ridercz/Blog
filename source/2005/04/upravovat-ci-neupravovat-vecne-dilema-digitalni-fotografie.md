@@ -17,8 +17,8 @@ Druhým tamo diskutovaným tématem je, zda je z hlediska vyššího principu mr
 
 Řada lidí, kteří jsou proti digitálním úpravám fotografií argumentuje, že fotografie je historicky věrným zachycením skutečnosti. Já osobně digitální úpravy hojně používám, obhajuji a to především proto, že fotografie, ať už klasická nebo digitální, věrným zachycením skutečnosti není a nikdy nebyla.
 
-Podle mého názoru představuje fotografie v nejlepším případě <em>komentář fotografa</em> ke skutečnosti. Ponechme stranou jakékoliv modifikace a retuše, které v žádném případě nejsou doménou pouze digitální fotografie. Fotograf svůj názor vyjadřuje už jenom výběrem témat snímku a jeho kompozicí.
+Podle mého názoru představuje fotografie v nejlepším případě *komentář fotografa* ke skutečnosti. Ponechme stranou jakékoliv modifikace a retuše, které v žádném případě nejsou doménou pouze digitální fotografie. Fotograf svůj názor vyjadřuje už jenom výběrem témat snímku a jeho kompozicí.
 
-Pokud přijmeme tento přístup, platí že <em>účel světí prostředky</em>. Pokud něco fotografuji, činím tak zpravidla proto, že chci okolnímu světu zprostředkovat svůj zážitek nebo názor. Fotografie pro mne není cílem, ale prostředkem. Pokud bych uměl kreslit, tak to místo fotografování nakreslím. Nebo napíšu či složím symfonickou báseň - podle osobních preferencí a schopností.
+Pokud přijmeme tento přístup, platí že *účel světí prostředky*. Pokud něco fotografuji, činím tak zpravidla proto, že chci okolnímu světu zprostředkovat svůj zážitek nebo názor. Fotografie pro mne není cílem, ale prostředkem. Pokud bych uměl kreslit, tak to místo fotografování nakreslím. Nebo napíšu či složím symfonickou báseň - podle osobních preferencí a schopností.
 
 Pokud naznám, že mému cíli prospěje, abych provedl jisté úpravy, není to na závadu. Mohu tím napravit své chyby (nedostatek zručnosti při pořizování záznamu nahradím zručností při jeho zpracování), případě zvýrazním své sdělení prostředky ve fotografii nedostupnými.

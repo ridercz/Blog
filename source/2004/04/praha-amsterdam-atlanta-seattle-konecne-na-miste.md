@@ -10,12 +10,12 @@
 
 Vždycky jsem záviděl románovým hrdinům samozřejmou lehkost, s jakou letadly cestovali po celém světě. Cestu skoro kolem světa lze podniknout i nedobrovolně a poté, co jsem tak učinil, jsem přestal Forsythovým literárním postavám závidět.
 
-<em>There’s something in the sky you can rely on. Everywhere and always. KLM – The Reliable Airline.</em> To je plakátový reklamní slogan letecké společnosti KLM, jejíchž služeb cestou na summit využíváme. Tedy, slušelo by se říci „služeb pod její značkou poskytovaných“, protože let Praha – Amsterdam provozují ČSA a Amsterdam – Seattle zase Northwest Airlines.
+*There’s something in the sky you can rely on. Everywhere and always. KLM – The Reliable Airline.* To je plakátový reklamní slogan letecké společnosti KLM, jejíchž služeb cestou na summit využíváme. Tedy, slušelo by se říci „služeb pod její značkou poskytovaných“, protože let Praha – Amsterdam provozují ČSA a Amsterdam – Seattle zase Northwest Airlines.
 [![Excitovaný David Pavlík - ještě neví co ho čeká](http://gallery.rider.cz/Events/Microsoft/MVP_Summit_2004/20040404-060234-0000.jpg?w=200)](http://gallery.rider.cz/Events/Microsoft/MVP_Summit_2004/20040404-060234-0000.jpg.xhtml.cs) 
 
 Celý summit pro mne začal v pět hodin ráno, kde jsme se v počtu třech lidí a jednoho Valáška sešli na Ruzyni (letiště, nikoliv vazební věznice). Expedici – nebo chcete-li slovy našich triček „MVP SUMMIT 2004 CZECH & SLOVAK TEAM“ tvořili tři čs. MVP (moje maličkost, Slavo Furman a Petr Šetka), láskyplně opečováni naším MVP leadem Davidem Pavlíkem z Microsoftu.
 
-Bez zásadnějších příhod jsme se naboardovali, odstrartovali a já otevřel vhodnou knihu pro duchovní povznesení v letadle: <strong>Večerní zprávy</strong>. Pro sklerotiky a neznalé, ta kniha začíná podrobným popisem letecké havárie.
+Bez zásadnějších příhod jsme se naboardovali, odstrartovali a já otevřel vhodnou knihu pro duchovní povznesení v letadle: **Večerní zprávy**. Pro sklerotiky a neznalé, ta kniha začíná podrobným popisem letecké havárie.
 
 Jak jsem si tak četl, nijak mi nepřipadlo divné hlášení palubního rozhlasu, kde se letuška ptala, zda se mezi cestujícími náhodou nenachází nějaký zaměstnanec aerolinek. Teprve když nám oznámili, že se náš stroj pro poruchu pokusí o nouzové přistání zpět na ruzyňském letišti došlo mi, že to není trik páně Haileyova vypravěčského umu, ale tvrdá realita.
 [![Provozně netypické letadlo ČSA](http://gallery.rider.cz/Events/Microsoft/MVP_Summit_2004/20040404-081228-0000.jpg?h=150)](http://gallery.rider.cz/Events/Microsoft/MVP_Summit_2004/20040404-081228-0000.jpg.xhtml.cs) 

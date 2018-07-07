@@ -18,15 +18,15 @@ V šestém dílu seriálu o vytvoření ["zlé maliny" pro útoky sociálním in
 
 Co bude naše aplikace dělat? Pokud se uživatel připojí k otevřenému Wi-Fi hotspotu, každý HTTP požadavek ho přenese na naši aplikaci. Ta mu ukáže úhledný dialog a nabídne, že se může připojit k Internetu, pokud se přihlásí pomocí služeb jako je Facebook, Twitter, Google Account, Microsoft Account nebo místní Seznam.cz:
 
-[![atropa-gate-step0](http://www.aspnet.cz/Files/20150823-atropa-gate-step0_thumb.png "atropa-gate-step0")](http://www.aspnet.cz/Files/20150823-atropa-gate-step0_2.png)
+[![atropa-gate-step0](https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step0_thumb.png "atropa-gate-step0")](https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step0_2.png)
 
 Seznam služeb je konfigurovatelný, pro změny stačí editovat soubor `config.json` a přidat správně pojmenovaný soubor s obrázkem. Poté, co uživatel klepnutím vybere službu, zobrazí se mu přihlašovací dialog a bude vyzván k zadání jména nebo hesla pro příslušnou službu:
 
-[![atropa-gate-step1](http://www.aspnet.cz/Files/20150823-atropa-gate-step1_thumb.png "atropa-gate-step1")](http://www.aspnet.cz/Files/20150823-atropa-gate-step1_2.png)
+[![atropa-gate-step1](https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step1_thumb.png "atropa-gate-step1")](https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step1_2.png)
 
 Bez ohledu na to, jaké heslo zadá, bude mu po odeslání zobrazena následující chybová stránka:
 
-[![atropa-gate-step2](http://www.aspnet.cz/Files/20150823-atropa-gate-step2_thumb_1.png "atropa-gate-step2")](http://www.aspnet.cz/Files/20150823-atropa-gate-step2_4.png)
+[![atropa-gate-step2](https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step2_thumb_1.png "atropa-gate-step2")](https://www.cdn.altairis.cz/Blog/2015/20150823-atropa-gate-step2_4.png)
 
 Vše vypadá podle mého názoru velice elegantně a profesionálně. Upřímně řečeno, aplikace je minimálně po vizuální stránce a po stránce podpory pro mobilní zařízení napsána lépe, než většina skutečných přihlašovacích portálů.
 

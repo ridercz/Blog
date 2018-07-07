@@ -188,4 +188,4 @@ Spusťte Visual Studio a v menu jděte do `Tools –> Options –> Package Manag
 
 Tímto postupem jste do svého projektu nahráli nejnovější verze vámi používaných knihoven, svoje vlastní nastavení a všechno je ve stavu způsobilém další práce a případně odinstalace modulů, které zrovna v tomto konkrétním projektu nepotřebujete.
 
-Moje hotové šablony si můžete stáhnout [zde](/files/20120903-SiteBoilerplate.zip).
+Moje hotové šablony si můžete stáhnout [zde](https://www.cdn.altairis.cz/Blog/2012/20120903-SiteBoilerplate.zip).

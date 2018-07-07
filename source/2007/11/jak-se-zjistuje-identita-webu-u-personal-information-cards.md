@@ -11,7 +11,7 @@
 
 ## Pozor, tento článek je již neaktuální
 
-Problém popisovaný v tomto článku byl vyřešen v ISIP 1.5. Podrobnější informace najdete v [novém článku](/Articles/216-reseni-problemu-s-identitou-webu-u-personal-information-cards.aspx).
+Problém popisovaný v tomto článku byl vyřešen v ISIP 1.5. Podrobnější informace najdete v [novém článku](https://www.aspnet.cz/Articles/216-reseni-problemu-s-identitou-webu-u-personal-information-cards.aspx).
 
 ## Jemný úvod do Information Cards
 
@@ -44,7 +44,7 @@ V každém z těchto případů se postupuje jinak a každé z těchto řešení
 
 Certifikáty s rozšířenou validací (Extended Validation, EV) jsou relativní novinkou. Při jejich vydání je žadatel podrobně prověřován: ověřuje se název firmy, sídlo, zda je žádající osoba oprávněna jednat za společnost atd. Celý proces je poměrně komplikovaný, administrativně náročný a drahý - ceny EV certifikátů se pohybují řádově ve stovkách dolarů a jejich získání může trvat i několik měsíců.
 
-![EV certifik&aacute;t](http://www.aspnet.cz/Files/20071127-20071124-EVCert_5.png) 
+![EV certifik&aacute;t](https://www.cdn.altairis.cz/Blog/2007/20071127-20071124-EVCert_5.png) 
 
 Vizuálně se EV certifikát projeví tak, že se adresní řádek zbarví do zelena (v IE a Mozille) a v jeho pravé části se střídá název společnosti, které certifikát patří (na shora uvedeném obrázku je to Microsoft) a název certifikační autority, která jej vydala (VeriSign).
 

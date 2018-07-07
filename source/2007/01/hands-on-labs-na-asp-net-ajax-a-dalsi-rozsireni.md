@@ -18,9 +18,9 @@ Tento kurz by se měl zaměřit na použití následujících technologií:
 *   [ASP.NET 2.0 CSS Friendly Control Adapters](http://www.asp.net/cssadapters/) 
 *   [Web Application Projects](http://msdn2.microsoft.com/en-us/asp.net/aa336618.aspx) (také součást VS 2005 SP1)
 *   [Web Deployment Projects](http://msdn2.microsoft.com/en-us/asp.net/aa336619.aspx) 
-*   [Alternativní membership, role a profile providers](/Articles/130-prehled-alternativnich-membership-role-a-profile-provideru-pro-asp-net.aspx)  
+*   [Alternativní membership, role a profile providers](https://www.aspnet.cz/Articles/130-prehled-alternativnich-membership-role-a-profile-provideru-pro-asp-net.aspx)  
 
-První běh tohoto kurzu se bude konat **2-3. dubna 2007** v Praze a jste na něj srdečně zváni, Jeho cena bude 7400 Kč (nebo 6660 Kč s [10% slevou pro čtenáře ASPNET.CZ](/Articles/116-sleva-na-vyvojarske-kurzy-pro-ctenare-aspnet-cz.aspx)).
+První běh tohoto kurzu se bude konat **2-3. dubna 2007** v Praze a jste na něj srdečně zváni, Jeho cena bude 7400 Kč (nebo 6660 Kč s [10% slevou pro čtenáře ASPNET.CZ](https://www.aspnet.cz/Articles/116-sleva-na-vyvojarske-kurzy-pro-ctenare-aspnet-cz.aspx)).
 
 Kurz bude realizován formou hands-on labu, tedy jeho převážnou většinu bude tvořit samostatná práce s příklady. 
 

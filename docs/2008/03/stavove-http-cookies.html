@@ -6,21 +6,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Web byl stvořen jako bezstavový a struktura HTTP a HTML tomu odpovídá. Pokud chceme tuto bezstavovost překlenout, existuje několik technik, které nám umožní toto omezení obejít. Nyní se podrobněji podíváme na první z nich: cookies." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Stavové HTTP: Cookies</h1>
       <section class="article">
-        <p>V <a href="/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx">minulém díle tohoto seriálu</a> jsme si řekli, že HTTP je protokol bezstavový a že jednou z technik, jak tuto bezstavovost obejít, je použití cookies.</p>
+        <p>V <a href="https://www.aspnet.cz/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx">minulém díle tohoto seriálu</a> jsme si řekli, že HTTP je protokol bezstavový a že jednou z technik, jak tuto bezstavovost obejít, je použití cookies.</p>
 <p>Cookies jsou jediná technika v HTTP, která je přímo navržená k tomu, abyste si mohli něco na klienta &quot;uložit&quot; a při dalším požadavku zase &quot;vyzvednout&quot;. Cookies fungují tak, že server pošle jako jednu z HTTP hlaviček odpovědi textový řetězec, který si prohlížeč uloží na disk a při dalším požadavku ho ve formě HTTP hlavičky pošle zpátky.</p>
-<p>To byl velmi zjednodušený náhled na celou problematiku, podrobnější informace o použití cookies v ASP.NET najdete v článku <strong><a href="/Articles/8-susenky-net.aspx">Sušenky.NET</a></strong> na tomto serveru.</p>
+<p>To byl velmi zjednodušený náhled na celou problematiku, podrobnější informace o použití cookies v ASP.NET najdete v článku <strong><a href="https://www.aspnet.cz/Articles/8-susenky-net.aspx">Sušenky.NET</a></strong> na tomto serveru.</p>
 <p>Do cookies můžete uložit pouze omezené množství dat. Zabrání vám v tom jednak omezení na straně prohlížeče (maximální velikost cookie se obvykle počítá v jednotkách kB, přesné číslo si nepamatuji) a druhak by vám v tom měl zabránit i zdravý rozum. Obsah cookie se přenáší s úplně každým požadavkem na váš server, a to i tehdy, když ho server vůbec nepotřebuje a nevyužije. Například při požadavcích na obrázky a další statická data. Což zvyšuje objem přenášených dat, za která obvykle tou či onou formou platíte.</p>
 <p>Cookies jsou v zásadě dvojího druhu: permanentní a per-session.</p>
 <h2 id="permanentni-cookies">Permanentní cookies</h2>

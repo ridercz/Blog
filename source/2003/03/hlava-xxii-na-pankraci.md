@@ -12,7 +12,7 @@ Včera večer jsem navštívil pražskou čtvrť Pankrác. Své odpůrce musím 
 
 A konečně jsem mohl vyfotografovat dvě zajímavé cedule, které se nacházejí v tamnější stanici metra:
 
-![](/files/hlava22_pankrac.jpg)
+![](https://www.cdn.altairis.cz/Blog/hlava22_pankrac.jpg)
 
 Hlava XXII ve své nejčistší podobě.
 

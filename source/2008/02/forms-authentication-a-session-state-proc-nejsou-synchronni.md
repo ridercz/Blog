@@ -27,11 +27,11 @@ Session state má timeout také. Standardně je nastaven na 20 minut a počítá
 
 Následující diagram zobrazuje situaci, která může nastat, pokud nastavíme platnost autentizačního ticketu i session na stejnou dobu - 20 minut.  Při prvním požadavku v čase T = 0 se vystaví autentizační ticket, který vyprší v T+20 a stejně tak se vytvoří nová session, která bude platná stejnou dobu.
 
-![](http://www.aspnet.cz/Files/20080216-20080216-AuthMissing_3.png) 
+![](https://www.cdn.altairis.cz/Blog/2008/20080216-20080216-AuthMissing_3.png) 
 
 Pokud přijde v čase T+5 požadavek na běžnou stránku, prodlouží se řádně platnost session, která tedy vyprší až v čase T+25. Nicméně platnost autentizačního ticketu se neprodlouží, protože dosud neuplynula polovina doby jeho platnosti. Pokud tedy další požadavek přijde v době T+20 až T+25 (zvýrazněna žlutě), session bude stále k dispozici, ale uživatel už bude odhlášen.
 
-![](http://www.aspnet.cz/Files/20080216-20080216-SessionMissing_3.png) 
+![](https://www.cdn.altairis.cz/Blog/2008/20080216-20080216-SessionMissing_3.png) 
 
 Druhý diagram zachycuje opačnou situaci. Počáteční stav je stejný, platnost ticketu i session začala v čase T=0. V čase T+15 přijala aplikace požadavek na stránku, která ale nevyžaduje session - handler neimplemenuje *IRequiresSessionState*. V takovém případě se sice prodlouží platnost autentizačního ticketu, ale nikoliv session. Pokud přijde další požadavek v čase T+20 až T+35 (opět zvýrazněn žlutě), dojde k opačné situaci, než minule. Uživatel bude přihlášen, ale session již nebude k dispozici a založí se nová (na diagramu se tak stalo v čase T+25).
 

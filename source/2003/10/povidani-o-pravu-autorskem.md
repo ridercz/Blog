@@ -13,7 +13,7 @@ Blogeři se poslední dobou intenzivně věnují diskusím nad kradením článk
 
 ## Podmínky ochrany autorských děl
 
-Autorská dílka jsou v českých zemích chráněna dle zákona [121/2000 o právu autorském](/files/autorsky_zakon.txt). Aby dílo spadalo pod ochranu tohoto zákona, musí být "jedinečným výsledkem tvůrčí činnosti autora a je vyjádřeno v jakékoliv objektivně vnímatelné podobě, včetně podoby elektronické, trvale nebo dočasně, bez ohledu na jeho rozsah, účel nebo význam". Jakýkoliv běžný zápis do weblogu či počin podobné povahy této definici odpovídá.
+Autorská dílka jsou v českých zemích chráněna dle zákona [121/2000 o právu autorském](https://www.cdn.altairis.cz/Blog/autorsky_zakon.txt). Aby dílo spadalo pod ochranu tohoto zákona, musí být "jedinečným výsledkem tvůrčí činnosti autora a je vyjádřeno v jakékoliv objektivně vnímatelné podobě, včetně podoby elektronické, trvale nebo dočasně, bez ohledu na jeho rozsah, účel nebo význam". Jakýkoliv běžný zápis do weblogu či počin podobné povahy této definici odpovídá.
 
 Obecně tradované je přesvědčení, že text je volně k použití, pokud není uveden jeho autor a nebo u něho není napsán copyright. Není tomu tak. Uvádění copyrightu je sice obvyklé a praktické, nicméně nemá v našem systému žádnou právní váhu -- dílo je chráněno zcela nezávisle na tom, zda nějakou doložku s céčkem v kroužku má nebo ne. Nelze se tedy odvolat na to, že mi text došel bez dalšího mailem, nebo že jsem ho "našel na Internetu".
 

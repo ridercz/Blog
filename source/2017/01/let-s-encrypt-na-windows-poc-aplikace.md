@@ -35,6 +35,6 @@ Krátce se zastavíme u bodu č. 4, neboť tam musíte zasáhnout ručně. Chall
 
 Požadovaný soubor lze snadno vytvořit pomocí příkazu echo, který stačí jenom spustit na serveru, kde je příslušný web hostován (ukázková aplikace nemusí být spuštěna na web serveru).
 
-[![AutoAcmeLogo_256](http://www.aspnet.cz/Files/20170115-AutoAcmeLogo_256_thumb.png "AutoAcmeLogo_256")](http://www.aspnet.cz/Files/20170115-AutoAcmeLogo_256_2.png)
+[![AutoAcmeLogo_256](https://www.cdn.altairis.cz/Blog/2017/20170115-AutoAcmeLogo_256_thumb.png "AutoAcmeLogo_256")](https://www.cdn.altairis.cz/Blog/2017/20170115-AutoAcmeLogo_256_2.png)
 
 Zároveň tímto P. T. čtenářům představuji i logo projektu AutoAcme. Název protokolu ACME je také název [společnosti z grotesek Looney Tunes](https://en.wikipedia.org/wiki/Acme_Corporation). Jedním z nejlepších zákazníků společnosti Acme Corporation byl Wile E. Coyote a jedním z často se objevujících motivů byla právě kovadlina, dodaná společností ACME. 

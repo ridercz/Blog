@@ -45,7 +45,7 @@ Další užitečnou novinkou jsou extension methods. V principu se jedná o způ
 
 ## Vývojové nástroje a multitargeting
 
-[![V&yacute;běr verze runtime ve Visual Studiu 2008](http://www.aspnet.cz/Files/20071203-20071202-multitargeting_thumb.gif)](http://www.aspnet.cz/Files/20071203-20071202-multitargeting_2.gif) Jak je obvyklé, s novou verzí .NETu přichází i nová verze Visual Studia. Co ale není obvyklé je nová vlastnost pojmenovaná *multitargeting*. Předchozí verze vývojových nástrojů byly spjaty s konkrétní verzí .NET Frameworku. Jedinou výjimkou je Visual Studio 2005, které je navrženo pro .NET 2.0 a verzi 3.0 se ze shora uvedených důvodů nijak zvlášť nebrání (ale také ji nijak zvlášť nepodporuje).
+[![V&yacute;běr verze runtime ve Visual Studiu 2008](https://www.cdn.altairis.cz/Blog/2007/20071203-20071202-multitargeting_thumb.gif)](https://www.cdn.altairis.cz/Blog/2007/20071203-20071202-multitargeting_2.gif) Jak je obvyklé, s novou verzí .NETu přichází i nová verze Visual Studia. Co ale není obvyklé je nová vlastnost pojmenovaná *multitargeting*. Předchozí verze vývojových nástrojů byly spjaty s konkrétní verzí .NET Frameworku. Jedinou výjimkou je Visual Studio 2005, které je navrženo pro .NET 2.0 a verzi 3.0 se ze shora uvedených důvodů nijak zvlášť nebrání (ale také ji nijak zvlášť nepodporuje).
 
 Visual Studio 2008 ve všech svých edicích (včetně Express) umožňuje vyvíjet aplikace pro .NET 2.0, 3.0 a 3.5. Nových funkcí vývojového prostředí můžete tedy využívat i při vývoji 2.0 aplikací. Formát projektů je shodný s předchozí verzí, formát solutions ovšem nikoliv. Pokud tedy chcete projekt vyvíjet v obou verzích, potřebujete dva SLN soubory, ukazující ale na stejné projekty.
 

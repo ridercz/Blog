@@ -21,4 +21,4 @@ Microsoft SQL Server Compact Edition (SQL CE) 4.0 je embedded databáze, vhodná
 
 NuGet je balíčkovač komponent pro .NET projekty. Knihovny není nutné stahovat, instalovat, konfigurovat a aktualizovat ručně, ale můžete tak činit výrazně jednodušším způsobem automaticky. Vyzkoušíme si, jak se NuGet používá a také jak můžete vytvářet vlastní NuGet balíčky pro veřejné nebo soukromé použití.
 
-**Prezentace a příklady ke stažení: **[**20110414-NovinkyBratislava.zip**](/Files/20110414-NovinkyBratislava.zip)
+**Prezentace a příklady ke stažení: **[**20110414-NovinkyBratislava.zip**](https://www.cdn.altairis.cz/Blog/2011/20110414-NovinkyBratislava.zip)

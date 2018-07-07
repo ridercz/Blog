@@ -10,6 +10,6 @@
 
 Náš pes leží ve svém pelechu, koulí očima a nevěří vlastním zrakům: páníček vstává, jakkoliv touto dobou obvykle chodí spát :o)
 
-<em>[zde doplňte libovolné z mých povolání]</em> je řehole, a momentálně se tedy vydávám na dvoudenní cestu do Němec, za účelem nákupu většího množství serverů...
+*[zde doplňte libovolné z mých povolání]* je řehole, a momentálně se tedy vydávám na dvoudenní cestu do Němec, za účelem nákupu většího množství serverů...
 
 Mám před sebou zhruba stejně dlouhou cestu jako [Felix](http://pfchudoba.byte.cz), až na to, že to naštěstí nejdu pěšky.

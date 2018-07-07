@@ -12,9 +12,10 @@
   
 
 Novinkou v ASP.NET 2.0 je nativní přístup k hlavičce (element `head`) webových stránek. Je možno ho využít například k automatickému generování odkazu na RSS feed.
- <h2>RSS autodiscovery</h2> 
 
-S rozvojem technologie RSS se objevila nutnost nějakým systemizovaným způsobem ukázat, kde leží RSS feed dané stránky. Proto vznikl mechanismus <em>RSS autodiscovery</em>. Pokud si chcete přidat tento web do čtečky, stačí zadat adresu jeho domovské stránky ([http://www.aspnet.cz/](/)) a čtečka si sama iniciativně dohledá adresu RSS feedu jako takového ([http://www.aspnet.cz/WS/GetRSS.aspx](/WS/GetRSS.aspx)).
+## RSS autodiscovery
+
+S rozvojem technologie RSS se objevila nutnost nějakým systemizovaným způsobem ukázat, kde leží RSS feed dané stránky. Proto vznikl mechanismus *RSS autodiscovery*. Pokud si chcete přidat tento web do čtečky, stačí zadat adresu jeho domovské stránky ([http://www.aspnet.cz/](/)) a čtečka si sama iniciativně dohledá adresu RSS feedu jako takového ([http://www.aspnet.cz/WS/GetRSS.aspx](/WS/GetRSS.aspx)).
 
 Celá technologie stojí na tom, že se do hlavičky stránky přidá následující kód:
 
@@ -22,12 +23,14 @@ Celá technologie stojí na tom, že se do hlavičky stránky přidá následuj�
 
 Význam atributů je následující:
 
-*   <strong>rel="alternate"</strong> určuje, že se jedná o alternativní verzi webu, o jinou možnost přístupu
-*   <strong>type="application/rss+xml"</strong> určuje, že tato alternativa je v XML, konkrétně ve formátu RSS
-*   <strong>href="..."</strong> je adresa, na níž se tato verze (feed) nachází
-*   <strong>title="..."</strong> je textový popis feedu (nadpis) <h2>Dynamické generování odkazů</h2> 
+*   **rel="alternate"** určuje, že se jedná o alternativní verzi webu, o jinou možnost přístupu
+*   **type="application/rss+xml"** určuje, že tato alternativa je v XML, konkrétně ve formátu RSS
+*   **href="..."** je adresa, na níž se tato verze (feed) nachází
+*   **title="..."** je textový popis feedu (nadpis) 
 
-![Zobrazení více RSS feedů v IE7 Beta 1](/files/20051222-IE7RSS.png)Pokud máte na webu jediný feed pro všechny články, je řešení snadné - prostě na všechny stránky vložíte jeden odkaz a je vystaráno. Nicméně pokud chcete u většího webu provozovat feedů více, například pro každou rubriku nebo autora, je to poněkud problém. RSS autodiscovery to umožňuje (můžete mít více feedů, rozlišíte je atributem <em>title</em>), ale odkazy na ně musíte generovat dynamicky.
+## Dynamické generování odkazů
+
+![Zobrazení více RSS feedů v IE7 Beta 1](https://www.cdn.altairis.cz/Blog/2005/20051222-IE7RSS.png)Pokud máte na webu jediný feed pro všechny články, je řešení snadné - prostě na všechny stránky vložíte jeden odkaz a je vystaráno. Nicméně pokud chcete u většího webu provozovat feedů více, například pro každou rubriku nebo autora, je to poněkud problém. RSS autodiscovery to umožňuje (můžete mít více feedů, rozlišíte je atributem *title*), ale odkazy na ně musíte generovat dynamicky.
 
 Naštěstí třída `System.Web.UI.Page` disponuje v ASP.NET 2.0 vlastností `Head`. Ta reprezentuje právě sekci `head` v HTML kódu. A jako (skoro) všechny ovládací prvky disponuje kolekcí `Controls`, která obsahuje ovládací prvky které jsou její součástí. Pak už stačí jen vytvořit instanci třídy `System.Web.UI.HtmlControls.HtmlLink`, nastavit jí parametry a z backendového kódu ji přidat.
 

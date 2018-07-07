@@ -24,6 +24,6 @@ Seminář je cílen na pokročilejší uživatele bez speciálních znalostí. C
 
 Akce se bude konat ve čtvrtek, **15. března 2012 v Praze**, v budově Microsoftu ("Akvárko"), od 10 do 17 hodin. Akci pořádá počítačová škola Gopas a vstup na ni stojí 2500 Kč. Registrovat se můžete na [webu Gopasu](http://www.gopas.cz/News/Seminar-Kyberkriminalnikem-snadno-a-rychle.aspx).
 
-*   [Informační leták v PDF](/files/20120221-kyberkrim-letak.pdf) 
+*   [Informační leták v PDF](https://www.cdn.altairis.cz/Blog/2012/20120221-kyberkrim-letak.pdf) 
 
 Na seminář bude volně navazovat tentokrát již zdarma přístupná akce [Bezpečná webová API, jak to dělat správně](http://www.geekcore.cz/events/497), o níž jsem psal včera.

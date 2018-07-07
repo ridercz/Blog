@@ -13,4 +13,4 @@ Pro ASP.NET 1.1 jsem napsal jako ukázkovou aplikaci publikační systém [Cheet
 
 Tyto dvě aplikace jsou si velmi podobné a používají i podobnou (ač ne stejnou) strukturu databáze. V rámci připravovaného převodu svých webů na platformu .NET 2.0 jsem napsal program, který umí převést všechna data z Cheetahu do Nemesis.
 
-Pokud po něm prahnete, můžete si ho [stáhnout včetně zdrojových kódů a dokumentace](/files/20051210-CH2N.zip) (145 kB).
+Pokud po něm prahnete, můžete si ho [stáhnout včetně zdrojových kódů a dokumentace](https://www.cdn.altairis.cz/Blog/2005/20051210-CH2N.zip) (145 kB).

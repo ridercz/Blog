@@ -6,19 +6,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="O možnosti využítí standardně zasílané hlavičky Accept-Language pro volbu preferovaného jazyka stránky jsem já osobně psal před čtyřmi lety (skoro). Dnešní živou diskusi na jistém fóru, týkající se magie způsobující že se moje osobní stránky někomu ukazují česky, někomu anglicky, jsem si zdůvodnil tím, že fórum je o psech a ne o počítačích. Když mi ovšem večer v mailboxu přistál dotaz jak z ASP.NET provést reverzní DNS lookup, kvůli volbě patřičné jazykové verze, došlo mi že je třeba jednat." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Automatické přepínání jazyka stránky podle nastavení prohlížeče</h1>
       <section class="article">
-        
+        <p>O možnosti využítí standardně zasílané hlavičky <em>Accept-Language</em> pro volbu preferovaného jazyka stránky jsem já osobně <a href="http://archive.aspnetwork.cz/art/clanek.asp?id=117">psal před čtyřmi lety</a> (skoro). Dnešní živou diskusi na jistém fóru, týkající se magie způsobující že se moje <a href="http://www.rider.cz/">osobní stránky</a> někomu ukazují česky, někomu anglicky, jsem si zdůvodnil tím, že fórum je o psech a ne o počítačích. Když mi ovšem večer v mailboxu přistál dotaz jak z ASP.NET provést reverzní DNS lookup, kvůli volbě patřičné jazykové verze, došlo mi že je třeba jednat.</p>
+<p>Internetové prohlížeče umožňují nastavit jazyk, ve kterém si uživatel přeje dostávat stránky, je-li to možné. Tuto preferenci pak posílají s každým požadavkem jako hlavičku <em>Accept-Language</em>. Bližší podrobnosti jest nalézti ve shora linkovaném článku, případně přímo v <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4">RFC 2616, sekce 14.4</a>.</p>
+<h2 id="vyuziti-v-asp.net">Využití v ASP.NET</h2>
+<p>ASP.NET umožňuje přistupovat k jazykovým preferencím pomocí vlastnosti Request.UserLanguages. Želbohu, nepříliš inteligentně, prostě rozparsuje hlavičku Accept-Header podle čárek a dál se o nic nestará. Ačkoliv RFC umožňuje nastavit každému jazyku prioritu (váhu), ASP.NET ji ignoruje, a řídí se pouze pořadím jazyků v hlavičce. V praxi to naštěstí nepředstavuje problém, protože klienti kódy jazyků posílají v patřičném pořadí.</p>
+<h2 id="nastaveni-v-msie">Nastavení v MSIE</h2>
+<p>Internet Explorer přebírá nastavení požadovaného jazyka při instalaci, podle nastavených &quot;regional settings&quot;. Je tedy pravděpodobné, že máte správně nastavenou češtinu. Pokud toto nastavení chcete změnit, jděte v menu na <em>Tools -&gt; Internet Options</em> a na záložce <em>General</em> klepněte na tlačítko <em>Languages</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2005/20050318-langpref-msie.png" alt="" /></p>
+<p>Mozilla Firefox samozřejmě v duchu svých nejlepších tradic příslušná nastavení operačního systému zcela ignoruje, na natvrdo má (alespoň v anglické verzi) nastavenou angličtinu. Náprava je naštěstí snadná a kupodivu zcela stejná jako v MSIE:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2005/20050318-langpref-firefox.png" alt="" /></p>
+
       </section>
     </main>
     <footer>

@@ -12,7 +12,7 @@
 
 Původní umělecký záměr nepočítal s tím, že v textu budou obrázky nebo něco takového. Weblog měl být mým poznámkovým blokem na psaní různých krátkých textových postřehů. Tato idea předpokládala, že web bude úzký - šířka textu měla být v podstatě stejná, jako sloupce vlevo. Počítal jsem s tím, že zde budou krátké zápisy, které zalomením na úzkou šířku opticky prodloužím.
 
-Ovšem, jak už u mých projektů bývá pravidlem, <em>jaksi se to zvrhlo</em>. Podcenil jsem sílu své grafomanie, která způsobuje, že příspěvky se rozhodně nevejdou do pár vět. Také jsem si neuvědomil, že jako letitý vlastník digitálního fotoaparátu svět kolem sebe dokumentuji v hojné míře také fotograficky.
+Ovšem, jak už u mých projektů bývá pravidlem, *jaksi se to zvrhlo*. Podcenil jsem sílu své grafomanie, která způsobuje, že příspěvky se rozhodně nevejdou do pár vět. Také jsem si neuvědomil, že jako letitý vlastník digitálního fotoaparátu svět kolem sebe dokumentuji v hojné míře také fotograficky.
 
 Pokud sledujete číslo verze systému Cheetah (dole na stránce), zjistíte, že se mění. Chystám se i na změnu desigu - Jerry má pravdu, že ten sloupec vlevo je zbytečně široký a navíc, vzhledem k tomu, že kalendář nezvýrazňuje záznamy v logu, je docela zbytečný.
 

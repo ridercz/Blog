@@ -11,9 +11,9 @@
 <!-- dcterms:created = 2006-07-17T04:00:00+02:00 -->
 <!-- dcterms:dateAccepted = 2006-07-17T04:00:00+02:00 -->
 
- ![Okno Virtual PC](/Files/20060715-VirtualPC.png)Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití. 
+ ![Okno Virtual PC](https://www.cdn.altairis.cz/Blog/2006/20060715-VirtualPC.png)Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití. 
 
-Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy "virtualizací pro normální lidi". [Předchozí díl](/Articles/103-virtualizace-uvod.aspx) byl věnován obecnému úvodu do virtualizace.
+Tento druhý díl se bude zabývat programem Microsoft Virtual PC 2004, tedy "virtualizací pro normální lidi". [Předchozí díl](https://www.aspnet.cz/Articles/103-virtualizace-uvod.aspx) byl věnován obecnému úvodu do virtualizace.
 
 ## Získání a instalace
 
@@ -46,7 +46,7 @@ Pokud se týče paměti, závisí na tom, co chcete s daným virtuálním počí
 
 Po vytvoření klepněte na tlačítko Settings. Otevře se vám okno, kde můžete podrobně nastavit všechny parametry:
 
- ![Okno Virtual PC - nastavení](/files/20060715-VpcSettings.gif) 
+ ![Okno Virtual PC - nastavení](https://www.cdn.altairis.cz/Blog/2006/20060715-VpcSettings.gif) 
 
 Okno nastavení je poněkud zrádné v tom, že některé věci můžete (celkem logicky) nastavit pouze pokud je virtuální počítač vypnuté (paměť, disky...). Jiné ovšem pouze tehdy, pokud VPC běží a jsou na něm nainstalovány Virtual Machine Additions).
 
@@ -71,7 +71,7 @@ Při použití poslední možnosti je nutné si uvědomit několik věcí:
 
 ## Spuštění VPC a instalace guest OS
 
- ![Virtuální počítač bootuje](/files/20060715-VpcBooting.gif)Klepnutím na tlačítko Start virtuální počítač spustíte a začne bootovat. Musíte na něj nainstalovat operační systém, stejně jako na fyzický počítač.
+ ![Virtuální počítač bootuje](https://www.cdn.altairis.cz/Blog/2006/20060715-VpcBooting.gif)Klepnutím na tlačítko Start virtuální počítač spustíte a začne bootovat. Musíte na něj nainstalovat operační systém, stejně jako na fyzický počítač.
 
 Nejčastěji budete postupovat tak, že si v menu *CD* připojíte fyzickou mechaniku (*Use Physical Drive*) nebo ISO image (*Capture ISO image*) a nabootujete z CD.
 

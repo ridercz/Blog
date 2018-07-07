@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Kolikrát už se vám stalo, že jste začali psát nějaký dlouhý text a pak třeba omlem zmáčknuli Refresh, zavřeli okno nebo vám po odeslání aplikace zahlásila &quot;vaše session vypršela, zkuste to znovu&quot;? Existuje jednoduché a elegantní řešení, jak tento problém řešit, pomocí DOM Storage (Local Storage)." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -42,7 +44,7 @@
 <p>Začneme tím, že si ověříme, jestli prohlížeč podporuje funkci Local Storage. Pokud ne, nic dalšího neděláme. Poté smažeme z úložiště všechny klíče, požadované atributem <code>data-rls-clear</code>. Dále naplníme všechna pole označená atributem <code>data-rls-id</code> případně z minula zapamatovanými hodnotami. Na závěr se pověsíme na událost <code>keyup</code> těchto polí handler, který uloží aktuální hodnotu do LocalStorage.</p>
 <p>Použil jsem stisk klávesy, nikoliv událost <code>change</code>. Ta se vyvolá teprve ve chvíli, kdy pole ztatí focus. Pokud ale uživatel píše delší text do jednoho pole, pokládám za pravděpodobné, že k nějakému problému dojde v průběhu editace. Toto řešení možná není úplně efektivní (kód se volá při každém stisku klávesy, a to i pokud nedošlo ke změně textu), ale nepředpokládám, že by v tomto případě byl výkon extra kritický. Pro úplnost dodávám, že řešneí není ani stoprocentně funkční – pokud uživatel text modifikuje čistě použitím myši (např. vyjmutím nebo vložením obsahu schránky z kontextového menu), nebude fungovat.</p>
 <p>Dále pak jsem se nezabýval minifikací skriptů nebo zabalením funkcionality do jQuery pluginu, ježto se v tom nevyznám. Vyřešení těchto problémů nechám případným zájemcům, kteří se v JavaScriptu vyznají lépe než já :)</p>
-<p><strong>Kompletní zdrojové kódy a příklad použití si můžete stáhnout zde: <strong><a href="/files/20111228-rls.zip"><strong>20111228-rls.zip</strong></a></strong> (4 kB).</strong></p>
+<p><strong>Kompletní zdrojové kódy a příklad použití si můžete stáhnout zde: <strong><a href="https://www.cdn.altairis.cz/Blog/2011/20111228-rls.zip"><strong>20111228-rls.zip</strong></a></strong> (4 kB).</strong></p>
 
       </section>
     </main>

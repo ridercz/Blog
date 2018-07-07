@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Základní specifikace web services (WS-I) jest praktickým důkazem pravdivosti tvrzení, že v jednoduchosti je síla. Tato specifikace je ve své podstatě neuvěřitelně primitivní. To má ovšem za následek skutečnost, že webové služby podle ní sepsané neumějí spoustu užitečných věcí, které by bylo lze od nich očekávati, příkladně autentizaci. S tím se ovšem počítalo a existuje řešení." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -46,15 +48,15 @@
 <p>Součástí naší politiky bude povolit přístup k webové službě pouze členům určité role. V mém příkladu se jmenuje &quot;<code>WebServiceUsers</code>&quot; a obsahuje jediného uživatele, jehož jméno je &quot;<code>DemoUser</code>&quot; a heslo &quot;<code>demo.password</code>&quot;. Vytvořte si tedy patřičné uživatele a role, nebo použijte mou databázi.</p>
 <h3 id="povoleni-wse-3.0-v-projektu">Povolení WSE 3.0 v projektu</h3>
 <p>Tvorba XML konfiguračních souborů a souborů s politikami není jednoduchá. Naštěstí WSE disponuje již zmiňovaným pluginem pro jejich vytváření. Klepněte pravým tlačítkem na projekt a z kontextového menu zvolte položku &quot;<strong>WSE Settings 3.0</strong>&quot;. Objeví se okno, v němž na záložce <strong>General</strong> zaškrtněte oba checkboxy:</p>
-<p><img src="/files/20060112-wse-01.png" alt="Screenshot" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060112-wse-01.png" alt="Screenshot" /></p>
 <p>Tímto krokem přidáte do konfiguračního souboru aplikace řadu nastavení, které povolí použití WSE 3.0, stejně jako referenci na odpovídající knihovnu.</p>
 <h3 id="tvorba-bezpecnostni-politiky">Tvorba bezpečnostní politiky</h3>
 <p>Dále je nutno vytvořit soubor pravidel, která budou stanovovat, kdo má právo přistupovat k naší službě. Přepněte se na záložku <strong>Policy</strong>, zaškrtněte <strong>Enable policy</strong> a klepněte na <strong>Add</strong> pro vytvoření nové politiky. Nějak vhodně si ji pojmenujte (například <code>MyServerPolicy</code>) a pokračujte spuštěním průvodce.</p>
-<p><img src="/files/20060112-wse-02.png" alt="Screenshot" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060112-wse-02.png" alt="Screenshot" /></p>
 <p>V prvním kroku je třeba zvolit, že chcete zabezpečit serverovou část - webovou službu (<strong>service application</strong>). Dále pak musíte zvolit formu autentizace. Zvolte <strong>Username</strong> - certifikáty a podobně si necháme na jindy.</p>
-<p><img src="/files/20060112-wse-03.png" alt="Screenshot" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060112-wse-03.png" alt="Screenshot" /></p>
 <p>Politika může (ale nemusí, pokud to chcete nastavit vlastními silami) zajistit též autorizaci, tedy povolit volání pouze určitým uživatelům nebo skupinám. Zaškrtněte <strong>Perform Authorization</strong> a povolte přístup skupině <code>WebServiceUsers</code>.</p>
-<p><img src="/files/20060112-wse-04.png" alt="Screenshot" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060112-wse-04.png" alt="Screenshot" /></p>
 <p>V posledním kroku průvodce můžete nastavit, zda se má SOAP zpráva podepsat, šifrovat či obojí. Použití podpisů a šifrování vyžaduje pokročilejší konfiguraci klíčů a podobně, proto v tomto okamžiku pro jednoduchost zvolíme &quot;<strong>None (rely on transport protection)</strong>&quot;. To znamená, že WSE nebude žádnou ze shora uvedených činností provádět, a že tedy uživatelské jméno a heslo poputuje sítí v otevřené podobě. Tomu je radno se vyhnout a pokud použijete tento postup, neměli byste k webové službě přistupovat přes obyčejné HTTP, ale přes jeho šifrovanou variantu HTTPS - tím přenesete zodpovědnost za šifrování na transportní vrstvu.</p>
 <p>Poklikáním na různé next a finish průvodce ukončíte.</p>
 <p>Řady souborů ve vaší aplikaci se rozmnožily o <code>~/wse3policyCache.config</code>. Tento soubor, vytvořený uvedeným průvodcem, obsahuje definci vaší bezpečnostní politiky. Můžete jej modifikovat stejně jako jste ho vytvořili, nebo přímo editovat jeho zdrojový kód. Rovněž <code>web.config</code> se rozrostl, a to právě o odkaz na tento soubor.</p>
@@ -66,7 +68,7 @@
 <p>Jest nutno si uvědomit, že dle implementace nemusí &quot;password&quot; být nutně heslo jako takové, může se jednat například o jeho hash a podobně.</p>
 <p>Protože používáme kromě autentizace i autorizaci pomocí rolí, následují tři řádky, kde načteme role uživateli přiřazené.</p>
 <p>Nyní je třeba způsobit, aby se námi pracně vytvořený manager vůbec spustil - respektive použil namísto standardního. Otevřete si proto opět konfigurační nástroj a na záložce <strong>Security</strong> v sekci <strong>Security Token Managers</strong> klepněte na tlačítko <strong>Add</strong>.</p>
-<p><img src="/files/20060112-wse-05.png" alt="Screenshot" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2006/20060112-wse-05.png" alt="Screenshot" /></p>
 <p>V objevivším se okně zadejte do položky <strong>Type</strong> plný název vámi vytvořené třídy (proto bylo nutno ji zažadit do namespace), v našem případě je to <code>WseDemo.MembershipUsernameTokenManager</code>. Další dvě položky určují, k jakému elementu ve zprávě se naše třída vztahuje. Namespace je <code>http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</code> a LocalName je <code>UsernameToken</code>.</p>
 <h3 id="aplikace-bezpecnostni-politiky">Aplikace bezpečnostní politiky</h3>
 <p>Posledním krokem na straně serveru je nutné zajistit, aby se námi vytvořená politika jménem <code>MyServerPolicy</code> aplikovala na naši webovou službu (politik můžete mít samozřejmě více pro různé služby). Jest tak učiniti pomocí atributu <code>Microsoft.Web.Services3.Policy</code>, jímž obohatíme definici třídy naší webové služby, takže kód bude vypadat takto:</p>
@@ -88,7 +90,7 @@
 </ol>
 <h3 id="odkazy">Odkazy</h3>
 <ul>
-<li><a href="/files/20060112-wse-samples.zip">Zdrojové kódy ke stažení</a></li>
+<li><a href="https://www.cdn.altairis.cz/Blog/2006/20060112-wse-samples.zip">Zdrojové kódy ke stažení</a></li>
 <li><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/wss_ch3_impdirectauth_wse30.asp">Článek o WSE na MSDN (anglicky)</a></li>
 <li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=018a09fd-3a74-43c5-8ec1-8d789091255d&amp;DisplayLang=en">Stažení WSE 3.0</a></li>
 </ul>

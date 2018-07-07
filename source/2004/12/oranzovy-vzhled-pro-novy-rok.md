@@ -12,7 +12,8 @@
 Již několik let se snažím dodržovat tradici, že každý rok provedu redesign svých webových stránek. V letošním roce jsem to ovšem stihl na poslední chvíli, a to mám novou grafiku připravenou už od loňského prosince.
 
 [![Můj avatar](http://www.rider.cz/files/images/tn_0006.gif)](http://www.rider.cz/files/images/0006.jpg)Nového kabátku se tedy dočkaly moje [osobní stránky](http://www.rider.cz/) i tento weblog (pokud nemá tato stránka nahoře oranžový pruh, přepněte si zobrazení styly v levém sloupci nebo klepnutím na [tento odkaz](/SetStyle.aspx?Screen=orange&URL=/entry/article-20041224.aspx)). Budou-li bohové milostiví, převedu do nového designu i [fotogalerii](http://gallery.rider.cz/).
- <h2>Proč má ten kůň na hlavě havrana?</h2> 
+
+## Proč má ten kůň na hlavě havrana?
 
 Je o mně všeobecně známo, že mám rád koně a že mým internetovým <acronym title="Zobrazením v kyberprostoru/Matrixu/Metaverzu - příznivci cyberpunku vědí">avatarem</acronym> je antropomorfní koník - podstatně roztomilejší, než je má reálná fyzická podstata (viz obrázek vpravo).
 

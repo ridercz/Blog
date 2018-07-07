@@ -14,7 +14,8 @@ V článku [Tvorba vlastního parametru pro data binding v ASP.NET 2.0](/entry/a
 Pokud použijete strongly-typed parametry pro data binding a předanou hodnotu nebude možno na požadovaný typ převést, dojde k výjimce. Což je v zásadě v pořádku. Situace, kdy aplikace vyhodí výjimku, by však neměly zůstat nepovšimnuty jejím tvůrcem. Dobrou cestou je například nechat si informace o chybách posílat e-mailem. Pokud tak učiníte, budete ovšem zakrátko zaplaveni velkým množstvím zpráv, které vygenerují požadavky na chybná URL, typicky v případě adres zaslaných e-mailem (a tedy nějak poškozených), jistých tupějších robotů a podobně.
 
 Řešením je napsat si vlastní typ parametru, který si s takovou situací dokáže graciézně poradit. V následujícím příkladu řeším případ načítání hodnoty z Query Stringu, tedy QueryStringParameter. Obdobnou logiku je možno využít pro všechny ostatní zdroje - cookies, forms atd.
- <h2>Vytvoření třídy SafeQueryStringParameter</h2> 
+
+## Vytvoření třídy SafeQueryStringParameter
 
 Zdrojový kód vypadá následovně:
 
@@ -25,7 +26,8 @@ Stejně jako ve shora uvedeném článku upozorňuji na nutnost umístit naši t
 Kód sám je velmi jednoduchý. Nová třída `SafeQueryStringParameter` jest poděděna od běžné `System.Web.UI.WebControls.QueryStringParameter`. Metodu `Evaluate()` jsem přepsal tak, že se pokusí zadanou hodnotu převést na požadovaný typ. Standardní `QueryStringParameter` v reaguje na neúspěch v tomto směru výjimkou, moje třída vrátí `DefaultValue`, tedy stejnou hodnotu, jako kdyby předmětný parametr nebyl v URL přítomen vůbec.
 
 Není to samozřejmě jediné řešení. Můžete se pokusit v případě jednodušších typů heuristicky odhadnout, co chtěl básník říci (například odfiltrováním nečíselných znaků). Případně můžete vyhodit svou vlastní výjimku (exception) a přepsat aplikaci tak, aby na výskyt této konkrétní výjimky reagovala nikoliv zasláním e-mailu, ale zobrazením nějakého duchaplného návodného textu ohledně pravděpodobně poškozeného URL.
- <h2>Použití v ASP.NET stránkách</h2> 
+
+## Použití v ASP.NET stránkách
 
 Nově deklarovaný parametr je možno použít v ASP.NET stránkách naprosto stejným způsobem, který jsem popsal v závěru [minulého článku](/entry/article-20051005.aspx). Vzhledem k tomu, že takto vytvořený prvek bude patrně třeba používat na mnoha stránkách (místo standardního parametru), bude ale vhodnější použít jiný postup. Registraci uživatelského ovládacího prvku je možno provést v souboru `web.config` s platností pro celou aplikaci:
 

@@ -20,25 +20,25 @@ Proto jsem před týdnem [vyhlásil anketu](http://www.aspnet.cz/articles/292-ja
 
 V první řadě mne zajímalo, jaké jazykové verze operačního systému, kancelářského balíku a dalších programů používáte, jaké byste používat chtěli a kdo rozhoduje o tom, jakou jazykovou verzi software budete na svém PC mít nainstalovanou.
 
-[![anketa_idealni](http://www.aspnet.cz/Files/20100804-anketa_idealni_thumb.png "anketa_idealni")](http://www.aspnet.cz/Files/20100804-anketa_idealni_2.png)
+[![anketa_idealni](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_idealni_thumb.png "anketa_idealni")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_idealni_2.png)
 
-[![anketa_skutecny](http://www.aspnet.cz/Files/20100804-anketa_skutecny_thumb.png "anketa_skutecny")](http://www.aspnet.cz/Files/20100804-anketa_skutecny_2.png)
+[![anketa_skutecny](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_skutecny_thumb.png "anketa_skutecny")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_skutecny_2.png)
 
-[![anketa_rozhoduje](http://www.aspnet.cz/Files/20100804-anketa_rozhoduje_thumb.png "anketa_rozhoduje")](http://www.aspnet.cz/Files/20100804-anketa_rozhoduje_2.png)
+[![anketa_rozhoduje](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_rozhoduje_thumb.png "anketa_rozhoduje")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_rozhoduje_2.png)
 
 Odpovědi na první tři otázky naznačují, že vývojáři si ve většině případů jazykovou verzi vybírají sami. V případě operačního systému je podpora národních jazyků proti angličtině zhruba půl na půl. Kancelářský balík je většinou požadován v češtině, ostatní programy v angličtině. Je zajímavé, že u OS i Office je podíl lokalizovaných verzí vyšší, než by si uživatelé přáli – projevuje se zde patrně ona čtvrtina vývojářů, u kterých o jazykové verzi rozhoduje někdo jiný.
 
 Dále pak mne zajímalo, jaké používáte jazyky při programování, při psaní kódu a komentářů.
 
-[![anketa_jazyk_kodu](http://www.aspnet.cz/Files/20100804-anketa_jazyk_kodu_thumb.png "anketa_jazyk_kodu")](http://www.aspnet.cz/Files/20100804-anketa_jazyk_kodu_2.png)
+[![anketa_jazyk_kodu](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_jazyk_kodu_thumb.png "anketa_jazyk_kodu")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_jazyk_kodu_2.png)
 
 Pro pojmenovávání tříd, proměnných a podobně drtivá většina z vás používá angličtinu, ale (pro mne) překvapivě velké množství lidí píše komentáře v národním jazyce.
 
 Poslední a z mého pohledu nejzajímavější je téma používání lokalizací VS 2008 a VS 2010:
 
-[![anketa_lokalizace_2008](http://www.aspnet.cz/Files/20100804-anketa_lokalizace_2008_thumb.png "anketa_lokalizace_2008")](http://www.aspnet.cz/Files/20100804-anketa_lokalizace_2008_2.png)   
+[![anketa_lokalizace_2008](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2008_thumb.png "anketa_lokalizace_2008")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2008_2.png)   
 
- [![anketa_lokalizace_2010](http://www.aspnet.cz/Files/20100804-anketa_lokalizace_2010_thumb.png "anketa_lokalizace_2010")](http://www.aspnet.cz/Files/20100804-anketa_lokalizace_2010_2.png)   
+ [![anketa_lokalizace_2010](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2010_thumb.png "anketa_lokalizace_2010")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2010_2.png)   
 Nadpoloviční většina všech dotázaných obě verze lokalizace nepoužívá a ani tak nehodlá činit. Existující lokalizace používá okolo 4% dotázaných, dalších zhruba 15% jim je ochotno dát šanci a vyzkoušet je.   
 
 ### Výherce losování

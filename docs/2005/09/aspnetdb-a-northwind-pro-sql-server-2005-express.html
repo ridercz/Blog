@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Dva užitečné datové soubory pro SQL Express" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -22,7 +24,10 @@
 <p>Data Source=.\SQLEXPRESS;Integrated Security=True;User Instance=True AttachDbFilename=|DataDirectory|Northwind.mdf;</p>
 <p>Výhoda je především pro vývoj, protože na různé pokusy a testování nemusíte složitě konfigurovat SQLko, ale stačí vytvořit datové soubory (lze přímo z VS.NET nebo VWD). Problém spočívá v tom, že současné verze nástrojů neumožňují - nebo jsem to alespoň neobjevil - pohodlný import dat ze SQL 2000, ani vytvoření &quot;systémové&quot; databáze <em>AspNetDb</em>.</p>
 <p>Za pomoci &quot;velkého&quot; SQL Serveru 2005 a dalších triků jsem vytvořil dva MDF soubory, které se vám mohou hodit:</p>
- <ul> <li><strong>[Northwind](/files/20050919-Northwind.zip)</strong> je klasická Microsoftí ukázková databáze. Hodí se, pokud si chcete něco vyzkoušet a nemáte jiná testovací data. Soubor obsahuje strukturu (tabulky, uložené procedury, pohledy...) i ukázková data (obsah tabulek).</li> <li><strong>[AspNetDb](/files/20050919-AspNetDb.zip)</strong> je databáze, obsahující strukturu kterou využívá Membership, Role a Profile provider z Whidbey. Je možno ji vytvořit pomocí utilitky <em>aspnet_regsql.exe</em>, ale ta nepodporuje připojení přímo na MDF soubor. Databáze neobsahuje žádná data.</li></ul>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2005/20050919-Northwind.zip">Northwind</a></strong> je klasická Microsoftí ukázková databáze. Hodí se, pokud si chcete něco vyzkoušet a nemáte jiná testovací data. Soubor obsahuje strukturu (tabulky, uložené procedury, pohledy...) i ukázková data (obsah tabulek).</li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2005/20050919-AspNetDb.zip">AspNetDb</a></strong> je databáze, obsahující strukturu kterou využívá Membership, Role a Profile provider z Whidbey. Je možno ji vytvořit pomocí utilitky <em>aspnet_regsql.exe</em>, ale ta nepodporuje připojení přímo na MDF soubor. Databáze neobsahuje žádná data.</li>
+</ul>
 
       </section>
     </main>

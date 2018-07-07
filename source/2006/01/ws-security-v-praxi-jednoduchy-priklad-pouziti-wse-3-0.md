@@ -65,7 +65,7 @@ Součástí naší politiky bude povolit přístup k webové službě pouze čle
 
 Tvorba XML konfiguračních souborů a souborů s politikami není jednoduchá. Naštěstí WSE disponuje již zmiňovaným pluginem pro jejich vytváření. Klepněte pravým tlačítkem na projekt a z kontextového menu zvolte položku "**WSE Settings 3.0**". Objeví se okno, v němž na záložce **General** zaškrtněte oba checkboxy:
 
- ![Screenshot](/files/20060112-wse-01.png) 
+ ![Screenshot](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-01.png) 
 
 Tímto krokem přidáte do konfiguračního souboru aplikace řadu nastavení, které povolí použití WSE 3.0, stejně jako referenci na odpovídající knihovnu.
 
@@ -73,15 +73,15 @@ Tímto krokem přidáte do konfiguračního souboru aplikace řadu nastavení, k
 
 Dále je nutno vytvořit soubor pravidel, která budou stanovovat, kdo má právo přistupovat k naší službě. Přepněte se na záložku **Policy**, zaškrtněte **Enable policy** a klepněte na **Add** pro vytvoření nové politiky. Nějak vhodně si ji pojmenujte (například `MyServerPolicy`) a pokračujte spuštěním průvodce.
 
- ![Screenshot](/files/20060112-wse-02.png) 
+ ![Screenshot](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-02.png) 
 
 V prvním kroku je třeba zvolit, že chcete zabezpečit serverovou část - webovou službu (**service application**). Dále pak musíte zvolit formu autentizace. Zvolte **Username** - certifikáty a podobně si necháme na jindy.
 
- ![Screenshot](/files/20060112-wse-03.png) 
+ ![Screenshot](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-03.png) 
 
 Politika může (ale nemusí, pokud to chcete nastavit vlastními silami) zajistit též autorizaci, tedy povolit volání pouze určitým uživatelům nebo skupinám. Zaškrtněte **Perform Authorization** a povolte přístup skupině `WebServiceUsers`.
 
- ![Screenshot](/files/20060112-wse-04.png) 
+ ![Screenshot](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-04.png) 
 
 V posledním kroku průvodce můžete nastavit, zda se má SOAP zpráva podepsat, šifrovat či obojí. Použití podpisů a šifrování vyžaduje pokročilejší konfiguraci klíčů a podobně, proto v tomto okamžiku pro jednoduchost zvolíme "**None (rely on transport protection)**". To znamená, že WSE nebude žádnou ze shora uvedených činností provádět, a že tedy uživatelské jméno a heslo poputuje sítí v otevřené podobě. Tomu je radno se vyhnout a pokud použijete tento postup, neměli byste k webové službě přistupovat přes obyčejné HTTP, ale přes jeho šifrovanou variantu HTTPS - tím přenesete zodpovědnost za šifrování na transportní vrstvu.
 
@@ -105,7 +105,7 @@ Protože používáme kromě autentizace i autorizaci pomocí rolí, následují
 
 Nyní je třeba způsobit, aby se námi pracně vytvořený manager vůbec spustil - respektive použil namísto standardního. Otevřete si proto opět konfigurační nástroj a na záložce **Security** v sekci **Security Token Managers** klepněte na tlačítko **Add**.
 
- ![Screenshot](/files/20060112-wse-05.png) 
+ ![Screenshot](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-05.png) 
 
 V objevivším se okně zadejte do položky **Type** plný název vámi vytvořené třídy (proto bylo nutno ji zažadit do namespace), v našem případě je to `WseDemo.MembershipUsernameTokenManager`. Další dvě položky určují, k jakému elementu ve zprávě se naše třída vztahuje. Namespace je `http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd` a LocalName je `UsernameToken`.
 
@@ -139,6 +139,6 @@ Při zadání chybného uživatelského jména či hesla dojde k výjimce, u ži
 
 ### Odkazy
 
-*   [Zdrojové kódy ke stažení](/files/20060112-wse-samples.zip) 
+*   [Zdrojové kódy ke stažení](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-samples.zip) 
 *   [Článek o WSE na MSDN (anglicky)](http://msdn.microsoft.com/library/en-us/dnpag2/html/wss_ch3_impdirectauth_wse30.asp) 
 *   [Stažení WSE 3.0](http://www.microsoft.com/downloads/details.aspx?FamilyID=018a09fd-3a74-43c5-8ec1-8d789091255d&DisplayLang=en) 

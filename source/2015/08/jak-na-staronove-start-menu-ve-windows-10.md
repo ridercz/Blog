@@ -27,7 +27,7 @@ Mimo tyto kategorie stojí dva speciální programy:
 
 A jaké programy v praxi používám? Takhle vypadá levý horní roh mé obrazovky ve stavu rozbalené nabídky Start (mám, poněkud nezvykle, již dlouhá léta taskbar a nabídku Start nahoře, ve výši očí.):
 
-[![Windows_start_menu](http://www.aspnet.cz/Files/20150731-Windows_start_menu_thumb.png "Windows_start_menu")](http://www.aspnet.cz/Files/20150731-Windows_start_menu_2.png)
+[![Windows_start_menu](https://www.cdn.altairis.cz/Blog/2015/20150731-Windows_start_menu_thumb.png "Windows_start_menu")](https://www.cdn.altairis.cz/Blog/2015/20150731-Windows_start_menu_2.png)
 
 Programy první kategorie s tlačítky na taskbaru jsou pro mne následující:
 

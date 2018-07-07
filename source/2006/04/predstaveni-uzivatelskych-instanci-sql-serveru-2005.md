@@ -57,7 +57,7 @@ Použití více instancí SQL Serveru znamená pro server větší zátěž, je 
 
 Takovýmto způsobem používaná databáze se prakticky nedá zálohovat. Souborově ji nezkopírujete (protože soubor je zpravidla otevřen instancí a používá se), plánované zálohování SQL Serveru ale nelze použít. Totéž se týká jakýchkoliv změn v databázi. Uživatelská instance je viditelná jenom pro toho, kdo ji vytvořil, nedá se na ni nijak zvlášť připojit a například modifikovat strukturu tabulek. 
 
-Jediný způsob jak zazálohovat databázi nebo provést změny v její struktuře (pokud tak samozřejmě neučiní aplikace sama z kódu) je shodit aplikaci, například pomocí triku se souborem [app_offline.htm](/Articles/77-tajemstvi-souboru-app-offline-htm-snadny-upgrade-aplikaci-v-asp-net-2-0.aspx) a zkopírovat přímo datové soubory.
+Jediný způsob jak zazálohovat databázi nebo provést změny v její struktuře (pokud tak samozřejmě neučiní aplikace sama z kódu) je shodit aplikaci, například pomocí triku se souborem [app_offline.htm](https://www.aspnet.cz/Articles/77-tajemstvi-souboru-app-offline-htm-snadny-upgrade-aplikaci-v-asp-net-2-0.aspx) a zkopírovat přímo datové soubory.
 
 Právě z tohoto důvodu je možno user instance používat pouze u Express edice SQL Serveru, nikoliv u edic vyšších.
 

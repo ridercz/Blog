@@ -14,7 +14,7 @@ Ne že bych v nich něco zásadního kupoval, v zásadě tam chodíme jenom do k
 
 Většinou není nutno brát ohled na stávající zástavbu, neb se buduje na "zelené louce", kdesi za městem. Peněz nebývá také zrovna málo a jediné, co je nutné zachovat, je architektonické pojetí sice pokud možno zajímavé, ale přesto efektivní. Tedy přesně takové, jaké mne zajímá.
 
-[![Nákupní centrum Olympia Brno (2001)](/files/olympia-lq.jpg)](/files/olympia-hq.jpg) Možná se zde projevuje moje obecná příchylnost k Brnu, ale snad nejvíc se mi líbí brněnská [Olympia](http://www.olympia-centrum.cz/brno/) (moji fotografii z října 2001 vidíte vedle textu, klepnutím možno zobrazit plnou velikost). Ačkoliv technokratická, není nudná a je dotažená do detailů, včetně osvětlení a podobně.
+[![Nákupní centrum Olympia Brno (2001)](https://www.cdn.altairis.cz/Blog/olympia-lq.jpg)](https://www.cdn.altairis.cz/Blog/olympia-hq.jpg) Možná se zde projevuje moje obecná příchylnost k Brnu, ale snad nejvíc se mi líbí brněnská [Olympia](http://www.olympia-centrum.cz/brno/) (moji fotografii z října 2001 vidíte vedle textu, klepnutím možno zobrazit plnou velikost). Ačkoliv technokratická, není nudná a je dotažená do detailů, včetně osvětlení a podobně.
 
 Včera se mi dostalo pochybné cti navštívit nejnovější (pokud vím) pražské zařízení tohoto typu, tedy [Metropoli Zličín](http://www.metropole.cz/). Svoji architekturou mne rozhodně nezaujala, nezaznamenal jsem tam jediný neotřelý nápad. Nicméně zaznamenal jsem, že snad osmdesát procent obchodů prodává oblečení! Všechny ostatní obchody bych snad dokázal spočítat na prstech.
 

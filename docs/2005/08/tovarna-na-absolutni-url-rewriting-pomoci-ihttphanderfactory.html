@@ -6,19 +6,43 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="URL rewriting je častá technika, používaná k výrobě &quot;hezkých&quot; webových adres. Elegantně je možno ji realizovat pomocí IHttpHanderFactory - narozdíl od jiných metod úspěšně implementuje postback a je Whidbey kompatibilní." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Továrna na absolutní URL: rewriting pomocí IHttpHanderFactory</h1>
       <section class="article">
-        
+        <p>U řady webových aplikací (tento blog nevyjímaje) jest se setkati se zvláštním formátem URL, kdy je nějaký parametr (třeba ID článku) předáván nikoliv jako hodnota v Query Stringu (<em><a href="http://server/Clanek.aspx?ID=neco">http://server/Clanek.aspx?ID=neco</a></em>), ale přímo jako název souboru (<em><a href="http://server/Clanky/neco.aspx">http://server/Clanky/neco.aspx</a></em>). Důvodů k tomu vedoucích může být povícero, ale obvykle převažuje skutečnost, že tato URL jsou obvykle snáze indexovatelná vyhledávači - a protože se právě nacházíme na vrcholu SEO bubliny, musí to mít každý.</p>
+<p>Samozřejmě to neznamená, že by publikační systém generoval pro každý článek zvláštní skript, ale používá se technika zvaná URL rewriting. V rámci zpracování HTTP požadavku (<a href="/entry/article-20050110.aspx">více o request pipeline v ASP.NET</a>) se na základě vygenerovaných pravidel URL &quot;přepíše&quot; a na straně serveru přesměruje na jinou stránku.</p>
+<h2 id="context.rewritepath">Context.RewritePath</h2>
+<p>Nejjednodušší metodu URL rewritingu představuje metoda <code>System.Web.HttpContext.Current.RewritePath</code>, volaná příkladně v rámci události <code>BeginRequest</code>.</p>
+<p>Její použití však má mnohá úskalí. Především pak to, že přepsání se provede takříkajíc &quot;napůl&quot;. Onen cílový skript totiž principiálně vůbec netuší, že se stal obětí URL rewritingu, a veškeré případné mapování se děje s ohledem na jeho adresu, nikoliv na původně požadovanou. Nejobvyklejším projevem je, že přestane fungovat postback.</p>
+<p>V aplikacích založených na ASP.NET 2.0 (Whidbey) přestane fungovat skoro všechno, protože na relativním odkazování je založeno kdeco, od vyhodnocování odkazů přes postback až po témata.</p>
+<h2 id="tovarna-na-handlery">Továrna na handlery</h2>
+<p>Klíčovou roli při zpracování ASP.NET požadavků představují HTTP handlery. Žil jsem v bludu, neb jsem myslel, že jsem je už na tomto serveru někdy do huby bral, ale není tomu tak (až na stručnou zmínku ve <a href="/entry/article-20050110.aspx">shora odkazovaném článku</a>). V dohledné době to napravím, pro tento okamžik se spokojte s oním jedním odstavcem.</p>
+<p>Obvykle se vykonávání nějakého URL či typu URL spojuje s určitým handlerem přímo, protože dopředu víme, co budeme chtít. Vyšší školu představují situace, kdy to podle URL nevíme a je nutno o tomto dynamicky rozhodnout. Pro tento účel disponuje .NET továrnou na výrobu handlerů - HTTP Handler Factory.</p>
+<p>Jedná se o třídu, implementující interface <code>IHttpHandlerFactory</code>. Ta přijme HTTP požadavek, hluboce se nad ním zamyslí, a namísto aby jej osobně zpracovala, vrátí zpět informaci o tom, kterému handleru má framework předmětný požadavek hodit na hrb.</p>
+<p>Tohoto chování jest možno využít pro URL rewriting. Zpracování klasických web formů (*.aspx) totiž také probíhá formou HTTP handleru. Máme možnost tedy možnost zneužít ubohý ASPX soubor ke zpracování požadavku, aniž by tento tušil, že jeho identita zůstane utajena. Veškeré mapování se tak bude provádět relativně vůči původně požadovanému URL, postback bude fungovat a všichni se budou mít rádi.</p>
+<p>Háček je v tom, že případné parametry (jako název požadovaného souboru) nelze podvrhnout například formou vygenerovaných Query String parametrů, neb vlastní URL zůstává nezměněno. Pro předávání informací mezi jednotlivými částmi ASP.NET pipeline jest určena kolekce <code>System.Web.HttpContext.Current.Items</code>. Můžete si ji představit jako určitou formu cache, která je platná toliko po dobu životnosti jednoho požadavku.</p>
+<h2 id="prakticky-priklad">Praktický příklad</h2>
+<p>Mějmež web publikující články. Přejeme si, aby adresa článku byla vždy <em>/Articles/nejakeid.aspx</em>. Vlastní zobrazení článku provádí stránka <em>/Article.aspx</em>, a ono dříve zmíněné <em>nejakeid</em> je pro něj informace o tom, který článek má z databáze vytáhnout.</p>
+<p>Začneme tím, že vytvoříme továrnu na handlery. Konkrétně třídu <code>Remapper</code>, která bude implementovat rozhraní <code>IHttpHandlerFactory</code>:</p>
+<p>Imports Microsoft.VisualBasic Public Class Remapper Implements IHttpHandlerFactory Public Function GetHandler(ByVal context As System.Web.HttpContext, ByVal requestType As String, ByVal url As String, ByVal pathTranslated As String) As System.Web.IHttpHandler Implements System.Web.IHttpHandlerFactory.GetHandler ' Put article ID - name of 'virtual' ASPX page - to request cache context.Items(&quot;ArticleID&quot;) = System.IO.Path.GetFileNameWithoutExtension(pathTranslated) ' Handle request via <sub>/Article.aspx script Return PageParser.GetCompiledPageInstance(&quot;</sub>/Article.aspx&quot;, _ context.Server.MapPath(&quot;~/Article.aspx&quot;), _ context) End Function Public Sub ReleaseHandler(ByVal handler As System.Web.IHttpHandler) Implements System.Web.IHttpHandlerFactory.ReleaseHandler End Sub End Class</p>
+<p>Metoda <code>GetHandler</code> načte název požadovaného souboru bez přípony a uloží jej jako prvek s klíčem <code>ArticleID</code> do context cache. Následně pak vyvolá instanci handleru pro stránku <code>~/Article.aspx</code> a vráti jí zpět k vykonání.</p>
+<p>Stránka ~/Article.aspx je primitivní, neb jenom vezme jí předané <code>ArticleID</code> a zobrazí ho:</p>
+<p>&lt;%@ Page Language=&quot;VB&quot; %&gt; <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <script runat="server"> Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Me.LabelArticleID.Text = String.Format(Me.LabelArticleID.Text, Context.Items(&quot;ArticleID&quot;)) End Sub </script> <html xmlns="http://www.w3.org/1999/xhtml"> <head runat="server"> <title>Untitled Page</title> </head> <body> <form id="form1" runat="server"> <div> &lt;asp:Label ID=&quot;LabelArticleID&quot; runat=&quot;server&quot; Text=&quot;Article ID = {0}&quot; /&gt; </div> </form> </body> </html></p>
+<p>Poslední nezbytnou komponentou systému je vhodné nastavení v souboru <code>Web.Config</code>. Námi vygenerovanou třídu Remapper je nutno přidat jako handler požadavků pro patřičné URL (<code>articles/*.aspx</code>):</p>
+<?xml version="1.0"?> <configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0"> <system.web> <httpHandlers> <add verb="*" path="Articles/*.aspx" type="Remapper"/> </httpHandlers> </system.web> </configuration>
+<p>Kompletní ukázkovou aplikaci jest možno si stáhnout <a href="https://www.cdn.altairis.cz/Blog/2005/20050812-url-rewriting.zip">zde</a>. Je určena, stejně jako výše uvedený kód, pro ASP.NET 2.0 (Whidbey), leč popsaná metoda funguje i ve verzi 1.1.</p>
+
       </section>
     </main>
     <footer>

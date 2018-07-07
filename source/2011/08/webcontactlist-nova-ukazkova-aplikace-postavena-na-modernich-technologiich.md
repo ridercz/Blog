@@ -70,9 +70,9 @@ Kromě toho obsahuje i docela slušný CSS framework s řadou hotových témat a
 
 Zároveň je aplikace napsaná tak, že je schopna fungovat i pokud je JavaScript vypnutý, nebo nefunkční, jenom se zjednoduší její vzhled, ale základní schopnosti zůstanou stejné. Následující dva obrázky ukazují aplikaci se zapnutým a vypnutím JavaScriptem:
 
-![Ukázka rozhraní s funkčním JavaScriptem](http://www.aspnet.cz/Files/20110815-webcl_script_3.png "Ukázka rozhraní s funkčním JavaScriptem")
+![Ukázka rozhraní s funkčním JavaScriptem](https://www.cdn.altairis.cz/Blog/2011/20110815-webcl_script_3.png "Ukázka rozhraní s funkčním JavaScriptem")
 
-![Ukázka rozhraní s nefunkčním JavaScriptem](http://www.aspnet.cz/Files/20110815-webcl_noscript_3.png "Ukázka rozhraní s nefunkčním JavaScriptem")
+![Ukázka rozhraní s nefunkčním JavaScriptem](https://www.cdn.altairis.cz/Blog/2011/20110815-webcl_noscript_3.png "Ukázka rozhraní s nefunkčním JavaScriptem")
 
 ### HTML 5
 
@@ -84,4 +84,4 @@ To není vyloženě nová technologie, spíš jedna z těch nejstarších. Ale n
 
 ## Zdrojové kódy ke stažení
 
-Kompletní aplikaci včetně zdrojových kódů si můžete stáhnout zde: **[20110814-WebContactList.zip](/files/20110814-WebContactList.zip)** (cca. 9 MB). Živé demo aplikace najdete na [**http://webcldemo.asp2.cz/**](http://webcldemo.asp2.cz/). 
+Kompletní aplikaci včetně zdrojových kódů si můžete stáhnout zde: **[20110814-WebContactList.zip](https://www.cdn.altairis.cz/Blog/2011/20110814-WebContactList.zip)** (cca. 9 MB). Živé demo aplikace najdete na [**http://webcldemo.asp2.cz/**](http://webcldemo.asp2.cz/). 

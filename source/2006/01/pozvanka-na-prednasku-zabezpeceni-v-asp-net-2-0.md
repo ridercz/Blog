@@ -9,9 +9,9 @@
 <!-- dcterms:created = 2006-01-25T19:44:52.333+01:00 -->
 <!-- dcterms:dateAccepted = 2006-01-25T19:44:52.333+01:00 -->
 
-![Windows User Group](/files/20060125-logo-wug.gif) 
+![Windows User Group](https://www.cdn.altairis.cz/Blog/2006/20060125-logo-wug.gif) 
 
-Zvu vás na svou přednášku s tématem <strong>Zabezpečení v ASP.NET 2.0</strong>. Tuto přednášku pořádá [Windows User Group v Hradci Králové](http://www.wug.cz/hradeckralove.xtml).
+Zvu vás na svou přednášku s tématem **Zabezpečení v ASP.NET 2.0**. Tuto přednášku pořádá [Windows User Group v Hradci Králové](http://www.wug.cz/hradeckralove.xtml).
 
 Témata přednášky jsou následující:
 

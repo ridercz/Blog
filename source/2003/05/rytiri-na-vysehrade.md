@@ -8,11 +8,11 @@
 <!-- dcterms:created = 2003-05-18T02:37:45+02:00 -->
 <!-- dcterms:dateAccepted = 2003-05-18T02:37:45+02:00 -->
 
-![Rytířské klání na Vyšehradě](/files/traken.jpg)Včera jsme s Myshí navštívili rytířské klání, které na Vyšehradě pořádá skupina Traken (bohužel se mi nepodařilo najít nikde na Internetu jejich webovské stránky).
+![Rytířské klání na Vyšehradě](https://www.cdn.altairis.cz/Blog/traken.jpg)Včera jsme s Myshí navštívili rytířské klání, které na Vyšehradě pořádá skupina Traken (bohužel se mi nepodařilo najít nikde na Internetu jejich webovské stránky).
 
 Já osobně jsem tam šel samozřejmě zejména kvůli koním a pořídil jsem spoustu fotek. Ty nejlepší z nich si můžete prohlédnout v [galerii na mých stránkách](http://gallery.rider.cz/events/traken/default.xhtml). Skvělá vlastnost mého nového foťáku je, že je rychlý a umí snímat fotografie velmi rychle za sebou. Zatímco s předchozím foťákem jsem měl na dynamický děj jenom jeden pokus (protože pak se fotka deset vteřin ukládala), nyní sem schopen nasekat během několika vteřin hromadu fotek a vybrat tu nejlepší.
 
-Ani ten nejlepší foťák ovšem není k ničemu, pokud s ním jeho uživatel (záměrně s odkazem na svoji osobu neužívám slova <em>fotograf</em>) neumí zacházet. Takže bych si nafackoval, protože jsem nechal citlivost nastavenou automaticky a Minolta tu automatiku jaksi nezvládá, takže většina fotek je v jasném světle vypálená. Ach jo.
+Ani ten nejlepší foťák ovšem není k ničemu, pokud s ním jeho uživatel (záměrně s odkazem na svoji osobu neužívám slova *fotograf*) neumí zacházet. Takže bych si nafackoval, protože jsem nechal citlivost nastavenou automaticky a Minolta tu automatiku jaksi nezvládá, takže většina fotek je v jasném světle vypálená. Ach jo.
 
 Turnaj samotný byl neobyčejně zajímavý zážitek, i přesto, že program je komponován především pro děti. Obdivuji výkony koní i jezdců, kteří si pod těžkou zbrojí museli horké slunečné odpoledne neuvěřitelně užívat.
 

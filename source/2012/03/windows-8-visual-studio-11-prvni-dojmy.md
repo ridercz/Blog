@@ -30,7 +30,7 @@ Windows si zákeřně standardně nastavení vyšší DPI a 125% zvětšení. V�
 
 Po vizuální stránce se mi Windows 8 líbí. Jsem funkcionalistický fundamentalista a zastávám Loosovo heslo "ornament je zločin". Střízlivý hranatý design se mi velmi líbí. Pokud se týče Metro rozhraní, tak se na něj těším na tabletu, na běžném nedotykovém notebooku ho nejspíš používat nebudu, nějak zatím nevidím důvod proč. Nedovedu si představit, že by moje nejpoužívanější aplikace (Visual Studio, Word, Outlook) byly převedené do Metro podoby.
 
-[![Windows 8 Start](http://www.aspnet.cz/Files/20120302-win8_thumb.png "Windows 8 Start")](http://www.aspnet.cz/Files/20120302-win8_2.png)
+[![Windows 8 Start](https://www.cdn.altairis.cz/Blog/2012/20120302-win8_thumb.png "Windows 8 Start")](https://www.cdn.altairis.cz/Blog/2012/20120302-win8_2.png)
 
 Neuralgickým bodem pro většinu uživatelů se zdá být absence tlačítka Start a Start menu. Já se sice zatím vždycky leknu, když zmáčknu Windows klávesu a změní se mi celá obrazovka, ale v praxi změnu hodnotím pozitivně. Proč? Protože start menu jako takové nepoužívám a v podstatě jsem nikdy nepoužíval. 
 
@@ -38,7 +38,7 @@ Na Windows 7 mám ty nejpoužívanější programy (browser, RDP klient, Altap S
 
 Ty méně používané ale pořád často spouštěné mám připnuté ve start menu (a měl jsem i ve starších verzích Windows, akorát tehdy se tomu říkalo jinak). Tam jsou takové věci, jako Word, Excel, eWallet atd. Ve Windows 8 jsem si je připnul do nabídky Start také, jenom je mám lépe organizované, viz screenshot nahoře. Vadí mi jenom to, že dlaždice nelze organizovat zcela libovolně, skupiny lze vytvářet pouze horizontálně a nelze třeba vytvořit sloupec o šířce jedné dlaždice (víc by se mi líbilo mít Word, Excel, Powerpoint a Visio pod sebou a nebo vedle sebe a ostatní programy pod nimi). Ale to je víceméně drobnost. Dále pak je trochu nešťastné, že všechny programy v bývalém Start menu mají ve výchozím nastavení dlaždici na Start obrazovce. Takže po instalaci jsem tam měl desítky dlaždic, ve kterých se nedalo vyznat. Ale dají se snadno odstranit (klikáním pravým tlačítkem je označíte, pak zvolte "Unpin from Start menu").
 
-[![win8_search](http://www.aspnet.cz/Files/20120302-win8_search_thumb.png "win8_search")](http://www.aspnet.cz/Files/20120302-win8_search_2.png)
+[![win8_search](https://www.cdn.altairis.cz/Blog/2012/20120302-win8_search_thumb.png "win8_search")](https://www.cdn.altairis.cz/Blog/2012/20120302-win8_search_2.png)
 
 Programy třetí kategorie nemám nervy hledat podle ikonek, takže používám vyhledávání: zmáčknu Start a napíšu část názvu. To funguje beze změn i nadále.
 
@@ -56,13 +56,13 @@ Bližším vyšetřováním bylo zjištěno, že problémy, které jsem připiso
 
 Na IE 10 mne ještě zlobí vestavěná kontrola pravopisu, zejména proto, že polovinu věcí na webu píšu anglicky. Na Internetu se často dočtete, že tato funkce nejde vypnout. Není to pravda, vypnout jde, akorát se to nedělá v IE, ale v nastavení systému (je to funkce systému, ne IE):
 
-[![lang](http://www.aspnet.cz/Files/20120303-lang_thumb.png "lang")](http://www.aspnet.cz/Files/20120303-lang_2.png)
+[![lang](https://www.cdn.altairis.cz/Blog/2012/20120303-lang_thumb.png "lang")](https://www.cdn.altairis.cz/Blog/2012/20120303-lang_2.png)
 
 ## Visual Studio 11: Uměřené nadšení
 
 Nové šedé rozhraní Visual Studia budí velmi smíšené reakce. Někomu se líbí, spousta lidí na něj nadává, zejména pak na monochromatické ikonky. Mně osobně se jednoduché a střízlivé rozhraní Studia strašně líbí a od zveřejnění prvních screenshotů jsem se na něj vyloženě těšil. Vadí mi jenom názvy oken psané velkými písmeny, což je ošklivé a nepřehledné – místo toho bych zvolil tučný řez nebo jinou barvu.
 
-[![vs11](http://www.aspnet.cz/Files/20120302-vs11_thumb.png "vs11")](http://www.aspnet.cz/Files/20120302-vs11_2.png)
+[![vs11](https://www.cdn.altairis.cz/Blog/2012/20120302-vs11_thumb.png "vs11")](https://www.cdn.altairis.cz/Blog/2012/20120302-vs11_2.png)
 
 S monochromatickými ikonkami zásadní problém nemám, ale spustil se okolo toho takový řev, že s tím Microsoft nejspíš něco udělá. Lépe řečeno: nevadí mi ikonky na toolbarech, protože je stejně nepoužívám a toolbary typicky vypínám. Za poněkud nepraktické považuji jednobarevné ikonky pro soubory v Solution Exploreru. Ani ne tak pro jejich jednobarevnost jako takovou, ale hlavně proto, že jsou jiné, než na jaké jsem zvyklý.
 

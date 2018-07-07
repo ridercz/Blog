@@ -12,7 +12,7 @@ Ve svém předchozím zápisku jsem se -- ohledně onoho přeinstalování poč�
 
 Jako obvykle si za to můžu vlastní blbostí a Windows jsou v tom nevinně. Skoro.
 
-Jal jsem se totiž instalovat <strong>Windows XP Service Pack 2 RC 1</strong>. Na svůj notebook. Jak vidno, nedopadlo to právě dobře. Po instalaci zkolabovalo co mohlo. Odinstalovat to z neznámých důvodů nejde. System restore také nefunguje. Takže reinstall.
+Jal jsem se totiž instalovat **Windows XP Service Pack 2 RC 1**. Na svůj notebook. Jak vidno, nedopadlo to právě dobře. Po instalaci zkolabovalo co mohlo. Odinstalovat to z neznámých důvodů nejde. System restore také nefunguje. Takže reinstall.
 
 Nedal jsem si říct a na nově nainstalované Windows jsem si ten SP2 hned plácl taky. To se obešlo bez problémů. Tak jsem zvědav, jak to nakonec dopadne. Tím spíš že jsem neodolal a právě instaluju kromě VS.NET 2003 i betu Whidbey...
 

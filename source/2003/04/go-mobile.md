@@ -10,7 +10,7 @@
 
 ![Weblog na smartphone Sony Ericsson P800](http://weblog.rider.cz/files/weblog_na_p800.jpg)Můj weblog si nyní můžete číst nejenom prostřednictím standardního webového prohlížeče, ale též prostřednictvím kapesního počítače nebo mobilního telefonu.
 
-Na adrese [<strong>http://weblog.rider.cz/mobile/</strong>](http://weblog.rider.cz/mobile/) byla spuštěna testovací verze speciální aplikace, která zpřístupňuje záznamy z logu i mobilním zařízením. Využívá technologie [Microsoft Mobile Internet Toolkit](http://www.asp.net/mobile/intro.aspx?tabindex=6), která podle typu zařízení, které k aplikaci přistupuje, patřičným způsobem formátuje výstup v HTML, XHTML nebo WML. Zároveň bere ohled na schopnosti toho kterého zařízení, rozměry obrazovky atd.
+Na adrese [**http://weblog.rider.cz/mobile/**](http://weblog.rider.cz/mobile/) byla spuštěna testovací verze speciální aplikace, která zpřístupňuje záznamy z logu i mobilním zařízením. Využívá technologie [Microsoft Mobile Internet Toolkit](http://www.asp.net/mobile/intro.aspx?tabindex=6), která podle typu zařízení, které k aplikaci přistupuje, patřičným způsobem formátuje výstup v HTML, XHTML nebo WML. Zároveň bere ohled na schopnosti toho kterého zařízení, rozměry obrazovky atd.
 
 Zatím jsem měl možnost vyzkoušet funčnost na iPaqu (Pocket PC), smartphone Sony Ericsson P800 (Symbian OS) a na běžném WAPovém mobilním telefonu Siemens ME 45. Všude aplikace fungovala, včetně správného zobrazování diakritiky.
 

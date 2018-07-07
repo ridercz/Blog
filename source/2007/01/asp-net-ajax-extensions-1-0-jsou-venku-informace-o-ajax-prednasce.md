@@ -37,4 +37,4 @@ Do knihovny AJAX Futures Microsoft zařadil funkce, které nepovažuje za tak d�
 
 Před týdnem jsem měl [přednášku o Ajaxu](http://akce.altairis.cz/Events/25.aspx). Dosud jsem se nedostal k tomu, abych zpracoval záznamy a zveřejnil příklady. Ve světle těchto událostí tak ani nebudu činit a uspořádám aktualizovanou přednášku, která bude odpovídat ostré verzi. Její termín včas oznámím, momentálně ho řeším s Microsoftem.
 
-Pokud máte zájem o hlubší vhled, doporučuji Hands-on-lab GOC37 od Gopasu, který připravuji. Více informací najdete v [tomuto kurzu věnovanému článku](/Articles/133-hands-on-labs-na-asp-net-ajax-a-dalsi-rozsireni.aspx).
+Pokud máte zájem o hlubší vhled, doporučuji Hands-on-lab GOC37 od Gopasu, který připravuji. Více informací najdete v [tomuto kurzu věnovanému článku](https://www.aspnet.cz/Articles/133-hands-on-labs-na-asp-net-ajax-a-dalsi-rozsireni.aspx).

@@ -14,7 +14,8 @@ Včera v noci jsem instaloval náš nový vývojový SQL server a z nedostatku i
 Dokud jsem měl jenom jeden počítač, jmenoval se obligátně ALTAIR. Od té doby se ovšem řady našich křemíkových souputníků značně rozrostly - jenom doma jich v tomto okamžiku máme v aktivním provozu šest.
 
 Celkem naše výpočetní kapacita v tomto okamžiku čítá sedmnáct počítačů, celkem rovnoměrně rozmístěných po území Čech:
- <ul> <li><strong>Aisha</strong> (workstation) <li><strong>Artex</strong> (vývojový web server) <li><strong>Canis</strong> (terminal server) <li><strong>Centaur</strong> (databáze) <li><strong>Epona</strong> (workstation) <li><strong>Equus</strong> (Linux - logy a bůh ví co) <li><strong>Falko</strong> (workstation - notebook) <li><strong>Felis</strong> (terminal server) <li><strong>Gepard</strong> (vývojový databázový server) <li><strong>Lupus</strong> (databázový server) <li><strong>Mustang</strong> (web server) <li><strong>Phoenix</strong> (workstation) <li><strong>Regulus</strong> (mail server) <li><strong>Spirit</strong> (web server) <li><strong>Unicorn</strong> (zálohy, FTP) <li><strong>Waylander</strong> (web server) <li><strong>Wolf</strong> (file server)</li></ul> 
+
+*   **Aisha** (workstation) **Artex** (vývojový web server) **Canis** (terminal server) **Centaur** (databáze) **Epona** (workstation) **Equus** (Linux - logy a bůh ví co) **Falko** (workstation - notebook) **Felis** (terminal server) **Gepard** (vývojový databázový server) **Lupus** (databázový server) **Mustang** (web server) **Phoenix** (workstation) **Regulus** (mail server) **Spirit** (web server) **Unicorn** (zálohy, FTP) **Waylander** (web server) **Wolf** (file server) 
 
 Při pohledu na jejich názvy je jasná inspirace zvířecí říší, nepříliš překvapivě zejména koňmi.
 

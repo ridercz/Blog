@@ -6,19 +6,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Stavové kódy 301 (Moved Permanently) a 410 (Gone)" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Neznámé leč užitečné stavové kódy HTTP</h1>
       <section class="article">
-        
+        <p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">RFC 2616</a> (HTTP) definuje mimo jiné stavové kódy, kterými HTTP servery odpovídají na požadavky. Notoricky známý (a nenáviděný) je například <em>404 Object not found</em>. Kompletní přehled najdete ve zmíněném RFCčku, já si dovolím upozornit na dva specifické. Jedná se o <em>301 Moved Permanently</em> a <em>410 Gone</em>. Oba dva jsou užitečné zejména při komunikaci s vyhledávači.</p>
+<h2 id="moved-permanently">301 Moved Permanently</h2>
+<p>Tento stavový kód se používá v případě, že požadovaná stránka byla trvale přesunuta na jinou adresu (např. v rámci zpracování nové verze webu). Tato adresa se posílá jako hlavička <em>Location</em>.</p>
+<p>Obvykle používaný stav <em>302 Found</em> (který ASP.NET generuje při <em>Response.Redirect</em>) znamená přesměrování dočasné. Klienti by sice měli přesměrovat požadavek na novou adresu, leč nic víc.</p>
+<p>Zato v případě 301 doporučuje norma klientům, aby odpovídajícím způsobem upravili například bookmarky a podobně. Není mi sice známo, že by tak některý z reálně používaných prohlížečů dneška činil, ale vyhledávače se tím docela řídí.</p>
+<h2 id="gone">410 Gone</h2>
+<p>Ještě zajímavější je stavový kód <em>410 Gone</em>. Ten indikuje, že požadovaná stránka byla definitivně a nenávratně odstraněna, zničena a vaporizována. Její URL má být navždy zapomenuto a všechny odkazy vypáleny a jejich pole posypána solí a salnytrem, aby na nich nic nerostlo. S tím salnytrem jsem to možná trochu přehnal, ale v zásadě toto jest záměr tvůrců normy. Vyhledávače na to reagují zpravidla vymazáním stránky z indexu.</p>
+<h2 id="jak-na-to-v-asp.net">Jak na to v ASP.NET</h2>
+<p>ASP.NET neobsahují pro shora uvedené žádnou systémovou podporu. Pročež používám dvojici funkcí, které totéž učiní za mne:</p>
+<p>Public Shared Sub PermanentRedirect(ByVal URL As String) With System.Web.HttpContext.Current.Response .Clear() .StatusCode = 301 .StatusDescription = &quot;Moved Permanently&quot; .AddHeader(&quot;Location&quot;, URL) .Write(&quot;<html><head><title>301 Moved Permanently</title></head>&quot;) .Write(&quot;<body><h1>301 Moved Permanently</h1><p>Requested page was permanently moved <a href='" & URL & "'>here</a>.</p></body></html>&quot;) .End() End With End Sub Public Shared Sub PermanentGone() With System.Web.HttpContext.Current.Response .Clear() .StatusCode = 410 .StatusDescription = &quot;Gone&quot; .Write(&quot;<html><head><title>410 Gone</title></head>&quot;) .Write(&quot;<body><h1>410 Gone</h1><p>Requested page was permanently discontinued. Please remove all links here.</p></body></html>&quot;) .End() End With End Sub</p>
+
       </section>
     </main>
     <footer>

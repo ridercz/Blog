@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Z minulého článku již víte, jakým způsobem můžete uchovávat v SQL Serveru prostorová data (jako například GPS souřadnice) a jak se na ně můžete dotazovat pomocí jazyka Transact-SQL. Používají se přitom datové typy geometry a geography, s nimiž lze samozřejmě pracovat i z prostředí ASP.NET, čemuž je věnován tento článek." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -38,7 +40,7 @@
 <p>S výsledkem dotazu můžete pracovat obvyklým způsobem. Můžete použít například <code>SqlDataReader</code> a data zpracovávat po řádcích. Nebo můžete udělat totéž, co já v předchozím příkladu, a použít <code>SqlDataAdapter</code> k naplnění <code>DataTable</code>, se kterou budete dále pracovat. Požadovaný sloupec pak stačí přetypovat na <code>SqlGeography</code> a můžete s ním dále pracovat běžným způsobem:</p>
 <p>var location = results.Rows[0][&quot;Location&quot;] as SqlGeography; double lat = location.Lat.Value; double lon = location.Long.Value;</p>
 <p>V příštím pokračování se seznámíme s formátem GeoRSS, který umožní publikovat seznamy geotagged bodů, a který se nám bude náramně hodit pro zobrazování bodů na mapě pomocí Virtual Earth nebo Google Maps.</p>
-<p><strong>Příklady k tomuto seriálu si můžete stáhnout na <strong><a href="http://www.aspnet.cz/files/20100603-GeoSamples.zip"><strong>http://www.aspnet.cz/files/20100603-GeoSamples.zip</strong></a></strong> (760 kB).</strong></p>
+<p><strong>Příklady k tomuto seriálu si můžete stáhnout na <strong><a href="https://www.cdn.altairis.cz/Blog/2010/20100603-GeoSamples.zip"><strong>http://www.aspnet.cz/files/20100603-GeoSamples.zip</strong></a></strong> (760 kB).</strong></p>
 
       </section>
     </main>

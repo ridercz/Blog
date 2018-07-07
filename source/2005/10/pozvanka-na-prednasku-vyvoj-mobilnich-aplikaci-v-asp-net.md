@@ -9,3 +9,12 @@
 <!-- dcterms:created = 2005-10-10T23:13:19.397+02:00 -->
 <!-- dcterms:dateAccepted = 2005-10-10T23:13:19.397+02:00 -->
 
+![](https://www.cdn.altairis.cz/Blog/2005/20051010-firstslide.jpg) 
+
+ASP.NET představuje mimo jiné i mocný nástroj pro rychlý vývoj webových aplikací, určených pro mobilní zařízení. Ve spolupráci s .NET Group jsme připravili přednášku, která se tímto tématem zabývá.
+
+**Akce se bude konat dne 19. října 2005 od 18:00 v centrále společnosti Microsoft v Praze. Vstup je zdarma, informace a registraci najdete na **[**www.dng.cz**](http://www.dng.cz)**.**
+
+Předvedu vám v teorii i praxi technologie pro vývoj webů pro mobilní telefony a kapesní počítače, a to v aktuální verzi ASP.NET 1.1 i nové 2.0 (Whidbey). Součástí budou též praktické ukázky i prostor na dotazy.
+
+Mimochodem - jedná se pravděpodobně o historicky první případ, kdy prezentaci nedělám v noci před přednáškou, a mám ji hotovou více než týden předem :-)

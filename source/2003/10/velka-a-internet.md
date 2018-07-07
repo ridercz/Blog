@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-10-13T01:51:59+02:00 -->
 <!-- dcterms:dateAccepted = 2003-10-13T01:51:59+02:00 -->
 
-[![Registana před dostihem](http://weblog.rider.cz/files/registana_1_lq.jpg)](http://weblog.rider.cz/files/registana_1_hq.jpg)Najít na Internetu výsledky včera proběhnuvší <strong>Velké pardubické</strong> není tak triviální úkol, jak by se mohlo zdát.
+[![Registana před dostihem](http://weblog.rider.cz/files/registana_1_lq.jpg)](http://weblog.rider.cz/files/registana_1_hq.jpg)Najít na Internetu výsledky včera proběhnuvší **Velké pardubické** není tak triviální úkol, jak by se mohlo zdát.
 
 [Oficiální stránky](http://www.vpcp.cz/) zatím nikdo neaktualizoval.
 

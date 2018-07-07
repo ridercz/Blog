@@ -24,6 +24,6 @@ Spojené státy jsou zemí nápisů, tedy přímo prokletím pro mne. Moje babi�
 
 Tady je cedulí s hodnotnými informacem spousta. Dveře na sobě mají výrazný nápis jak je otevřít. Dopravní značky podrobně popisují co je třeba dělat či nedělat a podobně. Nejvíc mne zaujala cedule na semaforu, hlásající "STOP HERE ON RED".
 
-Jenom se obávám, že rozličná varování a upozornění mají skoro opačný efekt. V Čechách když jeden vidí ceduli, tak ví, že se ji obvykle vyplatí přečíst. Tady je jich tolik (a všechny psané <strong>VÝRAZNÝMI VELKÝMI PÍSMENY</strong>), že je pomalu začínám ignorovat i já.
+Jenom se obávám, že rozličná varování a upozornění mají skoro opačný efekt. V Čechách když jeden vidí ceduli, tak ví, že se ji obvykle vyplatí přečíst. Tady je jich tolik (a všechny psané **VÝRAZNÝMI VELKÝMI PÍSMENY**), že je pomalu začínám ignorovat i já.
 
 V [galerii](http://gallery.rider.cz/Events/Microsoft/MVP_Summit_2004/default.xhtml.cs) najdete nové fotky. Bohužel jsou zatím skoro všechny foceny malým automatickým kompaktem Sony, který je sice malý, ale upřímně řečeno stojí za houby, a ani nemám čas si s nimi pohrát, takže jsou spíš informativní, než hezké. Doufám že se to zlomí zítra, budu toho s sebou obecně tahat méně, takže si budu moci vzít lepší (a větší) fotoaparát.

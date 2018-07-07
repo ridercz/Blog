@@ -62,11 +62,11 @@ Co hodnotit nemohu, je kancelářský balík – má existovat Office pro ARM, a
 
 Zcela zásadní je pro mne zadávání textu. Chci mít možnost stručně odpovídat na maily, psát na Facebook atd. On-screen klávesnice mi obecně příliš nesedí. Tu na Windows Phone jsem se naučil používat, ale HW je prostě HW.
 
-[![kb_landscape](http://www.weblog.rider.cz/Files/20120630-kb_landscape_thumb.png "kb_landscape")](http://www.weblog.rider.cz/Files/20120630-kb_landscape_2.png)
+[![kb_landscape](https://www.cdn.altairis.cz/Blog/2012/20120630-kb_landscape_thumb.png "kb_landscape")](https://www.cdn.altairis.cz/Blog/2012/20120630-kb_landscape_2.png)
 
 V režimu "na šířku" je klávesnice docela velká, ale má zcela nesmyslné rozložení. V pravé části se nacházejí některá písmena s diakritikou (jak napsat ta ostatní, na to jsem dosud nepřišel). Nejsou ovšem nijak odlišená od normálních kláves, což vede (alespoň u mne) k totálnímu zmatení a ztrátě orientace.
 
-[![kb_portrait](http://www.weblog.rider.cz/Files/20120630-kb_portrait_thumb.png "kb_portrait")](http://www.weblog.rider.cz/Files/20120630-kb_portrait_2.png)
+[![kb_portrait](https://www.cdn.altairis.cz/Blog/2012/20120630-kb_portrait_thumb.png "kb_portrait")](https://www.cdn.altairis.cz/Blog/2012/20120630-kb_portrait_2.png)
 
 V režimu "na výšku" jsou na můj vkus tlačítka příliš malá a kvůli širokoúhlosti displeje se tablet nedá držet za spodek, protože se převažuje, takže se na ní špatně píše i tak.
 

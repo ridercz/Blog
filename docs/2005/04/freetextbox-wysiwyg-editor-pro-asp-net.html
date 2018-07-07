@@ -6,19 +6,44 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jedním z nejčastějších požadavků kladených na vývoj webových aplikací je možnost zadávat formátovaný (HTML) text pomocí uživatelsky přítulného WYSIWYG editoru. Já osobně používám k plné spokojenosti komponentu zvanou FreeTextBox. Ukázka jeho použití zároveň poslouží k předvedení všeobecné práce s ovládacími prvky třetích stran." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>FreeTextBox: WYSIWYG editor pro ASP.NET</h1>
       <section class="article">
-        
+        <p>Jedním z nejčastějších požadavků kladených na vývoj webových aplikací je možnost zadávat formátovaný (HTML) text pomocí uživatelsky přítulného WYSIWYG editoru. Dříve doména a středobod činnosti publikačních systémů, dnes téměř nezbytná součást jakékoliv složitější aplikace. Komponent, které zajišťují takovou funkčnost, jest nepřeberné množství. Některé fungují výhradně na straně klienta v JavaScriptu, jiné umějí přímo spolupracovat s ASP.NET.</p>
+<p>Já osobně používám k plné spokojenosti komponentu zvanou <strong><a href="http://www.freetextbox.com/">FreeTextBox</a></strong>. Název není úplně přesný, protože &quot;free&quot; je jenom základní verze, za rozšířené či zdrojový kód si musíte připlatit. Nicméně i ona základní verze představuje pro většinu aplikací zcela postačující řešení. Osobně jsem toho názoru, že kreativitu uživatelů v oblasti zadávání formátování textu je třeba spíše krotit než podporovat.</p>
+<p>FreeTextBox má několik užitečných vlastností, které vyčnívají nad řadu jiných řešení:</p>
+<ul>
+<li><strong>Jednoduchá instalace:</strong> Lze jej nastavit tak, že nevyžaduje kopírování žádných dalších souborů kromě vlastního DLL. Obrázky a JavaScripty umí načítat přes speciální handler tak, jak jsou uloženy v jeho assembly. <strong>Plná nativní podpora ASP.NET:</strong> Jedná se o standardní web user control, na který jest aplikovati standardní metody, jako například validaci a podobně. <strong>Jednoduché uživatelské rozhraní:</strong> Ovládá se přes panely nástrojů, které lze přimět aby kopírovaly styl Microsoft Office v různých verzích. <strong>Podpora pro práci s obrázky:</strong> Obsahuje správce souborů, přes kterého je možno do vyhrazené složky (galerie) možno uploadovat obrázky a pak je pohodlně vkládat do editovaného textu. <strong>XHTML:</strong> Umožňuje zajistit, že vkládaný kód bude vždy valid XHTML (pouze v placené verzi).</li>
+</ul>
+<p>Ukázka použití FTB zároveň poslouží k předvedení všeobecné práce s ovládacími prvky třetích stran.</p>
+<h2 id="pripravy">Přípravy</h2>
+<p><img src="https://www.cdn.altairis.cz/Blog/2005/20050421-add-reference.png" alt="Přidání reference ve VS.NET" title="Přidání reference ve VS.NET" />Jako první krok (pomineme-li stažení z <a href="http://www.freetextbox.com/">www.freetextbox.com</a>) jest třeba přidat komponentu FreeTextBox do referencí daného webového projektu. V <em>Solution Exploreru</em> VS.NET klepněte pravým tlačítkem na složku <em>References</em> a z kontextového menu vyberte <em>Add Reference</em>. Objeví se nové okno, v němž na záložce <em>.NET</em> pomocí tlačítka <em>Browse</em> vyberte soubor <code>FreeTextBox.dll</code>.</p>
+<p>Chcete-li používat výše zmíněnou funkci natahování všech potřebných souborů z assembly, musíte zaregistrovat HTTP handler, který se o to postará. Učiníte tak přidáním následujícího kódu do sekce <code>/configuration/system.web</code> v souboru <code>web.config</code>:</p>
+<p><httpHandlers> <add verb="GET" path="FtbWebResource.axd" type="FreeTextBoxControls.AssemblyResourceHandler, FreeTextBox" /> </httpHandlers></p>
+<p>Chcete-li používat samostatné soubory, nakopírujte do vhodné složky (standardně <code>/aspnet_client/FreeTextBox/</code>) dodané pomocné soubory (obrázky a JavaScripty). Použití samostatných souborů může být výhodné, pokud se jedná o vysoce zatěžovanou aplikaci. Stahování velkého množství souborů přes handler může server zbytečně zatěžovat.</p>
+<h2 id="pouziti-ve-strance">Použití ve stránce</h2>
+<p>Aby bylo možno control ve stránce použít, je nutno ho nejprve zaregistrovat. Tak jest činiti přidáním direktivy <code>@Register</code> na její začátek. V našem konkrétním případě bude tato direktiva vypadat <code>. Místo běžného `asp:textbox` pak použijete pro vložení následující kód:</code>.</p>
+<p>Standardně ASP.NET 1.1 vyhodí výjimku, pokud zaslané parametry (GET, POST) obsahují libovolné HTML formátování, přesněji znaky &lt; a &gt;. Toto bohulibé chování si klade za cíl zabránit možnosti <em>script injection</em>, tedy možnosti podvrhnout javascriptový kód do stránky, v níž bude spuštěn s vyšším stupněm oprávnění, či kde může získat citlivé údaje - např. hodnoty cookies. Pro náš účel je ovšem toto chování nevhodné, takže jej vypneme vložením atributu <code>validateRequest=&quot;false&quot;</code> do direktivy <code>@Page</code>.</p>
+<p>Nezapomínejte ovšem na nutnost vstup validovat vlastními prostředky. Pokud umožníte vkládání formátovaného textu běžným návštěvníkům, je třeba zajistit aby nemohli vkládat skripty ani další potenciálně nebezpečné konstrukce. Teoreticky by v tomto směru mělo stačit nastavení vlastnosti FTP <code>StripAllScripting</code> na <code>True</code>, nicméně proti mnou vyzkoušeným metodám podvržení textu to nezabralo.</p>
+<p>Z code behind kódu se s instancí FreeTextBoxu zachází v zásadě stejně jako se standardním TextBoxem.</p>
+<h2 id="vkladani-obrazku-prace-s-galerii">Vkládání obrázků - práce s galerií</h2>
+<p>Jednou z výtečných funkcí FTB je možnost pracovat nativně s obrázky uploadovanými z klienta. Pokud ji chcete využít, je třeba učiniti několik dalších drobných úprav.</p>
+<p>Jednak je třeba <a href="http://wiki.freetextbox.com/default.aspx/FreeTextBoxWiki.ToolbarConfiguration">přidat na panel nástrojů</a> tlačítko <code>InsertImageFromGallery</code>.</p>
+<p>Dále pak je třeba vytvořit pomocný soubor se stránkou, která se bude starat o vlastní vkládání obrázků. Příklad takové stránky najdete v distribučním archivu jako <code>ftb.imagegallery.aspx</code>. O vlastní činnost se stará specializovaná komponenta <code>FTB:ImageGallery</code>. Ta se vyznačuje mimi jiné tím, že kvůli nějaké záhadné chybě v JavaScriptu nefunguje v Internet Exploreru, je-li stránka zobrazena ve Strict modu (má <code>!DOCTYPE</code>). Postarejte se tedy o to, aby se stránka vykreslovala v Quirk mode.</p>
+<p>Konečně pak je třeba nastavit několik parametrů u vlastního ovládacího prvku. V první řadě se jedná o <code>ImageGalleryUrl</code>. Standardně se předpokládá, že výše uvedená obslužná stránka bude dostupná jako <code>/ftb.imagegallery.aspx</code>. Chcete-li ji umístit jinam, uveďte příslušné umístění zde. Cestu ke složce, ve které se nacházejí obrázky, pak určete jako parametr <code>ImageGalleryPath</code>.</p>
+<p>Další možnosti FreeTextBoxu objevíte po prostudování přiložené dokumentace, případně online <a href="http://wiki.freetextbox.com/">na webu</a>.</p>
+
       </section>
     </main>
     <footer>

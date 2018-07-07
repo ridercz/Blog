@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2008-11-09T23:17:13.367+01:00 -->
 <!-- dcterms:dateAccepted = 2008-11-09T23:17:13.367+01:00 -->
 
-[![20081109-CacheManager](http://www.aspnet.cz/Files/20081109-20081109-CacheManager_thumb_1.gif "20081109-CacheManager")](http://www.aspnet.cz/Files/20081109-20081109-CacheManager_4.gif)Robustní cacheovací mechanismus je jedna z nejužitečnějších technologií, jaké ASP.NET nabízí. Při vhodném použití může cacheování velmi zvýšit výkon aplikace, aniž by bylo nutné do ní příliš zasahovat. Pokud ale cacheování využíváte extenzivně, máte velkou šanci, že se v něm ztratíte.
+[![20081109-CacheManager](https://www.cdn.altairis.cz/Blog/2008/20081109-20081109-CacheManager_thumb_1.gif "20081109-CacheManager")](https://www.cdn.altairis.cz/Blog/2008/20081109-20081109-CacheManager_4.gif)Robustní cacheovací mechanismus je jedna z nejužitečnějších technologií, jaké ASP.NET nabízí. Při vhodném použití může cacheování velmi zvýšit výkon aplikace, aniž by bylo nutné do ní příliš zasahovat. Pokud ale cacheování využíváte extenzivně, máte velkou šanci, že se v něm ztratíte.
 
 Na pomoc přochází **Cache Manager**. Malá ale šikovná aplikace, která umožňuje přímo z webu zobrazit cacheované položky a spoustu údajů, které jsou o nich dostupné. Položky také můžete z cache jednoduše odstranit.
 

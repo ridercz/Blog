@@ -14,7 +14,7 @@ O George Orwellovi jsem už [jednou na tomto webu psal](http://weblog.rider.cz/S
 
 Mimochodem - ve výše uvedeném projevu je válka v Iráku označována za "vojenskou operaci". Slovo "war" tam ovšem najdete:
 
-<em>My fellow citizens, at this hour, American and coalition forces are in the early stages of military operations to disarm Iraq, to free its people and to defend the world from grave danger. On my orders, coalition forces have begun striking selected targets of military importance to undermine Saddam Hussein's ability to wage war.</em>
+*My fellow citizens, at this hour, American and coalition forces are in the early stages of military operations to disarm Iraq, to free its people and to defend the world from grave danger. On my orders, coalition forces have begun striking selected targets of military importance to undermine Saddam Hussein's ability to wage war.*
 
 (Můj překlad: Moji spoluobčané, v této chvíli jsou síly Ameriky a koalice v počáteční fázi vojenské operace s cílem odzbrojit Irák, osvobodit jeho lid a zachránit svět před smrtelným nebezpečím. Na můj rozkaz koaliční síly zaútočily na vybrané cíle vojenské důležitosti, aby podkopaly možnosti Sadáma Hussejna vést válku.)
 

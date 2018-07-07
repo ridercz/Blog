@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-05-16T21:46:21+02:00 -->
 <!-- dcterms:dateAccepted = 2003-05-16T21:46:21+02:00 -->
 
-Zákonodárné iniciativy KDU-ČSL pro mne představují obveselení v nudné šedi všedního dne. Možná by byl dobrý nápad vyhlásit nějakou cenu "<strong>Nejblbější nápad volebního období</strong>". Vyhodnocovala a slavnostně by se předávala tak týden řed volbami do PSP.
+Zákonodárné iniciativy KDU-ČSL pro mne představují obveselení v nudné šedi všedního dne. Možná by byl dobrý nápad vyhlásit nějakou cenu "**Nejblbější nápad volebního období**". Vyhodnocovala a slavnostně by se předávala tak týden řed volbami do PSP.
 
 Vedle [protipotratového zákona](http://weblog.rider.cz/ShowRecord.aspx?day=20030505), který jsem si zde již bral do úst, by si nepochybně nějaké ocenění zasloužila i nejnovější státotvorná snaha lidovců, konkrétně snaha dát rodičům více [volebních hlasů](http://zpravy.idnes.cz/domaci.asp?r=domaci&c=A030516_091159_domaci_has&l=1&t=A030516_091159_domaci_has&r2=domaci), než bezdětným občanům - za každé dítě jedno.
 
@@ -25,6 +25,6 @@ Tak se mi na jazyk dere melodie písničky [Apage satanas](http://www.arakain.cz
 > dvanáctý je o poznání
 > kdo je ten co do duše ti hučí
 
-Nemám nic proti víře v Boha, mám pár připomínek vůči náboženství a hodně proti církvím. Ale jsem přesvědčen, že politické aktivity "křesťanů" škodí všem třem. Nevím toho o křesťanství mnoho, ale předpokládám, že s <em>tímhle</em> nemá nic společného.
+Nemám nic proti víře v Boha, mám pár připomínek vůči náboženství a hodně proti církvím. Ale jsem přesvědčen, že politické aktivity "křesťanů" škodí všem třem. Nevím toho o křesťanství mnoho, ale předpokládám, že s *tímhle* nemá nic společného.
 
 I když, jak nad tím tak přemýšlím, jisté části křesťanské věrouky mají něco do sebe. První cenou ve výše uvedené soutěži by mohl být například dlouhodobý pobyt v očistci.

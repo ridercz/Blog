@@ -22,19 +22,19 @@ Mohou zde pomoci jednorázová hesla, ale jenom omezeně. V první řadě, progr
 
 Jedinou skutečně spolehlivou obranou je vzdělat uživatele, aby prostě nezadávali heslo jinde, než na té správné doméně a aby si zkontrolovali, že na něj přistupují přes HTTPS, nejlépe podpořené HSTS. Třeba tak, jak to dělá slovenský Azet.sk:
 
-[![atropa-obrana-azet-1](http://www.aspnet.cz/Files/20150906-atropa-obrana-azet-1_thumb.png "atropa-obrana-azet-1")](http://www.aspnet.cz/Files/20150906-atropa-obrana-azet-1_2.png)
+[![atropa-obrana-azet-1](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-azet-1_thumb.png "atropa-obrana-azet-1")](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-azet-1_2.png)
 
 To ovšem může být trochu komplikované. Za prvé, vizuální podoba notifikací se v jednotlivých verzích prohlížečů mění a jak vidíte, třeba s Microsoft Edge si Azet.sk ještě úplně neporadil. A za druhé, když to uživatele naučíte, musíte to dodržet. Což se Azet.sk nedaří už vůbec. Dá se předpokládat, že spousta uživatelů bude zadávat jmého a heslo na homepage, která je ovšem dostupná výhradně přes HTTP (pokud se připojíte na HTTPS, budete přesměrováni na nezabezpečenou verzi):
 
-[![atropa-obrana-azet-2](http://www.aspnet.cz/Files/20150906-atropa-obrana-azet-2_thumb.png "atropa-obrana-azet-2")](http://www.aspnet.cz/Files/20150906-atropa-obrana-azet-2_2.png)
+[![atropa-obrana-azet-2](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-azet-2_thumb.png "atropa-obrana-azet-2")](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-azet-2_2.png)
 
 Český Seznam.cz na to jde zase poněkud opačně. Na homepage (konečně, hurá) již nějakou dobu zelený certifikát, HTTP a HSTS má, ovšem přihlašovací formulář odesílá na nepříliš důvěryhodně vypadající doménu szn.cz:
 
-[![atropa-obrana-seznam-1](http://www.aspnet.cz/Files/20150906-atropa-obrana-seznam-1_thumb.png "atropa-obrana-seznam-1")](http://www.aspnet.cz/Files/20150906-atropa-obrana-seznam-1_2.png)
+[![atropa-obrana-seznam-1](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-seznam-1_thumb.png "atropa-obrana-seznam-1")](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-seznam-1_2.png)
 
 Na tutéž doménu budete přesměrováni též, pokud se pokusíte přistoupit třeba přímo k e-mailové službě na doméně email.seznam.cz:
 
-[![atropa-obrana-seznam-2](http://www.aspnet.cz/Files/20150906-atropa-obrana-seznam-2_thumb.png "atropa-obrana-seznam-2")](http://www.aspnet.cz/Files/20150906-atropa-obrana-seznam-2_2.png)
+[![atropa-obrana-seznam-2](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-seznam-2_thumb.png "atropa-obrana-seznam-2")](https://www.cdn.altairis.cz/Blog/2015/20150906-atropa-obrana-seznam-2_2.png)
 
 Všechny uvedené adresy jsou sice zabezpečené přes HTTPS, ale jenom [www.seznam.cz](http://www.seznam.cz) má EV certifikát, přihlašovací server nikoliv a chybí v něm ta známá značka "seznam.cz".
 

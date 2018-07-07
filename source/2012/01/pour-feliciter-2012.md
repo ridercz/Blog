@@ -12,4 +12,4 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120101-pour-feliciter-2012.jpg -->
 
-[![230124_falko_pf2012](http://www.aspnet.cz/Files/20111231-230124_falko_pf2012_thumb.jpg "230124_falko_pf2012")](http://www.aspnet.cz/Files/20111231-230124_falko_pf2012_2.jpg)
+[![230124_falko_pf2012](https://www.cdn.altairis.cz/Blog/2011/20111231-230124_falko_pf2012_thumb.jpg "230124_falko_pf2012")](https://www.cdn.altairis.cz/Blog/2011/20111231-230124_falko_pf2012_2.jpg)

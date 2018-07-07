@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2004-06-21T08:46:41.687+02:00 -->
 <!-- dcterms:dateAccepted = 2004-06-21T08:46:41.687+02:00 -->
 
-![Logo Cheetah CMS](/files/cheetah.png)
+![Logo Cheetah CMS](https://www.cdn.altairis.cz/Blog/cheetah.png)
 
 Blogovacích systémů je spousta. Spousta jich je k dispozici i pod GPL. Vyznačují se ovšem zhusta tím, že jsou psány v PHP nebo jiném obskurním pro mne nepoužitelném jazyce a že jsou stavěny pro krátké zprávy a ne objemné jazykové exhibice mého stylu.
 

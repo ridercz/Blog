@@ -11,11 +11,11 @@
 <!-- dcterms:created = 2008-03-21T08:00:29+01:00 -->
 <!-- dcterms:dateAccepted = 2008-03-21T08:00:29+01:00 -->
 
-V [minulém díle tohoto seriálu](/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx) jsme si řekli, že HTTP je protokol bezstavový a že jednou z technik, jak tuto bezstavovost obejít, je použití cookies.
+V [minulém díle tohoto seriálu](https://www.aspnet.cz/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx) jsme si řekli, že HTTP je protokol bezstavový a že jednou z technik, jak tuto bezstavovost obejít, je použití cookies.
 
 Cookies jsou jediná technika v HTTP, která je přímo navržená k tomu, abyste si mohli něco na klienta "uložit" a při dalším požadavku zase "vyzvednout". Cookies fungují tak, že server pošle jako jednu z HTTP hlaviček odpovědi textový řetězec, který si prohlížeč uloží na disk a při dalším požadavku ho ve formě HTTP hlavičky pošle zpátky.
 
-To byl velmi zjednodušený náhled na celou problematiku, podrobnější informace o použití cookies v ASP.NET najdete v článku **[Sušenky.NET](/Articles/8-susenky-net.aspx)** na tomto serveru.
+To byl velmi zjednodušený náhled na celou problematiku, podrobnější informace o použití cookies v ASP.NET najdete v článku **[Sušenky.NET](https://www.aspnet.cz/Articles/8-susenky-net.aspx)** na tomto serveru.
 
 Do cookies můžete uložit pouze omezené množství dat. Zabrání vám v tom jednak omezení na straně prohlížeče (maximální velikost cookie se obvykle počítá v jednotkách kB, přesné číslo si nepamatuji) a druhak by vám v tom měl zabránit i zdravý rozum. Obsah cookie se přenáší s úplně každým požadavkem na váš server, a to i tehdy, když ho server vůbec nepotřebuje a nevyužije. Například při požadavcích na obrázky a další statická data. Což zvyšuje objem přenášených dat, za která obvykle tou či onou formou platíte.
 

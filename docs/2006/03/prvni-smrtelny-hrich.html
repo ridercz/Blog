@@ -6,19 +6,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Ve svém článku o mailování z ASP.NET 2.0 jsem napsal, že posílání mailů v HTML považuji za druhý nejhorší programátorský hřích. Tato zmínka vyvolala předpokládané dotazy, jaký že je tedy ten první nejhorší hřích, jakého se dle mého názoru může .NET vývojář dopustit." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>První smrtelný hřích</h1>
       <section class="article">
-        <p>Ve svém <a href="/Articles/79-odesilani-e-mailu-z-prostredi-net-2-0.aspx">článku o mailování z ASP.NET 2.0</a> jsem napsal, že posílání mailů v HTML považuji za druhý nejhorší programátorský hřích. Tato zmínka vyvolala předpokládané dotazy, jaký že je tedy ten první nejhorší hřích, jakého se dle mého názoru může .NET vývojář dopustit.</p>
+        <p>Ve svém <a href="https://www.aspnet.cz/Articles/79-odesilani-e-mailu-z-prostredi-net-2-0.aspx">článku o mailování z ASP.NET 2.0</a> jsem napsal, že posílání mailů v HTML považuji za druhý nejhorší programátorský hřích. Tato zmínka vyvolala předpokládané dotazy, jaký že je tedy ten první nejhorší hřích, jakého se dle mého názoru může .NET vývojář dopustit.</p>
 <p>Když se podíváte do diskusních fór a konferencí, najdete poměrně dost dotazů typu: <em>Jak může moje ASP.NET aplikace pracovat se systémovým registrem na klientově počítači? Jak mohu zakázat použití tlačítka „Zpět“ v prohlížeči? Jak poznám, že uživatel opustil stránku zavřením prohlížeče, aniž by se odhlásil?</em></p>
 <p>Na takové otázky se nedá odpovědět, protože jejich tazatel zcela zjevně nepochopil samotný princip webových aplikací. Ubohý programátor, izolovaný od komunikačního protokolu vrstvami ASP.NET abstrakcí, netuší nic o principu a povaze toho, s čím pracuje. Panensky nepostižen informacemi o bezstavovosti HTTP a omezeními HTML nadává, že ASP.NET jsou hloupé a neumožňují mu udělat to, co slíbil šéfovi.</p>
 <p>Je nám znám případ firmy, která pro svůj silně zatěžovaný databázový server sice zakoupila hromadu paměti a několik procesorů, ale pouze jeden disk, na němž je operační systém, data, logy zálohy…</p>

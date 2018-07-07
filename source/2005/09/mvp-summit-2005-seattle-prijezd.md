@@ -12,10 +12,12 @@
 Už se mi dlouho nestalo, že bych se v půl šesté ráno probudil, protože nemohu spát. Situaci vysvětluje skutečnost, že jsem v Seattle, a moje biologické hodiny mají dvě hodiny odpoledne, což je ta pravá doba ke vstávání.
 
 Pokud se týče cesty, musím jednoznačně ocenit skutečnost, že jsme byli ([narozdíl od loňska](/entry/article-20040406.aspx)) ušetřeni nouzového přistání a mnohahodinového čekání na letišti. Na druhou stranu, loni nám zase neztratili zavazadla...
- <h2>Střílejte na potkání</h2> 
 
-Asi bych se opravdu měl oholit. Stejně jako [moji milí čtenáři](/entry/article-20050805.aspx), i <em>Department of Homeland Security, U. S. Customs and Border Protection</em> naznal, že vypadám jako terorista a že je třeba mne patřičně proklepnout. Z celé naší skupinky si mne jako jediného označili červenou složkou a dlouze diskutovali. Naštěstí se posléze tři úředníci usnesli, že když jsem byl v USA loni, k žádným útokům nedošlo a propustili mne dále.
- <h2>Programátoři cestují nalehko</h2> 
+## Střílejte na potkání
+
+Asi bych se opravdu měl oholit. Stejně jako [moji milí čtenáři](/entry/article-20050805.aspx), i *Department of Homeland Security, U. S. Customs and Border Protection* naznal, že vypadám jako terorista a že je třeba mne patřičně proklepnout. Z celé naší skupinky si mne jako jediného označili červenou složkou a dlouze diskutovali. Naštěstí se posléze tři úředníci usnesli, že když jsem byl v USA loni, k žádným útokům nedošlo a propustili mne dále.
+
+## Programátoři cestují nalehko
 
 Před cestou na loňský MVP Summit jsem [poznamenal](/entry/article-20040404.aspx), že mne trochu  zaráží, že na týdenní cestu na cizí kontinent mi stačí tentýž batoh, s jakým chodím po městě. Zjistil jsem, že [nejsem sám](/CommentView.aspx?CID=144#d17af77b6fd6457cbeff0acca382b0ff). Na letišti jsme zjistili, že poloprázdný kufr máme všichni.
 

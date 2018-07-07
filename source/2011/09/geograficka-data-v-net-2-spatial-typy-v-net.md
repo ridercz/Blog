@@ -50,4 +50,4 @@ var location = results.Rows[0]["Location"] as SqlGeography; double lat = locatio
 
 V příštím pokračování se seznámíme s formátem GeoRSS, který umožní publikovat seznamy geotagged bodů, a který se nám bude náramně hodit pro zobrazování bodů na mapě pomocí Virtual Earth nebo Google Maps.
 
-**Příklady k tomuto seriálu si můžete stáhnout na **[**http://www.aspnet.cz/files/20100603-GeoSamples.zip**](http://www.aspnet.cz/files/20100603-GeoSamples.zip)** (760 kB).**
+**Příklady k tomuto seriálu si můžete stáhnout na **[**http://www.aspnet.cz/files/20100603-GeoSamples.zip**](https://www.cdn.altairis.cz/Blog/2010/20100603-GeoSamples.zip)** (760 kB).**

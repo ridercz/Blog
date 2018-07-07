@@ -14,7 +14,7 @@
 
 Na adrese [http://vs2010wallpapers.com](http://vs2010wallpapers.com) najdete sbírku pozadí na plochu s tematikou Visual Studia 2010. Je jich tam spousta zajímavých, ale já jsem potřeboval pro účely prezentací a webcastů nějaké univerzální, co bude fungovat pokud možno na všech rozlišeních. 
 
-[![Life Runs On Code](http://www.aspnet.cz/Files/20100726-LifeRunsOnCode_thumb.jpg "Life Runs On Code")](http://www.aspnet.cz/Files/20100726-LifeRunsOnCode_2.jpg)
+[![Life Runs On Code](https://www.cdn.altairis.cz/Blog/2010/20100726-LifeRunsOnCode_thumb.jpg "Life Runs On Code")](https://www.cdn.altairis.cz/Blog/2010/20100726-LifeRunsOnCode_2.jpg)
 
 Takový – který by mne navíc esteticky potěšil – jsem bohužel nenašel, tak jsem si ho vyrobil a dávám vám jej tímto k dispozici.
 

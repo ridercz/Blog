@@ -6,19 +6,38 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Detailní pohled na zasílání mailů prostřednictvím ASP.NET stránek" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Mailování z ASP.NET - výkon a specialitky</h1>
       <section class="article">
-        
+        <p>K rozesílání e-mailových zpráv z prostředí ASP.NET aplikací se obvykle používá tříd z namespace <code>System.Web.Mail</code>, potažmo <code>System.Web.Mail.SmtpMail</code>. Pro většínu případů plně postačuje základní nastavení opsané z příruček. Problémy nastanou v případě, kdy je e-mailů třeba rozeslat hodně, nebo pokud je architektura sítě komplikovaná. Nezaškodí tedy podívat se na to, jakým způsobem mailování probíhá a co vše můžeme nastavit.</p>
+<p>Existují dvě základní metody odesílání e-mailových zpráv. V prvním případě se ASP.NET chovají jako běžný poštovní klient (MUA - Mail User Agent), připojí se přes síť (TCP spojení na port 25) k mail serveru a zprávu odešlou. To je spolehlivé, máme-li k dispozici funkční mail server, leč poměrně pomalé - sestavení spojení a zaslání zprávy nějakou dobu trvá. Na druhou stranu, jako SMTP server můžeme použít cokoliv - vestavěný mail server ve Windows, produkt třetí strany...</p>
+<p>Ve druhém případě jsme těsně svázáni s použitým mail serverem, v našem případě tedy se <em>SMTP Service</em> ve Windows. Ta totiž umí prostřednictvím funkce &quot;mail pickup service&quot; monitorovat určitou složku (Standardně <code>C:\InetPub\MailRoot\pickup</code> ) a objeví-li se v ní specifickým způsobem formátovaný soubor, odešle ho jako e-mail. Maily v této složce zpracovává postupně, takže nemůže dojít k přetížení - maximálně se doručení zprávy o něco zpozdí, než na ni dojde řada. Podmínkou ovšem je, že na daném stroji musí běžet právě <em>Microsoft SMTP Service</em>.</p>
+<h2 id="zakladni-varianta">Základní varianta</h2>
+<p>Dim Message As New System.Web.Mail.MailMessage Message.From = &quot;odesilatel@server.cz&quot; Message.To = &quot;prijemce@server.cz&quot; Message.Subject = &quot;Subject zpravy&quot; Message.Body = &quot;Text zpravy&quot; System.Web.Mail.SmtpMail.Send(Message)</p>
+<p>Použitím shora uvedeného kódu se zpráva odešle prostřednictím mail pickup service, tedy prostřednictvím lokálního serveru a jeho MS SMTP služby. V případě, že by na jednom serveru běželo více instancí MS SMTP serveru, je možno explicitně určit do které složky se má zpráva uložit:</p>
+<p>Dim Message As New System.Web.Mail.MailMessage Message.From = &quot;odesilatel@server.cz&quot; Message.To = &quot;prijemce@server.cz&quot; Message.Subject = &quot;Subject zpravy&quot; Message.Body = &quot;Text zpravy&quot; Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/sendusing&quot;) = 1 Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/smtpserverpickupdirectory&quot;) = &quot;C:\InetPub\MailRoot\pickup&quot; System.Web.Mail.SmtpMail.Send(Message)</p>
+<h2 id="odeslani-pres-konkretni-smtp-server">Odeslání přes konkrétní SMTP server</h2>
+<p>V některých případech je nutné odeslat zprávu přes nějaký konkrétní SMTP server. Například tehdy, je-li server umístěn v rámci lokální sítě za firewallem, který z důvodu ochrany proti spamu a virům neumožňuje přímé připojení na vnější SMTP servery. V takovém případě bývá určen jeden místní server, přes který musí být přeposílána (relayována) veškerá pošta. Dalším případem, dnes již díky bohu vídaným jenom zřídka, je síť která není do Internetu připojena trvale, ale pouze v nějakých intervalech vytáčeným spojením - místní server nasbírá zprávy k odeslání a řekněme jednou za hodinu se na pár minut připojí a zprávy dávkově rozešle.</p>
+<p>V takovém případě je třeba nastavit statickou vlastnost <code>System.Web.Mail.SmtpMail.SmtpServer</code>:</p>
+<p>Dim Message As New System.Web.Mail.MailMessage Message.From = &quot;odesilatel@server.cz&quot; Message.To = &quot;prijemce@server.cz&quot; Message.Subject = &quot;Subject zpravy&quot; Message.Body = &quot;Text zpravy&quot; System.Web.Mail.SmtpMail.SmtpServer = &quot;mail.intranet.local&quot; System.Web.Mail.SmtpMail.Send(Message)</p>
+<h2 id="odeslani-pres-konkretni-smtp-server-s-autentizaci-ci-pres-nestandardni-port">Odeslání přes konkrétní SMTP server s autentizací či přes nestandardní port</h2>
+<p>V rámci uzavřených sítí mail servery zpravidla nevyžadují žádnou autentizaci a běží na standardním portu (25). Může však nastat situace, kdy je třeba zprávu odeslat přes server běžící na nestandardním portu (v našem příkladu 2525), nebo kdy je třeba zadat uživatelské jméno a heslo, či použít šifrované spojení (SSL). To vše je možno nastavit pomocí konfiguračních polí zprávy:</p>
+<p>Dim Message As New System.Web.Mail.MailMessage Message.From = &quot;odesilatel@server.cz&quot; Message.To = &quot;prijemce@server.cz&quot; Message.Subject = &quot;Subject zpravy&quot; Message.Body = &quot;Text zpravy&quot; Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/sendusing&quot;) = 2 Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/sendusername&quot;) = &quot;uzivatelske_jmeno&quot; Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/sendpassword&quot;) = &quot;heslo&quot; Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/smtpserver&quot;) = &quot;mail.intranet.local&quot; Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/smtpserverport&quot;) = 2525 Message.Fields(&quot;http://schemas.microsoft.com/cdo/configuration/smtpusessl&quot;) = True System.Web.Mail.SmtpMail.Send(Message)</p>
+<h2 id="zaver-kdy-co-pouzit">Závěr: Kdy co použít</h2>
+<p>Ve většině případů je nejsnazší cestou žádné zvláštní metody nespecifikovat a použít první zmiňovaný případ, zaslání prostřednictvím <em>pickup service</em>. Pokud to není možné, lze prostřednictvím konfiguračních polí určit rozličné parametry připojení na SMTP server (<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/e2k3/e2k3/_cdo_schema_configuration.asp">jejich kompletní popis najdete v MSDN</a>).</p>
+<p>Odesílání pomocí SMTP ovšem zabírá poměrně dost času a prostředků. Pokud kvůli nastavení sítě musíte použít nějaký komplikovaný postup, a odesíláte hodně mailů, je lepší cestou nainstalovat na lokální server Microsoft SMTP Service a <em>tu</em> potom zkonfigurovat tak, aby pro posílání používala odpovídajícího prostředníka - <em>smarthost</em>.</p>
+
       </section>
     </main>
     <footer>

@@ -10,13 +10,13 @@
 
 Při montáži [webové kamery](http://www.rider.cz/cs/webcam/default.xtml) na nové místo jsem urazil koně. Tedy, přesněji řečeno, urazil jsem kousek z figurky koníka, kterou mám vedle jednoho z počítačů. Žádný problém, máme výkonné vteřinové lepidlo, slepím to. Výsledek byl úspěšný, ale lepidlo mne pobavilo. 
 
-Tak nějak jsem si zvykl, že skoro všechno kolem nás obsahuje karcinogenní látky, takže nevidím důvod, proč by zrovna lepidlo mělo být výjimkou. Tohle ovšem těch rakovinotvorných látek musí obsahovat opravdu <em>hodně</em> - stačí se podívat na novotvar, který je na jeho vlastním povrchu:
+Tak nějak jsem si zvykl, že skoro všechno kolem nás obsahuje karcinogenní látky, takže nevidím důvod, proč by zrovna lepidlo mělo být výjimkou. Tohle ovšem těch rakovinotvorných látek musí obsahovat opravdu *hodně* - stačí se podívat na novotvar, který je na jeho vlastním povrchu:
 
 ![Lepidlo s nádorem](http://weblog.rider.cz/files/lepidlo.jpg)
 
 Jednou ze stinných stránek podnikání jest skutečnost, že je člověk neustále obtěžován rozličnými otrapy, kteří se mu snaží cosi vnutit a vytáhnout z něj peníze.
 
-Jeden z výše uvedených otrapů je jakýsi <strong>Martin Petrášek [[martin@emerite.cz](mailto:martin@emerite.cz)]</strong>. 28 května mi e-mailem zaslal nabídku služeb systému [eMerite](http://www.emerite.cz). Nabídku sice nevyžádanou, ale v právním systému ČR nikoliv nezákonnou. Služby eMerite považuji za reálně k ničemu, obdobné údaje jsou zjistitelné jinými, levnějšími prostředky, takže jsem mail přelétl očima a smazal.
+Jeden z výše uvedených otrapů je jakýsi **Martin Petrášek [[martin@emerite.cz](mailto:martin@emerite.cz)]**. 28 května mi e-mailem zaslal nabídku služeb systému [eMerite](http://www.emerite.cz). Nabídku sice nevyžádanou, ale v právním systému ČR nikoliv nezákonnou. Služby eMerite považuji za reálně k ničemu, obdobné údaje jsou zjistitelné jinými, levnějšími prostředky, takže jsem mail přelétl očima a smazal.
 
 Jaké bylo moje překvapení, když jsem dnes od pana Petráška obdržel další e-mail, ve kterém mne upomíná o odpověď na ten minulý!
 

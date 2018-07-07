@@ -6,19 +6,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Ačkoliv ASP.NET samy řeší řadu úloh, ke kterým se zpravidla používají cookies, představují HTTP sušenky užitečný způsob, jak si klienta &quot;označkovat&quot; a příště ho zase poznat. Implementace práce s cookies v ASP.NET ovšem neskrývá jisté záludnosti." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Sušenky.NET</h1>
       <section class="article">
-        
+        <p>Ačkoliv ASP.NET samy řeší řadu úloh, ke kterým se zpravidla používají cookies, představují HTTP sušenky užitečný způsob, jak si klienta &quot;označkovat&quot; a příště ho zase poznat. Implementace práce s cookies v ASP.NET ovšem neskrývá jisté záludnosti. Pokud se chcete dozvědět něco málo o základních principech fungování cookies, přečtěte si <a href="http://archive.aspnetwork.cz/art/clanek.asp?id=151">článek</a> dříve vydaný na ASP Network. Týká se sice klasických ASP 3.0, ale princip je pořád stejný.</p>
+<h2 id="request.cookiesvs.response.cookies">Request.Cookies vs. Response.Cookies</h2>
+<p>Cookies jsou v prostředí .NET reprezentovány třídami <code>System.Web.HttpCookie</code> a <code>System.Web.HttpCookieCollection</code>. Kolekce cookies jsou dostupné jako vlastnosti <code>Request.Cookies</code> a <code>Response.Cookies</code> - a v tom je právě kámen úrazu. Rozumný člověk by předpokládal, že kolekce dostupná pomocí <code>Request</code> bude read only obsahovat přijaté cookies, a že do <code>Response</code> se tyto jaksi iniciálně přepíší a následně se modifikovány pošlou na klienta.</p>
+<p>V praxi je tomu tak, že s kolekcí v <code>Request</code> sice manipulovat můžete do alelujá, ale neuloží se, a kolekce v <code>Response</code> je prázdná a když s ní něco provedetem, občas se to do Request zpropaguje a občas ne  (pokud přidáte cookie tak ano, pokud jenom změníte hodnotu tak ne).</p>
+<h2 id="path-domain-a-expires">Path, Domain a Expires</h2>
+<p>Kromě vlastnosti <code>Value</code> (resp. kolekce <code>Values</code>) má <code>HttpCookie</code> ještě tři užitečné vlastnosti:</p>
+<p><code>Path</code> - cestu v rámci webu, ve které je cookie čitelná. Standardně je hodnota nastavena na <code>/</code>, což znamená, že hodnotu může číst kterákoliv stránka v rámci webu. Pokud vaše aplikace běží v podadresáři, můžete chtít aby ostatní aplikace tuto cookie číst nemohly.</p>
+<p><code>Domain</code> - platnost cookie je standardně omezena na server, který ji zaslal. Můžete ovšem nastavit platnost v rámci celé domény druhé a nižší úrovně. To lze, pokud má vaše doména druhé úrovně alespoň čtyři znaky (aby nebylo možno nastavit domain-wide cookie pro ty TLD, které neumožňují přímou registraci domén druhé úrovně, např. <code>co.uk</code>). Pokud tedy chcete, aby hodnota cookie byla sdílena mezi více stroji v jedné doméně (např. <a href="vid:/"><em>www.aspnet.cz</em></a> a <em>necojineho.aspnet.cz</em>), nastavte vlastnost <code>Domain</code> na hodnotu &quot;<code>aspnet.cz</code>&quot;.</p>
+<p><code>Expires</code> - pokud necháte hodnotu prázdnou (potažmo <code>DateTime.MinValue</code>), cookie bude tzv. <em>per-session</em>. Neuloží se na disk klientského počítače, ale jenom do paměti a bude při zavření okna prohlížeče odstraněna. Pokud chcete cookie smazat, nastavte její hodnotu Expires do minulosti.</p>
+<h2 id="uzitecne-funkce">Užitečné funkce</h2>
+<p>Následujících několik funkcí vám zpříjemní práci s cookies a ošetřování chybových stavů (když cookie neexistuje). Předpkládám, že kód nepotřebuje komentář</p>
+<p>Public Shared Function GetCookie(ByVal Key1 As String, ByVal Key2 As String, Optional ByVal DefaultValue As String = &quot;&quot;) As String Try Return System.Web.HttpContext.Current.Request.Cookies(Key1).Item(Key2) Catch Return DefaultValue End Try End Function Public Shared Sub SetCookie(ByVal Key1 As String, ByVal Key2 As String, ByVal Value As String, Optional ByVal DaysToExpire As Int32 = 90) Dim C As System.Web.HttpCookie C = System.Web.HttpContext.Current.Request.Cookies.Get(Key1) If C Is Nothing Then C = New System.Web.HttpCookie(Key1) Try C.Values.Item(Key2) = Value Catch C.Values.Add(Key2, Value) End Try C.Expires = DateTime.Now.AddDays(DaysToExpire) System.Web.HttpContext.Current.Response.Cookies.Add(C) End Sub Public Shared Sub DeleteCookie(ByVal Name As String) Dim C As System.Web.HttpCookie = System.Web.HttpContext.Current.Request.Cookies.Get(Name) If C Is Nothing Then Return C.Expires = DateTime.Now.AddDays(-1) System.Web.HttpContext.Current.Response.Cookies.Add(C) End Sub</p>
+
       </section>
     </main>
     <footer>

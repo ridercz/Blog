@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2009-05-10T22:02:12.297+02:00 -->
 <!-- dcterms:dateAccepted = 2009-05-10T22:02:12.297+02:00 -->
 
-![](http://www.aspnet.cz/Files/20090510-image_5.png) Internet Information Services 7.0 přináší mimo jiné též snadnou možnost psát rozšiřující moduly. Na webu [www.iis.net](http://www.iis.net) se můžete přesvědčit, že se této šance chopilo mnoho vývojářů v Microsoftu i mimo něj.
+![](https://www.cdn.altairis.cz/Blog/2009/20090510-image_5.png) Internet Information Services 7.0 přináší mimo jiné též snadnou možnost psát rozšiřující moduly. Na webu [www.iis.net](http://www.iis.net) se můžete přesvědčit, že se této šance chopilo mnoho vývojářů v Microsoftu i mimo něj.
 
 V této přednášce představím některá rozšíření, která jsou k dispozici a která jsou užitečná, zejména pak:
 

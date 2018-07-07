@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2006-06-18T05:57:59.807+02:00 -->
 <!-- dcterms:dateAccepted = 2006-06-18T05:57:59.807+02:00 -->
 
-V úterý **27. června 2006** se od 18:00 v pražské centrále Microsoftu uskuteční další ze [série přednášek o novinkách v ASP.NET 2.0](/Articles/85-petidilny-seminar-novinky-v-asp-net-2-0.aspx). Tématem bude tentokráte přístup k datům z webových aplikací.
+V úterý **27. června 2006** se od 18:00 v pražské centrále Microsoftu uskuteční další ze [série přednášek o novinkách v ASP.NET 2.0](https://www.aspnet.cz/Articles/85-petidilny-seminar-novinky-v-asp-net-2-0.aspx). Tématem bude tentokráte přístup k datům z webových aplikací.
 
 Podíváme se na data binding a ukážeme si jak vytvořit databázovou aplikaci aniž bychom napsali řádek kódu. Ukážeme si též jak ASP.NET podporují object data binding, tedy deklarativní vazbu na vlastní business objekty. Posledním hlavním tématem bude cacheování jako prostředek, jak snadno zvýšit výkon mnohých aplikací, a to včetně novinky v ASP.NET 2.0, závislosti cache na databázi.
 

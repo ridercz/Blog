@@ -6,19 +6,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozích dvou zápisech o cacheování jsem se věnoval ukládání hotových výstupů, ať už celých stránek nebo jenom jejich částí (user controls). To ovšem není jediná forma cachingu, jakou ASP.NET podporují. Prostřednictvím caching API (namespace System.Web.Caching.Cache) můžete ukládat v podstatě libovolné objekty." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>ASP.NET caching pro více pokročilé: System.Web.Caching API</h1>
       <section class="article">
-        
+        <p>V předchozích dvou zápisech o cacheování jsem se věnoval ukládání hotových výstupů, ať už <a href="/entry/article-20050105.aspx">celých stránek</a> nebo jenom <a href="/entry/article-20050106.aspx">jejich částí</a> (user controls). To ovšem není jediná forma cachingu, jakou ASP.NET podporují. Prostřednictvím caching API (namespace <code>System.Web.Caching.Cache</code>) můžete ukládat v podstatě libovolné objekty. Patřičné rozhraní je jednoduché, ale velmi užitečné.</p>
+<p>Základní informace o tomto tématu sepsala <a href="http://www.bestijka.cz/">má milovaná</a> před nějakým časem ve článku <a href="http://archive.aspnetwork.cz/art/clanek.asp?id=191">System.Web.Caching – cachování objektů v ASP.NET</a>, na který vás tímto odkazuji. Budu se věnovat několika záludnostem.</p>
+<h2 id="bezpecne-nacitani-polozek-z-cache">Bezpečné načítání položek z cache</h2>
+<p>To že jste si něco uložili do cache ještě neznamená, že to tam najdete. Systém položky z cache odstraňuje nejen dle vámi explicitně určených pravidel (závislostí), ale též dle vlastního uvážení, příkladně pocítí-li nedostatek paměti. Obecně tedy možné na existenci cacheovaných dat spoléhat a pokud s nimi chcete pracovat, měli byste tak činit prostřednictvím nějakého wrapperu, který je buď načte z cache a nebo, neexistují-li, je vygeneruje a do cache uloží. Osobně používám přibližně následující kód:</p>
+<p>Public Function GetCategories(Optional ByVal UseCache As Boolean = True) As DataTable ' Pokus se načíst hodnotu z cache Dim Cats As DataTable = DirectCast(Cache(&quot;Categories&quot;), DataTable) If Cats Is Nothing Or Not UseCache Then ' Pokud nebyl objekt v cache nalezen, nebo bylo použití cache ' explicitně zakázáno, načti data z databáze Dim DA As New System.Data.SqlClient.SqlDataAdapter( _ &quot;SELECT CategoryID, Name, Description FROM Categories ORDER BY Name&quot;, _ &quot;SERVER=(local);UID=uzivatel;PWD=heslo&quot;) DA.Fill(Cats) DA.Dispose() ' ...a ulož je do cache Cache.Insert(&quot;Categories&quot;, Cats, Nothing, DateTime.Now.AddMinutes(15), TimeSpan.Zero) End If ' Vrať obstaranou hodnotu Return Cats End Function</p>
+<p>Pomocí nepovinného parametru <code>UseCache</code> jest možno v odůvodněných případech vynutit obnovení cache (např. vím-li že se daná hodnota změnila).</p>
+<h2 id="zaludnost-jmenem-cacheitemremovedcallback">Záludnost jménem CacheItemRemovedCallback</h2>
+<p>ASP.NET teoreticky obsahují výtečnou funkci, která by shora uvedený problém mohla vyřešit. Tou je delegát <code>CacheItemRemovedCallback</code>, který může ukazovat na funkci, která se vykoná v okamžiku, kdy je objekt z cache odstraněn. V praxi je její použitelnost dosti omezená, protože volání probíhá tak, že se objekt <em>nejprve</em> odstraní z cache a až <em>potom</em> se zavolá callback, který by cache mohl eventuelně znovu naplnit. Což je úkon, který může jistou dobu trvat. Po tuto dobu objekt v cache nebude přítomen, což nás oklikou vrací zpět na začátek a na objekty uložené v cache není možno se spolehnout.</p>
+<p>V praxi jsem zatím našel pro tuto funkci jediné využití, a to zaznamenávat případy odstranění objektu z důvodu nedostatku paměti. Pokud se to stává příliš často, měli byste uvažovat o tom, že svému serveru dopřejete víc RAMky.</p>
+<h2 id="sladka-budoucnost">Sladká budoucnost</h2>
+<p>Cacheování získává nový rozměr v okamžiku, kdy lze specifikovat závislost uloženého objektu na něčem jiném. Současná verze ASP.NET 1.1 umí nastavovat závislost uložených objektů toliko na souborech nebo jiných cacheovaných objektech (prostřednictvím <code>System.Web.Caching.CacheDependency</code>). V případě, že je údaj závislý na něčem jiném, příkladně na obsahu databáze, máte smůlu - musíte se smířit s tím, že může nastat situace kdy bude objekt neaktuální a nastavit čas expirace tak, aby ta doba byla přijatelná pro vaše záměry.</p>
+<p>ASP.NET 2.0 (Whidbey) ovšem slibují třídu <code>System.Web.Caching.SqlCacheDependency</code>, umožňující stanovit závislost cacheovaného prvku na SQL databázi. O důvod víc, proč se na Whidbey těšit.</p>
+
       </section>
     </main>
     <footer>

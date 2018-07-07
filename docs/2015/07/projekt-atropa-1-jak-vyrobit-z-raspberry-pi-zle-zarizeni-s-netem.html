@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -21,7 +23,7 @@
         <p>Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod. Nechávám na posouzení laskavého čtenáře, zda to vyhodnotí jako okolnost polehčující nebo přitěžující.</p>
 <h2 id="proc-atropa">Proč Atropa?</h2>
 <p>Raspberry Pi je miniaturní jednodeskový mikropočítač, který je levný a snadno dostupný. Může na něm běžet kdeco, třeba Linux nebo speciální edice Windows 10. Posledně jmenovaný systém je teprve v plenkách, takže pokud chcete na RPi něco vážnějšího dělat, tak vám toho času nezbude, než si začít s Linuxem.</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_rpihw_4.jpg"><img src="http://www.aspnet.cz/Files/20150713-atropa_rpihw_thumb_1.jpg" alt="Celkový pohled na Raspberry Pi" title="Celkový pohled na Raspberry Pi" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_4.jpg"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_thumb_1.jpg" alt="Celkový pohled na Raspberry Pi" title="Celkový pohled na Raspberry Pi" /></a></p>
 <p>Abych se nemusel vzdávat své oblíbené technologie .NET, chtěl jsem vyzkoušet, jak je možné ASP.NET aplikace (psané pomocí nového ASP.NET 5) reálně provozovat na Linuxu za hranicemi dema.</p>
 <p>A protože se zabývám počítačovou bezpečností, napadlo mne z Raspberry Pi udělat &quot;zlý přístupový bod&quot; (rogue AP). Bude vysílat Wi-Fi, ke které když se někdo připojí, zobrazí se mu captive portál (jak je u mnoha připojení k Internetu běžné), kde se z oběti pokusím vylákat citlivé přihlašovací údaje.</p>
 <p>Nejsem sám, koho tato idea napadla. Na Raspberry Pi se dá nahrát kompletní Kali Linux včetně programu Mana Toolkit, který tohle všechno umí a ještě něco navíc. Nicméně, já si to chtěl zkusit naprogramovat v .NETu a navíc nastavit tak, aby celý program byl naprosto autonomní a fungoval bez obsluhy, jenom po připojení napájení, a aby fungoval i bez připojení k Internetu.</p>

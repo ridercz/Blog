@@ -18,7 +18,7 @@ Prezentuji je v podobě bodů, které můžete užívat dle potřeby.
 ## Ideová příprava
 
 *   **Nesnažte se vše dělat sami.** Jenom samotná koordinace stěhování a balení a vybalování věcí je práce na plný úvazek. Najměte si stěhováky a úklidovou službu. Nejsou tak drazí, aby se vám nevyplatili. 
-*   I na hrubou práci, jako je nošení těžkých břemen, je třeba mít fortel. Oni ho mají. Vy ne.  [![plan_3](http://www.weblog.rider.cz/Files/20110209-plan_3_thumb.png "plan_3")](http://www.weblog.rider.cz/Files/20110209-plan_3_2.png) 
+*   I na hrubou práci, jako je nošení těžkých břemen, je třeba mít fortel. Oni ho mají. Vy ne.  [![plan_3](https://www.cdn.altairis.cz/Blog/2011/20110209-plan_3_thumb.png "plan_3")](https://www.cdn.altairis.cz/Blog/2011/20110209-plan_3_2.png) 
 
 ## Fáze příprav a plánování
 

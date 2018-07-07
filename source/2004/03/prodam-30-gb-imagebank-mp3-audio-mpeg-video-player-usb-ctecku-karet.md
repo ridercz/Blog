@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2004-03-25T20:13:24+01:00 -->
 <!-- dcterms:dateAccepted = 2004-03-25T20:13:24+01:00 -->
 
-V duchu nejlepších tradic tohoto blogu nabízím k prodeji chytré zařízení s názvem <strong>iTec V-MP3H</strong>.
+V duchu nejlepších tradic tohoto blogu nabízím k prodeji chytré zařízení s názvem **iTec V-MP3H**.
 
 ![iTec V-MP3H](http://weblog.rider.cz/files/itec-v-mp3h.jpg)
 
@@ -18,7 +18,7 @@ Má v sobě vestavěný 30 GB disk (2.5") a k počítači se připojuje přes US
 
 Má barevný LCD displej s úhlopříčkou 6.5 cm, na kterém lze prohlížet fotky a videa. Napájení z vestavěného akumulátoru nebo externího zdroje 12V.
 
-<strong>Komu se podle mne může hodit:</strong>
+**Komu se podle mne může hodit:**
 
 *   Majiteli digitálního fotoaparátu, který nevlastní notebook nebo ho narozdíl ode mne za každých okolností netahá všude s sebou. Koupě tohoto zařízení je řádově levnější než paměťové karty a na 30 GB disk se vejdou fotografie z libovolně dlouhé dovolené ;-) Někomu, kdo chce MP3 přehrávač s velkou kapacitou a nevadí mu trochu větší rozměry (15x9x4.5 cm) způsobené IMHO hlavně přítomností displeje. 
 

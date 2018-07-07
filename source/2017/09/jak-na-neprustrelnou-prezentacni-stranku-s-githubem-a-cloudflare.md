@@ -87,13 +87,13 @@ Jako první krok musíte převést svou doménu na DNS servery CloudFlare, což 
 
 V CloudFlare potom nastavte patříčné DNS záznamy. Zde vidíte moje nastavení:
 
-[![Screenshot CloudFlare](http://www.aspnet.cz/Files/20170903-SNAGHTML464454b_thumb.png "Screenshot CloudFlare")](http://www.aspnet.cz/Files/20170903-SNAGHTML464454b.png)
+[![Screenshot CloudFlare](https://www.cdn.altairis.cz/Blog/2017/20170903-SNAGHTML464454b_thumb.png "Screenshot CloudFlare")](https://www.cdn.altairis.cz/Blog/2017/20170903-SNAGHTML464454b.png)
 
 Ikonka oblaku v pravé části pak určuje, jak se bude s DNS záznamem zacházet. Pokud je oranžová (jako na obrázku), budou požadavky směrovány na serveru CLoudFlare. Pokud na ni kliknete, obláček zešediví, šipka ho obejde a CloudFlare bude působit jenom jako obyčejný DNS server. My chceme využívat služeb CloudFlare (přidání HTTPS), takže obláček zůstane oranžový.
 
 Jakmile se změna projeví, bude váš web dostupný pomocí obou variant prokotolu: HTTP i HTTPS. Pokud chcete, aby byl web dostupný jenom přes HTTPS (a požadavky na HTTP se přesměrovaly), klepněte v horní části stránky na *Page Rules* a pak na tlačítko *Create Page Rule*. Poté zadejte hodnoty podle následujícího vzoru a klepněte na *Save and Deploy*:
 
-[![Screenshot CloudFlare](http://www.aspnet.cz/Files/20170903-image_thumb_2.png "Screenshot CloudFlare")](http://www.aspnet.cz/Files/20170903-image_6.png)
+[![Screenshot CloudFlare](https://www.cdn.altairis.cz/Blog/2017/20170903-image_thumb_2.png "Screenshot CloudFlare")](https://www.cdn.altairis.cz/Blog/2017/20170903-image_6.png)
 
 Všechny požadavky zaslané protokolem HTTP budou nyní přesměrovány na HTTPS. V sekci *Crypto* můžete nastavit další podrobnosti. Zejména pak režim fungování HTTPS a HSTS.
 

@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jedním z námětů, které jsem obdržel v rámci své minulé výzvy, byla žádost o vysvětlení práce s textovými soubory. Zadání jsem si rozšířil na práci s obsahem souborů obecně - nebo chcete-li se streamy." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -19,22 +21,22 @@
       <h1>Práce s obsahem souborů v .NET</h1>
       <section class="article">
         <p>Jedním z námětů, které jsem obdržel v rámci své výzvy <a href="/entry/article-20050125.aspx">ptejte se mne na co chcete, já na co chci odpovím</a>, byla žádost o vysvětlení práce s textovými soubory. Zadání jsem si rozšířil na práci s obsahem souborů obecně - nebo chcete-li se streamy.</p>
- <h2>Co je stream</h2> 
+<h2 id="co-je-stream">Co je stream</h2>
 <p>Většina vstupně/výstupních operací se v .NET děje prostřednictvím nějaké formy streamu. Stream představuje obecně jakýkoliv objekt, ze kterého lze číst nebo do něj zapisovat bajty. Tato abstrakce je velmi široce použitelná: v tomto článku se budu zabývat toliko soubory, ale tentýž přístup je možno aplikovat na TCP/IP síťové spojení, komunikaci přes sériový port, kryptografické operace a řadu dalších věcí.</p>
 <p>Základní třídou je v tomto případě <code>System.IO.Stream</code>. Jeho základní metody jsou <code>ReadByte</code>, <code>Read</code>, <code>WriteByte</code> a <code>Write</code>. Ty umožňují přečíst nebo zapsat jeden či více bajtů. Steam může umožňovat čtení, zápis nebo obojí. To lze zjistit z vlastností <code>CanRead</code> a <code>CanWrite</code>. Metodou <code>Close</code> lze stream zavřít (a v případě souborů zapsat provedené změny na disk).</p>
 <p>Tato třída je abstraktní a musí být tedy v praxi implementována pomocí specializovaných tříd jako je například <code>FileStream</code>, <code>NetworkStream</code> nebo <code>MemoryStream</code>.</p>
- <h2>Textové soubory</h2> 
+<h2 id="textove-soubory">Textové soubory</h2>
 <p>Možnosti samotného streamu nejsou moc velké. Zapsat nebo přečíst hromádku bajtů sice <em>v zásadě</em> stačí, ale pro praktickou práci by bylo potřeba napsat spoustu věcí okolo. Pro práci s textovými soubory proto .NET obsahuje třídy <code>System.IO.StreamReader</code> a <code>System.IO.StreamWriter</code>. Ty umožňují pohodlně ze streamu číst nebo do něj zapisovat řetězcová data v požadovaném kódování. Disponují přitom metodami jako <code>ReadLine</code> nebo <code>WriteLine</code>, které umožňují zpracování souboru po řádcích.</p>
 <p>Následující kód tedy vytvoří textový soubor a zapíše do něj dva řádky textu:</p>
 <p>Dim Soubor As New System.IO.StreamWriter(Server.MapPath(&quot;/StreamDemo/demo.txt&quot;)) Soubor.WriteLine(&quot;První řádek&quot;) Soubor.WriteLine(&quot;Druhý řádek&quot;) Soubor.Close()</p>
 <p>Vcelku podobným způsobem je možno soubor i číst. Zde se uplatní též metoda <code>Peek</code>. Ta &quot;nakoukne&quot; na další bajt v souboru a aniž by posunula pomyslný kurzor, vrátí jeho hodnotu. V případě, že narazí na konec souboru, vrátí <code>-1</code>. Toho lze s úspěchem využít při řešení úloh typu &quot;načítej dokud nenarazíš na konec souboru. Následující kód přečte po řádcích obsah zdrojového souboru a vypíše ho na výstup:</p>
 <p>Dim Soubor As New System.IO.StreamReader(Server.MapPath(&quot;/StreamDemo/demo.txt&quot;)) Do While Soubor.Peek() &gt; -1 Dim Radek As String = Soubor.ReadLine() Response.Write(Radek &amp; &quot;<br>&quot;) Loop Soubor.Close()</p>
 <p>V tomto konkrétním případě je víceméně zbytečné číst soubor po řádcích. Mnohem jednodušší by bylo použít metodu <code>ReadToEnd</code> a poté prostě nahradit konce řádků tagem <code>&lt;br&gt;</code>.</p>
- <h2>Různá kódování</h2> 
+<h2 id="ruzna-kodovani">Různá kódování</h2>
 <p>.NET Framework vnitřně pracuje se všemi daty v kódování UNICODE, resp. UTF-8. I jeho výše uvedené třídy tedy implicitně předpokládají, že veškerá data jsou k dispozici v UTF-8. Ačkoliv vám vřele doporučuji, aby vaše programy tuto logiku přejaly (ušetříte si tím spoustu práce a problémů), může se stát, že data dostanete v kódování jiném.</p>
 <p>Ani to nepředstavuje zásadní problém. Obšírnější <a href="http://archive.aspnetwork.cz/art/clanek.asp?id=212">pojednání o kódování řetězců v .NET</a> jsem napsal již před časem, detaily si přečtěte v něm. Pro účely čtení nebo zápisu pomocí <code>StreamReaderu</code> a <code>StreamWriteru</code> stačí prostě požadované kódování specifikovat jako další volitelný parametr. Máte-li tedy vstupní data například v kódování Windows 1250, stačí příslušný řádek modifikovat takto:</p>
 <p>Dim Soubor As New System.IO.StreamReader(Server.MapPath(&quot;/StreamDemo/demo.txt&quot;), _ System.Text.Encoding.GetEncoding(&quot;Windows-1250&quot;))</p>
- <h2>Pohodlný přístup</h2> 
+<h2 id="pohodlny-pristup">Pohodlný přístup</h2>
 <p>V příkladech výše jsem soubory volal přímo pomocí odpovídajícího <code>StreamReaderu</code> či <code>StreamWriteru</code>. Zcela stejných výsledků, někdy pohodlnější cestou, lze dosíci použitím rozličných statických metod v <code>System.IO.File</code>. Například <code>CreateText</code>, <code>AppendText</code> a <code>OpenText</code>.</p>
 
       </section>

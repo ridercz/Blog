@@ -15,6 +15,6 @@ Pro vývojáře, kteří se chtějí podívat na Whidbey, je dlouhodobě k dispo
 
 Pokud po něm prahnete, zaregistrujte se na stránce [Beta Experience](http://www.microsoft.com/emea/msdn/betaexperience/cscz/), Microsoft vám pošle DVD. Což se hodí pro uživatele pomalých linek, protože stahovat těch několik gigabajtů může být nemilý zážitek.
 
-[![](/files/20050429-betaexperience.jpg)](http://www.microsoft.com/emea/msdn/betaexperience/cscz/)
+[![](https://www.cdn.altairis.cz/Blog/2005/20050429-betaexperience.jpg)](http://www.microsoft.com/emea/msdn/betaexperience/cscz/)
 
 Jenom by mne zajímalo, proč Microsoft důsledně pro VS.NET 2005 používá jako obrázek housenku. Že by v narážce na počet bugů, které ještě zbývá odstranit? :-)

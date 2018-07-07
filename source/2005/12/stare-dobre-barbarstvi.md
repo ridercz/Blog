@@ -23,7 +23,7 @@ O tom, zda homosexualita je nebo není přirozená by se - v závislosti na růz
 
 Zaráží mne ovšem onen důraz na rozmnožování a zachování rodu a z toho vyplývající ideu, že to nejzásadnější co člověk může na tomto světě zanechat, je vlastní potomek. 
 
-V Čechách máme letitou tradici vnímat člověka, jednotlivce, jenom jako stavební prvek Společnosti, Státu. Šroubek v soukolí. Stačí se podívat na sazby v trestním zákoníku: pokud vás někdo fyzicky zbije, nebude potrestán za to že vám způsobil bolest, uškodil vám a ponížil vás. Bude potrestán za to, že vám způsobil pracovní neschopnost - především tedy za to, že Společnost připravil o několik člověkohodin, o pracovní sílu. Pokud máte to štěstí, že jste <em>jenom</em> dostali přes hubu, je to jenom přestupek a vy ani nejste účastníkem řízení.
+V Čechách máme letitou tradici vnímat člověka, jednotlivce, jenom jako stavební prvek Společnosti, Státu. Šroubek v soukolí. Stačí se podívat na sazby v trestním zákoníku: pokud vás někdo fyzicky zbije, nebude potrestán za to že vám způsobil bolest, uškodil vám a ponížil vás. Bude potrestán za to, že vám způsobil pracovní neschopnost - především tedy za to, že Společnost připravil o několik člověkohodin, o pracovní sílu. Pokud máte to štěstí, že jste *jenom* dostali přes hubu, je to jenom přestupek a vy ani nejste účastníkem řízení.
 
 Princip, kdy je člověk posuzován podle svého přínosu pro společnost a na základě toho jsou mu přidělována určitá práva a zvýhodnění, je mi tudíž vysoce cizí a pokládám ho za zvrácený. Nicméně i pokud pro účely tohoto článku tuto logiku přijmu, nevidím v ní nic co by deklasovalo soužití partnerů nezpůsobilých zplodit potomka.
 
@@ -31,5 +31,6 @@ Pokora je prý ctností svatých. Svatosti ani pokory jsem pravda mnoho nepobral
 
 Zbývá jenom zodpovědět otázku, co pohání zastánce této teorie: zda příkladná pokora, nedůvěra ve vlastní schopnosti... a nebo staré dobré barbarství.
 
-<strong>Relevantní odkazy:</strong>
- <ul> <li>[Paroubkova homosexuální šance](/entry/article-20051215.aspx) <li>[Papež proti homosexuálnímu manželství - a já taky](/entry/article-20030806.aspx) <li>[www.partnerstvi.cz](http://www.partnerstvi.cz/)</li></ul>
+**Relevantní odkazy:**
+
+*   [Paroubkova homosexuální šance](/entry/article-20051215.aspx) [Papež proti homosexuálnímu manželství - a já taky](/entry/article-20030806.aspx) [www.partnerstvi.cz](http://www.partnerstvi.cz/)

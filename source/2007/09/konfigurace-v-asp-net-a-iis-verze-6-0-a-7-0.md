@@ -37,7 +37,7 @@ Je-li aplikace členěna do podadresářů, mohou jednotlivé podadresáře obsa
 
 ## Konfigurace IIS 6.0
 
-[![Konfigurace ASP.NET v IIS 6.0](http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis6_thumb.png)](http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis6.png)V případě Internet Information Services verze 6.0 a nižší se konfigurace web serveru ukládá odděleně od konfigurace ASP.NET a je na ní obecně zcela nezávislá.
+[![Konfigurace ASP.NET v IIS 6.0](https://www.cdn.altairis.cz/Blog/2007/20070916-20070915-aspconfig-iis6_thumb.png)](https://www.cdn.altairis.cz/Blog/2007/20070916-20070915-aspconfig-iis6.png)V případě Internet Information Services verze 6.0 a nižší se konfigurace web serveru ukládá odděleně od konfigurace ASP.NET a je na ní obecně zcela nezávislá.
 
 Konfigurace IIS se ukládá v takzvané metabázi, což je samostatný konfigurační systém, který používá pouze IIS. Do verze 5.x včetně byla metabáze uchovávána jako binární soubor na disku a pokud došlo k jejímu poškození a neměli jste zálohu, byla sebevražda v některých případech celkem adekvátní reakcí. 
 
@@ -49,7 +49,7 @@ Z této architektury mimo jiné vyplývá, že některé věci (týkající se s
 
 ## Konfigurace IIS 7.0
 
-[![Konfigurace ASP.NET v IIS 7.0](http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis7_thumb.png)](http://www.aspnet.cz/Files/20070916-20070915-aspconfig-iis7.png)Nová verze Internet Information Services, IIS 7.0, která je součástí Windows Vista a bude součástí Windows Serveru 2008 přistupuje ke konfiguraci podstatně elegantnějším způsobem. Nepřehledná metabáze je nahrazena stejným systémem hierarchických konfiguračních souborů, jaké známe z .NETu. 
+[![Konfigurace ASP.NET v IIS 7.0](https://www.cdn.altairis.cz/Blog/2007/20070916-20070915-aspconfig-iis7_thumb.png)](https://www.cdn.altairis.cz/Blog/2007/20070916-20070915-aspconfig-iis7.png)Nová verze Internet Information Services, IIS 7.0, která je součástí Windows Vista a bude součástí Windows Serveru 2008 přistupuje ke konfiguraci podstatně elegantnějším způsobem. Nepřehledná metabáze je nahrazena stejným systémem hierarchických konfiguračních souborů, jaké známe z .NETu. 
 
 Na vrcholu hierarchie z hlediska IIS stojí soubor *ApplicationHost.config*, který najdeme v adresáři *%SYSTEMROOT%\system32\inetsrv\config*. Má podobnou roli jako machine.config, tedy popisuje výchozí konfiguraci. Zároveň také obsahuje seznam všech webů a virtuálních adresářů, které jsou na daném serveru provozovány.
 

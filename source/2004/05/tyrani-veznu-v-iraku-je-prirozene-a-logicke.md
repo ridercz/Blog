@@ -24,6 +24,6 @@ Proto jsou veškeré instituce typu škol, vězení, vojenských posádek a podo
 
 V případě běžných vězení je těmto excesům s jistou úspěšností bráněno. Dozorci jsou speciálně vyškolení a jsou pod veřejnou kontrolou.
 
-Pokud se ovšem situace vyvine tak jako v Iráku, kdy roli dozorců zastávají lidé, kteří na ni nebyli zvlášť připraveni, a to bez jakékoliv kontroly, situace se logicky <strong>musí</strong> vyvinout tak, jak se stalo.
+Pokud se ovšem situace vyvine tak jako v Iráku, kdy roli dozorců zastávají lidé, kteří na ni nebyli zvlášť připraveni, a to bez jakékoliv kontroly, situace se logicky **musí** vyvinout tak, jak se stalo.
 
 Tak jaképak divení. 

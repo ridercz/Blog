@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -36,7 +38,7 @@
 </ol>
 <p>Krátce se zastavíme u bodu č. 4, neboť tam musíte zasáhnout ručně. Challenge obsahuje dvě důležité informace: ID a samotný ověřovací řetězec. Ověřovací řetězec musí být nějakým způsobem zpřístupněn přes HTTP nebo HTTPS na ověřovaném host name na adrese <em>/.well-known/acme-challenge/<id></em>. Tj. budete-li ověřovat host name <em>example.com</em> a vygenerované ID bude <em>1234abcd</em>, musí být ověřovací řetězec dostupný na adrese <em><a href="http://example.com/.well-known/acme-challenge/1234abcd">http://example.com/.well-known/acme-challenge/1234abcd</a></em>.</p>
 <p>Požadovaný soubor lze snadno vytvořit pomocí příkazu echo, který stačí jenom spustit na serveru, kde je příslušný web hostován (ukázková aplikace nemusí být spuštěna na web serveru).</p>
-<p><a href="http://www.aspnet.cz/Files/20170115-AutoAcmeLogo_256_2.png"><img src="http://www.aspnet.cz/Files/20170115-AutoAcmeLogo_256_thumb.png" alt="AutoAcmeLogo_256" title="AutoAcmeLogo_256" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2017/20170115-AutoAcmeLogo_256_2.png"><img src="https://www.cdn.altairis.cz/Blog/2017/20170115-AutoAcmeLogo_256_thumb.png" alt="AutoAcmeLogo_256" title="AutoAcmeLogo_256" /></a></p>
 <p>Zároveň tímto P. T. čtenářům představuji i logo projektu AutoAcme. Název protokolu ACME je také název <a href="https://en.wikipedia.org/wiki/Acme_Corporation">společnosti z grotesek Looney Tunes</a>. Jedním z nejlepších zákazníků společnosti Acme Corporation byl Wile E. Coyote a jedním z často se objevujících motivů byla právě kovadlina, dodaná společností ACME.</p>
 
       </section>

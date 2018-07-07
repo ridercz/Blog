@@ -8,13 +8,13 @@
 <!-- dcterms:created = 2004-03-16T20:46:01+01:00 -->
 <!-- dcterms:dateAccepted = 2004-03-16T20:46:01+01:00 -->
 
-![Upravená knihovna](/files/knihovna.jpg)Historicky mám k veškerému domácímu kutilství spíše rezervovaný vztah. Je to dáno osobností mého otce. Dělá to sice špatně, zato ale často a rád. 
+![Upravená knihovna](https://www.cdn.altairis.cz/Blog/knihovna.jpg)Historicky mám k veškerému domácímu kutilství spíše rezervovaný vztah. Je to dáno osobností mého otce. Dělá to sice špatně, zato ale často a rád. 
 
 Geny se ovšem nezapřou, takže jsem podobné sklony objevil i sám v sobě. Musím se přiznat že s jemným mrazením v zádech, protože se obávám, abych od svého otce nezdědil víc povahových rysů.
 
 Začalo to poměrně nevinně: sestavováním nábytku. Skládání nábytku je zábava, dodají vám takovou velkou stavebnici, se kterou si užijete při sestavování spoustu švandy.
 
-![nová skříň](/files/nova_skrin.jpg)Pravda, ne vždy se moje ideje zcela setkaly s úmyslem výrobce. Němým svědkem budiž například deska Myshího psacího stolu, následně přidělaná několika masivími úhelníky.
+![nová skříň](https://www.cdn.altairis.cz/Blog/nova_skrin.jpg)Pravda, ne vždy se moje ideje zcela setkaly s úmyslem výrobce. Němým svědkem budiž například deska Myshího psacího stolu, následně přidělaná několika masivími úhelníky.
 
 Zábavnější to začalo být ve chvíli, kdy jsem začal nábytek vlastníma rukama tvořit a upravovat. Kompenzuji tím neschopnost běžných výrobců a prodejců nábytku.
 

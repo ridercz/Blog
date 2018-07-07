@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Nebaví vás pořád dokola používat ve svých stránkách těch několik málo fontů, které má nainstalovaný každý? Řešením je font embedding, tedy použití písma, které nemá uživatel nainstalované, ale pro účely zobrazení stránky si jej stáhne z vašeho serveru. Jedná se sice o čistě klientskou techniku, ale má i implikace na straně serveru, o kterých také bude řeč." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -29,7 +31,7 @@
 <li><a href="http://www.google.com/webfonts"><strong>Google Web Fonts</strong></a> – databáze fontů od Google. Nabízí i <a href="http://code.google.com/apis/webfonts/">vlastní API</a> a CDN, která vyřeší některé vaše problémy, ovšem za cenu závislosti na Google a možných problémů, pokud se návštěvníci brání šmírování třeba pomocí tracking protection v IE. Podporuje sice vyhledávání i podle skriptu (české znaky jsou v <em>Latin Extended</em>), ale faktická podpora v jednotlivých písmech může být nepoužitelná.</li>
 </ul>
 <p>Nepochybně existují i další servery podobného zaměření, nicméně já osobně používám shora uvedené tři. Záměrně jsem se také zaměřil pouze na zdroje dostupné zdarma. Pokud máte další tipy, napište je do komentářů.</p>
-<p><a href="http://www.aspnet.cz/Files/20111210-font-nocs_2.png"><img src="http://www.aspnet.cz/Files/20111210-font-nocs_thumb.png" alt="Toto písmo má v podpoře nabodeníček ještě rezervy" title="Toto písmo má v podpoře nabodeníček ještě rezervy" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2011/20111210-font-nocs_2.png"><img src="https://www.cdn.altairis.cz/Blog/2011/20111210-font-nocs_thumb.png" alt="Toto písmo má v podpoře nabodeníček ještě rezervy" title="Toto písmo má v podpoře nabodeníček ještě rezervy" /></a></p>
 <p>Bohužel, na přítomnost českých znaků se nelze spolehnout a je nutné to otestovat. Naštěstí jak Font Squirrel tak Google Web Fonts umožňují zadat vlastní testovací text, takže hned vidíte, na čem jste. Doporučuji používat osvědčené &quot;<em>Žluťoučký kůň úpěl ďábelské ódy</em>&quot;, neboť písmena <strong>ť</strong> a <strong>ů</strong> bývají problematická a dobře se na nich pozná, jak moc kvalitní práci autor odvedl.</p>
 <p>Použití písem na webu musí být navíc v souladu s licenčními podmínkami. Pokud používáte Font Squirrel nebo Google Web Fonts, nemusíte si v tomto ohledu dělat starosti. U jiných zdrojů je nutné prostudovat licenční podmínky.</p>
 <h2 id="krok-druhy-konverze-formatu">Krok druhý: Konverze formátů</h2>
@@ -43,7 +45,7 @@
 </ul>
 <p>V praxi obyvkle používám kombinaci EOT + WOFF + TTF, která pokrývá většinu současných prohlížečů. Podrobnosti najdete na úchvatném webu <a href="http://caniuse.com/#feat=fontface">caniuse.com</a>.</p>
 <p>Pokud je vaším zdrojem písem Font Squirrel, můžete si stáhnout takzvaný <strong>@font-face kit</strong>, což je archiv, který obsahuje fonty ve vybraných formátech, CSS soubor a ukázkovou HTML stránku. Doporučuji ovšem změnit výchozí nastavení. V první řadě obsahuje i formát SVG, který nejspíš nebudete potřebovat, a ve druhé řadě je standardně zvolen subsetting pro angličtinu. Subsetting je funkce, která má za cíl zmenšovat velikost souboru s fontem tím, že se do výsledku vloží pouze znaky z potřebného jazyka. Pokud necháte výchozí nastavení, bude váš balíček obsahovat jenom anglické znaky, i když je třeba k dispozici čeština. V seznamu &quot;Choose a Subset&quot; tedy buďto vyberte češtinu (je-li k dispozici) nebo &quot;Don't Subset&quot;. Nepoužívejte při stahování download manager, protože (alespoň ten můj) nastavení resetuje.</p>
-<p><a href="http://www.aspnet.cz/Files/20111210-font-fsq_2.png"><img src="http://www.aspnet.cz/Files/20111210-font-fsq_thumb.png" alt="Doporučené nastavení Font Squirrel @font-face kitu" title="Doporučené nastavení Font Squirrel @font-face kitu" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2011/20111210-font-fsq_2.png"><img src="https://www.cdn.altairis.cz/Blog/2011/20111210-font-fsq_thumb.png" alt="Doporučené nastavení Font Squirrel @font-face kitu" title="Doporučené nastavení Font Squirrel @font-face kitu" /></a></p>
 <p>Pokud jste ke svému fontu přišli jinde, Font Squirrel vám pomůže rovněž. Obsahuje totiž <strong>@font-face generator</strong>, kam můžete nahrát soubory s fonty a vygeneruje vám shora určený balíček. Ani v tomto případě se nemůžete spolehnout na výchozí nastavení a musíte klepnout na rozšířené volby (<em>expert</em>) a vypnout či správně nastavit subsetting a formáty.</p>
 <h2 id="krok-treti-spravne-nastaveni-iis">Krok třetí: Správné nastavení IIS</h2>
 <p>Aby font embedding fungoval, musíte nahrát EOT/WOFF/TTF soubory na svůj web server. Drobná zákeřnost nicméně tkví v tom, že IIS ve výchozím nastavení přípony <em>.woff</em> a <em>.eot</em> nezná a jako takové tyto soubory z bezpečnostních důvodů odmítne browseru poslat, vyhodí chybu 404, i když soubor existuje. Aby vkládání fontů fungovalo, je nutné tyto přípony zaregistrovat. U IIS 7.x se to dělá v souboru <em>web.config</em> následující definicí:</p>
@@ -56,7 +58,7 @@
 <p>Obsah všech <strong><H1></strong> bude nyní zobrazen vloženým písmem.</p>
 <h2 id="krok-paty-vice-rezu-pisma">Krok pátý: Více řezů písma</h2>
 <p>Většina návodů končí u předchozího bodu, což je perfektně postačující ve chvíli, kdy potřebujete používat vložené písmo jenom na nadpisy nebo prostě výjimečně a v jednom jediném řezu (proto jsem ve výše uvedeném demu nastavil <em>font-weight: normal</em>, protože H1 je standardně tučně). Ale co když chcete používat i takové věci jako tučné (nebo naopak &quot;lehké&quot;) písmo, kurzívu, případně jejich kombinace?</p>
-<p><a href="http://www.aspnet.cz/Files/20111210-font-anonymous_2.png"><img src="http://www.aspnet.cz/Files/20111210-font-anonymous_thumb.png" alt="Rodina písem Anonymous Pro" title="Rodina písem Anonymous Pro" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2011/20111210-font-anonymous_2.png"><img src="https://www.cdn.altairis.cz/Blog/2011/20111210-font-anonymous_thumb.png" alt="Rodina písem Anonymous Pro" title="Rodina písem Anonymous Pro" /></a></p>
 <p>Browser si poradí: písmo uměle &quot;ztuční&quot; nebo &quot;skloní&quot;. Což je ovšem zpravidla velmi ošklivé a působí to ohavně a neprofesionálně. Některá písma se vyskytují ve více variantách, speciálně vytvořených pro tučné písmo, kurzívu atd. Typicky se jedná o písma, kterým se říká &quot;chlebová&quot;, určená jako základní pro hlavní text, nejenom pro nadpisy. Příkladem takového písma z nabídky Font Squirrel je třeba zajímavé neproporcionální písmo <a href="http://www.fontsquirrel.com/fonts/Anonymous-Pro">Anonymous Pro</a>, které je k dispozici ve čtyřech řezech: základní, tučné, kurzíva, tučná kurzíva.</p>
 <p>Pokud si stáhnete @font-face kit, budou v CSS souboru tyto varianty zaregistrované pod samostatnými názvy, např. <em>AnonymousProRegular</em>, <em>AnonymousProBold</em> atd. Nebude mezi nimi žádný vztah. Pokud použijete jako základní písmo <em>AnonymousProRegular</em> a potom ho ztučníte, nepoužije se správný tučný řez, ale prohlížeč bude interpolovat.</p>
 <p>Řešení ovšem existuje, v podobě následujícího zápisu (ve kterém jsem pro přehlednost nechal jenom odkaz na <em>.eot</em> formát pro Internet Explorer, v praxi byste opět použili výše uvedenou konstrukci):</p>

@@ -19,7 +19,7 @@ První na řadě je
 
 ## Frederick Forsyth
 
- ![Fotografie Fredericka Forsytha](/files/forsyth.jpg "Obrázek z přebalu knihy Avenger (c) Gill Shaw")Narodil se 23. srpna 1938 v Ashfordu (UK). Ve věku devatenácti let se stal nejmladším pilotem britské Royal Air Force. Dlouho v ní ovšem nevydržel, už ve svých dvaceti letech armádu opustil a stal se novinářem, pracoval pro Reuters a BBC, pro kterou psal např. o občanské válce v Nigérii.
+ ![Fotografie Fredericka Forsytha](https://www.cdn.altairis.cz/Blog/forsyth.jpg "Obrázek z přebalu knihy Avenger (c) Gill Shaw")Narodil se 23. srpna 1938 v Ashfordu (UK). Ve věku devatenácti let se stal nejmladším pilotem britské Royal Air Force. Dlouho v ní ovšem nevydržel, už ve svých dvaceti letech armádu opustil a stal se novinářem, pracoval pro Reuters a BBC, pro kterou psal např. o občanské válce v Nigérii.
 
 První Forsythova beletristická kniha **Day of the Jackal** (**Den pro šakala**) vyšla v roce 1970. Zatím poslední kniha **Avenger** (Mstitel, nebylo dosud přeloženo do češtiny) vyšla v září loňského roku.
 

@@ -18,6 +18,6 @@ Moje počítačové kabely totiž trpí fixní ideou, že jsou rohožkou, takže
 
 Při této příležitosti jsem si také vzpomněl na své rodiče a podnikl krok popsaný o několik odstavců výše. Můj otec totiž svého času sháněl obaly na CD. Nemám sice nejmenší tušení, k čemu mu budou, protože AFAIK nedisponuje vypalovačkou, ale nějaké jsem mu poslal - ty co jsem různě našel po pokoji. Letmým odhadem jich bude něco okolo stovky. Docela by mne zajímalo, kde se tady vzaly a hlavně co se stalo s těmi cédéčky, co v nich měly být...
 
-![Fotografie (55 kB)](/files/before_after.jpg)
+![Fotografie (55 kB)](https://www.cdn.altairis.cz/Blog/before_after.jpg)
 
 Výše uvedená fotografie zachycuje moji pracovnu "before and after". Publikuji ji zde zejména co historickou zajímavost, protože zobrazený stav (tj. prázdná pohovka i podlaha) nebude nepochybně trvat příliš dlouho. A také proto, že dala tomuto zápisu název. Když ji spatřila Mysh, tónem konferenciéra teleshoppingu reagovala slovy: *"Předtím a potom! Rozdíl jasně vidíte!"*

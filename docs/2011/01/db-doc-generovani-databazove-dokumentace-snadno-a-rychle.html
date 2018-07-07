@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Pro jeden projekt, na kterém momentálně pracuji, jsem hledal nástroj, který by mi umožnil snadno vygenerovat dokumentaci k používaným databázovým objektům. Zejména tedy k čemu jsou dobré jednotlivé tabulky a jaký význam mají jejich sloupečky. Použitelné řešení jsem nenašel, tak jsem si jedno napsal. A nyní jej dávám k dispozici i vám." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -20,7 +22,7 @@
       <section class="article">
         <p>Pro jeden projekt, na kterém momentálně pracuji, jsem hledal nástroj, který by mi umožnil snadno vygenerovat dokumentaci k používaným databázovým objektům. Zejména tedy k čemu jsou dobré jednotlivé tabulky a jaký význam mají jejich sloupečky. Bohužel jsem takový nástroj nenašel. Vytváření komentářů je v SQL serveru poměrně snadné, jde to dělat snadno třeba z databázového diagramu. Ale potom s těmi komentáři nějak rozumně pracovat, na to jsem dobré řešení nenašel. Zkoušel jsem databázové diagramy ve Visiu a podobných nástrojích, nicméně ty se zaměřují spíše na popisování vztahů mezi jednotlivými entitami, než na popisy jejich obsahu, tedy co je tam konkrétně za sloupečky a především, co se očekává, že budou obsahovat za hodnoty.</p>
 <p>Našel jsem spoustu obludně složitých nástrojů, ale nic, co by mne uspokojilo. Naštěstí je ale poměrně snadné napsat nástroj, který zmapuje strukturu předhozené mu databáze a načte související komentáře. Výsledek pak může vypadat nějak takto:</p>
-<p><a href="http://www.aspnet.cz/Files/20110127-20110127-dbdoc_2.png"><img src="http://www.aspnet.cz/Files/20110127-20110127-dbdoc_thumb.png" alt="20110127-dbdoc" title="20110127-dbdoc" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2011/20110127-20110127-dbdoc_2.png"><img src="https://www.cdn.altairis.cz/Blog/2011/20110127-20110127-dbdoc_thumb.png" alt="20110127-dbdoc" title="20110127-dbdoc" /></a></p>
 <h2 id="dbdoc-for-microsoft-sql-server">DB&gt;doc for Microsoft SQL Server</h2>
 <p>Napsal jsem jednoduchou utilitku, která se ovládá z příkazové řádky a přesně tohle dokáže. Zmapuje tabulky, pohledy a vztahy mezi nimi a vygeneruje XML dokument, který obsahuje všechny potřebné informace. Výstup je pak k dispozici v několika různých formátech:</p>
 <ul>

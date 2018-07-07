@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-09-12T01:58:46+02:00 -->
 <!-- dcterms:dateAccepted = 2003-09-12T01:58:46+02:00 -->
 
-Pokud to o mně ještě nevíte, tak <em>miluju reklamy</em>, zejména pak ty televizní a filmové. Tvůrci filmu mají nejméně hodinu na to, aby odvyprávěli příběh. Tvůrce televizní reklamy na to má v průměru okolo čtyřiceti vteřin.
+Pokud to o mně ještě nevíte, tak *miluju reklamy*, zejména pak ty televizní a filmové. Tvůrci filmu mají nejméně hodinu na to, aby odvyprávěli příběh. Tvůrce televizní reklamy na to má v průměru okolo čtyřiceti vteřin.
 
 Některá videa mají vestavěnou funkci přeskakování reklam - při nahrávání na reklamu vypnou. Já bych uvítal funkci přesně opačnou. Kdyby už jenom proto, že občas (typicky v případě TV Nova) jsou reklamy to nejlepší, co lze v televizi shlédnout.
 
@@ -22,4 +22,4 @@ V duchu výše uvedené teorie mne obsah reklamních bloků naplňuje mírným o
 
 Pomyslný žebříček kvality TV reklam u mne už nějakou dobu vede [Eurotel](http://www.eurotel.cz). Možná je to tím, že sází na známá a kvalitní jména. Ovšem nikoliv lacině ukazováním "známých tváří", ale v případě výběru hudby a autorů reklamy.
 
-Kdybych služeb Eurotelu nevyužíval už nějakou dobu, reklama "Umím zastavit čas" (ke stažení jako [MPEG-1, 9.8 MB](/files/eurotel_zastavit_cas.mpg)) by byla způsobilá mne k tomu přesvědčit. Má nápad a působivé zpracování.
+Kdybych služeb Eurotelu nevyužíval už nějakou dobu, reklama "Umím zastavit čas" (ke stažení jako [MPEG-1, 9.8 MB](https://www.cdn.altairis.cz/Blog/eurotel_zastavit_cas.mpg)) by byla způsobilá mne k tomu přesvědčit. Má nápad a působivé zpracování.

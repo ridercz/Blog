@@ -13,5 +13,6 @@ Zhruba před rokem jsem [zde upozorňoval](/entry/article-20040224.aspx#135011) 
 
 Doporučuji vřele k prostudování. Práce sama je z větší části důsledkem toho, že opsání jednoho zdroje je plagiát, zatímco opsání z více zdrojů výzkumná práce, leč i tak jde o zajímavé čtení.
 
-<strong>Odkazy:</strong>
- <ul> <li>[PSAV 2004](http://psav.chochola.net/) <li>[Obecné informace o výsledcích](http://diplomka.chochola.net) <li>[Kompletní diplomová práce ke stažení jako PDF](http://diplomka.chochola.net/dp/diplomova_prace.pdf)</li></ul>
+**Odkazy:**
+
+*   [PSAV 2004](http://psav.chochola.net/) [Obecné informace o výsledcích](http://diplomka.chochola.net) [Kompletní diplomová práce ke stažení jako PDF](http://diplomka.chochola.net/dp/diplomova_prace.pdf)

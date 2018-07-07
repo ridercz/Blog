@@ -29,6 +29,6 @@ Tento problém se netýká jenom ASP.NET, právě naopak – stejně jako v př�
 
 Dnes v 19:00 Microsoft uvolnil mimořádnou bezpečnostní aktualizaci (out-of-band security update), která tento problém řeší. Záplata je k dispozici na Windows Update a stačí tedy dát vyhledat dostupné aktualizace a budou nabídnuty patřičné balíčky (podle verzí .NET Frameworku):
 
-[![Screenshot](http://www.aspnet.cz/Files/20111229-oobsecurityupdate_thumb.png "Windows Update: záplaty pro .NET 3.5 a 4.0 na Windows 2008 R2")](http://www.aspnet.cz/Files/20111229-oobsecurityupdate_2.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2011/20111229-oobsecurityupdate_thumb.png "Windows Update: záplaty pro .NET 3.5 a 4.0 na Windows 2008 R2")](https://www.cdn.altairis.cz/Blog/2011/20111229-oobsecurityupdate_2.png)
 
 Problém není natolik kritický, aby bylo nutné záplatu bezpodmínečně instalovat teď hned a přijímat dramatická opatření. Není známo, že by v současné době takové útoky probíhaly a výsledkem může být jenom DoS po dobu trvání útoku, nedojde tedy k vyzrazení citlivých dat atd. Nicméně útok je principiálně velmi snadný a je jenom otázkou času, kdy někdo napíše nástroj použitelný i pro script kiddies, takže nedoporučuji s instalací ani příliš otálet.

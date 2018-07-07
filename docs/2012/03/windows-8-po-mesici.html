@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Už je tomu zhruba měsíc, co jsem si nainstaloval Windows 8 Consumer Preview. Své první dojmy jsem popsal v předchozím článku, v jeho pokračování se pokusím zamyslet podrobněji nad konkrétními věcmi, se kterými jsem se potkal." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -35,24 +37,24 @@
 <p>Výhodou Hyper-V je, že se totéž používá pro serverovou virtualizaci jako pro klientskou. Testovací a vývojové servery tedy budou moci být kompatibilní.</p>
 <p>Hyper-V ve Windows 8 ale bude vyžadovat procesor s funkcí Second Level Address Translation (SLAT), tedy nové procesory Intel i3, i5 a i7. Protože mne po letech opustil můj starý ThinkPad R61, koupil jsem si ThinkPad T420 a Hyper-V vyzkoušel. Funguje stejně jako ten serverový, což s sebou nese i vlastnosti nešťastné pro klientské použití, zejména v oblasti síťování (hodně mi chybí NAT, který je vestavěný ve VirtualBoxu). Připojení přes VM connection je dost nekomfortní, kvůli absenci sdílení schránky a podobně.</p>
 <p>Zatím tedy s mohutným frfláním zůstávám u VirtualBoxu, než vymyslím, jak si připravit nějaké dostatečně robustní &quot;virtual lab&quot; řešení, které by mi fungovalo na notebooku.</p>
-<h2 id="podpora-pro-mobile-broadbandpodpora-pro-mobile-broadband"><a href="http://www.aspnet.cz/Files/20120328-broadband_2.png"><img src="http://www.aspnet.cz/Files/20120328-broadband_thumb.png" alt="Podpora pro mobile broadband" title="Podpora pro mobile broadband" /></a>Podpora pro Mobile Broadband</h2>
+<h2 id="podpora-pro-mobile-broadbandpodpora-pro-mobile-broadband"><a href="https://www.cdn.altairis.cz/Blog/2012/20120328-broadband_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120328-broadband_thumb.png" alt="Podpora pro mobile broadband" title="Podpora pro mobile broadband" /></a>Podpora pro Mobile Broadband</h2>
 <p><em>Poznámka: podle reakce v komentářích potvrzené rychlým googlováním je popisovaná funkcionalita dostupná už ve Windows 7, akorát se s ní zjevně nikdy nepotkal můj hardware.</em></p>
 <p>Windows 8 mají vestavěnou podporu pro připojení přes mobilní sítě. Pokud máte v počítači kompatibilní 3G modem, můžete s mobilní sítí pracovat stejným způsobem, jako s Wi-Fi. Lze ho také nastavit jako záložní spojení, které se automaticky zapne, když není k dispozici nic jiného.</p>
 <p>Je to podobná funkcionalita, jakou nabízí třeba Lenovo v rámci svého software ThinkVantage Access Connections (který se mi mimhochodem na Windows 8 spolehlivě rozchodit nepodařilo), ale vestavěná přímo v systému.</p>
 <p>Mimochodem: zarazil mne propastný rozdíl chováním vestavěného profesionálního 3G modulu (Ericsson F5521gw) a takových těch USB neřádů, co operátoři rozdávají prakticky zadarmo k internetovým tarifům. Mini PCI-E modul v kombinaci s vestavěnou anténou nabízí mnohem kvalitnější signál a vyrovnává se s jeho kolísáním nebo občasnou absencí mnohem lépe, než USB modem, potažmo obskurní software s nimi dodávaný.</p>
 <p>Jezdím často vlakem trasu Praha – Brno a používat za jízdy USB modem bylo utrpení, protože vlivem mizerného pokrytí železničních tratí spojení neustále padalo a časem modem zblbl natolik, že ho bylo nutné hardwarově odstranit a znovu přidat. Interní modul sice spojení občas ztratil také, ale méně často a bez jakýchkoliv problémů ho zase rychle navázal.</p>
-<p><a href="http://www.aspnet.cz/Files/20120328-metered_2.png"><img src="http://www.aspnet.cz/Files/20120328-metered_thumb.png" alt="metered" title="metered" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120328-metered_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120328-metered_thumb.png" alt="metered" title="metered" /></a></p>
 <p>Windows 8 počítají i s tím, že připojení bude datově limitováno (&quot;metered connection&quot;) a ve výchozím nastavení nebudou při takovém připojení stahovat aktualizace. Veškerá &quot;rádia&quot; (WiFi, Bluetoohh, 3G) se pak zapínají a vypínají na jedno místě, včetně existence &quot;airplane mode&quot;, které vypne všechno najednou.</p>
 <h2 id="to-nestastne-metro">To nešťastné Metro</h2>
 <p>Nové grafické rozhraní budí emoce a spousta lidí s ním má nějaký zásadní problém. Zkusím popsat své zkušenosti s ním po měsíci používání. Předesílám, že jsem spokojeným uživatelem Windows Phone, takže toto rozhraní pro mne není dramaticky nové a že se mi vizuálně velmi líbí, což také nutně není pravidlem.</p>
 <p>Metro pokládám za geniální zařízení pro tablety a mobilní telefony, případně ještě pro nějaké speciální zařízení typu Surface nebo prostě velká dotyková obrazovka na zdi. U desktopu a notebooku ho nepokládám za příliš šťastné, protože myší a klávesnicí se neovládá právě nejlépe (resp. mám-li k dispozici myš a klávesnici, jsou efektivnější postupy).</p>
-<p><a href="http://www.aspnet.cz/Files/20120328-device_center_2.png"><img src="http://www.aspnet.cz/Files/20120328-device_center_thumb.png" alt="Microsoft Device Center - kříženec Metro a desktopu" title="Microsoft Device Center - kříženec Metro a desktopu" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120328-device_center_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120328-device_center_thumb.png" alt="Microsoft Device Center - kříženec Metro a desktopu" title="Microsoft Device Center - kříženec Metro a desktopu" /></a></p>
 <p>Pro desktopové aplikace se mi víc líbí rozhraní na způsob Zune nebo nového Microsoft Device Center, jakýsi kříženec obou přístupů. Nemyslím si, že na běžných počítačích se Metro aplikace příliš uchytí, ale to ukáže čas. Pokud chcete Windows 8 používat na běžném počítači jako nástupce Windows 7, setkáte se s Metrem prakticky pouze ve dvou případech: ve Start screen a u některých nastavení.</p>
-<p><a href="http://www.aspnet.cz/Files/20120328-start_2.png"><img src="http://www.aspnet.cz/Files/20120328-start_thumb.png" alt="Start Screen ve Windows 8" title="Start Screen ve Windows 8" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120328-start_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120328-start_thumb.png" alt="Start Screen ve Windows 8" title="Start Screen ve Windows 8" /></a></p>
 <p>Start screen nahrazuje Start menu a o svém přístupu k ní jsem psal již v <a href="http://www.aspnet.cz/articles/371-windows-8-visual-studio-11-prvni-dojmy">úvodním článku</a>. V podstatě se nijak nezměnil, beru Start screen jako další &quot;plochu&quot; pro aplikace spouštěné dostatečně často nato, abych je nechtěl vyhledávat a ne tak často, abych je připínal na taskbar.</p>
-<p><a href="http://www.aspnet.cz/Files/20120328-settings_4.png"><img src="http://www.aspnet.cz/Files/20120328-settings_thumb_1.png" alt="settings" title="settings" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120328-settings_4.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120328-settings_thumb_1.png" alt="settings" title="settings" /></a></p>
 <p>Druhé místo, kde se s Metrem setkáte i když nechcete, jsou nastavení &quot;PC settings&quot;, což je jakási Metro obdoba ovládacích panelů. Některá nastavení (většinou ta &quot;nová&quot;, ale třeba i připojení Bluetooth zařízení) najdete jenom zde, některá jenom v klasických ovládacích panelech, velmi málo jich je zdvojených. Předpokládám, že tohle se nějak časem ustálí a vyřeší. Naštěstí vyhledávání funguje napříč vším, takže netřeba řešit příliš urputně.</p>
-<p><a href="http://www.aspnet.cz/Files/20120328-winp_2.png"><img src="http://www.aspnet.cz/Files/20120328-winp_thumb.png" alt="winp" title="winp" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2012/20120328-winp_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120328-winp_thumb.png" alt="winp" title="winp" /></a></p>
 <p>Jinak se s Metro rozhraním setkáte jenom u pár sidebar panelů, které vám v excitovaných okamžicích vylezou při pravé straně obrazovky. Třeba po klepnutí na ikonku sítí uvidíte panel se seznamem dostupných připojení, jak bylo ukázáno dříve, nebo po stisku Win+P se objeví možnost připojení projektoru či externího monitoru v nové podobě. Ve verzi Consumer Preview se tak nechová důsledně vše, třeba nastavení hlasitosti nebo režimu napájení je stále &quot;postaru&quot;, ale to je předpokládám úkaz rázu dočasného.</p>
 <h2 id="bitlocker">BitLocker</h2>
 <p>Používám šifrování disků BitLocker na systémovém, datovém i externích discích. BitLocker se objevil už ve Windows Vista, ve Windows 7 byl výrazně vylepšen a dalších vylepšení se dočkal ve Windows 8. To nejlepší je, že při zapnutí šifrování na disku není nutné šifrovat celý disk, ale jenom tu část, na které jsou stávající data, tj. nešifruje se &quot;prázdná&quot; část. To je užitečné ve chvíli, kdy máte nový disk, na který chcete ukládat šifrovaná data, protože vám to ušetří hodiny práce.</p>

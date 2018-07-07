@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -37,7 +39,7 @@
 <p>sudo cp kestrel_service.sh /etc/init.d/kestrel_wifigate sudo chmod +x /etc/init.d/kestrel_wifigate</p>
 <p>Prvním příkazem (<code>cp</code>) zkopírujete soubor do adresáře <code>/etc/init.d</code> a přejmenujete ho na <code>kestrel_wifigate</code> (bez přípony). Druhým příkazem (<code>chmod</code>) soubor označíte jako vykonatelný. Na Linuxu se k označení spustitelných souborů nepoužívají přípony (<code>.exe</code> atd.), ale speciální příznak, který tímto příkazem nastavíte.</p>
 <p>Příkazem <code>sudo service kestrel_wifigate start</code> službu nastartujete (můžete také místo <code>start</code> využít příkazy <code>stop</code> a <code>restart</code>). Pokud vše dopadlo dobře, chvíli po spuštění služby najdete na adrese serveru a portu 5004 ukázkový ASP.NET 5 web. Pokud vše nedopadlo dobře, službu zastavte a podívejte se do souboru <code>~/www/wifigate/kestrel.log</code>, kde najdete, na co si Kestrel stěžuje.</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_demopage_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_demopage_thumb.png" alt="Ukázková stránka ASP.NET 5" title="Ukázková stránka ASP.NET 5" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_thumb.png" alt="Ukázková stránka ASP.NET 5" title="Ukázková stránka ASP.NET 5" /></a></p>
 <p>Pokud chcete, aby služba startovala automaticky po rebootu (nejspíš ano), nastavte to příkazem <code>sudo update-rc.d kestrel_wifigate defaults</code>. Pokud budete chtít autostart zrušit, vypněte ho příkazem <code>sudo update-rc.d kestrel_wifigate remove</code>.</p>
 <p>Restartujte počítač příkazem <code>sudo reboot</code> a vyzkoušejte, že po nastartování služba automaticky naběhne.</p>
 <h2 id="pouziti-nginx">Použití nginx</h2>
@@ -45,7 +47,7 @@
 <p>Jak na to, nám opět poradí <a href="http://druss.co/2015/06/asp-net-5-kestrel-nginx-web-server-on-linux/">Druss</a>, jeho návod jsem jenom mírně upravil pro naše potřeby a přidal pár vysvětlivek. Nginx nainstalujete následujícími příkazy:</p>
 <p>sudo apt-get install nginx -y sudo update-rc.d nginx defaults sudo service nginx start</p>
 <p>První příkaz nginx nainstaluje, druhý nastaví automatické spouštění po startu pomocí init.d a třetí službu nastartuje. Když se nyní podíváte z webového prohlížeče na adresu Raspberry Pi s výchozím portem (80), uvidíte hlášku <em>Welcome to nginx!</em>:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-atropa_nginx_2.png"><img src="http://www.aspnet.cz/Files/20150713-atropa_nginx_thumb.png" alt="atropa_nginx" title="atropa_nginx" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nginx_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nginx_thumb.png" alt="atropa_nginx" title="atropa_nginx" /></a></p>
 <p>My ovšem nechceme publikovat statický obsah (uložený mimochodem v adresáři <code>/usr/share/nginx/www/</code>), ale chceme nginx použít jako proxy pro Kestrel. Proto musíme upravit jeho konfiguraci.</p>
 <p>Konfigurace virtuálních serverů nginxu je uložena ve dvou složkách:</p>
 <ul>

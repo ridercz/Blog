@@ -11,7 +11,7 @@
 
 Microsoft přidal nové benefity pro členy programu MSDN Connection.
 
-[![Aplikace TraceGPS](http://www.aspnet.cz/Files/20071203-20071202-TraceGPS_thumb.gif)](http://www.aspnet.cz/Files/20071203-20071202-TraceGPS_2.gif) 
+[![Aplikace TraceGPS](https://www.cdn.altairis.cz/Blog/2007/20071203-20071202-TraceGPS_thumb.gif)](https://www.cdn.altairis.cz/Blog/2007/20071203-20071202-TraceGPS_2.gif) 
 
 V první řadě přibyla moje ukázková aplikace **NMEA Log Vizualizer**. Umí zobrazit log s GPS v NMEA formátu na mapě (využívám AMapy API). Aplikace je zajímavá mimo jiné tím, že využívá některé nové vymoženosti, jsoucí součástí Microsoft .NET Frameworku 3.5. Dále by vás mohlo zajímat něco užitečných funkcí na práci s NMEA formátem a také výpočet vzdálenosti mezi dvěma body na základě znalosti jejich zeměpisných souřadnic, což je úkol výrazně složitější, než by se na první pohled mohlo zdát.
 

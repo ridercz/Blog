@@ -28,4 +28,4 @@ Ačkoliv OData lze publikovat i konzumovat mnoha různými způsoby, zajímavá 
 
 ## Prezentace a příklady
 
-Prezentaci a příklady na výše uvedené si můžete stáhnout na [http://www.aspnet.cz/files/20101125-DevNetCon.zip](http://www.aspnet.cz/files/20101125-DevNetCon.zip "http://www.aspnet.cz/files/20101125-DevNetCon.zip") (800 kB).
+Prezentaci a příklady na výše uvedené si můžete stáhnout na [http://www.aspnet.cz/files/20101125-DevNetCon.zip](https://www.cdn.altairis.cz/Blog/2010/20101125-DevNetCon.zip "http://www.aspnet.cz/files/20101125-DevNetCon.zip") (800 kB).

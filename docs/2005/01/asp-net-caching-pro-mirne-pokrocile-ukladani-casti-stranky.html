@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V minulém zápisu jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů celých stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -23,13 +25,13 @@
 <p>ASP.NET umožňuje použít direktivu OutputCache nejenom v rámci ASPX stránek, ale i v rámci web user controlu - ASCX. Pro dynamicky generovaný seznam rubrik příkladně používám toto nastavení:</p>
 <p>&lt;%@ OutputCache Duration=&quot;1800&quot; Shared=&quot;true&quot; VaryByParam=&quot;none&quot; %&gt;</p>
 <p>Jest samozřejmé, že zatímco cacheování celých stránek je možno provádět na serveru, na klientovi či někde mezi nimi, pro cacheování částí stránky to neplatí - to lze provádět pouze na serveru. Použitím této technologie tedy neušetříte přenosové pásmo, ale &quot;jenom&quot; výkon serveru.</p>
- <h2>Argumenty OutputCache pro ASCX</h2> 
+<h2 id="argumenty-outputcache-pro-ascx">Argumenty OutputCache pro ASCX</h2>
 <p>Ačkoliv direktiva zůstává stejná, její parametry se u ASPX a ASCX liší. Možné jsou:</p>
 <p><code>Duration</code> - doba po kterou jest ukládati, v sekundách.</p>
 <p><code>Shared</code> (<code>True</code> nebo <code>False</code>, default <code>False</code>) - určuje, zda bude cacheovaná hodnota sdílena mezi různými ASPX stránkami. Tedy: Pokud je jeden ASCX control umístěn ve více ASPX stránkách, bude při nastavení <code>True</code> cacheována jedna kopie, při nastavení <code>False</code> tolik kopií, v kolika různých stránkách bude includováno. Používejte dle kontextu - menu všude stejné bude sdíleno, hlavička stránky dynamicky generující titulek asi ne.</p>
 <p><code>VaryByParam</code>, <code>VaryByCustom</code> - chová se úplně stejně jako při <a href="/entry/article-20050105.aspx">cacheování celých stránek</a>.</p>
 <p><code>VaryByControl</code> - umožňuje stanovit závislost na serverovém ovládacím prvku, jež je součástí ASCX controlu. To je vlastnost natolik obskurní, že jí budeme věnovat pozornost v následujícím samostatném oddílu.</p>
- <h2>VaryByControl</h2> 
+<h2 id="varybycontrol">VaryByControl</h2>
 <p>Jest nutno míti na paměti, že pokud je použito cacheování, kód v ASCX prvku se vůbec nevykoná a místo toho se použije již dříve vygenerovaný HTML kód. Což je dost nepříjemné v případě, že ASCX obsahuje sám o sobě nějakou funkčnost, závislou  příkladně na formulářových prvcích.</p>
 <p>V případě ASPX stránky lze požadovaného efektu dosáhnout prostřednictvím <code>VaryByParam</code>, protože při postbacku se data předávají jako formulářové parametry. V případě ASCX je to složitější - data se sice také předávají jako formulářové parametry, leč název polí není vždy jednoznačný, je generován dynamicky podle ID controlu. <code>VaryByParam</code> nelze tedy použít.</p>
 <p>Ukažme si to na příkladu. Mějmež web user control sestávající z textového pole, tlačítka a labelu:</p>

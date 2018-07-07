@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Gopas &amp; Microsoft TechEd 2005 v Praze je výběr nejzajímavějších přednášek z &quot;velkého&quot; TechEdu. Chcete se podívat? Nabízíme vám volnou vstupenku v ceně 6000 Kč!" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -21,13 +23,16 @@
         <p>Pro ty, kdož se z rozličných důvodů nedostali na konferenci Microsoft TechEd 2005 tradičně Microsoft a Počítačová škola Gopas pořádají akci nazvanou <a href="http://www.teched.cz/">Gopas &amp; Microsoft TechEd 2005</a> v Praze. Jedná se o výběr nejzajímavějších přednášek z &quot;velkého&quot; TechEdu.</p>
 <p>Letos se koná 19-23. září, tedy příští týden. Kompletní program najdete na <a href="http://www.teched.cz/program.htm">oficiálním webu</a>, ale patrně nikoho nepřekvapí, že vývojářská sekce je věnována převážně nadcházející verzi .NET 2.0 &quot;Whidbey&quot;. Kromě přednášek je užitečnou částí i zóna &quot;ask the expert&quot;, kde máte po přednášce možnost klást všetečné otázky všeho druhu (tematické!) předtím se exhibujícímu expertovi.</p>
 <p>Nezanedbatelná část TechEdu bude věnována i webovým technologiím a prezentace nezanedbatelné části této části leží na mých bedrech. Pro úvod do světa ASP.NET 2.0 jsem zvolil tři přednášky:</p>
- <ul> <li><strong>WEB323 - Overview of ASP.NET 2.0</strong>   
-<em>(úterý, 10:30-11:45) </em>Základní seznámení s technologií ASP.NET 2.0, představení možností. Spousta demo ukázek a příkladů ke stažení! <li><strong>WEB327 - Best Practices for Building Web Application UI with Master Pages, Themes and Site Navigation</strong>   
-<em>(středa, 10:30-11:45) </em>Co oko nevidí, sice srdce nebolí, ale co oko vidí, musí někdo naprogramovat. Whidbey umožňuje dosud nejpropracovanější oddělení grafiky od dat, a některé novinky, dosud u vývoje webových aplikací nevídané. <li><strong>WEB340 - IIS7: Discover and Move to the Next Generation Web Application Server Platform</strong>  
-<em>(čtvrtek 10:30-11:45) </em>A na závěr, pohled do budoucnosti poněkud vzdálenější, na následující verzi Internet Information Services. Jako malou ochutnávku doporučuji přečíst si dříve zde vydaný článek [IIS 7: Per aspera ad astra](/entry/article-20050112.aspx).</li></ul> <h2>Soutěž o volnou vstupenku</h2> 
+<ul>
+<li><strong>WEB323 - Overview of ASP.NET 2.0</strong><br />
+*(úterý, 10:30-11:45) *Základní seznámení s technologií ASP.NET 2.0, představení možností. Spousta demo ukázek a příkladů ke stažení! <strong>WEB327 - Best Practices for Building Web Application UI with Master Pages, Themes and Site Navigation</strong><br />
+*(středa, 10:30-11:45) *Co oko nevidí, sice srdce nebolí, ale co oko vidí, musí někdo naprogramovat. Whidbey umožňuje dosud nejpropracovanější oddělení grafiky od dat, a některé novinky, dosud u vývoje webových aplikací nevídané. <strong>WEB340 - IIS7: Discover and Move to the Next Generation Web Application Server Platform</strong><br />
+*(čtvrtek 10:30-11:45) *A na závěr, pohled do budoucnosti poněkud vzdálenější, na následující verzi Internet Information Services. Jako malou ochutnávku doporučuji přečíst si dříve zde vydaný článek <a href="/entry/article-20050112.aspx">IIS 7: Per aspera ad astra</a>.</li>
+</ul>
+<h2 id="soutez-o-volnou-vstupenku">Soutěž o volnou vstupenku</h2>
 <p>Běžný <a href="https://www.microsoft.cz/akce/teched2005/">registrační poplatek</a> na pražský TechEd je &quot;baťovských&quot; 5 990 Kč, DPH v to nepočítaje. Díky velkorysosti hlavního pořadatele, <a href="http://www.gopas.cz/">počítačové školy Gopas</a>, mohu na ASPNET.CZ vyhlásit soutěž. Hlavní výherce obdrží zdarma volnou vstupenku na akci, a druhý vylosovaný získá firemní tričko <a href="http://www.altaircom.net/">Altair Communications</a>.</p>
 <p>Abyste měli šanci na výhru, stačí jenom zadat svou e-mailovou adresu a požadovanou velikost trička. Ale protože ASPNET.CZ čtou programátoři (a jim je také určena vývojářská část TechEdu), rozhodl jsem se vás neponižovat triviálním webovým formulářem, takže své údaje musíte zadat pomocí web services rozhraní.</p>
- <h2>Jak na to?</h2> 
+<h2 id="jak-na-to">Jak na to?</h2>
 <p>Na adrese <a href="http://web.aspnet.cz/TechEdSoutez/Service.asmx">http://web.aspnet.cz/TechEdSoutez/Service.asmx</a> najdete webovou službu, která poskytuje dvě metody (obě lze volat pouze metodou SOAP, prosté HTTP GET či POST požadavky ani nezkoušejte).</p>
 <p>V první fázi zavolejte metodu <em>StepOne</em>, a jako parametr jí předejte svou e-mailovou adresu a požadovanou velikost trička. Metodat vrací řetězec, buďto &quot;OK&quot; v případě úspěchu a nebo informaci o chybě. Jakmile se tak stane, webová služba vám obratem pošle na zadanou e-mailovou adresu zprávu, obsahující vygenerovaný kontrolní řetězec.</p>
 <p>Ve druhé fázi zavolejte metodu <em>StepTwo</em>, které jako parametry předáte shora uvedeným způsobem získaný potvrzující řetězec, své ctěné jméno a telefonní číslo. I tato metoda vrací řetězec, odpověď &quot;OK&quot; znamená, že jste byli úspěšně zařazeni do zpracování, v opačném případě dostanete chybové hlášení.</p>

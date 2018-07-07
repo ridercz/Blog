@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Uživatelské instance (user instances) jsou užitečnou novinkou v Microsoft SQL Serveru Express 2005 . Jako každá novinka však přinášejí též různé potíže a nedorozumění, především z důvodu nepochopení. Pojďme se tedy podrobněji podívat na to, co to vlastně &quot;uživatelské instance&quot; jsou a jak fungují." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -42,7 +44,7 @@
 <p>Vytvoření nové instance, její nastartování a připojení databáze znamená poměrně velkou režii. První požadavek na aplikaci po delší době nečinnosti pak trvá velmi dlouho, protože tohle všechno musí provést.</p>
 <p>Použití více instancí SQL Serveru znamená pro server větší zátěž, je mnohem efektivnější mít jednu instanci a v ní různé databáze.</p>
 <p>Takovýmto způsobem používaná databáze se prakticky nedá zálohovat. Souborově ji nezkopírujete (protože soubor je zpravidla otevřen instancí a používá se), plánované zálohování SQL Serveru ale nelze použít. Totéž se týká jakýchkoliv změn v databázi. Uživatelská instance je viditelná jenom pro toho, kdo ji vytvořil, nedá se na ni nijak zvlášť připojit a například modifikovat strukturu tabulek.</p>
-<p>Jediný způsob jak zazálohovat databázi nebo provést změny v její struktuře (pokud tak samozřejmě neučiní aplikace sama z kódu) je shodit aplikaci, například pomocí triku se souborem <a href="/Articles/77-tajemstvi-souboru-app-offline-htm-snadny-upgrade-aplikaci-v-asp-net-2-0.aspx">app_offline.htm</a> a zkopírovat přímo datové soubory.</p>
+<p>Jediný způsob jak zazálohovat databázi nebo provést změny v její struktuře (pokud tak samozřejmě neučiní aplikace sama z kódu) je shodit aplikaci, například pomocí triku se souborem <a href="https://www.aspnet.cz/Articles/77-tajemstvi-souboru-app-offline-htm-snadny-upgrade-aplikaci-v-asp-net-2-0.aspx">app_offline.htm</a> a zkopírovat přímo datové soubory.</p>
 <p>Právě z tohoto důvodu je možno user instance používat pouze u Express edice SQL Serveru, nikoliv u edic vyšších.</p>
 <h2 id="zaver-a-uzitecne-odkazy">Závěr a užitečné odkazy</h2>
 <p>Jako vždy, i v případě uživatelských instancí platí, že mohou být velmi užitečné, pokud jim porozumíte, ale velmi matoucí pokud ne. Pro jednodušší schémata práce s databází a při vývoji mohou výrazně zjednodušit práci a nasazení. Pro složitější schémata (například síťový přístup) nebo ostré nasazení na web serveru ovšem použijte běžný způsob práce s databází.</p>

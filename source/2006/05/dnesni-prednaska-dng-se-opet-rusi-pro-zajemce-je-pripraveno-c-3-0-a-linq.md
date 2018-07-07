@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2006-05-23T12:33:26.94+02:00 -->
 <!-- dcterms:dateAccepted = 2006-05-23T12:33:26.94+02:00 -->
 
-Plánovaná přednáška Honzy Šedy o ASP.NET Security, [která byla již jednou přeložena](/Articles/91-dnesni-prednaska-honzy-sedy-o-asp-net-security-se-rusi.aspx), a to na dnešek, se opět ruší.
+Plánovaná přednáška Honzy Šedy o ASP.NET Security, [která byla již jednou přeložena](https://www.aspnet.cz/Articles/91-dnesni-prednaska-honzy-sedy-o-asp-net-security-se-rusi.aspx), a to na dnešek, se opět ruší.
 
 Štěpán Bechyňský z Microsoftu bude nicméně ve stejný čas a na stejném místě (budova Microsoftu v Praze, 18:00) zájemcům povídat o C# a LINQ.
 

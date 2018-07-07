@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-02-10T23:31:49+01:00 -->
 <!-- dcterms:dateAccepted = 2003-02-10T23:31:49+01:00 -->
 
-![Moje počítačové doupě za temné noci](/files/atnight.jpg) 
+![Moje počítačové doupě za temné noci](https://www.cdn.altairis.cz/Blog/atnight.jpg) 
 
 Opustiv ledové pláně severních Čech vracím se do civilizace. Doma mne kromě psa přivítalo hučení počítačových ventilátorů a poblikávání LEDek. Domove, sladký domove ;-)
 

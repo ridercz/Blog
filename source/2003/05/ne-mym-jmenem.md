@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-05-17T14:07:22+02:00 -->
 <!-- dcterms:dateAccepted = 2003-05-17T14:07:22+02:00 -->
 
-![NE EU!](/files/ne-eu.gif)O svém vztahu k Evropské unii jsem již na weblogu [psal](/ShowRecord.aspx?day=20030221#045529), a stálým čtenářům je jistě jasné, že nepatřím mezi její přívržence.
+![NE EU!](https://www.cdn.altairis.cz/Blog/ne-eu.gif)O svém vztahu k Evropské unii jsem již na weblogu [psal](/ShowRecord.aspx?day=20030221#045529), a stálým čtenářům je jistě jasné, že nepatřím mezi její přívržence.
 
 Před několika dny byla za peníze všech občanů spuštěna masivní vládní kampaň pro podporu vstupu. Podle mého názoru se jedná o největší vymývání mozků v krátké historii samostatné České republiky.
 
@@ -18,7 +18,7 @@ Je mi jasné, že následující řádky jsou tváří v tvář tupé a zmanipul
 
 Spoustu důvodů, proč do EU nevstupovat, najdete například na stránkách [Euroskeptiků](http://www.euroskeptik.cz/). Níže najdete důvody moje:
 
-<strong>EU je byrokracie v nejčistším smyslu toho slova</strong>
+**EU je byrokracie v nejčistším smyslu toho slova**
 
 Pod pojmem "byrokracie" si v českých reálích představíme hromadu papírů a neochotného úředníka. Ovšem původní význam slova "byrokracie" je "vláda úřednictva". A přesně to je Evropská unie. Skutečnou moc nemají alespoň teoreticky svobodně zvolení zástupci občanů, ale anonymní úředníci.
 
@@ -26,11 +26,11 @@ Armáda mravenečků, kolos, který nelze snadno zastavit. Jednotlivci, kteří 
 
 V současném stavu jsou úředníci drobnou nepříjemností, občas k smíchu. Se vstupem do EU jim narostou křídla.
 
-<strong>EU je cesta bez návratu</strong>
+**EU je cesta bez návratu**
 
 Jakmile se jednou staneme její součástí, neexistuje žádný způsob, jak z Evropské unie vystoupit. EU je další "tisíciletá říše", která nepřipouští možnost vlastního selhání či zániku. Už to samo o sobě je podezřelé.
 
-<strong>EU je zcela zbytečná instituce</strong>
+**EU je zcela zbytečná instituce**
 
 Přívrženci vstupu často argumentují tím, že Evropská unie je jediná cesta. Podle mého názoru je to spíš zbytečnost. Podívejte se na takzvané výhody členství v unii: jedná se výhradně o zrušení uměle vytvořených omezení, která z praktických důvodů nemají šanci na přežití ani tak.
 

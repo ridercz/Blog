@@ -19,7 +19,7 @@
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -48,6 +48,8 @@
     <xsl:if test="$Description != ''">
       <meta name="Description" content="{$Description}"/>
     </xsl:if>
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </xsl:template>
 
   <!-- Link to article with detail -->

@@ -6,26 +6,28 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jak již stálí čtenáři vědí, virtualizační technologie patří k mým oblíbeným, ostatně i tento web běží na virtuálním serveru. Nemohl jsem tedy odolat a vyzkoušel jsem novou technologii Microsoft Hyper-V, která je součástí Windows Serveru 2008." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Virtualizace: První zkušenosti s Microsoft Hyper-V</h1>
       <section class="article">
-        <p>Technologie Hyper-V je součástí Windows Serveru 2008. Svým určením je to v podstatě nástupce Virtual Serveru 2005 (o kterém jsem zde již <a href="/Articles/110-virtualizace-virtual-server-2005-r2.aspx">psal</a>, stejně jako o obecných principech <a href="/Articles/103-virtualizace-uvod.aspx">virtualizace</a>).</p>
+        <p>Technologie Hyper-V je součástí Windows Serveru 2008. Svým určením je to v podstatě nástupce Virtual Serveru 2005 (o kterém jsem zde již <a href="https://www.aspnet.cz/Articles/110-virtualizace-virtual-server-2005-r2.aspx">psal</a>, stejně jako o obecných principech <a href="https://www.aspnet.cz/Articles/103-virtualizace-uvod.aspx">virtualizace</a>).</p>
 <h2 id="co-co-je-microsoft-hyper-v">Co co je Microsoft Hyper-V</h2>
-<p><a href="/Files/20080318-20080318-hyperv-manager_2.png"><img src="/Files/20080318-20080318-hyperv-manager_thumb.png" alt="Hyper-V manager" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-manager_2.png"><img src="https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-manager_thumb.png" alt="Hyper-V manager" /></a></p>
 <p>Hyper-V je nová generace virtualizační technologie, přímo svázaná s operačním systémem a vyždaující speciální hardware (procesor s HW podporou virtualizace). Jedná se tedy o opravdovou virtualizaci, nikoliv o emulaci.</p>
 <p>Ve finální verzi Windows Serveru 2008 je pre-release verze Hyper-V, ostrá verze bude po dokončení nahrána pomocí Windows Update. Hyper-V je k dispozici pouze na 64-bitové edici Windows Server 2008 Standard a vyšší.</p>
 <p>Já to testuji na Windows Server 2008 Enterprise RTM, jako hardware používám server HP ProLiant DL320 G5 s dual-core procesorem a 8 GB operační paměti.</p>
 <h2 id="instalace-a-prvni-dojmy">Instalace a první dojmy</h2>
-<p><a href="/Files/20080318-20080318-hyperv-settings_2.png"><img src="/Files/20080318-20080318-hyperv-settings_thumb.png" alt="Nastavení virtuálního serveru" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-settings_2.png"><img src="https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-settings_thumb.png" alt="Nastavení virtuálního serveru" /></a></p>
 <p>Přestože se můj server nenachází na oficiálním <a href="https://www.microsoft.com/windowsserver2008/en/us/hyperv-install.aspx#RecommendedHardwareDevices">seznamu podporovaného hardware</a> pro pre-release verzi, byla instalace vcelku bezproblémová. Jediný problém spočívá v tom, že pro instalaci a provoz Hyper-V musíte mít na serveru nastavené anglické prostředí.</p>
 <p>Lépe řečeno: System a Default user locale musí být &quot;English (United States)&quot;. Lze doinstalovat českou klávesnici a změnit regional settings pro jiného uživatele. Pokud to neuděláte, odmítne virtualizační služba nastartovat. Tento problém by měl být vyřešen ve finální verzi.</p>
 <p>Správa virtuálních serverů se provádí z Microsoft Management Console, nikoliv přes web, jako v případě Virtual Serveru 2005. Obecně mi přijde rozhraní pro správu velmi dobře navržené, například všechny parametry virtuálnícho stroje lze nastavit z jednoho přehledného dialogu, který je vyřešen ještě lépe, než obdobný dialog u Virtual PC (a o řád lépe, než webové rozhraní Virtual Serveru). To je ale průvodní znak téměř všech nástrojů pro správu, které jsou součástí Windows Serveru 2008. Zdá se mi, že při jejich navrhování skutečně někdo myslel hlavou.</p>

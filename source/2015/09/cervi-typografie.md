@@ -17,7 +17,7 @@ Možná se doslechl, že když je potřeba něco v textu zdůraznit, užívá se
 
 Takže dotyčný sedne k Wordu a vyplodí leták, informující o montování měřičů tepla. A potřebuje zajistit, aby to opravdu nikdo nepřehlédl, protože taková montáž je přece záležitostí života a smrti. Jenomže co zdůraznit a jak?
 
-[![WP_20150920_20_31_08_Pro](http://www.weblog.rider.cz/Files/20150921-WP_20150920_20_31_08_Pro_thumb.jpg "WP_20150920_20_31_08_Pro")](http://www.weblog.rider.cz/Files/20150921-WP_20150920_20_31_08_Pro_2.jpg)
+[![WP_20150920_20_31_08_Pro](https://www.cdn.altairis.cz/Blog/2015/20150921-WP_20150920_20_31_08_Pro_thumb.jpg "WP_20150920_20_31_08_Pro")](https://www.cdn.altairis.cz/Blog/2015/20150921-WP_20150920_20_31_08_Pro_2.jpg)
 
 Odpověď je jednoduchá: všechno. Všechno je přece strašně důležité, jinak by to tam nepsal. Takže většina textu je verzálkami, tučně a podtržená. A jenom absence barevného tisku na prastaré laserovce brání tomu, aby bylo všechno červené, protože takové důležité věci bývají.
 

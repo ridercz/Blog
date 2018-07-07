@@ -14,7 +14,7 @@
 
 Jak to v budoucnu bude s ASP.NET? Jak si poradit se stávajícími aplikacemi ve Web Forms a MVC 5? Je už .NET Core technologie dostatečně zralá na nasazení? To jsou otázky, které dostáváme docela často. Proto jsme se rozhodli uspořádat konferenci [Budoucnost ASP.NET](https://budoucnost.aspnet.cz/), kde na tyto otázky obecně odpovídáme.
 
-[![budoucnost_foto](http://www.aspnet.cz/Files/20170908-budoucnost_foto_thumb.jpg "budoucnost_foto")](http://www.aspnet.cz/Files/20170908-budoucnost_foto_2.jpg)
+[![budoucnost_foto](https://www.cdn.altairis.cz/Blog/2017/20170908-budoucnost_foto_thumb.jpg "budoucnost_foto")](https://www.cdn.altairis.cz/Blog/2017/20170908-budoucnost_foto_2.jpg)
 
 Na této konferenci jsem měl dvě přednášky:
 

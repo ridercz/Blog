@@ -4,12 +4,15 @@
   "StaticFolder": "static",
   "XsltFolder": "xslt",
   "WorkFolder": "work",
-  "Transforms": {
+  "HtmlTransforms": {
     "HomePage.xslt": "index.html",
     "Archive.xslt": null,
     "Articles.xslt": null,
     "Categories.xslt": null,
     "Serials.xslt": null
+  },
+  "RawTransforms": {
+    "Feed.xslt": "feed.rss"
   },
   "TransformParameters": {
     "PageSize": 10

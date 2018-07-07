@@ -6,19 +6,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Zařekl jsem se, že se Whidbey vůbec nebudu zabývat, dokud nebude na světě alespoň beta 2 (kdo přepisoval aplikace pro .NET 1.0 z bety 1 do bety 2 ví proč). Nicméně toto mé úsilí jest systematicky podkopáváno Microsoftem i rozličnými nadšenci." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Personalizace v ASP.NET 2.0</h1>
       <section class="article">
-        
+        <p>Zařekl jsem se, že se Whidbey vůbec nebudu zabývat, dokud nebude na světě alespoň beta 2 (kdo přepisoval aplikace pro .NET 1.0 z bety 1 do bety 2 ví proč). Nicméně toto mé úsilí jest systematicky podkopáváno Microsoftem i rozličnými nadšenci. Jedním z nich je jistý Egypťan jménem Khaled Hussein, který napsal sérii třech článků o možnostech pesonalizace v ASP.NET 2.0:</p>
+<ul>
+<li><a href="http://www.kdkeys.net/forums/4107/ShowPost.aspx">Část první</a></li>
+<li><a href="http://www.kdkeys.net/forums/4135/ShowPost.aspx">Část druhá</a></li>
+<li><a href="http://www.kdkeys.net/forums/4137/ShowPost.aspx">Část třetí</a></li>
+</ul>
+<p>Ve zkratce: základním principem .NET je abstrakce. Framework se snaží programátora odstínit od detailů, aby se mohl věnovat skutečné kreativní práci. Ono &quot;odstínění od detailů&quot; může spočívat jednak v abstrakci od konkrétního hardware/operačního systému, ale také v &quot;zapouzdření&quot; často používaných technik do jednoduchého rozhraní. Typickým příkladem je <em>Forms Authentication</em> v ASP.NET 1.1. Nevím jak vy, ale já osobně jsem variantu téhož napsal v ASP 3.0 asi stokrát.</p>
+<p>Abstrakce ale není dokonalá: pokud se nechcete spokojit s několika uživateli napevno zadanými ve web.configu (ne že by to v mnoha případech nestačilo), musíte si databázi uživatelů sami napsat. Pokud máte trochu složitější strukturu, používáte role a podobně, Forms Authentication vám sice práci ulehčí, ale nezbavíte se ji.</p>
+<p>Personalizační mechanismy v nové verzi .NET jsou mnohem dál: bez jediného řádku kódu lze naprogramovat správu uživatelů, podporu skupin a dokonce i profilů, kam lze ukládat libovolné údaje, samozřejmě jako strongly-typed vlastnosti. Více se dozvíte ve shora linkovaných článcích.</p>
+<p>Čím lépe poznávám Whidbey, tím více nabývám přesvědčení, že současná verze 1.1 je spíše taková <em>ochutnávka</em> toho, co lze od .NET čekat. Už se na něj těším, protože k .NET programování mne vrátilo to, že to znovu začala být <em>zábava</em>. Whidbey slibuje, že to bude zábava ještě větší!</p>
+
       </section>
     </main>
     <footer>

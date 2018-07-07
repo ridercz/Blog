@@ -11,7 +11,7 @@
 
 ASP.NET 2.0 nabízí dvě nové a mocné technologie pro vytváření vzhledu webových stránek: Master pages a Themes. Nyní si můžete stáhnout sadu ukázkových "aplikací", které tuto funkcionalitu předvádějí.
 
-Ony uvozovky okolo slova "aplikace" jsou zcela právem - rád bych vás varoval před braním toho <em>příšerného</em> kódu který tam je za vzor. Je to jenom velmi narychlo načrtnutých pír řádek sloužících k oživení toho vzhledu.
+Ony uvozovky okolo slova "aplikace" jsou zcela právem - rád bych vás varoval před braním toho *příšerného* kódu který tam je za vzor. Je to jenom velmi narychlo načrtnutých pír řádek sloužících k oživení toho vzhledu.
 
 Šablony si můžete stáhnout na webu [starterkits.aspnet.cz](http://starterkits.aspnet.cz/Downloads/Product.aspx?ProductID=16). Sada obsahuje čtyři weby reprezentující nejčastější typy aplikací a každý z nich má tři grafické verze (témata). Součástí je i dokumentace která vysvětluje, jak to celé funguje dohromady. Jsou tam vysvětleny i základy CSS a podobně.
 
@@ -19,6 +19,6 @@ Autorem těchto šablon je Microsoft, já jsem je překládal do češtiny. Sna�
 
 A takhle jednotlivé šablony vypadají:
 
-![](/files/20060105-Commerce.gif) ![](/files/20060105-Corporate.gif)
+![](https://www.cdn.altairis.cz/Blog/2006/20060105-Commerce.gif) ![](https://www.cdn.altairis.cz/Blog/2006/20060105-Corporate.gif)
 
-![](/files/20060105-Personal.gif) ![](/files/20060105-SmallBusiness.gif)
+![](https://www.cdn.altairis.cz/Blog/2006/20060105-Personal.gif) ![](https://www.cdn.altairis.cz/Blog/2006/20060105-SmallBusiness.gif)

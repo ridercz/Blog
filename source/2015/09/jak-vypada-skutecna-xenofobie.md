@@ -11,7 +11,7 @@
 
 Xenofobie je poslední dobou často citovaný pojem. Nálepku xenofoba si dnes snadno vyslouží každý, kdo nesdílí názor, že nejlepší řešení války v Sýrii a obecně neutěšené situace v přilehlém okolí je nastěhovat si všechny postižené do vlastní země. Skutečná xenofobie vypadá jinak a výborně to předvádí [článek v Krajských listech](http://www.krajskelisty.cz/kralovehradecky-kraj/okres-hradec-kralove/10703-mestske-lazne-v-hradci-kralove-zazivaji-sok-arabky-se-koupou-mezi-skolaky-v-habitech-od-hlavy-az-k-pate.htm) a paní Věra (67) z Hradce Králové.
 
-[![krajskelisty](http://www.weblog.rider.cz/Files/20150907-krajskelisty_thumb.png "krajskelisty")](http://www.weblog.rider.cz/Files/20150907-krajskelisty_2.png)
+[![krajskelisty](https://www.cdn.altairis.cz/Blog/2015/20150907-krajskelisty_thumb.png "krajskelisty")](https://www.cdn.altairis.cz/Blog/2015/20150907-krajskelisty_2.png)
 
 Xenofobie je strach nebo odpor k cizímu. K cizím národům, kulturám, zvyklostem, čistě proto, že jsou cizí. Xenofobií není přesvědčení, že stát by měl peníze, které sebral svým občanům, investovat jinak, než do péče o uprchlíky. Xenofobií není strach ze zcela reálných bezpečnostních hrozeb, které s sebou současná situace nese.
 

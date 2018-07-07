@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Chcete si s Raspberry Pi pohrát víc, než jak vám nabízím v seriálu o projektu Atropa? Můžete povolit grafické rozhraní a zapnout vzdálený přístup přes RDP." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -22,9 +24,9 @@
 <h2 id="jak-zapnout-graficke-prostredi">Jak zapnout grafické prostředí?</h2>
 <p>Z konzole můžete nastartovat grafické rozhraní příkazem <code>startx</code>. Ale co když chcete, aby vám Raspberry do grafického prostředí rovnou bootovalo?</p>
 <p>V takovém případě zadejte příkaz <code>sudo raspi-config</code>. Spustí se vám textové rozhraní, pomocí kterého můžete nastavit řadu paramerů. Mimo jiné tam najdete i volbu <em>Enable boot to Desktop/Scratch</em>:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-raspi_config_1_2.png"><img src="http://www.aspnet.cz/Files/20150713-raspi_config_1_thumb.png" alt="Utilita raspi-config: hlavní menu" title="Utilita raspi-config: hlavní menu" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_1_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_1_thumb.png" alt="Utilita raspi-config: hlavní menu" title="Utilita raspi-config: hlavní menu" /></a></p>
 <p>Po klepnutí na něj si můžete vybrat, zda se má bootovat do textové konzole, grafického prostředí nebo do programovacího jazyka Scratch (což je takový trochu lepší Karel nebo Logo, programovací jazyk pro děti):</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-raspi_config_2_2.png"><img src="http://www.aspnet.cz/Files/20150713-raspi_config_2_thumb.png" alt="Utilita raspi-config: nastavení režimu bootu" title="Utilita raspi-config: nastavení režimu bootu" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_2_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-raspi_config_2_thumb.png" alt="Utilita raspi-config: nastavení režimu bootu" title="Utilita raspi-config: nastavení režimu bootu" /></a></p>
 <p>Po výběru požadovaného typu bootu zvolte <em><Ok></em> a <em><Select></em> a restartuje Rapberry.</p>
 <h2 id="jak-zapnout-vzdaleny-pristup">Jak zapnout vzdálený přístup?</h2>
 <p>Pokud nechcete na Raspberry pracovat lokálně, ale vzdáleně, hodí se na něm zapnout RDP, na které se pak budete moci připojit z Windows.</p>
@@ -36,11 +38,11 @@
 <h2 id="jak-se-pripojit-z-windows">Jak se připojit z Windows?</h2>
 <p>Pokud se pokusíte připojit s výchozími nastaveními, nebude vám to fungovat, protože xrdp podporuje pouze osmi nebo šestnáctibitovou barevnou hloubku, zatímco výchozí nastavení terminálového klienta je 32 bitů.</p>
 <p>Příkazem <code>mstsc</code> spusťte na Windows terminálového klienta a klepněte ve spodní části okna na šipku vedle <em>Show Options</em>. Přepněte se na záložku <em>Display</em> a nastavte jako barevnou hloubku <em>High Color (16 bit)</em>. Můžete také nastavit rozlišení, jaké chcete používat, pokud chcete, aby spojení běželo v okně a ne na plné obrazovce:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-mstsc_2.png"><img src="http://www.aspnet.cz/Files/20150713-mstsc_thumb.png" alt="Nastavení vlastností terminálového klienta" title="Nastavení vlastností terminálového klienta" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-mstsc_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-mstsc_thumb.png" alt="Nastavení vlastností terminálového klienta" title="Nastavení vlastností terminálového klienta" /></a></p>
 <p>Na záložce <em>General</em> zadejte název nebo IP adresu vašeho RPi za a klepněte na <em>Connect</em>. Budete vyzvání k potvrzení, že se chcete připojit pomocí nešifrovaného spojení  a poté se vám zobrazí přihlašovací dialog, kde zadejte své uživatelské jméno a heslo (výchozí je <code>pi</code> a <code>raspberry</code>):</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-xrdp_dialog_2.png"><img src="http://www.aspnet.cz/Files/20150713-xrdp_dialog_thumb.png" alt="Přihlašovací dialog xrdp" title="Přihlašovací dialog xrdp" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_dialog_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_dialog_thumb.png" alt="Přihlašovací dialog xrdp" title="Přihlašovací dialog xrdp" /></a></p>
 <p>Poté budete úspěšně připojeni. Na posledním screenshotu vidíte, jak jsem přes terminál připojen na Raspberry, kde běží Midnight Commander, webový prohlížeč a LibreOffice Writer, který jsem nainstaloval z grafického prostředí pomocí Pi Store:</p>
-<p><a href="http://www.aspnet.cz/Files/20150713-xrdp_desktop_2.png"><img src="http://www.aspnet.cz/Files/20150713-xrdp_desktop_thumb.png" alt="RPi přes RDP" title="RPi přes RDP" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_desktop_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-xrdp_desktop_thumb.png" alt="RPi přes RDP" title="RPi přes RDP" /></a></p>
 
       </section>
     </main>

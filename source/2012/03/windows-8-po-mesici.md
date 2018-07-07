@@ -40,7 +40,7 @@ Hyper-V ve Windows 8 ale bude vyžadovat procesor s funkcí Second Level Address
 
 Zatím tedy s mohutným frfláním zůstávám u VirtualBoxu, než vymyslím, jak si připravit nějaké dostatečně robustní "virtual lab" řešení, které by mi fungovalo na notebooku.
 
-## [![Podpora pro mobile broadband](http://www.aspnet.cz/Files/20120328-broadband_thumb.png "Podpora pro mobile broadband")](http://www.aspnet.cz/Files/20120328-broadband_2.png)Podpora pro Mobile Broadband
+## [![Podpora pro mobile broadband](https://www.cdn.altairis.cz/Blog/2012/20120328-broadband_thumb.png "Podpora pro mobile broadband")](https://www.cdn.altairis.cz/Blog/2012/20120328-broadband_2.png)Podpora pro Mobile Broadband
 
 *Poznámka: podle reakce v komentářích potvrzené rychlým googlováním je popisovaná funkcionalita dostupná už ve Windows 7, akorát se s ní zjevně nikdy nepotkal můj hardware.*
 
@@ -52,7 +52,7 @@ Mimochodem: zarazil mne propastný rozdíl chováním vestavěného profesionál
 
 Jezdím často vlakem trasu Praha – Brno a používat za jízdy USB modem bylo utrpení, protože vlivem mizerného pokrytí železničních tratí spojení neustále padalo a časem modem zblbl natolik, že ho bylo nutné hardwarově odstranit a znovu přidat. Interní modul sice spojení občas ztratil také, ale méně často a bez jakýchkoliv problémů ho zase rychle navázal.
 
-[![metered](http://www.aspnet.cz/Files/20120328-metered_thumb.png "metered")](http://www.aspnet.cz/Files/20120328-metered_2.png)
+[![metered](https://www.cdn.altairis.cz/Blog/2012/20120328-metered_thumb.png "metered")](https://www.cdn.altairis.cz/Blog/2012/20120328-metered_2.png)
 
 Windows 8 počítají i s tím, že připojení bude datově limitováno ("metered connection") a ve výchozím nastavení nebudou při takovém připojení stahovat aktualizace. Veškerá "rádia" (WiFi, Bluetoohh, 3G) se pak zapínají a vypínají na jedno místě, včetně existence "airplane mode", které vypne všechno najednou.
 
@@ -62,19 +62,19 @@ Nové grafické rozhraní budí emoce a spousta lidí s ním má nějaký zásad
 
 Metro pokládám za geniální zařízení pro tablety a mobilní telefony, případně ještě pro nějaké speciální zařízení typu Surface nebo prostě velká dotyková obrazovka na zdi. U desktopu a notebooku ho nepokládám za příliš šťastné, protože myší a klávesnicí se neovládá právě nejlépe (resp. mám-li k dispozici myš a klávesnici, jsou efektivnější postupy).
 
-[![Microsoft Device Center - kříženec Metro a desktopu](http://www.aspnet.cz/Files/20120328-device_center_thumb.png "Microsoft Device Center - kříženec Metro a desktopu")](http://www.aspnet.cz/Files/20120328-device_center_2.png)
+[![Microsoft Device Center - kříženec Metro a desktopu](https://www.cdn.altairis.cz/Blog/2012/20120328-device_center_thumb.png "Microsoft Device Center - kříženec Metro a desktopu")](https://www.cdn.altairis.cz/Blog/2012/20120328-device_center_2.png)
 
 Pro desktopové aplikace se mi víc líbí rozhraní na způsob Zune nebo nového Microsoft Device Center, jakýsi kříženec obou přístupů. Nemyslím si, že na běžných počítačích se Metro aplikace příliš uchytí, ale to ukáže čas. Pokud chcete Windows 8 používat na běžném počítači jako nástupce Windows 7, setkáte se s Metrem prakticky pouze ve dvou případech: ve Start screen a u některých nastavení.
 
-[![Start Screen ve Windows 8](http://www.aspnet.cz/Files/20120328-start_thumb.png "Start Screen ve Windows 8")](http://www.aspnet.cz/Files/20120328-start_2.png)
+[![Start Screen ve Windows 8](https://www.cdn.altairis.cz/Blog/2012/20120328-start_thumb.png "Start Screen ve Windows 8")](https://www.cdn.altairis.cz/Blog/2012/20120328-start_2.png)
 
 Start screen nahrazuje Start menu a o svém přístupu k ní jsem psal již v [úvodním článku](http://www.aspnet.cz/articles/371-windows-8-visual-studio-11-prvni-dojmy). V podstatě se nijak nezměnil, beru Start screen jako další "plochu" pro aplikace spouštěné dostatečně často nato, abych je nechtěl vyhledávat a ne tak často, abych je připínal na taskbar. 
 
-[![settings](http://www.aspnet.cz/Files/20120328-settings_thumb_1.png "settings")](http://www.aspnet.cz/Files/20120328-settings_4.png)
+[![settings](https://www.cdn.altairis.cz/Blog/2012/20120328-settings_thumb_1.png "settings")](https://www.cdn.altairis.cz/Blog/2012/20120328-settings_4.png)
 
 Druhé místo, kde se s Metrem setkáte i když nechcete, jsou nastavení "PC settings", což je jakási Metro obdoba ovládacích panelů. Některá nastavení (většinou ta "nová", ale třeba i připojení Bluetooth zařízení) najdete jenom zde, některá jenom v klasických ovládacích panelech, velmi málo jich je zdvojených. Předpokládám, že tohle se nějak časem ustálí a vyřeší. Naštěstí vyhledávání funguje napříč vším, takže netřeba řešit příliš urputně.
 
-[![winp](http://www.aspnet.cz/Files/20120328-winp_thumb.png "winp")](http://www.aspnet.cz/Files/20120328-winp_2.png)
+[![winp](https://www.cdn.altairis.cz/Blog/2012/20120328-winp_thumb.png "winp")](https://www.cdn.altairis.cz/Blog/2012/20120328-winp_2.png)
 
 Jinak se s Metro rozhraním setkáte jenom u pár sidebar panelů, které vám v excitovaných okamžicích vylezou při pravé straně obrazovky. Třeba po klepnutí na ikonku sítí uvidíte panel se seznamem dostupných připojení, jak bylo ukázáno dříve, nebo po stisku Win+P se objeví možnost připojení projektoru či externího monitoru v nové podobě. Ve verzi Consumer Preview se tak nechová důsledně vše, třeba nastavení hlasitosti nebo režimu napájení je stále "postaru", ale to je předpokládám úkaz rázu dočasného.
 

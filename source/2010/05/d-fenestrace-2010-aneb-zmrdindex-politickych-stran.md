@@ -17,7 +17,7 @@ Vzal jsem tedy tužku a vyškrtal všechny kandidáty, kteří jsou ve svém pov
 
 Výsledné číslo bych mohl D-FENSím slovníkem nazvat třeba "zmrdindex politických stran". Výsledek v grafické podobě následuje (strany jsou seřazeny podle volebních čísel a beru v úvahu volební kraj Hlavní město Praha):
 
-[![volby_2010_index_zazmrdovanosti](http://www.weblog.rider.cz/Files/20100519-volby_2010_index_zazmrdovanosti_thumb.png "volby_2010_index_zazmrdovanosti")](http://www.weblog.rider.cz/Files/20100519-volby_2010_index_zazmrdovanosti_2.png) 
+[![volby_2010_index_zazmrdovanosti](https://www.cdn.altairis.cz/Blog/2010/20100519-volby_2010_index_zazmrdovanosti_thumb.png "volby_2010_index_zazmrdovanosti")](https://www.cdn.altairis.cz/Blog/2010/20100519-volby_2010_index_zazmrdovanosti_2.png) 
 
 Několik poznatků:
 

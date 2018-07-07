@@ -17,7 +17,7 @@ Rozhodl jsem se tedy o svých oblíbencích napsat sérii krátkých článků, 
 
 ## Andrzej Sapkovski
 
- ![Andrzej Sapkowski - fotografie z www.sapkowski.ru](/files/sapkowski.jpg)Svou první knihu Andrzeje Sapkowského jsem si koupil náhodou. Vracel jsem ve spřáteleném knihkupectví knihu, kterou jsem nějakým nedopatřením obdržel dvakrát, a měl jsem si vybrat jinou v téže ceně jako náhradu. Padla mi do oka kniha s jasně červeným nápisem **Krev Elfů**, od autora s neznámým jménem. Koupil jsem si ji a nikdy jsem toho nelitoval.
+ ![Andrzej Sapkowski - fotografie z www.sapkowski.ru](https://www.cdn.altairis.cz/Blog/sapkowski.jpg)Svou první knihu Andrzeje Sapkowského jsem si koupil náhodou. Vracel jsem ve spřáteleném knihkupectví knihu, kterou jsem nějakým nedopatřením obdržel dvakrát, a měl jsem si vybrat jinou v téže ceně jako náhradu. Padla mi do oka kniha s jasně červeným nápisem **Krev Elfů**, od autora s neznámým jménem. Koupil jsem si ji a nikdy jsem toho nelitoval.
 
 Sapkowski se ve svém rodném Polsku i blízkých českých zemích stal svým způsobem legendou. I v době, kdy původní tvorba byla nemilosrdně válcována záplavou překladů anglických autorů, vybojoval si své místo na slunci.
 

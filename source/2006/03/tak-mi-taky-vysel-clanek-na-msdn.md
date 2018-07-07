@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2006-03-08T15:48:52.553+01:00 -->
 <!-- dcterms:dateAccepted = 2006-03-08T15:48:52.553+01:00 -->
 
-![Okno aplikace](/Files/20060308-C4F.gif) 
+![Okno aplikace](https://www.cdn.altairis.cz/Blog/2006/20060308-C4F.gif) 
 
 Není tomu tak dlouho, co se Michael Juřek [chlubil, že mu vyšel první článek na MSDN](http://blog.vyvojar.cz/mjurek/archive/2005/08/15/6448.aspx "Vyšel mi článek na msdn.microsoft.com ") (a možná první od českého autora). Teď mu mohu sekundovat, možná jsem druhý ;-)
 

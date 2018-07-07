@@ -6,30 +6,32 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Nepíšu, protože konám. Chcete konat též?" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Jak testovat Whidbey a jak to přežít</h1>
       <section class="article">
-        <p>Bystřejší povahy si nepochybně již povšimly toho, že se zde již delší dobu nic neobjevilo. Abych si vypůjčil <a href="http://weblog.bestijka.cz/ShowRecord.aspx?day=20030522">slova své drahé polovičky</a>: <em>Nepíšu, protože konám! </em>Jmenovitě tedy bádám v hlubinách Whidbey a píšu rozličné testovací a ukázkové aplikace - dočkáte se.</p>
- <h2>Bety nejen pro vyvolené</h2> 
+        <p>Bystřejší povahy si nepochybně již povšimly toho, že se zde již delší dobu nic neobjevilo. Abych si vypůjčil <a href="http://weblog.bestijka.cz/ShowRecord.aspx?day=20030522">slova své drahé polovičky</a>: *Nepíšu, protože konám! *Jmenovitě tedy bádám v hlubinách Whidbey a píšu rozličné testovací a ukázkové aplikace - dočkáte se.</p>
+<h2 id="bety-nejen-pro-vyvolene">Bety nejen pro vyvolené</h2>
 <p>Kdo se kolem počítačů a MS technologií motá déle, nepochybně pamatuje doby, kdy vydolovat z Microsoftu betaverzi bylo téměř nemožné. A pokud jste ji už nějakým způsobem získali a třeba v ní objevili nějaký bug, neměli jste moc možností, jak ho sdělit někomu, kdo s ním něco udělá.</p>
 <p>Zhruba od příchodu první verze .NETu se situace radikálně změnila a Microsoft se otevřel. Jak informačně, tak pokud se týče beta verzí. Novou verzi .NET Frameworku a souvisejících nástrojů může dneska testovat opravdu kdokoliv. A náznaky z hlubi Microsoftu naznačují, že v této politice hodlá společnost pokračovat.</p>
- <h2>Jak Whidbey získat</h2> 
+<h2 id="jak-whidbey-ziskat">Jak Whidbey získat</h2>
 <p>Nejjednodušším řešením je stáhnout si z webu Microsoftu <a href="http://lab.msdn.microsoft.com/express/">Express edici</a> vašeho oblíbeného vývojového nástroje. Pro většinu to asi bude <a href="http://lab.msdn.microsoft.com/express/vwd/default.aspx">Visual Web Developer Express</a>. Obnáší to cca. 60 MB downloadu při minimální instalaci. Pokud si nainstalujete i MSDN library a SQL Server Express, bude to asi o 200-300 MB více).</p>
 <p>Obrovskou výhodou Express nástrojů je, že budou i v ostré verzi k dispozici zdarma. Express edici radím nepodceňovat. Ubohý J. B. z českého Microsoftu, jsa hodnocen podle prodeje VS.NET, už teď má z Express edice těžkou hlavu ;-) Právem - jedná se totiž o extrémně schopný vývojový nástroj, který se od plnokrevného VS.NET liší jenom v opravdu pokročilých funkcích pro návrh komplexních systémů. Mám nainstalované obojí a obvykle používám jenom VWD, protože je menší a rychlejší.</p>
 <p>Pokud by pro vás stahování VWD představovalo příliš velké sousto, CD s ním bylo poslední dobou v několika tištěných časopisech. Předpokládám rovněž, že nebude zásadní problém si jej obstarat na akcích pořádaných Microsoftem.</p>
-<p><a href="http://www.microsoft.com/emea/msdn/betaexperience/cscz/"><img src="/files/20050429-betaexperience.jpg" alt="" /></a></p>
+<p><a href="http://www.microsoft.com/emea/msdn/betaexperience/cscz/"><img src="https://www.cdn.altairis.cz/Blog/2005/20050429-betaexperience.jpg" alt="" /></a></p>
 <p>Pokud vám Express edice nestačí a prahnete po plnokrevníkovi, je postup o něco komplikovanější. Ondyno jsem dostal balíček s kompletní sadou betaverzí všech komponent Whidbey. Pokud dobře počítám, je to sedm DVDček. To se z Internetu stahuje blbě i těm, kdož mohou využívat dobrodiní <em>skutečně</em> širokopásmového připojení.</p>
 <p>Download z Internetu je umožněn pouze uživatelům MSDN Subscription. Můžete si nicméně bezplatně přihlásit do programu <a href="http://www.microsoft.com/emea/msdn/betaexperience/cscz/">Beta Experience</a> (už jsem o něm <a href="/entry/article-20050429.aspx">psal</a>) a Microsoft vám bude bety posílat na DVD. V mém případě trvalo doručení asi týden - a po tu dobu vás spolehlivě zabaví Express edice :-)</p>
- <h2>Jak se z toho nezbláznit</h2> 
+<h2 id="jak-se-z-toho-nezblaznit">Jak se z toho nezbláznit</h2>
 <p>Já mám s beta verzemi zásadní problém: vzhledem k tomu, že se živím prací, nemám moc času na hraní. Beta verzi jsem ochoten používat pouze tehdy, je-li alespoň částečně použitelná pro reálnou práci a neshodí mi můj hlavní počítač, když si ji nainstaluju. Nemám sice problém s tím postavit si nějaký testovací stroj (o virtuálních počítačích nemluvě), ale stejně se nedonutím k tomu ho používat. To je ostatně důvod, proč jsem se ještě nikam neodhodlal nainstalovat žádnou z preview verzí Windows Longhorn, pardon, Vista, jimiž mne Microsoft hojně zásobuje.</p>
 <p>Druhá beta VS.NET se v tomto ohledu chová velmi mravně. Neškodí a je prakticky použitelná. Dokonce jsem pod ní napsal i několik prakticky používaných věcí - vbrzku vás s nimi seznámím.Rovněž se stabilitou to není nijak hrozné. Runtime běží spolehlivě. Vývojové prostředí se mi už podařilo poslat k zemi několikrát, ale zatím se vždy zhroutilo distinguovaným způsobem a dovolilo uložit rozdělanou práci.</p>
 <p>Moje doporučení ohledně testů Whidbey zní: nehoňte se bezmyšlenkovitě za vyšším číslem buildu. Existují v zásadě tři typy předprodukčních verzí, na které můžete narazit:</p>
@@ -38,7 +40,7 @@
 </ul>
 <p>Doporučuji tedy instalovat aktuální betu nebo nanejvýše - máte-li rádi dobrodružství - technical preview.</p>
 <p>Aktuální verze se zcela bezproblémově snáší se všemi programy, které používám, včetně VS.NET 2003 a frameworku 1.1. Jednotlivé beta verze se obvykle nemají moc rády mezi sebou. Instalace novější verze se může proměnit v reinstalaci celého počítače. To jsem zažil nedávno, když se mi těch pět různých verzí Frameworku pohádalo tak nehorázným způsobem, že jsem z toho vyvázl jedině formátováním disku. (O pár týdnů později jsem si to zopakoval, když mi v notebooku chcípl disk; opakování - matka moudrosti).</p>
- <h2>Feedback</h2> 
+<h2 id="feedback">Feedback</h2>
 <p>Účelem beta verzí je nejenom ukojit zvědavost zákazníků, ale též získat informace o tom, kterak to chodí či nechodí. Mohu s uspokojením konstatovat, že doby, kdy se zasílání jakéhokoliv feedbacku do Microsoftu podobalo komunikaci s černou dírou, jsou minulostí.</p>
 <p>Na adrese <a href="http://lab.msdn.microsoft.com/ProductFeedback/">http://lab.msdn.microsoft.com/ProductFeedback/</a> jest nalézti jednoduchý leč silný nástroj, pomocí kterého je možno reportovat nalezené chyby či požadovaná vylepšení a sledovat, co se s nimi děje. Podle mých zkušeností je odezva vcelku rychlá. Na příkladu mnou nalezeného bugu v <a href="http://lab.msdn.microsoft.com/ProductFeedback/viewfeedback.aspx?feedbackid=cd0e87f5-5fa7-487d-8d91-850a363dc15a">IntelliSense</a> je vidět, že moje chyba byla reprodukována a potvrzena během 24 hodin a pracuje se na řešení.</p>
 <p>I tento nástroj se Microsoftu osvědčil a je tedy pravděpodobné, že bude k dispozici i pro další produkty.</p>

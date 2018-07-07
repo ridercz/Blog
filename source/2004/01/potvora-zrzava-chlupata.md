@@ -12,9 +12,9 @@
 
 Brzo nad ránem jsem několika vhodně volenými a nahlas pronesenými slovy stručně vyjádřil svůj názor na některá specifika implementace šifrovacího algoritmu Rijndael v prostředí Microsoft .NET, se kterými jsem zápasil již šestou hodinu.
 
-To jsem ovšem neměl dělat. Ne že by mne bohové bleskem sežehnuli za klnutí, ale probudil jsem Estu. Což je v některých ohledech ta <em>horší </em>varianta. 
+To jsem ovšem neměl dělat. Ne že by mne bohové bleskem sežehnuli za klnutí, ale probudil jsem Estu. Což je v některých ohledech ta *horší *varianta. 
 
-Bylo totiž empiricky zjištěno, že je-li Esta vzbuzena, jest nutno ji vyvenčit. Nelíbí se to ani mně, ani jí. Jenomže já narozdíl od ní vím, že vyvenčit <em>potřebuje</em>. 
+Bylo totiž empiricky zjištěno, že je-li Esta vzbuzena, jest nutno ji vyvenčit. Nelíbí se to ani mně, ani jí. Jenomže já narozdíl od ní vím, že vyvenčit *potřebuje*. 
 
 Takže záhy nastane neměnná komedie: já se oblékám a vlka předvádí, jak strašně je ospalá. Dokáže v roztodivných polohách "usnout" i pětkrát na těch sedmi metrech, které musíme ujít k výtahu.
 

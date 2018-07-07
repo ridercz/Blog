@@ -11,7 +11,7 @@
 
 XML je jedno z oblíbených buzz-words poslední doby. Jedná se ovšem také o navýsost užitečný formát pro přenos počítače čitelných informací. Většina novějších technologií XML nějakým způsobem využívá. 
 
-[![CC licensed: B Tal via Flickr](http://www.aspnet.cz/Files/20070508-xmlsign%5B12%5D.jpg)](http://www.flickr.com/photos/b-tal/60434486/) Velkou výhodou (správně použitého) XML jako formátu je jeho univerzální použitelnost napříč různými platformami. Data v XML je možné vytvářet a zpracovávat na všech myslitelných platformách a ve většině existujících jazyků. I semináře, na které vás zvu, jsou technologicky neutrální, budu se zabývat nezávislými standardy, které je možné zpracovávat pomocí libovolné technologie. Mohou vám tedy být k užitku i v případě, že pro vývoj nepoužíváte platormu .NET, ale třeba PHP na Un*xu.
+[![CC licensed: B Tal via Flickr](https://www.cdn.altairis.cz/Blog/2007/20070508-xmlsign%5B12%5D.jpg)](http://www.flickr.com/photos/b-tal/60434486/) Velkou výhodou (správně použitého) XML jako formátu je jeho univerzální použitelnost napříč různými platformami. Data v XML je možné vytvářet a zpracovávat na všech myslitelných platformách a ve většině existujících jazyků. I semináře, na které vás zvu, jsou technologicky neutrální, budu se zabývat nezávislými standardy, které je možné zpracovávat pomocí libovolné technologie. Mohou vám tedy být k užitku i v případě, že pro vývoj nepoužíváte platormu .NET, ale třeba PHP na Un*xu.
 
 Oba dva semináře se konají v [budově pražské pobočky Microsoftu](http://akce.altairis.cz/Locations/1.aspx "Adresa, mapa a navigačn&iacute; instrukce"). Vstup je zdarma, ale je podmíněn předchozí registrací.
 

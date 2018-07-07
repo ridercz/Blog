@@ -11,4 +11,4 @@
 
 Přeji všem čtenářům ASP.NET do nového roku málo programátorských chyb a záhadných pádů…
 
-[![](http://www.aspnet.cz/Files/20100101-PF2010_thumb.png)](http://www.aspnet.cz/Files/20100101-PF2010_2.png)
+[![](https://www.cdn.altairis.cz/Blog/2010/20100101-PF2010_thumb.png)](https://www.cdn.altairis.cz/Blog/2010/20100101-PF2010_2.png)

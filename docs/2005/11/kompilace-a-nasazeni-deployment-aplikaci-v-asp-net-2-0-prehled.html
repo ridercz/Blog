@@ -6,19 +6,61 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Mezi ASP.NET 1.x a 2.x se změnil model kompilace webových aplikací a s tím souvisí i rozdílný způsob instalace aplikací na produkční server (nebo chcete-li deploymentu). Aby toho nebylo málo, v této oblasti je také zásadní rozdíl mezi plnokrevným Visual Studiem 2005 a Visual Web Developerem Express. Prostě nastal čas udělat v tom trochu pořádek." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Kompilace a nasazení (deployment) aplikací v ASP.NET 2.0 - přehled</h1>
       <section class="article">
-        
+        <p>Mezi ASP.NET 1.x a 2.x se změnil model kompilace webových aplikací a s tím souvisí i rozdílný způsob instalace aplikací na produkční server (nebo chcete-li deploymentu). Aby toho nebylo málo, v této oblasti je také zásadní rozdíl mezi plnokrevným Visual Studiem 2005 a Visual Web Developerem Express. Prostě nastal čas udělat v tom trochu pořádek.</p>
+<h2 id="kompilacni-modely-aspasp.net">Kompilační modely ASP/ASP.NET</h2>
+<p>Kompilace je proces, jímž se program překládá z jazyka srozumitelného (některým) lidským bytostem do jazyka srozumitelného počítačům. V případě .NET jazyků do jakési &quot;mezifáze&quot;, kterou poté vykonává .NET runtime, ale to pro naše účely není podstatné. V případě webových aplikací se tento proces s postupem času vyvíjel.</p>
+<h3 id="asp-3.0-kde-nic-neni-ani-cert-nebere">ASP 3.0: Kde nic není, ani čert nebere</h3>
+<p>V &quot;klasických&quot; ASP 3.0 se o kompilaci nedá moc mluvit. Byl použit skriptovací jazyk, který není kompilovaný, ale interpretovaný. To znamená, že se nepřekládá do strojového kódu, ale přímo vykonává interpreterem.</p>
+<p>Jednotlivé ASP stránky také tvořily spíše konfederaci nezávislých skriptů, než aplikaci. Dvě stránky spolu neměly v zásadě nic společného, nemohly nijak systemizovaně komunikovat a v podstatě o sobě vůbec nevěděly.</p>
+<p>Pokud jste chtěli ASP aplikaci nahrát na server, museli jste nahrát přímo zdrojové kódy, jiná forma neexistovala.</p>
+<h3 id="asp.net-1.0-a-1.1-code-behind">ASP.NET 1.0 a 1.1: Code behind</h3>
+<p>První verze ASP.NET přišla s konceptem &quot;code behind&quot;, kdy stránka byla rozdělena na dvě části. Soubor *<em>.aspx</em> obsahoval HTML a serverové ovládací prvky a programový kód byl uložen v samostatném souboru (obvykle nazvaném *<em>.aspx.vb</em> nebo *<em>.aspx.cs</em>). Každá stránka k sobě měla přiřazenou třídu (class), která se starala o její funkčnost. Veškeré serverové ovládací prvky přidané do ASPX stránky bylo nutno znovu deklarovat v code behind souboru. V případě VS.NET se o to postaralo vývojové prostředí a každý soubor obsahoval velký kus automaticky generovaného kódu, kde se tyto věci odehrávaly.</p>
+<p>Před nahráním aplikace na server jste tuto museli nejprve zkompilovat. Výsledkem byla jedna assembly (DLL knihovna), která obsahovala veškerou funkčnost aplikace. Na server se pak nahrávala tato DLL (do adresáře <em>bin</em>) a samotné ASPX soubory s pseudo-HTML kódem.</p>
+<p>Z tohoto důvodu také nebylo možné kombinovat při psaní jedné webové aplikace více jazyků, např. napsat část aplikace ve VB.NET a část v C#, protože ve výsledku z toho bude jediná assembly.</p>
+<p>Oproti předchozí verzi má tento přístup dvě hlavní výhody: Za prvé je běh aplikace mnohem rychlejší, protože u ASP se při každém požadavku stránka jakoby &quot;kompilovala&quot; znovu. Za druhé na produkční server nenahráváte zdrojové kódy, což je výhodné třeba na hostingu - předmětné DLL sice lze poměrně snadno dekompilovat, ale pořád lepší, než nahrávat přímo zdrojové kódy. Nevýhodou tohoto přístupu je, že při každé, sebemenší, změně programového kódu musíte celou aplikaci znovu kompilovat a nahrávat novou verzi DLLka na server.</p>
+<h3 id="asp.net-2.0-code-beside">ASP.NET 2.0: Code beside</h3>
+<p>Současná verze ASP.NET 2.0 podporuje z důvodu zpětné kompatibility i shora uvedenou metodu <em>code behind</em>, ale zároveň přichází s novinkou jménem <em>code beside</em>.</p>
+<p>Nový .NET 2.0 přináší koncept <em>partial class</em>, což si lze představit jako zápis jedné třídy do více souborů. V případě ASP.NET to znamená, že objektová reprezentace serverových ovládacích prvků zapsaných v pseudo-HTML souboru není generována vývojovým nástrojem do nějaké &quot;schované&quot; části zdrojového kódu, ale je generována samostatně do zvláštního souboru runtimem (při běhu).</p>
+<p>Každá stránka má svou vlastní třídu a také svou vlastní assembly. Tento přístup má několik důsledků:</p>
+<ul>
+<li>Jednu a tutéž aplikaci je možno složit ze stránek psaných v různých jazycích, protože každá stránka má svou vlastní assembly (DLL). V případě, že se změni kód jedné stránky, je nutné překompilovat pouze jednu assembly, odpovídající dané stránce, a ne celou aplikaci.</li>
+</ul>
+<p>Zvláštní úlohu mají třídy uložené ve složce <em>App_Code</em>. To jsou takzvané sdílené třídy (<em>shared class</em>) a zkompilují se do jednoho samostatného souboru.</p>
+<p>Důležitou změnou je, že shora uvedené probíhá standardně nikoliv ve vývojovém prostředí, ale až na serveru, při běhu. Znamená to mimo jiné to, že pokud na server nahrajete kompletní aplikaci a změníte něco ve zdrojovém kódu, automaticky se při dalším požadavku předmětná část aplikace překompiluje a uloží se do <em>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files</em>.</p>
+<p>Druhá možnost je, že .NET frameworku tuto činnost ušetříte a aplikaci zkompilujete &quot;ručně&quot;, a na server nahrajte jenom předmětné knihovny. Narozdíl od verzí 1.x není z hlediska ASP.NET nutné nahrávat ani ASPX soubory, neboť i jejich obsah je v DLL. Přítomnost těchto souborů může být nicméně nutná z jiných důvodů, jak si povíme za chvíli.</p>
+<h2 id="deployment-asp.net-2.0-aplikaci">Deployment ASP.NET 2.0 aplikací</h2>
+<p>Při nasazení ASP.NET 2.0 aplikací existují dvě cesty, jimiž se můžete vydat. První cesta spočívá v tom, že na web nahrajete kompletní projekt, včetně zdrojových kódů, a necháte na serveru, aby si je dle libosti kompiloval. Tato cesta je vhodná u menších aplikací a u aplikací kde čekáte, že může být užitečné mít možnost je pozměnit na straně serveru. <strong>Je to také jediná možnost, pokud používáte Visual Web Developer Express</strong>, protože pokročilejší možnosti má pouze Visual Studio 2005.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2005/20051121-publish-web-site.png" alt="Okno Publish web site" />Pokud jste šťastnými vlastníky VS 2005, můžete použít i druhou cestu, kompilaci celého webu. Chcete-li tak učinit, vyberete v menu <em>Build -&gt; Publish web site</em>.</p>
+<p>Pokud v objevivším se okně zaškrtnete <em>Allow this precompiled site to be updateable</em>, dostanete se do stavu zhruba podobného ASP.NET 1.1. Do vámi zvolené složky se nakopírují potřebné ASPX (atd) soubory a jejich funkčnost se zkompiluje do DLL knihoven v adresáři <em>bin</em>. Budete mít možnost měnit vzhled aplikace (HTML kód).</p>
+<p>Pokud shora uvedené okénko nezaškrtnete, na první pohled se nic nezmění (jenom přibude položek v adresáři <em>bin</em>). Po bližším nahlédnutí ovšem zjistíte, že všechny soubory s příponou ASPX obsahují pouze následující text:</p>
+<blockquote>
+<p>This is a marker file generated by the precompilation tool, and should not be deleted!</p>
+</blockquote>
+<p>Z hlediska ASP.NET jsou tyto soubory zbytečné (k ničemu se nepoužívají), ale mohou být užitečné v určitých konfiguracích IIS, kdy si server ověřuje, zda dotazovaný soubor skutečně existuje, takže na jeho místě musí něco být. Nezastupitelné jsou však &quot;default documenty&quot; (soubory <em>default.aspx</em>), pokud se chcete odkazovat pouze na root webu či adresáře, ne na název souboru.</p>
+<h3 id="web-deployment-projects">Web Deployment Projects</h3>
+<p>Pro usnadnění nasazení webových projektů Microsoft uvolnil add-in pro VS 2005 zvaný &quot;web deployment projects&quot;. Tento plugin má čtyři hlavní funkce:</p>
+<ol>
+<li>Lze určit, do kolika DLL (assemblies) bude projekt rozdělen a jak se mají jmenovat - můžete to určit podle logiky vaší aplikace. Lze přímo editovat řídící soubory pro MSBuild. Můžete definovat několik různých přednastavených kombinací s různými parametry. V závislosti na shora uvedených kombinacích můžete v průběhu buildu nahradit specifické sekce souboru web.config jinými. Pravděpodobně máte jiné nastavení pro produkční a jiné pro testovací server, což lze snadno automatizovat.</li>
+</ol>
+<p>Projekt WDP je momentálně ve fázi beta verze, nicméně to se týká jenom interface, vlastní build proces umí shora uvedené od samého počátku, jenom pro to ve VS není uživatelské rozhraní. Nemusíte se tedy bát tuto betu použít i v produkčním prostředí.</p>
+<ul>
+<li><a href="http://msdn.microsoft.com/asp.net/reference/infrastructure/wdp/default.aspx">Download (beta)</a> <a href="http://weblogs.asp.net/scottgu/archive/2005/11/06/429723.aspx">Příklady použití</a></li>
+</ul>
+
       </section>
     </main>
     <footer>

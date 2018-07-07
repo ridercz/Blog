@@ -26,7 +26,7 @@ Bohužel je v názvosloví poněkud zmatek. Někde se tato funkce jmenuje *Centr
 
 Nabízím vám kompletní lab, návod krok za krokem, kterak rozjet hromadu HTTPS webů na IIS. Můžete si to vyzkoušet na nějakém virtuálu na hraní nebo třeba v Azure VM. Vše je připraveno pro Windows Server 2012 R2, ale mělo by to fungovat i na “R1”. V praxi samozřejmě nebudete používat tento postup celý, ale použijete jenom části, které budete potřebovat.
 
-**» Veškeré potřebné soubory najdete v archivu [20160131-CSS.zip](http://www.aspnet.cz/files/20160131-CCS.zip).**
+**» Veškeré potřebné soubory najdete v archivu [20160131-CSS.zip](https://www.cdn.altairis.cz/Blog/2016/20160131-CCS.zip).**
 
 ### Vytvoření a nastavení webů
 
@@ -42,7 +42,7 @@ Na obsahu těchto webů nezáleží. Pokud je necháte prázdné, bude vám serv
 
 Výsledek by měl v IIS manageru vypadat nějak takto:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-SNAGHTML51fe537_thumb.png "IIS Manager po vytvoření webů")](http://www.aspnet.cz/Files/20160131-SNAGHTML51fe537.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML51fe537_thumb.png "IIS Manager po vytvoření webů")](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML51fe537.png)
 
 Pokud se nyní podíváte na některou z výše uvedených adres, web by měl fungovat a zobrazit váš obsah.
 
@@ -50,17 +50,17 @@ Pokud se nyní podíváte na některou z výše uvedených adres, web by měl fu
 
 CCS není součástí výchozí instalace, takže ho možná nemáte nainstalovaný. Ověřte si to tak, že se na úrovni web serveru podíváte na nainstalované snap-iny. Měli byste v sekci Management vidět ikonu Centralized Certificates: 
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-image_thumb.png "Centralized Certificates v IIS Manageru")](http://www.aspnet.cz/Files/20160131-image_2.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-image_thumb.png "Centralized Certificates v IIS Manageru")](https://www.cdn.altairis.cz/Blog/2016/20160131-image_2.png)
 
 Pokud tomu tak není, musíte si to nainstalovat. Buďto pomocí rozhraní pro správu rolí ve Windows a nebo pomocí [Web Platform Installeru](https://www.microsoft.com/web/platform/):
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-image_thumb_1.png "Instalace CCS pomocí Web Platform Installeru")](http://www.aspnet.cz/Files/20160131-image_4.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-image_thumb_1.png "Instalace CCS pomocí Web Platform Installeru")](https://www.cdn.altairis.cz/Blog/2016/20160131-image_4.png)
 
 Dále vytvořte složku, do níž budete ukládat certifikáty. Například `C:\CentralCertStore`. Může být i na síťovém disku, zejména v případě webových farem. Nastavte této složce práva tak, aby se do ní dostal jenom vámi pro tento účel vytvořený uživatel. Pro účely demonstrace budu používat uživatele `Administrator`, ale to není dobrý nápad pro produkci.
 
 Poklepejte v IIS Manageru na ikonu *Centralized Certificates* a pak v pravém panelu na *Edit Feature Settings*. V následném dialogu nastavte cestu k úložišti a uživatelské jméno a heslo, které se má použít pro přístup k němu:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-image_thumb_2.png "Konfigurace CCS")](http://www.aspnet.cz/Files/20160131-image_6.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-image_thumb_2.png "Konfigurace CCS")](https://www.cdn.altairis.cz/Blog/2016/20160131-image_6.png)
 
 Pole v sekci *Certificate Private Key Password* nechte prázdná. Naše PFX soubory nebudeme chránit heslem. Na první pohled to vypadá jako bezpečnostní riziko, ale celý princip CCS tkví v souborovém systému a jeho ochraně. Dodatečné heslo sice lze zadat, ale musí být pro všechny PFX soubory stejné a pokud útočník získá přístup k nastavení serveru na takové úrovni, je to stejně game over.
 
@@ -80,13 +80,13 @@ U CCS extrémně záleží na správném pojmenování souborů. Všechny musej�
 
 Poté co skončíte, měl by váš adresář vypadat nějak takto:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-SNAGHTML539bd9b_thumb.png "Soubory v CCS adresáři")](http://www.aspnet.cz/Files/20160131-SNAGHTML539bd9b.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML539bd9b_thumb.png "Soubory v CCS adresáři")](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML539bd9b.png)
 
 ### Nastavení HTTPS bindingu webu
 
 Nyní můžete běžným způsobem nastavit HTTPS binding webu. Všimněte si, že vám přibylo nové zaškrtávací pole *Use Centralized Certificate Store* a pokud ho zaškrtnete, zmizí možnost (nutnost) vybrat konkrétní certifikát. Bude vybrán automaticky podle host name a názvu souboru:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-image_thumb_3.png "Ruční konfigurace HTTPS bindingu")](http://www.aspnet.cz/Files/20160131-image_8.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-image_thumb_3.png "Ruční konfigurace HTTPS bindingu")](https://www.cdn.altairis.cz/Blog/2016/20160131-image_8.png)
 
 V tomto příkladu používám SNI (Server Name Indication) a všechny HTTPS weby mi běží na jedné IP adrese a portu. SNI nicméně používat nemusíte, máte-li dostatek IP adres (což nejspíš nemáte). Všechny současné prohlížeče SNI podporují.
 
@@ -109,7 +109,7 @@ Význam parametrů je následující:
 
 Seznam webů včetně bindingů by měl nyní vypadat nějak takto (povšimněte si, že všem webům přibyly HTTPS bindingy):
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-SNAGHTML5ca5e25_thumb.png "Seznam webů s HTTPS bindingy")](http://www.aspnet.cz/Files/20160131-SNAGHTML5ca5e25.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML5ca5e25_thumb.png "Seznam webů s HTTPS bindingy")](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML5ca5e25.png)
 
 ### Povolení CCS v HTTP.SYS
 
@@ -117,7 +117,7 @@ Pokud nastavujete parametry pomocí GUI IIS Manageru, mělo by nyní vše začí
 
 Zda byla vazba provedena zjistíte příkazem `netsh http show sslcert`:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-image_thumb_4.png "Kontrola vazby na HTTP.SYS")](http://www.aspnet.cz/Files/20160131-image_10.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-image_thumb_4.png "Kontrola vazby na HTTP.SYS")](https://www.cdn.altairis.cz/Blog/2016/20160131-image_10.png)
 
 Pokud je CCS navázán na `HTTP.SYS`, najdete v seznamu SSL certificate bindings položku, která má prázdný `Certificate Hash` a je uvozena `Central Certificate Store` s hodnotou, která odpovídá číslu portu. V případě že takovou položku nenajdete, musíte ji přidat následujícím příkazem:
 
@@ -131,10 +131,10 @@ Vytvoření bindingů v IIS i CCS dělá ve staženém souboru dávka `3_add_iis
 
 Když se nyní podíváte na snap-in Centralized Certificates, uvidíte seznam všech dostupných certifikátů:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-SNAGHTML5d3d760_thumb.png "Výpis certifikátů v CCS")](http://www.aspnet.cz/Files/20160131-SNAGHTML5d3d760.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML5d3d760_thumb.png "Výpis certifikátů v CCS")](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML5d3d760.png)
 
 Pokud se podíváte z browseru na kteroukoliv z adres pomocí protokolu HTTPS, zobrazí se vám stránka správně s použitím správného certifikátu:
 
-[![Screenshot](http://www.aspnet.cz/Files/20160131-SNAGHTML5d5b5a6_thumb.png "HTTPS web pomocí CCS")](http://www.aspnet.cz/Files/20160131-SNAGHTML5d5b5a6.png)
+[![Screenshot](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML5d5b5a6_thumb.png "HTTPS web pomocí CCS")](https://www.cdn.altairis.cz/Blog/2016/20160131-SNAGHTML5d5b5a6.png)
 
 Pokud budete nyní chtít provést jakoukoliv změnu (např. obnovu expirujícího certifikátu), stačí změnit příslušný soubor ve složce, do níž ukazuje konfigurace CCS. Změna se provede na všech napojených serverech zároveň.

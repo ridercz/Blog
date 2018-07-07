@@ -13,7 +13,7 @@ Ta dvě S v nadpisu nejsou překlep. Nejedná se totiž o novinky podávané exp
 
 ## Zdarma na věčné časy a nikdy jinak
 
-Úplně původně Microsoft zveřejnil Express edice vývojových nástrojů v duchu pohádky o chytré horákyni zadarmo-zapeníze: Oficiální cena byla $49 s tím, že po dobu jednoho roku od uvedení bude možno si ji stáhnout zdarma. Nicméně, jak jsem prorokoval už v [článku k jejich uvedení](/Articles/60-express-vyvojove-nastroje-net-2-0-zdarma.aspx), nakonec Microsoft kapituloval a dal Express zdarma k dispozici bez časového omezení.
+Úplně původně Microsoft zveřejnil Express edice vývojových nástrojů v duchu pohádky o chytré horákyni zadarmo-zapeníze: Oficiální cena byla $49 s tím, že po dobu jednoho roku od uvedení bude možno si ji stáhnout zdarma. Nicméně, jak jsem prorokoval už v [článku k jejich uvedení](https://www.aspnet.cz/Articles/60-express-vyvojove-nastroje-net-2-0-zdarma.aspx), nakonec Microsoft kapituloval a dal Express zdarma k dispozici bez časového omezení.
 
 Opakuje se tedy historie s MSDE, které bylo nejprve licenčně omezeno dost tvrdě, pak volněji a pak bylo volně k dispozici pro každého.
 

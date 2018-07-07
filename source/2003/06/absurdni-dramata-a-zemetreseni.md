@@ -8,7 +8,7 @@
 <!-- dcterms:created = 2003-06-09T04:15:31+02:00 -->
 <!-- dcterms:dateAccepted = 2003-06-09T04:15:31+02:00 -->
 
-Přestože absurdního dramatika na prezidentském postu jsme se už chválabohu konečně zbavili, česká politika absurdní drama připomíná i nadále. Další dějiství má na svědomí dnes již bývalý ministr obrany <strong>Jaroslav Tvrdík</strong>. Demise podaná, odvolaná, pak znovu podaná... Jak "u blbejch na dvorečku".
+Přestože absurdního dramatika na prezidentském postu jsme se už chválabohu konečně zbavili, česká politika absurdní drama připomíná i nadále. Další dějiství má na svědomí dnes již bývalý ministr obrany **Jaroslav Tvrdík**. Demise podaná, odvolaná, pak znovu podaná... Jak "u blbejch na dvorečku".
 
 Naštěstí, bojeschopnost naší armády nemůže být ohrožena ani takovým ministrem. Zlé jazyky říkají, že česká armáda bojovala naposledy L. P. 1620 na Bílé hoře a všichni víme, jak to tam dopadlo. Mne to naštěstí příliš zajímat nemusí, neb jako osoba napůl slepá jsem nevoják. Ještě horší jazyky říkají, že je to dobře, protože v případě válečného konfliktu bych své vlasti nejvíce pomohl, kdybych se přidal k nepříteli, ale to nehodlám komentovat.
 
@@ -26,4 +26,4 @@ Naučili jsme se brát ty, kteří nám vládnou, jako nutné zlo, sice drahé a
 
 Poučeni dlouhodobou "úspěšností" voleb do Senátu, naši moudří vládci pro platnost referenda žádnou minimální účast voličstva nestanovili. Takže jim ani nemusí vadit, že v prováděcích zákonech referenda udělali logickou botu, která řadě občanů znemožní v něm hlasovat.
 
-Jedním z postižených je i můj kamarád <strong>Petr Felix Chudoba</strong>. Vítám ho mezi uživateli blogovacího systému Cheetah, protože se svůj boj s úředním šimlem rozhodl postupně dokumentovat na nově vzniklém [weblogu](http://weblog.porta-bohemica.info/).
+Jedním z postižených je i můj kamarád **Petr Felix Chudoba**. Vítám ho mezi uživateli blogovacího systému Cheetah, protože se svůj boj s úředním šimlem rozhodl postupně dokumentovat na nově vzniklém [weblogu](http://weblog.porta-bohemica.info/).

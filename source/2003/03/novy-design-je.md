@@ -8,6 +8,6 @@
 <!-- dcterms:created = 2003-03-21T16:37:57+01:00 -->
 <!-- dcterms:dateAccepted = 2003-03-21T16:37:57+01:00 -->
 
-Několik <em>drobných chybiček</em> mne přimělo trochu přehodnotit priority a vytvořit novou verzi dříve, než jsem sám čekal.
+Několik *drobných chybiček* mne přimělo trochu přehodnotit priority a vytvořit novou verzi dříve, než jsem sám čekal.
 
 Nejmarkantnější změna je vizuální, tedy zeštíhlení levého sloupce a jiný kalendář. To by mělo učinit tento web přívětivější i vůči majitelům vykopávek s rozlišením 800x600 (slyšíš mne, Felixi?!?!).

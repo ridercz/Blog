@@ -19,4 +19,4 @@ Microsoft nedávno uvedl tři novinky, které osloví webové, ale ve dvou pří
 *   **Microsoft SQL Server Compact Edition (SSCE, SQLCE) 4.0** je embedded databáze, vhodná pro méně náročné případy, kdy je instalace "velkého" SQL Serveru příliš komplikovaná. Nová verze přináší řadu novinek, mimo jiné je také na rozdíl od předchozích verzí určena pro použití ve webových aplikacích.
 *   **NuGet** je balíčkovač komponent pro .NET projekty. Knihovny není nutné stahovat, instalovat, konfigurovat a aktualizovat ručně, ale můžete tak činit výrazně jednodušším způsobem automaticky. Vyzkoušíme si, jak se NuGet používá a také jak můžete vytvářet vlastní NuGet balíčky pro veřejné nebo soukromé použití. 
 
-Prezentaci a příklady si můžete stáhnout z [ASPNET.CZ](/files/20110228-NovinkyQ1.zip), mají necelé jedno mega.
+Prezentaci a příklady si můžete stáhnout z [ASPNET.CZ](https://www.cdn.altairis.cz/Blog/2011/20110228-NovinkyQ1.zip), mají necelé jedno mega.

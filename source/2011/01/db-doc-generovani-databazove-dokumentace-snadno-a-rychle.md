@@ -17,7 +17,7 @@ Pro jeden projekt, na kterém momentálně pracuji, jsem hledal nástroj, který
 
 Našel jsem spoustu obludně složitých nástrojů, ale nic, co by mne uspokojilo. Naštěstí je ale poměrně snadné napsat nástroj, který zmapuje strukturu předhozené mu databáze a načte související komentáře. Výsledek pak může vypadat nějak takto:
 
-[![20110127-dbdoc](http://www.aspnet.cz/Files/20110127-20110127-dbdoc_thumb.png "20110127-dbdoc")](http://www.aspnet.cz/Files/20110127-20110127-dbdoc_2.png)
+[![20110127-dbdoc](https://www.cdn.altairis.cz/Blog/2011/20110127-20110127-dbdoc_thumb.png "20110127-dbdoc")](https://www.cdn.altairis.cz/Blog/2011/20110127-20110127-dbdoc_2.png)
 
 ## DB>doc for Microsoft SQL Server
 

@@ -10,7 +10,8 @@
 <!-- dcterms:dateAccepted = 2005-11-23T02:49:02.407+01:00 -->
 
 V komentáři k mému článku [Vytváření vlastních parametrů podruhé - "bezpečný" query string parametr](/entry/article-20051109.aspx) nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network.
- <ul> <li>[Stáhněte si jeho kód (C#) spolu s mou ukázkovou aplikací ve VB.NET i v C# (10 kB)](/files/20051123-QueryStringParser.zip)</li></ul> 
+
+*   [Stáhněte si jeho kód (C#) spolu s mou ukázkovou aplikací ve VB.NET i v C# (10 kB)](https://www.cdn.altairis.cz/Blog/2005/20051123-QueryStringParser.zip) 
 
 Idea tohoto řešení je jednoduchá: Deklarujete si třídu, která reprezentuje parametry dané stránky. Pomocí atributu Arguments definujete, zda je daný parametr povinný, případně jakou má defaultní hodnotu:
 
@@ -18,6 +19,6 @@ protected class QueryStringArguments { [Argument(ArgumentType.NonRequired, Param
 
 Ve shora uvedené třídě jsem deklaroval dva parametry. Jeden je celočíselný a povinný, druhý je řetězcový, nepovinný s defaultní hodnotou.
 
-V samotné stránce pak zavoláte metodu <em>QueryStringParser.ParseArguments</em>, která se pokusí naplnit tuto třídu hodnotami z query stringu. Pokud se jí to povede, získáte silně typovou sadu nastavení. Pokud ne (protože chybí povinné parametry, případně nesouhlasí typy), dojde k chybě.
+V samotné stránce pak zavoláte metodu *QueryStringParser.ParseArguments*, která se pokusí naplnit tuto třídu hodnotami z query stringu. Pokud se jí to povede, získáte silně typovou sadu nastavení. Pokud ne (protože chybí povinné parametry, případně nesouhlasí typy), dojde k chybě.
 
 Toto řešení velice elegantním způsobem řeší načítání parametrů procedurálně, tedy z vašeho kódu.

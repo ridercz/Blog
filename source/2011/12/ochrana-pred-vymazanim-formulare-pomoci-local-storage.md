@@ -53,4 +53,4 @@ Použil jsem stisk klávesy, nikoliv událost `change`. Ta se vyvolá teprve ve 
 
 Dále pak jsem se nezabýval minifikací skriptů nebo zabalením funkcionality do jQuery pluginu, ježto se v tom nevyznám. Vyřešení těchto problémů nechám případným zájemcům, kteří se v JavaScriptu vyznají lépe než já :)
 
-**Kompletní zdrojové kódy a příklad použití si můžete stáhnout zde: **[**20111228-rls.zip**](/files/20111228-rls.zip)** (4 kB).**
+**Kompletní zdrojové kódy a příklad použití si můžete stáhnout zde: **[**20111228-rls.zip**](https://www.cdn.altairis.cz/Blog/2011/20111228-rls.zip)** (4 kB).**

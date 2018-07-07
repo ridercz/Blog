@@ -21,7 +21,7 @@ Rozhodl jsem se tedy o svých oblíbencích napsat sérii krátkých článků, 
 > 2.  Robot musí uposlechnout příkazů člověka, kromě případů, kdy tyto příkazy jsou v rozporu s prvním zákonem.
 > 3.  Robot musí chránit sám sebe před zničením, kromě případů, kdy tato ochrana je v rozporu s prvním nebo druhým zákonem.
 
- ![Isaac Asimov](/files/asimov.jpg)Tyto tři věty, obvykle nazývané Asimovovy zákony robotiky, jsou autorovým pravděpodobně nejznámějším dílem. Ačkoliv je zatím nutně nepotřebujeme, nemaje samostatně myslících robotů, překročily dávno hranice science fiction a zařadily se mezi seriózně brané poučky robotiky: vědy, které dal Asimov jméno.
+ ![Isaac Asimov](https://www.cdn.altairis.cz/Blog/asimov.jpg)Tyto tři věty, obvykle nazývané Asimovovy zákony robotiky, jsou autorovým pravděpodobně nejznámějším dílem. Ačkoliv je zatím nutně nepotřebujeme, nemaje samostatně myslících robotů, překročily dávno hranice science fiction a zařadily se mezi seriózně brané poučky robotiky: vědy, které dal Asimov jméno.
 
 Ačkoliv se v tomto oboru stal nejznámějším, bylo by chybou vnímat Asimova pouze jako spisovatele science fiction. Jeho osobnost byla vpravdě renesanční. Je autorem více než čtyřech stovek knih, z nichž signifikantní část tvoří seriózní vědecká pojednání, ovšem o imponující šířce témat. Asimov psal o fyzice, astronomii, historii, ale třeba též o literatuře a náboženství.
 

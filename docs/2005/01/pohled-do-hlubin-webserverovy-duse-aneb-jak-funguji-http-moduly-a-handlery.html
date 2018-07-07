@@ -6,19 +6,58 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Kromě psaní klasických ASP.NET stránek (ASPX) je možné webové aplikace psát ještě &quot;o úroveň níž&quot;, tedy pomocí HTTP handlerů a modulů. Je to jediná možnost jak implementovat některé funkce a nejpraktičtější možnost jak implementovat mnohé jiné. V tomto spíše teoretickém článku si povíme, jak vlastně funguje komunikace .NET s Internet Information Services a kde do toho můžeme jako programátoři zasahovat." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Pohled do hlubin webserverovy duše (aneb jak fungují HTTP moduly a handlery)</h1>
       <section class="article">
-        
+        <p>Kromě psaní klasických ASP.NET stránek (ASPX) je možné webové aplikace psát ještě &quot;o úroveň níž&quot;, tedy pomocí HTTP handlerů a modulů. Je to jediná možnost jak implementovat některé funkce a nejpraktičtější možnost jak implementovat mnohé jiné. V tomto spíše teoretickém článku si povíme, jak vlastně funguje komunikace .NET s Internet Information Services a kde do toho můžeme jako programátoři zasahovat.</p>
+<h2 id="jak-funguje-web-server">Jak funguje web server</h2>
+<p>Web server komunikuje s okolím prostřednictvím protokolu <acronym title="Hypertext Transfer Protocol">HTTP</acronym>. Velmi zjednodušeně transakce probíhá nějak takhle:</p>
+<ol>
+<li>Klient se připojí na server a řekne &quot;<em>chci z webu <em><a href="/"><em>www.aspnet.cz</em></a></em> soubor <code>/_gfx/mvp.png</code></em>&quot;. Server se podívá do své konfigurace a zjistí, že WWW root pro server jménem <a href="/">www.aspnet.cz</a> ukazuje do fyzického adresáře <code>C:\InetPub\wwwroot\</code>, a že se tedy požadovaný soubor nachází na fyzické cestě <code>C:\InetPub\wwwroot\_gfx\mvp.png</code>. Na základě shora uvedeného zjištění uchopí předmětný soubor, pošle ho klientovi a ukončí spojení.</li>
+</ol>
+<p>Pokud bychom napsali web server podle výše uvedených zásad (což je triviální), sice by fungoval, ale uměl by posílat jenom statické stránky, předávat soubory bez jakékoliv další funkcionality.</p>
+<p>A proto se už v dobách, kdy byly počítače dřevěné a šlapací, objevily takzvané <acronym title="Common Gateway Interface">CGI</acronym> skripty. Jejich princip je geniálně jednoduchý: pokud byl požadovaný soubor program, tak místo aby se odeslal klientovi, spustil se a klientovi se poslal jeho výstup. Programování webových aplikací tímto způsobem má pravda i své výhody (je jednoduché pro někoho, kdo umí programovat klasické konzolové aplikace), ale nevýhody často převažují: nízký výkon, komplikovaná údržba, možné ohrožení bezpečnosti...</p>
+<p>Proto spatřila světlo světa technologie <acronym title="Internet Server Application Programming Interface">ISAPI</acronym>. S jistým zjednodušením jest možno říci, že se jedná o univerzální technologii, která umožňuje předávat HTTP požadavky rozličným komponentám (říká se jim ISAPI filtry), aby si s nimi poradily jak umí.</p>
+<p>Klasickým případem z internetového dávnověku může být technologie <acronym title="Server-side Includes">SSI</acronym>: Vložením speciální direktivy (pokud mne paměť neklame, je to <code>&lt;!--#include file=&quot;jmenosouboru&quot;--&gt;</code>) do HTML souboru bylo možno na straně serveru vložit do HTML kódu jiný soubor (příkladně vždy se opakující navigaci) a výsledek odeslat.</p>
+<h2 id="isapi-v-iis-6">ISAPI v IIS 6</h2>
+<p>Od té doby se technologie <em>poněkud</em> vyvinula a na vrcholu je nyní technologie .NET. Podíváme-li se na Microsoft Internet Information Services 6.0 (web server ve Windows 2003), zpracovávají se HTTP požadavky na .NET aplikace nějak takhle (klepnutím na obrázek otevřete jeho větší verzi):</p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2005/20050110-process-schema-hq.png"><img src="https://www.cdn.altairis.cz/Blog/2005/20050110-process-schema-lq.png" alt="Schéma zpracování HTTP požadavku v IIS 6 - popis v textu" title="Schéma zpracování HTTP požadavku" /></a></p>
+<p>Na samém počátku je IIS. Jeho konfigurace je uložena v Metabázi (fyzicky se jedná o soubor <code>%SYSTEMROOT%\System32\inetsrv\MetaBase.xml</code>). Kromě mnoha jiných je tam také uložena informace který virtuální server (určený kombinací IP adresy, portu a hostname) ukazuje na kterou oblast (složku) disku a jaké ISAPI moduly se mají na jaké soubory aplikovat.</p>
+<p>Posledně zmíněné nastavení je závislé na příponě serveru. IIS tak mapuje soubory s příponou <em>.asp</em> na <code>ASP.DLL</code> (ISAPI filtr pro klasické ASP 3.0), soubory s příponami <em>.aspx, .ascx, .asmx</em>  a podobně na <code>ASPNET_ISAPI.DLL</code> (totéž pro ASP.NET), výše zmíněné server-side includes soubory <em>.shtml</em>, <em>.shtm</em> a <em>.stm</em> na <code>SSINC.DLL</code> a podobně.</p>
+<p>Z výše zmíněného vyplývá, že ASP.NET engine (a tedy ani vaše aplikace) se nedozví o požadavcích, které byly učiněny na soubory, jejichž přípony nejsou namapovány na <code>ASPNET_ISAPI.DLL</code>. Veškeré techniky popsané v tomto článku, jakož i v jeho pokračováních, tedy můžete použít jenom na soubory s mapovanými příponami. Pokud tedy chcete např. napsat HTTP handler který bude automaticky zmenšovat JPG obrázky, musíte příponu <em>.jpg</em> namapovat v konfiguraci IIS stejně jako např. <em>.aspx</em>.</p>
+<h3 id="wildcard-application-maps">Wildcard application maps</h3>
+<p>IIS 6.0 přináší novinku, která umožňuje výše zmíněné omezení obejít - <em>wildcard application maps</em>. Pomocí ní můžete nastavit, aby se <em>veškeré</em> požadavky zpracovávaly prostřednictvím nějakého ISAPI filtru. Pokud tedy nastavíte toto mapování na ASPNET ISAPI filtr (<code>C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\aspnet_isapi.dll</code>), budou se veškeré požadavky zpracovávat pomocí ASP.NET engine a budete do nich moci zasahovat.</p>
+<p>Shora uvedenou technologii používá např. můj systém <a href="http://software.altaircom.net/software/silverwolf.aspx">SilverWolf</a> (živé nasazení příkladně v <a href="http://gallery.rider.cz/default.xhtml">mé fotogalerii</a>), když automaticky generuje HTML a náhledy při požadavcích na adresáře, obrázky nebo soubory s příponou <em>.xhtml</em>.</p>
+<p>Pokud chcete pro daný web wildcard mapping nastavit, otevřete si v IIS Manageru jeho vlastnosti a na záložce <em>Home directory</em> klepněte na <em>Application Settings</em> -&gt; <em>Configuration</em>. Kromě obvyklého mapování máte možnost přidat i wildcardové. Pokud zrušíte zaškrtnutí pole <em>Verify that file exists</em>, nebude IIS ověřovat ani zda požadovaný soubor existuje, než zavolá ISAPI engine.</p>
+<h2 id="asp.net-pipeline">ASP.NET Pipeline</h2>
+<p>Rozhodne-li se IIS že o blaho zadaného požadavku by se měl dále přičiniti ISAPI engine pro ASP.NET, může do toho začít mluvit vaše aplikace. Zde totiž ztrácí svou konfigurační moc metabáze a získává ji konfigurace .NET, jmenovitě soubory <code>Machine.Config</code> a <code>Web.Config</code>. Zjednodušeně řečeno: <code>Machine.Config</code> nastavuje parametry pro celý server, <code>Web.Config</code> může pro určitou aplikaci tato nastavení doplnit či přepsat. Pokud tak neučiní, použijí se nastavení z <code>Machine.Config</code>. Pomocí těchto souborů můžete, jak si povíme v následných článcích, do hry zapojit vlastní HTTP moduly a handlery.</p>
+<h3 id="global.asax-a-http-moduly-poprve">GLOBAL.ASAX a HTTP moduly poprvé</h3>
+<p>Jako první se odpálí patřičné události (znáte lepší překlad pro *firing event? *;-) definované v <code>GLOBAL.ASAX</code> - typicky se jedná například o oblíbenou událost <code>BeginRequest</code> a podobně.</p>
+<p>Dále přijdou na řadu zkonfigurované HTTP moduly. Pro tento okamžik si je můžete představit jako nezávislé knihovny (aplikace o nich fakticky nemusí vůbec vědět a nemůže jim do činnosti moc mluvit), které se napojí na události aplikace a dělají prakticky totéž co <code>GLOBAL.ASAX</code>.</p>
+<p>HTTP moduly se používají například pro autentizaci a autorizaci. Používáte-li například <em>Forms Authentication</em>, vězte že její funkčnost je zajištěna právě HTTP modulem. Nic vám tedy nebrání v tom, abyste si napsali vlastní autentizační modul a používali ho místo ní (příklad - v angličtině - najdete na <a href="http://www.samspublishing.com/articles/article.asp?p=25466&amp;seqNum=1">webu SAMS publishing</a>).</p>
+<p>V tomto okamžiku máme možnost víceméně libovolně měnit obdržený požadavek. Hezkým příkladem je například takzvaný <em>url rewriting</em>. Z přirozenosti ASP.NET skriptů vyplývá, že je nejsnazší jsou-li volány nějak jako <em>/Clanek.aspx?id=123</em>. Tento postup ovšem není příliš v oblibě u uživatelů a vyhledávačů, neb ti mají rádi &quot;hezká&quot; URL. Mnohem lepší by bylo, kdyby adresa vypadala nějak jako <em>/Clanky/123.aspx</em>. Ovšem spravovat smečku autogenerovaných ASPX souborů není nic moc. Proto v rámci HTTP modulu můžeme nastavit, že se všechny adresy <em>/Clanky/neco.aspx</em> přepíší na <em>/Clanek.aspx?id=neco</em>. Shora uvedené nastane v rámci serveru, klient se o tom vůbec nedozví. Chcete praktický příklad? Podívejte se na adresu článku, který právě čtete.</p>
+<h3 id="http-handler">HTTP handler</h3>
+<p>Poté, co moduly dokončí svou práci, zavolá se odpovídající handler (odpovídající podle nastavení v <em>.Config</em> souborech). To je &quot;konečná instance&quot;, třída jejímž smyslem je vygenerovat vlastní obsah stránky a poslat ho na klienta.</p>
+<p>Typickým příkladem může být například zpracování souborů s příponou ASPX: konečnou instancí pro ně je HTTP handler, který přečte zdrojový soubor z disku a vykoná k němu přiložený kód (ať už inline nebo backend). Jiným příkladem je třeba handler, který se vyvolá při dotazu na jakýkoliv soubor s příponou <em>.Config</em> - ten je o hodně jednodušší, protože bez ohledu na cokoliv dalšího prostě vygeneruje chybové hlášení na téma že do konfiguračních souborů nikdo nemá co lézt.</p>
+<h3 id="global.asax-a-http-moduly-podruhe">GLOBAL.ASAX a HTTP moduly podruhé</h3>
+<p>Poté co handler dokončí svou práci, dění se vrací zpět do rukou HTTP modulů a GLOBAL.ASAX. Odpálí se další eventy, ve kterých je možno pracovat s výstupem, který handler vygeneroval, a nějak ho dále měnit.</p>
+<p>Hezkým příkladem takového modulu může být například <a href="http://www.mvps.org/emorcillo/dotnet/web/qse.shtml">rozkošné dílko</a> mého MVP kolegy <a href="http://www.mvps.org/emorcillo/index.shtml">Eduarda A. Morcilla</a>. Pomocí HTTP modulu transparentně šifruje a dešifruje parametry předávané prostřednictím QueryStringu.</p>
+<h2 id="shrnuti">Shrnutí</h2>
+<p>HTTP požadavky mohou být v rámci IIS zpracovávány různými ISAPI filtry. IIS rozhoduje o tom, které to budou, na základě vlastní konfigurace a přípony souboru, případně wildcard mappingu.</p>
+<p>Pokud je použit ISAPI modul pro ASP.NET, lze do průběhu vyřizování požadavků zasahovat prostřednictvím HTTP modulů a HTTP handlerů. Moduly lze vrstvit &quot;<em>na sebe</em>&quot; a obvykle se používají k modifikování HTTP požadavku nebo odpovědi, například k autentizaci nebo autorizaci. HTTP handler je vždy právě jeden a je odpovědný za &quot;obvyklou práci&quot;, tedy vlastní vygenerování odpovědi na uživatelův požadavek.</p>
+<p>V dalších článcích si povíme o tom, jak je možno psát a používat vlastní HTTP handlery a moduly.</p>
+
       </section>
     </main>
     <footer>

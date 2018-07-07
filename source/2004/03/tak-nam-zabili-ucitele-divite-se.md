@@ -20,7 +20,7 @@ V České republice žije zvláštní druh lidí: do osmnácti let svého život
 
 Bohužel, většinu školní docházky se oběti vzdělávacího procesu nacházejí v onom "nesvéprávném" stádiu svého života. Což znamená, že ke každému úkonu potřebují minimálně souhlas rodičů, povětšinou ho za ně rodiče přímo musejí udělat.
 
-Neexistují reálné (podtrhuji slovo <em>reálné</em>) mechanismy, které by žák či student základní nebo střední školy mohl použít, nesouhlasí-li s rozhodnutím některého z učitelů. Ano, sice se může nechat komisionálně přezkoušet, ale pouze na žádost rodičů. A většina rodičů se své potomky nepodpoří. Jednak do záležitosti obvykle nevidí, jednak se bojí, že bez ohledu na výsledek by si předmětný učitel na jejich potomka "zasedl".
+Neexistují reálné (podtrhuji slovo *reálné*) mechanismy, které by žák či student základní nebo střední školy mohl použít, nesouhlasí-li s rozhodnutím některého z učitelů. Ano, sice se může nechat komisionálně přezkoušet, ale pouze na žádost rodičů. A většina rodičů se své potomky nepodpoří. Jednak do záležitosti obvykle nevidí, jednak se bojí, že bez ohledu na výsledek by si předmětný učitel na jejich potomka "zasedl".
 
 Současné opravné prostředky nejsou příliš využívány. Znamená to tedy, že učitelská rozhodnutí jsou přijímána jako spravedlivá a správná?
 

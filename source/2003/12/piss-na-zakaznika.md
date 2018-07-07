@@ -12,19 +12,19 @@ Titulek nepředstavuje odkaz na nějaké bizarní sexuální praktiky, jak by se
 
 Možná právě tento historický úspěch vedl níže zmíněné firmy k tomu, aby tuto metodu implementovaly též.
 
-<strong>Případ první: [Aliatel](http://www.volejtelevne.cz/)</strong>
+**Případ první: [Aliatel](http://www.volejtelevne.cz/)**
 
-Pro jistý projekt potřebuji připojení pevnou linkou a server hosting. Poučen zkušeností, že posílat telco operátorům maily je totéž, jako posílat je na <em>/dev/null</em>, zavolal jsem na zelenou linku, nadiktoval technické parametry a požádal o zaslání kalkulace. Druhý den jsem skutečně z adresy [aliatel@volejtelevne.cz](mailto:aliatel@volejtelevne.cz) obdržel e-mail s nabídkou, podepsaný jménem Radka Chlubnová.
+Pro jistý projekt potřebuji připojení pevnou linkou a server hosting. Poučen zkušeností, že posílat telco operátorům maily je totéž, jako posílat je na */dev/null*, zavolal jsem na zelenou linku, nadiktoval technické parametry a požádal o zaslání kalkulace. Druhý den jsem skutečně z adresy [aliatel@volejtelevne.cz](mailto:aliatel@volejtelevne.cz) obdržel e-mail s nabídkou, podepsaný jménem Radka Chlubnová.
 
 Nabídka připojení pevnou linkou ovšem vůbec neodpovídala požadovaným parametrům a server hosting byl tiše ignorován vůbec. Obratem jsem na to paní Chlubnovou upozornil, nicméně do dnešního dne jsem se nedočkal žádné odpovědi. Ostatně, jedná se jenom o zakázku za pár desítek tisíc měsíčně, že ano.
 
-<strong>Případ druhý: [SkyNet](http://www.skynet.cz/)</strong>
+**Případ druhý: [SkyNet](http://www.skynet.cz/)**
 
 Zde jsem potřeboval zařídit nějaké změny smlouvy. Můj původní account manager ze společnosti odešel a jeho nástupce přestal ve firmě pracovat dřív, než jsem mu stihl zavolat. Ozval jsem se tedy na "generické" sales telefonní číslo. Tam se mne kdosi ujal, jakýsi obchodník mi skutečně zavolal zpět a slíbil, že se "zítra" ozve e-mailem.
 
 Vzhledem k tomu, že je tomu již měsíc, vidím pouze dvě možnosti: SkyNet byl zachycen v jádru časového kolapsu, nebo se na mne prostě vykašlali. I tady se jedná o nějakých 30 000 měsíčně letmým odhadem.
 
-<strong>Případ třetí: [UPC](http://www.upc.cz/)</strong>
+**Případ třetí: [UPC](http://www.upc.cz/)**
 
 Znechuceni nekoukatelnou nabídkou českých televizních programů jsme začali uvažovat o zaplacení televize kabelové. I napadla nás vcelku logická otázka: jaké TV programy jsou dostupné v naší konkrétní lokalitě? Jak to tak vypadá, jedná se zřejmě o jedno z nejpřísněji střežených tajemství společnosti. Na webu tato informace není vůbec. Zatím jsem se ptal čtyřikrát. Dvakrát prostřednictvím mailového formuláře, dvakrát telefonicky. Odpovědi jsem zatím obdržel dvě. 
 

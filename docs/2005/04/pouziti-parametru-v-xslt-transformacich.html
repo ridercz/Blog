@@ -6,19 +6,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="XSLT transformace je proces, v němž je XML dokument podle zapsaných pravidel překonvertován do jiného tvaru - nejčastěji XML v jiném formátu nebo HTML k prezentaci. Ve většíně případů, kdy se XSLT transformace využívá k prezentaci dat uživateli, se na různá data aplikuje vždy ta samá šablona. Někdy je ale potřebné, nebo minimálně užitečné, kromě těchto dvou vstupů dodat ještě něco dalšího." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
     <main>
       <h1>Použití parametrů v XSLT transformacích</h1>
       <section class="article">
-        
+        <p>XSLT transformace je proces, v němž je XML dokument podle zapsaných pravidel překonvertován do jiného tvaru - nejčastěji XML v jiném formátu nebo HTML k prezentaci. Ve většíně případů, kdy se XSLT transformace využívá k prezentaci dat uživateli, se na různá data aplikuje vždy ta samá šablona. Někdy je ale potřebné, nebo minimálně užitečné, kromě těchto dvou vstupů dodat ještě něco dalšího.</p>
+<p>V XSLT můžete pomocí elementu <code>xsl:param</code> definovat parametry, které lze &quot;zvenčí&quot; (při přípravě transformace) naplnit vhodnou hodnotou. Zpravidla se jedná o číslo či řetězec, ale můžete - což možnosti užití výrazně rozšiřuje - tímto způsobem předat i jiný XML dokument, potažmo jeho část. Parametr se chová jako XSLT proměnná (a stejně se používá), jenom je dostupný i zvenčí.</p>
+<h2 id="jednoduchy-priklad-pouziti-xslt-parametru">Jednoduchý příklad použití XSLT parametru</h2>
+<p>Mějmež následující šablonu:</p>
+<?xml version="1.0" encoding="UTF-8" ?> <x:stylesheet version="1.0" xmlns:x="http://www.w3.org/1999/XSL/Transform"> <x:param name="SimpleParameter" /> <x:template match="/"> <h1> <x:value-of select="$SimpleParameter" /> </h1> </x:template> </x:stylesheet>
+<p>Naplnění parametru <code>SimpleParameter</code> hodnotou jest provésti pomocí vlastnosti <code>TransformArgumentList</code> použité transformace. V příkladu níže transformaci provádím pomocí server control <code>asp:xml</code> jménem <code>Xml1</code>, ale postup je analogický pro všechny transformace:</p>
+<p>Me.Xml1.TransformArgumentList = New System.Xml.Xsl.XsltArgumentList Me.Xml1.TransformArgumentList.AddParam(&quot;SimpleParameter&quot;, &quot;&quot;, &quot;Hodnota parametru&quot;)</p>
+<p>Příklad XML souboru neuvádím, v tomto případě na něm nezáleží (použijte třeba <code>&lt;root /&gt;</code>).</p>
+<h2 id="predani-xml-struktury">Předání XML struktury</h2>
+<p>Jak již bylo řečeno, hodnotou parametu může být i <code>NodeSet</code>, tedy vybrané nody z dokumentu. V tomto příkladu budeme chtít předat celý jednoduchý dokument:</p>
+<p>Dim Doc As New System.Xml.XmlDocument Doc.LoadXml(&quot;<root><demo>jedna</demo><demo>dva</demo></root>&quot;) Me.Xml1.TransformArgumentList = New System.Xml.Xsl.XsltArgumentList Me.Xml1.TransformArgumentList.AddParam(&quot;AdvancedParameter&quot;, &quot;&quot;, _ Doc.CreateNavigator().Select(&quot;/&quot;))</p>
+<p>S takto předaným parametrem je pak v šabloně možno nakládat stejně, jako s fragmentem vlastního dokumentu, příkladně:</p>
+<?xml version="1.0" encoding="UTF-8" ?> <x:stylesheet version="1.0" xmlns:x="http://www.w3.org/1999/XSL/Transform"> <x:param name="AdvancedParameter" /> <x:template match="/"> <x:for-each select="$AdvancedParameter/root/demo"> <div> <x:value-of select="." /> </div> </x:for-each> </x:template> </x:stylesheet>
+
       </section>
     </main>
     <footer>

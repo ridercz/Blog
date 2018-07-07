@@ -16,8 +16,8 @@ Laskavostí RANDOM.ORG byl z účastníků jako vítěz vybrán **Jakub Chodouns
 
 V soutěži jsem se ptal na to, jakou verzi .NET Frameworku používáte teď. Výsledky jsou celkem pozitivní, 73 % z vás používá aktuální verzi 4.0 a jenom výrazná menšina trpí s verzemi staršími:
 
-[![graf_verze](http://www.aspnet.cz/Files/20120416-graf_verze_thumb.png "graf_verze")](http://www.aspnet.cz/Files/20120416-graf_verze_2.png)
+[![graf_verze](https://www.cdn.altairis.cz/Blog/2012/20120416-graf_verze_thumb.png "graf_verze")](https://www.cdn.altairis.cz/Blog/2012/20120416-graf_verze_2.png)
 
 Druhá otázka se týkala plánů na přechod na verzi 4.5. I zde jsou výsledky vcelku optimistické, protože 43 % účastníků plánuje přejít ihned a zbylých 48 % ještě letos.
 
-[![graf_prechod](http://www.aspnet.cz/Files/20120416-graf_prechod_thumb.png "graf_prechod")](http://www.aspnet.cz/Files/20120416-graf_prechod_2.png)
+[![graf_prechod](https://www.cdn.altairis.cz/Blog/2012/20120416-graf_prechod_thumb.png "graf_prechod")](https://www.cdn.altairis.cz/Blog/2012/20120416-graf_prechod_2.png)

@@ -10,9 +10,12 @@
 <!-- dcterms:dateAccepted = 2005-01-25T01:19:45.417+01:00 -->
 
 Píšu rád, a doufám že i dobře. Jenom poslední dobou nemám o čem - připadá mi, že pokud jde o ASP.NET a věci související, tak:
- <ol type="a"> <li>jsem buď o dané věci už psal,</li> <li>toho o ní už napsal dost někdo jiný,</li> <li>je to taková trivialita, že ji není nutno řešit.</li></ol> 
 
-Zejména u bodu c ale platí, že moje definice triviality se může zásadně lišit od definice mých drahých čtenářů, tedy vás. Pročež jsem si vypůjčil do titulku od pana Donutila větu <em>ptejte se mne na co chcete, já na co chci odpovím</em>.
+1.  jsem buď o dané věci už psal,
+2.  toho o ní už napsal dost někdo jiný,
+3.  je to taková trivialita, že ji není nutno řešit. 
+
+Zejména u bodu c ale platí, že moje definice triviality se může zásadně lišit od definice mých drahých čtenářů, tedy vás. Pročež jsem si vypůjčil do titulku od pana Donutila větu *ptejte se mne na co chcete, já na co chci odpovím*.
 
 Pokud tedy máte nějaké obecnější otázky týkající se vývoje ASP.NET aplikací a věcí souvisejících, pošlete mi je na adresu [michal.valasek@aspnet.cz](mailto:michal.valasek@aspnet.cz). Zajímavé a/nebo opakující se dotazy se pokusím zodpovědět.
 

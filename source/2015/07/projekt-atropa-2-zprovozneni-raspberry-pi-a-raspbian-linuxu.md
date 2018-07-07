@@ -16,7 +16,7 @@
 
 Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET. Oficiální návod ke zprovoznění (anglicky) najdete na webu [Raspberry Pi](https://www.raspberrypi.org/documentation/installation/).
 
-Nezapomeňte si přečíst [úvod k této sérii](/articles/5429-projekt-atropa-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem), kde najdete seznam všeho potřebného a důležitá varování.
+Nezapomeňte si přečíst [úvod k této sérii](https://www.aspnet.cz/Articles/5429-projekt-atropa-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem), kde najdete seznam všeho potřebného a důležitá varování.
 
 ## Co budete potřebovat?
 
@@ -35,7 +35,7 @@ Vložte MicroSD kartu do čtečky a připojte k počítači. Kartu je třeba zfo
 
 Spusťte utilitu, vyberte patřičný disk a po klepnutí na tlačítko *Option* povolte *Format size adjustment*, čímž zformátujete celou kartu, nejen případnou první partition:
 
-[![Formátování SD karty](http://www.aspnet.cz/Files/20150713-atropa_sdformat_thumb.png "Formátování SD karty")](http://www.aspnet.cz/Files/20150713-atropa_sdformat_2.png)
+[![Formátování SD karty](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_sdformat_thumb.png "Formátování SD karty")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_sdformat_2.png)
 
 Nyní na kartu musíte nahrát správná data. Existují v zásadě tři postupy:
 
@@ -51,7 +51,7 @@ Já budu v následujícím návodu používat první zmíněný postup a použij
 
 Na následujícím obrázku vidíte zapojené Raspberry Pi model 2+ plné jeho kráse:
 
-[![Celkový pohled na Raspberry Pi](http://www.aspnet.cz/Files/20150713-atropa_rpihw_thumb_1.jpg "Celkový pohled na Raspberry Pi")](http://www.aspnet.cz/Files/20150713-atropa_rpihw_4.jpg)
+[![Celkový pohled na Raspberry Pi](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_thumb_1.jpg "Celkový pohled na Raspberry Pi")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpihw_4.jpg)
 
 V levém dolním rohu je připojena USB Wi-Fi, nad ní vede kabel k USB klávesnici, dále je ethernetový síťový kabel. Nahoře je HDMI kabel k monitoru a MicroUSB napájení (které zatím nepřipojujte) a vpravo uprostřed je ve spodní části desku MicroSD karta. RPi mám v průhledné krabičce, kterou si nicméně musíte koupit zvlášť a je vhodná spíše na dema, než na praktické použití.
 
@@ -63,7 +63,7 @@ Zasuňte MicroSD kartu a zapojte všechny kabely, napájení jako poslední.
 
 Raspberry Pi rychle nabootuje a na monitoru se vám zobrazí prostředí NOOBS, kde si můžete vybrat (mezerníkem) operační systémy, které chcete instalovat. Vyberte si Raspbian, což je speciální varianta Debianu pro Raspberry Pi. Stiskem klávesy I zahájíte instalaci. 
 
-[![Instalace operačního systému](http://www.aspnet.cz/Files/20150713-atropa_rpinoobs_thumb.jpg "Instalace operačního systému")](http://www.aspnet.cz/Files/20150713-atropa_rpinoobs_2.jpg)
+[![Instalace operačního systému](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpinoobs_thumb.jpg "Instalace operačního systému")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_rpinoobs_2.jpg)
 
 Ta bude nějakou dobu trvat, přičemž přesnější kvantifikace oné doby záleží na rychlosti vašeho připojení k Internetu. Budou se stahovat zhruba dva gigabajty dat. Tak si běžte uvařit kafe. Nebo, máte-li ADSL nebo mobilní připojení, oběd o šesti chodech. Po dokončení stiskem klávesy Enter RPi restartujte.
 
@@ -87,21 +87,21 @@ Spusťte program `PUTTY.EXE`. Aby vše řádně fungovalo, je dobrý nápad nast
 
 V levé části klepněte na *Appearance* a zvolte si vašemu oku libou velikost a typ fontu. Já používám Consolas o velikost 14 bodů, ale já jsem napůl slepý, vám bude možná vyhovovat menší písmo.
 
-[![Konfigurace písma v Putty](http://www.aspnet.cz/Files/20150713-atropa_putty_1_thumb.png "Konfigurace písma v Putty")](http://www.aspnet.cz/Files/20150713-atropa_putty_1_2.png)
+[![Konfigurace písma v Putty](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_1_thumb.png "Konfigurace písma v Putty")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_1_2.png)
 
 V sekci Translation si jako *Remote character set* vyberte UTF-8 a ve spodní části vyberte *Use Unicode Line Drawing Code Points*.
 
-[![Konfigurace kódování v Putty](http://www.aspnet.cz/Files/20150713-atropa_putty_2_thumb.png "Konfigurace kódování v Putty")](http://www.aspnet.cz/Files/20150713-atropa_putty_2_2.png)
+[![Konfigurace kódování v Putty](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_2_thumb.png "Konfigurace kódování v Putty")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_2_2.png)
 
 V sekci Session zadejte jako název nebo IP adresu cílového zařízení dříve zjištěnou IP adresu a jako typ spojení SSH. Poté klepněte na *Default Settings* a *Save*, čímž nastavení uložíte jako výchozí.
 
-[![Parametry spojení v Putty](http://www.aspnet.cz/Files/20150713-atropa_putty_3_thumb.png "Parametry spojení v Putty")](http://www.aspnet.cz/Files/20150713-atropa_putty_3_2.png)
+[![Parametry spojení v Putty](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_3_thumb.png "Parametry spojení v Putty")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_3_2.png)
 
 Nyní můžete klepnout na *Open* a připojit se. Při prvním připojení budete vyzváni k potvrzení správnosti SSH klíče, což potvrďte (bezpečnost zde v tomto okamžiku neřešíme, pro ostré nasazení je nutné vygenerovat vlastní klíč a ověřit si pomocí fingerprintu jeho pravost). Poté musíte zadat uživatelské jméno (`pi`) a heslo (`raspberry`, pokud jste ho dříve nezměnili).
 
 Poté budete úspěšně přihlášeni:
 
-[![Přihlášení ke vzdálenému systému](http://www.aspnet.cz/Files/20150713-atropa_putty_4_thumb.png "Přihlášení ke vzdálenému systému")](http://www.aspnet.cz/Files/20150713-atropa_putty_4_2.png)
+[![Přihlášení ke vzdálenému systému](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_4_thumb.png "Přihlášení ke vzdálenému systému")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_putty_4_2.png)
 
 Tipy k použití Putty:
 
@@ -132,7 +132,7 @@ Vše najednou a bez ptaní nainstalujete následujícím příkazem:
 
 sudo apt-get install mc lynx dnsutils -y
 
-[![Midnight Commander spustíte příkazem 'mc'](http://www.aspnet.cz/Files/20150713-atropa_mc_thumb.png "Midnight Commander spustíte příkazem 'mc'")](http://www.aspnet.cz/Files/20150713-atropa_mc_2.png)
+[![Midnight Commander spustíte příkazem 'mc'](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_thumb.png "Midnight Commander spustíte příkazem 'mc'")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_2.png)
 
 ## Restart a vypnutí
 

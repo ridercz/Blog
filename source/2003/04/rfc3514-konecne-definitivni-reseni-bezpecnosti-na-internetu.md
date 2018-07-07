@@ -14,6 +14,6 @@ RFC3514 si můžete přečíst zde: [ftp://ftp.rfc-editor.org/in-notes/rfc3514.t
 
 Pro neangličtináře přináším stručný výtah z normy:
 
-<em>Firewally, paketové filtry, systémy pro detekci neoprávněného přístupu a podobně mají často problémy rozpoznat, jaké pakety jsou zasílány se zlým úmyslem, a jaké jsou prostě jenom nezvyklé. Problém je, že rozhodnout o který ze stavů se jedná, je poměrně obtížné. Abychom vyřešili tento problém, definujeme v hlavičce IPv4 bezpečnostní příznak, známý jako "zlý bit". Neškodné pakety mají tento bit nastavený na nulu, pakety použité pro útok ho budou mít nastavený na jedničku.</em>
+*Firewally, paketové filtry, systémy pro detekci neoprávněného přístupu a podobně mají často problémy rozpoznat, jaké pakety jsou zasílány se zlým úmyslem, a jaké jsou prostě jenom nezvyklé. Problém je, že rozhodnout o který ze stavů se jedná, je poměrně obtížné. Abychom vyřešili tento problém, definujeme v hlavičce IPv4 bezpečnostní příznak, známý jako "zlý bit". Neškodné pakety mají tento bit nastavený na nulu, pakety použité pro útok ho budou mít nastavený na jedničku.*
 
 Nezbývá, než zatleskat Internet Society, která touto normou odstranila bezpečnostní rizika spojená s protokolem IP.

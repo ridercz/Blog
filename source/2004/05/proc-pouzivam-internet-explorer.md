@@ -16,7 +16,7 @@ Budu se vyjadřovat toliko k Mozille, protože Operu neznám a prohlížeč za k
 
 Prvním důvodem je, [na tomto blogu již zmiňované](http://weblog.rider.cz/ShowRecord.aspx?day=20040223), nekonzistentní GUI Mozilly.
 
-Všechny ostatní vyplývají z toho, že <strong>na svém počítači potřebuji pracovat a ne si s ním hrát</strong>. Snažím se tedy počet instalovaných aplikací udržovat co nejmenší, abych při reinstalaci systému nemusel strávit týden nastavováním systému. Vzhledem k tomu, že svůj notebook z lenosti používám i jako vývojový a testovací počítač, přeinstalovávám na něm Windows co půl roku.
+Všechny ostatní vyplývají z toho, že **na svém počítači potřebuji pracovat a ne si s ním hrát**. Snažím se tedy počet instalovaných aplikací udržovat co nejmenší, abych při reinstalaci systému nemusel strávit týden nastavováním systému. Vzhledem k tomu, že svůj notebook z lenosti používám i jako vývojový a testovací počítač, přeinstalovávám na něm Windows co půl roku.
 
 Všechny další výhody Mozilly považuji za nedůležité. 
 
@@ -32,6 +32,6 @@ Stačí používat mozek mezi ušima. Kdo to neumí, tomu pomůže jenom svěce
 
 Jediným zásadním parametrem, který mluví pro Mozillu je, že je technologicky pokročilejší. MSIE 6 při svém stáří nepodporuje nejnovější standardy v oblasti CSS a podobně. Ony ovšem zase tak převratné nejsou. Na vytvoření dobrých stránek stačí i ty stávající standardy, implementované i v MSIE. Když člověk píše web příčetně, zobrazí se správně v čemkoliv.
 
-<strong>Aby bylo jasno:</strong> Neberu nikomu právo používat ne-MSIE prohlížeče a produkty. Ale vadí mi postoj, že kdo používá Internet Explorer je pitomec a zelenáč. Opravdu se necítím být pitomcem ani zelenáčem.
+**Aby bylo jasno:** Neberu nikomu právo používat ne-MSIE prohlížeče a produkty. Ale vadí mi postoj, že kdo používá Internet Explorer je pitomec a zelenáč. Opravdu se necítím být pitomcem ani zelenáčem.
 
-Že by právo svobodného výběru software platilo jenom pokud si vyberete ten <em>správný</em> software? Myslím si, že to je právě tento postoj, kterým se svět "alternativního software" sám shazuje.
+Že by právo svobodného výběru software platilo jenom pokud si vyberete ten *správný* software? Myslím si, že to je právě tento postoj, kterým se svět "alternativního software" sám shazuje.

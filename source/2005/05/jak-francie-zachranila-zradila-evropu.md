@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2005-05-30T23:13:19.947+02:00 -->
 <!-- dcterms:dateAccepted = 2005-05-30T23:13:19.947+02:00 -->
 
-<em>*) nehodící se škrtněte</em>
+**) nehodící se škrtněte*
 
 Francie podle očekávání desetiprocentním rozdílem hlasů v referendu [odmítla evropskou ústavu](http://www.ceskenoviny.cz/archiv/index_view.php?id=132067). Podle očekávání různé moudré hlavy vymýšlejí, kterak se takové blamáží propříště vyhnout, a to i za cenu porušení vlastních pravidel.
 

@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Microsoft zhruba před hodinou uveřejnil mimořádnou bezpečnostní aktualizaci pro ASP.NET, která zabraňuje možnému DoS útoku." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/Content/Images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
@@ -30,7 +32,7 @@
 <li>Demonstrace útoků na současné platformy: <a href="http://www.nruns.com/_downloads/advisory28122011.pdf">n.runs-SA-2011.004 - web programming languages and platforms - DoS through hash table</a></li>
 </ul>
 <p>Dnes v 19:00 Microsoft uvolnil mimořádnou bezpečnostní aktualizaci (out-of-band security update), která tento problém řeší. Záplata je k dispozici na Windows Update a stačí tedy dát vyhledat dostupné aktualizace a budou nabídnuty patřičné balíčky (podle verzí .NET Frameworku):</p>
-<p><a href="http://www.aspnet.cz/Files/20111229-oobsecurityupdate_2.png"><img src="http://www.aspnet.cz/Files/20111229-oobsecurityupdate_thumb.png" alt="Screenshot" title="Windows Update: záplaty pro .NET 3.5 a 4.0 na Windows 2008 R2" /></a></p>
+<p><a href="https://www.cdn.altairis.cz/Blog/2011/20111229-oobsecurityupdate_2.png"><img src="https://www.cdn.altairis.cz/Blog/2011/20111229-oobsecurityupdate_thumb.png" alt="Screenshot" title="Windows Update: záplaty pro .NET 3.5 a 4.0 na Windows 2008 R2" /></a></p>
 <p>Problém není natolik kritický, aby bylo nutné záplatu bezpodmínečně instalovat teď hned a přijímat dramatická opatření. Není známo, že by v současné době takové útoky probíhaly a výsledkem může být jenom DoS po dobu trvání útoku, nedojde tedy k vyzrazení citlivých dat atd. Nicméně útok je principiálně velmi snadný a je jenom otázkou času, kdy někdo napíše nástroj použitelný i pro script kiddies, takže nedoporučuji s instalací ani příliš otálet.</p>
 
       </section>

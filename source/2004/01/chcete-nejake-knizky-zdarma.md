@@ -14,7 +14,7 @@
 
 Neuvěřitelné se stalo skutkem. Včera se (dokonce v dohodnutném termínu) dostavili dva pánové od UPC a po sedmnácti dnech mne konečně příčetně připojili k Síti.
 
-Tentokráte jsem se nedopustil kritické chyby a nastěhoval jsem se do té <em>největší</em> místnosti v bytě. Vzhledem k tomu, že celou pětimetrovou stěnu zabírají regály, mám i dost místa na knihy.
+Tentokráte jsem se nedopustil kritické chyby a nastěhoval jsem se do té *největší* místnosti v bytě. Vzhledem k tomu, že celou pětimetrovou stěnu zabírají regály, mám i dost místa na knihy.
 
 Přiměl jsem Vlka, aby mi všechny mé knihy zanesl do počítače. Docela mne překvapilo, že jich je jenom 500. Myslel jsem si, že těch knih mám víc. Budu s tím muset něco udělat ;-)
 
