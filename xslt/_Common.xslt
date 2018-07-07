@@ -77,13 +77,30 @@
           <xsl:value-of select="dcterms:title" />
         </a>
       </header>
+      <xsl:if test="x4w:pictureUrl">
+        <aside>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:choose>
+                <xsl:when test="x4w:alternateUrl">
+                  <xsl:value-of select="x4w:alternateUrl"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="@path"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:attribute>
+            <img src="{x4w:pictureUrl}" width="{x4w:pictureWidth}" height="{x4w:pictureHeight}" alt="" />
+          </a>
+        </aside>
+      </xsl:if>
       <div>
         <xsl:value-of select="dcterms:abstract" />
       </div>
       <footer>
-        <date>
+        <time datetime="{dcterms:dateAccepted}">
           <xsl:value-of select="x4h:FormatDateTime(dcterms:dateAccepted, 'D', 'cs-CZ') "/>
-        </date>
+        </time>
         <xsl:if test="$ShowCategories = 1 and x4w:category">
           <ul class="categories">
             <xsl:for-each select="x4w:category">
