@@ -16,11 +16,8 @@
 
   <xsl:param name="x4c:PageSize" />
 
-  <xsl:key name="serials" match="//x4w:serial" use="." />
-
   <xsl:template match="/">
     <x4o:root>
-
       <!-- Generate list of serials -->
       <x4o:document href="/serials/index.html">
         <html>
@@ -34,15 +31,7 @@
             <xsl:call-template name="SiteHeader" />
             <main>
               <h1>Seriály</h1>
-              <ul>
-                <xsl:for-each select="//x4w:serial[generate-id() = generate-id(key('serials', .))]">
-                  <li>
-                    <a href="/serials/{x4h:UrlKey(.)}">
-                      <xsl:value-of select="."/>
-                    </a>
-                  </li>
-                </xsl:for-each>
-              </ul>
+              <xsl:call-template name="ListSerials" />
               <xsl:call-template name="SiteFooter" />
             </main>
           </body>

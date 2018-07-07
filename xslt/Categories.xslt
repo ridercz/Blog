@@ -16,8 +16,6 @@
 
   <xsl:param name="x4c:PageSize" />
 
-  <xsl:key name="categories" match="//x4w:category" use="." />
-
   <xsl:template match="/">
     <x4o:root>
 
@@ -34,15 +32,7 @@
             <xsl:call-template name="SiteHeader" />
             <main>
               <h1>Rubriky</h1>
-              <ul>
-                <xsl:for-each select="//x4w:category[generate-id() = generate-id(key('categories', .))]">
-                  <li>
-                    <a href="/categories/{x4h:UrlKey(.)}">
-                      <xsl:value-of select="."/>
-                    </a>
-                  </li>
-                </xsl:for-each>
-              </ul>
+              <xsl:call-template name="ListCategories" />
               <xsl:call-template name="SiteFooter" />
             </main>
           </body>

@@ -14,6 +14,10 @@
   <!-- Setup output -->
   <xsl:output method="xml" indent="yes" encoding="utf-8" omit-xml-declaration="yes" />
 
+  <!-- Key indices -->
+  <xsl:key name="serials" match="//x4w:serial" use="." />
+  <xsl:key name="categories" match="//x4w:category" use="." />
+
   <!-- Common header  -->
   <xsl:template name="SiteHeader">
     <header>
@@ -138,6 +142,32 @@
         <a href="{concat('./', $PageCount)}" rel="last">Nejstarší</a>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <!-- List of serials -->
+  <xsl:template name="ListSerials">
+    <ul>
+      <xsl:for-each select="//x4w:serial[generate-id() = generate-id(key('serials', .))]">
+        <li>
+          <a href="/serials/{x4h:UrlKey(.)}">
+            <xsl:value-of select="."/>
+          </a>
+        </li>
+      </xsl:for-each>
+    </ul>
+  </xsl:template>
+
+  <!-- List of categories -->
+  <xsl:template name="ListCategories">
+    <ul>
+      <xsl:for-each select="//x4w:category[generate-id() = generate-id(key('categories', .))]">
+        <li>
+          <a href="/categories/{x4h:UrlKey(.)}">
+            <xsl:value-of select="."/>
+          </a>
+        </li>
+      </xsl:for-each>
+    </ul>
   </xsl:template>
 
 </xsl:stylesheet>
