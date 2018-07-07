@@ -163,7 +163,14 @@
 
   <!-- List of serials -->
   <xsl:template name="ListSerials">
+    <xsl:param name="ulClass" />
+
     <ul>
+      <xsl:if test="$ulClass">
+        <xsl:attribute name="class">
+          <xsl:value-of select="$ulClass" />
+        </xsl:attribute>
+      </xsl:if>
       <xsl:for-each select="//x4w:serial[generate-id() = generate-id(key('serials', .))]">
         <li>
           <a href="/serials/{x4h:UrlKey(.)}">
@@ -176,7 +183,14 @@
 
   <!-- List of categories -->
   <xsl:template name="ListCategories">
+    <xsl:param name="ulClass" />
+
     <ul>
+      <xsl:if test="$ulClass">
+        <xsl:attribute name="class">
+          <xsl:value-of select="$ulClass" />
+        </xsl:attribute>
+      </xsl:if>
       <xsl:for-each select="//x4w:category[generate-id() = generate-id(key('categories', .))]">
         <li>
           <a href="/categories/{x4h:UrlKey(.)}">
