@@ -278,6 +278,7 @@
           </xsl:attribute>
         </xsl:if>
         <xsl:for-each select="//x4w:serial[generate-id() = generate-id(key('serials', .))]">
+          <xsl:sort select="." />
           <li>
             <a href="/serials/{x4h:UrlKey(.)}">
               <xsl:value-of select="."/>
@@ -309,6 +310,7 @@
           </xsl:attribute>
         </xsl:if>
         <xsl:for-each select="//x4w:category[generate-id() = generate-id(key('categories', .))]">
+          <xsl:sort select="." />
           <li>
             <a href="/categories/{x4h:UrlKey(.)}">
               <xsl:value-of select="."/>
