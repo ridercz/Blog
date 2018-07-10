@@ -1,0 +1,9 @@
+<!-- dcterms:title = Lorem Ipsum: Tajné motto BDSM -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/759-lorem-ipsum-tajne-motto-bdsm -->
+<!-- dcterms:abstract = „Lorem ipsum dolor sit amet, consectetur adipisicing elit…“ Tohle jste už jistě viděli mnohokrát, že? Není divu, protože tato pasáž latinu připomínajícího textu se používá jako ukázkový, výplňový obsah už od šestnáctého století. Stejně tak by se ale mohla stát jakýmsi tajným mottem a poučením pro úchyláctvo. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2011-10-31T00:00:00+01:00 -->

@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (7/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2818-dovolena-na-venkove-7-7 -->
+<!-- dcterms:abstract = Ještě se mi nikdy nestalo, aby dvě ženy konferovaly, jestli se tedy smím nebo nesmím udělat a za jakých podmínek. Bylo to zcela nesmyslné, ale zároveň v téhle situaci vlastně docela přirozené. A docela vzrušující. Docela hodně vzrušující… Zážitky posledních dnů byly obecně takové. Nesmyslné, zejména pro někoho zvenčí, kdo nesdílí naše fetiše, záliby a úchylky. Ale vlastně docela přirozená a zcela určitě hodně vzrušující. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-10-09T00:00:00+02:00 -->

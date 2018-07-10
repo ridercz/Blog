@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (1/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2812-dovolena-na-venkove-1-7 -->
+<!-- dcterms:abstract = Vystoupil jsem z auta na tmavém dvoře. Byl večer na sklonku babího léta a já jsem přijal nabídku své kamarádky, abych na její farmě strávil víkend v rámci „pracovního, výchovného, výcvikového a rekreačního pobytu“, jak to nazvala. Věděl jsem, že nudit se rozhodně nebudu; na to jsme se znali moc dobře. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-08-28T00:00:00+02:00 -->

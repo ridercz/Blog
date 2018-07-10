@@ -1,0 +1,9 @@
+<!-- dcterms:title = Kniha "Základy BDSM pro začátečníky" začátečníkům do rukou nepatří -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2809-kniha-zaklady-bdsm-pro-zacatecniky-zacatecnikum-do-rukou-nepatri -->
+<!-- dcterms:abstract = Recenze knihy marketované jako průvodce světem a životem BDSM se všemi jeho aspekty. Pokud jste začátečníci, vyhněte se jí obloukem. Nejen že nepomůže, ale aktivně škodí. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2016-11-24T00:00:00+01:00 -->

@@ -1,0 +1,9 @@
+<!-- dcterms:title = Jitřenka a světlonoš -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2802-jitrenka-a-svetlonos -->
+<!-- dcterms:abstract = „Tohle prostě nedopadne dobře,“ pomyslel si mladík, který napolo klečel, napolo seděl opřený o box v zešeřelé stáji a spíš cítil, než slyšel nervózní pohyby velkého těla za sebou. Staré koňácké úsloví praví, že když po koni něco chceš, valachovi přikaž, hřebce požádej a s kobylou konzultuj. S černou klisnou nikdo nekonzultoval, zda pokládá za dobrý nápad čekat bezmála dvacet minut nasedlaná v boxu a podle jejího nespokojeného podupávání bylo vidět, že to nepovažuje za dobrý nápad. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2016-02-16T00:00:00+01:00 -->

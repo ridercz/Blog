@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (5/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2816-dovolena-na-venkove-5-7 -->
+<!-- dcterms:abstract = Po obědě jsem se zase musel svléknout skoro donaha a Monika mne odvedla do dosud neprobádané části statku za stájemi. Bylo vidět, že do ní se renovační snahy nedostaly s takovou vehemencí. Byla tam místnost, která nejspíš v minulosti bývala sedlovnou. Byly v ní dvě řady věšáků na stěnách, několik držáků na sedla (na jednom z nich dokonce stále leželo sedlo, ale nevypadalo v úplně dobrém stavu) a stůl, jehož stabilita nevzbuzovala valné důvěry. Na zemi a stole ležela vrstva roztodivného harampádí. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-09-25T00:00:00+02:00 -->

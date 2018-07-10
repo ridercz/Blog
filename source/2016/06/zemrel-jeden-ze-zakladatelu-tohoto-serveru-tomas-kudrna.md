@@ -1,0 +1,9 @@
+<!-- dcterms:title = Zemřel jeden ze zakladatelů tohoto serveru, Tomáš Kudrna -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2805-zemrel-jeden-ze-zakladatelu-tohoto-serveru-tomas-kudrna -->
+<!-- dcterms:abstract = V sobotu 4. června 2016 při nehodě tragicky zahynul jeden ze zakladatelů tohoto serveru, Tomáš Kudrna. Čest jeho památce. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2016-06-06T00:00:00+02:00 -->

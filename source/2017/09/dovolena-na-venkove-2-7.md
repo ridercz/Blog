@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (2/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2813-dovolena-na-venkove-2-7 -->
+<!-- dcterms:abstract = Ráno mne vzbudilo rázné plesknutí po nahém zadku. Byl to Marek, který ze mne stáhl peřinu a přetrhl mé ranní snění. „Vstávat a cvičit,“ zavolal s veselostí ranního ptáčete, zatímco já jsem se snažil uvědomit si kde jsem a co tam dělám. „Teda, stačí, když budeš vstávat, o výcvik se ti postará Monika,“ hlaholil vesele. Cosi jsem znechuceně zabručel. „Klusej do maštale, čeká na tebe. A na tvém místě bych si pospíšil.“ -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-09-04T00:00:00+02:00 -->

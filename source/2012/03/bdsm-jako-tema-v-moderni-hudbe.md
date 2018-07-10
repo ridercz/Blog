@@ -1,0 +1,9 @@
+<!-- dcterms:title = BDSM jako téma v moderní hudbě -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/767-bdsm-jako-tema-v-moderni-hudbe -->
+<!-- dcterms:abstract = Vlastně to všechno začal Tony Conrad, když v roce 1965 ukázal nepříliš známé hudební skupině The Falling Spikes nenápadný paperback, zabývající se rozličnými parafiliemi a sexuálními úchylkami. Není známo, co si členové kapely mysleli o jejím obsahu, ale minimálně její název zaujal tehdejšího bubeníka Anguse MacLisea natolik, že jej navrhl použít jako nové jméno skupiny. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2012-03-12T00:00:00+01:00 -->

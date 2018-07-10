@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (4/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2815-dovolena-na-venkove-4-7 -->
+<!-- dcterms:abstract = Usnul jsem rychle a brzo a možná i proto bylo moje vstávání druhý den ráno méně krušné. Rozhodně jsem nezapomněl na pravidlo ohledně oblečení, nebo spíše absence oblečení, a nevysloužil jsem si tudíž trest hned po probuzení. Zato jsem byl svižně zapřažen do práce, stejné jako předtím: vyčistit boxy a zamést. Tentokráte jsem si dal pozor a zametl i pod rohožemi a celkově myslím, že mi to šlo lépe a rychleji - praxe ze včerejška se projevila. Když Monika přišla moji práci zkontrolovat, obešlo se to bez poznámek a naštěstí i bez trestů nebo jiných výchovných zásahů. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-09-18T00:00:00+02:00 -->

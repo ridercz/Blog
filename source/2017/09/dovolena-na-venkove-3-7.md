@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (3/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2814-dovolena-na-venkove-3-7 -->
+<!-- dcterms:abstract = Když jsme se najedli, šel mi Marek ukázat ty části statku, které jsem večer neviděl. Přiléhala k němu pastvina pro kozy, ohrazená laťkovým plotem (přes který se prý kozám bez větších obtíží a k pramalé radosti sousedů dařilo pravidelně utíkat) a elektrickým ohradníkem obehnané pastviny pro krávy a větší a menší výběh pro koně, každý s přístřeškem, který koně chránil před deštěm, prudkým sluncem a větrem. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-09-11T00:00:00+02:00 -->

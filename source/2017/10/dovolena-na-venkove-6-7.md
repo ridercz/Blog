@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dovolená na venkově (6/7) -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/articles/2817-dovolena-na-venkove-6-7 -->
+<!-- dcterms:abstract = Ačkoliv sláma byla docela pohodlná, jsem zvyklý spíše na matraci a navíc jsem se vzbudil pokaždé, když jsem se převalil, protože jsem při každém pohybu cítil trestný kolík v zadku. Postroj také na pohodlnosti moc nepřidal. Ale po předchozím dni jsem byl utahaný, inu jako kůň, a spánek přišel i tak. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-bdsmcz.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2017-10-02T00:00:00+02:00 -->
