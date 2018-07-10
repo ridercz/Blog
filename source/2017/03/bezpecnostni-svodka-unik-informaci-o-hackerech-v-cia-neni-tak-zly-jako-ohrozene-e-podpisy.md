@@ -1,0 +1,9 @@
+<!-- dcterms:title = Bezpečnostní svodka: Únik informací o hackerech v CIA není tak zlý, jako ohrožené e-podpisy -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-65652700-bezpecnostni-svodka-unik-informaci-o-hackerech-v-cia-neni-tak-hrozny-jako-prolomene-sifrovani -->
+<!-- dcterms:abstract = Únik dat „Vault 7“ obrací pozornost k útokům nultého dne a nutnosti aktualizovat software. Zkratka SHA-1 děsí odborníky na bezpečnost, i když se tento systém dávno nemá používat. Bezpečnost internetu neohrožují jen zločinci, ale také lidské chyby a koncentrace moci. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- dcterms:dateAccepted = 2017-03-09T01:34:00+01:00 -->
+<!-- x4w:category = Bezpečnost -->

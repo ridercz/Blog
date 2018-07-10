@@ -1,0 +1,9 @@
+<!-- dcterms:title = Nula s wi-fi: Nová verze Raspberry Pi Zero W se připojí k síti a stojí méně než 300 korun -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/geekosfera/c1-65654310-nula-s-wi-fi-nova-verze-raspberry-pi-zero-w-se-pripoji-k-siti-a-stoji-mene-nez-300-korun -->
+<!-- dcterms:abstract = Počítač s rozměry 6 x 3 centimetry udělá radost kutilům, připojit jde i monitor. Novinkou modelu Zero W je přítomnost wi-fi a Bluetooth modulů. Jako snadno dostupná alternativa vzniklo také čínské Orange Pi. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- dcterms:dateAccepted = 2017-03-09T22:08:00+01:00 -->
+<!-- x4w:category = Bastlení -->

@@ -1,0 +1,9 @@
+<!-- dcterms:title = Avast jako kovářova kobyla: V aplikaci CCleaner od výrobce antiviru byl škodlivý software -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-65885380-avast-jako-kovarova-kobyla-v-aplikaci-ccleaner-od-vyrobce-antiviru-byl-skodlivy-software?utm_source=mediafed&utm_medium=rss&utm_campaign=mediafed -->
+<!-- dcterms:abstract = Avast má obrovskou ostudu, jeho dceřiná firma šířila škodlivý software, neuznala ani pomoc od Cisca. Útočníci dokonale ovládli síť výrobce CCleaneru, takže nakažený software měl i správný digitální podpis. Samotný CCleaner je v podstatě zbytečný software, jeho hlavní funkce jsou přímo ve Windows. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- dcterms:dateAccepted = 2017-09-18T21:37:00+02:00 -->
+<!-- x4w:category = Bezpečnost -->

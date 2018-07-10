@@ -1,0 +1,10 @@
+<!-- dcterms:title = Jak vybrat 3D tiskárnu: Čínská stavebnice přijde na čtyři tisíce, kvalita stojí asi třicet -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/geekosfera/c1-65854850-jak-vybrat-3d-tiskarnu-cinska-stavebnice-prijde-na-ctyri-tisice-kvalita-stoji-asi-tricet?utm_source=mediafed&utm_medium=rss&utm_campaign=mediafed -->
+<!-- dcterms:abstract = 3D tiskárny jsou na vrcholu popularity, fascinují geeky i typické české kutily. Levné tiskárny se prodávají jako stavebnice, nejsou pro každého a kolísá u nich kvalita. Nejpopulárnější 3D tiskárny vznikají v Česku, jako skládačka stojí 19 tisíc, složené jsou za 27. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- dcterms:dateAccepted = 2017-08-23T01:19:00+02:00 -->
+<!-- x4w:category = 3D tisk -->
+<!-- x4w:category = Bastlení -->

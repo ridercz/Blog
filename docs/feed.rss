@@ -6,6 +6,24 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/05/seznam-cz-je-konecne-bezpecnejsi-dvoufaktorove-overeni-zavedl-pozde-ale-zato-spatne</guid>
+      <title>Seznam.cz je konečně bezpečnější: Dvoufaktorové ověření zavedl pozdě, ale zato špatně</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/05/seznam-cz-je-konecne-bezpecnejsi-dvoufaktorove-overeni-zavedl-pozde-ale-zato-spatne</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-05-02T00:10:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/04/na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</guid>
+      <title>Na návštěvě v muzeu Living Computers: Takhle vypadá domov důchodců pro hodné počítače</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/04/na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <pubDate>2018-04-29T22:28:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</guid>
       <title>Jak vyměnit v serveru disk za větší</title>
       <description></description>
@@ -13,6 +31,24 @@
       <author>Michal Altair Valášek</author>
       <category>Programování</category>
       <pubDate>2018-04-25T16:36:46</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/04/jednicky-nebo-osmicky-expert-vysvetluje-proc-je-pro-vas-dulezity-dns-server-a-jaky-si-vybrat</guid>
+      <title>Jedničky, nebo osmičky? Expert vysvětluje, proč je pro vás důležitý DNS server a jaký si vybrat</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/04/jednicky-nebo-osmicky-expert-vysvetluje-proc-je-pro-vas-dulezity-dns-server-a-jaky-si-vybrat</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-04-16T23:09:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/03/jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-rekvalifikaci</guid>
+      <title>Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na „rekvalifikaci“</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/03/jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-rekvalifikaci</link>
+      <author>Michal Altair Valášek</author>
+      <category>Lidé a jiná zvěř</category>
+      <pubDate>2018-03-19T00:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</guid>
@@ -31,6 +67,14 @@
       <author>Michal Altair Valášek</author>
       <category>Programování</category>
       <pubDate>2018-02-07T23:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/01/nejlepsi-novorocni-predsevzeti-naucte-se-pouzivat-spravce-hesel-bez-nej-nebudou-vase-data-v-bezpeci</guid>
+      <title>Nejlepší novoroční předsevzetí: Naučte se používat správce hesel, bez něj nebudou vaše data v bezpečí</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/01/nejlepsi-novorocni-predsevzeti-naucte-se-pouzivat-spravce-hesel-bez-nej-nebudou-vase-data-v-bezpeci</link>
+      <author>Michal Altair Valášek</author>
+      <pubDate>2018-01-04T11:15:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</guid>
@@ -60,6 +104,34 @@
       <pubDate>2017-11-04T02:13:24</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/10/volby-hackeri-a-krasa-papiru-bezpecnost-je-nad-pohodli</guid>
+      <title>Volby, hackeři a krása papíru: bezpečnost je nad pohodlí</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/10/volby-hackeri-a-krasa-papiru-bezpecnost-je-nad-pohodli</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2017-10-27T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/10/bezpecnostni-svodka-cesi-odhalili-chybu-v-elektronickych-obcankach-na-slovensku-a-estonsku</guid>
+      <title>Bezpečnostní svodka: Češi odhalili chybu v elektronických občankách na Slovensku a Estonsku</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/10/bezpecnostni-svodka-cesi-odhalili-chybu-v-elektronickych-obcankach-na-slovensku-a-estonsku</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2017-10-26T01:03:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/10/bezpecnostni-svodka-v-soucasne-dobe-nelze-provozovat-bezpecnou-wi-fi-sit-dulezitou-komunikaci-je-lepsi-zasifrovat</guid>
+      <title>Bezpečnostní svodka: V současné době nelze provozovat bezpečnou wi-fi síť. Důležitou komunikaci je lepší zašifrovat</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/10/bezpecnostni-svodka-v-soucasne-dobe-nelze-provozovat-bezpecnou-wi-fi-sit-dulezitou-komunikaci-je-lepsi-zasifrovat</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2017-10-17T10:50:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</guid>
       <title>ASP.NET Core 2.0: platforma kterou chcete používat</title>
       <description></description>
@@ -67,78 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2017-10-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/09/naucim-vas-asp-net-core</guid>
-      <title>Naučím vás ASP.NET Core</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/09/naucim-vas-asp-net-core</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-09-09T23:44:56</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/09/budoucnost-asp-net-materialy-z-mych-prednasek</guid>
-      <title>Budoucnost ASP.NET – materiály z mých přednášek</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/09/budoucnost-asp-net-materialy-z-mych-prednasek</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-09-08T17:05:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</guid>
-      <title>Jak na neprůstřelnou prezentační stránku s GitHubem a CloudFlare</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2017-09-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/08/budoucnost-asp-net</guid>
-      <title>Budoucnost ASP.NET</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/08/budoucnost-asp-net</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-08-04T02:42:17</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/02/prezentace-z-konference-showit-bratislava</guid>
-      <title>Prezentace z konference ShowIT Bratislava</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/02/prezentace-z-konference-showit-bratislava</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-02-22T09:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/02/pozvanka-na-architecture-security-days</guid>
-      <title>Pozvánka na Architecture &amp; Security Days</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/02/pozvanka-na-architecture-security-days</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-02-21T22:40:54</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/01/let-s-encrypt-na-windows-poc-aplikace</guid>
-      <title>Let's Encrypt na Windows: PoC aplikace</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/01/let-s-encrypt-na-windows-poc-aplikace</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2017-01-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/01/let-s-encrypt-na-windows-prvni-seznameni</guid>
-      <title>Let's Encrypt na Windows: První seznámení</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/01/let-s-encrypt-na-windows-prvni-seznameni</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2017-01-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
