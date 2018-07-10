@@ -2,7 +2,7 @@
 <!-- dcterms:title = Stavové HTTP: Shrnutí a dokončení -->
 <!-- dcterms:abstract = Při přípravě článku, který se podrobně zabývá technologií ViewState sjem zjistil, že vám již více než rok dlužím jeden díl seriálu o (bez)stavovém HTTP. Ba dokonce možná díl nejdůležitější, totiž poslední, shrnující a hodnotící. Nuže, tady je. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Tajemství souboru app_offline.htm - snadný upgrade aplikací v ASP.NET 2.0 -->
 <!-- dcterms:abstract = Jak snadno aktualizovat ASP.NET aplikaci, včetně výměny SQL Express databází? Použijte jednoduchý trik se souborem app_offline.htm -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

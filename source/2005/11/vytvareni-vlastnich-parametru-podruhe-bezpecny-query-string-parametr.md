@@ -2,7 +2,7 @@
 <!-- dcterms:title = Vytváření vlastních parametrů podruhé - "bezpečný" query string parametr -->
 <!-- dcterms:abstract = Pokud použijete strongly-typed parametry pro data binding a předanou hodnotu nebude možno na požadovaný typ převést, dojde k výjimce. Pokud si informace o výjimkách ve své aplikaci necháte posílat e-mailem, můžete být brzo zaplaveni zprávami právě o tomto typu chyb. Vyhnout se tomu lze právě pomocí vlastního parametru. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

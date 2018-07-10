@@ -2,7 +2,7 @@
 <!-- dcterms:title = Centralized SSL Certificates v IIS: Proč a jak je používat -->
 <!-- dcterms:abstract = Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = IIS -->
+<!-- x4w:category = Bezpečnost -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

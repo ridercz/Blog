@@ -2,7 +2,7 @@
 <!-- dcterms:title = jQuery UI dialogy v ASP.NET Web Forms -->
 <!-- dcterms:abstract = Doba si žádá své. Konkrétně dnešní doba si bohužel žádá "rich Internet applications", webové aplikace, které se chovají pokud možno tak, aby jako webové nevypadaly. Což zahrnuje i koncept v klasickém HTML obecně nevídaný, totiž virtuální okna realizovaná pomocí dynamického HTML a JavaScriptu. Knihovna jQuery UI nabízí nástroje pro práci s dialogy, ale pro bezchybnou spolupráci s ASP.NET Web Forms vyžadují trochu práce. Proto jsem připrvil v JavaScriptu rozšíření jQuery Dialog Helper, které se snaží tyto dva světy propojit. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -3,6 +3,7 @@
 <!-- dcterms:abstract = V šestém dílu seriálu o vytvoření "zlé maliny" pro útoky sociálním inženýrstvím si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6. -->
 <!-- np9:categoryId = 2 -->
 <!-- x4w:category = Bezpečnost -->
+<!-- x4w:serial = Projekt Atropa -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

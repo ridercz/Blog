@@ -2,7 +2,7 @@
 <!-- dcterms:title = Konec zmatku s web.config: různé konfigurace pro vývojovou a ostrou verzi -->
 <!-- dcterms:abstract = Známe to všichni: při nahrávání nové verze aplikace je třeba čarovat s web.configem, měnit connection stringy a jiné parametry... Web Deployment Projects nabízejí vestavěné řešení, které ale pokládám za poněkud nešikovné. Lze je ale "přiohnout" a usnadnit si život. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

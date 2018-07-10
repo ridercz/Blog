@@ -2,7 +2,7 @@
 <!-- dcterms:title = IpAddressValidator – validace IP adresy jako uživatelského vstupu -->
 <!-- dcterms:abstract = Píšu webovou aplikaci, která po uživateli chce zadat IP adresu. Samozřejmě si chci pomocí validátoru ověřit, zda jsou zadaná data formálně správná, tedy že uživatel zadal validní IP adresu. Jak na to? Ponaučení první: používejte standardní infrastrukturu. Ponaučení druhé: regulární výrazy nejsou všemocné. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

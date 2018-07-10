@@ -2,7 +2,7 @@
 <!-- dcterms:title = ASP.NET caching pro mírně pokročilé: Ukládání částí stránky -->
 <!-- dcterms:abstract = V minulém zápisu jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů celých stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

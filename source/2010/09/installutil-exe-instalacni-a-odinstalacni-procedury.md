@@ -2,7 +2,7 @@
 <!-- dcterms:title = InstallUtil.exe – instalační a odinstalační procedury -->
 <!-- dcterms:abstract = Instalace ASP.NET aplikace probíhá obvykle stylem "nakopíruj tohle do rootu webu a modli se". Součástí aplikace ale často bývají různé pomocné utilitky, které při své instalaci a odinstalaci vyžadují různé úkony. Například vložení do GAC, instalaci služby (Windows service), vytvoření protoklu událostí (vlastní event log a nebo alespoň event log source). Microsoft .NET framework na to má infrastrukturu v podobě instalačních tříd: užitečného, leč často přehlíženého nástroje. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

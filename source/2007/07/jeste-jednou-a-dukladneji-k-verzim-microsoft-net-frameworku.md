@@ -2,7 +2,7 @@
 <!-- dcterms:title = Ještě jednou a důkladněji k verzím Microsoft .NET Frameworku -->
 <!-- dcterms:abstract = AKTUALIZOVÁNO o verze AJAX Extensions. Poslední dobou se množí dotazy, jejichž společným jmenovatelem je nepochopení systému verzí .NET Frameworku a souvisejících technologií. Není se čenu divit, protože v tom zmatek skutečně je. Proto vznikl tento článek, který popisuje všechny existující verze .NETu a vztahy mezi nimi. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

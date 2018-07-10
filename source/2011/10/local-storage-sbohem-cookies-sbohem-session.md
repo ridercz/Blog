@@ -2,7 +2,7 @@
 <!-- dcterms:title = Local Storage: Sbohem cookies, sbohem session? -->
 <!-- dcterms:abstract = Jedna z užitečných – a kupodivu i široce podporovaných – novinek v HTML 5 se jmenuje Local Storage. Nedostává se jí tolik pozornosti, jako videu nebo elementu canvas, nicméně podle mého názoru je podstatně užitečnější. Ukážeme si, jak funguje, k čemu je dobrá a na závěr vám nabídnu užitečný nástroj pro ladění. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

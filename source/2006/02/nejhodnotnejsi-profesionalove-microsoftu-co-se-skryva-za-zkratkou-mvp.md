@@ -2,7 +2,7 @@
 <!-- dcterms:title = "Nejhodnotnější profesionálové" Microsoftu - co se skrývá za zkratkou MVP -->
 <!-- dcterms:abstract = Před několika lety se na různých českých webech bez velkého humbuku začalo objevovat poměrně ošklivé logo opatřené třemi písmeny - MVP. A před pár dny na Živě vyšel článek o "nejhodnotnějších profesionálech" - Microsoft MVPs. Diskuze pod článkem je očekávatelně hrozná a článek sám také není právě informačně hodnotný. Za tu poslední výtku nesu částečnou zodpovědnost - původně jsem byl totiž požádán já sám, abych o MVP programu něco napsal. To jsem odmítl s tím, že mi nepřísluší psát o MVP jako celku, mohu říct jenom svůj vlastní subjektivní názor. A to je právě účel tohoto článku. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

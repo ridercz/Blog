@@ -2,7 +2,7 @@
 <!-- dcterms:title = Coding4fun, aneb hrátky s Frameworkem -->
 <!-- dcterms:abstract = Pokud jsou bohové milostiví, je programování zábava. Úkol (pokud možno takový, co si sami zadáte) je technickou výzvou a umožní vám hrát si s kódem a napsat něco co vás bude opravdu bavit a uspokojí vás. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

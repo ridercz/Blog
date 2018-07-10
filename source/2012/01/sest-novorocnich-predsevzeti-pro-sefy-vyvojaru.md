@@ -1,8 +1,7 @@
 <!-- dcterms:identifier = aspnetcz#365 -->
 <!-- dcterms:title = Šest novoročních předsevzetí pro šéfy vývojářů -->
 <!-- dcterms:abstract = Začátek roku bývá tradičně spjat s volbou rozličných předsevzetí do nového roku. Jak dělat věci lépe a ku prospěchu vlastnímu i cizích. Dovoluji si tímto navrhnout seznam pěti předsevzetí pro nadřízené všech programátorů a vývojářů. Tento seznam vznikl na základě mých dlouholetých osobních zkušeností lektora a konzultanta – a vrby, která často poslouchá stesky mnoha různých programátorů z různých společností. -->
-<!-- np9:categoryId = 8 -->
-<!-- x4w:category = Z jiného soudku -->
+<!-- x4w:category = Lidé a jiná zvěř -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

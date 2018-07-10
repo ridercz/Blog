@@ -2,7 +2,7 @@
 <!-- dcterms:title = Pozvánka na TechEd Praha 2008 -->
 <!-- dcterms:abstract = Ve dnech 22.-25. dubna se v Praze uskuteční další ročník TechEdu. To nejlepší z amerického a evropského TechEdu, okořeněné trochou zkušeností z praxe, najdete ve Village Cinemas na Černém Mostě. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

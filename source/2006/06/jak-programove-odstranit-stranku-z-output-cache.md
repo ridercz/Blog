@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak programově odstranit stránku z output cache? -->
 <!-- dcterms:abstract = Output cache, neboli ukládání vygenerovaného výstupu do mezipaměti, takže se při dalším požadavku stránka nevolá znovu, je výtečný vynález. Častým dotazem je, jak lze takto nacacheovanou položku z mezipaměti odstranit. Existují na to dvě metody. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

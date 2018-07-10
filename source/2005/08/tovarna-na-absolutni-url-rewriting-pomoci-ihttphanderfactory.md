@@ -2,7 +2,7 @@
 <!-- dcterms:title = Továrna na absolutní URL: rewriting pomocí IHttpHanderFactory -->
 <!-- dcterms:abstract = URL rewriting je častá technika, používaná k výrobě "hezkých" webových adres. Elegantně je možno ji realizovat pomocí IHttpHanderFactory - narozdíl od jiných metod úspěšně implementuje postback a je Whidbey kompatibilní. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = IIS -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

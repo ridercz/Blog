@@ -2,7 +2,7 @@
 <!-- dcterms:title = Express vývojové nástroje - .NET 2.0 zdarma -->
 <!-- dcterms:abstract = Microsoft učinil užitečný krok a dal k dispozici Express edici vývojových nástrojů zdarma. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

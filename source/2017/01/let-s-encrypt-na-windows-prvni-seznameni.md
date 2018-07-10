@@ -2,7 +2,7 @@
 <!-- dcterms:title = Let's Encrypt na Windows: První seznámení -->
 <!-- dcterms:abstract = Asi jste již zaznamenali, že poslední dobou sílí snaha dostat maximum webů pod HTTPS. A k tomu jsou potřeba certifikáty, vydané důvěryhodnou certifikační autoritou. Řadu let jsem používat a doporučoval certifikační autoritu StartSSL, která vydávala běžné serverové i klientské certifikáty zdarma. Ta bohužel nyní přišla o svou důvěryhodnost v prohlížečích, neboť ji koupila čínská firma a začala vydávat certifikáty v rozporu s uznávanými pravidly. Řešením může být projekt Let's Encrypt, který vám chci představit v malém seriálu článků. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = IIS -->
+<!-- x4w:category = Bezpečnost -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

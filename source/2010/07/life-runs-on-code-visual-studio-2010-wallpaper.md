@@ -2,7 +2,7 @@
 <!-- dcterms:title = Life runs on code – Visual Studio 2010 wallpaper -->
 <!-- dcterms:abstract = Na adrese http://vs2010wallpapers.com najdete sbírku pozadí na plochu s tematikou Visual Studia 2010. Je jich tam spousta zajímavých, ale já jsem potřeboval pro účely prezentací a webcastů nějaké univerzální, co bude fungovat pokud možno na všech rozlišeních. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

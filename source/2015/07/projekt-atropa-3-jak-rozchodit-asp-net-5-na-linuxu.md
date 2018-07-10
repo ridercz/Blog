@@ -2,7 +2,7 @@
 <!-- dcterms:title = Projekt Atropa (3): Jak rozchodit ASP.NET 5 na Linuxu -->
 <!-- dcterms:abstract = V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit "zlý" počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

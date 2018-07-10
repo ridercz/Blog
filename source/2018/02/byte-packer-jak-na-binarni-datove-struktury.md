@@ -2,7 +2,7 @@
 <!-- dcterms:title = Byte packer – jak na binární datové struktury? -->
 <!-- dcterms:abstract = Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu BytePacker, která vám s tím pomůže. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Microsoftí mailové konference na EMWACu - základní informace -->
 <!-- dcterms:abstract = Jedním z nejlepších míst kde se můžete poradit, jsou mailové konference na EMWACu. Želbohu, přihlásit se do nich není právě jednoduché. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

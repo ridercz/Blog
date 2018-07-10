@@ -2,7 +2,7 @@
 <!-- dcterms:title = Tajemství souboru app_offline.htm -->
 <!-- dcterms:abstract = Magické schopnosti souboru app_offline.htm, přítomné v ASP.NET od verze 2.0, vám mohou usnadnit nasazení a upgrade aplikací. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Neznámé leč užitečné stavové kódy HTTP -->
 <!-- dcterms:abstract = Stavové kódy 301 (Moved Permanently) a 410 (Gone) -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

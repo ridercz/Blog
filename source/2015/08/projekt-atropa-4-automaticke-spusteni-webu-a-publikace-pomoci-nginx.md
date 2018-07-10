@@ -2,7 +2,7 @@
 <!-- dcterms:title = Projekt Atropa (4): Automatické spuštění webu a publikace pomocí nginx -->
 <!-- dcterms:abstract = V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

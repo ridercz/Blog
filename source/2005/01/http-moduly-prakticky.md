@@ -2,7 +2,7 @@
 <!-- dcterms:title = HTTP moduly prakticky -->
 <!-- dcterms:abstract = Jak uvnitř funguje SkinAnywhere? Příklad zpracování HTTP požadavku ve fázi před i po vykonání cílové stránky -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = IIS -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

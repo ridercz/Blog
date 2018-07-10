@@ -2,7 +2,7 @@
 <!-- dcterms:title = SignalR 0.5.3 a aktualizace příkladů -->
 <!-- dcterms:abstract = Dnes vyšla aktualizace knihovny SignalR na verzi 0.5.3. Obsahuje několik užitečných věcí, takže jsem aktualizoval příklady ze své přednášky. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

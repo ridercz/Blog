@@ -2,7 +2,7 @@
 <!-- dcterms:title = Hands-on labs na ASP.NET AJAX a další rozšíření -->
 <!-- dcterms:abstract = Připravuji pro společnost Gopas nový kurz GOC37, který bude pojat jako hands-on labs na ASP.NET AJAX a další rozšíření. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

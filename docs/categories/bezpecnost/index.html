@@ -33,10 +33,7 @@
           <a href="/categories/kone">Koně</a>
         </li>
         <li>
-          <a href="/categories/tipy-triky">Tipy, triky</a>
-        </li>
-        <li>
-          <a href="/categories/iis">IIS</a>
+          <a href="/categories/programovani">Programování</a>
         </li>
         <li>
           <a href="/categories/bezpecnost">Bezpečnost</a>
@@ -47,14 +44,41 @@
         <li>
           <a href="/categories/software">Software</a>
         </li>
-        <li>
-          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
-        </li>
       </ul>
     </nav>
     <main>
       <h1>Rubrika Bezpečnost</h1>
       <section class="artlist">
+        <article class="haspicture">
+          <aside>
+            <a href="/2017/01/let-s-encrypt-na-windows-poc-aplikace">
+              <img src="/perex-pictures/20170122-let-s-encrypt-na-windows-poc-aplikace.png" width="150" height="150" alt="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2017/01/let-s-encrypt-na-windows-poc-aplikace">Let's Encrypt na Windows: PoC aplikace</a>
+          </header>
+          <div>V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace.</div>
+          <footer>
+            <time datetime="2017-01-22T00:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 22. ledna 2017</time>
+          </footer>
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2017/01/let-s-encrypt-na-windows-prvni-seznameni">
+              <img src="/perex-pictures/20170115-let-s-encrypt-na-windows-prvni-seznameni.png" width="150" height="150" alt="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2017/01/let-s-encrypt-na-windows-prvni-seznameni">Let's Encrypt na Windows: První seznámení</a>
+          </header>
+          <div>Asi jste již zaznamenali, že poslední dobou sílí snaha dostat maximum webů pod HTTPS. A k tomu jsou potřeba certifikáty, vydané důvěryhodnou certifikační autoritou. Řadu let jsem používat a doporučoval certifikační autoritu StartSSL, která vydávala běžné serverové i klientské certifikáty zdarma. Ta bohužel nyní přišla o svou důvěryhodnost v prohlížečích, neboť ji koupila čínská firma a začala vydávat certifikáty v rozporu s uznávanými pravidly. Řešením může být projekt Let's Encrypt, který vám chci představit v malém seriálu článků.</div>
+          <footer>
+            <time datetime="2017-01-15T00:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 15. ledna 2017</time>
+          </footer>
+        </article>
         <article class="haspicture">
           <aside>
             <a href="/2016/03/bezpecnost-vec-verejna">
@@ -72,6 +96,21 @@
         </article>
         <article class="haspicture">
           <aside>
+            <a href="/2016/01/centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat">
+              <img src="/perex-pictures/20160131-centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat.jpg" width="149" height="150" alt="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2016/01/centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat">Centralized SSL Certificates v IIS: Proč a jak je používat</a>
+          </header>
+          <div>Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat.</div>
+          <footer>
+            <time datetime="2016-01-31T00:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 31. ledna 2016</time>
+          </footer>
+        </article>
+        <article class="haspicture">
+          <aside>
             <a href="/2015/08/projekt-atropa-6-vytvarime-captive-portal">
               <img src="/perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg" width="150" height="150" alt="" />
             </a>
@@ -83,6 +122,12 @@
           <footer>
             <time datetime="2015-08-24T00:00:00+02:00" title="Datum vydání">
               <i class="fal fa-calendar-alt"> </i>pondělí 24. srpna 2015</time>
+            <ul class="serials">
+              <li>
+                <a href="/serials/projekt-atropa" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
+              </li>
+            </ul>
           </footer>
         </article>
         <article class="haspicture">
@@ -166,57 +211,12 @@
               <i class="fal fa-calendar-alt"> </i>pondělí 17. října 2011</time>
           </footer>
         </article>
-        <article class="haspicture">
-          <aside>
-            <a href="/2011/01/altairis-web-security-toolkit-nova-verze-2-2-0-ke-stazeni">
-              <img src="/perex-pictures/20110124-altairis-web-security-toolkit-nova-verze-2-2-0-ke-stazeni.png" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <header>
-            <a href="/2011/01/altairis-web-security-toolkit-nova-verze-2-2-0-ke-stazeni">Altairis Web Security Toolkit – nová verze 2.2.0 ke stažení</a>
-          </header>
-          <div>Vydal jsem novou verzi své knihovny Altairis Web Security Toolkit (dříve Simple ASP.NET SQL Providers), kterí se stala vcelku populární. Přináší oproti minulé verzi řadu vylepšení a nově také nezávislost na databází a ověřenou kompatibilitu s novým SQL Serverem Compact Edition.</div>
-          <footer>
-            <time datetime="2011-01-24T00:00:00+01:00" title="Datum vydání">
-              <i class="fal fa-calendar-alt"> </i>pondělí 24. ledna 2011</time>
-          </footer>
-        </article>
-        <article class="haspicture">
-          <aside>
-            <a href="/2011/01/reset-zapomenuteho-hesla-jak-to-delat-spravne">
-              <img src="/perex-pictures/20110103-reset-zapomenuteho-hesla-jak-to-delat-spravne.png" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <header>
-            <a href="/2011/01/reset-zapomenuteho-hesla-jak-to-delat-spravne">Reset zapomenutého hesla – jak to dělat správně?</a>
-          </header>
-          <div>Ačkoliv existují i lepší varianty autentizace uživatelů, hesla stále bezpečně převažují. A uživatelé hesla rádi zapomínají a dobré systémy by s tím měly počítat a měly by tudíž umožnit se ztrátou hesla se nějakým způsobem vypořádat. A to pokud možno bezpečně a automatizovaně. Tento článek se zabývá způsoby, jak to lze udělat a vyhnout se přitom obvyklým problémům.</div>
-          <footer>
-            <time datetime="2011-01-03T05:27:27+01:00" title="Datum vydání">
-              <i class="fal fa-calendar-alt"> </i>pondělí 3. ledna 2011</time>
-          </footer>
-        </article>
-        <article class="haspicture">
-          <aside>
-            <a href="/2010/11/sifrovani-konfiguracnich-sekci-v-asp-net">
-              <img src="/perex-pictures/20101111-sifrovani-konfiguracnich-sekci-v-asp-net.png" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <header>
-            <a href="/2010/11/sifrovani-konfiguracnich-sekci-v-asp-net">Šifrování konfiguračních sekcí v ASP.NET</a>
-          </header>
-          <div>Některé konfigurační sekce, typicky například connectionStrings, obsahují citlivé údaje, které by se neměly dostat do rukou cizím. V případě, že se útočníkovi podaří získat obsah souboru web.config – třeba pomocí chyby podobné nedávnému "padding oracle" problému – šifrování konfiguračních sekcí dokáže minimalizovat následky chyby. Obecně se jedná o formu "obrany do hloubky". Problémem je, že za normálních okolností musíte mít k zašifrování možnost spouštět na serveru programy z příkazového řádku, a to pod tou identitou, pod níž běží webová aplikace. Napsal jsem nástroj, který vám umožní konfiguraci šifrovat přímo z webové aplikace.</div>
-          <footer>
-            <time datetime="2010-11-11T04:00:00+01:00" title="Datum vydání">
-              <i class="fal fa-calendar-alt"> </i>čtvrtek 11. listopadu 2010</time>
-          </footer>
-        </article>
         <footer>
           <span class="next">
             <a href="./2" rel="next">Starší</a>
-            <a href="./3" rel="last">Nejstarší</a>
+            <a href="./4" rel="last">Nejstarší</a>
           </span>
-          <span class="info">1 / 3</span>
+          <span class="info">1 / 4</span>
         </footer>
       </section>
     </main>

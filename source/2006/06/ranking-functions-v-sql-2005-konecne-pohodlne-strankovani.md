@@ -2,7 +2,7 @@
 <!-- dcterms:title = Ranking functions v SQL 2005 - konečně pohodlné stránkování -->
 <!-- dcterms:abstract = Verze 2005 přinesla do SQL Serveru řadu užitečných novinek. Jednou z nich jest též implementace tzv. ranking functions - dalo by se to překládat např. jako hodnotící funkce. Takové funkce jsou celkem čtyři a využijete je především, pokud chcete vypisovat z databáze pouze část záznamů. Vyloženě školním příkladem je využití funkce ROW_NUMBER() pro stránkování výpisů. Znamená to, že nebudeme muset nadále závidět uživatelům MySQL jejich SELECT LIMIT a budeme se moci štastně vzdát šílených stránkovacích procedur realizovaných pomocí rozličných kombinací SELECT TOP. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

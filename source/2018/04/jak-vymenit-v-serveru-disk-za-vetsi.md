@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak vyměnit v serveru disk za větší -->
 <!-- dcterms:abstract = Byl jsem tázán na některé okolnosti výměny disku v serveru za větší. Vyzkoušel jsem si simulaci ve virtuálním počítači a říkám si, že by se popis postupu mohl hodit i někomu dalšímu. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

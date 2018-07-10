@@ -2,7 +2,7 @@
 <!-- dcterms:title = IIS 7: Per aspera ad astra -->
 <!-- dcterms:abstract = Další důvod proč se učit psát HTTP moduly se jmenuje IIS 7 - nová generace web serveru od Microsoftu -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = IIS -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

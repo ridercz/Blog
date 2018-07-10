@@ -2,7 +2,7 @@
 <!-- dcterms:title = Bezpečné načítání hodnot z query stringu podruhé -->
 <!-- dcterms:abstract = V komentáři k mému předchozím článku o query string parametrech nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

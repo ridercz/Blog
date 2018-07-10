@@ -2,7 +2,7 @@
 <!-- dcterms:title = Posílání mailů z Azure: Sendy, Amazon SES a ASP.NET -->
 <!-- dcterms:abstract = Snažím se své nové projekty spouštět ve Windows Azure. Jednou z velkých bolestí nicméně zůstává velmi problematické posílání mailů z Azure Web Sites. Pro jednotlivé transakční maily jsem si řešení už napsal, ale ani to nestačí na odesílání tisíců nebo desetitisíců zpráv. Nicméně, našel jsem řešení. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

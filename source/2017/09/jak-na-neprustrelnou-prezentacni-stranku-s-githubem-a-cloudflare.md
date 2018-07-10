@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak na neprůstřelnou prezentační stránku s GitHubem a CloudFlare -->
 <!-- dcterms:abstract = Chcete si udělat jednoduchou statickou stránku na nezničitelné infrastruktuře a zadarmo? Kombinace GitHubu a CloudFlare vám to zajistí. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Software -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

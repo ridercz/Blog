@@ -2,7 +2,7 @@
 <!-- dcterms:title = První z ukázkových aplikací pro MSDN Connection: TherMon -->
 <!-- dcterms:abstract = TherMon je ukázková, leč prakticky použitelná aplikace, která slouží ke sběru dat z teplotních čidel a prezentaci získaných dat formou grafů, webové služby a RSS feedu včetně vlastních rozšíření. Živá verze aplikace je v provozu na adrese http://teplomer.altairis.cz/. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -11,7 +11,7 @@
       <description></description>
       <link>https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</link>
       <author>Michal Altair Valášek</author>
-      <category>Tipy, triky</category>
+      <category>Programování</category>
       <pubDate>2018-04-25T16:36:46</pubDate>
     </item>
     <item>
@@ -29,7 +29,7 @@
       <description></description>
       <link>https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</link>
       <author>Michal Altair Valášek</author>
-      <category>Tipy, triky</category>
+      <category>Programování</category>
       <pubDate>2018-02-07T23:00:00</pubDate>
     </item>
     <item>
@@ -92,7 +92,7 @@
       <description></description>
       <link>https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</link>
       <author>Michal Altair Valášek</author>
-      <category>Tipy, triky</category>
+      <category>Software</category>
       <pubDate>2017-09-03T00:00:00</pubDate>
     </item>
     <item>
@@ -128,7 +128,7 @@
       <description></description>
       <link>https://www.altair.blog/2017/01/let-s-encrypt-na-windows-poc-aplikace</link>
       <author>Michal Altair Valášek</author>
-      <category>IIS</category>
+      <category>Bezpečnost</category>
       <pubDate>2017-01-22T00:00:00</pubDate>
     </item>
     <item>
@@ -137,7 +137,7 @@
       <description></description>
       <link>https://www.altair.blog/2017/01/let-s-encrypt-na-windows-prvni-seznameni</link>
       <author>Michal Altair Valášek</author>
-      <category>IIS</category>
+      <category>Bezpečnost</category>
       <pubDate>2017-01-15T00:00:00</pubDate>
     </item>
   </channel>

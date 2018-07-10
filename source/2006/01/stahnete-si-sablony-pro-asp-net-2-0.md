@@ -2,7 +2,7 @@
 <!-- dcterms:title = Stáhněte si šablony pro ASP.NET 2.0 -->
 <!-- dcterms:abstract = ASP.NET 2.0 nabízí dvě nové a mocné technologie pro vytváření vzhledu webových stránek: Master pages a Themes. Nyní si můžete stáhnout sadu ukázkových "aplikací", které tuto funkcionalitu předvádějí. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

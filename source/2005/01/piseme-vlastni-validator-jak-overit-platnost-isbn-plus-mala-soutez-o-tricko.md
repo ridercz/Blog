@@ -2,7 +2,7 @@
 <!-- dcterms:title = Píšeme vlastní validátor - jak ověřit platnost ISBN plus malá soutěž o tričko -->
 <!-- dcterms:abstract = ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Na jeho příkladu si ukážeme, jak se dá v .NET vytvořit vlastní validátor. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Stavové HTTP: jak fungují Cookies, Session a ViewState a proč je nepoužívat -->
 <!-- dcterms:abstract = Web byl stvořen jako bezstavový a struktura HTTP a HTML tomu odpovídá. Často ale potřebujeme simulovat stavovou logiku a existuje několik technik, které dokážou toto omezení v větším či menším úspěchem obcházet. A za větší či menší cenu. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

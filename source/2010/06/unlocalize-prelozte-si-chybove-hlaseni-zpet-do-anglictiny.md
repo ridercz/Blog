@@ -2,7 +2,7 @@
 <!-- dcterms:title = Unlocalize – přeložte si chybové hlášení zpět do angličtiny -->
 <!-- dcterms:abstract = Nepřítelem lidu – toho programátorského rozhodně – jsou lokalizovaná chybová hlášení. Pomineme-li skutečnost, že je zřejmě překládá někdo, kdo nikdy nenaptogramoval ani Hello World, bez originálního textu se zpravidla na Internetu nedohledáme žádných vysvětlujících informací. Naštěstí je tu nová služba, která vám umožňuje chybová hlášení zpět odlokalizovat do angličtiny. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak jednoduše převádět časové údaje mezi jednotlivými časovými pásmy -->
 <!-- dcterms:abstract = Česká republika má to štěstí, že se celá nachází v jednom časovém pásmu a čeští programátoři jsou obvykle ušetřeni nutnosti tento údaj sledovat a pracovat s ním. Nicméně to neplatí ve chvíli, kdy se server nachází v jiném časovém pásmu, než klienti. Typickým příkladem je třeba Windows Azure, jehož servery bez ohledu na umístění běží v UTC. Nicméně, tento problém lze celkem jednoduše vyřešit. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

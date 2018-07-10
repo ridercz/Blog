@@ -2,7 +2,7 @@
 <!-- dcterms:title = Zpracování aktuálních a historických kurzů měn přes API ČNB -->
 <!-- dcterms:abstract = Kamarád Michal Bláha se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

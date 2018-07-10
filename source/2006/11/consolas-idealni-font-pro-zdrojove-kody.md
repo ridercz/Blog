@@ -2,7 +2,7 @@
 <!-- dcterms:title = Consolas: Ideální font pro zdrojové kódy -->
 <!-- dcterms:abstract = Vývojáři jsou zvláštní plémě uživatelů: hojně pracují s velkým množstvím textu, leč poněkud specifické povahy, který vyžaduje specifický přístup - a také specifické písmo ke zobrazení. V Office 2007 a WIndows Vista je k tomuto účelu nadmíru vhodný font Consolas, který si ale můžete stáhnout i samostatně. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

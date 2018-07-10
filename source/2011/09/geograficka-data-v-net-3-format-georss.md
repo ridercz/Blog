@@ -2,7 +2,7 @@
 <!-- dcterms:title = Geografická data v .NET 3: Formát GeoRSS -->
 <!-- dcterms:abstract = V předchozích článcích jsem se zabýval zpracováním prostorových dat v prostředí Microsoft SQL Serveru 2008 a Microsoft .NET Frameworku. Víme už, jak zeměpisné souřadnice uchovávat v databázi, jak se na ně dotazovat a jak s výsledkem zacházet z prostředí ASP.NET. Nyní se podíváme na dva ze způsobů, jak lze geografická data publikovat uživateli – na geotagging a GeoRSS. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,8 @@
 <!-- dcterms:title = Projekt Atropa (7): Jak se bránit? -->
 <!-- dcterms:abstract = V předchozích šesti dílech tohoto seriálu jsme si ukázali, jak za pomoci Raspberry Pi, Raspbian Linuxu a ASP.NET 5 rozjet honeypot. Závěrečný díl ukáže, jak se podobným útokům bránit. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
+<!-- x4w:serial = Projekt Atropa -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

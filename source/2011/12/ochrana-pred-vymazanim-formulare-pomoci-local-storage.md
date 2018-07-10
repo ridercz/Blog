@@ -2,7 +2,7 @@
 <!-- dcterms:title = Ochrana před vymazáním formuláře pomocí Local Storage -->
 <!-- dcterms:abstract = Kolikrát už se vám stalo, že jste začali psát nějaký dlouhý text a pak třeba omlem zmáčknuli Refresh, zavřeli okno nebo vám po odeslání aplikace zahlásila "vaše session vypršela, zkuste to znovu"? Existuje jednoduché a elegantní řešení, jak tento problém řešit, pomocí DOM Storage (Local Storage). -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

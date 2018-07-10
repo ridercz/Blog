@@ -2,7 +2,7 @@
 <!-- dcterms:title = Práce s obsahem souborů v .NET -->
 <!-- dcterms:abstract = Jedním z námětů, které jsem obdržel v rámci své minulé výzvy, byla žádost o vysvětlení práce s textovými soubory. Zadání jsem si rozšířil na práci s obsahem souborů obecně - nebo chcete-li se streamy. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

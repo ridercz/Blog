@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak přijímat e-maily v prostředí .NET a proč se tomu vyhnout -->
 <!-- dcterms:abstract = Nejpoužívanější službou internetu není kupodivu WWW, ale elektronická pošta: e-mail. Zatímco odesílání e-mailových zpráv z prostředí ASP.NET je jednoduché, se zpracováváním příchozích mailů to už není ani zdaleka tak snadné. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

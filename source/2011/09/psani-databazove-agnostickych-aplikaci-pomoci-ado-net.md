@@ -2,7 +2,7 @@
 <!-- dcterms:title = Psaní databázově agnostických aplikací pomocí ADO.NET -->
 <!-- dcterms:abstract = Většina aplikací potřebuje ke štěstí nějakou databázi. Někdy si můžeme svobodně vybrat, jaký typ databázového stroje budeme používat, jindy ne. Pro ten druhý případ je výhodné umět psát aplikace tak, aby uměly pracovat obecně s jakoukoliv databází, nebyly vázané na konkrétní produkt. O takových aplikacích pak říkáme, že jsou databázově agnostické. Ukážeme si jeden ze způsobů, jak takové aplikace psát. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Tipy, triky -->
+<!-- x4w:category = Programování -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
