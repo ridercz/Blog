@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2017-01-22T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20170122-let-s-encrypt-na-windows-poc-aplikace.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-autoacme.png -->
 
 V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace. Napíšeme jednoduchou proof of concept aplikaci, která projde procesem ověření totožnosti a vydání jednoho certifikátu.
 

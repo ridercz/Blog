@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2018-02-09T17:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20180209-pozvanka-na-vecerni-skoleni-arduino-a-badusb.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-makerslab.png -->
 
 Zvu vás na poněkud netradiční školení: bude se týkat platformy Arduino a jejího využití k emulaci USB zařízení – fenomén známý jako BadUSB. Toto školení je určeno zájemcům, kteří již mají základní znalosti platformy Arduino nebo programování (ve v podstatě jakémkoliv jazyce). Zároveň má průnik i do světa kybernetické bezpečnosti. Budeme na něm pracovat s procesorem ATmega32U4, který umí mimo jiné emulovat klávesnici, myš nebo gamepad. Ukážeme si, jakým způsobem lze této schopnosti využít k dobrému i ke zlému.
 

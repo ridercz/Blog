@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2012-03-23T23:00:49+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20120323-dnesni-pridel-novych-verzi.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-altairis.png -->
 
 Dnes jsem publikoval nové verze několika svých programů a knihoven:
 

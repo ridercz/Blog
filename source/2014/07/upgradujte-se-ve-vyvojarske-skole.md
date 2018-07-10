@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2014-07-14T23:59:33+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20140714-upgradujte-se-ve-vyvojarske-skole.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-gopas.png -->
 
 Mám zkušenost, že naprostá většina programátorů v ASP.NET zaostává ve znalostech za vývojem technologií. Mají sice (v tom lepším případě) moderní nástroje, nové verze a všechno, ale programují v nich zhruba stejně, jako v roce 2005. Těžko jim to vyčítat, protože novinky na nás Microsoft chrlí ve velkých kvantech a většina programátorů nemá na nějaké systematické vzdělávání čas a energii (což je často primárně vina jejich zaměstnavatelů). 
 

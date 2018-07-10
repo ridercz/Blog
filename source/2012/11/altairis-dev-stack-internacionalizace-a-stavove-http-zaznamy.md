@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2012-11-10T15:38:03+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20120323-dnesni-pridel-novych-verzi.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-altairis.png -->
 
 Konečně se mi podařilo zpracovat, nahrát a celkově zorganizovat všechny podklady z posledních třech akcí v Akvárku. Tip pro vás: pokud se vám nechce čekat a chcete jenom vidět záznam, přihlašte se k odběru YouTube kanálu [altairiscz](http://www.youtube.com/altairiscz). Publikovat samotné video zvládám obvykle docela rychle, horší je to s dodatečnými materiály.
 

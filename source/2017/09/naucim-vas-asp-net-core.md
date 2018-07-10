@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2017-09-09T23:44:56+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20160203-asp-net-mvc-pro-ty-kdo-ho-nemaji-radi.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-dnc.png -->
 
 Na páteční akci jsem vás (snad) přesvědčil, že budoucnost ASP.NET se jmenuje ASP.NET Core. Teď vás ho naučím používat. Připravil jsem totiž sadu čtyř dvoudenních kurzů, které jsou speciálně navržené pro stávající .NET programátory, které mají rychle uvést do nového světa .NETu.
 

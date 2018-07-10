@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2012-08-23T16:30:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20120823-novinky-v-asp-net-4-5-ef-code-first-migrations-model-binding-model-validation-zaznam.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-visualstudio.png -->
 
 Konečně jsem zpracoval tři týdny starý záznam z akce o (nejen)novinkávh v (nejen)ASP.NET 4.5. V této části najdete:
 

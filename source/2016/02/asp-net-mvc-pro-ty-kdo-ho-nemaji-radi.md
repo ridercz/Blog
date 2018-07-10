@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2016-02-03T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20160203-asp-net-mvc-pro-ty-kdo-ho-nemaji-radi.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-dnc.png -->
 
 Pro nedostatek lepších Microsoftem podporovaných možností jsem se s mohutným frfláním vrhnul na ASP.NET MVC. Pokud jste na tom stejně nebo se na to chystáte (a ono vám moc jiného nezbývá), připravil jsem pro vás dvě akce, které by vás mohly zajímat.
 
