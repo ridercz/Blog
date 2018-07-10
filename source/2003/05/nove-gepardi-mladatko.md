@@ -12,7 +12,7 @@ Počet uživatelů tohoto blogovacího systému se rozrostl na tři. Můj gepard
 
 *   [http://weblog.rider.cz](http://weblog.rider.cz/)
 *   [http://weblog.alraune.cz](http://weblog.alraune.cz/)
-*   [http://weblog.bestijka.cz](http://weblog.bestijka.cz/) 
+*   [http://weblog.bestijka.cz](http://weblog.bestijka.cz/)
 
 Posledně jmenovaný bestijčí blog patří [Myshi](http://www.bestijka.cz), která se mnou již přes tři roky sdílí počítačovou síť a lože (žádný společný stůl nemáme ;-).
 

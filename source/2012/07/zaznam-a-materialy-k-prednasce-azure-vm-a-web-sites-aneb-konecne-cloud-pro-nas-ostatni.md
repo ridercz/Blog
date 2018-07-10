@@ -21,25 +21,31 @@ Dvě výše zmíněné novinky konečně umožňují cloud využívat i nám ost
 Můžete si stáhnout [prezentaci](http://www.cdn.altairis.cz/Prednasky/20120704-AzureWeb.zip), kterou jsem používal. Nasazovaná aplikace je [GeekCore](http://www.geekcore.cz/) a je open source, její zdrojové kódy jsou na [CodePlexu](http://geekcore.codeplex.com/).
 
 Video záznam najdete na [YouTube](http://youtu.be/Qd5OMx9cCqo) nebo vložený níže:
- <iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/Qd5OMx9cCqo" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
+
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/Qd5OMx9cCqo" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ## Doporučené přednášky z TechEdu
 
 Účelem mé přednášky bylo představit vám tuto novou technologii. Další podrobnější informace najete například v záznamech následujících přednášek z TechEd Europe:
 
 *   **Úvodní přehledová přednáška** o tom, co vše je v Azure nového: [Scott Guthrie: Meet the New Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/FDN05) 
-*   **Azure Web Sites:** 
+*   **Azure Web Sites:**
 
-    *   <div style="text-align: left;">[Karandeep Anand, Nir Mashkowski: Web Sites on Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR209)</div> 
-    *   [Craig Kitterman, Nir Mashkowski: Windows Azure Web Sites: Under the Hood](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR305)  
-*   **Azure Virtual Machines: ** 
+    *   <div style="text-align: left;">[Karandeep Anand, Nir Mashkowski: Web Sites on Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR209)</div>
+
+    *   [Craig Kitterman, Nir Mashkowski: Windows Azure Web Sites: Under the Hood](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR305) 
+
+*   **Azure Virtual Machines: **
 
     *   [Mark Russinovich: Windows Azure Virtual Machines and Virtual Networks](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR208) 
-    *   [Vijay Rajagopalan: Deep Dive into Running Virtual Machines on Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR313)  
-*   **Azure Virtual Networks** 
+    *   [Vijay Rajagopalan: Deep Dive into Running Virtual Machines on Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR313) 
+
+*   **Azure Virtual Networks**
 
     *   [Ganesh Srinivasan: Overview of Windows Azure Networking Features](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR304) 
-    *   [Ganesh Srinivasan: Extending Enterprise Networks to Windows Azure using Windows Azure Virtual Networks](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR316)  
-*   **Storage:** 
+    *   [Ganesh Srinivasan: Extending Enterprise Networks to Windows Azure using Windows Azure Virtual Networks](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR316) 
 
-    *   [Jai Haridas: Windows Azure Storage: How it Works, Best Practices and Future Directions](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR306)  
+*   **Storage:**
+
+    *   [Jai Haridas: Windows Azure Storage: How it Works, Best Practices and Future Directions](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR306) 
+    

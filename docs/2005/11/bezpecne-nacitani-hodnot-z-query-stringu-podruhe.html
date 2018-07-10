@@ -7,25 +7,77 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V komentáři k mému předchozím článku o query string parametrech nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Bezpečné načítání hodnot z query stringu podruhé</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-11-23T02:49:02.407+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>23. listopadu 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V komentáři k mému článku <a href="/entry/article-20051109.aspx">Vytváření vlastních parametrů podruhé - &quot;bezpečný&quot; query string parametr</a> nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network.</p>
 <ul>
 <li><a href="https://www.cdn.altairis.cz/Blog/2005/20051123-QueryStringParser.zip">Stáhněte si jeho kód (C#) spolu s mou ukázkovou aplikací ve VB.NET i v C# (10 kB)</a></li>
 </ul>
 <p>Idea tohoto řešení je jednoduchá: Deklarujete si třídu, která reprezentuje parametry dané stránky. Pomocí atributu Arguments definujete, zda je daný parametr povinný, případně jakou má defaultní hodnotu:</p>
-<p>protected class QueryStringArguments { [Argument(ArgumentType.NonRequired, ParamName=&quot;StringParameter&quot;, DefaultValue=&quot;Defaultní hodnota nepovinného parametru&quot;)] public string StringParameter; [Argument(ArgumentType.Required, ParamName = &quot;IntParameter&quot;)] public int IntParameter; }</p>
+<pre><code>protected class QueryStringArguments
+{
+    [Argument(ArgumentType.NonRequired, ParamName=&quot;StringParameter&quot;, DefaultValue=&quot;Defaultní hodnota nepovinného parametru&quot;)]
+    public string StringParameter;
+    [Argument(ArgumentType.Required, ParamName = &quot;IntParameter&quot;)]
+    public int IntParameter;
+}
+</code></pre>
 <p>Ve shora uvedené třídě jsem deklaroval dva parametry. Jeden je celočíselný a povinný, druhý je řetězcový, nepovinný s defaultní hodnotou.</p>
 <p>V samotné stránce pak zavoláte metodu <em>QueryStringParser.ParseArguments</em>, která se pokusí naplnit tuto třídu hodnotami z query stringu. Pokud se jí to povede, získáte silně typovou sadu nastavení. Pokud ne (protože chybí povinné parametry, případně nesouhlasí typy), dojde k chybě.</p>
 <p>Toto řešení velice elegantním způsobem řeší načítání parametrů procedurálně, tedy z vašeho kódu.</p>
@@ -33,7 +85,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

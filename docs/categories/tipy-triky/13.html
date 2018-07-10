@@ -7,44 +7,62 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Rubrika Tipy, triky</h1>
       <section class="artlist">
-        <article>
-          <header>
-            <a href="/2005/04/pouziti-parametru-v-xslt-transformacich">Použití parametrů v XSLT transformacích</a>
-          </header>
-          <div>XSLT transformace je proces, v němž je XML dokument podle zapsaných pravidel překonvertován do jiného tvaru - nejčastěji XML v jiném formátu nebo HTML k prezentaci. Ve většíně případů, kdy se XSLT transformace využívá k prezentaci dat uživateli, se na různá data aplikuje vždy ta samá šablona. Někdy je ale potřebné, nebo minimálně užitečné, kromě těchto dvou vstupů dodat ještě něco dalšího.</div>
-          <footer>
-            <time datetime="2005-04-11T00:40:47.303+02:00">pondělí 11. dubna 2005</time>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <a href="/2005/04/personalizace-v-asp-net-2-0">Personalizace v ASP.NET 2.0</a>
-          </header>
-          <div>Zařekl jsem se, že se Whidbey vůbec nebudu zabývat, dokud nebude na světě alespoň beta 2 (kdo přepisoval aplikace pro .NET 1.0 z bety 1 do bety 2 ví proč). Nicméně toto mé úsilí jest systematicky podkopáváno Microsoftem i rozličnými nadšenci.</div>
-          <footer>
-            <time datetime="2005-04-10T02:33:57.373+02:00">neděle 10. dubna 2005</time>
-          </footer>
-        </article>
         <article>
           <header>
             <a href="/2005/04/rozesilani-hromadnych-e-mailovych-zprav-z-prostredi-net">Rozesílání hromadných e-mailových zpráv z prostředí .NET</a>
           </header>
           <div>Jeden článek o mailování z ASP.NET jsem už svého času napsal. Dotazy v konferencích a v neposlední řadě můj téměř shozený mailový server jsou však důkazem toho, že toto téma je stále živé.</div>
           <footer>
-            <time datetime="2005-04-07T05:06:19.08+02:00">čtvrtek 7. dubna 2005</time>
+            <time datetime="2005-04-07T05:06:19.08+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>čtvrtek 7. dubna 2005</time>
           </footer>
         </article>
         <article>
@@ -53,7 +71,8 @@
           </header>
           <div>ASP.NET umožňují programové vytváření serverových ovládacích prvků. U formulářových prvků ovšem může být problém s postbackem. Jednoduchý leč výživný příkládek</div>
           <footer>
-            <time datetime="2005-03-29T04:51:42.85+02:00">úterý 29. března 2005</time>
+            <time datetime="2005-03-29T04:51:42.85+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>úterý 29. března 2005</time>
           </footer>
         </article>
         <article>
@@ -62,7 +81,8 @@
           </header>
           <div>O možnosti využítí standardně zasílané hlavičky Accept-Language pro volbu preferovaného jazyka stránky jsem já osobně psal před čtyřmi lety (skoro). Dnešní živou diskusi na jistém fóru, týkající se magie způsobující že se moje osobní stránky někomu ukazují česky, někomu anglicky, jsem si zdůvodnil tím, že fórum je o psech a ne o počítačích. Když mi ovšem večer v mailboxu přistál dotaz jak z ASP.NET provést reverzní DNS lookup, kvůli volbě patřičné jazykové verze, došlo mi že je třeba jednat.</div>
           <footer>
-            <time datetime="2005-03-18T04:28:39.207+01:00">pátek 18. března 2005</time>
+            <time datetime="2005-03-18T04:28:39.207+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pátek 18. března 2005</time>
           </footer>
         </article>
         <article>
@@ -71,7 +91,8 @@
           </header>
           <div>Nastavovat komplikované filtrování portů na jednom počítači přes GUI je opruz. Dělat totéž na osmi je na sebevraždu.</div>
           <footer>
-            <time datetime="2005-03-13T04:07:26.567+01:00">neděle 13. března 2005</time>
+            <time datetime="2005-03-13T04:07:26.567+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 13. března 2005</time>
           </footer>
         </article>
         <article>
@@ -80,7 +101,8 @@
           </header>
           <div>Převážně nevážné ohlédnutí za programátorským seminářem</div>
           <footer>
-            <time datetime="2005-02-26T04:17:26.727+01:00">sobota 26. února 2005</time>
+            <time datetime="2005-02-26T04:17:26.727+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 26. února 2005</time>
           </footer>
         </article>
         <article>
@@ -89,7 +111,8 @@
           </header>
           <div>Do přednášky dva dny a já mám hotovou prezentaci, neuvěřitelné</div>
           <footer>
-            <time datetime="2005-02-21T22:26:01.633+01:00">pondělí 21. února 2005</time>
+            <time datetime="2005-02-21T22:26:01.633+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 21. února 2005</time>
           </footer>
         </article>
         <article>
@@ -98,7 +121,8 @@
           </header>
           <div>Odkaz na užitečný článek</div>
           <footer>
-            <time datetime="2005-02-21T22:06:36.703+01:00">pondělí 21. února 2005</time>
+            <time datetime="2005-02-21T22:06:36.703+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 21. února 2005</time>
           </footer>
         </article>
         <article>
@@ -107,19 +131,60 @@
           </header>
           <div>ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Na jeho příkladu si ukážeme, jak se dá v .NET vytvořit vlastní validátor.</div>
           <footer>
-            <time datetime="2005-01-29T03:17:44.853+01:00">sobota 29. ledna 2005</time>
+            <time datetime="2005-01-29T03:17:44.853+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 29. ledna 2005</time>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <a href="/2005/01/prace-s-obsahem-souboru-v-net">Práce s obsahem souborů v .NET</a>
+          </header>
+          <div>Jedním z námětů, které jsem obdržel v rámci své minulé výzvy, byla žádost o vysvětlení práce s textovými soubory. Zadání jsem si rozšířil na práci s obsahem souborů obecně - nebo chcete-li se streamy.</div>
+          <footer>
+            <time datetime="2005-01-28T00:39:37.31+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pátek 28. ledna 2005</time>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <a href="/2005/01/microsofti-mailove-konference-na-emwacu-zakladni-informace">Microsoftí mailové konference na EMWACu - základní informace</a>
+          </header>
+          <div>Jedním z nejlepších míst kde se můžete poradit, jsou mailové konference na EMWACu. Želbohu, přihlásit se do nich není právě jednoduché.</div>
+          <footer>
+            <time datetime="2005-01-25T02:01:01.717+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>úterý 25. ledna 2005</time>
           </footer>
         </article>
         <footer>
-          <a href="./" rel="first">Nejnovější</a>
-          <a href="./12" rel="prev">Novější</a>
-          <a href="./14" rel="next">Starší</a>
-          <a href="./15" rel="last">Nejstarší</a>
+          <span class="prev">
+            <a href="./" rel="first">Nejnovější</a>
+            <a href="./12" rel="prev">Novější</a>
+          </span>
+          <span class="next">
+            <a href="./14" rel="next">Starší</a>
+            <a href="./15" rel="last">Nejstarší</a>
+          </span>
+          <span class="info">13 / 15</span>
         </footer>
       </section>
-      <footer>
-      Footer
-    </footer>
     </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

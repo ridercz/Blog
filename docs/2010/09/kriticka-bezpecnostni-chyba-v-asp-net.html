@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V pátek byla zveřejněna kritická bezpečnostní chyba ve všech verzích ASP.NET, od 1.0 po 4.0 včetně. Dosud na ni neexistuje patch, jenom workaround, a ten je bohužel dosti pracný." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Kritická bezpečnostní chyba v ASP.NET</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2010-09-21T03:27:03.977+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>21. září 2010</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V pátek byla zveřejněna kritická bezpečnostní chyba ve <strong>všech verzích ASP.NET</strong>, od 1.0 po 4.0 včetně. Dosud na ni neexistuje patch, jenom workaround, a ten je bohužel dosti pracný.</p>
 <p>Abychom byli zcela korektní, tak původní příčina, známá jako &quot;Padding Oracle Exploit&quot; nemá v zásadě s ASP.NET nic společného, je to kryptografický útok, který zahrnuje rodinu symetrických algoritmů, zahrnující bohužel i AES – nejpoužívanější symetrický algoritmus dneška. Tímto problémem jsou zasaženy všechny webové frameworky a nejenom ony.</p>
 <p>Problém ASP.NET spočívá v tom, že využívá AES způsobem, který umožňuje tento problém využít mimo jiné k získání obsahu jinak chráněných souborů – zejména <em>web.config</em>. Tento soubor typicky obsahuje informace jako connection string a další, které mohou být dále zneužitelné různým způsobem.</p>
@@ -37,7 +82,7 @@
 <h2 id="nic-se-neji-tak-horke">Nic se nejí tak horké…</h2>
 <p>Jistou uklidňující zprávou je, že v době vydání tohoto článku nebyl zatím k dispozici žádný hotový nástroj pro provedení útoku na ASP.NET aplikaci. Na <a href="http://netifera.com/research/">výše linkované stránce</a> je k nalezení POET (Padding Oracle Exploit Tool) ve verzi 1.0, která ASP.NET přímo nepodporuje.</p>
 <p>Také dosud <strong>nebyl zaznamenán žádný úspěšný útok na produkční aplikaci</strong>. Jediné co je k dispozici, je následující video na YouTube:</p>
- <div style="padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 425px; padding-right: 0px; display: block; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:198ad0d7-2351-4f21-b387-8aa274accca9" class="wlWriterEditableSmartContent"><div>[![](https://www.cdn.altairis.cz/Blog/2010/20100921-video9bec751ad1ef.jpg)](http://www.youtube.com/watch?v=yghiC_U2RaM)</div></div> 
+  <div style="padding-bottom: 0px; margin: 0px auto; padding-left: 0px; width: 425px; padding-right: 0px; display: block; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:198ad0d7-2351-4f21-b387-8aa274accca9" class="wlWriterEditableSmartContent"><div>[![](https://www.cdn.altairis.cz/Blog/2010/20100921-video9bec751ad1ef.jpg)](http://www.youtube.com/watch?v=yghiC_U2RaM)</div></div>  
 <p>Bohužel, tento uklidňující stav je pouze dočasný. Dá se předpokládat, že mechanismus pro úspěšný útok bude k dispozici v řádu hodin, nejvýše dnů. Doporučuji tedy okamžitě přijmout odpovídající opatření.</p>
 <h2 id="preventivni-opatreni">Preventivní opatření</h2>
 <p>Dopady útoku může zmínit šifrování kritických konfiguračních sekcí. Útočník sice získá konfigurační soubor, ale důležité údaje v něm budou zašifrované. Podrobnější informace najdete na MSDN:</p>
@@ -51,7 +96,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

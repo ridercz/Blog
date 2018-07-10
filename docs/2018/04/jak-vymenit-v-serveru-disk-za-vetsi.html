@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Byl jsem tázán na některé okolnosti výměny disku v serveru za větší. Vyzkoušel jsem si simulaci ve virtuálním počítači a říkám si, že by se popis postupu mohl hodit i někomu dalšímu." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jak vyměnit v serveru disk za větší</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2018-04-25T16:36:46+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>25. dubna 2018</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Byl jsem tázán na některé okolnosti výměny disku v serveru za větší. Vyzkoušel jsem si simulaci ve virtuálním počítači a říkám si, že by se popis postupu mohl hodit i někomu dalšímu.</p>
 <p>Následující screenshot popisuje výchozí stav v Disk Managementu. Na serveru je operační systém Windows Server 2012 R2 (ale uvedený postup funguje bez ohledu na verzi Windows). Server má celkem tři fyzické disky: jeden je systémový a toho se naše změny týkat nebudou, další dva jsou v mirroru jako datové. Chceme oba dva disky vyměnit za větší – 10 GB na 20 GB (reálně na velikosti nezáleží, poměrně malou velikost jsem zvolil, aby demo bylo rychlejší). Výměnu chceme provést pokud možno za provozu bez výpadku, nebo jenom s minimálním výpadkem. Pokud server podporuje hot swap disků, lze vše provést za provozu, jinak je nutno server pro výměnu vypnout.</p>
 <p><a href="https://www.cdn.altairis.cz/Blog/2018/20180425-image_2.png"><img src="https://www.cdn.altairis.cz/Blog/2018/20180425-image_thumb.png" alt="image" title="image" /></a></p>
@@ -51,7 +96,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

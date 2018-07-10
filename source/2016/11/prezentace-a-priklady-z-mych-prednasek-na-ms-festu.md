@@ -20,7 +20,7 @@ V této dvojpřednášce jsem se vám snažil ukázat pyramidu bezpečnosti - tu
 
 Představil jsem vám kryptografickou knihovnu [Inferno](http://www.securitydriven.net/inferno), která poněkud v rozporu se svým názvem nepředstavuje peklo, ale naopak se vás toho pekla snaží uchránit. Je to high-level knihovna, která umí řešit typické problémy, aniž by po programátorovi vyžadovala odpovědi na nepohodlné otázky.
 
-*   [Prezentace a příklady ke stažení (700 kB)](http://www.cdn.altairis.cz/Prednasky/20161127-MSFest-Crypto101.7z) 
+*   [Prezentace a příklady ke stažení (700 kB)](http://www.cdn.altairis.cz/Prednasky/20161127-MSFest-Crypto101.7z)
 
 ## Jak na opravdové fulltextové vyhledávání s Microsoft SQL Serverem
 

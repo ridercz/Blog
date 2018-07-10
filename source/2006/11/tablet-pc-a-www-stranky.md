@@ -9,6 +9,8 @@
 <!-- dcterms:created = 2006-11-10T11:02:00.693+01:00 -->
 <!-- dcterms:dateAccepted = 2006-11-10T11:02:00.693+01:00 -->
 
+ 
+
 S poklesem jejich cen se dá očekávat razantnější nástup počítačů typu Tablet PC. Nedávno jsem si jedno pořídil a chci se s vámi podělit o dojmy z jeho používání ve vztahu k WWW stránkám.
 
 Tablet PC je přenosný počítač s „dotykovou“ obrazovkou. „Dotykovou“ proto v uvozovkách, protože na současné tablety se píše speciálním elektronickým perem, displej není citlivý na tlak, jako je tomu u PDA. Viděl jsem nicméně i prototyp touchscreen tabletu – mají sice rozličné nevýhody, ale časem se podle mne uplatní, protože jejich výroba je levnější.

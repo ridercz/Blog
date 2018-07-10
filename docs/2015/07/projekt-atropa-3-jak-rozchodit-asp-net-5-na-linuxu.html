@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit &quot;zlý&quot; počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Projekt Atropa (3): Jak rozchodit ASP.NET 5 na Linuxu</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2015-07-27T00:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>27. července 2015</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/projekt-atropa" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit &quot;zlý&quot; počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci. Uvedený postup je sice psán na míru Raspberry Pi a Raspbianu, ale mělo by být možné jej použít obecně, i pro jiné distribuce Linuxu.</p>
 <h2 id="architektura-asp.net-5">Architektura ASP.NET 5</h2>
 <p>Dnes je de facto podporován jenom jediný runtime (.NET Framework) a ASP.NET je závislé na řadě starých API pevně svázaných s Windows a IIS. Není prakticky možné provozovat ASP.NET na ničem jiném, než na Windows. Takhle vypadá ASP.NET dnes, ve verzi 4.5:</p>
@@ -34,22 +85,50 @@
 </ul>
 <h2 id="instalace-mono-runtime">Instalace Mono runtime</h2>
 <p>V ideálním světě by stačilo napsat <code>sudo apt-get install mono-complete</code>. Nicméně, v ideálním světě nežijeme a v repozitářích Raspbianu není v době psaní tohoto článku dostupná aktuální verze Mona. A verze, která je k dispozici, příliš nefunguje a není kompatibilní s ASP.NET 5. Takže k instalaci je třeba poněkud více příkazů:</p>
-<p>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF echo &quot;deb <a href="http://download.mono-project.com/repo/debian">http://download.mono-project.com/repo/debian</a> wheezy main&quot; | sudo tee /etc/apt/sources.list.d/mono-xamarin.list sudo apt-get update &amp;&amp; sudo apt-get upgrade -y &amp;&amp; sudo apt-get install mono-complete -y</p>
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF 
+echo &quot;deb http://download.mono-project.com/repo/debian wheezy main&quot; | sudo tee /etc/apt/sources.list.d/mono-xamarin.list 
+sudo apt-get update &amp;&amp; sudo apt-get upgrade -y &amp;&amp; sudo apt-get install mono-complete -y
+</code></pre>
 <p>Prvními dvěma příkazy přidáme do seznamu repozitářů balíčkovacího systému server pro distribuci Mona. Dalšími příkazy aktualizujeme seznam dostupných balíčků, nainstalujeme dostupné aplikace a konečně kompletní distribuci Mona. Jejich vykonání bude chvíli trvat, protože je nutné stáhnout a nainstalovat spoustu věcí.</p>
 <h2 id="instalace-libuv">Instalace Libuv</h2>
 <p>ASP.NET 5 využívá knihovnu Libuv, která slouží k asynchronnímu programování. Bohužel, není k dispozici jako balíček. Začněte tím, že se podíváte na <a href="https://github.com/libuv/libuv/releases">stránky projektu na GitHubu</a> a zjistíte aktuální verzi. V době psaní článku byla aktuální verze 1.6.1. Pokud mezi tím vyjde novější, upravte v příkazech číslo verze.</p>
 <p>K instalaci použijte následující příkazy:</p>
-<p>sudo apt-get install automake libtool -y curl -sSL <a href="https://github.com/libuv/libuv/archive/v1.6.1.tar.gz">https://github.com/libuv/libuv/archive/v1.6.1.tar.gz</a> | sudo tar zxfv - -C /usr/local/src cd /usr/local/src/libuv-1.6.1 sudo sh autogen.sh sudo ./configure sudo make sudo make install sudo rm -rf /usr/local/src/libuv-1.6.1 &amp;&amp; cd ~/ sudo ldconfig</p>
+<pre><code>sudo apt-get install automake libtool -y
+curl -sSL https://github.com/libuv/libuv/archive/v1.6.1.tar.gz | sudo tar zxfv - -C /usr/local/src
+cd /usr/local/src/libuv-1.6.1
+sudo sh autogen.sh
+sudo ./configure
+sudo make
+sudo make install
+sudo rm -rf /usr/local/src/libuv-1.6.1 &amp;&amp; cd ~/
+sudo ldconfig
+</code></pre>
 <p>První příkaz nainstaluje balíčky <code>automake</code> a <code>libtool</code>, které budeme potřebovat dále. Druhým příkazem stáhnete zdrojové kódy knihovny a rozbalíte je do dočasné složky v <code>/usr/local/src</code>. Dalšími příkazy potom kód zkompilujete a dočasné soubory smažete.</p>
 <h2 id="pridani-certifikatu-mezi-duveryhodne">Přidání certifikátů mezi důvěryhodné</h2>
 <p>ASP.NET 5 si průběžně dotahuje balíčky z různých serverů. Komunikuje s nimi přes HTTPS. Následující sekvencí příkazů všechny použité certifikáty označíme jako důvěryhodné:</p>
-<p>sudo yes | sudo certmgr -ssl -m -v <a href="https://go.microsoft.com">https://go.microsoft.com</a> sudo yes | sudo certmgr -ssl -m -v <a href="https://nugetgallery.blob.core.windows.net">https://nugetgallery.blob.core.windows.net</a> sudo yes | sudo certmgr -ssl -m -v <a href="https://myget.org">https://myget.org</a> sudo yes | sudo certmgr -ssl -m -v <a href="https://nuget.org">https://nuget.org</a> sudo yes | sudo certmgr -ssl -m -v <a href="https://www.myget.org/F/aspnetvnext/">https://www.myget.org/F/aspnetvnext/</a> sudo mozroots --import --sync --quiet</p>
+<pre><code>sudo yes | sudo certmgr -ssl -m -v https://go.microsoft.com
+sudo yes | sudo certmgr -ssl -m -v https://nugetgallery.blob.core.windows.net
+sudo yes | sudo certmgr -ssl -m -v https://myget.org
+sudo yes | sudo certmgr -ssl -m -v https://nuget.org
+sudo yes | sudo certmgr -ssl -m -v https://www.myget.org/F/aspnetvnext/
+sudo mozroots --import --sync --quiet
+</code></pre>
 <h2 id="instalace-asp.net-5">Instalace ASP.NET 5</h2>
 <p>Nyní můžeme konečně nainstalovat ASP.NET 5 jako takové. Základem všeho je DNVM - .NET Version Manager. Můžete totiž mít nainstalovány různé verze .NETu side by side</p>
 <p>Instalační skript pro DNVM je k dispozici na GitHubu a získáte jej následujícím příkazem:</p>
-<p>curl -sSL <a href="https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh">https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh</a> | DNX_BRANCH=dev sh &amp;&amp; source ~/.dnx/dnvm/dnvm.sh</p>
+<pre><code>curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh &amp;&amp; source ~/.dnx/dnvm/dnvm.sh
+</code></pre>
 <p>Nejsou ale nainstalovány žádné verze DNX, jak se můžete přesvědčit příkazem <code>dnvm list</code>. Pro instalaci nejnovější betaverze použijte příkaz <code>dnvm upgrade</code>. V době psaní článku jde o verzi 1.0.0-beta5, jak vidíte v následujícím výstupu uvedeného příkazu:</p>
-<p><em>pi@raspberrypi ~ $</em> <strong>dnvm upgrade</strong> Determining latest version Latest version is 1.0.0-beta5 Downloading dnx-mono.1.0.0-beta5 from <a href="https://www.nuget.org/api/v2">https://www.nuget.org/api/v2</a> Download: <a href="https://www.nuget.org/api/v2/package/dnx-mono/1.0.0-beta5">https://www.nuget.org/api/v2/package/dnx-mono/1.0.0-beta5</a> ######################################################################## 100.0% Installing to /home/pi/.dnx/runtimes/dnx-mono.1.0.0-beta5 Adding /home/pi/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin to process PATH Setting alias 'default' to 'dnx-mono.1.0.0-beta5'</p>
+<pre><code>*pi@raspberrypi ~ $* **dnvm upgrade**
+Determining latest version
+Latest version is 1.0.0-beta5
+Downloading dnx-mono.1.0.0-beta5 from https://www.nuget.org/api/v2
+Download: https://www.nuget.org/api/v2/package/dnx-mono/1.0.0-beta5
+######################################################################## 100.0%
+Installing to /home/pi/.dnx/runtimes/dnx-mono.1.0.0-beta5
+Adding /home/pi/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin to process PATH
+Setting alias 'default' to 'dnx-mono.1.0.0-beta5'
+</code></pre>
 <p>Pokud v době, kdy budete ASP.NET instalovat, bude k dispozici novější verze, musíte patřičným způsobem upravit i následující soubory a projekty.</p>
 <p>Poznámka: v předchozích verzích se DNVM jmenoval KVM a byly k dispozici i jiné příkazy. Pokud najdete příklady, kde je příliš mnoho &quot;káček&quot;, patrně jsou zastaralé.</p>
 <p>Nyní byla dokončena instalace ASP.NET 5 a můžeme vytvořit první projekt.</p>
@@ -59,10 +138,36 @@
 <p>Poté vytvoříme v uvedeném adresáři definiční soubor <code>project.json</code>. K editaci souborů budeme obecně používat editor nano, protože je dosti komfortní a uživatelé Windows s ním budou nejspíše dost kompatibilní. Spusťte jej příkazem <code>nano ~/www/wifigate/project.json</code>.</p>
 <p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nano_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nano_thumb.png" alt="Editor Nano" title="Editor Nano" /></a></p>
 <p>Zadejte do souboru následující kód (nezapomeňte jej upravit, budete-li používat novější verzi, než <code>1.0.0-beta5</code>; k náhradě textu můžete v editoru Nano použít klávesovou zkratku <em>Ctrl+W Ctrl+R</em>):</p>
-<p>{ &quot;dependencies&quot;: { &quot;Kestrel&quot;: &quot;1.0.0-beta5&quot;, &quot;Microsoft.AspNet.Diagnostics&quot;: &quot;1.0.0-beta5&quot;, &quot;Microsoft.AspNet.Hosting&quot;: &quot;1.0.0-beta5&quot;, &quot;Microsoft.AspNet.Server.WebListener&quot;: &quot;1.0.0-beta5&quot;, &quot;Microsoft.AspNet.StaticFiles&quot;: &quot;1.0.0-beta5&quot; }, &quot;frameworks&quot;: { &quot;dnx451&quot;: , &quot;dnxcore50&quot;: , }, &quot;commands&quot;: { &quot;kestrel&quot;: &quot;Microsoft.AspNet.Hosting --server Kestrel --server.urls <a href="http://localhost:5004%22">http://localhost:5004&quot;</a> } }</p>
+<pre><code>{
+  &quot;dependencies&quot;: {
+      &quot;Kestrel&quot;: &quot;1.0.0-beta5&quot;,
+      &quot;Microsoft.AspNet.Diagnostics&quot;: &quot;1.0.0-beta5&quot;,
+      &quot;Microsoft.AspNet.Hosting&quot;: &quot;1.0.0-beta5&quot;,
+      &quot;Microsoft.AspNet.Server.WebListener&quot;: &quot;1.0.0-beta5&quot;,
+      &quot;Microsoft.AspNet.StaticFiles&quot;: &quot;1.0.0-beta5&quot;
+  },
+  &quot;frameworks&quot;: {
+      &quot;dnx451&quot;: { },
+      &quot;dnxcore50&quot;: { },
+  },
+  &quot;commands&quot;: {
+      &quot;kestrel&quot;: &quot;Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004&quot;
+  }
+}
+</code></pre>
 <p>Editor ukončete stikem <em>Ctrl+X</em>. Na otázku, zda se má modifikovaný obsah uložit, odpovězte <em>Y</em> (ano). Nabídnutý název souboru neměňte a potvrďte jej stiskem klávesy <em>Enter</em>.</p>
 <p>Stejným způsobem vytvořte v téže složce soubor <code>Startup.cs</code>, jehož obsah bude následující:</p>
-<p>using Microsoft.AspNet.Builder; namespace Altairis.WiFiGate { public class Startup { public void Configure(IApplicationBuilder app) { app.UseStaticFiles(); app.UseWelcomePage(); } } }</p>
+<pre><code>using Microsoft.AspNet.Builder;
+
+namespace Altairis.WiFiGate {
+    public class Startup {
+        public void Configure(IApplicationBuilder app) {
+            app.UseStaticFiles();
+            app.UseWelcomePage();
+        }
+    }
+}
+</code></pre>
 <p>Tento kód vesměs nic nedělá, jenom zobrazí ukázkovou stránku, abychom věděli, že vše řádně funguje.</p>
 <h2 id="obnoveni-nuget-balicku-a-spusteni-projektu">Obnovení NuGet balíčků a spuštění projektu</h2>
 <p>Před spuštěním aplikace je nutné nainstalovat (obnovit) balíčky, specifikované v souboru <code>project.json</code>. To jest činiti příkazem <code>dnu restore ~/www/wifigate/</code>.</p>
@@ -72,13 +177,44 @@
 <p>Gratulujeme, právě jste zprovoznili ASP.NET 5 aplikaci na Raspberry Pi na Linuxu.</p>
 <p>Za normálních okolností byste měli mít možnost ukončit Kestrel tím, že stisknete Enter.  Aktuální beta ovšem obsahuje chybu, takže je nutné použít poněkud dramatičtější prostředky.</p>
 <p>Nejprve proces pozastavte stiskem klávesové zkratky <em>Ctrl+Z</em>. Poté si příkazem <code>ps</code> najděte proces jménem <code>mono</code> a zjistěte jeho pid (v prvním sloupci, například zde 18080). Pomocí příkazu <code>kill -9 &lt;pid&gt;</code> proces zabijte. Že vše proběhlo v pořádku si můžete ověřit opětovným spuštěním příkazu <code>ps</code>. Celou sekvenci vidíte zde:</p>
-<p><em>pi@raspberrypi ~ $</em>** dnx ~/www/wifigate/ kestrel** Started [1]+ Stopped dnx ~/www/wifigate/ kestrel *pi@raspberrypi ~ <span class="math">***ps** PID TTY TIME CMD 18001 pts/0 00:00:01 bash 18080 pts/0 00:00:54 mono 18090 pts/0 00:00:00 ps *pi@raspberrypi ~</span> *<strong>kill -9 18080</strong> <em>pi@raspberrypi ~ <span class="math">***ps** PID TTY TIME CMD 18001 pts/0 00:00:01 bash 18091 pts/0 00:00:00 ps [1]+ Killed dnx ~/www/wifigate/ kestrel *pi@raspberrypi ~</span></em></p>
+<pre><code>*pi@raspberrypi ~ $*** dnx ~/www/wifigate/ kestrel**
+Started
+
+[1]+  Stopped                 dnx ~/www/wifigate/ kestrel
+*pi@raspberrypi ~ $ ***ps**
+  PID TTY          TIME CMD
+18001 pts/0    00:00:01 bash
+18080 pts/0    00:00:54 mono
+18090 pts/0    00:00:00 ps
+*pi@raspberrypi ~ $ ***kill -9 18080**
+*pi@raspberrypi ~ $ ***ps**
+  PID TTY          TIME CMD
+18001 pts/0    00:00:01 bash
+18091 pts/0    00:00:00 ps
+[1]+  Killed                  dnx ~/www/wifigate/ kestrel
+*pi@raspberrypi ~ $*
+</code></pre>
 <p>Aplikace nám sice běží, ale jenom na vývojovém serveru a musíme jí ručně spustit, neběží v pozadí jako služba. Jak to zařídit, to si ukážeme v dalším pokračování za týden.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

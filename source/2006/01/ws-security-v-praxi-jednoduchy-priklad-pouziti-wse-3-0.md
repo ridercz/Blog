@@ -39,7 +39,19 @@ Tento článek předpokládá, že laskavý čtenář disponuje jistými znalost
 
 Naše ukázková webová služba sama o sobě nepředstavuje nižádnou ukázku programátorského umu. Založte si nový webový projekt a umístěte do něj novou webovou službu. Ponecháme onu ukázkovou metodu `HelloWorld()`, pro naše účely zcela postačuje. Zdrojový kód tedy vypadá nějak takto:
 
-Imports System.Web Imports System.Web.Services Imports System.Web.Services.Protocols <WebService(Namespace:="http://tempuri.org/")> _ <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _ <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _ Public Class WebService Inherits System.Web.Services.WebService <WebMethod()> _ Public Function HelloWorld() As String Return "Hello World" End Function End Class
+    Imports System.Web
+    Imports System.Web.Services
+    Imports System.Web.Services.Protocols
+    <WebService(Namespace:="http://tempuri.org/")> _
+    <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    Public Class WebService
+        Inherits System.Web.Services.WebService
+        <WebMethod()> _
+        Public Function HelloWorld() As String
+            Return "Hello World"
+        End Function
+    End Class
 
 Chceme-li tuto metodu využívat, není třeba se v dané chvíli obtěžovat žádnými uživatelskými jmény a podobně. Ukázkovou aplikaci jistě dokážete vytvořit sami, jednu najdete v přiložených příkladech jako projekt **UnsecureClient**.
 
@@ -53,7 +65,18 @@ Toto je **velmi důležitý krok**, protože jinak si vytvoříte roztomilou bez
 
 Seznam povolených protokolů můžeme měnit ve `web.config`u. Odstraníme z něj všechny protokoly s výjimkou `AnyHttpSoap` a `Documentation`. Posledně jmenovaný se stará o zobrazení informační stránky s popisem webové služby.
 
-<?xml version="1.0" encoding="utf-8"?> <configuration> <system.web> <webServices> <protocols> <clear /> <add name="Documentation" /> <add name="AnyHttpSoap" /> </protocols> </webServices> </system.web> </configuration>
+    <?xml version="1.0" encoding="utf-8"?>
+    <configuration>
+      <system.web>
+        <webServices>
+          <protocols>
+            <clear />
+            <add name="Documentation" />
+            <add name="AnyHttpSoap" />
+          </protocols> 
+        </webServices>
+      </system.web>
+    </configuration>
 
 ### Vytvoření databáze uživatelů
 
@@ -95,7 +118,20 @@ WSE standardně disponuje pouze ověřováním proti systémové databázi uživ
 
 Vytvoříme tedy třídu `MembershipUsernameTokenManager` a umístíme ji do namespace `WseDemo` (je nutno použít nějaký namespace, je vcelku jedno jaký). Tato třída bude dědit od `Microsoft.Web.Services3.Security.Tokens.UsernameTokenManager` a bude přepisovat toliko metodu `AuthenticateToken`:
 
-Namespace WseDemo Public Class MembershipUsernameTokenManager Inherits Microsoft.Web.Services3.Security.Tokens.UsernameTokenManager Protected Overrides Function AuthenticateToken(ByVal Token As Microsoft.Web.Services3.Security.Tokens.UsernameToken) As String ' Validate username and password using configured membership provider If Not Membership.ValidateUser(Token.Username, Token.Password) Then Return Nothing ' Create new principal based on user name Dim I As New System.Security.Principal.GenericIdentity(Token.Username) Dim P As New System.Security.Principal.GenericPrincipal(I, Roles.GetRolesForUser(Token.Username)) Token.Principal = P Return Token.Password End Function End Class End Namespace
+    Namespace WseDemo
+        Public Class MembershipUsernameTokenManager
+            Inherits Microsoft.Web.Services3.Security.Tokens.UsernameTokenManager
+            Protected Overrides Function AuthenticateToken(ByVal Token As Microsoft.Web.Services3.Security.Tokens.UsernameToken) As String
+                ' Validate username and password using configured membership provider
+                If Not Membership.ValidateUser(Token.Username, Token.Password) Then Return Nothing
+                ' Create new principal based on user name
+                Dim I As New System.Security.Principal.GenericIdentity(Token.Username)
+                Dim P As New System.Security.Principal.GenericPrincipal(I, Roles.GetRolesForUser(Token.Username))
+                Token.Principal = P
+                Return Token.Password
+            End Function
+        End Class
+    End Namespace
 
 Tato metoda obdrží jako vstupní parametr `UsernameToken` a vrací řetězec`. `Pokud je autentizace úspěšná, vrací údaj předaný jako heslo (`Token.Password`); není-li, vrací `Nothing`, případně může vyhodit výjimku.
 
@@ -113,7 +149,20 @@ V objevivším se okně zadejte do položky **Type** plný název vámi vytvoře
 
 Posledním krokem na straně serveru je nutné zajistit, aby se námi vytvořená politika jménem `MyServerPolicy` aplikovala na naši webovou službu (politik můžete mít samozřejmě více pro různé služby). Jest tak učiniti pomocí atributu `Microsoft.Web.Services3.Policy`, jímž obohatíme definici třídy naší webové služby, takže kód bude vypadat takto:
 
-Imports System.Web Imports System.Web.Services Imports System.Web.Services.Protocols <WebService(Namespace:="http://tempuri.org/")> _ <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _ <Microsoft.Web.Services3.Policy("MyServerPolicy")> _ <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _ Public Class WebService Inherits System.Web.Services.WebService <WebMethod()> _ Public Function HelloWorld() As String Return "Hello World" End Function End Class
+    Imports System.Web
+    Imports System.Web.Services
+    Imports System.Web.Services.Protocols
+    <WebService(Namespace:="http://tempuri.org/")> _
+    <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
+    <Microsoft.Web.Services3.Policy("MyServerPolicy")> _
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+    Public Class WebService
+        Inherits System.Web.Services.WebService
+        <WebMethod()> _
+        Public Function HelloWorld() As String
+            Return "Hello World"
+        End Function
+    End Class
 
 ## Klientská část
 
@@ -125,7 +174,14 @@ Přidejte si běžným způsobem odkaz na webovou službu - pojmenujte ji třeba
 
 Vlastní kód pro obsluhu stisknutého tlačítka je jednoduchý:
 
-Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click Dim MyToken As New Microsoft.Web.Services3.Security.Tokens.UsernameToken(Me.TextBoxUserName.Text, Me.TextBoxPassword.Text, Microsoft.Web.Services3.Security.Tokens.PasswordOption.SendPlainText) Dim HW As New HelloWorldService.WebServiceWse() HW.SetPolicy("MyClientPolicy") HW.SetClientCredential(MyToken) Dim Response As String = HW.HelloWorld() MsgBox("Web service returned: " & Response, MsgBoxStyle.Information) End Sub
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim MyToken As New Microsoft.Web.Services3.Security.Tokens.UsernameToken(Me.TextBoxUserName.Text, Me.TextBoxPassword.Text, Microsoft.Web.Services3.Security.Tokens.PasswordOption.SendPlainText)
+        Dim HW As New HelloWorldService.WebServiceWse()
+        HW.SetPolicy("MyClientPolicy")
+        HW.SetClientCredential(MyToken)
+        Dim Response As String = HW.HelloWorld()
+        MsgBox("Web service returned: " & Response, MsgBoxStyle.Information)
+    End Sub
 
 Při zadání chybného uživatelského jména či hesla dojde k výjimce, u živých aplikací je tedy vhodné ošetřit chybové stavy.
 
@@ -135,10 +191,11 @@ Při zadání chybného uživatelského jména či hesla dojde k výjimce, u ži
 2.  Tento problém řeší rozšiřující standard WS-Security, který je v prostředí .NET přítomen v podobě balíku Web Services Enhancements, který je možno si zdarma stáhnout.
 3.  Jaká pravidla se na tu kterou službu vztahují, jest určovati nejlépe deklarativně, pomocí tzv. politik (policy).
 4.  Standardně s WSE dodávané třídy umožňují pouze autentizaci proti Windows databázi uživatelů a/nebo pomocí klientských certifikátů.
-5.  Je nicméně snadné napsat si vlastní `UsernameTokenManager`, který může používat libovolnou databázi uživatelů. 
+5.  Je nicméně snadné napsat si vlastní `UsernameTokenManager`, který může používat libovolnou databázi uživatelů.
 
 ### Odkazy
 
 *   [Zdrojové kódy ke stažení](https://www.cdn.altairis.cz/Blog/2006/20060112-wse-samples.zip) 
-*   [Článek o WSE na MSDN (anglicky)](http://msdn.microsoft.com/library/en-us/dnpag2/html/wss_ch3_impdirectauth_wse30.asp) 
-*   [Stažení WSE 3.0](http://www.microsoft.com/downloads/details.aspx?FamilyID=018a09fd-3a74-43c5-8ec1-8d789091255d&DisplayLang=en) 
+*   [Článek o WSE na MSDN (anglicky)](http://msdn.microsoft.com/library/en-us/dnpag2/html/wss_ch3_impdirectauth_wse30.asp)
+
+*   [Stažení WSE 3.0](http://www.microsoft.com/downloads/details.aspx?FamilyID=018a09fd-3a74-43c5-8ec1-8d789091255d&DisplayLang=en)

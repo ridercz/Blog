@@ -18,7 +18,7 @@
 *   Pokud možno paměťové médium CF nebo MemoryStick, ale od toho jsem v nouzi ochoten ustoupit.
 *   Nesmí to být Minolta (zatím jsem nenašel výrobek této značky, která by *opravdu* fungoval a nehodlám jim dávat další šanci připravit mne o nervy).
 *   Rychlé reakce (malé zpoždění po stisku spouště) a možnost kontinuálního snímání alespoň 1 fps.
-*   Smysluplné rozměry. Což v mém případě znamená ne příliš malé. 
+*   Smysluplné rozměry. Což v mém případě znamená ne příliš malé.
 
 Zdá se, že nejěvštím problémem jsou poslední dva body. Všichni výrobci produkují stylové kompakty (tedy nic pro moje pazoury) a šetří na procesorech, takže je to pppoooommmmaaaalllléééé.
 

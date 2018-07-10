@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Další důvod proč se učit psát HTTP moduly se jmenuje IIS 7 - nová generace web serveru od Microsoftu" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>IIS 7: Per aspera ad astra</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-01-12T23:15:30.547+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>12. ledna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p><em>Per aspera ad astra</em> - tedy &quot;utrpením ke hvězdám&quot; - je dle mého názoru docela přesný popis způsobu, jakým se vyvíjel webový server od Microsoftu - Internet Information Services. Moje první setkání s IIS se uskutečnilo ve verzi 2.0 (byla součástí Windows NT 4.0). Používat ji bylo opravdové utrpení, které příliš nezměkčil ani SP3 (tuším) na NT Server, který IIS upgradoval na verzi 3.0.</p>
 <p>IIS verze 4.0 byl součástí Windows NT Option Packu a znamenal z pohledu webu na Windows platformě revoluci - konečně bylo možné na NT provozovat trochu slušný web server. Žel bohu, v případě že se jednalo o server zatíženější, musel vedle něj stát administrátor a podpírat ho, aby nespadl.</p>
 <p><img src="https://www.cdn.altairis.cz/Blog/spiderweb.jpg" alt="Fotografie pavučiny" title="Photo by slonecker / sxc.hu, used by permission" />Součástí Windows 2000 se stal IIS 5. Že se poslední slovo názvu změnilo ze &quot;server&quot; na &quot;services&quot; byla nejméně podstatná změna. Pomineme-li onu <a href="http://archives.neohapsis.com/archives/ntbugtraq/2000-q3/0080.html">trapnou záležitost</a> s chybou Translate:F, jednalo se o velmi dobře použitelný web server.</p>
@@ -28,7 +73,9 @@
 <h2 id="iis-7-se-odhaluje">IIS 7 se odhaluje</h2>
 <p>Dnes večer jsem se zúčastnil neveřejného chatu s vývojáři nového IISka. Bylo nám dovoleno poodhalit něco z tajemství budoucnosti. Vzhledem k tomu, co jsem se dozvěděl, tak činím s nevšední radostí. Tři hlavní přednosti nové verze jsou:</p>
 <ul>
-<li>Přehlednějši konfigurace, založená na distribuovaném modelu známém z .NET. Modularita (instalujete jenom to co skutečně potřebujete) a snadná rozšiřitelnost. <em>Mnohem</em> lepší konfigurační nástroje.</li>
+<li>Přehlednějši konfigurace, založená na distribuovaném modelu známém z .NET.
+Modularita (instalujete jenom to co skutečně potřebujete) a snadná rozšiřitelnost.
+<em>Mnohem</em> lepší konfigurační nástroje.</li>
 </ul>
 <h3 id="prehlednejsi-konfigurace">Přehlednější konfigurace</h3>
 <p>Konfigurace IIS bude uložena v XML formátu s využitím jeho předností (už žádné sáhodlouhé seznamy hodnot oddělené čárkami!) Parametry web serveru bude možno nastavit přímo v souboru <code>web.config</code>, stejně jako je tomu u .NET aplikací. V tomto XML souboru bude možno nastavit všechny parametry webu, jako například mapování přípon na různé HTTP handlery, povolení či zakázání directory browsingu v různých adresářích a podobně.</p>
@@ -42,7 +89,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

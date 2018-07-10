@@ -26,7 +26,7 @@ Tyto tři nástroje, které Microsoft zatím uvádí v beta verzi, jsou určeny 
 
 *   **WebMatrix** je extrémně jednoduchý vývojový nástroj, určený spíše než pro psaní aplikací pro úpravu a nasazení již exhistujících. Jeho instalace také nainstaluje zbylé dva produkty, které zatím nejsou k dispozici samostatně.
 *   **IIS Express** je zjednodušená verze IIS 7, která funguje podobně jako vývojový web server ve Visual Studiu, ale podporuje všechny triky, jaké umí velké IIS. Funguje i na Windows XP, případně na edicích klientských systémů, které velké IISko nemají a obecně může pomoci při vývoji webových aplikací tím, že zjednoduší konfiguraci a debugging.
-*   **SQL Server Compact 4.0** je nová verze embedded databáze známé také jako SQL Server CE. Dosavadní verze z různých důvodů nebylo možné použít pro vývoj webových aplikací (ač jinak jsou velmi užitečné), nová verze je pro web přímo určena. Může se hodit pro řadu případů, kdy by "velký" SQL server byl zbytečný overkill. 
+*   **SQL Server Compact 4.0** je nová verze embedded databáze známé také jako SQL Server CE. Dosavadní verze z různých důvodů nebylo možné použít pro vývoj webových aplikací (ač jinak jsou velmi užitečné), nová verze je pro web přímo určena. Může se hodit pro řadu případů, kdy by "velký" SQL server byl zbytečný overkill.  
 
 ## Cesta do hlubin Internet Information Services
 

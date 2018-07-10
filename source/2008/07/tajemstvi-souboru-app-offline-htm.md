@@ -14,7 +14,7 @@ Tenhle článek jsem se chystal napsat už pěkně dlouho, ale vždycky mi do to
 Princip jeho fungování je ve skutečnosti velice prostý. Pokud do rootu webové aplikace umístíte soubor, který se jmenuje *app_offline.htm* (název je nutné přesně dodržet, s jiným to fungovat nebude), stanou se dvě věci:
 
 1.  Ukončí se běh celé aplikace a zruší se její AppDomain. 
-2.  Veškeré požadavky, které by aplikace jinak vyřizovala (typicky tedy požadavky na soubory .aspx, .ashx atd.) budou vyřízeny tak, že žadatel obdrží obsah souboru *app_offline.htm*.  
+2.  Veškeré požadavky, které by aplikace jinak vyřizovala (typicky tedy požadavky na soubory .aspx, .ashx atd.) budou vyřízeny tak, že žadatel obdrží obsah souboru *app_offline.htm*.   
 
 Ukončení aplikace budete typicky využívat v případě, že chcete aplikaci, nebo její části, upgradovat. Uvolní se totiž všechny soubory, které by aplikace mohla používat, uzavřou se všechna databázová spojení atd. Do souboru byste měli též zapsat nějaký smysluplný text, který vašim uživatelům sdělí, že se jedná o plánovaný výpadek a že nemají propadat panice. 
 

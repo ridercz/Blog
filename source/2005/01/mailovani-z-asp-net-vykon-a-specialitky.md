@@ -17,11 +17,23 @@ Ve druhém případě jsme těsně svázáni s použitým mail serverem, v naše
 
 ## Základní varianta
 
-Dim Message As New System.Web.Mail.MailMessage Message.From = "odesilatel@server.cz" Message.To = "prijemce@server.cz" Message.Subject = "Subject zpravy" Message.Body = "Text zpravy" System.Web.Mail.SmtpMail.Send(Message)
+    Dim Message As New System.Web.Mail.MailMessage
+    Message.From = "odesilatel@server.cz"
+    Message.To = "prijemce@server.cz"
+    Message.Subject = "Subject zpravy"
+    Message.Body = "Text zpravy"
+    System.Web.Mail.SmtpMail.Send(Message)
 
 Použitím shora uvedeného kódu se zpráva odešle prostřednictím mail pickup service, tedy prostřednictvím lokálního serveru a jeho MS SMTP služby. V případě, že by na jednom serveru běželo více instancí MS SMTP serveru, je možno explicitně určit do které složky se má zpráva uložit:
 
-Dim Message As New System.Web.Mail.MailMessage Message.From = "odesilatel@server.cz" Message.To = "prijemce@server.cz" Message.Subject = "Subject zpravy" Message.Body = "Text zpravy" Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing") = 1 Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverpickupdirectory") = "C:\InetPub\MailRoot\pickup" System.Web.Mail.SmtpMail.Send(Message)
+    Dim Message As New System.Web.Mail.MailMessage
+    Message.From = "odesilatel@server.cz"
+    Message.To = "prijemce@server.cz"
+    Message.Subject = "Subject zpravy"
+    Message.Body = "Text zpravy"
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing") = 1
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverpickupdirectory") = "C:\InetPub\MailRoot\pickup"
+    System.Web.Mail.SmtpMail.Send(Message)
 
 ## Odeslání přes konkrétní SMTP server
 
@@ -29,13 +41,30 @@ V některých případech je nutné odeslat zprávu přes nějaký konkrétní S
 
 V takovém případě je třeba nastavit statickou vlastnost `System.Web.Mail.SmtpMail.SmtpServer`:
 
-Dim Message As New System.Web.Mail.MailMessage Message.From = "odesilatel@server.cz" Message.To = "prijemce@server.cz" Message.Subject = "Subject zpravy" Message.Body = "Text zpravy" System.Web.Mail.SmtpMail.SmtpServer = "mail.intranet.local" System.Web.Mail.SmtpMail.Send(Message)
+    Dim Message As New System.Web.Mail.MailMessage
+    Message.From = "odesilatel@server.cz"
+    Message.To = "prijemce@server.cz"
+    Message.Subject = "Subject zpravy"
+    Message.Body = "Text zpravy"
+    System.Web.Mail.SmtpMail.SmtpServer = "mail.intranet.local"
+    System.Web.Mail.SmtpMail.Send(Message)
 
 ## Odeslání přes konkrétní SMTP server s autentizací či přes nestandardní port
 
 V rámci uzavřených sítí mail servery zpravidla nevyžadují žádnou autentizaci a běží na standardním portu (25). Může však nastat situace, kdy je třeba zprávu odeslat přes server běžící na nestandardním portu (v našem příkladu 2525), nebo kdy je třeba zadat uživatelské jméno a heslo, či použít šifrované spojení (SSL). To vše je možno nastavit pomocí konfiguračních polí zprávy:
 
-Dim Message As New System.Web.Mail.MailMessage Message.From = "odesilatel@server.cz" Message.To = "prijemce@server.cz" Message.Subject = "Subject zpravy" Message.Body = "Text zpravy" Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2 Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendusername") = "uzivatelske_jmeno" Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "heslo" Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "mail.intranet.local" Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 2525 Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpusessl") = True System.Web.Mail.SmtpMail.Send(Message)
+    Dim Message As New System.Web.Mail.MailMessage
+    Message.From = "odesilatel@server.cz"
+    Message.To = "prijemce@server.cz"
+    Message.Subject = "Subject zpravy"
+    Message.Body = "Text zpravy"
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendusername") = "uzivatelske_jmeno"
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "heslo"
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "mail.intranet.local"
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 2525
+    Message.Fields("http://schemas.microsoft.com/cdo/configuration/smtpusessl") = True
+    System.Web.Mail.SmtpMail.Send(Message)
 
 ## Závěr: Kdy co použít
 

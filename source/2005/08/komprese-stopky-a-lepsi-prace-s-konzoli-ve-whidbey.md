@@ -37,6 +37,31 @@ Právě vlastnosti pro nastavení pozice kurzoru je možno použít například 
 
 Následující procedura slouží ke zkomprimování souboru metodou GZIP. Měří čas zpracování a postupně zobrazuje průběh:
 
-Sub CompressFile(ByVal InFileName As String, ByVal OutFileName As String) Const BufferSize As Int32 = 65536 ' 64 kB ' Start stopwatch Dim SW As New System.Diagnostics.Stopwatch() SW.Start() ' Prepare streams Dim InStream As New System.IO.FileStream(InFileName, IO.FileMode.Open, IO.FileAccess.Read) Dim OutStream As New System.IO.FileStream(OutFileName, IO.FileMode.Create, IO.FileAccess.Write) Dim ZipStream As New System.IO.Compression.GZipStream(OutStream, IO.Compression.CompressionMode.Compress, True) ' Compress Dim Data(BufferSize) As Byte Dim BytesRead As Int32 Do BytesRead = InStream.Read(Data, 0, BufferSize) ZipStream.Write(Data, 0, BytesRead) ' Show progress Console.Write("Progress: {0:N2}%", InStream.Position / InStream.Length * 100) Console.CursorLeft = 0 Loop While BytesRead = BufferSize ' Clean up SW.Stop() Console.WriteLine("Compression completed in {0:N2} seconds.", SW.Elapsed.TotalSeconds) ZipStream.Close() OutStream.Close() InStream.Close() End Sub
+    Sub CompressFile(ByVal InFileName As String, ByVal OutFileName As String)
+        Const BufferSize As Int32 = 65536 ' 64 kB
+        ' Start stopwatch
+        Dim SW As New System.Diagnostics.Stopwatch()
+        SW.Start()
+        ' Prepare streams
+        Dim InStream As New System.IO.FileStream(InFileName, IO.FileMode.Open, IO.FileAccess.Read)
+        Dim OutStream As New System.IO.FileStream(OutFileName, IO.FileMode.Create, IO.FileAccess.Write)
+        Dim ZipStream As New System.IO.Compression.GZipStream(OutStream, IO.Compression.CompressionMode.Compress, True)
+        ' Compress
+        Dim Data(BufferSize) As Byte
+        Dim BytesRead As Int32
+        Do
+            BytesRead = InStream.Read(Data, 0, BufferSize)
+            ZipStream.Write(Data, 0, BytesRead)
+            ' Show progress
+            Console.Write("Progress: {0:N2}%", InStream.Position / InStream.Length * 100)
+            Console.CursorLeft = 0
+        Loop While BytesRead = BufferSize
+        ' Clean up
+        SW.Stop()
+        Console.WriteLine("Compression completed in {0:N2} seconds.", SW.Elapsed.TotalSeconds)
+        ZipStream.Close()
+        OutStream.Close()
+        InStream.Close()
+    End Sub
 
 Můžete si stáhnout zdrojové kódy [kompletní konzolové aplikace](https://www.cdn.altairis.cz/Blog/2005/20050805-cgz.zip) ve VB.NET umožňující kompresi a dekompresi dat metodou GZIP.

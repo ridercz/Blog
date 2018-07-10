@@ -51,7 +51,13 @@ SQL (nebo spíše SQL-like) příkazy se nám stávají čím dál tím složit�
 
 Onen soubor `stats1.sql` bude obsahovat toto:
 
-SELECT TO_DATE(TO_TIMESTAMP(date, '"yyyy-MM-dd hh:mm:ss"')) AS Datum, COUNT(*) AS Pocet FROM D:\TMP\smtplogs\smtp-* WHERE status='"RCPT=OK"' GROUP BY Datum ORDER BY Datum
+    SELECT 
+     TO_DATE(TO_TIMESTAMP(date, '"yyyy-MM-dd hh:mm:ss"')) AS Datum, 
+     COUNT(*) AS Pocet 
+    FROM D:\TMP\smtplogs\smtp-* 
+    WHERE status='"RCPT=OK"'
+    GROUP BY Datum 
+    ORDER BY Datum
 
 Data mohu samozřejmě vyexportovat i do grafu nebo různě agregovat. Obsáhlejší příklady na analýzu logů XMailu najdete [zde](ftp://ftp.altaircom.net/outgoing/altaircom/logparser-xmail-samples.zip).
 
@@ -65,4 +71,6 @@ Stejně tak výstup lze ukládat nejenom do rozličných typů souborů, ale té
 
 ### Související odkazy
 
-*   [Microsoft LogParser 2.2](http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&displaylang=en) - download [Forensic Log Parsing with Microsoft's LogParser](http://www.securityfocus.com/infocus/1712) [LogParser.com](http://www.logparser.com/) - knihovna odkazů a dalších zdrojů
+*   [Microsoft LogParser 2.2](http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&displaylang=en) - download 
+[Forensic Log Parsing with Microsoft's LogParser](http://www.securityfocus.com/infocus/1712) 
+[LogParser.com](http://www.logparser.com/) - knihovna odkazů a dalších zdrojů

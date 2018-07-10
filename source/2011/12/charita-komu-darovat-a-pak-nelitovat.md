@@ -17,7 +17,7 @@ Nabídka je široká:
 *   Na stejnou strunu hraje [Fond ohrožených dětí](http://www.fod.cz/), provozující síť zařízení Klokánek, proslulá [nelegálními adopcemi](http://www.mpsv.cz/cs/4300), [půlmiliónovou pokutou](http://aktualne.centrum.cz/domaci/kauzy/clanek.phtml?id=616907) a [nerespektováním soudního rozhodnutí](http://zpravy.idnes.cz/to-jsou-nase-deti-prou-se-dva-detske-domovy-o-sourozence-p2n-/domaci.aspx?c=A111124_1689851_pardubice-zpravy_meb).
 *   Pomocí zejména za hranicemi se zabývá nadace [Člověk v tísni](http://www.clovekvtisni.cz/). Kromě ní se ovšem zabývá i politickou agendou tamtéž a organizováním "studentských voleb", [které ovšem bystře vykastrovala](http://zpravy.idnes.cz/studentske-volby-vzdaly-desitky-skol-rathovi-a-ministryni-se-nezdaly-koser-1vv-/studium.aspx?c=A100426_110039_studium_bar), když na ni udělali bububu hejtmani z ČSSD.
 *   Pomocí ubohým černouškům v Africe se zabývá celá řada organizací, s dost [katastrofickými následky](http://www.spiegel.de/international/spiegel/0,1518,363663,00.html) ([český překlad](http://www.penize.cz/nezamestnanost/17513-africky-ekonom-prestante-uz-prosim-s-tou-pomoci!)).
-*   Také samozřejmě máte možnost přispět do kasiček na ulici, kde máte mnohem větší šanci, že vaše peníze půjdou [do kapes lumpů rovnou](http://www.reflex.cz/clanek/stary-reflex-tema-reflexu/32526/do-kasicek-nedavejte.html), bez jakýchkoliv administrativních zdržovaček. 
+*   Také samozřejmě máte možnost přispět do kasiček na ulici, kde máte mnohem větší šanci, že vaše peníze půjdou [do kapes lumpů rovnou](http://www.reflex.cz/clanek/stary-reflex-tema-reflexu/32526/do-kasicek-nedavejte.html), bez jakýchkoliv administrativních zdržovaček.  
 
 Příkladů v podobném duchu by se nepochybně našlo ještě víc, takže se člověk pomalu stydí, že profesionální konatele dobra za cizí peníze rovnou nestřílí.
 
@@ -30,7 +30,7 @@ Kiva pomáhá těm, kdo se snaží si pomoci sami. Nerozdává peníze nebo jíd
 *   Poskytujete půjčku konkrétnímu člověkovi na konkrétní projekt. Můžete si vybrat podle regionu, podle tématu… Já osobně se snažím pomáhat v případech, které mají něco společného s informačními technologiemi.
 *   Minimální výše půjčky je $25, na potřebnou částku půjčky (obvykle se pohybuje v řádu stovek až tisíců dolarů) se skládá více lidí. Jde to docela rychle, u mého posledního dlužníka se zhruba tisíc dolarů dalo dohromady za pár hodin.
 *   Jedná se o půjčku, která vám je postupně splacena zpět. Můžete si peníze vybrat a nebo je půjčit dál. Riziko delikvence tu samozřejmě je, ale návratnost je vysoká (mně se zatím vrátilo 100% prostředků).
-*   Kiva striktně odděluje peníze na svůj vlastní provoz a peníze na půjčky. Organizaci jako takovou podporovat můžete, ale nemusíte. 
+*   Kiva striktně odděluje peníze na svůj vlastní provoz a peníze na půjčky. Organizaci jako takovou podporovat můžete, ale nemusíte.  
 
 Ani tento postup není zcela bezchybný a i Kiva má za sebou [problémy](http://en.wikipedia.org/wiki/Kiva_(organization)#Issues), ale celý proces je (na obvyklé podmínky panující v podobných organizací) transparentní a lze si vybrat podle vašich preferencí.
 

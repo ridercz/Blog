@@ -17,4 +17,5 @@ Jedním z přednášejících bude i má maličkost, pokud tedy toužíte vidět
 
 Program dosud není definitivní, a to ani pokud se týče témat mých přednášek. Máte-li náměty vztahující se k ASP.NET 2.0, napište je do komentáře k těmto článkům.
 
-*   [Informace o ročníku 2006, program, přihláška](http://www.haes.cz/ws_pozv.asp?r=workshop) [Mé jedovaté poznámky týkající se předchozího ročníku](/entry/article-20050226.aspx#041726), na jejichž základě mám pro letošek přislíbeno ubytování v místě, kam se vejdu na záchod :-)
+*   [Informace o ročníku 2006, program, přihláška](http://www.haes.cz/ws_pozv.asp?r=workshop) 
+[Mé jedovaté poznámky týkající se předchozího ročníku](/entry/article-20050226.aspx#041726), na jejichž základě mám pro letošek přislíbeno ubytování v místě, kam se vejdu na záchod :-)

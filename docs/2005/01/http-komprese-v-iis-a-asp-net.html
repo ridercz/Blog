@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Zapnutím HTTP komprese je možno snížit objem přenášených dat a zrychlit načítání stránek. Za vše se ale platí." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>HTTP komprese v IIS a ASP.NET</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-01-02T02:16:39.593+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>2. ledna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Pravděpodobně všichni znáte a používáte klasickou komprimaci souborů - jejich &quot;sbalení&quot; do ZIP nebo RAR archivu, čímž se zmenší jejich datový objem. Takovou kompresi je možno provádět i automaticky při přenosu mezi webovým serverem a klientem. Můžete si to představit tak, že server posílaná data sbalí do ZIPu a klient (prohlížeč) je zase rozbalí a zobrazí. V případě HTML kódu je možno dosáhnout značné úspory přenášených dat a tím zrychlit stahování stránek, zejména na pomalejších linkách.</p>
 <h2 id="jak-to-v-iis-nastavit">Jak to v IIS nastavit</h2>
 <p>V defaultním nastavení na IIS 6.0 je HTTP komprese vypnutá. Chcete-li ji zapnout, otevřete si <em>IIS Manager</em>, v levém sloupci klepněte pravým tlačítkem na &quot;složku&quot; <em>Web sites</em> a z kontextového menu zvolte <em>Properties</em>. Na záložce <em>Service</em> zaškrtněte <em>Compress application files</em> i <em>Compress static files</em>:</p>
@@ -28,16 +73,22 @@
 <h2 id="co-komprimovat-a-co-ne">Co komprimovat a co ne?</h2>
 <p>Které soubory se budou či nebudou komprimovat rozhoduje IIS podle jejich přípony. Standardně jsou nastaveny takto:</p>
 <ul>
-<li>Statické soubory: <em>htm, html, txt</em> Dynamické aplikace: <em>asp, exe, dll</em></li>
+<li>Statické soubory: <em>htm, html, txt</em>
+Dynamické aplikace: <em>asp, exe, dll</em></li>
 </ul>
 <p>Toto nastavení není nejšťastnější, protože zcela ignoruje .NET aplikace a ani v případě statických souborů má jisté rezervy.</p>
 <p>Bezztrátová komprese funguje tak, že nahrazuje opakující se sekvence bajtů. Principiálně je tedy vhodná pro textová data a značkovací jazyky a některé další typy dat. Naopak naprosto nevhodná jsou data se strukturou víceméně náhodnou - například data šifrovaná nebo již jednou komprimovaná (což se týká i formátů, které mají kompresi &quot;vestavěnou&quot;, jako například JPEG, GIF, PNG, MP3, WM* a podobně).</p>
 <p>Osobně používám toto nastavení:</p>
 <ul>
-<li>Statické soubory: <em>htm, html, txt, css, js, vbs, xml, xslt</em> Dynamické aplikace: <em>asp, exe, dll, aspx, asmx</em></li>
+<li>Statické soubory: <em>htm, html, txt, css, js, vbs, xml, xslt</em>
+Dynamické aplikace: <em>asp, exe, dll, aspx, asmx</em></li>
 </ul>
 <p>Seznam přípon je uložen v metabázi, ve větvích <em>W3Svc/Filters/Compression/GZIP</em> a <em>W3Svc/Filters/Compression/DEFLATE</em> (IIS podporuje dva komprimační algoritmy, GZIP a DEFLATE). Spíše než přímou editaci metabase.xml doporučuji použít skript <em>ADSUTIL.VBS</em> (nachází se zpravidla v *C:\InetPub\AdminScripts*). Otevřete tedy příkazový řádek, přejděte do tohoto adresáře a postupně spusťte následující čtyři příkazy:</p>
-<p>CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcFileExtensions &quot;htm&quot; &quot;html&quot; &quot;txt&quot; &quot;css&quot; &quot;js&quot; &quot;vbs&quot; &quot;xml&quot; &quot;xslt&quot; CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcFileExtensions &quot;htm&quot; &quot;html&quot; &quot;txt&quot; &quot;css&quot; &quot;js&quot; &quot;vbs&quot; &quot;xml&quot; &quot;xslt&quot; CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcScriptFileExtensions &quot;asp&quot; &quot;dll&quot; &quot;exe&quot; &quot;aspx&quot; &quot;asmx&quot; CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcScriptFileExtensions &quot;asp&quot; &quot;dll&quot; &quot;exe&quot; &quot;aspx&quot; &quot;asmx&quot;</p>
+<pre><code>CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcFileExtensions &quot;htm&quot; &quot;html&quot; &quot;txt&quot; &quot;css&quot; &quot;js&quot; &quot;vbs&quot; &quot;xml&quot; &quot;xslt&quot;
+CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcFileExtensions &quot;htm&quot; &quot;html&quot; &quot;txt&quot; &quot;css&quot; &quot;js&quot; &quot;vbs&quot; &quot;xml&quot; &quot;xslt&quot;
+CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcScriptFileExtensions &quot;asp&quot; &quot;dll&quot; &quot;exe&quot; &quot;aspx&quot; &quot;asmx&quot;
+CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcScriptFileExtensions &quot;asp&quot; &quot;dll&quot; &quot;exe&quot; &quot;aspx&quot; &quot;asmx&quot;
+</code></pre>
 <p>Tak. A teď už můžete to IISko konečně restartovat (z příkazové řádky spusťte <em>iisreset.exe</em>).</p>
 <h2 id="neco-za-neco">Něco za něco</h2>
 <p>V životě není nic zadarmo. A samozřejmě že ani HTTP komprese nebude výjimkou. Komprimace přenášených dat sice šetří linky, ale zase zatěžuje procesor na straně serveru i klienta. S klientem si starosti dělat netřeba - zvládne to v pohodě. Server na tom může být opačně, pokud je hodně zatěžován. Počítejte s tím, že po zapnutí HTTP komprese vzroste zatížení procesoru a server monitorujte, zda &quot;stíhá&quot;.</p>
@@ -49,7 +100,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

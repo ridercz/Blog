@@ -9,6 +9,8 @@
 <!-- dcterms:created = 2006-07-02T05:01:34.533+02:00 -->
 <!-- dcterms:dateAccepted = 2006-07-02T05:01:34.533+02:00 -->
 
+ 
+
 Po dlouhém a usilovém boji se mi podařilo shromáždit všechny záznamy dosud proběhlých seminářů o ASP.NET 2.0 na jednom místě. Tím místem je nově zřízený server **[**videoarchiv.altairis.cz**](http://videoarchiv.altairis.cz/)**.
 
 Na tomto místě do budoucna najdete všechny pořízené záznamy všech akcí.

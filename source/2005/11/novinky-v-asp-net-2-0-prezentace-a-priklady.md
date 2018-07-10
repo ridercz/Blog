@@ -14,7 +14,7 @@
 Jak jsem již na tomto webu [hlásal](/entry/article-20051024.aspx), držel jsem včera v Bratislavě delší řeč na téma novinek v ASP.NET 2.0. Tradičně nabízím ke stažení příklady a prezentace:
 
 *   [Prezentace ke stažení (ZIP 5 MB)](https://www.cdn.altairis.cz/Blog/2005/20051104-prezentace.zip)
-*   [Příklady ke stažení (ZIP 9 MB)](https://www.cdn.altairis.cz/Blog/2005/20051104-samples.zip) 
+*   [Příklady ke stažení (ZIP 9 MB)](https://www.cdn.altairis.cz/Blog/2005/20051104-samples.zip)
 
 Pevně doufám, že se nějakou podobnou akci podaří spáchat i v Praze.
 

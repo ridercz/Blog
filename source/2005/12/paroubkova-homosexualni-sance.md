@@ -19,4 +19,5 @@ Ve světle shora uvedených témat je poměrně jasné, proč Paroubek [zakázal
 
 **Relevantní odkazy:**
 
-*   [Papež proti homosexuálnímu manželství - a já taky](/entry/article-20030806.aspx#142526) [www.partnerstvi.cz](http://www.partnerstvi.cz)
+*   [Papež proti homosexuálnímu manželství - a já taky](/entry/article-20030806.aspx#142526) 
+[www.partnerstvi.cz](http://www.partnerstvi.cz)

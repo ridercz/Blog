@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Centralized SSL Certificates v IIS: Proč a jak je používat</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2016-01-31T00:00:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>31. ledna 2016</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat.</p>
 <h2 id="co-to-je-a-proc-to-chcete-pouzit">Co to je a proč to chcete použít?</h2>
 <p>Dosavadní typický způsob práce se serverovými certifikáty je, že se ukládají do systémového úložiště (certificate store). S ním se manipuluje pomocí speciálního API a GUI nástrojů. Což je fajn pokud HTTPS weby máte na svém serveru dva. Ale co když jich tam máte desítky nebo stovky? Případně máte serverů hodně a potřebujete certifikáty mezi nimi synchronizovat?</p>
@@ -30,7 +75,18 @@
 <p><strong>» Veškeré potřebné soubory najdete v archivu <a href="https://www.cdn.altairis.cz/Blog/2016/20160131-CCS.zip">20160131-CSS.zip</a>.</strong></p>
 <h3 id="vytvoreni-a-nastaveni-webu">Vytvoření a nastavení webů</h3>
 <p>Tento příklad počítá s tím, že máte kontrolu nad DNS resolvingem a dokážete si potřebné ukázkové DNS záznamy nasměrovat na IP adresu vašeho web serveru. Pokud takovou kontrolu nemáte nebo se s tím nechcete moc mazat a stačí vám lokálně fungující demo, stačí editovat obsah souboru <code>C:\Windows\System32\drivers\etc\hosts</code> (soubor nemá příponu). Přidejte na jeho konec následující text:</p>
-<p>127.0.0.1 <a href="http://www.northwind.com">www.northwind.com</a> 127.0.0.1 northwind.com 127.0.0.1 <a href="http://www.contoso.com">www.contoso.com</a> 127.0.0.1 contoso.com 127.0.0.1 <a href="http://www.example.com">www.example.com</a> 127.0.0.1 example.com 127.0.0.1 www1.example.com 127.0.0.1 www2.example.com 127.0.0.1 www3.example.com 127.0.0.1 www4.example.com 127.0.0.1 www5.example.com</p>
+<pre><code>127.0.0.1 www.northwind.com
+127.0.0.1 northwind.com
+127.0.0.1 www.contoso.com
+127.0.0.1 contoso.com
+127.0.0.1 www.example.com
+127.0.0.1 example.com
+127.0.0.1 www1.example.com
+127.0.0.1 www2.example.com
+127.0.0.1 www3.example.com
+127.0.0.1 www4.example.com
+127.0.0.1 www5.example.com
+</code></pre>
 <p>Tím zajistíte, že se DNS jména jako <code>northwind.com</code> apod. budou překládat na vámi určenou adresu. V tomto případě na <code>127.0.0.1</code>, tedy <code>localhost</code>.</p>
 <p>Dále pak si vytvořte osm ukázkových webů, se kterými budete dále pracovat. Budou to weby jménem <code>www1.contoso.com</code> až <code>www5.contoso.com</code> (název webu odpovídá host name, který na něj ukazuje). Dále pak webu <code>www.northwind.com</code>, <code>www.contoso.com</code> a <code>www.example.com</code>, přičemž na ně bude ukazovat příslušný hostname a zároveň totéž ve verzi bez <code>www</code> na začátku, tj. např. jen <code>northwind.com</code>.</p>
 <p>Na obsahu těchto webů nezáleží. Pokud je necháte prázdné, bude vám server vracet chybu 403, což z hlediska HTTPS nevadí. V souboru s příklady najdete stránku <code>default.aspx</code>, která vypíše základní informace o svém webu, takže ji můžete použít. Také tam najdete skript <code>1_create_websites.cmd</code>, který po spuštění weby vytvoří.</p>
@@ -103,7 +159,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -25,14 +25,24 @@ Ukazuje řešení následujících problémů v .NET Frameworku:
 *   Vytvoření a použití webové služby. 
 *   Vytvoření RSS feedu včetně různých jeho rozšíření. 
 *   Práce s uloženými procedurami v Microsoft SQL Serveru. 
-*   Dynamické generování jednoduchých grafů.  
+*   Dynamické generování jednoduchých grafů. 
 
 Aplikace je dostupná všem členům programu [MSDN Connection](https://www.microsoft.com/cze/msdn/connection/default.mspx). Pokud nejste jeho členy, můžete se [zaregistrovat](https://www.microsoft.com/cze/msdn/connection/disclaimer.mspx). Po přihlášení klepněte na "výhody členství", tam to najdete asi v půlce stránky. Členové tohoto programu mají také 20 % slevu na teplotní čidla firmy [Papouch Electronic](http://www.papouch.com/).
 
 ## Související články
 
- <span id="ctl00_CPHC_LabelArticleTitle"> 
+		<span id="ctl00_CPHC_LabelArticleTitle">
 
-*   <span id="ctl00_CPHC_LabelArticleTitle"> [Monitoring teploty: Sériová komunikace s hardwarem v .NET](https://www.aspnet.cz/Articles/41-monitoring-teploty-seriova-komunikace-s-hardwarem-v-net.aspx) </span> 
-*   <span>  <span> [MSDN Connection: Vánoční dárek od Microsoftu](https://www.aspnet.cz/Articles/68-msdn-connection-vanocni-darek-od-microsoftu.aspx) </span> 
-*   </span>  </span>
+*   <span id="ctl00_CPHC_LabelArticleTitle">
+										[Monitoring teploty: Sériová komunikace s hardwarem v .NET](https://www.aspnet.cz/Articles/41-monitoring-teploty-seriova-komunikace-s-hardwarem-v-net.aspx)
+								</span>
+
+*   <span>
+
+										<span>
+												[MSDN Connection: Vánoční dárek od Microsoftu](https://www.aspnet.cz/Articles/68-msdn-connection-vanocni-darek-od-microsoftu.aspx)
+										</span>
+
+*   </span>
+
+		</span>

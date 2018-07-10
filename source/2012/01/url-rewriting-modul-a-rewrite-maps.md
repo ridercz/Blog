@@ -36,13 +36,36 @@ Výsledek (ve spodním okně) se dá dobře zkopírovat do Excelu a tam s ním d
 
 Vygenerované XML potom obalím elementy *rewriteMaps* a *rewriteMap* (můžete jich mít vytvořeno více) a uložím jako soubor *RewriteMaps.config*, jehož obsah je přibližně následující:
 
-<rewriteMaps> <rewriteMap name="OldArticles"> <add key="/archive/2004/12/13/147.aspx" value="/articles/1" /> <add key="/archive/2004/12/13/150.aspx" value="/articles/2" /> <add key="/archive/2004/12/14/151.aspx" value="/articles/3" /> <!-- Vypuštěno zhruba 850 řádků --> <add key="/archive/2012/01/01/Congratulations-2012-Microsoft-MVP.aspx" value="/articles/859-congratulations-2012-microsoft-mvp" /> </rewriteMap> </rewriteMaps>
+    <rewriteMaps>
+        <rewriteMap name="OldArticles">
+            <add key="/archive/2004/12/13/147.aspx" value="/articles/1" />
+            <add key="/archive/2004/12/13/150.aspx" value="/articles/2" />
+            <add key="/archive/2004/12/14/151.aspx" value="/articles/3" />
+            <!-- Vypuštěno zhruba 850 řádků -->
+            <add key="/archive/2012/01/01/Congratulations-2012-Microsoft-MVP.aspx" value="/articles/859-congratulations-2012-microsoft-mvp" />
+        </rewriteMap>
+    </rewriteMaps>
 
 Celý proces vytváření a referencování samostatného souboru bychom si v zásadě mohli odpustit, protože rewrite mapy lze psát přímo do *web.configu*. Nicméně rewrite mapy používáme typicky v případech, kdy psaní samostatných pravidel by bylo komplikované a nepřehledné, takže jsou obvykle dost rozsáhlé a *web.config* je pak  nepřehledný.
 
 Ve *web.configu* potom vytvoříme pravidlo, které se bude odkazovat na dříve vytvořebou rewrite map:
 
-<configuration> <system.webServer> <rewrite> <rules> <rule name="Old article URLs" stopProcessing="true"> <match url=".*" /> <conditions> <add input="{OldArticles:{REQUEST_URI}}" pattern="(.+)" /> </conditions> <action type="Redirect" url="{C:1}" appendQueryString="False" redirectType="Permanent" /> </rule> </rules> <rewriteMaps configSource="RewriteMaps.config" /> </rewrite> </system.webServer> </configuration>
+    <configuration>
+        <system.webServer>
+            <rewrite>
+                <rules>
+                    <rule name="Old article URLs" stopProcessing="true">
+                        <match url=".*" />
+                        <conditions>
+                            <add input="{OldArticles:{REQUEST_URI}}" pattern="(.+)" />
+                        </conditions>
+                        <action type="Redirect" url="{C:1}" appendQueryString="False" redirectType="Permanent" />
+                    </rule>
+                </rules>
+                <rewriteMaps configSource="RewriteMaps.config" />
+            </rewrite>
+        </system.webServer>
+    </configuration>
 
 Používám *redirectType="Permanent"*, takže server použije pro přesměrování stavový kód [301 Moved Permanently](§). Vyhledávače by si tedy měly opravit příslušné odkazy a převést případné zvýhodnění ze zpětných odkazů na novou adresu.
 

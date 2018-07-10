@@ -18,7 +18,7 @@ Prezentuji je v podobě bodů, které můžete užívat dle potřeby.
 ## Ideová příprava
 
 *   **Nesnažte se vše dělat sami.** Jenom samotná koordinace stěhování a balení a vybalování věcí je práce na plný úvazek. Najměte si stěhováky a úklidovou službu. Nejsou tak drazí, aby se vám nevyplatili. 
-*   I na hrubou práci, jako je nošení těžkých břemen, je třeba mít fortel. Oni ho mají. Vy ne.  [![plan_3](https://www.cdn.altairis.cz/Blog/2011/20110209-plan_3_thumb.png "plan_3")](https://www.cdn.altairis.cz/Blog/2011/20110209-plan_3_2.png) 
+*   I na hrubou práci, jako je nošení těžkých břemen, je třeba mít fortel. Oni ho mají. Vy ne.  [![plan_3](https://www.cdn.altairis.cz/Blog/2011/20110209-plan_3_thumb.png "plan_3")](https://www.cdn.altairis.cz/Blog/2011/20110209-plan_3_2.png)   
 
 ## Fáze příprav a plánování
 
@@ -27,11 +27,11 @@ Prezentuji je v podobě bodů, které můžete užívat dle potřeby.
 *   Vyrobte si modely svého nábytku, opět v měřítku, a zkušejte různé varianty rozmístění v plánku. Je mnohem jednodušší tahat čtverečky myší, než skříně. 
 *   Poznamenejte si i **rozmístění zásuvek** a ověřte si, že jsou skutečně funkční. Můžete použít fázovku (zkoušečka s doutnavkou, co vypadá jako šroubovák, stojí pár desítek korun) a nebo nějaký malý spotřebič, co na sobě má světýlko. 
 *   Ke zmíněnému účelu používám Microsoft Visio. Existují i jiné programy, zdarma i za peníze. Použijte to, s čím jste schopni jednoduše zacházet. 
-*   Visio umožňuje práci ve vrstvách, což se hodí. Obvykle mám vrstvy nejméně tři: 
+*   Visio umožňuje práci ve vrstvách, což se hodí. Obvykle mám vrstvy nejméně tři:      
 
     *   Podkladovou, kde jsou jenom zdi, dveře, okna. 
     *   Rozměrovou, kde mám okótované důležité rozměry (to umí Visio udělat samo). 
-    *   Nábytkovou (obvykle několik různých variant rozmístění)   
+    *   Nábytkovou (obvykle několik různých variant rozmístění)      
 
 ## Fáze balení
 
@@ -55,7 +55,7 @@ Prezentuji je v podobě bodů, které můžete užívat dle potřeby.
 *   Osobně jako poslední svěšuju obrazy. Byt bez nich vypadá smutně a jako v bojovém stavu, depresivně. Obrazy sundavám až ráno, v den stěhování. 
 *   Děti, psy, nervózní partnery a podobně vyžeňte. Pokud potřebujete při stěhování pomoc, požádejte kamarády nebo profesionály. 
 *   Moje [přítelkyně Mysh](http://www.bestijka.cz/) trvá na přítomnosti provázku u stěhování. Důvody se mi zatím nepodařilo odhalit, nepamatuji si, že bych kdy ke stěhování provázek potřeboval, u posledního stěhování jsem jej nepoužil zcela určitě. 
-*   Existují firmy, specializující se na vyklízení, ale bývají dost drahé. Pokud máte hodně odpadu, je levnější zaplatit stěhováky a odvézt věci na sběrný dvůr, který je obvykle pro občany daného města zdarma.  
+*   Existují firmy, specializující se na vyklízení, ale bývají dost drahé. Pokud máte hodně odpadu, je levnější zaplatit stěhováky a odvézt věci na sběrný dvůr, který je obvykle pro občany daného města zdarma.   
 
 ## Fáze stěhování
 
@@ -64,7 +64,7 @@ Prezentuji je v podobě bodů, které můžete užívat dle potřeby.
 *   Při posledním stěhování jsem tuto metodu dovedl k dokonalosti tím, že jsem na jednotlivé předměty umístil jasně zelené post-it lístky s pořadovými čísly. 
 *   Před příchodem do bytu otevřete všechny dveře. V případě, že překážejí, může být rozumné je vysadit a dát někam, kde nebudou překážet. 
 *   Pokud máte hodně elektrických spotřebičů, ujasněte si, kde budete potřebovat zásuvky a **dokud je byt prázdný, natahejte si prodlužováky**. Zásuvek není nikdy dost. 
-*   Nepobíhejte kolem, **stůjte na jenom místě a jenom říkejte nosičům co kam mají postavit**. Nechte vše nosit rovnou do místnosti, kde to finálně bude. Nábytek nechte postavit na místo, kde bude v konečném důsledku stát.  
+*   Nepobíhejte kolem, **stůjte na jenom místě a jenom říkejte nosičům co kam mají postavit**. Nechte vše nosit rovnou do místnosti, kde to finálně bude. Nábytek nechte postavit na místo, kde bude v konečném důsledku stát.   
 
 ## Fáze vybalování
 

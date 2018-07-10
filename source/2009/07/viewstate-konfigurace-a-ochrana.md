@@ -19,7 +19,7 @@ Konfigurace ViewState mechanismu se provádí v souboru `web.config`, pomocí st
 
 *   **`enableViewState`** (`true`/`false`) povoluje nebo zakazuje použití celého ViewState mechanismu, jak již bylo popsáno dříve. Výchozí nastavení je `true`. 
 *   **`enableViewStateMac`** (`true`/`false`) určuje, zda se mají data posílaná na klienta opatřit digitálním podpisem, který znemožní jejich modifikaci. Výchozí nastavení je `true`. 
-*   **`viewStateEncryptionMode`** (`Always`/`Auto`/`Never`) určuje, zda se mají data posílaná na klienta zašifrovat. Výchozí nastavení je `Auto`.  
+*   **`viewStateEncryptionMode`** (`Always`/`Auto`/`Never`) určuje, zda se mají data posílaná na klienta zašifrovat. Výchozí nastavení je `Auto`. 
 
 Zabezpečením, tedy digitálním podpisem a šifrováním, se budu zabývat v další části.
 

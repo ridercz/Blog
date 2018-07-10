@@ -9,6 +9,8 @@
 <!-- dcterms:created = 2006-10-12T17:38:56.717+02:00 -->
 <!-- dcterms:dateAccepted = 2006-10-12T17:38:56.717+02:00 -->
 
+ 
+
 Provider object model v ASP.NET 2.0 představuje velký krok kupředu proti verzi 1.x. Vestavěné SQL providery jsou ovšem pro většinu aplikací prakticky nepoužitelné, protože vyžadují velice specifickou databázovou strukturu.
 
 Hlavním motivem při tvorbě vestavěných providerů (jejichž [zdrojové kódy jsou mimochodem volně dostupné](http://weblogs.asp.net/scottgu/archive/2006/04/13/442772.aspx)) byla naprostá univerzálnost. Databáze je tedy "rozkročena" velice široce, umožňuje uchovávat jakýkoliv serializovatelný typ v profilech, údaje více nezávislých aplikací v jedné struktuře tabulek a podobně.
@@ -18,7 +20,7 @@ Hlavním motivem při tvorbě vestavěných providerů (jejichž [zdrojové kód
 Knihovna **Altairis Simple ASP.NET SQL Providers** obsahuje tři providery:
 
 *   *Altairis.Web.Providers.SimpleSqlMemebrshipProvider* - membership provider pro správu uživatelů
-*   *Altairis.Web.Providers.SimpleSqlProfileProvider* - profile provider pro uchovávání dalších údajů o uživatelích
+*   *Altairis.Web.Providers.SimpleSqlProfileProvider* - profile provider pro uchovávání dalších údajů o uživatelích
 *   *Altairis.Web.Providers.SimpleSqlRoleProvider* - role provider pro správu rolí a členství uživatelů v nich
 
 Moji provideři nejsou tak univerzální jako ty vestavěné. Nepodporují např. anonymní profily, mají pouze některé typy vlastností v profilech, neumí blokování účtů nebo více nezávislých aplikací v jedné databázi). Hlavním motivem při *jejich* tvorbě byla nicméně snadná integrace se zbytkem databázové struktury libovolné aplikace.

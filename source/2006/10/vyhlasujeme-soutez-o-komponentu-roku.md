@@ -20,8 +20,8 @@ Komponentou se pro účely této soutěže rozumí jakýkolvi modul, který je u
 Co můžete vyhrát?
 
 1.  Microsoft Visual Studio 2005 Team Edition a jednoroční předplatné MSDN Premium (věnovala společnost Altairis) a poukaz na libovolné třídenní školení v počítačové škole Gopas.
-2.  Microsoft Visual Studio 2005 Professional Edition NFR, Microsoft SQL Server Standard Edition NFR (věnovala společnost Microsoft) a poukaz na jednodenní školení v počítačové škole Gopas.
-3.  Odborná počítačová literatura od společnosti Microsoft a propagační předměty partnerů soutěže. 
+2.  Microsoft Visual Studio 2005 Professional Edition NFR,  Microsoft SQL Server Standard Edition NFR (věnovala společnost Microsoft) a poukaz na jednodenní školení v počítačové škole Gopas.
+3.  Odborná počítačová literatura od společnosti Microsoft a propagační předměty partnerů soutěže.
 
 Více informací o soutěži najdete na adrese [http://komponenta-roku.aspnet.cz/](http://komponenta-roku.aspnet.cz/).
 

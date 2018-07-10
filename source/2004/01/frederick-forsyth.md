@@ -50,4 +50,4 @@ Pokud byste někdo věděl, kde by se daly sehnat knihy **Boží pěst** a **Ode
 Odkazy:
 
 *   [Wikipedia - Frederick Forsyth](http://en.wikipedia.org/wiki/Frederick_Forsyth) 
-*   [DMOZ - Frederick Forsyth](http://directory.google.com/Top/Arts/Literature/Authors/F/Forsyth,_Frederick/) 
+*   [DMOZ - Frederick Forsyth](http://directory.google.com/Top/Arts/Literature/Authors/F/Forsyth,_Frederick/)

@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Aplikace psané v ASP.NET jsou ve své podstatě konfederace nezávislých tříd, kterou drží pohromadě konfigurace. Je to právě konfigurační systém .NET, který říká kdy se který modul má použít. S příchodem nové verze IIS (7.0 ve Windows Vista a Windows Server 2008) je konfigurační model .NETu ještě důležitější, protože se jeho prostřednictvím budou nastavovat i vlastnosti IIS jako takového." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Konfigurace v ASP.NET a IIS verze 6.0 a 7.0</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2007-09-17T11:00:37+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>17. září 2007</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p><em>Poznámka: Tento článek je první součástí seriálu o konfiguraci ASP.NET a vychází z <a href="http://akce.altairis.cz/Events/122.aspx">přednášky</a>, kterou jsem měl v Praze 30. srpna 2007. Nebyl z ní pořízen záznam a těm, kdož se jí nezúčastnili, by patrně nebyly pouhé slajdy k ničemu.</em></p>
 <p>O aplikacích psaných v &quot;nižších&quot; technologiích, jako je třeba klasické ASP nebo PHP s oblibou (a jistou mírou despektu, přiznávám) tvrdím, že se nejedná ani tak o aplikaci, jako spíše o volnou konfederaci nezávislých skriptů. Typicky totiž jednotlivé stránky aplikace nespojuje nic, až na pár include souborů.</p>
 <p>O ASP.NET aplikacích se nicméně dá dle stejného vzoru s trochou nadsázky říct, že jde o volnou konfederaci nezávislých tříd, kterou pohromadě drží konfigurační systém. .NET Framework je striktně objektová technologie, což umožňuje extrémní modularizaci jednotlivých aplikací. A je to právě konfigurace, která určuje, které moduly se mají použít a v jaký okamžik. Je proto důležité konfiguračnímu systému .NET porozumět a naučit se ho využívat. Jinak nebude vývoj větších aplikací povznášejícím zážitkem, ale krvavým bojem, ve kterém budete mít jako programátor dost nevýhodnou pozici.</p>
@@ -27,7 +72,7 @@
 <h2 id="konfigurace-asp.net">Konfigurace ASP.NET</h2>
 <p>Tři klíčové vlastnosti konfiguračních mechanismů v .NETu jsou hierarchie, univerzalita a rozšiřitelnost.</p>
 <ul>
-<li>Konfigurace je <strong>hierarchická</strong>, protože jednotlivé konfigurační soubory popisují pouze změnu od výchozí konfigurace, lépe řečeno od konfigurace &quot;dříve známé&quot;. To umožňuje udržovat konfigurační soubory na snesitelné velikosti, ačkoliv konfiguračních nastavení jsou tisíce. Dále pak tento model umožňuje nastavení konfigurace decentralizovat (s možným stanovením omezení), takže není nutno veškeré konfigurace provádět z moci administrátora serveru, ale lze je učinit součástí aplikace samé. Konfigurace je <strong>univerzální</strong>. Jednotný konfigurační model se používá pro nastavení všech částí .NET Frameworku. Základy a principy jsou v podstatě stejné pro webové aplikace, desktopové aplikace, služby, mobilní aplikace atd. Konfigurace je <strong>rozšiřitelná</strong>, protože je její model navržený tak, abyste do konfiguračních souborů mohli ukládat nejenom nastavení .NET Frameworku, ale i nastavení vaší aplikace nebo jednotlivých komponent. Konfigurační soubory jsou zapsány ve formátu XML a formát jednotlivých konfiguračních sekcí není pevně dán, syntaxe je v rukou jejich tvůrce.</li>
+<li>Konfigurace je <strong>hierarchická</strong>, protože jednotlivé konfigurační soubory popisují pouze změnu od výchozí konfigurace, lépe řečeno od konfigurace &quot;dříve známé&quot;. To umožňuje udržovat konfigurační soubory na snesitelné velikosti, ačkoliv konfiguračních nastavení jsou tisíce. Dále pak tento model umožňuje nastavení konfigurace decentralizovat (s možným stanovením omezení), takže není nutno veškeré konfigurace provádět z moci administrátora serveru, ale lze je učinit součástí aplikace samé.  Konfigurace je <strong>univerzální</strong>. Jednotný konfigurační model se používá pro nastavení všech částí .NET Frameworku. Základy a principy jsou v podstatě stejné pro webové aplikace, desktopové aplikace, služby, mobilní aplikace atd.  Konfigurace je <strong>rozšiřitelná</strong>, protože je její model navržený tak, abyste do konfiguračních souborů mohli ukládat nejenom nastavení .NET Frameworku, ale i nastavení vaší aplikace nebo jednotlivých komponent. Konfigurační soubory jsou zapsány ve formátu XML a formát jednotlivých konfiguračních sekcí není pevně dán, syntaxe je v rukou jejich tvůrce.</li>
 </ul>
 <p>Základní konfigurace, platná pro všechny webové aplikace běžící na daném serveru, je uložena v souboru <em>machine.config</em>, který se nachází ve složce .NET Frameworku, typicky tedy v *%SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\CONFIG* (a to i v případě .NET Frameworku 3.0 nebo 3.5, protože i tyto verze používají jádro verze 2.0, pro více viz <a href="http://www.aspnet.cz/Articles/161-jeste-jednou-a-dukladneji-k-verzim-microsoft-net-frameworku.aspx">samostatný článek</a>).</p>
 <p>V téže složce se nachází ještě soubor <em>web.config</em>, kterému se obvykle říká <em>root web.config</em>. Jedná se v podstatě o vydělení konfigurační sekce system.web do samostatného souboru, z hlediska architektury je jeho role stejná, jako v případě <em>machine.configu</em>.</p>
@@ -56,7 +101,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

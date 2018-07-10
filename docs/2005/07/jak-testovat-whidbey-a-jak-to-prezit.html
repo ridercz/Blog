@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Nepíšu, protože konám. Chcete konat též?" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jak testovat Whidbey a jak to přežít</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-07-23T04:12:13.107+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>23. července 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Bystřejší povahy si nepochybně již povšimly toho, že se zde již delší dobu nic neobjevilo. Abych si vypůjčil <a href="http://weblog.bestijka.cz/ShowRecord.aspx?day=20030522">slova své drahé polovičky</a>: *Nepíšu, protože konám! *Jmenovitě tedy bádám v hlubinách Whidbey a píšu rozličné testovací a ukázkové aplikace - dočkáte se.</p>
 <h2 id="bety-nejen-pro-vyvolene">Bety nejen pro vyvolené</h2>
 <p>Kdo se kolem počítačů a MS technologií motá déle, nepochybně pamatuje doby, kdy vydolovat z Microsoftu betaverzi bylo téměř nemožné. A pokud jste ji už nějakým způsobem získali a třeba v ní objevili nějaký bug, neměli jste moc možností, jak ho sdělit někomu, kdo s ním něco udělá.</p>
@@ -36,7 +81,9 @@
 <p>Druhá beta VS.NET se v tomto ohledu chová velmi mravně. Neškodí a je prakticky použitelná. Dokonce jsem pod ní napsal i několik prakticky používaných věcí - vbrzku vás s nimi seznámím.Rovněž se stabilitou to není nijak hrozné. Runtime běží spolehlivě. Vývojové prostředí se mi už podařilo poslat k zemi několikrát, ale zatím se vždy zhroutilo distinguovaným způsobem a dovolilo uložit rozdělanou práci.</p>
 <p>Moje doporučení ohledně testů Whidbey zní: nehoňte se bezmyšlenkovitě za vyšším číslem buildu. Existují v zásadě tři typy předprodukčních verzí, na které můžete narazit:</p>
 <ul>
-<li><strong>Beta (beta 1, beta 2...)</strong> - &quot;beta&quot; verze by měla být poměrně stabilní a neměla by obsahovat žádné zvlášť závažné chyby, které by vám měly znemožnit ji využívat. Nemusí obsahovat všechny plánované funkce. V okamžiku psaní tohoto článku je aktuální <em>Beta 2</em>, a to pro Express i VS.NET. <strong>Technical Preview</strong> - testovací verze vyvržená Microsoftem zpravidla s ohledem na nějakou konanou akci. Označuje se buď názvem akce (jako například slavný <em>PDC Build</em>) nebo názvem měsíce (aktuální je <em>June Community Technical Preview</em> VS.NET, Express ji zatím nemá). Preview verze obsahuje ty cool nové feturky, o nichž povídají v prezentacích, ale bývá podstatně více zablešená, než beta. Z tohoto důvodu jsem se ještě neodhodlal k tomu, abych si tu preview verzi nainstaloval. <strong>Neveřejné bety</strong> - běžný smrtelník se k nim nedostane, alespoň ne standardní cestou. Pomineme-li cestu nelegálmího stažení nějaké pokoutně vynesené verze, dostanete se k nim pouze jako účastník nějakého speciálního programu Microsoftu. Já se například těším této pozornosti co MVP. Jsem nicméně přesvědčen, že to nestojí za tu námahu, pokud onen build neobsahuje opravu nějakého konkrétního bugu, který vás trápí. Vyrvou to ubohým vývojářům zpod pazour a podle toho to vypadá.</li>
+<li><strong>Beta (beta 1, beta 2...)</strong> - &quot;beta&quot; verze by měla být poměrně stabilní a neměla by obsahovat žádné zvlášť závažné chyby, které by vám měly znemožnit ji využívat. Nemusí obsahovat všechny plánované funkce. V okamžiku psaní tohoto článku je aktuální <em>Beta 2</em>, a to pro Express i VS.NET.
+<strong>Technical Preview</strong> - testovací verze vyvržená Microsoftem zpravidla s ohledem na nějakou konanou akci. Označuje se buď názvem akce (jako například slavný <em>PDC Build</em>) nebo názvem měsíce (aktuální je <em>June Community Technical Preview</em> VS.NET, Express ji zatím nemá). Preview verze obsahuje ty cool nové feturky, o nichž povídají v prezentacích, ale bývá podstatně více zablešená, než beta. Z tohoto důvodu jsem se ještě neodhodlal k tomu, abych si tu preview verzi nainstaloval.
+<strong>Neveřejné bety</strong> - běžný smrtelník se k nim nedostane, alespoň ne standardní cestou. Pomineme-li cestu nelegálmího stažení nějaké pokoutně vynesené verze, dostanete se k nim pouze jako účastník nějakého speciálního programu Microsoftu. Já se například těším této pozornosti co MVP. Jsem nicméně přesvědčen, že to nestojí za tu námahu, pokud onen build neobsahuje opravu nějakého konkrétního bugu, který vás trápí. Vyrvou to ubohým vývojářům zpod pazour a podle toho to vypadá.</li>
 </ul>
 <p>Doporučuji tedy instalovat aktuální betu nebo nanejvýše - máte-li rádi dobrodružství - technical preview.</p>
 <p>Aktuální verze se zcela bezproblémově snáší se všemi programy, které používám, včetně VS.NET 2003 a frameworku 1.1. Jednotlivé beta verze se obvykle nemají moc rády mezi sebou. Instalace novější verze se může proměnit v reinstalaci celého počítače. To jsem zažil nedávno, když se mi těch pět různých verzí Frameworku pohádalo tak nehorázným způsobem, že jsem z toho vyvázl jedině formátováním disku. (O pár týdnů později jsem si to zopakoval, když mi v notebooku chcípl disk; opakování - matka moudrosti).</p>
@@ -48,7 +95,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

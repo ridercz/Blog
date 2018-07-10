@@ -43,7 +43,8 @@ Onen návod na zrychlení Windows je nepochybně pravdivý v tom, že vyházení
 
 Mezi tajemství stvoření patří dle mého názoru i tyto dvě velké otázky:
 
-1.  Proč si docela velké množství lidí myslí, že veškeré konání Microsoftu a Billa Gatese osobně jest směřováno k tomu, vyvíjet ten nejhorší možný software, přecpaný zbytečnostmi a nefungující? Proč ti lidé, kteří si toto myslí, onen software používají a nepřejdou na MacOS/Linux/*BSD/BeOS nebo co já vím ještě? 
+1.  Proč si docela velké množství lidí myslí, že veškeré konání Microsoftu a Billa Gatese osobně jest směřováno k tomu, vyvíjet ten nejhorší možný software, přecpaný zbytečnostmi a nefungující? 
+Proč ti lidé, kteří si toto myslí, onen software používají a nepřejdou na MacOS/Linux/*BSD/BeOS nebo co já vím ještě?
 
 Operační systém Windows obsahuje řadu různých subsystémů. Některé z nich jsou na konkrétní instalaci počítače téměř vždy zbytečné. Pokud k počítači nemám připojen skener a vím, že nikdy mít nebudu (což je případ mého notebooku), pak v zásadě není důvod k tomu, aby se mi na disku roztahoval subsystém WIA (Windows Image Acquisition). Některé jsou zbytečné téměř vždy. Smazáním dema "Out of Box Experience" žádná škoda nevznikne.
 

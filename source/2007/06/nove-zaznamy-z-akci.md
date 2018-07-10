@@ -11,5 +11,5 @@
 
 Na webu [http://videoarchiv.altairis.cz/](http://videoarchiv.altairis.cz/) najdete dva nové záznamy z akcí:
 
-*   [XML v teorii a praxi, XSLT, XPath](http://videoarchiv.altairis.cz/Entry/15-xml-v-teorii-a-praxi-xslt-xpath.aspx) - záznam obou dílů semináře o XML, XSLT a XPath
-*   [Identity Metasystem, InfoCard, Windows CardSpace - úvod](http://videoarchiv.altairis.cz/Entry/16-identity-metasystem-infocard-windows-cardspace-uvod.aspx) - záznam prvního dílu semináře o Identity metasystému; druhý díl se bohužel nepodařilo nahrát
+*   [XML v teorii a praxi, XSLT, XPath](http://videoarchiv.altairis.cz/Entry/15-xml-v-teorii-a-praxi-xslt-xpath.aspx) - záznam obou dílů semináře o XML, XSLT a XPath
+*   [Identity Metasystem, InfoCard, Windows CardSpace - úvod](http://videoarchiv.altairis.cz/Entry/16-identity-metasystem-infocard-windows-cardspace-uvod.aspx) - záznam prvního dílu semináře o Identity metasystému; druhý díl se bohužel nepodařilo nahrát

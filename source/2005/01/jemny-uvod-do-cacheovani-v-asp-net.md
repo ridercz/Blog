@@ -23,7 +23,8 @@ Ona dočasná kopie může být uložena ledaskde: přímo na serveru (čímž s
 
 S cacheováním jsou spojeny dva základní problémy:
 
-*   Zajistit, aby se data neukládala příliš dlouho - aby klient dostal přiměřeně aktuální data. Zajistit, aby se ukládala správná data - protože stránka se stejnou adresou může mít různý obsah, třeba na základě toho jaký uživatel je přihlášen nebo jaký browser používá. 
+*   Zajistit, aby se data neukládala příliš dlouho - aby klient dostal přiměřeně aktuální data. 
+Zajistit, aby se ukládala správná data - protože stránka se stejnou adresou může mít různý obsah, třeba na základě toho jaký uživatel je přihlášen nebo jaký browser používá.
 
 ## Jak dlouho ukládat
 
@@ -39,7 +40,7 @@ U hodně zatěžovaných aplikací mají význam i velmi krátké časy, třeba 
 
 Expiraci jest v ASP.NET nastaviti pomocí metody `Response.Cache.SetExpires`. Jejím jediným parametrem jest datum a čas expirace. Nastavení "platné pět minut" lze tedy dosáhnouti takto:
 
-Response.Cache.SetExpires(DateTime.Now.AddMinutes(5))
+    Response.Cache.SetExpires(DateTime.Now.AddMinutes(5))
 
 ### Datum poslední změny
 
@@ -47,7 +48,8 @@ Druhou možností je specifikovat datum poslední změny. Klient pak může pou�
 
 Čas poslední modifikace je možno v ASP.NET nastavit pomocí metody `Response.Cache.SetLastModified`. V praxi se často stává, že obsah stránky je generován na základě obsahu jiného souboru. V takovém případě je možno použít *file dependency* (podrobnější popis níže) a nastavit automaticky datum podle data souboru na kterém záleží:
 
-Response.AddFileDependency("C:\data.txt") Response.Cache.SetLastModifiedFromFileDependencies()
+    Response.AddFileDependency("C:\data.txt")
+    Response.Cache.SetLastModifiedFromFileDependencies()
 
 ### Praktický příklad
 
@@ -57,15 +59,43 @@ Nastavíme, aby se stránka cacheovala po dobu patnácti sekund. To lze učinit 
 
 Direktivně - a velmi jednoduše - lze určit některé jednodušší typy cacheování. Stačí na začátek stránky přidat odpovídající direktivu `OutputCache`, takže její HTML kód bude vypadat nějak takto:
 
-<%@ OutputCache Duration="15" VaryByParam="none" %> <html> <head> <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"> </head> <body> <asp:label id="LabelTime" runat="server"></asp:label> </body> </html> 
+    <%@ OutputCache Duration="15" VaryByParam="none" %>
+    <html>
+      <head>
+        <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+      </head>
+      <body>
+        <asp:label id="LabelTime" runat="server"></asp:label>
+      </body>
+    </html>
 
 Zcela stejného efektu jest možno dosáhnouti z programového kódu nějak takhle:
 
-Response.Cache.SetCacheability(Web.HttpCacheability.Public) Response.Cache.SetExpires(DateTime.Now.AddSeconds(15))
+    Response.Cache.SetCacheability(Web.HttpCacheability.Public)
+    Response.Cache.SetExpires(DateTime.Now.AddSeconds(15))
 
 Pokud budete tuto stránku reloadovat, zjistíte, že se čas skutečně mění jenom jednou za patnáct vteřin. Pokud si zobrazíte i HTTP hlavičky odpovědi (třeba pomocí [této online služby](http://www.delorie.com/web/headers.html) nebo geniálního prográmku [WFETCH](http://support.microsoft.com/default.aspx?scid=kb;%5BLN%5D;Q284285)), uvidíte něco takového:
 
-HTTP/1.1 200 OK\r\n Date: Wed, 05 Jan 2005 02:14:38 GMT\r\n Server: Microsoft-IIS/6.0\r\n X-Powered-By: ASP.NET\r\n X-AspNet-Version: 1.1.4322\r\n **Cache-Control: public\r\n Expires: Wed, 05 Jan 2005 02:14:53 GMT\r\n ** Content-Type: text/html; charset=utf-8\r\n Content-Length: 194\r\n \r\n \r\n <html>\r\n \t<head>\r\n \t\t<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">\r\n \t</head>\r\n \t<body>\r\n \t\t<span id="LabelTime">5.1.2005 3:14:38</span>\r\n \t</body>\r\n </html>\r\n
+    HTTP/1.1 200 OK\r\n
+    Date: Wed, 05 Jan 2005 02:14:38 GMT\r\n
+    Server: Microsoft-IIS/6.0\r\n
+    X-Powered-By: ASP.NET\r\n
+    X-AspNet-Version: 1.1.4322\r\n
+    **Cache-Control: public\r\n
+    Expires: Wed, 05 Jan 2005 02:14:53 GMT\r\n
+    **
+    Content-Type: text/html; charset=utf-8\r\n
+    Content-Length: 194\r\n
+    \r\n
+    \r\n
+    <html>\r\n
+    \t<head>\r\n
+    \t\t<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">\r\n
+    \t</head>\r\n
+    \t<body>\r\n
+    \t\t<span id="LabelTime">5.1.2005 3:14:38</span>\r\n
+    \t</body>\r\n
+    </html>\r\n
 
 Všimněte si výše zmiňované hlavičky *Expires* a skutečnosti, že i pokud se klient touto hlavičkou neřídí (a stále zběsile reloaduje), nepomůže si, protože stránka se cacheuje i na serveru.
 
@@ -73,15 +103,21 @@ Všimněte si výše zmiňované hlavičky *Expires* a skutečnosti, že i pokud
 
 Jak již bylo řečeno, v případě webových aplikací stejné URL nutně neznamená stejný obsah stránky - s ohledem na personalizaci nebo úpravu podle použitého prohlížeče. Pracujeme navíc s ASPX stránkami, které mohou být volány s řadou různých parametrů, na kterých závisí co bude obsahem. Pročež ASP.NET umožňují určit v direktivě `OutputCache` několik parametrů, podle kterých se ukládá více verzí téže stránky.
 
-*   `VaryByParam` - Parametry a pole formuláře zasílané přes GET nebo POST. Seznam oddělený středníky, `*`  znamená všechna pole, `none` pro žádné pole (tento parametr je poviiný). `VaryByHeader` - HTTP hlavičky, jako například `Accept-Language` a podobně, seznam oddělený středníky. `VaryByCustom` - Umožňuje definovat vlastní mechanismus závislosti. Viz níže. 
+*   `VaryByParam` - Parametry a pole formuláře zasílané přes GET nebo POST. Seznam oddělený středníky, `*`  znamená všechna pole, `none` pro žádné pole (tento parametr je poviiný). 
+`VaryByHeader` - HTTP hlavičky, jako například `Accept-Language` a podobně, seznam oddělený středníky. 
+`VaryByCustom` - Umožňuje definovat vlastní mechanismus závislosti. Viz níže.
 
 Představme si například stránku, která vypisuje proměnlivý počet článků (v závislosti na parametrech `Pocet` a `Rubrika`) a používá hlavičku `Accept-Language` k tomu, aby vygenerovala obsah v patřičném jazyce. Cacheování lze nastavit direktivně takto:
 
-<%@OutputCache Duration="60" VaryByParam="Pocet;Rubrika" VaryByHeader="Accept-Language" %>
+    <%@OutputCache Duration="60" VaryByParam="Pocet;Rubrika" VaryByHeader="Accept-Language" %>
 
 Programově takto:
 
-Response.Cache.SetCacheability(Web.HttpCacheability.Public) Response.Cache.SetExpires(DateTime.Now.AddSeconds(60)) Response.Cache.VaryByParams("Pocet") = True Response.Cache.VaryByParams("Rubrika") = True Response.Cache.VaryByHeaders("Accept-Language") = True
+    Response.Cache.SetCacheability(Web.HttpCacheability.Public)
+    Response.Cache.SetExpires(DateTime.Now.AddSeconds(60))
+    Response.Cache.VaryByParams("Pocet") = True
+    Response.Cache.VaryByParams("Rubrika") = True
+    Response.Cache.VaryByHeaders("Accept-Language") = True
 
 ### VaryByCustom
 
@@ -89,11 +125,13 @@ Zvláštní a nesmírně užitečné postavení zaujímá parametr `VaryByCusto
 
 Pokud ho nastavíte na nějakou jinou hodnotu, máte možnost stanovit si vlastní mechanismus ověřování tím, že přepíšete v `GLOBAL.ASAX` metodu  `GetVaryByCustomString`. Jako její parametr obdržíte vámi určený klíč a na základě hodnoty kterou vrátíte se bude rozhodovat o cache. Například pokud se stránka generuje podle přihlášeného uživatele, můžete vrátit jeho login. Pokud je pro všechny uživatele stejná (ale odlišná od stránky pro nepřihlášené), stačí vrátit `"True"` nebo `"False"` podle toho zda je uživatel přihlášen nebo ne. Posledně zmiňovaný případ můžeme realizovat například tak, že do stránky vložíme tuto direktivu:
 
-<%@OutputCache Duration="60" VaryByParam="none" VaryByCustom="prihlaseni" %>
+    <%@OutputCache Duration="60" VaryByParam="none" VaryByCustom="prihlaseni" %>
 
 Do `GLOBAL.ASAX` pak umístíme následující backend kód:
 
-Public Overrides Function GetVaryByCustomString(ByVal context As System.Web.HttpContext, ByVal custom As String) As String If custom = "prihlaseni" Then Return context.Request.IsAuthenticated.ToString() End Function
+    Public Overrides Function GetVaryByCustomString(ByVal context As System.Web.HttpContext, ByVal custom As String) As String
+        If custom = "prihlaseni" Then Return context.Request.IsAuthenticated.ToString()
+    End Function
 
 ## A to není všechno
 

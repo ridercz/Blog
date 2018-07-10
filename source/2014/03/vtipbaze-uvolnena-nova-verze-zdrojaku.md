@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2014-03-24T13:59:15+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20140324-vtipbaze-uvolnena-nova-verze-zdrojaku.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20111223-vtipbaze-cz-ukazkova-aplikace-v-asp-net-4-5.png -->
 
 Jak možná víte, provozuji databázi vtipů na [www.vtipbaze.cz](http://www.vtipbaze.cz). Zdrojové kódy jsou open source a včera jsem zveřejnil novou verzi.
 

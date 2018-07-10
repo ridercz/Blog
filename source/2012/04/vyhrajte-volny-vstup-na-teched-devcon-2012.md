@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2012-04-08T20:33:38+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20120408-vyhrajte-volny-vstup-na-teched-devcon-2012.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20120410-aktualizovano-pozvanka-na-teched-devcon-2012-praha.png -->
 
 I letos vám přinášíme soutěž o volnou vstupenku na **TechEd-DevCon 2012**, který se bude konat v Praze od **23. do 26. dubna 2012**. Už z  [předběžně zveřejněného programu](http://www.teched.cz/index.html#program) je jasné, že se bude na co těšit. Samozřejmě bude řeč o novinkách, jako je SQL 2012, .NET 4.5 a VS11. Nicméně značnou část obsahu je věnována i současným verzím, včetně deep-dive do některých technologií, které jsou natrhu už dlouho.
 

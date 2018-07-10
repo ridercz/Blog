@@ -8,7 +8,16 @@
 <!-- dcterms:created = 2003-08-10T02:16:19+02:00 -->
 <!-- dcterms:dateAccepted = 2003-08-10T02:16:19+02:00 -->
 
-<table cellspacing="5" cellpadding="0" align="right" border="0"> <tbody> <tr> <td>[![Klávesnice](https://www.cdn.altairis.cz/Blog/tech_keyboard_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_keyboard_hq.jpg)</td></tr> <tr> <td>[![Notebook](https://www.cdn.altairis.cz/Blog/tech_notebook_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_notebook_hq.jpg) </td></tr> <tr> <td>[![Nokia D211](https://www.cdn.altairis.cz/Blog/tech_nokia_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_nokia_hq.jpg) </td></tr> <tr> <td>[![Růže](https://www.cdn.altairis.cz/Blog/tech_qetina_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_qetina_hq.jpg) </td></tr></tbody></table> 
+<table cellspacing="5" cellpadding="0" align="right" border="0">
+<tbody>
+<tr>
+<td>[![Klávesnice](https://www.cdn.altairis.cz/Blog/tech_keyboard_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_keyboard_hq.jpg)</td></tr>
+<tr>
+<td>[![Notebook](https://www.cdn.altairis.cz/Blog/tech_notebook_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_notebook_hq.jpg) </td></tr>
+<tr>
+<td>[![Nokia D211](https://www.cdn.altairis.cz/Blog/tech_nokia_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_nokia_hq.jpg) </td></tr>
+<tr>
+<td>[![Růže](https://www.cdn.altairis.cz/Blog/tech_qetina_lq.jpg)](https://www.cdn.altairis.cz/Blog/tech_qetina_hq.jpg) </td></tr></tbody></table>
 
 Po [Alraune](http://weblog.alraune.cz/) a [Myshi](http://weblog.bestijka.cz/) se též můj weblog dočkal upgrade na novou verzi publikačního systému. Předpokládám, že obzvláštní potěšení jsem tímto způsobil **ElKa**, který mne vytrvale upozorňoval na chybu v aktualizačním mailu, za což mu tímto veřejně děkuji :-) Jedním z projevů upgrade je drobná změna designu.
 

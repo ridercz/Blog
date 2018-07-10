@@ -15,7 +15,9 @@ Kromě psaní klasických ASP.NET stránek (ASPX) je možné webové aplikace ps
 
 Web server komunikuje s okolím prostřednictvím protokolu <acronym title="Hypertext Transfer Protocol">HTTP</acronym>. Velmi zjednodušeně transakce probíhá nějak takhle:
 
-1.  Klient se připojí na server a řekne "*chci z webu *[*www.aspnet.cz*](/)* soubor `/_gfx/mvp.png`*". Server se podívá do své konfigurace a zjistí, že WWW root pro server jménem [www.aspnet.cz](/) ukazuje do fyzického adresáře `C:\InetPub\wwwroot\`, a že se tedy požadovaný soubor nachází na fyzické cestě `C:\InetPub\wwwroot\_gfx\mvp.png`. Na základě shora uvedeného zjištění uchopí předmětný soubor, pošle ho klientovi a ukončí spojení. 
+1.  Klient se připojí na server a řekne "*chci z webu *[*www.aspnet.cz*](/)* soubor `/_gfx/mvp.png`*". 
+Server se podívá do své konfigurace a zjistí, že WWW root pro server jménem [www.aspnet.cz](/) ukazuje do fyzického adresáře `C:\InetPub\wwwroot\`, a že se tedy požadovaný soubor nachází na fyzické cestě `C:\InetPub\wwwroot\_gfx\mvp.png`. 
+Na základě shora uvedeného zjištění uchopí předmětný soubor, pošle ho klientovi a ukončí spojení.
 
 Pokud bychom napsali web server podle výše uvedených zásad (což je triviální), sice by fungoval, ale uměl by posílat jenom statické stránky, předávat soubory bez jakékoliv další funkcionality.
 

@@ -29,7 +29,7 @@ Kód postupně dělá následující:
 7.  Žádost odešle na server a nechá vystavit certifikát.
 8.  Načte certifikát a zobrazí jeho vlastnosti.
 9.  Vyexportuje certifikát do souboru CRT.
-10.  Vyexportuje certifikát a privátní klíč do souboru PFX. 
+10.  Vyexportuje certifikát a privátní klíč do souboru PFX.
 
 Krátce se zastavíme u bodu č. 4, neboť tam musíte zasáhnout ručně. Challenge obsahuje dvě důležité informace: ID a samotný ověřovací řetězec. Ověřovací řetězec musí být nějakým způsobem zpřístupněn přes HTTP nebo HTTPS na ověřovaném host name na adrese */.well-known/acme-challenge/<id>*. Tj. budete-li ověřovat host name *example.com* a vygenerované ID bude *1234abcd*, musí být ověřovací řetězec dostupný na adrese *http://example.com/.well-known/acme-challenge/1234abcd*.
 

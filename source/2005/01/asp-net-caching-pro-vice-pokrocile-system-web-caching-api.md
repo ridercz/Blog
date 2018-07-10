@@ -17,7 +17,26 @@ Základní informace o tomto tématu sepsala [má milovaná](http://www.bestijka
 
 To že jste si něco uložili do cache ještě neznamená, že to tam najdete. Systém položky z cache odstraňuje nejen dle vámi explicitně určených pravidel (závislostí), ale též dle vlastního uvážení, příkladně pocítí-li nedostatek paměti. Obecně tedy možné na existenci cacheovaných dat spoléhat a pokud s nimi chcete pracovat, měli byste tak činit prostřednictvím nějakého wrapperu, který je buď načte z cache a nebo, neexistují-li, je vygeneruje a do cache uloží. Osobně používám přibližně následující kód:
 
-Public Function GetCategories(Optional ByVal UseCache As Boolean = True) As DataTable ' Pokus se načíst hodnotu z cache Dim Cats As DataTable = DirectCast(Cache("Categories"), DataTable) If Cats Is Nothing Or Not UseCache Then ' Pokud nebyl objekt v cache nalezen, nebo bylo použití cache ' explicitně zakázáno, načti data z databáze Dim DA As New System.Data.SqlClient.SqlDataAdapter( _ "SELECT CategoryID, Name, Description FROM Categories ORDER BY Name", _ "SERVER=(local);UID=uzivatel;PWD=heslo") DA.Fill(Cats) DA.Dispose() ' ...a ulož je do cache Cache.Insert("Categories", Cats, Nothing, DateTime.Now.AddMinutes(15), TimeSpan.Zero) End If ' Vrať obstaranou hodnotu Return Cats End Function
+    Public Function GetCategories(Optional ByVal UseCache As Boolean = True) As DataTable
+        ' Pokus se načíst hodnotu z cache
+        Dim Cats As DataTable = DirectCast(Cache("Categories"), DataTable)
+
+        If Cats Is Nothing Or Not UseCache Then
+            ' Pokud nebyl objekt v cache nalezen, nebo bylo použití cache 
+            ' explicitně zakázáno, načti data z databáze
+            Dim DA As New System.Data.SqlClient.SqlDataAdapter( _
+                "SELECT CategoryID, Name, Description FROM Categories ORDER BY Name", _
+                "SERVER=(local);UID=uzivatel;PWD=heslo")
+            DA.Fill(Cats)
+            DA.Dispose()
+
+            ' ...a ulož je do cache
+            Cache.Insert("Categories", Cats, Nothing, DateTime.Now.AddMinutes(15), TimeSpan.Zero)
+        End If
+
+        ' Vrať obstaranou hodnotu
+        Return Cats
+    End Function
 
 Pomocí nepovinného parametru `UseCache` jest možno v odůvodněných případech vynutit obnovení cache (např. vím-li že se daná hodnota změnila).
 

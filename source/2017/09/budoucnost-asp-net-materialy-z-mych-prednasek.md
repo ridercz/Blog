@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2017-09-08T17:05:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20170908-budoucnost-asp-net-materialy-z-mych-prednasek.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20170804-budoucnost-asp-net.jpg -->
 
 Jak to v budoucnu bude s ASP.NET? Jak si poradit se stávajícími aplikacemi ve Web Forms a MVC 5? Je už .NET Core technologie dostatečně zralá na nasazení? To jsou otázky, které dostáváme docela často. Proto jsme se rozhodli uspořádat konferenci [Budoucnost ASP.NET](https://budoucnost.aspnet.cz/), kde na tyto otázky obecně odpovídáme.
 
@@ -19,7 +19,7 @@ Jak to v budoucnu bude s ASP.NET? Jak si poradit se stávajícími aplikacemi ve
 Na této konferenci jsem měl dvě přednášky:
 
 *   **Minulost, současnost a budoucnost ASP.NET** – úvodní přehledová přednáška. Můžete si stáhnout mou [prezentaci jako PDF](https://www.cdn.altairis.cz/Prednasky/20170908-BudoucnostASPNET.pdf).
-*   Praktická ukázka jednoduché databázové aplikace v **ASP.NET Core 2.0 Razor Pages** je [k dispozici na GitHubu](https://github.com/ridercz/ShirtShop). Aplikace není zatím úplně hotová, ale má základní funkcionalitu. 
+*   Praktická ukázka jednoduché databázové aplikace v **ASP.NET Core 2.0 Razor Pages** je [k dispozici na GitHubu](https://github.com/ridercz/ShirtShop). Aplikace není zatím úplně hotová, ale má základní funkcionalitu.
 
 ## Pokud nevíte kam dál, pomůžeme vám!
 

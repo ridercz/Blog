@@ -31,4 +31,33 @@ Kromě vlastnosti `Value` (resp. kolekce `Values`) má `HttpCookie` ještě tři
 
 Následujících několik funkcí vám zpříjemní práci s cookies a ošetřování chybových stavů (když cookie neexistuje). Předpkládám, že kód nepotřebuje komentář
 
-Public Shared Function GetCookie(ByVal Key1 As String, ByVal Key2 As String, Optional ByVal DefaultValue As String = "") As String Try Return System.Web.HttpContext.Current.Request.Cookies(Key1).Item(Key2) Catch Return DefaultValue End Try End Function Public Shared Sub SetCookie(ByVal Key1 As String, ByVal Key2 As String, ByVal Value As String, Optional ByVal DaysToExpire As Int32 = 90) Dim C As System.Web.HttpCookie C = System.Web.HttpContext.Current.Request.Cookies.Get(Key1) If C Is Nothing Then C = New System.Web.HttpCookie(Key1) Try C.Values.Item(Key2) = Value Catch C.Values.Add(Key2, Value) End Try C.Expires = DateTime.Now.AddDays(DaysToExpire) System.Web.HttpContext.Current.Response.Cookies.Add(C) End Sub Public Shared Sub DeleteCookie(ByVal Name As String) Dim C As System.Web.HttpCookie = System.Web.HttpContext.Current.Request.Cookies.Get(Name) If C Is Nothing Then Return C.Expires = DateTime.Now.AddDays(-1) System.Web.HttpContext.Current.Response.Cookies.Add(C) End Sub
+    Public Shared Function GetCookie(ByVal Key1 As String, ByVal Key2 As String, Optional ByVal DefaultValue As String = "") As String
+        Try
+            Return System.Web.HttpContext.Current.Request.Cookies(Key1).Item(Key2)
+        Catch
+            Return DefaultValue
+        End Try
+    End Function
+
+    Public Shared Sub SetCookie(ByVal Key1 As String, ByVal Key2 As String, ByVal Value As String, Optional ByVal DaysToExpire As Int32 = 90)
+        Dim C As System.Web.HttpCookie
+
+        C = System.Web.HttpContext.Current.Request.Cookies.Get(Key1)
+        If C Is Nothing Then C = New System.Web.HttpCookie(Key1)
+
+        Try
+            C.Values.Item(Key2) = Value
+        Catch
+            C.Values.Add(Key2, Value)
+        End Try
+
+        C.Expires = DateTime.Now.AddDays(DaysToExpire)
+        System.Web.HttpContext.Current.Response.Cookies.Add(C)
+    End Sub
+
+    Public Shared Sub DeleteCookie(ByVal Name As String)
+        Dim C As System.Web.HttpCookie = System.Web.HttpContext.Current.Request.Cookies.Get(Name)
+        If C Is Nothing Then Return
+        C.Expires = DateTime.Now.AddDays(-1)
+        System.Web.HttpContext.Current.Response.Cookies.Add(C)
+    End Sub

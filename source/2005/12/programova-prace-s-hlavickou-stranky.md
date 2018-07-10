@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2005-12-22T05:04:02.117+01:00 -->
 <!-- dcterms:dateAccepted = 2005-12-22T05:04:02.117+01:00 -->
 
-  
+ 
 
 Novinkou v ASP.NET 2.0 je nativní přístup k hlavičce (element `head`) webových stránek. Je možno ho využít například k automatickému generování odkazu na RSS feed.
 
@@ -19,14 +19,16 @@ S rozvojem technologie RSS se objevila nutnost nějakým systemizovaným způsob
 
 Celá technologie stojí na tom, že se do hlavičky stránky přidá následující kód:
 
-<link rel="alternate" type="application/rss+xml" HREF="/WS/GetRSS.aspx" title="Nejnovější články na ASPNET.CZ" />
+    <link rel="alternate" type="application/rss+xml"
+          HREF="/WS/GetRSS.aspx"
+          title="Nejnovější články na ASPNET.CZ" />
 
 Význam atributů je následující:
 
 *   **rel="alternate"** určuje, že se jedná o alternativní verzi webu, o jinou možnost přístupu
 *   **type="application/rss+xml"** určuje, že tato alternativa je v XML, konkrétně ve formátu RSS
 *   **href="..."** je adresa, na níž se tato verze (feed) nachází
-*   **title="..."** je textový popis feedu (nadpis) 
+*   **title="..."** je textový popis feedu (nadpis)
 
 ## Dynamické generování odkazů
 
@@ -36,6 +38,13 @@ Naštěstí třída `System.Web.UI.Page` disponuje v ASP.NET 2.0 vlastností `He
 
 Napsal jsem si na to jednoduchou metodu nazvanou `AddRssFeed`:
 
-Public Shared Sub AddRssFeed(ByVal Page As System.Web.UI.Page, ByVal Title As String, ByVal Url As String) Dim L As New System.Web.UI.HtmlControls.HtmlLink() L.Attributes.Add("rel", "Alternate") L.Attributes.Add("type", "application/rss+xml") L.Attributes.Add("title", Title) L.Attributes.Add("href", Url) Page.Header.Controls.Add(L) End Sub
+    Public Shared Sub AddRssFeed(ByVal Page As System.Web.UI.Page, ByVal Title As String, ByVal Url As String)
+        Dim L As New System.Web.UI.HtmlControls.HtmlLink()
+        L.Attributes.Add("rel", "Alternate")
+        L.Attributes.Add("type", "application/rss+xml")
+        L.Attributes.Add("title", Title)
+        L.Attributes.Add("href", Url)
+        Page.Header.Controls.Add(L)
+    End Sub
 
 Ze stránky ji můžete zavolat jednoduše, například: `AddRssFeed(Me, "Články v rubrice " & CategoryName, "~/Rss.ashx?Category=" & CategoryID)`.

@@ -21,7 +21,7 @@ Níže podepsaný si tam bude plácat játra na téma **Novinky v .NET Framework
 *   Model validation v ASP.NET Web Forms.
 *   Klíčová slova async, await a zjednodušení asynchronního programování.
 *   Podpora HTML 5 ve Web Forms.
-*   Minifikace a komprimace JavaScriptu a CSS. 
+*   Minifikace a komprimace JavaScriptu a CSS.
 
 Ve spolupráci s pořadatelem, počítačovou školou Gopas, jsme pro vás připravili soutěž, jejíž dva výherci dostanou vstup na konferenci zdarma. Soutěž probíhá ode dneška do **18. listopadu 2011** na adrese [DevConSoutez.aspnet.cz](http://DevConSoutez.aspnet.cz). 
 

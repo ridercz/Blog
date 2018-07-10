@@ -31,7 +31,9 @@ Kromě toho, v ČR není tradičně problém s nedostatkem zákonných nástroj�
 
 Ve zkratce si myslím, že pokud pes s nějakými zásadnějšími následky napadne člověka, je to často způsobeno jedním z následujících třech důvodů:
 
-*   Postižený je pitomec. Majitel je pitomec nebo gauner. Pes je psychopat. 
+*   Postižený je pitomec. 
+Majitel je pitomec nebo gauner. 
+Pes je psychopat.
 
 Jak v lidské, tak psí populaci, se vyskytují psychopati. Jedinci, kteří napadají svoje okolí, aniž by k tomu museli mít nějaký zásadní důvod. Tak to prostě je, sice se můžeme snažit je nějakým způsobem podchytit a vytřídit včas, ale to se nemusí povést. Tady žádné zákonné ustanovení nepomůže.
 
@@ -55,7 +57,12 @@ Na tomto úsloví je názorně vidět, že lidovou moudrost je třeba bráti s r
 
 A někde se pes vyvenčit a vyběhat musí. To "někde" znamená pro většinu obyvatel Jižního Města okolí Hostivařské přehrady. Nevelká oáza zeleně obklopená sídlišti s desítkami tisíc obyvatel musí pojmout jejich zástupce, sdružující se do následujících vzájemně ne zcela kompatibilních skupin:
 
-*   Majitelé psů, majitelé dětí rozličného věku, v kočárku či bez, cyklisté, běžci, důchodci na pomalé zdravotní procházce, teenageři, bažící po přírodě z důvodu nedostatku soukromí jinde. 
+*   Majitelé psů, 
+majitelé dětí rozličného věku, v kočárku či bez, 
+cyklisté, 
+běžci, 
+důchodci na pomalé zdravotní procházce, 
+teenageři, bažící po přírodě z důvodu nedostatku soukromí jinde.
 
 Prostě se tam všichni nevejdeme. Běžci se prostě budou muset smířit se skutečností, že je občas začne na pár metrů doprovázet pes. Můj kardiovaskulární systém se bude muset obrnit proti infarktovým stavům v okamžiku, kdy se mi za zády bez varování vynoří sprintující cyklista. Překonávání přirozeného nutkání utopit v přehradě onoho uslintaného parchanta sápajícího se na mne pařátky lepivými od rozmatlané čokolády lze chápat jako zocelení charakteru v duchu hesla <acronym title="Utrpením ke hvězdám (lat.)">per aspera ad astra</acronym> a tak dále.
 

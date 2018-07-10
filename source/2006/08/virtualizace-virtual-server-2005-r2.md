@@ -11,6 +11,8 @@
 <!-- dcterms:created = 2006-08-25T17:31:25.503+02:00 -->
 <!-- dcterms:dateAccepted = 2006-08-25T17:31:25.503+02:00 -->
 
+ 
+
 V [předchozím povídání o virtualizaci](https://www.aspnet.cz/Articles/104-virtualizace-virtual-pc-2004.aspx) jsem vám představil program Virtual PC. To je dobré na interaktivní práci, ale nemůžete v něm provozovat "ostré" servery - a přitom právě jejich konsolidace je jedním z hnacích motorů virtualizace jako takové. Proto je tu "větší bratříček" jménem **Virtual Server**.
 
 ## Servery, které neexistují

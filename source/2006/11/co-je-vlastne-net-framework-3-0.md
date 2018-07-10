@@ -16,7 +16,7 @@ Předchozí nové verze frameworku (1.1 i 2.0) přinášely kompletní nový run
 *   Windows Communication Foundation (WCF, dříve Indigo)
 *   Windows Presentation Foundation (WPF, dříve Avalon)
 *   Windows Workflow Foundation (WF)
-*   Windows CardSpace (dříve InfoCard) 
+*   Windows CardSpace (dříve InfoCard)
 
 Pokud si myslíte, že u Workflow Foundation chybí ve zkratce jedno W, jest tomu tak proto, že proti jeho možnému použití protestoval World Wide Fund for Nature. Přestože svůj původní název (World Wildlife Foundation) ze kterého zkratka vzešla, opustil již před dvaceti lety, zkratku WWF používá a střeží přímo žárlivě. Vzhledem k tomu, že tato bohulibá organizace strávila několik let soudními spory s World Wrestling Federation, Microsoft se moudře rozhodl v této věci ustoupit).
 
@@ -25,7 +25,7 @@ Pokud si myslíte, že u Workflow Foundation chybí ve zkratce jedno W, jest tom
 *   Windows XP SP2
 *   Windows Vista
 *   Windows Server 2003
-*   Windows "Longhorn" 
+*   Windows "Longhorn"
 
 Není tedy možno ho provozovat na Windows 2000 ani 9x.
 

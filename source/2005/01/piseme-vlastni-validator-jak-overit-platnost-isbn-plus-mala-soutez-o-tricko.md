@@ -17,7 +17,9 @@ Tento formát je původní a dnes nejběžnější. ISBN v tomto formátu může
 
 Validace ISBN-10 tedy probíhá takto:
 
-1.  Odstraň všechny mezery, pomlčky a převeď text na velká písmena. Ověř, zda výsledný řetězec odpovídá regulárnímu výrazu `^[0-9]{9}[0-9X]$`. Spočítej kontrolní číslici z prvních devíti číslic a ověř, zda odpovídá poslednímu znaku. 
+1.  Odstraň všechny mezery, pomlčky a převeď text na velká písmena. 
+Ověř, zda výsledný řetězec odpovídá regulárnímu výrazu `^[0-9]{9}[0-9X]$`. 
+Spočítej kontrolní číslici z prvních devíti číslic a ověř, zda odpovídá poslednímu znaku.
 
 Výpočet kontrolní číslice probíhá tak, že se pro každá z devíti významových číslic vynásobí svým pořadím a výsledky se sečtou. To celé se vydělí jedenácti a zbytek je kontrolní číslice (pokud je zbytek 10, zapíše se jako X). Pro shora uvedené ISBN tedy bude výpočet kontrolní číslice probíhat takto:
 
@@ -45,17 +47,91 @@ Dále pak potřebuji, aby programátor mohl zvolit, zda pro tuto specifickou apl
 
 Kompletní zdrojový kód třídy pak vypadá takto:
 
-Imports System.ComponentModel Imports System.Web.UI <DefaultProperty("Text"), ToolboxData("<{0}:IsbnValidator1 runat=server></{0}:IsbnValidator>")> Public Class IsbnValidator Inherits System.Web.UI.WebControls.BaseValidator Public Enum IsbnTypes Isbn10 Isbn13 Both End Enum Private _EnabledIsbnTypes As IsbnTypes = IsbnTypes.Both Public Property EnabledIsbnTypes() As IsbnTypes Get Return Me._EnabledIsbnTypes End Get Set(ByVal Value As IsbnTypes) Me._EnabledIsbnTypes = Value End Set End Property Protected Overrides Function EvaluateIsValid() As Boolean Dim Value As String = Me.GetControlValidationValue(Me.ControlToValidate) ' If empty string, return true If Value = "" Then Return True ' Remove formatting and turn to uppercase Value = Value.Replace(" ", String.Empty).Replace("-", String.Empty).ToUpper() ' Check if the result is ISBN-10 or ISBN-13 If Value.Length = 10 Then ' ISBN-10: Check if is enabled and valid If Me._EnabledIsbnTypes = IsbnTypes.Isbn13 Then Return False If Not System.Text.RegularExpressions.Regex.IsMatch(Value, "^[0-9]{9}[0-9X]$") Then Return False ' Compute checksum Dim CheckSum As Int32 For I As Int32 = 0 To 8 CheckSum += Int32.Parse(Value.Chars(I)) * (I + 1) Next CheckSum = CheckSum Mod 11 Dim CheckString As String = CheckSum.ToString() If CheckSum = 10 Then CheckString = "X" ' Compare checksum Return CheckString = Right(Value, 1) ElseIf Value.Length = 13 Then ' ISBN-13: Check if is enabled and valid If Me._EnabledIsbnTypes = IsbnTypes.Isbn10 Then Return False If Not System.Text.RegularExpressions.Regex.IsMatch(Value, "^97[89][0-9]{10}$") Then Return False ' Compute checksum Dim CheckSum As Int32 For I As Int32 = 0 To 11 If I Mod 2 = 0 Then CheckSum += Int32.Parse(Value.Chars(I)) Else CheckSum += Int32.Parse(Value.Chars(I)) * 3 End If Next CheckSum = 10 - (CheckSum Mod 10) If CheckSum = 10 Then CheckSum = 0 ' Compare checksum Return Right(Value, 1) = CheckSum.ToString() Else ' Bad number of digits Return False End If End Function End Class
+    Imports System.ComponentModel
+    Imports System.Web.UI
+
+    <DefaultProperty("Text"), ToolboxData("<{0}:IsbnValidator1 runat=server></{0}:IsbnValidator>")> Public Class IsbnValidator
+        Inherits System.Web.UI.WebControls.BaseValidator
+
+        Public Enum IsbnTypes
+            Isbn10
+            Isbn13
+            Both
+        End Enum
+
+        Private _EnabledIsbnTypes As IsbnTypes = IsbnTypes.Both
+
+        Public Property EnabledIsbnTypes() As IsbnTypes
+            Get
+                Return Me._EnabledIsbnTypes
+            End Get
+            Set(ByVal Value As IsbnTypes)
+                Me._EnabledIsbnTypes = Value
+            End Set
+        End Property
+
+        Protected Overrides Function EvaluateIsValid() As Boolean
+            Dim Value As String = Me.GetControlValidationValue(Me.ControlToValidate)
+
+            ' If empty string, return true
+            If Value = "" Then Return True
+
+            ' Remove formatting and turn to uppercase
+            Value = Value.Replace(" ", String.Empty).Replace("-", String.Empty).ToUpper()
+
+            ' Check if the result is ISBN-10 or ISBN-13
+            If Value.Length = 10 Then
+                ' ISBN-10: Check if is enabled and valid
+                If Me._EnabledIsbnTypes = IsbnTypes.Isbn13 Then Return False
+                If Not System.Text.RegularExpressions.Regex.IsMatch(Value, "^[0-9]{9}[0-9X]$") Then Return False
+
+                ' Compute checksum
+                Dim CheckSum As Int32
+                For I As Int32 = 0 To 8
+                    CheckSum += Int32.Parse(Value.Chars(I)) * (I + 1)
+                Next
+                CheckSum = CheckSum Mod 11
+                Dim CheckString As String = CheckSum.ToString()
+                If CheckSum = 10 Then CheckString = "X"
+
+                ' Compare checksum
+                Return CheckString = Right(Value, 1)
+            ElseIf Value.Length = 13 Then
+                ' ISBN-13: Check if is enabled and valid
+                If Me._EnabledIsbnTypes = IsbnTypes.Isbn10 Then Return False
+                If Not System.Text.RegularExpressions.Regex.IsMatch(Value, "^97[89][0-9]{10}$") Then Return False
+
+                ' Compute checksum
+                Dim CheckSum As Int32
+                For I As Int32 = 0 To 11
+                    If I Mod 2 = 0 Then
+                        CheckSum += Int32.Parse(Value.Chars(I))
+                    Else
+                        CheckSum += Int32.Parse(Value.Chars(I)) * 3
+                    End If
+                Next
+                CheckSum = 10 - (CheckSum Mod 10)
+                If CheckSum = 10 Then CheckSum = 0
+
+                ' Compare checksum
+                Return Right(Value, 1) = CheckSum.ToString()
+            Else
+                ' Bad number of digits
+                Return False
+            End If
+        End Function
+
+    End Class
 
 ## Použití
 
 Po zkompilování a nakopírování výsledko do adresáře `/bin` vaší aplikace můžete validátor používat. V hlavičce stránky ho zaregistrujete takto (hodnoty Namespace a Assembly samozřejmě upravte dle potřeby):
 
-<%@ Register TagPrefix="iv" Namespace="AltairCommunications.Web.UI" Assembly="IsbnValidator" %>
+    <%@ Register TagPrefix="iv" Namespace="AltairCommunications.Web.UI" Assembly="IsbnValidator" %>
 
 Použít ho může prostým vložením následujícího kódu do stránky:
 
-<my:isbnvalidator runat="server" id="IsbnValidator1" controltovalidate="TextBox1">(!)</my:isbnvalidator>
+    <my:isbnvalidator runat="server" id="IsbnValidator1" controltovalidate="TextBox1">(!)</my:isbnvalidator>
 
 Kompletní příklad včetně zdrojových kódů si můžete stáhnout na [http://software.altaircom.net/software/isbnvalidator.aspx](http://software.altaircom.net/software/isbnvalidator.aspx).
 

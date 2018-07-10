@@ -24,7 +24,7 @@ V každém případě, moje oblíbené zdroje písem jsou:
 
 *   [**České fonty**](http://www.ceskefonty.cz/) – jak již název napovídá, jedná se o databázi českých fontů, které jsou k dispozici zdarma. 
 *   [**Font Squirrel**](http://www.fontsquirrel.com/) – patrně největší databáze volně dostupných fontů. Bohužel, podporu češtiny má jenom menšina z nich a navíc nelze podle tohoto parametru vyhledávat. Font Squirrel má pro naše účely jednu podstatnou výhodu, a to že umí generovat *@font-face* balíčky, a to jak z vlastních, tak z vámi dodaných fontů, o čemž bude řeč později. 
-*   [**Google Web Fonts**](http://www.google.com/webfonts) – databáze fontů od Google. Nabízí i [vlastní API](http://code.google.com/apis/webfonts/) a CDN, která vyřeší některé vaše problémy, ovšem za cenu závislosti na Google a možných problémů, pokud se návštěvníci brání šmírování třeba pomocí tracking protection v IE. Podporuje sice vyhledávání i podle skriptu (české znaky jsou v *Latin Extended*), ale faktická podpora v jednotlivých písmech může být nepoužitelná.  
+*   [**Google Web Fonts**](http://www.google.com/webfonts) – databáze fontů od Google. Nabízí i [vlastní API](http://code.google.com/apis/webfonts/) a CDN, která vyřeší některé vaše problémy, ovšem za cenu závislosti na Google a možných problémů, pokud se návštěvníci brání šmírování třeba pomocí tracking protection v IE. Podporuje sice vyhledávání i podle skriptu (české znaky jsou v *Latin Extended*), ale faktická podpora v jednotlivých písmech může být nepoužitelná. 
 
 Nepochybně existují i další servery podobného zaměření, nicméně já osobně používám shora uvedené tři. Záměrně jsem se také zaměřil pouze na zdroje dostupné zdarma. Pokud máte další tipy, napište je do komentářů.
 
@@ -43,7 +43,7 @@ Pro vkládání do stránek se ovšem používají jiné formáty:
 *   **Embedded Open Type** (přípona *.eot*) je formát původně vymyšlený Microsoftem, který vychází z OpenType. Je podporován Internet Explorerem od verze 6.0. 
 *   **Web Open Font Format** (přípona *.woff*) je víceméně totéž, ovšem novější. Podporuje ho IE od verze 9.0 a některé další prohlížeče. 
 *   **TrueType** (přípona *.ttf*) některé browsery umí taktéž, podstatný je zejména pro starší verze iOS. 
-*   **Scalable Vector Graphics** (přípona *.svg*) má význam pro ještě starší verze iOS.  
+*   **Scalable Vector Graphics** (přípona *.svg*) má význam pro ještě starší verze iOS. 
 
 V praxi obyvkle používám kombinaci EOT + WOFF + TTF, která pokrývá většinu současných prohlížečů. Podrobnosti najdete na úchvatném webu [caniuse.com](http://caniuse.com/#feat=fontface).
 
@@ -57,17 +57,40 @@ Pokud jste ke svému fontu přišli jinde, Font Squirrel vám pomůže rovněž.
 
 Aby font embedding fungoval, musíte nahrát EOT/WOFF/TTF soubory na svůj web server. Drobná zákeřnost nicméně tkví v tom, že IIS ve výchozím nastavení přípony *.woff* a *.eot* nezná a jako takové tyto soubory z bezpečnostních důvodů odmítne browseru poslat, vyhodí chybu 404, i když soubor existuje. Aby vkládání fontů fungovalo, je nutné tyto přípony zaregistrovat. U IIS 7.x se to dělá v souboru *web.config* následující definicí:
 
-<configuration> <system.webServer> <staticContent> <remove fileExtension=".ttf" /> <remove fileExtension=".eot" /> <remove fileExtension=".woff" /> <mimeMap fileExtension=".eot" mimeType="application/vnd.bw-fontobject" /> <mimeMap fileExtension=".ttf" mimeType="application/x-font-ttf" /> <mimeMap fileExtension=".woff" mimeType="application/x-woff" /> </staticContent> </system.webServer> </configuration>
+    <configuration>
+        <system.webServer>
+            <staticContent>
+                <remove fileExtension=".ttf" />
+                <remove fileExtension=".eot" />
+                <remove fileExtension=".woff" />
+                <mimeMap fileExtension=".eot" mimeType="application/vnd.bw-fontobject" />
+                <mimeMap fileExtension=".ttf" mimeType="application/x-font-ttf" />
+                <mimeMap fileExtension=".woff" mimeType="application/x-woff" />
+            </staticContent>
+        </system.webServer>
+    </configuration>
 
 ## Krok čtvrtý: Nastavení CSS
 
 Součástí balíčku staženého z Font Squirrel je i soubor *stylesheet.css*, který obsahuje stylopis, který musíte přidat do svého CSS souboru, typicky na začátek. Vypadá nějak takto (pro demo jsem použil písmo [Bebas Neue](http://www.fontsquirrel.com/fonts/Bebas-neue)):
 
-@font-face { font-family: 'BebasNeueRegular'; src: url('BebasNeue-webfont.eot'); src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('BebasNeue-webfont.woff') format('woff'), url('BebasNeue-webfont.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+    @font-face {
+        font-family: 'BebasNeueRegular';
+        src: url('BebasNeue-webfont.eot');
+        src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+             url('BebasNeue-webfont.woff') format('woff'), 
+             url('BebasNeue-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
 
 Tato relativně složitá konstrukce zajišťuje, že se pro každý prohlížeč stáhne ten správný formát. Jakmile ji jednou máte, můžete v dalším stylopisu normálně používat zaregistrovaný název fontu, zde *BebasNeueRegular*. Je žádoucí i v tomto případě specifikovat "fallback" fonty, aby v případě nefunkčnosti embeddingu (prohlížeč nepodporuje, došlo k chybě při přenosu…) byla stránka zobrazena alespoň přibližně použitelně. Bebas je úzký, bezpatkový font, kterému je z těch běžných nebližší Impact. Pokud bychom chtěli všechny nadpisy první úrovně psát tímto písmem, můžeme zadat následující styl:
 
-h1 { font-family: BebasNeueRegular, Impact, Arial, Helvetica, sans-serif; font-size: 30pt; font-weight: normal; }
+    h1 {
+        font-family: BebasNeueRegular, Impact, Arial, Helvetica, sans-serif;
+        font-size: 30pt;
+        font-weight: normal;
+    }
 
 Obsah všech **<H1>** bude nyní zobrazen vloženým písmem.
 
@@ -83,7 +106,30 @@ Pokud si stáhnete @font-face kit, budou v CSS souboru tyto varianty zaregistrov
 
 Řešení ovšem existuje, v podobě následujícího zápisu (ve kterém jsem pro přehlednost nechal jenom odkaz na *.eot* formát pro Internet Explorer, v praxi byste opět použili výše uvedenou konstrukci):
 
-@font-face { font-family: 'AnonymousPro'; src: url('Anonymous_Pro-webfont.eot'); font-weight: normal; font-style: normal; } @font-face { font-family: 'AnonymousPro'; src: url('Anonymous_Pro_I-webfont.eot'); font-weight: normal; font-style: italic; } @font-face { font-family: 'AnonymousPro'; src: url('Anonymous_Pro_B-webfont.eot'); font-weight: bold; font-style: normal; } @font-face { font-family: 'AnonymousPro'; src: url('Anonymous_Pro_BI-webfont.eot'); font-weight: bold; font-style: italic; }
+    @font-face {
+        font-family: 'AnonymousPro';
+        src: url('Anonymous_Pro-webfont.eot');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'AnonymousPro';
+        src: url('Anonymous_Pro_I-webfont.eot');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'AnonymousPro';
+        src: url('Anonymous_Pro_B-webfont.eot');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'AnonymousPro';
+        src: url('Anonymous_Pro_BI-webfont.eot');
+        font-weight: bold;
+        font-style: italic;
+    }
 
 Pod totožným názvem (*AnonymousPro*) jsme zaregistrovali čtyři různé fonty a kombinací parametrů *font-weight* a *font-style* jsme určili, jaké řezy se mají v jednotlivých kontextech použít.
 
@@ -91,6 +137,65 @@ Některá písma mohou mít variant ještě mnohem více. Příkladem budiž tř
 
 Pokud bychom chtěli zaregistrovat všech 10 řezů, použili bychom následující obsáhlý styl (opět pro přehlednost jenom v *.eot*):
 
-@font-face { font-family: 'OpenSans'; src: url("OpenSans-Light-webfont.eot"); font-weight: 100; font-style: normal; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-LightItalic-webfont.eot"); font-weight: 100; font-style: italic; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-Regular-webfont.eot"); font-weight: 400; font-style: normal; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-Italic-webfont.eot"); font-weight: 400; font-style: italic; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-Semibold-webfont.eot"); font-weight: 500; font-style: normal; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-SemiboldItalic-webfont.eot"); font-weight: 500; font-style: italic; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-Bold-webfont.eot"); font-weight: 700; font-style: normal; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-BoldItalic-webfont.eot"); font-weight: 700; font-style: italic; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-ExtraBold-webfont.eot"); font-weight: 900; font-style: normal; } @font-face { font-family: 'OpenSans'; src: url("OpenSans-ExtraBoldItalic-webfont.eot"); font-weight: 900; font-style: italic; }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-Light-webfont.eot");
+        font-weight: 100;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-LightItalic-webfont.eot");
+        font-weight: 100;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-Regular-webfont.eot");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-Italic-webfont.eot");
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-Semibold-webfont.eot");
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-SemiboldItalic-webfont.eot");
+        font-weight: 500;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-Bold-webfont.eot");
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-BoldItalic-webfont.eot");
+        font-weight: 700;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-ExtraBold-webfont.eot");
+        font-weight: 900;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url("OpenSans-ExtraBoldItalic-webfont.eot");
+        font-weight: 900;
+        font-style: italic;
+    }
 
 Vkládání písem je velmi mocný nástroj, který dokáže ozvláštnit webové stránky a není mnoho důvodů, proč jej opomíjet.

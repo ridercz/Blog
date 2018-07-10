@@ -22,7 +22,7 @@ Dobrý systém pro rozesílání zpráv by měl mít následující vlastnosti:
 *   **Korektní nastavení hlaviček původce.** Tedy *From*, *Sender* a *Reply-To*.
 *   **Rozesílání e-mailů na více adres současně.** Ve většině případů je vhodné maily více příjemcům rozesílat tak, aby o sobě jednotliví příjemci nevědli, tj. aby každý měl vlastní kopii se svou adresou v hlavičce *To*.
 *   **Jednoduchost odeslání mailu** z kódu, ideálně na jeden příkaz/řádek.
-*   **Centralizace konfigurace**, aby změnu parametrů nebylo nutné provádět na mnoha místech najednou. 
+*   **Centralizace konfigurace**, aby změnu parametrů nebylo nutné provádět na mnoha místech najednou.  
 
 Kromě toho platí vše, co pro .NET aplikace všeobecně. Tedy maximální využití existujících standardů a infrastruktury, což zjednoduší zapojení do existujících struktur.
 

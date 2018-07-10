@@ -16,7 +16,7 @@ V této přednášce představím některá rozšíření, která jsou k dispozi
 *   IIS Media Pack (bitrate throttling, web playlists, smooth streaming) 
 *   URL Rewrite (a jeho omezení) 
 *   Database Manager (a jeho použití na hostingu ve spolupráci se vzdálenou správou) 
-*   Application Request Routing  
+*   Application Request Routing   
 
 Podíváme se také na Microsoft Web Platform Installer, který umožňuje toto všechno snadno nainstalovat a používat.
 

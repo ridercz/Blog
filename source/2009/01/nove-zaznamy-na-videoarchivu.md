@@ -25,6 +25,6 @@ Na webu [videoarchiv.altairis.cz](http://videoarchiv.altairis.cz/) jsem publikov
 *   [XNA Framework](http://videoarchiv.altairis.cz/Entries/30-xna-framework.aspx) 
 *   [Expression nástroje](http://videoarchiv.altairis.cz/Entries/29-expression-nastroje.aspx) 
 *   [Design patterns a .NET](http://videoarchiv.altairis.cz/Entries/28-design-patterns-a-net.aspx) 
-*   [Javascriptové frameworky](http://videoarchiv.altairis.cz/Entries/27-javascriptove-frameworky.aspx)  
+*   [Javascriptové frameworky](http://videoarchiv.altairis.cz/Entries/27-javascriptove-frameworky.aspx)   
 
 Pokud se týče mé vlastní činnosti, tak už týden brblám, chrchlám a konce v nedohlednu. Proto jsem musel zrušit už jednou přesunutou přednášku o Geneva Frameworku a jeden projekt, ve které mám prsty (a bohužel též hlasivky) ve spolupráci s Microsoftem. 

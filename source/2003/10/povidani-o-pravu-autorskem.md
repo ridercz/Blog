@@ -35,7 +35,7 @@ Mail v tomto duchu rozešlu na všechny strany:
 
 *   Na kontaktní adresu uvedenou na webu, je-li jaká. 
 *   Na všechny kontaktní adresy uvedené u registrace příslušné domény. 
-*   Patřičnému ISP. 
+*   Patřičnému ISP.
 
 Zatím se mi v této fázi podařilo vždy dosáhnout svého - zareagoval buď provozovatel stránek nebo příslušný webhoster/ISP. Nemusel jsem tedy přikročit k třetímu kroku, kterým je reálné podání trestního oznámení.
 

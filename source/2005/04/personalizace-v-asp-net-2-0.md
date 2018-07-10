@@ -13,7 +13,7 @@ Zařekl jsem se, že se Whidbey vůbec nebudu zabývat, dokud nebude na světě 
 
 *   [Část první](http://www.kdkeys.net/forums/4107/ShowPost.aspx)
 *   [Část druhá](http://www.kdkeys.net/forums/4135/ShowPost.aspx)
-*   [Část třetí](http://www.kdkeys.net/forums/4137/ShowPost.aspx) 
+*   [Část třetí](http://www.kdkeys.net/forums/4137/ShowPost.aspx)
 
 Ve zkratce: základním principem .NET je abstrakce. Framework se snaží programátora odstínit od detailů, aby se mohl věnovat skutečné kreativní práci. Ono "odstínění od detailů" může spočívat jednak v abstrakci od konkrétního hardware/operačního systému, ale také v "zapouzdření" často používaných technik do jednoduchého rozhraní. Typickým příkladem je *Forms Authentication* v ASP.NET 1.1. Nevím jak vy, ale já osobně jsem variantu téhož napsal v ASP 3.0 asi stokrát.
 

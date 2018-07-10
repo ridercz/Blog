@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Další z mých mezisvátkových open source projektů je sada šablon pro dynamické generování UI v ASP.NET Razor Pages a MVC Core." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jednoduché šablony pro generování UI v ASP.NET Core</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2017-12-27T01:53:52.03+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>27. prosince 2017</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Další z mých mezisvátkových open source projektů je sada šablon pro dynamické generování UI v ASP.NET Razor Pages a MVC Core. Jedná se o ideového nástupce mého NuGet balíčku <a href="https://www.nuget.org/packages/Altairis.Mvc.EditorTemplates/">Altairis.Mvc.EditorTemplates</a>, který jsem vytvořil pro ASP.NET MVC 5.</p>
 <p>Píšete-li aplikace v ASP.NET MVC nebo Razor Pages, téměř s jistotou používáte dynamické generování uživatelského rozhraní. Buďto na úrovni jednotlivých polí (<code>@Html.EditorFor(m =&gt; m.Field)</code> nebo <code>asp-for=&quot;Model.Field&quot;</code>) nebo na úrovni celého modelu (<code>@Html.EditorForModel()</code>). V takovém případě ASP.NET standardně pro generování HTML použije své vestavěné šablony, které jsou připraveny na použití UI frameworku Bootstrap a obsahují tedy patřičné HTML a CSS třídy.</p>
 <p>Já Bootstrap nepoužívám a nemám rád. Dávám přednost sémantickému, čistému HTML. Proto jsem hledal jednodušší šablony, které by bootstrapové konstrukce neobsahovaly. ASP.NET použité šablony umožňuje modifikovat. Stačí nahrát soubory s názvem odpovídajícím logickému typu pole do <code>~/Views/Shared/EditorTemplates/*název_typu*.cshtml</code> (pro MVC) nebo do <code>~/Pages/EditorTemplates/*název_typu*.cshtml</code> pro Razor Pages.</p>
@@ -33,7 +78,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

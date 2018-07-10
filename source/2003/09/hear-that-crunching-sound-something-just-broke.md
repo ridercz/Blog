@@ -24,7 +24,9 @@ Zvláště zábavným zdrojem chybových hlášek jsou systémy, které píší 
 > 
 > **Options**
 > 
-> 1.  Try and do whatever you did again. Open the CodeProject home page, and then look for links to the information you want. Sure, the information you need is probably on this page, but you never know your luck in a big city. Pray, curse, or sacrifice burnt offerings, then see 1.
+> 1.  Try and do whatever you did again.
+> Open the CodeProject home page, and then look for links to the information you want. Sure, the information you need is probably on this page, but you never know your luck in a big city.
+> Pray, curse, or sacrifice burnt offerings, then see 1.
 
 Pro Felixe a další jedince, kteří z angličtiny zvládají jenom "OK" a "Cancel", následuje přibližný překlad:
 
@@ -38,6 +40,8 @@ Pro Felixe a další jedince, kteří z angličtiny zvládají jenom "OK" a "Can
 > 
 > **Co dělat**
 > 
-> 1.  Zkuste to, a ať už jste dělali cokoliv, zopakujte to. Otevřete titulní stárnku serveru a jděte po odkazech, abyste našli co hledáte. Samozřejmě, informace kterou hledáte se pravděpodobně nachází na této stránce, ale jeden nikdy neví, Modlete se, nadávejte, nebo proveďte zápalnou oběť a pokračujte bodem 1.
+> 1.  Zkuste to, a ať už jste dělali cokoliv, zopakujte to.
+> Otevřete titulní stárnku serveru a jděte po odkazech, abyste našli co hledáte. Samozřejmě, informace kterou hledáte se pravděpodobně nachází na této stránce, ale jeden nikdy neví,
+> Modlete se, nadávejte, nebo proveďte zápalnou oběť a pokračujte bodem 1.
 
 Radost mi kazí snad jenom to, že CodeProject shodil právě [můj článek](http://www.codeproject.com/useritems/WS-Security.asp)...

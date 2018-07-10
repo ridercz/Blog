@@ -24,6 +24,7 @@ Požádal jsem magistrát města o zaslání příslušného usnesení, uvidíme
 
 Nicméně pokud rada města uvedené internetové stránky skutečně podpořila, tak je to - dle mého soudu - podstatně větší problém, než nehoda samotná. A to ze dvou hlavních důvodů:
 
-*   Ačkoliv chápu otce, který se vydá na křižáckou výpravu proti tomu, koho považuje za vraha svého syna, jeho pomsta by neměla být sponzorována státními prostředky. Při nejlepší vůli si nedovedu představit, jakým způsobem by mohlo občanské sdružení do internetových stránek té *strašné* kvality nacpat padesát tisíc. 
+*   Ačkoliv chápu otce, který se vydá na křižáckou výpravu proti tomu, koho považuje za vraha svého syna, jeho pomsta by neměla být sponzorována státními prostředky. 
+Při nejlepší vůli si nedovedu představit, jakým způsobem by mohlo občanské sdružení do internetových stránek té *strašné* kvality nacpat padesát tisíc.
 
 Uvidíme, co mi dojde od rady města, jakožto - pravda tolik formální - občan Karlových Varů doufám, že ta podpora šla na něco jiného, či že se celá věc má nějak jinak.

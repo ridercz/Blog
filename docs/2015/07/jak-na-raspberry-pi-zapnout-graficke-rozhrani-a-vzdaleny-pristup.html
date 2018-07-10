@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Chcete si s Raspberry Pi pohrát víc, než jak vám nabízím v seriálu o projektu Atropa? Můžete povolit grafické rozhraní a zapnout vzdálený přístup přes RDP." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jak na Raspberry Pi zapnout grafické rozhraní a vzdálený přístup?</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2015-07-23T19:53:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>23. července 2015</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Chcete si s Raspberry Pi pohrát víc, než jak vám nabízím v seriálu o projektu Atropa? Můžete povolit grafické rozhraní a zapnout vzdálený přístup přes RDP.</p>
 <h2 id="jak-zapnout-graficke-prostredi">Jak zapnout grafické prostředí?</h2>
 <p>Z konzole můžete nastartovat grafické rozhraní příkazem <code>startx</code>. Ale co když chcete, aby vám Raspberry do grafického prostředí rovnou bootovalo?</p>
@@ -33,7 +78,10 @@
 <p>Za tímto účelem musíte nainstalovat balíček <em>xrdp</em>, což učiníte z terminálu následujícím příkazem: <code>sudo apt-get install xrdp</code>.</p>
 <p>Při snaze rozchodit správně xrdp jsem měl problém s českou klávesnicí. Ačkoliv mi správně fungovala na lokále v textovém i grafickém režimu, přes RDP jsem měl pořád anglické rozložení a nedokázal jsem psát háčky a čárky. Po jistých problémech jsem přišel na řešení.</p>
 <p>Připojte se lokálně na konzoli do grafického rozhraní a spusťte terminál (ve kterém vám funguje klávesnice, jakou chcete). Poté spusťte následující příkazy:</p>
-<p>sudo xrdp-genkeymap /etc/xrdp/km-0405.ini sudo cp /etc/xrdp/km-0409.ini /etc/xrdp/km-0409.ini.bak sudo xrdp-genkeymap /etc/xrdp/km-0409.ini</p>
+<pre><code>sudo xrdp-genkeymap /etc/xrdp/km-0405.ini
+sudo cp /etc/xrdp/km-0409.ini /etc/xrdp/km-0409.ini.bak
+sudo xrdp-genkeymap /etc/xrdp/km-0409.ini
+</code></pre>
 <p>První příkaz vezme stávající mapování klávesnice a uloží ho do souboru <code>km-0405.ini</code>. Číslo 0405 je kód pro češtinu (seznam kódů najdete <a href="http://xrdp.sourceforge.net/documents/keymap/rfc1766.html">na webu xrdp</a>). To by samo o sobě mělo stačit, nicméně mně to nepomohlo. Možná proto, že mám anglická Windows a RDP klient reportuje jako jazyk angličtinu. Proto jsem se rozhodl, že českým přepíšu anglické mapování klávesnice, které je v souboru <code>km-0409.ini</code>. Původní nastavení jsem si pro jistotu uložil do <code>km-0409.ini.bak</code> (to dělá druhý příkaz) a pak přegeneroval původní soubor (třetí příkaz). Poté mi xrdp začalo fungovat česky.</p>
 <h2 id="jak-se-pripojit-z-windows">Jak se připojit z Windows?</h2>
 <p>Pokud se pokusíte připojit s výchozími nastaveními, nebude vám to fungovat, protože xrdp podporuje pouze osmi nebo šestnáctibitovou barevnou hloubku, zatímco výchozí nastavení terminálového klienta je 32 bitů.</p>
@@ -47,7 +95,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -27,4 +27,25 @@ Ještě zajímavější je stavový kód *410 Gone*. Ten indikuje, že požadova
 
 ASP.NET neobsahují pro shora uvedené žádnou systémovou podporu. Pročež používám dvojici funkcí, které totéž učiní za mne:
 
-Public Shared Sub PermanentRedirect(ByVal URL As String) With System.Web.HttpContext.Current.Response .Clear() .StatusCode = 301 .StatusDescription = "Moved Permanently" .AddHeader("Location", URL) .Write("<html><head><title>301 Moved Permanently</title></head>") .Write("<body><h1>301 Moved Permanently</h1><p>Requested page was permanently moved <a href='" & URL & "'>here</a>.</p></body></html>") .End() End With End Sub Public Shared Sub PermanentGone() With System.Web.HttpContext.Current.Response .Clear() .StatusCode = 410 .StatusDescription = "Gone" .Write("<html><head><title>410 Gone</title></head>") .Write("<body><h1>410 Gone</h1><p>Requested page was permanently discontinued. Please remove all links here.</p></body></html>") .End() End With End Sub 
+    Public Shared Sub PermanentRedirect(ByVal URL As String)
+        With System.Web.HttpContext.Current.Response
+            .Clear()
+            .StatusCode = 301
+            .StatusDescription = "Moved Permanently"
+            .AddHeader("Location", URL)
+            .Write("<html><head><title>301 Moved Permanently</title></head>")
+            .Write("<body><h1>301 Moved Permanently</h1><p>Requested page was permanently moved <a href='" & URL & "'>here</a>.</p></body></html>")
+            .End()
+        End With
+    End Sub
+
+    Public Shared Sub PermanentGone()
+        With System.Web.HttpContext.Current.Response
+            .Clear()
+            .StatusCode = 410
+            .StatusDescription = "Gone"
+            .Write("<html><head><title>410 Gone</title></head>")
+            .Write("<body><h1>410 Gone</h1><p>Requested page was permanently discontinued. Please remove all links here.</p></body></html>")
+            .End()
+        End With
+    End Sub

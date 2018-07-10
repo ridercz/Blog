@@ -17,6 +17,6 @@ Dnes se v Praze konal další ze seminářů o novinkách v ASP.NET 4.5, tentokr
 ***POZOR! Nabízené řešení pro propojení bundlingu a ScriptManageru je zbytečně složité. Popis jednoduššího najdete v článku ***[***Bundling a ScriptManager znovu: ještě jednodušší, než jsme čekali***](http://www.aspnet.cz/articles/402-bundling-a-scriptmanager-znovu-jeste-jednodussi-nez-jsme-cekali)***. ***
 
 Záznam z akce najdeje tradičně na [YouTube](http://youtu.be/Kj4k8C-BSDo):
- <iframe height="480" src="http://www.youtube-nocookie.com/embed/Kj4k8C-BSDo" frameborder="0" width="853" allowfullscreen="allowfullscreen"></iframe> 
+ <iframe height="480" src="http://www.youtube-nocookie.com/embed/Kj4k8C-BSDo" frameborder="0" width="853" allowfullscreen="allowfullscreen"></iframe>  
 
 Můžete si stáhnout i [příklady a prezentaci (1.6 MB)](http://www.cdn.altairis.cz/Prednasky/20120829-bundling.zip). Řadu užitečných transformací najdete na [CodePlexu](http://bundletransformer.codeplex.com/).

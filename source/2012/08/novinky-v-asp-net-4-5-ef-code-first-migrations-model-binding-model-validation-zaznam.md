@@ -16,9 +16,10 @@ Konečně jsem zpracoval tři týdny starý záznam z akce o (nejen)novinkávh v
 
 *   Entity Framework Code First a Code First Migrations
 *   ASP.NET Model Binding (strongly-typed data binding)
-*   ASP.NET Model Validation 
+*   ASP.NET Model Validation
 
 Záznam je k dispozici na [YouTube](http://youtu.be/NGw4-QZkmw0):
- <iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/NGw4-QZkmw0" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
+
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/NGw4-QZkmw0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 V této souvislosti bych vás rád pozval na akci příští středu (29. srpna), kdy bude řeč o další dávce, tentokrát se bude týkat práce s CSS a skripty – bundling, minification, script manager… Podrobnější informace a registraci najdete na [GeekCore](http://www.geekcore.cz/events/566).

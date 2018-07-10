@@ -32,7 +32,7 @@ V tomto článku vám chci představit embedded databázi od Microsoftu – **SQ
 *   Datový soubor obsahuje pouze data, nemůže obsahovat žádný kód (uložené procedury, funkce…) a je tedy bezpečný z pohledu možnosti šíření malware.
 *   Standardní přípona datového souboru je *.sdf*, ale je možné ji změnit a např. použít tento formát jako interní formát své aplikace.
 *   Databáze nemá samostatný soubor s daty a transakčním logem (*.mdf* + *.ldf*), ale jenom jeden soubor.
-*   Záloha je snadná, stačí zkopírovat datový soubor. 
+*   Záloha je snadná, stačí zkopírovat datový soubor.
 
 Pro tyto vlastnosti se embedded databáze hojně využívají v klientských (desktopových) aplikacích. Ve skutečnosti je dost pravděpodobné, že na svém počítači několik různých embedded databází už máte, protože jsou hojně využívány např. programy pro instant messaging (MSN používá SQL CE, Skype SQLite), webové prohlížeče (Mozilla používá SQLite) nebo multimediální přehrávače s knhovnou médií. V takových případech je jednodušší k aplikaci přibalit jedno DLLko, než nebohého uživatele nutit, aby instaloval a spravoval byť třeba zdarma dostupný SQL Server Express.
 
@@ -46,7 +46,7 @@ Kdy byste se tedy měli poohlížet po použití SQL Serveru CE místo vyššíc
 *   Pokud vaše aplikace pracuje s **menším objemem dat**. Ovšem ono "menší" berte s rezervou. Maximální velikost databáze jsou u SQL CE 4 GB. Mám jednu databázi, která má zhruba gigabajt a subjektivně chodí svižně.
 *   Máte **méně zatěžovaný web**. Opět, to "méně" berte s rezervou, zejména pokud se hodně čte a málo zapisuje.
 *   Potřebujete **zjednodušit distribuci** aplikace. SQL Server Express a vyšší musí někdo nainstalovat a zkonfigurovat. Knihovny SQL CE stačí nakopírovat do *bin* adresáře.
-*   Potřebujete **zjednodušit konfiguraci** aplikace. Použití běžné databáze na Microsoft SQL Serveru vyžaduje patřičné nastavení, což nelze jednoduše udělat automaticky. Je nutné vytvořit databázi, dostat do ní patřičné objekty a zkonfigurovat connection string. U SQL CE stačí ukázat na patřičný SDF soubor. 
+*   Potřebujete **zjednodušit konfiguraci** aplikace. Použití běžné databáze na Microsoft SQL Serveru vyžaduje patřičné nastavení, což nelze jednoduše udělat automaticky. Je nutné vytvořit databázi, dostat do ní patřičné objekty a zkonfigurovat connection string. U SQL CE stačí ukázat na patřičný SDF soubor.
 
 ## Nástroje pro práci se SQL CE
 

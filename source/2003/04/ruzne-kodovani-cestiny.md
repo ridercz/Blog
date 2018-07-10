@@ -17,7 +17,7 @@ V levé části stránky nyní najdete menu, ve kterém si můžete přepnout k�
 *   **UTF-8:** [http://weblog.rider.cz/mobile/?c=utf](http://weblog.rider.cz/mobile/?c=utf)
 *   **ISO 8859-1:** [http://weblog.rider.cz/mobile/?c=asc](http://weblog.rider.cz/mobile/?c=asc)
 *   **ISO 8859-2:** [http://weblog.rider.cz/mobile/?c=iso](http://weblog.rider.cz/mobile/?c=iso)
-*   **Windows-1250:** [http://weblog.rider.cz/mobile/?c=win](http://weblog.rider.cz/mobile/?c=win) 
+*   **Windows-1250:** [http://weblog.rider.cz/mobile/?c=win](http://weblog.rider.cz/mobile/?c=win)
 
 Kdyby nic, tak kódování ISO-8859-1 by mělo fungovat snad všude, protože neobsahuje speciální české znaky s nabodeníčky. Neřeknete-li jinak, bude se vše prezentovat v UTF-8.
 

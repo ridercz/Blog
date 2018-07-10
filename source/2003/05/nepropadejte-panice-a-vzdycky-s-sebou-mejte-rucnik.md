@@ -28,4 +28,7 @@ A v neposlední řadě se i dozvědí odpověď na Velkou otázku života, vesm�
 
 Pokud tedy potkáte podivína s ručníkem, pak vězte, že jste potkali Stopaře.
 
-*   [Více informací o Ručníkovém dnu](http://rucnik.ic.cz/) (česky) [Oficiální stránka DNA](http://www.douglasadams.com/) (anglicky) [MFAQ - Most Frequently Asked Questions](http://www.zootle.net/afda/mfaq.shtml) (anglicky) [The Hitchhiker's Guide to the Galaxy](http://www.bbc.co.uk/dna/h2g2/) (anglicky)
+*   [Více informací o Ručníkovém dnu](http://rucnik.ic.cz/) (česky) 
+[Oficiální stránka DNA](http://www.douglasadams.com/) (anglicky) 
+[MFAQ - Most Frequently Asked Questions](http://www.zootle.net/afda/mfaq.shtml) (anglicky) 
+[The Hitchhiker's Guide to the Galaxy](http://www.bbc.co.uk/dna/h2g2/) (anglicky)

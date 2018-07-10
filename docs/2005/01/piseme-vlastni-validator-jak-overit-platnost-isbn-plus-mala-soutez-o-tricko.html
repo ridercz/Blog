@@ -7,25 +7,72 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Na jeho příkladu si ukážeme, jak se dá v .NET vytvořit vlastní validátor." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Píšeme vlastní validátor - jak ověřit platnost ISBN plus malá soutěž o tričko</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-01-29T03:17:44.853+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>29. ledna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Celosvětová koordinace zajišťuje, že žádné dvě knihy nemají stejné ISBN. Pro jeho formát platí jisté zákonitosti, které není možné snadno ověřit prostřednictvím prvku <code>RegularExpressionValidator</code>. Pokud potřebujete validovat vstup ISBN, musíte si validaci napsat sami. Pokud to děláte jednou v celé aplikaci, vystačíte si s prvkem <code>CustomValidator</code>, ale pokud se toto zadání opakuje vícekrát, je výhodnější si napsat vlastní specializovaný validátor.</p>
 <h2 id="format-isbn-10">Formát ISBN-10</h2>
 <p>Tento formát je původní a dnes nejběžnější. ISBN v tomto formátu může vypadat například takto: <em>80-7234-184-7</em>. Jedná se o devět významových číslic (co znamenají si můžete přečíst na <a href="http://www.isbn.org/">www.isbn.org</a>) a desátý kontrolní znak, což může být buď číslice nebo písmeno X. Mezi číslice mohou být přidány pro větší srozumitelnost pomlčky, jejich umístění může být v zásadě libovolné.</p>
 <p>Validace ISBN-10 tedy probíhá takto:</p>
 <ol>
-<li>Odstraň všechny mezery, pomlčky a převeď text na velká písmena. Ověř, zda výsledný řetězec odpovídá regulárnímu výrazu <code>^[0-9]{9}[0-9X]$</code>. Spočítej kontrolní číslici z prvních devíti číslic a ověř, zda odpovídá poslednímu znaku.</li>
+<li>Odstraň všechny mezery, pomlčky a převeď text na velká písmena.
+Ověř, zda výsledný řetězec odpovídá regulárnímu výrazu <code>^[0-9]{9}[0-9X]$</code>.
+Spočítej kontrolní číslici z prvních devíti číslic a ověř, zda odpovídá poslednímu znaku.</li>
 </ol>
 <p>Výpočet kontrolní číslice probíhá tak, že se pro každá z devíti významových číslic vynásobí svým pořadím a výsledky se sečtou. To celé se vydělí jedenácti a zbytek je kontrolní číslice (pokud je zbytek 10, zapíše se jako X). Pro shora uvedené ISBN tedy bude výpočet kontrolní číslice probíhat takto:</p>
 <p><em>8</em>1 + 0<em>2 + 7</em>3 + 2<em>4 + 3</em>5 + 4<em>6 + 1</em>7 + 8<em>8 + 4</em>9 = 183<br />
@@ -41,12 +88,89 @@
 <p>Validátor je ve své podstatě třída odvozená (Inherits) od <code>System.Web.UI.BaseValidator</code>. Je nutné přepsat metodu <code>EvaluateIsValid</code>, která vrací <code>True</code>, pokud vstup vyhovuje a <code>False</code> pokud nikoliv.</p>
 <p>Dále pak potřebuji, aby programátor mohl zvolit, zda pro tuto specifickou aplikaci považuje za validní ISBN ve formátu ISBN-10, ISBN-13 nebo obě varianty. To zajistí vlastnost <code>EnabledIsbnTypes</code>, nabývající hodnot <code>Isbn10</code>, <code>Isbn13</code> a <code>Both</code>.</p>
 <p>Kompletní zdrojový kód třídy pak vypadá takto:</p>
-<p>Imports System.ComponentModel Imports System.Web.UI &lt;DefaultProperty(&quot;Text&quot;), ToolboxData(&quot;&lt;{0}:IsbnValidator1 runat=server&gt;&lt;/{0}:IsbnValidator&gt;&quot;)&gt; Public Class IsbnValidator Inherits System.Web.UI.WebControls.BaseValidator Public Enum IsbnTypes Isbn10 Isbn13 Both End Enum Private _EnabledIsbnTypes As IsbnTypes = IsbnTypes.Both Public Property EnabledIsbnTypes() As IsbnTypes Get Return Me._EnabledIsbnTypes End Get Set(ByVal Value As IsbnTypes) Me._EnabledIsbnTypes = Value End Set End Property Protected Overrides Function EvaluateIsValid() As Boolean Dim Value As String = Me.GetControlValidationValue(Me.ControlToValidate) ' If empty string, return true If Value = &quot;&quot; Then Return True ' Remove formatting and turn to uppercase Value = Value.Replace(&quot; &quot;, String.Empty).Replace(&quot;-&quot;, String.Empty).ToUpper() ' Check if the result is ISBN-10 or ISBN-13 If Value.Length = 10 Then ' ISBN-10: Check if is enabled and valid If Me._EnabledIsbnTypes = IsbnTypes.Isbn13 Then Return False If Not System.Text.RegularExpressions.Regex.IsMatch(Value, &quot;^[0-9]{9}[0-9X]<span class="math">&quot;) Then Return False ' Compute checksum Dim CheckSum As Int32 For I As Int32 = 0 To 8 CheckSum += Int32.Parse(Value.Chars(I)) * (I + 1) Next CheckSum = CheckSum Mod 11 Dim CheckString As String = CheckSum.ToString() If CheckSum = 10 Then CheckString = &quot;X&quot; ' Compare checksum Return CheckString = Right(Value, 1) ElseIf Value.Length = 13 Then ' ISBN-13: Check if is enabled and valid If Me._EnabledIsbnTypes = IsbnTypes.Isbn10 Then Return False If Not System.Text.RegularExpressions.Regex.IsMatch(Value, &quot;^97[89][0-9]{10}</span>&quot;) Then Return False ' Compute checksum Dim CheckSum As Int32 For I As Int32 = 0 To 11 If I Mod 2 = 0 Then CheckSum += Int32.Parse(Value.Chars(I)) Else CheckSum += Int32.Parse(Value.Chars(I)) * 3 End If Next CheckSum = 10 - (CheckSum Mod 10) If CheckSum = 10 Then CheckSum = 0 ' Compare checksum Return Right(Value, 1) = CheckSum.ToString() Else ' Bad number of digits Return False End If End Function End Class</p>
+<pre><code>Imports System.ComponentModel
+Imports System.Web.UI
+
+&lt;DefaultProperty(&quot;Text&quot;), ToolboxData(&quot;&lt;{0}:IsbnValidator1 runat=server&gt;&lt;/{0}:IsbnValidator&gt;&quot;)&gt; Public Class IsbnValidator
+    Inherits System.Web.UI.WebControls.BaseValidator
+
+    Public Enum IsbnTypes
+        Isbn10
+        Isbn13
+        Both
+    End Enum
+
+    Private _EnabledIsbnTypes As IsbnTypes = IsbnTypes.Both
+
+    Public Property EnabledIsbnTypes() As IsbnTypes
+        Get
+            Return Me._EnabledIsbnTypes
+        End Get
+        Set(ByVal Value As IsbnTypes)
+            Me._EnabledIsbnTypes = Value
+        End Set
+    End Property
+
+    Protected Overrides Function EvaluateIsValid() As Boolean
+        Dim Value As String = Me.GetControlValidationValue(Me.ControlToValidate)
+
+        ' If empty string, return true
+        If Value = &quot;&quot; Then Return True
+
+        ' Remove formatting and turn to uppercase
+        Value = Value.Replace(&quot; &quot;, String.Empty).Replace(&quot;-&quot;, String.Empty).ToUpper()
+
+        ' Check if the result is ISBN-10 or ISBN-13
+        If Value.Length = 10 Then
+            ' ISBN-10: Check if is enabled and valid
+            If Me._EnabledIsbnTypes = IsbnTypes.Isbn13 Then Return False
+            If Not System.Text.RegularExpressions.Regex.IsMatch(Value, &quot;^[0-9]{9}[0-9X]$&quot;) Then Return False
+
+            ' Compute checksum
+            Dim CheckSum As Int32
+            For I As Int32 = 0 To 8
+                CheckSum += Int32.Parse(Value.Chars(I)) * (I + 1)
+            Next
+            CheckSum = CheckSum Mod 11
+            Dim CheckString As String = CheckSum.ToString()
+            If CheckSum = 10 Then CheckString = &quot;X&quot;
+
+            ' Compare checksum
+            Return CheckString = Right(Value, 1)
+        ElseIf Value.Length = 13 Then
+            ' ISBN-13: Check if is enabled and valid
+            If Me._EnabledIsbnTypes = IsbnTypes.Isbn10 Then Return False
+            If Not System.Text.RegularExpressions.Regex.IsMatch(Value, &quot;^97[89][0-9]{10}$&quot;) Then Return False
+
+            ' Compute checksum
+            Dim CheckSum As Int32
+            For I As Int32 = 0 To 11
+                If I Mod 2 = 0 Then
+                    CheckSum += Int32.Parse(Value.Chars(I))
+                Else
+                    CheckSum += Int32.Parse(Value.Chars(I)) * 3
+                End If
+            Next
+            CheckSum = 10 - (CheckSum Mod 10)
+            If CheckSum = 10 Then CheckSum = 0
+
+            ' Compare checksum
+            Return Right(Value, 1) = CheckSum.ToString()
+        Else
+            ' Bad number of digits
+            Return False
+        End If
+    End Function
+
+End Class
+</code></pre>
 <h2 id="pouziti">Použití</h2>
 <p>Po zkompilování a nakopírování výsledko do adresáře <code>/bin</code> vaší aplikace můžete validátor používat. V hlavičce stránky ho zaregistrujete takto (hodnoty Namespace a Assembly samozřejmě upravte dle potřeby):</p>
-<p>&lt;%@ Register TagPrefix=&quot;iv&quot; Namespace=&quot;AltairCommunications.Web.UI&quot; Assembly=&quot;IsbnValidator&quot; %&gt;</p>
+<pre><code>&lt;%@ Register TagPrefix=&quot;iv&quot; Namespace=&quot;AltairCommunications.Web.UI&quot; Assembly=&quot;IsbnValidator&quot; %&gt;
+</code></pre>
 <p>Použít ho může prostým vložením následujícího kódu do stránky:</p>
-<p>&lt;my:isbnvalidator runat=&quot;server&quot; id=&quot;IsbnValidator1&quot; controltovalidate=&quot;TextBox1&quot;&gt;(!)&lt;/my:isbnvalidator&gt;</p>
+<pre><code>&lt;my:isbnvalidator runat=&quot;server&quot; id=&quot;IsbnValidator1&quot; controltovalidate=&quot;TextBox1&quot;&gt;(!)&lt;/my:isbnvalidator&gt;
+</code></pre>
 <p>Kompletní příklad včetně zdrojových kódů si můžete stáhnout na <a href="http://software.altaircom.net/software/isbnvalidator.aspx">http://software.altaircom.net/software/isbnvalidator.aspx</a>.</p>
 <h2 id="soutez">Soutěž</h2>
 <p>ISBN knihy, kterou jsem před pár hodinami dočetl, je <em>80-7197-2?5-2</em>. Bohužel, jedna číslice z něj vypadla. Kdo na základě výše popsaného algoritmu vypočítá správné ISBN a napíše jako první do komentářů název knihy, dostane firemní tričko!</p>
@@ -54,7 +178,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -13,7 +13,8 @@
 <!-- x4w:pictureUrl = /perex-pictures/20120622-deep-dive-cacheovani-v-net-a-http-aneb-jak-neuhnat-sebe-a-svuj-server-zaznam-priklady.png -->
 
 Včera se v Praze uskutečnila avizovaná přednáška o HTTP cacheování a jeho využití v .NET Frameworku. Přes značné technické obtíže, konkrétně z neznámých důvodů nefunkční mikrofon mého ThinkPadu, se podařilo uskutečnit záznam – audio jsem nahrát na digitální diktafon a pak to složil dohromady.
- <div style="text-align: center;"><iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/vPXK82CayYE" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div> 
+
+<div style="text-align: center;"><iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/vPXK82CayYE" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 
 *   [Video záznam z přednášky na YouTube](http://youtu.be/vPXK82CayYE)
 *   [Prezentace a příklady ke stažení](http://www.cdn.altairis.cz/Prednasky/20120621-httpcache.zip)

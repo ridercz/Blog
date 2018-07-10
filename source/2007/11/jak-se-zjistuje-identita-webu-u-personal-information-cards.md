@@ -36,7 +36,7 @@ Nejdůležitějším místem celého mechanismu tedy je, na základě čeho weby
 1.  připojení přes HTTPS (SSL) a je použit EV (Extended Validation) certifikát, 
 2.  připojení přes HTTPS (SSL) a je použit běžný (non-EV) certifikát s uvedením údajů o žadateli, 
 3.  připojení přes HTTPS (SSL) a je použit běžný (non-EV) certifikát bez uvedení údajů o žadateli, 
-4.  připojení přes HTTP, žádný certifikát není k dispozici. 
+4.  připojení přes HTTP, žádný certifikát není k dispozici.
 
 V každém z těchto případů se postupuje jinak a každé z těchto řešení má svá úskalí.
 

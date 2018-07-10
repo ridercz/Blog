@@ -33,7 +33,7 @@ Možná jste již nějakou mou přednášku o SignalR viděli, ale tato technolo
 Akce se bude konat v Praze a v Bratislavě:
 
 *   **Praha – Microsoft, 23. ledna 2013**, vstup 1790 Kč, registrace a informace na [Gopas.cz](http://www.gopas.cz/Kurzy/Katalog-kurzu/Bootcamp-Konference-Seminare/Konference-a-seminare/GOPAS-DevCon-2013-DEVCON2013.aspx) 
-*   **Bratislava – Gopas, 31. ledna 2013**, vstup 72 €, registrace a informace na [Gopas.sk](http://www.gopas.sk/News/Vyvojari-zbystrite!-GOPAS-DevCon-2013-je-tu!.aspx)  
+*   **Bratislava – Gopas, 31. ledna 2013**, vstup 72 €, registrace a informace na [Gopas.sk](http://www.gopas.sk/News/Vyvojari-zbystrite!-GOPAS-DevCon-2013-je-tu!.aspx) 
 
 ## Praktická implementace HTTPS/SSL/TLS v Internet Information Services 
 

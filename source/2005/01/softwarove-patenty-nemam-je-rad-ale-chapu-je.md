@@ -49,7 +49,7 @@ Důvody, proč jsem ve výsledku *proti* softwarovým patentům, nejsou ideologi
 
 1.  Jde o změnu pravidel uprostřed hry.
 2.  Patenty mají rozumný efekt pouze v případě, že jich je rozumně obsáhnutelné množství.
-3.  Patenty mají rozumný efekt pouze v případě, že je rozumně obsáhnutelné množství těch, kdo je vytvářejí a užívají. 
+3.  Patenty mají rozumný efekt pouze v případě, že je rozumně obsáhnutelné množství těch, kdo je vytvářejí a užívají.
 
 V případě softwarových patentů hlavní zmatek vyplývá z bodů 2 a 3 výše. Shora popsaný princip patentování je perfektně účinný, pokud se danou činností zabývá pět lidí, kteří se navzájem znají. 
 

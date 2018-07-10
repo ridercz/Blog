@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Projekt Atropa (2): Zprovoznění Raspberry Pi a Raspbian Linuxu</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2015-07-20T00:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>20. července 2015</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/projekt-atropa" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET. Oficiální návod ke zprovoznění (anglicky) najdete na webu <a href="https://www.raspberrypi.org/documentation/installation/">Raspberry Pi</a>.</p>
 <p>Nezapomeňte si přečíst <a href="https://www.aspnet.cz/Articles/5429-projekt-atropa-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">úvod k této sérii</a>, kde najdete seznam všeho potřebného a důležitá varování.</p>
 <h2 id="co-budete-potrebovat">Co budete potřebovat?</h2>
@@ -59,7 +110,30 @@
 <h2 id="pripojeni-po-siti">Připojení po síti</h2>
 <p>My nicméně nebudeme používat lokální konzoli, ale budeme s Raspberry Pi komunikovat po síti.</p>
 <p>Jako první potřebujeme zjistit IP adresu počítače. Tu lze zjistit mnoha způsoby (třeba z DHCP serveru), ale protože máme k dispozici lokální konzoli, stačí napsat příkaz <code>ifconfig</code>, což je obdoba příkazu <code>ipconfig</code> na Windows. Ukáže se něco takového:</p>
-<p>pi@raspberrypi ~ $ ifconfig eth0 Link encap:Ethernet HWaddr b8:27:eb:07:93:41 inet addr:<strong>10.7.0.101</strong> Bcast:10.7.0.255 Mask:255.255.255.0 UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1 RX packets:14124 errors:0 dropped:0 overruns:0 frame:0 TX packets:2286 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:1000 RX bytes:17452927 (16.6 MiB) TX bytes:281223 (274.6 KiB) lo Link encap:Local Loopback inet addr:127.0.0.1 Mask:255.0.0.0 UP LOOPBACK RUNNING MTU:65536 Metric:1 RX packets:72 errors:0 dropped:0 overruns:0 frame:0 TX packets:72 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:0 RX bytes:6288 (6.1 KiB) TX bytes:6288 (6.1 KiB) wlan0 Link encap:Ethernet HWaddr c4:6e:1f:13:27:87 UP BROADCAST MULTICAST MTU:1500 Metric:1 RX packets:0 errors:0 dropped:0 overruns:0 frame:0 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:1000 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)</p>
+<pre><code>pi@raspberrypi ~ $ ifconfig
+eth0      Link encap:Ethernet  HWaddr b8:27:eb:07:93:41
+          inet addr:**10.7.0.101**  Bcast:10.7.0.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:14124 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2286 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:17452927 (16.6 MiB)  TX bytes:281223 (274.6 KiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:72 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:72 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:6288 (6.1 KiB)  TX bytes:6288 (6.1 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr c4:6e:1f:13:27:87
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+</code></pre>
 <p>Nás zajímá adresa u rozhraní <code>eth0</code>, za <code>inet addr:</code>, zde 10.7.0.101 (ve výpisu zobrazena tučně).</p>
 <p>Maje cílové adresy, můžeme se připojit. K tomu potřebujete SSH klienta a nejčastěji se používá program jménem Putty. Stáhněte si <a href="http://the.earth.li/%7Esgtatham/putty/latest/x86/putty.zip">ZIP soubor</a> a někam ho rozbalte.</p>
 <p>Spusťte program <code>PUTTY.EXE</code>. Aby vše řádně fungovalo, je dobrý nápad nastavit některé parametry.</p>
@@ -82,7 +156,8 @@
 <h2 id="aktualizace-balicku">Aktualizace balíčků</h2>
 <p>Programy a součásti systému se na Linuxu instalují vesměs pomocí balíčkovacích systémů. Raspbian používá Aptitude a bude vás tedy zajímat příkaz <code>apt-get</code>.</p>
 <p>Aktualizaci seznamu dostupných balíčků a instalaci těch nejnovějších provedete následujícím příkazem</p>
-<p>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y</p>
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+</code></pre>
 <p>Příkaz <code>sudo</code> slouží k vykonání příkazu pod oprávněním správce systému (uživatel <code>root</code>). Poněkud to připomíná User Account Control (UAC) na Windows Vista a novějších. Přepínač <code>-y</code> v tomto případě znamená, že se operace má rovnou provést a že se příkaz na nic nemá ptát. Obecně platí, že u všeho (příkazů, názvů souborů, parametrů…) záleží na použití velkých a malých písmen.</p>
 <h2 id="instalace-uzitecneho-software">Instalace užitečného software</h2>
 <p>Při práci se vám téměř jistě budou hodit některé utility, které si můžete snadno nainstalovat pomocí následujících příkazů:</p>
@@ -92,7 +167,8 @@
 <li><code>sudo apt-get install dnsutils</code> – nainstaluje utility <code>nslookup</code> a <code>dig</code>, které můžete použít pro diagnostiku problémů s DNS a kontrolu jeho nastavení.</li>
 </ul>
 <p>Vše najednou a bez ptaní nainstalujete následujícím příkazem:</p>
-<p>sudo apt-get install mc lynx dnsutils -y</p>
+<pre><code>sudo apt-get install mc lynx dnsutils -y
+</code></pre>
 <p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_thumb.png" alt="Midnight Commander spustíte příkazem 'mc'" title="Midnight Commander spustíte příkazem 'mc'" /></a></p>
 <h2 id="restart-a-vypnuti">Restart a vypnutí</h2>
 <p>Žádný počítač by se neměl vypínat vytažením napájení a Raspberry Pi není výjimkou. Pro vypnutí použijte příkaz <code>sudo shutdown -hP now</code> a pro restart <code>sudo reboot</code>. Pokud se chcete jenom odhlásit ze vzdáleného terminálu, zavřete okno Putty nebo použijte příkaz <code>logout</code>.</p>
@@ -100,7 +176,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -12,7 +12,24 @@ Někdo má heroin, já komunikaci -- typ závislosti, cenová náročnost a abst
 
 Začnu jejich přehledem, přibližně chronologickým a pravděpodobně ne kompletním:
 
-*   ![Nokia D211](http://weblog.rider.cz/files/tech_nokia_lq.jpg)Allamat AE 2100 nebo 2200 (nepamatuji si přesně) Siemens S6 Nokia 8110 Benefon Delta Nokia 5110 Nokia 9110i Communicator Siemens C25 Nokia 6210i Siemens C35i Nokia CardPhone 2.0 Mitsubishi Trium Aria Ericsson T39m Ericsson R520m Motorola V66 Nokia D211 Sony Ericsson T68i Sony Ericsson P800 Nokia 9210i Communicator 
+*   ![Nokia D211](http://weblog.rider.cz/files/tech_nokia_lq.jpg)Allamat AE 2100 nebo 2200 (nepamatuji si přesně) 
+Siemens S6 
+Nokia 8110 
+Benefon Delta 
+Nokia 5110 
+Nokia 9110i Communicator 
+Siemens C25 
+Nokia 6210i 
+Siemens C35i 
+Nokia CardPhone 2.0 
+Mitsubishi Trium Aria 
+Ericsson T39m 
+Ericsson R520m 
+Motorola V66 
+Nokia D211 
+Sony Ericsson T68i 
+Sony Ericsson P800 
+Nokia 9210i Communicator
 
 Pokud vám název první položky v seznamu nepřijde povědomý, nedivte se. Nejedná se totiž o mobilní telefon, ale o CB vysílačku, kterou jsem ke komunikaci s okolím používal předtím.
 

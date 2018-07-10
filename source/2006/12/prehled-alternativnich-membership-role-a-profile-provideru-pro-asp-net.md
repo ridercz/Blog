@@ -35,6 +35,6 @@ Pokud používáte MySQL, může vás zajímat implementace membershipu a rolí 
 
 V MSDN najdete příklad implementace [Membership](http://msdn2.microsoft.com/en-us/library/6tc47t75.aspx), [Role](http://msdn2.microsoft.com/en-us/library/317sza4k.aspx) a [Profile](http://msdn2.microsoft.com/en-us/library/ta63b872.aspx) providerů proti jakémukoliv datovému zdroji, který je dostupný přes ODBC.
 
-## Zdrojové kódy vestavěných providerů a dokumentace k nim
+## Zdrojové kódy vestavěných providerů a dokumentace k nim
 
 Pokud vás zajímá, jak providery obecně fungují a chcete se podívat na jejich zdrojové kódy, máte možnost. Obsáhlá dokumentace a zdrojáky jsou nyní [ke stažení na MSDN jako Provider Toolkit](http://msdn2.microsoft.com/en-us/asp.net/aa336558.aspx).

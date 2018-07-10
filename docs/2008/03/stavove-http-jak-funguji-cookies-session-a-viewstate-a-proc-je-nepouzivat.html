@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Web byl stvořen jako bezstavový a struktura HTTP a HTML tomu odpovídá. Často ale potřebujeme simulovat stavovou logiku a existuje několik technik, které dokážou toto omezení v větším či menším úspěchem obcházet. A za větší či menší cenu." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Stavové HTTP: jak fungují Cookies, Session a ViewState a proč je nepoužívat</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2008-03-20T08:00:42+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>20. března 2008</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/stavove-http" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Stavové HTTP</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Web byl stvořen jako bezstavový. Přesněji řečeno, standardy HTTP a HTML jsou navržené jako bezstavové. Co to znamená? Že jednotlivé požadavky na server položené (HTTP requesty) spolu nejsou nijak svázány. Server neví, zda jsou od téhož uživatele, zda spolu nějak souvisejí atd.</p>
 <h2 id="stavovy-vs.bezstavovy-protokol">Stavový vs. bezstavový protokol</h2>
 <p>Například protokol SMTP, který se používá pro přenos e-mailových zpráv, je stavový. Komunikace probíhá tak, že klient otevře TCP spojení na server a po celou dobu transakce ho drží otevřené. Tímto kanálem klient pošle sérii příkazů a obdrží odpovědi na ně. Typicky pošle příkazy HELO (představí se), MAIL FROM (adresa odesílatele), RCPT TO (adresa příjemce) a DATA (vlastní zpráva).</p>
@@ -42,7 +93,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

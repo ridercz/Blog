@@ -7,168 +7,209 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Rubrika Bezpečnost</h1>
       <section class="artlist">
-        <article>
-          <header>
-            <a href="/2013/05/windows-azure-storage-a-shared-access-signatures">Windows Azure Storage a Shared Access Signatures</a>
-          </header>
+        <article class="haspicture">
           <aside>
-            <a href="/2013/05/windows-azure-storage-a-shared-access-signatures">
-              <img src="/perex-pictures/20130506-windows-azure-storage-a-shared-access-signatures.png" width="150" height="150" alt="" />
+            <a href="/2010/10/padding-oracle-chyba-v-asp-net-o-co-vlastne-slo">
+              <img src="/perex-pictures/20101003-padding-oracle-chyba-v-asp-net-o-co-vlastne-slo.png" width="150" height="150" alt="" />
             </a>
           </aside>
-          <div>Původně úložiště Windows Azure Storage neumožňovalo příliš jemné nastavení přístupových práv: data mohla být buďto veřejná, takže k nim mohl kdokoliv, nebo soukromá, takže k nim nemohl nikdo, kdo neznal klíč k úložišti. A zase pokud ho znal, mohl s ním dělat cokoliv. Již zhruba rok nicméně Azure umí takzvané Shared Access Signatures, tedy technologii, která umí přístup omezit operacemi nebo časově.</div>
+          <header>
+            <a href="/2010/10/padding-oracle-chyba-v-asp-net-o-co-vlastne-slo">"Padding Oracle" chyba v ASP.NET – o co vlastně šlo?</a>
+          </header>
+          <div>Myšlenky těch zodpovědnějších ASP.NET programátorů a správců serverů v uplynulých dnech okupovala první pořádná bezpečnostní díra v ASP.NET. Upozorňoval jsem na ni i na tomto webu a nabízel i workaround. Microsoft již vydal i oficiální záplatu, nově dostupnou přes Windows Update. Myslím si, že je přesně ten správý okamžik podívat se, o co vlastně šlo, v čem útok spočívá. Nejedná se totiž ve své podstatě o chybu v ASP.NET, ale o obecný mechanismus kryptografického útoku, který může zasáhnout i vaše vlastní aplikace.</div>
           <footer>
-            <time datetime="2013-05-06T08:00:00+02:00">pondělí 6. května 2013</time>
+            <time datetime="2010-10-03T22:22:19.717+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 3. října 2010</time>
+          </footer>
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2010/09/modul-pro-jednoduchy-workaround-bezpecnostni-chyby-v-asp-net">
+              <img src="/perex-pictures/20100921-modul-pro-jednoduchy-workaround-bezpecnostni-chyby-v-asp-net.png" width="150" height="150" alt="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2010/09/modul-pro-jednoduchy-workaround-bezpecnostni-chyby-v-asp-net">Modul pro jednoduchý workaround bezpečnostní chyby v ASP.NET</a>
+          </header>
+          <div>Podařilo se mi napsat a zprovoznit modul, který umožní obejít dříve zmíněnou bezpečnostní chybu v ASP.NET, a to bez zásahu do aplikace samé. Jeho aplikace nevyžaduje žádné specifické znalosti a je velmi jednoduchá.</div>
+          <footer>
+            <time datetime="2010-09-21T05:24:21.663+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>úterý 21. září 2010</time>
+          </footer>
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2010/09/kriticka-bezpecnostni-chyba-v-asp-net">
+              <img src="/perex-pictures/20100921-kriticka-bezpecnostni-chyba-v-asp-net.png" width="150" height="150" alt="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2010/09/kriticka-bezpecnostni-chyba-v-asp-net">Kritická bezpečnostní chyba v ASP.NET</a>
+          </header>
+          <div>V pátek byla zveřejněna kritická bezpečnostní chyba ve všech verzích ASP.NET, od 1.0 po 4.0 včetně. Dosud na ni neexistuje patch, jenom workaround, a ten je bohužel dosti pracný.</div>
+          <footer>
+            <time datetime="2010-09-21T03:27:03.977+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>úterý 21. září 2010</time>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58933940-uvod-do-kryptografie-ebook">Přísně tajné šifry (7): Omezení platnosti a časová razítka proti manipulaci s dokumenty</a>
+            <a href="/2008/11/reseni-problemu-s-identitou-webu-u-personal-information-cards">Řešení problémů s identitou webu u Personal Information Cards</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58933940-uvod-do-kryptografie-ebook">
-              <img src="/perex-pictures/20121210-prisne-tajne-sifry-7-omezeni-platnosti-a-casova-razitka-proti-manipulaci-s-dokumenty.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>Poslední díl seriálu o kryptografii se zaměří na to, jak bezpečnost informací ovlivňuje čas a na prokazatelnost data podpisu. Pro právní dokumenty v elektronické podobě jde o zásadní věc. Na konci článku potom najdete celý seriál v podobě e-knihy pro Kindle i další čtečky.</div>
+          <div>Téměř přesně před rokem jsem si v článku Jak se zjišťuje identita webu u Personal Information Cards? stěžoval na to, že algoritmus pro výpočet identity relying party (tedy typicky webu) je špatný. Specifikace ISIP verze 1.5 tento problém řeší. Problém u Windows CardSpace řeší .NET Framework 3.5 SP1.</div>
           <footer>
-            <time datetime="2012-12-10T00:00:00+01:00">pondělí 10. prosince 2012</time>
+            <time datetime="2008-11-19T01:55:29.763+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>středa 19. listopadu 2008</time>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58804400-sifry-certifikaty-elektronicky-podpis">Přísně tajné šifry (6): Jak Alice, Bob a Eva ukázali, k čemu potřebujeme certifikáty</a>
+            <a href="/2008/02/jak-funguje-forms-authentication-a-autentizacni-tickety">Jak funguje forms authentication a autentizační tickety</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58804400-sifry-certifikaty-elektronicky-podpis">
-              <img src="/perex-pictures/20121127-prisne-tajne-sifry-6-jak-alice-bob-a-eva-ukazali-k-cemu-potrebujeme-certifikaty.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>V předchozích dílech jsme se zabývali klíči pro asymetrické šifrovací algoritmy a pro vytváření elektronického podpisu. Klíč ale nenese informaci o tom, komu patří. K propojení kyberprostoru a reálného světa potřebujeme certifikační autority.</div>
+          <div>Otázky na forms autentizaci patří na mých kurzech k velmi častým. I místní článek "Forms authentication a session state - proč nejsou synchronní?" vzbudil jistý zájem. Pojďme se tedy podrobněji podívat na to, jak forms authentication funguje, a rozeberme si onen magický autentizační ticket.</div>
           <footer>
-            <time datetime="2012-11-27T00:00:00+01:00">úterý 27. listopadu 2012</time>
+            <time datetime="2008-02-28T19:51:55.75+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>čtvrtek 28. února 2008</time>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58689370-prisne-tajne-sifry-elektronicky-podpis-k-cemu-je-vlastne-dobry-a-co-neumi">Přísně tajné šifry (5): Elektronický podpis, k čemu je vlastně dobrý a co neumí</a>
+            <a href="/2007/11/jak-se-zjistuje-identita-webu-u-personal-information-cards">Jak se zjišťuje identita webu u Personal Information Cards?</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58689370-prisne-tajne-sifry-elektronicky-podpis-k-cemu-je-vlastne-dobry-a-co-neumi">
-              <img src="/perex-pictures/20121120-prisne-tajne-sifry-5-elektronicky-podpis-k-cemu-je-vlastne-dobry-a-co-neumi.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>V předchozích dílech našeho kryptografického seriálu jsme si ukázali, jak fungují asymetrické šifrovací algoritmy a hashovací algoritmy. Nyní tyto dvě technologie zkombinujeme dohromady a vytvoříme tak elektronický podpis.</div>
+          <div>Zajištění soukromí uživatelů je jedním z hlavích cílů technologie Information Cards (CardSpace). V případě osobních (unmanaged) karet jsou různým webům zaslány různé údaje, takže provozovatelé těchto webů je nemohou spojit nebo zneužít. Proces zjišťování identity webů je ale dosti komplikovaný. Pojďme se na něj podívat podrobně a zabývejme se důsledky, které z něj plynou.</div>
           <footer>
-            <time datetime="2012-11-20T00:00:00+01:00">úterý 20. listopadu 2012</time>
+            <time datetime="2007-11-27T14:37:48.947+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>úterý 27. listopadu 2007</time>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58446560-zaklady-kryptografie-hashovaci-funkce">Přísně tajné šifry (4): Hash, nebo chcete-li otisk</a>
+            <a href="/2007/05/nova-verze-altairis-simple-asp-net-providers">Nová verze Altairis Simple ASP.NET Providers</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58446560-zaklady-kryptografie-hashovaci-funkce">
-              <img src="/perex-pictures/20121118-prisne-tajne-sifry-4-hash-nebo-chcete-li-otisk.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>Po symetrických a asymetrických šifrovacích algoritmech se zaměříme na další z kryptografických primitiv: na hashovací funkce, nebo chcete-li výpočet otisku.</div>
+          <div>Právě jsem na CodePlex nahrál novou verzi svých Simple ASP.NET Providers. Verze 1.0.1 opravuje pár chyb, na které jsem byl upozorněn.</div>
           <footer>
-            <time datetime="2012-11-18T21:11:00+01:00">neděle 18. listopadu 2012</time>
+            <time datetime="2007-05-26T20:48:46.627+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 26. května 2007</time>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58281550-prisne-tajne-sifry-asymetricke-sifry-pro-tajne-zpravy-a-pripojeni-k-bankam">Přísně tajné šifry (3): Asymetrické algoritmy</a>
+            <a href="/2007/04/asymetricke-sifrovani-rsa-v-net-sprava-klicu">Asymetrické šifrování RSA v .NET - správa klíčů</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58281550-prisne-tajne-sifry-asymetricke-sifry-pro-tajne-zpravy-a-pripojeni-k-bankam">
-              <img src="/perex-pictures/20121112-prisne-tajne-sifry-3-asymetricke-algoritmy.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>Jak zabezpečit zprávy před zvědavýma očima a zajistit jejich přenos internetem? Odpověď skrývají asymetrické šifry. Kromě šifrování je lze používat též k vytváření elektronických podpisů a k ověření identity uživatelů.</div>
+          <div>Ve druhém dílu seriálu "Přísně tajné šifry" se podíváme na správu klíčů nejběžnějšího asymetrického šifrovacího algoritmu - RSA.</div>
           <footer>
-            <time datetime="2012-11-12T00:00:00+01:00">pondělí 12. listopadu 2012</time>
+            <time datetime="2007-04-18T10:47:25.667+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>středa 18. dubna 2007</time>
+            <ul class="serials">
+              <li>
+                <a href="/serials/prisne-tajne-sifry" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Přísně tajné šifry</a>
+              </li>
+            </ul>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58236170-prisne-tajne-sifry-symetricke-sifrovani-pro-pevne-disky-zalozene-na-nahode">Přísně tajné šifry (2): symetrické</a>
+            <a href="/2007/04/symetricke-sifrovani-aes-rijndael-v-net">Symetrické šifrování AES/Rijndael v .NET</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58236170-prisne-tajne-sifry-symetricke-sifrovani-pro-pevne-disky-zalozene-na-nahode">
-              <img src="/perex-pictures/20121109-prisne-tajne-sifry-2-symetricke.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>V předchozím díle jsme se seznámili s několika základními pojmy současné kryptografie. V tom dnešním se podíváme na symetrické šifry – ty se vyznačují tím, že se pro šifrování a dešifrování zprávy používá tentýž klíč.</div>
+          <div>Současným průmyslovým standardem pro symetrické šifrování je algoritmus AES (Advanced Encryption Standard), nazývaný též Rijndael. Je k dispozici i jako součást Microsoft .NET Frameworku a je k dispozici všem programátorům.</div>
           <footer>
-            <time datetime="2012-11-09T00:00:00+01:00">pátek 9. listopadu 2012</time>
+            <time datetime="2007-04-16T16:08:14.883+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 16. dubna 2007</time>
+            <ul class="serials">
+              <li>
+                <a href="/serials/prisne-tajne-sifry" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Přísně tajné šifry</a>
+              </li>
+            </ul>
           </footer>
         </article>
         <article>
           <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58032340-prisne-tajne-sifry-co-byste-meli-znat-o-kryptografii-a-jejim-vyuziti-1-dil">Přísně tajné šifry (1): Co byste měli znát o kryptografii a jejím využití</a>
+            <a href="/2007/04/hmac-hash-message-authentication-code">HMAC - Hash Message Authentication Code</a>
           </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-58032340-prisne-tajne-sifry-co-byste-meli-znat-o-kryptografii-a-jejim-vyuziti-1-dil">
-              <img src="/perex-pictures/20121022-prisne-tajne-sifry-1-co-byste-meli-znat-o-kryptografii-a-jejim-vyuziti.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>Když se řekne šifra, vybaví se většině lidí šifrovací hříčky z Pionýrského zápisníku. Současné šifrovací algoritmy s nimi ovšem nemají mnoho společného. S námi můžete základy šifrování odhalit. Jednou se vám to může hodit.</div>
+          <div>Technologie HMAC (Hash Message Authentication Code) je základem elektronického podpisu. Pomocí jednosměrné funkce pro výpočet kontrolního součtu (hashování) můžete ověřovat, zda data nebyla modifikována. S trochou chytrého využití můžete s hashem dělat lecjaká kouzla a zjednodušit vývoj aplikací a zároveň zvýšit jejich bezpečnost.</div>
           <footer>
-            <time datetime="2012-10-22T00:00:00+02:00">pondělí 22. října 2012</time>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <a href="http://tech.ihned.cz/geekosfera/c1-57770760-hejtmanem-za-pet-minut-jak-snadne-je-podvrhnout-odesilatele-e-mailove-zpravy">Hejtmanem za pět minut: jak snadné je podvrhnout odesílatele e-mailové zprávy?</a>
-          </header>
-          <aside>
-            <a href="http://tech.ihned.cz/geekosfera/c1-57770760-hejtmanem-za-pet-minut-jak-snadne-je-podvrhnout-odesilatele-e-mailove-zpravy">
-              <img src="/perex-pictures/20121010-hejtmanem-za-pet-minut-jak-snadne-je-podvrhnout-odesilatele-e-mailove-zpravy.png" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>funkcí - alespoň tedy podle e-mailových zpráv, rozeslaných z jejich adres či adres jejich spolupracovníků. Odeslat zprávu s podvrženým odesílatelem je přitom triviální, zvládne to i amatér.</div>
-          <footer>
-            <time datetime="2012-10-10T00:00:00+02:00">středa 10. října 2012</time>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <a href="http://tech.ihned.cz/c3-57177150-040000_d-windows-8-z-hlediska-bezpecnosti-zasadni-zmeny-jsou-schovane-pod-poklickou">Windows 8 z hlediska bezpečnosti</a>
-          </header>
-          <aside>
-            <a href="http://tech.ihned.cz/c3-57177150-040000_d-windows-8-z-hlediska-bezpecnosti-zasadni-zmeny-jsou-schovane-pod-poklickou">
-              <img src="/perex-pictures/20120905-windows-8-z-hlediska-bezpecnosti.png" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>Microsoft pro své partnery uvolnil nejnovější verzi Windows 8. Většinu pozornosti na sebe strhává nové uživatelské prostředí. Výrazné novinky však nová verze Windows přináší v oblasti bezpečnosti uživatelských dat.</div>
-          <footer>
-            <time datetime="2012-09-05T03:00:00+02:00">středa 5. září 2012</time>
+            <time datetime="2007-04-14T15:22:24.783+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 14. dubna 2007</time>
           </footer>
         </article>
         <footer>
-          <a href="./" rel="first">Novější</a>
-          <a href="./3" rel="next">Starší</a>
-          <a href="./5" rel="last">Nejstarší</a>
+          <span class="prev">
+            <a href="./" rel="first">Novější</a>
+          </span>
+          <span class="next">
+            <a href="./3" rel="last">Starší</a>
+          </span>
+          <span class="info">2 / 3</span>
         </footer>
       </section>
-      <footer>
-      Footer
-    </footer>
     </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

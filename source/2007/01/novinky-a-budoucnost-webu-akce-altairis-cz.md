@@ -56,7 +56,7 @@ Technologie, které na webu akce.altairis.cz používáme:
 *   Microsoft VirtualEarth (interaktivní mapy míst, kde se akce konají).
 *   Vlastní membership, role a profile providery.
 *   CSS Friendly Control Adapters a vlastní adaptéry pro renderování rozumného výstupního HTML.
-*   Unikátní systém sledování účasti pomocí čárových kódů generovaných v .NETu. 
+*   Unikátní systém sledování účasti pomocí čárových kódů generovaných v .NETu.
 
 Ten seznam je dlouhý a myslím si, že ne nezajímavý. Vzpomínám si, že na TechEdu byla jedna z nejzajímavějších akcí "*How we built the TechEd web site*". Myslím si, že je vždy dobré vědět, jak vzniká reálný systém, s jakými problémy se autoři potýkali a jak je vyřešili. Kromě toho se z feedbacku mohou poučit i sami autoři. Měli byste zájem o "*how we built*" session v případě webu akce.altairis.cz? Pokud ano, přihlašte se v komentářích.
 

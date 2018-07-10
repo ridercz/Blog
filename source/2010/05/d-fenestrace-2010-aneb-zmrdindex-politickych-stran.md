@@ -24,7 +24,7 @@ Několik poznatků:
 *   Vysoké číslo u Strany zelených nepřekvapí. Celkem 24 ze 36 kandidátů se živí způsobem přímo napojeným na státní rozpočet (a to jsem nepočítal "podnikatele v oblasti bio výrobků" Tomáše Bräunera, číslo 23). 
 *   Mírně mne překvapilo, že druhé místo suverénně zabrala ODS a to s velkým náskokem před ČSSD. Očekával jsem jednak menší rozdíl a zejména opačné pořadí. 
 *   Nepřekvapí nízké číslo u Svobodných, jediným vyškrtnutým je číslo 23, Miroslav Machač, mající u jména "úředník" (navíc jsem ho možná vyškrtnul neprávem, úředník nemusí nutně být státní, pravda). Podobných výsledků bychom se nicméně asi dočkali u všech "mladých" a "malých" stran. 
-*   Z tohoto pohledu také vyplývá, že TOP 09, jakkoliv až na další zůstává mým volebním favoritem, žánou mladou stranou není. 19% je sice společně s VV nejnižší číslo ve stranách s šancí na poslanecké křeslo, ale i tak je to dle mého soudu docela dost.  
+*   Z tohoto pohledu také vyplývá, že TOP 09, jakkoliv až na další zůstává mým volebním favoritem, žánou mladou stranou není. 19% je sice společně s VV nejnižší číslo ve stranách s šancí na poslanecké křeslo, ale i tak je to dle mého soudu docela dost.   
 
 Další poznámky nad rámec výsledků:
 

@@ -12,7 +12,7 @@
 <!-- dcterms:dateAccepted = 2015-08-03T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20150803-projekt-atropa-4-automaticke-spusteni-webu-a-publikace-pomoci-nginx.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
 V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx.
 
@@ -31,15 +31,76 @@ Poté si soubor `kestrel_service.sh` otevřete v editoru Nano příkazem `nano k
 *   `<SCRIPT_NAME>` je logický název "služby". V našem případě `kestrel_wifigate`. Pokud byste na jednom počítači chtěli provozovat víc webů, musíte každý z nich zaregistrovat tímto postupem zvlášť pod jiným jménem. 
 *   `<WWW_USER>` je název uživatele, pod kterým služba poběží. V našem případě je to `pi`. Z bezpečnostního hlediska není dobrý nápad rozjet web server pod tímto uživatelem, ale pro naše účely to zatím postačí. 
 *   `<PATH_TO_RUNTIME>` je cesta k aktuální verzi DNX. V cestě používám dříve definovanou proměnnou `WWW_USER`, cesta pro betu 5 je `/home/$WWW_USER/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin/dnx`. 
-*   `<APPROOT>` je cesta k rootu aplikace, v našem případě tedy `/home/$WWW_USER/www/wifigate`.  
+*   `<APPROOT>` je cesta k rootu aplikace, v našem případě tedy `/home/$WWW_USER/www/wifigate`. 
 
 Celý soubor bude po úpravách vypadat takto:
 
-#!/bin/sh ### BEGIN INIT INFO # Provides: kestrel_wifigate # Required-Start: $local_fs $network $named $time $syslog # Required-Stop: $local_fs $network $named $time $syslog # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Description: Script to run asp.net 5 application in background ### END INIT INFO # Author: Ivan Derevianko aka druss <drussilla7> # Fixed for ASP.NET 5 beta 5 with DNVM/DNX by Michal A. Valasek - github.com/ridercz WWW_USER=pi DNXRUNTIME=/home/$WWW_USER/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin/dnx APPROOT=/home/$WWW_USER/www/wifigate PIDFILE=$APPROOT/kestrel.pid LOGFILE=$APPROOT/kestrel.log # fix issue with DNX exception in case of two env vars with the same name but different case TMP_SAVE_runlevel_VAR=$runlevel unset runlevel start() { if [ -f $PIDFILE ] && kill -0 $(cat $PIDFILE); then echo 'Service already running' >&2 return 1 fi echo 'Starting service...' >&2 su -c "start-stop-daemon -SbmCv -x /usr/bin/nohup -p \"$PIDFILE\" -d \"$APPROOT\" -- \"$DNXRUNTIME\" . kestrel > \"$LOGFILE\"" $WWW_USER echo 'Service started' >&2 } stop() { if [ ! -f "$PIDFILE" ] || ! kill -0 $(cat "$PIDFILE"); then echo 'Service not running' >&2 return 1 fi echo 'Stopping service...' >&2 start-stop-daemon -K -p "$PIDFILE" rm -f "$PIDFILE" echo 'Service stopped' >&2 } case "$1" in start) start ;; stop) stop ;; restart) stop start ;; *) echo "Usage: $0 {start|stop|restart}" esac export runlevel=$TMP_SAVE_runlevel_VAR</drussilla7>
+    #!/bin/sh
+    ### BEGIN INIT INFO
+    # Provides:          kestrel_wifigate
+    # Required-Start:    $local_fs $network $named $time $syslog
+    # Required-Stop:     $local_fs $network $named $time $syslog
+    # Default-Start:     2 3 4 5
+    # Default-Stop:      0 1 6
+    # Description:       Script to run asp.net 5 application in background
+    ### END INIT INFO
+
+    # Author: Ivan Derevianko aka druss <drussilla7>
+    # Fixed for ASP.NET 5 beta 5 with DNVM/DNX by Michal A. Valasek - github.com/ridercz
+
+    WWW_USER=pi
+    DNXRUNTIME=/home/$WWW_USER/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin/dnx
+    APPROOT=/home/$WWW_USER/www/wifigate
+
+    PIDFILE=$APPROOT/kestrel.pid
+    LOGFILE=$APPROOT/kestrel.log
+
+    # fix issue with DNX exception in case of two env vars with the same name but different case
+    TMP_SAVE_runlevel_VAR=$runlevel
+    unset runlevel
+
+    start() {
+      if [ -f $PIDFILE ] && kill -0 $(cat $PIDFILE); then
+        echo 'Service already running' >&2
+        return 1
+      fi
+      echo 'Starting service...' >&2
+      su -c "start-stop-daemon -SbmCv -x /usr/bin/nohup -p \"$PIDFILE\" -d \"$APPROOT\" -- \"$DNXRUNTIME\" . kestrel > \"$LOGFILE\"" $WWW_USER
+      echo 'Service started' >&2
+    }
+
+    stop() {
+      if [ ! -f "$PIDFILE" ] || ! kill -0 $(cat "$PIDFILE"); then
+        echo 'Service not running' >&2
+        return 1
+      fi
+      echo 'Stopping service...' >&2
+      start-stop-daemon -K -p "$PIDFILE"
+      rm -f "$PIDFILE"
+      echo 'Service stopped' >&2
+    }
+
+    case "$1" in
+      start)
+        start
+        ;;
+      stop)
+        stop
+        ;;
+      restart)
+        stop
+        start
+        ;;
+      *)
+        echo "Usage: $0 {start|stop|restart}"
+    esac
+
+    export runlevel=$TMP_SAVE_runlevel_VAR</drussilla7>
 
 Ukončete Nano s uložením změn (Ctrl+X, Y, Enter). Nyní je třeba přidat náš skript do init.d, což je infrastruktura, která se stará právě o spouštění služeb. Učiňte to následujícími příkazy:
 
-sudo cp kestrel_service.sh /etc/init.d/kestrel_wifigate sudo chmod +x /etc/init.d/kestrel_wifigate
+    sudo cp kestrel_service.sh /etc/init.d/kestrel_wifigate
+    sudo chmod +x /etc/init.d/kestrel_wifigate
 
 Prvním příkazem (`cp`) zkopírujete soubor do adresáře `/etc/init.d` a přejmenujete ho na `kestrel_wifigate` (bez přípony). Druhým příkazem (`chmod`) soubor označíte jako vykonatelný. Na Linuxu se k označení spustitelných souborů nepoužívají přípony (`.exe` atd.), ale speciální příznak, který tímto příkazem nastavíte.
 
@@ -57,7 +118,9 @@ V zásadě bychom mohli zkonfigurovat Kestrel tak, aby naslouchal ne na portu 50
 
 Jak na to, nám opět poradí [Druss](http://druss.co/2015/06/asp-net-5-kestrel-nginx-web-server-on-linux/), jeho návod jsem jenom mírně upravil pro naše potřeby a přidal pár vysvětlivek. Nginx nainstalujete následujícími příkazy:
 
-sudo apt-get install nginx -y sudo update-rc.d nginx defaults sudo service nginx start
+    sudo apt-get install nginx -y
+    sudo update-rc.d nginx defaults
+    sudo service nginx start
 
 První příkaz nginx nainstaluje, druhý nastaví automatické spouštění po startu pomocí init.d a třetí službu nastartuje. Když se nyní podíváte z webového prohlížeče na adresu Raspberry Pi s výchozím portem (80), uvidíte hlášku *Welcome to nginx!*:
 
@@ -68,15 +131,25 @@ My ovšem nechceme publikovat statický obsah (uložený mimochodem v adresáři
 Konfigurace virtuálních serverů nginxu je uložena ve dvou složkách:
 
 *   `/etc/nginx/sites-available` obsahuje konfiguraci jednotlivých virtuálních web serverů. Ne všechny jsou aktivní, je to seznam konfigurací, které jsou k dispozici. 
-*   `/etc/nginx/sites-enabled` pak obsahuje symlinky (odkazy, zástupce) na ty soubory ze `sites-available`, které se mají skutečně použít.  
+*   `/etc/nginx/sites-enabled` pak obsahuje symlinky (odkazy, zástupce) na ty soubory ze `sites-available`, které se mají skutečně použít. 
 
 Po instalaci je v `sites-available` vytvořen soubor `default`, který způsobil, že se zobrazila hláška "Welcome to nginx!". Mohli bychom jej editovat, ale jednodušší bude vytvořit nový soubor, který bude obsahovat jenom konfiguraci, kterou potřebujeme.  Soubor se bude jmenovat `/etc/nginx/sites-available/wifigate` a vytvoříte jej pomocí editoru Nano příkazem `sudo nano /etc/nginx/sites-available/wifigate`. Poté do něj zadejte následující text:
 
-server { listen 80; location / { proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_pass http://127.0.0.1:5004; } }
+    server {
+            listen 80;
+            location / {
+                    proxy_set_header    Host $host;
+                    proxy_set_header    X-Real-IP   $remote_addr;
+                    proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+                    proxy_pass  http://127.0.0.1:5004;
+            }
+    }
 
 Aktualizujeme konfiguraci nginxu následujícími příkazy:
 
-sudo rm /etc/nginx/sites-available/default sudo ln -s /etc/nginx/sites-available/wifigate /etc/nginx/sites-enabled/wifigate sudo service nginx restart
+    sudo rm /etc/nginx/sites-available/default
+    sudo ln -s /etc/nginx/sites-available/wifigate /etc/nginx/sites-enabled/wifigate
+    sudo service nginx restart
 
 Prvním příkazem odstraníme symlink na výchozí konfiguraci, čímž ji vypneme. Druhým příkazem uděláme symlink na naši vlastní konfiguraci, čímž ji zapneme. Posledním příkazem restartujeme nginx, čímž se změny provedou.
 

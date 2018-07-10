@@ -7,33 +7,138 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Léta jsem používal pro vystavování faktur a související činnosti vlastní webovou aplikaci. Teď jsem našel službu Fakturoid, která dělá totéž lépe a umí skoro všechno, co ta moje. A co neumí, to se dá napsat pomocí jejího API, pro které jsem napsal .NET klienta, kterého tímto dávám jako open source k dispozici." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Představuji .NET klienta pro Fakturoid API</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2013-08-05T20:07:12+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>5. srpna 2013</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Léta jsem používal pro vystavování faktur a související činnosti vlastní webovou aplikaci. Teď jsem našel službu <a href="http://www.fakturoid.cz/">Fakturoid</a>, která dělá totéž lépe a umí skoro všechno, co ta moje. A co neumí, to se dá napsat pomocí jejího API, pro které jsem napsal .NET klienta, kterého tímto dávám jako open source k dispozici.</p>
 <p>Fakturoid nabízí <a href="https://github.com/fakturoid/api">docela příjemné API</a>. Je to vcelku příčetné REST rozhraní s JSON serializací a docela dobře funguje s klientskou knihovnou pro ASP.NET Web API. Některé aspekty serializace jsou trochu podivné a nejsem si jist 100% správností typů (které nejsou publikované a je na fantazii implementátora, jak si s nimi poradí), ale v zásadě by to mělo fungovat.</p>
 <p>Rád bych poděkoval technické podpoře fakturoidího robota, protože je nejlepší, s jakou jsem se poslední dobou setkal. Odpovědi k věci a většinou prakticky obratem.</p>
 <p>Moje API najdete na <a href="https://github.com/ridercz/Fakturoid-API">GitHubu</a> (nojo, nakazil jsem se tou nemocí taky) a je k dispozici i jako NuGet balíček <strong abp="336">Altairis.Fakturoid.Client**.</p>
 <h2 id="ukazka-pouziti">Ukázka použití</h2>
 <p><a href="https://github.com/ridercz/Fakturoid-API/blob/master/Altairis.Fakturoid.Client.DemoApp/Program.cs">Ukázkovou aplikaci</a> (stejně jako <a href="https://github.com/ridercz/Fakturoid-API/blob/master/Documentation.chm?raw=true">dokumentaci</a>) najdete na GitHubu, já níže nabídnu jenom ukázku, jak se s knihovnou pracuje:</p>
-<p>// Vytvořit instanci API klienta var fc = new FakturoidContext(&quot;username&quot;, &quot;apitoken&quot;, &quot;Název aplikace (me@example.com)&quot;); // Vytvořit instanci třídy, která reprezentuje nový kontakt var newSubject = new JsonSubject { name = &quot;ACME, s. r. o.&quot;, street = &quot;Testovací 123&quot;, city = &quot;Praha&quot;, zip = &quot;11000&quot;, country = &quot;CZ&quot;, registration_no = &quot;12345678&quot;, vat_no = &quot;CZ12345678&quot;, email = &quot;acmecorp@mailinator.com&quot; }; // Pomocí API vytvořit kontakt a získat jeho ID var newSubjectId = fc.Subjects.Create(newSubject); // Vytvořit instanci třídy, která reprezentuje fakturu var newInvoice = new JsonInvoice { subject_id = newSubjectId, lines = new List<jsoninvoiceline abp="342">(), }; // Přidat do ní nějaké položky newInvoice.lines.Add(new JsonInvoiceLine { name = &quot;Položka 1&quot;, quantity = 1, unit_name = &quot;ks&quot;, unit_price = 100, vat_rate = 21 }); newInvoice.lines.Add(new JsonInvoiceLine { name = &quot;Položka 2&quot;, quantity = 3, unit_name = &quot;hod.&quot;, unit_price = 1234, vat_rate = 21 }); // Pomocí API fakturu vytvořit var newInvoiceId = context.Invoices.Create(newInvoice); // ...a odeslat e-mailem context.Invoices.SendMessage(newInvoiceId, InvoiceMessageType.InvoiceMessage);</jsoninvoiceline></p>
+<pre><code>// Vytvořit instanci API klienta
+var fc = new FakturoidContext(&quot;username&quot;, &quot;apitoken&quot;, &quot;Název aplikace (me@example.com)&quot;);
+
+// Vytvořit instanci třídy, která reprezentuje nový kontakt
+var newSubject = new JsonSubject {
+    name = &quot;ACME, s. r. o.&quot;,
+    street = &quot;Testovací 123&quot;,
+    city = &quot;Praha&quot;,
+    zip = &quot;11000&quot;,
+    country = &quot;CZ&quot;,
+    registration_no = &quot;12345678&quot;,
+    vat_no = &quot;CZ12345678&quot;,
+    email = &quot;acmecorp@mailinator.com&quot;
+};
+
+// Pomocí API vytvořit kontakt a získat jeho ID
+var newSubjectId = fc.Subjects.Create(newSubject);
+
+// Vytvořit instanci třídy, která reprezentuje fakturu
+var newInvoice = new JsonInvoice {
+    subject_id = newSubjectId,
+    lines = new List&lt;jsoninvoiceline abp=&quot;342&quot;&gt;(),
+};
+
+// Přidat do ní nějaké položky
+newInvoice.lines.Add(new JsonInvoiceLine {
+    name = &quot;Položka 1&quot;,
+    quantity = 1,
+    unit_name = &quot;ks&quot;,
+    unit_price = 100,
+    vat_rate = 21
+});
+newInvoice.lines.Add(new JsonInvoiceLine {
+    name = &quot;Položka 2&quot;,
+    quantity = 3,
+    unit_name = &quot;hod.&quot;,
+    unit_price = 1234,
+    vat_rate = 21
+});
+
+// Pomocí API fakturu vytvořit
+var newInvoiceId = context.Invoices.Create(newInvoice);
+
+// ...a odeslat e-mailem
+context.Invoices.SendMessage(newInvoiceId, InvoiceMessageType.InvoiceMessage);&lt;/jsoninvoiceline&gt;
+</code></pre>
 <p>Základní tarif (omezený na 5 zákazníků, ale bez omezení na počet faktur) je zdarma, další jsou za ceny velmi nízké a uživatelsky přítulné, takže mohu doporučit minimálně na vyzkoušení.
 </strong></p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

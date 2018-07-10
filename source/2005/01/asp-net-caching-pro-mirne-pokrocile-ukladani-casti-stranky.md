@@ -15,7 +15,7 @@ Většina stránek obsahuje kromě "originálního" obsahu také stále se opaku
 
 ASP.NET umožňuje použít direktivu OutputCache nejenom v rámci ASPX stránek, ale i v rámci web user controlu - ASCX. Pro dynamicky generovaný seznam rubrik příkladně používám toto nastavení:
 
-<%@ OutputCache Duration="1800" Shared="true" VaryByParam="none" %>
+    <%@ OutputCache Duration="1800" Shared="true" VaryByParam="none" %>
 
 Jest samozřejmé, že zatímco cacheování celých stránek je možno provádět na serveru, na klientovi či někde mezi nimi, pro cacheování částí stránky to neplatí - to lze provádět pouze na serveru. Použitím této technologie tedy neušetříte přenosové pásmo, ale "jenom" výkon serveru.
 
@@ -39,15 +39,23 @@ V případě ASPX stránky lze požadovaného efektu dosáhnout prostřednictví
 
 Ukažme si to na příkladu. Mějmež web user control sestávající z textového pole, tlačítka a labelu:
 
-<p> <asp:textbox id="TextBox1" runat="server"></asp:textbox> <asp:button id="Button1" runat="server" text="Button"></asp:button> </p> <p> <asp:label id="Label1" runat="server">Label</asp:label> </p> 
+    <p>
+      <asp:textbox id="TextBox1" runat="server"></asp:textbox>
+      <asp:button id="Button1" runat="server" text="Button"></asp:button>
+    </p>
+    <p>
+      <asp:label id="Label1" runat="server">Label</asp:label>
+    </p>
 
 Jednořádkový obslužný kód v jeho Page_Load vypíše aktuální čas a hodnotu onoho textového pole:
 
-Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load Me.Label1.Text = "Time = " & DateTime.Now.ToString() & "; Selected = " & Me.TextBox1.Text End Sub
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Label1.Text = "Time = " & DateTime.Now.ToString() & "; Selected = " & Me.TextBox1.Text
+    End Sub
 
 Pokud bychom použili cacheovací direktivu bez `VaryByControl`, výsledek by nebyl příliš uspokojivý: zobrazil by se ten text, který byl zadán v okamžiku, kdy se naposledy přegenerovala cache, veškerá další zadání by byla ignorována. Pročež použijeme tuto direktivu:
 
-<%@ OutputCache Duration="60" VaryByParam="none" VaryByControl="TextBox1" %>
+    <%@ OutputCache Duration="60" VaryByParam="none" VaryByControl="TextBox1" %>
 
 Ta, jak račte klidně vyzkoušeti, zajistí cacheování v závislosti na hodnotě zadané do textového pole.
 

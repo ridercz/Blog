@@ -15,7 +15,23 @@ Dokud jsem měl jenom jeden počítač, jmenoval se obligátně ALTAIR. Od té d
 
 Celkem naše výpočetní kapacita v tomto okamžiku čítá sedmnáct počítačů, celkem rovnoměrně rozmístěných po území Čech:
 
-*   **Aisha** (workstation) **Artex** (vývojový web server) **Canis** (terminal server) **Centaur** (databáze) **Epona** (workstation) **Equus** (Linux - logy a bůh ví co) **Falko** (workstation - notebook) **Felis** (terminal server) **Gepard** (vývojový databázový server) **Lupus** (databázový server) **Mustang** (web server) **Phoenix** (workstation) **Regulus** (mail server) **Spirit** (web server) **Unicorn** (zálohy, FTP) **Waylander** (web server) **Wolf** (file server) 
+*   **Aisha** (workstation) 
+    **Artex** (vývojový web server) 
+    **Canis** (terminal server) 
+    **Centaur** (databáze) 
+    **Epona** (workstation) 
+    **Equus** (Linux - logy a bůh ví co) 
+    **Falko** (workstation - notebook) 
+    **Felis** (terminal server) 
+    **Gepard** (vývojový databázový server) 
+    **Lupus** (databázový server) 
+    **Mustang** (web server) 
+    **Phoenix** (workstation) 
+    **Regulus** (mail server) 
+    **Spirit** (web server) 
+    **Unicorn** (zálohy, FTP) 
+    **Waylander** (web server) 
+    **Wolf** (file server)
 
 Při pohledu na jejich názvy je jasná inspirace zvířecí říší, nepříliš překvapivě zejména koňmi.
 

@@ -21,7 +21,7 @@ Tom Evslin je mužem, jehož [názory](http://blog.tomevslin.com/) na Internet (
 
 *   [**Fractals of Change**](http://blog.tomevslin.com/) - blog
 *   [**Hackoff.com**](http://hackoff.com/) - online verze zdarma
-*   [**Předběžná objednávka tištěné knihy**](http://www.amazon.com/exec/obidos/redirect?tag=wwwtomevslico-20&creative=9325&camp=1789&link_code=as2&path=ASIN/0977464601) na Amazonu 
+*   [**Předběžná objednávka tištěné knihy**](http://www.amazon.com/exec/obidos/redirect?tag=wwwtomevslico-20&creative=9325&camp=1789&link_code=as2&path=ASIN/0977464601) na Amazonu
 
 ## O politice
 
@@ -30,14 +30,14 @@ Tom Evslin je mužem, jehož [názory](http://blog.tomevslin.com/) na Internet (
 *   [**Cafe Hayek**](http://cafehayek.typepad.com/)** (anglicky)** - zajímavé pohledy na ekonomiku. Milý závan ekonomické reality.
 *   [**KweenLog**](http://kween.bloguje.cz/)** (česky)** - přívětivé ekonomické komentáře
 *   [**Viditelný Macek**](http://www.viditelnymacek.cz/)** (česky)** - bývalý místopředseda ODS a ministr; ačkoliv dvojdomek bych s ním nechtěl, jeho štiplavé komentáře mi vždycky zvednou náladu
-*   [**Wizard of Id**](http://www.comics.com/creators/wizardofid/)** (anglicky)** - comics o středověkém království, podobnost s reálnou politikou je dozajista čistě náhodná; RSS feed najdete [zde](http://www.tapestrycomics.com/wizardofid.xml). 
+*   [**Wizard of Id**](http://www.comics.com/creators/wizardofid/)** (anglicky)** - comics o středověkém království, podobnost s reálnou politikou je dozajista čistě náhodná; RSS feed najdete [zde](http://www.tapestrycomics.com/wizardofid.xml).
 
 ## WTF?!
 
 Nic nepotěší člověka jako cizí neštěstí - jmenovitě důkaz o tom, že jsou na světě i horší blbci než ti, s nimiž se potkáváte vy.
 
 *   **[The Daily WTF](http://www.thedailywtf.com/) (anglicky)** - web s podtitulem "podivuhodné zvrácenosti v informačních technologiích" shromažďuje podivuhodné ukázky zdrojového kódu, na které když někde narazíte, nezbude vám než se jenom podivit "*what the fuck...*"
-*   [**This is Broken**](http://www.thisisbroken.com/)** (anglicky) **- že je použitelnost důležitá platí nejenom v případě webových aplikací; tento web shromažďuje podivuhodné ukázky nedomyšleností všeho druhu, od počítačových aplikací až po [cedulky na záchodech](http://www.thisisbroken.com/b/2006/01/restroom_signag.html). 
+*   [**This is Broken**](http://www.thisisbroken.com/)** (anglicky) **- že je použitelnost důležitá platí nejenom v případě webových aplikací; tento web shromažďuje podivuhodné ukázky nedomyšleností všeho druhu, od počítačových aplikací až po [cedulky na záchodech](http://www.thisisbroken.com/b/2006/01/restroom_signag.html).
 
 ## Všeliké jiné různé
 

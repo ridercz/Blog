@@ -11,5 +11,5 @@
 <!-- dcterms:dateAccepted = 2011-06-29T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20110629-pouziti-geolocation-api-z-asp-net-web-forms.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20100603-geograficka-data-v-net-1-spatial-funkce-sql-serveru-2008.png -->
 

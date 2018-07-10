@@ -24,7 +24,7 @@ Na základě vašeho zájmu v komentářích jsme se rozhodli 5. 3. uspořádat 
 *   Microsoft VirtualEarth (interaktivní mapy míst, kde se akce konají). 
 *   Vlastní membership, role a profile providery. 
 *   CSS Friendly Control Adapters a vlastní adaptéry pro renderování rozumného výstupního HTML. 
-*   Unikátní systém sledování účasti pomocí čárových kódů generovaných v .NETu.  
+*   Unikátní systém sledování účasti pomocí čárových kódů generovaných v .NETu. 
 
 Ten seznam je dlouhý a myslím si, že ne nezajímavý. Budu připraven odpovídat i na vaše konkrétní dotazy a ukázat i kousky zdrojového kódu :)
 

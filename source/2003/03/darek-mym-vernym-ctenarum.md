@@ -12,7 +12,7 @@ Překvapuje mne, že moje stránky navštěvuje tolik lidí. Podle statistiky pr
 
 1.  Tento web je čistě osobní a neobsahuje žádné zásadní informace a neposkytuje žádné služby.
 2.  Funguje teprve nějaký měsíc a půl.
-3.  Tyto stránky nemají v podstatě žádnou propagaci. 
+3.  Tyto stránky nemají v podstatě žádnou propagaci.
 
 Že se najde takové množství jedinců, kteří dobrovolně čtou moje zápisy buď znamená, že mé výplody jsou lepší než si sám myslím, nebo potvrzuje moji teorii o tom, že masochistů je v populaci hodně, jenom jsou skrytí ;-)
 

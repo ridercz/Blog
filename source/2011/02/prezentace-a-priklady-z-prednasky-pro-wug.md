@@ -17,6 +17,6 @@ Microsoft nedávno uvedl tři novinky, které osloví webové, ale ve dvou pří
 
 *   **IIS Express** je odlehčená verze Microsoft Internet Information Services 7.0, určená především pro vývojáře. Přináší schopnosti IIS na platformy, kter není nativně k dispozici (Windows XP a nižší edice Windows Vista a Windows 7) a usnadňuje vývoj a ladění aplikací.
 *   **Microsoft SQL Server Compact Edition (SSCE, SQLCE) 4.0** je embedded databáze, vhodná pro méně náročné případy, kdy je instalace "velkého" SQL Serveru příliš komplikovaná. Nová verze přináší řadu novinek, mimo jiné je také na rozdíl od předchozích verzí určena pro použití ve webových aplikacích.
-*   **NuGet** je balíčkovač komponent pro .NET projekty. Knihovny není nutné stahovat, instalovat, konfigurovat a aktualizovat ručně, ale můžete tak činit výrazně jednodušším způsobem automaticky. Vyzkoušíme si, jak se NuGet používá a také jak můžete vytvářet vlastní NuGet balíčky pro veřejné nebo soukromé použití. 
+*   **NuGet** je balíčkovač komponent pro .NET projekty. Knihovny není nutné stahovat, instalovat, konfigurovat a aktualizovat ručně, ale můžete tak činit výrazně jednodušším způsobem automaticky. Vyzkoušíme si, jak se NuGet používá a také jak můžete vytvářet vlastní NuGet balíčky pro veřejné nebo soukromé použití.
 
 Prezentaci a příklady si můžete stáhnout z [ASPNET.CZ](https://www.cdn.altairis.cz/Blog/2011/20110228-NovinkyQ1.zip), mají necelé jedno mega.

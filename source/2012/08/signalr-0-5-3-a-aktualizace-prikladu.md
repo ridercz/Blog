@@ -18,10 +18,44 @@ Původní způsob zůstává nadále funkční, ale přibyl nový, který je pod
 
 Takto v nové verzi vypadá kód v C# klientovi:
 
-// Create SignalR hub var connection = new HubConnection(BASE_URL); var proxy = connection.CreateProxy("authChat"); // Handle events proxy.On("userJoined", (string time, string userName) => { Console.WriteLine("[{0}] User {1} connected to chat", time, userName); }); // Connect to server Console.Write("Starting connection..."); connection.Start().Wait(); Console.WriteLine("OK"); // Authenticate Console.Write("Authenticating..."); proxy.Invoke("authenticate", authCode).Wait(); Console.WriteLine("OK");
+    // Create SignalR hub
+    var connection = new HubConnection(BASE_URL);
+    var proxy = connection.CreateProxy("authChat");
+
+    // Handle events
+    proxy.On("userJoined", (string time, string userName) => {
+        Console.WriteLine("[{0}] User {1} connected to chat", time, userName);
+    });
+
+    // Connect to server
+    Console.Write("Starting connection...");
+    connection.Start().Wait();
+    Console.WriteLine("OK");
+
+    // Authenticate
+    Console.Write("Authenticating...");
+    proxy.Invoke("authenticate", authCode).Wait();
+    Console.WriteLine("OK");
 
 Kód v JavaScriptu je prakticky tentýž:
 
-// Create connection and hub proxy var connection = $.hubConnection(); var proxy = connection.createProxy("authChat"); // Handle event proxy.on("userJoined", function (time, userName) { var html = FormatString("<div><span>[{time}]</span> <i>User {userName} connected to chat.</i></div>", { time: time, userName: userName }); $(".chat").html(html + $(".chat").html()); }); // Connect to service and authenticate connection.start(function () { $(".chat").text("Authenticating..."); proxy.invoke("authenticate", authCode); });
+    // Create connection and hub proxy
+    var connection = $.hubConnection();
+    var proxy = connection.createProxy("authChat");
+
+    // Handle event
+    proxy.on("userJoined", function (time, userName) {
+        var html = FormatString("<div><span>[{time}]</span> <i>User {userName} connected to chat.</i></div>", {
+            time: time,
+            userName: userName
+        });
+        $(".chat").html(html + $(".chat").html());
+    });
+
+    // Connect to service and authenticate
+    connection.start(function () {
+        $(".chat").text("Authenticating...");
+        proxy.invoke("authenticate", authCode);
+    });
 
 Přepsal jsem poslední příklad ze své [přednášky o SignalR](http://www.aspnet.cz/articles/396-signalr-realtime-web-v-asp-net) do nové syntaxe (a trochu vylepšil command line klienta), takže můžete obě řešení porovnat, nové příklady jsou ke stažení [zde](http://www.cdn.altairis.cz/Prednasky/20120824-signalr-0.5.3.zip).

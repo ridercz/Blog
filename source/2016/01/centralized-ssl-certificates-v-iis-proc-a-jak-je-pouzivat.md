@@ -32,7 +32,17 @@ Nabízím vám kompletní lab, návod krok za krokem, kterak rozjet hromadu HTTP
 
 Tento příklad počítá s tím, že máte kontrolu nad DNS resolvingem a dokážete si potřebné ukázkové DNS záznamy nasměrovat na IP adresu vašeho web serveru. Pokud takovou kontrolu nemáte nebo se s tím nechcete moc mazat a stačí vám lokálně fungující demo, stačí editovat obsah souboru `C:\Windows\System32\drivers\etc\hosts` (soubor nemá příponu). Přidejte na jeho konec následující text:
 
-127.0.0.1 www.northwind.com 127.0.0.1 northwind.com 127.0.0.1 www.contoso.com 127.0.0.1 contoso.com 127.0.0.1 www.example.com 127.0.0.1 example.com 127.0.0.1 www1.example.com 127.0.0.1 www2.example.com 127.0.0.1 www3.example.com 127.0.0.1 www4.example.com 127.0.0.1 www5.example.com
+    127.0.0.1 www.northwind.com
+    127.0.0.1 northwind.com
+    127.0.0.1 www.contoso.com
+    127.0.0.1 contoso.com
+    127.0.0.1 www.example.com
+    127.0.0.1 example.com
+    127.0.0.1 www1.example.com
+    127.0.0.1 www2.example.com
+    127.0.0.1 www3.example.com
+    127.0.0.1 www4.example.com
+    127.0.0.1 www5.example.com
 
 Tím zajistíte, že se DNS jména jako `northwind.com` apod. budou překládat na vámi určenou adresu. V tomto případě na `127.0.0.1`, tedy `localhost`.
 
@@ -76,7 +86,7 @@ U CCS extrémně záleží na správném pojmenování souborů. Všechny musej�
 
 *   Název zásadně odpovídá použitému host name, s příponou `.pfx`. 
 *   Pokud jeden certifikát obsluhuje několik různých host names (např. verzi s i bez “`www`” na začátku), musí se jeho soubor v adresáři nacházet dvakrát s odpovídajícími názvy. 
-*   Pokud se jedná o wildcard certifikát, je hvězdička nahrazena podtržítkem. Tj. je-li certifikát vydán pro `*.example.com`, bude se odpovídající soubor jmenovat `_.example.com.pfx`.  
+*   Pokud se jedná o wildcard certifikát, je hvězdička nahrazena podtržítkem. Tj. je-li certifikát vydán pro `*.example.com`, bude se odpovídající soubor jmenovat `_.example.com.pfx`. 
 
 Poté co skončíte, měl by váš adresář vypadat nějak takto:
 
@@ -105,7 +115,7 @@ Význam parametrů je následující:
     *   `0` = vazba na IP:port, systémové úložiště certifikátů 
     *   `1` = použití SNI, systémové úložiště certifikátů 
     *   `2` = vazba na IP:port, CCS 
-    *   `3` = použití SNI, CCS (což je náš případ)   
+    *   `3` = použití SNI, CCS (což je náš případ) 
 
 Seznam webů včetně bindingů by měl nyní vypadat nějak takto (povšimněte si, že všem webům přibyly HTTPS bindingy):
 

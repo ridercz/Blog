@@ -22,6 +22,6 @@ To je z hlediska uživatele nejviditelnější změna, které se GeekCore dočka
 *   Upgrade komponent 
 *   Přidání vizuální editace Wiki markupu 
 *   Implementace jQuery UI dialogů 
-*   Drobné doladění vzhledu  
+*   Drobné doladění vzhledu 
 
 Systém Nemesis Publishing, na kterém GeekCore běží, je open source. Můžete si ho stáhnout na [http://geekcore.codeplex.com/](http://geekcore.codeplex.com/ "http://geekcore.codeplex.com/").

@@ -15,7 +15,7 @@ Připravil jsem přednášku **[Novinky v C# 3.0 a LINQ pro běžné smrtelníky
 
 Podíváme se na následující témata:
 
-*   *Novinky v jazyce C# 3.0 (.NET Framework 3.5):* 
+*   *Novinky v jazyce C# 3.0 (.NET Framework 3.5):*       
 
     *   Extension methods 
     *   Partial classes a partial methods 
@@ -23,17 +23,17 @@ Podíváme se na následující témata:
     *   Automatic properties 
     *   Anonymous types 
     *   Object initializers 
-    *   Lambda expressions  
-*   *Technologie LINQ-to-SQL:* 
+    *   Lambda expressions    
+*   *Technologie LINQ-to-SQL:*       
 
     *   DBML jako O/R mapper 
     *   Jak provádět základní operace typu SELECT, INSERT, UPDATE, DELETE 
     *   Jak volat uložené procedury 
-    *   Jak rozšiřovat schopnosti generovaných tříd  
-*   *Dotazovací jazyk LINQ obecně:* 
+    *   Jak rozšiřovat schopnosti generovaných tříd    
+*   *Dotazovací jazyk LINQ obecně:*       
 
     *   Proti čemu se dá LINQ použít 
-    *   Základní metody, syntaxe dotazů   
+    *   Základní metody, syntaxe dotazů      
 
 Předpokladem je alespoň základní znalost platformy .NET ve verzi 2.0. Příklady budu předvádět na webové aplikaci v ASP.NET, ale popisované techniky jsou univerzální, akce je tedy vhodná i pro vývojáře newebových aplikací.
 

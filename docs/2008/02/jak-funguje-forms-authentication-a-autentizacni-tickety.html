@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Otázky na forms autentizaci patří na mých kurzech k velmi častým. I místní článek &quot;Forms authentication a session state - proč nejsou synchronní?&quot; vzbudil jistý zájem. Pojďme se tedy podrobněji podívat na to, jak forms authentication funguje, a rozeberme si onen magický autentizační ticket." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jak funguje forms authentication a autentizační tickety</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2008-02-28T19:51:55.75+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>28. února 2008</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Otázky na forms autentizaci, její použití a implementaci patří na <a href="http://www.gopas.cz/kurzy/GOC36/">mých kurzech</a> k velmi častým. I místní článek <a href="http://www.aspnet.cz/Articles/184-forms-authentication-a-session-state-proc-nejsou-synchronni.aspx">Forms authentication a session state - proč nejsou synchronní?</a> vzbudil jistý zájem. Pojďme se tedy podrobněji podívat na to, jak forms authentication funguje, a rozeberme si onen magický autentizační ticket.</p>
 <h2 id="co-je-forms-authentication">Co je forms authentication</h2>
 <p>Většina klasických internetových protokolů je na tom se zabezpečením dosti bídně. Vznikaly totiž v době, kdy Internet byl malý, počítače drahé a lidé si navzájem věřili. Tomu odpovídá i jejich úroveň zabezpečení - většinou statickým heslem, které se přenáší v otevřené podobě. Standard HTTP se v tomto ohledu nijak neliší. Obsahuje popis dvou autentizačních metod - Basic Authentication a Digest Authentication, které se ale v praxi z různých důvodů příliš nepoužívají.</p>
@@ -56,7 +101,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

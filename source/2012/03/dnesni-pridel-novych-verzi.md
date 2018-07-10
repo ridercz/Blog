@@ -17,7 +17,7 @@ Dnes jsem publikoval nové verze několika svých programů a knihoven:
 ## Altairis Web UI Toolkit verze 2.1.8
 
 *   Prvky *IconLinkButton* a *IconHyperLink* obsahují kromě sady Silk i Silk Companion 1 a Silk Companion 2.
-*   Všechny PNG obrázky byly optimalizovány a jsou nyní ještě o kousek menší 
+*   Všechny PNG obrázky byly optimalizovány a jsou nyní ještě o kousek menší
 
 Zdrojové kódy najdete na [CodePlexu](http://altairiswebui.codeplex.com/), knihovnu můžete instalovat nebo aktualizovat též jako [NuGet balíček](http://www.nuget.org/packages/Altairis.Web.UI) *Altairis.Web.UI*.
 
@@ -28,7 +28,7 @@ Změny ve správě mailing listů:
 *   *SqlMailingListProvider* nyní podporuje i SQL Server Compact
 *   Přidány metody *SubscribeForce* a *RemoveForce*, které umožňují přidat a odstranit uživatele z mailing listu, aniž by bylo nutné to potvrzovat e-mailem.
 *   Metodám *Subscribe*, *Remove* a *SendMessages* přibyl poslední volitelný parametr *additionalArguments*, který bude předán formátovacímu řetězci šablony jako placeholdery s čísly *{4}* atd.
-*   Kromě ukázkových aplikací byl přidán kompletní webový mailing list manager, který umožňuje webové přihlašování, odhlašování, rozesílání zpráv a import adres. K vidění živě na [http://mailing.altairis.cz/](http://mailing.altairis.cz/).  
+*   Kromě ukázkových aplikací byl přidán kompletní webový mailing list manager, který umožňuje webové přihlašování, odhlašování, rozesílání zpráv a import adres. K vidění živě na [http://mailing.altairis.cz/](http://mailing.altairis.cz/). 
 
 Zdrojové kódy najdete na [CodePlexu](http://altairismailtoolkit.codeplex.com/), knihovnu můžete instalovat nebo aktualizovat též jako [NuGet balíček](http://www.nuget.org/packages/Altairis.MailToolkit) *Altairis.MailToolkit*.
 

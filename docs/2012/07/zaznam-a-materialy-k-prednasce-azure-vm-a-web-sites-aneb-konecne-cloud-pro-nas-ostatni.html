@@ -7,25 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Záznam středeční akce a slíbené odkazy na další zdroje." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Záznam a materiály k přednášce Azure VM a Web Sites, aneb konečně cloud pro nás ostatní</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2012-07-05T15:45:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>5. července 2012</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Včera se v Praze konala přednáška, jejímž tématem byly dvě novinky ve Windows Azure: Azure Web Sites a Azure Virtual Machines. Cloudové služby jsou populární buzzword a jsou s námi již nějaký pátek. Jsou fajn pro určité typy nových aplikací, ale přenos existujících aplikací do cloudu je dost komplikovaný až nemožný a ceny pro podmínky mnoha českých firem příliš vysoké.</p>
 <p>Dvě výše zmíněné novinky konečně umožňují cloud využívat i nám ostatním. Azure Web Sites výrazně zjednodušují a zlevňují vývoj a nasazení webových aplikací. Azure Virtual Machines vám pak dávají naprostou svobodu udělat v podstatě cokoliv.</p>
 <h2 id="zaznam-akce-a-materialy">Záznam akce a materiály</h2>
 <p>Můžete si stáhnout <a href="http://www.cdn.altairis.cz/Prednasky/20120704-AzureWeb.zip">prezentaci</a>, kterou jsem používal. Nasazovaná aplikace je <a href="http://www.geekcore.cz/">GeekCore</a> a je open source, její zdrojové kódy jsou na <a href="http://geekcore.codeplex.com/">CodePlexu</a>.</p>
 <p>Video záznam najdete na <a href="http://youtu.be/Qd5OMx9cCqo">YouTube</a> nebo vložený níže:</p>
- <iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/Qd5OMx9cCqo" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/Qd5OMx9cCqo" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 <h2 id="doporucene-prednasky-z-techedu">Doporučené přednášky z TechEdu</h2>
 <p>Účelem mé přednášky bylo představit vám tuto novou technologii. Další podrobnější informace najete například v záznamech následujících přednášek z TechEd Europe:</p>
 <ul>
@@ -33,9 +78,10 @@
 </li>
 <li><p><strong>Azure Web Sites:</strong></p>
 <ul>
-<li><div style="text-align: left;">[Karandeep Anand, Nir Mashkowski: Web Sites on Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR209)</div> 
+<li><div style="text-align: left;">[Karandeep Anand, Nir Mashkowski: Web Sites on Windows Azure](http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR209)</div>
 </li>
-<li><a href="http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR305">Craig Kitterman, Nir Mashkowski: Windows Azure Web Sites: Under the Hood</a></li>
+<li><p><a href="http://channel9.msdn.com/Events/TechEd/Europe/2012/AZR305">Craig Kitterman, Nir Mashkowski: Windows Azure Web Sites: Under the Hood</a></p>
+</li>
 </ul>
 </li>
 <li><p>**Azure Virtual Machines: **</p>
@@ -60,7 +106,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

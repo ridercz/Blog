@@ -22,7 +22,7 @@ Takže v současné době kromě jiných věcí (jako třeba upgrade tohoto blog
 *   8 dkg mletých ořechů
 *   21 dkg másla
 *   1 žloutek
-*   2 lžičky kakaa (cca) 
+*   2 lžičky kakaa (cca)  
 
 Všechny suroviny (já tedy obvykle zpracovávám čtyřnásobné množství) smísíme a zpracujeme do těsta. Mně osobně se osvědčuje ruční hnětení na rovné ploše, robotizace v tomto ohledu nepomáhá. Vzniklé těsto je dobré nechat na pár hodin odležet a pak nacpat v tenké vrstvě do formiček (nejlépe ve tvaru vlašských ořechů) a nechat upéct. Mně se osvědčuje 15 minut při 180 stupních.
 
@@ -34,7 +34,7 @@ Poté, co je dopečeno, je třeba plniti. Recept na náplň je následující:
 *   10 dkg cukru
 *   2 hrsti ořechů
 *   2 žloutky
-*   rum dle chuti 
+*   rum dle chuti  
 
 Množství náplně je dost variabilní a závisí na tvaru vašich formiček. Já mám bohužel toliko formičky dosti placaté, takže jejich kapacita je omezená a náplně potřebuji spíš méně, než kolik by odpovídalo dle receptu.
 

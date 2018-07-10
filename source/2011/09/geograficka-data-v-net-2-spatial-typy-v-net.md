@@ -12,7 +12,7 @@
 <!-- dcterms:dateAccepted = 2011-09-15T08:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20110915-geograficka-data-v-net-2-spatial-typy-v-net.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20100603-geograficka-data-v-net-1-spatial-funkce-sql-serveru-2008.png -->
 
 > **Redakční poznámka:** Když jsem více než před rokem vydával první díl tohoto seriálu, byl jsem dohodnutý s Petrem Kaletou, který slíbil dopsat poslední díl, zahrnující zobrazování GeoRSS dat na Google Maps. Protože to je něco, co vážně neumím. Bohužel, přes několikeré urgence se mi jej nepodařilo k napsání článku přimět. Rozhodl jsem se tedy zbylé dva díly zveřejnit tak, jak jsou.
 > 
@@ -32,21 +32,66 @@ Třída `SqlGeography` je CLR protějškem SQL typu `geography`. Umí reprezento
 
 Zdrojový kód bude vypadat následovně:
 
-// Vytvořit bod, který reprezentuje střed hledání var point = SqlGeography.Point(16.607552, 49.199541, 4326); // Najít všechny položky ve vzdálenosti max. 10 km od @Point using (var db = new SqlConnection("SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo") { using (var cmd = new SqlCommand("SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE @Point.STDistance(Location) <= @Delta", db)) { db.Open(); cmd.Parameters.Add("@Delta", SqlDbType.Int).Value = 10000; cmd.Parameters.Add(new SqlParameter { ParameterName = "@Point", SqlDbType = SqlDbType.Udt, UdtTypeName = "geography", Value = point }); results = new DataTable(); using (var da = new SqlDataAdapter(cmd)) { da.Fill(results); } } }
+    // Vytvořit bod, který reprezentuje střed hledání
+    var point = SqlGeography.Point(16.607552, 49.199541, 4326);
+
+    // Najít všechny položky ve vzdálenosti max. 10 km od @Point
+    using (var db = new SqlConnection("SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo") {
+        using (var cmd = new SqlCommand("SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE @Point.STDistance(Location) <= @Delta", db)) {
+            db.Open();
+            cmd.Parameters.Add("@Delta", SqlDbType.Int).Value = 10000;
+            cmd.Parameters.Add(new SqlParameter {
+                ParameterName = "@Point",
+                SqlDbType = SqlDbType.Udt,
+                UdtTypeName = "geography",
+                Value = point
+            });
+            results = new DataTable();
+            using (var da = new SqlDataAdapter(cmd)) {
+                da.Fill(results);
+            }
+        }
+    }
 
 V případě druhého typu dotazu, tedy vyhledávání bodu v polygonu, je vytvoření odpovídající `SqlGeography` poněkud komplikovanější. K dispozici máme statické metody známé ze SQL Serveru – třeba `STPolyFromText`. Systematičtější přístup nabízí třída `SqlGeographyBuilder`. Detailní popis jejích metod si najděte v dokumentaci, níže uvedený kód vytvoří nám známý obdélník (kde `lat1`/`lon1` a `lat2`/`lon2` jsou souřadnice protilehlých rohů). Na první pohled je zbytečně složitý, nicméně builder počítá s vytvářením výrazně komplikovanějších tvarů, čemuž odpovídá i jeho robustnost.
 
-var rectBuilder = new SqlGeographyBuilder(); rectBuilder.SetSrid(4326); rectBuilder.BeginGeography(OpenGisGeographyType.Polygon); rectBuilder.BeginFigure(lat1, lon1); rectBuilder.AddLine(lat2, lon1); rectBuilder.AddLine(lat2, lon2); rectBuilder.AddLine(lat1, lon2); rectBuilder.AddLine(lat1, lon1); rectBuilder.EndFigure(); rectBuilder.EndGeography(); var rect = rectBuilder.ConstructedGeography;
+    var rectBuilder = new SqlGeographyBuilder();
+    rectBuilder.SetSrid(4326);
+    rectBuilder.BeginGeography(OpenGisGeographyType.Polygon);
+    rectBuilder.BeginFigure(lat1, lon1);
+    rectBuilder.AddLine(lat2, lon1);
+    rectBuilder.AddLine(lat2, lon2);
+    rectBuilder.AddLine(lat1, lon2);
+    rectBuilder.AddLine(lat1, lon1);
+    rectBuilder.EndFigure();
+    rectBuilder.EndGeography();
+    var rect = rectBuilder.ConstructedGeography;
 
 Vlastní dotazování pak je prakticky stejné jako ve výše uvedeném příkladu:
 
-using (var db = new SqlConnection("SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo") { using (var cmd = new SqlCommand("SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE Location.STIntersects(@Rect) = 1", db)) { db.Open(); cmd.Parameters.Add(new SqlParameter { ParameterName = "@Rect", SqlDbType = SqlDbType.Udt, UdtTypeName = "geography", Value = rect }); results = new DataTable(); using (var da = new SqlDataAdapter(cmd)) { da.Fill(results); } } }
+    using (var db = new SqlConnection("SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo") {
+        using (var cmd = new SqlCommand("SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE Location.STIntersects(@Rect) = 1", db)) {
+            db.Open();
+            cmd.Parameters.Add(new SqlParameter {
+                ParameterName = "@Rect",
+                SqlDbType = SqlDbType.Udt,
+                UdtTypeName = "geography",
+                Value = rect
+            });
+            results = new DataTable();
+            using (var da = new SqlDataAdapter(cmd)) {
+                da.Fill(results);
+            }
+        }
+    }
 
 ## Práce s výsledkem
 
 S výsledkem dotazu můžete pracovat obvyklým způsobem. Můžete použít například `SqlDataReader` a data zpracovávat po řádcích. Nebo můžete udělat totéž, co já v předchozím příkladu, a použít `SqlDataAdapter` k naplnění `DataTable`, se kterou budete dále pracovat. Požadovaný sloupec pak stačí přetypovat na `SqlGeography` a můžete s ním dále pracovat běžným způsobem:
 
-var location = results.Rows[0]["Location"] as SqlGeography; double lat = location.Lat.Value; double lon = location.Long.Value;
+    var location = results.Rows[0]["Location"] as SqlGeography;
+    double lat = location.Lat.Value;
+    double lon = location.Long.Value;
 
 V příštím pokračování se seznámíme s formátem GeoRSS, který umožní publikovat seznamy geotagged bodů, a který se nám bude náramně hodit pro zobrazování bodů na mapě pomocí Virtual Earth nebo Google Maps.
 

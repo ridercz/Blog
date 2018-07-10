@@ -19,9 +19,19 @@ Nainstaloval jsem IrfanView. Alespoň že jde odinstalovat, ale nepodařilo se m
 
 Tím asi tak moje idea končí. Momentálně jsem na pokraji odhodlání napsat si takový program sám. Nicméně než se do toho pustím, chci se optat národa vůkol, zda neví o nějakém programu, který by splňoval mé - podle mého názoru vcelku triviální - požadavky:
 
-*   Schopnost práce s JPEG a TIFF formáty. Více obskurních formátů nepotřebuji, ačkoliv možnost práce s RAW formáty různých DF by na škodu nebyla. Rychlost a stabilita, bezproblémový chod na Windows XP. Musím se efektivně popasovat se situací, kdy mám z jediné akce několik tisíc fotek a potřebuju je rychle probrat a roztřídit. Rozumné uživatelské rozhraní. Tedy takové, jaké má můj operační systém, bez různých inovativních vychytávek. Pokud to má skinování, nechť se dá vypnout. Možnost ovládání klávesovými zkratkami - jsou rychlejší. Schopnost práce s EXIF metadaty. Pokud možno i dávkové (např. nastavit pro všechny vybrané fotky najednou autoa nebo copyright). Možnost prohlížet fotky v adresářové struktuře (a manipulovat s nimi) v následujících režimech. 
+*   Schopnost práce s JPEG a TIFF formáty. Více obskurních formátů nepotřebuji, ačkoliv možnost práce s RAW formáty různých DF by na škodu nebyla. 
+Rychlost a stabilita, bezproblémový chod na Windows XP. Musím se efektivně popasovat se situací, kdy mám z jediné akce několik tisíc fotek a potřebuju je rychle probrat a roztřídit. 
+Rozumné uživatelské rozhraní. Tedy takové, jaké má můj operační systém, bez různých inovativních vychytávek. Pokud to má skinování, nechť se dá vypnout. Možnost ovládání klávesovými zkratkami - jsou rychlejší. 
+Schopnost práce s EXIF metadaty. Pokud možno i dávkové (např. nastavit pro všechny vybrané fotky najednou autoa nebo copyright). 
+Možnost prohlížet fotky v adresářové struktuře (a manipulovat s nimi) v následujících režimech. 
 
-    *   detail (seznam souborů, možno s vybranými metadaty jako rozměr nebo popis) thumbnail (náhledy v rozumné velikosti) listování soubor po souboru (zobrazit v plné velikosti/fit to screen, listování po souborech) Otáčení fotek ručně, nebo podle EXIF příznaku. Práce se standardní adresářovou strukturou. Rychlé a jednoduché přesouvání/kopírování a mazání fotek. Možnost mít krátkou poznámku která se zobrazí při prohlížení adresářů (jako popis z *descript.ion* v ACDsee). 
+    *   detail (seznam souborů, možno s vybranými metadaty jako rozměr nebo popis) 
+thumbnail (náhledy v rozumné velikosti) 
+listování soubor po souboru (zobrazit v plné velikosti/fit to screen, listování po souborech)
+Otáčení fotek ručně, nebo podle EXIF příznaku. 
+Práce se standardní adresářovou strukturou. 
+Rychlé a jednoduché přesouvání/kopírování a mazání fotek. 
+Možnost mít krátkou poznámku která se zobrazí při prohlížení adresářů (jako popis z *descript.ion* v ACDsee).
 
 Co nepožaduji, jsou jakékoliv funkce pro úpravu fotek (s výjimkou otáčení po 90 stupních), jejich publikování na webu, vytváření DVD a podobné radosti. Ačkoliv pro *běžného uživatele (tm)* mohou být zásadní, já k tomuto účelu mám speciální profesionální nástroje, jejichž schopností univerzální prográmek nedosáhne. Mohou být v programu samozřejmě přítomny, ale neměly by se mi vnucovat nehorázným způsobem.
 

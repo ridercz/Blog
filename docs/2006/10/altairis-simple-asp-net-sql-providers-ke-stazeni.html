@@ -7,26 +7,71 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Provider object model v ASP.NET 2.0 představuje velký krok kupředu proti verzi 1.x. Vestavěné SQL providery jsou ovšem pro většinu aplikací prakticky nepoužitelné, protože vyžadují velice specifickou databázovou strukturu. Napsal jsem si vlastní providery, které nejsou sice tak univerzální, ale zato používají jednoduchou databázovou strukturu, propojitelnou snadno se zbytkem vaší databáze." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Altairis Simple ASP.NET SQL Providers ke stažení</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2006-10-12T17:38:56.717+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>12. října 2006</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Provider object model v ASP.NET 2.0 představuje velký krok kupředu proti verzi 1.x. Vestavěné SQL providery jsou ovšem pro většinu aplikací prakticky nepoužitelné, protože vyžadují velice specifickou databázovou strukturu.</p>
 <p>Hlavním motivem při tvorbě vestavěných providerů (jejichž <a href="http://weblogs.asp.net/scottgu/archive/2006/04/13/442772.aspx">zdrojové kódy jsou mimochodem volně dostupné</a>) byla naprostá univerzálnost. Databáze je tedy &quot;rozkročena&quot; velice široce, umožňuje uchovávat jakýkoliv serializovatelný typ v profilech, údaje více nezávislých aplikací v jedné struktuře tabulek a podobně.</p>
 <h2 id="altairis-simple-asp.net-sql-providers">Altairis Simple ASP.NET SQL Providers</h2>
 <p>Knihovna <strong>Altairis Simple ASP.NET SQL Providers</strong> obsahuje tři providery:</p>
 <ul>
 <li><em>Altairis.Web.Providers.SimpleSqlMemebrshipProvider</em> - membership provider pro správu uživatelů</li>
-<li><em>Altairis.Web.Providers.SimpleSqlProfileProvider</em> - profile provider pro uchovávání dalších údajů o uživatelích</li>
+<li><em>Altairis.Web.Providers.SimpleSqlProfileProvider</em> - profile provider pro uchovávání dalších údajů o uživatelích</li>
 <li><em>Altairis.Web.Providers.SimpleSqlRoleProvider</em> - role provider pro správu rolí a členství uživatelů v nich</li>
 </ul>
 <p>Moji provideři nejsou tak univerzální jako ty vestavěné. Nepodporují např. anonymní profily, mají pouze některé typy vlastností v profilech, neumí blokování účtů nebo více nezávislých aplikací v jedné databázi). Hlavním motivem při <em>jejich</em> tvorbě byla nicméně snadná integrace se zbytkem databázové struktury libovolné aplikace.</p>
@@ -44,7 +89,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -12,5 +12,5 @@
 <!-- dcterms:dateAccepted = 2011-09-23T08:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20110923-geograficka-data-v-net-3-format-georss.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20100603-geograficka-data-v-net-1-spatial-funkce-sql-serveru-2008.png -->
 

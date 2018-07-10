@@ -33,13 +33,13 @@ Za tímto účelem by tablet měl splňovat zhruba následující (může být z
 *   Vestavěné WiFi a 3G modem. 
 *   RDP klient – možnost nouzově spravovat vzdálené servery. 
 *   Nízká cena, tak do 5000 Kč. Není to pracovní nástroj, který mi něco přinese, ale hračka, se kterou se chci bavit. 
-*   Rozměry a váha, která mi umožní tablet pohodlně nosit s sebou, aniž bych na něj musel mít nějaké zavazadlo, tj. třeba v kapse u bundy. Jakmile s sebou už mám nosit nějaké zavazadlo, vezmu si batoh a to s sebou rovnou můžu brát ThinkPad. Za ideální bych považoval rozměr okolo A5, resp. asi jako má již zmíněný Kindle.  
+*   Rozměry a váha, která mi umožní tablet pohodlně nosit s sebou, aniž bych na něj musel mít nějaké zavazadlo, tj. třeba v kapse u bundy. Jakmile s sebou už mám nosit nějaké zavazadlo, vezmu si batoh a to s sebou rovnou můžu brát ThinkPad. Za ideální bych považoval rozměr okolo A5, resp. asi jako má již zmíněný Kindle. 
 
 Pro jistotu uvádím, co od svého potenciálního tabletu rozhodně neočekávám (ačkoliv je to zřejmě běžné, alespoň podle recenzí a reklam):
 
 *   Přehrávání filmů. Na filmy se dívám hodně zřídka a když, tak při nějaké práci na druhém monitoru velkého počítače. Pokud ten film opravdu stojí za to (takových znám celkem asi pět), nebo při nějaké speciální příležitosti, tak na projektoru a s úhlopříčkou aspoň dva metry. 
 *   Přehrávání hudby. Lépe řečeno: na to mi stačí mobil, nemyslím si, že by mi tablet přinesl něco obzvláště nového. 
-*   Hraní náročných her. Počítačové hry mne vesměs nebaví, beru je jako ukrácení volného času, když nic jiného prostě dělat nejde. A na to žádné extra výkonné železo a sofistikované hry nepotřebuju, spíš naopak.  
+*   Hraní náročných her. Počítačové hry mne vesměs nebaví, beru je jako ukrácení volného času, když nic jiného prostě dělat nejde. A na to žádné extra výkonné železo a sofistikované hry nepotřebuju, spíš naopak. 
 
 ### Tablet jako jediný mobilní pracovní nástroj
 
@@ -53,7 +53,7 @@ Druhou variantou je, že bych se (po mnoha, mnoha letech) zbavil notebooku, poř
 *   Výdrž celý den při běžném použití. 
 *   VGA výstup – buď na těle nebo přes nějakou malou redukci. Potřebuji z toho prezentovat a upřímně řečeno, nevzpomínám si, že bych někdy přednášel nebo prezentoval na místě, kde by byli připraveni na něco jiného. HDMI je mi k ničemu a hříčky typu Intel WiDi jsou sice pěkné, ale ještě jsem to nikdy nikde v praxi neviděl. 
 *   Výpočetní výkon odpovídající současnému počítači – tj. nějaký současný procesor, alespoň 4 GB RAM, alespoň 120 GB HDD. 
-*   Rozměry a váha menší, než běžný notebook.  
+*   Rozměry a váha menší, než běžný notebook. 
 
 Obecně, největší výhodu tabletu proti notebooku vidím v možnosti pracovat i ve stísněných místech. Otevřít si notebook v letadle, ve vlaku (kde nejsou sedačky proti sobě) nebo v obyčejné tramvaji je docela problém, ten krám se tam prostě nevejde tak, aby se na něm dalo něco dělat.
 

@@ -17,12 +17,12 @@ Včerejší přednáškou o internals a rozšiřitelnosti byl ukončen seriál a
 
 V tomto okamžiku jsme naplánovali tři další akce, které by vás mohly zajímat:
 
-*   [29. 08. 2006 - **SQL Server 2005 pro webové vývojáře**](http://akce.altairis.cz/Event.aspx?EventId=5) (Michal A. Valášek, Altairis)
-*   [19. 09. 2006 - **SQL injection - snadná cesta k hacknutí počítače**](http://akce.altairis.cz/Event.aspx?EventId=6) (Michal Bláha, Devmasters)
-*   [10. 10. 2006 - **Indexing service a fulltextové prohledávání**](http://akce.altairis.cz/Event.aspx?EventId=7) (Boris Lehečka) 
+*   [29. 08. 2006 - **SQL Server 2005 pro webové vývojáře**](http://akce.altairis.cz/Event.aspx?EventId=5) (Michal A. Valášek, Altairis)
+*   [19. 09. 2006 - **SQL injection - snadná cesta k hacknutí počítače**](http://akce.altairis.cz/Event.aspx?EventId=6) (Michal Bláha, Devmasters)
+*   [10. 10. 2006 - **Indexing service a fulltextové prohledávání**](http://akce.altairis.cz/Event.aspx?EventId=7) (Boris Lehečka)
 
 ## Microsoft Developer Days 2006
 
 11-12. září se bude v Praze konat letošní ročník Microsoft Developer Days (v Bratislavě 7. 9.). Vstupné je 750 Kč, členové programu [MSDN Connection](https://www.microsoft.com/cze/msdn/connection/default.mspx) mají třetinovou slevu.
 
-*   [Více informací o DevDays 2006](http://www.microsoft.com/cze/events/developerdays/default.mspx) 
+*   [Více informací o DevDays 2006](http://www.microsoft.com/cze/events/developerdays/default.mspx)

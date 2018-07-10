@@ -22,7 +22,7 @@ Hlavní novinky, které VS 2013 a .NET 4.5.1 přináší:
 *   <strong abp="341">One ASP.NET** – nový způsob vytváření a konfigurace webových projektů, umožňující snadno kombinovat jednotlivé technologie (Web Forms, MVC, WebAPI…) a formy autentizace. 
 *   <strong abp="343">ASP.NET Identity** – po osmi letech nový model autentizace a správy identit v ASP.NET aplikacích, nástupce membership provider modelu. Snadná federace identit třeba s Facebookem, Twitterem a dalšími službami. 
 *   <strong abp="345">Nové verze knihoven** – SignalR, Web API, Entity Framework a další se dočkaly updatů a změn. 
-*   <strong abp="347">OWIN** – Open Web Interface for .NET usnadňuje hostování ASP.NET aplikací mimo IIS – třeba ve vlastním procesu.  
+*   <strong abp="347">OWIN** – Open Web Interface for .NET usnadňuje hostování ASP.NET aplikací mimo IIS – třeba ve vlastním procesu. 
 
 Pokud vás tyto novinky zajímají, zvu vás na své přednášky na konferenci MS Fest, a to [2. 11. v Praze](http://www.ms-fest.cz/praha/program/sobota) nebo [30. 11. v Ostravě](http://www.ms-fest.cz/ostrava/program/sobota).
 

@@ -72,7 +72,7 @@ Správa opravdu velkých mailových seznamů je rozhodně netriviální. Je nár
 *   dva nezávislé front-endy slouží pro příjem zpráv z Internetu a prvotní antivirovou a antispamovou kontrolu,
 *   jeden back-end slouží k ukládání pošty a odesílání zpráv autentizovanými uživateli (zákazníky),
 *   další server zajišťuje rozesílání zpráv do mailing listů,
-*   další server obsluhuje doménu *blackhole.altaircom.net* a zpracovává přijatá chybová hlášení. 
+*   další server obsluhuje doménu *blackhole.altaircom.net* a zpracovává přijatá chybová hlášení.
 
 Pokud jste odkázáni na služby hostingové firmy, která se živí převážně poskytováním služeb v ceně 50 Kč/měs. tisícům nenáročných zákazníků, je pravděpodobné, že nic z výše uvedeného nebudete schopni uvést do praxe.
 

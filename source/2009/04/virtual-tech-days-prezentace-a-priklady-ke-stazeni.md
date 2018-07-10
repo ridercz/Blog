@@ -13,6 +13,6 @@
 
 **Microsoft Virtual Tech Days** jsou úspěšně za námi – tedy alespoň v našem časovém pásmu. Pokud vás zaujala moje přednáška o nových server controls v ASP.NET, můžete si stáhnout prezentaci a příklady z ní:
 
-*   [20090401-TechDays.zip](https://www.cdn.altairis.cz/Blog/2009/20090401-TechDays.zip) (500 kB) 
+*   [20090401-TechDays.zip](https://www.cdn.altairis.cz/Blog/2009/20090401-TechDays.zip) (500 kB)  
 
 Video záznam se zpracovává, jakmile o něm budu mít nějaké zprávy, dám vědět.

@@ -7,26 +7,73 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Nástroj pro tvorbu MSDN-like dokumentace pro .NET 2.0 a kompletní MSDN Library ke stažení zdarma." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Dokumentační novinky z Redmondu</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2006-08-11T04:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>11. srpna 2006</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <h2 id="piskove-zamky-dokumentace">Pískové zámky dokumentace</h2>
 <p>Jestli programátoři něco nesnášejí, je to psaní dokumentace. Na hranici snesitelnosti je ještě psaní XML komentářů přímo do kódu - zejména proto, že je nativně podporování Visual Studiem. Výsledkem takového snažení může být XML soubor, který VS 2005 využívá k nápovědě v IntelliSense. Při troše snahy se z týchž podkladů dá vygenerovat HTML dokumentace třeba ve stylu MSDN Library.</p>
 <p>Ona &quot;trocha snahy&quot; dosud ve většině případů znamenala použití geniálního nástroje jménem <a href="http://ndoc.sourceforge.net/">NDoc</a>. Ten ovšem nepodporuje .NET 2.0 a jeho další vývoj <a href="http://www.charliedigital.com/PermaLink,guid,95b2ab68-ba92-413a-b758-2783cde5df9c.aspx">byl zastaven</a>, protože jeho autor byl znechucen nedostatkem jakékoliv podpory vývojářské komunity.</p>
 <p>Microsoft anoncoval vlastní nástroj v podobném duchu - je znám pod kódovým označením <em>Sandcastle</em>. K dispozici je jeho <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=e82ea71d-da89-42ee-a715-696e3a4873b2&amp;DisplayLang=en">červencová Community Technology Preview</a>. K přívětivosti a jednoduchosti ovládání NDocu mu pravda ještě hodně chybí, jeho ovládání je poněkud... liunxové :-) Pokud jste líní psát komplikované příkazy v command line, doporučuji podívat se na <a href="http://www.codeproject.com/useritems/SandcastleCreateBat.asp">tento jednoduchý program</a> který umí automagicky vygenerovat příslušné dávkové soubory.</p>
 <ul>
-<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=e82ea71d-da89-42ee-a715-696e3a4873b2&amp;DisplayLang=en">Microsoft codename &quot;sandcastle&quot;, July 2006 CTP</a></li>
-<li><a href="http://www.codeproject.com/useritems/SandcastleCreateBat.asp">Sandcastle CHM-compile BAT script &amp; configuration utility</a></li>
+<li><p><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=e82ea71d-da89-42ee-a715-696e3a4873b2&amp;DisplayLang=en">Microsoft codename &quot;sandcastle&quot;, July 2006 CTP</a></p>
+</li>
+<li><p><a href="http://www.codeproject.com/useritems/SandcastleCreateBat.asp">Sandcastle CHM-compile BAT script &amp; configuration utility</a></p>
+</li>
 </ul>
 <h2 id="msdn-library-ke-stazeni">MSDN Library ke stažení</h2>
 <p>Lidé se mne často ptají na doporučenou literaturu. Dostávají mne tím trochu do úzkých, protože je obvykle neuspokojí moje dva oblíbené odkazy: <a href="http://www.google.com/">www.google.com</a> a <a href="http://msdn.microsoft.com/">msdn.microsoft.com</a>.</p>
@@ -40,7 +87,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

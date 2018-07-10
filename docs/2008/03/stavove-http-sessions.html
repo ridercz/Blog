@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Web byl stvořen jako bezstavový a struktura HTTP a HTML tomu odpovídá. Pokud chceme tuto bezstavovost překlenout, existuje několik technik, které nám umožní toto omezení obejít. Populární jsou například sessions. Podíváme se jak fungují a jak jsou implementovány v ASP.NET." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Stavové HTTP: Sessions</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2008-03-22T08:00:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>22. března 2008</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/stavove-http" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Stavové HTTP</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V <a href="http://www.aspnet.cz/Articles/191-stavove-http-cookies.aspx">minulém díle</a> našeho seriálu jsme se podívali na technologii cookies a mimo jiné též na problémy, které přináší. Některé problémy cookies lze vyřešit poměrně snadno. Do cookie si uložíme pouze nějaký identifikační řetězec, jednoznačný identifikátor klienta, třeba nějaký GUID. A vlastní obsah si budeme držet na serveru, v paměti, v databázi, na disku nebo kdekoliv jinde.</p>
 <p>To je v kostce popsán princip techniky sessions, která je v té či oné podobě implementována ve většině technologií pro vývoj webů. Vygenerujeme nějaký náhodný identifikátor - obvykle se mu říká Session ID - a ten pak jako jediný posíláme s každým požadavkem v cookie, nebo jako parametr v query stringu.</p>
 <h2 id="kam-data-ukladat">Kam data ukládat</h2>
@@ -44,22 +95,37 @@
 <h2 id="vyhody-a-nevyhody">Výhody a nevýhody</h2>
 <h3 id="proc-sessions-pouzitat">Proč sessions použítat</h3>
 <ul>
-<li>Je to jednoduché - stačí použít kolekci <em>HttpContext.Session</em>. Můžete ukládat větší množství údajů, bez zvýšení objemu přenášených dat.</li>
+<li>Je to jednoduché - stačí použít kolekci <em>HttpContext.Session</em>.  Můžete ukládat větší množství údajů, bez zvýšení objemu přenášených dat.</li>
 </ul>
 <h3 id="proc-sessions-nepouzivat">Proč sessions nepoužívat</h3>
 <ul>
-<li>Špatná škálovatelnost - vytváříte úzké hrdlo v aplikaci. Single point of failure u webových farem. Session timeout je pouze odhadem - většinou špatným. Bezpečnostní rizika - session stealing.</li>
+<li>Špatná škálovatelnost - vytváříte úzké hrdlo v aplikaci.  Single point of failure u webových farem.  Session timeout je pouze odhadem - většinou špatným.  Bezpečnostní rizika - session stealing.</li>
 </ul>
 <h3 id="doporuceni">Doporučení</h3>
 <ul>
-<li>Sessions nepoužívejte a zejména vypněte. Když už je používáte, důkladně zvažte, v jakém režimu mají fungovat. Ukládejte pouze minimální množství dat, nepoužívejte session jako cache (na to je v ASP.NET zvláštní mechanismus). Zejména u InProc sessions počítejte s tím, že se obsah může ztratit - při restartu worker procesu a nespoléhejte na něj.</li>
+<li>Sessions nepoužívejte a zejména vypněte.  Když už je používáte, důkladně zvažte, v jakém režimu mají fungovat.  Ukládejte pouze minimální množství dat, nepoužívejte session jako cache (na to je v ASP.NET zvláštní mechanismus).  Zejména u InProc sessions počítejte s tím, že se obsah může ztratit - při restartu worker procesu a nespoléhejte na něj.</li>
 </ul>
 <p><em>Zítra se v dalším dílu tohoto seriálu podíváme na poslední technologii, a tou je ViewState.</em></p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

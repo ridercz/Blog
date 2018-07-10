@@ -33,4 +33,6 @@ Zbývá jenom zodpovědět otázku, co pohání zastánce této teorie: zda př�
 
 **Relevantní odkazy:**
 
-*   [Paroubkova homosexuální šance](/entry/article-20051215.aspx) [Papež proti homosexuálnímu manželství - a já taky](/entry/article-20030806.aspx) [www.partnerstvi.cz](http://www.partnerstvi.cz/)
+*   [Paroubkova homosexuální šance](/entry/article-20051215.aspx) 
+[Papež proti homosexuálnímu manželství - a já taky](/entry/article-20030806.aspx) 
+[www.partnerstvi.cz](http://www.partnerstvi.cz/)

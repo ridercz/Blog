@@ -34,13 +34,13 @@ Obecná idea zálohování Hyper-V stroje je následující:
 3.  Tuto shadow copy si přimountujete jako další disk (buďto další písmenko a nebo si můžete vytvořit NTFS junction point a namapovat to do prázdného adresáře). 
 4.  Z této shadow copy potom běžnými prostředky okopírujete data někam do pryč, na jiný disk. 
 5.  Shadow copy opět odmountujete. 
-6.  Shadow copy můžete explicitně zrušit. Pokud tak neučiníte, postará se o to příležitostně operační systém sám, drží si jich jenom omezený počet.  
+6.  Shadow copy můžete explicitně zrušit. Pokud tak neučiníte, postará se o to příležitostně operační systém sám, drží si jich jenom omezený počet.   
 
 Praktická bezobslužná implementace jest ovšem poněkud komplikovaná, s ohledem na dočasnou a nestálou povahu stínových kopií. Potřebujete udělat hned několik věcí:
 
 1.  Spustit hlavní dávkový soubor, který udělá přípravné práce a spustí `DISKSHADOW.EXE` se sadou příkazů, které vytvoří kopii, přimountují ji a zase odmountují. 
 2.  V této sadě příkazů želbohu nemůžete zkopírovat soubory, protože to `DISKSHADOW.EXE` neumí. Umí ale zavolat v rámci dávky externí dávkový soubor, který to udělá. 
-3.  Po dokončení běhu dávky se pak vrátíme zpět do hlavního souboru a uklidíme po sobě.  
+3.  Po dokončení běhu dávky se pak vrátíme zpět do hlavního souboru a uklidíme po sobě.   
 
 ## Konkrétní implementace
 
@@ -48,7 +48,7 @@ Představme si následující situaci: máme jeden fyzický Hyper-V server a na 
 
 *   **C:** – na něm je operační systém a také uložená konfigurační data Hyper-V serverů, a to v adresáři `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines`. 
 *   **D:** – zde se nacházejí systémové disky virtuálních strojů, v adresáři `D:\SystemVHD`. 
-*   **E:** – zde se nacházejí datové disky virtuálních strojů, v adresáři `E:\DataVHD`.  
+*   **E:** – zde se nacházejí datové disky virtuálních strojů, v adresáři `E:\DataVHD`.   
 
 Zálohování chceme provádět "křížem", tedy že data z **D:** zkopírujeme na **E:** a naopak. Konfiguraci (je malá) zkopírujeme na **D:** i na **E:**. Tím dosáhneme toho, že při selhání kteréhokoliv z disků budeme mít k dispozici kompletní data.
 
@@ -57,7 +57,7 @@ Aby byla situace zábavnější, chceme udržovat vždy dvě poslední zálohy, 
 To celé lze zařídit celkem jednoduše, pomocí jednoho dávkového souboru, jedné sady příkazů pro `DISKSHADOW.EXE` a pár pomocných souborů, které si dle potřeby vytvoříme a zase smažeme.
 
 Hlavní magie se děje v souboru `C:\Backup\HVBS\backup.cmd`, který vypadá následovně:
- <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt"> 
+  <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt">   
 
 @ECHO OFF
 
@@ -188,10 +188,10 @@ ECHO [%DATE%%TIME%] Backup sequence "%HVBS_SEQ%" completed >> %HVBS_LOGFILE%
 ECHO Backup script completed!
 
 :END
- </div> 
+ </div>  
 
 Pomocným fámulem jest soubor `C:\Backup\HVBS\backup.dsh`, jehož obsah je dost stručný:
- <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt"> 
+  <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt">   
 
 set context persistent
 
@@ -218,7 +218,7 @@ unexpose C:\Backup\HVBS\mnt.c
 unexpose C:\Backup\HVBS\mnt.d
 
 unexpose C:\Backup\HVBS\mnt.e
- </div> 
+ </div>  
 
 Dále pak si skript v průběhu své činnosti vytvoří a zase smaže soubory `C:\Backup\HVBS\sequence.marker` a `C:\Backup\HVBS\phase.marker`. Postup činnosti zálohovacího skriptu je poměrně prostý:
 
@@ -231,6 +231,6 @@ Dále pak si skript v průběhu své činnosti vytvoří a zase smaže soubory `
 7.  V rámci této dávky je znovu spuštěna ve druhé kopii dávka `backup.cmd`. Protože ale nyní existuje soubor `phase.marker`, přeskočí se již provedená fáze 1 a spustí se fáze 2. 
 8.  V ní pomocí ROBOCOPY.EXE zkopírujeme co jen kam potřebujeme. Jen v cestě místo písmen disků použejem dříve vytvořené adresáře "`mnt.c`", "`mnt.d`" a "`mnt.e`". 
 9.  Nezapomeneme smazat soubor `phase.marker`, aby se příště dávka spustila zase od začátku a dávku ukončíme. 
-10.  V běhu pokračuje první instance `backup.cmd`, která pokračuje fází 3, ve které se už neděje nic zásadního, jenom po sobě uklidíme a smažeme nyní již nepotřebné prázdné adresáře.  
+10.  V běhu pokračuje první instance `backup.cmd`, která pokračuje fází 3, ve které se už neděje nic zásadního, jenom po sobě uklidíme a smažeme nyní již nepotřebné prázdné adresáře.   
 
 Výsledkem této činnosti je, že při každém spuštění skriptu se nám vytvoří jedna záloha, cyklicky pojmenovaná "`D/E:\Backup-SetA`" a "`D/E:\Backup-SetB`". Virtuální počítače o této činnosti nevědí a nevyžaduje se od nich žádná aktivní spolupráce. Pouze musejí mít nainstalované Integration components (tj. "Virtual Machine Additions pro Hyper-V"). Nemají-li, bezvýpadkově je zálohovat nelze a v průběhu zálohy budou zapauzovány a potí znovu rozběhnuty. Nebo by alespoň měly být, nezkoušel jsem to, protože žádný server bez IC nemám.

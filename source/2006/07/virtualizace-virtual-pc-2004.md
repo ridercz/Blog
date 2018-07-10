@@ -34,7 +34,7 @@ Virtuální počítače typicky sestávají z několika souborů, rozlišených 
 *   **VMC **jsou malé XML soubory, které popisují konfiguraci počítače.
 *   **VHD **jsou velké soubory, které reprezentují virtuální hard disky. Je jich několik typů, jak pojednáme později.
 *   **VFD **jsou obrazy disket, ale v životě jsem žádný neviděl.
-*   **VSV** jsou dočasně existující soubory které vzniknou, pokud vypnete virtuální počítač a uložíte jeho stav. V takovém případě se obsah jeho paměti uloží do tohoto souboru. Podobá se to procesu hibernace který jistě znáte, pokud jste uživateli notebooku. 
+*   **VSV** jsou dočasně existující soubory které vzniknou, pokud vypnete virtuální počítač a uložíte jeho stav. V takovém případě se obsah jeho paměti uloží do tohoto souboru. Podobá se to procesu hibernace který jistě znáte, pokud jste uživateli notebooku.
 
 ## Vytvoření a konfigurace virtuálního počítače
 
@@ -61,13 +61,13 @@ Velmi důležitá je sekce Networking. Počítač může mít až čtyři virtu�
 *   **Not connected** - síťová karta není nikam připojena, počítač se chová, jako by do ní nebyl zasunut kabel.
 *   **Local only** - bude vytvořena virtuální síť, která umožní komunikovat více současně spuštěným virtuálním počítačům mezi sebou. Nebude možno komunikovat s reálnou sítí ani s hostitelským počítačem.
 *   **Shared networking (NAT)** - hostitelský počítač se bude chovat jako router s NATem. Virtuální počítač bude přes DHCP přidělenou adresu z rozsashu 192.168.131.x. Bude schopen se připojit na vnější síť, ale nikoliv naopak, protože jednoduchý NAT nepodporuje "inbound port mapping".
-*   **Network adapter on the physical computer** - pravděpodobně nejzajímavější řešení. Pomocí fyzické síťové karty hostitelského počítače se virtuální počítač připojí do fyzické sítě a bude se jí jevit jako další připojený počítač se vším všudy. 
+*   **Network adapter on the physical computer** - pravděpodobně nejzajímavější řešení. Pomocí fyzické síťové karty hostitelského počítače se virtuální počítač připojí do fyzické sítě a bude se jí jevit jako další připojený počítač se vším všudy.
 
 Při použití poslední možnosti je nutné si uvědomit několik věcí:
 
 *   Síťová konfigurace virtuálního počítače bude podobná, jako konfigurace hostitelského. Pokud v síti běží DHCP, přidělí mu dynamicky adresu. Pokud v síti funguje statické přidělování adres, je nutné počítači takovou přidělit a nastavit.
 *   Vzhledem ke způsobu připojení je jakýkoliv softwarový firewall běžící na hostitelském stroji vůči virtuálnímu počítači neúčinný. Z hlediska zabezpečení je tedy nutno k virtuálnímu stroji přistupovat jako k fyzickému.
-*   Pokud přenášíte virtuální počítače mezi fyzickými, zkontrolujte si po přenosu nastavení této hodnoty, protože nastavení je vázáno na název síťové karty (který bude pravděpodobně odlišný). 
+*   Pokud přenášíte virtuální počítače mezi fyzickými, zkontrolujte si po přenosu nastavení této hodnoty, protože nastavení je vázáno na název síťové karty (který bude pravděpodobně odlišný).
 
 ## Spuštění VPC a instalace guest OS
 
@@ -86,7 +86,7 @@ AltGr je ve virtuálním počítači velmi důležitá klávesa. Obecně se jí 
 *   *AltGr + DEL* pošle do virtuálního počítače CTRL-ALT-DEL
 *   *AltGr + ENTER* přepíná mezi full screen režimem a během v okně
 *   *AltGr + P* zastaví (pause) a pak zase rozběhne (resume) virtuální stroj
-*   *AltGr + R* vyresetuje virtuální stroj 
+*   *AltGr + R* vyresetuje virtuální stroj
 
 ## Virtual Machine Additions
 
@@ -98,7 +98,7 @@ Virtual Machine Additions jsou dostupné pro následující operační systémy
 *   **MS-DOS** - standardní součást instalace, postup instalace pro VMA pro DOS najdete v [Q833146](http://support.microsoft.com/?kbid=833146)
 *   **OS/2** - standardní součást instalace, nezkoušel jsem (nemáte někdo instalačky OS/2?)
 *   **Windows Vista** - provoz Visty pod Virtual PC je spojen s řadou problémů a oficiálně není podporován. Jsou nicméně k dispozici polooficiální VMA pro Vistu. S některými beta verzemi Visty fungují, s jinými ne. Podrobnější informace najdete na blogu s příznačným podtitulem "*[Views on using an unreleased operating system on a computer that doesn't exist](http://blogs.msdn.com/mikekol/archive/category/11647.aspx)*".
-*   **RedHat a SuSE Linux** - additions si můžete stáhnout [z webu Microsoftu](http://www.microsoft.com/windowsserversystem/virtualserver/evaluation/linuxguestsupport/default.mspx), kde také najdete konkrétní seznam podporovaných distribucí. Jsou určeny pro Virtual Server, ale údajně fungují i pod Virtual PC. 
+*   **RedHat a SuSE Linux** - additions si můžete stáhnout [z webu Microsoftu](http://www.microsoft.com/windowsserversystem/virtualserver/evaluation/linuxguestsupport/default.mspx), kde také najdete konkrétní seznam podporovaných distribucí. Jsou určeny pro Virtual Server, ale údajně fungují i pod Virtual PC.
 
 Kromě neviditelných "systémových" vylepšení získáte instalací VM Additions (pro Windows) následující výhody:
 
@@ -106,6 +106,6 @@ Kromě neviditelných "systémových" vylepšení získáte instalací VM Additi
 *   Sdílení schránky (přenos dat mezi host OS a guest OS přes schránku)
 *   Mapování adresářů (sekce *Shared Folders* v Settings umožní namapovat adresář z host OS jako síťový disk v guest OS)
 *   Dynamická změna rozlišení (změnou velikosti okna měníte rozlišení v guest OS)
-*   Drag and drop přenos souborů (přetahováním můžete přenášet soubory mezi guest a host OS) 
+*   Drag and drop přenos souborů (přetahováním můžete přenášet soubory mezi guest a host OS)
 
  *Příště se podíváme na Microsoft Virtual Server 2005, což je řešení pro provoz virtuálních serverů. Do komentářů můžete psát dotazy a připomínky, budu na ně brát ohled při tvorbě dalších dílů tohoto seriálu.* 

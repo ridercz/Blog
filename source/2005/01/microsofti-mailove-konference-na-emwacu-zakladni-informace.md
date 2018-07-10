@@ -27,7 +27,7 @@ Cokoliv pošlete do konference, bude číst několik stovek víceméně cizích 
 *   **Vyjadřujte se srozumitelně.** Svůj dotaz popište tak, aby mu bylo možno snadno odpovědět a uveďte všechny relevantní informace, tedy například typ a verzi operačního systému či prostředí a podobně.
 *   **Používejte subject (předmět) zprávy.** Uvědomte si, že subject zprávy je to, na základě čeho se člověk který vám potenciálně může být užitečný rozhodne, zda zprávu bude číst. Nepoužívejte proto obecné předměty ("*Pomoc!*"), ale dostatečně konkrétní určení ("*V Mozille mi nefunguje validace na straně klienta*").
 *   **Pokud píšete novou zprávu, nečiňte tak odpovědí na starou.** E-mailové programy přidávají do hlaviček zprávy informace, které umožňují je řadit do stromové struktury (kdo komu odpověděl). Pokud zprávu na nové téma zařadíte někam hluboko do stromu, děláte tím jednak zmatek, druhak je možné že si vaší zprávy nikdo nevšimne, protože bude v threadu, který se rozhodl dále nesledovat.
-*   **Než se zeptáte, podívejte se do archivu.** Archivy jsou dva. Jeden přímo na [Emwacu](http://list.emwac.cz/archives/index.html), druhý provozuje Michal Blaha na [Vývojáři](http://konference.vyvojar.cz). 
+*   **Než se zeptáte, podívejte se do archivu.** Archivy jsou dva. Jeden přímo na [Emwacu](http://list.emwac.cz/archives/index.html), druhý provozuje Michal Blaha na [Vývojáři](http://konference.vyvojar.cz).
 
 ## Jaké konference jsou na EMWACu k dispozici
 

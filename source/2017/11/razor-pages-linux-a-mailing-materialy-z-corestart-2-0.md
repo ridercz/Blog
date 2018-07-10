@@ -10,5 +10,5 @@
 <!-- dcterms:dateAccepted = 2017-11-04T02:13:24.227+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20171104-razor-pages-linux-a-mailing-materialy-z-corestart-2-0.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20171010-asp-net-core-2-0-platforma-kterou-chcete-pouzivat.jpg -->
 

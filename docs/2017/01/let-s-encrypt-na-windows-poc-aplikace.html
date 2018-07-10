@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Let's Encrypt na Windows: PoC aplikace</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2017-01-22T00:00:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>22. ledna 2017</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace. Napíšeme jednoduchou proof of concept aplikaci, která projde procesem ověření totožnosti a vydání jednoho certifikátu.</p>
 <p>Pro komunikaci protokolem ACME použijeme <a href="https://github.com/fszlin/certes">Certes</a>, .NET kliente pro ACME protokol. Přišel mi srozumitelnější, než populárnější <a href="https://github.com/ebekker/ACMESharp">ACMESharp</a>. Součástí projektu Certes je i klient z příkazové řádky, který dělá část toho, co chceme. Pokud nechcete plně automatizovaný proces, podívejte se na něj, může vám být užitečné.</p>
 <p>Zdrojový kód mé aplikace najdete jako <a href="https://gist.github.com/ridercz/ce6473b9693402882a7ec56fb722ea0c">gist na GitHubu</a>. V podstatě jde o mírně upravený a rozšířený příklad, který najdete na stránkách projektu <a href="https://github.com/fszlin/certes#get-started">Certes</a>.</p>
@@ -44,7 +89,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

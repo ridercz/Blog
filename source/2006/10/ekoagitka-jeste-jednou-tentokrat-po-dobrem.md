@@ -13,6 +13,6 @@ Před pár dny jsem se v článku [Koňský trus a ekologická agitka](https://w
 
 Konečně někdo, kdo přehledně vyjádřil můj postoj k životnímu prostředí a aktivitám na jeho ochranu:
 
-> ...vztah k životnímu prostředí nemá být jen morálním rozhodnutím, ale také rozhodnutím ekonomickým. (...) Péče o životní prostředí nesmí být věcí toho, zda jsem dobrý člověk. Je lepší žít ve společnosti, kde je snazší chovat se jako dobrý člověk.
+> ...vztah k životnímu prostředí nemá být jen morálním rozhodnutím, ale také rozhodnutím ekonomickým. (...) Péče o životní prostředí nesmí být věcí toho, zda jsem dobrý člověk. Je lepší žít ve společnosti, kde je snazší chovat se jako dobrý člověk.
 
 Lidé se budou chovat "správně" pokud se jim to vyplatí a nebo budou alespoň přesvědčeni o tom, že se jim to vyplatí. Správnou, a jedinou opravdu funkční, cestou k trvale udržitelnému rozvoji není omezování a vzbuzování pocitů viny, ale skutečný rozvoj. Technologie, které zajistí, že nejvýhodnější chování bude trvale udržitelné.

@@ -25,11 +25,19 @@ Možnosti samotného streamu nejsou moc velké. Zapsat nebo přečíst hromádku
 
 Následující kód tedy vytvoří textový soubor a zapíše do něj dva řádky textu:
 
-Dim Soubor As New System.IO.StreamWriter(Server.MapPath("/StreamDemo/demo.txt")) Soubor.WriteLine("První řádek") Soubor.WriteLine("Druhý řádek") Soubor.Close()
+    Dim Soubor As New System.IO.StreamWriter(Server.MapPath("/StreamDemo/demo.txt"))
+    Soubor.WriteLine("První řádek")
+    Soubor.WriteLine("Druhý řádek")
+    Soubor.Close()
 
 Vcelku podobným způsobem je možno soubor i číst. Zde se uplatní též metoda `Peek`. Ta "nakoukne" na další bajt v souboru a aniž by posunula pomyslný kurzor, vrátí jeho hodnotu. V případě, že narazí na konec souboru, vrátí `-1`. Toho lze s úspěchem využít při řešení úloh typu "načítej dokud nenarazíš na konec souboru. Následující kód přečte po řádcích obsah zdrojového souboru a vypíše ho na výstup:
 
-Dim Soubor As New System.IO.StreamReader(Server.MapPath("/StreamDemo/demo.txt")) Do While Soubor.Peek() > -1 Dim Radek As String = Soubor.ReadLine() Response.Write(Radek & "<br>") Loop Soubor.Close()
+    Dim Soubor As New System.IO.StreamReader(Server.MapPath("/StreamDemo/demo.txt"))
+    Do While Soubor.Peek() > -1
+        Dim Radek As String = Soubor.ReadLine()
+        Response.Write(Radek & "<br>")
+    Loop
+    Soubor.Close()
 
 V tomto konkrétním případě je víceméně zbytečné číst soubor po řádcích. Mnohem jednodušší by bylo použít metodu `ReadToEnd` a poté prostě nahradit konce řádků tagem `<br>`.
 
@@ -39,7 +47,8 @@ V tomto konkrétním případě je víceméně zbytečné číst soubor po řád
 
 Ani to nepředstavuje zásadní problém. Obšírnější [pojednání o kódování řetězců v .NET](http://archive.aspnetwork.cz/art/clanek.asp?id=212) jsem napsal již před časem, detaily si přečtěte v něm. Pro účely čtení nebo zápisu pomocí `StreamReaderu` a `StreamWriteru` stačí prostě požadované kódování specifikovat jako další volitelný parametr. Máte-li tedy vstupní data například v kódování Windows 1250, stačí příslušný řádek modifikovat takto:
 
-Dim Soubor As New System.IO.StreamReader(Server.MapPath("/StreamDemo/demo.txt"), _ System.Text.Encoding.GetEncoding("Windows-1250"))
+    Dim Soubor As New System.IO.StreamReader(Server.MapPath("/StreamDemo/demo.txt"), _
+                      System.Text.Encoding.GetEncoding("Windows-1250"))
 
 ## Pohodlný přístup
 

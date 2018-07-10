@@ -18,7 +18,7 @@ Před pár dny se konala v Bratislavě konference ShowIT, z níž vám nyní nab
 
 Používání Entity Frameworku se dnes již v podstatě nedá vyhnout. Přesto se ho řada vývojářů bojí. V této přednášce jsem vám ukázal základní principy fungování tohoto O/R mapperu a ukázal vám, že není čeho se bát.
 
-*   **Prezentace ke stažení: **[**20170209-ShowIT-EntityFramework.zip**](https://www.cdn.altairis.cz/Prednasky/20170209-ShowIT-EntityFramework.zip)  
+*   **Prezentace ke stažení: **[**20170209-ShowIT-EntityFramework.zip**](https://www.cdn.altairis.cz/Prednasky/20170209-ShowIT-EntityFramework.zip)   
 
 ## C# v roce 2017
 

@@ -17,7 +17,7 @@ Web server a ASP.NET při své činnosti využívá tři identity:
 
 *   **Request Identity** je identita, pod níž běží kód, který je bezprostřední reakcí na konkrétní požadavek. Zjednodušeně řečeno, všechno mezi událostmi `BeginRequest` a `EndRequest`. Většina vaší aplikace a kódu, který napíšete, běží pod request identity.
 *   **Process Identity** je identita worker procesu jako takového. Pod touto identitou běží vše, co není bezprostřední reakcí na konkrétní požadavek. Například události typu ukončení session nebo start a shutdown aplikace. Také callbacky všeho druhu – odstranění položky z cache, například.
-*   **Identita anonymního uživatele** (IUSR) web serveru se ASP.NET jako takových netýká, ale použije se pro požadavky na všechno ostatní, tedy zejména na statické soubory, jako třeba obrázky nebo CSS styly. Použije se v případě, že je webový uživatel z hlediska Windows neznámý, tj. není například Basic autentizací přihlášen doménový nebo lokální uživatel. 
+*   **Identita anonymního uživatele** (IUSR) web serveru se ASP.NET jako takových netýká, ale použije se pro požadavky na všechno ostatní, tedy zejména na statické soubory, jako třeba obrázky nebo CSS styly. Použije se v případě, že je webový uživatel z hlediska Windows neznámý, tj. není například Basic autentizací přihlášen doménový nebo lokální uživatel.  
 
 Níže v článku používám pojmy "uživatel" a "identita". Jaký je mezi nimi rozdíl? Uživatel má klasický uživatelský účet, tak jak ho známe. Má také takzvaný uživatelský profil, což je adresář, akm se ukládají jeho nastavení. Má heslo a lze se jako on obvykle interaktivně přihlásit, prostě někam zadám jméno a heslo. Serverová Windows mají po instalaci typicky dva uživatele, první se jmenuje Guest a druhý Administrator. Uživatel může být buďto lokální (`NÁZEV_POČÍTAČE\jméno_uživatele`) nebo doménový (`NÁZEV_DOMÉNY\jméno_uživatele` nebo zřídka `jméno_uživatele@NÁZEV_DOMÉNY`).
 
@@ -37,7 +37,7 @@ Výchozí nastavení je tedy:
 
 *   Identita anonymního uživatele je uživatel `IUSR_názevserveru`. Tuto identitu je možno změnit v nastavení IIS a to pro každou aplikaci (virtuální web server nebo web aplikaci) zvlášť. 
 *   ASP.NET Process identity je uživatel `ASPNET`. Tuto identitu je možno změnit v `machine.config`u a nastavení je jednotné pro celý server, všechny aplikace mají tuto identitu stejnou. 
-*   ASP.NET Request identity je, pokud neřeknete jinak, stejná jako process identity. Říct jinak lze pomocí impersonace ve `web.config`u, v elementu `/configuration/system.web/identity`. Pokud nastavíte atribut `impersonate` na `"true"`, podědí se identita od hostujícího webu, tj. např. na uživatele `IUSR_názevserveru`. Případně lze pomocí atributů `userName` a `password` zadat jméno a heslo jiného uživatele.  
+*   ASP.NET Request identity je, pokud neřeknete jinak, stejná jako process identity. Říct jinak lze pomocí impersonace ve `web.config`u, v elementu `/configuration/system.web/identity`. Pokud nastavíte atribut `impersonate` na `"true"`, podědí se identita od hostujícího webu, tj. např. na uživatele `IUSR_názevserveru`. Případně lze pomocí atributů `userName` a `password` zadat jméno a heslo jiného uživatele.   
 
 Z důvodů popsaných výše je na IIS 5.x v podstatě nemožné provozovat bezpečný hosting více nezávislých aplikací, protože všechny mají stejnou process identity a nelze je od sebe oddělit.
 
@@ -51,7 +51,7 @@ Výchozí nastavení a možnosti u těchto verzí tedy jsou:
 
 *   Identita anonymního uživatele je stále IUSR_názevserveru, zde se nic nemění. 
 *   ASP.NET Process Identity je standardně `NT AUTHORITY\NETWORK SERVICE`. To je speciální identita (nikoliv běžný uživatel), pod kterou nově běží velká část služeb. Process Identity lze změnit v nastavení application poolu, a to pro každý pool zvlášť. Aby mohl být uživatel použit pro identitu AP, musí být členem skupiny `IIS_WPG` (IIS Worker Process Group). 
-*   ASP.NET Request Identity je opět standardně stejná, jako process identity a lze ji změnit stejným postupem jako u předchozí verze.  
+*   ASP.NET Request Identity je opět standardně stejná, jako process identity a lze ji změnit stejným postupem jako u předchozí verze.   
 
 Na této verzi je tedy možný bezpečný hosting více zákazníků (resp. nezávislých aplikací) na jednom serveru, pokud má každý zákazník svůj application pool.
 
@@ -61,7 +61,7 @@ Mezi verzemi 6 a 7 doznal IIS zcela zásadních změn, ale základní systém wo
 
 *   Identita anonymního uživatele se změnila. Výchozí nastavení je, že se používá speciální identita `NT AUTHORITY\IUSR`. Impersonace se nově nastavuje zde, lze nastavit konkrétního uživatele a nebo že se použije identita application poolu. 
 *   ASP.NET Process Identity je opět identita application poolu a platí, že může být změněna. Výchozí nastavení je ovšem jiné. Nepoužívá se již identita `NT AUTHORITY\NETWORK SERVICE` (ačkoliv je možné ji ručně nastavit), ale speciální smečka skrývající se v konfiguraci pod názvem `ApplicationPoolIdentity`. Pro každý application pool je automaticky vytvořena speciální identita jménem `IIS APPPOOL\názevpoolu`. Tj. pokud vytvoříte AP jménem `MujAP`, bude se automaticky použitá identita jmenovat `IIS APPPOOL\MujAP`. To znamená, že jednotlivé AP jsou od sebe automaticky izolovány, bez nutnosti pro ně vytvářet samostatné uživatele. Tato možnost zůstala samozřejmě zachována, pouze se změnil název skupiny, které by tento uživatel měl být členem: jmenuje se `IIS_IUSRS`. 
-*   ASP.NET request identity je pro anonymní požadavky výše uvedené identita anonymního uživatele, tj. dle nastavení buď IUSR (výchozí) nebo identita AP.  
+*   ASP.NET request identity je pro anonymní požadavky výše uvedené identita anonymního uživatele, tj. dle nastavení buď IUSR (výchozí) nebo identita AP.   
 
 ## Typická použití, rady a doporučení
 

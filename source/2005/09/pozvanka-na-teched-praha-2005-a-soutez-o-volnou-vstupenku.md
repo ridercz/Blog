@@ -16,9 +16,11 @@ Letos se koná 19-23. září, tedy příští týden. Kompletní program najdet
 Nezanedbatelná část TechEdu bude věnována i webovým technologiím a prezentace nezanedbatelné části této části leží na mých bedrech. Pro úvod do světa ASP.NET 2.0 jsem zvolil tři přednášky:
 
 *   **WEB323 - Overview of ASP.NET 2.0**   
-*(úterý, 10:30-11:45) *Základní seznámení s technologií ASP.NET 2.0, představení možností. Spousta demo ukázek a příkladů ke stažení! **WEB327 - Best Practices for Building Web Application UI with Master Pages, Themes and Site Navigation**   
-*(středa, 10:30-11:45) *Co oko nevidí, sice srdce nebolí, ale co oko vidí, musí někdo naprogramovat. Whidbey umožňuje dosud nejpropracovanější oddělení grafiky od dat, a některé novinky, dosud u vývoje webových aplikací nevídané. **WEB340 - IIS7: Discover and Move to the Next Generation Web Application Server Platform**  
-*(čtvrtek 10:30-11:45) *A na závěr, pohled do budoucnosti poněkud vzdálenější, na následující verzi Internet Information Services. Jako malou ochutnávku doporučuji přečíst si dříve zde vydaný článek [IIS 7: Per aspera ad astra](/entry/article-20050112.aspx). 
+*(úterý, 10:30-11:45) *Základní seznámení s technologií ASP.NET 2.0, představení možností. Spousta demo ukázek a příkladů ke stažení! 
+    **WEB327 - Best Practices for Building Web Application UI with Master Pages, Themes and Site Navigation**   
+*(středa, 10:30-11:45) *Co oko nevidí, sice srdce nebolí, ale co oko vidí, musí někdo naprogramovat. Whidbey umožňuje dosud nejpropracovanější oddělení grafiky od dat, a některé novinky, dosud u vývoje webových aplikací nevídané. 
+    **WEB340 - IIS7: Discover and Move to the Next Generation Web Application Server Platform**  
+*(čtvrtek 10:30-11:45) *A na závěr, pohled do budoucnosti poněkud vzdálenější, na následující verzi Internet Information Services. Jako malou ochutnávku doporučuji přečíst si dříve zde vydaný článek [IIS 7: Per aspera ad astra](/entry/article-20050112.aspx).
 
 ## Soutěž o volnou vstupenku
 

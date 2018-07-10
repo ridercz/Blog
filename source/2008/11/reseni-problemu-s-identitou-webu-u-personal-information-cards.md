@@ -25,13 +25,13 @@ Byl změněn algoritmus výpočtu PPID. Nově platí, že:
 *   V případě **HTTPS s certifikátem, kde jsou uvedenu údaje o žadateli, ale není EV**, se algoritmus změnil. Nově se neuvažuje certifikační autorita. Řetězec je stejný jako pro EV, jenom se na začátek přidá string `|Non-EV`, tj. výsledek bude příkladně `|Non-EV|O="Altairis, s.r.o."|L="Praha"|S=""|C="CZ"|`. 
 *   V případě **HTTPS s certifikátem, kde nejsou uvedeny údaje o žadateli, ale je uveden název serveru**, se algoritmus také změnil. Použije se pouze Common Name, nepřihlíží se ke klíči, např. tedy `|CN="www.altairis.cz"|`. 
 *   V případě **HTTP bez certifikátu** se použije hostname serveru, převedený na malá písmena (např. tedy `www.altairis.cz`). 
-*   Teprve v případě, že **certifikát neobsahuje žádné údaje o žadateli ani serveru** (takový jsem ještě neviděl) a nebo pokud **není propojen s důvěryhodnou certifikační autoritou**, použije se jeho veřejný klíč.  
+*   Teprve v případě, že **certifikát neobsahuje žádné údaje o žadateli ani serveru** (takový jsem ještě neviděl) a nebo pokud **není propojen s důvěryhodnou certifikační autoritou**, použije se jeho veřejný klíč.   
 
 To pro provozovatele webů znamená, že:
 
 *   Všechny weby stejného provozovatele, bez ohledu na adresu, budou mít stejné PPID (v případě standardního certifikátu, kde je uvedena identita žadatele). Žadatelé mohou svobodně měnit poskytovatele certifikačních služeb. Identita bude ale jiná pro EV a Non-EV weby téhoš subjektu. 
 *   V případě "desetidolarových" certifikátů, kde se ověřuje jenom název serveru, se při změně certifikátu nezmění PPID. To zůstane na věky stejné (dokud je stejný název serveru). 
-*   Pokud používají libovolný ne-EV certifikát, mají jednorázový problém: jakmile si klient nainstaluje identity selector podporující ISIP 1.5 (což v případě CardSpace znamená, že si nainstalují SP1 na .NET Framework 3.5, který bude co nevidět na Windows Update), změní se jim PPID. Protože CardSpace z NetFx 3.0 podporuje ISIP 1.0 a ten z NetFx 3.5 SP1 podporuje ISIP 1.5.  
+*   Pokud používají libovolný ne-EV certifikát, mají jednorázový problém: jakmile si klient nainstaluje identity selector podporující ISIP 1.5 (což v případě CardSpace znamená, že si nainstalují SP1 na .NET Framework 3.5, který bude co nevidět na Windows Update), změní se jim PPID. Protože CardSpace z NetFx 3.0 podporuje ISIP 1.0 a ten z NetFx 3.5 SP1 podporuje ISIP 1.5.   
 
 Stávající provozovatelé webů budou tedy muset znovu asociovat PPID se svými uživateli, principiálně stejným způsobem jako při registraci a nebo při ztrátě karty.
 

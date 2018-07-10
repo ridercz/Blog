@@ -7,22 +7,69 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jednou z nejčastěji se vyskytujících chyb ve webových aplikacích je script injection. Příčinou je nedostatečné ověření vstupů. Jak snadno a pro uživatele vstřícně zacházet s generickým HTML vstupem?" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Filtrování HTML: jak na "nebezpečné" elementy?</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-10-01T09:12:24.22+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>1. října 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Jednou z nejčastěji se vyskytujících chyb je <em>script injection</em>. Mechanismus, který dovolí uživateli zadat HTML kód, který, jsa zobrazen jinému uživateli, bude mít negativní efekt. Oním negativním efektem může být ledacos, obvykle se ale jedná o:</p>
 <ul>
-<li>Prosté obtěžování uživatele (otevíráním pop-up oken a podobně). Získání autentizačních údajů (jsou-li uloženy v cookies, URL a podobně). Čirý vandalismus.</li>
+<li>Prosté obtěžování uživatele (otevíráním pop-up oken a podobně).
+Získání autentizačních údajů (jsou-li uloženy v cookies, URL a podobně).
+Čirý vandalismus.</li>
 </ul>
 <h2 id="filter-sievekazdy-vstup-je-povazovan-za-nebezpecny-dokud-neprokaze-opak"><img src="https://www.cdn.altairis.cz/Blog/filter.jpg" alt="Filter, sieve" title="Image via sxc.hu, used by permission." />Každý vstup je považován za nebezpečný, dokud neprokáže opak</h2>
 <p>Často je třeba principiálně nedůvěryhodným (či dokonce anonymním) uživatelům umožnit nějak zadávat vlastní obsah na stránky, typicky například jako komentáře, příspěvky do diskusního fóra, inzeráty... V takovém případě je třeba ošetřit vstup tak, aby uživatel - ať už z čiré blbosti nebo zlé vůle - nemohl způsobit nepříjemnosti systému nebo dalším uživatelům.</p>
@@ -43,18 +90,43 @@
 <h3 id="simplefilter-plain-text-do-xhtml">SimpleFilter - plain text do XHTML</h3>
 <p>První metoda je zmiňovaná <em>čínská zeď</em>. Vstup by měl být zadán v plain textu, bez jakéhokoliv formátování. Statická metoda <em>SimpleFilter</em> s ním provede několik věcí:</p>
 <ol>
-<li>Převede jej na odstavce, podle zalomení řádků (ENTER). Inteligentně přitom vynechá prázdné odstavce. Je tedy jedno, zda uživatel používá k oddělení odstavců 1x nebo 2x ENTER. Celý text zakóduje pomocí <em>HtmlEncode</em>. Případně zadané HTML značky se zobrazí, nikoliv aplikují. Prohledá text na výskyt webových a e-mailových adres. Najde-li nějaké, převede je automaticky na odkazy. Pokud je odkazovaná adresa příliš dlouhá (delší než 60 znaků), automaticky se zobrazí v textu pouze prvních 60 znaků (cíl odkazu samozřejmě zůstane nezměněn).</li>
+<li>Převede jej na odstavce, podle zalomení řádků (ENTER). Inteligentně přitom vynechá prázdné odstavce. Je tedy jedno, zda uživatel používá k oddělení odstavců 1x nebo 2x ENTER.
+Celý text zakóduje pomocí <em>HtmlEncode</em>. Případně zadané HTML značky se zobrazí, nikoliv aplikují.
+Prohledá text na výskyt webových a e-mailových adres. Najde-li nějaké, převede je automaticky na odkazy.
+Pokud je odkazovaná adresa příliš dlouhá (delší než 60 znaků), automaticky se zobrazí v textu pouze prvních 60 znaků (cíl odkazu samozřejmě zůstane nezměněn).</li>
 </ol>
 <p>Tato metoda je vhodná tehdy, neočekává-li se od uživatelů, že budou cosi explicitně formátovat a nemá-li jim to být ani umožněno.</p>
 <p>Celé filtrování je založeno na jedné veřejné a jedné pomocné metodě:</p>
-<p>Public Shared Function SimpleFilter(ByVal Text As String) As String Dim SB As New System.Text.StringBuilder For Each Line As String In Split(Text, vbCrLf) Line = Line.Trim() If Line &lt;&gt; &quot;&quot; Then Line = System.Web.HttpUtility.HtmlEncode(Line) Line = System.Text.RegularExpressions.Regex.Replace(Line, &quot;\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)<em>&quot;, &quot;<a href="">$0</a>&quot;) Line = System.Text.RegularExpressions.Regex.Replace(Line, &quot;(http|https|ftp)://[a-zA-Z0-9-.]+.[a-zA-Z]{2,3}(:[a-zA-Z0-9]</em>)?/?([a-zA-Z0-9-._?,'/\+&amp;%$#=~])*[^.,)(\s]&quot;, New System.Text.RegularExpressions.MatchEvaluator(AddressOf EvaluateHyperlink)) SB.Append(&quot;</p>
+<pre><code>Public Shared Function SimpleFilter(ByVal Text As String) As String
+    Dim SB As New System.Text.StringBuilder
+    For Each Line As String In Split(Text, vbCrLf)
+        Line = Line.Trim()
+        If Line &lt;&gt; &quot;&quot; Then
+            Line = System.Web.HttpUtility.HtmlEncode(Line)
+            Line = System.Text.RegularExpressions.Regex.Replace(Line, &quot;\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*&quot;, &quot;[$0]()&quot;)
+            Line = System.Text.RegularExpressions.Regex.Replace(Line, &quot;(http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*[^\.\,\)\(\s]&quot;, New System.Text.RegularExpressions.MatchEvaluator(AddressOf EvaluateHyperlink))
+            SB.Append(&quot;
+</code></pre>
 <p>&quot; &amp; Line &amp; &quot;
-&quot; &amp; vbCrLf) End If Next Return SB.ToString() End Function Private Shared Function EvaluateHyperlink(ByVal M As System.Text.RegularExpressions.Match) As String Dim Title As String = M.Value If Title.Length &gt; 60 Then Title = Title.Remove(60) &amp; &quot;...&quot; Return String.Format(&quot;<a href="">{1}</a>&quot;, M.Value, Title) End Function</p>
+&quot; &amp; vbCrLf)
+End If
+Next
+Return SB.ToString()
+End Function</p>
+<pre><code>Private Shared Function EvaluateHyperlink(ByVal M As System.Text.RegularExpressions.Match) As String
+    Dim Title As String = M.Value
+    If Title.Length &gt; 60 Then Title = Title.Remove(60) &amp; &quot;...&quot;
+    Return String.Format(&quot;[{1}]()&quot;, M.Value, Title)
+End Function
+</code></pre>
 <p>Jedinou zajímavost zde představuje metoda <em>EvaluateHyperlink</em>. Že je pomocí regulárních výrazů možno vyhledávat a nahrazovat, je obecně známo. Je nicméně též možno napsat si vlastní metodu, která procedurálně zajistí jakkoliv složité nahrazení, které není možné napsat přímo v regexp, případně to programátor neumí. Já jsem této funkcionality využil při implementaci zmiňované funkce zobrazování URL.</p>
 <h3 id="advancedfilter-tag-soup-do-xhtml">AdvancedFilter - tag soup do XHTML</h3>
 <p>Druhá statická metoda, <em>AdvancedFilter</em> aplikuje posledně zmiňovaný přístup. Předpokládá, že vstup je zapsán v HTML, nebo že se o to alespoň uživatel pokoušel. S takovým vstupem pak provede následující psí kusy:</p>
 <ol>
-<li>Převede jej na well-formed XML. Domyslí si tedy chybějící párové tagy, odstraní překřížené a podobně. Všechny názvy elementů/atributů převede na malá písmena (pro kompatibilitu s XHTML). V duchu nejlepších tradic presumpce viny odstraní všechny konstrukce, kromě těch, jež byly výslovně prohlášeny za důvěryhodné a povolené. Odstraní HTML komentáře.</li>
+<li>Převede jej na well-formed XML. Domyslí si tedy chybějící párové tagy, odstraní překřížené a podobně.
+Všechny názvy elementů/atributů převede na malá písmena (pro kompatibilitu s XHTML).
+V duchu nejlepších tradic presumpce viny odstraní všechny konstrukce, kromě těch, jež byly výslovně prohlášeny za důvěryhodné a povolené.
+Odstraní HTML komentáře.</li>
 </ol>
 <p>Tuto metodu lze - po případné úpravě - použít kromě zabezpečení též k omezení nežádoucí kreativity autorizovaných uživatelů.</p>
 <p>Standardně jsou za povolené pokládány následující elementy a jejich atributy: <em>a (href), img (src, alt, title, width, height), b, i, cite, strong, em, p, br, code, blockquote</em>. V případě odkazů je rovněž zajištěno, že smí začínat pouze některým ze standardních internetových protokolů (<em>http://, https://, ftp://, mailto: <em>a</em> news:</em>) a nesmějí se tedy odkazovat na klientské skripty.</p>
@@ -62,13 +134,29 @@
 <p>Celou třídu můžete velmi snadno upravit k obrazu svému, příkladně co do seznamu povolených HTML konstrukcí.</p>
 <h2 id="download-a-odkazy">Download a odkazy</h2>
 <ul>
-<li><a href="http://smourier.blogspot.com/">.NET HTML Agility Pack</a> - informace a download <a href="https://www.cdn.altairis.cz/Blog/2005/20051001-SafeHtml.zip">SafeHtml</a> - zdrojový kód ve VB.NET</li>
+<li><a href="http://smourier.blogspot.com/">.NET HTML Agility Pack</a> - informace a download
+<a href="https://www.cdn.altairis.cz/Blog/2005/20051001-SafeHtml.zip">SafeHtml</a> - zdrojový kód ve VB.NET</li>
 </ul>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

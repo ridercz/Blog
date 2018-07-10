@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Téměř přesně před rokem jsem si v článku Jak se zjišťuje identita webu u Personal Information Cards? stěžoval na to, že algoritmus pro výpočet identity relying party (tedy typicky webu) je špatný. Specifikace ISIP verze 1.5 tento problém řeší. Problém u Windows CardSpace řeší .NET Framework 3.5 SP1." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Řešení problémů s identitou webu u Personal Information Cards</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2008-11-19T01:55:29.763+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>19. listopadu 2008</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Téměř přesně před rokem jsem si v článku <a href="http://www.aspnet.cz/Articles/171-jak-se-zjistuje-identita-webu-u-personal-information-cards.aspx">Jak se zjišťuje identita webu u Personal Information Cards?</a> stěžoval na to, že algoritmus pro výpočet identity relying party (tedy typicky webu) je špatný. Specifikace <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=b94817fc-3991-4dd0-8e85-b73e626f6764&amp;DisplayLang=en">ISIP verze 1.5</a> tento problém řeší. Problém u Windows CardSpace řeší .NET Framework 3.5 SP1.</p>
 <h2 id="v-cem-byl-problem">V čem byl problém?</h2>
 <p>Osobní (unmanaged) information cards používají jako základní identifikační prvek PPID – private personal identifier. Ten je unikátní vždy pro kombinaci konkrétní karty (uživatele) a relying party (webu). To je dobré z důvodu bezpečnosti a ochrany soukromí uživatele. Řeší to problém phishingu, protože i když phisher zmate uživatele a ten mu pošle kartu, získá útočník identifikátor platný jenom pro svůj web. A z hlediska ochrany soukromí si může být uživatel jist, že provozovatelé dvou webů nemohou jeho údaje za jeho zády propojit, protože PPID je pro každou stranu jiné.</p>
@@ -46,7 +91,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

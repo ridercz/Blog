@@ -16,7 +16,7 @@ Momentálně se nacházím daleko (relativně) od domova, na TechEdu v Amsterdam
 Ačkoliv se ve svém testu chci zaměřit především na softwarovou stránku věci, sluší se představit i hardware, se nímž pracuji, tedy Samsung 700T.
 
 *   [Informace na webu výrobce](http://www.samsung.com/us/computer/tablet-pcs/XE700T1A-A04US)
-*   [Windows 8 na tomto tabletu](http://www.samsung.com/windowspreview) 
+*   [Windows 8 na tomto tabletu](http://www.samsung.com/windowspreview)
 
 Pokud je mi známo, tak se tento model u nás oficiálně neprodává, já ho mám půjčený od české pobočky Microsoftu. Jeho oficiální prodejní cena je 1350 USD, což při prostém přepočtu (bez obvyklých cenových hrátek evropských a českých distributorů) znamená nějakých 28 000 Kč. Na podrobné hodnocení je ještě brzy, ale už dnes mohu prohlásit, že za tyto peníze bych si ho rozhodně nekoupil.
 
@@ -65,7 +65,7 @@ Z výpočetního hlediska není tablet žádné ořezávátko:
 *   **Disk:** 60 GB SSD
 *   **Grafika:** nějaká Intel HD, bližší informace jsem nehledal
 *   **Komunikace:** 3G modem, WiFi, Bluetooth, USB 2.0 (1x na těle, 1x na docku), Ethernet (pouze na docku)
-*   **Senzory:** okolní osvětlení, akcelerometr a NFC, které nemám jak vyzkoušet 
+*   **Senzory:** okolní osvětlení, akcelerometr a NFC, které nemám jak vyzkoušet
 
 Jedná se tedy o docela slušnou konfiguraci. Překvapuje mne absence GPS, která by u tohoto zařízení měla smysl a stojí pár korun. Za nejslabší místo pokládám jen 60 GB disk, ale údajně existuje i 128 GB verze. Zamrzí zejména v kombinaci s absencí rychlého rozhraní pro připojení externího disku (eSATA nebo USB 3.0 – tedy, tiše předpokládám, konektor není modrý a žádné 3.0 zařízení na otestování nemám).
 

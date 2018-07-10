@@ -30,7 +30,36 @@ Klienty zpravidla příliš nezajímá, jaká časová zóna je na serveru a v d
 
 Pro účely zobrazení lze s výhodou použít extension metody. Následující kód rozšíří instance tříd `DateTime` a `DateTimeOffset` o metodu `ToLocalDisplayFormat`, která převede čas do zvolené časové zóny a zformátuje jej podle našich parametrů. V tomto případě umí pracovat se dny "včera", "dnes" a "zítra":
 
-private const string TZID = "Central Europe Standard Time"; public static string ToLocalDisplayFormat(this DateTime dt) { var dto = new DateTimeOffset(dt); return dto.ToLocalDisplayFormat(); } public static string ToLocalDisplayFormat(this DateTimeOffset dt) { var dtConverted = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TZID); var todayConverted = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, TZID).Date; var dayDelta = (int)dtConverted.Date.Subtract(todayConverted).TotalDays; if (dayDelta == -1) { // Yesterday return string.Format("včera, {0:HH:mm}", dtConverted); } else if (dayDelta == 0) { // Today return string.Format("dnes, {0:HH:mm}", dtConverted); } else if (dayDelta == 1) { // Tomorrow return string.Format("zítra, {0:HH:mm}", dtConverted); } else { // Sometime else return dtConverted.ToString("dd. MM. yyyy HH:mm"); } }
+    private const string TZID = "Central Europe Standard Time";
+
+    public static string ToLocalDisplayFormat(this DateTime dt) {
+        var dto = new DateTimeOffset(dt);
+        return dto.ToLocalDisplayFormat();
+    }
+
+    public static string ToLocalDisplayFormat(this DateTimeOffset dt) {
+        var dtConverted = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TZID);
+        var todayConverted = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, TZID).Date;
+
+        var dayDelta = (int)dtConverted.Date.Subtract(todayConverted).TotalDays;
+
+        if (dayDelta == -1) {
+            // Yesterday
+            return string.Format("včera, {0:HH:mm}", dtConverted);
+        }
+        else if (dayDelta == 0) {
+            // Today
+            return string.Format("dnes, {0:HH:mm}", dtConverted);
+        }
+        else if (dayDelta == 1) {
+            // Tomorrow
+            return string.Format("zítra, {0:HH:mm}", dtConverted);
+        }
+        else {
+            // Sometime else
+            return dtConverted.ToString("dd. MM. yyyy HH:mm");
+        }
+    }
 
 Hodnota konstanty TZID určuje cílovou časovou zónu a v tomto případě se jedná o časovou zónu ČR. Kompletní seznam časových zón známých danému systému (seznam se občas mění) získáte pomocí metody [GetSystemTimeZones](http://msdn.microsoft.com/en-us/library/system.timezoneinfo.getsystemtimezones.aspx).
 

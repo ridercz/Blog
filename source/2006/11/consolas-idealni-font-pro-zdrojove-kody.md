@@ -9,6 +9,8 @@
 <!-- dcterms:created = 2006-11-04T00:35:33.603+01:00 -->
 <!-- dcterms:dateAccepted = 2006-11-04T00:35:33.603+01:00 -->
 
+ 
+
 Vývojáři jsou zvláštní plémě uživatelů: hojně pracují s velkým množstvím textu, leč poněkud specifické povahy, který vyžaduje specifický přístup - a také specifické písmo ke zobrazení. V převážné většině případů se užívá fontu neproporcionálního, tedy takového, v němž mají různé znaky vždy pevnou šířku. Děje se tak z příčin dílem praktických (odsazování atd), dílem romantických, kdy touto cestou vzdáváme hold pionýrům počítačové vědy v dobách, kdy prostředkem komunikace člověka s počítačem byla dálnopisná konzole.
 
 Obvykle se k tomuto účelu užívá písma **Courier New**, písma vycházejícího z tradice psacího stroje (původně byl navržen v roce 1955 pro psací stroje IBM). Tento font ovšem umožňuje snadnou záměnu znaků, písmene O za nulu, malého L za jedničku a podobně. Takové překlepy mohou být pro programátory velice nepříjemné. Kromě toho, tenké tahy a výrazné patky tohoto písma způsobují, že je při rozlišení počítačových monitorů obtížně čitelné v malé velikosti.

@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jedna z nenápadných Microsoftích utilitek se dočkala nové verze - a ta zvyšuje jeho použitelnost o řád." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Microsoft LogParser 2.2: Nová verze užitečného nástroje</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-01-23T00:05:06.293+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>23. ledna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Microsoft <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&amp;displaylang=en">uvolnil novou verzi</a> svého málo známého, ale o to užitečnějšího nástroje <strong>Microsoft LogParser</strong>. Tento program umí zpracovat v podstatě jakákoliv zdrojová data (zejména nejrůznější logy, jak již jeho název napovídá) a dotazovat se do nich pomocí SQL-like dotazů. Výsledek umí vygenerovat v mnoha různých formátech. Přibližnou představu vám může dát následující schéma činnosti:</p>
 <p><img src="https://www.cdn.altairis.cz/Blog/2005/20050122-logparser-schema.png" alt="Schéma činnosti Microsoft LogParseru" title="Schéma činnosti Microsoft LogParseru" /></p>
 <p>LogParser není primárně určen ke generování obvyklých webserverových statistik (ne že by to neuměl, ale obvykle je jednodušší použít jiné nástroje). S výhodou ho můžete použít pokud potřebujete analyzovat logy s ohledem na nějaké speciální zadání či při řešení určitého problému.</p>
@@ -41,7 +86,14 @@
 <p>SQL (nebo spíše SQL-like) příkazy se nám stávají čím dál tím složitějšími. Naštěstí není nutno je psát přímo do příkazové řádky - je možno načíst je ze souboru. Pokud budu chtít vypsat počet mailů, které mým serverem prošly za den, použiji následujcí příkaz:</p>
 <p><code>LogParser -i:TSV file:D:\TMP\smtplogs\stats1.sql -headerRow:OFF -iHeaderFile:D:\TMP\smtplogs\header.tsv -rtp:-1</code></p>
 <p>Onen soubor <code>stats1.sql</code> bude obsahovat toto:</p>
-<p>SELECT TO_DATE(TO_TIMESTAMP(date, '&quot;yyyy-MM-dd hh:mm:ss&quot;')) AS Datum, COUNT(<em>) AS Pocet FROM D:\TMP\smtplogs\smtp-</em> WHERE status='&quot;RCPT=OK&quot;' GROUP BY Datum ORDER BY Datum</p>
+<pre><code>SELECT 
+ TO_DATE(TO_TIMESTAMP(date, '&quot;yyyy-MM-dd hh:mm:ss&quot;')) AS Datum, 
+ COUNT(*) AS Pocet 
+FROM D:\TMP\smtplogs\smtp-* 
+WHERE status='&quot;RCPT=OK&quot;'
+GROUP BY Datum 
+ORDER BY Datum
+</code></pre>
 <p>Data mohu samozřejmě vyexportovat i do grafu nebo různě agregovat. Obsáhlejší příklady na analýzu logů XMailu najdete <a href="ftp://ftp.altaircom.net/outgoing/altaircom/logparser-xmail-samples.zip">zde</a>.</p>
 <h2 id="nejenom-na-logy">Nejenom na logy</h2>
 <p>Kromě logů v rozličných formátech lze jako vstupní data použít i takové zdroje jako filesystém, Active Directory nebo registry. Například následujícím příkazem lze na základě shodných MD5 hashů najít na disku shodné soubory:</p>
@@ -49,13 +101,30 @@
 <p>Stejně tak výstup lze ukládat nejenom do rozličných typů souborů, ale též posílat například na <a href="http://www.faqs.org/rfcs/rfc3164.html">SYSLOG</a> server, nebo je vkládat do libovolné SQL databáze přes ODBC.</p>
 <h3 id="souvisejici-odkazy">Související odkazy</h3>
 <ul>
-<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&amp;displaylang=en">Microsoft LogParser 2.2</a> - download <a href="http://www.securityfocus.com/infocus/1712">Forensic Log Parsing with Microsoft's LogParser</a> <a href="http://www.logparser.com/">LogParser.com</a> - knihovna odkazů a dalších zdrojů</li>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&amp;displaylang=en">Microsoft LogParser 2.2</a> - download
+<a href="http://www.securityfocus.com/infocus/1712">Forensic Log Parsing with Microsoft's LogParser</a>
+<a href="http://www.logparser.com/">LogParser.com</a> - knihovna odkazů a dalších zdrojů</li>
 </ul>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

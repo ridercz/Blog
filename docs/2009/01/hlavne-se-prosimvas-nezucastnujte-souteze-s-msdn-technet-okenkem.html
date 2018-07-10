@@ -7,20 +7,65 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Když jsem frflal nad tím, že původní projekt IFRAME, který vám umožnil do vlastních stránek zahrnout novinky z MSDN a TechNetu, je špatný, zastaralý a vůbec, mohlo mě napadnout, že mně Microsoft řekne, že když jsem tak chytrej, tak ať to napíšu sám a líp." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Hlavně se prosímvás nezúčastňujte soutěže s MSDN/TechNet okénkem!</h1>
-      <section class="article">
-        <iframe style="border-bottom-style: none; border-right-style: none; border-top-style: none; float: left; border-left-style: none; margin-right: 2ex" height="300" src="http://www.microsoft.cz/rsstoframe/transform.msdn.axd" frameborder="0" width="200" scrolling="no"></iframe> 
+      <aside class="article-info">
+        <time datetime="2009-01-28T12:30:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>28. ledna 2009</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
+        <iframe style="border-bottom-style: none; border-right-style: none; border-top-style: none; float: left; border-left-style: none; margin-right: 2ex" height="300" src="http://www.microsoft.cz/rsstoframe/transform.msdn.axd" frameborder="0" width="200" scrolling="no"></iframe>  
 <p>To jsem si zase na sebe upletl bič.</p>
 <p>Když jsem frflal nad tím, že původní projekt IFRAME, který vám umožnil do vlastních stránek zahrnout novinky z MSDN a TechNetu, je špatný, zastaralý a vůbec, mohlo mě napadnout, že mně Microsoft řekne, že když jsem tak chytrej, tak ať to napíšu sám a líp. Blbé je, že já na tohle vždycky naletím.</p>
 <p>No, tak jsem to udělal. Výsledkem je open source projekt <a href="http://www.codeplex.com/RssFrame/">RssToFrame</a>, který dělá v zásadě jednoduchou věc: čas od času stáhne RSS feedy dle konfigurace a udělá z nich jedno velké XML. To lze potom prohnat XSLT šablonou a udělat z toho nějaké pěkné HTML nebo v podstatě cokoliv jiného. Jednoduché, pěkné, elegantní. Pokud by vás to zajímalo, podívejte se na <a href="http://www.codeplex.com/RssFrame/">CodePlex</a>, je to tam včetně zdrojáků a dokumentace.</p>
@@ -33,7 +78,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

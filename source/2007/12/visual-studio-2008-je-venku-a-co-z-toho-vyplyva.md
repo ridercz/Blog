@@ -21,7 +21,7 @@ Zvláštní péči nemusíte zachovávat ani při provozu webových aplikací na
 
 Více informací o verzování .NET Frameworku najdete v následujících článcích:
 
-*   [Ještě jednou a důkladněji k verzím Microsoft .NET Frameworku](http://www.aspnet.cz/Articles/161-jeste-jednou-a-dukladneji-k-verzim-microsoft-net-frameworku.aspx) [Co je vlastně .NET Framework 3.0](http://www.aspnet.cz/Articles/123-co-je-vlastne-net-framework-3-0.aspx) 
+*   [Ještě jednou a důkladněji k verzím Microsoft .NET Frameworku](http://www.aspnet.cz/Articles/161-jeste-jednou-a-dukladneji-k-verzim-microsoft-net-frameworku.aspx)  [Co je vlastně .NET Framework 3.0](http://www.aspnet.cz/Articles/123-co-je-vlastne-net-framework-3-0.aspx) 
 
 ### Instalace .NET 3.5
 
@@ -35,7 +35,7 @@ Odpověď *nic* by nebyla přesná. S odpovědí *nemnoho* však pochodíme výr
 
 Kromě Ajaxovin přibylo několik nových controlů, žádný z nich však neznamená revoluci:
 
-*   `ListView` rozšířil řady prvků pro data binding. Umožňuje programátorovi větší kontrolu nad výsledným HTML kódem a jednodušší realizaci některých scénářů, které dříve bylo nutno řešit poněkud nesystémově a/nebo znásilňováním jiných prvků. `DataPager` je samostatná komponenta pro stránkování, která umí fungovat ve spojitosti s data bound controls, zejména výše zmíněným `ListView`. Měla by konečně umožnit civilizované stránkování nezávislé na JavaScriptu, ale zatím jsem neměl čas ji prozkoumat do hloubky. `LinqDataSource` umožňuje dotazovat se do datových zdrojů přes Linq, přítomnost tohoto prvku se tedy dala docela čekat. 
+*   `ListView` rozšířil řady prvků pro data binding. Umožňuje programátorovi větší kontrolu nad výsledným HTML kódem a jednodušší realizaci některých scénářů, které dříve bylo nutno řešit poněkud nesystémově a/nebo znásilňováním jiných prvků.  `DataPager` je samostatná komponenta pro stránkování, která umí fungovat ve spojitosti s data bound controls, zejména výše zmíněným `ListView`. Měla by konečně umožnit civilizované stránkování nezávislé na JavaScriptu, ale zatím jsem neměl čas ji prozkoumat do hloubky.  `LinqDataSource` umožňuje dotazovat se do datových zdrojů přes Linq, přítomnost tohoto prvku se tedy dala docela čekat. 
 
 Pro webové vývojáře budou důležitější změny spíše v IIS 7.0 než v ASP.NET jako takovém. IIS má zcela novou architekturu, je mnohem rozšiřitelnější atakdále. Budu o tom mluvit na DevConu, patrně se budou konat i nějaké další akce a zcela určitě bude toto téma probíráno na pražském TechEdu příští rok na jaře. Rovněž na toto téma připravujeme nový kurz v Gopasu. Chystal jsem se o tom napsat článek, ale drobet se mi to zvrhlo, takže to vidím spíš na knížku.
 

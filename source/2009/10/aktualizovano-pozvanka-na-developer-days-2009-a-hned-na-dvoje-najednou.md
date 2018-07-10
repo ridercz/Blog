@@ -19,7 +19,7 @@ Termíny jsou následující (a pozor, oproti předběžným se změnilo pořad�
 
 *   18. 11. 2009 Bratislava 
 *   19. 11. 2009 Ostrava 
-*   20. 11. 2009 Praha  
+*   20. 11. 2009 Praha   
 
 Účastnický poplatek je 990 Kč (na Slovensku 35 EUR) a zaregistrovat se můžete na webu [Gopasu](http://www.gopas.cz/kurzy/GDEV/).
 
@@ -29,7 +29,7 @@ Tradiční konference pořádaná Microsoftem. <strike>Oficiální web, program 
 
 *   24. 11. 2009 Bratislava 
 *   25. 11. 2009 Praha 
-*   26. 11. 2009 Ostrava  
+*   26. 11. 2009 Ostrava   
 
 Se Štěpánem Bechynským a novou posilou českého DPE, Ondřejem Štrbou, připravujeme na DPE docela zábavnou show. V jednotlivých městech se budou akce v rámci "ask the expert" účastnit i ostatní čeští MVPs, které znáte z rozličných blogů a webů. Spolu s množstvím a kvalitou novinek v produktech, o nichž bude řeč, bude jistě o co stát.
 

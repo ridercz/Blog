@@ -41,7 +41,8 @@ Nový .NET 2.0 přináší koncept *partial class*, což si lze představit jako
 
 Každá stránka má svou vlastní třídu a také svou vlastní assembly. Tento přístup má několik důsledků:
 
-*   Jednu a tutéž aplikaci je možno složit ze stránek psaných v různých jazycích, protože každá stránka má svou vlastní assembly (DLL). V případě, že se změni kód jedné stránky, je nutné překompilovat pouze jednu assembly, odpovídající dané stránce, a ne celou aplikaci. 
+*   Jednu a tutéž aplikaci je možno složit ze stránek psaných v různých jazycích, protože každá stránka má svou vlastní assembly (DLL). 
+V případě, že se změni kód jedné stránky, je nutné překompilovat pouze jednu assembly, odpovídající dané stránce, a ne celou aplikaci.
 
 Zvláštní úlohu mají třídy uložené ve složce *App_Code*. To jsou takzvané sdílené třídy (*shared class*) a zkompilují se do jednoho samostatného souboru.
 
@@ -67,8 +68,12 @@ Z hlediska ASP.NET jsou tyto soubory zbytečné (k ničemu se nepoužívají), a
 
 Pro usnadnění nasazení webových projektů Microsoft uvolnil add-in pro VS 2005 zvaný "web deployment projects". Tento plugin má čtyři hlavní funkce:
 
-1.  Lze určit, do kolika DLL (assemblies) bude projekt rozdělen a jak se mají jmenovat - můžete to určit podle logiky vaší aplikace. Lze přímo editovat řídící soubory pro MSBuild. Můžete definovat několik různých přednastavených kombinací s různými parametry. V závislosti na shora uvedených kombinacích můžete v průběhu buildu nahradit specifické sekce souboru web.config jinými. Pravděpodobně máte jiné nastavení pro produkční a jiné pro testovací server, což lze snadno automatizovat. 
+1.  Lze určit, do kolika DLL (assemblies) bude projekt rozdělen a jak se mají jmenovat - můžete to určit podle logiky vaší aplikace. 
+Lze přímo editovat řídící soubory pro MSBuild. 
+Můžete definovat několik různých přednastavených kombinací s různými parametry. 
+V závislosti na shora uvedených kombinacích můžete v průběhu buildu nahradit specifické sekce souboru web.config jinými. Pravděpodobně máte jiné nastavení pro produkční a jiné pro testovací server, což lze snadno automatizovat.
 
 Projekt WDP je momentálně ve fázi beta verze, nicméně to se týká jenom interface, vlastní build proces umí shora uvedené od samého počátku, jenom pro to ve VS není uživatelské rozhraní. Nemusíte se tedy bát tuto betu použít i v produkčním prostředí.
 
-*   [Download (beta)](http://msdn.microsoft.com/asp.net/reference/infrastructure/wdp/default.aspx) [Příklady použití](http://weblogs.asp.net/scottgu/archive/2005/11/06/429723.aspx)
+*   [Download (beta)](http://msdn.microsoft.com/asp.net/reference/infrastructure/wdp/default.aspx) 
+[Příklady použití](http://weblogs.asp.net/scottgu/archive/2005/11/06/429723.aspx)

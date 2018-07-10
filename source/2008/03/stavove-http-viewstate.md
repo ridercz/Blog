@@ -25,7 +25,7 @@ Cokoliv, co uložíte do kolekce ViewState se při renderingu stránky zpracuje 
 2.  **Zkomprimuje** se to - jeden z rozdílů mezi ASP.NET verze 1.x a 2.0 je, že data se zkomprimují, což snižuje jejich objem. 
 3.  **Zašifruje** se to - pokud to v konfiguraci explicitně nezakážete a control si to vyžádá, data se před uložením zašifrují pomocí symetrické šifry a machine key. 
 4.  **Podepíše** se to - pokud to v konfiguraci explicitně nezakážete, výsledek se digitálně podepíše, aby se vyloučila možnost úmyslného nebo neúmyslného poškození dat při roundtripu přes klienta. 
-5.  **Zakóduje** to to do Base64, čímž se celá ta věc převede na tisknutelné znaky. 
+5.  **Zakóduje** to to do Base64, čímž se celá ta věc převede na tisknutelné znaky.
 
 Výsledek tohoto procesu je potom někam uložen. Kam konkrétně závisí na zvoleném ViewState providerovi. ASP.NET obsahuje dva. Výchozí nastavení je takové, že se celá tato záležitost uloží do skrytého pole formuláře - do hidden fieldu, který se jmenuje "*__VIEWSTATE*". Jiný provider umí ukládat tuto hodnotu do session.
 
@@ -51,17 +51,17 @@ ViewState i ControlState se ukládají na stejné místo, nerozeznáte je od seb
 
 *   Drží se filozofie HTTP, veškerá potřebná data jsou součástí requestu. 
 *   Stejně se ho v podstatě nezbavíte. 
-*   Je bezpečný, protože data jsou šifrovaná a digitálně podepsaná. 
+*   Je bezpečný, protože data jsou šifrovaná a digitálně podepsaná.
 
 ### Proč ViewState nepoužívat?
 
 *   Zvyšuje objem přenášených dat, mnohdy velmi razantně. 
-*   Zpracování objemných dat může být výkonově náročné. 
+*   Zpracování objemných dat může být výkonově náročné.
 
 ### Doporučení
 
 *   ViewState vypněte v celé aplikaci, pro drtivou většinou případů si vystačíte s ControlState, kterého se stejně nezbavíte. 
 *   V odůvodněných případech u složitých formulářů ViewState explicitně zapněte, pro ty prvky, pro které ho potřebujete. 
-*   Pokud je pro vás extrémně důležitý objem přenášených dat, např. u aplikací pro mobilní zařízení, zvažte ukládání ViewState/ControlState do session. 
+*   Pokud je pro vás extrémně důležitý objem přenášených dat, např. u aplikací pro mobilní zařízení, zvažte ukládání ViewState/ControlState do session.
 
 *V zítřejším dokončení seriálu celou problematiku shrneme a zaměříme se na doporučená řešení obvyklých problémů (bez)stavovosti.*

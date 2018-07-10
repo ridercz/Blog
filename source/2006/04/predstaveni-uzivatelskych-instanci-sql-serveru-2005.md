@@ -67,7 +67,9 @@ Jako vždy, i v případě uživatelských instancí platí, že mohou být velm
 
 Více:
 
-*   [Download Microsoft SQL Server 2005 - Express Edition](http://msdn.microsoft.com/vstudio/express/sql/) 
-*   [Popis user instances na MSDN](http://msdn.microsoft.com/sql/express/default.aspx?pull=/library/en-us/dnsse/html/sqlexpuserinst.asp) 
+*   [Download Microsoft SQL Server 2005 - Express Edition](http://msdn.microsoft.com/vstudio/express/sql/)
+
+*   [Popis user instances na MSDN](http://msdn.microsoft.com/sql/express/default.aspx?pull=/library/en-us/dnsse/html/sqlexpuserinst.asp)
+
 *   [Blog SQL Express teamu](http://blogs.msdn.com/sqlexpress/) s množstvím užitečných tipů a downloadů
-*   [Popis omezení Express edice](http://www.teratrax.com/articles/sql_server_2005_express.html) 
+*   [Popis omezení Express edice](http://www.teratrax.com/articles/sql_server_2005_express.html)

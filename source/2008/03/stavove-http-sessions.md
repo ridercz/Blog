@@ -57,14 +57,14 @@ Třetí nevýhodou je, že na session se prostě nemůžete spolehnout, zejména
 
 ### Proč sessions použítat
 
-*   Je to jednoduché - stačí použít kolekci *HttpContext.Session*. Můžete ukládat větší množství údajů, bez zvýšení objemu přenášených dat. 
+*   Je to jednoduché - stačí použít kolekci *HttpContext.Session*.  Můžete ukládat větší množství údajů, bez zvýšení objemu přenášených dat. 
 
 ### Proč sessions nepoužívat
 
-*   Špatná škálovatelnost - vytváříte úzké hrdlo v aplikaci. Single point of failure u webových farem. Session timeout je pouze odhadem - většinou špatným. Bezpečnostní rizika - session stealing. 
+*   Špatná škálovatelnost - vytváříte úzké hrdlo v aplikaci.  Single point of failure u webových farem.  Session timeout je pouze odhadem - většinou špatným.  Bezpečnostní rizika - session stealing. 
 
 ### Doporučení
 
-*   Sessions nepoužívejte a zejména vypněte. Když už je používáte, důkladně zvažte, v jakém režimu mají fungovat. Ukládejte pouze minimální množství dat, nepoužívejte session jako cache (na to je v ASP.NET zvláštní mechanismus). Zejména u InProc sessions počítejte s tím, že se obsah může ztratit - při restartu worker procesu a nespoléhejte na něj. 
+*   Sessions nepoužívejte a zejména vypněte.  Když už je používáte, důkladně zvažte, v jakém režimu mají fungovat.  Ukládejte pouze minimální množství dat, nepoužívejte session jako cache (na to je v ASP.NET zvláštní mechanismus).  Zejména u InProc sessions počítejte s tím, že se obsah může ztratit - při restartu worker procesu a nespoléhejte na něj. 
 
 *Zítra se v dalším dílu tohoto seriálu podíváme na poslední technologii, a tou je ViewState.*

@@ -26,6 +26,6 @@ Poté je nutno tag helpery zaregistrovat, což jest učiniti přidáním direkti
 *   `RolesTagHelper` přidává všem elementům atributy `include-roles` a `exclude-roles`, pomocí kterých lze učinit element viditelný nebo neviditelný pro určité skupiny uživatelů.
 *   `TimeTagHelper` rozšiřuje HTML5 element `<time>` o možnosti relativního formátování času.
 *   `TrimLengthTagHelper` umožňuje zkrátit dlouhý obsah textu elementu.
-*   `VisibleTagHelper` umožňuje podmíněně zakázat zobrazení elementu. 
+*   `VisibleTagHelper` umožňuje podmíněně zakázat zobrazení elementu.
 
 **Zdrojové kódy a příklad najdete na **[**GitHubu**](https://github.com/ridercz/Altairis.TagHelpers)** a dokumentaci na **[**tamní wiki**](https://github.com/ridercz/Altairis.TagHelpers/wiki)**.**

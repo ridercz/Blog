@@ -17,7 +17,7 @@ Takovou možnost vám nabízí utilitka **VHDMount**, která je součástí *Vir
 
 1.  Stáhněte si z Microsoft Connect [aktuální betaverzi Virtual Serveru se SP1](https://connect.microsoft.com/programdetails.aspx?ProgramDetailsID=525).
 2.  Spusťte setup a nainstalujte si program. Nemusíte instalovat celý Virtual Server, pokud zvolíte Custom Install, máte možnost zvolit si pouze instalaci VHDMount.
-3.  Vše potřebné nyní najdete ve složce C:\Program Files\Microsoft Virtual Server\Vhdmount. Příkazem *vhdmount /m C:\cesta\k\souboru.vhd* disk připojíte, pomocí *vhdmount /u C:\cesta\k\souboru.vhd* disk odpojíte. 
+3.  Vše potřebné nyní najdete ve složce C:\Program Files\Microsoft Virtual Server\Vhdmount. Příkazem *vhdmount /m C:\cesta\k\souboru.vhd* disk připojíte, pomocí *vhdmount /u C:\cesta\k\souboru.vhd* disk odpojíte.
 
 Pokud se vám nechce používat příkazovou řádku, můžete si příkazy pro mount a unmount [přidat do kontextového menu](http://blogs.msdn.com/virtual_pc_guy/archive/2006/09/01/734435.aspx) pro VHD soubory.
 
@@ -29,4 +29,4 @@ Na Windows Vista z neznámých důvodů současná verze nefunguje a je potřeba
 2.  Otevřete si computer management a v něm device manager. Klepněte pravým tlačítkem na "Microsoft Virtual Server Storage Device" a zvolte "Update Driver Software".
 3.  V dalším okně klepněte na "Browse my computer for driver software".
 4.  V dalším okně klepněte na "Let me pick from a list...". Ze seznamu ovladačů vyberte "Microsoft Virtual Server Storage Devices".
-5.  Po nainstalování ovladačů je disk plně funkční, vidíte ho v Disk manageru a můžete mu přiřadit písmeno.
+5.  Po nainstalování ovladačů je disk plně funkční, vidíte ho v Disk manageru a můžete mu přiřadit písmeno.

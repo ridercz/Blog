@@ -25,4 +25,6 @@ Pokud navíc doplníte ještě jméno člověka, který vymyslel (v reálném sv
 
 Ještě **organizační pokyny**:
 
-1.  Až se probudím (tedy dnes v brzkém odpoledni), buďto vyhlásím vítěze nebo zveřejním nápovědu. V komentáři musíte uvést platnou a fungující e-mailovou adresu (budu vás na ni kontaktovat). Nemusíte ji označovat jako veřejně viditelnou, já vidím všechny. Soutěže se prosím účastněte pouze tehdy, pokud můžete a chcete 15. prosince 2005 přijet na [tento celodenní seminář o ASP.NET 2.0](/entry/article-20051203.aspx).
+1.  Až se probudím (tedy dnes v brzkém odpoledni), buďto vyhlásím vítěze nebo zveřejním nápovědu. 
+V komentáři musíte uvést platnou a fungující e-mailovou adresu (budu vás na ni kontaktovat). Nemusíte ji označovat jako veřejně viditelnou, já vidím všechny. 
+Soutěže se prosím účastněte pouze tehdy, pokud můžete a chcete 15. prosince 2005 přijet na [tento celodenní seminář o ASP.NET 2.0](/entry/article-20051203.aspx).

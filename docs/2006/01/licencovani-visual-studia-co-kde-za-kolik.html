@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Dlouhodobě se nijak netajím s názorem, že vývojářský software Microsoftu je mnohem snazší ukrást, než koupit. Ba co více, ono je obvykle téměř nemožné snadno zjistit, kolik že vlastně stojí. Proto jsem, za laskavé spolupráce spřátelených odborníků, sepsal tento článek, který popíše aktuální stav ohledně Visual Studia a Microsoft SQL Serveru." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Licencování Visual Studia: co, kde, za kolik...</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2006-01-02T05:06:40.607+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>2. ledna 2006</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Dlouhodobě se nijak netajím s názorem, že vývojářský software Microsoftu je mnohem snazší ukrást, než koupit. Ba co více, ono je obvykle téměř nemožné snadno zjistit, kolik že vlastně stojí. Proto jsem, za laskavé spolupráce spřátelených odborníků, sepsal tento článek, který popíše aktuální stav ohledně Visual Studia a Microsoft SQL Serveru.</p>
 <h2 id="pruvodce-edicemi-microsoft-visual-studia">Průvodce edicemi Microsoft Visual Studia</h2>
 <p>Hlavním vývojářským nástrojem od Microsoftu je Visual Studio 2005. To se vyskytuje ve čtyřech hlavních edicích. Budu se jim věnovat dosti podrobně a říkat i zdánlivé triviality – vím na co se lidé ptají, co je pro jednoho samozřejmé, jinému tak připadat nebude.</p>
@@ -54,18 +99,39 @@
 <p>Za pomoc při přípravě tohoto článku děkuji Igoru Vítovi (mimochodem MVP pro Fox Pro) a jeho krásné kolegyni z Daquasu, jejíý jméno jsem bohužel již úspěšně zapomněl.</p>
 <h3 id="souvisejici-odkazy">Související odkazy:</h3>
 <ul>
-<li><a href="http://msdn.microsoft.com/vstudio/products/compare/default.aspx">Porovnání edic Visual Studia 2005</a></li>
-<li><a href="http://www.daquas.cz/quas/">Daquasí časopis Quas</a>, obsahující rozličné informace o právě vypuknuvších akcích, FAQ a podobně</li>
-<li><a href="http://weblog.rider.cz/entry/article-20051109.aspx">ASP.NET 2.0: Nechejte maličkých přijíti ke mně… </a>– zamyšlení nad politikou Microsoftu v oblasti vývojových nástrojů na mém osobním weblogu</li>
-<li><a href="/entry/article-20051114.aspx#192050">Zdejší článek k uvedení Express nástrojů</a></li>
-<li><a href="http://msdn.microsoft.com/vstudio/express/">Stažení Express edic</a> z webu Microsoftu</li>
-<li><a href="/entry/article-20051220.aspx#164258">MSDN Connection: Vánoční dárek od Microsoftu</a> – pokud se vám nechce stahovat, objednejte si DVD s knížkou zdarma</li>
+<li><p><a href="http://msdn.microsoft.com/vstudio/products/compare/default.aspx">Porovnání edic Visual Studia 2005</a></p>
+</li>
+<li><p><a href="http://www.daquas.cz/quas/">Daquasí časopis Quas</a>, obsahující rozličné informace o právě vypuknuvších akcích, FAQ a podobně</p>
+</li>
+<li><p><a href="http://weblog.rider.cz/entry/article-20051109.aspx">ASP.NET 2.0: Nechejte maličkých přijíti ke mně… </a>– zamyšlení nad politikou Microsoftu v oblasti vývojových nástrojů na mém osobním weblogu</p>
+</li>
+<li><p><a href="/entry/article-20051114.aspx#192050">Zdejší článek k uvedení Express nástrojů</a></p>
+</li>
+<li><p><a href="http://msdn.microsoft.com/vstudio/express/">Stažení Express edic</a> z webu Microsoftu</p>
+</li>
+<li><p><a href="/entry/article-20051220.aspx#164258">MSDN Connection: Vánoční dárek od Microsoftu</a> – pokud se vám nechce stahovat, objednejte si DVD s knížkou zdarma</p>
+</li>
 </ul>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

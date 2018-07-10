@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Microsoft už dva roky provozuje server CodePlex. Slouží k podpoře open source projektů, jejichž vývojářům poskytuje potřebnou infrastrukturu. Podpora pro Subversion byla jedním z nejčastejších požadavků. Po nesmělých klientských řešení nyní CodePlex podporuje Subversion nativně." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>CodePlex podporuje TortoiseSVN – tentokrát doopravdy</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2008-09-17T01:16:14.183+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>17. září 2008</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Microsoft už dva roky provozuje server <a href="http://www.codeplex.com/">CodePlex</a>. Slouží k podpoře open source projektů, jejichž vývojářům poskytuje potřebnou infrastrukturu. CodePlex podporuje sledování problémů, zveřejňování nových verzí a především code repository, nutnost v případě, že se má na projektu podílet větší množství lidí. Podobné služby nabízí například <a href="http://www.sourceforge.net/">SourceForge</a> nebo <a href="http://code.google.com/hosting/">Google Code</a>.</p>
 <p>CodePlex je postaven nad Team Foundation Serverem. To je nástroj velmi mocný, ale pro řadu uživatelů (včetně mne) až příliš komplexní a náročný na obsluhu. Stejně jako řada dalších programátorů dávám přednost systému <a href="http://subversion.tigris.org/">Subversion</a> a samostatnému klientskému nástroji <a href="http://tortoisesvn.tigris.org/">Tortoise SVN</a>. Podpora Subversion byla jednou z nejčastěji požadovaných nových funkcí.</p>
 <p>První vlaštovkou v tomto směru byl projekt <a href="http://www.codeplex.com/SvnBridge/">SvnBridge</a>. Jedná se o program, který běží na klientském počítači a v podstatě slouží jako překladač mezi SVN a TFS. SVN klient se připojí k lokálnímu počítači a komunikuje s programem, který požadavky překládá do formátu, kterému rozumí Team Foundation Server. Použití tohoto programu je také možné i proti jiným TFS než CodePlex. Počin to jest jistě chvályhodný, želbohu je však toto řešení mnohdy příliš komplikované.</p>
@@ -30,7 +75,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

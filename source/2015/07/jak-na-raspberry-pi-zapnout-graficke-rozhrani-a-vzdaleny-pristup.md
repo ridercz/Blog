@@ -38,7 +38,9 @@ Při snaze rozchodit správně xrdp jsem měl problém s českou klávesnicí. A
 
 Připojte se lokálně na konzoli do grafického rozhraní a spusťte terminál (ve kterém vám funguje klávesnice, jakou chcete). Poté spusťte následující příkazy:
 
-sudo xrdp-genkeymap /etc/xrdp/km-0405.ini sudo cp /etc/xrdp/km-0409.ini /etc/xrdp/km-0409.ini.bak sudo xrdp-genkeymap /etc/xrdp/km-0409.ini
+    sudo xrdp-genkeymap /etc/xrdp/km-0405.ini
+    sudo cp /etc/xrdp/km-0409.ini /etc/xrdp/km-0409.ini.bak
+    sudo xrdp-genkeymap /etc/xrdp/km-0409.ini
 
 První příkaz vezme stávající mapování klávesnice a uloží ho do souboru `km-0405.ini`. Číslo 0405 je kód pro češtinu (seznam kódů najdete [na webu xrdp](http://xrdp.sourceforge.net/documents/keymap/rfc1766.html)). To by samo o sobě mělo stačit, nicméně mně to nepomohlo. Možná proto, že mám anglická Windows a RDP klient reportuje jako jazyk angličtinu. Proto jsem se rozhodl, že českým přepíšu anglické mapování klávesnice, které je v souboru `km-0409.ini`. Původní nastavení jsem si pro jistotu uložil do `km-0409.ini.bak` (to dělá druhý příkaz) a pak přegeneroval původní soubor (třetí příkaz). Poté mi xrdp začalo fungovat česky.
 

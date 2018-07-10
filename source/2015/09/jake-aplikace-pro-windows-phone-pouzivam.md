@@ -19,7 +19,7 @@
 *   **Facebook** a **Messenger** - Druhý zmiňovaný nemám rád, ale bohužel to je dneska fakticky jediný způsob, jak komunikovat s většinou lidí písemnou formou.
 *   **Twitter** - tuhle službu taky nemám v lásce a zejména na ni nerad píšu (140 znaků je na mne málo), ale bohužel je to dneska fakticky jediný způsob, jak rychle získávat informace z dev a infosec světa.
 *   **Alza.cz** - posílá mi notifikace při vyzvednutí zboží na prodejně.
-*   **4th & Mayor** - klient pro Foursquare. Používám zejména pro zjištění hesel na poloveřejné Wi-Fi, typicky je to napsané v komentářích. 
+*   **4th & Mayor** - klient pro Foursquare. Používám zejména pro zjištění hesel na poloveřejné Wi-Fi, typicky je to napsané v komentářích.
 
 ## Mapy, navigace, doprava
 
@@ -28,7 +28,7 @@
 *   **Mapy.cz** - bezkonkurenčně nejlepší mapy ČR pro pěší navigaci, vč. offline map.
 *   **GPS Calculator Pro** - Nemapová GPS a hlavně sledování trasy. Používám často pro tagování fotek.
 *   **CG Transit** - jizdní řády MHD.
-*   **Vlakové tabule** - mobilní aplikace zobrazující to, co je jinak na tabulích příjezdů/odjedzů na nádražích, v reálném čase. 
+*   **Vlakové tabule** - mobilní aplikace zobrazující to, co je jinak na tabulích příjezdů/odjedzů na nádražích, v reálném čase.
 
 ## Ostatní, jiné a různé
 

@@ -7,31 +7,103 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Na své přednášce o práci s JavaScriptem a v CSS jsem tvrdil, že mezi bundlingem a ScriptManagerem není žádné propojení a představil jsem dva způsoby, jak jej realizovat. Ukázalo se, že jsem se mýlil a že v nejnovější dostupné verzi takové propojení je a dokonce je automaticky funkční." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Bundling a ScriptManager znovu: ještě jednodušší, než jsme čekali</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2012-09-02T15:30:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>2. září 2012</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Na své <a href="http://www.aspnet.cz/articles/401-novinky-v-asp-net-4-5-novy-pristup-k-praci-s-javascriptem-a-css-zaznam-a-priklady">přednášce o práci s JavaScriptem a CSS v ASP.NET</a> jsem tvrdil, že mezi bundlingem a ScriptManagerem není žádné propojení a představil jsem dva způsoby, jak jej realizovat.</p>
 <p>Ukázalo se, že jsem se mýlil a že v nejnovější dostupné verzi takové propojení je a dokonce je automaticky funkční – děkuji Adamovi Hörzenbergerovi, že mne na to upozornil.</p>
 <p>Stačí prostě vytvořit bundle a zaregistrovat jeho ScriptResourceDefinition, například takto:</p>
-<p Path="~/bundles/SiteJs">// Local JavaScript files BundleTable.Bundles.Add(new ScriptBundle(&quot;<sub>/bundles/SiteJs&quot;).Include( &quot;</sub>/Scripts/site/*.js&quot;)); // Register script resource mapping for local JavaScript files ScriptManager.ScriptResourceMapping.AddDefinition(&quot;SiteBundle&quot;, new ScriptResourceDefinition );</p>
+<pre><code>// Local JavaScript files
+BundleTable.Bundles.Add(new ScriptBundle(&quot;~/bundles/SiteJs&quot;).Include(
+    &quot;~/Scripts/site/*.js&quot;));
+
+// Register script resource mapping for local JavaScript files
+ScriptManager.ScriptResourceMapping.AddDefinition(&quot;SiteBundle&quot;,
+    new ScriptResourceDefinition { Path = &quot;~/bundles/SiteJs&quot; });
+</code></pre>
 <p>Poté se na něj můžete odkázat ze stránky pomocí ScriptManageru:</p>
-<p>&lt;asp:ScriptManager runat=&quot;server&quot;&gt; <Scripts> &lt;asp:ScriptReference Name=&quot;SiteBundle&quot; /&gt; </Scripts> &lt;/asp:ScriptManager&gt;</p>
+<pre><code>&lt;asp:ScriptManager runat=&quot;server&quot;&gt;
+    &lt;Scripts&gt;
+        &lt;asp:ScriptReference Name=&quot;SiteBundle&quot; /&gt;
+    &lt;/Scripts&gt;
+&lt;/asp:ScriptManager&gt;
+</code></pre>
 <p>To je vše. Hash pro cache busting se dopočítá automaticky.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

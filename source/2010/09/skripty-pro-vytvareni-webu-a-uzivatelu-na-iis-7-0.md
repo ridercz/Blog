@@ -16,7 +16,7 @@ Na Microsoft Days jsem slíbil zveřejnit skripty, které používám pro správ
 
 1.  Vyberte oblast "IT odborníci". 
 2.  V seznamu autorú vyberte "Michal Altair Valášek" 
-3.  V seznamu témat vyberte "Hostování"  
+3.  V seznamu témat vyberte "Hostování"   
 
 V archivu, který si můžete stáhnout na konci tohoto článku,  najdete dva soubory: `newcust.cmd` a `newsite.cmd`. Tyto soubory předpokládají, že budete mít architekturu podobnou, jako ve výše uvedeném seriálu, jenom nepočítají s během Application Poolu pod specifickým uživatelem, ale předpokládají automatickou identitu AP.
 
@@ -24,7 +24,7 @@ Před použitím je třeba nastavit některé systémové proměnné, které naj
 
 *   `APPCMD` je cesta k souboru appcmd.exe (musíte mít nainstalované IIS Management Script and Tools). Výchozí cesta je `%SYSTEMROOT%\System32\inetsrv\appcmd.exe` a téměř jistě nebude nutné ji měnit. 
 *   `ROOT_FOLDER` je cesta k adresáři, kde budou uloženy adresáře jednotlivých zákazníků. Výchozí hodnota je `D:\WWW-servers\LocalUser`. 
-*   `FTP_GROUP` je název uživatelské skupiny, která má obsahovat jednotlivé zákazníky (uživatele) a slouží k nastavení FTP přístupu. Výchozí hodnota je `Customers`.  
+*   `FTP_GROUP` je název uživatelské skupiny, která má obsahovat jednotlivé zákazníky (uživatele) a slouží k nastavení FTP přístupu. Výchozí hodnota je `Customers`.   
 
 Skripty obecně pracují pouze s lokálními účty a skupinami. Pokud byste je chtěli používat v doménovém prostředí, je nutná jejich úprava.
 
@@ -41,7 +41,7 @@ Tento skript slouží k založení nového zákazníka web hostingu a vytvořen�
 5.  Nastaví v tomto adresáři práva "full control" uživateli `username` a identitě `IIS APPPOOL\AP_username`. 
 6.  Vytvoří adresář pro nový web, např. `D:\WWW-Servers\LocalUser\username\hostname`. 
 7.  Vytvoří nový virtuální web server jménem "`username-hostname`" a nasměruje ho do adresáře vytvořeného v předchozím kroku. 
-8.  Zařadí vytvořený web do application poolu "`AP_username`"  
+8.  Zařadí vytvořený web do application poolu "`AP_username`"   
 
 ## NEWSITE.CMD – vytvoření nového webu pro existujícího uživatele
 

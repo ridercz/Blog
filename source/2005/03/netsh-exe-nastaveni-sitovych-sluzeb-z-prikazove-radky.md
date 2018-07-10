@@ -19,4 +19,41 @@ Nejjednodušším způsobem použití je pomocí příkazu `NETSH dump > soubor.
 
 Následující konfigurační soubor nastaví na rozhraní vnější sítě (pokud se bude jmenovat *LAC External*) poměrně restriktivní sadu pravidel:
 
-# IP Configuration pushd routing ip reset set loglevel error add preferenceforprotocol proto=LOCAL preflevel=1 add preferenceforprotocol proto=STATIC preflevel=3 add preferenceforprotocol proto=NONDOD preflevel=5 add preferenceforprotocol proto=AUTOSTATIC preflevel=7 add preferenceforprotocol proto=NetMgmt preflevel=10 add preferenceforprotocol proto=OSPF preflevel=110 add preferenceforprotocol proto=RIP preflevel=120 add interface name="LAC External" state=enable add interface name="LAC Internal" state=enable set filter name="LAC External" fragcheck=disable set filter name="LAC Internal" fragcheck=disable add interface name="Internal" state=enable set filter name="Internal" fragcheck=disable add interface name="Loopback" state=enable set filter name="Loopback" fragcheck=disable # Zakázat vše, co není explicitně povoleno set filter name="LAC External" filtertype=INPUT action=DROP # Povolit TCP-Established add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP-EST srcport=0 dstport=0 # Povolit HTTP (80/tcp), HTTPS (443/tcp), SMTP (25/tcp), POP3 (110/tcp) pro všechny add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=80 add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=443 add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=25 add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=110 # Povolit přístup na terminál jenom ze sítě Eurotel (příklad) add filter name="LAC External" filtertype=INPUT srcaddr=160.218.0.0 srcmask=255.255.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=3389 popd # End of IP configuration
+    # IP Configuration
+    pushd routing ip
+    reset
+    set loglevel error
+    add preferenceforprotocol proto=LOCAL preflevel=1
+    add preferenceforprotocol proto=STATIC preflevel=3
+    add preferenceforprotocol proto=NONDOD preflevel=5
+    add preferenceforprotocol proto=AUTOSTATIC preflevel=7
+    add preferenceforprotocol proto=NetMgmt preflevel=10
+    add preferenceforprotocol proto=OSPF preflevel=110
+    add preferenceforprotocol proto=RIP preflevel=120
+
+    add interface name="LAC External" state=enable
+    add interface name="LAC Internal" state=enable
+    set filter name="LAC External" fragcheck=disable
+    set filter name="LAC Internal" fragcheck=disable
+    add interface name="Internal" state=enable
+    set filter name="Internal" fragcheck=disable
+    add interface name="Loopback" state=enable
+    set filter name="Loopback" fragcheck=disable
+
+    # Zakázat vše, co není explicitně povoleno
+    set filter name="LAC External" filtertype=INPUT action=DROP
+
+    # Povolit TCP-Established
+    add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP-EST srcport=0 dstport=0
+
+    # Povolit HTTP (80/tcp), HTTPS (443/tcp), SMTP (25/tcp), POP3 (110/tcp) pro všechny
+    add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=80
+    add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=443
+    add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=25
+    add filter name="LAC External" filtertype=INPUT srcaddr=0.0.0.0 srcmask=0.0.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=110
+
+    # Povolit přístup na terminál jenom ze sítě Eurotel (příklad)
+    add filter name="LAC External" filtertype=INPUT srcaddr=160.218.0.0 srcmask=255.255.0.0 dstaddr=0.0.0.0 dstmask=0.0.0.0 proto=TCP srcport=0 dstport=3389
+
+    popd
+    # End of IP configuration

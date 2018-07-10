@@ -18,7 +18,7 @@ Díky této lehkosti jsem si koupil spoustu knížek. Prostě jsem o nich někde
 Většina knih, které si takto kupuji, nabízí větší či menší vhled do paralelních realit. Do světů, které se s tím naším stýkají a občas prolínají, ale o kterém většina z nás neví nic. O profesích, oborech lidské činnosti a subkulturách, se kterými se možná čas od času potkáváte, ale nic o nich nevíte.
 
 Nabízím vám možnost podívat se se mnou do některých cizích světů, s knihami, které jsem poslední dobou četl. Všechny knihy jsou k dispozici v angličtině pro Kindle. Nezkoumal jsem, zda u některých existuje český překlad. V rámci full disclosure dodávám, že linky obsahují moje affiliate ID a pokud si přes ně něco koupíte, měl bych teoreticky dostat nějakou odměnu.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1250058295&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/1250058295/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1250058295&linkCode=as2&tag=ac022-20&linkId=DK7L53CTWLNSADUD) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1250058295&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/1250058295/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1250058295&linkCode=as2&tag=ac022-20&linkId=DK7L53CTWLNSADUD)   
 
 ## Rose George: [Ninety Percent of Everything](http://www.amazon.com/gp/product/1250058295/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1250058295&linkCode=as2&tag=ac022-20&linkId=DK7L53CTWLNSADUD)
 
@@ -27,14 +27,14 @@ Devadesát procent všeho zboží, které vidíme v obchodech, je v nějaké fá
 K lodím přistupuji s blahovolnou ignorancí příslušníka vnitrozemského národa. Ale ani obyvatelé největších evropských přístavních měst na tom nejsou o mnoho jinak. Přestože kontajnerové lodě podávají obrovské přepravní výkony, mají neuvěřitelný vliv ne ekonomiku, životní prostředí a spoustu dalších věcí, mnoho toho o nich nevíme. Námořní doprava je zajímavá i z právního hlediska, protože mezinárodní vody představují prostor, v němž v praxi často žádné právo neplatí.
 
 Autorka se snažila proniknout do světa mezinárodní lodní dopravy. Plavila se s kontajnerovou lodí společnosti Maersk i s vojenskými plavidly mezinárodní mise proti námořním pirátům. Popisuje svět, o kterém jsem nevěděl, že existuje.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0375726624&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/0375726624/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0375726624&linkCode=as2&tag=ac022-20&linkId=NIWS45GNYT2A44HE) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0375726624&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/0375726624/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0375726624&linkCode=as2&tag=ac022-20&linkId=NIWS45GNYT2A44HE)   
 
 ## Ted Conover: [Newjack](http://www.amazon.com/gp/product/0375726624/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0375726624&linkCode=as2&tag=ac022-20&linkId=NIWS45GNYT2A44HE)
 
 USA jsou země s největším počtem vězňů na počet obyvatel. Pravda, v závislosti na použité metrice se o toto prvenství přetahují se Seychellskými ostrovy, ale to je dané tím, že Seychelly nemají ani sto tisíc obyvatel.
 
 Ted Conover je novinář, který se snažil získat materiály pro knihu o vězeňském systému. Vězeňská služba státu New York s ním ovšem odmítala komunikovat a poskytnout mu podklady. Nicméně neustále shání nové strážné. Takže autor prošel standardním výcvikem a nechal se na nějakou dobu zaměstnat jako strážný v Sing Singu. Na základě svých zkušeností popsal svět, o které jsem sice věděl, že existuje, ale rozhodně se s ním nehodlám osobně blíže seznamovat.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1610394550&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/1610394550/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1610394550&linkCode=as2&tag=ac022-20&linkId=DIXUBXUADNCIFF7G) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1610394550&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/1610394550/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1610394550&linkCode=as2&tag=ac022-20&linkId=DIXUBXUADNCIFF7G)   
 
 ## Peter Pomerantsev: [Nothing Is True and Everything Is Possible](http://www.amazon.com/gp/product/1610394550/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1610394550&linkCode=as2&tag=ac022-20&linkId=DIXUBXUADNCIFF7G"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1610394550&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)
 
@@ -43,7 +43,7 @@ Autor má ruské kořeny, vyrostl ovšem ve Velké Británii. Přijal zaměstná
 Kniha je fascinujícím popisem světa ruských médií. Ukazuje, že Putinův režim si uvědomuje pravdivost prastarého hesla "chléb a hry". A když se chleba občas nedostává, o to více musí být her. Takže televize pro celý národ vytváří vlastní realitu, která většině obyvatelstva pomáhá překonat problémy každodenního života.
 
 Jde o příběh světa propagandy a velice rád bych si přečetl totéž o českém mediálním světě. Nemyslím si samozřejmě, že situace v České republice je stejná, ale jisté paralely zde vidět lze.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0804173664&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/0804173664/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804173664&linkCode=as2&tag=ac022-20&linkId=WUKMWO7REFRLS7E5) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0804173664&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/0804173664/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804173664&linkCode=as2&tag=ac022-20&linkId=WUKMWO7REFRLS7E5)   
 
 ## Betsy Weber: [The Burglary](http://www.amazon.com/gp/product/0804173664/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804173664&linkCode=as2&tag=ac022-20&linkId=WUKMWO7REFRLS7E5)
 
@@ -52,21 +52,21 @@ Federální úřad pro vyšetřování, FBI, byla v polovině minulého století
 FBI si uřízla pořádnou ostudu, protože se jí nikdy nepodařilo vypátrat pachatele, což značně poškodilo její reputaci. Odhalit členy "Občanské komise pro vyšetřování FBI" a pachatele vloupání se podařilo až po čtyřiceti letech autorce knihy. Vydat ji ovšem směla až po smrti hlavního organizátora, Williama Davidona.
 
 Kniha bude nepochybně zajímavá zejména pro obyvatele USA, ale hodnotu má i pro nás ostatní. Jednak v ní můžeme hledat historické paralely se současnou FBI a NSA, ale i s fungováním Státní bezpečnosti v ČSSR. Ukazuje se, že metody, které používala FBI, si v mnoha ohledech s těmi estébáckými nezadají. A pokud ano, tak jenom pro nedostatek možností, rozhodně ne v ideovém vnímání nepřítele. V každém případě se jedná o zajímavý výlet do světa nekonformní části americké společnosti v šedesátých a sedmdesátých letech 20. století.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0316253030&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/0316253030/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0316253030&linkCode=as2&tag=ac022-20&linkId=DNSI6IXH2Q3UU2DW) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0316253030&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/0316253030/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0316253030&linkCode=as2&tag=ac022-20&linkId=DNSI6IXH2Q3UU2DW)   
 
 ## Chris Hadfield: [An Astronaut's Guide to Life on Earth](http://www.amazon.com/gp/product/0316253030/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0316253030&linkCode=as2&tag=ac022-20&linkId=DNSI6IXH2Q3UU2DW)
 
 O tomhle pánovi a jeho knize jste možná už slyšeli. Chris Hadfield byl kanadským astronautem na Mezinárodní vesmírné stanici (ISS), tweetoval o tom a publikoval videa na YouTube. A po návratu na Zemi napsal knihu nejenom o životě na ISS, ale celé své kariéře nejprve vojenského pilota a poté astronauta. 
 
 Knize bych vyčetl občas až příliš dušínovský přístup a mravoučná kázání pro mládež, ale pokud se nad ně povznesete, rozhodně se jí vyplatí přečíst. Nabízí pohled do světa, kam se nejspíš nikdo z nás dostat nedokáže.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=146352949X&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/146352949X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=146352949X&linkCode=as2&tag=ac022-20&linkId=26SUBAB4H7ISXP54) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=146352949X&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/146352949X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=146352949X&linkCode=as2&tag=ac022-20&linkId=26SUBAB4H7ISXP54)   
 
 ## Chris Wong: Yellow Green Beret (díly [1](http://www.amazon.com/gp/product/146352949X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=146352949X&linkCode=as2&tag=ac022-20&linkId=NWY4DTHXGOM3NS2V), [2](http://www.amazon.com/gp/product/1467922080/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1467922080&linkCode=as2&tag=ac022-20&linkId=H4V2UAY3YTMTHYCS), [3](http://www.amazon.com/gp/product/1477405755/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1477405755&linkCode=as2&tag=ac022-20&linkId=6EVWQNO3V34IPJG6))
 
 Chris Wong je pseudonym amerického vojáka čínského původu, který vystudoval West Point a poté se stal členem speciálních jednotek americké armády. Jeho tři knihy jsou sbírkou různých historek, posbíraných v průběhu jeho kariéry. Počínaje studiemi na vojenské akademii (USMA – United States Military Academy, West Point) se všemi zvláštnostmi, tradicemi, šikanou (kterou hájí) a historií. Přes různé zvláštní formy výcviku až po nasazení po celém světě, včetně Iráku a Afghanistánu.
 
 Autor vypráví civilním a zábavným způsobem, nenabízí žádné hrdinské válečné memoáry. S jeho názory nemusíte souhlasit (já se všemi rozhodně nesouhlasím), ale rozhodně jde o výlet do opravdu zvláštního světa.
- [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1402280912&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/1402280912/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1402280912&linkCode=as2&tag=ac022-20&linkId=7H4TSSH5KE2PIOLF) 
+ [![](http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1402280912&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ac022-20)](http://www.amazon.com/gp/product/1402280912/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1402280912&linkCode=as2&tag=ac022-20&linkId=7H4TSSH5KE2PIOLF)   
 
 ## Patrick Smith: [Cockpit Confidential](http://www.amazon.com/gp/product/1402280912/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1402280912&linkCode=as2&tag=ac022-20&linkId=VCGGPB7BXLOQB5XQ) a Heather Poole: [Cruising Attitude](http://www.amazon.com/gp/product/0061986461/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0061986461&linkCode=as2&tag=ac022-20&linkId=RDDIYVM4FCFZ7ZG2)
 

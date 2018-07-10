@@ -15,7 +15,7 @@ Technologie Hyper-V je součástí Windows Serveru 2008. Svým určením je to v
 
 ## Co co je Microsoft Hyper-V
 
-[![Hyper-V manager](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-manager_thumb.png)](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-manager_2.png) 
+[![Hyper-V manager](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-manager_thumb.png)](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-manager_2.png)  
 
 Hyper-V je nová generace virtualizační technologie, přímo svázaná s operačním systémem a vyždaující speciální hardware (procesor s HW podporou virtualizace). Jedná se tedy o opravdovou virtualizaci, nikoliv o emulaci. 
 
@@ -25,7 +25,7 @@ Já to testuji na Windows Server 2008 Enterprise RTM, jako hardware používám 
 
 ## Instalace a první dojmy
 
-[![Nastaven&iacute; virtu&aacute;ln&iacute;ho serveru](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-settings_thumb.png)](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-settings_2.png) 
+[![Nastaven&iacute; virtu&aacute;ln&iacute;ho serveru](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-settings_thumb.png)](https://www.cdn.altairis.cz/Blog/2008/20080318-20080318-hyperv-settings_2.png)  
 
 Přestože se můj server nenachází na oficiálním [seznamu podporovaného hardware](https://www.microsoft.com/windowsserver2008/en/us/hyperv-install.aspx#RecommendedHardwareDevices) pro pre-release verzi, byla instalace vcelku bezproblémová. Jediný problém spočívá v tom, že pro instalaci a provoz Hyper-V musíte mít na serveru nastavené anglické prostředí. 
 

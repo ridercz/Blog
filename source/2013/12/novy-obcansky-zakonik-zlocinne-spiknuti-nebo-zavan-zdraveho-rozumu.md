@@ -15,7 +15,7 @@ Od prvního ledna začne platit nová verze tohoto zákona, která se ovšem net
 
 *   Takto radikální změna je špatná sama o sobě, protože spousta lidí pojede "postaru".
 *   Změna zahltí soudy, protože soudci nebudou vědět, jak mají soudit, nebudou se moci opřít u dosavadní judikáty.
-*   Zákoník obsahuje podivné pojmy jako z předminulého století – pacht, výprosa nebo služebnost. 
+*   Zákoník obsahuje podivné pojmy jako z předminulého století – pacht, výprosa nebo služebnost.  
 
 Jsou i tací, kteří za tím vidí vyloženě zlý úmysl. Například JUDr. Klára Samková napsala v září pro časopis Soudcovské unie článek, který by se dal stručně shrnout takto: smyslem práva obecně je napomáhat komunikaci mezi lidmi. Umožnit stanovením jednotných a pro všechny závazných pravidel nějakou „nosnou vlnu“, na které může fungovat i spolupráce mezi osobami, které se navzájem neznají. Nový občanský zákoník tuto roli neplní, protože je nesrozumitelný a způsobí chaos. Takový efekt je ze strany politických elit, které NOZ prosazují, vyvolán zcela záměrně, aby byla rozvrácena soudní moc. Aby ji přešly samosprávné choutky a obecně měla spoustu práce s uměle vyvolanými problémy a neměla energii řešit prohřešky současné politické a ekonomické vládnoucí garnitury.
 

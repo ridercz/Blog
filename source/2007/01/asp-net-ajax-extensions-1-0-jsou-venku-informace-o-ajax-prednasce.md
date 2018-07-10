@@ -9,6 +9,8 @@
 <!-- dcterms:created = 2007-01-24T01:52:35.64+01:00 -->
 <!-- dcterms:dateAccepted = 2007-01-24T01:52:35.64+01:00 -->
 
+ 
+
 Před několika hodinami (včera v 0900 místního času v Seattle) byla uvolněna dlouho očekávaná ostrá verze 1.0 ASP.NET AJAX Extensions. Na níže uvedených adresách si ji můžete stáhnout:
 
 *   [ASP.NET AJAX Extensions 1.0 RTM](http://go.microsoft.com/fwlink/?LinkID=77296) 

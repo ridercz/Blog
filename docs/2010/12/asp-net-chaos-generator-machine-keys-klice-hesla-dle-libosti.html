@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Při vývoji a nasazení aplikací potřebujeme často trochu chaosu. Tím nemyslím příspěvky našich spolupracovníků, ale náhodně generované klíče či hesla. K jejich generování lze použít řadu různých programů a online služeb, ale já osobně s nimi z různých důvodů nejsem spokojen. Takže jsem napsal a zprovoznil vlastní nástroj, který lze považovat za swiss-army knife pro všechny případy, kdy toužíme po chaosu. A zároveň může sloužit jako inspirace pro tvorbu uživatelského rozhraní pomocí jQuery UI." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>ASP.NET Chaos Generator: machine keys, klíče, hesla dle libosti</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2010-12-31T06:24:39.92+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>31. prosince 2010</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Při vývoji a nasazení aplikací potřebujeme často trochu chaosu. Tím nemyslím příspěvky našich spolupracovníků, ale náhodně generované klíče či hesla. K jejich generování lze použít řadu různých programů a online služeb, ale já osobně s nimi z různých důvodů nejsem spokojen. Takže jsem napsal a zprovoznil vlastní nástroj, který lze považovat za swiss-army knife pro všechny případy, kdy toužíme po chaosu. A zároveň může sloužit jako inspirace pro tvorbu uživatelského rozhraní pomocí jQuery UI.</p>
 <p>Online verzi aplikace najdete na adrese <a href="http://chaos.aspnet.cz">chaos.aspnet.cz</a>. Tamtéž si (na záložce <em>About</em>) můžete stáhnout zdrojový kód celé aplikace. A co umí?</p>
 <h2 id="generovani-machine-keys-i-pro.net-4.0">Generování machine keys i pro .NET 4.0</h2>
@@ -44,7 +89,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

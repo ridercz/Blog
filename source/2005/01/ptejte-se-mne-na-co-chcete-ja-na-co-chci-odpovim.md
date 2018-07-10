@@ -13,7 +13,7 @@ Píšu rád, a doufám že i dobře. Jenom poslední dobou nemám o čem - přip
 
 1.  jsem buď o dané věci už psal,
 2.  toho o ní už napsal dost někdo jiný,
-3.  je to taková trivialita, že ji není nutno řešit. 
+3.  je to taková trivialita, že ji není nutno řešit.
 
 Zejména u bodu c ale platí, že moje definice triviality se může zásadně lišit od definice mých drahých čtenářů, tedy vás. Pročež jsem si vypůjčil do titulku od pana Donutila větu *ptejte se mne na co chcete, já na co chci odpovím*.
 

@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2015-09-07T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20150907-projekt-atropa-7-jak-se-branit.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
 V předchozích šesti dílech tohoto seriálu jsme si ukázali, jak za pomoci Raspberry Pi, Raspbian Linuxu a ASP.NET 5 rozjet honeypot. Tedy "zlé" Wi-Fi AP, ke kterému se kdokoliv může připojit, ale bude vyzván k zadání hesla do některé z populárních služeb. Heslo bude zaznamenáno, ale uživatel se nikam nepřipojí - zařízení ani nemusí mít přístup k Internetu.  Závěrečný díl ukáže, jak se podobným útokům bránit.
 

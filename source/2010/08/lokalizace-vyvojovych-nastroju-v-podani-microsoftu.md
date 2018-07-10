@@ -38,8 +38,8 @@ Poslední a z mého pohledu nejzajímavější je téma používání lokalizac�
 
 [![anketa_lokalizace_2008](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2008_thumb.png "anketa_lokalizace_2008")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2008_2.png)   
 
- [![anketa_lokalizace_2010](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2010_thumb.png "anketa_lokalizace_2010")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2010_2.png)   
-Nadpoloviční většina všech dotázaných obě verze lokalizace nepoužívá a ani tak nehodlá činit. Existující lokalizace používá okolo 4% dotázaných, dalších zhruba 15% jim je ochotno dát šanci a vyzkoušet je.   
+ [![anketa_lokalizace_2010](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2010_thumb.png "anketa_lokalizace_2010")](https://www.cdn.altairis.cz/Blog/2010/20100804-anketa_lokalizace_2010_2.png)     
+Nadpoloviční většina všech dotázaných obě verze lokalizace nepoužívá a ani tak nehodlá činit. Existující lokalizace používá okolo 4% dotázaných, dalších zhruba 15% jim je ochotno dát šanci a vyzkoušet je.    
 
 ### Výherce losování
 

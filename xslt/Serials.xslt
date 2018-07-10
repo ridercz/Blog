@@ -14,8 +14,6 @@
 
   <xsl:include href="_Common.xslt" />
 
-  <xsl:param name="x4c:PageSize" />
-
   <xsl:template match="/">
     <x4o:root>
       <!-- Generate list of serials -->
@@ -32,8 +30,8 @@
             <main>
               <h1>Seriály</h1>
               <xsl:call-template name="ListSerials" />
-              <xsl:call-template name="SiteFooter" />
             </main>
+            <xsl:call-template name="SiteFooter" />
           </body>
         </html>
       </x4o:document>
@@ -73,8 +71,8 @@
                 </xsl:call-template>
               </xsl:for-each>
             </section>
-            <xsl:call-template name="SiteFooter" />
           </main>
+          <xsl:call-template name="SiteFooter" />
         </body>
       </html>
     </x4o:document>

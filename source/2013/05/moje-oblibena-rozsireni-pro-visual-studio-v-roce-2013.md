@@ -20,7 +20,7 @@ Postupně jsem byl donucen pro různé projekty používat různé verzovací sy
 
 *   Subversion: [AnkhSVN](http://visualstudiogallery.msdn.microsoft.com/E721D830-7664-4E02-8D03-933C3F1477F2?SRC=Home) (VS plugin) + [TortoiseSVN](http://tortoisesvn.net/) (Windows klient) + [VisualSVN Server](http://www.visualsvn.com) 
 *   Mercurial: [HgSCC](http://visualstudiogallery.msdn.microsoft.com/9bc074fa-9e1f-4ce2-a75d-b90e65f7475a) + [TortoiseHg](http://tortoisehg.bitbucket.org/) 
-*   Git: [Visual Studio Tools for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) + [TortoiseGit](http://code.google.com/p/tortoisegit/)  
+*   Git: [Visual Studio Tools for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) + [TortoiseGit](http://code.google.com/p/tortoisegit/) 
 
 ## Univerzální sady rozšíření
 
@@ -28,7 +28,7 @@ Používám několik víceméně univerzálních sad rozšíření, které do Vi
 
 *   [Productivity Power Tools](http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd) – column guides, copy as HTML, vylepšený scrollbar, organize usings… 
 *   [VSCommands for Visual Studio 2012](http://visualstudiogallery.msdn.microsoft.com/a83505c6-77b3-44a6-b53b-73d77cba84c8) – Barevné odlišení zpráv v output okně, solution badges, možnost libovolně seskupovat soubory v Solution exploreru. 
-*   [Web Essentials 2012](http://vswebessentials.com/) – základní rozšíření Visual Studia pro každého webového programátora  
+*   [Web Essentials 2012](http://vswebessentials.com/) – základní rozšíření Visual Studia pro každého webového programátora 
 
 ## Všeliké jiné různé
 
@@ -38,7 +38,7 @@ Používám několik víceméně univerzálních sad rozšíření, které do Vi
 *   [Image Optimizer](http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3) – plugin od autora Web Essentials řeší optimalizaci velikosti PNG a JPG souborů. Optimalizace je bezztrátová, funguje na principu vnitřní optimalizace datových struktur. 
 *   [Indent Guides](http://visualstudiogallery.msdn.microsoft.com/e792686d-542b-474a-8c55-630980e72c30) – doplní čáry, vizuálně zdůrazňující odsazení částí kódu. Nepostradatelné v hluboce hierarchicky strukturovaných záležitostech HTML, XML, C#… 
 *   [Layouts O Rama](http://visualstudiogallery.msdn.microsoft.com/35966ad9-430f-4ad7-9186-4394b784e36c) – nepostradatelný plugin pro někoho, kdo pracuje v různých konfiguracích monitorů. Když mám notebook v docku, mám tři monitory (a na nich rozložená různá okna), pokud mimo dock, mám jenom jednu obrazovku a jiné rozlišení. Layouts O Rama umožňuje uložit několik různých rozložení oken a přepínat se mezi nimi. 
-*   [SQL Server Compact Toolbox](http://sqlcetoolbox.codeplex.com/) v současné době nemám nainstalovaný, protože SQL CE v současných projektech používám via EF Code First, ale pokud bych měl se SDF databázemi dělat cokoliv pokročilejšího, nainstaloval bych si ho.  
+*   [SQL Server Compact Toolbox](http://sqlcetoolbox.codeplex.com/) v současné době nemám nainstalovaný, protože SQL CE v současných projektech používám via EF Code First, ale pokud bych měl se SDF databázemi dělat cokoliv pokročilejšího, nainstaloval bych si ho. 
 
 ## Věci od Microsoftu
 

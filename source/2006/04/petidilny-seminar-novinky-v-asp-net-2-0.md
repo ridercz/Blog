@@ -9,6 +9,8 @@
 <!-- dcterms:created = 2006-04-10T17:46:17.227+02:00 -->
 <!-- dcterms:dateAccepted = 2006-04-10T17:46:17.227+02:00 -->
 
+ 
+
 Pod hlavičkou **[**.NET Group**](http://www.dng.cz/)** jsme s Honzou Šedou připravili pětidílný seminář o novinkách v ASP.NET 2.0. Seriál akcí je určen programátorům s alespoň základní znalostí ASP.NET 1.1 a představuje nové technologie v aktuální verzi.
 
 Pro značný rozsah je látka rozdělena do pěti logických celků. Není samozřejmě nutné, abyste se účastnili všech pěti částí, i když je to doporučeno.

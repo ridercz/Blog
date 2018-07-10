@@ -19,6 +19,6 @@ Témata přednášky jsou následující:
 *   Role Providers
 *   Login controls
 *   Vytváření vlastních providerů
-*   Práce s uživatelskými profily (personalizace) 
+*   Práce s uživatelskými profily (personalizace)
 
 Akce se koná 2. února 2006 od 17:00 ve Střední škole aplikované kybernetiky v Hradci Králové. Vstup je zdarma, potřebné informace najdete na [webu WUG](http://www.wug.cz/cs/hradeckralove.xtml) a můžete se i [online registrovat](http://wwwapp.wug.cz/Akce/Default.aspx?AID=73).

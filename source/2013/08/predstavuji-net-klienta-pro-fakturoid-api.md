@@ -24,7 +24,51 @@ Moje API najdete na [GitHubu](https://github.com/ridercz/Fakturoid-API) (nojo, n
 
 [Ukázkovou aplikaci](https://github.com/ridercz/Fakturoid-API/blob/master/Altairis.Fakturoid.Client.DemoApp/Program.cs) (stejně jako [dokumentaci](https://github.com/ridercz/Fakturoid-API/blob/master/Documentation.chm?raw=true)) najdete na GitHubu, já níže nabídnu jenom ukázku, jak se s knihovnou pracuje:
 
-// Vytvořit instanci API klienta var fc = new FakturoidContext("username", "apitoken", "Název aplikace (me@example.com)"); // Vytvořit instanci třídy, která reprezentuje nový kontakt var newSubject = new JsonSubject { name = "ACME, s. r. o.", street = "Testovací 123", city = "Praha", zip = "11000", country = "CZ", registration_no = "12345678", vat_no = "CZ12345678", email = "acmecorp@mailinator.com" }; // Pomocí API vytvořit kontakt a získat jeho ID var newSubjectId = fc.Subjects.Create(newSubject); // Vytvořit instanci třídy, která reprezentuje fakturu var newInvoice = new JsonInvoice { subject_id = newSubjectId, lines = new List<jsoninvoiceline abp="342">(), }; // Přidat do ní nějaké položky newInvoice.lines.Add(new JsonInvoiceLine { name = "Položka 1", quantity = 1, unit_name = "ks", unit_price = 100, vat_rate = 21 }); newInvoice.lines.Add(new JsonInvoiceLine { name = "Položka 2", quantity = 3, unit_name = "hod.", unit_price = 1234, vat_rate = 21 }); // Pomocí API fakturu vytvořit var newInvoiceId = context.Invoices.Create(newInvoice); // ...a odeslat e-mailem context.Invoices.SendMessage(newInvoiceId, InvoiceMessageType.InvoiceMessage);</jsoninvoiceline>
+    // Vytvořit instanci API klienta
+    var fc = new FakturoidContext("username", "apitoken", "Název aplikace (me@example.com)");
+
+    // Vytvořit instanci třídy, která reprezentuje nový kontakt
+    var newSubject = new JsonSubject {
+        name = "ACME, s. r. o.",
+        street = "Testovací 123",
+        city = "Praha",
+        zip = "11000",
+        country = "CZ",
+        registration_no = "12345678",
+        vat_no = "CZ12345678",
+        email = "acmecorp@mailinator.com"
+    };
+
+    // Pomocí API vytvořit kontakt a získat jeho ID
+    var newSubjectId = fc.Subjects.Create(newSubject);
+
+    // Vytvořit instanci třídy, která reprezentuje fakturu
+    var newInvoice = new JsonInvoice {
+        subject_id = newSubjectId,
+        lines = new List<jsoninvoiceline abp="342">(),
+    };
+
+    // Přidat do ní nějaké položky
+    newInvoice.lines.Add(new JsonInvoiceLine {
+        name = "Položka 1",
+        quantity = 1,
+        unit_name = "ks",
+        unit_price = 100,
+        vat_rate = 21
+    });
+    newInvoice.lines.Add(new JsonInvoiceLine {
+        name = "Položka 2",
+        quantity = 3,
+        unit_name = "hod.",
+        unit_price = 1234,
+        vat_rate = 21
+    });
+
+    // Pomocí API fakturu vytvořit
+    var newInvoiceId = context.Invoices.Create(newInvoice);
+
+    // ...a odeslat e-mailem
+    context.Invoices.SendMessage(newInvoiceId, InvoiceMessageType.InvoiceMessage);</jsoninvoiceline>
 
 Základní tarif (omezený na 5 zákazníků, ale bez omezení na počet faktur) je zdarma, další jsou za ceny velmi nízké a uživatelsky přítulné, takže mohu doporučit minimálně na vyzkoušení.
 </strong>

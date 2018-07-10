@@ -7,25 +7,73 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Novinkou v ASP.NET 2.0 je nativní přístup k hlavičce (element HEAD) webových stránek. Je možno ho využít například k automatickému generování odkazu na RSS feed." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Programová práce s hlavičkou stránky</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-12-22T05:04:02.117+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>22. prosince 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p> </p>
 <p>Novinkou v ASP.NET 2.0 je nativní přístup k hlavičce (element <code>head</code>) webových stránek. Je možno ho využít například k automatickému generování odkazu na RSS feed.</p>
 <h2 id="rss-autodiscovery">RSS autodiscovery</h2>
 <p>S rozvojem technologie RSS se objevila nutnost nějakým systemizovaným způsobem ukázat, kde leží RSS feed dané stránky. Proto vznikl mechanismus <em>RSS autodiscovery</em>. Pokud si chcete přidat tento web do čtečky, stačí zadat adresu jeho domovské stránky (<a href="/">http://www.aspnet.cz/</a>) a čtečka si sama iniciativně dohledá adresu RSS feedu jako takového (<a href="/WS/GetRSS.aspx">http://www.aspnet.cz/WS/GetRSS.aspx</a>).</p>
 <p>Celá technologie stojí na tom, že se do hlavičky stránky přidá následující kód:</p>
-<link rel="alternate" type="application/rss+xml" HREF="/WS/GetRSS.aspx" title="Nejnovější články na ASPNET.CZ" />
+<pre><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot;
+      HREF=&quot;/WS/GetRSS.aspx&quot;
+      title=&quot;Nejnovější články na ASPNET.CZ&quot; /&gt;
+</code></pre>
 <p>Význam atributů je následující:</p>
 <ul>
 <li><strong>rel=&quot;alternate&quot;</strong> určuje, že se jedná o alternativní verzi webu, o jinou možnost přístupu</li>
@@ -37,13 +85,36 @@
 <p><img src="https://www.cdn.altairis.cz/Blog/2005/20051222-IE7RSS.png" alt="Zobrazení více RSS feedů v IE7 Beta 1" />Pokud máte na webu jediný feed pro všechny články, je řešení snadné - prostě na všechny stránky vložíte jeden odkaz a je vystaráno. Nicméně pokud chcete u většího webu provozovat feedů více, například pro každou rubriku nebo autora, je to poněkud problém. RSS autodiscovery to umožňuje (můžete mít více feedů, rozlišíte je atributem <em>title</em>), ale odkazy na ně musíte generovat dynamicky.</p>
 <p>Naštěstí třída <code>System.Web.UI.Page</code> disponuje v ASP.NET 2.0 vlastností <code>Head</code>. Ta reprezentuje právě sekci <code>head</code> v HTML kódu. A jako (skoro) všechny ovládací prvky disponuje kolekcí <code>Controls</code>, která obsahuje ovládací prvky které jsou její součástí. Pak už stačí jen vytvořit instanci třídy <code>System.Web.UI.HtmlControls.HtmlLink</code>, nastavit jí parametry a z backendového kódu ji přidat.</p>
 <p>Napsal jsem si na to jednoduchou metodu nazvanou <code>AddRssFeed</code>:</p>
-<p>Public Shared Sub AddRssFeed(ByVal Page As System.Web.UI.Page, ByVal Title As String, ByVal Url As String) Dim L As New System.Web.UI.HtmlControls.HtmlLink() L.Attributes.Add(&quot;rel&quot;, &quot;Alternate&quot;) L.Attributes.Add(&quot;type&quot;, &quot;application/rss+xml&quot;) L.Attributes.Add(&quot;title&quot;, Title) L.Attributes.Add(&quot;href&quot;, Url) Page.Header.Controls.Add(L) End Sub</p>
+<pre><code>Public Shared Sub AddRssFeed(ByVal Page As System.Web.UI.Page, ByVal Title As String, ByVal Url As String)
+    Dim L As New System.Web.UI.HtmlControls.HtmlLink()
+    L.Attributes.Add(&quot;rel&quot;, &quot;Alternate&quot;)
+    L.Attributes.Add(&quot;type&quot;, &quot;application/rss+xml&quot;)
+    L.Attributes.Add(&quot;title&quot;, Title)
+    L.Attributes.Add(&quot;href&quot;, Url)
+    Page.Header.Controls.Add(L)
+End Sub
+</code></pre>
 <p>Ze stránky ji můžete zavolat jednoduše, například: <code>AddRssFeed(Me, &quot;Články v rubrice &quot; &amp; CategoryName, &quot;~/Rss.ashx?Category=&quot; &amp; CategoryID)</code>.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

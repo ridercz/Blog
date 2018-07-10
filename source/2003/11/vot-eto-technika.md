@@ -14,7 +14,7 @@ Nikdy jsem neměl s (vlastní) výpočetní technikou zásadnější problémy. 
 *   **Netrvám na absolutní technické špičce** (protože je předražená a nevyzkoušená).
 *   **Používám příčetný operační systém** (NT-based, militantní linuxáře prosím aby odešli do křoví a tiše chcípli)
 *   **Neinstaluju na počítač kraviny** (jakožto například různé obskurní screensavery a jiné blbinky)
-*   **Udržuji svůj systém v aktuálním stavu** (protože v každém systému jsou chyby, které je nutno opravovat) 
+*   **Udržuji svůj systém v aktuálním stavu** (protože v každém systému jsou chyby, které je nutno opravovat)
 
 Dokonce ani s oněmi vysmívanými Windows jsem nikdy neměl problémy. Možná je to tím, že s Windows 95 jsem koketoval jenom několik týdnů, než jsem objevil existenci Windows NT Workstation 4.0 a od té doby jedu tvrdě po NT linii. 
 

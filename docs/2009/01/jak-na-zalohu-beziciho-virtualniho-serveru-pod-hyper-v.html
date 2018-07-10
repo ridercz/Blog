@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jednou z velkých výhod virtualizačních technologií je snadnost zálohování. Stačí spustit zálohu fyzického serveru a máme zazálohovány i virtuální stroje na něm běžící. Tolik tedy praví teorie. V praxi to bývá poněkud složitější." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jak na zálohu běžícího virtuálního serveru pod Hyper-V</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2009-01-29T00:38:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>29. ledna 2009</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Jednou z velkých výhod virtualizačních technologií je snadnost zálohování. Stačí spustit zálohu fyzického serveru a máme zazálohovány i virtuální stroje na něm běžící. Tolik tedy praví teorie. V praxi to bývá poněkud složitější.</p>
 <h2 id="o-zalohovani-virtualu-obecne">O zálohování virtuálů obecně</h2>
 <p>Obecně lze zálohování virtuálního stroje provádět dvěma způsoby. Při prvním z nich zapomeneme na to, že počítač je virtuální a zazálohujeme ho stejně jako fyzický stroj. Tedy nainstalujeme do něj příslušný zálohovací program, agenta či co a zálohujeme jako obvykle. Elegantnější řešení spočívá v tom, že si uvědomíme, že virtuání server není v podstatě nic jiného, než několik souborů na disku a že si můžeme spoustu práce ušetřit tím, že tyto soubory prostě zkopírujeme jinam.</p>
@@ -55,7 +100,7 @@
 <p>Aby byla situace zábavnější, chceme udržovat vždy dvě poslední zálohy, nazvěme je třeba &quot;SetA&quot; a &quot;SetB&quot;. Toto opatření zajistí, že i pokud by došlo k selhání v průběhu zálohy, budeme mít k dispozici &quot;poslední dobrá&quot; data odminula.</p>
 <p>To celé lze zařídit celkem jednoduše, pomocí jednoho dávkového souboru, jedné sady příkazů pro <code>DISKSHADOW.EXE</code> a pár pomocných souborů, které si dle potřeby vytvoříme a zase smažeme.</p>
 <p>Hlavní magie se děje v souboru <code>C:\Backup\HVBS\backup.cmd</code>, který vypadá následovně:</p>
- <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt"> 
+  <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt">   
 <p>@ECHO OFF</p>
 <p>SET HVBS_SEQMARKERFILE=C:\Backup\HVBS\sequence.marker</p>
 <p>SET HVBS_PHAMARKERFILE=C:\Backup\HVBS\phase.marker</p>
@@ -121,9 +166,9 @@
 <p>ECHO [%DATE%%TIME%] Backup sequence &quot;%HVBS_SEQ%&quot; completed &gt;&gt; %HVBS_LOGFILE%</p>
 <p>ECHO Backup script completed!</p>
 <p>:END</p>
- </div> 
+ </div>  
 <p>Pomocným fámulem jest soubor <code>C:\Backup\HVBS\backup.dsh</code>, jehož obsah je dost stručný:</p>
- <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt"> 
+  <div style="font-family: consolas, courier new; background: white; color: black; font-size: 12pt">   
 <p>set context persistent</p>
 <p>add volume C: alias drive_c</p>
 <p>add volume D: alias drive_d</p>
@@ -137,7 +182,7 @@
 <p>unexpose C:\Backup\HVBS\mnt.c</p>
 <p>unexpose C:\Backup\HVBS\mnt.d</p>
 <p>unexpose C:\Backup\HVBS\mnt.e</p>
- </div> 
+ </div>  
 <p>Dále pak si skript v průběhu své činnosti vytvoří a zase smaže soubory <code>C:\Backup\HVBS\sequence.marker</code> a <code>C:\Backup\HVBS\phase.marker</code>. Postup činnosti zálohovacího skriptu je poměrně prostý:</p>
 <ol>
 <li>Spustíme (patrně pomocí Task Scheduleru) dávku <code>backup.cmd</code>.</li>
@@ -156,7 +201,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -17,6 +17,6 @@ Vyhodnotil jsem také tamo pořádanou anketu, ze které vyplynulo, že:
 *   Nejvíce toužíte po seminářích o ASP.NET pro pokročilé, nasazení a provozu ASP.NET aplikací a o SQL Serveru.
 *   Jste dosti kritičtí ke svým vlastním znalostem, průměrná "známka" kterou jste je ohodnotili, je trojka.
 *   Nevíte vůbec nic o programování pro mobilní zařízení (průměrná známka 4,5) a jste s tímto stavem spokojeni, protože o seminář o programování v CF nebyl téměř vůbec žádný zájme.
-*   Většina z vás jsou profesionální vývojáři, přibližně polovina své servery též spravuje jako administrátoři. Aplikace provozujete především na svých serverech, hosterům dává vydělávat méně než polovina z vás. 
+*   Většina z vás jsou profesionální vývojáři, přibližně polovina své servery též spravuje jako administrátoři. Aplikace provozujete především na svých serverech, hosterům dává vydělávat méně než polovina z vás.
 
 Potěšující zpráva pro mne je, že jako formu dotazníku většina z vás preferuj webovou aplikaci. Zpracování těch papírových dotazníků mne stálo tolik času a nervů, že se mu rád do budoucna vyhnu.

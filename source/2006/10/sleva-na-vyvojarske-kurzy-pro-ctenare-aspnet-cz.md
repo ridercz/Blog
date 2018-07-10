@@ -27,7 +27,9 @@ Termíny jsou v jednotlivých lokalitách (Praha, Brno a Bratislava) vypisovány
 
 ### GOC2310 - Vývoj webových aplikací v ASP.NET 2.0 (5 dní)
 
-*   * **Brno, 11-15. prosince 2006** *  
+*   *
+								**Brno, 11-15. prosince 2006**
+						*
 
 Tento kurz je určen pro zájemce o programování v ASP.NET 2.0, kteří nemají znalosti předchozí verze ASP.NET. Vyučuje se tedy "od základu" na verzi 2.0 ve Visual Studiu 2005.
 
@@ -38,7 +40,9 @@ Jedná se o mimořádný běh kurzu, na který je nutno se * [ *registrovat pře
 
 ### GOC3201 - Novinky v ASP.NET 2.0 (3 dny)
 
-*   ** *Brno, 13-15. listopadu 2006* **  
+*   **
+								*Brno, 13-15. listopadu 2006*
+						**
 
 Tento kurz je určen vývojářům, kteří mají zkušenosti s ASP.NET verze 1.x a chtějí je "upgradovat" na verzi 2.0. Kurz se zaměřuje na novinky jako je deklarativní programování, membership, nové server controls a podobně.
 
@@ -49,8 +53,9 @@ Registrujte se * [ *standardním způsobem na webu Gopasu* ](http://www.gopas.cz
 
 ### GOC3202 - ASP.NET 2.0 pro pokročilé (3 dny)
 
-*   **Praha, 23-25. října 2006** 
-*   **Praha, 6-8. prosince 2006**  
+*   **Praha, 23-25. října 2006**
+
+*   **Praha, 6-8. prosince 2006**
 
 Tento kurz je určen zkušenějším vývojářům v ASP.NET 2.0 a je logickým pokračováním předchozích dvou kurzů. Zatímco předchozí kurzy se zabývají především využitím hotových funkčních celků ASP.NET, tento kurz je zaměřen především na jejich modifikaci a psaní vlastních. Zaměřuje se především na:
 
@@ -58,7 +63,7 @@ Tento kurz je určen zkušenějším vývojářům v ASP.NET 2.0 a je logickým 
 *   Jak využít control adaptérů k získání kontroly nad HTML kódem, který ASP.NET generují.
 *   Vlastní membership, role či profile providery, ViewState moduly a další.
 *   Nasazení a správa WWW aplikací, využití web deployment projects.
-*   Úvod do využití ASP.NET AJAX Frameworku. 
+*   Úvod do využití ASP.NET AJAX Frameworku.
 
 Předpokládá se znalost technologie ASP.NET 2.0 zhruba v rozsahu předchozích dvou kurzů. Příklady jsou ve směsi jazyků - něco je ve VB.NET, něco v C#, něco v obojí verzi.
 

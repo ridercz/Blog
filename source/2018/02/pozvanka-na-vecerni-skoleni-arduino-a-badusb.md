@@ -21,7 +21,7 @@ Zvu vás na poněkud netradiční školení: bude se týkat platformy Arduino a 
 *   Jak to využit ke kybernetickému útoku
 *   Tvorba vlastní HW makro klávesnice
 *   Emulace gamepadu
-*   Tvorba vlastní makro klávesnice s open source řídícím softwarem 
+*   Tvorba vlastní makro klávesnice s open source řídícím softwarem  
 
 Příslušné součástky dostanete po dobu konání kurzu zapůjčeny a po skončení je budete moci odkoupit, budete-li mít zájem. Potřebujete pouze vlastní notebook s nainstalovanou nejnovější verzí [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
@@ -30,6 +30,6 @@ Příslušné součástky dostanete po dobu konání kurzu zapůjčeny a po skon
 Jde o krátké, tříhodinové školení, které se bude odehrávat ve večerních hodinách. Zatím jsou vypsané dva termíny:
 
 *   14. února 2018, 17:00-20:00
-*   28. února 2018, 17:00-20:00 
+*   28. února 2018, 17:00-20:00  
 
 Školení se koná v MakersLabu, Milady Horákové 106, Praha 6 a jeho cena je 1200 Kč. Podrobnější informace a možnost registrace najdete [na webu MakersLabu](https://www.makerslab.cz/courses/project-arduino-mirne-pokrocily/?rmcb=1518193222).

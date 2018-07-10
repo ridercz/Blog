@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Při přípravě článku, který se podrobně zabývá technologií ViewState sjem zjistil, že vám již více než rok dlužím jeden díl seriálu o (bez)stavovém HTTP. Ba dokonce možná díl nejdůležitější, totiž poslední, shrnující a hodnotící. Nuže, tady je." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Stavové HTTP: Shrnutí a dokončení</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2009-06-23T00:01:08.363+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>23. června 2009</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/stavove-http" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Stavové HTTP</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Při přípravě článku, který se podrobně zabývá technologií ViewState sjem zjistil, že vám již více než rok dlužím jeden díl seriálu o (bez)stavovém HTTP. Ba dokonce možná díl nejdůležitější, totiž poslední, shrnující a hodnotící. Nuže, tady je. Odkazy na předchozí díly seriálu najdete v boxu v pravé části stránky.</p>
 <p>V <a href="http://www.aspnet.cz/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx">úvodu</a> jsem vysvětlil, že HTTP je protokol bezstavový, tedy že neumí udržovat žádný kontext a spojit si několik po sobě jdoucích požadavků do nějaké logické sekvence. Popsal jsem také tři techniky, které umožňují tuto bezstavovost s větším či menším množstvím problémů obejít: <a href="http://www.aspnet.cz/Articles/191-stavove-http-cookies.aspx">cookies</a>, <a href="http://www.aspnet.cz/Articles/193-stavove-http-sessions.aspx">sessions</a> a <a href="http://www.aspnet.cz/Articles/192-stavove-http-viewstate.aspx">ViewState</a>.</p>
 <p>Jaký je tedy můj závěrečný verdikt a doporučení, kterou z technologií používat? Odpověď je jednoduchá: pokud možno žádnou.</p>
@@ -36,7 +87,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

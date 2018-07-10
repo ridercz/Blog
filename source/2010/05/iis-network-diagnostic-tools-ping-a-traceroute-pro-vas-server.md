@@ -22,7 +22,7 @@ Ping má následující podstatné parametry:
 *   **Objem dat** – nezáleží na jejich obsahu, ale na objemu. V mezních situacích se mohou sítě chovat různě pro malé a velké pakety. 
 *   **Timeout** – čas (obvykle udávaný v milisekundách) za který musí dorazit odpověď. Nedorazí-li, ping vypíše populární "Request timed out". 
 *   **Počet požadavků** – vzhledem k povaze ICMP nemá zaslání jednoho paketu příliš velkou vypovídací hodnotu. Jeden ztracený ping nic neznamená. Typicky bych tedy pošleme větší množství a vyhodnocujeme je statisticky. 
-*   **TTL** – zákeřná a často nepochopená hodnota "time to live". Nemá v zásadě nic společného s časem, ale je to počet "skoků", které může request vykonat, tj. přes kolik routerů může požadavek projít. Pokud nedosáhne svého cíle před vypršením tohoto čísla, zobrazí se stav "TTL expired in transit".  
+*   **TTL** – zákeřná a často nepochopená hodnota "time to live". Nemá v zásadě nic společného s časem, ale je to počet "skoků", které může request vykonat, tj. přes kolik routerů může požadavek projít. Pokud nedosáhne svého cíle před vypršením tohoto čísla, zobrazí se stav "TTL expired in transit".   
 
 Norma RFC1122 sice stanoví, že každý počítač musí ICMP echo request přijmout a také na něj odpovědět, ale v dnešní době je to bohapustá teorie a zbožné přání. Velké množství firewallů ping blokuje, z údajně bezpečnostních důvodů. Pokud vám tedy neznámý počítač neodpovídá na ping, samo o sobě to nic neznamená, klidně může běžet a fungovat.
 
@@ -39,6 +39,6 @@ Funkcionalita PINGu je v .NETu součástí třídy `System.Net.NetworkInformatio
 *   `FormHandler` je HTTP handler, který umí zobrazit úvodní HTML formulář. 
 *   `PingHandler` je HTTP handler, který zobrazí výsledky PINGu. 
 *   `TraceRouteHandler` je HTTP handler, který zobrazí výsledky TRACEROUTE. 
-*   `ToolsHandlerFactory` je pomocná třída, handler factory, která rozděluje práci mezi tři výše uvedené handlery. Takže není nezbytné registrovat handlery samostatně, ale stačí zaregistrovat jednu factory.  
+*   `ToolsHandlerFactory` je pomocná třída, handler factory, která rozděluje práci mezi tři výše uvedené handlery. Takže není nezbytné registrovat handlery samostatně, ale stačí zaregistrovat jednu factory.   
 
 Aplikaci včetně zdrojového kódu si můžete stáhnout na [iisnetdiag.codeplex.com](http://iisnetdiag.codeplex.com/), naživo si  ji můžete vyzkoušet z našeho serveru v [ČR](http://www7.v.altairis.cz/iisnetdiag.axd) nebo v [USA](http://www6.v.altairis.cz/iisnetdiag.axd).

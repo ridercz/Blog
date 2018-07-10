@@ -27,9 +27,11 @@ Bohužel, v podmínkách běžného komerčního hostingu je bezpečné uložen�
 
 Více informací:
 
-*   [Rob Howard: Keeping Secrets in ASP.NET 2.0](http://msdn.microsoft.com/msdnmag/issues/06/05/ExtremeASPNET/) 
-*   [How to: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI](http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000005.asp) 
-*   [How to: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA](http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000006.asp)  
+*   [Rob Howard: Keeping Secrets in ASP.NET 2.0](http://msdn.microsoft.com/msdnmag/issues/06/05/ExtremeASPNET/)
+
+*   [How to: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI](http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000005.asp)
+
+*   [How to: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA](http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000006.asp)
 
 ## Hashování
 
@@ -59,13 +61,13 @@ Při vytváření uživatelského účtu:
 
 1.  Vygenerujte náhodný řetězec, který se použije jako sůl (použijte třeba metodu *Membership.GeneratePassword()*). Na jeho délce příliš nezáleží, já osobně používám pět znaků.
 2.  Spočítejte si hash z řetězce *Heslo + Sůl*.
-3.  Do databáze uložte uživatelské jméno, sůl a vypočtený hash. 
+3.  Do databáze uložte uživatelské jméno, sůl a vypočtený hash.
 
 Při ověření přihlášení:
 
 1.  Načtěte z databáze sůl k danému uživatelskému jménu.
 2.  Spočítejte si hash z řetězce *Heslo + Sůl*.
-3.  Porovnejte, zda se vypočtená hodnota shoduje s hodnotou hashe, uloženou v databázi. 
+3.  Porovnejte, zda se vypočtená hodnota shoduje s hodnotou hashe, uloženou v databázi.
 
 Tento postup je zcela univerzální, můžete ho použít nezávisle na zvoleném hashovacím algoritmu.
 

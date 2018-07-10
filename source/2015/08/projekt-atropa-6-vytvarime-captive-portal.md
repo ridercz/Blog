@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2015-08-24T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20150824-projekt-atropa-6-vytvarime-captive-portal.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
 V šestém dílu seriálu o vytvoření ["zlé maliny" pro útoky sociálním inženýrstvím](http://www.aspnet.cz/articles/5429-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem) si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6. Aplikace je poměrně triviální a nepochybně by téhož výsledku bylo možno dosáhnout i jednoduššími prostředky. Já jsem zvolil ASP.NET 5 a MVC 6, protože jsem chtěl novou platformu vyzkoušet a také zkusit na Linuxu rozběhnout z .NETu trochu víc, než obligátní "Hello World!".
 
@@ -38,14 +38,40 @@ Aplikace je napsána v ASP.NET 5 a MVC 6, ve Visual Studiu 2015. Je velice jedno
 
 Klíčovou součástí aplikace je její konfigurace, neboť ta říká, co se vlastně bude dělat. Využívám zde nový konfigurační systém v ASP.NET 5, který je vymyšlený docela dobře, ale zato je mizerně popsaný. Jeho fungování věnuji samostatný článek, zde je jednom návod k použití. Aplikaci řídí soubor `config.json`, který ve výchozím nastavení vypadá takto:
 
-{ "ForceHostName": "www.wifigate-login.local", "OutputFileName": "wwwroot/passwords.txt", "MaximumPasswordLength": 4, "IdentityProviders": [ { "Id": "facebook", "Title": "Facebook" }, { "Id": "google", "Title": "Google Account" }, { "Id": "twitter", "Title": "Twitter" }, { "Id": "microsoft", "Title": "Microsoft Account" }, { "Id": "seznam", "Title": "Seznam.cz" } ] }
+    {
+        "ForceHostName": "www.wifigate-login.local",
+        "OutputFileName": "wwwroot/passwords.txt",
+        "MaximumPasswordLength": 4,
+        "IdentityProviders": [
+            {
+                "Id": "facebook",
+                "Title": "Facebook"
+            },
+            {
+                "Id": "google",
+                "Title": "Google Account"
+            },
+            {
+                "Id": "twitter",
+                "Title": "Twitter"
+            },
+            {
+                "Id": "microsoft",
+                "Title": "Microsoft Account"
+            },
+            {
+                "Id": "seznam",
+                "Title": "Seznam.cz"
+            }
+        ]
+    }
 
 Význam konfiguračních hodnot je následující:
 
 *   `ForceHostName` je název serveru, na který bude uživatel přesměrován poté, co se na aplikaci dostane. Účelem je zvýšit důvěryhodnost rozhraní, neboť takto autorizační portály obvykle postupují. Můžete sem zadat jakoukoliv adresu - existující, neexistující, dokonce i s vymyšlenou top-level doménou. Nebo - jako já - můžete použít standardizovanou doménu "`.local`" pro lokální sítě. Po [konfiguraci popsané v předchozím dílu](http://www.aspnet.cz/articles/5435-projekt-atropa-5-vytvarime-honeypot) bude stejně jakýkoliv DNS dotaz resolvován na adresu našeho honeypotu. Tento parametr je nepovinný, pokud bude hodnota prázdná nebo nebude přítomna vůbec, přesměrování se neprovede. Také se neprovede, pokud aplikace běží ve vývojovém prostředí. 
 *   `OutputFileName` je název výsledného souboru, kam se budou ukládat ulovená hesla. Adresa je relativní k rootu aplikace. V uvedeném příkladu se budou data ukládat do souboru, který bude dostupný na adrese `http://adresa-honeypotu/passwords.txt`. 
 *   `MaximumPasswordLength` je počet znaků z hesla, které se budou ukládat. Vzhledem k tomu, že celou aplikaci hodlám používat pro výukové účely a výsledek její činnosti uživatelům online ukazovat, nechci skladovat celá hesla. Ukládat se bude jenom prvních několik znaků (zde čtyři), zbytek hesla bude nahrazen hvězdičkami. 
-*   `IdentityProviders` je seznam služeb, přes které chceme povolit přihlašování (jejichž přihlašovací údaje chceme získat). Pro každou z nich určujeme její `Id` a `Název` (`Title`). Parametr `Id` bude součástí URL a také se použije jako název obrázku s logem. Mělo by se tedy jednat o "bezpečný" string, který lze použít jako název souboru a cesty. `Title` je lidsky čitelný název služby. Identity providerů může být neomezené množství, já jsem zvolil čtyři nejpopupárnější služby plus lokálního favorita Seznam.cz.  
+*   `IdentityProviders` je seznam služeb, přes které chceme povolit přihlašování (jejichž přihlašovací údaje chceme získat). Pro každou z nich určujeme její `Id` a `Název` (`Title`). Parametr `Id` bude součástí URL a také se použije jako název obrázku s logem. Mělo by se tedy jednat o "bezpečný" string, který lze použít jako název souboru a cesty. `Title` je lidsky čitelný název služby. Identity providerů může být neomezené množství, já jsem zvolil čtyři nejpopupárnější služby plus lokálního favorita Seznam.cz. 
 
 ## Jak aplikace funguje?
 
@@ -55,7 +81,7 @@ O tvorbě aplikací v ASP.NET 5 napíšu podrobnější článek někdy jindy, z
 *   `Startup.cs` je Owin Startup Class. Kód v něm se spouští jako první při startu aplikace a celou ji inicializuje. Je jakýmsi křížencem souborů `Global.asax` a `web.config` v předchozích verzích. V jeho konstruktoru načítám výše popsanou konfiguraci. V `ConfigureServices` registruji služby, které se budou později používat pro dependency injection. V Configure pak říkám, jaké OWIN middlewares (ekvivalent HTTP modulů a handlerů ze starších verzí) se budou používat atd. 
 *   `hosting.ini` je soubor, který mi tam zbyl z výchozí šablony a upřímně, zatím jsem nevyzkoumal, k čemu je dobrý, musím se na to podívat později. 
 *   `GlobalSuppressions.cs` na běh aplikace nemá vliv. Používám ve Visual Studiu 2015 plugin [Refactoring Essentials](http://vsrefactoringessentials.com/), který hlídá dodržování standardů psaní kódu a nabízí refactoring obvyklých porušení. Některá jeho pravidla se mi nelíbí a v tomto souboru se dají na úrovni projektu vypnout. 
-*   `WifiGateOptions.cs` je model používaný pro konfiguraci.  
+*   `WifiGateOptions.cs` je model používaný pro konfiguraci. 
 
 Ostatní soubory jsou standardní a neliší se podstatně od běžné ASP.NET MVC aplikace.
 
@@ -67,7 +93,7 @@ Smažte na Raspberry Pi obsah složky s obsahem web serveru, tedy `/home/pi/www/
 
 Poté pomocí `pscp.exe` nakopírujte zdrojové kódy aplikace WifiGate.  Použijete k tomu následující příkaz, spuštěný ovšem na Windows:
 
-pscp -r -batch -C -pw raspberry "C:\Users\Altair\Source\Repos\WifiGate\src\WifiGate\*" pi@10.7.0.103:/home/pi/www/wifigate
+    pscp -r -batch -C -pw raspberry "C:\Users\Altair\Source\Repos\WifiGate\src\WifiGate\*" pi@10.7.0.103:/home/pi/www/wifigate
 
 Význam parametrů je následující:
 
@@ -76,7 +102,7 @@ Význam parametrů je následující:
 *   `-C` použije při přenosu kompresi. 
 *   `-pw raspberry` umožňuje specifikovat heslo (v tomto případě `raspberry`). 
 *   `"C:\Users\...\*"` popisuje, které soubory se mají přenášet. Zde všechno ve složce WifiGate; uvozovky jsou nutné, pokud cesta obsahuje mezery. 
-*   Posledním parametrem určujete, kam se mají data nakopírovat. Formát je `uživatel@host:cesta`. Zde se připojuji jako uživatel `pi` k počítači s adresou `10.7.0.103` a ukládám do adresáře `/home/pi/www/wifigate`.  
+*   Posledním parametrem určujete, kam se mají data nakopírovat. Formát je `uživatel@host:cesta`. Zde se připojuji jako uživatel `pi` k počítači s adresou `10.7.0.103` a ukládám do adresáře `/home/pi/www/wifigate`. 
 
 Po nakopírování souborů se opět připojte na Raspberry a spusťte obnovu NuGet balíčků příkazem `dnu restore /home/pi/www/wifigate`.
 

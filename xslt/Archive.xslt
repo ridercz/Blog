@@ -37,7 +37,7 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-      <xsl:variable name="FromPosition" select="($PageNumber - 1) * $x4c:PageSize" />
+      <xsl:variable name="FromPosition" select="($PageNumber - 1) * $x4c:PageSize + 1" />
       <xsl:variable name="ToPosition" select="$FromPosition + $x4c:PageSize - 1" />
       <html>
         <head>
@@ -64,8 +64,8 @@
                 </xsl:call-template>
               </footer>
             </section>
-            <xsl:call-template name="SiteFooter" />
           </main>
+          <xsl:call-template name="SiteFooter" />
         </body>
       </html>
     </x4o:document>

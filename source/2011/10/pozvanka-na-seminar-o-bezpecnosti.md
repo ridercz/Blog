@@ -21,14 +21,14 @@ Na tomto semináři, který se koná **29. – 30. 11. 2011** v Praze budu mít 
 *   Bezpečnost a integrita dat v Informačním systému datových schránek 
 *   Možnosti přihlášení do datových schránek a jejich porovnání z hlediska bezpečnosti 
 *   Zabezpečení proti zasílání nevyžádané pošty 
-*   Archivace zpráv zaslaných datovou schránkou  
+*   Archivace zpráv zaslaných datovou schránkou 
 
 ## Dlouhodobá úschova digitálních dokumentů
 
 *   Problematika časově omezené platnosti certifikátů pro vytváření elektronických podpisů a časových razítek 
 *   Dlouhodobá úschova digitálních dokumentů v českém právním řádu 
 *   Použití časových razítek a tvorba důvěryhodného archivu 
-*   Kdy nastane *The End of the World As We Know It*? 
+*   Kdy nastane *The End of the World As We Know It*?
 
 Zejména druhá přednáška je užitečná i pro firmy ze soukromého sektoru. Ten státní dlouhodobou platnost elektronických dokumentů neřeší a je pravděpodobné, že to dříve či později vyřeší legislativně. Pro soukromoprávní vztahy firem se však tak jednoduché řešení předpokládat nedá a protoje dobré začít se touto otázkou zabývat dříve, než bude pozdě.
 

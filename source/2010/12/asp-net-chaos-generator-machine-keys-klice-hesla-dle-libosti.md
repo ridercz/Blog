@@ -33,7 +33,7 @@ Tohle je funkce, která mi chyběla nejvíc. Můžete zadat požadovaný počet 
 *   **HEX array** je totéž, ale bajty jsou v šestnáctkové soustavě, v 0x00 notaci. 
 *   **Base16** generuje klíč jako sekvenci šestnáctkových číslic 0-F (velká nebo malá písmena). Tenhle formát je používán machineKeys (i když na ty mám zvláštní generátor), ale třeba se typicky zadává i při konfiguraci WiFi sítě. 
 *   **Base64** je kódování široce používané na mnoha místech. 
-*   **UrlBase64** je jeho varianta, která je bezpečná i pro použití v rámci URL, protože znaky + a / byly nahrazeny - a _.  
+*   **UrlBase64** je jeho varianta, která je bezpečná i pro použití v rámci URL, protože znaky + a / byly nahrazeny - a _.   
 
 ## Rozhraní jQuery UI
 

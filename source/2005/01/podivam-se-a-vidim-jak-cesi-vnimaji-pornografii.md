@@ -15,4 +15,6 @@ Doporučuji vřele k prostudování. Práce sama je z větší části důsledke
 
 **Odkazy:**
 
-*   [PSAV 2004](http://psav.chochola.net/) [Obecné informace o výsledcích](http://diplomka.chochola.net) [Kompletní diplomová práce ke stažení jako PDF](http://diplomka.chochola.net/dp/diplomova_prace.pdf)
+*   [PSAV 2004](http://psav.chochola.net/) 
+[Obecné informace o výsledcích](http://diplomka.chochola.net) 
+[Kompletní diplomová práce ke stažení jako PDF](http://diplomka.chochola.net/dp/diplomova_prace.pdf)

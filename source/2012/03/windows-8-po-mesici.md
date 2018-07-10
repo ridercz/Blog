@@ -32,7 +32,7 @@ Naprosto stejným způsobem lze připojovat i ISO images, jako virtuální CD/DV
 
 *   **[Windows Virtual PC](http://www.microsoft.com/windows/virtual-pc/default.aspx)**, jediné oficiálně podporované řešení od Microsoftu, funguje sice docela dobře, ale umí emulovat jenom 32-bitové operační systémy. To znamená, že servery (které jsou už jenom 64-bitové) virtualizovat nemůžete, třeba pro účely testování. 
 *   [**VirtualBox**](https://www.virtualbox.org/) tohle sice umí, ale jeho uživatelské rozhraní je velmi svérázné, stejně jako přístup k souborům virtuálních disků. Momentálně ho používám, jako nejmenší zlo, ale rozhodně nebudu želet, až se ho budu moci zbavit. 
-*   [**VMWare Workstation**](http://www.vmware.com/products/workstation/overview.html) se mi nikdy nepodařilo dlouhodobě provozovat spolehlivě a bez problémů. Vždycky mi nějak záhadně vytrotlily síťové karty nebo něco podobného. Navíc je nutné za něj platit, jde o komerční SW, zatímco výše zmíněné alternativy jsou zdarma. V zájmu objektivity nutno dodat, že existuje i bezplatný VMWare Player, ten lze ale použít jenom k provozu existujících virtuálů, ne vytváření nových.  
+*   [**VMWare Workstation**](http://www.vmware.com/products/workstation/overview.html) se mi nikdy nepodařilo dlouhodobě provozovat spolehlivě a bez problémů. Vždycky mi nějak záhadně vytrotlily síťové karty nebo něco podobného. Navíc je nutné za něj platit, jde o komerční SW, zatímco výše zmíněné alternativy jsou zdarma. V zájmu objektivity nutno dodat, že existuje i bezplatný VMWare Player, ten lze ale použít jenom k provozu existujících virtuálů, ne vytváření nových.   
 
 Výhodou Hyper-V je, že se totéž používá pro serverovou virtualizaci jako pro klientskou. Testovací a vývojové servery tedy budou moci být kompatibilní.
 

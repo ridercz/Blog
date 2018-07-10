@@ -23,7 +23,8 @@ Komprese se zapne po restartu IIS. Zatím ho ovšem ještě nerestartujte, je to
 
 Které soubory se budou či nebudou komprimovat rozhoduje IIS podle jejich přípony. Standardně jsou nastaveny takto:
 
-*   Statické soubory: *htm, html, txt* Dynamické aplikace: *asp, exe, dll* 
+*   Statické soubory: *htm, html, txt* 
+Dynamické aplikace: *asp, exe, dll*
 
 Toto nastavení není nejšťastnější, protože zcela ignoruje .NET aplikace a ani v případě statických souborů má jisté rezervy.
 
@@ -31,11 +32,15 @@ Bezztrátová komprese funguje tak, že nahrazuje opakující se sekvence bajtů
 
 Osobně používám toto nastavení:
 
-*   Statické soubory: *htm, html, txt, css, js, vbs, xml, xslt* Dynamické aplikace: *asp, exe, dll, aspx, asmx* 
+*   Statické soubory: *htm, html, txt, css, js, vbs, xml, xslt* 
+Dynamické aplikace: *asp, exe, dll, aspx, asmx*
 
 Seznam přípon je uložen v metabázi, ve větvích *W3Svc/Filters/Compression/GZIP* a *W3Svc/Filters/Compression/DEFLATE* (IIS podporuje dva komprimační algoritmy, GZIP a DEFLATE). Spíše než přímou editaci metabase.xml doporučuji použít skript *ADSUTIL.VBS* (nachází se zpravidla v *C:\InetPub\AdminScripts\*). Otevřete tedy příkazový řádek, přejděte do tohoto adresáře a postupně spusťte následující čtyři příkazy:
 
-CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcFileExtensions "htm" "html" "txt" "css" "js" "vbs" "xml" "xslt" CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcFileExtensions "htm" "html" "txt" "css" "js" "vbs" "xml" "xslt" CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcScriptFileExtensions "asp" "dll" "exe" "aspx" "asmx" CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcScriptFileExtensions "asp" "dll" "exe" "aspx" "asmx"
+    CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcFileExtensions "htm" "html" "txt" "css" "js" "vbs" "xml" "xslt"
+    CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcFileExtensions "htm" "html" "txt" "css" "js" "vbs" "xml" "xslt"
+    CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/GZIP/HcScriptFileExtensions "asp" "dll" "exe" "aspx" "asmx"
+    CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcScriptFileExtensions "asp" "dll" "exe" "aspx" "asmx"
 
 Tak. A teď už můžete to IISko konečně restartovat (z příkazové řádky spusťte *iisreset.exe*).
 

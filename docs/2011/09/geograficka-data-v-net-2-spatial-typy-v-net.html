@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Z minulého článku již víte, jakým způsobem můžete uchovávat v SQL Serveru prostorová data (jako například GPS souřadnice) a jak se na ně můžete dotazovat pomocí jazyka Transact-SQL. Používají se přitom datové typy geometry a geography, s nimiž lze samozřejmě pracovat i z prostředí ASP.NET, čemuž je věnován tento článek." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Geografická data v .NET 2: Spatial typy v .NET</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2011-09-15T08:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>15. září 2011</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/geograficka-data-v-net" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Geografická data v .NET</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <blockquote>
 <p><strong>Redakční poznámka:</strong> Když jsem více než před rokem vydával první díl tohoto seriálu, byl jsem dohodnutý s Petrem Kaletou, který slíbil dopsat poslední díl, zahrnující zobrazování GeoRSS dat na Google Maps. Protože to je něco, co vážně neumím. Bohužel, přes několikeré urgence se mi jej nepodařilo k napsání článku přimět. Rozhodl jsem se tedy zbylé dva díly zveřejnit tak, jak jsou.</p>
 <p>Pokud se mezi čtenáři ASPNET.CZ najde někdo, kdo se na rozdíl ode mne vyžívá v psaní mashupů a Google Maps API nemá kopřivku, budu velmi rád, když se o patřičný postup podělí s ostatními čtenáři.</p>
@@ -31,21 +82,85 @@
 <p>SQL dotaz je jednoduchý a prakticky tentýž, který jsme už viděli v předchozím článku. Pro vyhledání bodů ve vzdálenosti nejvýše <code>@Delta</code> metrů od bodu <code>@Point</code> to bude <code>SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE @Point.STDistance(Location) &lt;= @Delta</code>. Trik spočívá v předání parametru <code>@Point</code> (s <code>@Delta</code> žádný problém nebude, to je klasický <code>int</code>).</p>
 <p>Třída <code>SqlGeography</code> je CLR protějškem SQL typu <code>geography</code>. Umí reprezentovat bod, polygon nebo trasu. Pro účely shora uvedeného dotazu nám stačí nejprostší varianta, tedy bod. K vytvoření instance třídy reprezentující bod lze použít statickou metodu <code>Point</code>. Ta bere tři parametry: zeměpisnou šířku, délku a již z minula nám známé SRID, tedy číslo referenčního modelu – v našem případě je to 4326 pro WGS84.</p>
 <p>Zdrojový kód bude vypadat následovně:</p>
-<p>// Vytvořit bod, který reprezentuje střed hledání var point = SqlGeography.Point(16.607552, 49.199541, 4326); // Najít všechny položky ve vzdálenosti max. 10 km od @Point using (var db = new SqlConnection(&quot;SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo&quot;) { using (var cmd = new SqlCommand(&quot;SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE @Point.STDistance(Location) &lt;= @Delta&quot;, db)) { db.Open(); cmd.Parameters.Add(&quot;@Delta&quot;, SqlDbType.Int).Value = 10000; cmd.Parameters.Add(new SqlParameter { ParameterName = &quot;@Point&quot;, SqlDbType = SqlDbType.Udt, UdtTypeName = &quot;geography&quot;, Value = point }); results = new DataTable(); using (var da = new SqlDataAdapter(cmd)) { da.Fill(results); } } }</p>
+<pre><code>// Vytvořit bod, který reprezentuje střed hledání
+var point = SqlGeography.Point(16.607552, 49.199541, 4326);
+
+// Najít všechny položky ve vzdálenosti max. 10 km od @Point
+using (var db = new SqlConnection(&quot;SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo&quot;) {
+    using (var cmd = new SqlCommand(&quot;SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE @Point.STDistance(Location) &lt;= @Delta&quot;, db)) {
+        db.Open();
+        cmd.Parameters.Add(&quot;@Delta&quot;, SqlDbType.Int).Value = 10000;
+        cmd.Parameters.Add(new SqlParameter {
+            ParameterName = &quot;@Point&quot;,
+            SqlDbType = SqlDbType.Udt,
+            UdtTypeName = &quot;geography&quot;,
+            Value = point
+        });
+        results = new DataTable();
+        using (var da = new SqlDataAdapter(cmd)) {
+            da.Fill(results);
+        }
+    }
+}
+</code></pre>
 <p>V případě druhého typu dotazu, tedy vyhledávání bodu v polygonu, je vytvoření odpovídající <code>SqlGeography</code> poněkud komplikovanější. K dispozici máme statické metody známé ze SQL Serveru – třeba <code>STPolyFromText</code>. Systematičtější přístup nabízí třída <code>SqlGeographyBuilder</code>. Detailní popis jejích metod si najděte v dokumentaci, níže uvedený kód vytvoří nám známý obdélník (kde <code>lat1</code>/<code>lon1</code> a <code>lat2</code>/<code>lon2</code> jsou souřadnice protilehlých rohů). Na první pohled je zbytečně složitý, nicméně builder počítá s vytvářením výrazně komplikovanějších tvarů, čemuž odpovídá i jeho robustnost.</p>
-<p>var rectBuilder = new SqlGeographyBuilder(); rectBuilder.SetSrid(4326); rectBuilder.BeginGeography(OpenGisGeographyType.Polygon); rectBuilder.BeginFigure(lat1, lon1); rectBuilder.AddLine(lat2, lon1); rectBuilder.AddLine(lat2, lon2); rectBuilder.AddLine(lat1, lon2); rectBuilder.AddLine(lat1, lon1); rectBuilder.EndFigure(); rectBuilder.EndGeography(); var rect = rectBuilder.ConstructedGeography;</p>
+<pre><code>var rectBuilder = new SqlGeographyBuilder();
+rectBuilder.SetSrid(4326);
+rectBuilder.BeginGeography(OpenGisGeographyType.Polygon);
+rectBuilder.BeginFigure(lat1, lon1);
+rectBuilder.AddLine(lat2, lon1);
+rectBuilder.AddLine(lat2, lon2);
+rectBuilder.AddLine(lat1, lon2);
+rectBuilder.AddLine(lat1, lon1);
+rectBuilder.EndFigure();
+rectBuilder.EndGeography();
+var rect = rectBuilder.ConstructedGeography;
+</code></pre>
 <p>Vlastní dotazování pak je prakticky stejné jako ve výše uvedeném příkladu:</p>
-<p>using (var db = new SqlConnection(&quot;SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo&quot;) { using (var cmd = new SqlCommand(&quot;SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE Location.STIntersects(@Rect) = 1&quot;, db)) { db.Open(); cmd.Parameters.Add(new SqlParameter { ParameterName = &quot;@Rect&quot;, SqlDbType = SqlDbType.Udt, UdtTypeName = &quot;geography&quot;, Value = rect }); results = new DataTable(); using (var da = new SqlDataAdapter(cmd)) { da.Fill(results); } } }</p>
+<pre><code>using (var db = new SqlConnection(&quot;SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Geo&quot;) {
+    using (var cmd = new SqlCommand(&quot;SELECT GeoPointId, Name, Class, ClassName, Location FROM vGeoPoints WHERE Location.STIntersects(@Rect) = 1&quot;, db)) {
+        db.Open();
+        cmd.Parameters.Add(new SqlParameter {
+            ParameterName = &quot;@Rect&quot;,
+            SqlDbType = SqlDbType.Udt,
+            UdtTypeName = &quot;geography&quot;,
+            Value = rect
+        });
+        results = new DataTable();
+        using (var da = new SqlDataAdapter(cmd)) {
+            da.Fill(results);
+        }
+    }
+}
+</code></pre>
 <h2 id="prace-s-vysledkem">Práce s výsledkem</h2>
 <p>S výsledkem dotazu můžete pracovat obvyklým způsobem. Můžete použít například <code>SqlDataReader</code> a data zpracovávat po řádcích. Nebo můžete udělat totéž, co já v předchozím příkladu, a použít <code>SqlDataAdapter</code> k naplnění <code>DataTable</code>, se kterou budete dále pracovat. Požadovaný sloupec pak stačí přetypovat na <code>SqlGeography</code> a můžete s ním dále pracovat běžným způsobem:</p>
-<p>var location = results.Rows[0][&quot;Location&quot;] as SqlGeography; double lat = location.Lat.Value; double lon = location.Long.Value;</p>
+<pre><code>var location = results.Rows[0][&quot;Location&quot;] as SqlGeography;
+double lat = location.Lat.Value;
+double lon = location.Long.Value;
+</code></pre>
 <p>V příštím pokračování se seznámíme s formátem GeoRSS, který umožní publikovat seznamy geotagged bodů, a který se nám bude náramně hodit pro zobrazování bodů na mapě pomocí Virtual Earth nebo Google Maps.</p>
 <p><strong>Příklady k tomuto seriálu si můžete stáhnout na <strong><a href="https://www.cdn.altairis.cz/Blog/2010/20100603-GeoSamples.zip"><strong>http://www.aspnet.cz/files/20100603-GeoSamples.zip</strong></a></strong> (760 kB).</strong></p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

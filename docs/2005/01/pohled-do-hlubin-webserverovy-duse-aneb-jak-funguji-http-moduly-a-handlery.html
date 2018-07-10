@@ -7,24 +7,71 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Kromě psaní klasických ASP.NET stránek (ASPX) je možné webové aplikace psát ještě &quot;o úroveň níž&quot;, tedy pomocí HTTP handlerů a modulů. Je to jediná možnost jak implementovat některé funkce a nejpraktičtější možnost jak implementovat mnohé jiné. V tomto spíše teoretickém článku si povíme, jak vlastně funguje komunikace .NET s Internet Information Services a kde do toho můžeme jako programátoři zasahovat." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Pohled do hlubin webserverovy duše (aneb jak fungují HTTP moduly a handlery)</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-01-10T03:55:09.127+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>10. ledna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Kromě psaní klasických ASP.NET stránek (ASPX) je možné webové aplikace psát ještě &quot;o úroveň níž&quot;, tedy pomocí HTTP handlerů a modulů. Je to jediná možnost jak implementovat některé funkce a nejpraktičtější možnost jak implementovat mnohé jiné. V tomto spíše teoretickém článku si povíme, jak vlastně funguje komunikace .NET s Internet Information Services a kde do toho můžeme jako programátoři zasahovat.</p>
 <h2 id="jak-funguje-web-server">Jak funguje web server</h2>
 <p>Web server komunikuje s okolím prostřednictvím protokolu <acronym title="Hypertext Transfer Protocol">HTTP</acronym>. Velmi zjednodušeně transakce probíhá nějak takhle:</p>
 <ol>
-<li>Klient se připojí na server a řekne &quot;<em>chci z webu <em><a href="/"><em>www.aspnet.cz</em></a></em> soubor <code>/_gfx/mvp.png</code></em>&quot;. Server se podívá do své konfigurace a zjistí, že WWW root pro server jménem <a href="/">www.aspnet.cz</a> ukazuje do fyzického adresáře <code>C:\InetPub\wwwroot\</code>, a že se tedy požadovaný soubor nachází na fyzické cestě <code>C:\InetPub\wwwroot\_gfx\mvp.png</code>. Na základě shora uvedeného zjištění uchopí předmětný soubor, pošle ho klientovi a ukončí spojení.</li>
+<li>Klient se připojí na server a řekne &quot;<em>chci z webu <em><a href="/"><em>www.aspnet.cz</em></a></em> soubor <code>/_gfx/mvp.png</code></em>&quot;.
+Server se podívá do své konfigurace a zjistí, že WWW root pro server jménem <a href="/">www.aspnet.cz</a> ukazuje do fyzického adresáře <code>C:\InetPub\wwwroot\</code>, a že se tedy požadovaný soubor nachází na fyzické cestě <code>C:\InetPub\wwwroot\_gfx\mvp.png</code>.
+Na základě shora uvedeného zjištění uchopí předmětný soubor, pošle ho klientovi a ukončí spojení.</li>
 </ol>
 <p>Pokud bychom napsali web server podle výše uvedených zásad (což je triviální), sice by fungoval, ale uměl by posílat jenom statické stránky, předávat soubory bez jakékoliv další funkcionality.</p>
 <p>A proto se už v dobách, kdy byly počítače dřevěné a šlapací, objevily takzvané <acronym title="Common Gateway Interface">CGI</acronym> skripty. Jejich princip je geniálně jednoduchý: pokud byl požadovaný soubor program, tak místo aby se odeslal klientovi, spustil se a klientovi se poslal jeho výstup. Programování webových aplikací tímto způsobem má pravda i své výhody (je jednoduché pro někoho, kdo umí programovat klasické konzolové aplikace), ale nevýhody často převažují: nízký výkon, komplikovaná údržba, možné ohrožení bezpečnosti...</p>
@@ -61,7 +108,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

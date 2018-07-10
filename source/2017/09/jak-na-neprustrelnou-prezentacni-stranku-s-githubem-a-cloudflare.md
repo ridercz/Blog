@@ -21,7 +21,7 @@ Naznal jsem, že po několika letech by <span style="text-decoration: line-throu
 *   Bezúdržbové, bez nutnosti cokoliv (kromě obsahu) aktualizovat.
 *   Bezplatné bez omezení (objemu uložených či přenesených dat atd.) v pro mne relevantních hodnotách.
 *   Možnost provozu na vlastní doméně (`rider.cz`).
-*   Podpora HTTPS 
+*   Podpora HTTPS  
 
 ## GitHub Pages
 
@@ -29,7 +29,7 @@ Většina programátorů zná GitHub jako platformu pro verzování zdrojového 
 
 1.  "Hlavní" stránka uživatele, nativně na adrese `*username*.github.io`.
 2.  Stránka "projektu" (repozitáře) vytvořená ze složky `/docs`,  nativně na adrese `*username*.github.io/*repository-name*`.
-3.  Publikování celého repozitáře, nativně opět na adrese `*username*.github.io/*repository-name*`. 
+3.  Publikování celého repozitáře, nativně opět na adrese `*username*.github.io/*repository-name*`.  
 
 ### Hlavní stránka uživatele na adrese `*username*.github.io`
 
@@ -47,7 +47,7 @@ Tato možnost se vám hodí v případě, že chcete vytvořit prezentační str
 2.  Do ní nahrajte soubory, které mají být vidět na webu. Tato složka bude rootem webu, takže do ní nejspíš chcete umístit soubor `index.html`.
 3.  V repozitáři klepněte na ikonku *Settings* a poté najděte sekci *GitHub Pages*.
 4.  V rozbalovacím seznamu Source zvolte možnost *master branch /docs folder.*
-5.  Hotovo. Obsah adresáře bude dostupný na adrese `*username*.github.io/*repository-name*`. Opět platí, že vytvoření nemusí být okamžité, pokud to nefunguje, minutku počkejte. 
+5.  Hotovo. Obsah adresáře bude dostupný na adrese `*username*.github.io/*repository-name*`. Opět platí, že vytvoření nemusí být okamžité, pokud to nefunguje, minutku počkejte.  
 
 Vše uvedené (včetně adresy) bude fungovat, i když nemáte svou osobní stránku na `*username*.github.io`. Pokud zadáte tuto adresu, server vrátí chybu, že stránka neexistuje. Pokud zadáte adresu včetně repozitáře, vše bude fungovat.
 
@@ -79,7 +79,7 @@ Nevýhodou ovšem je, že tímto krokem jste ztratili podporu HTTPS. GitHub má 
 *   Funguje jako firewall/proxy/web akcelerátor. Tj. postaví se mezi váš server a klienty z Internetu.
 *   To umožňuje reagovat na různá ohrožení typu DoS útoky a podobně.
 *   Také to vašemu webu automaticky přidá podporu nejnovějších standardů typu HTTP/2 nebo IPv6, a to i když je váš vlastní server nepodporuje.
-*   Umí též zajistit terminaci HTTPS a automaticky vám vystaví důvěryhodný HTTPS certifikát. 
+*   Umí též zajistit terminaci HTTPS a automaticky vám vystaví důvěryhodný HTTPS certifikát.  
 
 To vše nabízí zdarma. Má i placené programy, které toho umí víc, ale pro naše nároky bude stačit ten bezplatný.
 
@@ -102,7 +102,7 @@ CloudFlare podporuje čtyři režimy fungování HTTPS:
 *   *Off* znamená, že se HTTPS nebude vůbec používat.
 *   *Flexible* je výchozí nastavení a znamená, že se požadavky od klienta na servery CF mohou dít pomocí HTTPS, ale požadavky mezi CF a vaším serverem (resp. zde serverem GitHub Pages) jdou přes nešifrované HTTP. To není zdaleka ideální, protože umožňuje i pasivní odposlech mezi servery CF a GitHubu. Nicméně největší nebezpečí hrozí mezi klientem a CF, takže i takto nedokonalá podpora má svůj smysl.
 *   *Full* znamená, že komunikace mezi CF a vaším serverem (GitHubem) sice probíhá přes HTTPS, ale nekontroluje se platnost certifikátu. Ten může tedy být vydaný nedůvěryhodnou CA nebo pro jiný host name. To je nastavení, které chcete použít v případě GitHub Pages (certifikát mají, ale špatný, pro jiný host name). Oproti předchozí variantě je tato lepší, protože útočník musí mít pro úspěšný útok možnost provoz modifikovat (podvrhnout certifikát), nestačí prostý pasivní odposlech.
-*   *Full (strict)* vyžaduje, aby origin server měl platný certifikát od důvěryhodné CA a pro správný host name. Což je ideální stav, kterého ale lze dosáhnout pouze máte-li pod kontrolou cílový server. V případě GitHub pages ho použít nemůžete. 
+*   *Full (strict)* vyžaduje, aby origin server měl platný certifikát od důvěryhodné CA a pro správný host name. Což je ideální stav, kterého ale lze dosáhnout pouze máte-li pod kontrolou cílový server. V případě GitHub pages ho použít nemůžete.  
 
 Ve stejné sekci *Crypto* můžete nastavit i parametry HTTP Strict Transport Security. Pokud nevíte co to je, podívejte se na záznam mé přednášky [HTTPS už máte, tak ještě aby vám k něčemu bylo](https://www.youtube.com/watch?v=EpdIx5dNfOk).
 

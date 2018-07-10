@@ -36,6 +36,6 @@ Slovenská verze úspěšného semináře "Kyberkriminálníkem snadno a rychle"
 *   **Připojení k Internetu.** Jak zjistit, s kým máte tu čest a jak se připojit tak, abyste byli opravdu anonymní. 
 *   **Digitální stopy ve vašem počítači.** Jak je zjistit a jak se jich zbavit. 
 *   **Bezpečnost přenášených dat**, zejména e-mailové komunikace. Jak používat elektronické podpisy a šifrování obsahu, kde získat zdarma bezpečné certifikáty a jak s nimi zacházet. 
-*   **Bezpečnost uchovávaných dat**. Jak šifrovat jednotlivé soubory, nebo celý disk najednou, a jaké vám to přinese problémy. 
+*   **Bezpečnost uchovávaných dat**. Jak šifrovat jednotlivé soubory, nebo celý disk najednou, a jaké vám to přinese problémy.
 
 Akce se bude konat **19. 9. 2012 od 10:00** ve slovenském Gopasu. Cena vstupného je 98 € a v ceně je i oběd. Bližší informaci a registraci najdete na stránkách slovenského [Gopasu](http://www.gopas.sk/Novinky/Kyberkriminalnikom-lahko-a-rychlo!.aspx).

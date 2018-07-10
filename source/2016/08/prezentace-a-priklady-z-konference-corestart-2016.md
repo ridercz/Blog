@@ -14,7 +14,7 @@
 
 U příležitosti restartu nového .NET Frameworku jsme uspořádali konferenci [CoReStart 2016](https://www.corestart.cz/). Nyní vám nabízím svoje prezentace a příklady z ní. Na zpracování záznamů se pracuje, ale bude to nějakou dobu trvat. Až budou hotové, najdete je na [YouTube kanále společnosti Altairis](https://youtube.com/altairiscz).
 
-*   <div style="text-align: left;">**[Prezentace a příklady ke stažení](http://www.cdn.altairis.cz/Prednasky/20160818-CoreStart.zip)** jako ZIP, 4 MB.</div>  
+*   <div style="text-align: left;">**[Prezentace a příklady ke stažení](http://www.cdn.altairis.cz/Prednasky/20160818-CoreStart.zip)** jako ZIP, 4 MB.</div>
 
 V první přednášce jsem se vám snažil sdělit, **co vlastně ASP.NET Core 1.0 je**. Že to je defacto restart platformy .NET, neboť Microsoft po čtrnácti letech naznal, že je třeba. Ačkoliv idea .NETu je dobrá, mnoho rozhodnutí učiněných v době, kdy ještě žila britská královna matka a premiérem ČR se s heslem "zdroje tu jsou" stal Vladimír Špidla, je z dnešního pohledu nešťastných. Nový .NET Core sice neumí zdaleka všechno, co stávající .NET Framework, ale je postavený způsobem, který nám zase nějakou dobu vydrží.
 

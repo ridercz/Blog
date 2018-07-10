@@ -7,23 +7,71 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Nápad přehledně zobrazovat události z EventLogu vzdálených serverů jsem zcizil na CodeProjectu. Implementace se mi nelíbila, proto jsem napsal vlastní - lepší. Nabízím vám ji k testování." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Události z EventLogu Windows do vaší RSS čtečky</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-06-13T04:50:10.063+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>13. června 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Již dlouho pasu po řešení, které by mi umožnilo nějak jednoduše sledovat důležité události v event logu našich asi dvaceti počítačů. Vyzkoušel jsem (a částečně napsal) kdejakou variantu různého přeposílání vybraných eventů mailem a podobně, ale s ničím jsem nebyl zcela spokojen.</p>
 <p>Na CodeProjectu se objevila <a href="http://www.codeproject.com/aspnet/EventLogRss.asp">zajímavá idea</a>: generovat z eventlogu RSS feed, který lze pohodlně zpracovávat jakoukoliv RSS čtečkou. Ten nápad mne opravdu zaujal. Tamo předvedená implementace již méně:</p>
 <ul>
-<li>On-line generování ASPX stránkou mi přijde úplně nejšťastnější, může server zbytečně zatěžovat. Tímto způsobem lze monitorovat jenom počítač, na kterém běží IIS a žádný jiný. IIS uživatel nemá standardně právo přistupovat k síťovým zdrojům - a dávat mu ho jenom pro tento účel se mi nelíbí. Nabídnuté možnosti filtrování jsou nedostatečné. Některé aplikace používají event log nesprávným způsobem, typ události (<em>Information</em>, <em>Warning</em>, <em>Error</em>, <em>SuccessAudit</em>, <em>FailureAudit</em>) často neodpovídá její závažnosti. Jest proto nutné umožnit filtrování podle různé kombinace parametrů, která může být dosti složitá. Kromě toho se mi nelíbilo celkové pojetí feedu, měl bych být jediným pohledem do čtečky schopen odhalit chybu, což znamená vhodně popisné titulky a další &quot;hlavičkové&quot; parametry.</li>
+<li>On-line generování ASPX stránkou mi přijde úplně nejšťastnější, může server zbytečně zatěžovat.
+Tímto způsobem lze monitorovat jenom počítač, na kterém běží IIS a žádný jiný. IIS uživatel nemá standardně právo přistupovat k síťovým zdrojům - a dávat mu ho jenom pro tento účel se mi nelíbí.
+Nabídnuté možnosti filtrování jsou nedostatečné. Některé aplikace používají event log nesprávným způsobem, typ události (<em>Information</em>, <em>Warning</em>, <em>Error</em>, <em>SuccessAudit</em>, <em>FailureAudit</em>) často neodpovídá její závažnosti. Jest proto nutné umožnit filtrování podle různé kombinace parametrů, která může být dosti složitá.
+Kromě toho se mi nelíbilo celkové pojetí feedu, měl bych být jediným pohledem do čtečky schopen odhalit chybu, což znamená vhodně popisné titulky a další &quot;hlavičkové&quot; parametry.</li>
 </ul>
 <h2 id="moje-reseni">Moje řešení</h2>
 <p>Vymyslel jsem tedy řešení, které je dle mého názoru lepší. Jedná se o konzolovou EXE aplikaci, která se v pravidelných intervalech spouští, natáhne si data z různých logů z lokálního i vzdáleného počítače a vygeneruje statické XML (RSS) soubory, které zapíše do WWW prostoru.</p>
@@ -39,7 +87,12 @@
 <p>Jeho syntaxe je následující:</p>
 <p><code>gatherer -L logname -O filename [-C computername] [-M number] [-T transform | -CT filename]</code></p>
 <ul>
-<li>Parametr <strong>-L</strong> je název logu, standardní jsou <code>System</code>, <code>Application</code> a <code>Security</code>. Parametr <strong>-O</strong> je název výstupního souboru. Pokud soubor již existuje, bude přepsán. Parametr <strong>-C</strong> je název nebo IP adresa počítače, ze kterého se mají události načítat. Pokud není uveden, použije se lokální. Uvádějte bez lomítek a podobně. Parametr <strong>-M</strong> je maximální počet záznamů, který bude z logu načten. To neznamená, že tento počet bude i zapsán do RSS feedu, co se v něm objeví záleží na nastavení filtrů. Toto omezení slouží k tomu, aby se opakovaně nenačítaly tisíce starých znáznamů. Parametr <strong>-T</strong> je název vestavěné transformace. Možné jsou tři hodnoty: <code>errors</code> (propustí pouze chyby), <code>warnings</code> (propustí chyby a varování) a <code>all</code> (propustí všechny, standardní nastavení). Parametr <strong>-TC</strong> je cesta ke XSLT souboru, který se použije pro transformaci. Na ukázku je přiložen soubor <code>FilterSql.xslt</code>, který vyfiltruje pouze události zapsané Microsoft SQL Serverem a SQL Server Agentem. Pokud je použit tento parametr, případný parametr <code>-T</code> se ignoruje.</li>
+<li>Parametr <strong>-L</strong> je název logu, standardní jsou <code>System</code>, <code>Application</code> a <code>Security</code>.
+Parametr <strong>-O</strong> je název výstupního souboru. Pokud soubor již existuje, bude přepsán.
+Parametr <strong>-C</strong> je název nebo IP adresa počítače, ze kterého se mají události načítat. Pokud není uveden, použije se lokální. Uvádějte bez lomítek a podobně.
+Parametr <strong>-M</strong> je maximální počet záznamů, který bude z logu načten. To neznamená, že tento počet bude i zapsán do RSS feedu, co se v něm objeví záleží na nastavení filtrů. Toto omezení slouží k tomu, aby se opakovaně nenačítaly tisíce starých znáznamů.
+Parametr <strong>-T</strong> je název vestavěné transformace. Možné jsou tři hodnoty: <code>errors</code> (propustí pouze chyby), <code>warnings</code> (propustí chyby a varování) a <code>all</code> (propustí všechny, standardní nastavení).
+Parametr <strong>-TC</strong> je cesta ke XSLT souboru, který se použije pro transformaci. Na ukázku je přiložen soubor <code>FilterSql.xslt</code>, který vyfiltruje pouze události zapsané Microsoft SQL Serverem a SQL Server Agentem. Pokud je použit tento parametr, případný parametr <code>-T</code> se ignoruje.</li>
 </ul>
 <h2 id="plany-do-budoucna">Plány do budoucna</h2>
 <p>Současné řešení je dostačující pro případ, že v daném místě (lokaci) máte k dispozici alespoň jeden web server. To nemusí být vždy pravidlem. Plánuji tedy do EG doplnit možnost POSTnout výsledek činnosti na zadané URL. Jednoduchý ASPX skript na straně web serveru umožní zaslaná data přijmout a uložit na lokální disk jako XML. Takto bude možné dohledovat lokaci, která nemá žádný web server a neumožňuje přímé připojení, ale má přístup k Internetu.</p>
@@ -49,7 +102,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

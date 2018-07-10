@@ -11,7 +11,9 @@
 
 Jednou z nejčastěji se vyskytujících chyb je *script injection*. Mechanismus, který dovolí uživateli zadat HTML kód, který, jsa zobrazen jinému uživateli, bude mít negativní efekt. Oním negativním efektem může být ledacos, obvykle se ale jedná o:
 
-*   Prosté obtěžování uživatele (otevíráním pop-up oken a podobně). Získání autentizačních údajů (jsou-li uloženy v cookies, URL a podobně). Čirý vandalismus. 
+*   Prosté obtěžování uživatele (otevíráním pop-up oken a podobně). 
+Získání autentizačních údajů (jsou-li uloženy v cookies, URL a podobně). 
+Čirý vandalismus.
 
 ## ![Filter, sieve](https://www.cdn.altairis.cz/Blog/filter.jpg "Image via sxc.hu, used by permission.")Každý vstup je považován za nebezpečný, dokud neprokáže opak
 
@@ -49,16 +51,37 @@ Na bázi Agility Packu jsem napsal třídu SafeHtml, která nabízí dvě zákla
 
 První metoda je zmiňovaná *čínská zeď*. Vstup by měl být zadán v plain textu, bez jakéhokoliv formátování. Statická metoda *SimpleFilter* s ním provede několik věcí:
 
-1.  Převede jej na odstavce, podle zalomení řádků (ENTER). Inteligentně přitom vynechá prázdné odstavce. Je tedy jedno, zda uživatel používá k oddělení odstavců 1x nebo 2x ENTER. Celý text zakóduje pomocí *HtmlEncode*. Případně zadané HTML značky se zobrazí, nikoliv aplikují. Prohledá text na výskyt webových a e-mailových adres. Najde-li nějaké, převede je automaticky na odkazy. Pokud je odkazovaná adresa příliš dlouhá (delší než 60 znaků), automaticky se zobrazí v textu pouze prvních 60 znaků (cíl odkazu samozřejmě zůstane nezměněn). 
+1.  Převede jej na odstavce, podle zalomení řádků (ENTER). Inteligentně přitom vynechá prázdné odstavce. Je tedy jedno, zda uživatel používá k oddělení odstavců 1x nebo 2x ENTER. 
+Celý text zakóduje pomocí *HtmlEncode*. Případně zadané HTML značky se zobrazí, nikoliv aplikují. 
+Prohledá text na výskyt webových a e-mailových adres. Najde-li nějaké, převede je automaticky na odkazy. 
+Pokud je odkazovaná adresa příliš dlouhá (delší než 60 znaků), automaticky se zobrazí v textu pouze prvních 60 znaků (cíl odkazu samozřejmě zůstane nezměněn).
 
 Tato metoda je vhodná tehdy, neočekává-li se od uživatelů, že budou cosi explicitně formátovat a nemá-li jim to být ani umožněno.
 
 Celé filtrování je založeno na jedné veřejné a jedné pomocné metodě:
 
-Public Shared Function SimpleFilter(ByVal Text As String) As String Dim SB As New System.Text.StringBuilder For Each Line As String In Split(Text, vbCrLf) Line = Line.Trim() If Line <> "" Then Line = System.Web.HttpUtility.HtmlEncode(Line) Line = System.Text.RegularExpressions.Regex.Replace(Line, "\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", "[$0]()") Line = System.Text.RegularExpressions.Regex.Replace(Line, "(http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&%\$#\=~])*[^\.\,\)\(\s]", New System.Text.RegularExpressions.MatchEvaluator(AddressOf EvaluateHyperlink)) SB.Append("
+    Public Shared Function SimpleFilter(ByVal Text As String) As String
+        Dim SB As New System.Text.StringBuilder
+        For Each Line As String In Split(Text, vbCrLf)
+            Line = Line.Trim()
+            If Line <> "" Then
+                Line = System.Web.HttpUtility.HtmlEncode(Line)
+                Line = System.Text.RegularExpressions.Regex.Replace(Line, "\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", "[$0]()")
+                Line = System.Text.RegularExpressions.Regex.Replace(Line, "(http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&%\$#\=~])*[^\.\,\)\(\s]", New System.Text.RegularExpressions.MatchEvaluator(AddressOf EvaluateHyperlink))
+                SB.Append("
 
 " & Line & "
-" & vbCrLf) End If Next Return SB.ToString() End Function Private Shared Function EvaluateHyperlink(ByVal M As System.Text.RegularExpressions.Match) As String Dim Title As String = M.Value If Title.Length > 60 Then Title = Title.Remove(60) & "..." Return String.Format("[{1}]()", M.Value, Title) End Function
+" & vbCrLf)
+            End If
+        Next
+        Return SB.ToString()
+    End Function
+
+    Private Shared Function EvaluateHyperlink(ByVal M As System.Text.RegularExpressions.Match) As String
+        Dim Title As String = M.Value
+        If Title.Length > 60 Then Title = Title.Remove(60) & "..."
+        Return String.Format("[{1}]()", M.Value, Title)
+    End Function
 
 Jedinou zajímavost zde představuje metoda *EvaluateHyperlink*. Že je pomocí regulárních výrazů možno vyhledávat a nahrazovat, je obecně známo. Je nicméně též možno napsat si vlastní metodu, která procedurálně zajistí jakkoliv složité nahrazení, které není možné napsat přímo v regexp, případně to programátor neumí. Já jsem této funkcionality využil při implementaci zmiňované funkce zobrazování URL.
 
@@ -66,7 +89,10 @@ Jedinou zajímavost zde představuje metoda *EvaluateHyperlink*. Že je pomocí 
 
 Druhá statická metoda, *AdvancedFilter* aplikuje posledně zmiňovaný přístup. Předpokládá, že vstup je zapsán v HTML, nebo že se o to alespoň uživatel pokoušel. S takovým vstupem pak provede následující psí kusy:
 
-1.  Převede jej na well-formed XML. Domyslí si tedy chybějící párové tagy, odstraní překřížené a podobně. Všechny názvy elementů/atributů převede na malá písmena (pro kompatibilitu s XHTML). V duchu nejlepších tradic presumpce viny odstraní všechny konstrukce, kromě těch, jež byly výslovně prohlášeny za důvěryhodné a povolené. Odstraní HTML komentáře. 
+1.  Převede jej na well-formed XML. Domyslí si tedy chybějící párové tagy, odstraní překřížené a podobně. 
+Všechny názvy elementů/atributů převede na malá písmena (pro kompatibilitu s XHTML). 
+V duchu nejlepších tradic presumpce viny odstraní všechny konstrukce, kromě těch, jež byly výslovně prohlášeny za důvěryhodné a povolené. 
+Odstraní HTML komentáře.
 
 Tuto metodu lze - po případné úpravě - použít kromě zabezpečení též k omezení nežádoucí kreativity autorizovaných uživatelů.
 
@@ -78,4 +104,5 @@ Celou třídu můžete velmi snadno upravit k obrazu svému, příkladně co do 
 
 ## Download a odkazy
 
-*   [.NET HTML Agility Pack](http://smourier.blogspot.com/) - informace a download [SafeHtml](https://www.cdn.altairis.cz/Blog/2005/20051001-SafeHtml.zip) - zdrojový kód ve VB.NET
+*   [.NET HTML Agility Pack](http://smourier.blogspot.com/) - informace a download 
+[SafeHtml](https://www.cdn.altairis.cz/Blog/2005/20051001-SafeHtml.zip) - zdrojový kód ve VB.NET

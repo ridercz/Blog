@@ -12,7 +12,7 @@
 <!-- dcterms:dateAccepted = 2015-07-20T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20150720-projekt-atropa-2-zprovozneni-raspberry-pi-a-raspbian-linuxu.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
 Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET. Oficiální návod ke zprovoznění (anglicky) najdete na webu [Raspberry Pi](https://www.raspberrypi.org/documentation/installation/).
 
@@ -25,7 +25,7 @@ Nezapomeňte si přečíst [úvod k této sérii](https://www.aspnet.cz/Articles
 *   **MicroSD kartu.** Používám 8 GB Class 10, ale možná by stačila i 4 GB. Také budete potřebovat patřičnou čtečku pro vaše PC a případně redukci z MicroSD na velkou SD.  Redukce bývá u některých karet přímo součástí balení. 
 *   **Monitor s HDMI vstupem.** To má většina novějších monitorů, případně vám stačí DVI nebo DisplayPort vstup a patřičná redukce/kabel. 
 *   **USB klávesnice.** Jakákoliv standardní klávesnice postačí. 
-*   **USB Wi-Fi karta.** Nejlépe se mi osvědčila karta [TP-LINK TL-WN722N](https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm). Je levná, široce kompatibilní (Raspbian s ní umí pracovat automaticky), má všechny funkce potřebné i pro pokročilejší Wi-Fi škození a externí anténu, místo které je možné připojit jinou.  
+*   **USB Wi-Fi karta.** Nejlépe se mi osvědčila karta [TP-LINK TL-WN722N](https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm). Je levná, široce kompatibilní (Raspbian s ní umí pracovat automaticky), má všechny funkce potřebné i pro pokročilejší Wi-Fi škození a externí anténu, místo které je možné připojit jinou. 
 
 Dále pak budete potřebovat běžný počítač s v podstatě libovolným operačním systémem. Já používám poslední preview Windows 10, ale nesejde na tom, protože z tohoto PC budeme potřebovat jenom kopírovat souboryu a používat terminálový program. Využívat budeme též různý volně dostupný software, na který vás postupně upozorním v průběhu návodu.
 
@@ -41,7 +41,7 @@ Nyní na kartu musíte nahrát správná data. Existují v zásadě tři postupy
 
 *   Můžete použít NOOBS Lite, kdy na kartu nahrajete minimální množství dat a zbytek se dynamicky dotáhne při instalaci. Musíte mít ovšem Raspberry připojené k Internetu, nejlépe klasickým ethernetovým kabelem (nejsem si jist, zda to funguje přes Wi-Fi). Automaticky se dotáhne vše potřebné. 
 *   Můžete použít NOOBS, který obsahuje vše potřebné pro instalaci a při instalaci samotné můžete být offline. To použijte ve chvíli, kdy v místě instalace nebudete mít dostatečně solidní připojení k Internetu.
-*   Můžete si stáhnout hotový kompletní image.  
+*   Můžete si stáhnout hotový kompletní image. 
 
 Vše potřebné je ke stažení na webu RaspberryPi.org v [sekci Download](https://www.raspberrypi.org/downloads/).
 
@@ -77,7 +77,29 @@ My nicméně nebudeme používat lokální konzoli, ale budeme s Raspberry Pi ko
 
 Jako první potřebujeme zjistit IP adresu počítače. Tu lze zjistit mnoha způsoby (třeba z DHCP serveru), ale protože máme k dispozici lokální konzoli, stačí napsat příkaz `ifconfig`, což je obdoba příkazu `ipconfig` na Windows. Ukáže se něco takového:
 
-pi@raspberrypi ~ $ ifconfig eth0 Link encap:Ethernet HWaddr b8:27:eb:07:93:41 inet addr:**10.7.0.101** Bcast:10.7.0.255 Mask:255.255.255.0 UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1 RX packets:14124 errors:0 dropped:0 overruns:0 frame:0 TX packets:2286 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:1000 RX bytes:17452927 (16.6 MiB) TX bytes:281223 (274.6 KiB) lo Link encap:Local Loopback inet addr:127.0.0.1 Mask:255.0.0.0 UP LOOPBACK RUNNING MTU:65536 Metric:1 RX packets:72 errors:0 dropped:0 overruns:0 frame:0 TX packets:72 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:0 RX bytes:6288 (6.1 KiB) TX bytes:6288 (6.1 KiB) wlan0 Link encap:Ethernet HWaddr c4:6e:1f:13:27:87 UP BROADCAST MULTICAST MTU:1500 Metric:1 RX packets:0 errors:0 dropped:0 overruns:0 frame:0 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:1000 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+    pi@raspberrypi ~ $ ifconfig
+    eth0      Link encap:Ethernet  HWaddr b8:27:eb:07:93:41
+              inet addr:**10.7.0.101**  Bcast:10.7.0.255  Mask:255.255.255.0
+              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+              RX packets:14124 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:2286 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000
+              RX bytes:17452927 (16.6 MiB)  TX bytes:281223 (274.6 KiB)
+
+    lo        Link encap:Local Loopback
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              UP LOOPBACK RUNNING  MTU:65536  Metric:1
+              RX packets:72 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:72 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0
+              RX bytes:6288 (6.1 KiB)  TX bytes:6288 (6.1 KiB)
+
+    wlan0     Link encap:Ethernet  HWaddr c4:6e:1f:13:27:87
+              UP BROADCAST MULTICAST  MTU:1500  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 
 Nás zajímá adresa u rozhraní `eth0`, za `inet addr:`, zde 10.7.0.101 (ve výpisu zobrazena tučně).
 
@@ -108,7 +130,7 @@ Tipy k použití Putty:
 *   Okno můžete myší zvětšovat a zmenšovat v obou směrech. Přizpůsobí se počet řádků a sloupců.
 *   Můžete používat i schránku. Text na lokálním počítači běžným způsobem zkopírujte a poté klepněte kamkoliv do okna Putty pravým tlačítkem, čímž se text vloží.
 *   Pokud chcete kopírovat ze vzdáleného počítače na lokální, označte požadovaný text pomocí levého tlačítka myši. Klepnutím levým tlačítkem označení zmizí a kód se zkopíruje do schránky.
-*   Pokud po označení klepnete pravým tlačítkem, text se zkopíruje a ihned vloží, což je užitečné zejména, pokud to příkazu potřebujete zapsat něco, co jste získali napsané na obrazovce. 
+*   Pokud po označení klepnete pravým tlačítkem, text se zkopíruje a ihned vloží, což je užitečné zejména, pokud to příkazu potřebujete zapsat něco, co jste získali napsané na obrazovce.
 
 ## Aktualizace balíčků
 
@@ -116,7 +138,7 @@ Programy a součásti systému se na Linuxu instalují vesměs pomocí balíčko
 
 Aktualizaci seznamu dostupných balíčků a instalaci těch nejnovějších provedete následujícím příkazem
 
-sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt-get update && sudo apt-get upgrade -y
 
 Příkaz `sudo` slouží k vykonání příkazu pod oprávněním správce systému (uživatel `root`). Poněkud to připomíná User Account Control (UAC) na Windows Vista a novějších. Přepínač `-y` v tomto případě znamená, že se operace má rovnou provést a že se příkaz na nic nemá ptát. Obecně platí, že u všeho (příkazů, názvů souborů, parametrů…) záleží na použití velkých a malých písmen.
 
@@ -126,11 +148,11 @@ Při práci se vám téměř jistě budou hodit některé utility, které si mů
 
 *   `sudo apt-get install mc` – nainstaluje Midnight Commander, což je dvoupanelový správce souborů, který poněkud připomíná Norton Commander pro DOS (nebo, pro později narozené, Total Commander pro Windows). 
 *   `sudo apt-get install lynx` – nainstaluje Lynx, textový webový prohlížeč. Pro mne znamená závan nostalgie, protože v něm jsem poprvé lezl na web. Pro vás může znamenat užitečný nástroj pro kontrolu funkčnosti webu. 
-*   `sudo apt-get install dnsutils` – nainstaluje utility `nslookup` a `dig`, které můžete použít pro diagnostiku problémů s DNS a kontrolu jeho nastavení.  
+*   `sudo apt-get install dnsutils` – nainstaluje utility `nslookup` a `dig`, které můžete použít pro diagnostiku problémů s DNS a kontrolu jeho nastavení. 
 
 Vše najednou a bez ptaní nainstalujete následujícím příkazem:
 
-sudo apt-get install mc lynx dnsutils -y
+    sudo apt-get install mc lynx dnsutils -y
 
 [![Midnight Commander spustíte příkazem 'mc'](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_thumb.png "Midnight Commander spustíte příkazem 'mc'")](https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_mc_2.png)
 

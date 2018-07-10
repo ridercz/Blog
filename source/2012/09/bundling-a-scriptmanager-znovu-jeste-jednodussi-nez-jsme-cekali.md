@@ -18,10 +18,20 @@ Ukázalo se, že jsem se mýlil a že v nejnovější dostupné verzi takové pr
 
 Stačí prostě vytvořit bundle a zaregistrovat jeho ScriptResourceDefinition, například takto:
 
-// Local JavaScript files BundleTable.Bundles.Add(new ScriptBundle("~/bundles/SiteJs").Include( "~/Scripts/site/*.js")); // Register script resource mapping for local JavaScript files ScriptManager.ScriptResourceMapping.AddDefinition("SiteBundle", new ScriptResourceDefinition { Path = "~/bundles/SiteJs" });
+    // Local JavaScript files
+    BundleTable.Bundles.Add(new ScriptBundle("~/bundles/SiteJs").Include(
+        "~/Scripts/site/*.js"));
+
+    // Register script resource mapping for local JavaScript files
+    ScriptManager.ScriptResourceMapping.AddDefinition("SiteBundle",
+        new ScriptResourceDefinition { Path = "~/bundles/SiteJs" });
 
 Poté se na něj můžete odkázat ze stránky pomocí ScriptManageru:
 
-<asp:ScriptManager runat="server"> <Scripts> <asp:ScriptReference Name="SiteBundle" /> </Scripts> </asp:ScriptManager>
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <asp:ScriptReference Name="SiteBundle" />
+        </Scripts>
+    </asp:ScriptManager>
 
 To je vše. Hash pro cache busting se dopočítá automaticky.

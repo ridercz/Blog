@@ -75,9 +75,11 @@ Za pomoc při přípravě tohoto článku děkuji Igoru Vítovi (mimochodem MVP 
 
 ### Související odkazy:
 
-*   [Porovnání edic Visual Studia 2005](http://msdn.microsoft.com/vstudio/products/compare/default.aspx) 
+*   [Porovnání edic Visual Studia 2005](http://msdn.microsoft.com/vstudio/products/compare/default.aspx)
+
 *   [Daquasí časopis Quas](http://www.daquas.cz/quas/), obsahující rozličné informace o právě vypuknuvších akcích, FAQ a podobně
-*   [ASP.NET 2.0: Nechejte maličkých přijíti ke mně… ](http://weblog.rider.cz/entry/article-20051109.aspx)– zamyšlení nad politikou Microsoftu v oblasti vývojových nástrojů na mém osobním weblogu
-*   [Zdejší článek k uvedení Express nástrojů](/entry/article-20051114.aspx#192050) 
-*   [Stažení Express edic](http://msdn.microsoft.com/vstudio/express/) z webu Microsoftu
-*   [MSDN Connection: Vánoční dárek od Microsoftu](/entry/article-20051220.aspx#164258) – pokud se vám nechce stahovat, objednejte si DVD s knížkou zdarma
+*   [ASP.NET 2.0: Nechejte maličkých přijíti ke mně… ](http://weblog.rider.cz/entry/article-20051109.aspx)– zamyšlení nad politikou Microsoftu v oblasti vývojových nástrojů na mém osobním weblogu
+*   [Zdejší článek k uvedení Express nástrojů](/entry/article-20051114.aspx#192050)
+
+*   [Stažení Express edic](http://msdn.microsoft.com/vstudio/express/) z webu Microsoftu
+*   [MSDN Connection: Vánoční dárek od Microsoftu](/entry/article-20051220.aspx#164258) – pokud se vám nechce stahovat, objednejte si DVD s knížkou zdarma

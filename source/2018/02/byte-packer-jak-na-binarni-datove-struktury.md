@@ -22,7 +22,7 @@ Základní zadání je následující:
 *   Máme předem neurčené množství bloků binárních dat (polí `byte[]`).
 *   Neznáme délku jednotlivých bloků, víme jen že bude 1-255 bajtů.
 *   Neznáme počet jednotlivých bloků, víme jen že jich bude 2-256.
-*   Potřebujeme vytvořit datovou strukturu, která toto umožní rozumným způsobem uchovat a zpracovat. 
+*   Potřebujeme vytvořit datovou strukturu, která toto umožní rozumným způsobem uchovat a zpracovat.
 
 ## Ukládání dat s předem známou délkou
 
@@ -30,11 +30,15 @@ Pokud ukládáme data s předem známou délkou, je to jednoduché. Prostě je n
 
 Typickým příkladem bude např. situace, kdy budeme jako součást datové struktury uchovávat ID měřícího zařízení (dva bajty), vnitřní teplotu a vnější teplotu. Teplotu budeme uchovávat s přesností na půl stupně celsia. Pokud bychom data ukládali v XML, lze si představit například následující formát:
 
-<measure id="1234" internalTemp="15.5" externalTemp="-3.5" />
+    <measure id="1234" internalTemp="15.5" externalTemp="-3.5" />
 
 V současné době je módní používat spíše JSON, v něm by to mohlo vypadat následovně:
 
-{ "id" : 1234, "internalTemp" : 15.5, "externalTemp" : -3.5 }
+    {
+      "id" : 1234,
+      "internalTemp" : 15.5,
+      "externalTemp" : -3.5
+    }
 
 Jak to ovšem uložit do co nejmenšího objemu dat, například budeme-li data chtít přenášet po LPWAN síti s omezeným objemem přenášených dat? Stačí nám k tomu prosté čtyři bajty. První a druhý bajt bude identifikátor měřící stanice. Třetí bajt bude vnitřní teplota a čtvrtý bajt vnější teplota. 
 
@@ -42,7 +46,7 @@ Jeden bajt může uchovávat hodnotu 0-255. Jak do toho zakódovat desetinnou a 
 
 *   ID zařízení (1234) budeme uchovávat jako dva bajty big endian, tj. `0x04`, `0xD2`. 
 *   Interní teplota bude uložena jako `15.5 * 2 + 127 = 158 = 0x9E.` 
-*   Externí teplota jako `–3.5 * 2 + 127 = 120 = 0x78`.  
+*   Externí teplota jako `–3.5 * 2 + 127 = 120 = 0x78`. 
 
 Výsledná datová struktura tedy bude `[0x04, 0xD2, 0x9E, 0x78]`, nebo stručněji zapsáno `0x04D29E78`. Obsahuje pouze holá data, žádné režijní údaje. Víme, že první dva bajty jsou ID zařízení, další je interní teplota a druhá externí teplota.
 

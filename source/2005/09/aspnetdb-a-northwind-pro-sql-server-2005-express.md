@@ -11,7 +11,8 @@
 
 Vývojové prostředí Whidbey umožňuje jeden zajímavý trik, kterým je přímé připojení databázového MDF souboru. Pokud máte na klientovi nainstalovaný SQL Server 2005 Express, můžete do adresáře *App_Data* uložit přímo MDF soubor a napojit se na něj tímto connection stringem:
 
-Data Source=.\SQLEXPRESS;Integrated Security=True;User Instance=True AttachDbFilename=|DataDirectory|Northwind.mdf;
+    Data Source=.\SQLEXPRESS;Integrated Security=True;User Instance=True
+    AttachDbFilename=|DataDirectory|Northwind.mdf;
 
 Výhoda je především pro vývoj, protože na různé pokusy a testování nemusíte složitě konfigurovat SQLko, ale stačí vytvořit datové soubory (lze přímo z VS.NET nebo VWD). Problém spočívá v tom, že současné verze nástrojů neumožňují - nebo jsem to alespoň neobjevil - pohodlný import dat ze SQL 2000, ani vytvoření "systémové" databáze *AspNetDb*.
 

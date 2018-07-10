@@ -18,7 +18,7 @@ Cenné body u mne ztratily moje oblíbené České noviny, protože jako jediné
 
 *   [České noviny](http://www.sportovninoviny.cz/archiv/index_view.php?id=29233)
 *   [iDnes](http://sport.idnes.cz/sporty.asp?r=sporty&c=A031012_162556_sporty_rou)
-*   [Novinky](http://www.sport.cz/01/72/22.html) 
+*   [Novinky](http://www.sport.cz/01/72/22.html)
 
 [![Registana v cílové rovince](http://weblog.rider.cz/files/registana_2_lq.jpg)](http://weblog.rider.cz/files/registana_2_hq.jpg)On se obecně asi dostihový sport s Internetem nesnáší. Když jsem v tiskovém středisku pardubického závodiště sledoval kolegy, zápolící s nefunkčním dial-upovým připojením, poskytnutým tiskovou službou, usmíval jsem se. Mám přece svoji oblíbenou [Nokii D211](http://weblog.rider.cz/ShowRecord.aspx?day=20030810#021619) a GPRS od Eurotelu. 
 

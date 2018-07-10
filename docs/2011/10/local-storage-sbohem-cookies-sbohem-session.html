@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jedna z užitečných – a kupodivu i široce podporovaných – novinek v HTML 5 se jmenuje Local Storage. Nedostává se jí tolik pozornosti, jako videu nebo elementu canvas, nicméně podle mého názoru je podstatně užitečnější. Ukážeme si, jak funguje, k čemu je dobrá a na závěr vám nabídnu užitečný nástroj pro ladění." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Local Storage: Sbohem cookies, sbohem session?</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2011-10-13T04:06:57+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>13. října 2011</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Celá idea je ve skutečnosti velmi jednoduchá: local storage je úložiště na klientovi (ve webovém prohlížeči), kam si stránka může skriptem uložit libovolná data a potom je skriptem zase načíst. Přístup z klientského skriptu je přitom jediný možný. Data žijí jenom na klientově počítači, nepřenášejí se na server (za předpokladu, že si takový přenos sami nenaskriptujete).</p>
 <p>Webová aplikace si takto může uložit poměrně velké množství dat (současné prohlížeče umožňují 5 MB) a to na dlouhou dobu, prakticky na věky. Přesněji dokud si uživatel nesmaže data nebo nepřeinstaluje počítač, není mi známo, že by nějaký prohlížeč implementoval expiraci, ačkoliv <a href="http://dev.w3.org/html5/webstorage/#disk-space">specifikace s ní volitelně počítá</a>.</p>
 <p>Tato feature se občas nazývá i <strong>DOM storage</strong> nebo <strong>HTML5 storage</strong>. Nezaměňovat prosím s <a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a> nebo <a href="http://www.w3.org/TR/IndexedDB/">Indexed Database API</a>,to je něco úplně jiného a s mnohem menší podporou.</p>
@@ -40,9 +85,22 @@
 <p>Úložiště je oddělené pro každý server (host name), resp. doménu. Ještě přesněji, pro každý <code>origin</code>, tedy zdroj. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html">Obšírnější pojednání</a> na toto téma jest nalézti na webu WHAT WG.</p>
 <p>Vlastnost <code>localStorage</code> je kolekce (nebo řečeno jazykem JavaScriptu asociativní pole), která má stringový klíč a stringovou hodnotu. Klíč může být jakýkoliv řetězec. Pamatujte na to, že jeho porovnávání je case sensitive. Hodnota je při vkládání automaticky převedena na string a jako takovou ji dostanete zpět. Pokud si tedy uložíte něco jiného, musíte to po načtení patřičně zpracovat.</p>
 <p>Kód pro vložení hodnoty do kolekce je jednoduchý:</p>
-<p>var localStorageSupported = &quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null; if (!localStorageSupported) { window.alert(&quot;Prohlížeč nepodporuje Local Storage!&quot;); } else { window.localStorage[&quot;foo&quot;] = &quot;bar&quot;; }</p>
+<pre><code>var localStorageSupported = &quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null;
+if (!localStorageSupported) {
+    window.alert(&quot;Prohlížeč nepodporuje Local Storage!&quot;);
+} else {
+    window.localStorage[&quot;foo&quot;] = &quot;bar&quot;;
+}
+</code></pre>
 <p>Kód pro načtení hodnoty je velmi podobný:</p>
-<p>var localStorageSupported = &quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null; if (!localStorageSupported) { window.alert(&quot;Prohlížeč nepodporuje Local Storage!&quot;); } else { var foo = window.localStorage[&quot;foo&quot;]; window.alert(&quot;foo = &quot; + foo); }</p>
+<pre><code>var localStorageSupported = &quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null;
+if (!localStorageSupported) {
+    window.alert(&quot;Prohlížeč nepodporuje Local Storage!&quot;);
+} else {
+    var foo = window.localStorage[&quot;foo&quot;];
+    window.alert(&quot;foo = &quot; + foo);
+}
+</code></pre>
 <p>První řádek slouží k detekci podpory technologie prohlížečem. Pak je to obyčejná práce s kolekcí. Chcete-li, můžete použít i metody <code>getItem</code> a <code>setItem</code>. Pokud chcete odstranit položku z kolekce, použijte <code>removeItem</code>, pokud chcete smazat celé úložiště, použijte <code>clear</code>. Můžete využívat i <a href="http://dev.w3.org/html5/webstorage/#event-storage">události</a>, ale to je mimo rozsah tohoto článku.</p>
 <h2 id="k-cemu-je-to-dobre">K čemu je to dobré?</h2>
 <p>Úložiště Local Storage je užitečné pro řadu věcí a při správném použití může velmi ulehčit vašemu serveru a zpříjemnit uživatelům práci s vaší aplikací.</p>
@@ -59,17 +117,48 @@
 <p>Praktický příklad implementace najdete na tomto serveru. V noci na dnešek jsem nasadil novou verzi Nemesis, která umí indikovat komentáře, které přibyly od vaší poslední návštěvy. Jak to funguje? Na stránce se zobrazením článku a komentářů k němu se do local storage pod kód článku uloží aktuální počet komentářů. Na stránkách s výpisem seznamu příspěvků (třeba na <a href="/">homepage</a>) se potom JavaScriptem porovná aktuální počet komentářů s takto zapamatovanou hodnotou. Pokud jich je víc, tak se u článku zobrazí upozornění na nové komentáře.</p>
 <p>Konkrétní implementace využívá ještě jednu vlastnost HTML 5, a to jsou data atributy. Nově může každý HTML element mít neomezené množství &quot;vlastních&quot; atributů, které se mohou jmenovat jakkoliv, jenom musí začínat řetězcem <code>data-</code>. Na straně serveru jsem si tedy uložil u panelu pojmenovaného <code>comments</code> do těchto atributů ID aktuálního článku a počet komentářů.</p>
 <p>ASPX markup vypadá takto:</p>
-<p>&lt;asp:Panel ID=&quot;comments&quot; runat=&quot;server&quot; Visible='&lt;%# Eval(&quot;AllowComments&quot;) %&gt;' ClientIDMode=&quot;Static&quot; data-article-id='&lt;%# Eval(&quot;ArticleId&quot;) %&gt;' data-comment-count='&lt;%# Eval(&quot;Comments.Count&quot;) %&gt;'&gt; ... &lt;/asp:Panel&gt;</p>
+<pre><code>&lt;asp:Panel ID=&quot;comments&quot; runat=&quot;server&quot; 
+    Visible='&lt;%# Eval(&quot;AllowComments&quot;) %&gt;' 
+    ClientIDMode=&quot;Static&quot; 
+    data-article-id='&lt;%# Eval(&quot;ArticleId&quot;) %&gt;' 
+    data-comment-count='&lt;%# Eval(&quot;Comments.Count&quot;) %&gt;'&gt;
+...
+&lt;/asp:Panel&gt;
+</code></pre>
 <p>Vygenerované HTML na straně klienta pak takto:</p>
-<div id="comments" data-article-id="334" data-comment-count="3"> ... </div>
+<pre><code>&lt;div id=&quot;comments&quot; data-article-id=&quot;334&quot; data-comment-count=&quot;3&quot;&gt;
+...
+&lt;/div&gt;
+</code></pre>
 <p>Nutno připodotknout, že nic z toho není nezbytně nutné. ID článku i počet komentářů bych mohl zjistit z jiných věcí na stránce. Nicméně koně jsou vesměs stvoření líná, takže jsem šel cestou menšího odporu. Na straně klienta se pak spustí JavaScript, který pod klíčem <code>NemesisPublishing.ArticleCommentCount[334]</code> uloží hodnotu <code>3</code>. Syntaxe klíče s tečkami a hranatými závorkami je můj výmysl, chci v tom udělat nějaký systém, pro případ, že bych v budoucnu Local Storage využíval intenzivněji, tak aby se mi to nepohádalo.</p>
 <p>Příslušný úsek JavaScriptu vypadá takto (a využívá jQuery, není to čistý JavaScript):</p>
-<p>var comments = $(&quot;#comments&quot;); if (comments[0] != null &amp;&amp; 'localStorage' in window &amp;&amp; window['localStorage'] !== null) { var key = &quot;NemesisPublishing.ArticleCommentCount[&quot; + comments.data(&quot;article-id&quot;) + &quot;]&quot;; window.localStorage[key] = comments.data(&quot;comment-count&quot;); }</p>
+<pre><code>var comments = $(&quot;#comments&quot;);
+if (comments[0] != null &amp;&amp; 'localStorage' in window &amp;&amp; window['localStorage'] !== null) {
+    var key = &quot;NemesisPublishing.ArticleCommentCount[&quot; + comments.data(&quot;article-id&quot;) + &quot;]&quot;;
+    window.localStorage[key] = comments.data(&quot;comment-count&quot;);
+}
+</code></pre>
 <p>Pokud element s požadovaným ID chybí, nic se neuloží (k článku jsou zakázané komentáře a tedy není pravděpodobné, že by nějaké přibyly).</p>
 <p>Na stránce s výpisem seznamu článků používám stejnou techniku (<code>data-</code> atributy), abych si v odkazu poznamenal číslo relevantního článku a současný počet komentářů. HTML zdroják vypadá takto (ve skutečnosti to vypadá trochu jinak, ale to není pro náš výklad podstatné, tak jsem to zjednodušil):</p>
-<p><a href="articles/334#comments" data-comment-aid="334" data-comment-count="3">3 komentáře</a></p>
+<pre><code>&lt;a href=&quot;articles/334#comments&quot; 
+      data-comment-aid=&quot;334&quot; 
+      data-comment-count=&quot;3&quot;&gt;3 komentáře&lt;/a&gt;
+</code></pre>
 <p>Opět platí, že si usnadňuji práci, protože v JavaScriptu programuji nerad a nechce se mi moc se hrabat v HTML DOMu. JavaScript na dotyčné stránce vypadá takto:</p>
-<p>if (&quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null) { $(&quot;*[data-comment-aid]&quot;).each(function () { var key = &quot;NemesisPublishing.ArticleCommentCount[&quot; + <span class="math">(this).data(&quot;comment-aid&quot;) + &quot;]&quot;; if (window.localStorage[key] != null) { var currentCount = parseInt(</span>(this).data(&quot;comment-count&quot;)); var readCount = parseInt(window.localStorage[key]); if (currentCount &gt; readCount) { var newCount = currentCount - readCount; $(this).append(&quot; <span class='new'>&quot; + newCount + &quot; new<span>&quot;); } } }); }</p>
+<pre><code>if (&quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null) {
+    $(&quot;*[data-comment-aid]&quot;).each(function () {
+        var key = &quot;NemesisPublishing.ArticleCommentCount[&quot; + $(this).data(&quot;comment-aid&quot;) + &quot;]&quot;;
+        if (window.localStorage[key] != null) {
+            var currentCount = parseInt($(this).data(&quot;comment-count&quot;));
+            var readCount = parseInt(window.localStorage[key]);
+            if (currentCount &gt; readCount) {
+                var newCount = currentCount - readCount;
+                $(this).append(&quot; &lt;span class='new'&gt;&quot; + newCount + &quot; new&lt;span&gt;&quot;);
+            }
+        }
+    });
+}
+</code></pre>
 <p>Tento skript je trochu složitější, než ten předchozí, ale ne o mnoho. Nejprve si ověřím, že Local Storage funguje a pak najdu všechny elementy, které mají atribut <code>data-comment-aid</code>. U všech těchto elementů pak zjistím, jaký je aktuální počet komentářů a jaký je poslední počet komentářů, které uživatel četl (resp. měl je zobrazené). Pokud se liší, zobrazím počet nových komentářů v textu odkazu.</p>
 <p>Toto řešení je velmi jednoduché a podle mého názoru velmi elegantní, a to z několika důvodů:</p>
 <ul>
@@ -96,7 +185,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

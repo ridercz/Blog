@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Doba si žádá své. Konkrétně dnešní doba si bohužel žádá &quot;rich Internet applications&quot;, webové aplikace, které se chovají pokud možno tak, aby jako webové nevypadaly. Což zahrnuje i koncept v klasickém HTML obecně nevídaný, totiž virtuální okna realizovaná pomocí dynamického HTML a JavaScriptu. Knihovna jQuery UI nabízí nástroje pro práci s dialogy, ale pro bezchybnou spolupráci s ASP.NET Web Forms vyžadují trochu práce. Proto jsem připrvil v JavaScriptu rozšíření jQuery Dialog Helper, které se snaží tyto dva světy propojit." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>jQuery UI dialogy v ASP.NET Web Forms</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2012-02-11T16:55:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>11. února 2012</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Doba si žádá své. Konkrétně dnešní doba si bohužel žádá &quot;rich Internet applications&quot;, webové aplikace, které se chovají pokud možno tak, aby jako webové nevypadaly. Což zahrnuje i koncept v klasickém HTML obecně nevídaný, totiž virtuální okna realizovaná pomocí dynamického HTML a JavaScriptu. Knihovna jQuery UI nabízí nástroje pro práci s dialogy, ale pro bezchybnou spolupráci s ASP.NET Web Forms vyžadují trochu práce. Proto jsem připrvil v JavaScriptu rozšíření jQuery Dialog Helper, které se snaží tyto dva světy propojit.</p>
 <p>V čem spočívá jádro problému? jQuery UI předpokládá, že interakce s dialogem bude plně řízena JavaScriptem. Že třeba položky vyplnění v dialogu zase načteme skriptem a jím je také zpracujeme (a na server odešleme třeba JSON serializované pomocí nějakého callbacku). Pokud od začátku aplikaci píšete s tímto záměrem, je to v pořádku. Ale co když chcete jenom poněkud modernizovat stávající aplikaci a neumíte, nehodláte nebo nemůžete tento přístup použít? Moje pomocné rozšíření pro jQuery vychází z následujících ideových zásad:</p>
 <ul>
@@ -32,47 +77,222 @@
 <h2 id="jak-dialoghelper-nasadit">Jak DialogHelper nasadit?</h2>
 <p>Postup je velmi jednoduchý. Vaše stránka musí referencovat <a href="http://www.jquery.com/">jQuery</a>, <a href="http://jqueryui.com/">jQuery UI</a> a patřičný styl pro jQuery UI prvky (ten si můžete vytvořit třeba pomocí <a href="http://jqueryui.com/themeroller/">ThemeRolleru</a>). Dále pak můj soubor <code>jquery.dialogHelper.js</code>, který je k mání na konci článku.</p>
 <p>Poté stačí jenom zavolat metodu <code>dialogHelper</code> a ona se postará o všechno sama. Patřičný jQuery kód je:</p>
-<p>$(function () { // Activate dialog helper $(this).dialogHelper(); });</p>
+<pre><code>$(function () {
+    // Activate dialog helper
+    $(this).dialogHelper();
+});
+</code></pre>
 <p>Aby dialogy ožily, stačí patřičným HTML elementům přidat různé <code>data-</code> atributy, které definuje HTML 5. Jejich názvy lze v případě potřeby změnit jiným overloadem metody <code>dialogHelper</code>, já nadále popisuji výchozí hodnoty. Data atributy jsou výborná novinka v HTML 5, která umožňuje rozšířit jakýkoliv HTML element o neomezené množství vlastních atributů, které jsou pak zpracovány skriptem. Mohou se jmenovat jakkoliv, jenom musejí začínat prefixem <code>data-</code>.</p>
 <p>DialogHelper umí vytvářet tři druhy dialogů: informační, potvrzovací a obecné modální.</p>
 <h2 id="informacni-dialogy">Informační dialogy</h2>
 <p>Informační dialog je zpráva, která se zobrazí jako modální okno při načtení stránky a aby se uživatel dostal dál, musí stisknout OK nebo zmáčknout Enter. Typicky se jedná o různé formy potvrzení, že předchozí operace proběhla úspěšně. Pro její zobrazení stačí libovolnému elementu dát atribut <code>data-dialog-message</code>. Jeho hodnota se zobrazí jako titulek okna, obsah elementu se zobrazí jako obsah okna. Dialog bude zobrazen jako modální, bude mít automatickou velikost a bude mít jediné tlačítko &quot;OK&quot;.</p>
 <p>HTML markup může vypadat například takto:</p>
-<p data-dialog-message="Potvrzení">Vaše heslo bylo úspěšně změněno</p>
+<pre><code>&lt;p data-dialog-message=&quot;Potvrzení&quot;&gt;Vaše heslo bylo úspěšně změněno&lt;/p&gt;
+</code></pre>
 <p>Obsah dialogu může být i komplexnější, i když se neočekává, že bude příliš interaktivní, ve smyslu formulářových prvků atd.:</p>
-<div data-dialog-message="Uživatel zastřelen"> <p><b>Uživatel byl úspěšně zastřelen.</b> Nyní zvažte následující kroky:</p> <ul> <li>Objednejte si někoho, kdo zlikviduje tělo.</li> <li>Pro jistotu si najděte <a href="http://www.cak.cz">dobrého advokáta</a>, kdyby se něco zvrtlo.</li> </ul> </div>
+<pre><code>&lt;div data-dialog-message=&quot;Uživatel zastřelen&quot;&gt;
+  &lt;p&gt;&lt;b&gt;Uživatel byl úspěšně zastřelen.&lt;/b&gt; Nyní zvažte následující kroky:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Objednejte si někoho, kdo zlikviduje tělo.&lt;/li&gt;
+    &lt;li&gt;Pro jistotu si najděte &lt;a href=&quot;http://www.cak.cz&quot;&gt;dobrého advokáta&lt;/a&gt;, kdyby se něco zvrtlo.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
 <p>Data atributy můžete dávat i většině ASP.NET server controls, všechny prvky poděděné od <code>System.Web.UI.WebControls.WebControl</code> automaticky kopírují všechny neznámé serverové atributy beze změny na výstup. Můžete tedy použít například:</p>
-<p>&lt;asp:Label ID=&quot;LabelSuccess&quot; runat=&quot;server&quot; Text=&quot;Operace byla dokončena úspěšně&quot; data-dialog-message=&quot;Potvrzení&quot; /&gt;</p>
+<pre><code>&lt;asp:Label ID=&quot;LabelSuccess&quot; runat=&quot;server&quot; Text=&quot;Operace byla dokončena úspěšně&quot; data-dialog-message=&quot;Potvrzení&quot; /&gt;
+</code></pre>
 <p>Dialog helper poté prvek, tvořící dialog, skryje. Nebude tedy na stránce strašit navždy. Na druhou stranu, pokud volání skriptu selže, bude text zobrazen normálně, jako fallback.</p>
 <h2 id="potvrzovaci-dialogy">Potvrzovací dialogy</h2>
 <p>Potvrzovací dialog slouží k potvrzení nějaké akce, která je potenciálně nebezpečná, nevratná nebo jinak problematická. Typicky smazání záznamu a podobně. Z hlediska HTML je potvrzovanou akcí klepnutí na něco – typicky na formulářové tlačítko nebo hypertextový odkaz.</p>
 <p>DialogHelper vyžaduje, aby potvrzovaný element měl atribut <code>data-dialog-confirm</code>, který obsahuje text potvrzovací zprávy. Například:</p>
-<p><a href="http://www.weblog.rider.cz/" data-confirm-prompt="Altairův blog není pro citlivé povahy. Opravdu chcete pokračovat?">Weblog</a></p>
+<pre><code>&lt;a href=&quot;http://www.weblog.rider.cz/&quot; data-confirm-prompt=&quot;Altairův blog není pro citlivé povahy. Opravdu chcete pokračovat?&quot;&gt;Weblog&lt;/a&gt;
+</code></pre>
 <p>V takovém případě se zobrazí okno, jehož titulek bude &quot;Confirmation&quot; a bude obsahovat tlačítka &quot;Yes&quot; a &quot;No&quot;.</p>
 <p>Pokud chcete tyto texty změnit, můžete použít další dva atributy. Atribut <code>data-confirm-title</code> umožní specifikovat titulek okna, zatímto <code>data-confirm-buttons</code> umožní změnit texty ma tlačítkách, přičemž první je potvrzovací, druhý stornující a jsou oddělené středníkem. Například:</p>
-<p>&lt;asp:Button runat=&quot;server&quot; CommandName=&quot;Delete&quot; data-confirm-prompt=&quot;Opravdu chcete záznam smazat?&quot; data-confirm-title=&quot;Smazání záznamu&quot; data-confirm-buttons=&quot;Ano;Ne&quot; /&gt;</p>
+<pre><code>&lt;asp:Button runat=&quot;server&quot; CommandName=&quot;Delete&quot; 
+            data-confirm-prompt=&quot;Opravdu chcete záznam smazat?&quot; 
+            data-confirm-title=&quot;Smazání záznamu&quot; 
+            data-confirm-buttons=&quot;Ano;Ne&quot; /&gt;
+</code></pre>
 <p>Pokud uživateli nefunguje skriptování, požadovaná operace se provede bez potvrzení.</p>
 <h2 id="obecne-dialogy">Obecné dialogy</h2>
 <p>Obecné dialogy slouží ke skrytí části stránky, dokud není dialog výslovně vyvolán. Například pokud budu mít na stránce seznam položek a zřídkavě používaný dialog pro přidání nové, mohu chtít dialog pro přidání nové položky schovat a zobrazit jenom ve chvíli, kdy si to uživatel vyžádá.</p>
 <p>Tento dialog vyžaduje dva elementy: jeden (typicky odkaz, tlačítko) který vyvolává dialog a druhý, který jej obsahuje. Minimální implementace spočívá v tom, že se vyvolávacímu odkazu dá atribut data-dialog-open, jehož hodnotou je klientské ID elementu, který obsahuje dialog. Například:</p>
-<p><a href="#helpDialog" data-dialog-open="helpDialog">nápověda</a> ... <div id="helpDialog"> <h1>Nápověda</h1> ... </div></p>
+<pre><code>&lt;a href=&quot;#helpDialog&quot; data-dialog-open=&quot;helpDialog&quot;&gt;nápověda&lt;/a&gt;
+...
+&lt;div id=&quot;helpDialog&quot;&gt;
+  &lt;h1&gt;Nápověda&lt;/h1&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
 <p>Element dialogu (ve výše zmíněném příkladu to bude <code>div</code>) může obsahovat i dva další atributy:</p>
 <ul>
 <li><code>title</code> – standardní HTML atribut, pokud je specifikován, použije se jako titulek dialogu.</li>
 <li><code>data-dialog-options</code> – seznam <a href="http://jqueryui.com/demos/dialog/">nastavení dialogu</a>, jako řetězce ve formátu &quot;<code>název:hodnota</code>&quot;, oddělené středníkem. Lze tak nastavit jakékoliv vlastnosti, jaké jQuery UI dialog zná, typicky například rozměry.</li>
 </ul>
 <p>Následující příklad využívá rozšířené možnosti a zároveň ukazuje použití na straně ASP.NET Web Forms:</p>
-<p><a href="#newUserDialog" data-dialog-open="newUserDialog">nový uživatel</a> ... &lt;asp:Panel ID=&quot;newUserDialog&quot; runat=&quot;server&quot; ClientIdMode=&quot;Static&quot; title=&quot;Nový uživatel&quot; data-dialog-options=&quot;minWidth:500;minHeight:400&quot;&gt; &lt;asp:CreateUserWizard runat=&quot;server&quot; /&gt; &lt;/asp:Panel&gt;</p>
+<pre><code>&lt;a href=&quot;#newUserDialog&quot; data-dialog-open=&quot;newUserDialog&quot;&gt;nový uživatel&lt;/a&gt;
+...
+&lt;asp:Panel ID=&quot;newUserDialog&quot; runat=&quot;server&quot; 
+           ClientIdMode=&quot;Static&quot;
+           title=&quot;Nový uživatel&quot;
+           data-dialog-options=&quot;minWidth:500;minHeight:400&quot;&gt;
+  &lt;asp:CreateUserWizard runat=&quot;server&quot; /&gt;
+&lt;/asp:Panel&gt;
+</code></pre>
 <p>DialogHelper se postará o to, aby bylo možné formulář odeslat na server (jQuery dialogy standardně vyhodí z dokumentu a postback by nefungoval) a také všechna tlačítka (<code>input type=&quot;submit&quot;</code>) skryje a znovu je vytvoří jako dialogová tlačítka se stejnou funkcí.</p>
 <p>Pokud uživateli skripty nefungují, obsah dialogu se zobrazí přímo v původní stránce.</p>
 <h2 id="zdrojovy-kod">Zdrojový kód</h2>
 <p>Kód mého pluginu je velmi přímočarý a JavaScriptoví programátoři by mu jistě dokázali ledacos vytknout, já to píšu jako C#. Nicméně vypadá to, že je docela dobře funkční, jakkoliv uvítám konstruktivní připomínky.</p>
-<p var buttonNames="$(this).data(settings.dataConfirmButtons).split(&quot;;&quot;);" buttonYes="buttonNames[0];" buttonNo="buttonNames[1];" window.location="href;">/// <reference path="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" /> /// <reference path="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.17/jquery-ui.min.js" /> (function ($) { $.fn.dialogHelper = function (options) { // Read settings var settings = $.extend({ dataDialogOpen: &quot;dialog-open&quot;, dataDialogOptions: &quot;dialog-options&quot;, dataDialogMessage: &quot;dialog-message&quot;, dataConfirmPrompt: &quot;confirm-prompt&quot;, dataConfirmTitle: &quot;confirm-title&quot;, dataConfirmButtons: &quot;confirm-buttons&quot;, dataConfirmDone: &quot;confirm-done&quot;, confirmTitle: &quot;Confirmation&quot;, confirmYes: &quot;Yes&quot;, confirmNo: &quot;No&quot;, showEffect: &quot;clip&quot;, hideEffect: &quot;clip&quot; }, options); // Initialize general dialogs $(&quot;<em>[data-&quot; + settings.dataDialogOpen + &quot;]&quot;).each(function () { var dialogElement = $(&quot;#&quot; + $(this).data(settings.dataDialogOpen)); // Create dialog dialogElement.dialog({ autoOpen: false, modal: true, show: settings.showEffect, hide: settings.hideEffect }); // Set dialog options if (dialogElement.data(settings.dataDialogOptions) != null) { var options = dialogElement.data(settings.dataDialogOptions).split(&quot;;&quot;); for (var i = 0; i &lt; options.length; i++) { var option = options[i].split(&quot;:&quot;); dialogElement.dialog(&quot;option&quot;, option[0], option[1]); } } // Recreate all buttons as dialog buttons var buttons = []; $(&quot;input[type=submit]&quot;, dialogElement).each(function () { var button = <span class="math">(this); button.hide(); buttons.push({ text: button.val(), click: function () { button.click() } }); }); if (buttons.length != 0) dialogElement.dialog(&quot;option&quot;, &quot;buttons&quot;, buttons); // Move to &lt;form runat=server&gt; dialogElement.parent().appendTo(</span>(&quot;form:first&quot;)); // Handle click $(this).click(function () { dialogElement.dialog(&quot;open&quot;); return false; }); }); // Initialize message dialogs $(&quot;</em>[data-&quot; + settings.dataDialogMessage + &quot;]&quot;).each(function () { $(this).dialog({ modal: true, show: settings.showEffect, hide: settings.hideEffect, title: $(this).data(settings.dataDialogMessage), resizable: false, buttons: { OK: function () { $(this).dialog(&quot;close&quot;); } } }); }); // Click confirmation $(&quot;<em>[data-&quot; + settings.dataConfirmPrompt + &quot;]&quot;).click(function () { var clickedObject = $(this); // Get href from this element or its children var href = clickedObject.attr(&quot;href&quot;); if (href == null) href = clickedObject.children(&quot;</em>[href]&quot;).attr(&quot;href&quot;); if (href &amp;&amp; href.indexOf(&quot;javascript:&quot;) == 0) href = null; if (clickedObject.data(settings.dataConfirmDone) != true) { // Get button names var title = settings.confirmTitle; var buttonYes = settings.confirmYes; var buttonNo = settings.confirmNo; if (clickedObject.data(settings.dataConfirmTitle) != null) title = $(this).data(settings.dataConfirmTitle); if (clickedObject.data(settings.dataConfirmButtons) != null)  // Display jQuery UI confirmation dialog $(&quot;<div><p>&quot; + clickedObject.data(settings.dataConfirmPrompt) + &quot;</p></div>&quot;).dialog({ modal: true, show: settings.showEffect, hide: settings.hideEffect, resizable: false, title: title, buttons: [{ text: buttonYes, click: function () { $(this).dialog(&quot;close&quot;); if (href)  else { clickedObject.data(settings.dataConfirmDone, true); clickedObject.click(); } } }, { text: buttonNo, click: function () { $(this).dialog(&quot;close&quot;); } }] }); clickedObject.data(settings.dataConfirmDone, false); } return clickedObject.data(settings.dataConfirmDone); }); } })(jQuery);</p>
+<pre><code>/// &lt;reference path=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js&quot; /&gt;
+/// &lt;reference path=&quot;http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.17/jquery-ui.min.js&quot; /&gt;
+
+(function ($) {
+    $.fn.dialogHelper = function (options) {
+
+        // Read settings
+        var settings = $.extend({
+            dataDialogOpen: &quot;dialog-open&quot;,
+            dataDialogOptions: &quot;dialog-options&quot;,
+            dataDialogMessage: &quot;dialog-message&quot;,
+            dataConfirmPrompt: &quot;confirm-prompt&quot;,
+            dataConfirmTitle: &quot;confirm-title&quot;,
+            dataConfirmButtons: &quot;confirm-buttons&quot;,
+            dataConfirmDone: &quot;confirm-done&quot;,
+            confirmTitle: &quot;Confirmation&quot;,
+            confirmYes: &quot;Yes&quot;,
+            confirmNo: &quot;No&quot;,
+            showEffect: &quot;clip&quot;,
+            hideEffect: &quot;clip&quot;
+        }, options);
+
+        // Initialize general dialogs
+        $(&quot;*[data-&quot; + settings.dataDialogOpen + &quot;]&quot;).each(function () {
+            var dialogElement = $(&quot;#&quot; + $(this).data(settings.dataDialogOpen));
+
+            // Create dialog
+            dialogElement.dialog({
+                autoOpen: false,
+                modal: true,
+                show: settings.showEffect,
+                hide: settings.hideEffect
+            });
+
+            // Set dialog options
+            if (dialogElement.data(settings.dataDialogOptions) != null) {
+                var options = dialogElement.data(settings.dataDialogOptions).split(&quot;;&quot;);
+                for (var i = 0; i &lt; options.length; i++) {
+                    var option = options[i].split(&quot;:&quot;);
+                    dialogElement.dialog(&quot;option&quot;, option[0], option[1]);
+                }
+            }
+
+            // Recreate all buttons as dialog buttons
+            var buttons = [];
+            $(&quot;input[type=submit]&quot;, dialogElement).each(function () {
+                var button = $(this);
+                button.hide();
+                buttons.push({ text: button.val(), click: function () { button.click() } });
+            });
+            if (buttons.length != 0) dialogElement.dialog(&quot;option&quot;, &quot;buttons&quot;, buttons);
+
+            // Move to &lt;form runat=server&gt;
+            dialogElement.parent().appendTo($(&quot;form:first&quot;));
+
+            // Handle click
+            $(this).click(function () {
+                dialogElement.dialog(&quot;open&quot;);
+                return false;
+            });
+        });
+
+        // Initialize message dialogs
+        $(&quot;*[data-&quot; + settings.dataDialogMessage + &quot;]&quot;).each(function () {
+            $(this).dialog({
+                modal: true,
+                show: settings.showEffect,
+                hide: settings.hideEffect,
+                title: $(this).data(settings.dataDialogMessage),
+                resizable: false,
+                buttons: { OK: function () { $(this).dialog(&quot;close&quot;); } }
+            });
+        });
+
+        // Click confirmation
+        $(&quot;*[data-&quot; + settings.dataConfirmPrompt + &quot;]&quot;).click(function () {
+            var clickedObject = $(this);
+
+            // Get href from this element or its children
+            var href = clickedObject.attr(&quot;href&quot;);
+            if (href == null) href = clickedObject.children(&quot;*[href]&quot;).attr(&quot;href&quot;);
+            if (href &amp;&amp; href.indexOf(&quot;javascript:&quot;) == 0) href = null;
+
+            if (clickedObject.data(settings.dataConfirmDone) != true) {
+                // Get button names
+                var title = settings.confirmTitle;
+                var buttonYes = settings.confirmYes;
+                var buttonNo = settings.confirmNo;
+                if (clickedObject.data(settings.dataConfirmTitle) != null) title = $(this).data(settings.dataConfirmTitle);
+                if (clickedObject.data(settings.dataConfirmButtons) != null) {
+                    var buttonNames = $(this).data(settings.dataConfirmButtons).split(&quot;;&quot;);
+                    buttonYes = buttonNames[0];
+                    buttonNo = buttonNames[1];
+                }
+
+                // Display jQuery UI confirmation dialog
+                $(&quot;&lt;div&gt;&lt;p&gt;&quot; + clickedObject.data(settings.dataConfirmPrompt) + &quot;&lt;/p&gt;&lt;/div&gt;&quot;).dialog({
+                    modal: true,
+                    show: settings.showEffect,
+                    hide: settings.hideEffect,
+                    resizable: false,
+                    title: title,
+                    buttons: [{
+                        text: buttonYes,
+                        click: function () {
+                            $(this).dialog(&quot;close&quot;);
+                            if (href) {
+                                window.location = href;
+                            } else {
+                                clickedObject.data(settings.dataConfirmDone, true);
+                                clickedObject.click();
+                            }
+                        }
+                    },
+                    {
+                        text: buttonNo,
+                        click: function () {
+                            $(this).dialog(&quot;close&quot;);
+                        }
+                    }]
+                });
+                clickedObject.data(settings.dataConfirmDone, false);
+            }
+            return clickedObject.data(settings.dataConfirmDone);
+        });
+
+    }
+})(jQuery);
+</code></pre>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

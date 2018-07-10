@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2013-05-24T19:23:41+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20130524-prezentace-a-priklady-z-mych-prednasek-na-techedu.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20130501-pozvanka-na-teched-a-moje-prednasky.png -->
 
 Jak jsem sliboval na konferenci samé, zveřejňuji příklady ze svých přednášek ke stažení. Pokud mne ještě pořád nemáte dost, můžete mne sledovat na [Facebooku](http://www.facebook.com/rider.cz), [Twitteru](https://twitter.com/ridercz) nebo pokládat anonymně otázky na [Ask.fm](http://ask.fm/ridercz).
 

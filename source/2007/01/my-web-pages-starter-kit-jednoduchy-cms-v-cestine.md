@@ -22,6 +22,6 @@ Přeložil jsem aplikaci samotnou i její dokumentaci do češtiny. Bohužel, p�
 Pokud jste si stáhli verzi z CodePlexu, je náprava jednoduchá:
 
 1.  Smažte adresář ~/Documentation/cs/ i s veškerým obsahem.
-2.  Přejmenujte adresář ~/Documentation/cz/ na ~/Documentation/cs/. 
+2.  Přejmenujte adresář ~/Documentation/cz/ na ~/Documentation/cs/.
 
 Já to říkám pořád, že Husa za ta nabodeníčka upálili po právu a bohužel pozdě...

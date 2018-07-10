@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="OpenSSL Heartbleed chyba, která bouří celým Internetem, se Microsoft platformě vyhnula. Ne tak řada implementačních problémů, které často způsobí, že web sice má zabezpečené spojení, ale to je efektivně k ničemu. Zvu vás na bezplatný seminář, v němž vám ukážu, jak HTTPS správně používat, když už ho máte." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>HTTPS už máte. Tak ještě aby vám k něčemu bylo.</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2014-04-17T17:26:51+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>17. dubna 2014</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>OpenSSL Heartbleed chyba, která bouří celým Internetem (popis z mé klávesnice <a href="http://tech.ihned.cz/geekosfera/c1-62006020-heartbleed-bezpecnostni-chyba-openssl">najdete na iHNed</a>, stejně jako <a href="http://tech.ihned.cz/geekosfera/c1-62018560-otazky-a-odpovedi-jak-zmeni-heartbleed-chyba-openssl-a-internet">zamyšlení nad možnými důsledky</a>), se Microsoft platformě vyhnula. Ne tak řada implementačních problémů, které často způsobí, že web sice má zabezpečené spojení, ale to je efektivně k ničemu.</p>
 <p>Zvu vás na bezplatný seminář, v němž vám ukážu, jak HTTPS správně používat, když už ho máte.</p>
 <p>Mluvit budu o dvou základních oblastech. Tou první je správné nastavení serveru, tedy pooužitých protokolů SSL, TLS, algoritmů… Budu mluvit o forward secrecy a dalších souvisejících tématech. Druhá oblast je zejména pro programátory, totiž jak vytvořit aplikaci tak, aby HTTPS správně využívala.</p>
@@ -31,7 +76,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

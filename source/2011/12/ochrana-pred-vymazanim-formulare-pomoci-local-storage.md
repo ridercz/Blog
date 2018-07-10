@@ -23,7 +23,7 @@ Chci vyřešit problém s mizením hodnot z formulářů při automatickém odhl
 *   Umožnit autorovi aplikace jednoduše vybrat, hodnoty kterých polí chce zachovat. To vyplývá z logiky aplikace. Např. při psaní komentáře budu chtít zachovat jméno, e-mail a text komentáře, ale ne třeba opsaný CAPTCHA kód. 
 *   V případě úspěšného odeslání formuláře některé (vybrané) zapamatované hodnoty smazat. Ale ne všechny – ne výše uvedeném případě odstranit jenom text komentáře, ne už jméno a e-mail. 
 *   Minimální, nejlépe žádná, zátěž na straně serveru. 
-*   Snadná implementace a široká kompatibilita.  
+*   Snadná implementace a široká kompatibilita.   
 
 ## Řešení
 
@@ -31,21 +31,45 @@ Zvolil jsem čistě klientské řešení využívající JavaScript, Local Stora
 
 Použití je jednoduché. Pro **zapamatování hodnoty pole** stačí danému elementu přidat atribut `data-rls-id`, jehož hodnota se použije pro vytvoření klíče, pod nímž bude zapamatovaná hodnota uložena v local storage:
 
-<input type="text" name="name" data-rls-id="name" />
+    <input type="text" name="name" data-rls-id="name" />
 
 Protože v případě ASP.NET server controls se neznámé atributy beze změny kopírují na výstup, je snadné totéž zapsat i v ASPX:
 
-<asp:TextBox ID="TextBoxName" runat="server" data-rls-id="name" />
+    <asp:TextBox ID="TextBoxName" runat="server" data-rls-id="name" />
 
 Ve výše uvedeném příkladu se hodnota uloží do local storage pole s názvem `RLS[name]`. Syntaxe připomíná (záměrně) adresaci kolekcí, ale je to jenom stringový identifikátor. Ono "RLS" (Remember in Local Storage) tam přidávám proto, abych předešel možným konfliktům pro obvyklé hodnoty.
 
 Některé hodnoty (jméno, e-mail) si budeme chtít pamatovat bez omezení, ale některé je žádoucí po úspěšném zpracování odstranit, protože příště budou jiné (text komentáře). Pro **vymazání zapamatované hodnoty** slouží atribut `data-rls-clear`, který přidáme k jekémukoliv elementu na stránce, která je reakcí na úspěšné odeslání formuláře. Hodnota tohoto atributu je seznam ID polí, která se mají zapomenout, oddělený čárkami:
 
-<p data-rls-clear="comment">Váš komentář byl zaznamenán.</p>
+    <p data-rls-clear="comment">Váš komentář byl zaznamenán.</p>
 
 Zdrojový kód obslužného skriptu, který se zavolá při natažení stránky, je následující:
 
-$(function () { // Check if this browser supports local storage if ("localStorage" in window && window["localStorage"] !== null) { // Clear all remembered entries required by data-rls-clear $("*[data-rls-clear]").each(function () { var fields = $(this).data("rls-clear").split(","); for (var i = 0; i < fields.length; i++) { window.localStorage.removeItem("RLS[" + fields[i].trim() + "]"); } }); $("*[data-rls-id]").each(function () { // Load currently remembered data var keyName = "RLS[" + $(this).data("rls-id") + "]"; $(this).val(window.localStorage[keyName]); // Save data to local storage when value changes $(this).keyup(function () { window.localStorage[keyName] = $(this).val(); }); }); } });
+    $(function () {
+        // Check if this browser supports local storage
+        if ("localStorage" in window && window["localStorage"] !== null) {
+
+            // Clear all remembered entries required by data-rls-clear
+            $("*[data-rls-clear]").each(function () {
+                var fields = $(this).data("rls-clear").split(",");
+                for (var i = 0; i < fields.length; i++) {
+                    window.localStorage.removeItem("RLS[" + fields[i].trim() + "]");
+                }
+            });
+
+            $("*[data-rls-id]").each(function () {
+                // Load currently remembered data
+                var keyName = "RLS[" + $(this).data("rls-id") + "]";
+                $(this).val(window.localStorage[keyName]);
+
+                // Save data to local storage when value changes
+                $(this).keyup(function () {
+                    window.localStorage[keyName] = $(this).val();
+                });
+            });
+
+        }
+    });
 
 Začneme tím, že si ověříme, jestli prohlížeč podporuje funkci Local Storage. Pokud ne, nic dalšího neděláme. Poté smažeme z úložiště všechny klíče, požadované atributem `data-rls-clear`. Dále naplníme všechna pole označená atributem `data-rls-id` případně z minula zapamatovanými hodnotami. Na závěr se pověsíme na událost `keyup` těchto polí handler, který uloží aktuální hodnotu do LocalStorage.
 

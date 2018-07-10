@@ -15,7 +15,11 @@ Já osobně používám k plné spokojenosti komponentu zvanou **[FreeTextBox](h
 
 FreeTextBox má několik užitečných vlastností, které vyčnívají nad řadu jiných řešení:
 
-*   **Jednoduchá instalace:** Lze jej nastavit tak, že nevyžaduje kopírování žádných dalších souborů kromě vlastního DLL. Obrázky a JavaScripty umí načítat přes speciální handler tak, jak jsou uloženy v jeho assembly. **Plná nativní podpora ASP.NET:** Jedná se o standardní web user control, na který jest aplikovati standardní metody, jako například validaci a podobně. **Jednoduché uživatelské rozhraní:** Ovládá se přes panely nástrojů, které lze přimět aby kopírovaly styl Microsoft Office v různých verzích. **Podpora pro práci s obrázky:** Obsahuje správce souborů, přes kterého je možno do vyhrazené složky (galerie) možno uploadovat obrázky a pak je pohodlně vkládat do editovaného textu. **XHTML:** Umožňuje zajistit, že vkládaný kód bude vždy valid XHTML (pouze v placené verzi). 
+*   **Jednoduchá instalace:** Lze jej nastavit tak, že nevyžaduje kopírování žádných dalších souborů kromě vlastního DLL. Obrázky a JavaScripty umí načítat přes speciální handler tak, jak jsou uloženy v jeho assembly. 
+    **Plná nativní podpora ASP.NET:** Jedná se o standardní web user control, na který jest aplikovati standardní metody, jako například validaci a podobně. 
+    **Jednoduché uživatelské rozhraní:** Ovládá se přes panely nástrojů, které lze přimět aby kopírovaly styl Microsoft Office v různých verzích. 
+    **Podpora pro práci s obrázky:** Obsahuje správce souborů, přes kterého je možno do vyhrazené složky (galerie) možno uploadovat obrázky a pak je pohodlně vkládat do editovaného textu. 
+    **XHTML:** Umožňuje zajistit, že vkládaný kód bude vždy valid XHTML (pouze v placené verzi).
 
 Ukázka použití FTB zároveň poslouží k předvedení všeobecné práce s ovládacími prvky třetích stran.
 
@@ -25,7 +29,10 @@ Ukázka použití FTB zároveň poslouží k předvedení všeobecné práce s o
 
 Chcete-li používat výše zmíněnou funkci natahování všech potřebných souborů z assembly, musíte zaregistrovat HTTP handler, který se o to postará. Učiníte tak přidáním následujícího kódu do sekce `/configuration/system.web` v souboru `web.config`:
 
-<httpHandlers> <add verb="GET" path="FtbWebResource.axd" type="FreeTextBoxControls.AssemblyResourceHandler, FreeTextBox" /> </httpHandlers>
+    <httpHandlers>
+      <add verb="GET" path="FtbWebResource.axd" 
+           type="FreeTextBoxControls.AssemblyResourceHandler, FreeTextBox" />
+    </httpHandlers>
 
 Chcete-li používat samostatné soubory, nakopírujte do vhodné složky (standardně `/aspnet_client/FreeTextBox/`) dodané pomocné soubory (obrázky a JavaScripty). Použití samostatných souborů může být výhodné, pokud se jedná o vysoce zatěžovanou aplikaci. Stahování velkého množství souborů přes handler může server zbytečně zatěžovat.
 

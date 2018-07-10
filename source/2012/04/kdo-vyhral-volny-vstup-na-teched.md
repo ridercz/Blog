@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2012-04-16T23:45:41+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20120416-kdo-vyhral-volny-vstup-na-teched.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20120410-aktualizovano-pozvanka-na-teched-devcon-2012-praha.png -->
 
 Laskavostí RANDOM.ORG byl z účastníků jako vítěz vybrán **Jakub Chodounský**. Vyhrává volnou vstupenku na TechEd-DevCon 2012. Pozvánku na něj a seznam mých přednášek najdete [ve starším článku](http://www.aspnet.cz/articles/377-aktualizovano-pozvanka-na-teched-devcon-2012-praha).
 

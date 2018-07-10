@@ -26,4 +26,5 @@ Svůj velký den zažila [Jaw z Molu Es](http://www.cswolfdog.cz/database/pes.as
 
 Celkový dojem z té výstavy je vcelku pozitivní. Na základě vyslechnutých historek jsem čekal mnohem větší stres a méně pohodovou atmosféru. Alespoň mezi vlčáčími vystavovateli i rozhodčím vládla přátelská nálada a i blahopřání vítězům od soupeřů se byla upřímná.
 
-*   Fotky z výstavy najdete [ve fotogalerii](http://gallery.rider.cz/esta/20040725_nvp_boleslav/default.xhtml). Mysh svůj pohled na věc zvěčnila na [bestijčím weblogu](http://weblog.bestijka.cz/ShowRecord.aspx?day=20040725).
+*   Fotky z výstavy najdete [ve fotogalerii](http://gallery.rider.cz/esta/20040725_nvp_boleslav/default.xhtml). 
+Mysh svůj pohled na věc zvěčnila na [bestijčím weblogu](http://weblog.bestijka.cz/ShowRecord.aspx?day=20040725).

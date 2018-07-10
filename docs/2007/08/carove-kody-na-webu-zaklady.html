@@ -7,25 +7,76 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Od doby, co jsem na webu akce.altairis.cz spustil tisk pozvánek s čárovým kódem, byl jsem opakovaně dotazován na zkušenosti. Tento článek popisuje souhrnně zkušenosti a poznatky, ke kterým jsem dospěl. Může být užitečný všem, kdo chtějí implementovat čárové kódy ve svých webových aplikacích." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Čárové kódy na webu: Základy</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2007-08-14T22:05:36.997+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>14. srpna 2007</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/carove-kody-na-webu" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Čárové kódy na webu</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Od doby, co jsem na webu <a href="http://akce.altairis.cz/">akce.altairis.cz</a> spustil tisk pozvánek s čárovým kódem, byl jsem opakovaně dotazován na zkušenosti. Tento článek popisuje souhrnně zkušenosti a poznatky, ke kterým jsem dospěl. Může být užitečný všem, kdo chtějí implementovat čárové kódy ve svých webových aplikacích.</p>
 <h2 id="co-jsou-carove-kody">Co jsou čárové kódy</h2>
 <p>Obecně čárové kódy představují možnost, jak zakódovat sekvenci číslic (případně i písmen a jiných znaků) do grafického symbolu. Ten je možné speciálním zařízením (čtečkou) přečíst. Výhoda spočívá v tom, že načtení čárového kódu je rychlejší než jeho ruční opisování a zároveň je méně náchylné k chybám.</p>
 <p>Norem pro generování čárových kódů existuje celá řada a zabývají se v zásadě třemi otázkami:</p>
 <ol>
-<li><strong>Definice kódování znaků do čar.</strong> Neboli jak daná data převést na čáry a mezery. To je část normy, kterou je nutné se bezpodmínečně zabývat. <strong>Definice technických podmínek čitelnosti.</strong> Určuje minimální a maximální rozměry kódu, velikost ochranného pásma (prázdné plochy, která by kolem kódu měla zůstat, aby čtečka dokázala kód najít a přečíst), kontrast světlého a tmavého bodu a podobně. Tato část se obecně na webu zajišťuje nejhůře, zvláště pokud se předpokládá, že si uživatelé budou kódy tisknout sami obecně na tiskárnách, které mají k dispozici, a tisk nebude probíhat v kontrolovaném prostředí a prověřeném hardware. <strong>Definice obsahu informace.</strong> Popisuje formát dat, která mají být kódována. Některé čárové kódy v sobě mají vestavěné mechanismy výpočtu kontrolního součtu, případně jsou určeny pro speciální aplikace, které určují formát uchovávaných dat.</li>
+<li><strong>Definice kódování znaků do čar.</strong> Neboli jak daná data převést na čáry a mezery. To je část normy, kterou je nutné se bezpodmínečně zabývat.  <strong>Definice technických podmínek čitelnosti.</strong> Určuje minimální a maximální rozměry kódu, velikost ochranného pásma (prázdné plochy, která by kolem kódu měla zůstat, aby čtečka dokázala kód najít a přečíst), kontrast světlého a tmavého bodu a podobně. Tato část se obecně na webu zajišťuje nejhůře, zvláště pokud se předpokládá, že si uživatelé budou kódy tisknout sami obecně na tiskárnách, které mají k dispozici, a tisk nebude probíhat v kontrolovaném prostředí a prověřeném hardware.  <strong>Definice obsahu informace.</strong> Popisuje formát dat, která mají být kódována. Některé čárové kódy v sobě mají vestavěné mechanismy výpočtu kontrolního součtu, případně jsou určeny pro speciální aplikace, které určují formát uchovávaných dat.</li>
 </ol>
 <h2 id="typy-carovych-kodu">Typy čárových kódů</h2>
 <p>Existuje celá řada norem, ať už specializovaných nebo univerzálních. Mám zkušenosti s implementací třech hlavních norem: EAN13, Code 2/5 a Code39.</p>
@@ -39,7 +90,7 @@
 <h3 id="kody-rodiny-25">Kódy rodiny 2/5</h3>
 <p>Velmi často používané jsou kódy z rodiny &quot;dva z pěti&quot;. Označují se jako &quot;Code25&quot;, &quot;Code 2/5&quot;, &quot;Code 2 of 5&quot; a podobně. Tyto kódy mají sPokpolečné to, že každý znak je tvořen pěti moduly (čárami nebo mezerami), z nichž vždy právě dva jsou široké a tři úzké. Tyto kódy umožňují zakódovat pouze číslice 0-9 a jsou univerzálně použitelné.</p>
 <ul>
-<li><strong>Code 25 Industrial</strong> je dle mého názoru nejjednodušší norma pro pochopení principu čárových kódů: každý znak je reprezentován sekvencí silných a slabých čar. Čáry jsou odděleny mezerami, které jsou vždy stejně široké a nenesou žádnou informaci. <strong>Code 25 Interleaved</strong> je úspornější variantou téhož. Pro kódování informace využívá nejenom čáry, ale též mezery. Jedná se v podstatě o &quot;dva kódy v sobě&quot;.</li>
+<li><strong>Code 25 Industrial</strong> je dle mého názoru nejjednodušší norma pro pochopení principu čárových kódů: každý znak je reprezentován sekvencí silných a slabých čar. Čáry jsou odděleny mezerami, které jsou vždy stejně široké a nenesou žádnou informaci.  <strong>Code 25 Interleaved</strong> je úspornější variantou téhož. Pro kódování informace využívá nejenom čáry, ale též mezery. Jedná se v podstatě o &quot;dva kódy v sobě&quot;.</li>
 </ul>
 <h3 id="kody-rodiny-code39">Kódy rodiny Code39</h3>
 <p>Tato rodina umožňuje kódovat nejenom číslice, ale i písmena. Klasický kód <strong>Code39</strong> umožňuje kódovat číslice 0-9, písmena A-Z a některé speciální znaky (mezeru, -, ., $, /, + a %).</p>
@@ -58,7 +109,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

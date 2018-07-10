@@ -39,16 +39,54 @@ Mějmež web publikující články. Přejeme si, aby adresa článku byla vždy
 
 Začneme tím, že vytvoříme továrnu na handlery. Konkrétně třídu `Remapper`, která bude implementovat rozhraní `IHttpHandlerFactory`:
 
-Imports Microsoft.VisualBasic Public Class Remapper Implements IHttpHandlerFactory Public Function GetHandler(ByVal context As System.Web.HttpContext, ByVal requestType As String, ByVal url As String, ByVal pathTranslated As String) As System.Web.IHttpHandler Implements System.Web.IHttpHandlerFactory.GetHandler ' Put article ID - name of 'virtual' ASPX page - to request cache context.Items("ArticleID") = System.IO.Path.GetFileNameWithoutExtension(pathTranslated) ' Handle request via ~/Article.aspx script Return PageParser.GetCompiledPageInstance("~/Article.aspx", _ context.Server.MapPath("~/Article.aspx"), _ context) End Function Public Sub ReleaseHandler(ByVal handler As System.Web.IHttpHandler) Implements System.Web.IHttpHandlerFactory.ReleaseHandler End Sub End Class
+    Imports Microsoft.VisualBasic
+    Public Class Remapper
+        Implements IHttpHandlerFactory
+        Public Function GetHandler(ByVal context As System.Web.HttpContext, ByVal requestType As String, ByVal url As String, ByVal pathTranslated As String) As System.Web.IHttpHandler Implements System.Web.IHttpHandlerFactory.GetHandler
+            ' Put article ID - name of 'virtual' ASPX page - to request cache
+            context.Items("ArticleID") = System.IO.Path.GetFileNameWithoutExtension(pathTranslated)
+            ' Handle request via ~/Article.aspx script
+            Return PageParser.GetCompiledPageInstance("~/Article.aspx", _
+                context.Server.MapPath("~/Article.aspx"), _
+                context)
+        End Function
+        Public Sub ReleaseHandler(ByVal handler As System.Web.IHttpHandler) Implements System.Web.IHttpHandlerFactory.ReleaseHandler
+        End Sub
+    End Class
 
 Metoda `GetHandler` načte název požadovaného souboru bez přípony a uloží jej jako prvek s klíčem `ArticleID` do context cache. Následně pak vyvolá instanci handleru pro stránku `~/Article.aspx` a vráti jí zpět k vykonání.
 
 Stránka ~/Article.aspx je primitivní, neb jenom vezme jí předané `ArticleID` a zobrazí ho:
 
-<%@ Page Language="VB" %> <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <script runat="server"> Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Me.LabelArticleID.Text = String.Format(Me.LabelArticleID.Text, Context.Items("ArticleID")) End Sub </script> <html xmlns="http://www.w3.org/1999/xhtml"> <head runat="server"> <title>Untitled Page</title> </head> <body> <form id="form1" runat="server"> <div> <asp:Label ID="LabelArticleID" runat="server" Text="Article ID = {0}" /> </div> </form> </body> </html>
+    <%@ Page Language="VB" %>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    <script runat="server">
+        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+            Me.LabelArticleID.Text = String.Format(Me.LabelArticleID.Text, Context.Items("ArticleID"))
+        End Sub
+    </script>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Untitled Page</title>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <asp:Label ID="LabelArticleID" runat="server" Text="Article ID = {0}" />
+            </div>
+        </form>
+    </body>
+    </html>
 
 Poslední nezbytnou komponentou systému je vhodné nastavení v souboru `Web.Config`. Námi vygenerovanou třídu Remapper je nutno přidat jako handler požadavků pro patřičné URL (`articles/*.aspx`):
 
-<?xml version="1.0"?> <configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0"> <system.web> <httpHandlers> <add verb="*" path="Articles/*.aspx" type="Remapper"/> </httpHandlers> </system.web> </configuration>
+    <?xml version="1.0"?>
+    <configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">
+        <system.web>
+          <httpHandlers>
+            <add verb="*" path="Articles/*.aspx" type="Remapper"/>
+          </httpHandlers>
+        </system.web>
+    </configuration>
 
 Kompletní ukázkovou aplikaci jest možno si stáhnout [zde](https://www.cdn.altairis.cz/Blog/2005/20050812-url-rewriting.zip). Je určena, stejně jako výše uvedený kód, pro ASP.NET 2.0 (Whidbey), leč popsaná metoda funguje i ve verzi 1.1.

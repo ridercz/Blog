@@ -19,7 +19,18 @@ Pokud použijete strongly-typed parametry pro data binding a předanou hodnotu n
 
 Zdrojový kód vypadá následovně:
 
-Namespace MyControls Public Class SafeQueryStringParameter Inherits System.Web.UI.WebControls.QueryStringParameter Protected Overrides Function Evaluate(ByVal context As System.Web.HttpContext, ByVal control As System.Web.UI.Control) As Object Try Return System.Convert.ChangeType(MyBase.Evaluate(context, control), Me.Type) Catch ex As Exception Return Me.DefaultValue End Try End Function End Class End Namespace
+    Namespace MyControls
+        Public Class SafeQueryStringParameter
+            Inherits System.Web.UI.WebControls.QueryStringParameter
+            Protected Overrides Function Evaluate(ByVal context As System.Web.HttpContext, ByVal control As System.Web.UI.Control) As Object
+                Try
+                    Return System.Convert.ChangeType(MyBase.Evaluate(context, control), Me.Type)
+                Catch ex As Exception
+                    Return Me.DefaultValue
+                End Try
+            End Function
+        End Class
+    End Namespace
 
 Stejně jako ve shora uvedeném článku upozorňuji na nutnost umístit naši třídu do namespace. Je vcelku jedno, jak se bude jmenovat, ale musí nějaký být.
 
@@ -31,7 +42,16 @@ Není to samozřejmě jediné řešení. Můžete se pokusit v případě jednod
 
 Nově deklarovaný parametr je možno použít v ASP.NET stránkách naprosto stejným způsobem, který jsem popsal v závěru [minulého článku](/entry/article-20051005.aspx). Vzhledem k tomu, že takto vytvořený prvek bude patrně třeba používat na mnoha stránkách (místo standardního parametru), bude ale vhodnější použít jiný postup. Registraci uživatelského ovládacího prvku je možno provést v souboru `web.config` s platností pro celou aplikaci:
 
-<?xml version="1.0"?> <configuration> <system.web> <pages> <controls > <add tagPrefix="moje" namespace="MyControls" /> </controls> </pages> </system.web> </configuration>
+    <?xml version="1.0"?>
+    <configuration>
+      <system.web>
+        <pages>
+          <controls >
+            <add tagPrefix="moje" namespace="MyControls" />
+          </controls>
+        </pages>
+      </system.web>
+    </configuration>
 
 Potom je možno ovládací prvek používat ve všech stránkách dané aplikace, aniž by bylo nutno ho v každé z nich výslovně zvlášť registrovat.
 

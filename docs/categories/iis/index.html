@@ -7,101 +7,142 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Rubrika IIS</h1>
       <section class="artlist">
-        <article>
-          <header>
-            <a href="/2017/01/let-s-encrypt-na-windows-poc-aplikace">Let's Encrypt na Windows: PoC aplikace</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2017/01/let-s-encrypt-na-windows-poc-aplikace">
               <img src="/perex-pictures/20170122-let-s-encrypt-na-windows-poc-aplikace.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2017/01/let-s-encrypt-na-windows-poc-aplikace">Let's Encrypt na Windows: PoC aplikace</a>
+          </header>
           <div>V předchozím článku jsem vám představil certifikační autoritu Let's Encrypt a protokol ACME. Nyní si ukážeme, jak s CA pomocí ACME komunikovat z prostředí .NET aplikace.</div>
           <footer>
-            <time datetime="2017-01-22T00:00:00+01:00">neděle 22. ledna 2017</time>
+            <time datetime="2017-01-22T00:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 22. ledna 2017</time>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2017/01/let-s-encrypt-na-windows-prvni-seznameni">Let's Encrypt na Windows: První seznámení</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2017/01/let-s-encrypt-na-windows-prvni-seznameni">
               <img src="/perex-pictures/20170115-let-s-encrypt-na-windows-prvni-seznameni.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2017/01/let-s-encrypt-na-windows-prvni-seznameni">Let's Encrypt na Windows: První seznámení</a>
+          </header>
           <div>Asi jste již zaznamenali, že poslední dobou sílí snaha dostat maximum webů pod HTTPS. A k tomu jsou potřeba certifikáty, vydané důvěryhodnou certifikační autoritou. Řadu let jsem používat a doporučoval certifikační autoritu StartSSL, která vydávala běžné serverové i klientské certifikáty zdarma. Ta bohužel nyní přišla o svou důvěryhodnost v prohlížečích, neboť ji koupila čínská firma a začala vydávat certifikáty v rozporu s uznávanými pravidly. Řešením může být projekt Let's Encrypt, který vám chci představit v malém seriálu článků.</div>
           <footer>
-            <time datetime="2017-01-15T00:00:00+01:00">neděle 15. ledna 2017</time>
+            <time datetime="2017-01-15T00:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 15. ledna 2017</time>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2016/01/centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat">Centralized SSL Certificates v IIS: Proč a jak je používat</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2016/01/centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat">
               <img src="/perex-pictures/20160131-centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat.jpg" width="149" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2016/01/centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat">Centralized SSL Certificates v IIS: Proč a jak je používat</a>
+          </header>
           <div>Často se mluví o “HTTPS Everywhere” a jedním z pozitivních trendů dnešní doby je snaha maximálně využívat HTTPS pokud možno všude a pokud možno by default. IIS od verze 8.0 (Windows 2012) disponuje funkcí Centralized SSL Certificates, která dovoluje práci s certifikáty velice výrazně usnadnit. V tomto článku vám ukážu postup krok za krokem, jak tuto funkci nastavit a používat.</div>
           <footer>
-            <time datetime="2016-01-31T00:00:00+01:00">neděle 31. ledna 2016</time>
+            <time datetime="2016-01-31T00:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 31. ledna 2016</time>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2012/01/url-rewriting-modul-a-rewrite-maps">URL rewriting modul a rewrite maps</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2012/01/url-rewriting-modul-a-rewrite-maps">
               <img src="/perex-pictures/20120115-url-rewriting-modul-a-rewrite-maps.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2012/01/url-rewriting-modul-a-rewrite-maps">URL rewriting modul a rewrite maps</a>
+          </header>
           <div>Pro Martina Pavlise jsem řešil migraci jeho blogu ze SubTextu na Nemesis a narazil jsem na problém zachování stávajících odkazů pro velké množství článků. Typický úkol pro URL rewriting modul v IIS a RewriteMaps.</div>
           <footer>
-            <time datetime="2012-01-15T21:22:40+01:00">neděle 15. ledna 2012</time>
+            <time datetime="2012-01-15T21:22:40+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 15. ledna 2012</time>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2011/09/novinky-ve-windows-8-a-iis-8-pro-webove-vyvojare">Novinky ve Windows 8 a IIS 8 pro webové vývojáře</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2011/09/novinky-ve-windows-8-a-iis-8-pro-webove-vyvojare">
               <img src="/perex-pictures/20110924-novinky-ve-windows-8-a-iis-8-pro-webove-vyvojare.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2011/09/novinky-ve-windows-8-a-iis-8-pro-webove-vyvojare">Novinky ve Windows 8 a IIS 8 pro webové vývojáře</a>
+          </header>
           <div>Minulý týden byla na konferenci Build uvedena první testovací verze Windows 8. Většina dosavadních zpráv se zaměřila na nové Metro UI a rozličné kontroverze, které budou Windows 8 provázet. Já se s vámi chci podělit o dojmy z hlediska vyvojáře webových aplikací.</div>
           <footer>
-            <time datetime="2011-09-24T14:41:41+02:00">sobota 24. září 2011</time>
+            <time datetime="2011-09-24T14:41:41+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 24. září 2011</time>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2010/09/skripty-pro-vytvareni-webu-a-uzivatelu-na-iis-7-0">Skripty pro vytváření webů a uživatelů na IIS 7.0</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2010/09/skripty-pro-vytvareni-webu-a-uzivatelu-na-iis-7-0">
               <img src="/perex-pictures/20100924-skripty-pro-vytvareni-webu-a-uzivatelu-na-iis-7-0.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2010/09/skripty-pro-vytvareni-webu-a-uzivatelu-na-iis-7-0">Skripty pro vytváření webů a uživatelů na IIS 7.0</a>
+          </header>
           <div>Na Microsoft Days jsem slíbil zveřejnit skripty, které používám pro správu svých web hostingových serverů, jmenovitě pro zakládání nového uživatele a přidání webu k existujícímu uživateli. Tady jsou.</div>
           <footer>
-            <time datetime="2010-09-24T22:24:29.617+02:00">pátek 24. září 2010</time>
+            <time datetime="2010-09-24T22:24:29.617+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pátek 24. září 2010</time>
           </footer>
         </article>
         <article>
@@ -110,7 +151,8 @@
           </header>
           <div>Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy ping a traceroute (tracert). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Ukážeme si, jak takovou službu napsat v ASP.NET a provozovat na IIS.</div>
           <footer>
-            <time datetime="2010-05-22T18:03:17.313+02:00">sobota 22. května 2010</time>
+            <time datetime="2010-05-22T18:03:17.313+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 22. května 2010</time>
           </footer>
         </article>
         <article>
@@ -119,7 +161,8 @@
           </header>
           <div>Stručné pojednání o historii významu přípon souborů a jejich vlivu na funkčnost webových aplikací. Pokud se vám po přechodu na IIS 7 aplikace chová nějak divně, možná zde najdete odpověď.</div>
           <footer>
-            <time datetime="2010-04-18T20:30:22.813+02:00">neděle 18. dubna 2010</time>
+            <time datetime="2010-04-18T20:30:22.813+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 18. dubna 2010</time>
           </footer>
         </article>
         <article>
@@ -128,17 +171,46 @@
           </header>
           <div>O smysluplnosti, výhodách a problémech národních znaků v doménách (IDN – Internationalized Domain Names) lze vésti disputace velmi dlouho. Nicméně IDN jsou zde a je dobré vědět, jak se s nimi dokáže vyrovnat IIS a ASP.NET.</div>
           <footer>
-            <time datetime="2010-04-17T15:35:27.36+02:00">sobota 17. dubna 2010</time>
+            <time datetime="2010-04-17T15:35:27.36+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 17. dubna 2010</time>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <a href="/2010/02/video-zaloha-a-obnoveni-web-serveru">Video: Záloha a obnovení web serveru</a>
+          </header>
+          <div>Poté, co jsme server úspěšně nainstalovali a zkonfigurovali, bylo by špatně, kdybychom o něj při nějaké havárii zase přišli. Posledním dílem našeho seriálu na MSTV.CZ se tedy poučíme, jak lze pomocí nástroje Windows Server Backup server zazálohovat a v případě havárie na novém systému zase obnovit do původního stavu.</div>
+          <footer>
+            <time datetime="2010-02-03T09:00:00+01:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>středa 3. února 2010</time>
           </footer>
         </article>
         <footer>
-          <a href="./2" rel="next">Starší</a>
-          <a href="./3" rel="last">Nejstarší</a>
+          <span class="next">
+            <a href="./2" rel="next">Starší</a>
+            <a href="./3" rel="last">Nejstarší</a>
+          </span>
+          <span class="info">1 / 3</span>
         </footer>
       </section>
-      <footer>
-      Footer
-    </footer>
     </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

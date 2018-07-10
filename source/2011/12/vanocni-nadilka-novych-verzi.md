@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2011-12-24T21:32:46+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 130 -->
-<!-- x4w:pictureUrl = /perex-pictures/20111224-vanocni-nadilka-novych-verzi.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20100608-altairis-mail-toolkit-mailovani-z-webovych-aplikaci-snadno-a-korektne.png -->
 
 Abyste se mezi svátky nenudili, vydal jsem novou verzi své knihovny **Altairis Mail Toolkit** a aktualizované zdrojové kódy portálu **GeekCore**.
 
@@ -19,7 +19,7 @@ Abyste se mezi svátky nenudili, vydal jsem novou verzi své knihovny **Altairis
 Tato knihovna slouží k rozesílání mailů a už jsem zde psal o jejích předchozích verzích:
 
 *   [Altairis Mail Toolkit: mailování z webových aplikací snadno a korektně](http://www.aspnet.cz/articles/286-altairis-mail-toolkit-mailovani-z-webovych-aplikaci-snadno-a-korektne)
-*   [Altairis Mail Toolkit: Nyní i s podporou mailing listů (a stále zdarma)](http://www.aspnet.cz/articles/325-altairis-mail-toolkit-nyni-i-s-podporou-mailing-listu-a-stale-zdarma) 
+*   [Altairis Mail Toolkit: Nyní i s podporou mailing listů (a stále zdarma)](http://www.aspnet.cz/articles/325-altairis-mail-toolkit-nyni-i-s-podporou-mailing-listu-a-stale-zdarma)
 
 Nová verze 1.6 přináší vylepšený *SqlMailingListProvider*. V předchozí verzi byly názvy sloupců v tabulkách zadané natvrdo, nová verze je má konfigurovatelné. Dále pak podporuje ukládání času přihlášení a IP adresy, z níš bylo potvrzeno, což se vám může hodit v případě sporu či [kontroly z Úřadu pro ochranu osobních údajů](http://www.lupa.cz/clanky/spam-a-urad-pro-ochranu-osobnich-udaju/).
 
@@ -32,6 +32,6 @@ Kalendář akcí [GeekCore](http://www.geekcore.cz/) je open source a aktualizov
 *   Nový systém automatického verzování CSS souborů (bude o něm podrobněji řeč v samostatném článku).
 *   Podporu pro akce, na které se platí vstupné (spolu s rozšířeními bezpečnostního modelu).
 *   Aktuální verze použitých komponent.
-*   Opravy drobných chyb předchozí verze. 
+*   Opravy drobných chyb předchozí verze.
 
 Zdrojovké kódy najdete na [geekcore.codeplex.com](http://geekcore.codeplex.com/).

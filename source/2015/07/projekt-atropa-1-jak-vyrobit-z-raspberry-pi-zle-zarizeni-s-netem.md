@@ -39,7 +39,7 @@ Samozřejmě záleží na vás, jak se získanými informacemi naložíte. Drtiv
 *   **MicroSD kartu.** Používám 16 GB Class 10, ale měla by vám, stačit i menší, 8 GB určitě, možná i 4 GB. Také budete potřebovat patřičnou čtečku pro vaše PC a případně redukci z MicroSD na velkou SD.  Redukce bývá u některých karet přímo součástí balení. 
 *   **Monitor s HDMI vstupem.** To má většina novějších monitorů, případně vám stačí DVI nebo DisplayPort vstup a patřičná redukce/kabel. 
 *   **USB klávesnice.** Jakákoliv standardní klávesnice postačí. 
-*   **USB Wi-Fi karta.** Nejlépe se mi osvědčila karta [TP-LINK TL-WN722N](https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm). Je levná, široce kompatibilní (Raspbian s ní umí pracovat automaticky), má všechny funkce potřebné i pro pokročilejší Wi-Fi škození a externí anténu, místo které je možné připojit jinou.  
+*   **USB Wi-Fi karta.** Nejlépe se mi osvědčila karta [TP-LINK TL-WN722N](https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm). Je levná, široce kompatibilní (Raspbian s ní umí pracovat automaticky), má všechny funkce potřebné i pro pokročilejší Wi-Fi škození a externí anténu, místo které je možné připojit jinou. 
 
 Dále pak budete potřebovat běžný počítač s v podstatě libovolným operačním systémem. Já používám poslední preview Windows 10, ale nesejde na tom, protože z tohoto PC budeme potřebovat jenom kopírovat souboryu a používat terminálový program. Využívat budeme též různý volně dostupný software, na který vás postupně upozorním v průběhu návodu.
 
@@ -55,7 +55,7 @@ Jednotlivé díly budou mít následující obsah:
 4.  Instalace a konfigurace nginx jako proxy a nastavení ASP.NET pro ostrý provoz. 
 5.  Instalace a konfigurace HostAPD, DnsMasq a captive portál pro WiFi. 
 6.  Tvorba captive portálu v ASP.NET 5. 
-7.  Návody, jak se útokům tohoto ražení bránit.  
+7.  Návody, jak se útokům tohoto ražení bránit. 
 
 Díly 1-4 jsou "hodné" a jejich výsledkem bude platforma, na které by měla běžet jakákoliv ASP.NET aplikace. Díly 5-6 jsou "zlé" a ukáží, jak uvedené technologie využívat k útokům na důvěřivé uživatele. Díl 7 je nejhodnější a ukáže vám, jak se bránit.
 

@@ -7,239 +7,314 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Archiv článků</h1>
       <section class="artlist">
-        <article>
-          <header>
-            <a href="/2015/09/projekt-atropa-7-jak-se-branit">Projekt Atropa (7): Jak se bránit?</a>
-          </header>
+        <article class="haspicture">
           <aside>
-            <a href="/2015/09/projekt-atropa-7-jak-se-branit">
-              <img src="/perex-pictures/20150907-projekt-atropa-7-jak-se-branit.jpg" width="150" height="150" alt="" />
+            <a href="/2015/08/projekt-atropa-5-vytvarime-honeypot">
+              <img src="/perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg" width="150" height="150" alt="" />
             </a>
           </aside>
-          <div>V předchozích šesti dílech tohoto seriálu jsme si ukázali, jak za pomoci Raspberry Pi, Raspbian Linuxu a ASP.NET 5 rozjet honeypot. Závěrečný díl ukáže, jak se podobným útokům bránit.</div>
-          <footer>
-            <time datetime="2015-09-07T00:00:00+02:00">pondělí 7. září 2015</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
-              </li>
-            </ul>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <a href="/2015/08/projekt-atropa-6-vytvarime-captive-portal">Projekt Atropa (6): Vytváříme captive portal</a>
-          </header>
-          <aside>
-            <a href="/2015/08/projekt-atropa-6-vytvarime-captive-portal">
-              <img src="/perex-pictures/20150824-projekt-atropa-6-vytvarime-captive-portal.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
-          <div>V šestém dílu seriálu o vytvoření "zlé maliny" pro útoky sociálním inženýrstvím si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6.</div>
-          <footer>
-            <time datetime="2015-08-24T00:00:00+02:00">pondělí 24. srpna 2015</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/bezpecnost">Bezpečnost</a>
-              </li>
-            </ul>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <a href="/2015/08/nekonfliktni">Nekonfliktní</a>
-          </header>
-          <div>Co je příčinou vzrůstající nenávisti v jinak nekonfliktní české společnosti?</div>
-          <footer>
-            <time datetime="2015-08-15T04:18:00+02:00">sobota 15. srpna 2015</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
-              </li>
-            </ul>
-          </footer>
-        </article>
-        <article>
           <header>
             <a href="/2015/08/projekt-atropa-5-vytvarime-honeypot">Projekt Atropa (5): Vytváříme honeypot</a>
           </header>
-          <aside>
-            <a href="/2015/08/projekt-atropa-5-vytvarime-honeypot">
-              <img src="/perex-pictures/20150810-projekt-atropa-5-vytvarime-honeypot.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
           <div>V předchozích dílech seriálu o vytvoření "zlé maliny" jsme si ukázali, jak na Raspberry Pi nainstalovat operační systém Raspbian, ASP.NET 5 a jak aplikaci pomocí nginxu vypublikovat do Internetu. Dnes z Raspberry vytvoříme Wi-Fi honeypot, tedy Wi-Fi access point, který každému dovolí, aby se připojil, a všechny HTTP požadavky bude směřovat sám na sebe.</div>
           <footer>
-            <time datetime="2015-08-10T00:00:00+02:00">pondělí 10. srpna 2015</time>
+            <time datetime="2015-08-10T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 10. srpna 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/bezpecnost">Bezpečnost</a>
+                <a href="/categories/bezpecnost" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Bezpečnost</a>
               </li>
             </ul>
             <ul class="serials">
               <li>
-                <a href="/serials/projekt-atropa">Projekt Atropa</a>
+                <a href="/serials/projekt-atropa" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
               </li>
             </ul>
           </footer>
         </article>
-        <article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2015/08/projekt-atropa-4-automaticke-spusteni-webu-a-publikace-pomoci-nginx">
+              <img src="/perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg" width="150" height="150" alt="" />
+            </a>
+          </aside>
           <header>
             <a href="/2015/08/projekt-atropa-4-automaticke-spusteni-webu-a-publikace-pomoci-nginx">Projekt Atropa (4): Automatické spuštění webu a publikace pomocí nginx</a>
           </header>
-          <aside>
-            <a href="/2015/08/projekt-atropa-4-automaticke-spusteni-webu-a-publikace-pomoci-nginx">
-              <img src="/perex-pictures/20150803-projekt-atropa-4-automaticke-spusteni-webu-a-publikace-pomoci-nginx.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
           <div>V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx.</div>
           <footer>
-            <time datetime="2015-08-03T00:00:00+02:00">pondělí 3. srpna 2015</time>
+            <time datetime="2015-08-03T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 3. srpna 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
+                <a href="/categories/tipy-triky" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Tipy, triky</a>
               </li>
             </ul>
             <ul class="serials">
               <li>
-                <a href="/serials/projekt-atropa">Projekt Atropa</a>
+                <a href="/serials/projekt-atropa" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
               </li>
             </ul>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2015/08/jak-na-staronove-start-menu-ve-windows-10">Jak na staronové Start menu ve Windows 10</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2015/08/jak-na-staronove-start-menu-ve-windows-10">
               <img src="/perex-pictures/20150801-jak-na-staronove-start-menu-ve-windows-10.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2015/08/jak-na-staronove-start-menu-ve-windows-10">Jak na staronové Start menu ve Windows 10</a>
+          </header>
           <div>Microsoft uvedl Windows 10, které mají staronový koncept nabídky Start. Pokud přemýšlíte, jak se s ním vyrovnat, nabízím pro inspiraci své osvědčené a léty prověřené řešení. Popisovaný přístup používám již od Windows 7 a jeho principy jsou ještě starší.</div>
           <footer>
-            <time datetime="2015-08-01T00:00:00+02:00">sobota 1. srpna 2015</time>
+            <time datetime="2015-08-01T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>sobota 1. srpna 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
+                <a href="/categories/tipy-triky" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Tipy, triky</a>
               </li>
             </ul>
           </footer>
         </article>
-        <article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2015/07/projekt-atropa-3-jak-rozchodit-asp-net-5-na-linuxu">
+              <img src="/perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg" width="150" height="150" alt="" />
+            </a>
+          </aside>
           <header>
             <a href="/2015/07/projekt-atropa-3-jak-rozchodit-asp-net-5-na-linuxu">Projekt Atropa (3): Jak rozchodit ASP.NET 5 na Linuxu</a>
           </header>
-          <aside>
-            <a href="/2015/07/projekt-atropa-3-jak-rozchodit-asp-net-5-na-linuxu">
-              <img src="/perex-pictures/20150727-projekt-atropa-3-jak-rozchodit-asp-net-5-na-linuxu.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
           <div>V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit "zlý" počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci.</div>
           <footer>
-            <time datetime="2015-07-27T00:00:00+02:00">pondělí 27. července 2015</time>
+            <time datetime="2015-07-27T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 27. července 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
+                <a href="/categories/tipy-triky" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Tipy, triky</a>
               </li>
             </ul>
             <ul class="serials">
               <li>
-                <a href="/serials/projekt-atropa">Projekt Atropa</a>
+                <a href="/serials/projekt-atropa" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
               </li>
             </ul>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2015/07/jak-na-raspberry-pi-zapnout-graficke-rozhrani-a-vzdaleny-pristup">Jak na Raspberry Pi zapnout grafické rozhraní a vzdálený přístup?</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2015/07/jak-na-raspberry-pi-zapnout-graficke-rozhrani-a-vzdaleny-pristup">
               <img src="/perex-pictures/20150723-jak-na-raspberry-pi-zapnout-graficke-rozhrani-a-vzdaleny-pristup.png" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2015/07/jak-na-raspberry-pi-zapnout-graficke-rozhrani-a-vzdaleny-pristup">Jak na Raspberry Pi zapnout grafické rozhraní a vzdálený přístup?</a>
+          </header>
           <div>Chcete si s Raspberry Pi pohrát víc, než jak vám nabízím v seriálu o projektu Atropa? Můžete povolit grafické rozhraní a zapnout vzdálený přístup přes RDP.</div>
           <footer>
-            <time datetime="2015-07-23T19:53:00+02:00">čtvrtek 23. července 2015</time>
+            <time datetime="2015-07-23T19:53:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>čtvrtek 23. července 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
+                <a href="/categories/tipy-triky" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Tipy, triky</a>
               </li>
             </ul>
           </footer>
         </article>
-        <article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2015/07/projekt-atropa-2-zprovozneni-raspberry-pi-a-raspbian-linuxu">
+              <img src="/perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg" width="150" height="150" alt="" />
+            </a>
+          </aside>
           <header>
             <a href="/2015/07/projekt-atropa-2-zprovozneni-raspberry-pi-a-raspbian-linuxu">Projekt Atropa (2): Zprovoznění Raspberry Pi a Raspbian Linuxu</a>
           </header>
-          <aside>
-            <a href="/2015/07/projekt-atropa-2-zprovozneni-raspberry-pi-a-raspbian-linuxu">
-              <img src="/perex-pictures/20150720-projekt-atropa-2-zprovozneni-raspberry-pi-a-raspbian-linuxu.jpg" width="150" height="150" alt="" />
-            </a>
-          </aside>
           <div>Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET.</div>
           <footer>
-            <time datetime="2015-07-20T00:00:00+02:00">pondělí 20. července 2015</time>
+            <time datetime="2015-07-20T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 20. července 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
+                <a href="/categories/tipy-triky" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Tipy, triky</a>
               </li>
             </ul>
             <ul class="serials">
               <li>
-                <a href="/serials/projekt-atropa">Projekt Atropa</a>
+                <a href="/serials/projekt-atropa" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
               </li>
             </ul>
           </footer>
         </article>
-        <article>
-          <header>
-            <a href="/2015/07/projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">Projekt Atropa (1): Jak vyrobit z Raspberry Pi zlé zařízení s .NETem</a>
-          </header>
+        <article class="haspicture">
           <aside>
             <a href="/2015/07/projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">
               <img src="/perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg" width="150" height="150" alt="" />
             </a>
           </aside>
+          <header>
+            <a href="/2015/07/projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">Projekt Atropa (1): Jak vyrobit z Raspberry Pi zlé zařízení s .NETem</a>
+          </header>
           <div>Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod.</div>
           <footer>
-            <time datetime="2015-07-13T00:00:00+02:00">pondělí 13. července 2015</time>
+            <time datetime="2015-07-13T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 13. července 2015</time>
             <ul class="categories">
               <li>
-                <a href="/categories/tipy-triky">Tipy, triky</a>
+                <a href="/categories/tipy-triky" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Tipy, triky</a>
               </li>
             </ul>
             <ul class="serials">
               <li>
-                <a href="/serials/projekt-atropa">Projekt Atropa</a>
+                <a href="/serials/projekt-atropa" title="Seriál">
+                  <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
+              </li>
+            </ul>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <a href="/2015/06/cesty-do-jinych-svetu-s-kindle">Cesty do jiných světů s Kindle</a>
+          </header>
+          <div>Když jsem byl mladší, velice rád jsem četl science fiction a fantasy. Mám je pořád rád, ale časem jsem zjistil, že ty nejzajímavější světy se nacházejí v naší realitě. Jenom kolem nich chodíme, aniž bychom si jich všimli.</div>
+          <footer>
+            <time datetime="2015-06-28T00:00:00+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>neděle 28. června 2015</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/kone" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Koně</a>
+              </li>
+            </ul>
+          </footer>
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2014/09/pohodlna-kryptografie-v-asp-net-pomoci-machine-keys">
+              <img src="/perex-pictures/20140904-pohodlna-kryptografie-v-asp-net-pomoci-machine-keys.jpg" width="150" height="150" alt="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2014/09/pohodlna-kryptografie-v-asp-net-pomoci-machine-keys">Pohodlná kryptografie v ASP.NET pomocí Machine Keys</a>
+          </header>
+          <div>Vytvořit funkční a bezpečný kryptosystém z kryptografických primitiv je dosti komplikované. Proto ASP.NET obsahuje možnost jak zašifrovat a digitálně podepsat data pomocí dvou jednoduchých metod, na kterých v podstatě není co zkazit.</div>
+          <footer>
+            <time datetime="2014-09-04T17:40:57+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>čtvrtek 4. září 2014</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/bezpecnost" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Bezpečnost</a>
+              </li>
+            </ul>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <a href="/2014/08/protoze-muzem">Protože můžem</a>
+          </header>
+          <div>Prahou o víkendu prošel duhový pochod, kterým vyvrcholila týdenní akce Prague Pride 2014. Kromě obvyklé hrstky protestujících mašíblů vzbudila tato akce nesouhlasné reakce v lidech, u kterých mne to poněkud překvapuje. Jejich hlavní otázka zní: Proč se ta akce koná? Pokusím se na tuto otázku odpovědět, silně subjektivně. Ta odpověď se dá shrnout do dvou slov: "Protože můžem."</div>
+          <footer>
+            <time datetime="2014-08-18T14:52:10.15+02:00" title="Datum vydání">
+              <i class="fal fa-calendar-alt"> </i>pondělí 18. srpna 2014</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/lide-a-jina-zver" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Lidé a jiná zvěř</a>
               </li>
             </ul>
           </footer>
         </article>
         <footer>
-          <a href="./" rel="first">Nejnovější</a>
-          <a href="./3" rel="prev">Novější</a>
-          <a href="./5" rel="next">Starší</a>
-          <a href="./70" rel="last">Nejstarší</a>
+          <span class="prev">
+            <a href="./" rel="first">Nejnovější</a>
+            <a href="./3" rel="prev">Novější</a>
+          </span>
+          <span class="next">
+            <a href="./5" rel="next">Starší</a>
+            <a href="./67" rel="last">Nejstarší</a>
+          </span>
+          <span class="info">4 / 67</span>
         </footer>
       </section>
-      <footer>
-      Footer
-    </footer>
     </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

@@ -17,5 +17,7 @@ Obvykle na svých přednáškách slibuji, že dám příklady ke stažení a ob
 
 Zde tedy najdete prezentace a příklady, které budu předvádět:
 
-*   [ **Prezentace** (PPT ZIP 1.3 MB)](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad-Prezentace.zip) 
-*   [ **Příklady** (ZIP 8 MB)](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad-Samples.zip) 
+*   [
+								**Prezentace** (PPT ZIP 1.3 MB)](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad-Prezentace.zip) 
+*   [
+								**Příklady** (ZIP 8 MB)](https://www.cdn.altairis.cz/Blog/2006/20060315-Belohrad-Samples.zip) 

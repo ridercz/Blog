@@ -32,7 +32,37 @@
                 <h1>
                   <xsl:value-of select="dcterms:title"/>
                 </h1>
-                <section class="article" x4o:unescape="true">
+                <aside class="article-info">
+                  <time datetime="{dcterms:dateAccepted}" title="Datum vydání">
+                    <i class="fal fa-calendar-alt">&#8197;</i>
+                    <xsl:value-of select="x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ')"/>
+                  </time>
+                  <xsl:if test="x4w:category">
+                    <ul class="categories">
+                      <xsl:for-each select="x4w:category">
+                        <li>
+                          <a href="/categories/{x4h:UrlKey(.)}" title="Rubrika">
+                            <i class="fal fa-tag">&#8197;</i>
+                            <xsl:value-of select="."/>
+                          </a>
+                        </li>
+                      </xsl:for-each>
+                    </ul>
+                  </xsl:if>
+                  <xsl:if test="x4w:serial">
+                    <ul class="serials">
+                      <xsl:for-each select="x4w:serial">
+                        <li>
+                          <a href="/serials/{x4h:UrlKey(.)}" title="Seriál">
+                            <i class="fal fa-list-alt">&#8197;</i>
+                            <xsl:value-of select="."/>
+                          </a>
+                        </li>
+                      </xsl:for-each>
+                    </ul>
+                  </xsl:if>
+                </aside>
+                <section class="article-text" x4o:unescape="true">
                   <xsl:value-of select="x4h:GetItemHtml(@path)" />
                 </section>
               </main>

@@ -13,7 +13,10 @@ Již dlouho pasu po řešení, které by mi umožnilo nějak jednoduše sledovat
 
 Na CodeProjectu se objevila [zajímavá idea](http://www.codeproject.com/aspnet/EventLogRss.asp): generovat z eventlogu RSS feed, který lze pohodlně zpracovávat jakoukoliv RSS čtečkou. Ten nápad mne opravdu zaujal. Tamo předvedená implementace již méně:
 
-*   On-line generování ASPX stránkou mi přijde úplně nejšťastnější, může server zbytečně zatěžovat. Tímto způsobem lze monitorovat jenom počítač, na kterém běží IIS a žádný jiný. IIS uživatel nemá standardně právo přistupovat k síťovým zdrojům - a dávat mu ho jenom pro tento účel se mi nelíbí. Nabídnuté možnosti filtrování jsou nedostatečné. Některé aplikace používají event log nesprávným způsobem, typ události (*Information*, *Warning*, *Error*, *SuccessAudit*, *FailureAudit*) často neodpovídá její závažnosti. Jest proto nutné umožnit filtrování podle různé kombinace parametrů, která může být dosti složitá. Kromě toho se mi nelíbilo celkové pojetí feedu, měl bych být jediným pohledem do čtečky schopen odhalit chybu, což znamená vhodně popisné titulky a další "hlavičkové" parametry. 
+*   On-line generování ASPX stránkou mi přijde úplně nejšťastnější, může server zbytečně zatěžovat. 
+Tímto způsobem lze monitorovat jenom počítač, na kterém běží IIS a žádný jiný. IIS uživatel nemá standardně právo přistupovat k síťovým zdrojům - a dávat mu ho jenom pro tento účel se mi nelíbí. 
+Nabídnuté možnosti filtrování jsou nedostatečné. Některé aplikace používají event log nesprávným způsobem, typ události (*Information*, *Warning*, *Error*, *SuccessAudit*, *FailureAudit*) často neodpovídá její závažnosti. Jest proto nutné umožnit filtrování podle různé kombinace parametrů, která může být dosti složitá. 
+Kromě toho se mi nelíbilo celkové pojetí feedu, měl bych být jediným pohledem do čtečky schopen odhalit chybu, což znamená vhodně popisné titulky a další "hlavičkové" parametry.
 
 ## Moje řešení
 
@@ -41,7 +44,12 @@ Jeho syntaxe je následující:
 
 `gatherer -L logname -O filename [-C computername] [-M number] [-T transform | -CT filename]`
 
-*   Parametr **-L** je název logu, standardní jsou `System`, `Application` a `Security`. Parametr **-O** je název výstupního souboru. Pokud soubor již existuje, bude přepsán. Parametr **-C** je název nebo IP adresa počítače, ze kterého se mají události načítat. Pokud není uveden, použije se lokální. Uvádějte bez lomítek a podobně. Parametr **-M** je maximální počet záznamů, který bude z logu načten. To neznamená, že tento počet bude i zapsán do RSS feedu, co se v něm objeví záleží na nastavení filtrů. Toto omezení slouží k tomu, aby se opakovaně nenačítaly tisíce starých znáznamů. Parametr **-T** je název vestavěné transformace. Možné jsou tři hodnoty: `errors` (propustí pouze chyby), `warnings` (propustí chyby a varování) a `all` (propustí všechny, standardní nastavení). Parametr **-TC** je cesta ke XSLT souboru, který se použije pro transformaci. Na ukázku je přiložen soubor `FilterSql.xslt`, který vyfiltruje pouze události zapsané Microsoft SQL Serverem a SQL Server Agentem. Pokud je použit tento parametr, případný parametr `-T` se ignoruje. 
+*   Parametr **-L** je název logu, standardní jsou `System`, `Application` a `Security`. 
+Parametr **-O** je název výstupního souboru. Pokud soubor již existuje, bude přepsán. 
+Parametr **-C** je název nebo IP adresa počítače, ze kterého se mají události načítat. Pokud není uveden, použije se lokální. Uvádějte bez lomítek a podobně. 
+Parametr **-M** je maximální počet záznamů, který bude z logu načten. To neznamená, že tento počet bude i zapsán do RSS feedu, co se v něm objeví záleží na nastavení filtrů. Toto omezení slouží k tomu, aby se opakovaně nenačítaly tisíce starých znáznamů. 
+Parametr **-T** je název vestavěné transformace. Možné jsou tři hodnoty: `errors` (propustí pouze chyby), `warnings` (propustí chyby a varování) a `all` (propustí všechny, standardní nastavení). 
+Parametr **-TC** je cesta ke XSLT souboru, který se použije pro transformaci. Na ukázku je přiložen soubor `FilterSql.xslt`, který vyfiltruje pouze události zapsané Microsoft SQL Serverem a SQL Server Agentem. Pokud je použit tento parametr, případný parametr `-T` se ignoruje.
 
 ## Plány do budoucna
 

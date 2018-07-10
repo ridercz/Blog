@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Projekt Atropa (4): Automatické spuštění webu a publikace pomocí nginx</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2015-08-03T00:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>3. srpna 2015</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/projekt-atropa" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx.</p>
 <h2 id="automaticke-spusteni-kestrelu-pomoci-init.d">Automatické spuštění Kestrelu pomocí init.d</h2>
 <p>Na Windows se jim říká služby, na UNIX-like systémech démoni. Programy, které startují automaticky a při spuštění běží v pozadí, i když není nikdo interaktivně přihlášen. Jako první potřebujeme zařídit, aby se Kestrel, web server na kterém běží ASP.NET, choval právě takhle.</p>
@@ -34,9 +85,72 @@
 <li><code>&lt;APPROOT&gt;</code> je cesta k rootu aplikace, v našem případě tedy <code>/home/$WWW_USER/www/wifigate</code>.</li>
 </ul>
 <p>Celý soubor bude po úpravách vypadat takto:</p>
-<p>#!/bin/sh ### BEGIN INIT INFO # Provides: kestrel_wifigate # Required-Start: $local_fs $network $named $time $syslog # Required-Stop: $local_fs $network $named $time $syslog # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Description: Script to run asp.net 5 application in background ### END INIT INFO # Author: Ivan Derevianko aka druss <drussilla7> # Fixed for ASP.NET 5 beta 5 with DNVM/DNX by Michal A. Valasek - github.com/ridercz WWW_USER=pi DNXRUNTIME=/home/$WWW_USER/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin/dnx APPROOT=/home/$WWW_USER/www/wifigate PIDFILE=$APPROOT/kestrel.pid LOGFILE=$APPROOT/kestrel.log # fix issue with DNX exception in case of two env vars with the same name but different case TMP_SAVE_runlevel_VAR=$runlevel unset runlevel start() { if [ -f $PIDFILE ] &amp;&amp; kill -0 $(cat $PIDFILE); then echo 'Service already running' &gt;&amp;2 return 1 fi echo 'Starting service...' &gt;&amp;2 su -c &quot;start-stop-daemon -SbmCv -x /usr/bin/nohup -p &quot;$PIDFILE&quot; -d &quot;$APPROOT&quot; -- &quot;$DNXRUNTIME&quot; . kestrel &gt; &quot;$LOGFILE&quot;&quot; $WWW_USER echo 'Service started' &gt;&amp;2 } stop() { if [ ! -f &quot;$PIDFILE&quot; ] || ! kill -0 $(cat &quot;$PIDFILE&quot;); then echo 'Service not running' &gt;&amp;2 return 1 fi echo 'Stopping service...' &gt;&amp;2 start-stop-daemon -K -p &quot;$PIDFILE&quot; rm -f &quot;$PIDFILE&quot; echo 'Service stopped' &gt;&amp;2 } case &quot;$1&quot; in start) start ;; stop) stop ;; restart) stop start ;; *) echo &quot;Usage: $0 {start|stop|restart}&quot; esac export runlevel=$TMP_SAVE_runlevel_VAR</drussilla7></p>
+<pre><code>#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          kestrel_wifigate
+# Required-Start:    $local_fs $network $named $time $syslog
+# Required-Stop:     $local_fs $network $named $time $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Description:       Script to run asp.net 5 application in background
+### END INIT INFO
+
+# Author: Ivan Derevianko aka druss &lt;drussilla7&gt;
+# Fixed for ASP.NET 5 beta 5 with DNVM/DNX by Michal A. Valasek - github.com/ridercz
+
+WWW_USER=pi
+DNXRUNTIME=/home/$WWW_USER/.dnx/runtimes/dnx-mono.1.0.0-beta5/bin/dnx
+APPROOT=/home/$WWW_USER/www/wifigate
+
+PIDFILE=$APPROOT/kestrel.pid
+LOGFILE=$APPROOT/kestrel.log
+
+# fix issue with DNX exception in case of two env vars with the same name but different case
+TMP_SAVE_runlevel_VAR=$runlevel
+unset runlevel
+
+start() {
+  if [ -f $PIDFILE ] &amp;&amp; kill -0 $(cat $PIDFILE); then
+    echo 'Service already running' &gt;&amp;2
+    return 1
+  fi
+  echo 'Starting service...' &gt;&amp;2
+  su -c &quot;start-stop-daemon -SbmCv -x /usr/bin/nohup -p \&quot;$PIDFILE\&quot; -d \&quot;$APPROOT\&quot; -- \&quot;$DNXRUNTIME\&quot; . kestrel &gt; \&quot;$LOGFILE\&quot;&quot; $WWW_USER
+  echo 'Service started' &gt;&amp;2
+}
+
+stop() {
+  if [ ! -f &quot;$PIDFILE&quot; ] || ! kill -0 $(cat &quot;$PIDFILE&quot;); then
+    echo 'Service not running' &gt;&amp;2
+    return 1
+  fi
+  echo 'Stopping service...' &gt;&amp;2
+  start-stop-daemon -K -p &quot;$PIDFILE&quot;
+  rm -f &quot;$PIDFILE&quot;
+  echo 'Service stopped' &gt;&amp;2
+}
+
+case &quot;$1&quot; in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  *)
+    echo &quot;Usage: $0 {start|stop|restart}&quot;
+esac
+
+export runlevel=$TMP_SAVE_runlevel_VAR&lt;/drussilla7&gt;
+</code></pre>
 <p>Ukončete Nano s uložením změn (Ctrl+X, Y, Enter). Nyní je třeba přidat náš skript do init.d, což je infrastruktura, která se stará právě o spouštění služeb. Učiňte to následujícími příkazy:</p>
-<p>sudo cp kestrel_service.sh /etc/init.d/kestrel_wifigate sudo chmod +x /etc/init.d/kestrel_wifigate</p>
+<pre><code>sudo cp kestrel_service.sh /etc/init.d/kestrel_wifigate
+sudo chmod +x /etc/init.d/kestrel_wifigate
+</code></pre>
 <p>Prvním příkazem (<code>cp</code>) zkopírujete soubor do adresáře <code>/etc/init.d</code> a přejmenujete ho na <code>kestrel_wifigate</code> (bez přípony). Druhým příkazem (<code>chmod</code>) soubor označíte jako vykonatelný. Na Linuxu se k označení spustitelných souborů nepoužívají přípony (<code>.exe</code> atd.), ale speciální příznak, který tímto příkazem nastavíte.</p>
 <p>Příkazem <code>sudo service kestrel_wifigate start</code> službu nastartujete (můžete také místo <code>start</code> využít příkazy <code>stop</code> a <code>restart</code>). Pokud vše dopadlo dobře, chvíli po spuštění služby najdete na adrese serveru a portu 5004 ukázkový ASP.NET 5 web. Pokud vše nedopadlo dobře, službu zastavte a podívejte se do souboru <code>~/www/wifigate/kestrel.log</code>, kde najdete, na co si Kestrel stěžuje.</p>
 <p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_demopage_thumb.png" alt="Ukázková stránka ASP.NET 5" title="Ukázková stránka ASP.NET 5" /></a></p>
@@ -45,7 +159,10 @@
 <h2 id="pouziti-nginx">Použití nginx</h2>
 <p>V zásadě bychom mohli zkonfigurovat Kestrel tak, aby naslouchal ne na portu 5004, ale na portu 80 a prohlásit, že máme hotovo. Nicméně Kestrel není k takovému nasazení zcela vhodný, chybí mu řada obvyklých funkcí (jako třeba schopnost navázat na jeden port několik virtuálních webů) a navíc by musel běžet po doprávněním roota, aby mohl být navázán na port nižší, než 1024. Proto, pokud chceme web vypublikovat do Internetu, použijeme pro to <em>nginx</em>. To je program, který slouží (mimo jiné) jako reverzní proxy, dá se srovnat třeba s Application Request Routingem (ARR) v IIS.</p>
 <p>Jak na to, nám opět poradí <a href="http://druss.co/2015/06/asp-net-5-kestrel-nginx-web-server-on-linux/">Druss</a>, jeho návod jsem jenom mírně upravil pro naše potřeby a přidal pár vysvětlivek. Nginx nainstalujete následujícími příkazy:</p>
-<p>sudo apt-get install nginx -y sudo update-rc.d nginx defaults sudo service nginx start</p>
+<pre><code>sudo apt-get install nginx -y
+sudo update-rc.d nginx defaults
+sudo service nginx start
+</code></pre>
 <p>První příkaz nginx nainstaluje, druhý nastaví automatické spouštění po startu pomocí init.d a třetí službu nastartuje. Když se nyní podíváte z webového prohlížeče na adresu Raspberry Pi s výchozím portem (80), uvidíte hlášku <em>Welcome to nginx!</em>:</p>
 <p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nginx_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_nginx_thumb.png" alt="atropa_nginx" title="atropa_nginx" /></a></p>
 <p>My ovšem nechceme publikovat statický obsah (uložený mimochodem v adresáři <code>/usr/share/nginx/www/</code>), ale chceme nginx použít jako proxy pro Kestrel. Proto musíme upravit jeho konfiguraci.</p>
@@ -55,9 +172,21 @@
 <li><code>/etc/nginx/sites-enabled</code> pak obsahuje symlinky (odkazy, zástupce) na ty soubory ze <code>sites-available</code>, které se mají skutečně použít.</li>
 </ul>
 <p>Po instalaci je v <code>sites-available</code> vytvořen soubor <code>default</code>, který způsobil, že se zobrazila hláška &quot;Welcome to nginx!&quot;. Mohli bychom jej editovat, ale jednodušší bude vytvořit nový soubor, který bude obsahovat jenom konfiguraci, kterou potřebujeme.  Soubor se bude jmenovat <code>/etc/nginx/sites-available/wifigate</code> a vytvoříte jej pomocí editoru Nano příkazem <code>sudo nano /etc/nginx/sites-available/wifigate</code>. Poté do něj zadejte následující text:</p>
-<p>server { listen 80; location / { proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_pass <a href="http://127.0.0.1:5004;">http://127.0.0.1:5004;</a> } }</p>
+<pre><code>server {
+        listen 80;
+        location / {
+                proxy_set_header    Host $host;
+                proxy_set_header    X-Real-IP   $remote_addr;
+                proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_pass  http://127.0.0.1:5004;
+        }
+}
+</code></pre>
 <p>Aktualizujeme konfiguraci nginxu následujícími příkazy:</p>
-<p>sudo rm /etc/nginx/sites-available/default sudo ln -s /etc/nginx/sites-available/wifigate /etc/nginx/sites-enabled/wifigate sudo service nginx restart</p>
+<pre><code>sudo rm /etc/nginx/sites-available/default
+sudo ln -s /etc/nginx/sites-available/wifigate /etc/nginx/sites-enabled/wifigate
+sudo service nginx restart
+</code></pre>
 <p>Prvním příkazem odstraníme symlink na výchozí konfiguraci, čímž ji vypneme. Druhým příkazem uděláme symlink na naši vlastní konfiguraci, čímž ji zapneme. Posledním příkazem restartujeme nginx, čímž se změny provedou.</p>
 <p>Když se nyní podíváte na adresu Raspberry Pi z webového prohlířeče na výchozím portu (80), uvidíte ukázkový ASP.NET 5 projekt.</p>
 <h2 id="kam-jsme-se-dostali">Kam jsme se dostali</h2>
@@ -67,7 +196,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

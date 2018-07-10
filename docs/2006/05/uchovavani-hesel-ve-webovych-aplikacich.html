@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Ve většině případů jest povinností tvůrce aplikace, aby se ve vlastní režii postaral o bezpečné uložení přístupových hesel svých uživatelů. Tento článek se zabývá metodami jejich bezpečného ukládání a práce s nimi." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Uchovávání hesel ve webových aplikacích</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2006-05-17T14:53:05.017+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>17. května 2006</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Heslo francouzské revoluce „volnost, rovnost, bratrství“ se v případě webových aplikací příliš neujalo. Zpravidla je žádoucí, ne-li přímo nevyhnutelné, uživatele nějakým způsobem omezit a kastovat.</p>
 <p>V této souvislosti se setkáváme se třemi základními pojmy: identifikace, autentizace a autorizace. Identifikace je prostá odpověď na otázku „kdo jsi?“ – pokud napíšete k tomuto článku komentář, budete požádáni, abyste prozradili své jméno. V tomto případě se vámi zadaná hodnota nijak neprověřuje, ale zpravidla bývá identifikace následována autentizací (někdy se tento proces nazývá též autentifikace). To je v podstatě odpověď na výzvu „dokaž to!“. Posledním krokem tohoto řetězce bývá proces autorizace, v němž se na základě známé identity uživatele a nějakého systému práv rozhoduje, jaké operace mu bude dovoleno vykonat.</p>
 <p>V tomto článku nás bude zajímat autentizace, a to specificky autentizace pomocí hesla. Ve většině případů jest povinností tvůrce aplikace, aby se ve vlastní režii postaral o bezpečné uložení hesla. To lze zajistit různými způsoby.</p>
@@ -30,9 +75,12 @@
 <p>Bohužel, v podmínkách běžného komerčního hostingu je bezpečné uložení šifrovacího klíče v podstatě nemožné. ASP.NET sice má v tomto směru rozličné možnosti, leč ty jsou založeny na DPAPI (Data Protection API) a předpokládají možnost spuštění utility z příkazového řádku nebo možnost vykonání jistých poměrně privilegovaných operací.</p>
 <p>Více informací:</p>
 <ul>
-<li><a href="http://msdn.microsoft.com/msdnmag/issues/06/05/ExtremeASPNET/">Rob Howard: Keeping Secrets in ASP.NET 2.0</a></li>
-<li><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000005.asp">How to: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI</a></li>
-<li><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000006.asp">How to: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA</a></li>
+<li><p><a href="http://msdn.microsoft.com/msdnmag/issues/06/05/ExtremeASPNET/">Rob Howard: Keeping Secrets in ASP.NET 2.0</a></p>
+</li>
+<li><p><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000005.asp">How to: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI</a></p>
+</li>
+<li><p><a href="http://msdn.microsoft.com/library/en-us/dnpag2/html/paght000006.asp">How to: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA</a></p>
+</li>
 </ul>
 <h2 id="hashovani">Hashování</h2>
 <p>Ve většině případů (například pokud používáte Basic nebo Forms autentizaci) nepotřebujete správné heslo znát. Potřebujete mít pouze možnost ověřit si, že heslo je stejné, jako to správné. K tomuto účelu můžete s výhodou využít hashování.</p>
@@ -68,7 +116,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

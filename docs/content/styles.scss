@@ -1,6 +1,325 @@
-﻿body {
-    background-color: #FFF;
-    color: #000;
+﻿$White: #fff;
+$Black: #000;
+$DarkGray: #444;
+$LightGray: #ccc;
+$Orange: #e60;
+
+body {
+    background-color: $LightGray;
+    background-image: url(images/pattern_light.png);
+    color: $Black;
     font-family: 'Segoe UI', Segoe, Arial, Arial, Helvetica, sans-serif;
     font-size: 1em;
+    margin: 0;
+    padding: 0;
+
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    > header {
+        background-color: $DarkGray;
+        background-image: url(images/pattern_dark.png);
+
+        div {
+            max-width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 1em;
+            background-color: rgba($Black, .25);
+        }
+    }
+
+    > nav {
+        background-color: $Orange;
+        color: $White;
+        font-size: 120%;
+
+        ul {
+            display: block;
+            margin: 0 auto;
+            padding: 1ex;
+            list-style-type: none;
+            max-width: 1200px;
+            background-color: rgba($White, .25);
+
+            li {
+                display: inline;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            li:nth-last-of-type(n+2):after {
+                content: '|';
+            }
+        }
+
+        a:link, a:visited {
+            color: $White;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: $White;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+
+    > main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3em;
+        background-color: rgba($White, .95);
+    }
+
+    > footer {
+        max-width: 1200px;
+        border-top: 1px solid $DarkGray;
+        color: $DarkGray;
+        margin: 0 auto;
+        padding: 1em;
+        font-size: 90%;
+
+        ul.logos {
+            float: left;
+            margin: 0;
+            padding: 0;
+            display: inline;
+            list-style-type: none;
+
+            li {
+                margin: 0 3em 0 0;
+                padding: 0;
+                display: inline;
+                list-style-type: none;
+            }
+        }
+
+        ul.text {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: right;
+
+            li {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:link {
+        color: $Orange;
+    }
+
+    &:visited {
+        color: darken($Orange, 10);
+    }
+
+    &:hover {
+        color: $Black;
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 300%;
+    color: $Orange;
+    margin-top: 0;
+    text-align: left;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 200%;
+    color: $Orange;
+    text-align: left;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 150%;
+    text-align: left;
+}
+
+code {
+    font-size: 100%;
+    font-family: Consolas, 'Lucida Console',Courier New, Courier, monospace;
+    color: #600;
+}
+
+pre {
+    margin: 10px;
+    padding: 10px 20px;
+    border-left: 10px solid $DarkGray;
+    background-color: lighten($LightGray, 15);
+    overflow-x: auto;
+}
+
+blockquote {
+    margin: 10px;
+    padding: 10px 20px;
+    border-left: 10px solid $Orange;
+    background-color: lighten($LightGray, 10);
+    font-style: italic;
+}
+
+section.artlist {
+    article {
+        margin-bottom: 3em;
+
+        &.haspicture {
+            min-height: 150px;
+        }
+
+        aside {
+            float: left;
+        }
+
+        header {
+            margin: 0 0 0 150px;
+            padding: 0 0 0 1em;
+
+            a {
+                font-weight: 100;
+                font-size: 200%;
+            }
+        }
+
+        div {
+            margin: 0 0 0 150px;
+            padding: 0 0 0 1em;
+            text-align: justify;
+        }
+
+        footer {
+            margin: 0 0 0 150px;
+            padding: 0 0 0 1em;
+
+            time {
+                float: right;
+                font-size: 90%;
+                color: $DarkGray;
+            }
+        }
+    }
+
+    &.hlfirst article:nth-of-type(1) {
+        background-color: lighten($LightGray, 10);
+        padding-right: 1em;
+        font-size: 120%;
+    }
+
+    > footer {
+        background-color: $LightGray;
+        padding: 1ex .5ex;
+        text-align: center;
+        border-radius: 1ex;
+
+        .prev {
+            float: left
+        }
+
+        .next {
+            float: right;
+        }
+
+        a {
+            background-color: $Orange;
+            padding: .5ex 1ex;
+            border-radius: 1ex;
+
+            &:link, &:visited {
+                color: $White;
+                text-decoration: none;
+            }
+
+            &:hover {
+                color: $White;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+ul.categories {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 80%;
+
+    li {
+        display: inline;
+        margin-right: 1ex;
+        padding: .25ex 1.5ex;
+        list-style-type: none;
+        background-color: rgba($Orange, .75);
+        border-radius: 1ex;
+
+        a:link, a:visited {
+            color: $White;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $Black;
+        }
+    }
+}
+
+ul.serials {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 80%;
+
+    li {
+        display: inline;
+        margin-right: 1ex;
+        padding: .25ex 1.5ex;
+        list-style-type: none;
+        border: 1px solid rgba($Orange, .75);
+        border-radius: 1ex;
+
+        a:link, a:visited {
+            color: $Orange;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $Black;
+        }
+    }
+}
+
+aside.article-info {
+    font-size: 120%;
+    color: $DarkGray;
+
+    time {
+        float: right;
+    }
+}
+
+section.article-text {
+    text-align: justify;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+    }
 }

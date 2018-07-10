@@ -14,6 +14,6 @@ Pokud chcete provozovat na jednom serveru ASP.NET verze 1.1 a 2.0 Beta 2 (Whidbe
 Postup je tedy následující:
 
 1.  V IIS Manageru vytvořte nový application pool. Ve stromu vlevo klepněte pravým tlačítkem na *Application Pools* a v menu zvolte *New > Application Pool*. Ponechte defaultní nastavení a pojmenujte ho třeba *WhidbeyAppPool*.
-2.  Vytvořte nový virtuální web server (adresář). Poté si otevřete jeho vlastnosti. Na záložce *Home Directory* zvolte v listboxu dříve vytvořený pool. Dále pak na záložce ASP.NET (objeví se při instalaci Whidbey runtime) zvolte jako *ASP.NET version* 2.0.50215.0 (nebo takovou jakou máte nainstalovanou). 
+2.  Vytvořte nový virtuální web server (adresář). Poté si otevřete jeho vlastnosti. Na záložce *Home Directory* zvolte v listboxu dříve vytvořený pool. Dále pak na záložce ASP.NET (objeví se při instalaci Whidbey runtime) zvolte jako *ASP.NET version* 2.0.50215.0 (nebo takovou jakou máte nainstalovanou).
 
 V tomto okamžiku je už všechno nastaveno a patřičný web bude fungovat pod runtime 2.0, všechno ostatní pojede na stávající 1.1 verzi.

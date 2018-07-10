@@ -25,7 +25,7 @@ Tento problém se netýká jenom ASP.NET, právě naopak – stejně jako v př�
 *   Oficiální security bulletin: [Microsoft Security Bulletin MS11-100 – Critical](http://technet.microsoft.com/en-us/security/bulletin/ms11-100)
 *   Článek o dostupné aktualizaci: [Scott Guthrie: ASP.NET Security Update Shipping Thursday, Dec 29th](http://weblogs.asp.net/scottgu/archive/2011/12/28/asp-net-security-update-shipping-thursday-dec-29th.aspx)
 *   Původní článek popisující teoretické pozadí útoků: [Scott A. Crosby, Dan S. Wallach: Denial of Service via Algorithmic Complexity Attacks](http://www.cs.rice.edu/~scrosby/hash/CrosbyWallach_UsenixSec2003.pdf)
-*   Demonstrace útoků na současné platformy: [n.runs-SA-2011.004 - web programming languages and platforms - DoS through hash table](http://www.nruns.com/_downloads/advisory28122011.pdf) 
+*   Demonstrace útoků na současné platformy: [n.runs-SA-2011.004 - web programming languages and platforms - DoS through hash table](http://www.nruns.com/_downloads/advisory28122011.pdf)
 
 Dnes v 19:00 Microsoft uvolnil mimořádnou bezpečnostní aktualizaci (out-of-band security update), která tento problém řeší. Záplata je k dispozici na Windows Update a stačí tedy dát vyhledat dostupné aktualizace a budou nabídnuty patřičné balíčky (podle verzí .NET Frameworku):
 

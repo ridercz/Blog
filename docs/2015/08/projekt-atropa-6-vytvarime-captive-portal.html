@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V šestém dílu seriálu o vytvoření &quot;zlé maliny&quot; pro útoky sociálním inženýrstvím si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Projekt Atropa (6): Vytváříme captive portal</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2015-08-24T00:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>24. srpna 2015</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V šestém dílu seriálu o vytvoření <a href="http://www.aspnet.cz/articles/5429-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">&quot;zlé maliny&quot; pro útoky sociálním inženýrstvím</a> si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6. Aplikace je poměrně triviální a nepochybně by téhož výsledku bylo možno dosáhnout i jednoduššími prostředky. Já jsem zvolil ASP.NET 5 a MVC 6, protože jsem chtěl novou platformu vyzkoušet a také zkusit na Linuxu rozběhnout z .NETu trochu víc, než obligátní &quot;Hello World!&quot;.</p>
 <h2 id="user-experience">User experience</h2>
 <p>Co bude naše aplikace dělat? Pokud se uživatel připojí k otevřenému Wi-Fi hotspotu, každý HTTP požadavek ho přenese na naši aplikaci. Ta mu ukáže úhledný dialog a nabídne, že se může připojit k Internetu, pokud se přihlásí pomocí služeb jako je Facebook, Twitter, Google Account, Microsoft Account nebo místní Seznam.cz:</p>
@@ -33,7 +78,34 @@
 <h2 id="konfigurace-aplikace">Konfigurace aplikace</h2>
 <p>Aplikace je napsána v ASP.NET 5 a MVC 6, ve Visual Studiu 2015. Je velice jednoduchá, obsahuje jeden controller se čtyřmi akcemi, tři pohledy a celý jeden model. Zdrojové kódy <a href="https://github.com/ridercz/WifiGate/">najdete na GitHubu</a>. K dispozici jsou dva releasy. Verze <a href="https://github.com/ridercz/WifiGate/releases/tag/v1.0.0-alpha">1.0.0-alpha</a> je naprosto minimální implementace, kde je všechno zapsáno natvrdo a aplikace nemá žádnou grafiku, která by stála za řeč. <a href="https://github.com/ridercz/WifiGate/releases/tag/v1.0.0">Verze 1.0.0</a> už je kompletní aplikace s konfigurací a grafikou.</p>
 <p>Klíčovou součástí aplikace je její konfigurace, neboť ta říká, co se vlastně bude dělat. Využívám zde nový konfigurační systém v ASP.NET 5, který je vymyšlený docela dobře, ale zato je mizerně popsaný. Jeho fungování věnuji samostatný článek, zde je jednom návod k použití. Aplikaci řídí soubor <code>config.json</code>, který ve výchozím nastavení vypadá takto:</p>
-<p>{ &quot;ForceHostName&quot;: &quot;www.wifigate-login.local&quot;, &quot;OutputFileName&quot;: &quot;wwwroot/passwords.txt&quot;, &quot;MaximumPasswordLength&quot;: 4, &quot;IdentityProviders&quot;: [ { &quot;Id&quot;: &quot;facebook&quot;, &quot;Title&quot;: &quot;Facebook&quot; }, { &quot;Id&quot;: &quot;google&quot;, &quot;Title&quot;: &quot;Google Account&quot; }, { &quot;Id&quot;: &quot;twitter&quot;, &quot;Title&quot;: &quot;Twitter&quot; }, { &quot;Id&quot;: &quot;microsoft&quot;, &quot;Title&quot;: &quot;Microsoft Account&quot; }, { &quot;Id&quot;: &quot;seznam&quot;, &quot;Title&quot;: &quot;Seznam.cz&quot; } ] }</p>
+<pre><code>{
+    &quot;ForceHostName&quot;: &quot;www.wifigate-login.local&quot;,
+    &quot;OutputFileName&quot;: &quot;wwwroot/passwords.txt&quot;,
+    &quot;MaximumPasswordLength&quot;: 4,
+    &quot;IdentityProviders&quot;: [
+        {
+            &quot;Id&quot;: &quot;facebook&quot;,
+            &quot;Title&quot;: &quot;Facebook&quot;
+        },
+        {
+            &quot;Id&quot;: &quot;google&quot;,
+            &quot;Title&quot;: &quot;Google Account&quot;
+        },
+        {
+            &quot;Id&quot;: &quot;twitter&quot;,
+            &quot;Title&quot;: &quot;Twitter&quot;
+        },
+        {
+            &quot;Id&quot;: &quot;microsoft&quot;,
+            &quot;Title&quot;: &quot;Microsoft Account&quot;
+        },
+        {
+            &quot;Id&quot;: &quot;seznam&quot;,
+            &quot;Title&quot;: &quot;Seznam.cz&quot;
+        }
+    ]
+}
+</code></pre>
 <p>Význam konfiguračních hodnot je následující:</p>
 <ul>
 <li><code>ForceHostName</code> je název serveru, na který bude uživatel přesměrován poté, co se na aplikaci dostane. Účelem je zvýšit důvěryhodnost rozhraní, neboť takto autorizační portály obvykle postupují. Můžete sem zadat jakoukoliv adresu - existující, neexistující, dokonce i s vymyšlenou top-level doménou. Nebo - jako já - můžete použít standardizovanou doménu &quot;<code>.local</code>&quot; pro lokální sítě. Po <a href="http://www.aspnet.cz/articles/5435-projekt-atropa-5-vytvarime-honeypot">konfiguraci popsané v předchozím dílu</a> bude stejně jakýkoliv DNS dotaz resolvován na adresu našeho honeypotu. Tento parametr je nepovinný, pokud bude hodnota prázdná nebo nebude přítomna vůbec, přesměrování se neprovede. Také se neprovede, pokud aplikace běží ve vývojovém prostředí.</li>
@@ -55,7 +127,8 @@
 <p>Raspberry připravené podle předchozích dílů seriálu připojíme do stejné drátové sítě jako řídící počítač a zapneme. Potřebujeme na něj aplikaci zkopírovat, což lze učinit mnoha způsoby. Já budu používat SCP, což je přenos souborů po SSH. Pokud jste si nainstalovali PuTTY, k čemuž jsem vás vyzýval ve <a href="http://www.aspnet.cz/articles/5430-projekt-atropa-2-zprovozneni-raspberry-pi-a-raspbian-linuxu">druhém dílu</a>, máte k dispozici řádkovou utilitu <code>pscp.exe</code>.</p>
 <p>Smažte na Raspberry Pi obsah složky s obsahem web serveru, tedy <code>/home/pi/www/wifigate</code>, ovšem nikoliv složku samotnou. Můžete tak učinit třeba příkazem <code>rm -rf /home/pi/www/wifigate/*</code>.</p>
 <p>Poté pomocí <code>pscp.exe</code> nakopírujte zdrojové kódy aplikace WifiGate.  Použijete k tomu následující příkaz, spuštěný ovšem na Windows:</p>
-<p>pscp -r -batch -C -pw raspberry &quot;C:\Users\Altair\Source\Repos\WifiGate\src\WifiGate*&quot; pi@10.7.0.103:/home/pi/www/wifigate</p>
+<pre><code>pscp -r -batch -C -pw raspberry &quot;C:\Users\Altair\Source\Repos\WifiGate\src\WifiGate\*&quot; pi@10.7.0.103:/home/pi/www/wifigate
+</code></pre>
 <p>Význam parametrů je následující:</p>
 <ul>
 <li><code>-r</code> postupuje rekurzivně, kopíruje i podadresáře.</li>
@@ -72,7 +145,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

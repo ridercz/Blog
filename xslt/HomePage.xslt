@@ -13,6 +13,7 @@
 
   <xsl:include href="_Common.xslt" />
 
+  <xsl:param name="x4c:PageSize" />
 
   <xsl:template match="/">
     <html>
@@ -22,16 +23,24 @@
           <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
         </xsl:call-template>
       </head>
-      <xsl:call-template name="SiteHeader" />
       <body>
-        <section class="artlist">
-          <xsl:for-each select="//file[dcterms:dateAccepted]">
-            <xsl:sort select="dcterms:dateAccepted" order="descending" />
-            <xsl:if test="position() &lt;= 5">
-              <xsl:call-template name="ArticleLink" />
-            </xsl:if>
-          </xsl:for-each>
-        </section>
+        <xsl:call-template name="SiteHeader" />
+        <main>
+          <section class="artlist hlfirst">
+            <xsl:for-each select="//file[dcterms:dateAccepted]">
+              <xsl:sort select="dcterms:dateAccepted" order="descending" />
+              <xsl:if test="position() &lt;= $x4c:PageSize">
+                <xsl:call-template name="ArticleLink" />
+              </xsl:if>
+            </xsl:for-each>
+            <footer>
+              <a href="/archive/2">
+                <i class="fal fa-archive">&#8197;</i>
+                Starší články najdete v archivu
+              </a>
+            </footer>
+          </section>
+        </main>
         <xsl:call-template name="SiteFooter" />
       </body>
     </html>

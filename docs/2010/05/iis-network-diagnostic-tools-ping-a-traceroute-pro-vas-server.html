@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy ping a traceroute (tracert). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Ukážeme si, jak takovou službu napsat v ASP.NET a provozovat na IIS." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>IIS Network Diagnostic Tools: Ping a Traceroute pro váš server</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2010-05-22T18:03:17.313+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>22. května 2010</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy <code>ping</code> a <code>traceroute</code> (<code>tracert</code>). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Jejich přehled najdete například na <a href="http://www.traceroute.org">www.traceroute.org</a>. Chce to ovšem trpělivost, řada serverů tamo uvedených je nefunkční.</p>
 <p>V zájmu rozmnožení jejich řad jsem napsal webovou aplikaci (přesněji modul pro IIS), který umožňuje jednoduše nabídnout možnost pingu a traceroute na jakémkoliv serveru. Jmenuje se <strong>IIS Network Diagnostic Tools</strong> a je zdarma ke stažení na <a href="http://iisnetdiag.codeplex.com/">http://iisnetdiag.codeplex.com/</a>.</p>
 <h2 id="co-umi-ping">Co umí PING</h2>
@@ -48,7 +93,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

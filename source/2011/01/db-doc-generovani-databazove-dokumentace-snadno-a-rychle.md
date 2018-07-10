@@ -25,7 +25,7 @@ Napsal jsem jednoduchou utilitku, která se ovládá z příkazové řádky a p�
 
 *   **XML** – původní XML dokument, který můžete použít pro další zpracování, například pomocí XSLT transformací. Program sám obsahuje dvě transformace, které umožňují výstup v dalších dvou formátech.
 *   **HTML** – výsledkem této transformace je HTML dokument, který obsahuje informace o všech tabulkách. Funguje interaktivně, foreign klíče vedou na odkazované tabulky a obsahuje dostatek prostoru pro komentáře. Zároveň je tento dokument optimalizován pro tisk, takže jej lze použít pro tvorbu dokumentace buďto tištěné a nebo třeba v PDF nebo XPS.
-*   **WikiPlex** – třetí formát, do nějž lze dokumentaci exportovat, je textový dokument s wiki syntaxí projektu [WikiPlex](http://wikiplex.codeplex.com/). Tento formát používá třeba populární server [CodePlex](http://www.codeplex.com/), ale je snadné jej zahrnout i do vlastních projektů. 
+*   **WikiPlex** – třetí formát, do nějž lze dokumentaci exportovat, je textový dokument s wiki syntaxí projektu [WikiPlex](http://wikiplex.codeplex.com/). Tento formát používá třeba populární server [CodePlex](http://www.codeplex.com/), ale je snadné jej zahrnout i do vlastních projektů.  
 
 K dispozici je též [ukázka dokumentace](http://sqldbdoc.codeplex.com/wikipage?title=Sample%20Output&referringTitle=Home) vygenerované pro populární databáze Northwind a AdventureWorks. Vzhledem k použité technologii XSL transformací je možné tyto šablony snadno modifikovat nebo vytvářet nové, podle požadavků daného projektu.
 

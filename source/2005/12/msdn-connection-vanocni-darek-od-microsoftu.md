@@ -13,7 +13,9 @@
 
 Milým vánočním dárkem pro vývojáře je program [**MSDN Connection**](https://www.microsoft.com/cze/msdn/connection/default.mspx). Pokud se do něj zaregistrujete, zdarma získáte mimo jiné:
 
-*   DVD s trial verzemi produktů technickou dokumentací a hlavně Express edicemi všech vývojových nástrojů. Papírovou knihu [Začínáme vytvářet webové stránky ve Visual Web Developer 2005](http://knihy.cpress.cz/Book.asp?ID=1965) Slevu 20% na knihy CP Books a Microsoft Press 
+*   DVD s trial verzemi produktů technickou dokumentací a hlavně Express edicemi všech vývojových nástrojů. 
+Papírovou knihu [Začínáme vytvářet webové stránky ve Visual Web Developer 2005](http://knihy.cpress.cz/Book.asp?ID=1965) 
+Slevu 20% na knihy CP Books a Microsoft Press
 
 ## Můj komentář
 

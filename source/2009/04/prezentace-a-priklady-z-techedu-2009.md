@@ -16,11 +16,11 @@
 V archivu najdete:
 
 *   Veškeré moje prezentace ve formátu PDF. 
-*   Příklad, který jsem ve svých přednáškách používal 
+*   Příklad, který jsem ve svých přednáškách používal      
 
     *   V adresáři *Samples\www.northwind.local* ukázkovou aplikaci v počátečním stavu. 
-    *   V adresáři *Samples\www-final.northwind.local* finální verzi téže aplikace včetně URL rewritingu, jQuery a stránkování.  
-*   Ukázkové HTML code snippets pro Visual Studio 2010  
+    *   V adresáři *Samples\www-final.northwind.local* finální verzi téže aplikace včetně URL rewritingu, jQuery a stránkování.    
+*   Ukázkové HTML code snippets pro Visual Studio 2010   
 
 Pokud si budete chtít příklady vyzkoušet, potřebujete k tomu ukázkovou databázi, příklad je zkonfigurován tak, aby se připojoval na lokální instanci *.\SqlExpress* a hledal databázi *Northwind*. Pokud tuto databázi nemáte k dispozici, vytvořte prázdnou a spusťte v ní skript *NorthwindTables.sql*, který je v adresáři *Samples*.
 

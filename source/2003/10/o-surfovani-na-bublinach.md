@@ -11,7 +11,7 @@
 Onehdá jsem se podíval na Lupu a našel tam dva perfektní články:
 
 *   [Umění surfovat na bublinách](http://www.lupa.cz/clanek.php3?show=3067)
-*   [Vykašlete se na ocenění, soustřeďte se na zisk](http://www.lupa.cz/clanek.php3?show=2938) 
+*   [Vykašlete se na ocenění, soustřeďte se na zisk](http://www.lupa.cz/clanek.php3?show=2938)
 
 Jsou perfektní v tom, že bych asi jenom těžko dokázal precizněji formulovat zásady podnikání, které považuji za zvrácené a celkově (společensky i ekonomicky) škodlivé.
 

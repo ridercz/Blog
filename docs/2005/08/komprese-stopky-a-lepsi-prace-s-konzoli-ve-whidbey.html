@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jednoduchý prográmek ilustrující některé novinky v .NET 2.0 (Whidbey)" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Komprese, stopky a lepší práce s konzolí ve Whidbey</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-08-05T22:37:54.79+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>5. srpna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Nový .NET framework přináší řadu funkcí, které předtím nebyly dostupné buď vůbec a nebo mnohem komplikovaněji. V dnešním příkladu se podíváme na tři z nich.</p>
 <h2 id="gzip-a-deflate-komprese">GZIP a DEFLATE komprese</h2>
 <p>Nový .NET nabízí podporu pro kompresi dat, metodou GZIP a DEFLATE. GZIP komprese je průmyslovým standardem a používá se například pro <a href="/entry/article-20050102.aspx">kompresi přenosů přes HTTP</a>. Ve stávající verzi 1.1 je možno s úspěchem použít open source knihovnu <a href="http://www.icsharpcode.net/OpenSource/SharpZipLib/Default.aspx">SharpZipLib</a>, ale zahrnutí této funkce do &quot;core&quot; frameworku je jistě výhodou.</p>
@@ -34,13 +79,54 @@
 <p>Často je třeba změřit, jak dlouho trvala určitá operace. V zásadě je k tomu možno použít obyčejnou proměnnou typu <code>DateTime</code> a odečíst rozdíl. Ve Whidbey je tato funkcionalita zapouzdřena do třídy <code>System.Diagnostics.Stopwatch</code>. Ovládá se pomocí metod <code>Start</code>, <code>Stop</code> a <code>Reset</code>, aktuální hodnotu zjistíte například pomocí vlastnosti <code>Elapsed</code>.</p>
 <h2 id="prakticky-priklad">Praktický příklad</h2>
 <p>Následující procedura slouží ke zkomprimování souboru metodou GZIP. Měří čas zpracování a postupně zobrazuje průběh:</p>
-<p>Sub CompressFile(ByVal InFileName As String, ByVal OutFileName As String) Const BufferSize As Int32 = 65536 ' 64 kB ' Start stopwatch Dim SW As New System.Diagnostics.Stopwatch() SW.Start() ' Prepare streams Dim InStream As New System.IO.FileStream(InFileName, IO.FileMode.Open, IO.FileAccess.Read) Dim OutStream As New System.IO.FileStream(OutFileName, IO.FileMode.Create, IO.FileAccess.Write) Dim ZipStream As New System.IO.Compression.GZipStream(OutStream, IO.Compression.CompressionMode.Compress, True) ' Compress Dim Data(BufferSize) As Byte Dim BytesRead As Int32 Do BytesRead = InStream.Read(Data, 0, BufferSize) ZipStream.Write(Data, 0, BytesRead) ' Show progress Console.Write(&quot;Progress: {0:N2}%&quot;, InStream.Position / InStream.Length * 100) Console.CursorLeft = 0 Loop While BytesRead = BufferSize ' Clean up SW.Stop() Console.WriteLine(&quot;Compression completed in {0:N2} seconds.&quot;, SW.Elapsed.TotalSeconds) ZipStream.Close() OutStream.Close() InStream.Close() End Sub</p>
+<pre><code>Sub CompressFile(ByVal InFileName As String, ByVal OutFileName As String)
+    Const BufferSize As Int32 = 65536 ' 64 kB
+    ' Start stopwatch
+    Dim SW As New System.Diagnostics.Stopwatch()
+    SW.Start()
+    ' Prepare streams
+    Dim InStream As New System.IO.FileStream(InFileName, IO.FileMode.Open, IO.FileAccess.Read)
+    Dim OutStream As New System.IO.FileStream(OutFileName, IO.FileMode.Create, IO.FileAccess.Write)
+    Dim ZipStream As New System.IO.Compression.GZipStream(OutStream, IO.Compression.CompressionMode.Compress, True)
+    ' Compress
+    Dim Data(BufferSize) As Byte
+    Dim BytesRead As Int32
+    Do
+        BytesRead = InStream.Read(Data, 0, BufferSize)
+        ZipStream.Write(Data, 0, BytesRead)
+        ' Show progress
+        Console.Write(&quot;Progress: {0:N2}%&quot;, InStream.Position / InStream.Length * 100)
+        Console.CursorLeft = 0
+    Loop While BytesRead = BufferSize
+    ' Clean up
+    SW.Stop()
+    Console.WriteLine(&quot;Compression completed in {0:N2} seconds.&quot;, SW.Elapsed.TotalSeconds)
+    ZipStream.Close()
+    OutStream.Close()
+    InStream.Close()
+End Sub
+</code></pre>
 <p>Můžete si stáhnout zdrojové kódy <a href="https://www.cdn.altairis.cz/Blog/2005/20050805-cgz.zip">kompletní konzolové aplikace</a> ve VB.NET umožňující kompresi a dekompresi dat metodou GZIP.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

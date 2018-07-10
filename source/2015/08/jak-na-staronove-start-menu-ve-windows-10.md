@@ -18,12 +18,12 @@ Používané programy dělím v zásadě do třech kategorií, v závislosti na 
 
 1.  Ty nejčastěji používané aplikace mám **připnuté na taskbaru** a kdykoliv je mohu spustit jedním kliknutím nebo klávesovou zkratkou. Ve Windows funguje klávesová zkratka "*Win + číslo*", kterou spustíte n-tou připnutou aplikaci. Takže pro spuštění první zleva stisknete *Win + 1* atd.
 2.  Druhou kategorii tvoří aplikace, které spouštím relativně méně často, třeba jednou denně, ale pořád je chci mít při ruce. Ty mám umístěné **na první úrovni Start menu**, ve Windows 8 jsem je měl na Start screen jako dlaždice. Dají se tedy spustit na dvě kliknutí (nebo *Win* a kliknutí).
-3.  Třetí kategorií jsou aplikace, které spouštím méně často. Ty spouštím **pomocí vyhledávání**. Tedy stisknout *Win* a začít psát název. 
+3.  Třetí kategorií jsou aplikace, které spouštím méně často. Ty spouštím **pomocí vyhledávání**. Tedy stisknout *Win* a začít psát název.
 
 Mimo tyto kategorie stojí dva speciální programy:
 
 *   **Příkazový řádek** spouštím ze systémového menu pomocí klávesové zkratky. *Win + X, C* pro běžnou příkazovou řádku a *Win + X, A, Alt + Y* pro administrátorskou.
-*   **Notepad** potřebuji velice často, ale spouštím ho paradoxně velice komplikovaně, totiž *Win + R* (spustit), do toho napsat *Notepad* a *Enter*. Samotného mne to trochu štve, protože je to neefektivní, ale ten reflex mám tak zažitý, že ho nedokáže přebít nic. Zkoušel jsem připínání na taskbar, dokonce mám na klávesnici programovatelné makro tlačítko, ale nefunguje nic. Bez ohledu na to, co dělám, Notepad pořád spouštím jako na Windows 95, takže jsem se s tím naučil žít. 
+*   **Notepad** potřebuji velice často, ale spouštím ho paradoxně velice komplikovaně, totiž *Win + R* (spustit), do toho napsat *Notepad* a *Enter*. Samotného mne to trochu štve, protože je to neefektivní, ale ten reflex mám tak zažitý, že ho nedokáže přebít nic. Zkoušel jsem připínání na taskbar, dokonce mám na klávesnici programovatelné makro tlačítko, ale nefunguje nic. Bez ohledu na to, co dělám, Notepad pořád spouštím jako na Windows 95, takže jsem se s tím naučil žít.
 
 A jaké programy v praxi používám? Takhle vypadá levý horní roh mé obrazovky ve stavu rozbalené nabídky Start (mám, poněkud nezvykle, již dlouhá léta taskbar a nabídku Start nahoře, ve výši očí.):
 
@@ -40,7 +40,7 @@ Programy první kategorie s tlačítky na taskbaru jsou pro mne následující:
 *   **[Microsoft OneNote](http://www.onenote.com/)** – jeden z mých hlavních pracovních nástrojů. Poznámkovník, ve kterém mám neuvěřitelné množství různých krátkodobých i dlouhodobých poznámek, námětů na články (většinu článků píšu v OneNote), nákupních seznamů a podobně. To vše sesynchronizované přes cloudové úložiště na notebooku, tabletu, mobilu a přes webové rozhraní.
 *   **Microsoft SQL Server Management Studio** – správa lokálního vývojového SQL Serveru.
 *   **Microsoft Visual Studio 2015** – asi netřeba nic dodávat. Po nejnovější reinstalaci na Windows 10 RTM jsem si nainstaloval pouze VS 2015 a doufám, že toho nebudu litovat.
-*   **Facebook [Messenger](http://www.messenger.com/) via Chrome** – to je takové zvláštní zviřátko. Obecně jako IM klienta používám Pidgin (pro IRC a ICQ). Bohužel, s většinou lidí se dneska dá komunikovat jenom přes zprávy na Facebooku. A dvakrát bohužel, Facebook zrušil XMPP rozhraní, takže Pidgin nadále neumí fungovat jako Facebook klient. IM chci ale mít vedle browseru, takže využívám schopnosti Chrome jakýkoliv web převést alespoň vizuálně do podoby aplikace ve speciálním okně bez záložek, adresního řádku apod. V této podobě mám na sekundárním monitoru trvale otevřený web [Messenger.com](http://www.messenger.com/). 
+*   **Facebook [Messenger](http://www.messenger.com/) via Chrome** – to je takové zvláštní zviřátko. Obecně jako IM klienta používám Pidgin (pro IRC a ICQ). Bohužel, s většinou lidí se dneska dá komunikovat jenom přes zprávy na Facebooku. A dvakrát bohužel, Facebook zrušil XMPP rozhraní, takže Pidgin nadále neumí fungovat jako Facebook klient. IM chci ale mít vedle browseru, takže využívám schopnosti Chrome jakýkoliv web převést alespoň vizuálně do podoby aplikace ve speciálním okně bez záložek, adresního řádku apod. V této podobě mám na sekundárním monitoru trvale otevřený web [Messenger.com](http://www.messenger.com/).
 
 Programy druhé kategorie ve Start menu jsou následující:
 
@@ -56,7 +56,7 @@ Programy druhé kategorie ve Start menu jsou následující:
 *   **Word**, **Excel** a **PowerPoint** nejspíše netřeba představovat, tvoří samostatnou "Office" sekci.
 *   Další blok obývají převážně produkty z **Adobe Creative Suite**: Photoshop, Illustrator (vektorový editor), Premiere (editace videa) a Acrobat pro práci s PDF.
 *   Společnost jim dělá [**RIOT**](http://luci.criosweb.ro/riot/), dle mého soudu nejlepší software na dávkovou optimalizaci obrázků před publikací na web.
-*   Trošku odstrčené vpravo jsou dva programy, které používám při modelování. **[SketchUp](http://www.sketchup.com/)**, což je první CAD, který se mi v životě podařilo pochopit a jsem v něm schopen něco namodelovat a [**Slic3r**](http://slic3r.org/) v distribuci [Průša Research](http://www.prusa3d.cz/ovladace/), který umí 3D modely vzít a převést do G-Code, ve kterém je dokáže přechroustat má 3D tiskárna. 
+*   Trošku odstrčené vpravo jsou dva programy, které používám při modelování. **[SketchUp](http://www.sketchup.com/)**, což je první CAD, který se mi v životě podařilo pochopit a jsem v něm schopen něco namodelovat a [**Slic3r**](http://slic3r.org/) v distribuci [Průša Research](http://www.prusa3d.cz/ovladace/), který umí 3D modely vzít a převést do G-Code, ve kterém je dokáže přechroustat má 3D tiskárna.
 
 Programů používám samozřejmě mnohem více, ale tyto jsou zdaleka nejpoužívanější a popisovaná forma přístupu k nim se mi výtečně osvědčuje. Může inspirovat i vás.
 

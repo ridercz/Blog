@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Upozornění na novou verzi &quot;Altairis Simple ASP.NET SQL Providers&quot; a stručný přehled dalších alternativ k vestavěným providerům." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Přehled alternativních Membership, Role a Profile providerů pro ASP.NET</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2006-12-19T02:52:22.573+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>19. prosince 2006</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Za jeden z nejlepších nápadů v ASP.NET 2.0 považuji provider model, zejména pak Membership, Profile a Role providery. Vestavěná sbírka providerů ovšem není moc použitelná pro složitější aplikace. Nabízím vám tedy přehled alternativ.</p>
 <h2 id="altairis-simple-asp.net-sql-providers">Altairis Simple ASP.NET SQL Providers</h2>
 <p>Začnu samozřejmě svým vlastním dílkem, sbírkou Membership, Role a Profile providerů, jejichž cílem je poskytnout &quot;minimální implementaci&quot; založenou na jednoduché databázové struktuře. Jejich popis jsem zde již <a href="https://www.aspnet.cz/Articles/115-altairis-simple-asp-net-sql-providers-ke-stazeni.aspx">zveřejnil před časem</a>.</p>
@@ -33,13 +78,28 @@
 <p>Pokud používáte MySQL, může vás zajímat implementace membershipu a rolí pro tento server. Najdete ji pro změnu na <a href="http://www.codeproject.com/aspnet/MySQLMembershipProvider.asp">CodeProjectu</a>. Víc o ní nevím, MySQL nepoužívám.</p>
 <h2 id="odbc">ODBC</h2>
 <p>V MSDN najdete příklad implementace <a href="http://msdn2.microsoft.com/en-us/library/6tc47t75.aspx">Membership</a>, <a href="http://msdn2.microsoft.com/en-us/library/317sza4k.aspx">Role</a> a <a href="http://msdn2.microsoft.com/en-us/library/ta63b872.aspx">Profile</a> providerů proti jakémukoliv datovému zdroji, který je dostupný přes ODBC.</p>
-<h2 id="zdrojove-kody-vestavenych-provideru-a-dokumentace-k-nim">Zdrojové kódy vestavěných providerů a dokumentace k nim</h2>
+<h2 id="zdrojove-kody-vestavenych-provideru-a-dokumentacek-nim">Zdrojové kódy vestavěných providerů a dokumentace k nim</h2>
 <p>Pokud vás zajímá, jak providery obecně fungují a chcete se podívat na jejich zdrojové kódy, máte možnost. Obsáhlá dokumentace a zdrojáky jsou nyní <a href="http://msdn2.microsoft.com/en-us/asp.net/aa336558.aspx">ke stažení na MSDN jako Provider Toolkit</a>.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -32,7 +32,7 @@ Nyní jsem uvolnil masivně přepracovanou druhou verzi. Třídy *Simple*Provide
 *   **Možnost konfigurovat názvy tabulek:** Původní verze vyžadovala tabulky s pevnými jmény. Nová umožňuje tabulky *Users*, *Roles* a *RoleMemberships* pojmenovat libovolně.
 *   Korektnější podpora zakazování a povolování uživatelů (původní implementace nesystémově míchala "enabled" a "locked out").
 *   Podpora metody *GetNumberOfUsersOnline*, o jejíž smysluplnosti si ovšem stále myslím své.
-*   Kompletní a úplná podpora impersonace v některých hostingových scénářích. 
+*   Kompletní a úplná podpora impersonace v některých hostingových scénářích.
 
 Zůstává zachována původní jednoduchost a také hojně využívaná možnost do tabulek přidávat libovolné vlastní sloupečky, pokud jsou nullable a nebo mají defaultní hodnotu, což zapojení do vlastní tabulkové struktury dále zjednodušuje.
 

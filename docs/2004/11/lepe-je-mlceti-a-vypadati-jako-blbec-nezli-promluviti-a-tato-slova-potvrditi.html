@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="O etice šiřitele informací" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Lépe je mlčeti a vypadati jako blbec, nežli promluviti a tato slova potvrditi</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2004-11-18T04:01:55.033+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>18. listopadu 2004</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/lide-a-jina-zver" title="Rubrika">
+              <i class="fal fa-tag"> </i>Lidé a jiná zvěř</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>I hlavy mnohem moudřejší než ta moje již drahnou dobu upozorňují, že přebytek informací může způsobovat ještě větší škody než jejich nedostatek. Čím dál tím očividnější je, že informace na Internetu může dnes publikovat každý nedouk a je velmi obtížné rozeznat relevantní zdroje od nesmyslných.</p>
 <p>Kdysi dávno měla pouze poměrně omezená skupina lidí možnost hlásat své názory a postoje masám. Nemluvím o cenzuře, ale o prostých technologických omezeních. V té době také zhruba fungovala <em>novinářská etika</em>, jejímž účelem bylo mimo jiné způsobit, aby se houfně nešířily nesmysly. V dnešní době se jejím dodržováním zhusta neobtěžují ani profesionální média a chtít to po bloggerech je už absurdní úplně.</p>
 <p>Byl bych ale strašně rád, kdyby se ujalo cosi, čemu pracovně říkám <em>etika šiřitele informací</em>. Jsem si vědom toho, že jsem v tomto okamžiku nesmírný idealista, ale jsem přesvědčen, že komunikační sítě by byly mnohem příjemnějším místem, kdyby se autoři alespoň občas zamysleli nad důsledky publikování svých děl.</p>
@@ -40,7 +85,8 @@
 <p>Onen návod na zrychlení Windows je nepochybně pravdivý v tom, že vyházením zbytečností z operačního systému tento skutečně zrychlíte. Pokud z auta vyházíte zvytečnosti, taky bude fungovat efektivněji. Problém nastává v okamžiku, když vám nějaká dobrá duše poradí, že vhodnými kandidáty na vyhození jsou třeba airbagy (máte přece bezpečnostní pásy), alarm (máte přece zámky a když i ty selžou, houkání sirény bude na prd tak jako tak), ruční brzda (máte přece normální), sada nářadí na opravy a rezerva (servis je přece dneska na každém rohu). Svému autu tak skutečně odlehčíte a bude v pohodě jezdit nadále. Chvíli.</p>
 <p>Mezi tajemství stvoření patří dle mého názoru i tyto dvě velké otázky:</p>
 <ol>
-<li>Proč si docela velké množství lidí myslí, že veškeré konání Microsoftu a Billa Gatese osobně jest směřováno k tomu, vyvíjet ten nejhorší možný software, přecpaný zbytečnostmi a nefungující? Proč ti lidé, kteří si toto myslí, onen software používají a nepřejdou na MacOS/Linux/*BSD/BeOS nebo co já vím ještě?</li>
+<li>Proč si docela velké množství lidí myslí, že veškeré konání Microsoftu a Billa Gatese osobně jest směřováno k tomu, vyvíjet ten nejhorší možný software, přecpaný zbytečnostmi a nefungující?
+Proč ti lidé, kteří si toto myslí, onen software používají a nepřejdou na MacOS/Linux/*BSD/BeOS nebo co já vím ještě?</li>
 </ol>
 <p>Operační systém Windows obsahuje řadu různých subsystémů. Některé z nich jsou na konkrétní instalaci počítače téměř vždy zbytečné. Pokud k počítači nemám připojen skener a vím, že nikdy mít nebudu (což je případ mého notebooku), pak v zásadě není důvod k tomu, aby se mi na disku roztahoval subsystém WIA (Windows Image Acquisition). Některé jsou zbytečné téměř vždy. Smazáním dema &quot;Out of Box Experience&quot; žádná škoda nevznikne.</p>
 <p>A pak jsou tu různé záhadné a tajemné položky, o jejichž smyslu má většina lidí spíše představy než znalosti. Vezměme si například takovou <em>Remote Registry Service</em> (česky to bude něco jako <em>vzdálený přístup k registru</em>). Pravděpodobný způsob uvažování je zhruba následující: mám jenom jeden počítač, žádnou síť nemám, k ničemu vzdáleně přistupovat nechci a nic mi sem nemá co lézt. Zbytečně to zabírá paměť a ještě navíc je to díra do systému. Smazat!</p>
@@ -63,7 +109,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

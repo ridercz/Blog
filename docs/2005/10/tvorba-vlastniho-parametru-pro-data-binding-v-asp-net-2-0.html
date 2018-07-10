@@ -7,24 +7,78 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Verze ASP.NET 2.0 přináší mimo jiné možnost velmi schopného deklarativního data bindingu. Pro parametrizaci dotazů můžete využít některé vestavěné zdroje (cookie, query string, session, profil...). Tento článek popisuje tvorb vlastního typu parametru, který vrcací uživatelské jméno." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Tvorba vlastního parametru pro data binding v ASP.NET 2.0</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-10-05T05:18:03.07+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>5. října 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Verze ASP.NET 2.0 přináší mimo jiné možnost velmi schopného deklarativního data bindingu. Co je data binding asi většina ví - vygenerování obsahu nějakého zobrazovače (typicky třeba DataGrid/GridView) na základě přiřazeného datového zdroje a nějaké soustavy pravidel a šablon. Tím je programátor ušetřen psaní kódu, ve kterém postupně řádek po řádku procházel vrácená data a generoval jejich HTML reprezentaci.</p>
 <p>Ve verzích 1.x se prakticky veškerý data binding děl z backendového kódu, nějak takhle:</p>
-<p>Dim CMD As New SqlCommand(&quot;SELECT * FROM Tabulka&quot;, DB) Dim R as SqlDataReader = CMD.ExecuteReader(CloseConnection) Me.DataGrid1.DataSource = R Me.DataGrid1.DataBind() R.Close()</p>
+<pre><code>Dim CMD As New SqlCommand(&quot;SELECT * FROM Tabulka&quot;, DB)
+Dim R as SqlDataReader = CMD.ExecuteReader(CloseConnection)
+Me.DataGrid1.DataSource = R
+Me.DataGrid1.DataBind()
+R.Close()
+</code></pre>
 <p>Whidbey razí všude, kde je to možné, deklarativní přístup. Zamezuje nutnosti psát opakující se jednoduchý kód, a místo toho umožnit maximum věcí automatizovat, zapisovat parametricky. Shora uvedený příklad by bylo možno v nové verzi napsat nějak takhle:</p>
-<p>&lt;asp:GridView ID=&quot;GridView1&quot; runat=&quot;server&quot; DataSourceID=&quot;SqlDataSource1&quot; /&gt; &lt;asp:SqlDataSource ID=&quot;SqlDataSource1&quot; runat=&quot;server&quot; ConnectionString=&quot;&lt;%$ ConnectionStrings:MujConnectionString %&gt;&quot; SelectCommand=&quot;SELECT * FROM Tabulka&quot;/&gt;</p>
+<pre><code>&lt;asp:GridView ID=&quot;GridView1&quot; runat=&quot;server&quot; DataSourceID=&quot;SqlDataSource1&quot; /&gt;
+&lt;asp:SqlDataSource ID=&quot;SqlDataSource1&quot; runat=&quot;server&quot; 
+  ConnectionString=&quot;&lt;%$ ConnectionStrings:MujConnectionString %&gt;&quot; 
+  SelectCommand=&quot;SELECT * FROM Tabulka&quot;/&gt;
+</code></pre>
 <h2 id="deklarativni-generovani-parametru">Deklarativní generování parametrů</h2>
 <p>V praxi ale není nic tak jednoduché, jako v příkladech a prezentacích, a dotazy (či uložené procedury) mají parametry, které jest jim nutno předávati. Naštěstí .NET Framework myslí i na tohle. Jednotlivé datové zdroje mohou mít definovány rozličné parametry. Jejich hodnota jest pak před voláním dotazu naplněna podle stavu určeného zdroje. Standardně oním zdrojem může být:</p>
 <ul>
@@ -39,9 +93,27 @@
 <p>Pokud chcete, aby dotaz byl závislý na čemkoliv jiném, než jsou shora uvedené možnosti, existují dvě základní řešení. První je použít prostý <code>asp:Parameter</code> a jeho hodnotu nastavit z backendového kódu. Tím se ovšem připravujete o výhody deklarativního přístupu. Druhou možností je využít rozšiřitelnosti .NET Frameworku a napsat si vlastní typ parametru.</p>
 <h2 id="piseme-vlastni-parametr-usernameparameter">Píšeme vlastní parametr - UserNameParameter</h2>
 <p>Jednou z vlastností, které mi vyloženě chybí, je možnost použít jako parametr jméno právě přihlášeného uživatele. Dokážeme si s tím poradit poměrně snadno: Vytvoříme (v adresáři <code>App_Code</code>) novou třídu, nazvanou <code>UserNameParameter</code> a podědíme ji od prototypu <code>System.Web.UI.WebControls.Parameter</code>. Funkčnost dodáme přepsáním metody <code>Evaluate</code>. Patřičný kód bude vypadat nějak takhle:</p>
-<p>Namespace MyControls Public Class UserNameParameter Inherits System.Web.UI.WebControls.Parameter Protected Overrides Function Evaluate(ByVal Context As System.Web.HttpContext, ByVal Control As System.Web.UI.Control) As Object Return Context.User.Identity.Name End Function End Class End Namespace</p>
+<pre><code>Namespace MyControls
+    Public Class UserNameParameter
+        Inherits System.Web.UI.WebControls.Parameter
+        Protected Overrides Function Evaluate(ByVal Context As System.Web.HttpContext, ByVal Control As System.Web.UI.Control) As Object
+            Return Context.User.Identity.Name
+        End Function
+    End Class
+End Namespace
+</code></pre>
 <p>Třídu jsem umístil do namespace <code>MyControls</code>, protože to je nutné, aby bylo možno se na ni odkazovat z ASPX stránek (na názvu NS nezáleží, ale prostě musí být určen). Použití parametru ve stránce sestává ze dvou činností. Za prvé musíme ovládací prvek zaregistrovat, což učiníme tak, že na začátek stránky zapíšeme direktivu <code>@Register</code>. Posléze daný prvek prostě použijeme:</p>
-<p>&lt;%@ Register TagPrefix=&quot;My&quot; Namespace=&quot;MyControls&quot; %&gt; ... &lt;asp:GridView ID=&quot;GridView1&quot; runat=&quot;server&quot; DataSourceID=&quot;SqlDataSource1&quot; /&gt; &lt;asp:SqlDataSource ID=&quot;SqlDataSource1&quot; runat=&quot;server&quot; ConnectionString=&quot;&lt;%$ ConnectionStrings:NemesisForum_Data %&gt;&quot; SelectCommand=&quot;SELECT * FROM Tabulka WHERE Uzivatel=@Uzivatel&quot;&gt; <SelectParameters> &lt;my:UserNameParameter Name=&quot;Uzivatel&quot; /&gt; </SelectParameters> &lt;/asp:SqlDataSource&gt;</p>
+<pre><code>&lt;%@ Register TagPrefix=&quot;My&quot; Namespace=&quot;MyControls&quot; %&gt;
+...
+&lt;asp:GridView ID=&quot;GridView1&quot; runat=&quot;server&quot; DataSourceID=&quot;SqlDataSource1&quot; /&gt;
+&lt;asp:SqlDataSource ID=&quot;SqlDataSource1&quot; runat=&quot;server&quot;
+  ConnectionString=&quot;&lt;%$ ConnectionStrings:NemesisForum_Data %&gt;&quot;
+  SelectCommand=&quot;SELECT * FROM Tabulka WHERE Uzivatel=@Uzivatel&quot;&gt;
+  &lt;SelectParameters&gt;
+    &lt;my:UserNameParameter Name=&quot;Uzivatel&quot; /&gt;
+  &lt;/SelectParameters&gt;
+&lt;/asp:SqlDataSource&gt;
+</code></pre>
 <p>Sluší se poznamenat, že shora uvedená metoda nemá podporu v průvodcích ve VS.NET/VWD. V těch uvidíte &quot;natvrdo&quot; pouze vestavěné parametry, podpora uživatelských se plánuje až do příští verze.</p>
 <h2 id="dotaz-do-plena">Dotaz do pléna</h2>
 <p>Novinky ve Whidbey, které se týkají data bindingu, mi přijdou velice užitečné a zajímavé. Nerad bych ale nosil sovy do Athén a psal o něčem, co všichni znají. Přejete si, abych se data bindingu ve Whidbey věnoval v některém z budoucích článků obšírněji?</p>
@@ -49,7 +121,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

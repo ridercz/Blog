@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Kolikrát už se vám stalo, že jste začali psát nějaký dlouhý text a pak třeba omlem zmáčknuli Refresh, zavřeli okno nebo vám po odeslání aplikace zahlásila &quot;vaše session vypršela, zkuste to znovu&quot;? Existuje jednoduché a elegantní řešení, jak tento problém řešit, pomocí DOM Storage (Local Storage)." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Ochrana před vymazáním formuláře pomocí Local Storage</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2011-12-28T21:45:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>28. prosince 2011</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Kolikrát už se vám stalo, že jste začali psát nějaký dlouhý text a pak třeba omlem zmáčknuli Refresh, zavřeli okno nebo vám po odeslání aplikace zahlásila &quot;vaše session vypršela, zkuste to znovu&quot;? Existuje jednoduché a elegantní řešení, jak tento problém řešit, pomocí DOM Storage (Local Storage).</p>
 <p>O této technologii jsem již před časem psal v článku <a href="http://www.aspnet.cz/articles/344-local-storage-sbohem-cookies-sbohem-session">Local Storage: Sbohem cookies, sbohem session</a>. Ve stručnosti se jedná o jednoduché úložiště &quot;název-hodnota&quot;, které je dostupné z JavaScriptu na straně klienta, na server vůbec neputuje. Z tohoto důvodu také není třeba příliš brát ohled na objem dat atd.</p>
 <h2 id="zadani">Zadání</h2>
@@ -33,14 +78,42 @@
 <h2 id="reseni">Řešení</h2>
 <p>Zvolil jsem čistě klientské řešení využívající JavaScript, Local Storage a data-atributy z HTML 5. Toto řešení je podporováno většinou v současnosti používaných prohlížečů a v případě že podporováno není, nepůsobí problémy, prostě to tiše nebude fungovat. Klientský skript je psaný pomocí jQuery, protože bez něj psaní JavaScriptu hloboce přesahuje hranice mého masochismu.</p>
 <p>Použití je jednoduché. Pro <strong>zapamatování hodnoty pole</strong> stačí danému elementu přidat atribut <code>data-rls-id</code>, jehož hodnota se použije pro vytvoření klíče, pod nímž bude zapamatovaná hodnota uložena v local storage:</p>
-<input type="text" name="name" data-rls-id="name" />
+<pre><code>&lt;input type=&quot;text&quot; name=&quot;name&quot; data-rls-id=&quot;name&quot; /&gt;
+</code></pre>
 <p>Protože v případě ASP.NET server controls se neznámé atributy beze změny kopírují na výstup, je snadné totéž zapsat i v ASPX:</p>
-<p>&lt;asp:TextBox ID=&quot;TextBoxName&quot; runat=&quot;server&quot; data-rls-id=&quot;name&quot; /&gt;</p>
+<pre><code>&lt;asp:TextBox ID=&quot;TextBoxName&quot; runat=&quot;server&quot; data-rls-id=&quot;name&quot; /&gt;
+</code></pre>
 <p>Ve výše uvedeném příkladu se hodnota uloží do local storage pole s názvem <code>RLS[name]</code>. Syntaxe připomíná (záměrně) adresaci kolekcí, ale je to jenom stringový identifikátor. Ono &quot;RLS&quot; (Remember in Local Storage) tam přidávám proto, abych předešel možným konfliktům pro obvyklé hodnoty.</p>
 <p>Některé hodnoty (jméno, e-mail) si budeme chtít pamatovat bez omezení, ale některé je žádoucí po úspěšném zpracování odstranit, protože příště budou jiné (text komentáře). Pro <strong>vymazání zapamatované hodnoty</strong> slouží atribut <code>data-rls-clear</code>, který přidáme k jekémukoliv elementu na stránce, která je reakcí na úspěšné odeslání formuláře. Hodnota tohoto atributu je seznam ID polí, která se mají zapomenout, oddělený čárkami:</p>
-<p data-rls-clear="comment">Váš komentář byl zaznamenán.</p>
+<pre><code>&lt;p data-rls-clear=&quot;comment&quot;&gt;Váš komentář byl zaznamenán.&lt;/p&gt;
+</code></pre>
 <p>Zdrojový kód obslužného skriptu, který se zavolá při natažení stránky, je následující:</p>
-<p>$(function () { // Check if this browser supports local storage if (&quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null) { // Clear all remembered entries required by data-rls-clear $(&quot;<em>[data-rls-clear]&quot;).each(function () { var fields = $(this).data(&quot;rls-clear&quot;).split(&quot;,&quot;); for (var i = 0; i &lt; fields.length; i++) { window.localStorage.removeItem(&quot;RLS[&quot; + fields[i].trim() + &quot;]&quot;); } }); $(&quot;</em>[data-rls-id]&quot;).each(function () { // Load currently remembered data var keyName = &quot;RLS[&quot; + $(this).data(&quot;rls-id&quot;) + &quot;]&quot;; $(this).val(window.localStorage[keyName]); // Save data to local storage when value changes $(this).keyup(function () { window.localStorage[keyName] = $(this).val(); }); }); } });</p>
+<pre><code>$(function () {
+    // Check if this browser supports local storage
+    if (&quot;localStorage&quot; in window &amp;&amp; window[&quot;localStorage&quot;] !== null) {
+
+        // Clear all remembered entries required by data-rls-clear
+        $(&quot;*[data-rls-clear]&quot;).each(function () {
+            var fields = $(this).data(&quot;rls-clear&quot;).split(&quot;,&quot;);
+            for (var i = 0; i &lt; fields.length; i++) {
+                window.localStorage.removeItem(&quot;RLS[&quot; + fields[i].trim() + &quot;]&quot;);
+            }
+        });
+
+        $(&quot;*[data-rls-id]&quot;).each(function () {
+            // Load currently remembered data
+            var keyName = &quot;RLS[&quot; + $(this).data(&quot;rls-id&quot;) + &quot;]&quot;;
+            $(this).val(window.localStorage[keyName]);
+
+            // Save data to local storage when value changes
+            $(this).keyup(function () {
+                window.localStorage[keyName] = $(this).val();
+            });
+        });
+
+    }
+});
+</code></pre>
 <p>Začneme tím, že si ověříme, jestli prohlížeč podporuje funkci Local Storage. Pokud ne, nic dalšího neděláme. Poté smažeme z úložiště všechny klíče, požadované atributem <code>data-rls-clear</code>. Dále naplníme všechna pole označená atributem <code>data-rls-id</code> případně z minula zapamatovanými hodnotami. Na závěr se pověsíme na událost <code>keyup</code> těchto polí handler, který uloží aktuální hodnotu do LocalStorage.</p>
 <p>Použil jsem stisk klávesy, nikoliv událost <code>change</code>. Ta se vyvolá teprve ve chvíli, kdy pole ztatí focus. Pokud ale uživatel píše delší text do jednoho pole, pokládám za pravděpodobné, že k nějakému problému dojde v průběhu editace. Toto řešení možná není úplně efektivní (kód se volá při každém stisku klávesy, a to i pokud nedošlo ke změně textu), ale nepředpokládám, že by v tomto případě byl výkon extra kritický. Pro úplnost dodávám, že řešneí není ani stoprocentně funkční – pokud uživatel text modifikuje čistě použitím myši (např. vyjmutím nebo vložením obsahu schránky z kontextového menu), nebude fungovat.</p>
 <p>Dále pak jsem se nezabýval minifikací skriptů nebo zabalením funkcionality do jQuery pluginu, ježto se v tom nevyznám. Vyřešení těchto problémů nechám případným zájemcům, kteří se v JavaScriptu vyznají lépe než já :)</p>
@@ -49,7 +122,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

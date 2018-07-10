@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="URL rewriting je častá technika, používaná k výrobě &quot;hezkých&quot; webových adres. Elegantně je možno ji realizovat pomocí IHttpHanderFactory - narozdíl od jiných metod úspěšně implementuje postback a je Whidbey kompatibilní." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Továrna na absolutní URL: rewriting pomocí IHttpHanderFactory</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-08-12T03:10:27.403+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>12. srpna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/iis" title="Rubrika">
+              <i class="fal fa-tag"> </i>IIS</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>U řady webových aplikací (tento blog nevyjímaje) jest se setkati se zvláštním formátem URL, kdy je nějaký parametr (třeba ID článku) předáván nikoliv jako hodnota v Query Stringu (<em><a href="http://server/Clanek.aspx?ID=neco">http://server/Clanek.aspx?ID=neco</a></em>), ale přímo jako název souboru (<em><a href="http://server/Clanky/neco.aspx">http://server/Clanky/neco.aspx</a></em>). Důvodů k tomu vedoucích může být povícero, ale obvykle převažuje skutečnost, že tato URL jsou obvykle snáze indexovatelná vyhledávači - a protože se právě nacházíme na vrcholu SEO bubliny, musí to mít každý.</p>
 <p>Samozřejmě to neznamená, že by publikační systém generoval pro každý článek zvláštní skript, ale používá se technika zvaná URL rewriting. V rámci zpracování HTTP požadavku (<a href="/entry/article-20050110.aspx">více o request pipeline v ASP.NET</a>) se na základě vygenerovaných pravidel URL &quot;přepíše&quot; a na straně serveru přesměruje na jinou stránku.</p>
 <h2 id="context.rewritepath">Context.RewritePath</h2>
@@ -35,18 +80,74 @@
 <h2 id="prakticky-priklad">Praktický příklad</h2>
 <p>Mějmež web publikující články. Přejeme si, aby adresa článku byla vždy <em>/Articles/nejakeid.aspx</em>. Vlastní zobrazení článku provádí stránka <em>/Article.aspx</em>, a ono dříve zmíněné <em>nejakeid</em> je pro něj informace o tom, který článek má z databáze vytáhnout.</p>
 <p>Začneme tím, že vytvoříme továrnu na handlery. Konkrétně třídu <code>Remapper</code>, která bude implementovat rozhraní <code>IHttpHandlerFactory</code>:</p>
-<p>Imports Microsoft.VisualBasic Public Class Remapper Implements IHttpHandlerFactory Public Function GetHandler(ByVal context As System.Web.HttpContext, ByVal requestType As String, ByVal url As String, ByVal pathTranslated As String) As System.Web.IHttpHandler Implements System.Web.IHttpHandlerFactory.GetHandler ' Put article ID - name of 'virtual' ASPX page - to request cache context.Items(&quot;ArticleID&quot;) = System.IO.Path.GetFileNameWithoutExtension(pathTranslated) ' Handle request via <sub>/Article.aspx script Return PageParser.GetCompiledPageInstance(&quot;</sub>/Article.aspx&quot;, _ context.Server.MapPath(&quot;~/Article.aspx&quot;), _ context) End Function Public Sub ReleaseHandler(ByVal handler As System.Web.IHttpHandler) Implements System.Web.IHttpHandlerFactory.ReleaseHandler End Sub End Class</p>
+<pre><code>Imports Microsoft.VisualBasic
+Public Class Remapper
+    Implements IHttpHandlerFactory
+    Public Function GetHandler(ByVal context As System.Web.HttpContext, ByVal requestType As String, ByVal url As String, ByVal pathTranslated As String) As System.Web.IHttpHandler Implements System.Web.IHttpHandlerFactory.GetHandler
+        ' Put article ID - name of 'virtual' ASPX page - to request cache
+        context.Items(&quot;ArticleID&quot;) = System.IO.Path.GetFileNameWithoutExtension(pathTranslated)
+        ' Handle request via ~/Article.aspx script
+        Return PageParser.GetCompiledPageInstance(&quot;~/Article.aspx&quot;, _
+            context.Server.MapPath(&quot;~/Article.aspx&quot;), _
+            context)
+    End Function
+    Public Sub ReleaseHandler(ByVal handler As System.Web.IHttpHandler) Implements System.Web.IHttpHandlerFactory.ReleaseHandler
+    End Sub
+End Class
+</code></pre>
 <p>Metoda <code>GetHandler</code> načte název požadovaného souboru bez přípony a uloží jej jako prvek s klíčem <code>ArticleID</code> do context cache. Následně pak vyvolá instanci handleru pro stránku <code>~/Article.aspx</code> a vráti jí zpět k vykonání.</p>
 <p>Stránka ~/Article.aspx je primitivní, neb jenom vezme jí předané <code>ArticleID</code> a zobrazí ho:</p>
-<p>&lt;%@ Page Language=&quot;VB&quot; %&gt; <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <script runat="server"> Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Me.LabelArticleID.Text = String.Format(Me.LabelArticleID.Text, Context.Items(&quot;ArticleID&quot;)) End Sub </script> <html xmlns="http://www.w3.org/1999/xhtml"> <head runat="server"> <title>Untitled Page</title> </head> <body> <form id="form1" runat="server"> <div> &lt;asp:Label ID=&quot;LabelArticleID&quot; runat=&quot;server&quot; Text=&quot;Article ID = {0}&quot; /&gt; </div> </form> </body> </html></p>
+<pre><code>&lt;%@ Page Language=&quot;VB&quot; %&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;
+&lt;script runat=&quot;server&quot;&gt;
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+        Me.LabelArticleID.Text = String.Format(Me.LabelArticleID.Text, Context.Items(&quot;ArticleID&quot;))
+    End Sub
+&lt;/script&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head runat=&quot;server&quot;&gt;
+    &lt;title&gt;Untitled Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;
+        &lt;div&gt;
+            &lt;asp:Label ID=&quot;LabelArticleID&quot; runat=&quot;server&quot; Text=&quot;Article ID = {0}&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 <p>Poslední nezbytnou komponentou systému je vhodné nastavení v souboru <code>Web.Config</code>. Námi vygenerovanou třídu Remapper je nutno přidat jako handler požadavků pro patřičné URL (<code>articles/*.aspx</code>):</p>
-<?xml version="1.0"?> <configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0"> <system.web> <httpHandlers> <add verb="*" path="Articles/*.aspx" type="Remapper"/> </httpHandlers> </system.web> </configuration>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;configuration xmlns=&quot;http://schemas.microsoft.com/.NetConfiguration/v2.0&quot;&gt;
+    &lt;system.web&gt;
+      &lt;httpHandlers&gt;
+        &lt;add verb=&quot;*&quot; path=&quot;Articles/*.aspx&quot; type=&quot;Remapper&quot;/&gt;
+      &lt;/httpHandlers&gt;
+    &lt;/system.web&gt;
+&lt;/configuration&gt;
+</code></pre>
 <p>Kompletní ukázkovou aplikaci jest možno si stáhnout <a href="https://www.cdn.altairis.cz/Blog/2005/20050812-url-rewriting.zip">zde</a>. Je určena, stejně jako výše uvedený kód, pro ASP.NET 2.0 (Whidbey), leč popsaná metoda funguje i ve verzi 1.1.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

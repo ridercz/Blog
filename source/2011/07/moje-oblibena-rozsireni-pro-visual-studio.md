@@ -22,7 +22,7 @@ Nikdy jsem nepřišel na chuť Team Foundation Serveru ani různým distribuovan
 
 *   **[VisualSVN Server](http://www.visualsvn.com/server/)** je server pro Subversion. Je to jednoduchý instalační balíček, který v sobě skrývá vlastní Subversion a Apache pro HTTP/HTTPS přístup. Zkonfigurovat vlastní SVN server pod Apache není jednoduché (zvlášť pokud se pohybujete ve světě .NET a IIS a o Apache nic nevíte), s tímto produktem je to snadné. Má i placenou "Enterprise" verzi, kterou ovšem nejspíš nebudete potřebovat.
 *   **[TortoiseSVN](http://www.tortoisesvn.net)** je populární Subversion klient, který integruje jeho schopnosti do operačního systému. Pokud používáte 64-bitovou platformu, musíte si nainstalovat obě verze, x86 i x64 (protože i na x64 systému jsou některé části x86 a 64-bitové shell extensions na nich nefungují).
-*   **[AnkhSVN](http://ankhsvn.open.collab.net/)** je Subversion source control plugin do Visual Studia. Umožňuje vám tedy pracovat s repository přímo z prostředí Visual Studia. 
+*   **[AnkhSVN](http://ankhsvn.open.collab.net/)** je Subversion source control plugin do Visual Studia. Umožňuje vám tedy pracovat s repository přímo z prostředí Visual Studia.
 
 ## PowerCommands for Visual Studio 2010
 

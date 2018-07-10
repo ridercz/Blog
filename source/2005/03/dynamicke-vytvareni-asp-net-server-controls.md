@@ -23,7 +23,19 @@ Pokud chcete mezi vygenerované prvky vložit něco statického HTML (což zprav
 
 Následující kód vygeneruje deset textových polí oddělených odřádkováním a nastaví jim různé užitečné vlastnosti, příkladně `ID` (budeme ho potřebovat později) a obsah (`Text`).
 
-For I As Int32 = 1 To 10 ' Vytvoř nový textbox Dim T As New System.Web.UI.WebControls.TextBox ' Nastav jeho vlastnosti T.ID = "DynamicTextBox" & I T.Text = "Dynamicky generovaný TextBox č. " & I T.Width = New System.Web.UI.WebControls.Unit(400, System.Web.UI.WebControls.UnitType.Pixel) ' Přidej ho na placeholder a odřádkuj Me.PlaceHolder1.Controls.Add(T) Me.PlaceHolder1.Controls.Add(New System.Web.UI.LiteralControl("<br>")) Next
+    For I As Int32 = 1 To 10
+        ' Vytvoř nový textbox
+        Dim T As New System.Web.UI.WebControls.TextBox
+
+        ' Nastav jeho vlastnosti
+        T.ID = "DynamicTextBox" & I
+        T.Text = "Dynamicky generovaný TextBox č. " & I
+        T.Width = New System.Web.UI.WebControls.Unit(400, System.Web.UI.WebControls.UnitType.Pixel)
+
+        ' Přidej ho na placeholder a odřádkuj
+        Me.PlaceHolder1.Controls.Add(T)
+        Me.PlaceHolder1.Controls.Add(New System.Web.UI.LiteralControl("<br>"))
+    Next
 
 ## Přežití Postbacku
 
@@ -33,7 +45,10 @@ Pro vysvětlení tohoto jevu jest třeba nahlédnout podrobněji na způsob, jak
 
 Podrobný popis najdete v [MSDN](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconcontrolexecutionlifecycle.asp), názorný obrázek na weblogu [Raymonda Lewallena](http://codebetter.com/blogs/raymond.lewallen/archive/2005/03/10/59583.aspx). Pro nás jsou v tomto okamžiku důležité první čtyři události:
 
-*   `Init` - vůbec první událost volaná po vytvoření instance stránky. `LoadViewState` - načtení hodnot z ViewState. `LoadPostData` - zpracování dat z postbacku. `Load` - provedení vlastních operací společných pro všechny požadavky na stránku. 
+*   `Init` - vůbec první událost volaná po vytvoření instance stránky. 
+`LoadViewState` - načtení hodnot z ViewState. 
+`LoadPostData` - zpracování dat z postbacku. 
+`Load` - provedení vlastních operací společných pro všechny požadavky na stránku.
 
 Ve většině případů ASP.NET programátor obslouží jako první událost `Load`. Ta ovšem v našem případě přichází příliš pozdě, až po zpracování ViewState a Postbacku. Dynamické vytváření prvků jest tedy třeba si odbýt už mnohem dříve, v handleru události `Init`.
 
@@ -41,7 +56,26 @@ Pokud stránky píšete ve VS.NET, je příslušná metoda již přítomna, leč
 
 Přesuňte si metodu `Page_Init` kam je libo a zapište kód do ní (nezapomeňte tam ale nechat ono vyžadované volání `InitializeComponent`). Výsledek bude vypadat nějak takto:
 
-Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init 'CODEGEN: This method call is required by the Web Form Designer 'Do not modify it using the code editor. InitializeComponent() ' Vygeneruj 10 textboxů a umísti je na stránku For I As Int32 = 1 To 10 ' Vytvoř nový textbox Dim T As New System.Web.UI.WebControls.TextBox ' Nastav jeho vlastnosti T.ID = "DynamicTextBox" & I T.Text = "Dynamicky generovaný TextBox č. " & I T.Width = New System.Web.UI.WebControls.Unit(400, System.Web.UI.WebControls.UnitType.Pixel) ' Přidej ho na placeholder a odřádkuj Me.PlaceHolder1.Controls.Add(T) Me.PlaceHolder1.Controls.Add(New System.Web.UI.LiteralControl("<br>")) Next End Sub
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+
+        ' Vygeneruj 10 textboxů a umísti je na stránku
+        For I As Int32 = 1 To 10
+            ' Vytvoř nový textbox
+            Dim T As New System.Web.UI.WebControls.TextBox
+
+            ' Nastav jeho vlastnosti
+            T.ID = "DynamicTextBox" & I
+            T.Text = "Dynamicky generovaný TextBox č. " & I
+            T.Width = New System.Web.UI.WebControls.Unit(400, System.Web.UI.WebControls.UnitType.Pixel)
+
+            ' Přidej ho na placeholder a odřádkuj
+            Me.PlaceHolder1.Controls.Add(T)
+            Me.PlaceHolder1.Controls.Add(New System.Web.UI.LiteralControl("<br>"))
+        Next
+    End Sub
 
 Tímto postupem se controly vytvoří včas a úspěšně se na ně aplikují změny z ViewState a Postbacku.
 
@@ -53,4 +87,16 @@ V zásadě můžete využít již dříve popisovanou kolekci Controls a postupn
 
 Druhou možností je použít u nadřazeného prvku (v našem případě je to `asp:placeholder`) metodu `FindControl`, která najde ovládací prvek s definovaným jménem (ID). My víme, jak se naše textboxy jmenují (`DynamicTextBox1` až `DynamicTextBox10`) a můžeme tuto metodu s výhodou použít, například k vypsání všech zadaných hodnot:
 
-Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click Dim SB As New System.Text.StringBuilder For I As Int32 = 1 To 10 ' Najít TextBox podle jména Dim T As System.Web.UI.WebControls.TextBox T = DirectCast(Me.PlaceHolder1.FindControl("DynamicTextBox" & I), System.Web.UI.WebControls.TextBox) SB.Append(T.ID & ".Text = " & T.Text & "<br>") Next Me.Label1.Text = SB.ToString() End Sub
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim SB As New System.Text.StringBuilder
+
+        For I As Int32 = 1 To 10
+            ' Najít TextBox podle jména
+            Dim T As System.Web.UI.WebControls.TextBox
+            T = DirectCast(Me.PlaceHolder1.FindControl("DynamicTextBox" & I), System.Web.UI.WebControls.TextBox)
+
+            SB.Append(T.ID & ".Text = " & T.Text & "<br>")
+        Next
+
+        Me.Label1.Text = SB.ToString()
+    End Sub

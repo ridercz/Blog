@@ -28,11 +28,11 @@ Sendy oficiálně není na Windows platformě podporováno, nicméně fakticky f
 
 Pro správnou funkčnost na Windows musíte (nad rámec odkazovaného návodu) provést záměnu všech řetězců
 
-$_SERVER['SCRIPT_FILENAME']
+    $_SERVER['SCRIPT_FILENAME']
 
 za
 
-strtr($_SERVER['SCRIPT_FILENAME'], '\\', '/')
+    strtr($_SERVER['SCRIPT_FILENAME'], '\\', '/')
 
 (tuto radu najdete v komentářích)
 
@@ -50,6 +50,53 @@ Moje třída je jednoduchá. V konstruktoru jí předáte výchozí adresu insta
 
 Zdrojový kód třídy je následující:
 
-using System; using System.Net; using System.Web; public class Sendy { private const string PAYLOAD_FORMAT = "email={0}&list={1}&boolean=true"; private const string CONTENT_TYPE = "application/x-www-form-urlencoded"; private const string SUCCESS_STRING = "1"; public Uri BaseUri { get; private set; } public Sendy(Uri baseUri) { if (baseUri == null) throw new ArgumentNullException("baseUri"); if (!baseUri.IsAbsoluteUri) throw new ArgumentException("The URI must be absolute.", "baseUri"); this.BaseUri = baseUri; } public void Subscribe(string email, string listId) { this.DoCommand(email, listId, "subscribe"); } public void Unsubscribe(string email, string listId) { this.DoCommand(email, listId, "unsubscribe"); } private void DoCommand(string email, string listId, string apiCommand) { if (email == null) throw new ArgumentNullException("email"); if (string.IsNullOrWhiteSpace(email)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "email"); if (listId == null) throw new ArgumentNullException("listId"); if (string.IsNullOrWhiteSpace(listId)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "listId"); // Prepare payload var payload = string.Format(PAYLOAD_FORMAT, HttpUtility.UrlEncode(email), // 0 HttpUtility.UrlEncode(listId)); // 1 // Prepare URI var uri = new Uri(this.BaseUri, new Uri("/" + apiCommand, UriKind.Relative)); using (var wc = new WebClient()) { wc.Headers.Add("Content-Type", CONTENT_TYPE); var s = wc.UploadString(uri, payload); if (!s.Trim().Equals(SUCCESS_STRING)) throw new Exception(s); } } }
+    using System;
+    using System.Net;
+    using System.Web;
+
+    public class Sendy {
+        private const string PAYLOAD_FORMAT = "email={0}&list={1}&boolean=true";
+        private const string CONTENT_TYPE = "application/x-www-form-urlencoded";
+        private const string SUCCESS_STRING = "1";
+
+        public Uri BaseUri { get; private set; }
+
+        public Sendy(Uri baseUri) {
+            if (baseUri == null) throw new ArgumentNullException("baseUri");
+            if (!baseUri.IsAbsoluteUri) throw new ArgumentException("The URI must be absolute.", "baseUri");
+
+            this.BaseUri = baseUri;
+        }
+
+        public void Subscribe(string email, string listId) {
+            this.DoCommand(email, listId, "subscribe");
+        }
+
+        public void Unsubscribe(string email, string listId) {
+            this.DoCommand(email, listId, "unsubscribe");
+        }
+
+        private void DoCommand(string email, string listId, string apiCommand) {
+            if (email == null) throw new ArgumentNullException("email");
+            if (string.IsNullOrWhiteSpace(email)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "email");
+            if (listId == null) throw new ArgumentNullException("listId");
+            if (string.IsNullOrWhiteSpace(listId)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "listId");
+
+            // Prepare payload
+            var payload = string.Format(PAYLOAD_FORMAT,
+                HttpUtility.UrlEncode(email),   // 0
+                HttpUtility.UrlEncode(listId)); // 1
+
+            // Prepare URI
+            var uri = new Uri(this.BaseUri, new Uri("/" + apiCommand, UriKind.Relative));
+
+            using (var wc = new WebClient()) {
+                wc.Headers.Add("Content-Type", CONTENT_TYPE);
+                var s = wc.UploadString(uri, payload);
+                if (!s.Trim().Equals(SUCCESS_STRING)) throw new Exception(s);
+            }
+        }
+
+    }
 
 Kombinací Sendy, Amazon SES a uvedeného API dokážete jednoduše a levně spravovat mailing listy v prostředí Windows Azure i lokálním.

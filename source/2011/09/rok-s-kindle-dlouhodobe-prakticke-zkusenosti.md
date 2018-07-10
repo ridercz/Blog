@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2011-09-29T21:07:30.08+02:00 -->
 <!-- dcterms:dateAccepted = 2011-09-29T21:07:31+02:00 -->
 
-[![Kindle Keyboard with WiFi - model, který mám](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_thumb.jpg "Kindle Keyboard with WiFi - model, který mám")](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_2.jpg) 
+[![Kindle Keyboard with WiFi - model, který mám](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_thumb.jpg "Kindle Keyboard with WiFi - model, který mám")](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_2.jpg)
 
 Amazon včera představil několik nových variant své e-bookové čtečky Kindle. Já Kindle vlastním už zhruba rok, tak jsem se rozhodl sepsat své praktické zkušenosti pro osvícení davů.
 
@@ -52,7 +52,8 @@ Většinu knih stahuji z různých českých zdrojů. Čtu převážně sci-fi a
 Nemám žádný konkrétní oblíbený zdroj, prostě napíšu do google něco jako "název knihy ebook" nebo "jméno autora ekniha". Tento postup není zcela spolehlivý a ani zcela bezproblémový. Někdy jsou knihy mizerně zformátované a nebo jenom prohnané OCR-kem, bez jakýchkoliv korektur, včetně čísel stránek a podobně. Obvykle stačí víc pokusů, pokud to nejde, tak nastoupí trocha ruční práce – převést do HTML/RTF, učesat ve Wordu a hotovo.
 
 Navíc hodně elektronických knih se po českém Internetu toulá v podobě "knihoven", kompletních archivů o stovkách položek. Takových knihoven mám stažených v současné době několik o objemu asi 4 GB (samozřejmě se spoustou duplicit). Většinou pokud na něco "dostanu chuť", stačí zapátrat v těchto knihovnách, upravit a číst. Ve stavu vhodném pro okamžitou konzumaci mám v tomto okamžiku asi 250 knih.
- [![Uživatelské rozhraní Calibre](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_thumb.png "Uživatelské rozhraní Calibre")](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_2.png) 
+
+[![Uživatelské rozhraní Calibre](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_thumb.png "Uživatelské rozhraní Calibre")](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_2.png)
 
 ## Calibre
 
@@ -63,7 +64,8 @@ K práci s knihami používám program [Calibre](http://calibre-ebook.com/). Pro
 Využívám asi tak jedno procento z toho, co Calibre umí. Používám jej na konverzi mezi jednotlivými formáty a na editaci metadat. Věština knih v češtině je k mání ve formátech PRC/PDB, Kindle má nejraději MOBI. Calibre umí konverzi těchto formátů bez problémů. 
 
 Ve výchozím nastavení jenom mrší českou diakritiku, protože většina PRC/PDB knih používá kódování Windows 1250. To se dá vyřešit právě konverzí do formátu MOBI a správným nastavením vstupního kódování:
- [![calibre_encoding](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_encoding_thumb.png "calibre_encoding")](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_encoding_2.png) 
+
+[![calibre_encoding](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_encoding_thumb.png "calibre_encoding")](https://www.cdn.altairis.cz/Blog/2011/20110929-calibre_encoding_2.png)
 
 ## WiFi nebo 3G?
 

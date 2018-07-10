@@ -13,4 +13,4 @@ Právě jsem na CodePlex nahrál novou verzi svých Simple ASP.NET Providers. Po
 
 Verze 1.0.1 opravuje pár chyb, na které jsem byl upozorněn. Jejich seznam najdete na webu release. Release neobsahuje žádné breaking changes.
 
-*   [**Stránka projektu**](http://www.codeplex.com/AltairisWebProviders) [**Stažení verze 1.0.1 Production**](http://www.codeplex.com/AltairisWebProviders/Release/ProjectReleases.aspx?ReleaseId=4509)
+*   [**Stránka projektu**](http://www.codeplex.com/AltairisWebProviders)  [**Stažení verze 1.0.1 Production**](http://www.codeplex.com/AltairisWebProviders/Release/ProjectReleases.aspx?ReleaseId=4509)

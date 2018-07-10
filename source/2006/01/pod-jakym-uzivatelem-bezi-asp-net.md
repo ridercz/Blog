@@ -19,7 +19,7 @@ Druhým zásadním důvodem je přístup k databázi na SQL Serveru, pokud se po
 
 Pod kterým uživatelem váš kód běží můžete zjistit následujícím způsobem:
 
-Dim UserName As String = System.Security.Principal.WindowsIdentity.GetCurrent().Name
+    Dim UserName As String = System.Security.Principal.WindowsIdentity.GetCurrent().Name
 
 ## ASP.NET a rozdvojení osobnosti
 
@@ -41,13 +41,23 @@ Pod účtem request identity se spouští kód v reakci na určitý konkrétní 
 
 Pojem "impersonace" se česky překládá obvykle jako "zosobnění", ale příhodnější výraz by byl "vydávání se za (někoho)". Vaše aplikace se patřičným zápisem v konfiguračním souboru může vydávat buďto za konkrétního uživatele, nebo tuto hodnotu převezme z web serveru.
 
-<?xml version="1.0"?> <configuration> <system.web> <identity impersonate="true" /> </system.web> </configuration>
+    <?xml version="1.0"?>
+    <configuration>
+      <system.web>
+        <identity impersonate="true" />
+      </system.web>
+    </configuration>
 
 Zapíšete-li do `web.configu` direktivu `<identity impersonate="true" />`, převezme váš kód identitu uživatele web serveru. Pro tu platí totéž, jako pro staré ASP 3.0. Pro přihlášeného uživatele se použije jeho identita, pro anonymního uživatele účet dle nastavení web serveru, standardně `IUSR_názevserveru`.
 
 Můžete impersonovat též konkrétního uživatele, a to zadáním jeho uživatelského jména a hesla:
 
-<?xml version="1.0"?> <configuration> <system.web> <identity impersonate="true" userName="JohnDoe" password="P@s$w0rd" /> </system.web> </configuration>
+    <?xml version="1.0"?>
+    <configuration>
+      <system.web>
+        <identity impersonate="true" userName="JohnDoe" password="P@s$w0rd" />
+      </system.web>
+    </configuration>
 
 ## Zvláštní případ: ASP.NET Development Server
 

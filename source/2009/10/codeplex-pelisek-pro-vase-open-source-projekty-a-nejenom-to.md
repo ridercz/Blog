@@ -53,6 +53,6 @@ Abyste mohli CodePlex pro svůj projekt používat, musíte zvolit některou z [
 *   [Nemesis Gallery](http://nemesisgallery.codeplex.com/) 
 *   [Nemesis Switchboard](http://nemesisswitchboard.codeplex.com/) 
 *   [RSS To Frame](http://rssframe.codeplex.com) 
-*   [Sigma ASC 105 Control Library](http://sigmaasc105lib.codeplex.com/)  
+*   [Sigma ASC 105 Control Library](http://sigmaasc105lib.codeplex.com/)   
 
 U výše uvedených projektech se chystám v dohledné době trochu víc psát a představit vám je. Přidáte se?

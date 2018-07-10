@@ -7,37 +7,125 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="XSLT transformace je proces, v němž je XML dokument podle zapsaných pravidel překonvertován do jiného tvaru - nejčastěji XML v jiném formátu nebo HTML k prezentaci. Ve většíně případů, kdy se XSLT transformace využívá k prezentaci dat uživateli, se na různá data aplikuje vždy ta samá šablona. Někdy je ale potřebné, nebo minimálně užitečné, kromě těchto dvou vstupů dodat ještě něco dalšího." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Použití parametrů v XSLT transformacích</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-04-11T00:40:47.303+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>11. dubna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>XSLT transformace je proces, v němž je XML dokument podle zapsaných pravidel překonvertován do jiného tvaru - nejčastěji XML v jiném formátu nebo HTML k prezentaci. Ve většíně případů, kdy se XSLT transformace využívá k prezentaci dat uživateli, se na různá data aplikuje vždy ta samá šablona. Někdy je ale potřebné, nebo minimálně užitečné, kromě těchto dvou vstupů dodat ještě něco dalšího.</p>
 <p>V XSLT můžete pomocí elementu <code>xsl:param</code> definovat parametry, které lze &quot;zvenčí&quot; (při přípravě transformace) naplnit vhodnou hodnotou. Zpravidla se jedná o číslo či řetězec, ale můžete - což možnosti užití výrazně rozšiřuje - tímto způsobem předat i jiný XML dokument, potažmo jeho část. Parametr se chová jako XSLT proměnná (a stejně se používá), jenom je dostupný i zvenčí.</p>
 <h2 id="jednoduchy-priklad-pouziti-xslt-parametru">Jednoduchý příklad použití XSLT parametru</h2>
 <p>Mějmež následující šablonu:</p>
-<?xml version="1.0" encoding="UTF-8" ?> <x:stylesheet version="1.0" xmlns:x="http://www.w3.org/1999/XSL/Transform"> <x:param name="SimpleParameter" /> <x:template match="/"> <h1> <x:value-of select="$SimpleParameter" /> </h1> </x:template> </x:stylesheet>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;x:stylesheet version=&quot;1.0&quot; xmlns:x=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+  &lt;x:param name=&quot;SimpleParameter&quot; /&gt;
+  &lt;x:template match=&quot;/&quot;&gt;
+    &lt;h1&gt;
+      &lt;x:value-of select=&quot;$SimpleParameter&quot; /&gt;
+    &lt;/h1&gt;
+  &lt;/x:template&gt;
+&lt;/x:stylesheet&gt;
+</code></pre>
 <p>Naplnění parametru <code>SimpleParameter</code> hodnotou jest provésti pomocí vlastnosti <code>TransformArgumentList</code> použité transformace. V příkladu níže transformaci provádím pomocí server control <code>asp:xml</code> jménem <code>Xml1</code>, ale postup je analogický pro všechny transformace:</p>
-<p>Me.Xml1.TransformArgumentList = New System.Xml.Xsl.XsltArgumentList Me.Xml1.TransformArgumentList.AddParam(&quot;SimpleParameter&quot;, &quot;&quot;, &quot;Hodnota parametru&quot;)</p>
+<pre><code>Me.Xml1.TransformArgumentList = New System.Xml.Xsl.XsltArgumentList
+Me.Xml1.TransformArgumentList.AddParam(&quot;SimpleParameter&quot;, &quot;&quot;, &quot;Hodnota parametru&quot;)
+</code></pre>
 <p>Příklad XML souboru neuvádím, v tomto případě na něm nezáleží (použijte třeba <code>&lt;root /&gt;</code>).</p>
 <h2 id="predani-xml-struktury">Předání XML struktury</h2>
 <p>Jak již bylo řečeno, hodnotou parametu může být i <code>NodeSet</code>, tedy vybrané nody z dokumentu. V tomto příkladu budeme chtít předat celý jednoduchý dokument:</p>
-<p>Dim Doc As New System.Xml.XmlDocument Doc.LoadXml(&quot;<root><demo>jedna</demo><demo>dva</demo></root>&quot;) Me.Xml1.TransformArgumentList = New System.Xml.Xsl.XsltArgumentList Me.Xml1.TransformArgumentList.AddParam(&quot;AdvancedParameter&quot;, &quot;&quot;, _ Doc.CreateNavigator().Select(&quot;/&quot;))</p>
+<pre><code>Dim Doc As New System.Xml.XmlDocument
+Doc.LoadXml(&quot;&lt;root&gt;&lt;demo&gt;jedna&lt;/demo&gt;&lt;demo&gt;dva&lt;/demo&gt;&lt;/root&gt;&quot;)
+
+Me.Xml1.TransformArgumentList = New System.Xml.Xsl.XsltArgumentList
+Me.Xml1.TransformArgumentList.AddParam(&quot;AdvancedParameter&quot;, &quot;&quot;, _
+                                       Doc.CreateNavigator().Select(&quot;/&quot;))
+</code></pre>
 <p>S takto předaným parametrem je pak v šabloně možno nakládat stejně, jako s fragmentem vlastního dokumentu, příkladně:</p>
-<?xml version="1.0" encoding="UTF-8" ?> <x:stylesheet version="1.0" xmlns:x="http://www.w3.org/1999/XSL/Transform"> <x:param name="AdvancedParameter" /> <x:template match="/"> <x:for-each select="$AdvancedParameter/root/demo"> <div> <x:value-of select="." /> </div> </x:for-each> </x:template> </x:stylesheet>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;x:stylesheet version=&quot;1.0&quot; xmlns:x=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+  &lt;x:param name=&quot;AdvancedParameter&quot; /&gt;
+  &lt;x:template match=&quot;/&quot;&gt;
+    &lt;x:for-each select=&quot;$AdvancedParameter/root/demo&quot;&gt;
+      &lt;div&gt;
+        &lt;x:value-of select=&quot;.&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/x:for-each&gt;
+  &lt;/x:template&gt;
+&lt;/x:stylesheet&gt;
+</code></pre>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

@@ -28,11 +28,51 @@ Při psaní aplikací, které využívají Microsoft SQL Server využíváme obv
 
 Následující kód je psaný specificky pro Microsoft SQL Server:
 
-const string CONNECTION_STRING = @"SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind"; const string SQL_COMMAND = "SELECT * FROM Products WHERE UnitsInStock < @Units"; using (var db = new SqlConnection(CONNECTION_STRING)) using (var cmd = new SqlCommand(SQL_COMMAND, db)) { cmd.Parameters.Add("@Units", SqlDbType.Int).Value = 50; db.Open(); using (var r = cmd.ExecuteReader()) { while (r.Read()) { Console.WriteLine("{0,3}: {1,-40} {2,4} x", r["ProductId"], // 0 r["ProductName"], // 1 r["UnitsInStock"]); // 2 } } }
+    const string CONNECTION_STRING = @"SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind";
+    const string SQL_COMMAND = "SELECT * FROM Products WHERE UnitsInStock < @Units";
+
+    using (var db = new SqlConnection(CONNECTION_STRING))
+    using (var cmd = new SqlCommand(SQL_COMMAND, db)) {
+        cmd.Parameters.Add("@Units", SqlDbType.Int).Value = 50;
+        db.Open();
+        using (var r = cmd.ExecuteReader()) {
+            while (r.Read()) {
+                Console.WriteLine("{0,3}: {1,-40} {2,4} x",
+                    r["ProductId"],     // 0
+                    r["ProductName"],   // 1
+                    r["UnitsInStock"]); // 2
+            }
+        }
+    }
 
 Jeho úprava pro obecné ADO.NET třídy je dost jednoduchá. Přibyla nám další konfigurační hodnota, kterou je název ADO.NET providera, který se má použít. Pro Microsoft SQL Server je to *System.Data.SqlClient*.
 
-const string PROVIDER_NAME = "System.Data.SqlClient"; const string CONNECTION_STRING = @"SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind"; const string SQL_COMMAND = "SELECT * FROM Products WHERE UnitsInStock < @Units"; var factory = DbProviderFactories.GetFactory(PROVIDER_NAME); using (var db = factory.CreateConnection()) using (var cmd = db.CreateCommand()) { db.ConnectionString = CONNECTION_STRING; cmd.CommandText = SQL_COMMAND; var p = cmd.CreateParameter(); p.ParameterName = "@Units"; p.DbType = DbType.Int32; p.Value = 50; cmd.Parameters.Add(p); db.Open(); using (var r = cmd.ExecuteReader()) { while (r.Read()) { Console.WriteLine("{0,3}: {1,-40} {2,4} x", r["ProductId"], // 1 r["ProductName"], // 0 r["UnitsInStock"]); // 2 } } }
+    const string PROVIDER_NAME = "System.Data.SqlClient";
+    const string CONNECTION_STRING = @"SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind";
+    const string SQL_COMMAND = "SELECT * FROM Products WHERE UnitsInStock < @Units";
+
+    var factory = DbProviderFactories.GetFactory(PROVIDER_NAME);
+    using (var db = factory.CreateConnection())
+    using (var cmd = db.CreateCommand()) {
+        db.ConnectionString = CONNECTION_STRING;
+        cmd.CommandText = SQL_COMMAND;
+
+        var p = cmd.CreateParameter();
+        p.ParameterName = "@Units";
+        p.DbType = DbType.Int32;
+        p.Value = 50;
+        cmd.Parameters.Add(p);
+
+        db.Open();
+        using (var r = cmd.ExecuteReader()) {
+            while (r.Read()) {
+                Console.WriteLine("{0,3}: {1,-40} {2,4} x",
+                    r["ProductId"],     // 1
+                    r["ProductName"],   // 0
+                    r["UnitsInStock"]); // 2
+            }
+        }
+    }
 
 Kód se velmi podobá tomu předchozímu, jenom obsahuje daleko méně syntaktického cukru. Místo příjemných konstruktorů a metod s návodnými overloady musíme vše vytvářet "prázdné" a vlastnosti nastavit ručně. 
 
@@ -40,16 +80,107 @@ Kód se velmi podobá tomu předchozímu, jenom obsahuje daleko méně syntaktic
 
 Pro pohodlnější práci jsem si vytvořil statickou třídu *DatabaseExtensionMethods*, která obsahuje několik extension methods, které práci usnadní.
 
-using System; using System.Configuration; using System.Data; using System.Data.Common; public static class DatabaseExtensionMethods { public static DbConnection CreateDbConnection(this ConnectionStringSettings settings) { // Validate arguments if (settings == null) throw new ArgumentNullException("settings"); if (string.IsNullOrEmpty(settings.ProviderName)) throw new ArgumentException("The ProviderName property cannot be empty.", "settings"); if (string.IsNullOrEmpty(settings.ConnectionString)) throw new ArgumentException("The ConnectionString property cannot be empty.", "settings"); var factory = DbProviderFactories.GetFactory(settings.ProviderName); var conn = factory.CreateConnection(); conn.ConnectionString = settings.ConnectionString; return conn; } public static void AddParameterWithValue(this DbCommand cmd, string name, string value) { var p = cmd.CreateParameter(); p.ParameterName = name; p.DbType = DbType.String; if (!string.IsNullOrEmpty(value)) p.Size = value.Length; p.Value = value; cmd.Parameters.Add(p); } public static void AddParameterWithValue(this DbCommand cmd, string name, int value) { var p = cmd.CreateParameter(); p.ParameterName = name; p.DbType = DbType.Int32; p.Value = value; cmd.Parameters.Add(p); } public static void AddParameterWithValue(this DbCommand cmd, string name, Guid value) { var p = cmd.CreateParameter(); p.ParameterName = name; p.DbType = DbType.Guid; p.Value = value; cmd.Parameters.Add(p); } public static void AddParameterWithValue(this DbCommand cmd, string name, DateTime value) { var p = cmd.CreateParameter(); p.ParameterName = name; p.DbType = DbType.DateTime; p.Value = value; cmd.Parameters.Add(p); } public static void AddParameterWithValue(this DbCommand cmd, string name, bool value) { var p = cmd.CreateParameter(); p.ParameterName = name; p.DbType = DbType.Boolean; p.Value = value; cmd.Parameters.Add(p); } public static void AddParameterWithValue(this DbCommand cmd, string name, byte[] value) { var p = cmd.CreateParameter(); p.ParameterName = name; p.DbType = DbType.Binary; p.Size = value.Length; p.Value = value; cmd.Parameters.Add(p); } }
+    using System;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.Common;
+
+    public static class DatabaseExtensionMethods {
+
+        public static DbConnection CreateDbConnection(this ConnectionStringSettings settings) {
+            // Validate arguments
+            if (settings == null) throw new ArgumentNullException("settings");
+            if (string.IsNullOrEmpty(settings.ProviderName)) throw new ArgumentException("The ProviderName property cannot be empty.", "settings");
+            if (string.IsNullOrEmpty(settings.ConnectionString)) throw new ArgumentException("The ConnectionString property cannot be empty.", "settings");
+
+            var factory = DbProviderFactories.GetFactory(settings.ProviderName);
+            var conn = factory.CreateConnection();
+            conn.ConnectionString = settings.ConnectionString;
+            return conn;
+        }
+
+        public static void AddParameterWithValue(this DbCommand cmd, string name, string value) {
+            var p = cmd.CreateParameter();
+            p.ParameterName = name;
+            p.DbType = DbType.String;
+            if (!string.IsNullOrEmpty(value)) p.Size = value.Length;
+            p.Value = value;
+            cmd.Parameters.Add(p);
+        }
+
+        public static void AddParameterWithValue(this DbCommand cmd, string name, int value) {
+            var p = cmd.CreateParameter();
+            p.ParameterName = name;
+            p.DbType = DbType.Int32;
+            p.Value = value;
+            cmd.Parameters.Add(p);
+        }
+
+        public static void AddParameterWithValue(this DbCommand cmd, string name, Guid value) {
+            var p = cmd.CreateParameter();
+            p.ParameterName = name;
+            p.DbType = DbType.Guid;
+            p.Value = value;
+            cmd.Parameters.Add(p);
+        }
+
+        public static void AddParameterWithValue(this DbCommand cmd, string name, DateTime value) {
+            var p = cmd.CreateParameter();
+            p.ParameterName = name;
+            p.DbType = DbType.DateTime;
+            p.Value = value;
+            cmd.Parameters.Add(p);
+        }
+
+        public static void AddParameterWithValue(this DbCommand cmd, string name, bool value) {
+            var p = cmd.CreateParameter();
+            p.ParameterName = name;
+            p.DbType = DbType.Boolean;
+            p.Value = value;
+            cmd.Parameters.Add(p);
+        }
+
+        public static void AddParameterWithValue(this DbCommand cmd, string name, byte[] value) {
+            var p = cmd.CreateParameter();
+            p.ParameterName = name;
+            p.DbType = DbType.Binary;
+            p.Size = value.Length;
+            p.Value = value;
+            cmd.Parameters.Add(p);
+        }
+
+    }
 
 První je metoda *CreateDbConnection*, která rozšiřuje poněkud netypicky třídu *ConnectionStringSettings*. Pro univerzální vytvoření a otevření spojení potřebujeme znát connection string a název providera. Tyto údaje jsou typicky součástí konfigurace, např. zhruba takto:
 
-<configuration> <connectionStrings> <add name="Northwind" providerName="System.Data.SqlClient" connectionString="SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind"/> </connectionStrings> </configuration>
+    <configuration>
+        <connectionStrings>
+            <add name="Northwind" providerName="System.Data.SqlClient" 
+                 connectionString="SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind"/>
+        </connectionStrings>
+    </configuration>
 
 Druhá metoda se jmenuje *AddParameterWithValue*. Rozšiřuje *DbCommand* a funguje podobně, jako stejnojmenná metoda, kterou disponuje *SqlCommand*: na základě předaného názvu a hodnoty vytvoří patřičně otypovaný parametr. Tato metoda má šest overloadů, pro nejčastěji používané typy.
 
 S použitím těchto extension metod je pak tvorba databázového kódu mnohem jednodušší a je stejně komfortní, jako při použití specifických tříd. Náš ukázkový kód by mohl vypadat takto:
 
-const string SQL_COMMAND = "SELECT * FROM Products WHERE UnitsInStock < @Units"; var connectionString = ConfigurationManager.ConnectionStrings["Northwind"]; using (var db = connectionString.CreateDbConnection()) using (var cmd = db.CreateCommand()) { cmd.CommandText = SQL_COMMAND; cmd.AddParameterWithValue("@Units", 50); db.Open(); using (var r = cmd.ExecuteReader()) { while (r.Read()) { Console.WriteLine("{0,3}: {1,-40} {2,4} x", r["ProductId"], // 1 r["ProductName"], // 0 r["UnitsInStock"]); // 2 } } }
+    const string SQL_COMMAND = "SELECT * FROM Products WHERE UnitsInStock < @Units";
+
+    var connectionString = ConfigurationManager.ConnectionStrings["Northwind"];
+    using (var db = connectionString.CreateDbConnection())
+    using (var cmd = db.CreateCommand()) {
+        cmd.CommandText = SQL_COMMAND;
+        cmd.AddParameterWithValue("@Units", 50);
+
+        db.Open();
+        using (var r = cmd.ExecuteReader()) {
+            while (r.Read()) {
+                Console.WriteLine("{0,3}: {1,-40} {2,4} x",
+                    r["ProductId"],     // 1
+                    r["ProductName"],   // 0
+                    r["UnitsInStock"]); // 2
+            }
+        }
+    }
 
 Výše uvedené metody psaní kódu zajistí, že vaše aplikace bude schopna komunikovat s jakoukoliv databází, pro níž existuje ADO.NET provider. Používám popsaný postup velmi úspěšně hned v několika svých programech, například v populární sadě membership a role providerů [Altairis Web Security Toolkit](http://altairiswebsecurity.codeplex.com/).

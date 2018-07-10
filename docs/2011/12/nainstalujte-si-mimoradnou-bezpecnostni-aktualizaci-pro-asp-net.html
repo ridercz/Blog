@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Microsoft zhruba před hodinou uveřejnil mimořádnou bezpečnostní aktualizaci pro ASP.NET, která zabraňuje možnému DoS útoku." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Nainstalujte si mimořádnou bezpečnostní aktualizaci pro ASP.NET</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2011-12-29T21:14:33+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>29. prosince 2011</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Microsoft zhruba před hodinou uveřejnil mimořádnou bezpečnostní aktualizaci pro ASP.NET, která zabraňuje možnému DoS útoku. V čem je problém? Pokusím se jej vysvětlit velmi zjednodušeně, pro detailní vysvětlení doporučuji odkazy na konci článku.</p>
 <p>Při vývoj software se velmi často používají různé typy kolekcí klíč – hodnota. V různých programovacích jazycích se nazývají různě, ale základem je vždy nějaká forma hashovací tabulky, v níž se ukládají klíče a podle které se vyhledává.</p>
 <p>Pokud vezmeme například klasickou C# kolekci se stringovým klíčem, nedochází při prohledávání z výkonových důvodů ke skutečnému porovnávání řetězců. Místo toho se spočítá hash, což je 32-bitové číslo, a dále se pracuje jenom s ním, což je výpočetně efektivnější. Každý objekt má metodu <a href="http://msdn.microsoft.com/en-us/library/system.object.gethashcode.aspx">GetHashCode</a>, která tento hash vypočítá.</p>
@@ -38,7 +83,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

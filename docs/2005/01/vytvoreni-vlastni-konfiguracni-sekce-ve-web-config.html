@@ -7,44 +7,171 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Webové .NET aplikace jsou předučeny k tomu, aby svá nastavení ukládala do souboru Web.Config. Pokud se nechcete omezit na ukládání pouhých dvojic název-hodnota, můžete si napsat vlastní handler konfigurační sekce a použít formát jaký se vám zlíbí." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Vytvoření vlastní konfigurační sekce ve Web.Config</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-01-09T06:54:43.36+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>9. ledna 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>.NET aplikace jsou předurčeny k tomu, aby své konfigurační údaje ukládaly do souboru <code>jménoaplikace.config</code> (v případě webových <code>web.config</code>). K takto uloženým údajům lze přistupovat pomocí namespace <code>System.Configuration.ConfigurationSettings</code>.</p>
 <p>Konfigurační soubory jsou psány ve formátu XML a jsou rozděleny na několik sekcí. <code>Web.Config</code> typické webové aplikace vypadá nějak takhle:</p>
-<p><configuration> <appSettings> <add key="Nazev1" value="hodnota1" /> <add key="Nazev2" value="hodnota2" /> <appSettings> &lt;system.web&gt; <authentication mode="Forms"> <forms name=".CHEETAH3AUTH" loginUrl="/Login.aspx" protection="All" timeout="60"/> </authentication> &lt;/system.web&gt; </configuration></p>
+<pre><code>&lt;configuration&gt;
+  &lt;appSettings&gt;
+    &lt;add key=&quot;Nazev1&quot; value=&quot;hodnota1&quot; /&gt;
+    &lt;add key=&quot;Nazev2&quot; value=&quot;hodnota2&quot; /&gt;
+  &lt;appSettings&gt;
+  &lt;system.web&gt;
+    &lt;authentication mode=&quot;Forms&quot;&gt;
+      &lt;forms name=&quot;.CHEETAH3AUTH&quot; loginUrl=&quot;/Login.aspx&quot; protection=&quot;All&quot; timeout=&quot;60&quot;/&gt;
+    &lt;/authentication&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</code></pre>
 <p>Aplikační nastavení se obvykle ukládají do sekce <code>appSettings</code> jako dvojice <em>název-hodnota</em>. Přistupovat k nim pak lze jako k hodnotám kolekce <code>System.Configuration.ConfigurationSettings.AppSettings</code>.</p>
 <h2 id="za-hranice-appsettings">Za hranice AppSettings</h2>
 <p>Výše uvedený postup stačí pro jednoduché aplikace. Ale pokud píšete aplikaci složitější, pravděpodobně oceníte možnost zapsat její konfiguraci pomocí vlastních XML elementů a atributů. Protože jenom málo věcí je v prostředí .NET &quot;zadrátováno&quot; napevno, máte možnost snadno si naprogramovat vlastní konfigurační sekci.</p>
 <p>Princip je zhruba následující: Je třeba vytvořit dvě třídy. Jedna bude reprezentovat vlastní nastavení (její vlastnosti a metody budou mít hodnoty podle uživatelem definovaného obsahu konfiguračního souboru). Druhá třída bude tzv. configuration section handler a zajistí naplnění konfigurační sekce dle potřeby.</p>
 <p>Představme si, že chcete do konfiguračního souboru vložit novou sekci, která bude obsahovat informace pro odesílání e-mailových zpráv. Ona sekce bude vypadat nějak takhle:</p>
-<p><mailConfig> <from name="Jméno odesílatele" address="odesilatel@example.com" /> <to name="Jméno příjemce" address="prijemce@example.com" /> <smtpServer>localhost</smtpServer> </mailConfig></p>
+<pre><code>&lt;mailConfig&gt;
+  &lt;from name=&quot;Jméno odesílatele&quot; address=&quot;odesilatel@example.com&quot; /&gt;
+  &lt;to name=&quot;Jméno příjemce&quot; address=&quot;prijemce@example.com&quot; /&gt;
+  &lt;smtpServer&gt;localhost&lt;/smtpServer&gt;
+&lt;/mailConfig&gt;
+</code></pre>
 <p>Obslužný kód ve VB.NET sestává ze dvou tříd:</p>
-<p>Public Class EmailSettingsConfigHandler Implements System.Configuration.IConfigurationSectionHandler Public Function Create(ByVal parent As Object, ByVal configContext As Object, ByVal section As System.Xml.XmlNode) As Object Implements System.Configuration.IConfigurationSectionHandler.Create Return New EmailSettings(section) End Function End Class Public Class EmailSettings Private _From, _To, _SmtpServer As String Friend Sub New(ByVal E As System.Xml.XmlNode) Me._From = &quot;&quot;&quot;&quot; &amp; E.SelectSingleNode(&quot;from/@name&quot;).Value &amp; &quot;&quot;&quot; &quot; &amp; _ &quot;&lt;&quot; &amp; E.SelectSingleNode(&quot;from/@address&quot;).Value &amp; &quot;&gt;&quot; Me._To = &quot;&quot;&quot;&quot; &amp; E.SelectSingleNode(&quot;to/@name&quot;).Value &amp; &quot;&quot;&quot; &quot; &amp; _ &quot;&lt;&quot; &amp; E.SelectSingleNode(&quot;to/@address&quot;).Value &amp; &quot;&gt;&quot; Me._SmtpServer = E.SelectSingleNode(&quot;smtpServer&quot;).InnerText End Sub Public ReadOnly Property From() As String Get Return Me._From End Get End Property Public ReadOnly Property <a href="">To</a> As String Get Return Me._To End Get End Property Public ReadOnly Property SmtpServer() As String Get Return Me._SmtpServer End Get End Property End Class</p>
+<pre><code>Public Class EmailSettingsConfigHandler
+    Implements System.Configuration.IConfigurationSectionHandler
+
+    Public Function Create(ByVal parent As Object, ByVal configContext As Object, ByVal section As System.Xml.XmlNode) As Object Implements System.Configuration.IConfigurationSectionHandler.Create
+        Return New EmailSettings(section)
+    End Function
+End Class
+
+Public Class EmailSettings
+    Private _From, _To, _SmtpServer As String
+
+    Friend Sub New(ByVal E As System.Xml.XmlNode)
+        Me._From = &quot;&quot;&quot;&quot; &amp; E.SelectSingleNode(&quot;from/@name&quot;).Value &amp; &quot;&quot;&quot; &quot; &amp; _
+                   &quot;&lt;&quot; &amp; E.SelectSingleNode(&quot;from/@address&quot;).Value &amp; &quot;&gt;&quot;
+        Me._To = &quot;&quot;&quot;&quot; &amp; E.SelectSingleNode(&quot;to/@name&quot;).Value &amp; &quot;&quot;&quot; &quot; &amp; _
+                   &quot;&lt;&quot; &amp; E.SelectSingleNode(&quot;to/@address&quot;).Value &amp; &quot;&gt;&quot;
+        Me._SmtpServer = E.SelectSingleNode(&quot;smtpServer&quot;).InnerText
+    End Sub
+
+    Public ReadOnly Property From() As String
+        Get
+            Return Me._From
+        End Get
+    End Property
+
+    Public ReadOnly Property [To]() As String
+        Get
+            Return Me._To
+        End Get
+    End Property
+
+    Public ReadOnly Property SmtpServer() As String
+        Get
+            Return Me._SmtpServer
+        End Get
+    End Property
+End Class
+</code></pre>
 <p>Třída <code>EmailSettings</code> reprezentuje vlastní nastavení, která načítá ve svém konstruktoru z XML dokumentu.</p>
 <p>Třída <code>EmailSettingsConfigHandler</code> slouží systému k práci s novou konfigurační sekcí. Implementuje rozhraní <code>IConfigurationSectionHandler</code>, které definuje jedinou metodu: <code>Create</code>. Jejím jediným parametrem, který nás momentálně zajímá, je <code>section</code>. To je <code>XmlNode</code>, odkazující na přiřazenou konfigurační sekci, v našem případě tedy na element <code>&lt;mailConfig&gt;</code>. Metoda vrací instanci námi vytvořené třídy s nastaveními a je velmi jednoduchá, veškerou &quot;špinavou práci&quot; za nás odvede konstruktor třídy samé.</p>
 <h2 id="konfigurace-konfiguratoru">Konfigurace konfigurátoru</h2>
 <p>Abychom mohli nově založenou konfigurační sekci využívat, je potřeba ji zaregistrovat. To se dělá přidáním elementu <code>configSections</code>, jehož obsah je následující:</p>
-<p><configSections> <section name="mailConfig" type="AltairCommunications.Test.EmailSettingsConfigHandler, Test" /> </configSections></p>
+<pre><code>&lt;configSections&gt;
+  &lt;section name=&quot;mailConfig&quot; type=&quot;AltairCommunications.Test.EmailSettingsConfigHandler, Test&quot; /&gt;
+&lt;/configSections&gt;
+</code></pre>
 <p>Atribut <code>section/@name</code> určuje název elementu konfigurační sekce. Atribut <code>section/@type</code> je úplné označení typu výše uvedené třídy <code>EmailSettingsConfigHandler</code>. Konkrétní hodnota tohoto atributu záleží na vašem nastavení. Moje třída je uložena v namespace <code>AltairCommunications.Test</code>, vaše se bude patrně jmenovat jinak. Parametr za čárkou je název assembly (bez přípony, např. <em>.dll</em>), ve které se typ nachází. Moje knihovna se tedy jmenuje <code>Test.dll</code> - vaše se opět bude zřejmě jmenovat jinak.</p>
 <h2 id="pouziti-konfigurace">Použití konfigurace</h2>
 <p>Použití konfigurace je jednoduché. Zavoláte <code>System.Configuration.ConfigurationSettings.GetConfig(&quot;název sekce&quot;)</code> a přetypujete na váš konfigurační typ. Například:</p>
-<p>Public Sub SendMail() Dim Config As EmailSettings = DirectCast(System.Configuration.ConfigurationSettings.GetConfig(&quot;mailConfig&quot;), EmailSettings) Dim Msg As New System.Web.Mail.MailMessage Msg.From = Config.From Msg.To = Config.To Msg.Subject = &quot;Testovací zpráva&quot; Msg.Body = &quot;Obsah testovací zprávy&quot; System.Web.Mail.SmtpMail.SmtpServer = Config.SmtpServer System.Web.Mail.SmtpMail.Send(Msg) End Sub</p>
+<pre><code>Public Sub SendMail()
+    Dim Config As EmailSettings = DirectCast(System.Configuration.ConfigurationSettings.GetConfig(&quot;mailConfig&quot;), EmailSettings)
+    Dim Msg As New System.Web.Mail.MailMessage
+    Msg.From = Config.From
+    Msg.To = Config.To
+    Msg.Subject = &quot;Testovací zpráva&quot;
+    Msg.Body = &quot;Obsah testovací zprávy&quot;
+
+    System.Web.Mail.SmtpMail.SmtpServer = Config.SmtpServer
+    System.Web.Mail.SmtpMail.Send(Msg)
+End Sub
+</code></pre>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

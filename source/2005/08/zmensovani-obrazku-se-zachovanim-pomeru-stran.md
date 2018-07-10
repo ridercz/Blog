@@ -19,4 +19,25 @@ Za neuvěřitelně ohavné ovšem považuji chování některých systémů, kte
 
 V zájmu ochrany svého estetického cítění před zdeformovanými obrázky zde přikládám příslušný kód:
 
-Public Shared Function ResizeImage(ByRef Source As System.Drawing.Image, ByVal Width As Int32, ByVal Height As Int32) As System.Drawing.Image ' Do nothing, if dimensions are correct If Source.Width = Width And Source.Height = Height Then Return Source ' Get proportional size of image Dim W, H As Int32 If Source.Width >= Source.Height Then W = Width H = CInt(Source.Height * (Width / Source.Width)) Else W = CInt(Source.Width * (Height / Source.Height)) H = Height End If ' Draw new image Dim Target As New System.Drawing.Bitmap(Width, Height) Dim GPH As System.Drawing.Graphics = System.Drawing.Graphics.FromImage(Target) GPH.FillRectangle(Drawing.Brushes.White, 0, 0, Width, Height) GPH.CompositingQuality = Drawing.Drawing2D.CompositingQuality.HighQuality GPH.SmoothingMode = Drawing.Drawing2D.SmoothingMode.HighQuality GPH.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic GPH.DrawImage(Source, 0, 0, W, H) Return Target End Function
+    Public Shared Function ResizeImage(ByRef Source As System.Drawing.Image, ByVal Width As Int32, ByVal Height As Int32) As System.Drawing.Image
+        ' Do nothing, if dimensions are correct
+        If Source.Width = Width And Source.Height = Height Then Return Source
+        ' Get proportional size of image
+        Dim W, H As Int32
+        If Source.Width >= Source.Height Then
+            W = Width
+            H = CInt(Source.Height * (Width / Source.Width))
+        Else
+            W = CInt(Source.Width * (Height / Source.Height))
+            H = Height
+        End If
+        ' Draw new image
+        Dim Target As New System.Drawing.Bitmap(Width, Height)
+        Dim GPH As System.Drawing.Graphics = System.Drawing.Graphics.FromImage(Target)
+        GPH.FillRectangle(Drawing.Brushes.White, 0, 0, Width, Height)
+        GPH.CompositingQuality = Drawing.Drawing2D.CompositingQuality.HighQuality
+        GPH.SmoothingMode = Drawing.Drawing2D.SmoothingMode.HighQuality
+        GPH.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
+        GPH.DrawImage(Source, 0, 0, W, H)
+        Return Target
+    End Function

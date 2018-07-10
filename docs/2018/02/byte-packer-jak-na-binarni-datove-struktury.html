@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu BytePacker, která vám s tím pomůže." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Byte packer – jak na binární datové struktury?</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2018-02-07T23:00:00+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>7. února 2018</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu <code>BytePacker</code>, která vám s tím pomůže.</p>
 <p>Tento článek jsem napsal na základě diskuse s jedním začínajícím C# programátorem, který poněkud plaval v operacích s poli bajtů. Myslím si, že může být užitečný i mnoha dalším.</p>
 <p>Základní zadání je následující:</p>
@@ -32,9 +77,15 @@
 <h2 id="ukladani-dat-s-predem-znamou-delkou">Ukládání dat s předem známou délkou</h2>
 <p>Pokud ukládáme data s předem známou délkou, je to jednoduché. Prostě je naskládáme za sebe a hotovo. Protože dopředu známe délku, dokážeme rozpoznat komu které bajty patří. </p>
 <p>Typickým příkladem bude např. situace, kdy budeme jako součást datové struktury uchovávat ID měřícího zařízení (dva bajty), vnitřní teplotu a vnější teplotu. Teplotu budeme uchovávat s přesností na půl stupně celsia. Pokud bychom data ukládali v XML, lze si představit například následující formát:</p>
-<measure id="1234" internalTemp="15.5" externalTemp="-3.5" />
+<pre><code>&lt;measure id=&quot;1234&quot; internalTemp=&quot;15.5&quot; externalTemp=&quot;-3.5&quot; /&gt;
+</code></pre>
 <p>V současné době je módní používat spíše JSON, v něm by to mohlo vypadat následovně:</p>
-<p>{ &quot;id&quot; : 1234, &quot;internalTemp&quot; : 15.5, &quot;externalTemp&quot; : -3.5 }</p>
+<pre><code>{
+  &quot;id&quot; : 1234,
+  &quot;internalTemp&quot; : 15.5,
+  &quot;externalTemp&quot; : -3.5
+}
+</code></pre>
 <p>Jak to ovšem uložit do co nejmenšího objemu dat, například budeme-li data chtít přenášet po LPWAN síti s omezeným objemem přenášených dat? Stačí nám k tomu prosté čtyři bajty. První a druhý bajt bude identifikátor měřící stanice. Třetí bajt bude vnitřní teplota a čtvrtý bajt vnější teplota.</p>
 <p>Jeden bajt může uchovávat hodnotu 0-255. Jak do toho zakódovat desetinnou a zápornou teplotu? Možností je několik. Zápornou hodnotu vyřešíme tím, že k teplotě ve stupních pro účely ukládání přičteme 127. Budeme tak schopni uchovávat teplotu od –127 °C (uloženo jako 0) po +128 °C (uloženo jako 255), což nám pro naši aplikaci postačí. Chceme-li uchovávat s přesností na půl stupně, stačí hodnotu před uložením ještě vynásobit dvěma. Tím se nám sice sníží rozsah na polovinu (od –63,5 °C do +64 °C), ale to je pořád dostačující. Vzorec pro převod teploty <code>t</code> na uloženou hodnotu s tedy bude <code>s = t * 2 + 127</code>. Opačný převod pak provedeme pomocí vzorečku <code>t = (s – 127) / 2</code>.</p>
 <ul>
@@ -66,7 +117,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

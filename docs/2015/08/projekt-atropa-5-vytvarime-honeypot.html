@@ -7,19 +7,70 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="V předchozích dílech seriálu o vytvoření &quot;zlé maliny&quot; jsme si ukázali, jak na Raspberry Pi nainstalovat operační systém Raspbian, ASP.NET 5 a jak aplikaci pomocí nginxu vypublikovat do Internetu. Dnes z Raspberry vytvoříme Wi-Fi honeypot, tedy Wi-Fi access point, který každému dovolí, aby se připojil, a všechny HTTP požadavky bude směřovat sám na sebe." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Projekt Atropa (5): Vytváříme honeypot</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2015-08-10T00:00:00+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>10. srpna 2015</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/projekt-atropa" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Projekt Atropa</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V předchozích dílech seriálu o vytvoření &quot;zlé maliny&quot; jsme si ukázali, jak na Raspberry Pi nainstalovat operační systém Raspbian, ASP.NET 5 a jak aplikaci pomocí nginxu vypublikovat do Internetu. Dnes z Raspberry vytvoříme Wi-Fi honeypot, tedy Wi-Fi access point, který každému dovolí, aby se připojil, a všechny HTTP požadavky bude směřovat sám na sebe.</p>
 <h2 id="umi-moje-wi-fi-rezim-ap">Umí moje Wi-Fi režim AP?</h2>
 <p>Základem úspěchu je mít Wi-Fi síťovou kartu, která podporuje AP režim. V <a href="http://www.aspnet.cz/articles/5429-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">úvodním dílu</a> jsem doporučoval <a href="https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm">TP-LINK TL-WN722N</a> a ten AP umí. Pokud budete mít jinou a nejste si jisti, zkontrolujte to.</p>
@@ -27,9 +78,22 @@
 <p>Najděte sekci <em>Supported interface modes</em> a v ní hledejte režim <em>AP</em>. Pokud ho nenajdete, kupte si jinou kartu.</p>
 <h2 id="vytvoreni-wi-fi-ap-pomoci-hostapd">Vytvoření Wi-Fi AP pomocí hostapd</h2>
 <p>V celém návodu budu předpokládat, že se vaše Wi-Fi karta jmenuje <code>wlan0</code>, což je nejspíš pravda (pokud máte v systému jedinou kartu). Pokud si nejste jisti, zjistěte to příkazem <code>iwconfig</code>, který vypíše všechny bezdrátové síťovky ve vašem systému:</p>
-<p><em>pi@raspberrypi ~ $</em> <strong>iwconfig</strong> wlan0 IEEE 802.11bgn ESSID:off/any Mode:Managed Access Point: Not-Associated Tx-Power=20 dBm Retry short limit:7 RTS thr:off Fragment thr:off Power Management:off lo no wireless extensions. eth0 no wireless extensions.</p>
+<pre><code>*pi@raspberrypi ~ $* **iwconfig**
+wlan0     IEEE 802.11bgn  ESSID:off/any
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=20 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+</code></pre>
 <p><code>Hostapd</code> je program, který z vašeho Raspberry Pi udělá Wi-Fi přístupový bod. Nainstalujte ho příkazem <code>sudo apt-get install hostapd -y</code>. Dále pak vytvořte jeho konfigurační soubor příkazem <code>sudo nano /etc/hostapd/hostapd.conf</code>. Zadejte do něj následující obsah:</p>
-<p>interface=wlan0 driver=nl80211 ssid=Internet channel=6</p>
+<pre><code>interface=wlan0
+driver=nl80211
+ssid=Internet
+channel=6
+</code></pre>
 <p>Poté změny uložte (Ctrl+X, Y, ENTER). Význam parametrů je následující:</p>
 <ul>
 <li><code>interface</code> je název rozhraní, v našem případě tedy <code>wlan0</code>.</li>
@@ -38,24 +102,68 @@
 <li><code>channel</code> je číslo kanálu. Zvolte takový, který nebude kolidovat se sítěmi ve vašem okolí.</li>
 </ul>
 <p>Dále musíme hostapd říct, kde konfiguraci najde. Příkazem <code>sudo nano /etc/init.d/hostapd</code> otevřete jeho spouštěcí skript a najděte řádek, který začíná <code>DAEMON_CONF=</code>. Za rovnítko napište cestu ke konfiguračnímu souboru. Celý řádek tedy bude vypadat tako:</p>
-<p>DAEMON_CONF=/etc/hostapd/hostapd.conf</p>
+<pre><code>DAEMON_CONF=/etc/hostapd/hostapd.conf
+</code></pre>
 <p>Poté změny uložte (Ctrl+X, Y, ENTER).</p>
 <p>Příkazem <code>sudo update-rc.d hostapd defaults</code> nastavte, aby se hostapd automaticky nastartoval po rebootu.</p>
 <p>Tímto jsme náš počítač zkonfigurovali jako AP pro síť Internet, která je zcela otevřená (bez hesla). Zatím ho ale nebudeme startovat, protože by se klienti stejně nemohli připojit, protože by nedostali adresu přes DHCP.</p>
 <h2 id="instalace-a-konfigurace-dnsmasq">Instalace a konfigurace dnsmasq</h2>
 <p>Dnsmasq je program, který funguje jako jednoduchý DNS a DHCP server. Nainstalujte ho příkazem <code>sudo apt-get install dnsmasq -y</code>. Poté otevřete jeho konfigurační soubor příkazem <code>sudo nano /etc/dnsmasq.conf</code>. Na konec souboru přidejte následující:</p>
-<p>log-facility=/var/log/dnsmasq.log address=/#/10.0.0.1 interface=wlan0 dhcp-range=10.0.0.10,10.0.0.250,1h no-resolv log-queries</p>
+<pre><code>log-facility=/var/log/dnsmasq.log
+address=/#/10.0.0.1
+interface=wlan0
+dhcp-range=10.0.0.10,10.0.0.250,1h
+no-resolv
+log-queries
+</code></pre>
 <p>Poté změny uložte (Ctrl+X, Y, ENTER). Tento zápis všem připojeným přes interface <code>wlan0</code> přidělí IP adresu z rozsahu <code>10.0.0.100-250</code> a na všechny DNS dotazy bude odpovídat adresou <code>10.0.0.1</code>. To bude adresa našeho počítače, takže ať už se uživatel zeptá na cokoliv, bude přesměrován na náš lokální web server. Dále pak budeme všechny DNS dotazy ukládat do souboru <code>/var/log/dnsmasq.log</code>.</p>
 <p>Příkazem <code>sudo update-rc.d dnsmasq defaults</code> nastavte, aby se dnsmasq automaticky nastartoval po rebootu.</p>
 <h2 id="nastaveni-site-a-firewallu">Nastavení sítě a firewallu</h2>
 <p>Začneme tím, že na firewallu zakážeme pro rozhraní wlan0 všechny porty, s výjimkou HTTP, DHCP a DNS. Zadejte následující příkazy:</p>
-<p>sudo iptables -F sudo iptables -i wlan0 -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT sudo iptables -i wlan0 -A INPUT -p udp --dport 53 -j ACCEPT sudo iptables -i wlan0 -A INPUT -p udp --dport 67:68 -j ACCEPT sudo iptables -i wlan0 -A INPUT -p tcp --dport 80 -j ACCEPT sudo iptables -i wlan0 -A INPUT -j DROP sudo sh -c &quot;iptables-save &gt; /etc/iptables.rules&quot;</p>
+<pre><code>sudo iptables -F
+sudo iptables -i wlan0 -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -i wlan0 -A INPUT -p udp --dport 53 -j ACCEPT
+sudo iptables -i wlan0 -A INPUT -p udp --dport 67:68 -j ACCEPT
+sudo iptables -i wlan0 -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -i wlan0 -A INPUT -j DROP
+sudo sh -c &quot;iptables-save &gt; /etc/iptables.rules&quot;
+</code></pre>
 <p>Těmi nastavíte, že se budou zahazovat všechny pakety mimo DNS (port 53 UDP), DHCP (porty 67-68 UDP) a HTTP (port 80 TCP). Nastavení platí pouze pro rozhraní <code>wlan0</code>, takže přes drátový Ethernet bude možné se nadále normálně připojit. Posledním příkazem nastavení iptables vyexportujete do souboru <code>/etc/iptables.rules</code>, ze kterého je budeme později načítat.</p>
 <p>Dále pak nastavíme naší bezdrátové kartě pevnou IP adresu 10.0.0.1 a zajistíme, že se při startu načtou shora uvedená pravidla. Editujte konfigurační soubor příkazem <code>sudo nano /etc/network/interfaces</code>. V tomto souboru vymažte celou sekci týkající se rozhraní <code>wlan0</code> (celý řádek smažete pomocí Ctrl+K). Místo ní zadejte tučný text v následujícím výpisu (který zahrnuje pro informaci i konfiguraci ostatních rozhraní, tedy celý soubor na mém RPi):</p>
-<p>auto lo iface lo inet loopback auto eth0 allow-hotplug eth0 iface eth0 inet manual <strong>iface wlan0 inet static address 10.0.0.1 netmask 255.255.255.0 broadcast 255.0.0.0 pre-up iptables-restore &lt; /etc/iptables.rules</strong> auto wlan1 allow-hotplug wlan1 iface wlan1 inet manual wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf</p>
+<pre><code>auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+
+**iface wlan0 inet static
+address 10.0.0.1
+netmask 255.255.255.0
+broadcast 255.0.0.0
+pre-up iptables-restore &lt; /etc/iptables.rules**
+
+auto wlan1
+allow-hotplug wlan1
+iface wlan1 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
 <p>Poté změny uložte (Ctrl+X, Y, ENTER).</p>
 <p>Poslední věc, kterou je třeba zajistit je, abychom se nestali obětí vlastního honeypotu. Tedy aby Raspberry Pi samo dokázalo udělat funkční DNS resolving a neresolvovalo vše samo na sebe. Nastavíme tedy, že bude napevno používat DNS server Google. Příkazem <code>sudo nano /etc/resolvconf.conf</code> otevřete konfigurační soubor, odkomentujte řádek začínající <code>#name_servers=</code> a místo <code>127.0.0.1</code> zadejte adresu DNS serveru, který chcete používat, např. <code>8.8.8.8</code>. Celý soubor bude po provedení změn vypadat takto:</p>
-<h1 id="configuration-for-resolvconf8-see-resolvconf.conf5-for-details-resolv_confetcresolv.conf-if-you-run-a-local-name-server-you-should-uncomment-the-below-line-and-configure-your-subscribers-configuration-files-below.name_servers8.8.8.8-mirror-the-debian-package-defaults-for-the-below-resolvers-so-that-resolvconf-integrates-seemlessly.dnsmasq_resolvvarrundnsmasqresolv.conf-pdnsd_confetcpdnsd.conf-unbound_confvarcacheunboundresolvconf_resolvers.conf">Configuration for resolvconf(8) # See resolvconf.conf(5) for details resolv_conf=/etc/resolv.conf # If you run a local name server, you should uncomment the below line and # configure your subscribers configuration files below. <strong>name_servers=8.8.8.8</strong> # Mirror the Debian package defaults for the below resolvers # so that resolvconf integrates seemlessly. dnsmasq_resolv=/var/run/dnsmasq/resolv.conf pdnsd_conf=/etc/pdnsd.conf unbound_conf=/var/cache/unbound/resolvconf_resolvers.conf</h1>
+<pre><code># Configuration for resolvconf(8)
+# See resolvconf.conf(5) for details
+
+resolv_conf=/etc/resolv.conf
+# If you run a local name server, you should uncomment the below line and
+# configure your subscribers configuration files below.
+**name_servers=8.8.8.8**
+
+# Mirror the Debian package defaults for the below resolvers
+# so that resolvconf integrates seemlessly.
+dnsmasq_resolv=/var/run/dnsmasq/resolv.conf
+pdnsd_conf=/etc/pdnsd.conf
+unbound_conf=/var/cache/unbound/resolvconf_resolvers.conf
+</code></pre>
 <p>Poté změny uložte (Ctrl+X, Y, ENTER).</p>
 <h2 id="zkouska-honeypotu">Zkouška honeypotu</h2>
 <p>Začněte tím, že Raspberry restarujtete příkazem <code>sudo reboot</code>. Vyčkejte, dokud nenastartuje. Poté se připojte k otevřené síti Internet (nebo jak jste ji pojmenovali) a zadejte do browseru jakoukoliv webovou adresu. Budete přesměrováni na výchozí stránku naší ukázkové ASP.NET aplikace.</p>
@@ -64,7 +172,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

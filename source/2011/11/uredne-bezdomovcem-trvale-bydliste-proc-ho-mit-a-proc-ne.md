@@ -19,7 +19,7 @@ Ve vztahu k místu trvalého pobytu mohou nastat v zásadě tři situace:
 
 *   **Občan má klasický trvalý pobyt na "normální" adrese.** To je běžný stav, platný pro většinu populace. Prvním místem trvalého pobytu je (nedohodnou-li se rodiče jinak) místo bydliště matky v době narození. V pozdějším životě se mění způsobem, který je obecně znám a dostatečně popsán. 
 *   Druhý případ nastává, když **občan má trvalý pobyt "na úřadě"**. Ve většině parametrů se jedná o situaci ve výsledku shodnou s první. S výjimkou drobných obtíží, které budou pojednány níže, nepřináší občanovi nižádných problémů. 
-*   Poslední možností je, že **občan trvalý pobyt nemá vůbec**, neboť se jej rozhodl ukončit. To je nejextrémnější varianta, která má podstatné výhody i nevýhody a budeme se jí podrobněji věnovat později.  
+*   Poslední možností je, že **občan trvalý pobyt nemá vůbec**, neboť se jej rozhodl ukončit. To je nejextrémnější varianta, která má podstatné výhody i nevýhody a budeme se jí podrobněji věnovat později.   
 
 ## Trvalé bydliště "na úřadě"
 
@@ -150,7 +150,7 @@ Jak byste tedy měli postupovat, chcete-li se stát úředně bezdomovcem?
 
 1.  Ověřte si, že máte platný cestovní pas. Pokud nemáte, nebo mu bude brzo končit platnost, požádejte o jeho vydání. Pokud nemáte jiný státem vydaný průkaz totožnosti (typicky ŘP), požádejte o vydání druhého cestovního pasu. Platnost pasu si hlídejte – bude vaším základním dokladem totožnosti a pokud vám vyprší, bude získání dalšího podstatně komplikovanější. 
 2.  Zajděte na ohlašovnu pobytu v místě trvalého bydliště. To je typicky obecní/městský úřad, případně úřad městské části. Tam postupem popsaným výše ukončete trvalý pobyt. 
-3.  Enjoy :)  
+3.  Enjoy :)   
 
 Zásadní otázka samozřejmě je, proč byste toto měli podstoupit. 
 

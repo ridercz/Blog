@@ -9,7 +9,7 @@
 <!-- dcterms:created = 2005-01-12T23:15:30.547+01:00 -->
 <!-- dcterms:dateAccepted = 2005-01-12T23:15:30.547+01:00 -->
 
-*Per aspera ad astra* - tedy "utrpením ke hvězdám" - je dle mého názoru docela přesný popis způsobu, jakým se vyvíjel webový server od Microsoftu - Internet Information Services. Moje první setkání s IIS se uskutečnilo ve verzi 2.0 (byla součástí Windows NT 4.0). Používat ji bylo opravdové utrpení, které příliš nezměkčil ani SP3 (tuším) na NT Server, který IIS upgradoval na verzi 3.0. 
+*Per aspera ad astra* - tedy "utrpením ke hvězdám" - je dle mého názoru docela přesný popis způsobu, jakým se vyvíjel webový server od Microsoftu - Internet Information Services. Moje první setkání s IIS se uskutečnilo ve verzi 2.0 (byla součástí Windows NT 4.0). Používat ji bylo opravdové utrpení, které příliš nezměkčil ani SP3 (tuším) na NT Server, který IIS upgradoval na verzi 3.0.
 
 IIS verze 4.0 byl součástí Windows NT Option Packu a znamenal z pohledu webu na Windows platformě revoluci - konečně bylo možné na NT provozovat trochu slušný web server. Žel bohu, v případě že se jednalo o server zatíženější, musel vedle něj stát administrátor a podpírat ho, aby nespadl.
 
@@ -23,7 +23,9 @@ Soubor `MetaBase.xml`, tedy úložiště konfiguračních informací o serveru, 
 
 Dnes večer jsem se zúčastnil neveřejného chatu s vývojáři nového IISka. Bylo nám dovoleno poodhalit něco z tajemství budoucnosti. Vzhledem k tomu, co jsem se dozvěděl, tak činím s nevšední radostí. Tři hlavní přednosti nové verze jsou:
 
-*   Přehlednějši konfigurace, založená na distribuovaném modelu známém z .NET. Modularita (instalujete jenom to co skutečně potřebujete) a snadná rozšiřitelnost. *Mnohem* lepší konfigurační nástroje. 
+*   Přehlednějši konfigurace, založená na distribuovaném modelu známém z .NET. 
+Modularita (instalujete jenom to co skutečně potřebujete) a snadná rozšiřitelnost. 
+    *Mnohem* lepší konfigurační nástroje.
 
 ### Přehlednější konfigurace
 

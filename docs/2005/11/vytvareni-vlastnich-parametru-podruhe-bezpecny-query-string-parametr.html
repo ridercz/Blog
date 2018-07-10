@@ -7,38 +7,120 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Pokud použijete strongly-typed parametry pro data binding a předanou hodnotu nebude možno na požadovaný typ převést, dojde k výjimce. Pokud si informace o výjimkách ve své aplikaci necháte posílat e-mailem, můžete být brzo zaplaveni zprávami právě o tomto typu chyb. Vyhnout se tomu lze právě pomocí vlastního parametru." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Vytváření vlastních parametrů podruhé - "bezpečný" query string parametr</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2005-11-09T03:21:35.817+01:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>9. listopadu 2005</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>V článku <a href="/entry/article-20051005.aspx">Tvorba vlastního parametru pro data binding v ASP.NET 2.0</a> jsem popisoval, kterak lze vytvořit vlastní parametr pro deklarativní data binding, novinku to v nové verzi ASP.NET. Obdobnou metodu je možno použít k odstranění problému, který mne štve od doby, co jsem ASP.NET 2.0 prakticky nasadil.</p>
 <p>Pokud použijete strongly-typed parametry pro data binding a předanou hodnotu nebude možno na požadovaný typ převést, dojde k výjimce. Což je v zásadě v pořádku. Situace, kdy aplikace vyhodí výjimku, by však neměly zůstat nepovšimnuty jejím tvůrcem. Dobrou cestou je například nechat si informace o chybách posílat e-mailem. Pokud tak učiníte, budete ovšem zakrátko zaplaveni velkým množstvím zpráv, které vygenerují požadavky na chybná URL, typicky v případě adres zaslaných e-mailem (a tedy nějak poškozených), jistých tupějších robotů a podobně.</p>
 <p>Řešením je napsat si vlastní typ parametru, který si s takovou situací dokáže graciézně poradit. V následujícím příkladu řeším případ načítání hodnoty z Query Stringu, tedy QueryStringParameter. Obdobnou logiku je možno využít pro všechny ostatní zdroje - cookies, forms atd.</p>
 <h2 id="vytvoreni-tridy-safequerystringparameter">Vytvoření třídy SafeQueryStringParameter</h2>
 <p>Zdrojový kód vypadá následovně:</p>
-<p>Namespace MyControls Public Class SafeQueryStringParameter Inherits System.Web.UI.WebControls.QueryStringParameter Protected Overrides Function Evaluate(ByVal context As System.Web.HttpContext, ByVal control As System.Web.UI.Control) As Object Try Return System.Convert.ChangeType(MyBase.Evaluate(context, control), Me.Type) Catch ex As Exception Return Me.DefaultValue End Try End Function End Class End Namespace</p>
+<pre><code>Namespace MyControls
+    Public Class SafeQueryStringParameter
+        Inherits System.Web.UI.WebControls.QueryStringParameter
+        Protected Overrides Function Evaluate(ByVal context As System.Web.HttpContext, ByVal control As System.Web.UI.Control) As Object
+            Try
+                Return System.Convert.ChangeType(MyBase.Evaluate(context, control), Me.Type)
+            Catch ex As Exception
+                Return Me.DefaultValue
+            End Try
+        End Function
+    End Class
+End Namespace
+</code></pre>
 <p>Stejně jako ve shora uvedeném článku upozorňuji na nutnost umístit naši třídu do namespace. Je vcelku jedno, jak se bude jmenovat, ale musí nějaký být.</p>
 <p>Kód sám je velmi jednoduchý. Nová třída <code>SafeQueryStringParameter</code> jest poděděna od běžné <code>System.Web.UI.WebControls.QueryStringParameter</code>. Metodu <code>Evaluate()</code> jsem přepsal tak, že se pokusí zadanou hodnotu převést na požadovaný typ. Standardní <code>QueryStringParameter</code> v reaguje na neúspěch v tomto směru výjimkou, moje třída vrátí <code>DefaultValue</code>, tedy stejnou hodnotu, jako kdyby předmětný parametr nebyl v URL přítomen vůbec.</p>
 <p>Není to samozřejmě jediné řešení. Můžete se pokusit v případě jednodušších typů heuristicky odhadnout, co chtěl básník říci (například odfiltrováním nečíselných znaků). Případně můžete vyhodit svou vlastní výjimku (exception) a přepsat aplikaci tak, aby na výskyt této konkrétní výjimky reagovala nikoliv zasláním e-mailu, ale zobrazením nějakého duchaplného návodného textu ohledně pravděpodobně poškozeného URL.</p>
 <h2 id="pouziti-v-asp.net-strankach">Použití v ASP.NET stránkách</h2>
 <p>Nově deklarovaný parametr je možno použít v ASP.NET stránkách naprosto stejným způsobem, který jsem popsal v závěru <a href="/entry/article-20051005.aspx">minulého článku</a>. Vzhledem k tomu, že takto vytvořený prvek bude patrně třeba používat na mnoha stránkách (místo standardního parametru), bude ale vhodnější použít jiný postup. Registraci uživatelského ovládacího prvku je možno provést v souboru <code>web.config</code> s platností pro celou aplikaci:</p>
-<?xml version="1.0"?> <configuration> <system.web> <pages> <controls > <add tagPrefix="moje" namespace="MyControls" /> </controls> </pages> </system.web> </configuration>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;configuration&gt;
+  &lt;system.web&gt;
+    &lt;pages&gt;
+      &lt;controls &gt;
+        &lt;add tagPrefix=&quot;moje&quot; namespace=&quot;MyControls&quot; /&gt;
+      &lt;/controls&gt;
+    &lt;/pages&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</code></pre>
 <p>Potom je možno ovládací prvek používat ve všech stránkách dané aplikace, aniž by bylo nutno ho v každé z nich výslovně zvlášť registrovat.</p>
 <p>Vzhledem k tomu, že dialogy ve Visual Studiu nepodporují uživatelsky definované parametry při vytváření dotazů (prý v další verzi), doporučuji postupovat tak, že při vývoji použijete normální parametry a teprve po odladění dané části aplikace pomocí funkce Replace nahradíte veškeré řetězce <code>asp:QueryStringParameter</code> řetězcem <code>moje:SafeQueryStringParameter</code>.</p>
 
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

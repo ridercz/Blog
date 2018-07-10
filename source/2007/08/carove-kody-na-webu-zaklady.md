@@ -19,7 +19,7 @@ Obecně čárové kódy představují možnost, jak zakódovat sekvenci číslic
 
 Norem pro generování čárových kódů existuje celá řada a zabývají se v zásadě třemi otázkami:
 
-1.  **Definice kódování znaků do čar.** Neboli jak daná data převést na čáry a mezery. To je část normy, kterou je nutné se bezpodmínečně zabývat. **Definice technických podmínek čitelnosti.** Určuje minimální a maximální rozměry kódu, velikost ochranného pásma (prázdné plochy, která by kolem kódu měla zůstat, aby čtečka dokázala kód najít a přečíst), kontrast světlého a tmavého bodu a podobně. Tato část se obecně na webu zajišťuje nejhůře, zvláště pokud se předpokládá, že si uživatelé budou kódy tisknout sami obecně na tiskárnách, které mají k dispozici, a tisk nebude probíhat v kontrolovaném prostředí a prověřeném hardware. **Definice obsahu informace.** Popisuje formát dat, která mají být kódována. Některé čárové kódy v sobě mají vestavěné mechanismy výpočtu kontrolního součtu, případně jsou určeny pro speciální aplikace, které určují formát uchovávaných dat. 
+1.  **Definice kódování znaků do čar.** Neboli jak daná data převést na čáry a mezery. To je část normy, kterou je nutné se bezpodmínečně zabývat.  **Definice technických podmínek čitelnosti.** Určuje minimální a maximální rozměry kódu, velikost ochranného pásma (prázdné plochy, která by kolem kódu měla zůstat, aby čtečka dokázala kód najít a přečíst), kontrast světlého a tmavého bodu a podobně. Tato část se obecně na webu zajišťuje nejhůře, zvláště pokud se předpokládá, že si uživatelé budou kódy tisknout sami obecně na tiskárnách, které mají k dispozici, a tisk nebude probíhat v kontrolovaném prostředí a prověřeném hardware.  **Definice obsahu informace.** Popisuje formát dat, která mají být kódována. Některé čárové kódy v sobě mají vestavěné mechanismy výpočtu kontrolního součtu, případně jsou určeny pro speciální aplikace, které určují formát uchovávaných dat. 
 
 ## Typy čárových kódů
 
@@ -43,7 +43,7 @@ Kód EAN 13 používám právě na shora uvedeném webu [akce.altairis.cz](http:
 
 Velmi často používané jsou kódy z rodiny "dva z pěti". Označují se jako "Code25", "Code 2/5", "Code 2 of 5" a podobně. Tyto kódy mají sPokpolečné to, že každý znak je tvořen pěti moduly (čárami nebo mezerami), z nichž vždy právě dva jsou široké a tři úzké. Tyto kódy umožňují zakódovat pouze číslice 0-9 a jsou univerzálně použitelné.
 
-*   **Code 25 Industrial** je dle mého názoru nejjednodušší norma pro pochopení principu čárových kódů: každý znak je reprezentován sekvencí silných a slabých čar. Čáry jsou odděleny mezerami, které jsou vždy stejně široké a nenesou žádnou informaci. **Code 25 Interleaved** je úspornější variantou téhož. Pro kódování informace využívá nejenom čáry, ale též mezery. Jedná se v podstatě o "dva kódy v sobě". 
+*   **Code 25 Industrial** je dle mého názoru nejjednodušší norma pro pochopení principu čárových kódů: každý znak je reprezentován sekvencí silných a slabých čar. Čáry jsou odděleny mezerami, které jsou vždy stejně široké a nenesou žádnou informaci.  **Code 25 Interleaved** je úspornější variantou téhož. Pro kódování informace využívá nejenom čáry, ale též mezery. Jedná se v podstatě o "dva kódy v sobě". 
 
 ### Kódy rodiny Code39
 

@@ -21,7 +21,7 @@ Proto jsem vymyslel a ve spolupráci s počítačovou školou Gopas realizoval (
 Můžete si vybrat ze dvou formátů akcí:
 
 *   <strong abp="337">Jednodenní přednášky,** frontální výklad s prezentacemi a ukázkami, které budu předvádět já.
-*   <strong abp="339">Dvoudenní workshopy,** kde budou ukázky nahrazeny praktickými cvičeními (laby), které budou účastníci dělat sami. 
+*   <strong abp="339">Dvoudenní workshopy,** kde budou ukázky nahrazeny praktickými cvičeními (laby), které budou účastníci dělat sami.
 
 Dva formáty jsme vymysleli proto, že každému vyhovuje něco jiného. Někomu stačí "nakopnutí" v podobě přednášky a zbytek si vyzkouší a dohledá sám. Jiný si zase všechno potřebuje vyzkoušet na příkladech a pohrát si s hotovým kódem. Je na vás, čemu dáte přednost.
 

@@ -63,7 +63,7 @@ Odhalení souboru *web.config* představuje zásadní bezpečnostní problém. V
 *   *connectionStrings* – connection stringy k databázi a tedy názvy serverů, uživatelská jména a hesla databázových uživatelů.
 *   *machineKey* – klíč pro všechny výše popsané operace; principem útoku samotného jej sice získat nedokážu, ale pokud jej získám z web.configu, už mohu padělat i HMAC a celkově škodit mnohem elegantněji a s menším úsilím.
 *   *identity* – uživatelské jméno a heslo Windows uživatele, kterého mají ASP.NET používat – impersonovat (používá se relativně zřídka).
-*   *sessionState* – může obsahovat connection string, pokud session ukládáte do databáze; nechápu, proč si ho povinně nenačítá také ze sekce *connectionStrings* jako ostatní, ale možná to nějaký důvod má, technologií session dlouhodobě opovrhuji z ideových důvodů a v detailech její implementace jsem se nešťoural. 
+*   *sessionState* – může obsahovat connection string, pokud session ukládáte do databáze; nechápu, proč si ho povinně nenačítá také ze sekce *connectionStrings* jako ostatní, ale možná to nějaký důvod má, technologií session dlouhodobě opovrhuji z ideových důvodů a v detailech její implementace jsem se nešťoural.  
 
 Získání shora uvedených údajů umožňuje celou škálu zajímavého škození, jehož rozsah a formu nechávám na fantazii P. T. čtenářstva.
 

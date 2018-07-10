@@ -17,8 +17,9 @@ Ona "trocha snahy" dosud ve většině případů znamenala použití geniální
 
 Microsoft anoncoval vlastní nástroj v podobném duchu - je znám pod kódovým označením *Sandcastle*. K dispozici je jeho [červencová Community Technology Preview](http://www.microsoft.com/downloads/details.aspx?FamilyID=e82ea71d-da89-42ee-a715-696e3a4873b2&DisplayLang=en). K přívětivosti a jednoduchosti ovládání NDocu mu pravda ještě hodně chybí, jeho ovládání je poněkud... liunxové :-) Pokud jste líní psát komplikované příkazy v command line, doporučuji podívat se na [tento jednoduchý program](http://www.codeproject.com/useritems/SandcastleCreateBat.asp) který umí automagicky vygenerovat příslušné dávkové soubory.
 
-*   [Microsoft codename "sandcastle", July 2006 CTP](http://www.microsoft.com/downloads/details.aspx?FamilyID=e82ea71d-da89-42ee-a715-696e3a4873b2&DisplayLang=en) 
-*   [Sandcastle CHM-compile BAT script & configuration utility](http://www.codeproject.com/useritems/SandcastleCreateBat.asp)  
+*   [Microsoft codename "sandcastle", July 2006 CTP](http://www.microsoft.com/downloads/details.aspx?FamilyID=e82ea71d-da89-42ee-a715-696e3a4873b2&DisplayLang=en)
+
+*   [Sandcastle CHM-compile BAT script & configuration utility](http://www.codeproject.com/useritems/SandcastleCreateBat.asp)
 
 ## MSDN Library ke stažení
 
@@ -27,6 +28,6 @@ Lidé se mne často ptají na doporučenou literaturu. Dostávají mne tím troc
 MSDN je oficiální dokumentace k většině produktů, které vývojáře mohou zajímat. K dispozici je její [online verze na webu](http://msdn.microsoft.com/library/) a nebo si ji můžete lokálně nainstalovat. Zatímco online verze je od počátku věků zdarma dostupná komukoliv, verze k instalaci byla až dosud za peníze v rámci MSDN Subscription. Nyní si ji celou můžete stáhnout. Pokud se vám ta tři cédéčka stahovat nechce, přijďte na [Developer Days 2006](http://www.microsoft.com/cze/events/developerdays/default.mspx), kdežtě byste je měli jako účastníci dostat ve fyzické podobě.
 
 *   [MSDN Library - May 2006](http://www.microsoft.com/downloads/details.aspx?FamilyId=373930CB-A3D7-4EA5-B421-DD6818DC7C41&displaylang=en) 
-*   [SQL Server 2005 Books Online - July 2006](http://www.microsoft.com/downloads/details.aspx?familyid=BE6A2C5D-00DF-4220-B133-29C1E0B6585F&displaylang=en)  
+*   [SQL Server 2005 Books Online - July 2006](http://www.microsoft.com/downloads/details.aspx?familyid=BE6A2C5D-00DF-4220-B133-29C1E0B6585F&displaylang=en) 
 
 Celkově je milé, že Microsoft pokračuje v nastoupeném trendu a postupně uvolňuje zdarma velké množství pro vývojáře užitečných věcí. Nyní je možné pro Windows a .NET platformu velmi pohodlně vyvíjet i relativně složité aplikace, aniž byste museli za nástroje, dokumentaci, DB stroj a podobně platit.

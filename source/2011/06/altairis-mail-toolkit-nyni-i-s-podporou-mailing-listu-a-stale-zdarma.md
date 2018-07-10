@@ -11,7 +11,7 @@
 <!-- dcterms:dateAccepted = 2011-06-13T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 130 -->
-<!-- x4w:pictureUrl = /perex-pictures/20110613-altairis-mail-toolkit-nyni-i-s-podporou-mailing-listu-a-stale-zdarma.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20100608-altairis-mail-toolkit-mailovani-z-webovych-aplikaci-snadno-a-korektne.png -->
 
 Zhruba před rokem jsem v článku [Altairis Mail Toolkit: mailování z webových aplikací snadno a korektně](http://www.aspnet.cz/articles/286-altairis-mail-toolkit-mailovani-z-webovych-aplikaci-snadno-a-korektne) představil svůj projekt [Altairis Mail Toolkit](http://altairismailtoolkit.codeplex.com/), který slouží k jednoduchému a korektnímu mailování z ASP.NET. Po roce se tato knihovna dočkala nové verze 1.5, v níž řeší další častý problém, a tím je správa distribučních seznamů – mailing listů.
 

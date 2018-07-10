@@ -7,19 +7,64 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Co všechno předcházelo publikaci dalších záznamů z akcí. Aneb cesta do pekel je dlážděná dobrými úmysly." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
   <body>
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
         </a>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+        </li>
+        <li>
+          <a href="/categories/lide-a-jina-zver">Lidé a jiná zvěř</a>
+        </li>
+        <li>
+          <a href="/categories/vlci">Vlci</a>
+        </li>
+        <li>
+          <a href="/categories/kone">Koně</a>
+        </li>
+        <li>
+          <a href="/categories/tipy-triky">Tipy, triky</a>
+        </li>
+        <li>
+          <a href="/categories/iis">IIS</a>
+        </li>
+        <li>
+          <a href="/categories/bezpecnost">Bezpečnost</a>
+        </li>
+        <li>
+          <a href="/categories/akce-a-udalosti">Akce a události</a>
+        </li>
+        <li>
+          <a href="/categories/software">Software</a>
+        </li>
+        <li>
+          <a href="/categories/z-jineho-soudku">Z jiného soudku</a>
+        </li>
+      </ul>
+    </nav>
     <main>
       <h1>Jak jsem spouštěl nový videoarchiv</h1>
-      <section class="article">
+      <aside class="article-info">
+        <time datetime="2008-09-21T14:27:39.167+02:00" title="Datum vydání">
+          <i class="fal fa-calendar-alt"> </i>21. září 2008</time>
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="article-text">
         <p>Jedno z mých nejoblíbenějších úsloví zní, že <em>cesta do pekel je dlážděná dobrými úmysly</em>. V jeho duchu se snažím zpravidla mít úmysly spíše špatné, aby výsledný efekt odpovídal směru vynaloženého úsilí, ale občas mi to nedá a ozvou se zbytky takových vlastností jako dobré vychování, pomoc bližnímu, služba veřejnosti a tak všelijak vůbec. No, a podle toho to pak dopadá. Jako například, když jsem pojal úmysl oživit web <a href="http://videoarchiv.altairis.cz/">videoarchiv.altairis.cz</a>.</p>
 <p>Tedy, úplně původně jsem předpokládal, že na moji <a href="http://www.aspnet.cz/Articles/200-hledam-sponzory-pro-koupi-zarizeni-pro-nahravani-prednasek.aspx">výzvu</a> nikdo nezareaguje a já budu mít klid. Nicméně <a href="http://www.aspnet.cz/Articles/201-pozvanka-na-nove-akce-plus-informace-o-zaznamech-z-nich.aspx">sponzoři se ozvali</a>, já jsem nakoupil zařízení a cirkus se rozjel. Upřímně řečeno, původní sestravu se nakonec vůbec nepodařilo rozjet, ale nakonec jsem to vyřešil zcela jiným způsobem, kombinací hardware a software a výsledek je uspokojivý. Dosud ještě trochu laboruji se zvukem (což je bohužel na jeho kvalitě dost poznat), ale i na tom se pracuje. Micosoft mezitím zrenovoval Akvárko a to by mělo pomoci.</p>
 <p>Když jsem chtěl mírně upravit a znovu rozjet <a href="http://videoarchiv.altairis.cz/">videoarchiv.altairis.cz</a> tak jsem zjistil, že nemám zdrojáky aplikace, kterou jsem kdysi zpráskal dohromady, takže jsem to celé musel napsat znova. Na notebooku už mám nainstalovaný SP1 na .NET Framework 3.5 a na serveru ne. Což jsem zjistil až po dvou hodinách laborování s tím, proč mi sakra na lokálním počítači fungují a na ostrém serveru nefungují update a delete z aplikace. A pak mně ještě lehl přenosný disk, na které jsem měl nahrané video a musel jsem to všechno rekomprimovat znovu.</p>
@@ -29,7 +74,22 @@
       </section>
     </main>
     <footer>
-      Footer
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          <a href="/feed.rss">
+            RSS feed <i class="fal fa-rss-square"> </i></a>
+        </li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

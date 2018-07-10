@@ -36,7 +36,7 @@ Nejznámějším, ačkoliv dle samotného autora nikoliv nejzdařilejším, jeho
 *   Nadace na hranicích 
 *   Druhá Nadace 
 *   Nadace a Země 
-*   Předehra k Nadaci 
+*   Předehra k Nadaci
 
 Pomocí vědy zvané [psychohistorie](/entry/article-20030410.aspx) je vypočítáno, že lidské impérium čeká zkáza, která uvrhne lidskou civilizaci na desítky tisíc let do chaosu a temna. Hari Seldon, objevitel této vědy, proto ustanoví daleko od Země Nadaci, která má působit tak, aby bylo toto období zkráceno.
 
@@ -57,7 +57,7 @@ Asimovova autobiografie hodně ovlivnila mé názory a tím i můj život. Stejn
 ### Odkazy a informace
 
 *   [Heslo ve Wikipedii](http://en.wikipedia.org/wiki/Isaac_Asimov) 
-*   [Asimov Online](http://www.asimovonline.com/)  
+*   [Asimov Online](http://www.asimovonline.com/) 
 
 Hodně Asimovových knih vyšlo již začátkem devadesátých let a jsou dnes prakticky nesehnatelné (s velkým štěstím na ně narazíte v antikvariátech, nebo - zpravidla v případě jeho autobiografie *Já, Asimov* - v Levných knihách.
 

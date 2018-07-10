@@ -49,5 +49,6 @@ Pokud jste nuceni zabývat se obsahem zprávy (nebo nedejbože přílohami) zač
 
 Od snahy psát vlastní MIME parser bych laskavé čtenáře rád odradil - vycházeje přitom z vlastních zkušeností, které nelze nazvat jinak, než jako bolestné. Je mnohem rozumnější (a v konečné důsledku též obvykle lacinější) zakoupit hotovou komponentu, například:
 
-*   [Rebex Mail for .NET](http://www.rebex.net/mail.net/) 
-*   [/n software IP*Works](http://www.nsoftware.com/) 
+*   [Rebex Mail for .NET](http://www.rebex.net/mail.net/)
+
+*   [/n software IP*Works](http://www.nsoftware.com/)

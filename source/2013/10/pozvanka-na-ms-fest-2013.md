@@ -20,7 +20,7 @@ Termíny a místa konání konference jsou:
 
 *   <strong abp="335">Brno:** 12. – 13. října, FIT VUT 
 *   <strong abp="337">Praha:** 2. – 3. listopadu, MFF UK 
-*   <strong abp="339">Ostrava:** 30. listopadu až 1. prosince, VŠB-TU  
+*   <strong abp="339">Ostrava:** 30. listopadu až 1. prosince, VŠB-TU 
 
 Jako obvykle nebudu chybět, a to hned se třemi přednáškami, na které vás tímto zvu:
 

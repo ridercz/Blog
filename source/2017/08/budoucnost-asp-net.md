@@ -21,7 +21,7 @@ Proto Microsoft přišel s novou verzí, která si bere to nejlepší ze stávaj
 *   Zjednodušený, "streamlined" framework. Byla odstraněna spouste dnes již neaktuálního kódu a nepoužívaných features. Nová platforma umí méně, ale to co umí, umí výrazně lépe.
 *   Odstranění závislosti na Windows. .NET je nyní opravdu multiplatformní a běží stejně dobře na Windows jako na Linuxu a Mac OS. A co je důležitější, poběží na novém Windows Nano Serveru, na který Microsoft hodně sází.
 *   Odstranění závislosti na IIS a dalších legacy komponentách Windows. ASP.NET Core aplikace vnitřně fungují zcela jinak, než ty stávající. IIS nekončí, ale jeho role se mění, posouvá se z modelu "Apache" spíš k modelu "nginx".
-*   Podpora moderního způsobu programování, IoC/DI, Cloudových aplikací a podobně. 
+*   Podpora moderního způsobu programování, IoC/DI, Cloudových aplikací a podobně.
 
 Výše uvedené si nicméně vyžádalo ukončení dalšího vývoje (nikoliv podpory) Web Forms, nejpopulárnější ASP.NET technologie. A ani MVC 5 aplikace vesměs nedává smysl upgradovat, spíš využít příležitosti k "restartu" vlastní aplikace.
 
