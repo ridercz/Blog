@@ -78,15 +78,14 @@
         padding: 0;
         list-style-type: none; }
 
-a {
-  text-decoration: none; }
-  a:link {
-    color: #e60; }
-  a:visited {
-    color: #bb5000; }
-  a:hover {
-    color: #000;
-    text-decoration: underline; }
+a:link {
+  color: #e60; }
+
+a:visited {
+  color: #bb5000; }
+
+a:hover {
+  color: #000; }
 
 h1 {
   font-weight: 100;
