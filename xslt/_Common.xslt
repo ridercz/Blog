@@ -80,7 +80,7 @@
     <xsl:if test="$Description != ''">
       <meta name="Description" content="{$Description}"/>
     </xsl:if>
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </xsl:template>
