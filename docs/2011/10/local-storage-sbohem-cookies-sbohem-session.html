@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Jedna z užitečných – a kupodivu i široce podporovaných – novinek v HTML 5 se jmenuje Local Storage. Nedostává se jí tolik pozornosti, jako videu nebo elementu canvas, nicméně podle mého názoru je podstatně užitečnější. Ukážeme si, jak funguje, k čemu je dobrá a na závěr vám nabídnu užitečný nástroj pro ladění." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=4DDB20FA669A44D7867FE08765BADDDAB4D4F6F5" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=138C4DB3727D348756D2D1C5E0CDCE3318398B5E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
@@ -70,14 +70,19 @@
     <main>
       <h1>Local Storage: Sbohem cookies, sbohem session?</h1>
       <aside class="article-info">
-        <time datetime="2011-10-13T04:06:57+02:00" title="Datum vydání">
-          <i class="fal fa-calendar-alt"> </i>13. října 2011</time>
         <ul class="categories">
           <li>
             <a href="/categories/programovani" title="Rubrika">
               <i class="fal fa-tag"> </i>Programování</a>
           </li>
         </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2011-10-13T04:06:57+02:00" title="Datum vydání">13. října 2011 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>Celá idea je ve skutečnosti velmi jednoduchá: local storage je úložiště na klientovi (ve webovém prohlížeči), kam si stránka může skriptem uložit libovolná data a potom je skriptem zase načíst. Přístup z klientského skriptu je přitom jediný možný. Data žijí jenom na klientově počítači, nepřenášejí se na server (za předpokladu, že si takový přenos sami nenaskriptujete).</p>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Ticket vystavení forms authentication modulem má danou platnost v minutách a lze nastavit, že bude &quot;sliding&quot;, tedy že platnost bude prodlužována při každém požadavku. Stejně tak session timeout se udává v minutách a také se prodlužuje při každém požadavku. Zdravý rozum tedy říká, že pokud oba parametry nastavím na stejnou hodnotu, budou tickety i sessions platit vždy stejnou dobu. Leč, není tomu tak. Pojďme se podívat na to, jak tyto mechanismy vlastně fungují." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=4DDB20FA669A44D7867FE08765BADDDAB4D4F6F5" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=138C4DB3727D348756D2D1C5E0CDCE3318398B5E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
@@ -70,14 +70,19 @@
     <main>
       <h1>Forms authentication a session state - proč nejsou synchronní?</h1>
       <aside class="article-info">
-        <time datetime="2008-02-16T13:55:53.117+01:00" title="Datum vydání">
-          <i class="fal fa-calendar-alt"> </i>16. února 2008</time>
         <ul class="categories">
           <li>
             <a href="/categories/programovani" title="Rubrika">
               <i class="fal fa-tag"> </i>Programování</a>
           </li>
         </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2008-02-16T13:55:53.117+01:00" title="Datum vydání">16. února 2008 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>Ticket vystavení forms authentication modulem má danou platnost v minutách a lze nastavit, že bude &quot;sliding&quot;, tedy že platnost bude prodlužována při každém požadavku. Stejně tak session timeout se udává v minutách a také se prodlužuje při každém požadavku. Zdravý rozum tedy říká, že pokud oba parametry nastavím na stejnou hodnotu, budou tickety i sessions platit vždy stejnou dobu. Leč, není tomu tak. Pojďme se podívat na to, jak tyto mechanismy vlastně fungují.</p>

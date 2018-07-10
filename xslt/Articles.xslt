@@ -33,10 +33,6 @@
                   <xsl:value-of select="dcterms:title"/>
                 </h1>
                 <aside class="article-info">
-                  <time datetime="{dcterms:dateAccepted}" title="Datum vydání">
-                    <i class="fal fa-calendar-alt">&#8197;</i>
-                    <xsl:value-of select="x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ')"/>
-                  </time>
                   <xsl:if test="x4w:category">
                     <ul class="categories">
                       <xsl:for-each select="x4w:category">
@@ -61,6 +57,16 @@
                       </xsl:for-each>
                     </ul>
                   </xsl:if>
+                  <div>
+                    <a href="https://www.rider.cz/">Michal Altair Valášek&#160;</a>
+                    <i class="fal fa-user">&#8203;</i>
+                  </div>
+                  <div>
+                    <time datetime="{dcterms:dateAccepted}" title="Datum vydání">
+                      <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
+                      <i class="fal fa-calendar-alt">&#8203;</i>
+                    </time>
+                  </div>
                 </aside>
                 <section class="article-text" x4o:unescape="true">
                   <xsl:value-of select="x4h:GetItemHtml(@path)" />

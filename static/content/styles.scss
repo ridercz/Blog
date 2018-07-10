@@ -307,9 +307,20 @@ ul.serials {
 aside.article-info {
     font-size: 120%;
     color: $DarkGray;
+    text-align: right;
 
-    time {
-        float: right;
+    ul {
+        float: left;
+    }
+
+    a {
+        color: $DarkGray;
+        text-decoration: none;
+
+        &:hover {
+            color: $Black;
+            text-decoration: underline;
+        }
     }
 }
 

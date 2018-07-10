@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Zhruba jednou do roka se na mne obrátí jistá nešťastná duše z Microsoftu, hnána touhou naplniti výkazy a formuláře přehršlí čísel. Klade dotazy typu &quot;kolik lidí chodí na ASPNET.CZ&quot; a nedá pokoj, dokud nedostane odpověď. Několik let jsem k řešení tohoto problému úspěšně používal metodu Monte Carlo, pak jsem přešel na Google Analytics. Nyní jsem si k přidávání měřícího kódu napsal HTTP modul,na němž jest demonstrovati celou řadu užitečných technik." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=4DDB20FA669A44D7867FE08765BADDDAB4D4F6F5" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=138C4DB3727D348756D2D1C5E0CDCE3318398B5E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
@@ -70,14 +70,19 @@
     <main>
       <h1>Podpora Google Analytics ve formě HTTP modulu</h1>
       <aside class="article-info">
-        <time datetime="2007-05-08T05:01:33.867+02:00" title="Datum vydání">
-          <i class="fal fa-calendar-alt"> </i>8. května 2007</time>
         <ul class="categories">
           <li>
             <a href="/categories/programovani" title="Rubrika">
               <i class="fal fa-tag"> </i>Programování</a>
           </li>
         </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2007-05-08T05:01:33.867+02:00" title="Datum vydání">8. května 2007 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>Zhruba jednou do roka se na mne obrátí jistá nešťastná duše z Microsoftu, hnána touhou naplniti výkazy a formuláře přehršlí čísel. Klade dotazy typu "kolik lidí chodí na ASPNET.CZ" a nedá mně pokoj, dokud nedostane odpověď. Několik let jsem k řešení tohoto problému úspěšně používal metodu Monte Carlo, pak jsem přešel na Google Analytics. Výsledek je zhruba stejný, ale líp to vypadá ;-)</p><p>Měřící kód vkládám do stránek dynamicky a nyní jsem celou záležitost vyřešil pomocí HTTP modulu. Na tomto postupu lze ukázat celou řadu užitečných technik, najmě pak:</p><ul><li>Tvorbu a použití HTTP modulů všeobecně. </li><li>Použití události PreRequestHandlerExecute k manipulaci se stránkou. </li><li>Generování (a registrování) klientských skriptů z ASP.NET. </li><li>Vytváření vlastních kongifuračních sekcí</li></ul><h2>Jak funguje Google Analytics a proč použít HTTP modul</h2><p>Pokud chcete používat pro měření návštěvnosti svého webu <a href="http://www.google.com/analytics/">Google Analytics</a>, stačí vám vložit do stránky dva kousky JavaScriptu, Google se postará o zbytek. </p><pre><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">script</span> <span style="COLOR: #ff0000">src</span>=<span style="COLOR: #0000ff">"http://www.google-analytics.com/urchin.js"</span> <span style="COLOR: #ff0000">type</span>=<span style="COLOR: #0000ff">"text/javascript"</span><span style="COLOR: #0000ff">></span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">script</span><span style="COLOR: #0000ff">></span>

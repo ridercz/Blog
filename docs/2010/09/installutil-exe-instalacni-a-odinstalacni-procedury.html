@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Instalace ASP.NET aplikace probíhá obvykle stylem &quot;nakopíruj tohle do rootu webu a modli se&quot;. Součástí aplikace ale často bývají různé pomocné utilitky, které při své instalaci a odinstalaci vyžadují různé úkony. Například vložení do GAC, instalaci služby (Windows service), vytvoření protoklu událostí (vlastní event log a nebo alespoň event log source). Microsoft .NET framework na to má infrastrukturu v podobě instalačních tříd: užitečného, leč často přehlíženého nástroje." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=4DDB20FA669A44D7867FE08765BADDDAB4D4F6F5" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=138C4DB3727D348756D2D1C5E0CDCE3318398B5E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
@@ -70,14 +70,19 @@
     <main>
       <h1>InstallUtil.exe – instalační a odinstalační procedury</h1>
       <aside class="article-info">
-        <time datetime="2010-09-23T21:55:56.007+02:00" title="Datum vydání">
-          <i class="fal fa-calendar-alt"> </i>23. září 2010</time>
         <ul class="categories">
           <li>
             <a href="/categories/programovani" title="Rubrika">
               <i class="fal fa-tag"> </i>Programování</a>
           </li>
         </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2010-09-23T21:55:56.007+02:00" title="Datum vydání">23. září 2010 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>Instalace ASP.NET aplikace probíhá obvykle stylem &quot;nakopíruj tohle do rootu webu a modli se&quot;. Součástí aplikace ale často bývají různé pomocné utilitky, které při své instalaci a odinstalaci vyžadují různé úkony. Například vložení do GAC, instalaci služby (Windows service), vytvoření protoklu událostí (vlastní event log a nebo alespoň event log source). Microsoft .NET framework na to má infrastrukturu v podobě instalačních tříd: užitečného, leč často přehlíženého nástroje.</p>  <p>Hned na úvod je nutné upozornit na jednu důležitou věc: v tomto článku nebude řeč o vytváření instalačních balíčků, setup projektech, MSI a podobných věcech. Zaměříme se na specifické činnost, které konkrétní assemblies potřebují k životu.Ty lze vyvolat buďto ručně, pomocí utility InstallUtil.exe, která je součástí .NET Frameworku, nebo v rámci &quot;velké&quot; instalace, jako jsou např. různé formy setup projektů ve Visual Studiu.</p>  <h2>Jak funguje InstallUtil.exe</h2>  <p>Utilitka <em>InstallUtil.exe</em> je součástí .NET Frameworku. Slouží k instalaci a odinstalaci assembly, přičemž záleží pouze na assembly samotné, jaké konkrétní úkony bude instalace a odinstalace zahrnovat. Jedná se o konzolový program, který se spouští z příkazové řádky a ovládá se pomocí parametrů. Jeho nejtypičtější použití nicméně je pouze s názvem assembly, pro instalaci:</p>  <pre style="font-family: "><font face="Consolas"><font style="font-size: 12pt">InstallUtil.exe C:\Cesta\k\assembly.dll</font></font></pre>

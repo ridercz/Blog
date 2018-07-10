@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Na jeho příkladu si ukážeme, jak se dá v .NET vytvořit vlastní validátor." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=4DDB20FA669A44D7867FE08765BADDDAB4D4F6F5" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=138C4DB3727D348756D2D1C5E0CDCE3318398B5E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
@@ -70,14 +70,19 @@
     <main>
       <h1>Píšeme vlastní validátor - jak ověřit platnost ISBN plus malá soutěž o tričko</h1>
       <aside class="article-info">
-        <time datetime="2005-01-29T03:17:44.853+01:00" title="Datum vydání">
-          <i class="fal fa-calendar-alt"> </i>29. ledna 2005</time>
         <ul class="categories">
           <li>
             <a href="/categories/programovani" title="Rubrika">
               <i class="fal fa-tag"> </i>Programování</a>
           </li>
         </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2005-01-29T03:17:44.853+01:00" title="Datum vydání">29. ledna 2005 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Celosvětová koordinace zajišťuje, že žádné dvě knihy nemají stejné ISBN. Pro jeho formát platí jisté zákonitosti, které není možné snadno ověřit prostřednictvím prvku <code>RegularExpressionValidator</code>. Pokud potřebujete validovat vstup ISBN, musíte si validaci napsat sami. Pokud to děláte jednou v celé aplikaci, vystačíte si s prvkem <code>CustomValidator</code>, ale pokud se toto zadání opakuje vícekrát, je výhodnější si napsat vlastní specializovaný validátor.</p>

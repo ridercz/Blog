@@ -156,8 +156,12 @@ section.artlist > footer {
   border-radius: 1ex; }
   section.artlist > footer .prev {
     float: left; }
+    section.artlist > footer .prev a {
+      margin-right: 1ex; }
   section.artlist > footer .next {
     float: right; }
+    section.artlist > footer .next a {
+      margin-left: 1ex; }
   section.artlist > footer a {
     background-color: #e60;
     padding: .5ex 1ex;
@@ -166,8 +170,7 @@ section.artlist > footer {
       color: #fff;
       text-decoration: none; }
     section.artlist > footer a:hover {
-      color: #fff;
-      text-decoration: underline; }
+      color: #000; }
 
 ul.categories {
   display: inline;
@@ -209,9 +212,16 @@ ul.serials {
 
 aside.article-info {
   font-size: 120%;
-  color: #444; }
-  aside.article-info time {
-    float: right; }
+  color: #444;
+  text-align: right; }
+  aside.article-info ul {
+    float: left; }
+  aside.article-info a {
+    color: #444;
+    text-decoration: none; }
+    aside.article-info a:hover {
+      color: #000;
+      text-decoration: underline; }
 
 section.article-text {
   text-align: justify; }

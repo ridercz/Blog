@@ -212,9 +212,16 @@ ul.serials {
 
 aside.article-info {
   font-size: 120%;
-  color: #444; }
-  aside.article-info time {
-    float: right; }
+  color: #444;
+  text-align: right; }
+  aside.article-info ul {
+    float: left; }
+  aside.article-info a {
+    color: #444;
+    text-decoration: none; }
+    aside.article-info a:hover {
+      color: #000;
+      text-decoration: underline; }
 
 section.article-text {
   text-align: justify; }

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Myšlenky těch zodpovědnějších ASP.NET programátorů a správců serverů v uplynulých dnech okupovala první pořádná bezpečnostní díra v ASP.NET. Upozorňoval jsem na ni i na tomto webu a nabízel i workaround. Microsoft již vydal i oficiální záplatu, nově dostupnou přes Windows Update. Myslím si, že je přesně ten správý okamžik podívat se, o co vlastně šlo, v čem útok spočívá. Nejedná se totiž ve své podstatě o chybu v ASP.NET, ale o obecný mechanismus kryptografického útoku, který může zasáhnout i vaše vlastní aplikace." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=4DDB20FA669A44D7867FE08765BADDDAB4D4F6F5" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=138C4DB3727D348756D2D1C5E0CDCE3318398B5E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
   </head>
@@ -70,14 +70,19 @@
     <main>
       <h1>"Padding Oracle" chyba v ASP.NET – o co vlastně šlo?</h1>
       <aside class="article-info">
-        <time datetime="2010-10-03T22:22:19.717+02:00" title="Datum vydání">
-          <i class="fal fa-calendar-alt"> </i>3. října 2010</time>
         <ul class="categories">
           <li>
             <a href="/categories/bezpecnost" title="Rubrika">
               <i class="fal fa-tag"> </i>Bezpečnost</a>
           </li>
         </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2010-10-03T22:22:19.717+02:00" title="Datum vydání">3. října 2010 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>Myšlenky těch zodpovědnějších ASP.NET programátorů a správců serverů v uplynulých dnech okupovala první pořádná bezpečnostní díra v ASP.NET. <a href="http://www.aspnet.cz/articles/298-kriticka-bezpecnostni-chyba-v-asp-net">Upozorňoval jsem na ni</a> i na tomto webu a nabízel i <a href="http://www.aspnet.cz/articles/299-modul-pro-jednoduchy-workaround-bezpecnostni-chyby-v-asp-net">workaround</a>. Microsoft již vydal i <a href="http://weblogs.asp.net/scottgu/archive/2010/09/28/asp-net-security-update-now-available.aspx">oficiální záplatu</a>, nově <a href="http://weblogs.asp.net/scottgu/archive/2010/09/30/asp-net-security-fix-now-on-windows-update.aspx">dostupnou přes Windows Update</a>. V tomto článku se pokusím vysvětlit, o co vlastně šlo. V čem daný problém spočívá, kde je problém v ASP.NET implementaci a jak se tomuto mechanismu vyhnout při tvorbě vlastních aplikací.</p>
