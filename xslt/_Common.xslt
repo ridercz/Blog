@@ -204,45 +204,57 @@
     <xsl:param name="PageCount" />
 
     <!-- Previous page links -->
-    <xsl:if test="$PageNumber &gt; 1">
-      <span class="prev">
-        <xsl:choose>
-          <xsl:when test="$PageNumber = 1">
-            <!-- Do not display prev on first page-->
-          </xsl:when>
-          <xsl:when test="$PageNumber = 2">
-            <a href="./" rel="first">Novější</a>
-          </xsl:when>
-          <xsl:otherwise>
-            <a href="./" rel="first">Nejnovější</a>
-            <a href="{concat('./', $PageNumber - 1)}" rel="prev">Novější</a>
-          </xsl:otherwise>
-        </xsl:choose>
-      </span>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="$PageNumber = 1">
+        <!-- Do not display prev on first page-->
+      </xsl:when>
+      <xsl:when test="$PageNumber = 2">
+        <span class="prev">
+          <a href="./" rel="first">
+            <i class="fal fa-chevron-left">&#8203;</i>&#160;Novější
+          </a>
+        </span>
+      </xsl:when>
+      <xsl:otherwise>
+        <span class="prev">
+          <a href="./" rel="first">
+            <i class="fal fa-chevron-double-left">&#8203;</i>&#160;Nejnovější
+          </a>
+          <a href="{concat('./', $PageNumber - 1)}" rel="prev">
+            <i class="fal fa-chevron-left">&#8203;</i>&#160;Novější
+          </a>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
 
     <!-- Next page links -->
-    <xsl:if test="$PageNumber &lt; $PageCount">
-      <span class="next">
-        <xsl:choose>
-          <xsl:when test="$PageNumber = $PageCount">
-            <!-- Do not display next on last page-->
-          </xsl:when>
-          <xsl:when test="$PageNumber = $PageCount - 1">
-            <a href="{concat('./', $PageCount)}" rel="last">Starší</a>
-          </xsl:when>
-          <xsl:otherwise>
-            <a href="{concat('./', $PageNumber + 1)}" rel="next">Starší</a>
-            <a href="{concat('./', $PageCount)}" rel="last">Nejstarší</a>
-          </xsl:otherwise>
-        </xsl:choose>
-      </span>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="$PageNumber = $PageCount">
+        <!-- Do not display next on last page-->
+      </xsl:when>
+      <xsl:when test="$PageNumber = $PageCount - 1">
+        <span class="next">
+          <a href="{concat('./', $PageCount)}" rel="last">
+            Starší&#160;<i class="fal fa-chevron-right">&#8203;</i>
+          </a>
+        </span>
+      </xsl:when>
+      <xsl:otherwise>
+        <span class="next">
+          <a href="{concat('./', $PageNumber + 1)}" rel="next">
+            Starší&#160;<i class="fal fa-chevron-right">&#8203;</i>
+          </a>
+          <a href="{concat('./', $PageCount)}" rel="last">
+            Nejstarší&#160;<i class="fal fa-chevron-double-right">&#8203;</i>
+          </a>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
 
+    <!-- Paging information -->
     <span class="info">
       <xsl:value-of select="concat($PageNumber, ' / ', $PageCount)"/>
     </span>
-
   </xsl:template>
 
   <!-- List of serials -->

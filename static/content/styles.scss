@@ -220,11 +220,19 @@ section.artlist {
         border-radius: 1ex;
 
         .prev {
-            float: left
+            float: left;
+
+            a {
+                margin-right: 1ex;
+            }
         }
 
         .next {
             float: right;
+
+            a {
+                margin-left: 1ex;
+            }
         }
 
         a {
@@ -238,8 +246,7 @@ section.artlist {
             }
 
             &:hover {
-                color: $White;
-                text-decoration: underline;
+                color: $Black;
             }
         }
     }
