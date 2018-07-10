@@ -57,7 +57,7 @@
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a>
         </li>
         <li>
-          Copyright &#0169; <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018
+          Copyright &#0169; <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-<xsl:value-of select="x4h:FormatDateTime(x4h:CurrentDateTime(), 'yyyy', 'cs-CZ')"/>
         </li>
 
       </ul>
