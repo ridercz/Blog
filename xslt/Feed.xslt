@@ -25,7 +25,14 @@
           <xsl:if test="position() &lt;= 15">
             <item>
               <guid isPermaLink="true">
-                <xsl:value-of select="concat('https://www.altair.blog', @path)" />
+                <xsl:choose>
+                  <xsl:when test="x4w:alternateUrl">
+                    <xsl:value-of select="x4w:alternateUrl"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="concat('https://www.altair.blog', @path)" />
+                  </xsl:otherwise>
+                </xsl:choose>
               </guid>
               <title>
                 <xsl:value-of select="dcterms:title"/>
@@ -34,7 +41,14 @@
                 <xsl:value-of select="dcterms:description"/>
               </description>
               <link>
-                <xsl:value-of select="concat('https://www.altair.blog', @path)" />
+                <xsl:choose>
+                  <xsl:when test="x4w:alternateUrl">
+                    <xsl:value-of select="x4w:alternateUrl"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="concat('https://www.altair.blog', @path)" />
+                  </xsl:otherwise>
+                </xsl:choose>
               </link>
               <xsl:for-each select="dcterms:creator">
                 <author>
