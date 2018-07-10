@@ -30,11 +30,50 @@
     <nav>
       <ul>
         <li>
-          <a href="https://www.rider.cz/">Michal Altair Valášek</a>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user">&#8197;</i>
+          </a>
         </li>
-        <xsl:call-template name="ListCategories">
-          <xsl:with-param name="EmitUl" select="0"/>
-        </xsl:call-template>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github">&#8197;</i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question">&#8197;</i>
+          </a>
+        </li>
       </ul>
     </nav>
   </xsl:template>
@@ -49,17 +88,16 @@
       </ul>
       <ul class="text">
         <li>
-          <a href="/feed.rss">
-            RSS feed <i class="fal fa-rss-square">&#8197;</i>
-          </a>
+          Copyright &#0169; <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-<xsl:value-of select="x4h:FormatDateTime(x4h:CurrentDateTime(), 'yyyy', 'cs-CZ')"/>
         </li>
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a>
         </li>
         <li>
-          Copyright &#0169; <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-<xsl:value-of select="x4h:FormatDateTime(x4h:CurrentDateTime(), 'yyyy', 'cs-CZ')"/>
+          <a href="/feed.rss" rel="alternate">
+            RSS feed <i class="fal fa-rss-square">&#8197;</i>
+          </a>
         </li>
-
       </ul>
     </footer>
   </xsl:template>

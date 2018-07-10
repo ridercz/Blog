@@ -22,7 +22,8 @@
   body > nav {
     background-color: #e60;
     color: #fff;
-    font-size: 120%; }
+    font-size: 160%;
+    text-align: center; }
     body > nav ul {
       display: block;
       margin: 0 auto;
@@ -33,18 +34,13 @@
       body > nav ul li {
         display: inline;
         margin: 0;
-        padding: 0;
+        padding: 0 1ex;
         list-style-type: none; }
-      body > nav ul li:nth-last-of-type(n+2):after {
-        content: '|'; }
     body > nav a:link, body > nav a:visited {
       color: #fff;
-      text-decoration: none;
-      font-weight: bold; }
+      text-decoration: none; }
     body > nav a:hover {
-      color: #fff;
-      text-decoration: underline;
-      font-weight: bold; }
+      color: #000; }
   body > main {
     max-width: 1200px;
     margin: 0 auto;

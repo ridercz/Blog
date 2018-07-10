@@ -35,7 +35,8 @@ body {
     > nav {
         background-color: $Orange;
         color: $White;
-        font-size: 120%;
+        font-size: 160%;
+        text-align: center;
 
         ul {
             display: block;
@@ -48,25 +49,18 @@ body {
             li {
                 display: inline;
                 margin: 0;
-                padding: 0;
+                padding: 0 1ex;
                 list-style-type: none;
-            }
-
-            li:nth-last-of-type(n+2):after {
-                content: '|';
             }
         }
 
         a:link, a:visited {
             color: $White;
             text-decoration: none;
-            font-weight: bold;
         }
 
         a:hover {
-            color: $White;
-            text-decoration: underline;
-            font-weight: bold;
+            color: $Black;
         }
     }
 
