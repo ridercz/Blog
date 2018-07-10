@@ -42,6 +42,15 @@
       <pubDate>2018-04-16T23:09:00</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/03/jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo</guid>
+      <title>Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na &amp;bdquo;rekvalifikaci&amp;ldquo;</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/03/jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo</link>
+      <author>Michal Altair Valášek</author>
+      <category>Lidé a j</category>
+      <pubDate>2018-03-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/03/jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-rekvalifikaci</guid>
       <title>Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na „rekvalifikaci“</title>
       <description></description>
@@ -74,6 +83,7 @@
       <description></description>
       <link>https://www.altair.blog/2018/01/nejlepsi-novorocni-predsevzeti-naucte-se-pouzivat-spravce-hesel-bez-nej-nebudou-vase-data-v-bezpeci</link>
       <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
       <pubDate>2018-01-04T11:15:00</pubDate>
     </item>
     <item>
@@ -130,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2017-10-17T10:50:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</guid>
-      <title>ASP.NET Core 2.0: platforma kterou chcete používat</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-10-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

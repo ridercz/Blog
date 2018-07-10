@@ -209,7 +209,8 @@ section.artlist {
 
     &.hlfirst article:nth-of-type(1) {
         background-color: lighten($LightGray, 10);
-        padding-right: 1em;
+        padding: 1em;
+        border-radius: 1ex;
         font-size: 120%;
     }
 
