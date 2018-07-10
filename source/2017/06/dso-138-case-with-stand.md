@@ -1,0 +1,9 @@
+<!-- dcterms:title = DSO 138 Case With Stand -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2365063 -->
+<!-- dcterms:abstract = I remixed the case for DSO 138 oscilloscope. The main changes include adding a slanted stand and back plane to the original model. Everything is held together with six 2.2 x 9.5 mm screws - two to add the stand to the backplane and four to hold backplane, PCB and front part together. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-06-04T20:31:19+02:00 -->

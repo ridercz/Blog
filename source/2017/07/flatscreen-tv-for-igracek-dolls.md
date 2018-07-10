@@ -1,0 +1,9 @@
+<!-- dcterms:title = Flatscreen TV for Igráček dolls -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2456710 -->
+<!-- dcterms:abstract = We don't have a TV, but our Igráček dolls do! The parts are glued together with CA glue. The "screen" is a piece of paper that can be put into the slit in the TV. The stand has 10 M3 nuts pushed in as an ballast weight, so it would be more stable. See my other designs for other Igráček furniture. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-07-28T12:45:17+02:00 -->

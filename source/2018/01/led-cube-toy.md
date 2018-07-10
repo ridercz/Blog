@@ -1,0 +1,9 @@
+<!-- dcterms:title = LED cube toy -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2771287 -->
+<!-- dcterms:abstract = My small son loves electronics, especially if they have blinking lights and bunch of buttons. So I designed this light ramp, which is controller by Arduino and can display different light effects. Print: ledcubetoy_holder_top.stl and ledcubetoy_holder_bottom.stl in any color. It's a quite big part, I had to position it diagonally on my Prusa i3 MK2. ledcubetoy_cube.stl or ledcubetoy_cylinder.stl in transparent. Any combination of these, has to be 8 total. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-01-26T20:37:43+01:00 -->

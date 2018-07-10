@@ -1,0 +1,9 @@
+<!-- dcterms:title = Colorful light from IKEA Pyssla beads -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2237812 -->
+<!-- dcterms:abstract = My daughter loves the Pyssla beads from IKEA - the ones you can heat with household iron and make colorful shapes off them. So we decided to make a LED lamp from them: Print the base on 3D printer. Make 5 colorful squares (10x10) from the Pyssla beads and flatten them with hot iron. Use hot glue to make a cube from the squares. Solder wires to the top part of LED legs (near the base). Solder single wire to each LED, one to anode and second to cathode of the other LED. Bend legs of two LEDs to right angle and put them into the base. Solder them parallel. Create battery contacts from thin sheet metal. I used a nickel strip used when making battery packs because I had it, but you can use metal from cans etc. Solder the wires to the metal contacts. Power with AAA batteries. The light does not have any on/off switch, because I don't have any locking switch such small at the moment, You can modify the base to fit the switch from bottom, if you wish. We are removing the batteries to turn it off. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-04-09T14:35:19+02:00 -->

@@ -1,0 +1,9 @@
+<!-- dcterms:title = Ikea SAMLA 130 l clip -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2924811 -->
+<!-- dcterms:abstract = This is version of The best Ikea Samla Clip. even better. by crashc0de made for the biggest (130 l) SAMLA version (IKEA art. no. 901.029.71). This one has different size so I enlarged the original model to 157%. The original STL for 45-65 l version is thrown in for completeness. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-05-22T14:25:36+02:00 -->

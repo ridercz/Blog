@@ -1,0 +1,9 @@
+<!-- dcterms:title = Tetrahedron Connectors -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2527818 -->
+<!-- dcterms:abstract = It's kind of a fetish of mine, I just love platonic solids. So I decided to create a tetrahedron. This model is a connector, intended to connect wooden or similar dowels to the shape of tetrahedron. For single object you have to print four of them, see photos. The STL is intended for 10 mm dowels and the holder is 35 mm deep. The entire model is parametric, so you can modify few variables in OpenSCAD source and can create connectors for any size of dowel. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-09-10T23:59:54+02:00 -->

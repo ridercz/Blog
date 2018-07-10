@@ -1,0 +1,9 @@
+<!-- dcterms:title = MFRC522 + Arduino Nano Case -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2349265 -->
+<!-- dcterms:abstract = This is case for MFCR522 RFID reader and Arduino Nano. It's part of a bigger project you can find on GitHub. The other parts are Arduino firmware and C#/.NET library for communicating with the reader trough serial port. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-05-28T00:52:14+02:00 -->

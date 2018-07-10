@@ -1,0 +1,9 @@
+<!-- dcterms:title = Generic & Parametric Flashlight Holder -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2692998 -->
+<!-- dcterms:abstract = This is a simple flashlight holder. The OpenSCAD design is parametric so it can be modified for any flashlight diameter. The top is slightly tapered to for ease of use. Holder can be fixed using screw trough provided hole or using double-sided tape or adhesive. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-12-06T00:16:55+01:00 -->

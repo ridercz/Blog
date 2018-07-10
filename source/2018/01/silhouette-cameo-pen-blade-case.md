@@ -1,0 +1,9 @@
+<!-- dcterms:title = Silhouette Cameo Pen/Blade Case -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2748108 -->
+<!-- dcterms:abstract = This is holder/box for Silhouette Cameo sketch pens and cutting knives. It will hold the standard 24 color pens with three spaces for additional ones and three spaces for cutting knives. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-01-06T10:21:54+01:00 -->

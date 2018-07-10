@@ -1,0 +1,9 @@
+<!-- dcterms:title = Hexagonal Bee Cookie Maker -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:1984869 -->
+<!-- dcterms:abstract = After I did my Cookie stamper project, a friend asked me if I could make a cookie cutter of hexagonal shape with a bee stamp. Of couse I can! So, here I proudly present you the hexagonal cutter, superb for work efficiency! The entire system isn't modular, as I don't expect multiple motifs for hexagonal cookies. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2016-12-20T21:03:39+01:00 -->

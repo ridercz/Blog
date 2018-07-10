@@ -1,0 +1,9 @@
+<!-- dcterms:title = Chest of drawers for Igráček dolls -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2456706 -->
+<!-- dcterms:abstract = This is a chest of drawers for Igráček dolls. Printed from two colors of filament and glued together with CA glue. See my other designs for other Igráček furniture. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-07-28T12:37:31+02:00 -->

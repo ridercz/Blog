@@ -1,0 +1,9 @@
+<!-- dcterms:title = Low-poly Horse Head With Mount -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2688500 -->
+<!-- dcterms:abstract = When I saw Turbi's Horse Papercraft I immediatelly thought it would look great in silver with gold wall plaque. I enlarged the original model to 150% and designed simple matching base. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-12-04T13:19:25+01:00 -->

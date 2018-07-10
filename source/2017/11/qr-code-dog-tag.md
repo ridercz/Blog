@@ -1,0 +1,9 @@
+<!-- dcterms:title = QR Code Dog Tag -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2640021 -->
+<!-- dcterms:abstract = This is simple dog tag with a QR Code, where you can encode URL or other contact information. The model is parametric and its size adapts to amount of data encoded in the QR code. To generate the qr_data variable holding the QR Code data, use my OpenSCAD QR Code Generator. The SCAD file generates two objects, you are supposed to glue them back to back with superglue and form a single badge. The model requires Prusa ColorPrint or other similar software, which allows you to modify G-Code to change filament during print. It does not require dual extrusion etc. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-11-12T15:04:04+01:00 -->

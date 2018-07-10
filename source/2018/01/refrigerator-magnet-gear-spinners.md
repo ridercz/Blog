@@ -1,0 +1,9 @@
+<!-- dcterms:title = Refrigerator Magnet Gear Spinners -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2741623 -->
+<!-- dcterms:abstract = I designed a small plug, which is superglued or epoxied to the hole and holds the magnet in the right position. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-01-01T19:18:33+01:00 -->

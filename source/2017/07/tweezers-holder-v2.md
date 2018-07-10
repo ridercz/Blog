@@ -1,0 +1,9 @@
+<!-- dcterms:title = Tweezers holder v2 -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2419685 -->
+<!-- dcterms:abstract = This is updated version of my Tweezers Rack from 2015. Remodelled in OpenSCAD (and made parametric). Made the mounting easier by placing the screw holes elsewhere. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-07-05T12:25:40+02:00 -->

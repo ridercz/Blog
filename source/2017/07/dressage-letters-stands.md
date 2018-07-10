@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dressage Letters Stands -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2428510 -->
+<!-- dcterms:abstract = Horse dressage requires arena to be marked with letters. This model is a simple and cheap way how to prop them on any soft surface. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-07-10T22:10:04+02:00 -->

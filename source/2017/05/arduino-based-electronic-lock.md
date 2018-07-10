@@ -1,0 +1,9 @@
+<!-- dcterms:title = Arduino-based Electronic Lock -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2350856 -->
+<!-- dcterms:abstract = This is servo-based door lock controlled by Arduino Nano and powered by standard SG90 servo. The means to open the lock can be anything, from simple keypad trough magnetic hall sensors to Bluetooth or RFID. This project contains complete material from Arduino Workshop SIG I did at ZodiaCon 2017. In addition to STLs, there are the following files available: Slides.pdf - presentation slides from my talk Handbook-CS.pdf - lab handbook in Czech language Handbook-EN.pdf - lab handbook in English language Code.zip - source code for all labs The following labs are included: Testing the environment (blinking the LED) Using the OH3144 Hall Sensor Using the 4x4 matrix keyboard Using the SG90 servo Simple lock controlled by magnetic sensor Simple lock controlled by keyboard Finished project - lock with changeable code stored in EEPROM. The following electronic components are required: Arduino Nano (or basically any Arduino, but the holder is designed for Nano) OH3144 Hall Sensor SG90 servo 4x4 matrix keyboard -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-05-28T22:34:41+02:00 -->

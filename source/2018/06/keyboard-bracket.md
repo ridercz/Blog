@@ -1,0 +1,9 @@
+<!-- dcterms:title = Keyboard Bracket -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2980848 -->
+<!-- dcterms:abstract = This is simple but robust holder for my secondary keyboard (used to control the camera server or install jobs). The keyboard is to be held at 30° angle from edge of desk (in my case, the ingenious IKEA Lack). Screw the holders with four 4 mm screws to bottom of desk. The OpenSCAD model is fairly parametric to allow for accommodation of keyboards of various sizes. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20180628-keyboard-bracket.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-06-28T01:35:17+02:00 -->

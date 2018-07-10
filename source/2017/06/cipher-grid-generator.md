@@ -1,0 +1,9 @@
+<!-- dcterms:title = Cipher Grid Generator -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2412248 -->
+<!-- dcterms:abstract = Grid Cipher (sometimes also called a grid code) is very simple transposition block symmetric encryption algorithm. It is not usable for any serious cryptography nowadays, but still can be used for games and entertainment. Traditionally, the grids are created by hand by cutting them from paper. But this process is tedious and prone to errors. So I automated it using 3D printer. This SCAD file will randomly generate a valid cipher grid each time it's rendered. See variables in source code for customization options. For your convenience, there are several pre-generated grids available for download, if you don't have OpenSCAD installed. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-06-30T16:52:47+02:00 -->

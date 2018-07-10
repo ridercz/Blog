@@ -1,0 +1,9 @@
+<!-- dcterms:title = Thermometer module enclosure -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2023379 -->
+<!-- dcterms:abstract = This is simple box for a common small thermometer module, available from AliExpress. I use it to monitor temperature inside my 3D printer box. Use customizer to modify displayed text. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-01-08T13:11:22+01:00 -->

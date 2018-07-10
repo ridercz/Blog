@@ -1,0 +1,9 @@
+<!-- dcterms:title = Fish tank light strip holder -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2023759 -->
+<!-- dcterms:abstract = Friend of mine wanted a LED light for her fish tank. But cost of one is about $ 25. So we created one ourselves, for about $ 5: just a piece of LED strip, strip of flexible plastic and old 12 V charger I had lying around and 3D-printed brackets to hold the plastic with LED strip on the side of the tank. Oh, and about 15 minutes of soldering (since she was doing it for second time in her life) and half hour of printing. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-01-08T17:09:41+01:00 -->

@@ -1,0 +1,9 @@
+<!-- dcterms:title = Sofa for Igráček dolls -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2456705 -->
+<!-- dcterms:abstract = This is simple sofa for Igráček dolls. The flat parts are made from cardboard with upholstery glued on. See my other designs for other Igráček furniture. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-07-28T12:34:26+02:00 -->

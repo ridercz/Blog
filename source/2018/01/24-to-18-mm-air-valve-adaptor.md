@@ -1,0 +1,9 @@
+<!-- dcterms:title = 24 to 18 mm Air Valve Adaptor -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2750310 -->
+<!-- dcterms:abstract = This is adaptor from 24 mm to 18 mm air valve used to inflate and deflate inflatable toys, bed etc. The nozzle is long enough to open the security flap for successful deflation. The OpenSCAD model is parametric, so the model may be adapted to various diameters. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-01-08T15:56:43+01:00 -->

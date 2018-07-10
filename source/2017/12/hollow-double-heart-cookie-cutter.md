@@ -1,0 +1,9 @@
+<!-- dcterms:title = Hollow Double Heart Cookie Cutter -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2722900 -->
+<!-- dcterms:abstract = Double hollow heart cookie cutter made for my friend. Parametric OpenSCAD. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-12-20T13:52:33+01:00 -->

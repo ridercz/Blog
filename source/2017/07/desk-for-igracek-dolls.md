@@ -1,0 +1,9 @@
+<!-- dcterms:title = Desk for Igráček dolls -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:2456698 -->
+<!-- dcterms:abstract = This is simple desk for Igráček dolls. There are also chairs available. The desktop is made from cardboard and packing tape, hot glued to the 3D printed base. See my other designs for other Igráček furniture. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-thingiverse.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2017-07-28T12:28:43+02:00 -->

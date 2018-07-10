@@ -6,6 +6,33 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2981598</guid>
+      <title>LACK Wrench for Electric Drill</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2981598</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-06-28T17:13:16</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2980848</guid>
+      <title>Keyboard Bracket</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2980848</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-06-28T01:35:17</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2924811</guid>
+      <title>Ikea SAMLA 130 l clip</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2924811</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-05-22T14:25:36</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-66126470-seznam-cz-je-konecne-bezpecnejsi-dvoufaktorove-overeni-zavedl-pozde-ale-zato-spatne?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</guid>
       <title>Seznam.cz je konečně bezpečnější: Dvoufaktorové ověření zavedl pozdě, ale zato špatně</title>
       <description></description>
@@ -69,6 +96,42 @@
       <pubDate>2018-02-07T23:00:00</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2771287</guid>
+      <title>LED cube toy</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2771287</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-01-26T20:37:43</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2750310</guid>
+      <title>24 to 18 mm Air Valve Adaptor</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2750310</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-01-08T15:56:43</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2748108</guid>
+      <title>Silhouette Cameo Pen/Blade Case</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2748108</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-01-06T10:21:54</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:2746589</guid>
+      <title>Lock Picks (printable STL version)</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:2746589</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-01-04T20:24:37</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-66007330-nejlepsi-novorocni-predsevzeti-naucte-se-pouzivat-spravce-hesel-bez-nej-nebudou-vase-data-v-bezpeci?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</guid>
       <title>Nejlepší novoroční předsevzetí: Naučte se používat správce hesel, bez něj nebudou vaše data v bezpečí</title>
       <description></description>
@@ -76,70 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-01-04T11:15:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</guid>
-      <title>Jednoduché šablony pro generování UI v ASP.NET Core</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2017-12-27T01:53:52</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</guid>
-      <title>Altairis Tag Helpers pro ASP.NET Core Razor Pages a ASP.NET MVC Core</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2017-12-26T19:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/11/razor-pages-linux-a-mailing-materialy-z-corestart-2-0</guid>
-      <title>Razor Pages, Linux a mailing – materiály z CoreStart 2.0</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/11/razor-pages-linux-a-mailing-materialy-z-corestart-2-0</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-11-04T02:13:24</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://archiv.ihned.cz/c1-65930890-volby-hackeri-a-krasa-papiru-bezpecnost-je-nad-pohodli?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</guid>
-      <title>Volby, hackeři a krása papíru: bezpečnost je nad pohodlí</title>
-      <description></description>
-      <link>https://archiv.ihned.cz/c1-65930890-volby-hackeri-a-krasa-papiru-bezpecnost-je-nad-pohodli?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2017-10-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-65930450-bezpecnostni-svodka-cesi-odhalili-chybu-v-elektronickych-obcankach-na-slovensku-a-estonsku?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</guid>
-      <title>Bezpečnostní svodka: Češi odhalili chybu v elektronických občankách na Slovensku a Estonsku</title>
-      <description></description>
-      <link>https://tech.ihned.cz/internet/c1-65930450-bezpecnostni-svodka-cesi-odhalili-chybu-v-elektronickych-obcankach-na-slovensku-a-estonsku?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2017-10-26T01:03:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c1-65918210-bezpecnostni-svodka-v-soucasne-dobe-nelze-provozovat-bezpecnou-wi-fi-sit-dulezitou-komunikaci-je-lepsi-zasifrovat?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</guid>
-      <title>Bezpečnostní svodka: V současné době nelze provozovat bezpečnou wi-fi síť. Důležitou komunikaci je lepší zašifrovat</title>
-      <description></description>
-      <link>https://tech.ihned.cz/c1-65918210-bezpecnostni-svodka-v-soucasne-dobe-nelze-provozovat-bezpecnou-wi-fi-sit-dulezitou-komunikaci-je-lepsi-zasifrovat?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2017-10-17T10:50:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</guid>
-      <title>ASP.NET Core 2.0: platforma kterou chcete používat</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-10-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
