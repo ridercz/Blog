@@ -59,7 +59,30 @@
         </ul>
       </aside>
       <section class="article-text">
-        
+        <pre><code>	&lt;p&gt;Již léta opakuji, kdykoliv přijde řeč na česká &quot;nabodeníčka&quot;, že Jana Husa upálili po právu a bohužel pozdě. Historicky se většina pokroku v počítačových technologiích odehrávala v anglosaských zemích. Národy, mající ve zvyku okrašlovat nudná písmenka háčky, čárkami, ocásky a podobně jsou tedy v řadě případů poněkud diskriminovány.&lt;/p&gt;
+	&lt;p&gt;V praxi často nastává situace, kdy je třeba z nějakého textu odstranit písmenka s háčky a čárkami. A to pokud možno tak, aby se tato písmena neztratila, ale byla převedena na &quot;neokrášlené&quot; ekvivalenty, aby text zůstal i nadále čitelný. Řešení tohoto úkolu je složitější, než na první pohled vypadá.&lt;/p&gt;
+	&lt;p&gt;První co většinu programátorů napadne, je vytvořit seznam písmen s diakritikou a jemu odpovídajících písmen bez háčků a čárek. Toto řešení není zcela špatné - a ve verzích 1.x je pokud vím jediné možné. Záludnost tohoto řešení spočívá v tom, že onen seznam písmen zpravidla vzniká tak, že se programátor hluboce zamyslí a napíše něco jako &lt;em&gt;&quot;äáčďéěëíňóöřšťůúüýž&quot;&lt;/em&gt;. Jenomže rozličnými přívěsky okrášlených písmenek je mnohem víc, než si většina z nás myslí. Stačí se podívat na Slovensko a písmenka jako &lt;em&gt;Ľ&lt;/em&gt; nebo &lt;em&gt;Ĺ&lt;/em&gt;.&lt;/p&gt;
+	&lt;p&gt;Naštěstí pro nás umí .NET ve verzi 2.0 pracovat s takzvanými Unicode kategoriemi. Unicode je sada norem, které si vzaly za cíl učinit počítače použitelnými pro včechny jazyky a definitivně zlomit prokletí původně osmibitové znakové sady.&lt;/p&gt;
+	&lt;p&gt;Jedním z prostředků je zakódování textu tak, že se oddělí &quot;mateřské&quot; písmeno a jeho modifikátor. Je to trochu jako když jste na starém mechanickém psacím stroji chtěli napsat velké písmeno s háčkem: nejdříve jste na papíře vytvořili háček a pak pod něj dodali písmenko. A přesně této funkce nyní využijeme:&lt;/p&gt;
+	&lt;div style=&quot;FONT-SIZE: 10pt; BACKGROUND: white; COLOR: black; FONT-FAMILY: 'Courier New', monospace&quot;&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;
+					&lt;span style=&quot;COLOR: green&quot;&gt;// using System.Globalization&lt;/span&gt;
+			&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;
+					&lt;span style=&quot;COLOR: blue&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;COLOR: blue&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;COLOR: blue&quot;&gt;string&lt;/span&gt; RemoveDiacritics(&lt;span style=&quot;COLOR: blue&quot;&gt;string&lt;/span&gt; s) {&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    s = s.Normalize(NormalizationForm.FormD);&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    StringBuilder sb = &lt;span style=&quot;COLOR: blue&quot;&gt;new&lt;/span&gt; StringBuilder();&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;COLOR: blue&quot;&gt;int&lt;/span&gt; i = 0; i &amp;lt; s.Length; i++) {&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;COLOR: teal&quot;&gt;CharUnicodeInfo&lt;/span&gt;.GetUnicodeCategory(s[i]) != &lt;span style=&quot;COLOR: teal&quot;&gt;UnicodeCategory&lt;/span&gt;.NonSpacingMark) sb.Append(s[i]);&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    }&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;return&lt;/span&gt; sb.ToString();&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;}&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;p&gt;Pomocí metody &lt;em&gt;Normalize&lt;/em&gt; převedeme náš řetězec právě do shora popsané podoby. Následně pak projdeme všechny znaky v řetězci a ponecháme si pro další použití jenom ty, které nejsou typu &lt;em&gt;NonSpacingMark&lt;/em&gt;, což jsou právě naše nabodeníčka. V závislosti na požadované aplikaci lze samozřejmě konkrétně určit, jaké že &lt;a title=&quot;Seznam kategorií znaků na webu Unicode.org&quot; href=&quot;http://www.unicode.org/Public/UNIDATA/UCD.html#General_Category_Values&quot;&gt;Unicode kategorie&lt;/a&gt; mají být odstraněny či zachovány.&lt;/p&gt;
+</code></pre>
+
       </section>
     </main>
     <footer>

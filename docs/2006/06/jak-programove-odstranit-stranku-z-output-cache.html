@@ -59,7 +59,29 @@
         </ul>
       </aside>
       <section class="article-text">
-        
+        <pre><code>	&lt;p&gt;Output cache, neboli ukládání vygenerovaného výstupu do mezipaměti, takže se při dalším požadavku stránka nevolá znovu, je výtečný vynález. Častým dotazem je, jak lze takto nacacheovanou položku z mezipaměti odstranit. Existují na to dvě metody.&lt;/p&gt;
+	&lt;h2&gt;RemoveOutputCacheItem&lt;/h2&gt;
+	&lt;p&gt;Tato metoda přináleží třídě &lt;em&gt;HttpResponse&lt;/em&gt; a odstraní z output cache položku s danou adresou. Dlužno přiznat, že mi nikdy moc k srdci nepřirostla.&lt;/p&gt;
+	&lt;p&gt;Adresa se uvádí jako &quot;absolutní virtuální cesta&quot;, tedy cesta od rootu web serveru (nikoliv vaší aplikace). Tj. musíte si zjistit cestu k rootu vaší aplikace a poskládat URL.&lt;/p&gt;
+	&lt;p&gt;Tuto metodu nemůžete využít pro web user controls a nepodařilo se mi nijak vystopovat její chování pro více cacheovaných verzí stránky, např. podle parametru v URL.&lt;/p&gt;
+	&lt;h2&gt;Cache item dependency&lt;/h2&gt;
+	&lt;p&gt;Osobně dávám přednost jinému a velmi elegantnímu triku: jednotlivé položky v cache na sobě mohou být závislé. Při ukládání do cache tedy můžete svou stránku učinit závislou na nějaké jiné položce, jejíž název si zvolíte:&lt;/p&gt;
+	&lt;div style=&quot;FONT-SIZE: 10pt; BACKGROUND: white; COLOR: black; FONT-FAMILY: 'Courier New', monospace&quot;&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.ContentType = &lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;image/gif&quot;&lt;/span&gt;;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.AppendHeader(&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;Content-Disposition&quot;&lt;/span&gt;, &lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;image; filename=\&quot;icon.gif\&quot;&quot;&lt;/span&gt;);&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.Cache.SetCacheability(&lt;span style=&quot;COLOR: teal&quot;&gt;HttpCacheability&lt;/span&gt;.ServerAndPrivate);&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.Cache.SetExpires(&lt;span style=&quot;COLOR: teal&quot;&gt;DateTime&lt;/span&gt;.Now.AddHours(8));&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.Cache.VaryByParams[&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;MediaTypeId&quot;&lt;/span&gt;] = &lt;span style=&quot;COLOR: blue&quot;&gt;true&lt;/span&gt;;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.AddCacheItemDependency(&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;MediaTypeIconFlag&quot;&lt;/span&gt;);&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;p&gt;Poté, v okamžiku kdy chcete takto závislé stránky z cache odstranit, stačí změnit hodnotu předmětné položky v cache:&lt;/p&gt;
+	&lt;div style=&quot;FONT-SIZE: 10pt; BACKGROUND: white; COLOR: black; FONT-FAMILY: 'Courier New', monospace&quot;&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;Cache.Insert(&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;MediaTypeIconFlag&quot;&lt;/span&gt;, &lt;span style=&quot;COLOR: teal&quot;&gt;DateTime&lt;/span&gt;.Now, &lt;span style=&quot;COLOR: blue&quot;&gt;null&lt;/span&gt;, System.Web.Caching.&lt;span style=&quot;COLOR: teal&quot;&gt;Cache&lt;/span&gt;.NoAbsoluteExpiration, System.Web.Caching.&lt;span style=&quot;COLOR: teal&quot;&gt;Cache&lt;/span&gt;.NoSlidingExpiration, System.Web.Caching.&lt;span style=&quot;COLOR: teal&quot;&gt;CacheItemPriority&lt;/span&gt;.NotRemovable, &lt;span style=&quot;COLOR: blue&quot;&gt;null&lt;/span&gt;);&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;p&gt;Tento složitější zápis používám proto, aby mi server při nedostatku paměti můj &quot;flag&quot; neodstranil. Není to nezbytně nutné, ale pak může dojít k &quot;řetězové reakci&quot;.&lt;/p&gt;
+	&lt;p&gt;Cacheování bylo též tématem včerejšího semináře konaného v Microsoftu, záznam z něho zpracovávám, až bude k dispozici, napíšu o něm zprávu na tento web.&lt;/p&gt;
+</code></pre>
+
       </section>
     </main>
     <footer>

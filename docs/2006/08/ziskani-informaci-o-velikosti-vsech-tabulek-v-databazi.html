@@ -59,7 +59,68 @@
         </ul>
       </aside>
       <section class="article-text">
-        
+        <pre><code>	&lt;p&gt;SQL Server Management Studio umí informace o velikosti jednotlivých tabulek zobrazit v podobě krásného reportu. Nicméně jak si poradit, pokud chcete tyto informace zobrazit pomocí vlastní aplikace, nebo pokud máte k dispozici pouze SQL Server 2000?&lt;/p&gt;
+	&lt;p&gt;Řešením je níže prezentovaná uložená procedura &lt;em&gt;TableStatistics&lt;/em&gt;:&lt;/p&gt;
+	&lt;div style=&quot;FONT-SIZE: 10pt; BACKGROUND: white; COLOR: black; FONT-FAMILY: 'Courier New', monospace&quot;&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;
+					&lt;span style=&quot;COLOR: blue&quot;&gt;CREATE PROCEDURE &lt;/span&gt;[dbo].[TableStatistics]&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;
+					&lt;span style=&quot;COLOR: blue&quot;&gt;AS&lt;/span&gt;
+			&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;
+					&lt;span style=&quot;COLOR: blue&quot;&gt;BEGIN &lt;/span&gt;
+			&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;SET NOCOUNT ON&lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: green&quot;&gt;-- Create the temporary table&lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;CREATE TABLE &lt;/span&gt;#TableStatistics (&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       &lt;span style=&quot;COLOR: blue&quot;&gt;name    &lt;/span&gt;          nvarchar(100),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       &lt;span style=&quot;COLOR: blue&quot;&gt;rows    &lt;/span&gt;          &lt;span style=&quot;COLOR: blue&quot;&gt;int&lt;/span&gt;,&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       reserved          &lt;span style=&quot;COLOR: blue&quot;&gt;varchar&lt;/span&gt;(18),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       reserved_int      &lt;span style=&quot;COLOR: blue&quot;&gt;int default&lt;/span&gt;(0),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       data              &lt;span style=&quot;COLOR: blue&quot;&gt;varchar&lt;/span&gt;(18),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       data_int          &lt;span style=&quot;COLOR: blue&quot;&gt;int default&lt;/span&gt;(0),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       index_size        &lt;span style=&quot;COLOR: blue&quot;&gt;varchar&lt;/span&gt;(18),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       index_size_int    &lt;span style=&quot;COLOR: blue&quot;&gt;int default&lt;/span&gt;(0),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       unused            &lt;span style=&quot;COLOR: blue&quot;&gt;varchar&lt;/span&gt;(18),&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;       unused_int        &lt;span style=&quot;COLOR: blue&quot;&gt;int default&lt;/span&gt;(0)&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    )&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: green&quot;&gt;-- Populate table&lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;EXEC &lt;/span&gt;sp_MSforeachtable @command1=&quot;INSERT INTO #TableStatistics (name,rows,reserved,data,index_size,unused) EXEC sp_spaceused '?'&quot;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: green&quot;&gt;-- Return converted values&lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;SELECT &lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;name AS Name&lt;/span&gt;,&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;rows AS Rows&lt;/span&gt;,&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;CAST&lt;/span&gt;(&lt;span style=&quot;COLOR: blue&quot;&gt;SUBSTRING&lt;/span&gt;(reserved, 1, &lt;span style=&quot;COLOR: blue&quot;&gt;CHARINDEX&lt;/span&gt;(&lt;span style=&quot;COLOR: maroon&quot;&gt;' '&lt;/span&gt;, reserved)) &lt;span style=&quot;COLOR: blue&quot;&gt;AS int&lt;/span&gt;) &lt;span style=&quot;COLOR: blue&quot;&gt;AS &lt;/span&gt;Reserved,&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;CAST&lt;/span&gt;(&lt;span style=&quot;COLOR: blue&quot;&gt;SUBSTRING&lt;/span&gt;(data, 1, &lt;span style=&quot;COLOR: blue&quot;&gt;CHARINDEX&lt;/span&gt;(&lt;span style=&quot;COLOR: maroon&quot;&gt;' '&lt;/span&gt;, data)) &lt;span style=&quot;COLOR: blue&quot;&gt;AS int&lt;/span&gt;) &lt;span style=&quot;COLOR: blue&quot;&gt;AS &lt;/span&gt;Data,&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;CAST&lt;/span&gt;(&lt;span style=&quot;COLOR: blue&quot;&gt;SUBSTRING&lt;/span&gt;(index_size, 1, &lt;span style=&quot;COLOR: blue&quot;&gt;CHARINDEX&lt;/span&gt;(&lt;span style=&quot;COLOR: maroon&quot;&gt;' '&lt;/span&gt;, index_size)) &lt;span style=&quot;COLOR: blue&quot;&gt;AS int&lt;/span&gt;) &lt;span style=&quot;COLOR: blue&quot;&gt;AS &lt;/span&gt;IndexSize,&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;        &lt;span style=&quot;COLOR: blue&quot;&gt;CAST&lt;/span&gt;(&lt;span style=&quot;COLOR: blue&quot;&gt;SUBSTRING&lt;/span&gt;(unused, 1, &lt;span style=&quot;COLOR: blue&quot;&gt;CHARINDEX&lt;/span&gt;(&lt;span style=&quot;COLOR: maroon&quot;&gt;' '&lt;/span&gt;, unused)) &lt;span style=&quot;COLOR: blue&quot;&gt;AS int&lt;/span&gt;) &lt;span style=&quot;COLOR: blue&quot;&gt;AS &lt;/span&gt;Unused&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;FROM &lt;/span&gt;#TableStatistics &lt;span style=&quot;COLOR: blue&quot;&gt;ORDER BY Name&lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: green&quot;&gt;-- Delete the temporary table&lt;/span&gt;&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;    &lt;span style=&quot;COLOR: blue&quot;&gt;DROP TABLE &lt;/span&gt;#TableStatistics&lt;/p&gt;
+			&lt;p style=&quot;MARGIN: 0px&quot;&gt;
+					&lt;span style=&quot;COLOR: blue&quot;&gt;END&lt;/span&gt;
+			&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;p&gt;Jejím výstupem je resultset, který obsahuje pro každou tabulku v databázi následující údaje:&lt;/p&gt;
+	&lt;ul&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Name&lt;/strong&gt; - název tabulky&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Rows&lt;/strong&gt; - počet řádků&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Reserved&lt;/strong&gt; - velikost prostoru, který je pro tabulku rezervován (v kB)&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Data&lt;/strong&gt; - objem v kB, který skutečně zabírají data&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;IndexSize&lt;/strong&gt; - objem v kB, který skutečně zabírají indexy&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Unused&lt;/strong&gt; - nevyužitý objem v kB &lt;/li&gt;
+	&lt;/ul&gt;
+</code></pre>
+
       </section>
     </main>
     <footer>

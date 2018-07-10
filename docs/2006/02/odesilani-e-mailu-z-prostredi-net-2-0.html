@@ -59,7 +59,36 @@
         </ul>
       </aside>
       <section class="article-text">
-        
+        <pre><code>	&lt;p&gt;Odesílání mailů z webových aplikací je tak často kladený dotaz, že jsem mu věnoval hned &lt;a href=&quot;https://www.aspnet.cz/Articles/3-mailovani-z-asp-net-vykon-a-specialitky.aspx&quot;&gt;třetí článek&lt;/a&gt;, který na tomto serveru vůbec vyšel. Vzhledem k tomu, že .NET 2.0 přináší změny i v tomto oboru, je na čase vydat jeho novelizovanou verzi.&lt;/p&gt;
+	&lt;h2&gt;Net místo Web&lt;/h2&gt;
+	&lt;p&gt;Vývojáři si konečně uvědomili, že nejenom webové aplikace posílají maily a přemístili tuto funkcionalitu z namespace &lt;code&gt;System.Web.Mail&lt;/code&gt; do &lt;code&gt;System.Net.Mail&lt;/code&gt;. Starý zápis bude samozřejmě fungovat nadále, ale při kompilaci vám vyhodí warning. Spolu s tím souvisí přejmenování některých dalších tříd a mírná změna přístupu.&lt;/p&gt;
+	&lt;p&gt;Jednoduchý kód pro odeslání e-mailové zprávy tak bude vypadat takto:&lt;/p&gt;
+	&lt;pre class=&quot;sh-code-vb&quot;&gt;Dim Msg As New System.Net.Mail.MailMessage()&lt;br&gt;Msg.From = New System.Net.Mail.MailAddress(&quot;john@example.com&quot;, &quot;John Doe&quot;)&lt;br&gt;Msg.To.Add(New System.Net.Mail.MailAddress(&quot;jane@example.com&quot;, &quot;Jane Doe&quot;))&lt;br&gt;Msg.Subject = &quot;Předmět zprávy&quot;&lt;br&gt;Msg.Body = &quot;Text zprávy&quot;&lt;br&gt;Dim Sender As New System.Net.Mail.SmtpClient()&lt;br&gt;Sender.Send(Msg)&lt;br&gt;Msg.Dispose()&lt;/pre&gt;
+	&lt;p&gt;Nová třída &lt;code&gt;MailAddress&lt;/code&gt; umožňuje systemizovaně zadat kromě e-mailové adresy i zobrazované jméno (s jistotou, že se správně zakóduje). V řadě metod můžete ovšem &quot;postaru&quot; psát jako string jenom e-mailovou adresu.&lt;/p&gt;
+	&lt;p&gt;Novinka je v odesílání, které se nadále naprovádí pomocí statické třídy &lt;code&gt;System.Web.Mail.SmtpMail&lt;/code&gt;, ale pomocí třídy &lt;code&gt;SmtpClient&lt;/code&gt;. Název není zvolen zcela šťastně, neb tato třída umožňuje i jiné metody než pouze SMTP. Z této třídy nás bude obvykle zajímat toliko metoda &lt;code&gt;Send&lt;/code&gt;. Pomocí rozličných jejích vlastností sice můžeme procedurálně nastavovat, jak že se mail má odeslat, obvykle je ale podstatně lepší činit tak konfiguračně, jak probereme vzápětí.&lt;/p&gt;
+	&lt;p&gt;Pozitivní je rovněž možnost přidat attachment, který neexistuje v podobě fyzického souboru. Starou třídu &lt;code&gt;System.Web.MailAttachment&lt;/code&gt; bylo možno vytvořit pouze z existujícího souboru. Nová třída &lt;code&gt;System.Net.Mail.Attachment&lt;/code&gt; má konstruktor s overloadem, jemuž se předává objekt typu &lt;code&gt;Stream&lt;/code&gt;.&lt;/p&gt;
+	&lt;p&gt;Nové rozhraní obsahuje i systémovou podporu pro posílání mailů v HTML. Vzhledem k tomu, že to považuji za druhý největší programátorský hřích před tváří boží, nebudu se o tom podrobněji rozšiřovat.&lt;/p&gt;
+	&lt;h2&gt;Konfigurace použité metody odesílání&lt;/h2&gt;
+	&lt;p&gt;V předchozích verzích .NET bylo nutné veškerou konfiguraci způsobů odesílání řešit procedurálně. Nadto některé věci (jako například SMTP autentizaci) nebylo možno nativně realizovat z prostředí .NET, ale musely se pracně nastavovat skrze CDO fields, jak jsem popisoval ve &lt;a href=&quot;https://www.aspnet.cz/Articles/3-mailovani-z-asp-net-vykon-a-specialitky.aspx&quot;&gt;shora linkovaném článku&lt;/a&gt;. Pouhé tři verze stačily moudrým hlavám v Redmondu k tomu, aby dospěly k poznání, že konfigurační parametry jest vhodno určovat především konfiguračně.&lt;/p&gt;
+	&lt;p&gt;Pročež v konfiguračním souboru přibyla možnost nastavovat rozličné parametry odesílání e-mailových zpráv. Tyto se liší podle použité metody:&lt;/p&gt;
+	&lt;ul&gt;
+			&lt;li&gt;
+					&lt;strong&gt;PickupDirectoryFromIis&lt;/strong&gt; - použije se mail pickup service lokálního IIS. Výchozí a obvykle též preferovaná metoda. Měl jsem nicméně problémy s tím, že na některých serverech nebyl .NET schopen si konfiguraci z IIS načíst, netuším proč.&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;SpecifiedPickupDirectory&lt;/strong&gt; - vhodné pro řešení shora uvedeného případu, stejně jako pokud žádné maily ve skutečnosti odesílat nechcete. Ve druhém případě stačí nastavit jako cílový adresář něco, co čas od času promažete (a nebo prozkoumáte, abyste zjistili, proč vám aplikace dělá co jste do ní napsali a ne to, co po ní chcete).&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Network&lt;/strong&gt; - k odeslání se použije jakýkoliv SMTP server, k němuž se aplikace připojí po síti.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;p&gt;Prvně zmiňovaná možnost žádnou specifickou konfiguraci nevyžaduje. Druhá možnost prahne po jediném konfiguračním parametru, jímž je název složky, kam se mají soubory se zprávami plivat - obvykle je to &lt;code&gt;C:\InetPub\MailRoot\pickup&lt;/code&gt;.&lt;/p&gt;
+	&lt;pre class=&quot;sh-code-xml&quot;&gt;				&lt;p&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&lt;br&gt;&amp;lt;configuration&amp;gt;&lt;br&gt;  &amp;lt;system.net&amp;gt;&lt;br&gt;    &amp;lt;mailSettings&amp;gt;&lt;br&gt;      &amp;lt;smtp from=&quot;odesilatel@example.com&quot; deliveryMethod=&quot;SpecifiedPickupDirectory&quot;&amp;gt;&lt;br&gt;        &amp;lt;specifiedPickupDirectory pickupDirectoryLocation=&quot;D:\TMP\SMTP&quot;/&amp;gt;&lt;br&gt;      &amp;lt;/smtp&amp;gt;&lt;br&gt;    &amp;lt;/mailSettings&amp;gt;&lt;br&gt;  &amp;lt;/system.net&amp;gt;&lt;br&gt;&amp;lt;/configuration&amp;gt;&lt;/p&gt;
+	&lt;/pre&gt;
+	&lt;p&gt;V případě, že použijete odesílání zpráv přes síť (SMTP), je třeba určit minimálně název serveru, který bude použit (výchozí nastavení je &lt;code&gt;localhost&lt;/code&gt;), často také port a uživatelské jméno a heslo:&lt;/p&gt;
+	&lt;pre class=&quot;sh-code-xml&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&lt;br&gt;&amp;lt;configuration&amp;gt;&lt;br&gt;  &amp;lt;system.net&amp;gt;&lt;br&gt;    &amp;lt;mailSettings&amp;gt;&lt;br&gt;      &amp;lt;smtp from=&quot;odesilatel@example.com&quot; deliveryMethod=&quot;Network&quot;&amp;gt;&lt;br&gt;        &amp;lt;network host=&quot;smtp.example.com&quot; port=&quot;25&quot; userName=&quot;user&quot; password=&quot;pa@$$w0rd&quot;/&amp;gt;&lt;br&gt;      &amp;lt;/smtp&amp;gt;&lt;br&gt;    &amp;lt;/mailSettings&amp;gt;&lt;br&gt;  &amp;lt;/system.net&amp;gt;&lt;br&gt;&amp;lt;/configuration&amp;gt;&lt;/pre&gt;
+	&lt;p&gt;I nadále doporučuji používat pokud možno pickup directory IISka - je to nejrychlejší a zpravidla též nejspolehlivější. Pokud vám lehne SMTP service v IIS, zprávy se budou v adresáři štosovat a doručí se po restartu. Lépe pozdě, než nikdy.&lt;/p&gt;
+	&lt;p&gt;Posílání mailů přes SMTP doporučuji pouze jako &quot;variantu Brod&quot;, pokud vám opravdu nic jiného nezbývá. Zejména pro její časovou a technologickou náročnost, která stoupá s počtem odesílaných mailů.&lt;/p&gt;
+	&lt;p&gt;Tolik tedy k odesílání mailů. V nepříliš vzdálené budoucnosti se snad dostanu k tématu podstatně komplikovanějšímu tématu, jímž je přijímání mailů.&lt;/p&gt;
+</code></pre>
+
       </section>
     </main>
     <footer>

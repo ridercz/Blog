@@ -59,7 +59,64 @@
         </ul>
       </aside>
       <section class="article-text">
-        
+        <pre><code>	&lt;h2&gt;Jak funguje 'basic authentication'&lt;/h2&gt;
+	&lt;p&gt;Metoda 'basic' je nejstarší a nejjednodušší metoda HTTP autentizace. Je přímo součástí HTTP protokolu a podporují ji všechny prohlížeče, proxy servery a podobně. Není tedy třeba podpora cookies a podobně. Pokud se pokusíte přistoupit na nějakou stránku chráněnou &quot;basic&quot; autentizací, zobrazí vám prohlížeč systémový dialog pro zadání jména a hesla - celá autentizace se tak děje zcela v jeho režii, vaše aplikace pro ni nevytváří žádné GUI.&lt;/p&gt;
+	&lt;p&gt;Technicky vzato funguje HTTP autentizace následovně.&lt;/p&gt;
+	&lt;ol&gt;
+			&lt;li&gt;Klient se pokusí přistoupit na zabezpečenou stránku.&lt;/li&gt;
+			&lt;li&gt;Server odpoví chybovým kódem &lt;code&gt;401 Access Denied&lt;/code&gt; a do odpovědi přidá hlavičku &lt;code&gt;WWW-Authenticate: Basic Realm=&quot;Název aplikace&quot;&lt;/code&gt;.&lt;/li&gt;
+			&lt;li&gt;Klient si od uživatele vyžádá jméno a heslo a pokus opakuje. Tentokráte ale přidá do požadavku hlavičku &lt;code&gt;Authorize: Basic &lt;strong&gt;username:password&lt;/strong&gt;&lt;/code&gt;. Uživatelské jméno a heslo je odděleno dvojtečkou a celý tento řetězec je zakódován ve formátu Base64.&lt;/li&gt;
+			&lt;li&gt;Server ověří uživatelské jméno a heslo. Pokud je správné, vydá kýžený obsah. Není-li, opakuje se bod 2.&lt;/li&gt;
+	&lt;/ol&gt;
+	&lt;p&gt;Ze shora uvedeného vyplývají dvě hlavní nevýhody basic autentizace:&lt;/p&gt;
+	&lt;ul&gt;
+			&lt;li&gt;S každým požadavkem na zabezpečenou stránku je zasíláno uživatelské jméno a heslo v nezašifrovaném tvaru (Base64 je přenosové kódování, nikoliv šifra). To představuje bezpečností riziko, a proto je obecně vhodné používat tuto formu autentizace pouze na šifrovaném kanále (na webu zabezpečeném pomocí HTTPS).&lt;/li&gt;
+			&lt;li&gt;Přihlášení je nutno si vynutit. Pokud o něj server explicitně nepožádá, klient mu ho nepošle. Není tedy možno vytvořit jednu stránku, která bude zobrazovat jiný obsah pro přihlášeného a jiný pro anonymního uživatele.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;h2&gt;Implementace v ASP.NET&lt;/h2&gt;
+	&lt;p&gt;V prostředí internetových aplikací na platformě Windows se tato forma autentizace moc neuchytila. Hlavním důvodem je podle mého soudu skutečnost, že pomocí standardně dostupných prostředků je možno ověřovat se pouze proti systémovým účtům (uživatelům ve Windows nebo Active Directory), nikoliv např. proti vlastní databázi uživatelů.&lt;/p&gt;
+	&lt;p&gt;Je ale možné jednoduše napsat autentizační modul, který bude basic autentizaci podporovat. Technicky vzato se jedná o třídu implementující rozhraní &lt;em&gt;System.Web.IHttpModule&lt;/em&gt; a obsluhující události &lt;em&gt;OnAuthenticateRequest&lt;/em&gt; a &lt;em&gt;OnEndRequest&lt;/em&gt;.&lt;/p&gt;
+	&lt;p&gt;Je důležité si uvědomit, že je nutné vypnout všechny ostatní formy autentizace. Tj. v Internet Information Services u webu povolit pouze anonymní přístup (jinak by se o ověřování snažilo IISko samo) a v konfiguraci ASP.NET (&lt;em&gt;web.config&lt;/em&gt;) nastavit &lt;em&gt;/configuration/system.web/authentication/@mode&lt;/em&gt; na hodnotu &lt;em&gt;None&lt;/em&gt;.&lt;/p&gt;
+	&lt;h2&gt;Proof-of-concept&lt;/h2&gt;
+	&lt;p&gt;Vyzkoušíme si, zda popsaná metoda úspěšně funguje, níže najdete proof-of-concept kód, který vyžaduje uživatelské jméno &lt;em&gt;user&lt;/em&gt; a heslo &lt;em&gt;password&lt;/em&gt;. Protentokrát je napsaný v C#, aby se mi zase na VSNET-L nepošklebovali ;-)&lt;/p&gt;
+	&lt;pre class=&quot;sh-code-cs&quot;&gt;				&lt;p&gt;using System;&lt;br&gt;using System.Web;&lt;/p&gt;
+			&lt;p&gt;public class BasicPOC: IHttpModule {&lt;/p&gt;
+			&lt;p&gt;    public void Dispose() {&lt;br&gt;        // Nothing to dispose&lt;br&gt;    }&lt;/p&gt;
+			&lt;p&gt;    public void Init(HttpApplication application) {&lt;br&gt;        // Attach event handlers&lt;br&gt;        application.AuthenticateRequest += new EventHandler(this.OnAuthenticateRequest);&lt;br&gt;        application.EndRequest += new EventHandler(this.OnEndRequest);&lt;br&gt;    }&lt;/p&gt;
+			&lt;p&gt;    public void OnAuthenticateRequest(object source, EventArgs eventArgs) {&lt;br&gt;        HttpApplication Application = (HttpApplication)source;&lt;/p&gt;
+			&lt;p&gt;        // Get authentication data&lt;br&gt;        string AuthString = Application.Request.Headers[&quot;Authorization&quot;];&lt;br&gt;        if (String.IsNullOrEmpty(AuthString)) return; // anonymous request&lt;br&gt;        if (!AuthString.StartsWith(&quot;Basic&quot;, StringComparison.InvariantCultureIgnoreCase)) return; // not basic auth&lt;/p&gt;
+			&lt;p&gt;        // Get username and password&lt;br&gt;        string UserName, Password;&lt;br&gt;        try {&lt;br&gt;            AuthString = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(AuthString.Substring(6)));&lt;br&gt;            string[] AuthData = AuthString.Split(new char[] { ':' }, 2);&lt;br&gt;            UserName = AuthData[0];&lt;br&gt;            Password = AuthData[1];&lt;br&gt;        }&lt;br&gt;        catch (Exception ex) {&lt;br&gt;            throw new System.Security.SecurityException(&quot;Invalid format of 'Authorization' HTTP header.&quot;, ex);&lt;br&gt;        }&lt;/p&gt;
+			&lt;p&gt;        // Validate user against currently configured membership provider&lt;br&gt;        if (UserName == &quot;user&quot; &amp;amp;&amp;amp; Password == &quot;password&quot;) {&lt;br&gt;            // Success&lt;br&gt;            Application.Context.User = new System.Security.Principal.GenericPrincipal(new System.Security.Principal.GenericIdentity(UserName), new string[0]);&lt;br&gt;        }&lt;br&gt;        else {&lt;br&gt;            // Failure&lt;br&gt;            Application.Response.StatusCode = 401;&lt;br&gt;            Application.Response.StatusDescription = &quot;Access Denied&quot;;&lt;br&gt;            Application.Response.Write(&quot;&amp;lt;html&amp;gt;\n&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;401 Access Denied&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;\n&amp;lt;body&amp;gt;&amp;lt;h1&amp;gt;401 Access Denied&amp;lt;/h1&amp;gt;&amp;lt;/body&amp;gt;\n&amp;lt;/html&amp;gt;&quot;);&lt;br&gt;            Application.CompleteRequest();&lt;br&gt;            return;&lt;br&gt;        }&lt;br&gt;    }&lt;/p&gt;
+			&lt;p&gt;    public void OnEndRequest(object source, EventArgs eventArgs) {&lt;br&gt;        // Add WWW-Authenticate header if access denied&lt;br&gt;        HttpApplication Application = (HttpApplication)source;&lt;br&gt;        if (Application.Response.StatusCode == 401) Application.Response.AppendHeader(&quot;WWW-Authenticate&quot;, &quot;Basic Realm=\&quot;Moje aplikace\&quot;&quot;);&lt;br&gt;    }&lt;br&gt;}&lt;/p&gt;
+	&lt;/pre&gt;
+	&lt;p&gt;Bližší popis fungování HTTP modulů najdete v článku &lt;a href=&quot;https://www.aspnet.cz/Articles/13-http-moduly-prakticky.aspx&quot;&gt;HTTP moduly prakticky&lt;/a&gt;. Veškerou špinavou práci dělají metody &lt;em&gt;OnAuthenticateRequest&lt;/em&gt; a &lt;em&gt;OnEndRequest&lt;/em&gt;. &lt;/p&gt;
+	&lt;p&gt;První jmenovaná dekóduje a ověří HTTP hlavičku &lt;em&gt;Authorization&lt;/em&gt;, pokud je přítomna. Povšimněte si prosím, že v případě, že přítomna není (uživatel je anonymní) nic nedělá (nevrací žádnou chybu nebo stavový kód &lt;em&gt;401 Access Denied&lt;/em&gt;). O tom, zda se bude přihlášení vyžadovat, totiž nerozhoduje náš modul, ale autorizační modul - typicky na základě nastavení v souboru &lt;em&gt;web.config&lt;/em&gt;. Jediný případ, kdy náš modul proaktivně zakazuje přístup, je když uživatel sice zadá jméno a heslo, ale chybné.&lt;/p&gt;
+	&lt;p&gt;Metoda &lt;em&gt;OnEndRequest&lt;/em&gt; zařizuje jedinou věc: pokud je na konci zpracování požadavku nastaven stavový kód &lt;em&gt;401 Access Denied&lt;/em&gt;, přidá do výstupu zmiňovanou HTTP hlavičku &lt;em&gt;WWW-Authenticate&lt;/em&gt;. Pokud kdokoliv (náš modul, autorizační modul, jiná část aplikace...) bude pomocí tohoto kódu vyžadovat přihlášení, bude k němu uživatel vyzván.&lt;/p&gt;
+	&lt;p&gt;Pomocí následujícího nastavení v souboru &lt;em&gt;web.config&lt;/em&gt; modul aktivujeme a zároveň zakážeme do celé aplikace přístup anonymním uživatelům, takže se vynutí přihlášení:&lt;/p&gt;
+	&lt;pre class=&quot;sh-code-xml&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&lt;br&gt;&amp;lt;configuration&amp;gt;&lt;br&gt;  &amp;lt;system.web&amp;gt;&lt;br&gt;    &amp;lt;httpModules&amp;gt;&lt;br&gt;      &amp;lt;add name=&quot;BasicPOC&quot; type=&quot;BasicPOC&quot; /&amp;gt;&lt;br&gt;    &amp;lt;/httpModules&amp;gt;&lt;br&gt;    &amp;lt;compilation debug=&quot;true&quot; /&amp;gt;&lt;br&gt;    &amp;lt;authentication mode=&quot;None&quot; /&amp;gt;&lt;br&gt;    &amp;lt;authorization&amp;gt;&lt;br&gt;      &amp;lt;deny users=&quot;?&quot;/&amp;gt;&lt;br&gt;    &amp;lt;/authorization&amp;gt;&lt;br&gt;  &amp;lt;/system.web&amp;gt;&lt;br&gt;&amp;lt;/configuration&amp;gt;&lt;/pre&gt;
+	&lt;h2&gt;Plná implementace&lt;/h2&gt;
+	&lt;p&gt;Mým cílem je vytvořit univerzální modul, který bude možno snadno nasadit a integrovat ho se strukturou membership providerů v ASP.NET a podobně. Zároveň chci, aby byl konfigurovatelný &lt;em&gt;Realm&lt;/em&gt; a obsah stránky, která se zobrazí v případě chybného přihlášení.&lt;/p&gt;
+	&lt;p&gt;Vytvořil jsem proto následující strukturu tříd:&lt;/p&gt;
+	&lt;p style=&quot;TEXT-ALIGN: center&quot;&gt;
+			&lt;img width=&quot;475&quot; height=&quot;318&quot; alt=&quot;Class diagram&quot; src=&quot;https://www.cdn.altairis.cz/Blog/2006/20060404-BasicAuthClasses.gif&quot;&gt; &lt;/p&gt;
+	&lt;ul&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Altairis.Web.Security.BasicAuthentication.HttpModule&lt;/strong&gt; je výše zmíněný autentizační modul. Jeho kód se změni jenom nepatrně: místo napevno zakódovaného jména a hesla volám metodu &lt;em&gt;Memebrship.ValidateUser()&lt;/em&gt;, která mi ověří jméno a heslo proti aktivnímu membership providerovi. A místo pevně určeného názvu realmu a tetxu chybové stránky tyto hodnoty načítám z konfigurace.&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Altairis.Web.Security.BasicAuthentication.ConfigurationSectionHandler&lt;/strong&gt; je handler konfigurační sekce, který mi umožní přidat si do souboru &lt;em&gt;web.config&lt;/em&gt; vlastní konfigurační parametry. Podrobnější popis najdete v článku &lt;a href=&quot;https://www.aspnet.cz/Articles/9-vytvoreni-vlastni-konfiguracni-sekce-ve-web-config.aspx&quot;&gt;Vytvoření vlastní konfigurační sekce ve Web.Config&lt;/a&gt;.&lt;/li&gt;
+			&lt;li&gt;
+					&lt;strong&gt;Altairis.Web.Security.BasicAuthentication.ConfigurationSettings&lt;/strong&gt; je strukura, která uchovává konfigurační informace a spolupracuje s předchozí třídou.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;h2&gt;Odkazy a kód ke stažení&lt;/h2&gt;
+	&lt;ul&gt;
+			&lt;li&gt;
+					&lt;a href=&quot;https://www.cdn.altairis.cz/Blog/2006/20060404-BasicAuthentication.zip&quot;&gt;Zdrojové kódy&lt;/a&gt; &lt;/li&gt;
+			&lt;li&gt;
+					&lt;a href=&quot;http://www.ietf.org/rfc/rfc2617.txt&quot;&gt;RFC 2617: HTTP Authentication: Basic and Digest Access Authentication&lt;/a&gt; &lt;/li&gt;
+			&lt;li&gt;UserLand Frontier: &lt;a href=&quot;http://frontier.userland.com/stories/storyReader$2159&quot;&gt;HTTP Authentication Schemes&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+</code></pre>
+
       </section>
     </main>
     <footer>

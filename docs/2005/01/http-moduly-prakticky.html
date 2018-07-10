@@ -59,7 +59,102 @@
         </ul>
       </aside>
       <section class="article-text">
-        
+        <p>Douf&#225;m, že v&#225;s můj <a href="/entry/article-20050110.aspx">předchoz&#237; čl&#225;nek</a> navnadil na psan&#237; HTTP modulů a <a href="/entry/article-20050112.aspx">pohled do budoucnosti přesvědčil</a>, že se jedn&#225; o užitečnou dovednost. Pod&#237;vejme se tedy do &#250;trob jednoho HTTP modulu, jak funguje.</p>
+<p>On&#237;m kouskem software bude můj modůlek <a href="http://software.altaircom.net/software/skinanywhere.aspx">SkinAnywhere</a>. Princip jeho činnosti je jednoduch&#253;: v jak&#233;koliv aplikaci "pod n&#237;m" lze jeho prostřednictv&#237;m přep&#237;nat kask&#225;dov&#233; styly. Funguje to tak, že můj modul prohl&#237;ž&#237; aplikac&#237; vygenerovan&#233; HTML a hled&#225; v něm odkaz na origin&#225;ln&#237; stylesheet. Pokud ho najde, modifikuje HTML tak, aby m&#237;sto něj byl odkaz na nějak&#253; jin&#253; stylesheet, v z&#225;vislosti na nastaven&#237; konfiguračn&#237; cookie. Tuto cookie lze nastavit zavol&#225;n&#237;m speci&#225;ln&#237; str&#225;nky s vhodn&#253;mi parametry. </p>
+<p>Z hlediska funkčnosti tedy k&#243;d obsahuje tři hlavn&#237; č&#225;sti:</p>
+<ol>
+<li>Nač&#237;t&#225;n&#237; konfigurace (tato problematika byla již <a href="/entry/article-20050109.aspx">pops&#225;na dř&#237;ve</a> a nebudu se j&#237; věnovat). 
+<li>Ve vstupn&#237; f&#225;zi (před generov&#225;n&#237;m v&#253;stupu ASPX str&#225;nkami) kontrolovat, zda se nejedn&#225; o požadavek na speci&#225;ln&#237; URL pro změnu stylu (nastaven&#237; cookies) a pokud ano, zpracovat ho. 
+<li>Ve v&#253;stupn&#237; f&#225;zi (po vygenerov&#225;n&#237; v&#253;stupu ASPX str&#225;nkami) prohled&#225;vat vygenerovan&#253; k&#243;d a nahradit v něm odkaz na CSS vlastn&#237;m.</li></ol>
+<h2>IHttpModule</h2>
+<p>J&#225;drem cel&#233; aplikace je vlastn&#237; HTTP modul. Jedn&#225; se o tř&#237;du kter&#225; implementuje rozhran&#237; <code>System.Web.IHttpModule</code>. To specifikuje dvě metody: <code>Init</code> a <code>Dispose</code>.</p>
+<p>V&#253;znam metody <code>Dispose</code> je jasn&#253; - slouž&#237; k uvolněn&#237; v&#353;ech použ&#237;van&#253;ch zdrojů při odstraněn&#237; modulu. My ž&#225;dn&#233; zdroje nealokujeme a tud&#237;ž nen&#237; co uvolnit.</p>
+<p>Kl&#237;čov&#225; je pro n&#225;s metoda <code>Init</code>, kter&#225; se zavol&#225; při inicializaci (zaveden&#237;) modulu. V n&#237; je možno pověsit vlastn&#237; metody jako event handlery na obsluhu ud&#225;lost&#237;, kter&#233; se přihod&#237; v průběhu zpracov&#225;n&#237; požadavku na str&#225;nku. Těch je mnoho a každ&#225; m&#225; svůj v&#253;znam, proto se na ně pod&#237;v&#225;me podrobněji.</p>
+<h3>Ud&#225;losti při zpracov&#225;n&#237; požadavku</h3>
+<p>N&#225;sleduj&#237;c&#237; ud&#225;losti nastanou při zpracov&#225;n&#237; webov&#233;ho požadavku přes HTTP runtime, v uveden&#233;m pořad&#237;:</p>
+<ul>
+<li><code>BeginRequest</code> - pokud chcete prov&#225;dět nějak&#233; specifick&#233; věci t&#253;kaj&#237;c&#237; se přesměrov&#225;n&#237; a podobně, učiňte tak nyn&#237;. 
+<li><code>AuthenticateRequest</code> - teď se hled&#225; odpověď na ot&#225;zku "kdo jsi" - pomoc&#237; dostupn&#253;ch (nakonfigurovan&#253;ch) metod zabezpečen&#237; se ověřuje platnost uživatelsk&#233;ho jm&#233;na a hesla (nebo jin&#233;ho autentizačn&#237;ho prostředku). 
+<li><code>AuthorizeRequest</code> - teď se zji&#353;ťuje "co tady děl&#225;&#353;", tedy zda v předchoz&#237;m kroku &#250;spě&#353;ně identifikovan&#253; uživatel m&#225; pr&#225;vo vzn&#233;sti tento požadavek. 
+<li><code>ResolveRequestCache</code> - v tomto kroku se zji&#353;ťuje, zda je str&#225;nka odpov&#237;daj&#237;c&#237; tomuto požadavku v cache a nebo zda se mus&#237; skutečně vykonat. 
+<li><code>AcquireRequestState</code> - v tomto kroku se načtou hodnoty session state apod. 
+<li><code>PreRequestHandlerExecute</code> - tento krok nastane těsně předt&#237;m, než se požadavek před&#225; k vykon&#225;n&#237; patřičn&#233;mu HTTP handleru. 
+<li><em>V tomto okamžiku se zavol&#225; př&#237;slu&#353;n&#253; HTTP handler a vykon&#225; se vlastn&#237; k&#243;d str&#225;nky.</em> 
+<li><code>PostRequestHandlerExecute</code> - tento krok nastane těsně potom, co se vykon&#225; HTTP handler. 
+<li><code>ReleaseRequestState</code> - v tomto okamžiku se ulož&#237; změněn&#225; data zpět do session apod. 
+<li><code>UpdateRequestCache</code> - pokud to pravidla cacheov&#225;n&#237; umožn&#237;, ulož&#237; se v tomto kroku vygenerovan&#225; hodnota do cache. 
+<li><code>EndRequest</code> - posledn&#237; ud&#225;lost těsně před t&#237;m, než se vygenerovan&#225; data po&#353;lou na klienta.</li></ul>
+<p>Pomoc&#237; vlastn&#237;ch HTTP modulů můžeme tedy roz&#353;&#237;řit nebo přepsat prakticky v&#353;echni činnosti, kter&#233; při běhu .NET aplikace nast&#225;vaj&#237;. Z v&#253;&#353;e uveden&#233;ho seznamu je jasn&#233;, kdy budeme vyřizovat jak&#233; &#250;koly:</p>
+<p>Na ud&#225;lost <code>BeginRequest</code> pověs&#237;me vyhodnocen&#237; požadovan&#233; adresy a přijet&#237; vhodn&#253;ch opatřen&#237; v př&#237;padě, že se jedn&#225; o adresu pro změnu stylu. Na ud&#225;lost <code>PostRequestHandlerExecute</code> pověs&#237;me zpracov&#225;n&#237; a pozměněn&#237; vygenerovan&#253;ch dat.</p>
+<p>Za t&#237;mto &#250;čelem si vytvoř&#237;me metody <code>HandleBeginRequest</code> a <code>HandlePostRequestHandlerExecute</code> (mohou se jmenovat fakticky jakkoliv). V <code>Init</code> je pak přiřad&#237;me k patřičn&#253;m ud&#225;lostem:</p><pre class="sh-code-vb">Public Sub Init(ByVal context As System.Web.HttpApplication) Implements System.Web.IHttpModule.Init
+    AddHandler context.PostRequestHandlerExecute, AddressOf HandlePostRequestHandlerExecute
+    AddHandler context.BeginRequest, AddressOf HandleBeginRequest
+End Sub</pre>
+<h2>Přepisov&#225;n&#237; v&#253;stupn&#237;ho HTML</h2>
+<p>K dal&#353;&#237;mu&nbsp;zpracov&#225;n&#237; vygenerovan&#253;ch dat lze použ&#237;t vlastn&#237; tř&#237;du, odvozenou (<code>Inherits</code>) od <code>System.IO.Stream</code>. Instanci t&#233;to tř&#237;dy jest přiřaditi vlastnosti <code>Response.Filter</code>. To n&#225;&#353; HTTP modul prov&#225;d&#237; v r&#225;mci obsluhy ud&#225;losti <code>PostRequestHandlerExecute</code> nějak takto:</p><pre class="sh-code-vb">Public Sub HandlePostRequestHandlerExecute(ByVal sender As Object, ByVal e As EventArgs)
+    With System.Web.HttpContext.Current
+        ' If output is not HTML, give up
+        If .Response.ContentType.ToLower() &lt;&gt; "text/html" Then Return
+<pre><code>    ' Append filter
+    .Response.Filter = New Filter(.Response.Filter)
+End With
+</code></pre>
+<p>End Sub</pre></p>
+<p>Na&#353;e vlastn&#237; tř&#237;da <code>Filter</code> slouž&#237; jako skutečn&#253; filtr: z jedn&#233; strany (metodou <code>Write</code>) jsou do něj data cp&#225;na a z druh&#233; strany (metodou <code>Read</code>) z n&#237; zase vyt&#233;kaj&#237;:</p><pre class="sh-code-vb">Public Class Filter
+    Inherits System.IO.Stream
+<pre><code>Private Base As System.IO.Stream
+
+Public Overrides Function Read(ByVal buffer() As Byte, ByVal offset As Integer, ByVal count As Integer) As Integer
+    Return Me.Base.Read(buffer, offset, count)
+End Function
+
+Public Sub New(ByVal ResponseStream As System.IO.Stream)
+    If ResponseStream Is Nothing Then Throw New ArgumentNullException(&quot;ResponseStream&quot;)
+    Me.Base = ResponseStream
+End Sub
+
+Public Overrides Sub Write(ByVal buffer() As Byte, ByVal offset As Integer, ByVal count As Integer)
+    ' Get HTML code
+    Dim HTML As String = System.Text.Encoding.UTF8.GetString(buffer, offset, count)
+
+    ' Do something with output
+    HTML = HTML.Replace(&quot;DEMO&quot;, &quot;TEST&quot;)
+
+    ' Send output
+    buffer = System.Text.Encoding.UTF8.GetBytes(HTML)
+    Me.Base.Write(buffer, 0, buffer.Length)
+End Sub
+</code></pre>
+<p>End Class</pre></p>
+<p>Skutečnou logiku nahrazov&#225;n&#237; jsem pro přehlednost vypustil, tento k&#243;d jenom nahrad&#237; jak&#253;koliv v&#253;skyt řetězce "DEMO" řetězcem "TEST". Stejn&#253;m způsobem jako s metodou <code>Read</code> je nutno naložit se v&#353;emi dal&#353;&#237;mi metodami a vlastnostmi, jimiž <code>Stream</code> opl&#253;v&#225; - pokud n&#225;s jejich osud nezaj&#237;m&#225;, prostě zavol&#225;me tut&#233;ž metodu se stejn&#253;mi parametry, ov&#353;em u "underlying" (vnitřn&#237;ho) streamu, kter&#253; jsme mimo jin&#233; za t&#237;mto &#250;čelem v konstruktoru zř&#237;dili.</p>
+<h2>Odchycen&#237; speci&#225;ln&#237;ho požadavku</h2>
+<p>V r&#225;mci HTTP handleru můžeme prov&#233;st i odchycen&#237; speci&#225;ln&#237;ho požadavku, kter&#253; např&#237;klad necheme předat n&#237;že lež&#237;c&#237; aplikaci. V na&#353;em př&#237;padě se jedn&#225; o vol&#225;n&#237; str&#225;nky pro přepnut&#237; stylu. Odchycen&#237; provedeme v event handleru ud&#225;losti <code>BeginRequest</code>. Skutečn&#253; k&#243;d je opět složitěj&#353;&#237;, n&#237;že určen&#253; př&#237;klad jenom při požadavku na str&#225;nku <code>/moduletest.aspx</code> vr&#225;t&#237; pevně definovan&#253; text. Str&#225;nka <code>moduletest.aspx</code> přitom vůbec nemus&#237; existovat (a i pokud existuje, vůbec na n&#237; nez&#225;lež&#237;, nikdy se nevykon&#225;).</p><pre class="sh-code-vb"> Public Sub HandleBeginRequest(ByVal sender As Object, ByVal e As EventArgs) <br>  Dim Context As System.Web.HttpContext = System.Web.HttpContext.Current
+  If Not Context.Request.Url.AbsolutePath.ToLower() = "/moduletest.aspx" Then Return<br>  <br>  Context.Response.Clear()
+  Context.Response.Write("&lt;html&gt;&lt;head&gt;&lt;title&gt;HTTP module test&lt;/title&gt;&lt;/head&gt;")<br> Context.Response.Write("&lt;body&gt;&lt;h1&gt;HTTP module test&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;")
+    Context.Response.End()
+End Sub</pre>
+<h2>Registrace HTTP modulu</h2>
+<p>Aby byl HTTP modul aktivn&#237; (vykon&#225;n) je nutno ho nejenom napsat, ale t&#233;ž zaregistrovat v souboru <code>web.config</code>. Děje se tak v sekci <code>/configuration/system.web/httpModules</code>. Uk&#225;zkov&#253; konfiguračn&#237; soubor může vypadat takto:</p><pre class="sh-code-xml">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;configuration&gt;
+  &lt;system.web&gt;
+    &lt;httpModules&gt;
+      &lt;add name="SkinAnywhere" 
+      type="AltairCommunications.SkinAnywhere.HttpModule, SkinAnywhere" /&gt;
+    &lt;/httpModules&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</pre>
+<p>Přiřazen&#237; se děje pomoc&#237; elementu <code>add</code> a jeho dvou atributů:</p>
+<ul>
+<li><code>name</code> je uživatelsky př&#237;tuln&#233; jm&#233;no va&#353;eho modulu. V kontextu na&#353;eho př&#237;kladu na něm nez&#225;lež&#237;. 
+<li><code>type</code> je označen&#237; typu HTTP module (tedy t&#233; tř&#237;dy kter&#225; implementuje <code>IHttpModule</code>).</li></ul>
+<h2>Z&#225;věr</h2>
+<ul>
+<li>Prostřednictv&#237;m HTTP modulů je možno se napojit na kteroukoliv ud&#225;lost HTTP request processing pipeline. 
+<li>V uk&#225;zk&#225;ch je n&#225;vod jak&#253;m lze modifikovat požadavek předt&#237;m než je zpracov&#225;n, i potom. 
+<li>Aby se handler vykonal, je nutno ho zaregistrovat v souboru <code>web.config</code> (nebo <code>machine.config</code> pro cel&#253; server)</li></ul>
+<p>Kompletn&#237; komentovan&#253; zdrojov&#253; k&#243;d jednoduch&#233;ho ale užitečn&#233;ho HTTP modulu si můžete st&#225;hnout na webu <a href="http://software.altaircom.net/software/skinanywhere.aspx">Altair Communications</a>.</p>
+
       </section>
     </main>
     <footer>
