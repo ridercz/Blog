@@ -139,12 +139,12 @@
     <meta name="twitter:description" content="{$Description}" />
     <meta name="twitter:image" content="{$PictureUrl}" />
     <!-- Facebook-->
-    <meta name="og:type" content="article" />
-    <meta name="og:site_name" content="ALTAIR.blog" />
-    <meta name="og:title" content="{$Title}" />
-    <meta name="og:description" content="{$Description}" />
-    <meta name="og:image" content="{$PictureUrl}" />
-    <meta name="og:locale" content="cs_CZ" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="{$Title}" />
+    <meta property="og:description" content="{$Description}" />
+    <meta property="og:image" content="{$PictureUrl}" />
+    <meta property="og:locale" content="cs_CZ" />
   </xsl:template>
 
   <!-- Link to article with detail -->
