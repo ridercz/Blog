@@ -1,0 +1,9 @@
+﻿<!-- dcterms:title = Příklad z praxe: Naprogramujte si model pro 3D tisk v OpenSCADu -->
+<!-- dcterms:abstract = Jak vzniká věc z 3D tiskárny? Že se vůbec ptám. Připravit STL model, pak pomocí sliceru převést na G-code a hurá tisknout… V tomto článku ale učiníme ještě krok zpět, před tvorbu trojrozměrného modelu. Máme problém z reálného světa, který chceme vyřešit pomocí 3D tisku. A já vás provedu procesem, který lze při řešení tohoto problému využít. Tisk je tentokrát jenom třešničkou na dortu. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20180629-openscad-praxe.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-06-29 -->
+<!-- x4w:alternateUrl = https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/ -->
