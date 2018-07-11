@@ -107,6 +107,8 @@
     <xsl:param name="Title" />
     <xsl:param name="Description" />
     <xsl:param name="PictureUrl" select="'/perex-pictures/logo-rider.jpg'" />
+    <xsl:param name="PictureWidth" select="150" />
+    <xsl:param name="PictureHeight" select="150" />
 
     <meta charset="utf-8"/>
     <xsl:choose>
@@ -144,6 +146,8 @@
     <meta property="og:title" content="{$Title}" />
     <meta property="og:description" content="{$Description}" />
     <meta property="og:image" content="{$PictureUrl}" />
+    <meta property="og:image:height" content="{$PictureHeight}" />
+    <meta property="og:image:width" content="{$PictureWidth}" />
     <meta property="og:locale" content="cs_CZ" />
   </xsl:template>
 
