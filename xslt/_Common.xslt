@@ -106,21 +106,45 @@
   <xsl:template name="PopulateHeader">
     <xsl:param name="Title" />
     <xsl:param name="Description" />
+    <xsl:param name="PictureUrl" select="'/perex-pictures/logo-rider.jpg'" />
 
     <meta charset="utf-8"/>
-    <xsl:if test="$Title != ''">
-      <title>
-        <xsl:value-of select="$Title" />
-      </title>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="$Title = ''">
+        <title>ALTAIR.blog</title>
+      </xsl:when>
+      <xsl:otherwise>
+        <title>
+          <xsl:value-of select="concat($Title, ' | ALTAIR.blog')" />
+        </title>
+      </xsl:otherwise>
+    </xsl:choose>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <xsl:if test="$Description != ''">
       <meta name="Description" content="{$Description}"/>
     </xsl:if>
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- Twitter-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="{$Title}" />
+    <meta name="twitter:description" content="{$Description}" />
+    <meta name="twitter:image" content="{$PictureUrl}" />
+    <!-- Facebook-->
+    <meta name="og:type" content="article" />
+    <meta name="og:site_name" content="ALTAIR.blog" />
+    <meta name="og:title" content="{$Title}" />
+    <meta name="og:description" content="{$Description}" />
+    <meta name="og:image" content="{$PictureUrl}" />
+    <meta name="og:locale" content="cs_CZ" />
   </xsl:template>
 
   <!-- Link to article with detail -->

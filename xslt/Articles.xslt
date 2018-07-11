@@ -22,8 +22,9 @@
           <html>
             <head>
               <xsl:call-template name="PopulateHeader">
-                <xsl:with-param name="Title" select="concat(dcterms:title, ' | ALTAIR.blog')" />
+                <xsl:with-param name="Title" select="dcterms:title" />
                 <xsl:with-param name="Description" select="dcterms:abstract" />
+                <xsl:with-param name="PictureUrl" select="x4w:pictureUrl"/>
               </xsl:call-template>
             </head>
             <body>

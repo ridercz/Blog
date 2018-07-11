@@ -19,7 +19,6 @@
     <html>
       <head>
         <xsl:call-template name="PopulateHeader">
-          <xsl:with-param name="Title" select="'ALTAIR.blog'" />
           <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
         </xsl:call-template>
       </head>

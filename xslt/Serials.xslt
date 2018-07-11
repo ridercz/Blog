@@ -21,7 +21,7 @@
         <html>
           <head>
             <xsl:call-template name="PopulateHeader">
-              <xsl:with-param name="Title" select="'Seriály | ALTAIR.blog'" />
+              <xsl:with-param name="Title" select="'Seriály'" />
               <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
             </xsl:call-template>
           </head>
@@ -53,7 +53,7 @@
       <html>
         <head>
           <xsl:call-template name="PopulateHeader">
-            <xsl:with-param name="Title" select="concat('Seriál ', $Serial, ' | ALTAIR.blog')" />
+            <xsl:with-param name="Title" select="concat('Seriál ', $Serial)" />
             <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
           </xsl:call-template>
         </head>
