@@ -42,6 +42,7 @@
     body > nav a:hover {
       color: #000; }
   body > main {
+    display: block;
     max-width: 1200px;
     margin: 0 auto;
     padding: 3em;

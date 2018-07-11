@@ -136,7 +136,7 @@
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="{$Title}" />
     <meta name="twitter:description" content="{$Description}" />
-    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview.jpg" />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
     <!-- Facebook-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
