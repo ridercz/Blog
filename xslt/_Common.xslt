@@ -139,13 +139,13 @@
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="{$Title}" />
     <meta name="twitter:description" content="{$Description}" />
-    <meta name="twitter:image" content="{$PictureUrl}" />
+    <meta name="twitter:image" content="https://www.altair.blog{$PictureUrl}" />
     <!-- Facebook-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta property="og:title" content="{$Title}" />
     <meta property="og:description" content="{$Description}" />
-    <meta property="og:image" content="{$PictureUrl}" />
+    <meta property="og:image" content="https://www.altair.blog{$PictureUrl}" />
     <meta property="og:image:height" content="{$PictureHeight}" />
     <meta property="og:image:width" content="{$PictureWidth}" />
     <meta property="og:locale" content="cs_CZ" />
