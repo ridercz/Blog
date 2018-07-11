@@ -106,9 +106,6 @@
   <xsl:template name="PopulateHeader">
     <xsl:param name="Title" />
     <xsl:param name="Description" />
-    <xsl:param name="PictureUrl" select="'/perex-pictures/logo-rider.jpg'" />
-    <xsl:param name="PictureWidth" select="150" />
-    <xsl:param name="PictureHeight" select="150" />
 
     <meta charset="utf-8"/>
     <xsl:choose>
@@ -130,24 +127,24 @@
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" href="/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <!-- Twitter-->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="{$Title}" />
     <meta name="twitter:description" content="{$Description}" />
-    <meta name="twitter:image" content="https://www.altair.blog{$PictureUrl}" />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview.jpg" />
     <!-- Facebook-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta property="og:title" content="{$Title}" />
     <meta property="og:description" content="{$Description}" />
-    <meta property="og:image" content="https://www.altair.blog{$PictureUrl}" />
-    <meta property="og:image:height" content="{$PictureHeight}" />
-    <meta property="og:image:width" content="{$PictureWidth}" />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview.jpg" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:width" content="500" />
     <meta property="og:locale" content="cs_CZ" />
   </xsl:template>
 

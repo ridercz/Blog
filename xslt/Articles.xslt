@@ -24,9 +24,6 @@
               <xsl:call-template name="PopulateHeader">
                 <xsl:with-param name="Title" select="dcterms:title" />
                 <xsl:with-param name="Description" select="dcterms:abstract" />
-                <xsl:with-param name="PictureUrl" select="x4w:pictureUrl"/>
-                <xsl:with-param name="PictureWidth" select="x4w:pictureWidth"/>
-                <xsl:with-param name="PictureHeight" select="x4w:pictureHeight"/>
               </xsl:call-template>
             </head>
             <body>
