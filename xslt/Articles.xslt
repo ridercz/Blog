@@ -71,6 +71,21 @@
                 <section class="article-text" x4o:unescape="true">
                   <xsl:value-of select="x4h:GetItemHtml(@path)" />
                 </section>
+                <section class="sharing">
+                  <span>Pošli to dál:</span>
+                  <ul>
+                    <li>
+                      <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog{@path}">
+                        <i class="fab fa-facebook-f">&#8203;</i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.facebook.com/sharer.php?u=http://www.altair.blog{@path}">
+                        <i class="fab fa-twitter">&#8203;</i>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
               </main>
               <xsl:call-template name="SiteFooter" />
             </body>

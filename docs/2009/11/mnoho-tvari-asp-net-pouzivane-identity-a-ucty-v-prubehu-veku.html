@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Často kladená otázka je: pod jakým účtem běží ASP.NET? Protože je často kladena, je i často zodpovídána, leč bohužel ne vždy správně a protože se odpověď s časem (a verzemi IIS) mění, odpověď může být neaktuální. Pojďme se podívat na vývoj a současný stav." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C391551C05C70C4370F51038F2FCDF372D53D602" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
@@ -145,6 +145,21 @@
 <p>Aplikace, které nazývám intranetovými, jsou zpravidla určeny omezenému a předem známému okruhu uživatelů, např. zaměstnanců. Jako uživatelskou databázi používají Active Directory nebo podobný systém a jejich uživatelé nejsou z hlediska systému anonymní. Zde máme v podstatě dvě možnosti, jakým můžeme přistupovat k bezpečnostní architektuře aplikace. Buďto postupujeme stejně jako ve výše uvedeném případě, tj. uživatele sice ověříme pomocí systémového účtu, ale aplikace sama pak běží pod nějakou vlastní identitou. Druhá možnost je, že identitu uživatele převememe a aplikace běží pod účtem toho uživatele, který se přihlásil a pod tímto účtem také přistupuje k dalším zdrojům, typicky k databázi. Zde se tedy request identity podědí od autentizovaného uživatele  (zakážeme anonymní přístup) a process identity bude jiná, speciální identita pro tu kterou aplikaci.</p>
 <p>Doufám, že se mi toto nepříliš jednoduché téma podařilo podat způsobem srozumitelným a pochopitelným. Chcete-li se v tomto oboru vzdělat hlouběji, vřele vám doporučuji svůj kurz o zabezpečení, který školím v Gopasu. Jeho kód je <a href="http://www.gopas.cz/kurzy/GOC36/">GOC36</a> a stále platí, že pokud uvedete při objednávce kód ASPNET.CZ, získáte slevu (a já provizi ;-).</p>
 
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2009/11/mnoho-tvari-asp-net-pouzivane-identity-a-ucty-v-prubehu-veku">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=http://www.altair.blog/2009/11/mnoho-tvari-asp-net-pouzivane-identity-a-ucty-v-prubehu-veku">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Zapnutím HTTP komprese je možno snížit objem přenášených dat a zrychlit načítání stránek. Za vše se ale platí." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C391551C05C70C4370F51038F2FCDF372D53D602" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
@@ -132,6 +132,21 @@ CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcScriptFileExtens
 <h2 id="zpetna-kompatibilita">Zpětná kompatibilita</h2>
 <p>Všechny současné desktopové browsery HTTP kompresi podporují. Leč najdou se i takové, které jí nerozumí. IIS nicméně umí poznat, co komu poslat. Pokud klient s požadavkem pošle hlavičku &quot;<em>Accept-Encoding: gzip, deflate</em>&quot;, dá tím najevo, že kompresi umí a IIS ji použije. Pokud hlavička chybí, pošle data bez komprese. Můžete si to vyzkoušet například prostřednictvím užitečného nástroje <em>wfetch</em>, který je součástí <a href="http://www.microsoft.com/downloads/details.aspx?familyid=56fc92ee-a71a-4c73-b628-ade629c89499&amp;displaylang=en">IIS 6.0 Resource Kitu</a>.</p>
 
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2005/01/http-komprese-v-iis-a-asp-net">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=http://www.altair.blog/2005/01/http-komprese-v-iis-a-asp-net">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>

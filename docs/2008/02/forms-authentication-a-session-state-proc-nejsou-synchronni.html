@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Ticket vystavení forms authentication modulem má danou platnost v minutách a lze nastavit, že bude &quot;sliding&quot;, tedy že platnost bude prodlužována při každém požadavku. Stejně tak session timeout se udává v minutách a také se prodlužuje při každém požadavku. Zdravý rozum tedy říká, že pokud oba parametry nastavím na stejnou hodnotu, budou tickety i sessions platit vždy stejnou dobu. Leč, není tomu tak. Pojďme se podívat na to, jak tyto mechanismy vlastně fungují." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C391551C05C70C4370F51038F2FCDF372D53D602" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
@@ -116,6 +116,21 @@
 <p>Mechanismy forms authentication a session state jsou na sobě naprosto nezávislé. Ukázali jsme si, že i při stejném nastavení hodnot <em>timeout</em> může nastat situace, kdy jedna z funkcí bude k dispozici a druhá nikoliv.</p>
 <p>Řešení je nasnadě: nepoužívejte session. A pokud už se rozhodnete ji používat, tak se nespoléhejte na to, že bude s čímkoliv synchronní, bez ohledu na to, jak nastavíte timeout.</p>
 
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2008/02/forms-authentication-a-session-state-proc-nejsou-synchronni">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=http://www.altair.blog/2008/02/forms-authentication-a-session-state-proc-nejsou-synchronni">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>
