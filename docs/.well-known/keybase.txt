@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ridercz
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.altair.blog
+  * I am ridercz (https://keybase.io/ridercz) on keybase.
+  * I have a public key ASAHzRzIu8FjooJ67Avq-ksBi3C0TD8SBxZBOc5A4iB1rwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012007cd1cc8bbc163a2827aec0beafa4b018b70b44c3f1207164139ce40e22075af0a",
+      "host": "keybase.io",
+      "kid": "012007cd1cc8bbc163a2827aec0beafa4b018b70b44c3f1207164139ce40e22075af0a",
+      "uid": "961dddd35dc4851373dab49960c9b219",
+      "username": "ridercz"
+    },
+    "merkle_root": {
+      "ctime": 1531396122,
+      "hash": "1697de377921976b88479a92bfe50e923d51228366bd48198c6f668d74e553ced1a2302efbbf631cfde535049949be4b4567616784943390d1f0b4326b05f20e",
+      "hash_meta": "8af186fb8bfdb76ee382daccdd381b3ab586e70103dfafdda462910ee71667bd",
+      "seqno": 3252885
+    },
+    "service": {
+      "entropy": "kOW88/r87PxWUQlUCLtILkwm",
+      "hostname": "www.altair.blog",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.3.0"
+  },
+  "ctime": 1531396107,
+  "expire_in": 504576000,
+  "prev": "26a7dc08a082ceec6c375f14747fd8757437a7f72ca07d0dc3fe604e60ed1302",
+  "seqno": 47,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgB80cyLvBY6KCeuwL6vpLAYtwtEw/EgcWQTnOQOIgda8Kp3BheWxvYWTESpcCL8QgJqfcCKCCzuxsN18UdH/YdXQ3p/csoH0Nw/5gTmDtEwLEICuv/vQKLUY2/LCPZpNFWL8R/9b3gKQRAnP7oamc/V6zAgHCo3NpZ8RAltzGyg0YlKRR5U7Ym8NsKB/HPGrDnh16MMbPrQS4SG2EeLnN8+ZZ8oMv0zkse1/9LSozLwscMcRIgaA2YaCBDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGyXzzBHgZuJTbcIX8QP3ZNOg/tE7Mbc4Tu5fVzR6t2Go3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ridercz
+
+==================================================================
