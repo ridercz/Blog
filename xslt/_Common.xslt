@@ -94,9 +94,7 @@
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a>
         </li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square">&#8197;</i>
-          </a>
+          <i class="fal fa-rss">&#8203;</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a>
         </li>
       </ul>
     </footer>
@@ -127,7 +125,9 @@
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />

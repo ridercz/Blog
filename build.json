@@ -12,7 +12,9 @@
     "Serials.xslt": null
   },
   "RawTransforms": {
-    "Feed.xslt": "feed.rss"
+    "Feed.xslt": "feed.rss",
+    "FeedInternal.xslt": "feed-internal.rss",
+    "FeedExternal.xslt": "feed-external.rss"
   },
   "TransformParameters": {
     "PageSize": 10
