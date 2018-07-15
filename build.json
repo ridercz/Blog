@@ -6,6 +6,7 @@
   "WorkFolder": "work",
   "HtmlTransforms": {
     "HomePage.xslt": "index.html",
+    "Search.xslt": "search.html",
     "Archive.xslt": null,
     "Articles.xslt": null,
     "Categories.xslt": null,

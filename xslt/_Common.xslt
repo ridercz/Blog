@@ -50,6 +50,12 @@
           </a>
         </li>
         <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search">&#8197;</i>
+          </a>
+        </li>
+
+        <li>
           <a href="https://www.rider.cz/#contact" title="Kontakt">
             <i class="fal fa-envelope">&#8197;</i>
           </a>
