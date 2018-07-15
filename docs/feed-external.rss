@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:3004897</guid>
+      <title>Držák na Nokii 8110 4G</title>
+      <description></description>
+      <link>https://www.thingiverse.com/thing:3004897</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-07-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/</guid>
       <title>Příklad z praxe: Naprogramujte si model pro 3D tisk v OpenSCADu</title>
       <description></description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-01-01T19:18:33</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2722900</guid>
-      <title>Hollow Double Heart Cookie Cutter</title>
-      <description></description>
-      <link>https://www.thingiverse.com/thing:2722900</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2017-12-20T13:52:33</pubDate>
     </item>
   </channel>
 </rss>

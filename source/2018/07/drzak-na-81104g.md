@@ -1,0 +1,9 @@
+﻿<!-- dcterms:title = Držák na Nokii 8110 4G -->
+<!-- dcterms:abstract = Nokia 8110 4G je feature phone, který těží z popularity klasického modelu, proslaveného filmem The Matrix. Není to špatný telefon, za necelé dva tisíce, proto jsem si ho pořídil jako záložní a na pokusy. A navrhl na něj univerzální držák, aby měl své pevné místo. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20180715-drzak-na-81104g.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-07-15 -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3004897 -->
