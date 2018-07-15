@@ -8,7 +8,9 @@
     <meta name="Description" content="Myšlenky těch zodpovědnějších ASP.NET programátorů a správců serverů v uplynulých dnech okupovala první pořádná bezpečnostní díra v ASP.NET. Upozorňoval jsem na ni i na tomto webu a nabízel i workaround. Microsoft již vydal i oficiální záplatu, nově dostupnou přes Windows Update. Myslím si, že je přesně ten správý okamžik podívat se, o co vlastně šlo, v čem útok spočívá. Nejedná se totiž ve své podstatě o chybu v ASP.NET, ale o obecný mechanismus kryptografického útoku, který může zasáhnout i vaše vlastní aplikace." />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary" />
@@ -24,6 +26,7 @@
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
   </head>
   <body>
     <header>
@@ -164,9 +167,7 @@
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square"> </i></a>
-        </li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
       </ul>
     </footer>
   </body>

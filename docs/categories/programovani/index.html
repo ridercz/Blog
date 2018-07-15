@@ -8,7 +8,9 @@
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary" />
@@ -24,6 +26,7 @@
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="noindex, follow" />
   </head>
   <body>
     <header>
@@ -138,6 +141,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=8uNEaWr5Z-w">Novinky v C# 6.0 prakticky</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Nějaký přehledový článek o novinkách v C# 6.0 jste už určitě četli. Proto se k nim v této přednášce pokusím přistoupit poněkud jinak. Nepůjde o prostý seznam "co je nového", ale pokusím se zároveň popsat konkrétní případy, kdy je použití té které novinky vhodné a kdy naopak nikoliv. Nebudu se také omezovat striktně na verzi 6.0, protože i starší verze C# mají mnohdy co nabídnout a některé jejich schopnosti nejsou běžným programátorům příliš známé. Záznam akce konané v Praze dne 20. ledna 2016</div>
           <footer>
@@ -153,6 +159,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=_z_Ft6ZwiWk">Serverové cacheování v ASP.NET</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Správně implementované cacheování může znamenat rozdíl mezi aplikací, která stíhá a které se pod náporem složí. V minulosti jsme se věnovali HTTP cacheování na straně klienta, nyní se podrobněji podíváme na cacheování na straně serveru: v ASP.NET Web Forms, v ASP.NET MVC a na univerzální objektovou cache a především jak ji správně používat, aby vám nepřinesla víc starostí, nežli užitku. Příklady ke stažení najdete na http://www.cdn.altairis.cz/Prednasky/20151007-ServerCache.zip Záznam akce konané v Praze dne 7. 10. 2015</div>
           <footer>
@@ -276,9 +285,7 @@
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square"> </i></a>
-        </li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
       </ul>
     </footer>
   </body>

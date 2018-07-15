@@ -8,7 +8,9 @@
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary" />
@@ -24,6 +26,7 @@
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="noindex, follow" />
   </head>
   <body>
     <header>
@@ -109,6 +112,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=WhEK0os7BYc">Jednorázová hesla a proč je chcete používat</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Dvoufaktorová autentizace, jednorázová hesla zasílaná přes SMS nebo generovaná mobilní aplikací… Proč je všichni používají? A co musíte udělat, abyste je mohli používat také? Pokud vás trápí nedostatečná autentizace uživatelů statickým heslem, OTP je nejjednodušší a nejlevnější způsob, jak výrazně zvýšit její kvalitu. Ukážeme si, jak jednorázová hesla fungují a jak je naimplementovat do aplikace, používající ASP.NET Identity. Příklady ke stažení na http://www.cdn.altairis.cz/Prednasky/20150811-OTP.zip Záznam akce konané v Praze dne 11. srpna 2015</div>
           <footer>
@@ -130,6 +136,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=uT0nzy_NETU">Elektronicky podepsané maily v praxi</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>V šestém dílu našeho seriálu o elektronicky podepsaných mailech si vyzkoušíme, proč to celé vlastně dělat. Jak takový elektronicky podepsaný mail vypadá a jak se pozná, že byl cestou změněn.</div>
           <footer>
@@ -151,6 +160,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=vj4qM0Cr8oY">Šifrování dat na přenosných discích pomocí nástroje BitLocker To Go</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Spousta lidí dnes používá pro ukládání dat, mnohdy i citlivých, přenosné flash disky. Když ale takový disk ztratíte, může se k datům dostat někdo nepovolaný. Řešení tohoto problému představuje například BitLocker To Go, nástroj vestavěný ve Windows 7 Enterprise a Ultimate.</div>
           <footer>
@@ -172,6 +184,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=i_xgsq4JVwY">Šifrování dat pomocí programu TrueCrypt</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Chcete šifrovat data a nehodláte (nebo nemůžete) používat BitLocker To Go? TrueCrypt je open source program, který je dostupný zdarma a pro několik platforem, včetně všech edic a verzí Windows. V tomto videu si ukážeme, jak lze vytvořit zašifrovaný kontajner a přechovávat v něm bezpečně důvěrná data.</div>
           <footer>
@@ -193,6 +208,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=PW0y2d0TMkI">TrueCrypt a ochrana proti vyzrazení hesla pod nátlakem</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Šifrování samo o sobě vám nepomůže proti "kryptoanalýze gumovou hadicí", tedy situaci, kdy vás útočník fyzickým nebo psychickým nátlakem donutí heslo vyzradit. TrueCrypt nabízí koncept "hidden volumes", tedy kontajnerů, které mohou mít dvojí obsah podle toho, jaké heslo se do nich zadá.</div>
           <footer>
@@ -339,9 +357,7 @@
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square"> </i></a>
-        </li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
       </ul>
     </footer>
   </body>

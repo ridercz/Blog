@@ -8,7 +8,9 @@
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary" />
@@ -24,6 +26,7 @@
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="noindex, follow" />
   </head>
   <body>
     <header>
@@ -93,6 +96,9 @@
           </aside>
           <header>
             <a href="https://archiv.ihned.cz/c1-65642800-paradox-zavislosti-na-velkych-firmach">Paradox závislosti na velkých firmách</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Zákazníky veřejně málo známé společnosti Cloudflare jsou projekty jako Uber, Zendesk, Yelp Fitbit či zhruba tři tisíce českých webů. Před dvěma týdny se v systému Cloudflare objevila chyba. Jejím důsledkem bylo, že se za určitých okolností mohla náhodně část HTTP požadavku nebo odpovědi dostat do odpovědi jiného zákazníka. Včetně citlivých informací.</div>
           <footer>
@@ -108,6 +114,9 @@
           </aside>
           <header>
             <a href="https://archiv.ihned.cz/c1-65619290-pouceni-pro-uzivatele-temneho-webu">Poučení pro uživatele temného webu</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Útok na takzvaný darknet ukázal, že i v šifrovaných sítích dělají lidé stejné chyby. Útočníci získali data několika tisíc serverů a desítky tisíc e-mailových adres. Anonymní útok se chlubí odhalením velkého množství případů zneužívání dětí.</div>
           <footer>
@@ -168,6 +177,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=xlqql4IaJfo">WTF E2E: Co je end-to-end encryption a proč by vás to mělo zajímat?</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Poslední dobou se hodně mluví o *end-to-end encryption*. Někteří (zejména policejní a podobné složky) proti tomu bojují, jiní (zejména aktivisté za ochranu soukromí) to propagují. Ale většina běžných vývojářů neví, co to je. Proto jsem připravil přednášku, na které si ukážeme, jak navrhnout bezpečnou komunikační aplikaci, se kterou si - bude-li správně použita - neporadí ani NSA. A také si povíme, proč ani takové aplikace nebudou znamenat konec policejní práce. Příkklady k prezentaci si můžete stáhnout na http://www.cdn.altairis.cz/Prednasky/20160218-E2E-WTF.zip Záznam akce konané v Praze dne 18. února 2016.</div>
           <footer>
@@ -198,6 +210,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=IALvUrpdoOI">Zabezpečení pro běžné smrtelníky</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Co dělají pro svou bezpečnost na Internetu bezpečnostní profesionálové a co běžní uživatelé? Nejčastější postupy běžných uživatelů jsou v podstatě bezcenné, ačkoliv často uživatele obtěžují. Pojďme se naučit od profíků, které jednoduché zásady dodržovat, aby byl váš pohyb v kyberprostoru co nejbezpečnější. Jakou skutečnou hodnotu má váš antivirový software? Je opravdu třeba heslo měnit co možná nejčastěji? Záznam akce konané v Alza TechZone dne 22. 10. 2015</div>
           <footer>
@@ -213,6 +228,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=okvJiKwd1BQ">Zálohování pro běžné smrtelníky</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Říká se, že data bez zálohy nevlastníte, máte je jenom propůjčena. Přežijí vaše data kolaps pevného disku ve vašem počítači? A co lidskou chybu uživatele, požár bytu či kanceláře? Ukončení služeb vašeho cloudového poskytovatele služeb? Přijít o celý digitální život je dnes poměrně snadné. Ale naštěstí je stejně snadné (a navíc poměrně levné a bezpracné) se před takovou chybou ochránit. Záznam akce konané v Alza TechZone dne 24. 9. 2015</div>
           <footer>
@@ -272,9 +290,7 @@
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square"> </i></a>
-        </li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
       </ul>
     </footer>
   </body>

@@ -8,7 +8,9 @@
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary" />
@@ -24,6 +26,7 @@
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="noindex, follow" />
   </head>
   <body>
     <header>
@@ -87,12 +90,15 @@
       <section class="artlist">
         <article class="haspicture">
           <aside>
-            <a href="https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed">
+            <a href="https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo">
               <img src="/perex-pictures/logo-economia.png" width="150" height="150" alt="" />
             </a>
           </aside>
           <header>
-            <a href="https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed">Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na „rekvalifikaci“</a>
+            <a href="https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo">Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na „rekvalifikaci“</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Zájemce o práci v IT sektoru zbytečně odrazuje matematika, stačí znát násobilku. Naučit se programovat není těžké ani nákladné, stačí pár stokorun a nějaký čas. V IT se dá pracovat i jinak než jako programátor, lidí je málo ve spoustě oborů.</div>
           <footer>
@@ -108,6 +114,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=CP-3ty7Aaks">Living Computer Museum: PDP-10</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Navštívil jsem Living Computer Museum v Seattle a nedalo mi, než abych natočil video o několika tamních počítačích, které si můžete vyzkoušet. Následovníkem PDP-8 byl počítač PDP-10. Jeho dědictví žije dodnes v podobě počítače TOAD-2, který má na jedné kartě to, na co jeho předchůdce potřeboval celou místnost.</div>
           <footer>
@@ -123,6 +132,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=E3z5jYFrMsw">Living Computer Museum: PDP-8</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Navštívil jsem Living Computer Museum v Seattle a nedalo mi, než abych natočil video o několika tamních počítačích, které si můžete vyzkoušet. Jako první je na řadě legendární PDP-8, které jsem přes dálnopis přiměl hrát šachy samo se sebou.</div>
           <footer>
@@ -138,6 +150,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=E8vO8Ihw0iQ">Living Computer Museum: Xerox Sigma 9</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Navštívil jsem Living Computer Museum v Seattle a nedalo mi, než abych natočil video o několika tamních počítačích, které si můžete vyzkoušet. Poslední video se zabývá počítačem Sigma 9 od společnosti Xerox. Tento počítač si můžete vyzkoušet i vy, protože na livingcomputers.org si můžete zažádat o guest účet pro vzdálený přístup přes Internet.</div>
           <footer>
@@ -228,9 +243,7 @@
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square"> </i></a>
-        </li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
       </ul>
     </footer>
   </body>

@@ -8,7 +8,9 @@
     <meta name="Description" content="Osobní weblog Michala A. Valáška" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=2D3B8CC7C50BC3C204E96ED10BD8F24EC37C06FC" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
     <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary" />
@@ -24,6 +26,7 @@
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="noindex, follow" />
   </head>
   <body>
     <header>
@@ -87,12 +90,15 @@
       <section class="artlist">
         <article class="haspicture">
           <aside>
-            <a href="https://tech.ihned.cz/geekosfera/c1-65854850-jak-vybrat-3d-tiskarnu-cinska-stavebnice-prijde-na-ctyri-tisice-kvalita-stoji-asi-tricet?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed">
+            <a href="https://tech.ihned.cz/geekosfera/c1-65854850-jak-vybrat-3d-tiskarnu-cinska-stavebnice-prijde-na-ctyri-tisice-kvalita-stoji-asi-tricet">
               <img src="/perex-pictures/logo-economia.png" width="150" height="150" alt="" />
             </a>
           </aside>
           <header>
-            <a href="https://tech.ihned.cz/geekosfera/c1-65854850-jak-vybrat-3d-tiskarnu-cinska-stavebnice-prijde-na-ctyri-tisice-kvalita-stoji-asi-tricet?utm_source=mediafed&amp;utm_medium=rss&amp;utm_campaign=mediafed">Jak vybrat 3D tiskárnu: Čínská stavebnice přijde na čtyři tisíce, kvalita stojí asi třicet</a>
+            <a href="https://tech.ihned.cz/geekosfera/c1-65854850-jak-vybrat-3d-tiskarnu-cinska-stavebnice-prijde-na-ctyri-tisice-kvalita-stoji-asi-tricet">Jak vybrat 3D tiskárnu: Čínská stavebnice přijde na čtyři tisíce, kvalita stojí asi třicet</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>3D tiskárny jsou na vrcholu popularity, fascinují geeky i typické české kutily. Levné tiskárny se prodávají jako stavebnice, nejsou pro každého a kolísá u nich kvalita. Nejpopulárnější 3D tiskárny vznikají v Česku, jako skládačka stojí 19 tisíc, složené jsou za 27.</div>
           <footer>
@@ -108,6 +114,9 @@
           </aside>
           <header>
             <a href="https://tech.ihned.cz/geekosfera/c1-65654310-nula-s-wi-fi-nova-verze-raspberry-pi-zero-w-se-pripoji-k-siti-a-stoji-mene-nez-300-korun">Nula s wi-fi: Nová verze Raspberry Pi Zero W se připojí k síti a stojí méně než 300 korun</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>Počítač s rozměry 6 x 3 centimetry udělá radost kutilům, připojit jde i monitor. Novinkou modelu Zero W je přítomnost wi-fi a Bluetooth modulů. Jako snadno dostupná alternativa vzniklo také čínské Orange Pi.</div>
           <footer>
@@ -123,6 +132,9 @@
           </aside>
           <header>
             <a href="https://www.youtube.com/watch?v=WKVRDCAMNG4">Rainbowduino and Conway's Game of Life</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
           </header>
           <div>This is my rendition of Conway's Game of Life with Rainbowduino and 3D printed case. Case: http://www.thingiverse.com/thing:1638743 Code: https://github.com/ridercz/Rainbowduino-Life</div>
           <footer>
@@ -147,9 +159,7 @@
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
-          <a href="/feed.rss" rel="alternate">
-            RSS feed <i class="fal fa-rss-square"> </i></a>
-        </li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
       </ul>
     </footer>
   </body>

@@ -1,0 +1,4 @@
+﻿User-Agent: *
+Disallow: /content
+
+Sitemap: https://www.altair.blog/sitemap.xml

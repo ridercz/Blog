@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0">
+  <channel>
+    <title>ALTAIR.blog (interní články)</title>
+    <link>https://www.altair.blog/</link>
+    <description>Weblog Michala A. Valáška</description>
+    <language>cs-CZ</language>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/07/ctvrtstoleti-psani</guid>
+      <title>Čtvrtstoletí psaní</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/07/ctvrtstoleti-psani</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <pubDate>2018-07-11T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</guid>
+      <title>Jak vyměnit v serveru disk za větší</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</link>
+      <author>Michal Altair Valášek</author>
+      <category>Programování</category>
+      <pubDate>2018-04-25T16:36:46</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</guid>
+      <title>Pozvánka na večerní školení Arduino a BadUSB</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2018-02-09T17:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</guid>
+      <title>Byte packer – jak na binární datové struktury?</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</link>
+      <author>Michal Altair Valášek</author>
+      <category>Programování</category>
+      <pubDate>2018-02-07T23:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</guid>
+      <title>Jednoduché šablony pro generování UI v ASP.NET Core</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</link>
+      <author>Michal Altair Valášek</author>
+      <category>Software</category>
+      <pubDate>2017-12-27T01:53:52</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</guid>
+      <title>Altairis Tag Helpers pro ASP.NET Core Razor Pages a ASP.NET MVC Core</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</link>
+      <author>Michal Altair Valášek</author>
+      <category>Software</category>
+      <pubDate>2017-12-26T19:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/11/razor-pages-linux-a-mailing-materialy-z-corestart-2-0</guid>
+      <title>Razor Pages, Linux a mailing – materiály z CoreStart 2.0</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/11/razor-pages-linux-a-mailing-materialy-z-corestart-2-0</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-11-04T02:13:24</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</guid>
+      <title>ASP.NET Core 2.0: platforma kterou chcete používat</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-10-10T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/09/naucim-vas-asp-net-core</guid>
+      <title>Naučím vás ASP.NET Core</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/09/naucim-vas-asp-net-core</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-09-09T23:44:56</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/09/budoucnost-asp-net-materialy-z-mych-prednasek</guid>
+      <title>Budoucnost ASP.NET – materiály z mých přednášek</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/09/budoucnost-asp-net-materialy-z-mych-prednasek</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-09-08T17:05:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</guid>
+      <title>Jak na neprůstřelnou prezentační stránku s GitHubem a CloudFlare</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</link>
+      <author>Michal Altair Valášek</author>
+      <category>Software</category>
+      <pubDate>2017-09-03T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/08/budoucnost-asp-net</guid>
+      <title>Budoucnost ASP.NET</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/08/budoucnost-asp-net</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-08-04T02:42:17</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/02/prezentace-z-konference-showit-bratislava</guid>
+      <title>Prezentace z konference ShowIT Bratislava</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/02/prezentace-z-konference-showit-bratislava</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-02-22T09:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/02/pozvanka-na-architecture-security-days</guid>
+      <title>Pozvánka na Architecture &amp; Security Days</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/02/pozvanka-na-architecture-security-days</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2017-02-21T22:40:54</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2017/01/let-s-encrypt-na-windows-poc-aplikace</guid>
+      <title>Let's Encrypt na Windows: PoC aplikace</title>
+      <description></description>
+      <link>https://www.altair.blog/2017/01/let-s-encrypt-na-windows-poc-aplikace</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2017-01-22T00:00:00</pubDate>
+    </item>
+  </channel>
+</rss>
