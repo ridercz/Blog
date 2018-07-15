@@ -16,7 +16,7 @@
 
   <xsl:template match="/">
     <x4o:root>
-      <xsl:for-each select="//file">
+      <xsl:for-each select="//file[dcterms:dateAccepted and not(x4w:alternateUrl)]">
         <xsl:sort select="dcterms:dateAccepted"/>
         <x4o:document href="{@path}.html">
           <html>
