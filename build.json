@@ -14,7 +14,8 @@
   "RawTransforms": {
     "Feed.xslt": "feed.rss",
     "FeedInternal.xslt": "feed-internal.rss",
-    "FeedExternal.xslt": "feed-external.rss"
+    "FeedExternal.xslt": "feed-external.rss",
+    "Sitemap.xslt": "sitemap.xml"
   },
   "TransformParameters": {
     "PageSize": 10
