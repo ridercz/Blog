@@ -25,8 +25,8 @@
         <xsl:call-template name="SiteHeader" />
         <main>
           <h1>Vyhledávání</h1>
-          <div class="gcse-searchbox" data-personalizedAds="false" data-safeSearch="off">-</div>
-          <div class="gcse-searchresults">-</div>
+          <div class="gcse-searchbox" data-personalizedAds="false" data-safeSearch="off">&#8197;</div>
+          <div class="gcse-searchresults">Vyhledávání používá Google Custom Search. Pokud vidíte tento text, pravděpodobně vám ho blokuje nějaký doplněk prohlížeče.</div>
           <script>
             (function () {
             var cx = '008719556634765943184:sgxqsp1qwmm';
