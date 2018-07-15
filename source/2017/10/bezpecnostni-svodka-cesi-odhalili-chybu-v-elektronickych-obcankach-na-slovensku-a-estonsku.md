@@ -1,5 +1,5 @@
 <!-- dcterms:title = Bezpečnostní svodka: Češi odhalili chybu v elektronických občankách na Slovensku a Estonsku -->
-<!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-65930450-bezpecnostni-svodka-cesi-odhalili-chybu-v-elektronickych-obcankach-na-slovensku-a-estonsku?utm_source=mediafed&utm_medium=rss&utm_campaign=mediafed -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-65930450-bezpecnostni-svodka-cesi-odhalili-chybu-v-elektronickych-obcankach-na-slovensku-a-estonsku -->
 <!-- dcterms:abstract = Chyba při práci s šifrováním ohrožuje elektronické občanky i zabezpečené počítače ve firmách. V Evropě se šíří nový „Zlobivý králík“, vyděračský software, kterému se Windows 10 umí bránit. Komerční VPN nejsou důvěrné, mohou pomáhat policii, ale zrazují důvěru zákazníků. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->

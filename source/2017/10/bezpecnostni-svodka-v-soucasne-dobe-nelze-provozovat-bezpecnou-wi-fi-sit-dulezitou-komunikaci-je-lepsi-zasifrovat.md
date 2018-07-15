@@ -1,5 +1,5 @@
 <!-- dcterms:title = Bezpečnostní svodka: V současné době nelze provozovat bezpečnou wi-fi síť. Důležitou komunikaci je lepší zašifrovat -->
-<!-- x4w:alternateUrl = https://tech.ihned.cz/c1-65918210-bezpecnostni-svodka-v-soucasne-dobe-nelze-provozovat-bezpecnou-wi-fi-sit-dulezitou-komunikaci-je-lepsi-zasifrovat?utm_source=mediafed&utm_medium=rss&utm_campaign=mediafed -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c1-65918210-bezpecnostni-svodka-v-soucasne-dobe-nelze-provozovat-bezpecnou-wi-fi-sit-dulezitou-komunikaci-je-lepsi-zasifrovat -->
 <!-- dcterms:abstract = Mathy Vanhoef objevil systémovou zranitelnost, která umožňuje všechny varianty WPA2 přelstít. Bezpečnostní průšvih má jméno KRACK - Key Reinstallation Attacks. Útočník dokáže odposlouchávat a za jistých okolností modifikovat síťovou komunikaci oběti. Co to v praxi znamená? V současné době nelze provozovat bezpečnou wi-fi síť. Projekt wi-fi v petřínské tramvaji je typickou ukázkou "smart cities" po česku. Parametry požadovaných zařízení jsou absurdně nadsazené. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->

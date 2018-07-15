@@ -1,5 +1,5 @@
 <!-- dcterms:title = Jedničky, nebo osmičky? Expert vysvětluje, proč je pro vás důležitý DNS server a jaký si vybrat -->
-<!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server?utm_source=mediafed&utm_medium=rss&utm_campaign=mediafed -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server -->
 <!-- dcterms:abstract = Společnost CloudFlare vyvolala novou vlnu zájmu o DNS. Bezplatné servery překládají názvy webů do počítačové řeči. Kvalitní DNS slibuje rychlost i větší bezpečnost, realita je ale složitější. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
