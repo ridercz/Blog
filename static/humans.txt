@@ -1,0 +1,4 @@
+﻿Developed and designed by Michal Altair Valášek
+https://www.rider.cz/
+
+This is a static site, generated using Markdown and XSLT using the XML4web Static Generator and hosted on Google Pages.
