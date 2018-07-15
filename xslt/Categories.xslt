@@ -27,6 +27,7 @@
               <xsl:with-param name="Title" select="'Rubriky'" />
               <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
             </xsl:call-template>
+            <meta name="robots" content="index, follow" />
           </head>
           <body>
             <xsl:call-template name="SiteHeader" />
@@ -76,6 +77,7 @@
             <xsl:with-param name="Title" select="concat('Rubrika ', $Category)" />
             <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
           </xsl:call-template>
+          <meta name="robots" content="noindex, follow" />
         </head>
         <body>
           <xsl:call-template name="SiteHeader" />

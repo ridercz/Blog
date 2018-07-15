@@ -25,6 +25,7 @@
                 <xsl:with-param name="Title" select="dcterms:title" />
                 <xsl:with-param name="Description" select="dcterms:abstract" />
               </xsl:call-template>
+              <meta name="robots" content="index, follow" />
             </head>
             <body>
               <xsl:call-template name="SiteHeader" />
