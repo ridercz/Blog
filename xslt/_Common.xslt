@@ -186,6 +186,11 @@
           </xsl:attribute>
           <xsl:value-of select="dcterms:title" />
         </a>
+        <xsl:if test="x4w:alternateUrl">
+          <sup title="Odkaz na můj článek jinde">
+            <i class="fal fa-external-link">&#8197;</i>
+          </sup>
+        </xsl:if>
       </header>
       <div>
         <xsl:value-of select="dcterms:abstract" />
