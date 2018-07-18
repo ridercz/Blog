@@ -1,0 +1,9 @@
+﻿<!-- dcterms:title = Banánový telefon z Matrixu je zpátky: Nokia 8110 4G ke starému konceptu přidala rychlý internet -->
+<!-- dcterms:abstract = Recenze telefonu Nokia 8110 4G, reinkarnace přes dvacet let starého modelu. Odemčený článek na Hospodářkách. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20180718-recenze-81104g.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Recenze -->
+<!-- dcterms:dateAccepted = 2018-07-18 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66195650-psms7-db00268db807cb4 -->
