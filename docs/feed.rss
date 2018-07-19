@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/07/wheeltug</guid>
+      <title>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/07/wheeltug</link>
+      <author>Michal Altair Valášek</author>
+      <category>Arduino</category>
+      <category>Bastlení</category>
+      <pubDate>2018-07-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66195650-psms7-db00268db807cb4</guid>
       <title>Banánový telefon z Matrixu je zpátky: Nokia 8110 4G ke starému konceptu přidala rychlý internet</title>
       <description></description>
@@ -130,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Programování</category>
       <pubDate>2018-02-07T23:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2771287</guid>
-      <title>LED cube toy</title>
-      <description></description>
-      <link>https://www.thingiverse.com/thing:2771287</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-01-26T20:37:43</pubDate>
     </item>
   </channel>
 </rss>

@@ -331,8 +331,27 @@ section.article-text {
 
     img {
         display: block;
-        margin: 0 auto;
+        border: 1px solid $DarkGray;
+        margin: 1em auto;
         max-width: 90%;
+    }
+
+    video {
+        display: block;
+        border: 1px solid $DarkGray;
+        margin: 1em auto;
+        max-width: 90%;
+    }
+
+    hr {
+        width: 20%;
+        text-align: left;
+        margin: 1em auto 1em 0;
+        height: 2px;
+        background-color: $LightGray;
+        color: $LightGray;
+        border: none;
+        border-top: 2px solid $LightGray;
     }
 }
 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Po většinu své programátorské kariéry píšu &quot;divné programy&quot; - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i &quot;divný hardware&quot; - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B6821C0583D8440A75575E6C465DC5975C8BB563" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru" />
+    <meta name="twitter:description" content="Po většinu své programátorské kariéry píšu &quot;divné programy&quot; - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i &quot;divný hardware&quot; - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru" />
+    <meta property="og:description" content="Po většinu své programátorské kariéry píšu &quot;divné programy&quot; - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i &quot;divný hardware&quot; - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/arduino" title="Rubrika">
+              <i class="fal fa-tag"> </i>Arduino</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-07-19" title="Datum vydání">19. července 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Po většinu své programátorské kariéry píšu &quot;divné programy&quot; - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i &quot;divný hardware&quot; - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru.</p>
+<p>Můj kamarád Horác taky dělá divné věci. Už léta. Toho času pracuje pro společnost WheelTug, která vyrábí elektricky poháněný přední podvozek pro letadla. Proudové letadlo je s ním schopno pojíždět bez použití vlastních motorů, což šetří palivo, životní prostředí a především peníze. Horác vyrábí simulátor, na kterém si piloti na modelu letadla mohou vyzkoušet, jak se WheelTug ovládá a pracuje se s ním. Celé to vypadá nějak takhle:</p>
+<video controls="controls" poster="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.png">
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.mp4" type="video/mp4" />
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.webm" type="video/webm" />
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.ogg" type="video/ogg" />
+    <p>Nepodařilo se přehrát video. Můžete si ho stáhnout jako:</p>
+    <ul>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.mp4">MP4</a></li>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.webm">WEBM</a></li>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180719-wheeltug.ogg">OGG</a></li>
+    </ul>
+</video>
+<p>Součástí emulátoru je i několik kamer a je potřeba je mezi sebou různě přepínat, pomocí tlačítek. A zařídit to, to byl můj úkol. Běžně se prodává zařízení, které umožňuje přepínat několik vstupů, nebo je sloučit do jednoho - třeba video ze čtyř zdrojů naskládá na jednu obrazovku. Problém je, že tato zařízení mají svoje vlastní dálkové ovládání a v rozumné cenové kategorii se nepočítá s jejich programovým řízením.</p>
+<p>Vyrobil jsem něco, čemu interně říkám &quot;Rube Goldberg's HDMI Switch&quot; a přestože je to řešení poněkud obskurní, je spolehlivé, univerzální a vesměs funkční.</p>
+<h2 id="jak-na-dalkove-ovladani-a-arduino">Jak na dálkové ovládání a Arduino</h2>
+<p>S mikrokontrolerem typu Arduino je poměrně snadné být ovládán nebo ovládat jiné zařízení za pomoci klasického infračerveného dálkového ovládání. Potřebujete k tomu jenom IR LEDku (na vysílání) nebo IR čidlo (na příjem, v mém případě šlo o <code>TSOP4838</code>).</p>
+<p>Problém jsem tedy vyřešil tak, že jsem vytvořil zařízení, které se &quot;naučilo&quot; signál originálního dálkového ovládání a pak ho na základě stisku příslušného tlačítka umělo zase přehrát.</p>
+<p>Infračervené dálkové ovládání funguje trochu jako morseovka. Ovladač zabliká pulzy v určité sestavě a zařízení je dekóduje a zachová se podle toho. Jednotlivých norem je celá řada, naštěstí existuje pro Arduino knihovna <code>IRemote</code>, se kterou je to snadné.</p>
+<h2 id="mechanicke-usporadani">Mechanické uspořádání</h2>
+<p>Navrhl jsem a na 3D tiskárně vytiskl držák, do kterého se zeshora zasune hotový switch a přesně proti jeho IR snímači je umístěna IR LED (na následujícím obrázku vpravo, je vidět 2x červená izolace):</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180719-rghdmi-1.jpg" alt="" /></p>
+<p>O řízení se stará Arduino Nano. Šlo by použít i menší a levnější Pro Mini, ale použil jsem Nano, protože to má vestavěný USB převodník a kdyby bylo třeba ho v terénu přeprogramovat, bude to snazší. To je ta malá destička na fotce úplně vpravo.</p>
+<p>Dále bylo potřeba vyřešit napájení. Naštěstí Arduino je z hlediska napájení poměrně tolerantní a má malý odběr, takže jsem použil původní zdroj k HDMI switchi a jenom jsem si udělal odbočku - na obrázku vlevo.</p>
+<p>Paradoxně nejkomplikovanější byly kabely a konektory. Ovládací rozhraní má osm tlačítek pro různé kombinace kamer a další funkce. Nechtěl jsem řešit nějaký multiplexing, protože se vše povede dlouhým kabelem v zarušeném prostředí a muselo to fungovat na první pokus, nebyl čas na ladění.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180719-rghdmi-2.jpg" alt="" /></p>
+<p>Takže jsem potřeboval (nejméně) devítipinový konektor a kabel. A to pokud možno nějaký univerzální, který se dá snadno kdekoliv koupit, kdyby selhal. Plus další požadavek z konstrukčních důvodů zněl, že konektory musejí být šroubovací. Nakonec jsem použil klasické DB9 konektory a kabely, používané pro klasické sériové porty (RS-232).</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180719-rghdmi-3.jpg" alt="" /></p>
+<p>Na posledním obrázku vidíte hotové řešení. Ovládací konzole s osmi tlačítky je viditelně namontována na simulátoru (na videu je vidět jako černá krabička s nápisem WHEELTUG VISION). Držák je schovaný uvnitř konstrukce.</p>
+<p>V době psaní tohoto článku je simulátor v provozu na velké letecké výstavě v Londýně a funguje dle zpráv bez problémů.</p>
+<hr />
+<p>Řada lidí se na Arduino a podobné &quot;hračky&quot; dívá pohrdlivě a posmívá se jim. Je pravda, že mnohé konstrukce mají k praktičnosti daleko. Nicméně v tomto případě se mi díky Arduinu a pár laciným součástkám podařilo během velmi krátké doby vyřešit reálný konstrukční problém ke spokojenosti zadavatele.</p>
+<p>Pokud máte nějaký zajímavý technický problém tohoto typu, rád ho pomohu vyřešit i vám.</p>
+
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/07/wheeltug">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/07/wheeltug">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
