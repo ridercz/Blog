@@ -81,7 +81,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/sharer.php?u=http://www.altair.blog{@path}">
+                      <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog{@path}">
                         <i class="fab fa-twitter">&#8203;</i>
                       </a>
                     </li>
