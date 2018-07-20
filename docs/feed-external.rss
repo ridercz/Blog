@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</guid>
+      <title>Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir</title>
+      <description></description>
+      <link>https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-07-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66195650-psms7-db00268db807cb4</guid>
       <title>Banánový telefon z Matrixu je zpátky: Nokia 8110 4G ke starému konceptu přidala rychlý internet</title>
       <description></description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-01-04T20:24:37</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-66007330-nejlepsi-novorocni-predsevzeti-naucte-se-pouzivat-spravce-hesel-bez-nej-nebudou-vase-data-v-bezpeci</guid>
-      <title>Nejlepší novoroční předsevzetí: Naučte se používat správce hesel, bez něj nebudou vaše data v bezpečí</title>
-      <description></description>
-      <link>https://tech.ihned.cz/internet/c1-66007330-nejlepsi-novorocni-predsevzeti-naucte-se-pouzivat-spravce-hesel-bez-nej-nebudou-vase-data-v-bezpeci</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-01-04T11:15:00</pubDate>
     </item>
   </channel>
 </rss>

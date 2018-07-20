@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</guid>
+      <title>Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir</title>
+      <description></description>
+      <link>https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-07-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/wheeltug</guid>
       <title>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru</title>
       <description></description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2018-02-09T17:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</guid>
-      <title>Byte packer – jak na binární datové struktury?</title>
-      <description></description>
-      <link>https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</link>
-      <author>Michal Altair Valášek</author>
-      <category>Programování</category>
-      <pubDate>2018-02-07T23:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,9 @@
+﻿<!-- dcterms:title = Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir -->
+<!-- dcterms:abstract = Pokud vám nevyhovuje neustále přenášení SD karet a do nastavování Raspberry Pi s Octoprintem se vám příliš nechce, mám pro vás řešení, které stojí za zvážení: SD karty Toshiba FlashAir. Sepsal jsem podrobný návod, jak pomocí nich z 3D tiskárny udělat tiskárnu bezdrátovou. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20180720-flashair.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-07-20 -->
+<!-- x4w:alternateUrl = https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/ -->
