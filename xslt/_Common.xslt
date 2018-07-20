@@ -315,10 +315,14 @@
         </xsl:if>
         <xsl:for-each select="//x4w:serial[generate-id() = generate-id(key('serials', .))]">
           <xsl:sort select="." />
+          <xsl:variable name="Value" select="." />
           <li>
             <a href="/serials/{x4h:UrlKey(.)}">
               <xsl:value-of select="."/>
             </a>
+            <span>
+              <xsl:value-of select="concat('(', count(//file[x4w:serial = $Value]), ')')"/>
+            </span>
           </li>
         </xsl:for-each>
       </xsl:otherwise>
@@ -347,10 +351,14 @@
         </xsl:if>
         <xsl:for-each select="//x4w:category[generate-id() = generate-id(key('categories', .))]">
           <xsl:sort select="." />
+          <xsl:variable name="Value" select="." />
           <li>
             <a href="/categories/{x4h:UrlKey(.)}">
               <xsl:value-of select="."/>
             </a>
+            <span>
+              <xsl:value-of select="concat('(', count(//file[x4w:category = $Value]), ')')"/>
+            </span>
           </li>
         </xsl:for-each>
       </xsl:otherwise>
