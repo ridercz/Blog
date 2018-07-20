@@ -1,0 +1,219 @@
+﻿@import "_variables.scss";
+
+section.artlist {
+    article {
+        margin-bottom: 3em;
+
+        &.haspicture {
+            min-height: 150px;
+        }
+
+        aside {
+            float: left;
+        }
+
+        header {
+            margin: 0 0 0 150px;
+            padding: 0 0 0 1em;
+
+            a {
+                font-weight: 100;
+                font-size: 200%;
+            }
+        }
+
+        div {
+            margin: 0 0 0 150px;
+            padding: 0 0 0 1em;
+            text-align: justify;
+        }
+
+        footer {
+            margin: 0 0 0 150px;
+            padding: 0 0 0 1em;
+
+            time {
+                float: right;
+                font-size: 90%;
+                color: $DarkGray;
+            }
+        }
+    }
+
+    &.hlfirst article:nth-of-type(1) {
+        background-color: lighten($LightGray, 10);
+        padding: 1em;
+        border-radius: 1ex;
+        font-size: 120%;
+    }
+
+    > footer {
+        background-color: $LightGray;
+        padding: 1ex .5ex;
+        text-align: center;
+        border-radius: 1ex;
+
+        .prev {
+            float: left;
+
+            a {
+                margin-right: 1ex;
+            }
+        }
+
+        .next {
+            float: right;
+
+            a {
+                margin-left: 1ex;
+            }
+        }
+
+        a {
+            background-color: $Orange;
+            padding: .5ex 1ex;
+            border-radius: 1ex;
+
+            &:link, &:visited {
+                color: $White;
+                text-decoration: none;
+            }
+
+            &:hover {
+                color: $Black;
+            }
+        }
+    }
+}
+
+ul.categories {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 80%;
+
+    li {
+        display: inline;
+        margin-right: 1ex;
+        padding: .25ex 1.5ex;
+        list-style-type: none;
+        background-color: rgba($Orange, .75);
+        border-radius: 1ex;
+
+        a:link, a:visited {
+            color: $White;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $Black;
+        }
+    }
+}
+
+ul.serials {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 80%;
+
+    li {
+        display: inline;
+        margin-right: 1ex;
+        padding: .25ex 1.5ex;
+        list-style-type: none;
+        border: 1px solid rgba($Orange, .75);
+        border-radius: 1ex;
+
+        a:link, a:visited {
+            color: $Orange;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $Black;
+        }
+    }
+}
+
+aside.article-info {
+    font-size: 120%;
+    color: $DarkGray;
+    text-align: right;
+
+    ul {
+        float: left;
+    }
+
+    a {
+        color: $DarkGray;
+        text-decoration: none;
+
+        &:hover {
+            color: $Black;
+            text-decoration: underline;
+        }
+    }
+}
+
+section.article-text {
+    text-align: justify;
+
+    img {
+        display: block;
+        border: 1px solid $DarkGray;
+        margin: 1em auto;
+        max-width: 90%;
+    }
+
+    video {
+        display: block;
+        border: 1px solid $DarkGray;
+        margin: 1em auto;
+        max-width: 90%;
+    }
+
+    hr {
+        width: 20%;
+        text-align: left;
+        margin: 1em auto 1em 0;
+        height: 2px;
+        background-color: $LightGray;
+        color: $LightGray;
+        border: none;
+        border-top: 2px solid $LightGray;
+    }
+}
+
+section.sharing {
+    font-weight: 100;
+    color: $DarkGray;
+    font-size: 150%;
+    text-align: right;
+    color: $DarkGray;
+
+    ul {
+        display: inline;
+        margin: 0 0 0 1ex;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            display: inline;
+            margin: 0 1ex 0 0;
+            padding: 0;
+            list-style-type: none;
+        }
+    }
+
+    a {
+        color: $DarkGray;
+        text-decoration: none;
+
+        &:hover {
+            color: $Orange;
+        }
+    }
+}

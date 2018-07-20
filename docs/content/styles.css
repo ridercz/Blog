@@ -1,4 +1,9 @@
-﻿body {
+﻿* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
   background-color: #ccc;
   background-image: url(images/pattern_light.png);
   color: #000;
@@ -6,10 +11,6 @@
   font-size: 1em;
   margin: 0;
   padding: 0; }
-  body * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
   body > header {
     background-color: #444;
     background-image: url(images/pattern_dark.png); }

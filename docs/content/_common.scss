@@ -1,0 +1,59 @@
+﻿@import "_variables.scss";
+
+a {
+
+    &:link {
+        color: $Orange;
+    }
+
+    &:visited {
+        color: darken($Orange, 10);
+    }
+
+    &:hover {
+        color: $Black;
+    }
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 300%;
+    color: $Orange;
+    margin-top: 0;
+    text-align: left;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 200%;
+    color: $Orange;
+    text-align: left;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 150%;
+    text-align: left;
+}
+
+code {
+    font-size: 100%;
+    font-family: Consolas, 'Lucida Console',Courier New, Courier, monospace;
+    color: #600;
+}
+
+pre {
+    margin: 10px;
+    padding: 10px 20px;
+    border-left: 10px solid $DarkGray;
+    background-color: lighten($LightGray, 15);
+    overflow-x: auto;
+}
+
+blockquote {
+    margin: 10px;
+    padding: 10px 20px;
+    border-left: 10px solid $Orange;
+    background-color: lighten($LightGray, 10);
+    font-style: italic;
+}

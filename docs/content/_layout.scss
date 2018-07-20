@@ -1,0 +1,107 @@
+﻿@import "_variables.scss";
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $LightGray;
+    background-image: url(images/pattern_light.png);
+    color: $Black;
+    font-family: 'Segoe UI', Segoe, Arial, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+
+    > header {
+        background-color: $DarkGray;
+        background-image: url(images/pattern_dark.png);
+
+        div {
+            max-width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 1em;
+            background-color: rgba($Black, .25);
+        }
+    }
+
+    > nav {
+        background-color: $Orange;
+        color: $White;
+        font-size: 160%;
+        text-align: center;
+
+        ul {
+            display: block;
+            margin: 0 auto;
+            padding: 1ex;
+            list-style-type: none;
+            max-width: 1200px;
+            background-color: rgba($White, .25);
+
+            li {
+                display: inline;
+                margin: 0;
+                padding: 0 1ex;
+                list-style-type: none;
+            }
+        }
+
+        a:link, a:visited {
+            color: $White;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $Black;
+        }
+    }
+
+    > main {
+        display: block;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3em;
+        background-color: rgba($White, .95);
+    }
+
+    > footer {
+        max-width: 1200px;
+        border-top: 1px solid $DarkGray;
+        color: $DarkGray;
+        margin: 0 auto;
+        padding: 1em;
+        font-size: 90%;
+
+        ul.logos {
+            float: left;
+            margin: 0;
+            padding: 0;
+            display: inline;
+            list-style-type: none;
+
+            li {
+                margin: 0 3em 0 0;
+                padding: 0;
+                display: inline;
+                list-style-type: none;
+            }
+        }
+
+        ul.text {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: right;
+
+            li {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+        }
+    }
+}
