@@ -6,6 +6,14 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/07/coitus-interruptus</guid>
+      <title>Coitus interruptus</title>
+      <description></description>
+      <link>https://www.bdsm.cz/2018/07/coitus-interruptus</link>
+      <category>BDSM</category>
+      <pubDate>2018-07-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</guid>
       <title>Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir</title>
       <description></description>
@@ -130,15 +138,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-01-06T10:21:54</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2746589</guid>
-      <title>Lock Picks (printable STL version)</title>
-      <description></description>
-      <link>https://www.thingiverse.com/thing:2746589</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-01-04T20:24:37</pubDate>
     </item>
   </channel>
 </rss>

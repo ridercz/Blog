@@ -6,6 +6,14 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/07/coitus-interruptus</guid>
+      <title>Coitus interruptus</title>
+      <description></description>
+      <link>https://www.bdsm.cz/2018/07/coitus-interruptus</link>
+      <category>BDSM</category>
+      <pubDate>2018-07-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</guid>
       <title>Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir</title>
       <description></description>
@@ -131,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2018-03-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</guid>
-      <title>Pozvánka na večerní školení Arduino a BadUSB</title>
-      <description></description>
-      <link>https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2018-02-09T17:00:00</pubDate>
     </item>
   </channel>
 </rss>
