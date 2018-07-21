@@ -16,7 +16,7 @@
 
   <xsl:template match="/">
     <x4o:root>
-      <xsl:for-each select="//file[dcterms:dateAccepted and not(x4w:alternateUrl)]">
+      <xsl:for-each select="//file[not(x4w:alternateUrl)]">
         <xsl:sort select="dcterms:dateAccepted"/>
         <x4o:document href="{@path}.html">
           <html>
@@ -62,12 +62,14 @@
                     <a href="https://www.rider.cz/">Michal Altair Valášek&#160;</a>
                     <i class="fal fa-user">&#8203;</i>
                   </div>
-                  <div>
-                    <time datetime="{dcterms:dateAccepted}" title="Datum vydání">
-                      <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
-                      <i class="fal fa-calendar-alt">&#8203;</i>
-                    </time>
-                  </div>
+                  <xsl:if test="dcterms:dateAccepted">
+                    <div>
+                      <time datetime="{dcterms:dateAccepted}" title="Datum vydání">
+                        <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
+                        <i class="fal fa-calendar-alt">&#8203;</i>
+                      </time>
+                    </div>
+                  </xsl:if>
                 </aside>
                 <section class="article-text" x4o:unescape="true">
                   <xsl:value-of select="x4h:GetItemHtml(@path)" />

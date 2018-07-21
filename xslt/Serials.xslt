@@ -66,7 +66,7 @@
               <xsl:value-of select="concat('Seriál ', $Serial)"/>
             </h1>
             <section class="artlist">
-              <xsl:for-each select="//file[x4w:serial = $Serial]">
+              <xsl:for-each select="//file[x4w:serial = $Serial and dcterms:dateAccepted]">
                 <xsl:sort select="dcterms:dateAccepted" />
                 <xsl:call-template name="ArticleLink" >
                   <xsl:with-param name="ShowSerials" select="0" />
