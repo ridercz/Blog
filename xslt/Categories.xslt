@@ -96,6 +96,7 @@
               </xsl:for-each>
               <footer>
                 <xsl:call-template name="Pager">
+                  <xsl:with-param name="UrlPrefix" select="concat('/categories/', x4h:UrlKey($Category))" />
                   <xsl:with-param name="PageNumber" select="$PageNumber" />
                   <xsl:with-param name="PageCount" select="$PageCount" />
                 </xsl:call-template>

@@ -60,6 +60,7 @@
               </xsl:for-each>
               <footer>
                 <xsl:call-template name="Pager">
+                  <xsl:with-param name="UrlPrefix">/archive</xsl:with-param>
                   <xsl:with-param name="PageNumber" select="$PageNumber" />
                   <xsl:with-param name="PageCount" select="$PageCount" />
                 </xsl:call-template>

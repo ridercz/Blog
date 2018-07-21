@@ -236,6 +236,7 @@
 
   <!-- Pager interface -->
   <xsl:template name="Pager">
+    <xsl:param name="UrlPrefix" />
     <xsl:param name="PageNumber" />
     <xsl:param name="PageCount" />
 
@@ -246,17 +247,17 @@
       </xsl:when>
       <xsl:when test="$PageNumber = 2">
         <span class="prev">
-          <a href="./" rel="first">
+          <a href="{$UrlPrefix}" rel="first">
             <i class="fal fa-chevron-left">&#8203;</i>&#160;Novější
           </a>
         </span>
       </xsl:when>
       <xsl:otherwise>
         <span class="prev">
-          <a href="./" rel="first">
+          <a href="{$UrlPrefix}" rel="first">
             <i class="fal fa-chevron-double-left">&#8203;</i>&#160;Nejnovější
           </a>
-          <a href="{concat('./', $PageNumber - 1)}" rel="prev">
+          <a href="{concat($UrlPrefix, '/', $PageNumber - 1)}" rel="prev">
             <i class="fal fa-chevron-left">&#8203;</i>&#160;Novější
           </a>
         </span>
@@ -270,17 +271,17 @@
       </xsl:when>
       <xsl:when test="$PageNumber = $PageCount - 1">
         <span class="next">
-          <a href="{concat('./', $PageCount)}" rel="last">
+          <a href="{concat($UrlPrefix, '/', $PageCount)}" rel="last">
             Starší&#160;<i class="fal fa-chevron-right">&#8203;</i>
           </a>
         </span>
       </xsl:when>
       <xsl:otherwise>
         <span class="next">
-          <a href="{concat('./', $PageNumber + 1)}" rel="next">
+          <a href="{concat($UrlPrefix, '/', $PageNumber + 1)}" rel="next">
             Starší&#160;<i class="fal fa-chevron-right">&#8203;</i>
           </a>
-          <a href="{concat('./', $PageCount)}" rel="last">
+          <a href="{concat($UrlPrefix, '/', $PageCount)}" rel="last">
             Nejstarší&#160;<i class="fal fa-chevron-double-right">&#8203;</i>
           </a>
         </span>
