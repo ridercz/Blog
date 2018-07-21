@@ -1,0 +1,9 @@
+﻿<!-- dcterms:title = Coitus interruptus-->
+<!-- dcterms:abstract = Po letech jsem znovu oživil BDSM.CZ. Tenhle příběh jsem kdysi napsal a šťastně na to zapomněl. Po letech ho vydávám z archivu. Zajímavé na něm je, že značka Nokia za tu dobu stihla zemřít a vstát z hrobu. -->
+<!-- dcterms:dateAccepted = 2018-07-21 -->
+<!-- x4w:category = BDSM -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/07/coitus-interruptus -->
+<!-- x4w:pictureUrl = /perex-pictures/20180721-coitus-interruptus.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Photo by Lana Campher (https://unsplash.com/@lana_c) -->
