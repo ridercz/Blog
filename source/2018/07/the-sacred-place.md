@@ -1,0 +1,11 @@
+<!-- dcterms:title = The Sacred Place -->
+<!-- dcterms:abstract = Další povídka z archivu. Pokud mi paměť slouží, je to snad jediná BDSM povídka, kterou jsem napsal v angličtině. Napsal jsem ji před patnácti lety pro účely literární soutěže SSS SSC a inspirovala mne k ní jedna věta, kterou jsem použil jako poslední. Povídka skončila na třetím místě.  -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:created = 2003-10-08 -->
+<!-- dcterms:dateAccepted = 2018-07-23 -->
+<!-- x4w:pictureUrl = /perex-pictures/20180723-the-sacred-place.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Photo by Roman Boed via Flickr, CC-BY -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/07/the-sacred-place -->
