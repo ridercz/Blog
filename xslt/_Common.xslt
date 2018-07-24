@@ -174,7 +174,7 @@
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:attribute>
-            <img src="{x4w:pictureUrl}" width="{x4w:pictureWidth}" height="{x4w:pictureHeight}" alt="" title="x4w:pictureCredits" />
+            <img src="{x4w:pictureUrl}" width="{x4w:pictureWidth}" height="{x4w:pictureHeight}" alt="" title="{x4w:pictureCredits}" />
           </a>
         </aside>
       </xsl:if>
