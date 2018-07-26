@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Nejsnazší ovládání semisegmentového displeje Arduinem | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka. Našel jsem snadno použitelný modul pro amatérské konstrukce, založený na čipu TM1637." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=FC6660B8747769DDFDB5A3B0326EB9B32080FE53" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Nejsnazší ovládání semisegmentového displeje Arduinem" />
+    <meta name="twitter:description" content="I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka. Našel jsem snadno použitelný modul pro amatérské konstrukce, založený na čipu TM1637." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Nejsnazší ovládání semisegmentového displeje Arduinem" />
+    <meta property="og:description" content="I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka. Našel jsem snadno použitelný modul pro amatérské konstrukce, založený na čipu TM1637." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Nejsnazší ovládání semisegmentového displeje Arduinem</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+          <li>
+            <a href="/categories/arduino" title="Rubrika">
+              <i class="fal fa-tag"> </i>Arduino</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-07-27" title="Datum vydání">27. července 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka, protože je jednoduchá a jasně čitelná ve tmě i na světle. Způsobů, jak ovládat 7-seg displeje z Arduina, je spousta.</p>
+<h2 id="hardwarovy-modul">Hardwarový modul</h2>
+<p>Já jsem objevil zajímavý modul s čipem TM1637, který má z mého pohledu několik výhod:</p>
+<ul>
+<li>Snadno se ovládá pomocí dvou digitálních pinů.</li>
+<li>Existují pro něj (nejméně) dvě slušné knihovny.</li>
+<li>Je k dispozici v různých velikostech a barvách.</li>
+<li>Modul sám má rozumnou velikost a díry na šrouby, pročež se dá snadno zamontovat do různých konstrukcí.</li>
+<li>Je velice levný ($ 1,21, tj. asi 26 Kč v okamžiku psaní článku).</li>
+</ul>
+<p>Dá se snadno koupit na AliExpressu, příkladmo:</p>
+<ul>
+<li><a href="https://www.aliexpress.com/item/x/32866984077.html">0,36&quot; (8 mm) verze</a></li>
+<li><a href="https://www.aliexpress.com/item/x/32841455579.html">0,56&quot; (14 mm) verze</a></li>
+</ul>
+<p>K dispozici je pět barev (bílá, červená, zelená, žlutá, modrá) a různé varianty rozložení teček. Moje verze má desetinnou tečku za každou číslicí (ty se mi ale nepodařilo rozchodit) a hodinovou dvojtečku mezi dvojicemi.</p>
+<h2 id="softwarove-knihovny">Softwarové knihovny</h2>
+<p>Našel a vyzkoušel jsem dvě knihovny, které s těmito moduly umějí pracovat:</p>
+<ul>
+<li><strong><a href="https://github.com/Seeed-Studio/Grove_4Digital_Display">Seeed Studio: Grove 4-Digit Display</a></strong> (<code>TM1637.h</code>). Knihovna je jednoduchá a snadno použitelná, ale možná až příliš - nelze pomocí ní zobrazit vlastní znaky, pouze číslice 0-9 a A-F. Její výhodou je, že je součástí Arduino IDE Library Manageru a dá se tedy nainstalovat přímo z IDE.</li>
+<li><strong><a href="https://github.com/avishorp/TM1637">Avishorp: TM1637</a></strong> (<code>TM1637Display.h</code>). Tu si musíte nainstalovat ručně, ale umí toho víc (zejména tedy ovládat jednotlivé segmenty a zobrazovat vlastní znaky). V následujícím textu se budu věnovat právě jí.</li>
+</ul>
+<h2 id="prace-s-knihovnou-tm1637display.h">Práce s knihovnou <code>TM1637Display.h</code></h2>
+<p>Pro propojení s Arduinem potřebujete dva digitální piny (plus napájení 5 V a zem). Jeden z nich jsou hodiny (<code>CLK</code>) a druhý data (<code>DIO</code> jako data in/out). Můžete použít jakékoliv dva piny, já použil <code>2</code> a <code>3</code>. Po vytvoření objektu <code>TM1637Display</code> máte k dispozici následující metody:</p>
+<ul>
+<li><code>setBrightness</code> nastaví jas od 0 (nejslabší) po 7. Za normálních podmínek doporučuji hodnoty kolem středu stupnice.</li>
+<li><code>setSegments</code> umožňuje zobrazit libovolné znaky pomocí ovládání jednotlivých segmentů.</li>
+<li><code>showNumberDec</code> umožňuje zobrazit desítkové číslo, volitelně s počátečními nulami.</li>
+<li><code>showNumberDecEx</code> kromě toho umožňuje manipulovat s desetinnými a hodinovými tečkami.</li>
+</ul>
+<p>Kompletní přehled všech funkcí a parametrů najdete v hlavičkovém souboru <a href="https://github.com/avishorp/TM1637/blob/master/TM1637Display.h">TM1637Display.h</a></p>
+<video controls="controls" poster="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.jpg">
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.mp4" type="video/mp4" />
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.webm" type="video/webm" />
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.ogg" type="video/ogg" />
+    <p>Nepodařilo se přehrát video. Můžete si ho stáhnout jako:</p>
+    <ul>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.mp4">MP4</a></li>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.webm">WEBM</a></li>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-1.ogg">OGG</a></li>
+    </ul>
+</video>
+<p>Zajímavá je možnost kombinace číslic a vlastních znaků. Pomocí overloadů metod <code>showNumberDec</code> a <code>showNumberDecEx</code> můžete nastavit délku a pozici zobrazovaného čísla. Pokud tedy například chcete zobrazit teplotu (např. <code>20°C</code>) nebo chybové hlášení (např. <code>Err1</code>), můžete písmena a symboly zapsat pomocí <code>setSegments</code> a potom doplnit.</p>
+<p>Napsal jsem ukázkový kód, který ukazuje základní možnosti knihovny a výše uvedenou kombinaci.</p>
+<pre><code class="language-cpp">#include &lt;TM1637Display.h&gt;
+
+// Piny pro pripojeni displeje
+#define CLK 2
+#define DIO 3
+
+// Definice specialnich znaku
+#define CHAR_LINES 0b01001001
+#define CHAR_MINUS 0b01000000
+#define CHAR_DEG   0b01100011
+#define CHAR_C     0b00111001
+#define CHAR_F     0b01110001
+#define CHAR_E     0b01111001
+#define CHAR_R     0b01010000
+
+// Inicializace displeje
+TM1637Display display(CLK, DIO);
+
+void setup() {
+  // Nastaveni jasu: 0 (min) - 7 (max)
+  display.setBrightness(4);
+}
+
+void loop() {
+  // Pocitani cisel 0 - 100 bez nul na zacatku
+  for (int i = 0; i &lt;= 100; i++) {
+    display.showNumberDec(i, false);
+    delay(20);
+  }
+
+  // Pocitani cisel 0000 - 0100 s nulami na zacatku
+  for (int i = 0; i &lt;= 100; i++) {
+    display.showNumberDec(i, true);
+    delay(20);
+  }
+
+  // Zobrazeni teploty - priprava
+  byte segDataDeg[] = { CHAR_LINES, CHAR_LINES, CHAR_DEG, CHAR_C};
+  display.setSegments(segDataDeg);
+  delay(1000);
+
+  // Zobrazeni teploty - 00 - 90 stupnu
+  for (int i = 0; i &lt;= 90; i += 10) {
+    display.showNumberDec(i, true, 2);
+    delay(250);
+  }
+
+  // Zobrazeni chyby Err0 - Err9
+  byte segDataErr[] = { CHAR_E, CHAR_R, CHAR_R, CHAR_MINUS};
+  display.setSegments(segDataErr);
+  for (int i = 0; i &lt;= 9; i++) {
+    display.showNumberDec(i, true, 1, 3);
+    delay(1000);
+  }
+}
+</code></pre>
+<video controls="controls" poster="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.jpg">
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.mp4" type="video/mp4" />
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.webm" type="video/webm" />
+    <source src="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.ogg" type="video/ogg" />
+    <p>Nepodařilo se přehrát video. Můžete si ho stáhnout jako:</p>
+    <ul>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.mp4">MP4</a></li>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.webm">WEBM</a></li>
+        <li><a href="https://www.cdn.altairis.cz/Blog/2018/20180727-TM1637-2.ogg">OGG</a></li>
+    </ul>
+</video>
+<p>Dvojtečka na mém displeji přímo vybízí k použití jako hodiny nebo stopky. Druhý ukázkový kód tedy ukazuje po sekundách čas.</p>
+<pre><code class="language-cpp">#include &lt;TM1637Display.h&gt;
+
+// Piny pro pripojeni displeje
+#define CLK 2
+#define DIO 3
+
+// Zapni nbebo vypni tecku
+#define DOT_OFF 0b00000000
+#define DOT_ON  0b01000000
+
+// Inicializace displeje
+TM1637Display display(CLK, DIO);
+
+// Aktualni mninuty a sekundy
+byte mm = 0;
+byte ss = 0;
+
+// Cas pristi zmeny sekundy
+unsigned long nextSecondChange = 0;
+
+// Cas pristiho zapnutí dvojtecky
+unsigned long nextDotChange = 0;
+
+void setup() {
+  // Nastaveni jasu: 0 (min) - 7 (max)
+  display.setBrightness(4);
+
+  // Zobraz 0000
+  display.showNumberDecEx(0, true);
+  nextDotChange = millis() + 500;
+  nextSecondChange = nextDotChange + 500;
+}
+
+void loop() {
+  // Zobraz cas, pokud uplynula sekunda
+  if (millis() &gt; nextSecondChange) {
+    nextSecondChange += 1000;
+
+    // Inkrementuj cas
+    ss++;
+    if (ss == 60) {
+      ss = 0;
+      mm++;
+    }
+    if (mm == 100) mm = 0;
+
+    // Zobraz cas bez dvojtecky
+    int displayValue = mm * 100 + ss;
+    display.showNumberDecEx(displayValue, DOT_OFF, true);
+  }
+
+  // Zapni dvojtecku v pulce sekundy (zmena sekundy ji vypne)
+  if (millis() &gt; nextDotChange) {
+    nextDotChange += 1000;
+
+    // Zobraz cas bez dvojtecky
+    int displayValue = mm * 100 + ss;
+    display.showNumberDecEx(displayValue, DOT_ON, true);
+  }
+}
+</code></pre>
+
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/07/TM1637">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/07/TM1637">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

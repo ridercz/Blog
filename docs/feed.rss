@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/07/TM1637</guid>
+      <title>Nejsnazší ovládání semisegmentového displeje Arduinem</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/07/TM1637</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>Arduino</category>
+      <pubDate>2018-07-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/zaloha-sql-do-azure</guid>
       <title>Automatizovaná záloha SQL Serveru do Azure Storage</title>
       <description></description>
@@ -130,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2018-04-29T22:28:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</guid>
-      <title>Jak vyměnit v serveru disk za větší</title>
-      <description></description>
-      <link>https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-04-25T16:36:46</pubDate>
     </item>
   </channel>
 </rss>
