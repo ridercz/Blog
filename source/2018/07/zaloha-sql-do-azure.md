@@ -47,71 +47,79 @@ Jako poslední je třeba vytvořit kontejner, do kterého budete data ukládat. 
 
 ## Nastavení SQL Serveru
 
-V SQL Serveru musíte vytvořit _credential_, tedy uložit autentizační údaj, který budeme později používat. Můžete jej vytvořit v GUI SQL Management Studia (v hlavním stromu _Server\Security\Credentials_) nebo pomocí následujícího příkazu, kde stačí nahradit hodnoty `IDENTITY` a `SECRET` názvem účtu a klíčem vygenerovaným výše. Můžete změnit i jméno (zde `AzureStorage`), ale pak budete muset změnit i další siripty.
+V SQL Serveru musíte vytvořit _credential_, tedy uložit autentizační údaj, který budeme později používat. Můžete jej vytvořit v GUI SQL Management Studia (v hlavním stromu _Server\Security\Credentials_) nebo pomocí následujícího příkazu, kde stačí nahradit hodnoty `IDENTITY` a `SECRET` názvem účtu a klíčem vygenerovaným výše. Můžete změnit i jméno (zde `AzureStorage`), ale pak budete muset změnit i další skripty.
 
-    CREATE CREDENTIAL AzureStorage WITH 
-        IDENTITY = 'sqlbackuptutorial',
-        SECRET = '5D/R5sUXPzJ/uTjdndTOZYgT71Imb028ZaUMjlVBbS34lShfueBhr7fxVBWqKSNO+5eVsrLXuHtMbai+PT028g=='
+```sql
+CREATE CREDENTIAL AzureStorage WITH 
+    IDENTITY = 'sqlbackuptutorial',
+    SECRET = '5D/R5sUXPzJ/uTjdndTOZYgT71Imb028ZaUMjlVBbS34lShfueBhr7fxVBWqKSNO+5eVsrLXuHtMbai+PT028g=='
+```
 
 ## Záloha databáze
 
 Nyní můžete zálohovat databáze do Azure Storage. Zálohu jedné konkrétní databáze provedete následujícím příkazem:
 
-    BACKUP DATABASE Northwind
-    TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
-    WITH CREDENTIAL = 'AzureStorage'
+```sql
+BACKUP DATABASE Northwind
+TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
+WITH CREDENTIAL = 'AzureStorage'
+```
 
 Hodnota `URL` je adresa v rámci Azure Storage, kde bude záloha vytvořena. Pokud chcete přepsat zálohu na této adrese již existující, přidejte `WITH FORMAT`:
 
-    BACKUP DATABASE Northwind
-    TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
-    WITH CREDENTIAL = 'AzureStorage', FORMAT
+```sql
+BACKUP DATABASE Northwind
+TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
+WITH CREDENTIAL = 'AzureStorage', FORMAT
+```
 
 ## Záloha všech databází
 
 Pro sálohu všech uživatelských databází můžeme použít mírně upravený skript z [minulého článku](https://www.altair.blog/2009/12/automatizovana-zaloha-vsech-databazi-na-sql-express). Základní logika procházení databází v cyklu a postupné zálohy zůstává stejná, pouze zálohujeme do URL a ne na místní disk.
 
-    /*******************************************************************************
-    ** ALL USER DATABASE BACKUP TO AZURE - SCRIPT FOR MICROSOFT SQL SERVER        **
-    ** Copyright (c) Michal A. Valasek, Altairis, 2018                            **
-    ** https://www.altairis.cz/ | https://www.rider.cz/ | https://www.altair.blog **
-    *******************************************************************************/
+```sql
+/*******************************************************************************
+** ALL USER DATABASE BACKUP TO AZURE - SCRIPT FOR MICROSOFT SQL SERVER        **
+** Copyright (c) Michal A. Valasek, Altairis, 2018                            **
+** https://www.altairis.cz/ | https://www.rider.cz/ | https://www.altair.blog **
+*******************************************************************************/
 
-    -- Configuration
-    DECLARE	
-        @base_url AS nvarchar(max) = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/',
-        @credential_name AS nvarchar(max) = 'AzureStorage'
+-- Configuration
+DECLARE	
+    @base_url AS nvarchar(max) = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/',
+    @credential_name AS nvarchar(max) = 'AzureStorage'
 
-    -- Declare variables used in the script
-    DECLARE
-        @timestamp AS nvarchar(20),
-        @current_id AS int,
-        @current_name AS nvarchar(max),
-        @current_url AS nvarchar(max)
+-- Declare variables used in the script
+DECLARE
+    @timestamp AS nvarchar(20),
+    @current_id AS int,
+    @current_name AS nvarchar(max),
+    @current_url AS nvarchar(max)
 
-    -- Create file name timestamp (YYYYMMDD_hhmmss format)
-    SET @timestamp = CONVERT(nvarchar, GETDATE(), 20)
-    SET @timestamp = REPLACE(@timestamp, '-', '')
-    SET @timestamp = REPLACE(@timestamp, ':', '')
-    SET @timestamp = REPLACE(@timestamp, ' ', '_')
+-- Create file name timestamp (YYYYMMDD_hhmmss format)
+SET @timestamp = CONVERT(nvarchar, GETDATE(), 20)
+SET @timestamp = REPLACE(@timestamp, '-', '')
+SET @timestamp = REPLACE(@timestamp, ':', '')
+SET @timestamp = REPLACE(@timestamp, ' ', '_')
 
-    -- Get initial database ID
-    SELECT @current_id = MIN(database_id) FROM sys.databases WHERE owner_sid != 0x01
+-- Get initial database ID
+SELECT @current_id = MIN(database_id) FROM sys.databases WHERE owner_sid != 0x01
 
-    -- Go trough all user databases
-    WHILE @current_id IS NOT NULL BEGIN
-        -- Get database name and backup file
-        SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
-        SET @current_url = @base_url + @current_name + '_' + @timestamp + '.bak'
+-- Go trough all user databases
+WHILE @current_id IS NOT NULL BEGIN
+    -- Get database name and backup file
+    SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
+    SET @current_url = @base_url + @current_name + '_' + @timestamp + '.bak'
 
-        -- Backup database
-        PRINT 'Backing up database ' + @current_name + ' to ' + @current_url
-        BACKUP DATABASE @current_name TO URL = @current_url WITH CREDENTIAL = @credential_name
-        PRINT NULL
+    -- Backup database
+    PRINT 'Backing up database ' + @current_name + ' to ' + @current_url
+    BACKUP DATABASE @current_name TO URL = @current_url WITH CREDENTIAL = @credential_name
+    PRINT NULL
 
-        -- Get next database ID
-        SELECT @current_id = MIN(database_id) FROM sys.databases WHERE owner_sid != 0x01 AND database_id > @current_id
-    END
+    -- Get next database ID
+    SELECT @current_id = MIN(database_id) FROM sys.databases WHERE owner_sid != 0x01 AND database_id > @current_id
+END
+```
 
 I mechanismus spouštení lze převzít z [původního článku](https://www.altair.blog/2009/12/automatizovana-zaloha-vsech-databazi-na-sql-express), jenom si tentokrát můžeme odpustit laborování s předávanými parametry `SQLCMD`, protože není co nastavovat.
 

@@ -19,51 +19,53 @@ Express edice nic takového nemá a pokud chceme například automaticky záloho
 
 Takhle bude vypadat soubor `ExpressBackup.sql`, který provede vlastní zálohování:
 
-    /******************************************************************************
-    ** ALL DATABASE BACKUP SCRIPT FOR MICROSOFT SQL SERVER EXPRESS EDITION 2008  **
-    ** Copyright (c) Michal A. Valasek, Altairis, 2009                           **
-    ** http://www.aspnet.cz/ | http://www.altairis.cz/ | http://www.rider.cz/    **
-    ** ------------------------------------------------------------------------- **
-    ** When running from command line:                                           **
-    **  - set BackupFilePath environment variable                                **
-    **  - see ExpressBackup.cmd for example                                      **
-    ** When running from SQL management studio:                                  **
-    **  - enable Query -> SQLCMD mode                                            **
-    **  - uncomment the ":setvar" line below and specify path                    **
-    ******************************************************************************/
+```sql
+/******************************************************************************
+** ALL DATABASE BACKUP SCRIPT FOR MICROSOFT SQL SERVER EXPRESS EDITION 2008  **
+** Copyright (c) Michal A. Valasek, Altairis, 2009                           **
+** http://www.aspnet.cz/ | http://www.altairis.cz/ | http://www.rider.cz/    **
+** ------------------------------------------------------------------------- **
+** When running from command line:                                           **
+**  - set BackupFilePath environment variable                                **
+**  - see ExpressBackup.cmd for example                                      **
+** When running from SQL management studio:                                  **
+**  - enable Query -> SQLCMD mode                                            **
+**  - uncomment the ":setvar" line below and specify path                    **
+******************************************************************************/
 
-    -- :setvar BackupFilePath "D:\SqlBackup\" -- include trailing backslash!!
+-- :setvar BackupFilePath "D:\SqlBackup\" -- include trailing backslash!!
 
-    -- Declare variables used in the script
-    DECLARE
-        @timestamp AS nvarchar(20),
-        @current_id AS int,
-        @current_name AS nvarchar(max),
-        @current_file AS nvarchar(max)
+-- Declare variables used in the script
+DECLARE
+    @timestamp AS nvarchar(20),
+    @current_id AS int,
+    @current_name AS nvarchar(max),
+    @current_file AS nvarchar(max)
 
-    -- Create file name timestamp (YYYYMMDD_hhmmss format)
-    SET @timestamp = CONVERT(nvarchar, GETDATE(), 20)
-    SET @timestamp = REPLACE(@timestamp, '-', '')
-    SET @timestamp = REPLACE(@timestamp, ':', '')
-    SET @timestamp = REPLACE(@timestamp, ' ', '_')
+-- Create file name timestamp (YYYYMMDD_hhmmss format)
+SET @timestamp = CONVERT(nvarchar, GETDATE(), 20)
+SET @timestamp = REPLACE(@timestamp, '-', '')
+SET @timestamp = REPLACE(@timestamp, ':', '')
+SET @timestamp = REPLACE(@timestamp, ' ', '_')
 
-    -- Get initial database ID
-    SELECT @current_id = MIN(database_id) FROM sys.databases WHERE name <> 'tempdb'
+-- Get initial database ID
+SELECT @current_id = MIN(database_id) FROM sys.databases WHERE name <> 'tempdb'
 
-    -- Go trough all databases
-    WHILE @current_id IS NOT NULL BEGIN
-        -- Get database name and backup file
-        SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
-        SET @current_file = '$(BackupFilePath)' + @current_name + '_' + @timestamp + '.bak'
-        
-        -- Backup database
-        PRINT 'Backing up database ' + @current_name + ' to ' + @current_file
-        BACKUP DATABASE @current_name TO  DISK = @current_file WITH NOINIT
-        PRINT NULL
-        
-        -- Get next database
-        SELECT @current_id = MIN(database_id) FROM sys.databases WHERE name <> 'tempdb' AND database_id > @current_id
-    END
+-- Go trough all databases
+WHILE @current_id IS NOT NULL BEGIN
+    -- Get database name and backup file
+    SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
+    SET @current_file = '$(BackupFilePath)' + @current_name + '_' + @timestamp + '.bak'
+    
+    -- Backup database
+    PRINT 'Backing up database ' + @current_name + ' to ' + @current_file
+    BACKUP DATABASE @current_name TO  DISK = @current_file WITH NOINIT
+    PRINT NULL
+    
+    -- Get next database
+    SELECT @current_id = MIN(database_id) FROM sys.databases WHERE name <> 'tempdb' AND database_id > @current_id
+END
+```
 
 Tato dávka postupně zazálohuje všechny databáze do souboru `NázevDB_YYYYMMDD_hhmmss.bak` ve složce určené SQLCMD proměnnou `BackupFilePath`. 
 
@@ -73,18 +75,20 @@ Výše uvedený skript není primárně určen k tou, aby byl spouštěn interak
 
 To je myslím hezky vidět v souboru `ExpressBackup.cmd`, který dělá v podstatě jenom tři věci: nastaví systémovou proměnnou, zavolá výše uvedenou SQL dávku a poté vymaže všechny záložní soubory starší než 7 dnů (posuzuje to podle data poslední změny souboru, ne podle jeho názvu).
 
-    @ECHO OFF
+```cmd
+@ECHO OFF
 
-    REM -- Set path to backup databases to - referenced from the SQL script
-    REM -- This path must include trailing backslash!
-    SET BackupFilePath=D:\SqlBackup\
-    
-    REM -- Call SQLCMD with parameters needed to connect to SQL Server
-    SQLCMD -S .\SqlExpress -E -i ExpressBackup.sql
-    
-    REM -- Delete all backup files older than 7 days
-    ECHO Deleting backups older than 7 days...
-    FORFILES /P %BackupFilePath% /M *.bak /D -7 /C "CMD /C DEL /Q @FILE"
+REM -- Set path to backup databases to - referenced from the SQL script
+REM -- This path must include trailing backslash!
+SET BackupFilePath=D:\SqlBackup\
+
+REM -- Call SQLCMD with parameters needed to connect to SQL Server
+SQLCMD -S .\SqlExpress -E -i ExpressBackup.sql
+
+REM -- Delete all backup files older than 7 days
+ECHO Deleting backups older than 7 days...
+FORFILES /P %BackupFilePath% /M *.bak /D -7 /C "CMD /C DEL /Q @FILE"
+```
 
 Tento soubor (zejména cestu k záložním souborům a volání SQLCMD) si můžete upravit dle potřeby.
 

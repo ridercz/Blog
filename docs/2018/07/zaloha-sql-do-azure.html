@@ -130,25 +130,25 @@
 <p><img src="https://www.cdn.altairis.cz/Blog/2018/20180726-portal-4.png" alt="" /></p>
 <p>Jako poslední je třeba vytvořit kontejner, do kterého budete data ukládat. Klepněte na <em>Container</em> a poté na <em>+ Container</em>. Zadejte název <code>sqlbackup</code> a klepněte na OK.</p>
 <h2 id="nastaveni-sql-serveru">Nastavení SQL Serveru</h2>
-<p>V SQL Serveru musíte vytvořit <em>credential</em>, tedy uložit autentizační údaj, který budeme později používat. Můžete jej vytvořit v GUI SQL Management Studia (v hlavním stromu <em>Server\Security\Credentials</em>) nebo pomocí následujícího příkazu, kde stačí nahradit hodnoty <code>IDENTITY</code> a <code>SECRET</code> názvem účtu a klíčem vygenerovaným výše. Můžete změnit i jméno (zde <code>AzureStorage</code>), ale pak budete muset změnit i další siripty.</p>
-<pre><code>CREATE CREDENTIAL AzureStorage WITH 
+<p>V SQL Serveru musíte vytvořit <em>credential</em>, tedy uložit autentizační údaj, který budeme později používat. Můžete jej vytvořit v GUI SQL Management Studia (v hlavním stromu <em>Server\Security\Credentials</em>) nebo pomocí následujícího příkazu, kde stačí nahradit hodnoty <code>IDENTITY</code> a <code>SECRET</code> názvem účtu a klíčem vygenerovaným výše. Můžete změnit i jméno (zde <code>AzureStorage</code>), ale pak budete muset změnit i další skripty.</p>
+<pre><code class="language-sql">CREATE CREDENTIAL AzureStorage WITH 
     IDENTITY = 'sqlbackuptutorial',
     SECRET = '5D/R5sUXPzJ/uTjdndTOZYgT71Imb028ZaUMjlVBbS34lShfueBhr7fxVBWqKSNO+5eVsrLXuHtMbai+PT028g=='
 </code></pre>
 <h2 id="zaloha-databaze">Záloha databáze</h2>
 <p>Nyní můžete zálohovat databáze do Azure Storage. Zálohu jedné konkrétní databáze provedete následujícím příkazem:</p>
-<pre><code>BACKUP DATABASE Northwind
+<pre><code class="language-sql">BACKUP DATABASE Northwind
 TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
 WITH CREDENTIAL = 'AzureStorage'
 </code></pre>
 <p>Hodnota <code>URL</code> je adresa v rámci Azure Storage, kde bude záloha vytvořena. Pokud chcete přepsat zálohu na této adrese již existující, přidejte <code>WITH FORMAT</code>:</p>
-<pre><code>BACKUP DATABASE Northwind
+<pre><code class="language-sql">BACKUP DATABASE Northwind
 TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
 WITH CREDENTIAL = 'AzureStorage', FORMAT
 </code></pre>
 <h2 id="zaloha-vsech-databazi">Záloha všech databází</h2>
 <p>Pro sálohu všech uživatelských databází můžeme použít mírně upravený skript z <a href="https://www.altair.blog/2009/12/automatizovana-zaloha-vsech-databazi-na-sql-express">minulého článku</a>. Základní logika procházení databází v cyklu a postupné zálohy zůstává stejná, pouze zálohujeme do URL a ne na místní disk.</p>
-<pre><code>/*******************************************************************************
+<pre><code class="language-sql">/*******************************************************************************
 ** ALL USER DATABASE BACKUP TO AZURE - SCRIPT FOR MICROSOFT SQL SERVER        **
 ** Copyright (c) Michal A. Valasek, Altairis, 2018                            **
 ** https://www.altairis.cz/ | https://www.rider.cz/ | https://www.altair.blog **
