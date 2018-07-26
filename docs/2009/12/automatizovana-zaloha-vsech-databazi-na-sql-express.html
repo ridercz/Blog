@@ -112,7 +112,7 @@
 <p>Maintenance plány fungují tak, že vám umožní například zazálohovat všechny databáze nebo na nich provést nějaké údržbové úkoly. SQL Server Agent, který se o ně stará, je jakýsi &quot;task scheduler&quot;, který žije uvnitř SQL Serveru a stará se o automatické spouštění úloh.</p>
 <p>Express edice nic takového nemá a pokud chceme například automaticky zálohovat všechny databáze, je třeba to naskriptovat vlastními silami. Princip fungování je velmi jednoduchý: V první řadě vytvoříme SQL dávku, která při spuštění projede seznam všech databází a pomocí příkazu BACKUP DATABASE je zazálohuje. Ve druhé řadě pak napíšeme dávkový soubor (CMD), ve kterém pomocí utility SQLCMD dříve vytvořený SQL skript spustíme. Aby se nám zálohy na disku nehromadily až do jeho úplného zaplnění, automaticky rovněž smažeme všechny záložní soubory, které jsou starší než definovaný počet dnů. Tento dávkový soubor pak pomocí systémového task scheduleru spustíme například jednou za den.</p>
 <h2 id="expressbackup.sql">ExpressBackup.sql</h2>
-<p>Takhle bude vypadat soubor ExpressBackup.sql, který provede vlastní zálohování:</p>
+<p>Takhle bude vypadat soubor <code>ExpressBackup.sql</code>, který provede vlastní zálohování:</p>
 <pre><code>/******************************************************************************
 ** ALL DATABASE BACKUP SCRIPT FOR MICROSOFT SQL SERVER EXPRESS EDITION 2008  **
 ** Copyright (c) Michal A. Valasek, Altairis, 2009                           **
@@ -177,7 +177,7 @@ ECHO Deleting backups older than 7 days...
 FORFILES /P %BackupFilePath% /M *.bak /D -7 /C &quot;CMD /C DEL /Q @FILE&quot;
 </code></pre>
 <p>Tento soubor (zejména cestu k záložním souborům a volání SQLCMD) si můžete upravit dle potřeby.</p>
-<p>Poslední krok pak spočívá v tom, že soubor <code>ExpressBackup.cmd</code> zavoláte jednou za den pomocí systémového plánovače úloh.</p>
+<p>Poslední krok pak spočívá v tom, že soubor <code>ExpressBackup.cmd</code> zavoláte jednou za den pomocí systémového plánovače úloh. Je nutné, aby běžel pod účtem, který má na SQL serveru právo zazálohovat příslušné databáze (je členem databázové role <code>db_backupoperator</code>).</p>
 <p>Ačkoliv je tento návod ušit na míru Express edici, můžete ho v případě nutnosti použít i na vyšší edice. Nicméně obecně to nedoporučuji, SQL Server Agent umí mnohem víc a vyplatí se s ním naučit zacházet.</p>
 
       </section>

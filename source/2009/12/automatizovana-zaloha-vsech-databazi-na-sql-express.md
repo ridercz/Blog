@@ -17,7 +17,7 @@ Express edice nic takového nemá a pokud chceme například automaticky záloho
 
 ## ExpressBackup.sql
 
-Takhle bude vypadat soubor ExpressBackup.sql, který provede vlastní zálohování:
+Takhle bude vypadat soubor `ExpressBackup.sql`, který provede vlastní zálohování:
 
     /******************************************************************************
     ** ALL DATABASE BACKUP SCRIPT FOR MICROSOFT SQL SERVER EXPRESS EDITION 2008  **
@@ -88,6 +88,6 @@ To je myslím hezky vidět v souboru `ExpressBackup.cmd`, který dělá v podsta
 
 Tento soubor (zejména cestu k záložním souborům a volání SQLCMD) si můžete upravit dle potřeby.
 
-Poslední krok pak spočívá v tom, že soubor `ExpressBackup.cmd` zavoláte jednou za den pomocí systémového plánovače úloh.
+Poslední krok pak spočívá v tom, že soubor `ExpressBackup.cmd` zavoláte jednou za den pomocí systémového plánovače úloh. Je nutné, aby běžel pod účtem, který má na SQL serveru právo zazálohovat příslušné databáze (je členem databázové role `db_backupoperator`).
 
 Ačkoliv je tento návod ušit na míru Express edici, můžete ho v případě nutnosti použít i na vyšší edice. Nicméně obecně to nedoporučuji, SQL Server Agent umí mnohem víc a vyplatí se s ním naučit zacházet.
