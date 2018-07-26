@@ -91,3 +91,5 @@ Tento soubor (zejména cestu k záložním souborům a volání SQLCMD) si můž
 Poslední krok pak spočívá v tom, že soubor `ExpressBackup.cmd` zavoláte jednou za den pomocí systémového plánovače úloh. Je nutné, aby běžel pod účtem, který má na SQL serveru právo zazálohovat příslušné databáze (je členem databázové role `db_backupoperator`).
 
 Ačkoliv je tento návod ušit na míru Express edici, můžete ho v případě nutnosti použít i na vyšší edice. Nicméně obecně to nedoporučuji, SQL Server Agent umí mnohem víc a vyplatí se s ním naučit zacházet.
+
+> Novější verze SQL Serveru podporují též přímou zálohu do Azure Storage, pro kterou jsem napsal [podobný návod](https://www.altair.blog/2018/07/zaloha-sql-do-azure).
