@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/07/zaloha-sql-do-azure</guid>
+      <title>Automatizovaná záloha SQL Serveru do Azure Storage</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/07/zaloha-sql-do-azure</link>
+      <author>Michal Altair Valášek</author>
+      <category>Programování</category>
+      <pubDate>2018-07-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/wheeltug</guid>
       <title>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru</title>
       <description></description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2017-02-22T09:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/02/pozvanka-na-architecture-security-days</guid>
-      <title>Pozvánka na Architecture &amp; Security Days</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/02/pozvanka-na-architecture-security-days</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-02-21T22:40:54</pubDate>
     </item>
   </channel>
 </rss>

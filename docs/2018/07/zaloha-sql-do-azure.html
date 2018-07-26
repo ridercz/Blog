@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Automatizovaná záloha SQL Serveru do Azure Storage | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=FC6660B8747769DDFDB5A3B0326EB9B32080FE53" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Automatizovaná záloha SQL Serveru do Azure Storage" />
+    <meta name="twitter:description" content="Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Automatizovaná záloha SQL Serveru do Azure Storage" />
+    <meta property="og:description" content="Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Automatizovaná záloha SQL Serveru do Azure Storage</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/programovani" title="Rubrika">
+              <i class="fal fa-tag"> </i>Programování</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-07-26" title="Datum vydání">26. července 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Jeden z mých nejužitečnějších článků je myslím <a href="https://www.altair.blog/2009/12/automatizovana-zaloha-vsech-databazi-na-sql-express">Automatizovaná záloha všech databází na SQL Express</a>. SQL Server Express je přes svá omezení mocný nástroj a mnoha firmám více než postačuje, zejména protože je zdarma. Pomocí jednoduchého skriptu lze též vyřešit jeho pravidelné zálohování, i když nemá službu SQL Server Agent.</p>
+<p>Od verze (nepletu-li se) 2012 podporuje SQL Server též zálohování do Azure Storage. Nastal tedy čas můj devět let starý skript poněkud rozšířit a nabídnout i zálohu do cloudu.</p>
+<h2 id="proc-zalohovat-do-cloudu">Proč zálohovat do cloudu</h2>
+<p>Protože je to snadné, levné a spolehlivé. Vzhledem k vestavěné podpoře na to stačí jediný SQL příkaz a dá se to snadno skriptovat. Azure Storage úložiště je - pro objemy dat, které lze u většiny českých firem předpokládat - velmi levné. A je řádově spolehlivější, než většina úložišť, která mají standardní české firmy k dispozici.</p>
+<p>Proto doporučuji - umožňuje-li to objem dat vaší databáze - tuto formu zálohy využívat, třeba jako doplňkovou &quot;poslední záchranu&quot; pro případ, že by vše ostatní selhalo.</p>
+<p>Konkrétně zde popisovaný postup je určen pro SQL Server Express, ale můžete jej použít i na vyšších edicích.</p>
+<h2 id="priprava-storage-accountu">Příprava Storage Accountu</h2>
+<p>Nejdříve si musíte v Azure vytvořit úložiště - storage account. Lze tak učinit mnoha způsoby, my použijete webové rozhraní na <a href="https://portal.azure.com">portal.azure.com</a>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180726-portal-1.png" alt="" /></p>
+<p>Nejprve kleněte na <em>Create a resource</em>, poté ze seznamu vyberte <em>Storage</em> a následně <em>Storage account - blob, file, table, queue</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180726-portal-2.png" alt="" /></p>
+<p>Poté zadejte název (<em>Name</em>). Ten musí být unikátní a smí obsahovat pouze malá písmena anglické abecedy a číslice a musí být 3-24 znaků dlouhý. Zde je <code>sqlbackuptutorial</code>.</p>
+<p>Zadejte název Resource Group, v níž bude storage account umístěn. Pokud nemáte specifické požadavky, vytvořte novou RG, která se bude jmenovat stejně jako storage account.</p>
+<p>Klepněte na tlačítko <em>Create</em> a vyčkejte. Vytvoření účtu bude trvat několik desítek sekund.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180726-portal-3.png" alt="" /></p>
+<p>Až se tak stane, zobrazte si vlastnosti nově vytvořeného účtu a klepněte na <em>Access keys</em>. Poznamenejte si název účtu (<code>sqlbackuptutorial</code>) a jeden z klíčů <code>key1</code> nebo <code>key2</code>.</p>
+<blockquote>
+<p>Oba dva klíče si jsou rovny a mají stejnou funkci. Dva klíče jsou vygenerovány proto, abyste je mohli bez výpadku změnit.</p>
+</blockquote>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180726-portal-4.png" alt="" /></p>
+<p>Jako poslední je třeba vytvořit kontejner, do kterého budete data ukládat. Klepněte na <em>Container</em> a poté na <em>+ Container</em>. Zadejte název <code>sqlbackup</code> a klepněte na OK.</p>
+<h2 id="nastaveni-sql-serveru">Nastavení SQL Serveru</h2>
+<p>V SQL Serveru musíte vytvořit <em>credential</em>, tedy uložit autentizační údaj, který budeme později používat. Můžete jej vytvořit v GUI SQL Management Studia (v hlavním stromu <em>Server\Security\Credentials</em>) nebo pomocí následujícího příkazu, kde stačí nahradit hodnoty <code>IDENTITY</code> a <code>SECRET</code> názvem účtu a klíčem vygenerovaným výše. Můžete změnit i jméno (zde <code>AzureStorage</code>), ale pak budete muset změnit i další siripty.</p>
+<pre><code>CREATE CREDENTIAL AzureStorage WITH 
+    IDENTITY = 'sqlbackuptutorial',
+    SECRET = '5D/R5sUXPzJ/uTjdndTOZYgT71Imb028ZaUMjlVBbS34lShfueBhr7fxVBWqKSNO+5eVsrLXuHtMbai+PT028g=='
+</code></pre>
+<h2 id="zaloha-databaze">Záloha databáze</h2>
+<p>Nyní můžete zálohovat databáze do Azure Storage. Zálohu jedné konkrétní databáze provedete následujícím příkazem:</p>
+<pre><code>BACKUP DATABASE Northwind
+TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
+WITH CREDENTIAL = 'AzureStorage'
+</code></pre>
+<p>Hodnota <code>URL</code> je adresa v rámci Azure Storage, kde bude záloha vytvořena. Pokud chcete přepsat zálohu na této adrese již existující, přidejte <code>WITH FORMAT</code>:</p>
+<pre><code>BACKUP DATABASE Northwind
+TO URL = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/Northwind.bak'   
+WITH CREDENTIAL = 'AzureStorage', FORMAT
+</code></pre>
+<h2 id="zaloha-vsech-databazi">Záloha všech databází</h2>
+<p>Pro sálohu všech uživatelských databází můžeme použít mírně upravený skript z <a href="https://www.altair.blog/2009/12/automatizovana-zaloha-vsech-databazi-na-sql-express">minulého článku</a>. Základní logika procházení databází v cyklu a postupné zálohy zůstává stejná, pouze zálohujeme do URL a ne na místní disk.</p>
+<pre><code>/*******************************************************************************
+** ALL USER DATABASE BACKUP TO AZURE - SCRIPT FOR MICROSOFT SQL SERVER        **
+** Copyright (c) Michal A. Valasek, Altairis, 2018                            **
+** https://www.altairis.cz/ | https://www.rider.cz/ | https://www.altair.blog **
+*******************************************************************************/
+
+-- Configuration
+DECLARE	
+    @base_url AS nvarchar(max) = 'https://sqlbackuptutorial.blob.core.windows.net/sqlbackup/',
+    @credential_name AS nvarchar(max) = 'AzureStorage'
+
+-- Declare variables used in the script
+DECLARE
+    @timestamp AS nvarchar(20),
+    @current_id AS int,
+    @current_name AS nvarchar(max),
+    @current_url AS nvarchar(max)
+
+-- Create file name timestamp (YYYYMMDD_hhmmss format)
+SET @timestamp = CONVERT(nvarchar, GETDATE(), 20)
+SET @timestamp = REPLACE(@timestamp, '-', '')
+SET @timestamp = REPLACE(@timestamp, ':', '')
+SET @timestamp = REPLACE(@timestamp, ' ', '_')
+
+-- Get initial database ID
+SELECT @current_id = MIN(database_id) FROM sys.databases WHERE owner_sid != 0x01
+
+-- Go trough all user databases
+WHILE @current_id IS NOT NULL BEGIN
+    -- Get database name and backup file
+    SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
+    SET @current_url = @base_url + @current_name + '_' + @timestamp + '.bak'
+
+    -- Backup database
+    PRINT 'Backing up database ' + @current_name + ' to ' + @current_url
+    BACKUP DATABASE @current_name TO URL = @current_url WITH CREDENTIAL = @credential_name
+    PRINT NULL
+
+    -- Get next database ID
+    SELECT @current_id = MIN(database_id) FROM sys.databases WHERE owner_sid != 0x01 AND database_id &gt; @current_id
+END
+</code></pre>
+<p>I mechanismus spouštení lze převzít z <a href="https://www.altair.blog/2009/12/automatizovana-zaloha-vsech-databazi-na-sql-express">původního článku</a>, jenom si tentokrát můžeme odpustit laborování s předávanými parametry <code>SQLCMD</code>, protože není co nastavovat.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20180726-portal-5.png" alt="" /></p>
+<p>Že záloha úspěšně proběhla si můžeme ověřit pomocí Azure Portálu. Stačí klepnout na název kontejneru a zobrazí se seznam uložených blobů (souborů).</p>
+<p>Tento mechanismus nezahrnuje mazání starých záloh, protože v případě mých databází je cena za uskladnění tak nízká, že se mi nevyplatí mazání řešit. Pokud je to ve vašem případě jinak, bude to nutné řešit externími prostředky, například nějakým PowerShellovým skriptem nebo naplánovanou úlohou v Azure.</p>
+
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/07/zaloha-sql-do-azure">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/07/zaloha-sql-do-azure">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -36,10 +36,10 @@ Takhle bude vypadat soubor `ExpressBackup.sql`, který provede vlastní zálohov
 
     -- Declare variables used in the script
     DECLARE
-    @timestamp AS nvarchar(20),
-    @current_id AS int,
-    @current_name AS nvarchar(max),
-    @current_file AS nvarchar(max)
+        @timestamp AS nvarchar(20),
+        @current_id AS int,
+        @current_name AS nvarchar(max),
+        @current_file AS nvarchar(max)
 
     -- Create file name timestamp (YYYYMMDD_hhmmss format)
     SET @timestamp = CONVERT(nvarchar, GETDATE(), 20)
@@ -52,17 +52,17 @@ Takhle bude vypadat soubor `ExpressBackup.sql`, který provede vlastní zálohov
 
     -- Go trough all databases
     WHILE @current_id IS NOT NULL BEGIN
-    -- Get database name and backup file
-    SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
-    SET @current_file = '$(BackupFilePath)' + @current_name + '_' + @timestamp + '.bak'
-    
-    -- Backup database
-    PRINT 'Backing up database ' + @current_name + ' to ' + @current_file
-    BACKUP DATABASE @current_name TO  DISK = @current_file WITH NOINIT
-    PRINT NULL
-    
-    -- Get next database
-    SELECT @current_id = MIN(database_id) FROM sys.databases WHERE name <> 'tempdb' AND database_id > @current_id
+        -- Get database name and backup file
+        SELECT @current_name = name FROM sys.databases WHERE database_id = @current_id
+        SET @current_file = '$(BackupFilePath)' + @current_name + '_' + @timestamp + '.bak'
+        
+        -- Backup database
+        PRINT 'Backing up database ' + @current_name + ' to ' + @current_file
+        BACKUP DATABASE @current_name TO  DISK = @current_file WITH NOINIT
+        PRINT NULL
+        
+        -- Get next database
+        SELECT @current_id = MIN(database_id) FROM sys.databases WHERE name <> 'tempdb' AND database_id > @current_id
     END
 
 Tato dávka postupně zazálohuje všechny databáze do souboru `NázevDB_YYYYMMDD_hhmmss.bak` ve složce určené SQLCMD proměnnou `BackupFilePath`. 
