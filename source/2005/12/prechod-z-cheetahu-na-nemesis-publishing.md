@@ -2,7 +2,7 @@
 <!-- dcterms:title = Přechod z Cheetahu na Nemesis Publishing -->
 <!-- dcterms:abstract = Software pro převod obsahu CMS Cheetah do Nemesis -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

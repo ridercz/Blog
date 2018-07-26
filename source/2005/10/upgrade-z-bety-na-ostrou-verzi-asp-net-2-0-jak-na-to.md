@@ -2,7 +2,7 @@
 <!-- dcterms:title = Upgrade z bety na ostrou verzi ASP.NET 2.0 - jak na to -->
 <!-- dcterms:abstract = Pokud jste si - stejně jako já - nadšeně hráli s pre-release verzemi Whidbey, možná uvítáte pár tipů, jak správně přejít na ostrou verzi. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Novinky ve Windows 8 a IIS 8 pro webové vývojáře -->
 <!-- dcterms:abstract = Minulý týden byla na konferenci Build uvedena první testovací verze Windows 8. Většina dosavadních zpráv se zaměřila na nové Metro UI a rozličné kontroverze, které budou Windows 8 provázet. Já se s vámi chci podělit o dojmy z hlediska vyvojáře webových aplikací. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

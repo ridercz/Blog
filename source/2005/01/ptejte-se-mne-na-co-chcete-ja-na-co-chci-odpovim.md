@@ -2,7 +2,7 @@
 <!-- dcterms:title = Ptejte se mne na co chcete, já na co chci odpovím -->
 <!-- dcterms:abstract = Píšu rád a doufejme že i dobře. Jenom poslední dobou nemám o čem. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

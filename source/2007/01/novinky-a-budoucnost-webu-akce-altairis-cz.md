@@ -2,7 +2,7 @@
 <!-- dcterms:title = Novinky a budoucnost webu akce.altairis.cz -->
 <!-- dcterms:abstract = Když jsem před zhruba půl rokem spouštěl web http://akce.altairis.cz/, byla moje představa o jeho smyslu a funkci jednoduchá. Chtěl jsem napsat systém, který by všem dal vědět, když se pořádaná akce, přesune nebo zruší. Počítal jsem s pár akcemi do roka. Jak už to bývá, trochu se to zvrhlo a shora uvedený web je prakticky největším kalendářem vývojářských akcí pro .NET. Rád bych vás seznámil s novinkami, které jsem na tomto webu spustil, a nebo které se plánují. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

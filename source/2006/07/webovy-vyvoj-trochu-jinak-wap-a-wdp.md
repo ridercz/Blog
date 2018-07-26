@@ -2,7 +2,7 @@
 <!-- dcterms:title = Webový vývoj trochu jinak - WAP a WDP -->
 <!-- dcterms:abstract = Pokud vám zcela nevyhovuje mírně chaotický způsob, jakým Visual Studio 2005 zachází s webovými projekty, mohou se vám hodit dva pluginy od Microsoftu: Web Application Projects (WAP) a Web Deployment Projects (WDP). -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

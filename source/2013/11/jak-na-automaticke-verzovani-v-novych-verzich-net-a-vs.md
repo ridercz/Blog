@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak na automatické verzování v nových verzích .NET a VS -->
 <!-- dcterms:abstract = Starší verze .NET Frameworku podporovaly automatické verzování, kdy se část informace o verzi vygenerovala automaticky podle datumu a času. Verze 4.5 nicméně přešla na sémantické verzování a tuto funkcionalitu ztratila. Jak ji vrátit zpátky? -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

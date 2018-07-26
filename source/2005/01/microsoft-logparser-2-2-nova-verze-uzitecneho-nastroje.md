@@ -2,7 +2,7 @@
 <!-- dcterms:title = Microsoft LogParser 2.2: Nová verze užitečného nástroje -->
 <!-- dcterms:abstract = Jedna z nenápadných Microsoftích utilitek se dočkala nové verze - a ta zvyšuje jeho použitelnost o řád. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

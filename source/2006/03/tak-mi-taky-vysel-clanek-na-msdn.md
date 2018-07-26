@@ -2,7 +2,7 @@
 <!-- dcterms:title = Tak mi taky vyšel článek na MSDN -->
 <!-- dcterms:abstract = Není tomu tak dlouho, co se Michael Juřek chlubil, že mu vyšel první článek na MSDN (a možná první od českého autora). Teď mu mohu sekundovat, možná jsem druhý. Můj článek je střelba trochu mimo mé obvyklé hájemství webových aplikací, ale dotýká se tématu, které mne hodně zajímá - uživatelského rozhraní. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

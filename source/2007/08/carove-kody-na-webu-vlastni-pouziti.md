@@ -2,7 +2,7 @@
 <!-- dcterms:title = Čárové kódy na webu: Vlastní použití -->
 <!-- dcterms:abstract = V minulém článku jsem se zabýval teoretickými aspekty použití čárových kódů na webu. Ve druhém pokračování se podíváme na praktickou stránku věci, tedy jak kódy reálně generovat a použít. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

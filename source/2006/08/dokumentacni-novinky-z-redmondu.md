@@ -2,7 +2,7 @@
 <!-- dcterms:title = Dokumentační novinky z Redmondu -->
 <!-- dcterms:abstract = Nástroj pro tvorbu MSDN-like dokumentace pro .NET 2.0 a kompletní MSDN Library ke stažení zdarma. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

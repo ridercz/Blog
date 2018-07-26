@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak na Raspberry Pi zapnout grafické rozhraní a vzdálený přístup? -->
 <!-- dcterms:abstract = Chcete si s Raspberry Pi pohrát víc, než jak vám nabízím v seriálu o projektu Atropa? Můžete povolit grafické rozhraní a zapnout vzdálený přístup přes RDP. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

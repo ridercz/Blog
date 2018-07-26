@@ -2,7 +2,7 @@
 <!-- dcterms:title = Nakažen virem Whidbey: Disclaimer -->
 <!-- dcterms:abstract = Jak jsem již avizoval dříve, definitivně se vzdávám a odhazuji v dál své původní přesvědčení nepsat o Whidbey dříve, než bude k dispozici ostrá verze. Byl to ale od Microsoftu podlý tah, vnutit mi knihy Introducing Microsoft ASP.NET 2.0! Začal jsem ji z nedostatku jiné literatury studovat a virus Whidbey mne nakazil též. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

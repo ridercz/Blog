@@ -2,7 +2,7 @@
 <!-- dcterms:title = Více virtuálních webových serverů na Windows XP -->
 <!-- dcterms:abstract = Patříte-li mezi ty ubohé duše, které jsou nuceny vyvíjet webové aplikace na klientské platformě Windows XP, mohl by vás zajímat program Windows XP IIS Manager. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

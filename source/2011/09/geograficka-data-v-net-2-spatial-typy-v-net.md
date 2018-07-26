@@ -2,7 +2,7 @@
 <!-- dcterms:title = Geografická data v .NET 2: Spatial typy v .NET -->
 <!-- dcterms:abstract = Z minulého článku již víte, jakým způsobem můžete uchovávat v SQL Serveru prostorová data (jako například GPS souřadnice) a jak se na ně můžete dotazovat pomocí jazyka Transact-SQL. Používají se přitom datové typy geometry a geography, s nimiž lze samozřejmě pracovat i z prostředí ASP.NET, čemuž je věnován tento článek. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

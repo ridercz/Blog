@@ -5,5 +5,5 @@
 <!-- x4w:pictureUrl = /perex-pictures/logo-youtube.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- dcterms:dateAccepted = 2016-01-21T02:58:12+01:00 -->

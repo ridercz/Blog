@@ -2,7 +2,7 @@
 <!-- dcterms:title = ViewState: Konfigurace a ochrana -->
 <!-- dcterms:abstract = V předchozích dílech tohoto seriálu jsme se podívali na ViewState a ControlState. Nyní se budeme zabývat konfigurací celého systému a ochranou obsahu. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

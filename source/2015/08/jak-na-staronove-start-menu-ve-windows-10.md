@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak na staronové Start menu ve Windows 10 -->
 <!-- dcterms:abstract = Microsoft uvedl Windows 10, které mají staronový koncept nabídky Start. Pokud přemýšlíte, jak se s ním vyrovnat, nabízím pro inspiraci své osvědčené a léty prověřené řešení. Popisovaný přístup používám již od Windows 7 a jeho principy jsou ještě starší. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

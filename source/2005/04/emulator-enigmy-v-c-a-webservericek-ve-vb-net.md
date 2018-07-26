@@ -2,7 +2,7 @@
 <!-- dcterms:title = Emulátor enigmy v C# a webserveříček ve VB.NET -->
 <!-- dcterms:abstract = Můj oblíbený server CodeProject jest zdrojem všeliké zábavy a poučení. V poslední sobě mne zaujaly dva projekty tamo se vyskytnuvší. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

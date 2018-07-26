@@ -2,7 +2,7 @@
 <!-- dcterms:title = Čárové kódy na webu: Základy -->
 <!-- dcterms:abstract = Od doby, co jsem na webu akce.altairis.cz spustil tisk pozvánek s čárovým kódem, byl jsem opakovaně dotazován na zkušenosti. Tento článek popisuje souhrnně zkušenosti a poznatky, ke kterým jsem dospěl. Může být užitečný všem, kdo chtějí implementovat čárové kódy ve svých webových aplikacích. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

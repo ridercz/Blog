@@ -2,7 +2,7 @@
 <!-- dcterms:title = Použití Geolocation API z ASP.NET Web Forms -->
 <!-- dcterms:abstract = Jedna z novinek, které nabízejí současné prohlížeče, je Geolocation API. Prohlížeč umí zjistit, kde se fyzicky nacházíte a tuto informaci (po vašem předchozím souhlasu) stránce pomocí JavaScriptu sdělit. Podíváme se, jak tuto funkci můžete využít a nabídnu vám hotovou komponentu pro ASP.NET Web Forms, která to zajišťuje. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

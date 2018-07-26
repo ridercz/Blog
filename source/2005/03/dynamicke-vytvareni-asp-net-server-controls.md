@@ -2,7 +2,7 @@
 <!-- dcterms:title = Dynamické vytváření ASP.NET server controls -->
 <!-- dcterms:abstract = ASP.NET umožňují programové vytváření serverových ovládacích prvků. U formulářových prvků ovšem může být problém s postbackem. Jednoduchý leč výživný příkládek -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

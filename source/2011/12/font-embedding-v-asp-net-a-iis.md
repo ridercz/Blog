@@ -2,7 +2,7 @@
 <!-- dcterms:title = Font embedding v ASP.NET a IIS -->
 <!-- dcterms:abstract = Nebaví vás pořád dokola používat ve svých stránkách těch několik málo fontů, které má nainstalovaný každý? Řešením je font embedding, tedy použití písma, které nemá uživatel nainstalované, ale pro účely zobrazení stránky si jej stáhne z vašeho serveru. Jedná se sice o čistě klientskou techniku, ale má i implikace na straně serveru, o kterých také bude řeč. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

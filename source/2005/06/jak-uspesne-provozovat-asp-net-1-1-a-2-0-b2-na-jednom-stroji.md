@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak úspěšně provozovat ASP.NET 1.1 a 2.0 B2 na jednom stroji -->
 <!-- dcterms:abstract = Návod na testování Whidbey aplikací souběžně s verzí 1.1 -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

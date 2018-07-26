@@ -2,7 +2,7 @@
 <!-- dcterms:title = Projekt Atropa (1): Jak vyrobit z Raspberry Pi zlé zařízení s .NETem -->
 <!-- dcterms:abstract = Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Konfigurace v ASP.NET a IIS verze 6.0 a 7.0 -->
 <!-- dcterms:abstract = Aplikace psané v ASP.NET jsou ve své podstatě konfederace nezávislých tříd, kterou drží pohromadě konfigurace. Je to právě konfigurační systém .NET, který říká kdy se který modul má použít. S příchodem nové verze IIS (7.0 ve Windows Vista a Windows Server 2008) je konfigurační model .NETu ještě důležitější, protože se jeho prostřednictvím budou nastavovat i vlastnosti IIS jako takového. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Zmenšování obrázků se zachováním poměru stran -->
 <!-- dcterms:abstract = Za neuvěřitelně ohavné ovšem považuji chování některých systémů, které si rozměry obrázku upraví k obrazu svému, leč nedbají přitom na poměr stran, takže ve výsledku obrázek zdeformují. Přitom postup pro zmenšení obrázku se zachováním poměru stran je jednoduchý. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

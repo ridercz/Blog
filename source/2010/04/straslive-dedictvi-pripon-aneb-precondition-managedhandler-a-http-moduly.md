@@ -2,7 +2,7 @@
 <!-- dcterms:title = Strašlivé dědictví přípon aneb preCondition "managedHandler" a HTTP moduly -->
 <!-- dcterms:abstract = Stručné pojednání o historii významu přípon souborů a jejich vlivu na funkčnost webových aplikací. Pokud se vám po přechodu na IIS 7 aplikace chová nějak divně, možná zde najdete odpověď. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

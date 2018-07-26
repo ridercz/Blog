@@ -2,7 +2,7 @@
 <!-- dcterms:title = URL rewriting modul a rewrite maps -->
 <!-- dcterms:abstract = Pro Martina Pavlise jsem řešil migraci jeho blogu ze SubTextu na Nemesis a narazil jsem na problém zachování stávajících odkazů pro velké množství článků. Typický úkol pro URL rewriting modul v IIS a RewriteMaps. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

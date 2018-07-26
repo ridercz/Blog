@@ -2,7 +2,7 @@
 <!-- dcterms:title = Programová práce s hlavičkou stránky -->
 <!-- dcterms:abstract = Novinkou v ASP.NET 2.0 je nativní přístup k hlavičce (element HEAD) webových stránek. Je možno ho využít například k automatickému generování odkazu na RSS feed. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

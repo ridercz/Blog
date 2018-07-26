@@ -2,7 +2,7 @@
 <!-- dcterms:title = Skripty pro vytváření webů a uživatelů na IIS 7.0 -->
 <!-- dcterms:abstract = Na Microsoft Days jsem slíbil zveřejnit skripty, které používám pro správu svých web hostingových serverů, jmenovitě pro zakládání nového uživatele a přidání webu k existujícímu uživateli. Tady jsou. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

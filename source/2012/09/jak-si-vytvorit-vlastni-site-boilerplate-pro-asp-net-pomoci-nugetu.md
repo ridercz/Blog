@@ -2,7 +2,7 @@
 <!-- dcterms:title = Jak si vytvořit vlastní site boilerplate pro ASP.NET pomocí NuGetu -->
 <!-- dcterms:abstract = Pokaždé, když začínám vyvíjet nějaký nový projekt, strávím určitý čas základním nastavením projektu – instalací obvyklých NuGet balíčků, konfigurací ve web.configu, vytvořením základní master/content page struktury a podobně. Automatizovat tuto činnost se ukázalo být překvapivě komplikovaným, ale nakonec jsem to porazil. Nabízím vám návod, jak si vytvořit vlastní ASP.NET Site Boilerplate podle svých představ. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

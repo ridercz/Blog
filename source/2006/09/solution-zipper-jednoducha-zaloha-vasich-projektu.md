@@ -2,7 +2,7 @@
 <!-- dcterms:title = Solution Zipper - jednoduchá záloha vašich projektů -->
 <!-- dcterms:abstract = Nepoužíváte source control, ale přesto byste se rádi vrátili ke starší verzi aplikace, když se plánované opravy či úpravy drobet zvrhnou? Řešením je archivovat si průběžně zdrojové kódy svých aplikací. Našel jsem addin do Visual Studia, který vám v tomhle směru pomůže. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

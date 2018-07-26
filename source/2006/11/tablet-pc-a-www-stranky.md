@@ -2,7 +2,7 @@
 <!-- dcterms:title = Tablet PC a WWW stránky -->
 <!-- dcterms:abstract = S poklesem jejich cen se dá očekávat razantnější nástup počítačů typu Tablet PC. Nedávno jsem si jedno pořídil a chci se s vámi podělit o dojmy z jeho používání ve vztahu k WWW stránkám. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

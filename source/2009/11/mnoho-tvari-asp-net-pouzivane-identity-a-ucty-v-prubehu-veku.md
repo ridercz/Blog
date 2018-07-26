@@ -2,7 +2,7 @@
 <!-- dcterms:title = Mnoho tváří ASP.NET: Používané identity a účty v průběhu věků -->
 <!-- dcterms:abstract = Často kladená otázka je: pod jakým účtem běží ASP.NET? Protože je často kladena, je i často zodpovídána, leč bohužel ne vždy správně a protože se odpověď s časem (a verzemi IIS) mění, odpověď může být neaktuální. Pojďme se podívat na vývoj a současný stav. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

@@ -2,7 +2,7 @@
 <!-- dcterms:title = Bundling a ScriptManager znovu: ještě jednodušší, než jsme čekali -->
 <!-- dcterms:abstract = Na své přednášce o práci s JavaScriptem a v CSS jsem tvrdil, že mezi bundlingem a ScriptManagerem není žádné propojení a představil jsem dva způsoby, jak jej realizovat. Ukázalo se, že jsem se mýlil a že v nejnovější dostupné verzi takové propojení je a dokonce je automaticky funkční. -->
 <!-- np9:categoryId = 1 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->

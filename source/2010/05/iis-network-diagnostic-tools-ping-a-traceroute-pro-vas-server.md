@@ -2,7 +2,7 @@
 <!-- dcterms:title = IIS Network Diagnostic Tools: Ping a Traceroute pro váš server -->
 <!-- dcterms:abstract = Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy ping a traceroute (tracert). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Ukážeme si, jak takovou službu napsat v ASP.NET a provozovat na IIS. -->
 <!-- np9:categoryId = 4 -->
-<!-- x4w:category = Programování -->
+<!-- x4w:category = IT -->
 <!-- np9:authorId = 1 -->
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
