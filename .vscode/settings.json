@@ -1,0 +1,34 @@
+{
+    "deploy.reloaded": {
+        "packages": [
+            {
+                "name": "Preview",
+                "files": [
+                    "build.json"
+                ],
+                "targets": [
+                    "Preview"
+                ],
+                "button": {
+                    "text": "Preview",
+                    "color": "#ffff00",
+                    "tooltip": "Build and preview site locally",
+                    "targets": [
+                        "Preview"
+                    ]
+                }
+            }
+        ],
+        "targets": [
+            {
+                "type": "app",
+                "name": "Preview",
+                "app": "preview.cmd",
+                "platforms": [
+                    "win32"
+                ],
+                "runInTerminal": true
+            }
+        ]
+    }
+}
