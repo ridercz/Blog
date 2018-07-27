@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</guid>
+      <title>Jak na migraci Azure Storage z Classic do ARM</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-07-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/TM1637</guid>
       <title>Nejsnazší ovládání sedmisegmentového displeje Arduinem</title>
       <description></description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-05-02T00:10:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66125020-na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</guid>
-      <title>Na návštěvě v muzeu Living Computers: Takhle vypadá domov důchodců pro hodné počítače</title>
-      <description></description>
-      <link>https://tech.ihned.cz/geekosfera/c1-66125020-na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2018-04-29T22:28:00</pubDate>
     </item>
   </channel>
 </rss>

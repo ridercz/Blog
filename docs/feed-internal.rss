@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</guid>
+      <title>Jak na migraci Azure Storage z Classic do ARM</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-07-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/TM1637</guid>
       <title>Nejsnazší ovládání sedmisegmentového displeje Arduinem</title>
       <description></description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Software</category>
       <pubDate>2017-09-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/08/budoucnost-asp-net</guid>
-      <title>Budoucnost ASP.NET</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/08/budoucnost-asp-net</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-08-04T02:42:17</pubDate>
     </item>
   </channel>
 </rss>
