@@ -30,5 +30,6 @@
                 "runInTerminal": true
             }
         ]
-    }
+    },
+    "easysass.excludeRegex": "^_"
 }
