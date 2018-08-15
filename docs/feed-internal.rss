@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/08/ftps</guid>
+      <title>FTPS: bezpečná varianta prastarého protokolu</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/08/ftps</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-08-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</guid>
       <title>Jak na migraci Azure Storage z Classic do ARM</title>
       <description></description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2017-09-08T17:05:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</guid>
-      <title>Jak na neprůstřelnou prezentační stránku s GitHubem a CloudFlare</title>
-      <description></description>
-      <link>https://www.altair.blog/2017/09/jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2017-09-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
