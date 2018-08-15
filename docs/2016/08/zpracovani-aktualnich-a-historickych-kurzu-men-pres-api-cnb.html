@@ -115,9 +115,10 @@
         </div>
       </aside>
       <section class="article-text">
-        <p>amarád <a href="http://www.michalblaha.cz/">Michal Bláha</a> se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici nejenom jemu, ale i všem ostatním zájemcům..</p>
+        <p>Kamarád <a href="http://www.michalblaha.cz/">Michal Bláha</a> se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici nejenom jemu, ale i všem ostatním zájemcům..</p>
 <p>Aplikace využívá <a href="https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt">API České národní banky</a>. Ta publikuje v jednoduchém textovém formátu (v podstatě CSV, jenom se pro oddělení používá svislítko) aktuální i historické kurzy. Nevím jak daleko do minulosti, ale minimálně do roku 2000.</p>
-<p>Napsal jsem tedy <a href="https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87">třídu, která tato data stáhne, proparsuje a publikuje</a>.</p>
+<p>Napsal jsem tedy <a href="https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87">třídu, která tato data stáhne, proparsuje a publikuje</a>:</p>
+<script src="https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87.js"></script>
 <p>Z programátorského hlediska je to kód dost přímočarý a jednoduchý. Pozoruhodných je pouze pár drobností:</p>
 <ul>
 <li>Všechny čtyři třídy jsem vložil do jednoho souboru i s ukázkovou konzolovou aplikací. Což není obecně pro praxi příliš dobré řešení, ale pro ukázkový kód ideální. Vzhledem k jednoduchosti předpokládám, že si prostě třídy <code>CnbClient</code>, <code>CnbExchangeRateList</code> a <code>CnbExchangeRate</code> nakopírujete někam do svého projektu. Nedělal jsem z toho ani samostatné DLL s NuGet balíčkem, jak je to jednoduché.</li>
