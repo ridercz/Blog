@@ -30,15 +30,19 @@ Pokud ukládáme data s předem známou délkou, je to jednoduché. Prostě je n
 
 Typickým příkladem bude např. situace, kdy budeme jako součást datové struktury uchovávat ID měřícího zařízení (dva bajty), vnitřní teplotu a vnější teplotu. Teplotu budeme uchovávat s přesností na půl stupně celsia. Pokud bychom data ukládali v XML, lze si představit například následující formát:
 
-    <measure id="1234" internalTemp="15.5" externalTemp="-3.5" />
+```xml
+<measure id="1234" internalTemp="15.5" externalTemp="-3.5" />
+```
 
 V současné době je módní používat spíše JSON, v něm by to mohlo vypadat následovně:
 
-    {
-      "id" : 1234,
-      "internalTemp" : 15.5,
-      "externalTemp" : -3.5
-    }
+```json
+{
+    "id" : 1234,
+    "internalTemp" : 15.5,
+    "externalTemp" : -3.5
+}
+```
 
 Jak to ovšem uložit do co nejmenšího objemu dat, například budeme-li data chtít přenášet po LPWAN síti s omezeným objemem přenášených dat? Stačí nám k tomu prosté čtyři bajty. První a druhý bajt bude identifikátor měřící stanice. Třetí bajt bude vnitřní teplota a čtvrtý bajt vnější teplota. 
 
@@ -54,11 +58,11 @@ Výsledná datová struktura tedy bude `[0x04, 0xD2, 0x9E, 0x78]`, nebo stručn�
 
 Neznáme-li dopředu délku uložených dat, pak jsou k dispozici pouze dvě metody. Buďto si jejich délku někam poznamenáme (typicky na začátek datové struktury) nebo použijeme oddělovače – takovou sekvenci, která se v datech samotných nikdy nemůže vyskytnout. Pohleďte příkladně na tuto sekvenci:
 
-`0x11002222003333330044444444`
+    0x11002222003333330044444444
 
 Ta obsahuje sekvence `0x11`, `0x2222,` `0x333333` a `0x44444444` oddělené nulami. Funguje to docela dobře, ovšem pouze do chvíle, kdy vlastní data nemohou obsahovat nulový bajt, na což se zpravidla nemůžeme spolehnout. Použijeme tedy jiný formát, který si bude délku jednotlivých bloků ukládat. Pro jednoduchost (abychom nemuseli řešit endian) budeme počítat s délkou bloku 0-255 bajtů. Tatáž data budou zakódována následovně:
 
-`0x**01**11**02**2222**03**33333344444444`
+<pre><code>0x<b>01</b>11<b>02</b>2222<b>03</b>33333344444444</code></pre>
 
 Tučně zvýrazněné bajty určují délku následujícího bloku. Poslední blok (čtyři bajty `0x44`) délku uvedenou mít nemusí – jsou to "všechna zbývající data".
 
@@ -66,19 +70,21 @@ Nevýhodou tohoto přístupu je, že nedokážeme přímo přečíst konkrétní
 
 Pokud ale známe počet bloků, můžeme datový formát vylepšit: všechny délky bloků napíšeme na začátek. Výsledek bude vypadat následovně:
 
-`0x**010203**11222233333344444444`
+<pre><code>0x<b>010203</b>11222233333344444444</code></pre>
 
 Poslední vylepšení bude spočívat v tom, že i počet bloků můžeme uložit na začátek a zbavíme se tedy posledního omezení, že počet bloků musí být dopředu znám.
 
 Pohleďte na následující datovou strukturu:
 
-`0x02**010203**11222233333344444444`
+<pre><code>0x02<b>010203</b>11222233333344444444</code></pre>
 
 První bajt určuje počet specifikovaných délek bloků mínus jedna. Určuje tedy, kolik následujících bajtů (v tomto případě tři, zdůrazněné tučně) jsou délky. Následují data jednotlívých bloků, včetně posledního "zbytkového".
 
 ## Třída BytePacker
 
 Napsal jsem v C# komfortní třídu `BytePacker`, která dokáže datové struktury podle uvedeného vzoru vytvářet a zase rozebírat pomocí statických metod `Pack` a `Unpack`. Kód jsem ještě vylepšil o podporu práce s prefixem s pevně danou délkou – v praxi často používáme hybridní datové struktury, které mají část pevnou a část ne.
+
+<script src="https://gist.github.com/ridercz/b77c210cbb3bbe0b832b3a6d06a8ad86.js"></script>
 
 *   Zdrojový kód třídy a ukázkové aplikace najdete jako [gist na GitHubu](https://gist.github.com/ridercz/b77c210cbb3bbe0b832b3a6d06a8ad86).
 *   Mírně zjednodušenou verzi (s pevně danou šířkou konzole) k živým experimentům pak najdete na [DotNetFiddle](https://dotnetfiddle.net/BiqaeN).
