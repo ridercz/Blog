@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>FTPS: bezpečná varianta prastarého protokolu | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=DB8121952121A7889D4F48E80C5786FB98B817CC" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="FTPS: bezpečná varianta prastarého protokolu" />
+    <meta name="twitter:description" content="Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="FTPS: bezpečná varianta prastarého protokolu" />
+    <meta property="og:description" content="Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/gcode.min.js" integrity="sha256-BfE9r9hXnnA3iCH3rWDpIOy/SX9vd4evlNzmSsi9+TU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js" integrity="sha256-EB4Qe5B8kOTN9/r65YrBPJ3VkDRJa8sSVqqaIakt0gU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>FTPS: bezpečná varianta prastarého protokolu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-08-15" title="Datum vydání">15. srpna 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>FTP, alias &quot;File Transfer Protocol&quot; je jeden z nejstarších síťových protokolů, které dnes používáme. Jeho první verze byla standardizována jako <a href="https://tools.ietf.org/html/rfc114">RFC 114</a> již v roce 1971, tedy několik let předtím, než se zrodilo to, co dnes nazýváme Internetem. Má relativně komplikovanou sturkturu a nerozumí si moc dobře s firewally (což bylo později poněkud vylepšeno podporou pasivního režimu).</p>
+<h2 id="zabezpeceni-ftp">Zabezpečení FTP</h2>
+<p>Ve své původní podobě nedisponuje žádným zabezpečením, které by stálo za řeč. Autentizace serveru neexistuje žádná, uživatelé se autentizují pouze jménem a statickým heslem, které se po síti přenáší v otevřené podobě, takže jej lze zjistit primitivním odposlechem. Obecně lze provoz klasického FTP serveru na Internetu dnes chápat jako hazardérství. Existují proto různé postupy, jak FTP zabezpečit.</p>
+<p>Prvním z nich je <strong>SFTP</strong>, což je bohužel zkratka mající několik významů. Prvním a dnes zapomenutým je <em>Simple File Transfer Protocol</em>, dnes již zapomenutý standard definovaný v <a href="https://tools.ietf.org/html/rfc913">RFC 913</a>, který se nikdy příliš nerozšířil. Druhý význam je <em>FTP over Secure Shell</em>, kdy se klasický FTP tuneluje skrze SSH, protokol pro bezpečnou komunikaci používaný zejména na Linuxu a podobných systémech. Ani tento protokol se příliš nerozšířil, což je dobře, protože klasické implementace chránily pouze kanál pro přenos příkazů, nikoliv data. Protokol tedy ochránil vaše heslo, ale ne přenášená data, před odposlechem nebo modifikací.</p>
+<p>Když se dnes bavíme o SFTP nebo <strong>SecureFTP</strong>, obvykle to znamená <em>SSH File Transfer Protocol</em>, což je protokol, který má s klasickým FTP společný jenom název a lze jej chápat spíše jako rozšíření linuxového <strong>SCP</strong> (Secure Copy Protocol). Jeho vývoj probíhal dosti živelně a do dnešního dne není definitivně standardizován. Windows ani IIS jej standardně nepodporují ani jako server, ani jako klient a nebudeme se jím proto nadále zabývat.</p>
+<h2 id="ftps">FTPS</h2>
+<p>Bude nás zajímat <strong>FTPS</strong>. Pokud má nějaký protokol na konci písmeno <em>S</em>, zpravidla to znamená, že je dodatečně zabezpečen pomocí SSL nebo TLS (dnes tedy TLS, protože všechny existující verze SSL jsou dnes pokládány za nebezpečné). FTPS umí fungovat ve dvou režimech.</p>
+<p>Prvním a služebně starším je <strong>Implicit FTPS</strong>. Ten funguje velmi jednoduše: jako první je nutné ustavit zabezpečený komunikační kanál prostřednictvím TLS. Teprve poté, co je vytvořeno toto bezpečné spojení, které lze s trochou nadsázky možné přirovnat k VPN, je tímto kanálem bez jakékoliv úpravy prohnáno klasické FTP spojení. Je to stejná logika, s jakou se setkáme třeba u běžného HTTPS.</p>
+<p>Implicitní FTPS běží typicky na portech 990/TCP (FTPS control) a 989/TCP (FTPS data). Jistou výhodou tohoto protokolu je, že od firewallu nevyžaduje žádné aktivní porozumění, stačí když tento nebude blokovat uvedené dva porty.</p>
+<p>Novější variantu představuje <strong>Explicit FTPS</strong>, označovaný někdy také zkratkou <strong>FTPES</strong>. Tento protokol běží na stejných portech 21/TCP (FTP control) a 20/TCP (FTP data), které používá běžné FTP. Klient má nicméně možnost požádat o &quot;upgrade&quot; spojení a přejít na šifrovanou verzi.</p>
+<h2 id="ftps-v-iis">FTPS v IIS</h2>
+<p>IIS podporuje oba dva režimy a přepíná mezi nimi automaticky, na základě čísla portu. Pokud jako číslo portu uvedete 990, použije se implicitní TLS, pokud jakékoliv jiné, použije se explicitní TLS.</p>
+<p>Pokud tedy chcete provozovat maximálně kompatibilní FTPS server, musíte vytvořit dva prakticky totožné virtuální servery. Budou mít stejné nastavení, ale budou se lišit pouze číslem portu. Jeden bude mít jako port 21 a druhý 990.</p>
+<p>IIS podporuje FTPS od verze 7.0, tedy již deset let. Přesto se lze stále setkat s případy, kdy příkladmo poskytovatelé hostingu nabízejí pouze dnes již nebezpečné FTP.</p>
+<p>Podrobnější informace o konfiguraci FTPS v IIS najdete na <a href="https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/ftpserver/security/ssl">docs.microsoft.com</a></p>
+
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/08/ftps">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/08/ftps">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

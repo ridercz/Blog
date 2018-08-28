@@ -12,11 +12,13 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20160813-zpracovani-aktualnich-a-historickych-kurzu-men-pres-api-cnb.png -->
 
-amarád [Michal Bláha](http://www.michalblaha.cz/) se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici nejenom jemu, ale i všem ostatním zájemcům..
+Kamarád [Michal Bláha](http://www.michalblaha.cz/) se na Facebooku sháněl po API, které by mu dalo k dispozici kurzy měn včetně historie. Vzpomněl jsem si, že jsem něco takového napsal, tak jsem to oprášil, přeleštil a dávám k dispozici nejenom jemu, ale i všem ostatním zájemcům..
 
 Aplikace využívá [API České národní banky](https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt). Ta publikuje v jednoduchém textovém formátu (v podstatě CSV, jenom se pro oddělení používá svislítko) aktuální i historické kurzy. Nevím jak daleko do minulosti, ale minimálně do roku 2000. 
 
-Napsal jsem tedy [třídu, která tato data stáhne, proparsuje a publikuje](https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87).
+Napsal jsem tedy [třídu, která tato data stáhne, proparsuje a publikuje](https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87):
+
+<script src="https://gist.github.com/ridercz/66f22ce86d082f059d26cde05ac69f87.js"></script>
 
 Z programátorského hlediska je to kód dost přímočarý a jednoduchý. Pozoruhodných je pouze pár drobností:
 
