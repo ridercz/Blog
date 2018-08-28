@@ -16,6 +16,15 @@
       <pubDate>2018-08-28T00:00:00</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/08/ftps</guid>
+      <title>FTPS: bezpečná varianta prastarého protokolu</title>
+      <description></description>
+      <link>https://www.altair.blog/2018/08/ftps</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-08-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</guid>
       <title>Jak na migraci Azure Storage z Classic do ARM</title>
       <description></description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-06-28T01:35:17</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2924811</guid>
-      <title>Ikea SAMLA 130 l clip</title>
-      <description></description>
-      <link>https://www.thingiverse.com/thing:2924811</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-05-22T14:25:36</pubDate>
     </item>
   </channel>
 </rss>
