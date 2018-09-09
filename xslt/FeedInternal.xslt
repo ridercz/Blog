@@ -38,7 +38,7 @@
                 <xsl:value-of select="dcterms:title"/>
               </title>
               <description>
-                <xsl:value-of select="dcterms:description"/>
+                <xsl:value-of select="dcterms:abstract"/>
               </description>
               <link>
                 <xsl:choose>

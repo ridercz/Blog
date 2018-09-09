@@ -8,7 +8,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/08/lack</guid>
       <title>Hack the LACK</title>
-      <description></description>
+      <description>Švédská společnost IKEA letos slaví 75 let od svého vzniku a v rámci oslav nabízí od 30. 8. do 5. 9. svůj stolek LACK se slevou za 169 Kč. Tenhle výrobek je nejenom ikonou značky, ale také oblíbeným základem všech možných kutilských projektů. Je snadno dostupný po celém světě, levný a jeho design je dostatečně jednoduchý na to, aby se na něm dalo snadno stavět. Proto jsem pro vás připravil přehled kutilských projektů, které lze na bázi stolku LACK postavit.</description>
       <link>https://www.altair.blog/2018/08/lack</link>
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
@@ -18,7 +18,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/08/ftps</guid>
       <title>FTPS: bezpečná varianta prastarého protokolu</title>
-      <description></description>
+      <description>Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít.</description>
       <link>https://www.altair.blog/2018/08/ftps</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
@@ -27,7 +27,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</guid>
       <title>Jak na migraci Azure Storage z Classic do ARM</title>
-      <description></description>
+      <description>Pokud používáte Azure již nějakou dobu, nejspíš máte řadu Azure Storage účtů ve starém režimu "Classic". Většina nových nástrojů a služeb nicméně předpokládá, že vaše účty budou již v novém režimu, který používá Azure Resource Manager (ARM). Upgrade není úplně triviální, ale ani nemožný.</description>
       <link>https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
@@ -36,7 +36,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/TM1637</guid>
       <title>Nejsnazší ovládání sedmisegmentového displeje Arduinem</title>
-      <description></description>
+      <description>I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka. Našel jsem snadno použitelný modul pro amatérské konstrukce, založený na čipu TM1637.</description>
       <link>https://www.altair.blog/2018/07/TM1637</link>
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
@@ -46,7 +46,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/zaloha-sql-do-azure</guid>
       <title>Automatizovaná záloha SQL Serveru do Azure Storage</title>
-      <description></description>
+      <description>Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště.</description>
       <link>https://www.altair.blog/2018/07/zaloha-sql-do-azure</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
@@ -55,7 +55,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/wheeltug</guid>
       <title>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru</title>
-      <description></description>
+      <description>Po většinu své programátorské kariéry píšu "divné programy" - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i "divný hardware" - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru.</description>
       <link>https://www.altair.blog/2018/07/wheeltug</link>
       <author>Michal Altair Valášek</author>
       <category>Arduino</category>
@@ -65,7 +65,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/07/ctvrtstoleti-psani</guid>
       <title>Čtvrtstoletí psaní</title>
-      <description></description>
+      <description>Všechno to začalo tak nevinně: jedním z mnoha marných pokusů mých rodičů zajistit, abych si vydělal nějaké peníze poctivou prací. Místo abych jako kolportér prodával noviny na ulici, začal jsem do nich psát. A následujícího čtvrt století nepřestal.</description>
       <link>https://www.altair.blog/2018/07/ctvrtstoleti-psani</link>
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
@@ -74,7 +74,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</guid>
       <title>Jak vyměnit v serveru disk za větší</title>
-      <description></description>
+      <description>Byl jsem tázán na některé okolnosti výměny disku v serveru za větší. Vyzkoušel jsem si simulaci ve virtuálním počítači a říkám si, že by se popis postupu mohl hodit i někomu dalšímu.</description>
       <link>https://www.altair.blog/2018/04/jak-vymenit-v-serveru-disk-za-vetsi</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
@@ -83,7 +83,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</guid>
       <title>Pozvánka na večerní školení Arduino a BadUSB</title>
-      <description></description>
+      <description>Zvu vás na poněkud netradiční školení: bude se týkat platformy Arduino a jejího využití k emulaci USB zařízení – fenomén známý jako BadUSB. Toto školení je určeno zájemcům, kteří již mají základní znalosti platformy Arduino nebo programování (ve v podstatě jakémkoliv jazyce). Zároveň má průnik i do světa kybernetické bezpečnosti. Budeme na něm pracovat s procesorem ATmega32U4, který umí mimo jiné emulovat klávesnici, myš nebo gamepad. Ukážeme si, jakým způsobem lze této schopnosti využít k dobrému i ke zlému.</description>
       <link>https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</link>
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
@@ -92,7 +92,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</guid>
       <title>Byte packer – jak na binární datové struktury?</title>
-      <description></description>
+      <description>Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu BytePacker, která vám s tím pomůže.</description>
       <link>https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
@@ -101,7 +101,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</guid>
       <title>Jednoduché šablony pro generování UI v ASP.NET Core</title>
-      <description></description>
+      <description>Další z mých mezisvátkových open source projektů je sada šablon pro dynamické generování UI v ASP.NET Razor Pages a MVC Core.</description>
       <link>https://www.altair.blog/2017/12/jednoduche-sablony-pro-generovani-ui-v-asp-net-core</link>
       <author>Michal Altair Valášek</author>
       <category>Software</category>
@@ -110,7 +110,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</guid>
       <title>Altairis Tag Helpers pro ASP.NET Core Razor Pages a ASP.NET MVC Core</title>
-      <description></description>
+      <description>Jako poněkud opožděný vánoční dárek jsem zveřejnil sadu užitečných tag helperů pro ASP.NET Core Razor Pages a ASP.NET MVC Core.</description>
       <link>https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</link>
       <author>Michal Altair Valášek</author>
       <category>Software</category>
@@ -119,7 +119,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/11/razor-pages-linux-a-mailing-materialy-z-corestart-2-0</guid>
       <title>Razor Pages, Linux a mailing – materiály z CoreStart 2.0</title>
-      <description></description>
+      <description>Na konferenci CoreStart 2.0, která skončila před několika hodinami, jsem měl tři přednášky. Nabízím vám ke stažení prezentace z nich.</description>
       <link>https://www.altair.blog/2017/11/razor-pages-linux-a-mailing-materialy-z-corestart-2-0</link>
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
@@ -128,7 +128,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</guid>
       <title>ASP.NET Core 2.0: platforma kterou chcete používat</title>
-      <description></description>
+      <description>Budoucností platformy ASP.NET jsem se na tomto webu zabýval již několikrát. Uspořádali jsme na toto téma i několik akcí: loni v létě konferenci CORESTART, před měsícem Budoucnost ASP.NET a 2. a 3. 11. nás čeká CORESTART 2.0. Co vlastně je ten .NET Core 2.0 a proč ho chcete používat?</description>
       <link>https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</link>
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
@@ -137,7 +137,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2017/09/naucim-vas-asp-net-core</guid>
       <title>Naučím vás ASP.NET Core</title>
-      <description></description>
+      <description>Na páteční akci jsem vás (snad) přesvědčil, že budoucnost ASP.NET se jmenuje ASP.NET Core. Teď vás ho naučím používat.</description>
       <link>https://www.altair.blog/2017/09/naucim-vas-asp-net-core</link>
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>

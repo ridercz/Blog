@@ -8,7 +8,7 @@
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66229500-psms7-5d3be9eca2ad777</guid>
       <title>Lítačka na kreditce vypadá jako moderní nápad, není to ale žádný důvod k radosti</title>
-      <description></description>
+      <description>V rámci předvolební kampaně spustilo hlavní město Praha další pokračování nekonečného seriálu dříve známého jako Opencard, nyní Lítačka. Hlavním tahákem má být možnost nahrát předplacené jízdenky na platební kartu. Mnoho důvodů k radosti v tom ale nevidím. Naopak, je to spíše důvod k obavám a hned trojí bezpečnostní riziko.</description>
       <link>https://tech.ihned.cz/c7-66229500-psms7-5d3be9eca2ad777</link>
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
@@ -17,7 +17,7 @@
     <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/07/the-sacred-place</guid>
       <title>The Sacred Place</title>
-      <description></description>
+      <description>Další povídka z archivu. Pokud mi paměť slouží, je to snad jediná BDSM povídka, kterou jsem napsal v angličtině. Napsal jsem ji před patnácti lety pro účely literární soutěže SSS SSC a inspirovala mne k ní jedna věta, kterou jsem použil jako poslední. Povídka skončila na třetím místě.</description>
       <link>https://www.bdsm.cz/2018/07/the-sacred-place</link>
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
@@ -26,7 +26,7 @@
     <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/07/coitus-interruptus</guid>
       <title>Coitus interruptus</title>
-      <description></description>
+      <description>Po letech jsem znovu oživil BDSM.CZ. Tenhle příběh jsem kdysi napsal a šťastně na to zapomněl. Po letech ho vydávám z archivu. Zajímavé na něm je, že značka Nokia za tu dobu stihla zemřít a vstát z hrobu.</description>
       <link>https://www.bdsm.cz/2018/07/coitus-interruptus</link>
       <category>BDSM</category>
       <pubDate>2018-07-21T00:00:00</pubDate>
@@ -34,7 +34,7 @@
     <item>
       <guid isPermaLink="true">https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</guid>
       <title>Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir</title>
-      <description></description>
+      <description>Pokud vám nevyhovuje neustále přenášení SD karet a do nastavování Raspberry Pi s Octoprintem se vám příliš nechce, mám pro vás řešení, které stojí za zvážení: SD karty Toshiba FlashAir. Sepsal jsem podrobný návod, jak pomocí nich z 3D tiskárny udělat tiskárnu bezdrátovou.</description>
       <link>https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
@@ -43,7 +43,7 @@
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66195650-psms7-db00268db807cb4</guid>
       <title>Banánový telefon z Matrixu je zpátky: Nokia 8110 4G ke starému konceptu přidala rychlý internet</title>
-      <description></description>
+      <description>Recenze telefonu Nokia 8110 4G, reinkarnace přes dvacet let starého modelu. Odemčený článek na Hospodářkách.</description>
       <link>https://tech.ihned.cz/c7-66195650-psms7-db00268db807cb4</link>
       <author>Michal Altair Valášek</author>
       <category>Recenze</category>
@@ -52,7 +52,7 @@
     <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:3004897</guid>
       <title>Držák na Nokii 8110 4G</title>
-      <description></description>
+      <description>Nokia 8110 4G je feature phone, který těží z popularity klasického modelu, proslaveného filmem The Matrix. Není to špatný telefon, za necelé dva tisíce, proto jsem si ho pořídil jako záložní a na pokusy. A navrhl na něj univerzální držák, aby měl své pevné místo.</description>
       <link>https://www.thingiverse.com/thing:3004897</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
@@ -61,7 +61,7 @@
     <item>
       <guid isPermaLink="true">https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/</guid>
       <title>Příklad z praxe: Naprogramujte si model pro 3D tisk v OpenSCADu</title>
-      <description></description>
+      <description>Jak vzniká věc z 3D tiskárny? Že se vůbec ptám. Připravit STL model, pak pomocí sliceru převést na G-code a hurá tisknout… V tomto článku ale učiníme ještě krok zpět, před tvorbu trojrozměrného modelu. Máme problém z reálného světa, který chceme vyřešit pomocí 3D tisku. A já vás provedu procesem, který lze při řešení tohoto problému využít. Tisk je tentokrát jenom třešničkou na dortu.</description>
       <link>https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
@@ -70,7 +70,7 @@
     <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:2981598</guid>
       <title>LACK Wrench for Electric Drill</title>
-      <description></description>
+      <description>IKEA Lack side tables are favorites of makers worldwide, because they're cheap, readily available and easily hackable. People are making everything from them - from server racks to 3D printer enclosures. But the Lack has one downside - the double-pronged screws have to be rightened manually, as no standard tool will fit them. Not anymore - I created the Lack Wrench. 3D printed tool you can attach do electric drill and use it to tighten the Lack legs.</description>
       <link>https://www.thingiverse.com/thing:2981598</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
@@ -79,7 +79,7 @@
     <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:2980848</guid>
       <title>Keyboard Bracket</title>
-      <description></description>
+      <description>This is simple but robust holder for my secondary keyboard (used to control the camera server or install jobs). The keyboard is to be held at 30° angle from edge of desk (in my case, the ingenious IKEA Lack). Screw the holders with four 4 mm screws to bottom of desk. The OpenSCAD model is fairly parametric to allow for accommodation of keyboards of various sizes.</description>
       <link>https://www.thingiverse.com/thing:2980848</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
@@ -88,7 +88,7 @@
     <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:2924811</guid>
       <title>Ikea SAMLA 130 l clip</title>
-      <description></description>
+      <description>This is version of The best Ikea Samla Clip. even better. by crashc0de made for the biggest (130 l) SAMLA version (IKEA art. no. 901.029.71). This one has different size so I enlarged the original model to 157%. The original STL for 45-65 l version is thrown in for completeness.</description>
       <link>https://www.thingiverse.com/thing:2924811</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
@@ -97,7 +97,7 @@
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-66126470-seznam-cz-je-konecne-bezpecnejsi-dvoufaktorove-overeni-zavedl-pozde-ale-zato-spatne</guid>
       <title>Seznam.cz je konečně bezpečnější: Dvoufaktorové ověření zavedl pozdě, ale zato špatně</title>
-      <description></description>
+      <description>Největší český poskytovatel e-mailů umožní bezpečnější přihlášení a zvýší ochranu uživatelů. Novinka přichází s několikaletým zpožděním proti globální, a i v ČR oblíbené, konkurenci. Seznam zvolil netradiční provedení, které se obejde bez SMS, není to ale dobře.</description>
       <link>https://tech.ihned.cz/internet/c1-66126470-seznam-cz-je-konecne-bezpecnejsi-dvoufaktorove-overeni-zavedl-pozde-ale-zato-spatne</link>
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
@@ -106,7 +106,7 @@
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66125020-na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</guid>
       <title>Na návštěvě v muzeu Living Computers: Takhle vypadá domov důchodců pro hodné počítače</title>
-      <description></description>
+      <description>Počítačové muzeum spoluzakladatele Microsoftu Paula Allena ukazuje legendy digitální historie. Místo exponátů za sklem jsou hlavním lákadlem desítky plně funkčních strojů, které si lze osahat. K vidění jsou i systémy Apple II a Apple Lisa nebo nejznámější superpočítač Cray-1.</description>
       <link>https://tech.ihned.cz/geekosfera/c1-66125020-na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</link>
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
@@ -115,7 +115,7 @@
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server</guid>
       <title>Jedničky, nebo osmičky? Expert vysvětluje, proč je pro vás důležitý DNS server a jaký si vybrat</title>
-      <description></description>
+      <description>Společnost CloudFlare vyvolala novou vlnu zájmu o DNS. Bezplatné servery překládají názvy webů do počítačové řeči. Kvalitní DNS slibuje rychlost i větší bezpečnost, realita je ale složitější.</description>
       <link>https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server</link>
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
@@ -124,7 +124,7 @@
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo</guid>
       <title>Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na „rekvalifikaci“</title>
-      <description></description>
+      <description>Zájemce o práci v IT sektoru zbytečně odrazuje matematika, stačí znát násobilku. Naučit se programovat není těžké ani nákladné, stačí pár stokorun a nějaký čas. V IT se dá pracovat i jinak než jako programátor, lidí je málo ve spoustě oborů.</description>
       <link>https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo</link>
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
@@ -133,7 +133,7 @@
     <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:2771287</guid>
       <title>LED cube toy</title>
-      <description></description>
+      <description>My small son loves electronics, especially if they have blinking lights and bunch of buttons. So I designed this light ramp, which is controller by Arduino and can display different light effects. Print: ledcubetoy_holder_top.stl and ledcubetoy_holder_bottom.stl in any color. It's a quite big part, I had to position it diagonally on my Prusa i3 MK2. ledcubetoy_cube.stl or ledcubetoy_cylinder.stl in transparent. Any combination of these, has to be 8 total.</description>
       <link>https://www.thingiverse.com/thing:2771287</link>
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
