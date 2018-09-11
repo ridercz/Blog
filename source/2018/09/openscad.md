@@ -1,0 +1,9 @@
+<!-- dcterms:title = Parametrické modelování v OpenSCADu -->
+<!-- dcterms:abstract = Jednou z hlavních výhod OpenSCADU proti běžným 3D modelovacím programům je snadné parametrické modelování. Tedy schopnost pomocí jednoduché změny proměnných zásadním způsobem ovlivnit vlastnosti modelu. A to nejenom jeho rozměry, ale celkově jakékoliv chování. V tomto článku vám ukážu, jak na to. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20180911-openscad.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2018-09-11 -->
+<!-- x4w:alternateUrl = https://josefprusa.cz/parametricke-modelovani-v-openscadu/ -->

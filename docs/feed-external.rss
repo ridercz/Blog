@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://josefprusa.cz/parametricke-modelovani-v-openscadu/</guid>
+      <title>Parametrické modelování v OpenSCADu</title>
+      <description>Jednou z hlavních výhod OpenSCADU proti běžným 3D modelovacím programům je snadné parametrické modelování. Tedy schopnost pomocí jednoduché změny proměnných zásadním způsobem ovlivnit vlastnosti modelu. A to nejenom jeho rozměry, ale celkově jakékoliv chování. V tomto článku vám ukážu, jak na to.</description>
+      <link>https://josefprusa.cz/parametricke-modelovani-v-openscadu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-09-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66229500-psms7-5d3be9eca2ad777</guid>
       <title>Lítačka na kreditce vypadá jako moderní nápad, není to ale žádný důvod k radosti</title>
       <description>V rámci předvolební kampaně spustilo hlavní město Praha další pokračování nekonečného seriálu dříve známého jako Opencard, nyní Lítačka. Hlavním tahákem má být možnost nahrát předplacené jízdenky na platební kartu. Mnoho důvodů k radosti v tom ale nevidím. Naopak, je to spíše důvod k obavám a hned trojí bezpečnostní riziko.</description>
@@ -129,15 +138,6 @@
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2018-03-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2771287</guid>
-      <title>LED cube toy</title>
-      <description>My small son loves electronics, especially if they have blinking lights and bunch of buttons. So I designed this light ramp, which is controller by Arduino and can display different light effects. Print: ledcubetoy_holder_top.stl and ledcubetoy_holder_bottom.stl in any color. It's a quite big part, I had to position it diagonally on my Prusa i3 MK2. ledcubetoy_cube.stl or ledcubetoy_cylinder.stl in transparent. Any combination of these, has to be 8 total.</description>
-      <link>https://www.thingiverse.com/thing:2771287</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-01-26T20:37:43</pubDate>
     </item>
   </channel>
 </rss>

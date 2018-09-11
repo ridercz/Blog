@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://josefprusa.cz/parametricke-modelovani-v-openscadu/</guid>
+      <title>Parametrické modelování v OpenSCADu</title>
+      <description>Jednou z hlavních výhod OpenSCADU proti běžným 3D modelovacím programům je snadné parametrické modelování. Tedy schopnost pomocí jednoduché změny proměnných zásadním způsobem ovlivnit vlastnosti modelu. A to nejenom jeho rozměry, ale celkově jakékoliv chování. V tomto článku vám ukážu, jak na to.</description>
+      <link>https://josefprusa.cz/parametricke-modelovani-v-openscadu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-09-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66229500-psms7-5d3be9eca2ad777</guid>
       <title>Lítačka na kreditce vypadá jako moderní nápad, není to ale žádný důvod k radosti</title>
       <description>V rámci předvolební kampaně spustilo hlavní město Praha další pokračování nekonečného seriálu dříve známého jako Opencard, nyní Lítačka. Hlavním tahákem má být možnost nahrát předplacené jízdenky na platební kartu. Mnoho důvodů k radosti v tom ale nevidím. Naopak, je to spíše důvod k obavám a hned trojí bezpečnostní riziko.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-06-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2981598</guid>
-      <title>LACK Wrench for Electric Drill</title>
-      <description>IKEA Lack side tables are favorites of makers worldwide, because they're cheap, readily available and easily hackable. People are making everything from them - from server racks to 3D printer enclosures. But the Lack has one downside - the double-pronged screws have to be rightened manually, as no standard tool will fit them. Not anymore - I created the Lack Wrench. 3D printed tool you can attach do electric drill and use it to tighten the Lack legs.</description>
-      <link>https://www.thingiverse.com/thing:2981598</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-06-28T17:13:16</pubDate>
     </item>
   </channel>
 </rss>
