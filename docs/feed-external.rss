@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c1-66254420-pokuta-za-hloupost-ne-za-masturbaci-vyderac-hrozi-zverejnenim-neexistujiciho-videa</guid>
+      <title>Pokuta za hloupost, ne za masturbaci</title>
+      <description>Český Internet je v tomto okamžiku cílem poměrně zábavného útoku. Na tisíce e-mailových adres chodí vyděračské zprávy, které uživateli sdělují, že si při prohlížení pornostránek stáhl virus a byl svou webkamerou natočen při masturbaci. Tajemný pisatel vyhrožuje, že nedostane-li 250 USD (5500 korun) v Bitcoinech, rozešle inkriminující záběry všem přátelům dotyčného..</description>
+      <link>https://tech.ihned.cz/c1-66254420-pokuta-za-hloupost-ne-za-masturbaci-vyderac-hrozi-zverejnenim-neexistujiciho-videa</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-09-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://josefprusa.cz/parametricke-modelovani-v-openscadu/</guid>
       <title>Parametrické modelování v OpenSCADu</title>
       <description>Jednou z hlavních výhod OpenSCADU proti běžným 3D modelovacím programům je snadné parametrické modelování. Tedy schopnost pomocí jednoduché změny proměnných zásadním způsobem ovlivnit vlastnosti modelu. A to nejenom jeho rozměry, ale celkově jakékoliv chování. V tomto článku vám ukážu, jak na to.</description>
@@ -129,15 +138,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-04-16T23:09:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo</guid>
-      <title>Jak se stát programátorem: Tři vyvrácené mýty a jednoduchý návod na „rekvalifikaci“</title>
-      <description>Zájemce o práci v IT sektoru zbytečně odrazuje matematika, stačí znát násobilku. Naučit se programovat není těžké ani nákladné, stačí pár stokorun a nějaký čas. V IT se dá pracovat i jinak než jako programátor, lidí je málo ve spoustě oborů.</description>
-      <link>https://tech.ihned.cz/pocitace/c1-66083700-jak-se-stat-programatorem-tri-vyvracene-myty-a-jednoduchy-navod-na-bdquo-rekvalifikaci-ldquo</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2018-03-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
