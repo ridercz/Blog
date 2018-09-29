@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznys.ihned.cz/c7-66262960-psms7-238c9e12295e29c</guid>
+      <title>Hack Facebooku: padesát miliónů účtů v ohrožení</title>
+      <description>Odhlásil vás v pátek ráno Facebook a museli jste se znovu přihlásit? Možná jste byli jednou z obětí nejnovějšího bezpečnostního průšvihu, který FB řeší. Webová aplikace Facebooku obsahovala chybu ve funkci "View As", která umožňuje zobrazit obsah tak, jak ho vidí jiný uživatel (např. pro otestování viditelnosti postu). Vinou této chyby mohl útočník získat autentizační token, který se používá pro přístup k aplikaci a různým API. S tímto tokenem pak mohl učinit cokoliv, co může učinit standardní uživatel.</description>
+      <link>https://byznys.ihned.cz/c7-66262960-psms7-238c9e12295e29c</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c1-66254420-pokuta-za-hloupost-ne-za-masturbaci-vyderac-hrozi-zverejnenim-neexistujiciho-videa</guid>
       <title>Pokuta za hloupost, ne za masturbaci</title>
       <description>Český Internet je v tomto okamžiku cílem poměrně zábavného útoku. Na tisíce e-mailových adres chodí vyděračské zprávy, které uživateli sdělují, že si při prohlížení pornostránek stáhl virus a byl svou webkamerou natočen při masturbaci. Tajemný pisatel vyhrožuje, že nedostane-li 250 USD (5500 korun) v Bitcoinech, rozešle inkriminující záběry všem přátelům dotyčného..</description>
@@ -129,15 +138,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2018-04-29T22:28:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server</guid>
-      <title>Jedničky, nebo osmičky? Expert vysvětluje, proč je pro vás důležitý DNS server a jaký si vybrat</title>
-      <description>Společnost CloudFlare vyvolala novou vlnu zájmu o DNS. Bezplatné servery překládají názvy webů do počítačové řeči. Kvalitní DNS slibuje rychlost i větší bezpečnost, realita je ale složitější.</description>
-      <link>https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-04-16T23:09:00</pubDate>
     </item>
   </channel>
 </rss>
