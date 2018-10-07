@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Instalace a konfigurace Kali Linuxu na Hyper-V | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Instalace a konfigurace Kali Linuxu na Hyper-V" />
+    <meta name="twitter:description" content="Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Instalace a konfigurace Kali Linuxu na Hyper-V" />
+    <meta property="og:description" content="Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/gcode.min.js" integrity="sha256-BfE9r9hXnnA3iCH3rWDpIOy/SX9vd4evlNzmSsi9+TU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js" integrity="sha256-EB4Qe5B8kOTN9/r65YrBPJ3VkDRJa8sSVqqaIakt0gU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Instalace a konfigurace Kali Linuxu na Hyper-V</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-10-07" title="Datum vydání">7. října 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Často se používá jako &quot;live&quot; distribuce, která se neinstaluje, ale jenom se nahraje na DVD nebo USB disk a nabootuje. Já ji nicméně používám pro různá dema a laby a mám ji nainstalovanou ve virtualizační platformě Hyper-V.</p>
+<p>Pro konkurenční platformy VMWare a VirtualBox jsou k dispozici přímo oficiální předinstalované images. Pro Hyper-V nic takového není a virtuálku si musíte vytvořit sami. Není to obtížné a nádavkem přidávám pár konfiguračních tipů. Takhle konfiguruji svoje Kali já pro účely výuky a dema. Samozřejmě pro praktické použití budete chtít postupovat jiným způsobem.</p>
+<h2 id="ziskani-instalacniho-image-a-vytvoreni-hyper-v-vm">Získání instalačního image a vytvoření Hyper-V VM</h2>
+<p>Instalační ISO image si stáhnete na webu <a href="https://www.kali.org/downloads/">kali.org v sekci Downloads</a>. Bude vás zajímat ten nejběžnější image - <em>Kali Linux 64 bit</em>. V době vydání článku je aktuální verze 2018.3a a můj návod se vztahuje právě k ní - postup je nicméně stejný již mnoho verzí a předpokládám, že bude aktuální i do budoucna.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20181007-kali-01.png" alt="VM musí být &quot;Generation 1&quot;" /></p>
+<p>Vytvoření VM je velmi jednoduché a v průvodci postupujte běžným způsobem. Jenom si dejte pozor, abyste vytvořili <em>Generation 1</em> VM. Po vytvoření VM ji nabootuje z ISO image.</p>
+<h2 id="instalace-operacniho-systemu">Instalace operačního systému</h2>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20181007-kali-02.png" alt="Kali Linux Boot Screen" /></p>
+<p>Měla by se vám ukázat úvodní obrazovka s možnostmi umožňujícími spustit Kali jako live distribuci a nebo jej nainstalovat. Zvolte Graphical Install.</p>
+<p>Občas se mi stává, že se boot screen zobrazí chybně - je tam jenom prázdný obrázek bez textu. V takovém případě pomáhá se odpojit (zavřít okno <em>Virtual Machine Connection</em>) a zase se připojit.</p>
+<p>Samotnou instalaci OS nechávám s výchozími hodnotami, včetně regionálních nastavení (je to poněkud zmatené, takže všechno nechávám na English/US a měním dodatečně).</p>
+<p>U Kali se vzhledem k jeho speciálnímu určení vesměs předpokládá, že budete pracovat jako <code>root</code> (administrátor), takže v rámci instalace zadávám jeho heslo a nevytvářím speciálního uživatele.</p>
+<h2 id="nastaveni-rozliseni">Nastavení rozlišení</h2>
+<p>Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné editovat soubor <code>/etc/default/grub</code>. Najděte následující řádek:</p>
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
+</code></pre>
+<p>a nahraďte jej tímto:</p>
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash video=hyperv_fb:1280x720&quot;
+</code></pre>
+<p>Poté spusťte příkaz <code>update-grub</code> a restartujte počítač.</p>
+<h2 id="nastaveni-automatickeho-prihlasovani">Nastavení automatického přihlašování</h2>
+<p>Pro dema se hodí mít nastavené automatické přihlašování. To zapnete tak, že editujete soubor <code>/etc/gdm3/daemon.conf</code>. Odstraněním <code>#</code> v něm odkomentujte následující řádky:</p>
+<pre><code>AutomaticLoginEnable = true
+AutomaticLogin = root
+</code></pre>
+<p>To zařídí automatické přihlašování. Ještě je třeba zakázat automatické zamykání konzole a vypínání obrazovky. To se dá udělat ze systémového menu (šipka dolů vpravo nahoře):</p>
+<ul>
+<li><em>Settings &gt; Power &gt; Blank screen</em></li>
+<li><em>Settings &gt; Privacy &gt; Screen lock</em></li>
+</ul>
+<h2 id="regionalni-nastaveni">Regionální nastavení</h2>
+<p>Chci, aby na mne systém mluvil anglicky, ale abych měl českou QWERTY klávesnici, české formáty datumu a času a českou časovou zónu. To se dá opět udělat ze systémového menu v <em>Settings &gt; Region &amp; Language</em>.</p>
+<h2 id="nastaveni-pozadi">Nastavení pozadí</h2>
+<p>Všechny moje VM pro dema mají na pozadí vycentrované firemní logo a barvu, která je specifická pro dané VM, aby se daly snadno rozeznat. To je nejjednodušší nastavit z příkazové řádky následujícími příkazy:</p>
+<pre><code>gsettings set org.gnome.desktop.background picture-uri &quot;file:///root/Pictures/Wallpapers/Altairis-Background-for-Virtual-PC.png&quot;
+gsettings set org.gnome.desktop.background picture-options &quot;centered&quot;
+gsettings set org.gnome.desktop.background primary-color &quot;#F26631&quot;
+</code></pre>
+
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/10/kali-linux-na-hyperv">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/10/kali-linux-na-hyperv">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

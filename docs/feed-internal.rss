@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/10/kali-linux-na-hyperv</guid>
+      <title>Instalace a konfigurace Kali Linuxu na Hyper-V</title>
+      <description>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu.</description>
+      <link>https://www.altair.blog/2018/10/kali-linux-na-hyperv</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <category>Software</category>
+      <pubDate>2018-10-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/09/smutna-historie-se-sirotami</guid>
       <title>Smutná historie se sirotami</title>
       <description>Pláčete-li nad cynismem české společnosti, odmítající pomoci ubohým sirotkům, zaměřte se na příčiny. Systematické působení profesionálních konatelů dobra za cizí peníze, kteří se místo sebevědomí a svobody snaží již léta imputovat pocity viny a méněcennosti jenom nese své ovoce.</description>
@@ -133,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2017-11-04T02:13:24</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</guid>
-      <title>ASP.NET Core 2.0: platforma kterou chcete používat</title>
-      <description>Budoucností platformy ASP.NET jsem se na tomto webu zabýval již několikrát. Uspořádali jsme na toto téma i několik akcí: loni v létě konferenci CORESTART, před měsícem Budoucnost ASP.NET a 2. a 3. 11. nás čeká CORESTART 2.0. Co vlastně je ten .NET Core 2.0 a proč ho chcete používat?</description>
-      <link>https://www.altair.blog/2017/10/asp-net-core-2-0-platforma-kterou-chcete-pouzivat</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2017-10-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
