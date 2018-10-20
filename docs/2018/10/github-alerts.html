@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GitHub Security Alerts nyní i pro .NET aplikace | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Koncem loňského roku spustil GitHub funkci, která vás varuje v případě, že používáte závislosti se známými bezpečnostními chybami. Nyní je dostupná i pro aplikace psané v .NETu a umí vás upozornit na to, že používáte potenciálně nebezpečné verze NuGet balíčků." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="GitHub Security Alerts nyní i pro .NET aplikace" />
+    <meta name="twitter:description" content="Koncem loňského roku spustil GitHub funkci, která vás varuje v případě, že používáte závislosti se známými bezpečnostními chybami. Nyní je dostupná i pro aplikace psané v .NETu a umí vás upozornit na to, že používáte potenciálně nebezpečné verze NuGet balíčků." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="GitHub Security Alerts nyní i pro .NET aplikace" />
+    <meta property="og:description" content="Koncem loňského roku spustil GitHub funkci, která vás varuje v případě, že používáte závislosti se známými bezpečnostními chybami. Nyní je dostupná i pro aplikace psané v .NETu a umí vás upozornit na to, že používáte potenciálně nebezpečné verze NuGet balíčků." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/gcode.min.js" integrity="sha256-BfE9r9hXnnA3iCH3rWDpIOy/SX9vd4evlNzmSsi9+TU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js" integrity="sha256-EB4Qe5B8kOTN9/r65YrBPJ3VkDRJa8sSVqqaIakt0gU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>GitHub Security Alerts nyní i pro .NET aplikace</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-10-20" title="Datum vydání">20. října 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Jedním z nejčastějších bezpečnostních problémů je používání zastaralých verzí závislostí (knihoven, komponent), které obsahují známé a opravené bezpečnostní chyby. V poslední verzi <a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf">OWASP Top 10</a> se dostal na deváté místo. GitHub již od listopadu 2017 disponuje funkcí <a href="https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/">Security Alerts</a>, která umí tyto zastaralé komponenty najít a upozornit vás, pokud je používáte.</p>
+<p>Nyní je tato funkce k dispozici i pro .NET aplikace a umí vás upozornit na potenciálně nebezpečné NuGet balíčky. Funkce podporuje jak klasické .NET Framework aplikace (kde je seznam balíčků v <code>packages.config</code>) tak nové .NET Core aplikace, kde jsou referencované balíčky přímo v <code>.csproj</code> souboru.</p>
+<h2 id="jak-se-o-problemu-dozvite">Jak se o problému dozvíte</h2>
+<p>Ve výchozím nastavení vás GitHub upozorní na potenciálně nebezpečné závislosti e-mailem:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20181020-github-alerts-0.png" alt="Screenshot e-mailové zprávy" /></p>
+<p>Rovněž vás upozorní žlutým výstražným bannerem přímo na hlavní stránce příslušného repozitáře:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20181020-github-alerts-1.png" alt="Screenshot notifikace na GitHubu" /></p>
+<p>Způsoby upozornění lze <a href="https://github.com/settings/notifications">změnit v nastavení</a>.</p>
+<p>Přehled všech aktuálních alertů v repozitáři najdete na záložce <em>Insights</em> v sekci <em>Alerts</em>. Tam najdete také odkaz na podrobnější informace o příslušné zranitelnosti:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20181020-github-alerts-3.png" alt="Screenshot detailu zranitelnosti" /></p>
+<h2 id="co-s-tim">Co s tím</h2>
+<p>OK. Notifikaci jste dostali. A teď, co s tím? Samozřejmě nejjednodušší a nejsprávnější řešení je, že aktualizujete NuGet balíčky na nejnovější verzi (nebo alespoň na verzi, která řeší problém, na který jste byli upozorněni). V takovém případě alert automaticky zmizí.</p>
+<p>V případě, že to učinit nemůžete nebo nehodláte, máte možnost alert zrušit pomocí tlačítka <em>Dismiss</em>, přičemž vyberete důvod, pro který jste se alert rozhodli ignorovat.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2018/20181020-github-alerts-4.png" alt="Screenshot zrušení alertu" /></p>
+<p>U aktivně vyvíjených projektů obvykle nebývá s udržováním aktuálních verzí komponent zásadnější problém. Ale jakmile projekt přejde do fáze údržby, může to být náročnější, zejména pokud je projektů hodně a vývojářů málo. Alerty z GitHubu tudíž mohou přijít vhod a proto tuto funkci hodnotím velmi pozitivně.</p>
+
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/10/github-alerts">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/10/github-alerts">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
