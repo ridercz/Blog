@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</guid>
+      <title>Jenom "S" nestačí: HTTPS správně</title>
+      <description>O důležitosti použití zabezpečeného protokolu HTTPS na webových stránkách již není sporu a z větších webů už odolávají jenom ty obzvláště zatvrzelé, jako například české ministerstvo vnitra nebo Policie ČR. Jenomže mít prosté "S" na konci již dnes nestačí.</description>
+      <link>https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2018-10-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://byznys.ihned.cz/c7-66262960-psms7-238c9e12295e29c</guid>
       <title>Hack Facebooku: padesát miliónů účtů v ohrožení</title>
       <description>Odhlásil vás v pátek ráno Facebook a museli jste se znovu přihlásit? Možná jste byli jednou z obětí nejnovějšího bezpečnostního průšvihu, který FB řeší. Webová aplikace Facebooku obsahovala chybu ve funkci "View As", která umožňuje zobrazit obsah tak, jak ho vidí jiný uživatel (např. pro otestování viditelnosti postu). Vinou této chyby mohl útočník získat autentizační token, který se používá pro přístup k aplikaci a různým API. S tímto tokenem pak mohl učinit cokoliv, co může učinit standardní uživatel.</description>
@@ -129,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-05-02T00:10:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66125020-na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</guid>
-      <title>Na návštěvě v muzeu Living Computers: Takhle vypadá domov důchodců pro hodné počítače</title>
-      <description>Počítačové muzeum spoluzakladatele Microsoftu Paula Allena ukazuje legendy digitální historie. Místo exponátů za sklem jsou hlavním lákadlem desítky plně funkčních strojů, které si lze osahat. K vidění jsou i systémy Apple II a Apple Lisa nebo nejznámější superpočítač Cray-1.</description>
-      <link>https://tech.ihned.cz/geekosfera/c1-66125020-na-navsteve-v-muzeu-living-computers-takhle-vypada-domov-duchodcu-pro-hodne-pocitace</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2018-04-29T22:28:00</pubDate>
     </item>
   </channel>
 </rss>

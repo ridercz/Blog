@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</guid>
+      <title>Jenom "S" nestačí: HTTPS správně</title>
+      <description>O důležitosti použití zabezpečeného protokolu HTTPS na webových stránkách již není sporu a z větších webů už odolávají jenom ty obzvláště zatvrzelé, jako například české ministerstvo vnitra nebo Policie ČR. Jenomže mít prosté "S" na konci již dnes nestačí.</description>
+      <link>https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2018-10-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/github-alerts</guid>
       <title>GitHub Security Alerts nyní i pro .NET aplikace</title>
       <description>Koncem loňského roku spustil GitHub funkci, která vás varuje v případě, že používáte závislosti se známými bezpečnostními chybami. Nyní je dostupná i pro aplikace psané v .NETu a umí vás upozornit na to, že používáte potenciálně nebezpečné verze NuGet balíčků.</description>
@@ -134,15 +144,6 @@
       <link>https://www.bdsm.cz/2018/07/coitus-interruptus</link>
       <category>BDSM</category>
       <pubDate>2018-07-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</guid>
-      <title>Bezdrátový 3D tisk snadno a rychle: SD karty Toshiba FlashAir</title>
-      <description>Pokud vám nevyhovuje neustále přenášení SD karet a do nastavování Raspberry Pi s Octoprintem se vám příliš nechce, mám pro vás řešení, které stojí za zvážení: SD karty Toshiba FlashAir. Sepsal jsem podrobný návod, jak pomocí nich z 3D tiskárny udělat tiskárnu bezdrátovou.</description>
-      <link>https://josefprusa.cz/bezdratovy-3d-tisk-snadno-a-rychle-sd-karty-toshiba-flashair/</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-07-20T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
