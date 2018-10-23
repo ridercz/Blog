@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/10/co-stoji-dobra-rada</guid>
+      <title>Co stojí dobrá rada</title>
+      <description>Poslední dobou mi přišlo několik dotazů, jestli je možné si mne najmout a za jakých podmínek. Odpověď je obecně ano - živím se tím. Ceny a podmínky mám vesměs pevné a nevidím důvod je nezveřejnit, takže tady jsou.</description>
+      <link>https://www.altair.blog/2018/10/co-stoji-dobra-rada</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Koně</category>
+      <pubDate>2018-10-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/github-alerts</guid>
       <title>GitHub Security Alerts nyní i pro .NET aplikace</title>
       <description>Koncem loňského roku spustil GitHub funkci, která vás varuje v případě, že používáte závislosti se známými bezpečnostními chybami. Nyní je dostupná i pro aplikace psané v .NETu a umí vás upozornit na to, že používáte potenciálně nebezpečné verze NuGet balíčků.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Software</category>
       <pubDate>2017-12-27T01:53:52</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</guid>
-      <title>Altairis Tag Helpers pro ASP.NET Core Razor Pages a ASP.NET MVC Core</title>
-      <description>Jako poněkud opožděný vánoční dárek jsem zveřejnil sadu užitečných tag helperů pro ASP.NET Core Razor Pages a ASP.NET MVC Core.</description>
-      <link>https://www.altair.blog/2017/12/altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2017-12-26T19:00:00</pubDate>
     </item>
   </channel>
 </rss>

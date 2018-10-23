@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/10/co-stoji-dobra-rada</guid>
+      <title>Co stojí dobrá rada</title>
+      <description>Poslední dobou mi přišlo několik dotazů, jestli je možné si mne najmout a za jakých podmínek. Odpověď je obecně ano - živím se tím. Ceny a podmínky mám vesměs pevné a nevidím důvod je nezveřejnit, takže tady jsou.</description>
+      <link>https://www.altair.blog/2018/10/co-stoji-dobra-rada</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Koně</category>
+      <pubDate>2018-10-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</guid>
       <title>Jenom "S" nestačí: HTTPS správně</title>
       <description>O důležitosti použití zabezpečeného protokolu HTTPS na webových stránkách již není sporu a z větších webů už odolávají jenom ty obzvláště zatvrzelé, jako například české ministerstvo vnitra nebo Policie ČR. Jenomže mít prosté "S" na konci již dnes nestačí.</description>
@@ -136,14 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2018-07-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2018/07/coitus-interruptus</guid>
-      <title>Coitus interruptus</title>
-      <description>Po letech jsem znovu oživil BDSM.CZ. Tenhle příběh jsem kdysi napsal a šťastně na to zapomněl. Po letech ho vydávám z archivu. Zajímavé na něm je, že značka Nokia za tu dobu stihla zemřít a vstát z hrobu.</description>
-      <link>https://www.bdsm.cz/2018/07/coitus-interruptus</link>
-      <category>BDSM</category>
-      <pubDate>2018-07-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
