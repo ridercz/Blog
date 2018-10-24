@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/10/ukazkove-aplikace</guid>
+      <title>AskMe a ShirtShop: ukázkové aplikace pro Razor Pages a Identity</title>
+      <description>Aktualizoval jsem dvě ukázkové aplikace, které používám na školeních a přednáškách. Ukazují možnosti využití ASP.NET Core Razor Pages 2.0 a ASP.NET Identity. Najdete je na mém GitHubu.</description>
+      <link>https://www.altair.blog/2018/10/ukazkove-aplikace</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Software</category>
+      <pubDate>2018-10-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/co-stoji-dobra-rada</guid>
       <title>Co stojí dobrá rada</title>
       <description>Poslední dobou mi přišlo několik dotazů, jestli je možné si mne najmout a za jakých podmínek. Odpověď je obecně ano - živím se tím. Ceny a podmínky mám vesměs pevné a nevidím důvod je nezveřejnit, takže tady jsou.</description>
@@ -137,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-07-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2018/07/the-sacred-place</guid>
-      <title>The Sacred Place</title>
-      <description>Další povídka z archivu. Pokud mi paměť slouží, je to snad jediná BDSM povídka, kterou jsem napsal v angličtině. Napsal jsem ji před patnácti lety pro účely literární soutěže SSS SSC a inspirovala mne k ní jedna věta, kterou jsem použil jako poslední. Povídka skončila na třetím místě.</description>
-      <link>https://www.bdsm.cz/2018/07/the-sacred-place</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2018-07-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
