@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/10/chybi-nam-republika</guid>
+      <title>Demokracii bychom měli, chybí nám republika</title>
+      <description>Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Podle mého názoru ovšem není moc co oslavovat. Po sto letech máme pořád stát, máme i demokracii, ale chybí nám to nejdůležitější: svoboda a v kontextu oněch oslav, republika.</description>
+      <link>https://www.altair.blog/2018/10/chybi-nam-republika</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <pubDate>2018-10-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/ukazkove-aplikace</guid>
       <title>AskMe a ShirtShop: ukázkové aplikace pro Razor Pages a Identity</title>
       <description>Aktualizoval jsem dvě ukázkové aplikace, které používám na školeních a přednáškách. Ukazují možnosti využití ASP.NET Core Razor Pages 2.0 a ASP.NET Identity. Najdete je na mém GitHubu.</description>
@@ -138,15 +147,6 @@
       <category>Bastlení</category>
       <category>Arduino</category>
       <pubDate>2018-07-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/zaloha-sql-do-azure</guid>
-      <title>Automatizovaná záloha SQL Serveru do Azure Storage</title>
-      <description>Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště.</description>
-      <link>https://www.altair.blog/2018/07/zaloha-sql-do-azure</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-07-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

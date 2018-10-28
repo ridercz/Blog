@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/10/chybi-nam-republika</guid>
+      <title>Demokracii bychom měli, chybí nám republika</title>
+      <description>Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Podle mého názoru ovšem není moc co oslavovat. Po sto letech máme pořád stát, máme i demokracii, ale chybí nám to nejdůležitější: svoboda a v kontextu oněch oslav, republika.</description>
+      <link>https://www.altair.blog/2018/10/chybi-nam-republika</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <pubDate>2018-10-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/ukazkove-aplikace</guid>
       <title>AskMe a ShirtShop: ukázkové aplikace pro Razor Pages a Identity</title>
       <description>Aktualizoval jsem dvě ukázkové aplikace, které používám na školeních a přednáškách. Ukazují možnosti využití ASP.NET Core Razor Pages 2.0 a ASP.NET Identity. Najdete je na mém GitHubu.</description>
@@ -138,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2018-02-09T17:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</guid>
-      <title>Byte packer – jak na binární datové struktury?</title>
-      <description>Jako programátoři ve vysokoúrovňovém jazyce zpravidla nemusíme řešit nízkoúrovňové formáty dat. Takové struktury řešíme na vysoké úrovni a na konci je serializujeme třeba do XML nebo JSON. Nebo, když už to jinak nejde, alespoň do CSV. Ale co když potřebujeme komunikovat s něčím, co má podstatně nižší úroveň, a potřebujeme do prostého pole bajtů uložit složitější datovou strukturu? Vytvořil jsem pomocnou třídu BytePacker, která vám s tím pomůže.</description>
-      <link>https://www.altair.blog/2018/02/byte-packer-jak-na-binarni-datove-struktury</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-02-07T23:00:00</pubDate>
     </item>
   </channel>
 </rss>

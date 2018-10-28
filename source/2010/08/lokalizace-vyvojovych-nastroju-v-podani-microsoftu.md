@@ -10,7 +10,7 @@
 <!-- dcterms:dateAccepted = 2010-08-04T00:31:03.58+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:pictureUrl = /perex-pictures/20100804-lokalizace-vyvojovych-nastroju-v-podani-microsoftu.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-vlajka.png -->
 
 Microsoft ve spolupráci s VŠB-TU Ostrava připravil lokalizaci uživatelského rozhraní Visual Studia 2010 Professional (můžete si ji stáhnout zdarma na [http://www.msdn.cz/vscz/](http://www.msdn.cz/vscz/)). Pokračuje tak v tradici nastolené už balíkem [Captions Language Interface Pack](http://blogs.msdn.com/b/vyvojari/archive/2008/11/04/captions-language-interface-pack-v-1-0-for-visual-studio-2008.aspx) pro VS 2008. Na smysluplnost nastoleného trendu lokalizace mám svůj názor, ale než jej začnu hlásat, chtěl jsem znát postoj ostatních.
 
