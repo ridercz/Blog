@@ -14,11 +14,11 @@ Nepovažuji se v tomto ohledu za odborníka, ale pečetě a pečetění mne fasc
 
 ![Různé pečeti](https://www.cdn.altairis.cz/Blog/2018/20181101-01-intro.jpg)
 
-Pečeť může sloužit v zásadě ke dvěma účelům. Řečeno moderní technologií je to _autentizace_ a _ochrana integrity_.
+Pečeť může sloužit v zásadě ke dvěma účelům. Řečeno moderní terminologií je to _autentizace_ a _ochrana integrity_.
 
-Používáme-li pečeť jako autentizační mechanismus, je chápána jako náhrada podpisu. Předpokládáme, že oprávněný držitel pečetidla jej chrání před zneužitím. V tomto ohledu jsou pečeti dnes v podstatě bezcenné, protože padělat pečetidlo je dnes velmi jednoduché a levné.
+Používáme-li pečeť jako autentizační mechanismus, je chápána jako náhrada podpisu. Předpokládáme, že oprávněný držitel pečetidla jej chrání před zneužitím. V tomto ohledu jsou pečeti dnes v podstatě bezcenné, protože padělat pečetidlo na základě známého otisku je dnes velmi jednoduché a levné.
 
-Dodnes lze nicméně pečeť úspěšně využít jako ochranu integrity zprávy, resp. její obálky. I v moderní době může klasická pečeť sloužit jako "tamper-evident" mechanismus. Zejména když si trochu pomůžeme moderními technologiemi. Pečeť lze po vytvoření vyfotografovat a při kontrole neporušenosti fotografii porovnat se skutečností. I pokud by se útočníkovi podařilo získat pečetidlo (nebo vyrobit jeho kopii), nebude schopen přesně napodobit původní tvar pečeti, případně barevné složení (použijeme-li vícebarevnou pečeť).
+Dodnes lze nicméně pečeť úspěšně využít jako ochranu integrity zprávy, resp. její obálky. I v moderní době může klasická pečeť sloužit jako "tamper-evident" mechanismus. Zejména když si trochu pomůžeme moderními technologiemi. Pečeť lze po vytvoření vyfotografovat a při kontrole neporušenosti fotografii porovnat se skutečností. I pokud by se útočníkovi podařilo získat pečetidlo (nebo vyrobit jeho kopii), nebude schopen přesně napodobit původní tvar pečeti, případně barevné složení (použijeme-li více barev pečetního vosku).
 
 ## Vybavení
 
@@ -29,7 +29,7 @@ Na obrázku vidíte rozličné vybavení, které lze k pečetění použít. Nep
 * Pečetidlo, o němž bude za chvíli řeč podrobněji.
 * Speciální lžičku na rozpouštění pečetního vosku, kterou ale lze nahradit obyčejnou lžící.
 * Několik druhů pečetního vosku v tyčinkách nebo granulích.
-* Zdroj tepla: svíčku nebo butanový hořák. Lze použít i horkovzdušnou pistoli.
+* Zdroj tepla: svíčku nebo butanový hořák. Lze použít i horkovzdušnou pistoli, ale u ní vadí síla proudu vzduchu.
 
 ## Pečetidlo
 
@@ -49,19 +49,15 @@ Pokud pečetidlo nemáte a chcete si to celé jenom nezávazně vyzkoušet, mů�
 
 Pečetní vosky lze v zásadě rozdělit do dvou skupin. Nevím zda mají nějaké oficiální názvy, já je označuji jako _tvrdé_ a _měkké_.
 
-Tvrdý pečetní vosk koupíte běžně v papírnictví v podobě tyčinek. V životě jsem viděl pouze dvě barvy: jedna je klasická tmavě červená a kdysi jsem viděl i tmavě zelenou. Označuje se jako _bankovní_ nebo _poštovní_ pečetní vosk. Nepodařilo se mi zjistit, je-li mezi nimi nějaký rozdíl.
+Tvrdý pečetní vosk koupíte běžně v papírnictví v podobě tyčinek cca. 20 centimetrů dlouhých. V životě jsem viděl pouze dvě barvy: jedna je klasická tmavě červená a někdy před dvaceti lety jsem viděl i tmavě zelenou. Označuje se jako _bankovní_ nebo _poštovní_ pečetní vosk. Nepodařilo se mi zjistit, je-li mezi nimi nějaký rozdíl.
 
 ![Tvrdý pečetní vosk](https://www.cdn.altairis.cz/Blog/2018/20181101-05-vosk-tvrdy.jpg)
 
-Tento druh vosku je tvrdý a křehký, v čemž spočívá jeho smysl. Při pokusu o otevření se zlomí a jaksi oddrolí, přičemž na papíře zanechá typickou barevnou skvrnu.
-
-Tento typ vosku je historicky věrnější, ale náchylný na hrubší zacházení. Obávám se, že třeba poštovní přepravu by nejspíše nepřežil.
+Tento druh vosku je tvrdý a křehký, v čemž spočívá jeho smysl. Při pokusu o otevření se zlomí a jaksi oddrolí, přičemž na papíře zanechá typickou barevnou skvrnu. Pečeti jsou historicky věrnější, ale náchylné na hrubší zacházení. Obávám se, že třeba poštovní přepravu by pečeť z tvrdého vosku nejspíše nepřežila.
 
 ![Měkký pečetní vosk](https://www.cdn.altairis.cz/Blog/2018/20181101-06-vosk-mekky.jpg)
 
-Měkký pečetní vosk kupuji na AliExpressu a funguje na jiném principu. Jím vytvořená pečeť zůstává do jisté míry pružná a nelze ji zlomit. Nicméně zapeče se do papíru takovým způsobem, že ji nelze odstranit bez poškození papíru.
-
-Díky této vlastnosti bez problémů přežije jakékoliv běžné zacházení i poštovní přepravu. Výhodou také může být, že se prodává v mnoha barevných variantách, včetně metalických, zlaté a stříbrné.
+Měkký pečetní vosk kupuji na AliExpressu a funguje na jiném principu. Jím vytvořená pečeť zůstává do jisté míry pružná a nelze ji zlomit. Nicméně zapeče se do papíru takovým způsobem, že ji nelze odstranit bez jeho poškození. Díky této vlastnosti bez problémů přežije jakékoliv běžné zacházení i poštovní přepravu. Výhodou také může být, že se prodává v mnoha barevných variantách, včetně metalických, zlaté a stříbrné.
 
 Vyskytuje se v zásadě ve třech provedeních. První je obyčejná tyčinka, asi deset centimetrů dlouhá, v průřezu cca. 10 x 10 mm. Druhé provedení je totožné, ale uprostřed je knot, jako u svíčky. Třetí provedení je v podobě malých granulí.
 
@@ -69,7 +65,7 @@ Vyskytuje se v zásadě ve třech provedeních. První je obyčejná tyčinka, a
 
 ![Pečetění](https://www.cdn.altairis.cz/Blog/2018/20181101-07-peceteni.jpg)
 
-Nejjednodušší je práce s měkkým voskem s knotem. Ten stačí zapálit a nakapat na žádané místo dostatečné množství.
+Nejjednodušší je práce s měkkým voskem s knotem. Ten stačí zapálit a nakapat na žádané místo dostatečné množství úplně stejně, jako kdybyste kapali vosk z běžné svíčky. Výhodu zde mají příznivci BDSM, kteří budou patrně obeznámeni s tím správným grifem, jak svíčkou rovnoměrně otáčet a kapat vosk :-)
 
 ![Pečetění](https://www.cdn.altairis.cz/Blog/2018/20181101-08-peceteni.jpg)
 
@@ -85,9 +81,9 @@ S tvrdým pečetním voskem (nebo pokud měkký vosk knot nemá) je práce jiná
 
 ![Granule pečetního vosku](https://www.cdn.altairis.cz/Blog/2018/20181101-11-granule.jpg)
 
-Poslední možností je pečetní vosk předem rozpustit v nějaké nádobě a na papír ho prostě nalít. Tuto možnost musíte použít, máte-li pečetní vosk ve formě granulí. Pro rozpuštění můžete použít speciální misku (viz foto), ale postačí i obyčejná lžíce. Důležité je, aby objem rozpuštěného vosku odpovídal potřebnému množství a rozměru pečeti.
+Poslední možností je pečetní vosk předem rozpustit v nějaké nádobě a na papír ho prostě nalít. Tuto možnost musíte použít, máte-li pečetní vosk ve formě granulí, ale můžete uštípnout nebo ulomit i kus vosku z tyčinek. Pro rozpuštění můžete použít speciální misku (viz foto), ale postačí i obyčejná lžíce. Důležité je, aby objem rozpuštěného vosku odpovídal potřebnému množství a rozměru pečeti.
 
-Vosk můžete rozehřát nad svíčkou. Já obecně dávám přednost již zmíněnému PB hořáku, ale s ním je nutné zacházet opatrně, aby se vosk nezačal pěnit, vařit a na pečeti nebyly bublinky (na detailní fotografii níže je vidět, že já jsem to zcela neuhlídal a nějaké bublinky tam jsou).
+Vosk můžete rozehřát nad svíčkou. Já obecně dávám přednost již zmíněnému PB hořáku, ale s ním je nutné zacházet opatrně, aby vosk nezačal pěnit nebo se vařit a na pečeti nebyly bublinky (na detailní fotografii níže je vidět, že já jsem to zcela neuhlídal a nějaké bublinky tam jsou).
 
 ![Vícebarevná pečeť](https://www.cdn.altairis.cz/Blog/2018/20181101-12-pecet-vicebarevna.jpg)
 
@@ -107,11 +103,11 @@ Na běžném hladkém kancelářském papíru doporučuji používat plastický 
 
 ![Výroba samostatné pečeti](https://www.cdn.altairis.cz/Blog/2018/20181101-15-pecet-samostatna.jpg)
 
-Dosud jsme se zabývali tím, jak pečeť přidělat k papíru. Pečeť může nicméně fungovat i samostatně, třeba jako upomínkový předmět nebo průkaz.
+Dosud jsem se zabýval tím, jak pečeť přidělat k papíru. Pečeť může nicméně fungovat i samostatně, třeba jako upomínkový předmět nebo průkaz.
 
 ![Výroba samostatné pečeti](https://www.cdn.altairis.cz/Blog/2018/20181101-16-pecet-detail.jpg)
 
-Chceme-li vyrobit samostatnou pečeť, doporučuji jako podkladový papír použít lesklý, "voskový" papír, který tvoří podkladovou vrstvu samolepek, případně samolepících štítků. Z něj pak lze hotovou pečeť snadno a bez poškození sloupnout.
+Chcete-li vyrobit samostatnou pečeť, doporučuji jako podkladový papír použít lesklý, "voskový" papír, který tvoří podkladovou vrstvu samolepek, případně samolepících štítků. Z něj pak lze hotovou pečeť snadno a bez poškození sloupnout.
 
 ![Pečeť na stuze](https://www.cdn.altairis.cz/Blog/2018/20181101-17-peceteni-stuha.jpg)
 
