@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/pecet</guid>
+      <title>Když se řekne pečeť</title>
+      <description>Protože se zabývám kybernetickou bezpečností a kryptografií, když řeknu slovo "pečeť", většina lidí si představí pečeť elektronickou, digitální podpis, certifikáty, časová razítka... Nyní ale budu hovořit o skutečných pečetích, fyzických, evokujících dávné časy.</description>
+      <link>https://www.altair.blog/2018/11/pecet</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>Tipy, triky</category>
+      <pubDate>2018-11-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/chybi-nam-republika</guid>
       <title>Demokracii bychom měli, chybí nám republika</title>
       <description>Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Podle mého názoru ovšem není moc co oslavovat. Po sto letech máme pořád stát, máme i demokracii, ale chybí nám to nejdůležitější: svoboda a v kontextu oněch oslav, republika.</description>
@@ -136,16 +146,6 @@
       <link>https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
-      <pubDate>2018-07-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/TM1637</guid>
-      <title>Nejsnazší ovládání sedmisegmentového displeje Arduinem</title>
-      <description>I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka. Našel jsem snadno použitelný modul pro amatérské konstrukce, založený na čipu TM1637.</description>
-      <link>https://www.altair.blog/2018/07/TM1637</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>Arduino</category>
       <pubDate>2018-07-27T00:00:00</pubDate>
     </item>
   </channel>

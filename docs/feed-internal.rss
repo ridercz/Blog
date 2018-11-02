@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/pecet</guid>
+      <title>Když se řekne pečeť</title>
+      <description>Protože se zabývám kybernetickou bezpečností a kryptografií, když řeknu slovo "pečeť", většina lidí si představí pečeť elektronickou, digitální podpis, certifikáty, časová razítka... Nyní ale budu hovořit o skutečných pečetích, fyzických, evokujících dávné časy.</description>
+      <link>https://www.altair.blog/2018/11/pecet</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>Tipy, triky</category>
+      <pubDate>2018-11-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/10/chybi-nam-republika</guid>
       <title>Demokracii bychom měli, chybí nám republika</title>
       <description>Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Podle mého názoru ovšem není moc co oslavovat. Po sto letech máme pořád stát, máme i demokracii, ale chybí nám to nejdůležitější: svoboda a v kontextu oněch oslav, republika.</description>
@@ -138,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-04-25T16:36:46</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</guid>
-      <title>Pozvánka na večerní školení Arduino a BadUSB</title>
-      <description>Zvu vás na poněkud netradiční školení: bude se týkat platformy Arduino a jejího využití k emulaci USB zařízení – fenomén známý jako BadUSB. Toto školení je určeno zájemcům, kteří již mají základní znalosti platformy Arduino nebo programování (ve v podstatě jakémkoliv jazyce). Zároveň má průnik i do světa kybernetické bezpečnosti. Budeme na něm pracovat s procesorem ATmega32U4, který umí mimo jiné emulovat klávesnici, myš nebo gamepad. Ukážeme si, jakým způsobem lze této schopnosti využít k dobrému i ke zlému.</description>
-      <link>https://www.altair.blog/2018/02/pozvanka-na-vecerni-skoleni-arduino-a-badusb</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2018-02-09T17:00:00</pubDate>
     </item>
   </channel>
 </rss>
