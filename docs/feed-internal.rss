@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/aspnet-identity-password-policy</guid>
+      <title>Vlastní rozumná politika hesel v ASP.NET Identity</title>
+      <description>ASP.NET Identity je nástupce Membership a Role providerů z .NET 2.0. Obecně se jedná o úkaz pozitivní, nicméně jeho výchozí politika hesel je dosti pomýlená. Naštěstí ji lze poměrně snadno změnit a dokonce si napsat vlastní, lepší.</description>
+      <link>https://www.altair.blog/2018/11/aspnet-identity-password-policy</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2018-11-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/zazraky-se-deji</guid>
       <title>Zázraky se dějí</title>
       <description>Žijeme v turbulentní době a skutečnosti, dříve pokládány za neměnné, se hroutí jako domečky z karet. Naposledy se tímto stylem zhroutila jedna z konstant českého Internetu, když weby Ministerstva vnitra a Policie ČR začaly podporovat HTTPS. Samozřejmě, není všechno zlato co se třpytí, takže i když mají weby mvcr.cz a policie.cz ono magické "S" na konci protokolu, v testu kvality implementace dostaly od Qualysu známku F - tedy nejhorší možnou.</description>
@@ -139,15 +149,6 @@
       <category>Arduino</category>
       <category>Bastlení</category>
       <pubDate>2018-07-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/ctvrtstoleti-psani</guid>
-      <title>Čtvrtstoletí psaní</title>
-      <description>Všechno to začalo tak nevinně: jedním z mnoha marných pokusů mých rodičů zajistit, abych si vydělal nějaké peníze poctivou prací. Místo abych jako kolportér prodával noviny na ulici, začal jsem do nich psát. A následujícího čtvrt století nepřestal.</description>
-      <link>https://www.altair.blog/2018/07/ctvrtstoleti-psani</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2018-07-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
