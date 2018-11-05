@@ -6,13 +6,22 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/zazraky-se-deji</guid>
+      <title>Zázraky se dějí</title>
+      <description>Žijeme v turbulentní době a skutečnosti, dříve pokládány za neměnné, se hroutí jako domečky z karet. Naposledy se tímto stylem zhroutila jedna z konstant českého Internetu, když weby Ministerstva vnitra a Policie ČR začaly podporovat HTTPS. Samozřejmě, není všechno zlato co se třpytí, takže i když mají weby mvcr.cz a policie.cz ono magické "S" na konci protokolu, v testu kvality implementace dostaly od Qualysu známku F - tedy nejhorší možnou.</description>
+      <link>https://www.altair.blog/2018/11/zazraky-se-deji</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-11-05T12:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66326960-psms7-40130420c2ae876</guid>
       <title>Chyba do které můžete kopnout</title>
       <description>Stará programátorská moudrost praví, že hardware je ta část počítače, do níž můžete kopnout, pokud se porouchá. Toto přísloví už ale neplatí stoprocentně, a to má obrovské důsledky. Na jedné straně je mizení hranice mezi hardwarem a softwarem pozitivní, protože rozšiřuje možnosti využití počítačových čipů. Na straně druhé to znamená změnu celého vnímání počítačové bezpečnosti.</description>
       <link>https://tech.ihned.cz/c7-66326960-psms7-40130420c2ae876</link>
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
-      <pubDate>2018-11-05T00:00:00</pubDate>
+      <pubDate>2018-11-05T09:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/pecet</guid>
@@ -138,15 +147,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2018-08-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/08/ftps</guid>
-      <title>FTPS: bezpečná varianta prastarého protokolu</title>
-      <description>Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít.</description>
-      <link>https://www.altair.blog/2018/08/ftps</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-08-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
