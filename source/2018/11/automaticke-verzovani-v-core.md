@@ -34,4 +34,4 @@ U každé assembly můžete určovat tři verze, přičemž hodnota každé z ni
 * `AssemblyVersion` je hodnota, se kterou pracuje .NET interně, např. pro určování kompatibility a podobné účely.
 * `FileVersion` pak může sloužit k unikátní identifikaci konkrétního buildu.
 
-V praxi je dobré s tím příliš nelaborovat, nastavit hodnotu jednotně ve `Version` a ta se pak použije pro všechny uvedené účely.
+V praxi je dobré s tím příliš nelaborovat, nastavit hodnotu jednotně ve `Version` a ta se pak použije pro všechny uvedené účely. K dispozici jsou též [podrobnější informace](https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/versioning) o významu jednotlivých verzí přímo od Microsoftu.
