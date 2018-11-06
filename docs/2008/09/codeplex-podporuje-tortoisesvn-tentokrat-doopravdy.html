@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Microsoft už dva roky provozuje server CodePlex. Slouží k podpoře open source projektů, jejichž vývojářům poskytuje potřebnou infrastrukturu. Podpora pro Subversion byla jedním z nejčastejších požadavků. Po nesmělých klientských řešení nyní CodePlex podporuje Subversion nativně." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -120,8 +120,13 @@
 <p>První vlaštovkou v tomto směru byl projekt <a href="http://www.codeplex.com/SvnBridge/">SvnBridge</a>. Jedná se o program, který běží na klientském počítači a v podstatě slouží jako překladač mezi SVN a TFS. SVN klient se připojí k lokálnímu počítači a komunikuje s programem, který požadavky překládá do formátu, kterému rozumí Team Foundation Server. Použití tohoto programu je také možné i proti jiným TFS než CodePlex. Počin to jest jistě chvályhodný, želbohu je však toto řešení mnohdy příliš komplikované.</p>
 <p>Před několika dny nicméně <a href="http://blogs.msdn.com/codeplex/archive/2008/09/14/codeplex-launches-support-for-tortoisesvn.aspx">CodePlex spustil přímou podporu</a>, bez nutnosti instalovat speciální klientský software. Ačkoliv důsledně operuje pouze s názvem TortoiseSVN, nikoliv Subversion, mělo by rozhraní z principu být použitelné i pro jiné klienty. Výhodou pak je, že tentýž repository je dostupný různými způsoby, takže jeden uživatel může používat TFS a jiný SVN. Read-only přístup je anonymní, pro změny musíte být členy projektu.</p>
 <p>Nadšeně jsem se jal tuto funkci využívat, načež jsem během prvního půl dne (resp. půli noci, při mém životním rytmu :-) objevil tři závažné chyby. K mému velkému a velmi příjemnému překvapení je vývojáři během jediného dne odstranili, ačkoliv jsem nepoužíval žádných speciálních kanálů a reportoval jsem to toliko prostředky dostupnými běžným smrtelníkům. Bystře jsem tedy na CodePlex nahrál jeden nový projekt, o kterém napíšu blíže zítra.</p>
-<p>Podrobný obrázkový návod najdete <a href="http://blogs.msdn.com/codeplex/archive/2008/09/14/codeplex-launches-support-for-tortoisesvn.aspx">na blogu CodePlex teamu</a>. Ostříleným uživatelům pak nepochybně postačí informace, že pro připojení ke svému projektu mají použít url <strong><a href="https://*n%C3%A1zev-projektu*.svn.codeplex.com/svn">https://*název-projektu*.svn.codeplex.com/svn</a></strong>. Uživatelské jméno a heslo pro zápis je stejné jako na web, tj. nemusíte zadávat jméno ve speciálním formátu, jako pro TFS.</p>
+<p>Podrobný obrázkový návod najdete <a href="http://blogs.msdn.com/codeplex/archive/2008/09/14/codeplex-launches-support-for-tortoisesvn.aspx">na blogu CodePlex teamu</a>. Ostříleným uživatelům pak nepochybně postačí informace, že pro připojení ke svému projektu mají použít url <strong>https://<em>název-projektu</em>.svn.codeplex.com/svn</strong>. Uživatelské jméno a heslo pro zápis je stejné jako na web, tj. nemusíte zadávat jméno ve speciálním formátu, jako pro TFS.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=CodePlex+podporuje+TortoiseSVN+%e2%80%93+tentokr%c3%a1t+doopravdy&amp;body=https://www.altair.blog/2008/09/codeplex-podporuje-tortoisesvn-tentokrat-doopravdy">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2008/09/codeplex-podporuje-tortoisesvn-tentokrat-doopravdy.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

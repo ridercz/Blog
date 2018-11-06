@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Odpověď na otázku kladenou v titulku není - bohužel - zcela triviální. Proto se pojďme na uživatelské účty webových aplikací podívat poněkud zevrubněji." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -153,6 +153,11 @@
 <p>Toto mějte na paměti, protože většina vývojářů pracuje pod účtem s administrátorskými oprávněními - a to znamená, že vaše webová aplikace běží jako admin také. To samo o sobě nepředstavuje žádné bezpečnostní riziko (protože ASP.NET Development Server nepřijímá požadavky ze sítě, ale jenom z lokálního počítače), ale pokud si to neuvědomíte, můžete se při ostrém nasazení dočkat nepříjemných překvapení.</p>
 <p>Ostatně - i mistr tesař se utne: tento článek píši pod dojmem několikahodinového zjišťování, proč mi jedna webová aplikace po nasazení na web server nefunguje jak má. Neuvědomil jsem si totiž, že spustím-li ze stránku nový thread, nespustí se pod request identity, ale pod process identity, která má v mém případě podstatně omezenější práva.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=Pod+jak%c3%bdm+u%c5%beivatelem+b%c4%9b%c5%be%c3%ad+ASP.NET%3f&amp;body=https://www.altair.blog/2006/01/pod-jakym-uzivatelem-bezi-asp-net">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2006/01/pod-jakym-uzivatelem-bezi-asp-net.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Kromě psaní klasických ASP.NET stránek (ASPX) je možné webové aplikace psát ještě &quot;o úroveň níž&quot;, tedy pomocí HTTP handlerů a modulů. Je to jediná možnost jak implementovat některé funkce a nejpraktičtější možnost jak implementovat mnohé jiné. V tomto spíše teoretickém článku si povíme, jak vlastně funguje komunikace .NET s Internet Information Services a kde do toho můžeme jako programátoři zasahovat." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -155,6 +155,11 @@ Na základě shora uvedeného zjištění uchopí předmětný soubor, pošle ho
 <p>Pokud je použit ISAPI modul pro ASP.NET, lze do průběhu vyřizování požadavků zasahovat prostřednictvím HTTP modulů a HTTP handlerů. Moduly lze vrstvit &quot;<em>na sebe</em>&quot; a obvykle se používají k modifikování HTTP požadavku nebo odpovědi, například k autentizaci nebo autorizaci. HTTP handler je vždy právě jeden a je odpovědný za &quot;obvyklou práci&quot;, tedy vlastní vygenerování odpovědi na uživatelův požadavek.</p>
 <p>V dalších článcích si povíme o tom, jak je možno psát a používat vlastní HTTP handlery a moduly.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=Pohled+do+hlubin+webserverovy+du%c5%a1e+(aneb+jak+funguj%c3%ad+HTTP+moduly+a+handlery)&amp;body=https://www.altair.blog/2005/01/pohled-do-hlubin-webserverovy-duse-aneb-jak-funguji-http-moduly-a-handlery">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2005/01/pohled-do-hlubin-webserverovy-duse-aneb-jak-funguji-http-moduly-a-handlery.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Snad žádná jiná technologie v ASP.NET nezpůsobila tolik zlé krve jako právě ViewState. Hromady na první pohled zbytečných a nesmyslných Base64 kódovaných dat ve skrytém formulážovém poli __VIEWSTATE jsou to první, na co si obvykle odpůrci ASP.NET Web Forms vzpomenou, často s uštěpačnou poznámkou v duchu &quot;nojo, co byste chtěli od Microsoftu&quot;. Jako u každé technologie ovšem i zde platí, že nejsou technologie dobré a špatné, ale pouze vhodně a nevhodně použité." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -223,6 +223,11 @@
 <p>Morální ponaučení ze shora uvedeného příběhu zní: do ViewState si ukládejte pouze to, co můžete postrádat. Co jste schopni získat v případě potřeby nějak jinak. ASP.NET se tak chová třeba při data bindingu: aby nemusel při odeslání formuláře zatěžovat databázový server, tak si dříve zjištrěné hodnoty uloží do ViewState a po postbacku je použije. Můžete si tedy vybrat mezi zvýšením zátěže databáze a nebo zvýšením objemu přenesených dat.</p>
 <p><em>Co ale pokud si některé věci potřebujete uložit opravdu nutně? A chcete, aby control fungoval i při vypnutém ViewState? Existuje řešení? Dobrá zpráva je: ano, existuje a jmenuje se ControlState. Špatná zpráva je, že více se o něm dozvíte až v příštím článku.</em></p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=ViewState%3a+K+%c4%8demu+je+a+jak+ho+spr%c3%a1vn%c4%9b+pou%c5%be%c3%advat&amp;body=https://www.altair.blog/2009/06/viewstate-k-cemu-je-a-jak-ho-spravne-pouzivat">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2009/06/viewstate-k-cemu-je-a-jak-ho-spravne-pouzivat.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

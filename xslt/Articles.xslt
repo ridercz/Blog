@@ -81,6 +81,10 @@
                 <section class="article-text" x4o:unescape="true">
                   <xsl:value-of select="x4h:GetItemHtml(@path)" />
                 </section>
+                <section class="issues">
+                  <header><i class="fab fa-github">&#8203;</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+                  <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="{concat('https://github.com/ridercz/Blog/issues/new?title=', x4h:UrlEncode(dcterms:title), '&amp;body=https://www.altair.blog', @path)}">issue na GitHubu</a> nebo <a href="{concat('https://github.com/ridercz/Blog/edit/master/source', @path, '.md')}">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+                </section>
                 <section class="sharing">
                   <span>Pošli to dál:</span>
                   <ul>

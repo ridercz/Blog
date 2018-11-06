@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Asi jste již zaznamenali, že poslední dobou sílí snaha dostat maximum webů pod HTTPS. A k tomu jsou potřeba certifikáty, vydané důvěryhodnou certifikační autoritou. Řadu let jsem používat a doporučoval certifikační autoritu StartSSL, která vydávala běžné serverové i klientské certifikáty zdarma. Ta bohužel nyní přišla o svou důvěryhodnost v prohlížečích, neboť ji koupila čínská firma a začala vydávat certifikáty v rozporu s uznávanými pravidly. Řešením může být projekt Let's Encrypt, který vám chci představit v malém seriálu článků." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -136,6 +136,11 @@
 <p>Certifikáty se používají nejenom pro HTTPS, ale i v řadě dalších případů: pro mail servery, FTP a podobně. Tam je nutné je nějakým specifickým způsobem nainstalovat a zkonfigurovat.</p>
 <p>AutoAcme tento problém neřeší, ale ani jeho řešení nijak nebrání. Protože používá CCS, jsou certifikáty a jejich klíče ukládány ve standardním formátu PFX s předvídatelným názvem souboru (který odpovídá host name). Jakákoliv jiná aplikace tento soubor může využít přímo nebo lze napsat aplikaci, která klíče z něj použije libovolným způsobem.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=Let%27s+Encrypt+na+Windows%3a+Prvn%c3%ad+sezn%c3%a1men%c3%ad&amp;body=https://www.altair.blog/2017/01/let-s-encrypt-na-windows-prvni-seznameni">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2017/01/let-s-encrypt-na-windows-prvni-seznameni.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

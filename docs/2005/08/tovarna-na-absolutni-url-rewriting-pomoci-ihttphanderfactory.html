@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="URL rewriting je častá technika, používaná k výrobě &quot;hezkých&quot; webových adres. Elegantně je možno ji realizovat pomocí IHttpHanderFactory - narozdíl od jiných metod úspěšně implementuje postback a je Whidbey kompatibilní." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -115,7 +115,7 @@
         </div>
       </aside>
       <section class="article-text">
-        <p>U řady webových aplikací (tento blog nevyjímaje) jest se setkati se zvláštním formátem URL, kdy je nějaký parametr (třeba ID článku) předáván nikoliv jako hodnota v Query Stringu (<em><a href="http://server/Clanek.aspx?ID=neco">http://server/Clanek.aspx?ID=neco</a></em>), ale přímo jako název souboru (<em><a href="http://server/Clanky/neco.aspx">http://server/Clanky/neco.aspx</a></em>). Důvodů k tomu vedoucích může být povícero, ale obvykle převažuje skutečnost, že tato URL jsou obvykle snáze indexovatelná vyhledávači - a protože se právě nacházíme na vrcholu SEO bubliny, musí to mít každý.</p>
+        <p>U řady webových aplikací (tento blog nevyjímaje) jest se setkati se zvláštním formátem URL, kdy je nějaký parametr (třeba ID článku) předáván nikoliv jako hodnota v Query Stringu (<em>http://server/Clanek.aspx?ID=neco</em>), ale přímo jako název souboru (<em>http://server/Clanky/neco.aspx</em>). Důvodů k tomu vedoucích může být povícero, ale obvykle převažuje skutečnost, že tato URL jsou obvykle snáze indexovatelná vyhledávači - a protože se právě nacházíme na vrcholu SEO bubliny, musí to mít každý.</p>
 <p>Samozřejmě to neznamená, že by publikační systém generoval pro každý článek zvláštní skript, ale používá se technika zvaná URL rewriting. V rámci zpracování HTTP požadavku (<a href="/entry/article-20050110.aspx">více o request pipeline v ASP.NET</a>) se na základě vygenerovaných pravidel URL &quot;přepíše&quot; a na straně serveru přesměruje na jinou stránku.</p>
 <h2 id="context.rewritepath">Context.RewritePath</h2>
 <p>Nejjednodušší metodu URL rewritingu představuje metoda <code>System.Web.HttpContext.Current.RewritePath</code>, volaná příkladně v rámci události <code>BeginRequest</code>.</p>
@@ -179,6 +179,11 @@ End Class
 </code></pre>
 <p>Kompletní ukázkovou aplikaci jest možno si stáhnout <a href="https://www.cdn.altairis.cz/Blog/2005/20050812-url-rewriting.zip">zde</a>. Je určena, stejně jako výše uvedený kód, pro ASP.NET 2.0 (Whidbey), leč popsaná metoda funguje i ve verzi 1.1.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=Tov%c3%a1rna+na+absolutn%c3%ad+URL%3a+rewriting+pomoc%c3%ad+IHttpHanderFactory&amp;body=https://www.altair.blog/2005/08/tovarna-na-absolutni-url-rewriting-pomoci-ihttphanderfactory">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2005/08/tovarna-na-absolutni-url-rewriting-pomoci-ihttphanderfactory.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

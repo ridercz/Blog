@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Většina aplikací potřebuje ke štěstí nějakou databázi. Někdy si můžeme svobodně vybrat, jaký typ databázového stroje budeme používat, jindy ne. Pro ten druhý případ je výhodné umět psát aplikace tak, aby uměly pracovat obecně s jakoukoliv databází, nebyly vázané na konkrétní produkt. O takových aplikacích pak říkáme, že jsou databázově agnostické. Ukážeme si jeden ze způsobů, jak takové aplikace psát." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -273,6 +273,11 @@ using (var cmd = db.CreateCommand()) {
 </code></pre>
 <p>Výše uvedené metody psaní kódu zajistí, že vaše aplikace bude schopna komunikovat s jakoukoliv databází, pro níž existuje ADO.NET provider. Používám popsaný postup velmi úspěšně hned v několika svých programech, například v populární sadě membership a role providerů <a href="http://altairiswebsecurity.codeplex.com/">Altairis Web Security Toolkit</a>.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=Psan%c3%ad+datab%c3%a1zov%c4%9b+agnostick%c3%bdch+aplikac%c3%ad+pomoc%c3%ad+ADO.NET&amp;body=https://www.altair.blog/2011/09/psani-databazove-agnostickych-aplikaci-pomoci-ado-net">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2011/09/psani-databazove-agnostickych-aplikaci-pomoci-ado-net.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

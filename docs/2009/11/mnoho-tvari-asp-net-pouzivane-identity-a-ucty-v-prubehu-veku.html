@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Často kladená otázka je: pod jakým účtem běží ASP.NET? Protože je často kladena, je i často zodpovídána, leč bohužel ne vždy správně a protože se odpověď s časem (a verzemi IIS) mění, odpověď může být neaktuální. Pojďme se podívat na vývoj a současný stav." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -160,6 +160,11 @@
 <p>Aplikace, které nazývám intranetovými, jsou zpravidla určeny omezenému a předem známému okruhu uživatelů, např. zaměstnanců. Jako uživatelskou databázi používají Active Directory nebo podobný systém a jejich uživatelé nejsou z hlediska systému anonymní. Zde máme v podstatě dvě možnosti, jakým můžeme přistupovat k bezpečnostní architektuře aplikace. Buďto postupujeme stejně jako ve výše uvedeném případě, tj. uživatele sice ověříme pomocí systémového účtu, ale aplikace sama pak běží pod nějakou vlastní identitou. Druhá možnost je, že identitu uživatele převememe a aplikace běží pod účtem toho uživatele, který se přihlásil a pod tímto účtem také přistupuje k dalším zdrojům, typicky k databázi. Zde se tedy request identity podědí od autentizovaného uživatele  (zakážeme anonymní přístup) a process identity bude jiná, speciální identita pro tu kterou aplikaci.</p>
 <p>Doufám, že se mi toto nepříliš jednoduché téma podařilo podat způsobem srozumitelným a pochopitelným. Chcete-li se v tomto oboru vzdělat hlouběji, vřele vám doporučuji svůj kurz o zabezpečení, který školím v Gopasu. Jeho kód je <a href="http://www.gopas.cz/kurzy/GOC36/">GOC36</a> a stále platí, že pokud uvedete při objednávce kód ASPNET.CZ, získáte slevu (a já provizi ;-).</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=Mnoho+tv%c3%a1%c5%99%c3%ad+ASP.NET%3a+Pou%c5%be%c3%advan%c3%a9+identity+a+%c3%ba%c4%8dty+v+pr%c5%afb%c4%9bhu+v%c4%9bk%c5%af&amp;body=https://www.altair.blog/2009/11/mnoho-tvari-asp-net-pouzivane-identity-a-ucty-v-prubehu-veku">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2009/11/mnoho-tvari-asp-net-pouzivane-identity-a-ucty-v-prubehu-veku.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

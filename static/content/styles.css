@@ -260,7 +260,8 @@ ul.categories li {
   border-radius: 1ex;
 }
 
-ul.categories li a:link, ul.categories li a:visited {
+ul.categories li a:link,
+ul.categories li a:visited {
   color: #fff;
   text-decoration: none;
 }
@@ -286,7 +287,8 @@ ul.serials li {
   border-radius: 1ex;
 }
 
-ul.serials li a:link, ul.serials li a:visited {
+ul.serials li a:link,
+ul.serials li a:visited {
   color: #e60;
   text-decoration: none;
 }
@@ -341,6 +343,18 @@ section.article-text hr {
   color: #ccc;
   border: none;
   border-top: 2px solid #ccc;
+}
+
+section.issues {
+  margin: 10px;
+  padding: 10px 20px;
+  border-left: 10px solid #e60;
+  background-color: seashell;
+}
+
+section.issues header {
+  font-size: 200%;
+  color: #e60;
 }
 
 section.sharing {

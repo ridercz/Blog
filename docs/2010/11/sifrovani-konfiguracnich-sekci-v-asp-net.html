@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Některé konfigurační sekce, typicky například connectionStrings, obsahují citlivé údaje, které by se neměly dostat do rukou cizím. V případě, že se útočníkovi podaří získat obsah souboru web.config – třeba pomocí chyby podobné nedávnému &quot;padding oracle&quot; problému – šifrování konfiguračních sekcí dokáže minimalizovat následky chyby. Obecně se jedná o formu &quot;obrany do hloubky&quot;. Problémem je, že za normálních okolností musíte mít k zašifrování možnost spouštět na serveru programy z příkazového řádku, a to pod tou identitou, pod níž běží webová aplikace. Napsal jsem nástroj, který vám umožní konfiguraci šifrovat přímo z webové aplikace." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -129,6 +129,11 @@
 <p>Poté, co jste knihovnu nainstalovali, stačí zavolat patřičnou cestu (v příkladu nahoře by to bylo <em>http://server/cesta.axd</em>). Zobrazí se vám seznam všech konfiguračních sekcí a stačí klepnout na odkaz &quot;encrypt&quot; nebo &quot;decrypt&quot; u názvu sekce.</p>
 <p>Handler nemá smysl nechávat v aplikaci registrovaný trvale, naopak by to znamenalo bezpečnostní riziko, po použití je žádoucí registraci handleru ihned odstranit. Assembly můžete nechat na místě, není nutné ji odstraňovat nebo odregistrovávat z GAC.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=%c5%a0ifrov%c3%a1n%c3%ad+konfigura%c4%8dn%c3%adch+sekc%c3%ad+v+ASP.NET&amp;body=https://www.altair.blog/2010/11/sifrovani-konfiguracnich-sekci-v-asp-net">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2010/11/sifrovani-konfiguracnich-sekci-v-asp-net.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>

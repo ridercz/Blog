@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <meta name="Description" content="Zapnutím HTTP komprese je možno snížit objem přenášených dat a zrychlit načítání stránek. Za vše se ale platí." />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=7818B4B5EBF120476CFD1415C136627474CF3870" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -147,6 +147,11 @@ CSCRIPT.EXE ADSUTIL.VBS SET W3Svc/Filters/Compression/DEFLATE/HcScriptFileExtens
 <h2 id="zpetna-kompatibilita">Zpětná kompatibilita</h2>
 <p>Všechny současné desktopové browsery HTTP kompresi podporují. Leč najdou se i takové, které jí nerozumí. IIS nicméně umí poznat, co komu poslat. Pokud klient s požadavkem pošle hlavičku &quot;<em>Accept-Encoding: gzip, deflate</em>&quot;, dá tím najevo, že kompresi umí a IIS ji použije. Pokud hlavička chybí, pošle data bez komprese. Můžete si to vyzkoušet například prostřednictvím užitečného nástroje <em>wfetch</em>, který je součástí <a href="http://www.microsoft.com/downloads/details.aspx?familyid=56fc92ee-a71a-4c73-b628-ade629c89499&amp;displaylang=en">IIS 6.0 Resource Kitu</a>.</p>
 
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, otevřete nový <a href="https://github.com/ridercz/Blog/issues/new?title=HTTP+komprese+v+IIS+a+ASP.NET&amp;body=https://www.altair.blog/2005/01/http-komprese-v-iis-a-asp-net">issue na GitHubu</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2005/01/http-komprese-v-iis-a-asp-net.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>
