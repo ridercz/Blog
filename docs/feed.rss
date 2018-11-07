@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2</guid>
+      <title>Když disky lžou</title>
+      <description>Používáte šifrování celého disku nabízené operačním systémem (příkladmo BitLocker ve Windows) nebo třetími stranami (příkladmo následovníky TrueCryptu, jako je třeba VeraCrypt)? Možná jsou vaše data přesto v ohrožení. Ne chybou Microsoftu nebo VeraCryptu, ale protože příliš důvěřují výrobcům pevných disků.</description>
+      <link>https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-11-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/aspnet-identity-password-policy</guid>
       <title>Vlastní rozumná politika hesel v ASP.NET Identity</title>
       <description>ASP.NET Identity je nástupce Membership a Role providerů z .NET 2.0. Obecně se jedná o úkaz pozitivní, nicméně jeho výchozí politika hesel je dosti pomýlená. Naštěstí ji lze poměrně snadno změnit a dokonce si napsat vlastní, lepší.</description>
@@ -138,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-09-11T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66229500-psms7-5d3be9eca2ad777</guid>
-      <title>Lítačka na kreditce vypadá jako moderní nápad, není to ale žádný důvod k radosti</title>
-      <description>V rámci předvolební kampaně spustilo hlavní město Praha další pokračování nekonečného seriálu dříve známého jako Opencard, nyní Lítačka. Hlavním tahákem má být možnost nahrát předplacené jízdenky na platební kartu. Mnoho důvodů k radosti v tom ale nevidím. Naopak, je to spíše důvod k obavám a hned trojí bezpečnostní riziko.</description>
-      <link>https://tech.ihned.cz/c7-66229500-psms7-5d3be9eca2ad777</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-08-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
