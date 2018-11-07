@@ -1,7 +1,7 @@
 <!-- dcterms:title = Automatické verzování projektu v ASP.NET Core -->
 <!-- dcterms:abstract = Trendem při určování nových verzí je v současnosti sémantické verzování. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/20181107-automaticke-verzovani-v-core.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20181109-automaticke-verzovani-v-core.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
