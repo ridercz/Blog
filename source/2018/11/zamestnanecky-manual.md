@@ -1,0 +1,11 @@
+<!-- dcterms:title = Zaměstnanecký manuál -->
+<!-- dcterms:abstract = Je hezké mít nějakou příručku, podle které se můžete v životě řídit. Příkladmo v případě hotelové pokojské to může být zaměstnanecký manuál. Kniha dává jistotu a jasná řešení problémů. Jenomže i pokojská může potkat hotelové hosty, s nimiž zažije situace, se kterými manuál nepočítá. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:created = 2018-07-07 -->
+<!-- dcterms:dateAccepted = 2018-11-08 -->
+<!-- x4w:pictureUrl = /perex-pictures/20181108-zamestnanecky-manual.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Leo Prieto via Flickr, CC BY-NC-ND-->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/11/zamestanecky-manual -->

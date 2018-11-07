@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/11/zamestanecky-manual</guid>
+      <title>Zaměstnanecký manuál</title>
+      <description>Je hezké mít nějakou příručku, podle které se můžete v životě řídit. Příkladmo v případě hotelové pokojské to může být zaměstnanecký manuál. Kniha dává jistotu a jasná řešení problémů. Jenomže i pokojská může potkat hotelové hosty, s nimiž zažije situace, se kterými manuál nepočítá.</description>
+      <link>https://www.bdsm.cz/2018/11/zamestanecky-manual</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2018-11-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2</guid>
       <title>Když disky lžou</title>
       <description>Používáte šifrování celého disku nabízené operačním systémem (příkladmo BitLocker ve Windows) nebo třetími stranami (příkladmo následovníky TrueCryptu, jako je třeba VeraCrypt)? Možná jsou vaše data přesto v ohrožení. Ne chybou Microsoftu nebo VeraCryptu, ale protože příliš důvěřují výrobcům pevných disků.</description>
@@ -138,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2018-09-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://josefprusa.cz/parametricke-modelovani-v-openscadu/</guid>
-      <title>Parametrické modelování v OpenSCADu</title>
-      <description>Jednou z hlavních výhod OpenSCADU proti běžným 3D modelovacím programům je snadné parametrické modelování. Tedy schopnost pomocí jednoduché změny proměnných zásadním způsobem ovlivnit vlastnosti modelu. A to nejenom jeho rozměry, ale celkově jakékoliv chování. V tomto článku vám ukážu, jak na to.</description>
-      <link>https://josefprusa.cz/parametricke-modelovani-v-openscadu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-09-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

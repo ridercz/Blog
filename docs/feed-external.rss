@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/11/zamestanecky-manual</guid>
+      <title>Zaměstnanecký manuál</title>
+      <description>Je hezké mít nějakou příručku, podle které se můžete v životě řídit. Příkladmo v případě hotelové pokojské to může být zaměstnanecký manuál. Kniha dává jistotu a jasná řešení problémů. Jenomže i pokojská může potkat hotelové hosty, s nimiž zažije situace, se kterými manuál nepočítá.</description>
+      <link>https://www.bdsm.cz/2018/11/zamestanecky-manual</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2018-11-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2</guid>
       <title>Když disky lžou</title>
       <description>Používáte šifrování celého disku nabízené operačním systémem (příkladmo BitLocker ve Windows) nebo třetími stranami (příkladmo následovníky TrueCryptu, jako je třeba VeraCrypt)? Možná jsou vaše data přesto v ohrožení. Ne chybou Microsoftu nebo VeraCryptu, ale protože příliš důvěřují výrobcům pevných disků.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-06-28T17:13:16</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2980848</guid>
-      <title>Keyboard Bracket</title>
-      <description>This is simple but robust holder for my secondary keyboard (used to control the camera server or install jobs). The keyboard is to be held at 30° angle from edge of desk (in my case, the ingenious IKEA Lack). Screw the holders with four 4 mm screws to bottom of desk. The OpenSCAD model is fairly parametric to allow for accommodation of keyboards of various sizes.</description>
-      <link>https://www.thingiverse.com/thing:2980848</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-06-28T01:35:17</pubDate>
     </item>
   </channel>
 </rss>
