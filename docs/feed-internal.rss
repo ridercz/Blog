@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/automaticke-verzovani-v-core</guid>
+      <title>Automatické verzování projektu v ASP.NET Core</title>
+      <description>Trendem při určování nových verzí je v současnosti sémantické verzování. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu.</description>
+      <link>https://www.altair.blog/2018/11/automaticke-verzovani-v-core</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-11-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/aspnet-identity-password-policy</guid>
       <title>Vlastní rozumná politika hesel v ASP.NET Identity</title>
       <description>ASP.NET Identity je nástupce Membership a Role providerů z .NET 2.0. Obecně se jedná o úkaz pozitivní, nicméně jeho výchozí politika hesel je dosti pomýlená. Naštěstí ji lze poměrně snadno změnit a dokonce si napsat vlastní, lepší.</description>
@@ -139,16 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-07-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/wheeltug</guid>
-      <title>Divný hardware z mojí dílny - ovládání HDMI switche a kvadrátoru</title>
-      <description>Po většinu své programátorské kariéry píšu "divné programy" - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i "divný hardware" - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru.</description>
-      <link>https://www.altair.blog/2018/07/wheeltug</link>
-      <author>Michal Altair Valášek</author>
-      <category>Arduino</category>
-      <category>Bastlení</category>
-      <pubDate>2018-07-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -104,11 +104,14 @@
           <a href="https://www.rider.cz/">Michal Altair Valášek </a>
           <i class="fal fa-user">​</i>
         </div>
+        <div>
+          <time datetime="2018-11-09" title="Datum vydání">9. listopadu 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
       </aside>
       <section class="article-text">
         <p>Trendem při určování nových verzí je v současnosti <a href="https://semver.org/">sémantické verzování</a>. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu.</p>
 <p>První verze .NETu (&gt;4.5) a Visual Studia měly tuto funkci vestavěnou. Stačilo ve specifikaci verze použít symbol hvězdičky (např. <code>1.0.*.*</code>) a část verzování se vygenerovala automaticky podle systémového času.</p>
-<p>To se změnilo v .NET Frameworku 4.5, který přinesl podporu výše zmíněného sémantického verzování. Před pěti lety jsem napsal článek popisující, jak na automatické verzování pomocí <a href="https://www.altair.blog/2013/11/jak-na-automaticke-verzovani-v-novych-verzich-net-a-vs">MS Build Community Tasks</a>.</p>
+<p>To se změnilo v .NET Frameworku 4.5, který přinesl podporu výše zmíněného sémantického verzování. Před pěti lety jsem napsal článek popisující, jak na automatické verzování pomocí <a href="/2013/11/jak-na-automaticke-verzovani-v-novych-verzich-net-a-vs">MS Build Community Tasks</a>.</p>
 <h2 id="automaticke-verzovani-v.net-core">Automatické verzování v .NET Core</h2>
 <p>Chcete-li téhož efektu dosáhnout v .NET Core, je k dispozici mnohem jednodušší a elegantní řešení.</p>
 <p>Verze projektu (případně jeho NuGet balíčku) se určuje pomocí elementu <code>Version</code> v <code>.csproj</code> souboru. Ten může obsahovat přímo text verze, např. <code>1.2.3</code> nebo <code>1.2.3-beta1</code> a podobně, v souladu se zásadami sémantického verzování.</p>

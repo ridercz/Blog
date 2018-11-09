@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/automaticke-verzovani-v-core</guid>
+      <title>Automatické verzování projektu v ASP.NET Core</title>
+      <description>Trendem při určování nových verzí je v současnosti sémantické verzování. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu.</description>
+      <link>https://www.altair.blog/2018/11/automaticke-verzovani-v-core</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-11-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/11/zamestanecky-manual</guid>
       <title>Zaměstnanecký manuál</title>
       <description>Je hezké mít nějakou příručku, podle které se můžete v životě řídit. Příkladmo v případě hotelové pokojské to může být zaměstnanecký manuál. Kniha dává jistotu a jasná řešení problémů. Jenomže i pokojská může potkat hotelové hosty, s nimiž zažije situace, se kterými manuál nepočítá.</description>
@@ -138,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-09-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/09/smutna-historie-se-sirotami</guid>
-      <title>Smutná historie se sirotami</title>
-      <description>Pláčete-li nad cynismem české společnosti, odmítající pomoci ubohým sirotkům, zaměřte se na příčiny. Systematické působení profesionálních konatelů dobra za cizí peníze, kteří se místo sebevědomí a svobody snaží již léta imputovat pocity viny a méněcennosti jenom nese své ovoce.</description>
-      <link>https://www.altair.blog/2018/09/smutna-historie-se-sirotami</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2018-09-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
