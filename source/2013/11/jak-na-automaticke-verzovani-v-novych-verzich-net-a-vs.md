@@ -4,6 +4,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-11-08T19:54:51.947+01:00 -->
 <!-- dcterms:dateAccepted = 2013-11-08T19:54:52+01:00 -->
+<!-- dcterms:modified = 2018-11-08 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20131108-jak-na-automaticke-verzovani-v-novych-verzich-net-a-vs.png -->
