@@ -5,6 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Koně -->
+<!-- dcterms:dateAccepted = 2018-11-10 -->
 
 Lidé se zkušenostmi z publikování na Internetu se vesměs shodují, že komentáře u článků jsou žumpa. Na obecných serverech bývají trpěny dílem ze setrvačnosti, dílem z obchodních důvodů nebo více či méně pomýlené představě o těchto. Na menších serverech (jako je můj blog) jsou zase zdrojem spamu a dalších problémů. 
 

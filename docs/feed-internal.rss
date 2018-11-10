@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/jak-jsem-nepridal-komentare</guid>
+      <title>Jak jsem nepřidal na blog komentáře</title>
+      <description>Lidé se zkušenostmi z publikování na Internetu se vesměs shodují, že komentáře u článků jsou žumpa. Na obecných serverech bývají trpěny dílem ze setrvačnosti, dílem z obchodních důvodů nebo více či méně pomýlené představě o těchto. U technických serverů nicméně komentáře mývají smysl. Takže jsem je zavedl. Pomocí GitHubu.</description>
+      <link>https://www.altair.blog/2018/11/jak-jsem-nepridal-komentare</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <pubDate>2018-11-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/automaticke-verzovani-v-core</guid>
       <title>Automatické verzování projektu v ASP.NET Core</title>
       <description>Trendem při určování nových verzí je v současnosti sémantické verzování. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu. V .NET Core to jde překvapivě snadno.</description>
@@ -139,15 +148,6 @@
       <category>Bastlení</category>
       <category>Arduino</category>
       <pubDate>2018-07-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/zaloha-sql-do-azure</guid>
-      <title>Automatizovaná záloha SQL Serveru do Azure Storage</title>
-      <description>Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště.</description>
-      <link>https://www.altair.blog/2018/07/zaloha-sql-do-azure</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-07-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
