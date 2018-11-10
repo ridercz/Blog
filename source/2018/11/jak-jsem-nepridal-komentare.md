@@ -13,7 +13,7 @@ U technických serverů nicméně komentáře někdy mívají smysl. Ne že by t
 
 ## Co je GitHub?
 
-_Programátoři tuto sekci laskavě přeskočí a pokud ne, nebudou laskavě frflat nad přemnohými doporučeními, jichž jsem se pro dobro laických čtenářů dopustil._
+_Programátoři tuto sekci laskavě přeskočí a pokud ne, nebudou frflat nad přemnohými zjednodušeními, jichž jsem se pro dobro laických čtenářů dopustil._
 
 [GitHub](https://github.com/) je služba (nedávno koupená Microsoftem), kterou používají vývojáři (zejména) open source aplikací. Nabízí jim celou řadu důležitých služeb:
 
