@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</guid>
+      <title>Aktualizace ukázkové aplikace ASKme</title>
+      <description>Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core.</description>
+      <link>https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Software</category>
+      <pubDate>2018-11-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/jak-jsem-nepridal-komentare</guid>
       <title>Jak jsem nepřidal na blog komentáře</title>
       <description>Lidé se zkušenostmi z publikování na Internetu se vesměs shodují, že komentáře u článků jsou žumpa. Na obecných serverech bývají trpěny dílem ze setrvačnosti, dílem z obchodních důvodů nebo více či méně pomýlené představě o těchto. U technických serverů nicméně komentáře mývají smysl. Takže jsem je zavedl. Pomocí GitHubu.</description>
@@ -137,16 +147,6 @@
       <link>https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
-      <pubDate>2018-07-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/TM1637</guid>
-      <title>Nejsnazší ovládání sedmisegmentového displeje Arduinem</title>
-      <description>I v dnešní době plné maticových displejů a dalších udělátek se někdy hodí stará dobrá sedmisegmentovka. Našel jsem snadno použitelný modul pro amatérské konstrukce, založený na čipu TM1637.</description>
-      <link>https://www.altair.blog/2018/07/TM1637</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>Arduino</category>
       <pubDate>2018-07-27T00:00:00</pubDate>
     </item>
   </channel>

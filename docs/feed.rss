@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</guid>
+      <title>Aktualizace ukázkové aplikace ASKme</title>
+      <description>Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core.</description>
+      <link>https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Software</category>
+      <pubDate>2018-11-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/jak-jsem-nepridal-komentare</guid>
       <title>Jak jsem nepřidal na blog komentáře</title>
       <description>Lidé se zkušenostmi z publikování na Internetu se vesměs shodují, že komentáře u článků jsou žumpa. Na obecných serverech bývají trpěny dílem ze setrvačnosti, dílem z obchodních důvodů nebo více či méně pomýlené představě o těchto. U technických serverů nicméně komentáře mývají smysl. Takže jsem je zavedl. Pomocí GitHubu.</description>
@@ -138,15 +148,6 @@
       <category>IT</category>
       <category>Software</category>
       <pubDate>2018-10-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznys.ihned.cz/c7-66262960-psms7-238c9e12295e29c</guid>
-      <title>Hack Facebooku: padesát miliónů účtů v ohrožení</title>
-      <description>Odhlásil vás v pátek ráno Facebook a museli jste se znovu přihlásit? Možná jste byli jednou z obětí nejnovějšího bezpečnostního průšvihu, který FB řeší. Webová aplikace Facebooku obsahovala chybu ve funkci "View As", která umožňuje zobrazit obsah tak, jak ho vidí jiný uživatel (např. pro otestování viditelnosti postu). Vinou této chyby mohl útočník získat autentizační token, který se používá pro přístup k aplikaci a různým API. S tímto tokenem pak mohl učinit cokoliv, co může učinit standardní uživatel.</description>
-      <link>https://byznys.ihned.cz/c7-66262960-psms7-238c9e12295e29c</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-09-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

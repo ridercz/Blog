@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Aktualizace ukázkové aplikace ASKme | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Aktualizace ukázkové aplikace ASKme" />
+    <meta name="twitter:description" content="Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Aktualizace ukázkové aplikace ASKme" />
+    <meta property="og:description" content="Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Aktualizace ukázkové aplikace ASKme</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-11-12" title="Datum vydání">12. listopadu 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Nedávno jsem zde zveřejnil <a href="/2018/10/ukazkove-aplikace">článek o svých ukázkových aplikacích</a> pro ASP.NET Core.</p>
+<p>Jednou z nich je AskMe a jde v podstatě o jednouživatelskou kopii služby <a href="https://ask.fm/ridercz">Ask.fm</a>. Tato služba umožňuje anonymní (nebo pseudo-anonymní) pokládání otázek (můžete se zeptat <a href="https://ask.fm/ridercz">i mne</a>).</p>
+<p>Nyní je aplikace k dispozici ve dvou variantách:</p>
+<ul>
+<li><strong>Altairis.AskMe.Web.RazorPages</strong> je původní aplikace napsaná v Razor Pages, jenom přejmenovaná.</li>
+<li><strong>Altairis.AskMe.Web.Mvc</strong> je přesně stejná aplikace, ovšem napsaná v ASP.NET MVC.</li>
+</ul>
+<p>Obě dvě aplikace vypadají z pohledu uživatele úplně stejně a úplně stejně se i chovají, včetně stejných URL a podobně. Využívají i společnou vrstvu pro přístup k datům, vytvořenou pomocí Entity Frameworku Core, projekt <strong>Altairis.AskMe.Data</strong>.</p>
+<p>Můžete tedy porovnat rozdíly a naopak společné části, které mají oba dva přístupy - MVC i MVVM (Razor Pages). Z tohoto důvodu oba webové projekty obsahují spoustu podobného a zkopírovaného kódu. V normálním případě by bylo správné onen sdílený kód vyčlenit do samostatného projektu a neduplikovat ho. Zde to záměrně nedělám, aby bylo možné porovnat obě řešení.</p>
+<p>Ukázkové aplikace najdete na <a href="https://github.com/ridercz/AskMe/">mém GitHubu</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Aktualizace+uk%c3%a1zkov%c3%a9+aplikace+ASKme&amp;body=https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2018/11/aktualizace-ukazkove-aplikace.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/gcode.min.js" integrity="sha256-BfE9r9hXnnA3iCH3rWDpIOy/SX9vd4evlNzmSsi9+TU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js" integrity="sha256-EB4Qe5B8kOTN9/r65YrBPJ3VkDRJa8sSVqqaIakt0gU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
