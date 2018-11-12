@@ -1,25 +1,26 @@
 {
-  "SourceFolder": "source",
-  "TargetFolder": "docs",
-  "StaticFolder": "static",
-  "XsltFolder": "xslt",
-  "WorkFolder": "work",
-  "HtmlTransforms": {
-    "HomePage.xslt": "index.html",
-    "Search.xslt": "search.html",
-    "Archive.xslt": null,
-    "Articles.xslt": null,
-    "Categories.xslt": null,
-    "Serials.xslt": null
-  },
-  "RawTransforms": {
-    "Feed.xslt": "feed.rss",
-    "FeedInternal.xslt": "feed-internal.rss",
-    "FeedExternal.xslt": "feed-external.rss",
-    "Sitemap.xslt": "sitemap.xml"
-  },
-  "TransformParameters": {
-    "PageSize": 10
-  },
-  "PrependHtmlDoctype": "<!DOCTYPE html>"
+    "SourceFolder": "source",
+    "TargetFolder": "docs",
+    "StaticFolder": "static",
+    "XsltFolder": "xslt",
+    "WorkFolder": "work",
+    "HtmlTransforms": {
+        "HomePage.xslt": "index.html",
+        "Search.xslt": "search.html",
+        "404.xslt": "404.html",
+        "Archive.xslt": null,
+        "Articles.xslt": null,
+        "Categories.xslt": null,
+        "Serials.xslt": null
+    },
+    "RawTransforms": {
+        "Feed.xslt": "feed.rss",
+        "FeedInternal.xslt": "feed-internal.rss",
+        "FeedExternal.xslt": "feed-external.rss",
+        "Sitemap.xslt": "sitemap.xml"
+    },
+    "TransformParameters": {
+        "PageSize": 10
+    },
+    "PrependHtmlDoctype": "<!DOCTYPE html>"
 }
