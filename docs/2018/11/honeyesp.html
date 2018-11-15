@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HoneyESP: Falešné AP pro sociální útoky za stovku | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary." />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=B0166228C2664A53468BF08A4D7AFC84D8216330" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="HoneyESP: Falešné AP pro sociální útoky za stovku" />
+    <meta name="twitter:description" content="Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="HoneyESP: Falešné AP pro sociální útoky za stovku" />
+    <meta property="og:description" content="Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary." />
+    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>HoneyESP: Falešné AP pro sociální útoky za stovku</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-11-15" title="Datum vydání">15. listopadu 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary a můj open source projekt <strong><a href="https://github.com/ridercz/HoneyESP">HoneyESP</a></strong>.</p>
+<p>Před třemi lety jsem vydal seriál o projektu <a href="/serials/projekt-atropa">Atropa</a>, kde jsem ukázal, jak udělat falešné AP s captive portálem pomocí Raspberry Pi a ASP.NET Core (tehdy se ještě nazývané ASP.NET 5). Idea HoneyESP je naprosto totožná, ale místo Raspberry s Linuxem používáme mikrokontroler ESP8266. Stojí desetinu, má menší odběr a nedá se hacknout.</p>
+<p>Projekt jsem představil na včerejší přednášce v <a href="https://www.prusalab.cz/">PrusaLabu</a>. Zde se můžete podívat na její záznam:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Nx8krNOBnGw" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Zdrojové kódy, licencované pod MIT licencí najdete na <a href="https://github.com/ridercz/HoneyESP">GitHubu</a>. Na tamní wiki najdete též <a href="https://github.com/ridercz/HoneyESP/wiki">dokumentaci</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=HoneyESP%3a+Fale%c5%a1n%c3%a9+AP+pro+soci%c3%a1ln%c3%ad+%c3%batoky+za+stovku&amp;body=https://www.altair.blog/2018/11/honeyesp">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2018/11/honeyesp.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/11/honeyesp">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/11/honeyesp">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/gcode.min.js" integrity="sha256-BfE9r9hXnnA3iCH3rWDpIOy/SX9vd4evlNzmSsi9+TU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js" integrity="sha256-EB4Qe5B8kOTN9/r65YrBPJ3VkDRJa8sSVqqaIakt0gU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

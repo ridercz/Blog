@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/honeyesp</guid>
+      <title>HoneyESP: Falešné AP pro sociální útoky za stovku</title>
+      <description>Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary.</description>
+      <link>https://www.altair.blog/2018/11/honeyesp</link>
+      <author>Michal Altair Valášek</author>
+      <category>Software</category>
+      <category>Bezpečnost</category>
+      <category>Bastlení</category>
+      <pubDate>2018-11-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</guid>
       <title>Aktualizace ukázkové aplikace ASKme</title>
       <description>Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core.</description>
@@ -137,17 +148,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2018-10-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/10/kali-linux-na-hyperv</guid>
-      <title>Instalace a konfigurace Kali Linuxu na Hyper-V</title>
-      <description>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu.</description>
-      <link>https://www.altair.blog/2018/10/kali-linux-na-hyperv</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <category>Software</category>
-      <pubDate>2018-10-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

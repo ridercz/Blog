@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/11/honeyesp</guid>
+      <title>HoneyESP: Falešné AP pro sociální útoky za stovku</title>
+      <description>Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary.</description>
+      <link>https://www.altair.blog/2018/11/honeyesp</link>
+      <author>Michal Altair Valášek</author>
+      <category>Software</category>
+      <category>Bezpečnost</category>
+      <category>Bastlení</category>
+      <pubDate>2018-11-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</guid>
       <title>Aktualizace ukázkové aplikace ASKme</title>
       <description>Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core.</description>
@@ -139,15 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-08-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</guid>
-      <title>Jak na migraci Azure Storage z Classic do ARM</title>
-      <description>Pokud používáte Azure již nějakou dobu, nejspíš máte řadu Azure Storage účtů ve starém režimu "Classic". Většina nových nástrojů a služeb nicméně předpokládá, že vaše účty budou již v novém režimu, který používá Azure Resource Manager (ARM). Upgrade není úplně triviální, ale ani nemožný.</description>
-      <link>https://www.altair.blog/2018/07/migrace-azure-storage-do-arm</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-07-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
