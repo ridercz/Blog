@@ -13,6 +13,8 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+
 V šestém dílu seriálu o vytvoření ["zlé maliny" pro útoky sociálním inženýrstvím](http://www.aspnet.cz/articles/5429-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem) si ukážeme, jak vytvořit webovou aplikaci, která se bude tvářit jako autentizační captive portál a pokusí se z uživatelů vylákat přihlašovací údaje k populárním službám. Použijeme přitom ASP.NET 5 a MVC 6. Aplikace je poměrně triviální a nepochybně by téhož výsledku bylo možno dosáhnout i jednoduššími prostředky. Já jsem zvolil ASP.NET 5 a MVC 6, protože jsem chtěl novou platformu vyzkoušet a také zkusit na Linuxu rozběhnout z .NETu trochu víc, než obligátní "Hello World!".
 
 ## User experience

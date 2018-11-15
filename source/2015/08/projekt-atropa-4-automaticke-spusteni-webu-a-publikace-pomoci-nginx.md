@@ -14,6 +14,8 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+
 V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx.
 
 ## Automatické spuštění Kestrelu pomocí init.d

@@ -115,7 +115,10 @@
         </div>
       </aside>
       <section class="article-text">
-        <p>V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx.</p>
+        <blockquote>
+<p><strong>Upozornění:</strong> Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.</p>
+</blockquote>
+<p>V předchozích dílech jsme si ukázali postup, jak na Raspberry Pi rozchodit ASP.NET a napsat jednoduchou aplikaci. Web server jsme ale museli spustit ručně a jde o interní server Kestrel. V tomto pokračování se podíváme na to, jak spustit aplikaci jako daemona (službu) a vypublikovat ji pomocí nginx.</p>
 <h2 id="automaticke-spusteni-kestrelu-pomoci-init.d">Automatické spuštění Kestrelu pomocí init.d</h2>
 <p>Na Windows se jim říká služby, na UNIX-like systémech démoni. Programy, které startují automaticky a při spuštění běží v pozadí, i když není nikdo interaktivně přihlášen. Jako první potřebujeme zařídit, aby se Kestrel, web server na kterém běží ASP.NET, choval právě takhle.</p>
 <p>Můj návod vychází z postupu, který <a href="http://druss.co/2015/06/run-kestrel-in-the-background/">popsal Ivan Derevianko na svém blogu</a>. Jeho návod nicméně s nejnovější verzí ASP.NET nefunguje, protože se změnila syntaxe, s jakou se DNX volá. <a href="https://gist.github.com/ridercz/97e01a4c67c045eb9d46">Mou upravenou verzi</a> najdete na GitHubu.</p>

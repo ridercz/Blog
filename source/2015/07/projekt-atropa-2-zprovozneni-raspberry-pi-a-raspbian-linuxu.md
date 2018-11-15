@@ -14,6 +14,8 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+
 Gratuluji, pořídili jste si Raspberry Pi! Třímáte v ruce malou destičku s ježatými konektory. Právě vám je určen druhý díl seriálu o tom, jak na Raspberry Pi rozjet ASP.NET. Oficiální návod ke zprovoznění (anglicky) najdete na webu [Raspberry Pi](https://www.raspberrypi.org/documentation/installation/).
 
 Nezapomeňte si přečíst [úvod k této sérii](https://www.aspnet.cz/Articles/5429-projekt-atropa-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem), kde najdete seznam všeho potřebného a důležitá varování.

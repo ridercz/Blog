@@ -115,7 +115,10 @@
         </div>
       </aside>
       <section class="article-text">
-        <p>V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit &quot;zlý&quot; počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci. Uvedený postup je sice psán na míru Raspberry Pi a Raspbianu, ale mělo by být možné jej použít obecně, i pro jiné distribuce Linuxu.</p>
+        <blockquote>
+<p><strong>Upozornění:</strong> Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.</p>
+</blockquote>
+<p>V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit &quot;zlý&quot; počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci. Uvedený postup je sice psán na míru Raspberry Pi a Raspbianu, ale mělo by být možné jej použít obecně, i pro jiné distribuce Linuxu.</p>
 <h2 id="architektura-asp.net-5">Architektura ASP.NET 5</h2>
 <p>Dnes je de facto podporován jenom jediný runtime (.NET Framework) a ASP.NET je závislé na řadě starých API pevně svázaných s Windows a IIS. Není prakticky možné provozovat ASP.NET na ničem jiném, než na Windows. Takhle vypadá ASP.NET dnes, ve verzi 4.5:</p>
 <p><a href="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_aspnet_45_2.png"><img src="https://www.cdn.altairis.cz/Blog/2015/20150713-atropa_aspnet_45_thumb.png" alt="atropa_aspnet_45" title="atropa_aspnet_45" /></a></p>

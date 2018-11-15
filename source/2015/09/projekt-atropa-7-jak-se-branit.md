@@ -13,6 +13,8 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+
 V předchozích šesti dílech tohoto seriálu jsme si ukázali, jak za pomoci Raspberry Pi, Raspbian Linuxu a ASP.NET 5 rozjet honeypot. Tedy "zlé" Wi-Fi AP, ke kterému se kdokoliv může připojit, ale bude vyzván k zadání hesla do některé z populárních služeb. Heslo bude zaznamenáno, ale uživatel se nikam nepřipojí - zařízení ani nemusí mít přístup k Internetu.  Závěrečný díl ukáže, jak se podobným útokům bránit.
 
 ## Obrana z pozice provozovatele serveru

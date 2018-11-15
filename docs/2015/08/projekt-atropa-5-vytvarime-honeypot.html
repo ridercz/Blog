@@ -115,7 +115,10 @@
         </div>
       </aside>
       <section class="article-text">
-        <p>V předchozích dílech seriálu o vytvoření &quot;zlé maliny&quot; jsme si ukázali, jak na Raspberry Pi nainstalovat operační systém Raspbian, ASP.NET 5 a jak aplikaci pomocí nginxu vypublikovat do Internetu. Dnes z Raspberry vytvoříme Wi-Fi honeypot, tedy Wi-Fi access point, který každému dovolí, aby se připojil, a všechny HTTP požadavky bude směřovat sám na sebe.</p>
+        <blockquote>
+<p><strong>Upozornění:</strong> Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.</p>
+</blockquote>
+<p>V předchozích dílech seriálu o vytvoření &quot;zlé maliny&quot; jsme si ukázali, jak na Raspberry Pi nainstalovat operační systém Raspbian, ASP.NET 5 a jak aplikaci pomocí nginxu vypublikovat do Internetu. Dnes z Raspberry vytvoříme Wi-Fi honeypot, tedy Wi-Fi access point, který každému dovolí, aby se připojil, a všechny HTTP požadavky bude směřovat sám na sebe.</p>
 <h2 id="umi-moje-wi-fi-rezim-ap">Umí moje Wi-Fi režim AP?</h2>
 <p>Základem úspěchu je mít Wi-Fi síťovou kartu, která podporuje AP režim. V <a href="http://www.aspnet.cz/articles/5429-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem">úvodním dílu</a> jsem doporučoval <a href="https://www.alza.cz/tp-link-tl-wn722n-lite-d155291.htm">TP-LINK TL-WN722N</a> a ten AP umí. Pokud budete mít jinou a nejste si jisti, zkontrolujte to.</p>
 <p>Začněte tím, že příkazem <code>sudo apt-get install iw -y</code> nainstalujete utilitu <code>iw</code>, která umí mimo jiné vypsat schopnosti vaší Wi-Fi. Poté si příkazem <code>iw list</code> vypište všechny Wi-Fi ve vašem systému a jejich schopnosti.</p>
