@@ -73,7 +73,7 @@ Poté do ještě horkého vosku přitiskneme pečetidlo a vyčkáme několik sek
 
 ![Pečeť](https://www.cdn.altairis.cz/Blog/2018/20181101-09-pecet.jpg)
 
-Na obrázku vidíte výsledek. Tato pečeť není dokonalá, protože vosku bylo málo a neobklopil celé pečetidlo. Nedostatek vosku u vtěších rozměrů je u tohoto typu pečeti častý problém, protože vytvoření dostatečného množství nějakou dobu trvá, přičemž vzdálenější oblasti mezitím chladnou.
+Na obrázku vidíte výsledek. Tato pečeť není dokonalá, protože vosku bylo málo a neobklopil celé pečetidlo. Nedostatek vosku u větších rozměrů je u tohoto typu pečeti častý problém, protože vytvoření dostatečného množství nějakou dobu trvá, přičemž vzdálenější oblasti mezitím chladnou.
 
 ![Pečeť](https://www.cdn.altairis.cz/Blog/2018/20181101-10-pecet.jpg)
 
