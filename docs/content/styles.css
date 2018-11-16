@@ -159,6 +159,15 @@ blockquote {
   font-style: italic;
 }
 
+del {
+  color: #444;
+  text-decoration: line-through solid #444;
+}
+
+ins {
+  text-decoration: underline dotted #ccc;
+}
+
 section.artlist article {
   margin-bottom: 3em;
 }
