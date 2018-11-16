@@ -49,7 +49,7 @@ Pokud pečetidlo nemáte a chcete si to celé jenom nezávazně vyzkoušet, mů�
 
 Pečetní vosky lze v zásadě rozdělit do dvou skupin. Nevím zda mají nějaké oficiální názvy, já je označuji jako _tvrdé_ a _měkké_.
 
-Tvrdý pečetní vosk koupíte běžně v papírnictví v podobě tyčinek cca. 20 centimetrů dlouhých. V životě jsem viděl pouze dvě barvy: jedna je klasická tmavě červená a někdy před dvaceti lety jsem viděl i tmavě zelenou. Označuje se jako _bankovní_ nebo _poštovní_ pečetní vosk. Nepodařilo se mi zjistit, je-li mezi nimi nějaký rozdíl.
+Tvrdý pečetní vosk koupíte běžně v papírnictví v podobě tyčinek cca. 20 centimetrů dlouhých. V životě jsem viděl pouze dvě barvy: jedna je klasická tmavě červená a někdy před dvaceti lety jsem viděl i tmavě zelenou. Označuje se jako _bankovní_ nebo _poštovní_ pečetní vosk. <del>Nepodařilo se mi zjistit, je-li mezi nimi nějaký rozdíl.</del> <ins>Zeptal jsem se ve společnosti [Centropen](http://www.centropen.cz/), která je pokud vím jediným českým výrobcem, jaký je mezi nimi rozdíl. Dostalo se mi odpovědi, že bankovní pečetní vosk je mnohem kvalitnější a pro jeho zjemnění se do něj přidává šelak, aby lépe lepil. V porovnání s poštovním pečetním voskem má bankovní pečetní vosk menší křehkost, vyšší pevnost a vyšší přilnavost.</ins>
 
 ![Tvrdý pečetní vosk](https://www.cdn.altairis.cz/Blog/2018/20181101-05-vosk-tvrdy.jpg)
 
