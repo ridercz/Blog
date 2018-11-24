@@ -9,7 +9,7 @@
 
 Trendem při určování nových verzí je v současnosti [sémantické verzování](https://semver.org/). To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu.
 
-První verze .NETu (&gt;4.5) a Visual Studia měly tuto funkci vestavěnou. Stačilo ve specifikaci verze použít symbol hvězdičky (např. `1.0.*.*`) a část verzování se vygenerovala automaticky podle systémového času.
+První verze .NETu (&lt;4.5) a Visual Studia měly tuto funkci vestavěnou. Stačilo ve specifikaci verze použít symbol hvězdičky (např. `1.0.*.*`) a část verzování se vygenerovala automaticky podle systémového času.
 
 To se změnilo v .NET Frameworku 4.5, který přinesl podporu výše zmíněného sémantického verzování. Před pěti lety jsem napsal článek popisující, jak na automatické verzování pomocí [MS Build Community Tasks](/2013/11/jak-na-automaticke-verzovani-v-novych-verzich-net-a-vs).
 
