@@ -1,0 +1,9 @@
+<!-- dcterms:title = Smrt octomilkám! -->
+<!-- dcterms:abstract = Naše kuchyň je plná octomilek. Thingiverse je plný modelů pastí na ně. Ale nenašel jsem žádný, který by seděl na sklenice, které máme doma. Tak jsem navrhl vlastní model, který je plně parametrický. Můžete si libovolně nastavit rozměry, zejména tedy průměr a výšku víčka. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20181201-smrt-octomilkam.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D Tisk -->
+<!-- dcterms:dateAccepted = 2018-12-01 -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3251278 -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:3251278</guid>
+      <title>Smrt octomilkám!</title>
+      <description>Naše kuchyň je plná octomilek. Thingiverse je plný modelů pastí na ně. Ale nenašel jsem žádný, který by seděl na sklenice, které máme doma. Tak jsem navrhl vlastní model, který je plně parametrický. Můžete si libovolně nastavit rozměry, zejména tedy průměr a výšku víčka.</description>
+      <link>https://www.thingiverse.com/thing:3251278</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D Tisk</category>
+      <pubDate>2018-12-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/11/zamestanecky-manual</guid>
       <title>Zaměstnanecký manuál</title>
       <description>Je hezké mít nějakou příručku, podle které se můžete v životě řídit. Příkladmo v případě hotelové pokojské to může být zaměstnanecký manuál. Kniha dává jistotu a jasná řešení problémů. Jenomže i pokojská může potkat hotelové hosty, s nimiž zažije situace, se kterými manuál nepočítá.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-06-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:2981598</guid>
-      <title>LACK Wrench for Electric Drill</title>
-      <description>IKEA Lack side tables are favorites of makers worldwide, because they're cheap, readily available and easily hackable. People are making everything from them - from server racks to 3D printer enclosures. But the Lack has one downside - the double-pronged screws have to be rightened manually, as no standard tool will fit them. Not anymore - I created the Lack Wrench. 3D printed tool you can attach do electric drill and use it to tighten the Lack legs.</description>
-      <link>https://www.thingiverse.com/thing:2981598</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-06-28T17:13:16</pubDate>
     </item>
   </channel>
 </rss>
