@@ -4,6 +4,6 @@
 <!-- x4w:pictureUrl = /perex-pictures/20181201-smrt-octomilkam.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:category = 3D Tisk -->
+<!-- x4w:category = 3D tisk -->
 <!-- dcterms:dateAccepted = 2018-12-01 -->
 <!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3251278 -->
