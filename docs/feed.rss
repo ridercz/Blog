@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/12/blink-v-edge</guid>
+      <title>Konec EdgeHTML uškodí všem</title>
+      <description>Společnost Microsoft oznámila, že končí s vývojem vlastního vykreslovacího jádra EdgeHTML, které používá její prohlížeč Microsoft Edge a bude v budoucnu používat jádro Blink - stejné, jaké používá Chrome nebo třeba Opera. Její rozhodnutí je pochopitelné, ale nešťastné. Ve svých důsledcích poškodí všechny, včetně uživatelů.</description>
+      <link>https://www.altair.blog/2018/12/blink-v-edge</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-12-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:3251278</guid>
       <title>Smrt octomilkám!</title>
       <description>Naše kuchyň je plná octomilek. Thingiverse je plný modelů pastí na ně. Ale nenašel jsem žádný, který by seděl na sklenice, které máme doma. Tak jsem navrhl vlastní model, který je plně parametrický. Můžete si libovolně nastavit rozměry, zejména tedy průměr a výšku víčka.</description>
@@ -137,16 +146,6 @@
       <category>IT</category>
       <category>Koně</category>
       <pubDate>2018-10-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</guid>
-      <title>Jenom "S" nestačí: HTTPS správně</title>
-      <description>O důležitosti použití zabezpečeného protokolu HTTPS na webových stránkách již není sporu a z větších webů už odolávají jenom ty obzvláště zatvrzelé, jako například české ministerstvo vnitra nebo Policie ČR. Jenomže mít prosté "S" na konci již dnes nestačí.</description>
-      <link>https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2018-10-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

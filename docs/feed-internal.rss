@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/12/blink-v-edge</guid>
+      <title>Konec EdgeHTML uškodí všem</title>
+      <description>Společnost Microsoft oznámila, že končí s vývojem vlastního vykreslovacího jádra EdgeHTML, které používá její prohlížeč Microsoft Edge a bude v budoucnu používat jádro Blink - stejné, jaké používá Chrome nebo třeba Opera. Její rozhodnutí je pochopitelné, ale nešťastné. Ve svých důsledcích poškodí všechny, včetně uživatelů.</description>
+      <link>https://www.altair.blog/2018/12/blink-v-edge</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-12-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/11/honeyesp</guid>
       <title>HoneyESP: Falešné AP pro sociální útoky za stovku</title>
       <description>Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary.</description>
@@ -141,15 +150,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2018-08-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/08/ftps</guid>
-      <title>FTPS: bezpečná varianta prastarého protokolu</title>
-      <description>Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít.</description>
-      <link>https://www.altair.blog/2018/08/ftps</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-08-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
