@@ -11,7 +11,7 @@ Společnost Microsoft oznámila, že končí s vývojem vlastního vykreslovací
 
 ![Statistiky prohlížečů 11/2018](https://www.cdn.altairis.cz/Blog/2018/20181205-stats-general.png)
 
-Prohlížeč Edge se neuchytil. Podle statistik StatCounter.com měl v listopadu celkový tržní podíl 2,15 % a předstihl do s 2,81 % i stařičký Internet Explorer. Dominuje s 61,77 % Chrome, jedinou podstatnou konkurencí je Safari (výchozí prohlížeč na Mac OS a iOS, jinde nefunguje) s 15,09 %. Všechno ostatní se pohybuje pod 5%. 
+Prohlížeč Edge se neuchytil. Podle statistik StatCounter.com měl v listopadu celkový tržní podíl 2,15 % a předstihl ho s 2,81 % i stařičký Internet Explorer. Dominuje s 61,77 % Chrome, jedinou podstatnou konkurencí je Safari (výchozí prohlížeč na Mac OS a iOS, jinde nefunguje) s 15,09 %. Všechno ostatní se pohybuje pod 5%. 
 
 ![Statistiky prohlížečů na desktopu 11/2018](https://www.cdn.altairis.cz/Blog/2018/20181205-stats-desktop.png)
 
