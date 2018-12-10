@@ -110,6 +110,7 @@
   <xsl:template name="PopulateHeader">
     <xsl:param name="Title" />
     <xsl:param name="Description" />
+    <xsl:param name="Image" select="'https://www.altair.blog/content/images/preview-1200.jpg'" />
 
     <meta charset="utf-8"/>
     <xsl:choose>
@@ -142,15 +143,13 @@
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="{$Title}" />
     <meta name="twitter:description" content="{$Description}" />
-    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta name="twitter:image" content="{$Image}" />
     <!-- Facebook-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta property="og:title" content="{$Title}" />
     <meta property="og:description" content="{$Description}" />
-    <meta property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
-    <meta property="og:image:height" content="1200" />
-    <meta property="og:image:width" content="1200" />
+    <meta property="og:image" content="{$Image}" />
     <meta property="og:locale" content="cs_CZ" />
     <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
     <script>

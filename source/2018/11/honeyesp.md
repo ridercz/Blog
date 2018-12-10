@@ -2,6 +2,7 @@
 <!-- dcterms:abstract = Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20181115-honeyesp.jpg -->
+<!-- x4w:coverUrl = /cover-pictures/20181115-honeyesp.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Software -->

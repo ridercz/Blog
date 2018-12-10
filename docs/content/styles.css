@@ -50,7 +50,8 @@ body > nav ul li {
   list-style-type: none;
 }
 
-body > nav a:link, body > nav a:visited {
+body > nav a:link,
+body > nav a:visited {
   color: #fff;
   text-decoration: none;
 }
@@ -102,6 +103,26 @@ body > footer ul.text li {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+body.hascover {
+  background-color: #444;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body.hascover > header {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+body.hascover > footer {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 a:link {

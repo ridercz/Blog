@@ -21,14 +21,32 @@
         <x4o:document href="{@path}.html">
           <html>
             <head>
-              <xsl:call-template name="PopulateHeader">
-                <xsl:with-param name="Title" select="dcterms:title" />
-                <xsl:with-param name="Description" select="dcterms:abstract" />
-              </xsl:call-template>
+                <xsl:choose>
+                  <xsl:when test="x4w:coverUrl">
+                    <xsl:call-template name="PopulateHeader">
+                      <xsl:with-param name="Title" select="dcterms:title" />
+                      <xsl:with-param name="Description" select="dcterms:abstract" />
+                      <xsl:with-param name="Image" select="concat('https://www.altair.blog', x4w:coverUrl)" />
+                    </xsl:call-template>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:call-template name="PopulateHeader">
+                      <xsl:with-param name="Title" select="dcterms:title" />
+                      <xsl:with-param name="Description" select="dcterms:abstract" />
+                    </xsl:call-template>
+                  </xsl:otherwise>
+                </xsl:choose>
+
               <meta name="robots" content="index, follow" />
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
             </head>
             <body>
+            <xsl:if test="x4w:coverUrl">
+              <xsl:attribute name="class">hascover</xsl:attribute>
+              <xsl:attribute name="style">
+                <xsl:value-of select="concat('background-image: url(', x4w:coverUrl, ')')" />
+              </xsl:attribute>
+            </xsl:if>
               <xsl:call-template name="SiteHeader" />
               <main>
                 <h1>
@@ -69,6 +87,12 @@
                         <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
                         <i class="fal fa-calendar-alt">&#8203;</i>
                       </time>
+                    </div>
+                  </xsl:if>
+                  <xsl:if test="x4w:coverCredits">
+                    <div>
+                      <xsl:value-of select="concat(x4w:coverCredits, '&#160;')" />
+                      <i class="fal fa-camera">&#8203;</i>
                     </div>
                   </xsl:if>
                 </aside>
