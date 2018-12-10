@@ -337,7 +337,7 @@
               <xsl:value-of select="."/>
             </a>
             <span>
-              <xsl:value-of select="concat('(', count(//file[x4w:serial = $Value]), ')')"/>
+              <xsl:value-of select="concat('(', count(//file[x4w:serial = $Value and dcterms:dateAccepted]), ')')"/>
             </span>
           </li>
         </xsl:for-each>
@@ -373,7 +373,7 @@
               <xsl:value-of select="."/>
             </a>
             <span>
-              <xsl:value-of select="concat('(', count(//file[x4w:category = $Value]), ')')"/>
+              <xsl:value-of select="concat('(', count(//file[x4w:category = $Value and dcterms:dateAccepted]), ')')"/>
             </span>
           </li>
         </xsl:for-each>
