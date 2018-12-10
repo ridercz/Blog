@@ -161,7 +161,7 @@
         m=f.getElementsByTagName('script')[0];
         o.async=1; o.src=t; o.id='fathom-script';
         m.parentNode.insertBefore(o,m)
-      })(document, window, '//stats.altairis.cz/tracker.js', 'fathom');
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
       fathom('set', 'siteId', 'OBOTR');
       fathom('trackPageview');
     </script>
