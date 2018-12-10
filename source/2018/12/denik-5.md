@@ -1,0 +1,9 @@
+<!-- dcterms:title = Deník (5/5) -->
+<!-- dcterms:abstract = Vydaly jsme se znovu k tůňce, vykoupat se a najít rákosku. Rákosí kolem potoka rostlo víc než dost. Natrhaly jsme ho spoustu a zbavily ho listí. Ale moc dobře to nevypadalo. Když Kamila námi vyrobenou rákoskou zkusmo mávla do vzduchu, zlomila se vlastní vahou. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20181219-denik-5.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Andrew Knapp via Flickr, CC BY-NC-ND -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-5 -->

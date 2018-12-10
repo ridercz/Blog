@@ -1,0 +1,9 @@
+<!-- dcterms:title = Deník (3/5) -->
+<!-- dcterms:abstract = Ráno jsem se vzbudila příšerně rozlámaná a příšerně nadržená. S tou druhou věcí jsem se pokusila něco udělat – tiše, pod peřinou, jak se na slušně vychované děvče sluší a patří. Jenomže než jsem se stihla dopracovat k výsledku, začala se Kamila nahoře převalovat a musela jsem toho nechat. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20181214-denik-3.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Marc: via Flickr, CC BY-NC-ND -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-3 -->

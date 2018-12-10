@@ -1,0 +1,9 @@
+<!-- dcterms:title = Deník (4/5) -->
+<!-- dcterms:abstract = Jarmila do vyprávění rodinné historie. Její matka se na statek dostala jako děvečka pro všechno. Jenomže krátce potom si panímáma srazila vaz na těch příkrých schodech na půdu. A necelý rok potom byla svatba, na kterou se nevěsta navíc dostavila s pořádným bubnem. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20181217-denik-4.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Steven Depolo via Flickr, CC BY -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-4 -->
