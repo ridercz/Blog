@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</guid>
+      <title>Hrůza z Huawei</title>
+      <description>Poslední měsíc není pro Huawei příliš příjemný. Čínský telekomunikační obr se stal terčem útoků ze stran bezpečnostních služeb hned několika zemí včetně České republiky. Médii zesilovaná kritika a varování před bezpečnostními riziky vykazují prvky obchodní války. Na pozadí je ale mnohem důležitější otázka – nakolik je Huawei hrozbou pro každodenní i tu kritickou komunikaci.</description>
+      <link>https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-12-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:3251278</guid>
       <title>Smrt octomilkám!</title>
       <description>Naše kuchyň je plná octomilek. Thingiverse je plný modelů pastí na ně. Ale nenašel jsem žádný, který by seděl na sklenice, které máme doma. Tak jsem navrhl vlastní model, který je plně parametrický. Můžete si libovolně nastavit rozměry, zejména tedy průměr a výšku víčka.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2018-07-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/</guid>
-      <title>Příklad z praxe: Naprogramujte si model pro 3D tisk v OpenSCADu</title>
-      <description>Jak vzniká věc z 3D tiskárny? Že se vůbec ptám. Připravit STL model, pak pomocí sliceru převést na G-code a hurá tisknout… V tomto článku ale učiníme ještě krok zpět, před tvorbu trojrozměrného modelu. Máme problém z reálného světa, který chceme vyřešit pomocí 3D tisku. A já vás provedu procesem, který lze při řešení tohoto problému využít. Tisk je tentokrát jenom třešničkou na dortu.</description>
-      <link>https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-06-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
