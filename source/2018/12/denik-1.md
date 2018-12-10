@@ -1,0 +1,10 @@
+<!-- dcterms:title = Deník (1/5) -->
+<!-- dcterms:abstract = Poslední opravdové prázdniny. Poslední léto před nástupem na vysokou školu se pro mladou dívku stane příležitostí k objevování. Nalezený deník ji přivede k poznání sebe samé, svých vlastních skrytých tužeb, historie vlastní rodiny i k odhalení tajemství starého sto let. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2018-12-10T10:00:00 -->
+<!-- x4w:pictureUrl = /perex-pictures/20181210-denik-1.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Edward Musiak via Flickr, CC BY-NC-ND -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-1 -->

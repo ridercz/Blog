@@ -6,13 +6,22 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-1</guid>
+      <title>Deník (1/5)</title>
+      <description>Poslední opravdové prázdniny. Poslední léto před nástupem na vysokou školu se pro mladou dívku stane příležitostí k objevování. Nalezený deník ji přivede k poznání sebe samé, svých vlastních skrytých tužeb, historie vlastní rodiny i k odhalení tajemství starého sto let.</description>
+      <link>https://www.bdsm.cz/2018/12/denik-1</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2018-12-10T10:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</guid>
       <title>Hrůza z Huawei</title>
       <description>Poslední měsíc není pro Huawei příliš příjemný. Čínský telekomunikační obr se stal terčem útoků ze stran bezpečnostních služeb hned několika zemí včetně České republiky. Médii zesilovaná kritika a varování před bezpečnostními riziky vykazují prvky obchodní války. Na pozadí je ale mnohem důležitější otázka – nakolik je Huawei hrozbou pro každodenní i tu kritickou komunikaci.</description>
       <link>https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</link>
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
-      <pubDate>2018-12-10T00:00:00</pubDate>
+      <pubDate>2018-12-10T08:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:3251278</guid>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Recenze</category>
       <pubDate>2018-07-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:3004897</guid>
-      <title>Držák na Nokii 8110 4G</title>
-      <description>Nokia 8110 4G je feature phone, který těží z popularity klasického modelu, proslaveného filmem The Matrix. Není to špatný telefon, za necelé dva tisíce, proto jsem si ho pořídil jako záložní a na pokusy. A navrhl na něj univerzální držák, aby měl své pevné místo.</description>
-      <link>https://www.thingiverse.com/thing:3004897</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-07-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

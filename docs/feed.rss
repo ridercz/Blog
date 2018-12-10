@@ -6,13 +6,22 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-1</guid>
+      <title>Deník (1/5)</title>
+      <description>Poslední opravdové prázdniny. Poslední léto před nástupem na vysokou školu se pro mladou dívku stane příležitostí k objevování. Nalezený deník ji přivede k poznání sebe samé, svých vlastních skrytých tužeb, historie vlastní rodiny i k odhalení tajemství starého sto let.</description>
+      <link>https://www.bdsm.cz/2018/12/denik-1</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2018-12-10T10:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</guid>
       <title>Hrůza z Huawei</title>
       <description>Poslední měsíc není pro Huawei příliš příjemný. Čínský telekomunikační obr se stal terčem útoků ze stran bezpečnostních služeb hned několika zemí včetně České republiky. Médii zesilovaná kritika a varování před bezpečnostními riziky vykazují prvky obchodní války. Na pozadí je ale mnohem důležitější otázka – nakolik je Huawei hrozbou pro každodenní i tu kritickou komunikaci.</description>
       <link>https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</link>
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
-      <pubDate>2018-12-10T00:00:00</pubDate>
+      <pubDate>2018-12-10T08:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/12/blink-v-edge</guid>
@@ -135,16 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2018-10-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/10/ukazkove-aplikace</guid>
-      <title>AskMe a ShirtShop: ukázkové aplikace pro Razor Pages a Identity</title>
-      <description>Aktualizoval jsem dvě ukázkové aplikace, které používám na školeních a přednáškách. Ukazují možnosti využití ASP.NET Core Razor Pages 2.0 a ASP.NET Identity. Najdete je na mém GitHubu.</description>
-      <link>https://www.altair.blog/2018/10/ukazkove-aplikace</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Software</category>
-      <pubDate>2018-10-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
