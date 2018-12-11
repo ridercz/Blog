@@ -14,6 +14,9 @@
   <!-- Setup output -->
   <xsl:output method="xml" indent="yes" encoding="utf-8" omit-xml-declaration="yes" />
 
+  <!-- Variables -->
+  <xsl:variable name="BaseUrl" select="'https://www.altair.blog'" />
+
   <!-- Key indices -->
   <xsl:key name="serials" match="//x4w:serial" use="." />
   <xsl:key name="categories" match="//x4w:category" use="." />
@@ -110,8 +113,8 @@
   <xsl:template name="PopulateHeader">
     <xsl:param name="Title" />
     <xsl:param name="Description" />
-    <xsl:param name="Image" select="'https://www.altair.blog/content/images/preview-1200.jpg'" />
-
+    <xsl:param name="CanonicalUrl" select="'/'" />
+    <xsl:param name="Image" />
     <meta charset="utf-8"/>
     <xsl:choose>
       <xsl:when test="$Title = ''">
@@ -128,29 +131,45 @@
     <xsl:if test="$Description != ''">
       <meta name="Description" content="{$Description}"/>
     </xsl:if>
+    <link rel="canonical" href="{$BaseUrl}{$CanonicalUrl}" />
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
-    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed-external.rss" title="RSS (pouze odkazy)" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
-    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="shortcut icon" href="{$BaseUrl}/favicon.ico" />
+    <link rel="icon" href="{$BaseUrl}/favicon.ico" />
     <!-- Twitter-->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="{$Title}" />
     <meta name="twitter:description" content="{$Description}" />
-    <meta name="twitter:image" content="{$Image}" />
+    <xsl:choose>
+      <xsl:when test="$Image">
+        <meta name="twitter:image" content="{$BaseUrl}/{$Image}" />
+      </xsl:when>
+      <xsl:otherwise>
+        <meta name="twitter:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
+      </xsl:otherwise>
+    </xsl:choose>
     <!-- Facebook-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta property="og:title" content="{$Title}" />
     <meta property="og:description" content="{$Description}" />
-    <meta property="og:image" content="{$Image}" />
+        <xsl:choose>
+      <xsl:when test="$Image">
+        <meta name="og:image" content="{$BaseUrl}/{$Image}" />
+      </xsl:when>
+      <xsl:otherwise>
+        <meta name="og:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
+      </xsl:otherwise>
+    </xsl:choose>
     <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="{$BaseUrl}{$CanonicalUrl}" />
     <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
     <script>
       (function(f, a, t, h, o, m){

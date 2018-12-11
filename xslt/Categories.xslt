@@ -26,6 +26,7 @@
             <xsl:call-template name="PopulateHeader">
               <xsl:with-param name="Title" select="'Rubriky'" />
               <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
+              <xsl:with-param name="CanonicalUrl" select="'/categories'" />
             </xsl:call-template>
             <meta name="robots" content="index, follow" />
           </head>
@@ -57,7 +58,6 @@
     <xsl:variable name="ArticleCount" select="count(//file[x4w:category = $Category and dcterms:dateAccepted])" />
     <xsl:variable name="PageCount" select="ceiling($ArticleCount div $x4c:PageSize)" />
 
-
     <x4o:document>
       <xsl:attribute name="href">
         <xsl:choose>
@@ -76,6 +76,7 @@
           <xsl:call-template name="PopulateHeader">
             <xsl:with-param name="Title" select="concat('Rubrika ', $Category)" />
             <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
+            <xsl:with-param name="CanonicalUrl" select="concat('/categories/', x4h:UrlKey($Category))" />
           </xsl:call-template>
           <meta name="robots" content="noindex, follow" />
         </head>

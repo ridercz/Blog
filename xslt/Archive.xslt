@@ -44,6 +44,7 @@
           <xsl:call-template name="PopulateHeader">
             <xsl:with-param name="Title" select="'Archiv článků'" />
             <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
+            <xsl:with-param name="CanonicalUrl" select="'/archive'" />
           </xsl:call-template>
           <meta name="robots" content="noindex, follow" />
         </head>

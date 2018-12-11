@@ -17,7 +17,9 @@
     <html>
       <head>
         <xsl:call-template name="PopulateHeader">
+          <xsl:with-param name="Title" select="'Vyhledávání'" />
           <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
+          <xsl:with-param name="CanonicalUrl" select="'/search'" />
         </xsl:call-template>
         <meta name="robots" content="index, follow" />
       </head>

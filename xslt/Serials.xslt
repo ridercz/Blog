@@ -23,6 +23,7 @@
             <xsl:call-template name="PopulateHeader">
               <xsl:with-param name="Title" select="'Seriály'" />
               <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
+              <xsl:with-param name="CanonicalUrl" select="'/serials'" />
             </xsl:call-template>
             <meta name="robots" content="index, follow" />
           </head>
@@ -56,6 +57,7 @@
           <xsl:call-template name="PopulateHeader">
             <xsl:with-param name="Title" select="concat('Seriál ', $Serial)" />
             <xsl:with-param name="Description" select="'Osobní weblog Michala A. Valáška'" />
+            <xsl:with-param name="CanonicalUrl" select="concat('/serials/', x4h:UrlKey($Serial))" />
           </xsl:call-template>
         <meta name="robots" content="noindex, follow" />
         </head>
