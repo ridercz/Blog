@@ -115,7 +115,7 @@
     <xsl:param name="Description" />
     <xsl:param name="CanonicalUrl" select="'/'" />
     <xsl:param name="Image" />
-    
+
     <meta charset="utf-8"/>
     <xsl:choose>
       <xsl:when test="$Title = ''">
@@ -161,7 +161,7 @@
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta property="og:title" content="{$Title}" />
     <meta property="og:description" content="{$Description}" />
-        <xsl:choose>
+    <xsl:choose>
       <xsl:when test="$Image">
         <meta name="og:image" content="{$BaseUrl}/{$Image}" />
       </xsl:when>
