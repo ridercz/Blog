@@ -115,6 +115,7 @@
     <xsl:param name="Description" />
     <xsl:param name="CanonicalUrl" select="'/'" />
     <xsl:param name="Image" />
+    
     <meta charset="utf-8"/>
     <xsl:choose>
       <xsl:when test="$Title = ''">
