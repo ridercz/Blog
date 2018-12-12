@@ -2,6 +2,7 @@
 <!-- dcterms:abstract = Ráno byl svět čerstvě umytý a zářivý, jak už to po dešti bývá. Kamila měla dorazit vlakem v šest večer a kromě toho, že ji musím vyzvednout na nádraží, jsem žádné povinnosti neměla. Od Jarmily jsem dostala snídani, ona si na ně potrpěla, a pak to bylo na mně. -->
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2018-12-12 -->
 <!-- x4w:pictureUrl = /perex-pictures/20181212-denik-2.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

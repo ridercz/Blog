@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-2</guid>
+      <title>Deník (2/5)</title>
+      <description>Ráno byl svět čerstvě umytý a zářivý, jak už to po dešti bývá. Kamila měla dorazit vlakem v šest večer a kromě toho, že ji musím vyzvednout na nádraží, jsem žádné povinnosti neměla. Od Jarmily jsem dostala snídani, ona si na ně potrpěla, a pak to bylo na mně.</description>
+      <link>https://www.bdsm.cz/2018/12/denik-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2018-12-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-1</guid>
       <title>Deník (1/5)</title>
       <description>Poslední opravdové prázdniny. Poslední léto před nástupem na vysokou školu se pro mladou dívku stane příležitostí k objevování. Nalezený deník ji přivede k poznání sebe samé, svých vlastních skrytých tužeb, historie vlastní rodiny i k odhalení tajemství starého sto let.</description>
@@ -135,15 +144,6 @@
       <category>Bastlení</category>
       <category>Tipy, triky</category>
       <pubDate>2018-11-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/10/chybi-nam-republika</guid>
-      <title>Demokracii bychom měli, chybí nám republika</title>
-      <description>Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Podle mého názoru ovšem není moc co oslavovat. Po sto letech máme pořád stát, máme i demokracii, ale chybí nám to nejdůležitější: svoboda a v kontextu oněch oslav, republika.</description>
-      <link>https://www.altair.blog/2018/10/chybi-nam-republika</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2018-10-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
