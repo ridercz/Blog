@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/12/visacky</guid>
+      <title>Rychlé a hezké jmenovky na dárky</title>
+      <description>Před dvěma lety jsem z náhlé inspirace vyrobil zajímavé a jednoduché jmenovky/visačky na vánoční dárky. Letos mi došly a pracoval jsem na nové dávce. Napadlo mne návod na ně zveřejnit, aby se mohli inspirovat i ostatní. Pokud nemáte potřebné vybavení, nezoufejte - na konci článku najdete pozvánku na workshop, kde si budete moci přesně tyto visačky zdarma vyrobit.</description>
+      <link>https://www.altair.blog/2018/12/visacky</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2018-12-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-2</guid>
       <title>Deník (2/5)</title>
       <description>Ráno byl svět čerstvě umytý a zářivý, jak už to po dešti bývá. Kamila měla dorazit vlakem v šest večer a kromě toho, že ji musím vyzvednout na nádraží, jsem žádné povinnosti neměla. Od Jarmily jsem dostala snídani, ona si na ně potrpěla, a pak to bylo na mně.</description>
@@ -134,16 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-11-05T09:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/pecet</guid>
-      <title>Když se řekne pečeť</title>
-      <description>Protože se zabývám kybernetickou bezpečností a kryptografií, když řeknu slovo "pečeť", většina lidí si představí pečeť elektronickou, digitální podpis, certifikáty, časová razítka... Nyní ale budu hovořit o skutečných pečetích, fyzických, evokujících dávné časy.</description>
-      <link>https://www.altair.blog/2018/11/pecet</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>Tipy, triky</category>
-      <pubDate>2018-11-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
