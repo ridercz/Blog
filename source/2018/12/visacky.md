@@ -56,7 +56,7 @@ Lze vyrobit i inverzní variantu, kdy se jako "obal" použije bílý papír a ja
 
 Na vnitřní část pak stačí napsat jméno obdarovaného.
 
-Všechny použité soubory [si můžete stáhnout](https://www.cdn.altairis.cz/Blog/2018/20181213-visacky-6.jpg). Archiv obsahuje následující soubory:
+Všechny použité soubory [si můžete stáhnout](https://www.cdn.altairis.cz/Blog/2018/20181213-visacky.zip). Archiv obsahuje následující soubory:
 
 * `visacky.ai` je originál v Adobe Illustratoru,
 * `visacky.dxf` jsou tatáž data vyexportovaná jako DXF,
