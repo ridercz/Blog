@@ -7,3 +7,4 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Marc: via Flickr, CC BY-NC-ND -->
 <!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-3 -->
+<!-- dcterms:dateAccepted = 2018-12-14 -->
