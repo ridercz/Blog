@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66394760-psms7-1244ee1aae93b67</guid>
+      <title>Telefon Huawei nechte v kapse, 5G sítě si od něj ale nekupujte</title>
+      <description>Národní úřad pro kybernetickou informační bezpečnost vydal své historicky první varování. Za bezpečnostní hrozbu v něm prohlásil veškeré výrobky společností Huawei a ZTE. Svoje běžné mobily si ale klidně nechte v kapse, problém je spíše s páteřními prvky počítačových a telekomunikačních sítí</description>
+      <link>https://tech.ihned.cz/c7-66394760-psms7-1244ee1aae93b67</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-12-18T08:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://video.aktualne.cz/dvtv/firma-huawei-je-udem-cinskeho-statu-telefon-od-nich-bych-si/r~9f9984fa021e11e9a446ac1f6b220ee8/</guid>
       <title>Rozhovor pro DVTV</title>
       <description>NÚKIB vydal varování před výrobky Huawei a ZTE. Poskytl jsem na toto téma rozhovor DVTV. Je v něm totéž co v mých článcích, ale pokud raději posloucháte než čtete, máte možnost. Jako bonus v pozadí můžete vidět mou vlčandu Bystrou.</description>
@@ -133,15 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2018-11-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2</guid>
-      <title>Když disky lžou</title>
-      <description>Používáte šifrování celého disku nabízené operačním systémem (příkladmo BitLocker ve Windows) nebo třetími stranami (příkladmo následovníky TrueCryptu, jako je třeba VeraCrypt)? Možná jsou vaše data přesto v ohrožení. Ne chybou Microsoftu nebo VeraCryptu, ale protože příliš důvěřují výrobcům pevných disků.</description>
-      <link>https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-11-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

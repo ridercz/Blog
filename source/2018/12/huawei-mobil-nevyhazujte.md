@@ -1,0 +1,9 @@
+<!-- dcterms:title = Telefon Huawei nechte v kapse, 5G sítě si od něj ale nekupujte -->
+<!-- dcterms:abstract = Národní úřad pro kybernetickou informační bezpečnost vydal své historicky první varování. Za bezpečnostní hrozbu v něm prohlásil veškeré výrobky společností Huawei a ZTE. Svoje běžné mobily si ale klidně nechte v kapse, problém je spíše s páteřními prvky počítačových a telekomunikačních sítí -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-huawei.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2018-12-18T08:00:00 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66394760-psms7-1244ee1aae93b67 -->
