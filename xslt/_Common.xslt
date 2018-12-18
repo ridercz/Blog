@@ -150,7 +150,7 @@
     <meta name="twitter:description" content="{$Description}" />
     <xsl:choose>
       <xsl:when test="$Image">
-        <meta name="twitter:image" content="{$BaseUrl}/{$Image}" />
+        <meta name="twitter:image" content="{$BaseUrl}{$Image}" />
       </xsl:when>
       <xsl:otherwise>
         <meta name="twitter:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
@@ -163,7 +163,7 @@
     <meta property="og:description" content="{$Description}" />
     <xsl:choose>
       <xsl:when test="$Image">
-        <meta name="og:image" content="{$BaseUrl}/{$Image}" />
+        <meta name="og:image" content="{$BaseUrl}{$Image}" />
       </xsl:when>
       <xsl:otherwise>
         <meta name="og:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
