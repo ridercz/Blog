@@ -1,4 +1,4 @@
-<!-- dcterms:title = Rozhovor pro DVTV -->
+<!-- dcterms:title = Huawei jako bezpečnostní hrozba? Rozhovor pro DVTV -->
 <!-- dcterms:abstract = NÚKIB vydal varování před výrobky Huawei a ZTE. Poskytl jsem na toto téma rozhovor DVTV. Je v něm totéž co v mých článcích, ale pokud raději posloucháte než čtete, máte možnost. Jako bonus v pozadí můžete vidět mou vlčandu Bystrou. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-dvtv.png -->
