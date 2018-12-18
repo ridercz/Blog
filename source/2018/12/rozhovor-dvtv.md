@@ -1,0 +1,9 @@
+<!-- dcterms:title = Rozhovor pro DVTV -->
+<!-- dcterms:abstract = NÚKIB vydal varování před výrobky Huawei a ZTE. Poskytl jsem na toto téma rozhovor DVTV. Je v něm totéž co v mých článcích, ale pokud raději posloucháte než čtete, máte možnost. Jako bonus v pozadí můžete vidět mou vlčandu Bystrou. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-dvtv.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2018-12-17T19:00:00 -->
+<!-- x4w:alternateUrl = https://video.aktualne.cz/dvtv/firma-huawei-je-udem-cinskeho-statu-telefon-od-nich-bych-si/r~9f9984fa021e11e9a446ac1f6b220ee8/ -->
