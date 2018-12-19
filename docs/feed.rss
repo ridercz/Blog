@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66397470-psms7-19023e2c681369c</guid>
+      <title>Huawei a bezpečnost v otázkách a odpovědích</title>
+      <description>Kdybych dostal korunu pokaždé, když se mě někdo zeptá, jestli tedy má rychle koupit jiný telefon, možná bych si mohl nějaký pěkný Huawei mobil koupit… Efektivnější ale bude, když na hlavní otázky odpovím veřejně, přehledně a najednou.</description>
+      <link>https://tech.ihned.cz/c7-66397470-psms7-19023e2c681369c</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2018-12-19T08:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-5</guid>
       <title>Deník (5/5)</title>
       <description>Vydaly jsme se znovu k tůňce, vykoupat se a najít rákosku. Rákosí kolem potoka rostlo víc než dost. Natrhaly jsme ho spoustu a zbavily ho listí. Ale moc dobře to nevypadalo. Když Kamila námi vyrobenou rákoskou zkusmo mávla do vzduchu, zlomila se vlastní vahou.</description>
@@ -133,15 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2018-11-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/automaticke-verzovani-v-core</guid>
-      <title>Automatické verzování projektu v ASP.NET Core</title>
-      <description>Trendem při určování nových verzí je v současnosti sémantické verzování. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu. V .NET Core to jde překvapivě snadno.</description>
-      <link>https://www.altair.blog/2018/11/automaticke-verzovani-v-core</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-11-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
