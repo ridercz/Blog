@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/12/petrinska-rozhledna</guid>
+      <title>Proč už nikdy nevylezu na petřínskou rozhlednu</title>
+      <description>Na Asku se mne někdo zeptal, co už nikdy v životě neudělám. Takových věcí je hodně, ale k jedné se váže zajímavá historka, o kterou se s vámi chci podělit. Už nikdy v životě nevylezu na petřínskou rozhlednu, poté co jsem ji jednou navštívil za poněkud zvláštních okolností.</description>
+      <link>https://www.altair.blog/2018/12/petrinska-rozhledna</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <category>BDSM</category>
+      <pubDate>2018-12-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/12/visacky</guid>
       <title>Rychlé a hezké jmenovky na dárky</title>
       <description>Před dvěma lety jsem z náhlé inspirace vyrobil zajímavé a jednoduché jmenovky/visačky na vánoční dárky. Letos mi došly a pracoval jsem na nové dávce. Napadlo mne návod na ně zveřejnit, aby se mohli inspirovat i ostatní. Pokud nemáte potřebné vybavení, nezoufejte - na konci článku najdete pozvánku na workshop, kde si budete moci přesně tyto visačky zdarma vyrobit.</description>
@@ -140,15 +150,6 @@
       <category>IT</category>
       <category>Software</category>
       <pubDate>2018-10-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/09/smutna-historie-se-sirotami</guid>
-      <title>Smutná historie se sirotami</title>
-      <description>Pláčete-li nad cynismem české společnosti, odmítající pomoci ubohým sirotkům, zaměřte se na příčiny. Systematické působení profesionálních konatelů dobra za cizí peníze, kteří se místo sebevědomí a svobody snaží již léta imputovat pocity viny a méněcennosti jenom nese své ovoce.</description>
-      <link>https://www.altair.blog/2018/09/smutna-historie-se-sirotami</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2018-09-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
