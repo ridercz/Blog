@@ -1,0 +1,10 @@
+<!-- dcterms:title = Vánoční domácí technická podpora: Návštěvy rodiny mohou ochránit nervy geeků po zbytek roku -->
+<!-- dcterms:abstract = Vánoce jsou pro mnoho lidí příležitost k více či méně dobrovolným návštěvám více či méně vzdálených příbuzných. A pokud trpíte diagnózou "dělá s počítačem", mohou vás při této příležitosti méně technicky nadaní příbuzní pořádat o pomoc se svým počítačem. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20181221-vanocni-technicka-podpora.jpg -->
+<!-- x4w:pictureCredits = Thinkstock.com via HN -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- dcterms:dateAccepted = 2018-12-21 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66399390-psms7-26647a5c3cae74c -->

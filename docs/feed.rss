@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66399390-psms7-26647a5c3cae74c</guid>
+      <title>Vánoční domácí technická podpora: Návštěvy rodiny mohou ochránit nervy geeků po zbytek roku</title>
+      <description>Vánoce jsou pro mnoho lidí příležitost k více či méně dobrovolným návštěvám více či méně vzdálených příbuzných. A pokud trpíte diagnózou "dělá s počítačem", mohou vás při této příležitosti méně technicky nadaní příbuzní pořádat o pomoc se svým počítačem.</description>
+      <link>https://tech.ihned.cz/c7-66399390-psms7-26647a5c3cae74c</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2018-12-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/12/petrinska-rozhledna</guid>
       <title>Proč už nikdy nevylezu na petřínskou rozhlednu</title>
       <description>Na Asku se mne někdo zeptal, co už nikdy v životě neudělám. Takových věcí je hodně, ale k jedné se váže zajímavá historka, o kterou se s vámi chci podělit. Už nikdy v životě nevylezu na petřínskou rozhlednu, poté co jsem ji jednou navštívil za poněkud zvláštních okolností.</description>
@@ -133,16 +142,6 @@
       <category>Bezpečnost</category>
       <category>Bastlení</category>
       <pubDate>2018-11-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</guid>
-      <title>Aktualizace ukázkové aplikace ASKme</title>
-      <description>Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core.</description>
-      <link>https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Software</category>
-      <pubDate>2018-11-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
