@@ -40,7 +40,7 @@ Poslední obrázek vyžaduje kombinovaný přístup člověka a počítače. Po�
 
 Postup použitý u třetího obrázku je vlastně steganografie, skrývání dat v jiných datech. Pokud bych nechtěl, aby to bylo tak nápadné, mohl bych jako základ použít nějaký skutečný obrázek a pro uchování informace použít nejméně významný bit jedné nebo více barevných složek. Mírná změna barvy nezpůsobí žádný viditelný rozdíl, ale počítač si s ní poradí.
 
-<ins>Tomáš v [komentáři na GitHubu](https://github.com/ridercz/Blog/issues/7#issuecomment-449627117) popsal způsob, jakým se se zadáním popasoval.</ins>
+<ins>Tomáš v [komentáři na GitHubu](https://github.com/ridercz/Blog/issues/7#issuecomment-449627117) popsal způsob, jakým se se zadáním popasoval. [Jakub taky](https://github.com/ridercz/Blog/issues/8#issuecomment-449633871). </ins>
 
 ## Program
 
