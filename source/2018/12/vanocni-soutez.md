@@ -2,7 +2,6 @@
 <!-- dcterms:abstract = Vytvořil jsem naprosto nevinnou novoročenku. A lidé, kteří mě znají, začali pátrat po jejích skrytých významech. Tak jsem vytvořil vánoční soutež, která tyto nedůvěřivé povahy zaměstná. Vítěz ode mne dostane vánoční dárkový balíček. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20181222-vanocni-soutez.png -->
-<!-- x4w:pictureCredits = Thinkstock.com via HN -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
@@ -26,7 +25,9 @@ Tady jsou:
 
 ![](https://www.cdn.altairis.cz/Blog/2018/20181222-zadani-3.png)
 
-V těchto obrázcích jsou skryty tři zprávy. První, kdo mi [formou issue na GitHubu](https://github.com/ridercz/Blog/issues/new?title=Novoro%c4%8denka+a+v%c3%a1no%c4%8dn%c3%ad+sout%c4%9b%c5%be) pošle znění všech tří zpráv, dostane ode mne vánoční dárkový balíček.
+V těchto obrázcích jsou skryty tři zprávy. <del>První, kdo mi [formou issue na GitHubu](https://github.com/ridercz/Blog/issues/new?title=Novoro%c4%8denka+a+v%c3%a1no%c4%8dn%c3%ad+sout%c4%9b%c5%be) pošle znění všech tří zpráv, dostane ode mne vánoční dárkový balíček.</del>
+
+<ins>První byl [Tomáš Jecha](https://github.com/ridercz/Blog/issues/7) a stává se tak vítězem. Můžete si přečíst i [podrobnější popis použitého postupu](/2018/12/vysledek-vanocni-souteze).</ins>
 
 K vyluštění kódu nepotřebujete kromě obrázků a tohoto textu žádné další informace. Abych vám situaci trochu usnadnil, přidávám několik pomocných informací:
 
