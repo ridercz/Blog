@@ -40,6 +40,8 @@ Poslední obrázek vyžaduje kombinovaný přístup člověka a počítače. Po�
 
 Postup použitý u třetího obrázku je vlastně steganografie, skrývání dat v jiných datech. Pokud bych nechtěl, aby to bylo tak nápadné, mohl bych jako základ použít nějaký skutečný obrázek a pro uchování informace použít nejméně významný bit jedné nebo více barevných složek. Mírná změna barvy nezpůsobí žádný viditelný rozdíl, ale počítač si s ní poradí.
 
+<ins>Tomáš v [komentáři na GitHubu](https://github.com/ridercz/Blog/issues/7#issuecomment-449627117) popsal způsob, jakým se se zadáním popasoval.</ins>
+
 ## Program
 
 Můžete si stáhnout [zdrojový kód](https://www.cdn.altairis.cz/Blog/2018/20181223-imagencode.zip) programu, který jsem použil pro zakódování. Je napsán v ASP.NET Core a pro práci s obrázky využívá knihovnu [ImageSharp](https://github.com/SixLabors/ImageSharp).
