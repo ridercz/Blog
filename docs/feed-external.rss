@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/stribrna-noc</guid>
+      <title>Stříbrná noc</title>
+      <description>Ze svého zamřížovaného výklenku pořádně viděl jenom na čarodějku a z okna, kterým do místnosti svítilo stříbrné světlo měsíce v úplňku. A maje na výběr z těchto dvou možností, bral Rey zavděk čarodějčinými zády, kdyby už jenom proto že ta druhá alternativa byla svým způsobem zodpovědná za to, že dnešní večer trávil za masivními mřížemi a připoután řetězy za pouta na rukách, nohách a obojek kolem krku.</description>
+      <link>https://www.bdsm.cz/2018/12/stribrna-noc</link>
+      <author>Michal Altair Valášek</author>
+      <category>Erotické povídky</category>
+      <pubDate>2018-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66399390-psms7-26647a5c3cae74c</guid>
       <title>Vánoční domácí technická podpora: Návštěvy rodiny mohou ochránit nervy geeků po zbytek roku</title>
       <description>Vánoce jsou pro mnoho lidí příležitost k více či méně dobrovolným návštěvám více či méně vzdálených příbuzných. A pokud trpíte diagnózou "dělá s počítačem", mohou vás při této příležitosti méně technicky nadaní příbuzní pořádat o pomoc se svým počítačem.</description>
@@ -130,16 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-11-05T09:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</guid>
-      <title>Jenom "S" nestačí: HTTPS správně</title>
-      <description>O důležitosti použití zabezpečeného protokolu HTTPS na webových stránkách již není sporu a z větších webů už odolávají jenom ty obzvláště zatvrzelé, jako například české ministerstvo vnitra nebo Policie ČR. Jenomže mít prosté "S" na konci již dnes nestačí.</description>
-      <link>https://tech.ihned.cz/c7-66303170-psms7-0b5ed1a1a1ded3c</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2018-10-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,10 @@
+<!-- dcterms:title = Stříbrná noc -->
+<!-- dcterms:abstract = Ze svého zamřížovaného výklenku pořádně viděl jenom na čarodějku a z okna, kterým do místnosti svítilo stříbrné světlo měsíce v úplňku. A maje na výběr z těchto dvou možností, bral Rey zavděk čarodějčinými zády, kdyby už jenom proto že ta druhá alternativa byla svým způsobem zodpovědná za to, že dnešní večer trávil za masivními mřížemi a připoután řetězy za pouta na rukách, nohách a obojek kolem krku. -->
+<!-- x4w:category = Erotické povídky -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20181224-stribrna-noc.jpg -->
+<!-- x4w:pictureCredits = Reborn Brudeira -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- dcterms:dateAccepted = 2018-12-24 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/stribrna-noc -->
