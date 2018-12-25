@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/12/dopravni-experimenty</guid>
+      <title>Jak se na Praze 7 dopravně experimentuje</title>
+      <description>Praha 7 je od minulého volebního období výkladní skříní a vzorem všech omezovačů dopravy. Máme tu všechno: nesmyslnou "zónu 30", zákaz vjezdu Segwayů, rušení parkovacích míst, nevyužívané a nebezpečné cyklopruhy... prostě obvyklé znaky dopravního džihádu. A nejnovější experiment - zúžení v Korunovační ulici. Pojďme se podívat na profesionalismus, s jakým MČ k dopravě přistupuje.</description>
+      <link>https://www.altair.blog/2018/12/dopravni-experimenty</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2018-12-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2018/12/stribrna-noc</guid>
       <title>Stříbrná noc</title>
       <description>Ze svého zamřížovaného výklenku pořádně viděl jenom na čarodějku a z okna, kterým do místnosti svítilo stříbrné světlo měsíce v úplňku. A maje na výběr z těchto dvou možností, bral Rey zavděk čarodějčinými zády, kdyby už jenom proto že ta druhá alternativa byla svým způsobem zodpovědná za to, že dnešní večer trávil za masivními mřížemi a připoután řetězy za pouta na rukách, nohách a obojek kolem krku.</description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2018-12-10T10:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</guid>
-      <title>Hrůza z Huawei</title>
-      <description>Poslední měsíc není pro Huawei příliš příjemný. Čínský telekomunikační obr se stal terčem útoků ze stran bezpečnostních služeb hned několika zemí včetně České republiky. Médii zesilovaná kritika a varování před bezpečnostními riziky vykazují prvky obchodní války. Na pozadí je ale mnohem důležitější otázka – nakolik je Huawei hrozbou pro každodenní i tu kritickou komunikaci.</description>
-      <link>https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-12-10T08:00:00</pubDate>
     </item>
   </channel>
 </rss>
