@@ -10,7 +10,7 @@
 <!-- x4w:category = Politika -->
 <!-- dcterms:dateAccepted = 2018-12-25 -->
 
-Praha 7 je od minulého volebního období výkladní skříní a vzorem všech omezovačů dopravy. Radním proti dopravě se stal Ondřej Mirovský za Stranu zelených a do není nikdy dobré znamení. Takže tu máme všechno: nesmyslnou "zónu 30", zákaz vjezdu Segwayů, rušení parkovacích míst, nevyužívané a nebezpečné cyklopruhy... prostě obvyklé znaky dopravního džihádu.
+Praha 7 je od minulého volebního období výkladní skříní a vzorem všech omezovačů dopravy. Radním proti dopravě se stal Ondřej Mirovský za Stranu zelených a do není nikdy dobré znamení. Takže tu máme všechno: nesmyslnou "zónu 30", zákaz vjezdu Segwayů, rušení parkovacích míst, nevyužívané a nebezpečné cyklopruhy&hellip; prostě obvyklé znaky dopravního džihádu.
 
 Koncem listopadu začala MČ Praha 7 ["testovat úpravu provozu" v Korunovační ulici](https://www.praha7.cz/v-ulici-korunovacni-se-testuje-uprava-provozu-zvysujici-bezpecnost-chodcu/), jejímž deklarovaným cílem má být zvýšení bezpečnosti chodců v dané lokalitě.
 
