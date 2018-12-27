@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2018/12/osbs</guid>
+      <title>Nový build systém pro OpenSCAD</title>
+      <description>Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk.</description>
+      <link>https://www.altair.blog/2018/12/osbs</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2018-12-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/12/dopravni-experimenty</guid>
       <title>Jak se na Praze 7 dopravně experimentuje</title>
       <description>Praha 7 je od minulého volebního období výkladní skříní a vzorem všech omezovačů dopravy. Máme tu všechno: nesmyslnou "zónu 30", zákaz vjezdu Segwayů, rušení parkovacích míst, nevyužívané a nebezpečné cyklopruhy... prostě obvyklé znaky dopravního džihádu. A nejnovější experiment - zúžení v Korunovační ulici. Pojďme se podívat na profesionalismus, s jakým MČ k dopravě přistupuje.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2018-10-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/10/ukazkove-aplikace</guid>
-      <title>AskMe a ShirtShop: ukázkové aplikace pro Razor Pages a Identity</title>
-      <description>Aktualizoval jsem dvě ukázkové aplikace, které používám na školeních a přednáškách. Ukazují možnosti využití ASP.NET Core Razor Pages 2.0 a ASP.NET Identity. Najdete je na mém GitHubu.</description>
-      <link>https://www.altair.blog/2018/10/ukazkove-aplikace</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Software</category>
-      <pubDate>2018-10-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

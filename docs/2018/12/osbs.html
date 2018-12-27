@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Nový build systém pro OpenSCAD | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk." />
+    <link rel="canonical" href="https://www.altair.blog/2018/12/osbs" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0A8176D3C7A80FAC497B3EF5E576FF7C87B3A71E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Nový build systém pro OpenSCAD" />
+    <meta name="twitter:description" content="Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Nový build systém pro OpenSCAD" />
+    <meta property="og:description" content="Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk." />
+    <meta name="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2018/12/osbs" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Nový build systém pro OpenSCAD</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2018-12-27" title="Datum vydání">27. prosince 2018 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Pro vytváření 3D modelů používám program OpenSCAD. Ten je specifický tím, že se v něm model programuje, nikoliv kreslí. V minulosti jsem o něm už také napsal <a href="https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/">několik</a> <a href="https://josefprusa.cz/parametricke-modelovani-v-openscadu/">článků</a>.</p>
+<p>Teď pracuji na projektu, kde potřebuji na základě různých parametrů vygenerovat větší množství podobných modelů. Na to se OpenSCAD výtečně hodí. Nicméně chybí možnost generování modelů automatizovat. Naštěstí se dá OpenSCAD ovládat z příkazové řádky, takže jsem si na to vytvořil systém.</p>
+<p>Jmenuje se <strong>OSBS - OpenScad Build System</strong> a najdete ho na <a href="https://github.com/ridercz/OSBS">mém GitHubu</a>. Ve své podstatě je to obyčejný dávkový soubor (<code>.cmd</code>), ale ne úplně jednoduchý.</p>
+<h2 id="co-osbs-umi">Co OSBS umí?</h2>
+<p>Soubor <code>build.cmd</code> je nutné umístit do stejné složky, kde se nacházejí <code>.scad</code> soubory. Pokud má být soubor zahrnut do buildu, je třeba do něj vložit speciální komentář <code>/* OSBS:build */</code>.</p>
+<p>Poté je možno vytvořit soubor s příponou <code>.vars</code>, který bude obsahovat různé varianty modelu, s různým nastavením proměnných. OSBS vygeneruje všechny varianty.</p>
+<p>Další funkcí je podpora modelů, které se budou tisknout více extrudery. Přidáním komentáře <code>/* OSBS:build:2E */</code> lze např. určit, že se model bude tisknout dvěma extrudery. V takovém případě se odpovídající model bude renderovat třikrát, OSBS mu podstrčí proměnnou <code>osbs_selected_extruder</code> s hodnotami <code>0</code>, <code>1</code> a <code>2</code> a jednoduchými podmínkami uvnitř souboru lze určit, co se kdy bude generovat.</p>
+<hr />
+<p>Kompletní informace a příklad použití najdete na <a href="https://github.com/ridercz/OSBS">https://github.com/ridercz/OSBS</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Nov%c3%bd+build+syst%c3%a9m+pro+OpenSCAD&amp;body=https://www.altair.blog/2018/12/osbs">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2018/12/osbs.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/12/osbs">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/12/osbs">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2018</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/gcode.min.js" integrity="sha256-BfE9r9hXnnA3iCH3rWDpIOy/SX9vd4evlNzmSsi9+TU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/less.min.js" integrity="sha256-EB4Qe5B8kOTN9/r65YrBPJ3VkDRJa8sSVqqaIakt0gU=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
