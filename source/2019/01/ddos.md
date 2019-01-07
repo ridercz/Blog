@@ -1,0 +1,11 @@
+<!-- dcterms:title = Několik tuzemských internetových služeb a poskytovatelů se stalo terčem silného DDoS útoku. Mohlo se jednat o test kybernetické války -->
+<!-- dcterms:abstract = Na přelomu roku se řada českých internetových služeb a poskytovatelů připojení stala terčem DDoS (Distributed Denial of Service) útoku. Postiženi byli zejména menší a střední poskytovatelé internetu, v jejichž silách není drahou obranu proti tomuto útoku snadné zvládnout. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190107-ddos.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Evil Nick via Flickr, CC BY-NC-ND -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = IT -->
+<!-- dcterms:dateAccepted = 2019-01-07 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66421920-psms7-8af773556dbb689 -->

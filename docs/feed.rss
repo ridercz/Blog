@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66421920-psms7-8af773556dbb689</guid>
+      <title>Několik tuzemských internetových služeb a poskytovatelů se stalo terčem silného DDoS útoku. Mohlo se jednat o test kybernetické války</title>
+      <description>Na přelomu roku se řada českých internetových služeb a poskytovatelů připojení stala terčem DDoS (Distributed Denial of Service) útoku. Postiženi byli zejména menší a střední poskytovatelé internetu, v jejichž silách není drahou obranu proti tomuto útoku snadné zvládnout.</description>
+      <link>https://tech.ihned.cz/c7-66421920-psms7-8af773556dbb689</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2019-01-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/12/osbs</guid>
       <title>Nový build systém pro OpenSCAD</title>
       <description>Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk.</description>
@@ -131,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2018-12-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-2</guid>
-      <title>Deník (2/5)</title>
-      <description>Ráno byl svět čerstvě umytý a zářivý, jak už to po dešti bývá. Kamila měla dorazit vlakem v šest večer a kromě toho, že ji musím vyzvednout na nádraží, jsem žádné povinnosti neměla. Od Jarmily jsem dostala snídani, ona si na ně potrpěla, a pak to bylo na mně.</description>
-      <link>https://www.bdsm.cz/2018/12/denik-2</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2018-12-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
