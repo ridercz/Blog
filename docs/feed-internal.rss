@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/01/github</guid>
+      <title>GitHub a privátní repozitáře zdarma: zrada myšlenek open source?</title>
+      <description>Když Microsoft před půl rokem koupil GitHub, moje první myšlenka byla, že konečně budou privátní repozitáře zadarmo. Nyní na to konečně došlo. V myslích poněkud zpozdilejších geeků ovšem Microsoft stále zaujímá pozici arciďábla a vidí v tom zradu myšlenek open source. Je tomu skutečně tak?</description>
+      <link>https://www.altair.blog/2019/01/github</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2019-01-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2018/12/osbs</guid>
       <title>Nový build systém pro OpenSCAD</title>
       <description>Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk.</description>
@@ -136,15 +145,6 @@
       <category>Bastlení</category>
       <category>Tipy, triky</category>
       <pubDate>2018-11-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/10/chybi-nam-republika</guid>
-      <title>Demokracii bychom měli, chybí nám republika</title>
-      <description>Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Podle mého názoru ovšem není moc co oslavovat. Po sto letech máme pořád stát, máme i demokracii, ale chybí nám to nejdůležitější: svoboda a v kontextu oněch oslav, republika.</description>
-      <link>https://www.altair.blog/2018/10/chybi-nam-republika</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2018-10-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
