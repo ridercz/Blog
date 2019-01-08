@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/01/vso2gh</guid>
+      <title>Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub</title>
+      <description>GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. Psal jsem o tom již včera, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript.</description>
+      <link>https://www.altair.blog/2019/01/vso2gh</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2019-01-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/01/github</guid>
       <title>GitHub a privátní repozitáře zdarma: zrada myšlenek open source?</title>
       <description>Když Microsoft před půl rokem koupil GitHub, moje první myšlenka byla, že konečně budou privátní repozitáře zadarmo. Nyní na to konečně došlo. V myslích poněkud zpozdilejších geeků ovšem Microsoft stále zaujímá pozici arciďábla a vidí v tom zradu myšlenek open source. Je tomu skutečně tak?</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2018-12-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/denik-3</guid>
-      <title>Deník (3/5)</title>
-      <description>Ráno jsem se vzbudila příšerně rozlámaná a příšerně nadržená. S tou druhou věcí jsem se pokusila něco udělat – tiše, pod peřinou, jak se na slušně vychované děvče sluší a patří. Jenomže než jsem se stihla dopracovat k výsledku, začala se Kamila nahoře převalovat a musela jsem toho nechat.</description>
-      <link>https://www.bdsm.cz/2018/12/denik-3</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2018-12-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

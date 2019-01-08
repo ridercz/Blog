@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. Psal jsem o tom již včera, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript." />
+    <link rel="canonical" href="https://www.altair.blog/2019/01/vso2gh" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub" />
+    <meta name="twitter:description" content="GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. Psal jsem o tom již včera, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190109-vso2gh.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub" />
+    <meta property="og:description" content="GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. Psal jsem o tom již včera, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190109-vso2gh.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/01/vso2gh" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190109-vso2gh.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-01-09" title="Datum vydání">9. ledna 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. <a href="https://www.altair.blog/2019/01/github">Psal jsem o tom již včera</a>, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript.</p>
+<p>GitHub nabízí přímo možnost importu repozitáře ze známých služeb (v menu <em>+</em> místo <em>New repository</em> zvolte <em>Import repository</em>). Import je vhodný pro případy komplikovaných repozitářů. Jenomže většina mých repozitářů v TFS je primitivních, nějaké ukázkové aplikace pro zákazníky a podobně. Prostý kód v jedné <code>master</code> větvi.</p>
+<p>Pro ně je procedura importu příliš komplikovaná a zdlouhavá. Proto jsem napsal jednoduchý skript <code>vso2gh.cmd</code> soubor, který celý proces automatizuje. Zde je:</p>
+<pre><code class="language-bat">@ECHO OFF
+SETLOCAL
+
+ECHO -------------------------------------------------------------------------------
+ECHO VSO2GH version 1.0.0 - (c) Michal A. Valasek - Altairis, 2019
+ECHO                            www.altair.blog * www.rider.cz * www.altairis.cz
+ECHO -------------------------------------------------------------------------------
+ECHO.
+
+IF &quot;%1&quot; EQU &quot;&quot; GOTO HELP
+IF &quot;%2&quot; EQU &quot;&quot; GOTO HELP
+IF &quot;%3&quot; EQU &quot;&quot; GOTO HELP
+
+SET SOURCE=https://%1.visualstudio.com/DefaultCollection/%3/_git/%3
+IF &quot;%4&quot; EQU &quot;&quot; (
+    SET TARGET=https://github.com/%2/%3.git
+) ELSE (
+    SET TARGET=https://github.com/%2/%4.git
+)
+
+
+ECHO Migrate git repository from Azure DevOps (ex- Visual Studio Online) to GitHub:
+ECHO Source: %SOURCE%
+ECHO Target: %TARGET%
+CHOICE /M &quot;Do you want to continue?&quot;
+IF %ERRORLEVEL% NEQ 1 EXIT /B
+ECHO.
+
+REM -- First, clone the original repository
+git clone %SOURCE%
+
+REM -- Remove original remote origin
+CD %3
+git remote rm origin
+
+REM -- Add GitHub as new remote origin
+git remote add origin %TARGET%
+
+REM -- Push the repository there
+git push -u origin master
+
+REM -- Configure
+git config master.remote origin
+git config master.merge refs/heads/master
+
+CD ..
+EXIT /B
+
+:HELP
+ECHO Migrate git repository from Azure DevOps (ex- Visual Studio Online) to GitHub.
+ECHO.
+ECHO USAGE vso2gh hostname username vsoproject [ghproject]
+ECHO hostname      the custom part of *.visualstudio.com
+ECHO username      GitHub user name
+ECHO vsoproject    repository name in Azure DevOps/VSO
+ECHO ghproject     empty GitHub project name, defaults to vsoproject
+
+</code></pre>
+<p>Skript se volá takto:</p>
+<pre><code>vso2gh hostname username vsoproject [ghproject]
+</code></pre>
+<p>Význam parametrů je následující:</p>
+<ul>
+<li><code>hostname</code> je personalizovaná část VSO adresy. Tj. např. máte-li adresu <code>altairis.visualstudio.com</code>, zadejte <code>altairis</code>.</li>
+<li><code>username</code> je vaše uživatelské jméno na GitHubu.</li>
+<li><code>vsoproject</code> je název migrovaného projektu v Azure DevOps (VSO).</li>
+<li><code>ghproject</code> je nepovinný argument, název cílového repozitáře na GitHubu. Pokud není uveden, předpokládá se, že je stejný jako <code>vsoproject</code>.</li>
+</ul>
+<p>Skript nevytvoří repozitář na GitHubu, to musíte udělat sami ručně. Vytvořte úplně prázdný repozitář a potom spusťte výše uvedený skript.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+zmigrovat+z+Azure+DevOps+(ex-+Visual+Studio+Online)+na+GitHub&amp;body=https://www.altair.blog/2019/01/vso2gh">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/01/vso2gh.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/01/vso2gh">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/01/vso2gh">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
