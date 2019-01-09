@@ -124,7 +124,7 @@
       <section class="article-text">
         <p>GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. <a href="https://www.altair.blog/2019/01/github">Psal jsem o tom již včera</a>, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript.</p>
 <p>GitHub nabízí přímo možnost importu repozitáře ze známých služeb (v menu <em>+</em> místo <em>New repository</em> zvolte <em>Import repository</em>). Import je vhodný pro případy komplikovaných repozitářů. Jenomže většina mých repozitářů v TFS je primitivních, nějaké ukázkové aplikace pro zákazníky a podobně. Prostý kód v jedné <code>master</code> větvi.</p>
-<p>Pro ně je procedura importu příliš komplikovaná a zdlouhavá. Proto jsem napsal jednoduchý skript <code>vso2gh.cmd</code> soubor, který celý proces automatizuje. Zde je:</p>
+<p>Pro ně je procedura importu příliš komplikovaná a zdlouhavá. Proto jsem napsal jednoduchý skript <code>vso2gh.cmd</code>, který celý proces automatizuje. Zde je:</p>
 <pre><code class="language-bat">@ECHO OFF
 SETLOCAL
 

@@ -12,7 +12,7 @@ GitHub umožnil bezplatným uživatelům zakládat neomezené množství privát
 
 GitHub nabízí přímo možnost importu repozitáře ze známých služeb (v menu _+_ místo _New repository_ zvolte _Import repository_). Import je vhodný pro případy komplikovaných repozitářů. Jenomže většina mých repozitářů v TFS je primitivních, nějaké ukázkové aplikace pro zákazníky a podobně. Prostý kód v jedné `master` větvi. 
 
-Pro ně je procedura importu příliš komplikovaná a zdlouhavá. Proto jsem napsal jednoduchý skript `vso2gh.cmd` soubor, který celý proces automatizuje. Zde je:
+Pro ně je procedura importu příliš komplikovaná a zdlouhavá. Proto jsem napsal jednoduchý skript `vso2gh.cmd`, který celý proces automatizuje. Zde je:
 
 ```bat
 @ECHO OFF
