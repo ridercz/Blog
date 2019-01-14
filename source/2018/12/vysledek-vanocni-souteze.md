@@ -21,7 +21,7 @@ Z nápověd byla nepravdivá ta s MD5 hashem. Což bylo očividné už z toho, �
 
 Základem všeho je velmi jednoduché kódování:
 
-1. Text je převeden do UTF-8 (což potrápilo Jakuba Boučka a jsem rád že mi to vyšlo, proto obsahuje zdruhá zpráva nabodeníčka).
+1. Text je převeden do UTF-8 (což potrápilo Jakuba Boučka a jsem rád že mi to vyšlo, proto obsahuje druhá zpráva nabodeníčka).
 2. První dva moduly obrázku jsou "jedna" a "nula", což má sloužit ke kalibraci, neboť moduly mohou mít různou velikost. Kalibrace mimochodem není udělaná úplně nejlépe, protože při (ne)vhodné struktuře dat a nulové mezeře mezi řádky dává nejednoznačné výsledky.
 3. Dále pak následují jednotlivé bity dat jako moduly o barvě popředí nebo pozadí.
 4. Mezi jednotlivými řádky obrázku může (ale nemusí) být libovolně velká mezera.
