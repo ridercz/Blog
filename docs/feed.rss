@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66441960-psms7-d7f47a377760ff4</guid>
+      <title>Sto korun za otevření textové zprávy nezaplatíte, i když ČTÚ říká že ano</title>
+      <description>Český telekomunikační úřad dnes na svém oficiálním profilu na Facebooku vydal pozoruhodnou zprávu, v níž varuje před otevřením textové zprávy z čísla 90409099 - že prý desítky Čechů musely zaplatit bezmála sto korun poté, co to udělali. Celé je to samozřejmě nesmysl.</description>
+      <link>https://tech.ihned.cz/c7-66441960-psms7-d7f47a377760ff4</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-01-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2019/01/tmeleni-kolektivu</guid>
       <title>Tmelení kolektivu</title>
       <description>Nesnáším takové to tmelení kolektivu v rámci firmy. Ať už se tomu říká „teambuilding“, „vánoční večírek“ nebo prostě jenom upřímně firemní chlastačka. Firma se letos plácla přes kapsu a pronajala na vánoční večírek na víkend celý hotel v Krkonoších. Takže místo jednoho ztraceného večera je to celý ztracený víkend. Jenomže v mé pozici je prostě nemožné, abych se té opičárny neúčastnil. Kat aby to spral.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2018-12-18T08:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://video.aktualne.cz/dvtv/firma-huawei-je-udem-cinskeho-statu-telefon-od-nich-bych-si/r~9f9984fa021e11e9a446ac1f6b220ee8/</guid>
-      <title>Huawei jako bezpečnostní hrozba? Rozhovor pro DVTV</title>
-      <description>NÚKIB vydal varování před výrobky Huawei a ZTE. Poskytl jsem na toto téma rozhovor DVTV. Je v něm totéž co v mých článcích, ale pokud raději posloucháte než čtete, máte možnost. Jako bonus v pozadí můžete vidět mou vlčandu Bystrou.</description>
-      <link>https://video.aktualne.cz/dvtv/firma-huawei-je-udem-cinskeho-statu-telefon-od-nich-bych-si/r~9f9984fa021e11e9a446ac1f6b220ee8/</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-12-17T19:00:00</pubDate>
     </item>
   </channel>
 </rss>
