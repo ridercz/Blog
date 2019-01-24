@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak jsme zvířátka naučili pájet | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat..." />
+    <link rel="canonical" href="https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak jsme zvířátka naučili pájet" />
+    <meta name="twitter:description" content="Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat..." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190124-jak-jsme-zviratka-naucili-pajet.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Jak jsme zvířátka naučili pájet" />
+    <meta property="og:description" content="Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat..." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190124-jak-jsme-zviratka-naucili-pajet.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190124-jak-jsme-zviratka-naucili-pajet.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak jsme zvířátka naučili pájet</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/lide-a-jina-zver" title="Rubrika">
+              <i class="fal fa-tag"> </i>Lidé a jiná zvěř</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-01-24" title="Datum vydání">24. ledna 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>WMW66 Costumes <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Jak mnozí z vás ví, kromě mnoha jiných svých zálib a úchylek jsem i členem subkultury, která se označuje jako furry, furries. A pořádám i několik furry akcí, z nichž třetí ročník té menší, TechFurMeet, začne za dva týdny. Proč a jak spolu souvisí furries a páječky? Jaký je vztah mezi přerostlými plyšáky a Arduinem? Inu, to je dlouhý příběh.</p>
+<h2 id="kdo-jsou-furries">Kdo jsou furries?</h2>
+<p>Jednoduchá otázka, složitá odpověď. Standardní definice je, že furries jsou lidé, kteří se nějakým způsobem cítí spjati se zvířaty. To je definice velmi vágní a široce pojatá, což odpovídá i složení toho, co se zpravidla označuje jako &quot;furry komunita&quot;. Někteří furries se i v dospělosti ztotožňují s hrdiny animovaných filmů a seriálů. Jiní věc vnímají spíše duchovně a spirituálně v kontextu šamanismu a zvířecích totemů. Pro jiné je to součást erotického fetiše a podobně.</p>
+<p>Znáte film Zootopia? Antropomorfní zvířata, která se chovají jako lidé? Napadlo vás, jak byste asi vy vypadali ve světě Zootopie? Jakého byste byli živočišného druhu? Gratuluji, to je první krok k vytvoření vaší &quot;fursony&quot;, zvířecího avatara sebe sama</p>
+<p>O mně je všeobecně známo, že &quot;jsem kůň&quot; a mnozí z čtenářů mne i někdy viděli v mém koňském fursuitu (kostýmu). Takových lidí je povícero a ztotožňují se s různými zvířecími druhy.</p>
+<p><img src="/cover-pictures/20190124-jak-jsme-zviratka-naucili-pajet.jpg" alt="Skupinka fursuiterů" /></p>
+<p>Na obrázku vidíte skupinku &quot;fursuiterů&quot;, tedy lidí, kteří si vyrobili nebo nechali vyrobit kostým své zvířecí postavy. Všechny kostýmy na této fotografii pocházejí od mých kamarádů <a href="http://www.wmw66-costumes.com/">WMW66 Costumes</a>. Ne každý furry má takový kostým, ale ti kdo ano jsou nejviditelnější součástí furry scény.</p>
+<h2 id="jak-jsme-zviratka-naucili-elektroniku">Jak jsme zviřátka naučili elektroniku</h2>
+<p>Furries se setkávají i v reálném světě. Dobrou příležitostí k tomu jsou &quot;furry cony&quot;. Con je zkratka z &quot;convention&quot;, setkání. Pokud jste někdy slyšeli o sci-fi/fantasy conech, jako je třeba Pragocon, Festival fantazie a podobně, tak jde o něco podobného, ale s mírně jiným tématem. Já se již devátým rokem podílím na organizaci mezinárodního furry conu jménem <a href="https://www.zodiacon.org/">ZodiaCon</a>.</p>
+<p>Tento con má každý rok jiné téma a v roce 2016 byl tématem cyberpunk. A mne napadlo, že bychom mohli účastníkům ukázat, jak je to s tou elektronikou doopravdy. A s několika kamarády jsme připravili workshop úplných základů práce s Arduinem. Očekávali jsme, že ze zhruba 130 účastníků se na něj přihlásí 10-15, nějak to ukážeme a hotovo.</p>
+<p>Na tento workshop se přihlásilo zhruba padesát lidí. Většina z nich o elektronice nic zásadního nevěděla, ale chtěli si něco vyzkoušet a něco nového se naučit. Jiní se zase o elektroniku dlouhodobě zajímali, tak proč by nepřišli, že ano.</p>
+<p>Obrovsky pozitivní odezva nás nabudila a od té doby pořádáme akce dvě. V létě klasický furry con jménem ZodiaCon a v zimě specializovanou akci jménem TechFurMeet. Jejím obsahem jsou nejrůznější přednášky a workshopy týkající se různých technických aspektů. Jádrem programu jsou workshopy postavené kolem balíčku součástek, který si zájemci mohou za režijní cenu koupit a k dispozici jsou návody a přednášky, jak s těmito součástkami naložit.</p>
+<p>V minulosti jsme stavěli elektronický zámek, hodiny synchronizované přes Internet, makro klávesnici použitelné pro kybernetické útoky a pro letošní rok máme připravený mimo jiné barevný dotykový displej a práci s ním.</p>
+<p>Na TechFurMeetu je vítán každý se zájmem o elektroniku, kybernetiku, programování, počítačovou bezpečnost, 3D tisk, drony... Program je koncipován obvykle dosti široce, takže na své si přijdou jak úplní začátečníci, tak již pokročilejší uživatelé. Po většinu času jsme v jedné velké místnosti, každý má k dispozici vlastní celkem velký stůl, může se pochlubit svými projekty, najít třeba pomoc (mezi organizátory a účastníky jsou lidé s širokou škálou dovedností a znalostí). Účastníci jsou z celé Evropy a bývá jich mezi 30 a 50. Program je vedený částečně v češtině, částečně v angličtině dle zájmu posluchačů a osoby přednášejícího.</p>
+<p>Ačkoliv se celá akce vyvinula z furry conu, dneska je to spíš bastlířská/makers akce. I když nebuďte překvapeni, když se vás registrační formulář zeptá na živočišný druh, když potkáte někoho s ocasem nebo zvířecíma ušima.</p>
+<p>Pro řadu lidí je zajímavý formát akce, protože jde o celý víkend a ještě jeden den navíc. Letošní ročník se koná od 7. do 10. února (čtvrtek večer až neděle poledne). Máme pro sebe malý hotel poblíž Pardubic a obvykle jde o příjemný víkend strávený se spřízněnými dušemi. Pokud se chcete přihlásit, máme ještě volno a dokonce vám i odpustím v ceníku uvedený poplatek za pozdní registraci.</p>
+<p>Další informace a možnost registrace najdete na <a href="https://www.techfurmeet.org/">www.techfurmeet.org</a></p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+jsme+zv%c3%ad%c5%99%c3%a1tka+nau%c4%8dili+p%c3%a1jet&amp;body=https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/01/jak-jsme-zviratka-naucili-pajet.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</guid>
+      <title>Jak jsme zvířátka naučili pájet</title>
+      <description>Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat...</description>
+      <link>https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</link>
+      <author>Michal Altair Valášek</author>
+      <category>Lidé a jiná zvěř</category>
+      <category>Bastlení</category>
+      <pubDate>2019-01-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/01/vso2gh</guid>
       <title>Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub</title>
       <description>GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. Psal jsem o tom již včera, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript.</description>
@@ -135,15 +145,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2018-11-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/zazraky-se-deji</guid>
-      <title>Zázraky se dějí</title>
-      <description>Žijeme v turbulentní době a skutečnosti, dříve pokládány za neměnné, se hroutí jako domečky z karet. Naposledy se tímto stylem zhroutila jedna z konstant českého Internetu, když weby Ministerstva vnitra a Policie ČR začaly podporovat HTTPS. Samozřejmě, není všechno zlato co se třpytí, takže i když mají weby mvcr.cz a policie.cz ono magické "S" na konci protokolu, v testu kvality implementace dostaly od Qualysu známku F - tedy nejhorší možnou.</description>
-      <link>https://www.altair.blog/2018/11/zazraky-se-deji</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-11-05T12:00:00</pubDate>
     </item>
   </channel>
 </rss>
