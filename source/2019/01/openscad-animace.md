@@ -1,0 +1,9 @@
+<!-- dcterms:title = Jak na animace modelu v OpenSCADu -->
+<!-- dcterms:abstract = Obrázek prý řekne víc než tisíc slov. A co se pohyblivých obrázků týče, ty občas vydají za celou knihu. Proto si ukážeme, jakým způsobem je možné v OpenSCADu naprogramovaný model rozhýbat a vytvořit z něj animaci.  -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190125-openscad-animace.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2019-01-25 -->
+<!-- x4w:alternateUrl = https://josefprusa.cz/jak-na-animace-modelu-v-programu-openscad/ -->
