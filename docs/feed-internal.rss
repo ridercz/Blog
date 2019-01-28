@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/01/cf-geoip</guid>
+      <title>Geolokace pomocí CloudFlare a IIS Rewrite</title>
+      <description>Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází.</description>
+      <link>https://www.altair.blog/2019/01/cf-geoip</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Tipy, triky</category>
+      <pubDate>2019-01-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</guid>
       <title>Jak jsme zvířátka naučili pájet</title>
       <description>Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat...</description>
@@ -135,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-11-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/aspnet-identity-password-policy</guid>
-      <title>Vlastní rozumná politika hesel v ASP.NET Identity</title>
-      <description>ASP.NET Identity je nástupce Membership a Role providerů z .NET 2.0. Obecně se jedná o úkaz pozitivní, nicméně jeho výchozí politika hesel je dosti pomýlená. Naštěstí ji lze poměrně snadno změnit a dokonce si napsat vlastní, lepší.</description>
-      <link>https://www.altair.blog/2018/11/aspnet-identity-password-policy</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2018-11-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Geolokace pomocí CloudFlare a IIS Rewrite | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází." />
+    <link rel="canonical" href="https://www.altair.blog/2019/01/cf-geoip" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Geolokace pomocí CloudFlare a IIS Rewrite" />
+    <meta name="twitter:description" content="Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190129-cf-geoip.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Geolokace pomocí CloudFlare a IIS Rewrite" />
+    <meta property="og:description" content="Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190129-cf-geoip.png" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/01/cf-geoip" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190129-cf-geoip.png)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Geolokace pomocí CloudFlare a IIS Rewrite</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-01-28" title="Datum vydání">28. ledna 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>shaireproductions.com via Flickr, CC BY <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází.</p>
+<h2 id="geolokace">Geolokace</h2>
+<p>Podle IP adresy uživatele lze se značnou mírou pravděpodobnosti určit, ze které země uživatel pochází, resp. odkud se připojuje. Není to zcela spolehlivé, ale pro řadu účelů to postačuje.</p>
+<p>Cloudflare do forwardovaných HTTP požadavků přidává některé hlavičky, <a href="https://support.cloudflare.com/hc/en-us/articles/200170986">což je popsáno v dokumentaci</a>. Pro nás je podstatná hlavička <code>CF-IPCOUNTRY</code>, která obsahuje dvoupísmenný kód země (norma <em>ISO 3166-1 Alpha 2</em>). Speciální hodnota <code>XX</code> znamená, že se geolokace nezdařila a <code>T1</code> že požadavek přišel přes Tor.</p>
+<p>URL rewriting modul toho umí mnohem víc, než jenom URL rewriting. Mimo jiné umí rozhodnout o zpracování požadavku podle hodnoty HTTP hlavičky. Jediná zákeřnost je, že hlavičku je nutné zadat s prefixem <code>HTTP_</code> a znak <code>-</code> nahradit podtržítkem. Z <code>CF-IPCOUNTRY</code> se tak stane <code>HTTP_CF_IPCOUNTRY</code>.</p>
+<p>Následující konfigurace v souboru <code>web.config</code> přesměruje všechny uživatele geolokalizované do ČR a SR na můj blog:</p>
+<pre><code class="language-xml">&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;rewrite&gt;
+            &lt;rules&gt;
+                &lt;rule name=&quot;Geolocation&quot;&gt;
+                    &lt;match url=&quot;.*&quot; /&gt;
+                    &lt;conditions logicalGrouping=&quot;MatchAny&quot;&gt;
+                        &lt;add input=&quot;{HTTP_CF_IPCOUNTRY}&quot; pattern=&quot;^CZ$&quot; /&gt;
+                        &lt;add input=&quot;{HTTP_CF_IPCOUNTRY}&quot; pattern=&quot;^SK$&quot; /&gt;
+                    &lt;/conditions&gt;
+                    &lt;action type=&quot;Redirect&quot; url=&quot;https://www.altair.blog/&quot; redirectType=&quot;Temporary&quot; /&gt;
+                &lt;/rule&gt;
+            &lt;/rules&gt;
+        &lt;/rewrite&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</code></pre>
+<p>Jak této funkcionality využijete, to záleží na vašich potřebách. Můžete uživatele například přesměrovat na národní web nebo uživatelům z určitých zemí zakázat přístup.</p>
+<h2 id="jak-na-vyjimky">Jak na výjimky</h2>
+<p>Geolokace probíhá podle IP adresy. Ale co když pro určité speciální adresy chcete udělat výjimku? CloudFlare nechává původní adresu v hlavičce <code>CF-CONNECTING-IP</code>. Můžete tedy přidat pravidlo, které na základě této proměnné udělá něco jiného. Například následující kód neudělá nic (typ akce je <code>None</code>) a zastaví zpracovávání dalších pravidel (atribut <code>stopProcessing</code> je <code>true</code>) v případě, že se uživatel připojuje ze sítě <code>10.0.0/24</code> nebo má IP adresu <code>192.168.1.1</code>:</p>
+<pre><code class="language-xml">&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;rewrite&gt;
+            &lt;rules&gt;
+                &lt;rule name=&quot;Exceptions&quot; patternSyntax=&quot;Wildcard&quot; stopProcessing=&quot;true&quot;&gt;
+                    &lt;match url=&quot;*&quot; /&gt;
+                    &lt;conditions logicalGrouping=&quot;MatchAny&quot;&gt;
+                        &lt;add input=&quot;{HTTP_CF_CONNECTING_IP}&quot; pattern=&quot;192.168.1.1&quot; /&gt;
+                        &lt;add input=&quot;{HTTP_CF_CONNECTING_IP}&quot; pattern=&quot;10.0.0.*&quot; /&gt;
+                    &lt;/conditions&gt;
+                    &lt;action type=&quot;None&quot; /&gt;
+                &lt;/rule&gt;
+                &lt;rule name=&quot;Geolocation&quot;&gt;
+                    &lt;match url=&quot;.*&quot; /&gt;
+                    &lt;conditions logicalGrouping=&quot;MatchAny&quot;&gt;
+                        &lt;add input=&quot;{HTTP_CF_IPCOUNTRY}&quot; pattern=&quot;^CZ$&quot; /&gt;
+                        &lt;add input=&quot;{HTTP_CF_IPCOUNTRY}&quot; pattern=&quot;^SK$&quot; /&gt;
+                    &lt;/conditions&gt;
+                    &lt;action type=&quot;Redirect&quot; url=&quot;https://www.altair.blog/&quot; redirectType=&quot;Temporary&quot; /&gt;
+                &lt;/rule&gt;
+            &lt;/rules&gt;
+        &lt;/rewrite&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Geolokace+pomoc%c3%ad+CloudFlare+a+IIS+Rewrite&amp;body=https://www.altair.blog/2019/01/cf-geoip">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/01/cf-geoip.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/01/cf-geoip">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/01/cf-geoip">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
