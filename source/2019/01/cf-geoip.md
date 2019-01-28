@@ -1,10 +1,10 @@
 <!-- dcterms:title = Geolokace pomocí CloudFlare a IIS Rewrite -->
 <!-- dcterms:abstract = Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/20190129-cf-geoip.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20190128-cf-geoip.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:coverUrl = /cover-pictures/20190129-cf-geoip.png -->
+<!-- x4w:coverUrl = /cover-pictures/20190128-cf-geoip.png -->
 <!-- x4w:coverCredits = shaireproductions.com via Flickr, CC BY -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Tipy, triky -->
