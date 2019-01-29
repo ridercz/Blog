@@ -1,0 +1,9 @@
+<!-- dcterms:title = Držák laptopu na VESA kompatibilní rameno na monitor -->
+<!-- dcterms:abstract = U svého "dílenského" stolu občas potřebuju počítač, abych se podíval do dokumentace, schémat a podobně. Bohužel už na něj není místo. A držáky notebooků na pohyblivém rameni se sice vyrábějí, ale jsou dost drahé. Proto jsem si koupil levný držák na monitor a navrhl pro něj adaptér pro menší laptop - v mém případě Surface 3. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190129-laptop-vesa-mount.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2019-01-29 -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3388670 -->

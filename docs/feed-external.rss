@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:3388670</guid>
+      <title>Držák laptopu na VESA kompatibilní rameno na monitor</title>
+      <description>U svého "dílenského" stolu občas potřebuju počítač, abych se podíval do dokumentace, schémat a podobně. Bohužel už na něj není místo. A držáky notebooků na pohyblivém rameni se sice vyrábějí, ale jsou dost drahé. Proto jsem si koupil levný držák na monitor a navrhl pro něj adaptér pro menší laptop - v mém případě Surface 3.</description>
+      <link>https://www.thingiverse.com/thing:3388670</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2019-01-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://josefprusa.cz/jak-na-animace-modelu-v-programu-openscad/</guid>
       <title>Jak na animace modelu v OpenSCADu</title>
       <description>Obrázek prý řekne víc než tisíc slov. A co se pohyblivých obrázků týče, ty občas vydají za celou knihu. Proto si ukážeme, jakým způsobem je možné v OpenSCADu naprogramovaný model rozhýbat a vytvořit z něj animaci.</description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2018-12-10T10:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</guid>
-      <title>Hrůza z Huawei</title>
-      <description>Poslední měsíc není pro Huawei příliš příjemný. Čínský telekomunikační obr se stal terčem útoků ze stran bezpečnostních služeb hned několika zemí včetně České republiky. Médii zesilovaná kritika a varování před bezpečnostními riziky vykazují prvky obchodní války. Na pozadí je ale mnohem důležitější otázka – nakolik je Huawei hrozbou pro každodenní i tu kritickou komunikaci.</description>
-      <link>https://tech.ihned.cz/c7-66381760-psms7-8055e8ffc6e07d6</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2018-12-10T08:00:00</pubDate>
     </item>
   </channel>
 </rss>

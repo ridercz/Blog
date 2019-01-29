@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:3388670</guid>
+      <title>Držák laptopu na VESA kompatibilní rameno na monitor</title>
+      <description>U svého "dílenského" stolu občas potřebuju počítač, abych se podíval do dokumentace, schémat a podobně. Bohužel už na něj není místo. A držáky notebooků na pohyblivém rameni se sice vyrábějí, ale jsou dost drahé. Proto jsem si koupil levný držák na monitor a navrhl pro něj adaptér pro menší laptop - v mém případě Surface 3.</description>
+      <link>https://www.thingiverse.com/thing:3388670</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2019-01-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/01/cf-geoip</guid>
       <title>Geolokace pomocí CloudFlare a IIS Rewrite</title>
       <description>Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází.</description>
@@ -133,16 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-12-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/petrinska-rozhledna</guid>
-      <title>Proč už nikdy nevylezu na petřínskou rozhlednu</title>
-      <description>Na Asku se mne někdo zeptal, co už nikdy v životě neudělám. Takových věcí je hodně, ale k jedné se váže zajímavá historka, o kterou se s vámi chci podělit. Už nikdy v životě nevylezu na petřínskou rozhlednu, poté co jsem ji jednou navštívil za poněkud zvláštních okolností.</description>
-      <link>https://www.altair.blog/2018/12/petrinska-rozhledna</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <category>BDSM</category>
-      <pubDate>2018-12-20T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
