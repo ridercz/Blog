@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.ceskatelevize.cz/ivysilani/10175540660-mate-slovo-s-m-jilkovou/219411030520004</guid>
+      <title>Máte slovo: Čína jako bezpečnostní hrozba</title>
+      <description>Včera jsem se jako host zúčastnil pořadu České televize Máte slovo s Michaelou Jílkovou. Tématem bylo, nakolik představují čínské technologie (zejména od firem jako Huawei a ZTE) bezpečnostní hrozbu. Záznam pořadu najdete v iVysílání na webu ČT.</description>
+      <link>https://www.ceskatelevize.cz/ivysilani/10175540660-mate-slovo-s-m-jilkovou/219411030520004</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2019-01-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:3388670</guid>
       <title>Držák laptopu na VESA kompatibilní rameno na monitor</title>
       <description>U svého "dílenského" stolu občas potřebuju počítač, abych se podíval do dokumentace, schémat a podobně. Bohužel už na něj není místo. A držáky notebooků na pohyblivém rameni se sice vyrábějí, ale jsou dost drahé. Proto jsem si koupil levný držák na monitor a navrhl pro něj adaptér pro menší laptop - v mém případě Surface 3.</description>
@@ -133,15 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-12-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66399390-psms7-26647a5c3cae74c</guid>
-      <title>Vánoční domácí technická podpora: Návštěvy rodiny mohou ochránit nervy geeků po zbytek roku</title>
-      <description>Vánoce jsou pro mnoho lidí příležitost k více či méně dobrovolným návštěvám více či méně vzdálených příbuzných. A pokud trpíte diagnózou "dělá s počítačem", mohou vás při této příležitosti méně technicky nadaní příbuzní pořádat o pomoc se svým počítačem.</description>
-      <link>https://tech.ihned.cz/c7-66399390-psms7-26647a5c3cae74c</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-12-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,11 @@
+<!-- dcterms:title = Máte slovo: Čína jako bezpečnostní hrozba -->
+<!-- dcterms:abstract = Včera jsem se jako host zúčastnil pořadu České televize Máte slovo s Michaelou Jílkovou. Tématem bylo, nakolik představují čínské technologie (zejména od firem jako Huawei a ZTE) bezpečnostní hrozbu. Záznam pořadu najdete v iVysílání na webu ČT. -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2019-01-31 -->
+<!-- x4w:pictureUrl = /perex-pictures/20190131-mate-slovo.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Repro Česká televize -->
+<!-- x4w:alternateUrl = https://www.ceskatelevize.cz/ivysilani/10175540660-mate-slovo-s-m-jilkovou/219411030520004 -->
