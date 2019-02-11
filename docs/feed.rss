@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/lini-programatori</guid>
+      <title>Líný programátor - dobrý programátor: Akce pro ně</title>
+      <description>V jedné staré písničce, populární v dobách mého mládí, se zpívá, že práce je matka pokroku. Můj názor je přesně opačný. Matkou všího pokroku je lidská lenost, snaha práci si pokud možno zjednodušit nebo se jí vyhnout úplně. Kdyby pračlověk Janeček nebyl líný každý večer lézt na strom, nikdy by se nebyl odvážil vlézt do temné jeskyně nebo experimentovat s něčím tak nebezpečným, jako je oheň.</description>
+      <link>https://www.altair.blog/2019/02/lini-programatori</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2019-02-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.ceskatelevize.cz/ivysilani/10175540660-mate-slovo-s-m-jilkovou/219411030520004</guid>
       <title>Máte slovo: Čína jako bezpečnostní hrozba</title>
       <description>Včera jsem se jako host zúčastnil pořadu České televize Máte slovo s Michaelou Jílkovou. Tématem bylo, nakolik představují čínské technologie (zejména od firem jako Huawei a ZTE) bezpečnostní hrozbu. Záznam pořadu najdete v iVysílání na webu ČT.</description>
@@ -134,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-12-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/vanocni-soutez</guid>
-      <title>Novoročenka a vánoční soutěž</title>
-      <description>Vytvořil jsem naprosto nevinnou novoročenku. A lidé, kteří mě znají, začali pátrat po jejích skrytých významech. Tak jsem vytvořil vánoční soutež, která tyto nedůvěřivé povahy zaměstná. Vítěz ode mne dostane vánoční dárkový balíček.</description>
-      <link>https://www.altair.blog/2018/12/vanocni-soutez</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-12-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

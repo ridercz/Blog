@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/lini-programatori</guid>
+      <title>Líný programátor - dobrý programátor: Akce pro ně</title>
+      <description>V jedné staré písničce, populární v dobách mého mládí, se zpívá, že práce je matka pokroku. Můj názor je přesně opačný. Matkou všího pokroku je lidská lenost, snaha práci si pokud možno zjednodušit nebo se jí vyhnout úplně. Kdyby pračlověk Janeček nebyl líný každý večer lézt na strom, nikdy by se nebyl odvážil vlézt do temné jeskyně nebo experimentovat s něčím tak nebezpečným, jako je oheň.</description>
+      <link>https://www.altair.blog/2019/02/lini-programatori</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2019-02-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/01/cf-geoip</guid>
       <title>Geolokace pomocí CloudFlare a IIS Rewrite</title>
       <description>Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2018-11-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/automaticke-verzovani-v-core</guid>
-      <title>Automatické verzování projektu v ASP.NET Core</title>
-      <description>Trendem při určování nových verzí je v současnosti sémantické verzování. To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu. V .NET Core to jde překvapivě snadno.</description>
-      <link>https://www.altair.blog/2018/11/automaticke-verzovani-v-core</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-11-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
