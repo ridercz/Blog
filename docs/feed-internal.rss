@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/g2b</guid>
+      <title>Prezentace a příklady z akcí G2B TechEd a ShowIT</title>
+      <description>Minulý týden jsem přednášel na akcích G2B TechEd (Brno) a ShowIT (Bratislava). Nyní vám ke stažení nabízím své prezentace a příklady.</description>
+      <link>https://www.altair.blog/2019/02/g2b</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/lini-programatori</guid>
       <title>Líný programátor - dobrý programátor: Akce pro ně</title>
       <description>V jedné staré písničce, populární v dobách mého mládí, se zpívá, že práce je matka pokroku. Můj názor je přesně opačný. Matkou všího pokroku je lidská lenost, snaha práci si pokud možno zjednodušit nebo se jí vyhnout úplně. Kdyby pračlověk Janeček nebyl líný každý večer lézt na strom, nikdy by se nebyl odvážil vlézt do temné jeskyně nebo experimentovat s něčím tak nebezpečným, jako je oheň.</description>
@@ -137,15 +146,6 @@
       <category>IT</category>
       <category>Software</category>
       <pubDate>2018-11-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/jak-jsem-nepridal-komentare</guid>
-      <title>Jak jsem nepřidal na blog komentáře</title>
-      <description>Lidé se zkušenostmi z publikování na Internetu se vesměs shodují, že komentáře u článků jsou žumpa. Na obecných serverech bývají trpěny dílem ze setrvačnosti, dílem z obchodních důvodů nebo více či méně pomýlené představě o těchto. U technických serverů nicméně komentáře mývají smysl. Takže jsem je zavedl. Pomocí GitHubu.</description>
-      <link>https://www.altair.blog/2018/11/jak-jsem-nepridal-komentare</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2018-11-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

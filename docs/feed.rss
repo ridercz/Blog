@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/g2b</guid>
+      <title>Prezentace a příklady z akcí G2B TechEd a ShowIT</title>
+      <description>Minulý týden jsem přednášel na akcích G2B TechEd (Brno) a ShowIT (Bratislava). Nyní vám ke stažení nabízím své prezentace a příklady.</description>
+      <link>https://www.altair.blog/2019/02/g2b</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/lini-programatori</guid>
       <title>Líný programátor - dobrý programátor: Akce pro ně</title>
       <description>V jedné staré písničce, populární v dobách mého mládí, se zpívá, že práce je matka pokroku. Můj názor je přesně opačný. Matkou všího pokroku je lidská lenost, snaha práci si pokud možno zjednodušit nebo se jí vyhnout úplně. Kdyby pračlověk Janeček nebyl líný každý večer lézt na strom, nikdy by se nebyl odvážil vlézt do temné jeskyně nebo experimentovat s něčím tak nebezpečným, jako je oheň.</description>
@@ -135,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2018-12-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/vysledek-vanocni-souteze</guid>
-      <title>Výsledek vánoční soutěže</title>
-      <description>Včera jsem vyhlásil vánoční soutěž, kde bylo vaším úkolem vyluštit zprávu, zakódovanou od obrázku. Trvalo jenom pár hodin, než ji Tomáš Jecha (a za ním v závěsu Jakub Bouček) vyhrál.</description>
-      <link>https://www.altair.blog/2018/12/vysledek-vanocni-souteze</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-12-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
