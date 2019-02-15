@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Příklady a prezentace z akce pro líné programátory | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem &quot;ASP.NET Core pro líné programátory&quot;, protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy." />
+    <link rel="canonical" href="https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Příklady a prezentace z akce pro líné programátory" />
+    <meta name="twitter:description" content="Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem &quot;ASP.NET Core pro líné programátory&quot;, protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190215-aspnet-core-pro-line-programatory.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Příklady a prezentace z akce pro líné programátory" />
+    <meta property="og:description" content="Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem &quot;ASP.NET Core pro líné programátory&quot;, protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190215-aspnet-core-pro-line-programatory.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190215-aspnet-core-pro-line-programatory.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Příklady a prezentace z akce pro líné programátory</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-02-15" title="Datum vydání">15. února 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Update Conference <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem &quot;ASP.NET Core pro líné programátory&quot;, protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.</p>
+<p><strong>Všechny prezentace a příklady z mých přednášek si můžete stáhnout jako <a href="https://www.cdn.altairis.cz/Blog/2019/20190215-lprog.zip">ZIP archiv</a>.</strong></p>
+<h2 id="dejstvi-prvni-razor-pages-pro-pokrocile">Dějství první: Razor Pages pro pokročilé</h2>
+<p>V úvodní přednášce jsem vám ukázal pokročilejší vlastnosti Razor Pages. Jak využívat handlery, jak vytvářet vlastní tag helpery a view komponenty a jak je zabalit do opakovaně použitelných knihoven.</p>
+<h2 id="dejstvi-druhe-automaticke-generovani-uzivatelskeho-rozhrani">Dějství druhé: Automatické generování uživatelského rozhraní</h2>
+<p>Po obědě jsme se podívali na první ze svaté trojice líného programátora, totiž automatické generování uživatelského rozhraní. Ukázal jsem vám, jak částečně nebo úplně automaticky generovat uživatelské rozhraní na základě metadat, jak validovat uživatelské vstupy a zejména jak tohle všechno customizovat dle vašich přání.</p>
+<h2 id="dejstvi-treti-dynamicke-generovani-metadat-pomoci-konvenci">Dějství třetí: Dynamické generování metadat pomocí konvencí</h2>
+<p>V této přednášce jsem vám ukázal, jak si zjednodušit vytváření oněch metadat, která používáme pro dynamické generování UI. Představil jsem vám mechanismus generování metadat na základě konvencí, který vám podstatně usnadní život.</p>
+<h2 id="dejstvi-ctvrte-lokalizace-asp.net-aplikaci">Dějství čtvrté: Lokalizace ASP.NET aplikací</h2>
+<p>V závěrečné přednášce jsem ukázal, jak dříve předvedené techniky (a pár dalších triků) využít k tomu, aby vaše aplikace bezbolestně podporovala více než jeden jazyk. Jak využít vestavěné lokalizační mechanismy, které se ovšem pro naše prostředí příliš nehodí, nebo jak si napsat vlastní, lepší.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=P%c5%99%c3%adklady+a+prezentace+z+akce+pro+l%c3%adn%c3%a9+program%c3%a1tory&amp;body=https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/02/aspnet-core-pro-line-programatory.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

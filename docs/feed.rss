@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</guid>
+      <title>Příklady a prezentace z akce pro líné programátory</title>
+      <description>Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem "ASP.NET Core pro líné programátory", protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.</description>
+      <link>https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/g2b</guid>
       <title>Prezentace a příklady z akcí G2B TechEd a ShowIT</title>
       <description>Minulý týden jsem přednášel na akcích G2B TechEd (Brno) a ShowIT (Bratislava). Nyní vám ke stažení nabízím své prezentace a příklady.</description>
@@ -135,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2018-12-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2018/12/stribrna-noc</guid>
-      <title>Stříbrná noc</title>
-      <description>Ze svého zamřížovaného výklenku pořádně viděl jenom na čarodějku a z okna, kterým do místnosti svítilo stříbrné světlo měsíce v úplňku. A maje na výběr z těchto dvou možností, bral Rey zavděk čarodějčinými zády, kdyby už jenom proto že ta druhá alternativa byla svým způsobem zodpovědná za to, že dnešní večer trávil za masivními mřížemi a připoután řetězy za pouta na rukách, nohách a obojek kolem krku.</description>
-      <link>https://www.bdsm.cz/2018/12/stribrna-noc</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2018-12-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</guid>
+      <title>Příklady a prezentace z akce pro líné programátory</title>
+      <description>Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem "ASP.NET Core pro líné programátory", protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.</description>
+      <link>https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/g2b</guid>
       <title>Prezentace a příklady z akcí G2B TechEd a ShowIT</title>
       <description>Minulý týden jsem přednášel na akcích G2B TechEd (Brno) a ShowIT (Bratislava). Nyní vám ke stažení nabízím své prezentace a příklady.</description>
@@ -136,16 +145,6 @@
       <category>Bezpečnost</category>
       <category>Bastlení</category>
       <pubDate>2018-11-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</guid>
-      <title>Aktualizace ukázkové aplikace ASKme</title>
-      <description>Nedávno jsem publikoval ukázkové aplikace pro technologii ASP.NET Razor Pages. Dnes jsem aplikaci ASKme aktualizoval tak, že má i variantu napsanou v ASP.NET MVC Core.</description>
-      <link>https://www.altair.blog/2018/11/aktualizace-ukazkove-aplikace</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Software</category>
-      <pubDate>2018-11-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
