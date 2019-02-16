@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm</guid>
+      <title>Online stream: Píšeme AskMe v DotVVM</title>
+      <description>Z mých kurzů a konferencí znáte ukázkovou aplikace AskMe. Je to rozumně složitá aplikace psaná v ASP.NET Core a je k dispozici ve dvou variantách, v MVC a v Razor Pages. Příští týden budeme s Tomášem Hercegem psát třetí, v DotVVM. A budeme to online streamovat.</description>
+      <link>https://www.altair.blog/2019/02/askme-dotvvm</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</guid>
       <title>Příklady a prezentace z akce pro líné programátory</title>
       <description>Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem "ASP.NET Core pro líné programátory", protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.</description>
@@ -134,17 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-12-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/11/honeyesp</guid>
-      <title>HoneyESP: Falešné AP pro sociální útoky za stovku</title>
-      <description>Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary.</description>
-      <link>https://www.altair.blog/2018/11/honeyesp</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <category>Bezpečnost</category>
-      <category>Bastlení</category>
-      <pubDate>2018-11-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
