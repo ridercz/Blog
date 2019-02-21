@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</guid>
+      <title>Záznam online streamu Píšeme AskMe v DotVVM (1)</title>
+      <description>K dispozici je záznam ze včerejšího streamu, v němž jsme začali s Tomášem Hercegem přepisovat AskMe do DotVVM. Byla to moc velká zábava a za dva týdny budeme pokračovat.</description>
+      <link>https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-21T17:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/inproc-cwd</guid>
       <title>Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2</title>
       <description>ASP.NET Core 2.2 přinesl novinku: InProcess režim běhu webových aplikací. Došlo tam ovšem k jedné potenciálně breaking change, a to ke změně pracovního adresáře. Třeba EF migrace proti SQLite to nepřijaly úplně s nadšením. Náprava je naštěstí snadná.</description>
@@ -135,15 +144,6 @@
       <category>Koně</category>
       <category>BDSM</category>
       <pubDate>2018-12-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/visacky</guid>
-      <title>Rychlé a hezké jmenovky na dárky</title>
-      <description>Před dvěma lety jsem z náhlé inspirace vyrobil zajímavé a jednoduché jmenovky/visačky na vánoční dárky. Letos mi došly a pracoval jsem na nové dávce. Napadlo mne návod na ně zveřejnit, aby se mohli inspirovat i ostatní. Pokud nemáte potřebné vybavení, nezoufejte - na konci článku najdete pozvánku na workshop, kde si budete moci přesně tyto visačky zdarma vyrobit.</description>
-      <link>https://www.altair.blog/2018/12/visacky</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2018-12-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

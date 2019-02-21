@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</guid>
+      <title>Záznam online streamu Píšeme AskMe v DotVVM (1)</title>
+      <description>K dispozici je záznam ze včerejšího streamu, v němž jsme začali s Tomášem Hercegem přepisovat AskMe do DotVVM. Byla to moc velká zábava a za dva týdny budeme pokračovat.</description>
+      <link>https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-02-21T17:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/inproc-cwd</guid>
       <title>Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2</title>
       <description>ASP.NET Core 2.2 přinesl novinku: InProcess režim běhu webových aplikací. Došlo tam ovšem k jedné potenciálně breaking change, a to ke změně pracovního adresáře. Třeba EF migrace proti SQLite to nepřijaly úplně s nadšením. Náprava je naštěstí snadná.</description>
@@ -135,16 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2019-01-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66421920-psms7-8af773556dbb689</guid>
-      <title>Několik tuzemských internetových služeb a poskytovatelů se stalo terčem silného DDoS útoku. Mohlo se jednat o test kybernetické války</title>
-      <description>Na přelomu roku se řada českých internetových služeb a poskytovatelů připojení stala terčem DDoS (Distributed Denial of Service) útoku. Postiženi byli zejména menší a střední poskytovatelé internetu, v jejichž silách není drahou obranu proti tomuto útoku snadné zvládnout.</description>
-      <link>https://tech.ihned.cz/c7-66421920-psms7-8af773556dbb689</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2019-01-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
