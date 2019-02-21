@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/inproc-cwd</guid>
+      <title>Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2</title>
+      <description>ASP.NET Core 2.2 přinesl novinku: InProcess režim běhu webových aplikací. Došlo tam ovšem k jedné potenciálně breaking change, a to ke změně pracovního adresáře. Třeba EF migrace proti SQLite to nepřijaly úplně s nadšením. Náprava je naštěstí snadná.</description>
+      <link>https://www.altair.blog/2019/02/inproc-cwd</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2019-02-21T01:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm</guid>
       <title>Online stream: Píšeme AskMe v DotVVM</title>
       <description>Z mých kurzů a konferencí znáte ukázkovou aplikaci AskMe. Je to rozumně složitá aplikace psaná v ASP.NET Core a je k dispozici ve dvou variantách, v MVC a v Razor Pages. Příští týden budeme s Tomášem Hercegem psát třetí, v DotVVM. A budeme to online streamovat.</description>
@@ -135,15 +144,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2019-01-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/osbs</guid>
-      <title>Nový build systém pro OpenSCAD</title>
-      <description>Pro vytváření 3D modelů používám program OpenSCAD. Nyní jsem k němu napsal build systém, který umí snadno a jednoduše vygenerovat více variant z jednoho souboru a má podporu pro vícebarevný, resp. vícemateriálový tisk.</description>
-      <link>https://www.altair.blog/2018/12/osbs</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2018-12-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

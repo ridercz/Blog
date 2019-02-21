@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2 | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="ASP.NET Core 2.2 přinesl novinku: InProcess režim běhu webových aplikací. Došlo tam ovšem k jedné potenciálně breaking change, a to ke změně pracovního adresáře. Třeba EF migrace proti SQLite to nepřijaly úplně s nadšením. Náprava je naštěstí snadná." />
+    <link rel="canonical" href="https://www.altair.blog/2019/02/inproc-cwd" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2" />
+    <meta name="twitter:description" content="ASP.NET Core 2.2 přinesl novinku: InProcess režim běhu webových aplikací. Došlo tam ovšem k jedné potenciálně breaking change, a to ke změně pracovního adresáře. Třeba EF migrace proti SQLite to nepřijaly úplně s nadšením. Náprava je naštěstí snadná." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190221-inproc-cwd.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2" />
+    <meta property="og:description" content="ASP.NET Core 2.2 přinesl novinku: InProcess režim běhu webových aplikací. Došlo tam ovšem k jedné potenciálně breaking change, a to ke změně pracovního adresáře. Třeba EF migrace proti SQLite to nepřijaly úplně s nadšením. Náprava je naštěstí snadná." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190221-inproc-cwd.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/02/inproc-cwd" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190221-inproc-cwd.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak na aktuální adresář v InProcess režimu ASP.NET Core 2.2</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-02-21T01:00:00" title="Datum vydání">21. února 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>ASP.NET Core 2.2 přinesl jednu novinku. Webová aplikace nemusí běžet v Kestrelu, ale může být - stejně jako v klasickém .NETu - hostována přímo ve worker procesu IIS. Říká se tomu <em>in-process mode</em>, je to ve výchozím nastavení zapnuté a poznáte to podle následující konstrukce v <code>.csproj</code> souboru:</p>
+<pre><code class="language-xml">&lt;AspNetCoreHostingModel&gt;InProcess&lt;/AspNetCoreHostingModel&gt;
+</code></pre>
+<p>Dokumentaci najdete na webu <a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.2">docs.microsoft.com</a> a skrývá se v ní nenápadná poznámka:</p>
+<blockquote>
+<p><code>GetCurrentDirectory</code> returns the worker directory of the process started by IIS rather than the app's directory (for example, <code>C:\Windows\System32\inetsrv</code> for <code>w3wp.exe</code>).</p>
+</blockquote>
+<p>To může být docela problém v případě, že se v aplikaci odkazujete na nějaký soubor určený relativní cestou, která je odvozena od aktuálního adresáře. Mne se to týkalo při použití SQLite embedded databáze. Její connection string vypadá nějak jako <code>Data Source=App_Data/ask.db</code> a při použití EF migrací je cesta odvozena od aktuálního adresáře.</p>
+<p>Výše uvedená stránka s dokumentací obsahuje odkaz na <a href="https://github.com/aspnet/Docs/blob/master/aspnetcore/host-and-deploy/aspnet-core-module/samples_snapshot/2.x/CurrentDirectoryHelpers.cs">velice komplexní řešení</a>, které navíc nevypadá, že by fungovalo multiplatformně.</p>
+<p>Já jsem použil řešení poněkud jednodušší. Nejsem si zcela jist, zda bude spolehlivě fungovat za všech okolností a se všemi providery, ale zatím jej hodnotím jako uspokojivé. Spočívá v tom, že někde na začátku třídy <code>Startup</code> nastavíte <code>Environment.CurrentDirectory = env.ContentRootPath</code>. Nastavíte tím aktuální adresář na content root, což je stav odpovídající použití Kestrelu.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+na+aktu%c3%a1ln%c3%ad+adres%c3%a1%c5%99+v+InProcess+re%c5%beimu+ASP.NET+Core+2.2&amp;body=https://www.altair.blog/2019/02/inproc-cwd">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/02/inproc-cwd.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/02/inproc-cwd">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/02/inproc-cwd">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
