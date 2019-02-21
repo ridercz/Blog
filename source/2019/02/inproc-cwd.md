@@ -6,6 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20190221-inproc-cwd.jpg -->
 <!-- x4w:category = IT -->
+<!-- x4w:category = Tipy, triky -->
 <!-- dcterms:dateAccepted = 2019-02-21T01:00:00 -->
 
 ASP.NET Core 2.2 přinesl jednu novinku. Webová aplikace nemusí běžet v Kestrelu, ale může být - stejně jako v klasickém .NETu - hostována přímo ve worker procesu IIS. Říká se tomu _in-process mode_, je to ve výchozím nastavení zapnuté a poznáte to podle následující konstrukce v `.csproj` souboru:
