@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/autentizace-na-webu</guid>
+      <title>Autentizace na webu: Jak jsme došli k cookies?</title>
+      <description>Na svém ASK.FM jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu.</description>
+      <link>https://www.altair.blog/2019/02/autentizace-na-webu</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-02-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</guid>
       <title>Záznam online streamu Píšeme AskMe v DotVVM (1)</title>
       <description>K dispozici je záznam ze včerejšího streamu, v němž jsme začali s Tomášem Hercegem přepisovat AskMe do DotVVM. Byla to moc velká zábava a za dva týdny budeme pokračovat.</description>
@@ -135,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2019-01-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/01/github</guid>
-      <title>GitHub a privátní repozitáře zdarma: zrada myšlenek open source?</title>
-      <description>Když Microsoft před půl rokem koupil GitHub, moje první myšlenka byla, že konečně budou privátní repozitáře zadarmo. Nyní na to konečně došlo. V myslích poněkud zpozdilejších geeků ovšem Microsoft stále zaujímá pozici arciďábla a vidí v tom zradu myšlenek open source. Je tomu skutečně tak?</description>
-      <link>https://www.altair.blog/2019/01/github</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2019-01-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

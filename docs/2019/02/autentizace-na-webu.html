@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Autentizace na webu: Jak jsme došli k cookies? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Na svém ASK.FM jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu." />
+    <link rel="canonical" href="https://www.altair.blog/2019/02/autentizace-na-webu" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Autentizace na webu: Jak jsme došli k cookies?" />
+    <meta name="twitter:description" content="Na svém ASK.FM jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190225-autentizace-na-webu.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Autentizace na webu: Jak jsme došli k cookies?" />
+    <meta property="og:description" content="Na svém ASK.FM jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190225-autentizace-na-webu.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/02/autentizace-na-webu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190225-autentizace-na-webu.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Autentizace na webu: Jak jsme došli k cookies?</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-02-25" title="Datum vydání">25. února 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Mário Moreira via FREEIMAGES.COM <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Na svém <a href="https://ask.fm/ridercz">ASK.FM</a> jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu.</p>
+<h2 id="historicky-kontext">Historický kontext</h2>
+<p>Komunikační protokol HTTP (HyperText Transfer Protocol vznikl na přelomu 80. a 90. let minulého století). O této době s oblibou říkám, že v ní počítače byly dřevěné a šlapací (což je jenom mírná nadsázka) a že si tehdy lidé navzájem věřili. To druhé je bolestně zřejmé z úrovně zabezpečení tehdy vzniknuvších protokolů a standardů, se kterými se začasté potýkáme dodnes.</p>
+<p>První verze protokolu <a href="https://www.w3.org/Protocols/HTTP/AsImplemented.html">HTTP/0.9 byla neformálně publikována v roce 1991</a> a jak bylo tehdy zvykem, je zcela prosta jakéhokoliv zabezpečení a nenabízí žádnou možnost autentizace.</p>
+<p>První &quot;oficiální&quot; verze <a href="https://tools.ietf.org/html/rfc1945">HTTP/1.0 byla publikována jako RFC1945</a> v květnu 1996. Nabízí i takzvanou <a href="https://tools.ietf.org/html/rfc1945#section-11">Basic autentizaci</a>, která umožňuje autentizaci uživatelů vůči serveru. Bohužel tím způsobem, že pošlou s každým autentizovaným requestem své uživatelské jméno a heslo v otevřeném tvaru. Že jde o... řekněme suboptimální řešení bylo jasné i autorům standardu, neboť o něm píší:</p>
+<blockquote>
+<p>The basic authentication scheme is a non-secure method of filtering unauthorized access to resources on an HTTP server. It is based on the assumption that the connection between the client and the server can be regarded as a trusted carrier. As this is not generally true on an open network, the basic authentication scheme should be used accordingly. In spite of this, clients should implement the scheme in order to communicate with servers that use it.</p>
+<p>...</p>
+<p>HTTP/1.0 does not prevent additional authentication schemes and encryption mechanisms from being employed to increase security.</p>
+</blockquote>
+<p>Dalšího autentizačního schématu <em>Digest</em> se HTTP dočkal ve verzi 1.1 a poprvé byl popsán v <a href="https://tools.ietf.org/html/rfc2617">RFC2617</a>. A pravdu povědíc, moc si tím nepomohl, protože se jednalo o mrtvě narozené dítě. Pro své četné nevýhody se tento mechanismus nikdy masově neujal.</p>
+<h2 id="proc-nechceme-basic-autentizaci">Proč nechceme Basic autentizaci</h2>
+<p>Hlavní důvod byl zmíněn již v úvodu. Basic autentizace znamená, že s každým HTTP requestem jsou po síti přenášeny autentizační údaje v otevřeném tvaru. Jméno a heslo jsou jenom kódovány pomocí Base64, což neznamená utajení jejich obsahu, je to jenom pomůcka pro přenos osmibitových dat v sedmibitovém světě.</p>
+<p>Jakési míry bezpečnosti lze dosáhnout při použití HTTPS protokolu, ale tak častý přenos hesla obecně nevidíme rádi.</p>
+<p>Přesto se s Basic autentizací stále v některých případech setkáváme. Zejména:</p>
+<ul>
+<li><strong>U jednoduchých zařízení</strong> jako jsou IP kamery a domácí routery. Je jednoduchá na implmentaci a autoři (zpravidla s neoprávněným optimismem) předpokládají, že tato zařízení budou používána v bezpečné síti.</li>
+<li><strong>Při volání některých API</strong>, kde klientem není člověk, ale jiný počítač, přičemž autentizační hlavička často obsahuje nějaké customizované informace. Tento způsob přihlášení používá například <a href="https://fakturoid.docs.apiary.io/#introduction/overeni">API služby Fakturoid</a>.</li>
+</ul>
+<p>Pro obecné přihlašování na webu se ale nehodí.</p>
+<h2 id="proc-nechceme-digest-autentizaci">Proč nechceme Digest autentizaci</h2>
+<p>Nevýhody Basic autentizace měla vyřešit metoda Digest. Ta funguje tak, že server pošle klientovi náhodně vygenerovanou <em>challenge</em>, klient vezme heslo, spojí ho s <em>challenge</em> a vygeneruje hash, který pošle zpět serveru. Server udělá totéž a tak dokáže uživatele ověřit, aniž by muselo heslo v otevřeném tvaru jít po síti.</p>
+<p>Myšlenka to byla dobrá, což o to, ale v praxi nebyla moc úspěšná. V první řadě, aby bylo lze užít tento mechanismus autentizace, musí mít server k dispozici hesla uživatelů v otevřeném tvaru. Což není dobrý nápad, uchovávat hesla v čitelném nebo šifrovaném tvaru.</p>
+<p>Druhý důvod je, že ďábel se skrývá v detailech. Naimplementovat Digest autentizaci (zejména na straně serveru) není jednoduché. A naimplementovat ji <em>správně</em>, aby byla challenge generovaná tak, aby ji nebylo možné podvrhnout, aby obsahovala dostatečné množství entropie ale zároveň nespotřebovávala zbytečně moc entropie na serveru dostupné, je ještě mnohem obtížnější.</p>
+<p>Z tohoto důvodu se Digest autentizace nikdy nedočkala velkého rozšíření a nelze ji doporučit.</p>
+<h2 id="co-dalsi-autentizacni-schemata">Co další autentizační schémata?</h2>
+<p>Ačkoliv HTTP obecně podporuje další autentizační schémata, žádná obecně použitelná a nasaditelná nevznikla, nejsou podporována na serverech ani na klientech. Existují různé alternativy pro intranetové sítě (například NTLM autentizace), ale ty se nedají použít na Internetu a obecně je dneska už ani pro ten intranet nepokládáme za vhodné.</p>
+<h2 id="https-a-klientske-certifikaty">HTTPS a klientské certifikáty</h2>
+<p>Jedinou teoreticky použitelnou alternativu představuje přihlašování klientskými certifikáty přes HTTPS. Jejich použití je z technického hlediska velmi dobrý nápad. Správně naimplementované přihlašování klientskými certifikáty představuje nejvyšší možnou úroveň autentizace, kterou z hlediska bezpečnosti máme.</p>
+<p>Problém je, že je velmi náročné na údržbu. Je nutné vybudovat nebo mít k dispozici PKI, vydávat uživatelům certifikáty, řešit jejich životní cyklus... Prostě je s tím příliš mnoho práce a ceremonií, než aby šlo o metodu obecně použitelnou pro každého. Proto se používá jenom výjimečně, často pro autentizaci ve vnitrofiremních aplikacích a také pro komunikaci přes různá API, kdy klientem není browser, ale specializovaná aplikace.</p>
+<h2 id="takze-nam-zbyly-cookies">Takže nám zbyly cookies</h2>
+<p>Odvrhnuvše pro nevhodnost &quot;systémové&quot; autentizační metody v HTTP, nezbývá nám, než si autentizaci nějak zbastlit sami. Tedy, chraň vás ruka Páně to bastlit sami, použijte ASP.NET Identity (průpovídku, že <em>ďábel se skrývá v detailech</em> jsem v tomto článku už jednou použil a pořád platí).</p>
+<p>V současnosti používané autentizační metody pracují jak, že webová aplikace, jsa uspokojena autentizačním úkonem uživatele, vystaví tomuto <em>autentizační token</em>, což je nějaký identifikátor s dočasnou platnostní (do jehož obsahu a implementačních detailů v této chvíli nehodlám zabrušovat). Uživatel se v následných požadavcích prezentuje tímto tokenem.</p>
+<p>Kde ale tento token uchovávat? No kde jinde, než v cookies, které představují pro server možnost, jak si na klienta uložit malý kousek dat, která klient pošle s každým requestem. Existují sice i jiná, poněkud exotická řešení (příkladmo ukládání tokenu do query stringu nebo obecně do URL), ale faktickým standardem je dnes použití cookies.</p>
+<p>A teď už víte proč.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Autentizace+na+webu%3a+Jak+jsme+do%c5%a1li+k+cookies%3f&amp;body=https://www.altair.blog/2019/02/autentizace-na-webu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/02/autentizace-na-webu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/02/autentizace-na-webu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/02/autentizace-na-webu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/autentizace-na-webu</guid>
+      <title>Autentizace na webu: Jak jsme došli k cookies?</title>
+      <description>Na svém ASK.FM jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu.</description>
+      <link>https://www.altair.blog/2019/02/autentizace-na-webu</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-02-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</guid>
       <title>Záznam online streamu Píšeme AskMe v DotVVM (1)</title>
       <description>K dispozici je záznam ze včerejšího streamu, v němž jsme začali s Tomášem Hercegem přepisovat AskMe do DotVVM. Byla to moc velká zábava a za dva týdny budeme pokračovat.</description>
@@ -134,16 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-12-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/petrinska-rozhledna</guid>
-      <title>Proč už nikdy nevylezu na petřínskou rozhlednu</title>
-      <description>Na Asku se mne někdo zeptal, co už nikdy v životě neudělám. Takových věcí je hodně, ale k jedné se váže zajímavá historka, o kterou se s vámi chci podělit. Už nikdy v životě nevylezu na petřínskou rozhlednu, poté co jsem ji jednou navštívil za poněkud zvláštních okolností.</description>
-      <link>https://www.altair.blog/2018/12/petrinska-rozhledna</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <category>BDSM</category>
-      <pubDate>2018-12-20T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
