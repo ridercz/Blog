@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/jak-se-zbavit-com-portu</guid>
+      <title>Jak se zbavit neaktivních COM portů?</title>
+      <description>Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit.</description>
+      <link>https://www.altair.blog/2019/02/jak-se-zbavit-com-portu</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>Tipy, triky</category>
+      <pubDate>2019-02-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/autentizace-na-webu</guid>
       <title>Autentizace na webu: Jak jsme došli k cookies?</title>
       <description>Na svém ASK.FM jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu.</description>
@@ -134,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2018-12-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/vanocni-soutez</guid>
-      <title>Novoročenka a vánoční soutěž</title>
-      <description>Vytvořil jsem naprosto nevinnou novoročenku. A lidé, kteří mě znají, začali pátrat po jejích skrytých významech. Tak jsem vytvořil vánoční soutež, která tyto nedůvěřivé povahy zaměstná. Vítěz ode mne dostane vánoční dárkový balíček.</description>
-      <link>https://www.altair.blog/2018/12/vanocni-soutez</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-12-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak se zbavit neaktivních COM portů? | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit." />
+    <link rel="canonical" href="https://www.altair.blog/2019/02/jak-se-zbavit-com-portu" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=0BE672B32FE4E4E4CFE6C643AE99CEA1B8715865" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak se zbavit neaktivních COM portů?" />
+    <meta name="twitter:description" content="Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20181115-honeyesp.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Jak se zbavit neaktivních COM portů?" />
+    <meta property="og:description" content="Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20181115-honeyesp.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/02/jak-se-zbavit-com-portu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20181115-honeyesp.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak se zbavit neaktivních COM portů?</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+          <li>
+            <a href="/categories/tipy-triky" title="Rubrika">
+              <i class="fal fa-tag"> </i>Tipy, triky</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-02-26" title="Datum vydání">26. února 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů). Dám vám návod, jak od nich váš systém vyčistit.</p>
+<h2 id="kde-se-vzaly-com-porty">Kde se vzaly COM porty?</h2>
+<p>Sériové porty byly běžným rozhraním pro připojování příslušenství u počítačů standardu PC v 80. a 90. letech. Připojovala se přes ně většina příslušenství s malým datovým tokem, jako například myši, modemy, některé tiskárny a další zařízení. Vymizely až s příchodem rozhraní USB koncem 90. let.</p>
+<p>Dnes již klasické sériové porty (s 9 nebo 25-pinovým konektorem) v počítačích prakticky nenajdete. Na některých základních deskách ještě možná najdete tento port vyvedený na hlavičkách, ale ani to už není standardem. Pokud byste z nějakého důvodu opravdový port potřebovali, musíte si ho koupit v podobě rozšiřující karty, jakou vidíte na následující fotografii.</p>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2019/20190226-karta.jpg" alt="Karta se sériovými a paralelním portem" />
+    <figcaption>Tato konkrétní karta má dva sériové porty (malé konektory na samostatném bracketu) a jeden paralelní, široký konektor na vlastní kartě. Paralelní port se používal zpravidla k připojení tiskáren, ale i skenerů nebo páskových jednotek.</figcaption>
+</figure>
+<p>Sériové porty se označovaly zkratkou COM (z <strong>COM</strong>munications Port) a paralelní zkratkou LPT (<strong>L</strong>ine <strong>P</strong>rin<strong>T</strong>er). V systému DOS a pozdějí Windows jsou označována jako číslovaná zařízení, příkladně <code>COM1</code>, <code>COM2</code>, <code>COM3</code> atd.</p>
+<h2 id="proc-jich-je-tolik">Proč jich je tolik?</h2>
+<p>Ačkoliv se fyzické sériové porty dnes už v běžných počítačích nevyskytují, jejich dědictví žije dál, protože jejich sériový protokol je implementován a emulován řadoiu jiných prostředků. Například přes Bluetooh, interně v rámci komunikace základní desky nebo třeba pomocí USB převodníků. Ať už samostatných, nebo někde schovaných, třeba ve vývojové desce typu Arduino.</p>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2019/20190226-prevodnik.jpg" alt="Kompletní převodník s DB9 konektorem" />
+    <figcaption>Kompletní převodník s DB9 konektorem</figcaption>
+</figure>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2019/20190226-prevodnik-maly.jpg" alt="Jednoduchý převodník pro připojení na UART pomocí pinů" />
+    <figcaption>Jednoduchý převodník pro připojení na UART pomocí pinů</figcaption>
+</figure>
+<p>Pokud připojíte převodník nebo zařízení s ním, pokusí se Windows najít vhodný již existující COM port (podle typu zařízení, použitého USB portu atd.) a pokud se mu to nepodaří, vytvoří COM port s dalším číslem v řadě. Pokud s podobnými zařízeními pracujete často, asi se jich budete chtít časem zbavit.</p>
+<h2 id="jak-je-smazat">Jak je smazat?</h2>
+<ol>
+<li>Spusťte příkazový řádek jako administrátor.</li>
+<li>Zadejte následující příkaz <code>SET DEVMGR_SHOW_NONPRESENT_DEVICES=1</code>. Tím v Device Manageru povolíte zobrazování momentálně nepřipojených zařízení.</li>
+<li>Spusťte Device Manager příkazem <code>devmgmt.msc</code>.</li>
+<li>V menu vyberte <em>View -&gt; Show hidden devices</em>.</li>
+<li>Sériové porty se vám zobrazí ve větvi <em>Ports (COM &amp; LPT)</em>. Ty momentálně nepřipojené budou mít polopůhlednou ikonku Smazat je můžete klepnutím na DEL nebo z kontextového menu.</li>
+</ol>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2019/20190226-device-manager.png" alt="Nepřipojené COM porty v Device Manageru" />
+    <figcaption>Nepřipojené COM porty v Device Manageru</figcaption>
+</figure>
+<p>Pokud chcete nad nainstalovanými zařízeními větší kontrolu a třeba i možnost smazat všechna nepoužívaná zařízení (a nejenom COM porty) najednou, mohu doporučit program jménem <a href="https://www.softpedia.com/get/System/System-Miscellaneous/Device-Remover.shtml">Device Remover</a>. Jeho uživatelské rozhraní je pravda poněkud divoké, ale umí toho hodně. Pro zobrazení všech nepřítomných zařízení stiskněte <em>Ctrl+Shift+D</em>. Poté v <em>Edit -&gt; Check All Devices</em> zaškrtněte všechna zařízení a pomocí <em>Ctrl+Del</em> je smažte.x</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+se+zbavit+neaktivn%c3%adch+COM+port%c5%af%3f&amp;body=https://www.altair.blog/2019/02/jak-se-zbavit-com-portu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/02/jak-se-zbavit-com-portu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/02/jak-se-zbavit-com-portu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/02/jak-se-zbavit-com-portu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
