@@ -364,6 +364,13 @@ section.article-text video {
   max-width: 90%;
 }
 
+section.article-text figcaption {
+  font-size: 85%;
+  text-align: center;
+  max-width: 90%;
+  margin: .5ex auto 1ex auto;
+}
+
 section.article-text hr {
   width: 20%;
   text-align: left;
