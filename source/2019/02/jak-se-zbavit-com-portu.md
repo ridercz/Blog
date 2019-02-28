@@ -26,7 +26,7 @@ Sériové porty se označovaly zkratkou COM (z **COM**munications Port) a parale
 
 ## Proč jich je tolik?
 
-Ačkoliv se fyzické sériové porty dnes už v běžných počítačích nevyskytují, jejich dědictví žije dál, protože jejich sériový protokol je implementován a emulován řadoiu jiných prostředků. Například přes Bluetooh, interně v rámci komunikace základní desky nebo třeba pomocí USB převodníků. Ať už samostatných, nebo někde schovaných, třeba ve vývojové desce typu Arduino.
+Ačkoliv se fyzické sériové porty dnes už v běžných počítačích nevyskytují, jejich dědictví žije dál, protože jejich sériový protokol je implementován a emulován řadou jiných prostředků. Například přes Bluetooh, interně v rámci komunikace základní desky nebo třeba pomocí USB převodníků. Ať už samostatných, nebo někde schovaných, třeba ve vývojové desce typu Arduino.
 
 <figure>
     <img src="https://www.cdn.altairis.cz/Blog/2019/20190226-prevodnik.jpg" alt="Kompletní převodník s DB9 konektorem" />
@@ -46,11 +46,11 @@ Pokud připojíte převodník nebo zařízení s ním, pokusí se Windows najít
 1. Zadejte následující příkaz `SET DEVMGR_SHOW_NONPRESENT_DEVICES=1`. Tím v Device Manageru povolíte zobrazování momentálně nepřipojených zařízení.
 1. Spusťte Device Manager příkazem `devmgmt.msc`.
 1. V menu vyberte _View -> Show hidden devices_.
-1. Sériové porty se vám zobrazí ve větvi _Ports (COM & LPT)_. Ty momentálně nepřipojené budou mít polopůhlednou ikonku Smazat je můžete klepnutím na DEL nebo z kontextového menu.
+1. Sériové porty se vám zobrazí ve větvi _Ports (COM & LPT)_. Ty momentálně nepřipojené budou mít polopůhlednou ikonku. Smazat je můžete klepnutím na DEL nebo z kontextového menu.
 
 <figure>
     <img src="https://www.cdn.altairis.cz/Blog/2019/20190226-device-manager.png" alt="Nepřipojené COM porty v Device Manageru" />
     <figcaption>Nepřipojené COM porty v Device Manageru</figcaption>
 </figure>
 
-Pokud chcete nad nainstalovanými zařízeními větší kontrolu a třeba i možnost smazat všechna nepoužívaná zařízení (a nejenom COM porty) najednou, mohu doporučit program jménem [Device Remover](https://www.softpedia.com/get/System/System-Miscellaneous/Device-Remover.shtml). Jeho uživatelské rozhraní je pravda poněkud divoké, ale umí toho hodně. Pro zobrazení všech nepřítomných zařízení stiskněte _Ctrl+Shift+D_. Poté v _Edit -> Check All Devices_ zaškrtněte všechna zařízení a pomocí _Ctrl+Del_ je smažte.x
+Pokud chcete nad nainstalovanými zařízeními větší kontrolu a třeba i možnost smazat všechna nepoužívaná zařízení (a nejenom COM porty) najednou, mohu doporučit program jménem [Device Remover](https://www.softpedia.com/get/System/System-Miscellaneous/Device-Remover.shtml). Jeho uživatelské rozhraní je pravda poněkud divoké, ale umí toho hodně. Pro zobrazení všech nepřítomných zařízení stiskněte _Ctrl+Shift+D_. Poté v _Edit -> Check All Devices_ zaškrtněte všechna zařízení a pomocí _Ctrl+Del_ je smažte.
