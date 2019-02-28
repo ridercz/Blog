@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/02/honeyesp32</guid>
+      <title>Novinky v projektu HoneyESP: Podpora ESP32 a nepotřebujete SD kartu</title>
+      <description>Před časem jsem zde na blogu představil projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266.</description>
+      <link>https://www.altair.blog/2019/02/honeyesp32</link>
+      <author>Michal Altair Valášek</author>
+      <category>Software</category>
+      <category>Bezpečnost</category>
+      <category>Bastlení</category>
+      <pubDate>2019-02-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/02/jak-se-zbavit-com-portu</guid>
       <title>Jak se zbavit neaktivních COM portů?</title>
       <description>Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit.</description>
@@ -135,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2018-12-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2018/12/vysledek-vanocni-souteze</guid>
-      <title>Výsledek vánoční soutěže</title>
-      <description>Včera jsem vyhlásil vánoční soutěž, kde bylo vaším úkolem vyluštit zprávu, zakódovanou od obrázku. Trvalo jenom pár hodin, než ji Tomáš Jecha (a za ním v závěsu Jakub Bouček) vyhrál.</description>
-      <link>https://www.altair.blog/2018/12/vysledek-vanocni-souteze</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2018-12-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

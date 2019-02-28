@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Novinky v projektu HoneyESP: Podpora ESP32 a nepotřebujete SD kartu | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Před časem jsem zde na blogu představil projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266." />
+    <link rel="canonical" href="https://www.altair.blog/2019/02/honeyesp32" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=12971F944EDE93D9D37DF3A7E52200ED24269934" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Novinky v projektu HoneyESP: Podpora ESP32 a nepotřebujete SD kartu" />
+    <meta name="twitter:description" content="Před časem jsem zde na blogu představil projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190228-honeyesp32.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Novinky v projektu HoneyESP: Podpora ESP32 a nepotřebujete SD kartu" />
+    <meta property="og:description" content="Před časem jsem zde na blogu představil projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190228-honeyesp32.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/02/honeyesp32" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190228-honeyesp32.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Novinky v projektu HoneyESP: Podpora ESP32 a nepotřebujete SD kartu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/software" title="Rubrika">
+              <i class="fal fa-tag"> </i>Software</a>
+          </li>
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-02-28" title="Datum vydání">28. února 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Product picture by Expressif Systems <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Před časem jsem <a href="/2018/11/honeyesp">zde na blogu představil</a> projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266.</p>
+<h2 id="nove-bez-sd-karty">Nově bez SD karty</h2>
+<p>Původně představená veze vyžadovala SD kartu, na níž byl uložen obsah web serveru a kam se také ukládala nastavení a nalovená hesla. Nyní je k dispozici i verze, která paměťovou kartu nepotřebuje. K ukládání dat využívá SPI flash paměť, která je přímo součástí čipu.</p>
+<p>Výhodou tohoto řešení je, že celé řešení je jednodušší a levnější. Stačí vám doslova jakákoliv deska a napájení. Není třeba používat speciální desku se čtečkou karet nebo řešit propojení samostatné desky z hlavní.</p>
+<p>Toto řešení má samozřejmě i nevýhody. Nahrávání dat do flash paměti je poněkud komplikovanější, nestačí jenom změnit soubory na SD kartě. Také je k dispozici méně paměti (v závislosti na konkrétní variantě čipo typicky 4, 8 nebo 16 MB), ale to zpravidla není problém, protože stejně potřebujeme řádově maximálně stovky kilobajtů.</p>
+<h2 id="podpora-pro-esp32">Podpora pro ESP32</h2>
+<p>Nástupcem populárního ESP8266 je čip jménem ESP32. Umí všechno co jeho starší bratříček, ale ještě mnoho věcí navíc. Má vestavěnou podporu pro Bluetooth, celou řadu dalších protokolů a rozhraní a je výkonnější.</p>
+<p>HoneyESP v tomto okamžiku rozšířených možností nového čipu využít nepotřebuje. Nicméně může na něm běžet, což může být užitečné, protože desky s ním často mívají například vestavěnou podporu pro nabíjecí baterie a další podobné užitečnosti.</p>
+<p>Varianta využívající SPIFFS je nyní naprogramovaná tak, že <a href="https://github.com/ridercz/HoneyESP/wiki/ESP32_Notes">běží jak na starším ESP8266 tak na novějším ESP32</a>. Varianta využívající SD kartu zatím ESP32 nepodporuje. Důvodem je, že se mi nějak nedaří rozběhnout práci s SD kartami.</p>
+<h2 id="plany-do-budoucna">Plány do budoucna</h2>
+<p>Do budoucna bych rád vytvořil jedinou univerzální verzi, která bude podporovat (pomocí patřičných direktiv) jak SD kartu tak SPIFFS a to na obou platformách. Dále pak plánuji možnost definovat několik variant portálu a SSID, mezi kterými bude možné se přepínat a také možnost ovládat celý systém přes webové rozhraní.</p>
+<h2 id="download">Download</h2>
+<p><strong>Projekt HoneyESP najdete <a href="https://github.com/ridercz/HoneyESP/">na mém GitHubu</a>.</strong> Tamtéž je k dispozici i dokumentace <a href="https://github.com/ridercz/HoneyESP/wiki">v podobě wiki</a>.</p>
+<p>Software je open source, licencován pod <a href="https://github.com/ridercz/HoneyESP/blob/master/LICENSE">MIT licencí</a>. Budu rád, pokud se zapojíte do vývoje a pošlete mi třeba nějaký pěkný pull request.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Novinky+v+projektu+HoneyESP%3a+Podpora+ESP32+a+nepot%c5%99ebujete+SD+kartu&amp;body=https://www.altair.blog/2019/02/honeyesp32">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/02/honeyesp32.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/02/honeyesp32">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/02/honeyesp32">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
