@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Online stream: Aby data v Arduinu přežila restart | ALTAIR.blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Ve dvou online streamech si ukážeme, jak využít EEPROM, Flash pamět a běžné SD karty k ukládání informací, které mají přežít reset." />
+    <link rel="canonical" href="https://www.altair.blog/2019/03/pameti-v-arduinu" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=12971F944EDE93D9D37DF3A7E52200ED24269934" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Online stream: Aby data v Arduinu přežila restart" />
+    <meta name="twitter:description" content="Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Ve dvou online streamech si ukážeme, jak využít EEPROM, Flash pamět a běžné SD karty k ukládání informací, které mají přežít reset." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190301-pameti-v-arduinu.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Online stream: Aby data v Arduinu přežila restart" />
+    <meta property="og:description" content="Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Ve dvou online streamech si ukážeme, jak využít EEPROM, Flash pamět a běžné SD karty k ukládání informací, které mají přežít reset." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190301-pameti-v-arduinu.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/03/pameti-v-arduinu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190301-pameti-v-arduinu.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Online stream: Aby data v Arduinu přežila restart</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-03-01" title="Datum vydání">1. března 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Ve dvou online streamech si ukážeme, jak využít EEPROM, Flash pamět a běžné SD karty k ukládání informací, které mají přežít reset.</p>
+<p>Ve středu jsem na toto téma dělal přednášku v PrusaLabu a řada lidí se zajímala o to, zda bude záznam. Záznam se bohužel kombinací lidské (koňské :-) chyby a selhání techniky pořídit nepodařilo. Proto jsem se rozhodl, že na stejné téma udělám live stream na Facebooku. Přesněji dva live streamy, <strong>jeden v pondělí a druhý v úterý, vždy od 18:00</strong>.</p>
+<p>Události na FB jsou zde:</p>
+<ul>
+<li><a href="https://www.facebook.com/events/2585496061477340/">Arduino: Aby data přežila restart - Úvod a EPROM (online)</a></li>
+<li><a href="https://www.facebook.com/events/651538848637195/">Arduino: Aby data přežila restart - SD a SPI Flash FS (online)</a></li>
+</ul>
+<p>Streamovat budu <a href="https://www.facebook.com/rider.cz">na svém soukromém profilu</a>. Nemusíte si mne přidávat do přátel (ani to nedělejte pokud vás neznám), můj profil je volně otevřený každému, všechno dám veřejně.</p>
+<p>Záznam ze streamu bude na <a href="https://youtube.com/altairis">mém YouTube kanálu</a>.</p>
+<p>Pro pořádek jenom připomínám, že <strong>ve čtvrtek od 20:30</strong> budeme s Tomášem Hercegem živě pokračovat v přepisování <a href="/2019/02/askme-dotvvm-1-zaznam">AskMe do DotVVM</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Online+stream%3a+Aby+data+v+Arduinu+p%c5%99e%c5%beila+restart&amp;body=https://www.altair.blog/2019/03/pameti-v-arduinu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/03/pameti-v-arduinu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/03/pameti-v-arduinu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/03/pameti-v-arduinu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/cs.min.js" integrity="sha256-0c0t9KjDyV5CegSIuGZ4cUhQNpb9azCZ1Jwa1NP1fi4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/markdown.min.js" integrity="sha256-QisUfMmh1ba2V0Kn8uxkMS1ShgsY1LyhrVNmit2llf4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/openscad.min.js" integrity="sha256-INIXLRdrhfM2ihtmmR1En9GjWUL7kwseGJUQVC0bN/Y=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/powershell.min.js" integrity="sha256-cRUESDACI7Yr/eSmoHs6zDQu6HmpAkCp0s4xrZ9RnE0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
