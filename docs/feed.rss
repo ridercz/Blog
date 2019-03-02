@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/03/obs-control</guid>
+      <title>Moje vybavení pro live stream: OBS control rig</title>
+      <description>Příští týden mne čekají hned tři live streamy a proto jsem se rozhodl poněkud upgradovat svou streamovací sestavu, dosud používanou převážně na dálková školení. Vyrobil jsem také hardwarovou konzoli (rig) na ovládání OBS Studia.</description>
+      <link>https://www.altair.blog/2019/03/obs-control</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2019-03-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/pameti-v-arduinu</guid>
       <title>Online stream: Aby data v Arduinu přežila restart</title>
       <description>Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Ve dvou online streamech si ukážeme, jak využít EEPROM, Flash pamět a běžné SD karty k ukládání informací, které mají přežít reset.</description>
@@ -138,16 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2019-01-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</guid>
-      <title>Jak jsme zvířátka naučili pájet</title>
-      <description>Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat...</description>
-      <link>https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <category>Bastlení</category>
-      <pubDate>2019-01-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
