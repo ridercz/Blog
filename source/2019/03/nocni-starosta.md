@@ -10,7 +10,7 @@
 <!-- x4w:category = Politika -->
 <!-- dcterms:dateAccepted = 2019-03-04 -->
 
-Není tomu tak dávno, co vedení Hlavního města Prahy s velkou pompou a propagací zřídilo funkci "nočního starosty", který by se měl starat o noční život v Praze. Od samého počátku to vypadalo jako populistický krok. Současné vedení hlavního města se od Andreje Babiše a jeho ANO naučillo jednu základní věc: není třeba něco dělat, ale je nezbytné tvářit se, jako že se něco dělá. Mohutně medializované zřízení nesmyslné funkce je z tohoto hlediska přímo ideální nástroj.
+Není tomu tak dávno, co vedení Hlavního města Prahy s velkou pompou a propagací zřídilo funkci "nočního starosty", který by se měl starat o noční život v Praze. Od samého počátku to vypadalo jako populistický krok. Současné vedení hlavního města se od Andreje Babiše a jeho ANO naučilo jednu základní věc: není třeba něco dělat, ale je nezbytné tvářit se, jako že se něco dělá. Mohutně medializované zřízení nesmyslné funkce je z tohoto hlediska přímo ideální nástroj.
 
 Když jsem se začal zajímat o to, kdo je ten **Jan Štern**, který se "nočním starostou" stal, vlastně zač, nebyl jsem úspěšný. Uznávám, že pražský noční život nepatří mezi mé obory zájmu, ale to jméno nikdy neslyšel žádný z mých kontaktů v oboru. Ani pokusy o hledání na Internetu nebyly úspěšné. Ale proč chodit ke kováříčkovi, když mohu rovnou za kovářem: [zeptal jsem se](https://www.infoprovsechny.cz/request/nocni_starosta) přímo hlavního města Prahy, podle zákona o svobodném přístupu k informacím.
 
