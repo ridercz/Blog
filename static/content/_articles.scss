@@ -164,6 +164,24 @@ section.article-text {
         border: none;
         border-top: 2px solid $LightGray;
     }
+
+    table {
+        border-collapse: collapse;
+        margin: auto auto;
+        td {
+            background-color: $White;
+            border: 1px solid $DarkGray;
+            padding: 1ex;
+        }
+        th {
+            background-color: $LightGray;
+            border: 1px solid $DarkGray;
+            padding: 1ex;
+        }
+        tbody tr:hover td, tbody tr:hover th {
+            background-color: rgba($Orange, .25);
+        }
+    }
 }
 
 section.issues {
