@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/03/nocni-starosta</guid>
+      <title>Noční starosta: bez kvalifikace, bez pravomocí, zato se střetem zájmů</title>
+      <description>Není tomu tak dávno, co vedení Hlavního města Prahy s velkou pompou a propagací zřídilo funkci "nočního starosty", který by se měl starat o noční život v Praze. Když jsem se začal zajímat o to, kdo je ten Jan Štern, který se "nočním starostou" stal, vlastně zač, magistrát přestal být jako mávnutím kouzelného proutku sdílný. A dobře věděl proč.</description>
+      <link>https://www.altair.blog/2019/03/nocni-starosta</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2019-03-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/obs-control</guid>
       <title>Moje vybavení pro live stream: OBS control rig</title>
       <description>Příští týden mne čekají hned tři live streamy a proto jsem se rozhodl poněkud upgradovat svou streamovací sestavu, dosud používanou převážně na dálková školení. Vyrobil jsem také hardwarovou konzoli (rig) na ovládání OBS Studia.</description>
@@ -138,15 +147,6 @@
       <category>IT</category>
       <category>Tipy, triky</category>
       <pubDate>2019-01-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://josefprusa.cz/jak-na-animace-modelu-v-programu-openscad/</guid>
-      <title>Jak na animace modelu v OpenSCADu</title>
-      <description>Obrázek prý řekne víc než tisíc slov. A co se pohyblivých obrázků týče, ty občas vydají za celou knihu. Proto si ukážeme, jakým způsobem je možné v OpenSCADu naprogramovaný model rozhýbat a vytvořit z něj animaci.</description>
-      <link>https://josefprusa.cz/jak-na-animace-modelu-v-programu-openscad/</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2019-01-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
