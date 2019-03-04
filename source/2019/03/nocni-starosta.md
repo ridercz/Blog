@@ -44,7 +44,7 @@ Uvedené dva projekty jsou dle vlastního tvrzení neziskové a podle veřejnýc
 
 Pan Štern je skutečně spojen se [společností Containall](https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=857273). Je jejím zakladatelem a členem správní rady. Členkou dozorčí rady je pro změnu o tři roky mladší Tereza Šternová; zda je s nočním starostou v nějakém vztahu nicméně není autorovi článku známo a může se jednat o shodu jmen.
 
-Podle [registru smluv](https://www.hlidacstatu.cz/hledat?Q=01343939) společnost Containall obdržela od července 2017 do října 2018 milión a půl na dotacích od hlavního města Prahy:
+Podle [registru smluv](https://www.hlidacstatu.cz/HledatSmlouvy?Q=icoPlatce:00064581+AND+icoPrijemce:01343939) společnost Containall obdržela od července 2017 do října 2018 milión a půl na dotacích od hlavního města Prahy:
 
 Datum        | Částka              | Smlouva
 -------------|--------------------:|---------------------------------------
