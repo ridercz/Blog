@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/03/pameti-v-arduinu-zaznam</guid>
+      <title>Aby data v Arduinu přežila restart - záznam a materiály</title>
+      <description>Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Záznam živého vysílání a podklady.</description>
+      <link>https://www.altair.blog/2019/03/pameti-v-arduinu-zaznam</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>Bastlení</category>
+      <pubDate>2019-03-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/nocni-starosta</guid>
       <title>Noční starosta: bez kvalifikace, bez pravomocí, zato se střetem zájmů</title>
       <description>Není tomu tak dávno, co vedení Hlavního města Prahy s velkou pompou a propagací zřídilo funkci "nočního starosty", který by se měl starat o noční život v Praze. Když jsem se začal zajímat o to, kdo je ten Jan Štern, který se "nočním starostou" stal, vlastně zač, magistrát přestal být jako mávnutím kouzelného proutku sdílný. A dobře věděl proč.</description>
@@ -137,16 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2019-01-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/01/cf-geoip</guid>
-      <title>Geolokace pomocí CloudFlare a IIS Rewrite</title>
-      <description>Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází.</description>
-      <link>https://www.altair.blog/2019/01/cf-geoip</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Tipy, triky</category>
-      <pubDate>2019-01-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
