@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</guid>
+      <title>Dopravní experimenty podruhé: Soud jsem vyhrál, informace stále nemám</title>
+      <description>O dopravní experimenty vedení Prahy 7 se zajímám dlouhodobě. Nyní jsem po více než dvou letech vyhrál soudní spor a mám pravomocný rozsudek. Informace však stále chybí, protože magistrát rozsudek ignoruje.</description>
+      <link>https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2019-03-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/pameti-v-arduinu-zaznam</guid>
       <title>Aby data v Arduinu přežila restart - záznam a materiály</title>
       <description>Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Záznam živého vysílání a podklady.</description>
@@ -138,15 +147,6 @@
       <category>Bezpečnost</category>
       <category>Politika</category>
       <pubDate>2019-01-31T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:3388670</guid>
-      <title>Držák laptopu na VESA kompatibilní rameno na monitor</title>
-      <description>U svého "dílenského" stolu občas potřebuju počítač, abych se podíval do dokumentace, schémat a podobně. Bohužel už na něj není místo. A držáky notebooků na pohyblivém rameni se sice vyrábějí, ale jsou dost drahé. Proto jsem si koupil levný držák na monitor a navrhl pro něj adaptér pro menší laptop - v mém případě Surface 3.</description>
-      <link>https://www.thingiverse.com/thing:3388670</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2019-01-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

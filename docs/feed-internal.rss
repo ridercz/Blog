@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</guid>
+      <title>Dopravní experimenty podruhé: Soud jsem vyhrál, informace stále nemám</title>
+      <description>O dopravní experimenty vedení Prahy 7 se zajímám dlouhodobě. Nyní jsem po více než dvou letech vyhrál soudní spor a mám pravomocný rozsudek. Informace však stále chybí, protože magistrát rozsudek ignoruje.</description>
+      <link>https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2019-03-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/pameti-v-arduinu-zaznam</guid>
       <title>Aby data v Arduinu přežila restart - záznam a materiály</title>
       <description>Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Záznam živého vysílání a podklady.</description>
@@ -138,16 +147,6 @@
       <category>IT</category>
       <category>Tipy, triky</category>
       <pubDate>2019-01-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</guid>
-      <title>Jak jsme zvířátka naučili pájet</title>
-      <description>Za čtrnáct dnů startuje třetí ročník akce TechFurMeet, což je poněkud netradiční setkání (nejen) furry bastlířů. Zajímá vás jak vznikl a co mají přerostlí plyšáci - furries - společné s elektronikou a Arduinem? Možná se i budete chtít přidat...</description>
-      <link>https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <category>Bastlení</category>
-      <pubDate>2019-01-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
