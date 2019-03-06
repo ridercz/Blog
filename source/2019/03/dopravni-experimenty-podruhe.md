@@ -27,7 +27,7 @@ Své otázky jsem v červnu 2016 položil Úřadu MČ Praha 7. Úřad mi promptn
 
 Nezbylo mi tedy než se svého práva na informace domáhat žalobou proti rozhodnutí magistrátu. Sepsal jsem ji, zaplatil soudní poplatek a čekal. Spravedlnost - nebo tedy přinejmenším rozsudek - si v českých zemích musíte zejména vysedět. A netrvalo to ani tři roky a mám v ruce rozsudek první instance, který mi dává plně za pravdu. Rozhodnutí magistrátu ruší a přikazuje mu, aby mi zaplatil náklady řízení.
 
-Pražský magistrát se poučil minimálně do té míry, že náklady soudního řízení uhradil obratem. Patrně se poučil z minulosti, kdy jej dva žadatelé o informace v letech [2011](https://www.idnes.cz/zpravy/domaci/prazsky-magistrat-je-v-exekuci.A110404_160659_praha-zpravy_jj) a [2018](https://www.irozhlas.cz/komentare/jak-jsem-poslal-prahu-do-exekuce_1804191500_cib) poslali do exekuce.
+Pražský magistrát náklady soudního řízení uhradil obratem. Patrně se poučil z minulosti, kdy jej dva žadatelé o informace v letech [2011](https://www.idnes.cz/zpravy/domaci/prazsky-magistrat-je-v-exekuci.A110404_160659_praha-zpravy_jj) a [2018](https://www.irozhlas.cz/komentare/jak-jsem-poslal-prahu-do-exekuce_1804191500_cib) poslali do exekuce.
 
 ## Happyend se nekoná
 
@@ -37,7 +37,7 @@ Bohužel, exekucí lze z magistrátu dostat pouze peníze, nikoliv splnění pov
 
 ## Proč je to důležité?
 
-Přeji si, aby stát - v tomto případě místní samospráva - rozhodoval na základě faktů a dat, ne na základě dojmů a ideologických předsudků. Nemám v zásadě nic proti experimentování, protože to je validní a v mnoha případech jediná možnost, jak dosíci výsledků. Nicméně očekávám, že v případě experimentu se bude používat něco, co alespoň v hrubých rysech připomíná vědeckou metodu. Tedy že bude dopředu stanoveno, jak bude experiment dlouho trvat, jaké parametry při něm budou sledovány a jaké jejich hodnoty budou pokládány za úspěšné a jaké za neúspěšné.
+Přeji si, aby stát - v tomto případě místní samospráva - rozhodoval na základě faktů a dat, ne na základě dojmů a ideologických předsudků. Nemám v zásadě nic proti experimentování, protože to je validní a v mnoha případech jediná možnost, jak dosíci výsledků. Nicméně očekávám, že v případě experimentu se bude používat něco, co alespoň v hrubých rysech připomíná vědeckou metodu. Tedy že bude dopředu stanoveno, jak dlouho bude experiment trvat, jaké parametry při něm budou sledovány a jaké jejich hodnoty budou pokládány za úspěšné a jaké za neúspěšné.
 
 Stanovení těchto parametrů a jejich hodnot je politickým rozhodnutím. Je věcí politických priorit volených zástupců, jaké aspekty pokládají za důležité a o tom by se mělo rozhodovat ve volbách a rokovat v politických orgánech. Ale udělat nějaké náhodné rozhodnutí a pak bez dalšího sledovat co se stane, to není politika, ale hloupost, nezodpovědnost a amatérismus.
 
@@ -50,6 +50,8 @@ Přesto pokládám za svou povinnost podobné případy řešit a zveřejňovat.
 I pokud se mi nakonec podaří odpovědí v tomto případě dosáhnout, bude to vyhraná bitva, nikoliv válka. Ve světle obou v článku zmiňovaných případů jsem to vzal od podlahy a [požádal MČ Praha 7 informace o všech prováděných dopravních experimentech v minulém a současném volebním období](https://www.infoprovsechny.cz/request/dopravni_experimenty_na_uzemi_mc). Odpověď úřadu mi vyrazila dech: prý s výjimkou dříve zmiňovaného experimentu v Korunovační žádné další nebyly a nejsou.
 
 Zákon o svobodném přístupu k informacím dává návod jak postupovat, když úřad informaci neposkytne, když nereaguje... Jeho tvůrci ale nepočítali se situací, kdy bude povinný subjekt aktivně lhát a poskytne informaci nepravdivou. Odpověď úřadu je totiž zjevně lživá, protože aktivně popírá existenci experimentu na Strossmayerově náměstí, o kterém je tento článek. Vím a mohu prokázat, že nejde o jediný případ, ale detaily nebudu v tomto okamžiku zveřejňovat, protože chci získat seznam všech experimentů a ne dávat úřadu seznam těch, o kterých jsem se dozvěděl jinými způsoby.
+
+Nevěda lepšího postupu, [zeptal jsem se znovu na tytéž otázky](https://www.infoprovsechny.cz/request/dopravni_experimenty_na_uzemi_mc_2) a dal tak úřadu šanci na reparát. Pokud nebudu úspěšný, nezbude mi, než znovu podat stížnost k pražskému magistrátu, případně další žalobu, další žádost o ochrani proti nečinnosti...
 
 ---
 
