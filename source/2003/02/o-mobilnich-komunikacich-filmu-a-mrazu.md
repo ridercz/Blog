@@ -10,7 +10,7 @@
 
 Za tento zápis ve weblogu vděčíte dobrodiní mobilní komunikace, konkrétně technologii GPRS v síti Eurotel. Pracovní povinnosti mne zavály do míst, kam bych jinak zavítal jenom stěží. Abych řekl pravdu, nevím přesně kde jsem. Zatímco v Praze jsem schopen svou polohu vcelku přesně odhadnout, protože přes cell broadcast na displeji telefonu vidím lokace typu „Náměstí I. P. Pavlova“ nebo alespoň „Praha 4 – Háje“, tady je to nápis „České středohoří“. Tak dík.
 
-Jeden [můj kamarád](http://pfchudoba.byte.cz) se vyjádřil, že kdekoliv se posadím, začne kolem mne vznikat počítačová síť. Asi na tom něco bude. Sedím v odhadem dvě století staré chalupě, u zhruba stejně starého stolu. Mám na něm položený notebook s Bluetooth kartou a Ericsson T68i, ke kterému jsem bluetoothově připojen a přes GPRS lezu na Internet. Vot éto těchnika!
+Jeden můj kamarád se vyjádřil, že kdekoliv se posadím, začne kolem mne vznikat počítačová síť. Asi na tom něco bude. Sedím v odhadem dvě století staré chalupě, u zhruba stejně starého stolu. Mám na něm položený notebook s Bluetooth kartou a Ericsson T68i, ke kterému jsem bluetoothově připojen a přes GPRS lezu na Internet. Vot éto těchnika!
 
 Pamětliv svých hořkých zkušeností jsem se na expedici do divočiny řádně vybavil. Jakožto člověk venkoncem městský si většinou neuvědomuji, že oblečení bohatě postačující pro cestu k nejbližší stanici metra nebude postačovat pro pobyt v otevřené krajině.
 

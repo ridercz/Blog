@@ -8,7 +8,7 @@
 <!-- x4w:category = Bastlení -->
 <!-- dcterms:dateAccepted = 2019-03-02 -->
 
-Příští týden mne čekají hned tři live streamy (v pondělí a úterý o [pamětech v Arduinu](/2019/03/pameti-v-arduinu) a ve čtvrtek budeme [pokračovat s přepisem AskMe do DotVVM](/2019/02-askme-dotvvm-1-zaznam)) a proto jsem se rozhodl poněkud upgradovat svou streamovací sestavu, dosud používanou převážně na dálková školení. Vyrobil jsem také hardwarovou konzoli (rig) na ovládání OBS Studia.
+Příští týden mne čekají hned tři live streamy (v pondělí a úterý o [pamětech v Arduinu](/2019/03/pameti-v-arduinu) a ve čtvrtek budeme [pokračovat s přepisem AskMe do DotVVM](/2019/02/askme-dotvvm-1-zaznam)) a proto jsem se rozhodl poněkud upgradovat svou streamovací sestavu, dosud používanou převážně na dálková školení. Vyrobil jsem také hardwarovou konzoli (rig) na ovládání OBS Studia.
 
 ## Hardware
 

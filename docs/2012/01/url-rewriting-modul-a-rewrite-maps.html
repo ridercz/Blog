@@ -134,7 +134,7 @@
 <p>Výsledek (ve spodním okně) se dá dobře zkopírovat do Excelu a tam s ním dále pracovat. Hardcore databázisti si vytvoří dotaz, který jim vygeneruje přímo XML, já většinou používám Excel a jeho vzorečky:</p>
 <p><a href="https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-2_2.png"><img src="https://www.cdn.altairis.cz/Blog/2012/20120115-rewritemap-2_thumb.png" alt="rewritemap-2" title="rewritemap-2" /></a></p>
 <p>Vygenerované XML potom obalím elementy <em>rewriteMaps</em> a <em>rewriteMap</em> (můžete jich mít vytvořeno více) a uložím jako soubor <em>RewriteMaps.config</em>, jehož obsah je přibližně následující:</p>
-<pre><code>&lt;rewriteMaps&gt;
+<pre><code class="language-xml">&lt;rewriteMaps&gt;
     &lt;rewriteMap name=&quot;OldArticles&quot;&gt;
         &lt;add key=&quot;/archive/2004/12/13/147.aspx&quot; value=&quot;/articles/1&quot; /&gt;
         &lt;add key=&quot;/archive/2004/12/13/150.aspx&quot; value=&quot;/articles/2&quot; /&gt;
@@ -143,9 +143,9 @@
     &lt;/rewriteMap&gt;
 &lt;/rewriteMaps&gt;
 </code></pre>
-<p>Celý proces vytváření a referencování samostatného souboru bychom si v zásadě mohli odpustit, protože rewrite mapy lze psát přímo do <em>web.configu</em>. Nicméně rewrite mapy používáme typicky v případech, kdy psaní samostatných pravidel by bylo komplikované a nepřehledné, takže jsou obvykle dost rozsáhlé a <em>web.config</em> je pak  nepřehledný.</p>
-<p>Ve <em>web.configu</em> potom vytvoříme pravidlo, které se bude odkazovat na dříve vytvořebou rewrite map:</p>
-<pre><code>&lt;configuration&gt;
+<p>Celý proces vytváření a referencování samostatného souboru bychom si v zásadě mohli odpustit, protože rewrite mapy lze psát přímo do <code>web.config</code>u. Nicméně rewrite mapy používáme typicky v případech, kdy psaní samostatných pravidel by bylo komplikované a nepřehledné, takže jsou obvykle dost rozsáhlé a <code>web.config</code> je pak  nepřehledný.</p>
+<p>Ve <code>web.config</code>u potom vytvoříme pravidlo, které se bude odkazovat na dříve vytvořebou rewrite map:</p>
+<pre><code class="language-xml">&lt;configuration&gt;
     &lt;system.webServer&gt;
         &lt;rewrite&gt;
             &lt;rules&gt;
@@ -162,7 +162,7 @@
     &lt;/system.webServer&gt;
 &lt;/configuration&gt;
 </code></pre>
-<p>Používám <em>redirectType=&quot;Permanent&quot;</em>, takže server použije pro přesměrování stavový kód <a href="%C2%A7">301 Moved Permanently</a>. Vyhledávače by si tedy měly opravit příslušné odkazy a převést případné zvýhodnění ze zpětných odkazů na novou adresu.</p>
+<p>Používám <code>redirectType=&quot;Permanent&quot;</code>, takže server použije pro přesměrování stavový kód <code>301 Moved Permanently</code>. Vyhledávače by si tedy měly opravit příslušné odkazy a převést případné zvýhodnění ze zpětných odkazů na novou adresu.</p>
 <p>Tímto poměrně jednoduchým a elegantním způsobem lze vyřešit velmi častý problém směrování starých URL na nové. Je to jednoduché, přehledné a výkonné, protože mapa se cacheuje.</p>
 
       </section>

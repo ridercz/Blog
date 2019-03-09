@@ -35,11 +35,11 @@ Nakonec jsem se vydal jinou cestou, a to generováním obrázku kódu "čáru po
 
 Existuje poměrně hodně komponent, které toto nabízejí. Komerční komponenty mi přišly příliš drahé a komplikované, našel jsem i pár volně dostupných, ale ty zase nefungovaly příliš spolehlivě. Nakonec se ukázalo, že implementace čárových kódů vlastními silami není nijak náročná.
 
-Specifikace jsou volně dostupné - obvykle stačí zadat do Google něco jako "názevkódu specification" a doberete se výsledku. Případně se můžete obrátit na server [OpenBarcode](http://www.openbarcode.org/), který je této problematice celý věnován.
+Specifikace jsou volně dostupné - obvykle stačí zadat do Google něco jako "názevkódu specification" a doberete se výsledku.
 
-Trváte-li na zdrojích v češtině, doporučuji knihu *Čárové kódy - automatická identifikace (A. Benadiková, Š. Mada, S. Weinlich, Grada 1994, ISBN 80-85623-66-8)*. Bohužel ale tato kniha vyšla před mnoha lety a budete možná mít problém ji sehnat (.
+Trváte-li na zdrojích v češtině, doporučuji knihu *Čárové kódy - automatická identifikace (A. Benadiková, Š. Mada, S. Weinlich, Grada 1994, ISBN 80-85623-66-8)*. Bohužel ale tato kniha vyšla před mnoha lety a budete možná mít problém ji sehnat.
 
-Mně osobně trvalo vytvoření základu komponenty s první implementovanou normou asi jeden den. Přidání dalších norem čárových kódů je pak práce na několik hodin. Pokud si je chcete ušetřit, pošlete mi mail a můžeme se dohodnout na prodeji ;-)
+Mně osobně trvalo vytvoření základu komponenty s první implementovanou normou asi jeden den. Přidání dalších norem čárových kódů je pak práce na několik hodin. Pokud si je chcete ušetřit, pošlete mi mail a můžeme se dohodnout na prodeji.
 
 ## Načítání kódů
 
