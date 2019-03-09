@@ -1,7 +1,7 @@
 <!-- dcterms:title = Jak se zbavit neaktivních COM portů? -->
 <!-- dcterms:abstract = Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/20190826-jak-se-zbavit-com-portu.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20190226-jak-se-zbavit-com-portu.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20181115-honeyesp.jpg -->
