@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/03/ex-oriente-lux</guid>
+      <title>Ex oriente lux: Pária Huawei</title>
+      <description>Společnost Huawei se dostává po celém světě do nezáviděníhodné situace: řada států s ní nechce nic mít. Nejnověji Huawei způsobil diplomatickou při mezi USA a Německem. Skutečné nebezpečí pro budoucnost se ale neskrývá jenom v možnosti špehování.</description>
+      <link>https://www.altair.blog/2019/03/ex-oriente-lux</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-03-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/samolepky</guid>
       <title>Jak nalepit samolepku</title>
       <description>Dostali jste - třeba ode mne - samolepku vyřezanou z fólie a nevíte, jak ji správně nalepit? Pokud je z jednoho kusu, je to snadné. Ale co když jsou to třeba písmenka, nebo jiné složité tvary? Přináším jednoduchý návod, jak na to.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-02-14T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/lini-programatori</guid>
-      <title>Líný programátor - dobrý programátor: Akce pro ně</title>
-      <description>V jedné staré písničce, populární v dobách mého mládí, se zpívá, že práce je matka pokroku. Můj názor je přesně opačný. Matkou všího pokroku je lidská lenost, snaha práci si pokud možno zjednodušit nebo se jí vyhnout úplně. Kdyby pračlověk Janeček nebyl líný každý večer lézt na strom, nikdy by se nebyl odvážil vlézt do temné jeskyně nebo experimentovat s něčím tak nebezpečným, jako je oheň.</description>
-      <link>https://www.altair.blog/2019/02/lini-programatori</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Akce a události</category>
-      <pubDate>2019-02-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
