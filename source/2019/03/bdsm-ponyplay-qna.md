@@ -1,0 +1,9 @@
+<!-- dcterms:title = BDSM a ponyplay Q&A živě na YouTube -->
+<!-- dcterms:abstract = Jedna z nejúspěšnějších věcí na mém YouTube jsou záznamy přednášek o BDSM, které jsme pořádali na FHS UK v minulých letech. Letos se žádná konat nebude - aspoň pohud vím - a tak jsem se rozhodl uspořádat totéž online. Ve středu 20. března 2019 od 20:00 bude na mém YouTube kanále živý stream, ve kterém budu odpovídat na vaše otázky. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2019-03-19 -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-youtube.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2019/03/bdsm-ponyplay-qna -->
