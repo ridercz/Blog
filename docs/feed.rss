@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=9QszkJh1CPc</guid>
+      <title>KeePass: Jak nainstalovat a používat správce hesel</title>
+      <description>Pokud si heslo dokážete zapamatovat, není dostatečně bezpečné. Zní to trochu jedovatě, ale v základu to je pravda. Dostatek kvalitních hesel si běžný uživatel nemá šanci zapamatovat, chce-li dodržet základní zásadu, že každá služba by měla mít své vlastní heslo. Od toho tu jsou správci hesel (password manager). Já používám KeePass, který je zadarmo a pro všechny možné platformy. V tomto videu vás naučím, jak ho nainstalovat, počeštit a používat.</description>
+      <link>https://www.youtube.com/watch?v=9QszkJh1CPc</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>Software</category>
+      <pubDate>2019-03-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2019/03/bdsm-ponyplay-qna</guid>
       <title>BDSM a ponyplay Q&amp;A živě na YouTube</title>
       <description>Jedna z nejúspěšnějších věcí na mém YouTube jsou záznamy přednášek o BDSM, které jsme pořádali na FHS UK v minulých letech. Letos se žádná konat nebude - aspoň pohud vím - a tak jsem se rozhodl uspořádat totéž online. Ve středu 20. března 2019 od 20:00 bude na mém YouTube kanále živý stream, ve kterém budu odpovídat na vaše otázky.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-02-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</guid>
-      <title>Příklady a prezentace z akce pro líné programátory</title>
-      <description>Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem "ASP.NET Core pro líné programátory", protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.</description>
-      <link>https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-02-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
