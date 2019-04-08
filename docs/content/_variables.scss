@@ -3,3 +3,10 @@ $Black: #000;
 $DarkGray: #444;
 $LightGray: #ccc;
 $Orange: #e60;
+
+@mixin monospace(){
+    font-size: 100%;
+    font-family: 'Fira Code', Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
+}
