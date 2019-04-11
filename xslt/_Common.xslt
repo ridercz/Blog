@@ -137,7 +137,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
-    <link rel="stylesheet" type="text/css" href="/content/fa-5.1.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed-internal.rss" title="RSS (pouze místní články)" />
