@@ -21,6 +21,10 @@ h1 {
     color: $Orange;
     margin-top: 0;
     text-align: left;
+
+    @media ($NarrowScreen) {
+        font-size: 200%;
+    }
 }
 
 h2 {
@@ -28,12 +32,20 @@ h2 {
     font-size: 200%;
     color: $Orange;
     text-align: left;
+
+    @media ($NarrowScreen) {
+        font-size: 150%;
+    }
 }
 
 h3 {
     font-weight: 100;
     font-size: 150%;
     text-align: left;
+
+    @media ($NarrowScreen) {
+        font-size: 125%;
+    }
 }
 
 code {
@@ -63,6 +75,7 @@ del {
     color: $DarkGray;
     text-decoration: line-through solid $DarkGray;
 }
+
 ins {
     text-decoration: underline dotted $LightGray;
 }

@@ -1,29 +1,54 @@
 ﻿@import "_variables.scss";
+
 section.artlist {
     article {
         margin-bottom: 3em;
+
         &.haspicture {
-            min-height: 150px;
+            @media ($NormalScreen) {
+                min-height: 150px;
+            }
         }
+
         aside {
             float: left;
+
+            @media ($NarrowScreen) {
+                display: none;
+            }
         }
+
         header {
-            margin: 0 0 0 150px;
-            padding: 0 0 0 1em;
+            @media ($NormalScreen) {
+                margin: 0 0 0 150px;
+                padding: 0 0 0 1em;
+            }
+
             a {
                 font-weight: 100;
                 font-size: 200%;
+
+                @media ($NarrowScreen) {
+                    font-size: 150%;
+                }
             }
         }
+
         div {
-            margin: 0 0 0 150px;
-            padding: 0 0 0 1em;
+            @media ($NormalScreen) {
+                margin: 0 0 0 150px;
+                padding: 0 0 0 1em;
+            }
+
             text-align: justify;
         }
+
         footer {
-            margin: 0 0 0 150px;
-            padding: 0 0 0 1em;
+            @media ($NormalScreen) {
+                margin: 0 0 0 150px;
+                padding: 0 0 0 1em;
+            }
+
             time {
                 float: right;
                 font-size: 90%;
@@ -31,38 +56,51 @@ section.artlist {
             }
         }
     }
+
     &.hlfirst article:nth-of-type(1) {
         background-color: lighten($LightGray, 10);
         padding: 1em;
         border-radius: 1ex;
         font-size: 120%;
+
+        @media ($NarrowScreen) {
+            padding: 1ex;
+        }
     }
-    >footer {
+
+    > footer {
         background-color: $LightGray;
         padding: 1ex .5ex;
         text-align: center;
         border-radius: 1ex;
+
         .prev {
             float: left;
+
             a {
                 margin-right: 1ex;
             }
         }
+
         .next {
             float: right;
+
             a {
                 margin-left: 1ex;
             }
         }
+
         a {
             background-color: $Orange;
             padding: .5ex 1ex;
             border-radius: 1ex;
+
             &:link,
             &:visited {
                 color: $White;
                 text-decoration: none;
             }
+
             &:hover {
                 color: $Black;
             }
@@ -71,63 +109,28 @@ section.artlist {
 }
 
 ul.categories {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 80%;
-    li {
-        display: inline;
-        margin-right: 1ex;
-        padding: .25ex 1.5ex;
-        list-style-type: none;
-        background-color: rgba($Orange, .75);
-        border-radius: 1ex;
-        a:link,
-        a:visited {
-            color: $White;
-            text-decoration: none;
-        }
-        a:hover {
-            color: $Black;
-        }
-    }
+    @include tag(rgba($Orange, .75), $Orange, $White);
 }
 
 ul.serials {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 80%;
-    li {
-        display: inline;
-        margin-right: 1ex;
-        padding: .25ex 1.5ex;
-        list-style-type: none;
-        border: 1px solid rgba($Orange, .75);
-        border-radius: 1ex;
-        a:link,
-        a:visited {
-            color: $Orange;
-            text-decoration: none;
-        }
-        a:hover {
-            color: $Black;
-        }
-    }
+    @include tag(transparent, rgba($Orange, .75), $Orange);
 }
 
 aside.article-info {
     font-size: 120%;
     color: $DarkGray;
     text-align: right;
+
     ul {
-        float: left;
+        @media ($NormalScreen) {
+            float: left;
+        }
     }
+
     a {
         color: $DarkGray;
         text-decoration: none;
+
         &:hover {
             color: $Black;
             text-decoration: underline;
@@ -137,23 +140,27 @@ aside.article-info {
 
 section.article-text {
     text-align: justify;
+
     img {
         display: block;
         margin: 1em auto;
         max-width: 90%;
     }
+
     video {
         display: block;
         border: 1px solid $DarkGray;
         margin: 1em auto;
         max-width: 90%;
     }
+
     figcaption {
         font-size: 85%;
         text-align: center;
         max-width: 90%;
         margin: .5ex auto 1ex auto;
     }
+
     hr {
         width: 20%;
         text-align: left;
@@ -168,16 +175,19 @@ section.article-text {
     table {
         border-collapse: collapse;
         margin: auto auto;
+
         td {
             background-color: $White;
             border: 1px solid $DarkGray;
             padding: 1ex;
         }
+
         th {
             background-color: $LightGray;
             border: 1px solid $DarkGray;
             padding: 1ex;
         }
+
         tbody tr:hover td, tbody tr:hover th {
             background-color: rgba($Orange, .25);
         }
@@ -189,6 +199,11 @@ section.issues {
     padding: 10px 20px;
     border-left: 10px solid $Orange;
     background-color: lighten($Orange, 50);
+
+    @media ($NarrowScreen) {
+        font-size: 80%;
+    }
+
     header {
         font-size: 200%;
         color: $Orange;
@@ -201,11 +216,13 @@ section.sharing {
     font-size: 150%;
     text-align: right;
     color: $DarkGray;
+
     ul {
         display: inline;
         margin: 0 0 0 1ex;
         padding: 0;
         list-style-type: none;
+
         li {
             display: inline;
             margin: 0 1ex 0 0;
@@ -213,9 +230,11 @@ section.sharing {
             list-style-type: none;
         }
     }
+
     a {
         color: $DarkGray;
         text-decoration: none;
+
         &:hover {
             color: $Orange;
         }

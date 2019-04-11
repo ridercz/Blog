@@ -26,7 +26,7 @@
     <header>
       <div>
         <a href="/">
-          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="height:100px;" />
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
         </a>
       </div>
     </header>
@@ -34,38 +34,37 @@
       <ul>
         <li>
           <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
-            <i class="fal fa-user">&#8197;</i>
+            <i class="fal fa-fw fa-user">&#8197;</i>
           </a>
         </li>
         <li>
           <a href="/archive" title="Archiv článků">
-            <i class="fal fa-archive">&#8197;</i>
+            <i class="fal fa-fw fa-archive">&#8197;</i>
           </a>
         </li>
         <li>
           <a href="/categories" title="Rubriky">
-            <i class="fal fa-tags">&#8197;</i>
+            <i class="fal fa-fw fa-tags">&#8197;</i>
           </a>
         </li>
         <li>
           <a href="/serials" title="Seriály">
-            <i class="fal fa-list-alt">&#8197;</i>
+            <i class="fal fa-fw fa-list-alt">&#8197;</i>
           </a>
         </li>
         <li>
           <a href="/search" title="Vyhledávání">
-            <i class="fal fa-search">&#8197;</i>
+            <i class="fal fa-fw fa-search">&#8197;</i>
           </a>
         </li>
-
         <li>
           <a href="https://www.rider.cz/#contact" title="Kontakt">
-            <i class="fal fa-envelope">&#8197;</i>
+            <i class="fal fa-fw fa-envelope">&#8197;</i>
           </a>
         </li>
         <li>
           <a href="https://facebook.com/rider.cz" title="Facebook">
-            <i class="fab fa-facebook">&#8197;</i>
+            <i class="fab fa-fw fa-facebook">&#8197;</i>
           </a>
         </li>
         <li>
@@ -75,12 +74,12 @@
         </li>
         <li>
           <a href="https://github.com/ridercz" title="Github">
-            <i class="fab fa-github">&#8197;</i>
+            <i class="fab fa-fw fa-github">&#8197;</i>
           </a>
         </li>
         <li>
           <a href="https://ask.fm/ridercz" title="Ask.fm">
-            <i class="fal fa-question">&#8197;</i>
+            <i class="fal fa-fw fa-question">&#8197;</i>
           </a>
         </li>
       </ul>

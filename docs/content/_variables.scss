@@ -4,9 +4,41 @@ $DarkGray: #444;
 $LightGray: #ccc;
 $Orange: #e60;
 
-@mixin monospace(){
+$NarrowScreen: "max-width: 699px";
+$NormalScreen: "min-width: 700px";
+
+@mixin monospace() {
     font-size: 100%;
     font-family: 'Fira Code', Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
     font-feature-settings: "calt" 1;
-    font-variant-ligatures: contextual;
+    font-variant-ligatures: normal;
+}
+
+@mixin tag($BgColor, $BorderColor, $LinkColor, $HoverColor: $Black) {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 80%;
+
+    li {
+        white-space: nowrap;
+        display: inline;
+        margin-right: 1ex;
+        padding: .25ex 1.5ex;
+        list-style-type: none;
+        background-color: $BgColor;
+        border: 1px solid $BorderColor;
+        border-radius: 1ex;
+
+        a:link,
+        a:visited {
+            color: $LinkColor;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $HoverColor;
+        }
+    }
 }

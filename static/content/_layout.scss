@@ -1,4 +1,5 @@
 ﻿@import "_variables.scss";
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -13,9 +14,15 @@ body {
     font-size: 1em;
     margin: 0;
     padding: 0;
-    >header {
+
+    @media ($NarrowScreen) {
+        background-image: url(images/pattern_light.png) !important;
+    }
+
+    > header {
         background-color: $DarkGray;
         background-image: url(images/pattern_dark.png);
+
         div {
             max-width: 1200px;
             text-align: center;
@@ -24,11 +31,13 @@ body {
             background-color: rgba($Black, .25);
         }
     }
-    >nav {
+
+    > nav {
         background-color: $Orange;
         color: $White;
         font-size: 160%;
         text-align: center;
+
         ul {
             display: block;
             margin: 0 auto;
@@ -36,6 +45,7 @@ body {
             list-style-type: none;
             max-width: 1200px;
             background-color: rgba($White, .25);
+
             li {
                 display: inline;
                 margin: 0;
@@ -43,47 +53,76 @@ body {
                 list-style-type: none;
             }
         }
+
         a:link,
         a:visited {
             color: $White;
             text-decoration: none;
         }
+
         a:hover {
             color: $Black;
         }
     }
-    >main {
+
+    > main {
         display: block;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 3em;
         background-color: rgba($White, .95);
+
+        @media ($NarrowScreen) {
+            padding: 1ex;
+        }
+
+        @media ($NormalScreen) {
+            padding: 3em;
+        }
     }
-    >footer {
+
+    > footer {
         max-width: 1200px;
         border-top: 1px solid $DarkGray;
         color: $DarkGray;
         margin: 0 auto;
         padding: 1em;
         font-size: 90%;
+
         ul.logos {
             float: left;
             margin: 0;
             padding: 0;
             display: block;
             list-style-type: none;
+
+            @media ($NarrowScreen) {
+                float: none;
+                text-align: center;
+            }
+
             li {
                 margin: 0 3em 0 0;
+
+                @media ($NarrowScreen) {
+                    margin: 0;
+                }
+
                 padding: 0;
                 display: inline;
                 list-style-type: none;
             }
         }
+
         ul.text {
             margin: 0;
             padding: 0;
             list-style-type: none;
             text-align: right;
+
+            @media ($NarrowScreen) {
+                text-align: center;
+            }
+
             li {
                 margin: 0;
                 padding: 0;
@@ -91,27 +130,23 @@ body {
             }
         }
     }
-    &.hascover {
-        background-color: $DarkGray;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        >header {
-            background-image: none;
-            background-color: rgba($Black, .25);
-        }
-        // >nav {
-        //     background-color: rgba($Orange, .85);
-        // }
-        // >main {
-        //     background-color: rgba($White, .90);
-        // }
-        >footer {
-            background-color: rgba($White, .75);
+
+    @media ($NormalScreen) {
+        &.hascover {
+            background-color: $DarkGray;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+
+            > header {
+                background-image: none;
+                background-color: rgba($Black, .25);
+            }
+
+            > footer {
+                background-color: rgba($White, .75);
+            }
         }
     }
 }

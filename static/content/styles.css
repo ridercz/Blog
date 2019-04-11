@@ -14,6 +14,12 @@ body {
   padding: 0;
 }
 
+@media (max-width: 699px) {
+  body {
+    background-image: url(images/pattern_light.png) !important;
+  }
+}
+
 body > header {
   background-color: #444;
   background-image: url(images/pattern_dark.png);
@@ -64,8 +70,19 @@ body > main {
   display: block;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3em;
   background-color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 699px) {
+  body > main {
+    padding: 1ex;
+  }
+}
+
+@media (min-width: 700px) {
+  body > main {
+    padding: 3em;
+  }
 }
 
 body > footer {
@@ -85,11 +102,24 @@ body > footer ul.logos {
   list-style-type: none;
 }
 
+@media (max-width: 699px) {
+  body > footer ul.logos {
+    float: none;
+    text-align: center;
+  }
+}
+
 body > footer ul.logos li {
   margin: 0 3em 0 0;
   padding: 0;
   display: inline;
   list-style-type: none;
+}
+
+@media (max-width: 699px) {
+  body > footer ul.logos li {
+    margin: 0;
+  }
 }
 
 body > footer ul.text {
@@ -99,30 +129,33 @@ body > footer ul.text {
   text-align: right;
 }
 
+@media (max-width: 699px) {
+  body > footer ul.text {
+    text-align: center;
+  }
+}
+
 body > footer ul.text li {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-body.hascover {
-  background-color: #444;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body.hascover > header {
-  background-image: none;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-body.hascover > footer {
-  background-color: rgba(255, 255, 255, 0.75);
+@media (min-width: 700px) {
+  body.hascover {
+    background-color: #444;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  body.hascover > header {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  body.hascover > footer {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 a:link {
@@ -145,11 +178,23 @@ h1 {
   text-align: left;
 }
 
+@media (max-width: 699px) {
+  h1 {
+    font-size: 200%;
+  }
+}
+
 h2 {
   font-weight: 100;
   font-size: 200%;
   color: #e60;
   text-align: left;
+}
+
+@media (max-width: 699px) {
+  h2 {
+    font-size: 150%;
+  }
 }
 
 h3 {
@@ -158,11 +203,17 @@ h3 {
   text-align: left;
 }
 
+@media (max-width: 699px) {
+  h3 {
+    font-size: 125%;
+  }
+}
+
 code {
   font-size: 100%;
   font-family: 'Fira Code', Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
   font-feature-settings: "calt" 1;
-  font-variant-ligatures: contextual;
+  font-variant-ligatures: normal;
   color: #600;
 }
 
@@ -170,7 +221,7 @@ pre {
   font-size: 100%;
   font-family: 'Fira Code', Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
   font-feature-settings: "calt" 1;
-  font-variant-ligatures: contextual;
+  font-variant-ligatures: normal;
   color: #600;
   margin: 10px;
   padding: 10px 20px;
@@ -200,17 +251,27 @@ section.artlist article {
   margin-bottom: 3em;
 }
 
-section.artlist article.haspicture {
-  min-height: 150px;
+@media (min-width: 700px) {
+  section.artlist article.haspicture {
+    min-height: 150px;
+  }
 }
 
 section.artlist article aside {
   float: left;
 }
 
-section.artlist article header {
-  margin: 0 0 0 150px;
-  padding: 0 0 0 1em;
+@media (max-width: 699px) {
+  section.artlist article aside {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  section.artlist article header {
+    margin: 0 0 0 150px;
+    padding: 0 0 0 1em;
+  }
 }
 
 section.artlist article header a {
@@ -218,15 +279,28 @@ section.artlist article header a {
   font-size: 200%;
 }
 
+@media (max-width: 699px) {
+  section.artlist article header a {
+    font-size: 150%;
+  }
+}
+
 section.artlist article div {
-  margin: 0 0 0 150px;
-  padding: 0 0 0 1em;
   text-align: justify;
 }
 
-section.artlist article footer {
-  margin: 0 0 0 150px;
-  padding: 0 0 0 1em;
+@media (min-width: 700px) {
+  section.artlist article div {
+    margin: 0 0 0 150px;
+    padding: 0 0 0 1em;
+  }
+}
+
+@media (min-width: 700px) {
+  section.artlist article footer {
+    margin: 0 0 0 150px;
+    padding: 0 0 0 1em;
+  }
 }
 
 section.artlist article footer time {
@@ -240,6 +314,12 @@ section.artlist.hlfirst article:nth-of-type(1) {
   padding: 1em;
   border-radius: 1ex;
   font-size: 120%;
+}
+
+@media (max-width: 699px) {
+  section.artlist.hlfirst article:nth-of-type(1) {
+    padding: 1ex;
+  }
 }
 
 section.artlist > footer {
@@ -289,11 +369,13 @@ ul.categories {
 }
 
 ul.categories li {
+  white-space: nowrap;
   display: inline;
   margin-right: 1ex;
   padding: .25ex 1.5ex;
   list-style-type: none;
   background-color: rgba(238, 102, 0, 0.75);
+  border: 1px solid #e60;
   border-radius: 1ex;
 }
 
@@ -316,10 +398,12 @@ ul.serials {
 }
 
 ul.serials li {
+  white-space: nowrap;
   display: inline;
   margin-right: 1ex;
   padding: .25ex 1.5ex;
   list-style-type: none;
+  background-color: transparent;
   border: 1px solid rgba(238, 102, 0, 0.75);
   border-radius: 1ex;
 }
@@ -340,8 +424,10 @@ aside.article-info {
   text-align: right;
 }
 
-aside.article-info ul {
-  float: left;
+@media (min-width: 700px) {
+  aside.article-info ul {
+    float: left;
+  }
 }
 
 aside.article-info a {
@@ -415,6 +501,12 @@ section.issues {
   padding: 10px 20px;
   border-left: 10px solid #e60;
   background-color: seashell;
+}
+
+@media (max-width: 699px) {
+  section.issues {
+    font-size: 80%;
+  }
 }
 
 section.issues header {
