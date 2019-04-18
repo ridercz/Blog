@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:3572066</guid>
+      <title>Držák špendlíku na odznaky</title>
+      <description>Vyrábím dřevěné jakovlčí odznaky. Vlastní placka je vyrobená na laseru z tenké překližky, ale jak na ni přidělat spínací špendlík? Na prototyp jsem ho nalepil lepící páskou, ale to není moc profi řešení. Tak jsem pro produkční verzi připravil plastový držák, do kterého je špendlík zatisknutý.</description>
+      <link>https://www.thingiverse.com/thing:3572066</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-04-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66552460-ofaba-8fb891a4cb49ff9</guid>
       <title>V papírování kolem kyberbezpečnosti jsme nejlepší na světě. V digitalizaci těsně před Uruguayí.</title>
       <description>Ve svém pravidelném provolání k národu, obecně známém jako "Čaulidi", se premiér Babiš chlubí tím, že jsme "PRVNÍ NA SVĚTĚ!" v žebříčku kyberbezpečnosti. Pomiňme, že si premiér všiml žebříčku zveřejněného v únoru až ve svém dubnovém příspěvku. Problém je v tom, že hodnota českého prvenství je velice nízká.</description>
@@ -137,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-02-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</guid>
-      <title>Záznam online streamu Píšeme AskMe v DotVVM (1)</title>
-      <description>K dispozici je záznam ze včerejšího streamu, v němž jsme začali s Tomášem Hercegem přepisovat AskMe do DotVVM. Byla to moc velká zábava a za dva týdny budeme pokračovat.</description>
-      <link>https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-02-21T17:00:00</pubDate>
     </item>
   </channel>
 </rss>

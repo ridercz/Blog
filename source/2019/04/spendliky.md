@@ -1,0 +1,10 @@
+<!-- dcterms:title = Držák špendlíku na odznaky -->
+<!-- dcterms:abstract = Vyrábím dřevěné jakovlčí odznaky. Vlastní placka je vyrobená na laseru z tenké překližky, ale jak na ni přidělat spínací špendlík? Na prototyp jsem ho nalepil lepící páskou, ale to není moc profi řešení. Tak jsem pro produkční verzi připravil plastový držák, do kterého je špendlík zatisknutý. -->
+<!-- x4w:category = Bastlení -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2019-04-18 -->
+<!-- x4w:pictureUrl = /perex-pictures/20190418-spendliky.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3572066 -->
