@@ -17,7 +17,6 @@ V archivu najdete:
 
 *   Veškeré moje prezentace ve formátu PDF. 
 *   Příklad, který jsem ve svých přednáškách používal      
-
     *   V adresáři *Samples\www.northwind.local* ukázkovou aplikaci v počátečním stavu. 
     *   V adresáři *Samples\www-final.northwind.local* finální verzi téže aplikace včetně URL rewritingu, jQuery a stránkování.    
 *   Ukázkové HTML code snippets pro Visual Studio 2010   

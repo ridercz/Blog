@@ -37,7 +37,7 @@ Nový lídr a pravděpodobný budoucí předseda Petr Nečas snad bude mít šan
 
 ### TOP 09
 
-Pro jedny čerstvá krev, pro jiné recyklát tu KDU, to ODA. Tahle strana se zrodila z čirého zoufalství pravicových voličů a bylo to tohle zoufalství, které ji vyneslo do parlamentu. Pomohla tomu i volební kampaň, podle mého názoru nejlepší, co jsme v letošních volbách viděli. Byla dostatečně profesionální formou, aby neurážela svým amatérismem. A zároveň dostatečně upřímná, vtipná a sebeironická – vítané oživení ve stoce exaltovaných výpadů z Lidového domu a neurčitých odpovědí z druhé strany.
+Pro jedny čerstvá krev, pro jiné recyklát tu KDU, tu ODA. Tahle strana se zrodila z čirého zoufalství pravicových voličů a bylo to tohle zoufalství, které ji vyneslo do parlamentu. Pomohla tomu i volební kampaň, podle mého názoru nejlepší, co jsme v letošních volbách viděli. Byla dostatečně profesionální formou, aby neurážela svým amatérismem. A zároveň dostatečně upřímná, vtipná a sebeironická – vítané oživení ve stoce exaltovaných výpadů z Lidového domu a neurčitých odpovědí z druhé strany.
 
 Jak jsem již psal dříve, o morálním profilu většiny aktérů si nedělám žádné velké iluze, mluví za ně jejich minulost. Nicméně stále si myslím, že kdyby jim šlo jenom o osobní prospěch, vybrali by si méně komplikovanou cestu.
 
@@ -48,8 +48,6 @@ Historický úspěch je také že se poprvé podařilo odsunout komunistickou st
 Komunisté jsou na svém a mohou být spokojení. Do vlády ani její podpory se nijak zvlášť nehrnou a dobře vědí proč – image toho, kdo se nepošpinil mocí, jim může jenom prospět. Jsou přesvědčeni, že jejich čas přijde. Jiní jsou přesvědčeni, že jejich elektorát časem vymře. Která z eventualit nastane dříve? To asi rozhodne teprve čas.
 
 ### Věci veřejné
-
-###### 
 
 Největší tajemství letošních voleb a důkaz vítězství marketingu nad zdravým rozumem. Co z nich vzejde neví nejspíš ani oni sami. Příznačné je, že v zahajovacím tahu přišli s požadavkem na ministerstva životního prostředí, místního rozvoje a vnitra. Tedy ministerstva, přes která teče nejvíce peněz z EU a to, které ovládá policii.
 
@@ -63,7 +61,7 @@ Mnohem podstatnější je ovšem vymizení onoho "křesťanského proudu" v poli
 
 ### Strana práv občanů – Zemanovci
 
-Jezevec z Vysočiny splnil to, proč ze své nory vylezl. Sebral sociální demokracii dost hlasů na to, aby jí vítězství zhořklo. Mimo jiné tím také snad napomohl socialistům k tomu, aby se mohli stát rozumnou alternativou pro levicovně smýšlející voliče. Jsem přesvědčen, že to byla jedna z věcí, o které Zemanovi šlo. Sociální demokracii vybudoval on osobně od základů a sledovat, co se s ní pod knutou Grosse a Paroubka děje, mu musel působit fyzickou bolest.
+Jezevec z Vysočiny splnil to, proč ze své nory vylezl. Sebral sociální demokracii dost hlasů na to, aby jí vítězství zhořklo. Mimo jiné tím také snad napomohl socialistům k tomu, aby se mohli stát rozumnou alternativou pro levicovně smýšlející voliče. Jsem přesvědčen, že to byla jedna z věcí, o které Zemanovi šlo. Sociální demokracii vybudoval on osobně od základů a sledovat, co se s ní pod knutou Grosse a Paroubka děje, mu muselo působit fyzickou bolest.
 
 Je škoda, že se alespoň Zeman do sněmovny nedostal, už jenom pro oživení diskuze – přisprostlé bonmoty uměl jako nikdo jiný, snad jenom Karel Schwarzenberg, fenomén letošních voleb, se mu může rovnat.
 
