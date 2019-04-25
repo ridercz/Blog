@@ -10,7 +10,7 @@
 
 Dostali jste - třeba ode mne - samolepku vyřezanou z fólie a nevíte, jak ji správně nalepit? Pokud je z jednoho kusu, je to snadné. Ale co když jsou to třeba písmenka, nebo jiné složité tvary? Přináším jednoduchý návod, jak na to. 
 
-V profesioní praxi se používají speciální přenosové fólie nebo přenosové papíry. Nicméně jejich použití v malém je z různých důvodů dost komplikované. Naštěstí existuje jednoduché řešení - papírová malířská maskovací páska.
+V profesionální praxi se používají speciální přenosové fólie nebo přenosové papíry. Nicméně jejich získání a použití v malém je z různých důvodů dost komplikované. Naštěstí existuje jednoduché řešení - papírová malířská maskovací páska.
 
 <figure>
     <img src="https://www.cdn.altairis.cz/Blog/2019/20190315-samolepky-1.jpg" alt="Krok 1" />
