@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/04/askme-v-dotvvm-potreti</guid>
+      <title>Píšeme AskMe v DotVVM - online stream potřetí</title>
+      <description>Znáte lepší způsob oslavy svátku práce, než se dívat, jak někdo jiný pracuje? Letos budete mít tu možnost, protože budeme s Tomášem Hercegem livestreamovat třetí - a budou-li bohové milostiví, též poslední - část přepisu mé ukázkové aplikace AskMe.</description>
+      <link>https://www.altair.blog/2019/04/askme-v-dotvvm-potreti</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-04-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/03/ex-oriente-lux</guid>
       <title>Ex oriente lux: Pária Huawei</title>
       <description>Společnost Huawei se dostává po celém světě do nezáviděníhodné situace: řada států s ní nechce nic mít. Nejnověji Huawei způsobil diplomatickou při mezi USA a Německem. Skutečné nebezpečí pro budoucnost se ale neskrývá jenom v možnosti špehování.</description>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-02-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/g2b</guid>
-      <title>Prezentace a příklady z akcí G2B TechEd a ShowIT</title>
-      <description>Minulý týden jsem přednášel na akcích G2B TechEd (Brno) a ShowIT (Bratislava). Nyní vám ke stažení nabízím své prezentace a příklady.</description>
-      <link>https://www.altair.blog/2019/02/g2b</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-02-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
