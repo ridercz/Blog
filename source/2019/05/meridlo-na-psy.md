@@ -26,24 +26,24 @@ Základem konstrukce jsou hliníkové profily, spojené dohromady pomocí plasto
 ## Materiál a vybavení
 
 * Materiál:
-  * Hliníkový profil 15&times;15 mm, délka 90, 20 a 40 cm.
-  * Krejčovský metr.
-  * 4x šroub M4&times;12 s válcovou hlavou a vnitřním šestihranem.
-  * 2x šroub M5&times;10 s šestihrannou hlavou.
-  * 2x matka M5 nízká čtverhranná (s mírnou úpravou modelu lze použít i běžnou nízkou šestihrannou).
-  * Tištěné díly dle popisu dále.
-  * Kyanoakrylátové (vteřinové) lepidlo.
+  * hliníkový profil 15&times;15 mm, délka 90, 20 a 40 cm,
+  * krejčovský metr,
+  * 4x šroub M4&times;12 s válcovou hlavou a vnitřním šestihranem,
+  * 2x šroub M5&times;10 s šestihrannou hlavou,
+  * 2x matka M5 nízká čtverhranná (s mírnou úpravou modelu lze použít i běžnou nízkou šestihrannou),
+  * tištěné díly, [modely ke stažení](https://www.thingiverse.com/thing:3600322) na Thingiverse,
+  * kyanoakrylátové (vteřinové) lepidlo.
 * Nářadí:
-  * Pilka (na hliník staší běžná pilka na dřevo).
-  * Vrtačka, stačí ruční.
-  * Vrtáky a závitníky na díry M4 a M5.
-  * Imbus na M4 šrouby
+  * pilka (na hliník stačí běžná pilka na dřevo),
+  * vrtačka,
+  * vrtáky a závitníky na díry M4 a M5,
+  * imbus na M4 šrouby.
 
 ## Modelování a 3D tisk
 
 ![Sada 3D tištěných dílů](https://www.cdn.altairis.cz/Blog/2019/20190501-02-openscadmodel.png)
 
-Všechny díly jsem vymodeloval v OpenSCADu a jsou plně parametrické. Lze je tedy snadno upravit např. pro jiný typ profilu.
+Všechny díly jsem vymodeloval v OpenSCADu a jsou plně parametrické. Lze je tedy snadno upravit např. pro jiný typ profilu. Zdrojové kódy i hotové modely si můžete [stáhnout na Thingiverse](https://www.thingiverse.com/thing:3600322).
 
 <script src="https://gist.github.com/ridercz/0c8cd69bc91c31531b06539a3209d985.js"></script>
 
