@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/05/meridlo-na-psy</guid>
+      <title>Jak vyrobit měřidlo na psy</title>
+      <description>Kamarádka mne požádala, abych jí vyrobil měřidlo na psy. To je jednoduchý nástroj, který se používá při bonitaci (hodnocení psa za účelem určení chovnosti) a měří se jím kohoutková výška psa. Výroba je poměrně jednoduchá a dala mi možnost použít některé mé oblíbené konstrukční postupy.</description>
+      <link>https://www.altair.blog/2019/05/meridlo-na-psy</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-05-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/04/askme-v-dotvvm-potreti</guid>
       <title>Píšeme AskMe v DotVVM - online stream potřetí</title>
       <description>Znáte lepší způsob oslavy svátku práce, než se dívat, jak někdo jiný pracuje? Letos budete mít tu možnost, protože budeme s Tomášem Hercegem livestreamovat třetí - a budou-li bohové milostiví, též poslední - část přepisu mé ukázkové aplikace AskMe.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-02-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</guid>
-      <title>Příklady a prezentace z akce pro líné programátory</title>
-      <description>Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem "ASP.NET Core pro líné programátory", protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.</description>
-      <link>https://www.altair.blog/2019/02/aspnet-core-pro-line-programatory</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-02-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

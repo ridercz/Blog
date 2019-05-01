@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/05/meridlo-na-psy</guid>
+      <title>Jak vyrobit měřidlo na psy</title>
+      <description>Kamarádka mne požádala, abych jí vyrobil měřidlo na psy. To je jednoduchý nástroj, který se používá při bonitaci (hodnocení psa za účelem určení chovnosti) a měří se jím kohoutková výška psa. Výroba je poměrně jednoduchá a dala mi možnost použít některé mé oblíbené konstrukční postupy.</description>
+      <link>https://www.altair.blog/2019/05/meridlo-na-psy</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-05-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/04/askme-v-dotvvm-potreti</guid>
       <title>Píšeme AskMe v DotVVM - online stream potřetí</title>
       <description>Znáte lepší způsob oslavy svátku práce, než se dívat, jak někdo jiný pracuje? Letos budete mít tu možnost, protože budeme s Tomášem Hercegem livestreamovat třetí - a budou-li bohové milostiví, též poslední - část přepisu mé ukázkové aplikace AskMe.</description>
@@ -136,17 +146,6 @@
       <category>Akce a události</category>
       <category>Bastlení</category>
       <pubDate>2019-03-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/honeyesp32</guid>
-      <title>Novinky v projektu HoneyESP: Podpora ESP32 a nepotřebujete SD kartu</title>
-      <description>Před časem jsem zde na blogu představil projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266.</description>
-      <link>https://www.altair.blog/2019/02/honeyesp32</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <category>Bezpečnost</category>
-      <category>Bastlení</category>
-      <pubDate>2019-02-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

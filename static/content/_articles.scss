@@ -144,20 +144,20 @@ section.article-text {
     img {
         display: block;
         margin: 1em auto;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     video {
         display: block;
         border: 1px solid $DarkGray;
         margin: 1em auto;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     figcaption {
         font-size: 85%;
         text-align: center;
-        max-width: 90%;
+        max-width: 100%;
         margin: .5ex auto 1ex auto;
     }
 
