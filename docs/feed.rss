@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/05/pozvanka-na-teched</guid>
+      <title>Pozvánka na moje přednášky na TechEdu 2019</title>
+      <description>Jako každý rok, i letos budu mít na pražském TechEdu řadu přednášek. Počínaje tradiční vývojářskou keynote s přehledem věcí současných i budoucích a konče třeba tím, co by podle mne Windowsáci měli vědět o Linuxu.</description>
+      <link>https://www.altair.blog/2019/05/pozvanka-na-teched</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-05-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/05/askme-v-dotvvm-zaznamy</guid>
       <title>Píšeme AskMe v DotVVM - záznam třetího pokračování</title>
       <description>K dispozici je záznam třetího a předposledního pokračování našeho přepisu aplikace ASKme do DotVVM. Už nám to skoro celé chodí, zbývá jenom napsat pár komponent. To stihneme příště, tedy alespoň v to upřímně doufám.</description>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2019-03-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/03/obs-control</guid>
-      <title>Moje vybavení pro live stream: OBS control rig</title>
-      <description>Příští týden mne čekají hned tři live streamy a proto jsem se rozhodl poněkud upgradovat svou streamovací sestavu, dosud používanou převážně na dálková školení. Vyrobil jsem také hardwarovou konzoli (rig) na ovládání OBS Studia.</description>
-      <link>https://www.altair.blog/2019/03/obs-control</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2019-03-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
