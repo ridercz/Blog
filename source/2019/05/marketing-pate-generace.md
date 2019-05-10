@@ -1,0 +1,11 @@
+<!-- dcterms:title = Marketing páté generace -->
+<!-- dcterms:abstract = Podle Andreje Babiše bude nástup mobilních sítí páté generace revolucí srovnatelnou s nástupem mobilních telefonů. Podobných výroků se přitom dopouštějí i jedinci poněkud sofistikovanější než náš pan premiér. Co vlastně sítě páté generace jsou a co od nich můžeme čekat? Než to rozebereme podrobněji, prozradím závěr: zázraky to nebudou. -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2019-05-10 -->
+<!-- x4w:pictureUrl = /perex-pictures/20190510-marketing-pate-generace.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = HN - Otakar Schön -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66568810-psms7-91426c180e9391f -->

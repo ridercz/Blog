@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66568810-psms7-91426c180e9391f</guid>
+      <title>Marketing páté generace</title>
+      <description>Podle Andreje Babiše bude nástup mobilních sítí páté generace revolucí srovnatelnou s nástupem mobilních telefonů. Podobných výroků se přitom dopouštějí i jedinci poněkud sofistikovanější než náš pan premiér. Co vlastně sítě páté generace jsou a co od nich můžeme čekat? Než to rozebereme podrobněji, prozradím závěr: zázraky to nebudou.</description>
+      <link>https://tech.ihned.cz/c7-66568810-psms7-91426c180e9391f</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2019-05-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.ceskatelevize.cz/porady/11412378947-90-ct24/219411058130503/</guid>
       <title>90' ČT24: Sítě 5G - technologie budoucnosti</title>
       <description>Včera jsem se jako host zúčastnil pořadu 90' ČT24, jehož tématem byly sítě 5G a jejich bezpečnost. Nesdílím přesvědčení neinformovaných politiků, že 5G sítě jsou panacea, která vyřeší všechny problémy lidstva. Záznam pořadu najdete na webu ČT.</description>
@@ -136,16 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2019-03-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/03/pameti-v-arduinu-zaznam</guid>
-      <title>Aby data v Arduinu přežila restart - záznam a materiály</title>
-      <description>Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Záznam živého vysílání a podklady.</description>
-      <link>https://www.altair.blog/2019/03/pameti-v-arduinu-zaznam</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Bastlení</category>
-      <pubDate>2019-03-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
