@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/05/magneticke-kabely</guid>
+      <title>Univerzální magnetické napájecí USB kabely s držákem</title>
+      <description>Aby byla elektronika užitečná, nemusí v sobě mít mikroprocesor. Jedna z drobností, ze nichž jsem poslední dobou nadšený, jsou magnetické univerzální napájecí USB kabely, které lze za pár korun koupit na AliExpressu. A 3D tištěný držáček to posouvá ještě na vyšší úroveň.</description>
+      <link>https://www.altair.blog/2019/05/magneticke-kabely</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-05-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/05/pozvanka-na-teched</guid>
       <title>Pozvánka na moje přednášky na TechEdu 2019</title>
       <description>Jako každý rok, i letos budu mít na pražském TechEdu řadu přednášek. Počínaje tradiční vývojářskou keynote s přehledem věcí současných i budoucích a konče třeba tím, co by podle mne Windowsáci měli vědět o Linuxu.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-02-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</guid>
-      <title>Záznam online streamu Píšeme AskMe v DotVVM (1)</title>
-      <description>K dispozici je záznam ze včerejšího streamu, v němž jsme začali s Tomášem Hercegem přepisovat AskMe do DotVVM. Byla to moc velká zábava a za dva týdny budeme pokračovat.</description>
-      <link>https://www.altair.blog/2019/02/askme-dotvvm-1-zaznam</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-02-21T17:00:00</pubDate>
     </item>
   </channel>
 </rss>

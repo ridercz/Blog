@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/05/magneticke-kabely</guid>
+      <title>Univerzální magnetické napájecí USB kabely s držákem</title>
+      <description>Aby byla elektronika užitečná, nemusí v sobě mít mikroprocesor. Jedna z drobností, ze nichž jsem poslední dobou nadšený, jsou magnetické univerzální napájecí USB kabely, které lze za pár korun koupit na AliExpressu. A 3D tištěný držáček to posouvá ještě na vyšší úroveň.</description>
+      <link>https://www.altair.blog/2019/05/magneticke-kabely</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-05-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66568810-psms7-91426c180e9391f</guid>
       <title>Marketing páté generace</title>
       <description>Podle Andreje Babiše bude nástup mobilních sítí páté generace revolucí srovnatelnou s nástupem mobilních telefonů. Podobných výroků se přitom dopouštějí i jedinci poněkud sofistikovanější než náš pan premiér. Co vlastně sítě páté generace jsou a co od nich můžeme čekat? Než to rozebereme podrobněji, prozradím závěr: zázraky to nebudou.</description>
@@ -137,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2019-03-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</guid>
-      <title>Dopravní experimenty podruhé: Soud jsem vyhrál, informace stále nemám</title>
-      <description>O dopravní experimenty vedení Prahy 7 se zajímám dlouhodobě. Nyní jsem po více než dvou letech vyhrál soudní spor a mám pravomocný rozsudek. Informace však stále chybí, protože magistrát rozsudek ignoruje.</description>
-      <link>https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2019-03-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
