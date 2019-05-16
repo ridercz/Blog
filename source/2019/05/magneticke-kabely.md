@@ -24,7 +24,7 @@ Zásadní výhody jsou z mého pohledu následující:
 * Zvládne to slušné nabíjecí proudy. 2,5 A bez problémů, při 3 A se to už hřálo. Kabel jsem neřezal, ale působí kvalitním dojmem, všechny které mám jsou přiměřeně pružné a opletené.
 * Výrobce myslel hlavou, takže ten vnitřní pól je poněkud zapuštěný. Pokud se magnet přicucne na kovovou věc, konektor se nevyzkratuje.
 * Magnety jsou dost silné na to, aby stačilo nabíjeným zařízením zamávat poblíž magnetického konce konektoru a on se sám přicucne, užitečné zejména v autě. Nemusíte řešit orientaci kabelu, lze ho zapojit jakkoliv.
-* Vhodné zejména pro děti, které ještě nejsou tak šikovné, aby si poradili se správným směrem MicroUSB konektoru.
+* Vhodné zejména pro děti, které ještě nejsou tak šikovné, aby si poradily se správným směrem MicroUSB konektoru.
 * Koncovky mohou být podsvícené (lze vybrat barvu podsvícení i variantu bez něj). Přišlo mi to praktické, zejména v noci. Dobře se hledá ten konec a když zapojíte zařízení, tak to sice nezhasne, ale svítí to jenom decentně kroužkem kolem, zatímco když není nic připojeného, svítí to dost výrazně, abyste konec snadno našli.
 
 Nevýhody:
