@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/05/materialy-z-techedu</guid>
+      <title>Příklady a prezentace z mých přednášek na TechEdu 2019</title>
+      <description>Jako každý rok, i letos jsem měl na pražském TechEdu řadu přednášek. Počínaje tradiční vývojářskou keynote s přehledem věcí současných i budoucích a konče třeba tím, co by podle mne Windowsáci měli vědět o Linuxu. Nyní jsou ke stažení příklady a prezentace z nich.</description>
+      <link>https://www.altair.blog/2019/05/materialy-z-techedu</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-05-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/05/nove-tag-helpery</guid>
       <title>Nové tag helpery v knihovně Altairis Tag Helpers</title>
       <description>Do knihovny Altairis.TagHelpers jsem přidal několik nových tag helperů pro ASP.NET MVC Core a Razor Pages. Nová verze 1.4 obsahuje potvrzení akce, zobrazení verze aplikace a zejména žádaný ekvivalent komponent CheckBoxList a RadioButtonList.</description>
@@ -136,16 +145,6 @@
       <category>Bezpečnost</category>
       <category>Bastlení</category>
       <pubDate>2019-02-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/02/jak-se-zbavit-com-portu</guid>
-      <title>Jak se zbavit neaktivních COM portů?</title>
-      <description>Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů) s čísly narůstajícími do pozoruhodné velikosti. Dám vám návod, jak od nich váš systém vyčistit.</description>
-      <link>https://www.altair.blog/2019/02/jak-se-zbavit-com-portu</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>Tipy, triky</category>
-      <pubDate>2019-02-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
