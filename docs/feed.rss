@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/06/corestart-a-fialka</guid>
+      <title>Fialka.net a CoreStart - materiály z konference</title>
+      <description>Minulý týden se v Praze konala konference CoreStart 3.0, na které jsem přednášel o ASP.NET Identity a kryptografii v .NET Core. Nyní dávám k dispozici prezentace a ukázkovou aplikaci Fialka.net.</description>
+      <link>https://www.altair.blog/2019/06/corestart-a-fialka</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-06-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/05/huawei-bez-androidu</guid>
       <title>Co si počne Huawei "bez Androidu"?</title>
       <description>Podle zprávy agentury Reuters společnost Google přerušila spolupráci s Huawei. Což pro výrobce telefonů založených na platformě Android znamená docela zásadní problém. Je to součást systematického tažení americké vlády proti čínské firmě. Jaké dopady to bude mít na uživatele telefonů Huawei po celém světě, včetně České republiky?</description>
@@ -137,16 +146,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-04-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=9QszkJh1CPc</guid>
-      <title>KeePass: Jak nainstalovat a používat správce hesel</title>
-      <description>Pokud si heslo dokážete zapamatovat, není dostatečně bezpečné. Zní to trochu jedovatě, ale v základu to je pravda. Dostatek kvalitních hesel si běžný uživatel nemá šanci zapamatovat, chce-li dodržet základní zásadu, že každá služba by měla mít své vlastní heslo. Od toho tu jsou správci hesel (password manager). Já používám KeePass, který je zadarmo a pro všechny možné platformy. V tomto videu vás naučím, jak ho nainstalovat, počeštit a používat.</description>
-      <link>https://www.youtube.com/watch?v=9QszkJh1CPc</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>Software</category>
-      <pubDate>2019-03-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
