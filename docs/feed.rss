@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.dotnetpodcast.cz/episodes/ep49/</guid>
+      <title>Bezpečnost webových aplikací v .NET.CZ Podcastu</title>
+      <description>Byl jsem jako host pozván do podcastu .NET.CZ. S Martinem Šimečkem a Vojtou Mádrem jsme se bavili o kybernetické bezpečnosti, resp. zejména bezpečnosti webových aplikací. Bylo to poprvé, co jsem byl v nějakém podcastu a nemám nervy na to je poslouchat, takže vůbec nevím, jak to nakonec dopadlo :)</description>
+      <link>https://www.dotnetpodcast.cz/episodes/ep49/</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-06-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/06/corestart-a-fialka</guid>
       <title>Fialka.net a CoreStart - materiály z konference</title>
       <description>Minulý týden se v Praze konala konference CoreStart 3.0, na které jsem přednášel o ASP.NET Identity a kryptografii v .NET Core. Nyní dávám k dispozici prezentace a ukázkovou aplikaci Fialka.net.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-04-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://josefprusa.cz/jak-na-casosbery-3d-tisku-s-pomoci-mobilu/</guid>
-      <title>Jak na časosběry 3D tisků s pomocí mobilu</title>
-      <description>Mnoho lidí chce pořizovat časosběrné záběry 3D tisku, nicméně ne každý má dnes foťák se vzdálenou spouští, příkladmo zrcadlovku. Mobil s foťákem má ale skoro každý. Proto jsem navrhl řešení, pomocí kterého si pomocí příkazů v G-Code fotoaparát v mobilu může ovládat sama tiskárna přes Bluetooth LE.</description>
-      <link>https://josefprusa.cz/jak-na-casosbery-3d-tisku-s-pomoci-mobilu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-04-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
