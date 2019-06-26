@@ -32,7 +32,7 @@ Nevýhody:
 * Průměr 7 mm může být pro některá obzvláště placatá zařízení příliš velký. Existuje i oválná varianta, ale ta nefunguje zdaleka tak dobře a mám s ní špatné zkušenosti (nedrží, nedoléhá).
 * K mání jsou pouze kabely o délce 1 m a 2 m. Občas by se hodil kratší.
 * Řeší pouze nabíjení. Pokud potřebujete datové přenosy, musíte použít jiný kabel.
-* Magnetické spojení je dost pevné. Pokud máte konektory "vyklechtané" častým a necitlivým používáním
+* Magnetické spojení je dost pevné. Pokud máte konektory "vyklechtané" častým a necitlivým používáním, musíte magnetický spoj "rozlomit", nikoliv "vytáhnout".
 
 ## Kde koupit
 
