@@ -207,7 +207,7 @@ End Class
     End Class
 End Namespace
 </code></pre>
-<p>Tato metoda obdrží jako vstupní parametr <code>UsernameToken</code> a vrací řetězec<code>.</code>Pokud je autentizace úspěšná, vrací údaj předaný jako heslo (<code>Token.Password</code>); není-li, vrací <code>Nothing</code>, případně může vyhodit výjimku.</p>
+<p>Tato metoda obdrží jako vstupní parametr <code>UsernameToken</code> a vrací řetězec<code>. </code>Pokud je autentizace úspěšná, vrací údaj předaný jako heslo (<code>Token.Password</code>); není-li, vrací <code>Nothing</code>, případně může vyhodit výjimku.</p>
 <p>Jest nutno si uvědomit, že dle implementace nemusí &quot;password&quot; být nutně heslo jako takové, může se jednat například o jeho hash a podobně.</p>
 <p>Protože používáme kromě autentizace i autorizaci pomocí rolí, následují tři řádky, kde načteme role uživateli přiřazené.</p>
 <p>Nyní je třeba způsobit, aby se námi pracně vytvořený manager vůbec spustil - respektive použil namísto standardního. Otevřete si proto opět konfigurační nástroj a na záložce <strong>Security</strong> v sekci <strong>Security Token Managers</strong> klepněte na tlačítko <strong>Add</strong>.</p>

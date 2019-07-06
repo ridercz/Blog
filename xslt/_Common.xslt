@@ -7,9 +7,11 @@
                 xmlns:np9="http://schemas.altairis.cz/Nemesis/Publishing/9/"
                 xmlns:x4w="http://schemas.altairis.cz/XML4web/PageMetadata/"
                 xmlns:x4h="http://schemas.altairis.cz/XML4web/XsltHelper/"
+                xmlns:x4o="http://schemas.altairis.cz/XML4web/OutputProcessor/"
                 xmlns:x4c="http://schemas.altairis.cz/XML4web/Configuration/"
+                xmlns:x4f="http://schemas.altairis.cz/XML4web/FileSystemInfo/"
                 xmlns:void="http://tempuri.org/#void"
-                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4c void">
+                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4o x4c x4f void">
 
   <!-- Setup output -->
   <xsl:output method="xml" indent="yes" encoding="utf-8" omit-xml-declaration="yes" />
@@ -357,7 +359,7 @@
               <xsl:value-of select="."/>
             </a>
             <span>
-              <xsl:value-of select="concat('(', count(//file[x4w:serial = $Value and dcterms:dateAccepted]), ')')"/>
+              <xsl:value-of select="concat('(', count(//page[x4w:serial = $Value and dcterms:dateAccepted]), ')')"/>
             </span>
           </li>
         </xsl:for-each>
@@ -393,7 +395,7 @@
               <xsl:value-of select="."/>
             </a>
             <span>
-              <xsl:value-of select="concat('(', count(//file[x4w:category = $Value and dcterms:dateAccepted]), ')')"/>
+              <xsl:value-of select="concat('(', count(//page[x4w:category = $Value and dcterms:dateAccepted]), ')')"/>
             </span>
           </li>
         </xsl:for-each>

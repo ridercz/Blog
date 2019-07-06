@@ -7,10 +7,11 @@
                 xmlns:np9="http://schemas.altairis.cz/Nemesis/Publishing/9/"
                 xmlns:x4w="http://schemas.altairis.cz/XML4web/PageMetadata/"
                 xmlns:x4h="http://schemas.altairis.cz/XML4web/XsltHelper/"
-                xmlns:x4c="http://schemas.altairis.cz/XML4web/Configuration/"
                 xmlns:x4o="http://schemas.altairis.cz/XML4web/OutputProcessor/"
+                xmlns:x4c="http://schemas.altairis.cz/XML4web/Configuration/"
+                xmlns:x4f="http://schemas.altairis.cz/XML4web/FileSystemInfo/"
                 xmlns:void="http://tempuri.org/#void"
-                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4c void">
+                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4o x4c x4f void">
 
   <xsl:include href="_Common.xslt" />
 
@@ -55,7 +56,7 @@
     <xsl:param name="Category" />
     <xsl:param name="PageNumber" select="1" />
 
-    <xsl:variable name="ArticleCount" select="count(//file[x4w:category = $Category and dcterms:dateAccepted])" />
+    <xsl:variable name="ArticleCount" select="count(//page[x4w:category = $Category and dcterms:dateAccepted])" />
     <xsl:variable name="PageCount" select="ceiling($ArticleCount div $x4c:PageSize)" />
 
     <x4o:document>
@@ -87,7 +88,7 @@
               <xsl:value-of select="concat('Rubrika ', $Category)"/>
             </h1>
             <section class="artlist">
-              <xsl:for-each select="//file[x4w:category = $Category and dcterms:dateAccepted]">
+              <xsl:for-each select="//page[x4w:category = $Category and dcterms:dateAccepted]">
                 <xsl:sort select="dcterms:dateAccepted" order="descending" />
                 <xsl:if test="position() &gt;= $FromPosition and position() &lt;= $ToPosition">
                   <xsl:call-template name="ArticleLink" >

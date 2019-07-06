@@ -7,9 +7,11 @@
                 xmlns:np9="http://schemas.altairis.cz/Nemesis/Publishing/9/"
                 xmlns:x4w="http://schemas.altairis.cz/XML4web/PageMetadata/"
                 xmlns:x4h="http://schemas.altairis.cz/XML4web/XsltHelper/"
+                xmlns:x4o="http://schemas.altairis.cz/XML4web/OutputProcessor/"
                 xmlns:x4c="http://schemas.altairis.cz/XML4web/Configuration/"
+                xmlns:x4f="http://schemas.altairis.cz/XML4web/FileSystemInfo/"
                 xmlns:void="http://tempuri.org/#void"
-                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4c void">
+                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4o x4c x4f void">
 
   <xsl:include href="_Common.xslt" />
 

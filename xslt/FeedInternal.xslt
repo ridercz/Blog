@@ -7,9 +7,11 @@
                 xmlns:np9="http://schemas.altairis.cz/Nemesis/Publishing/9/"
                 xmlns:x4w="http://schemas.altairis.cz/XML4web/PageMetadata/"
                 xmlns:x4h="http://schemas.altairis.cz/XML4web/XsltHelper/"
+                xmlns:x4o="http://schemas.altairis.cz/XML4web/OutputProcessor/"
                 xmlns:x4c="http://schemas.altairis.cz/XML4web/Configuration/"
+                xmlns:x4f="http://schemas.altairis.cz/XML4web/FileSystemInfo/"
                 xmlns:void="http://tempuri.org/#void"
-                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4c void">
+                exclude-result-prefixes="msxsl dcterms dc np9 x4w x4h x4o x4c x4f void">
 
   <xsl:output method="xml" encoding="utf-8" indent="yes" standalone="yes" omit-xml-declaration="no" version="1.0"/>
 
@@ -20,7 +22,7 @@
         <link>https://www.altair.blog/</link>
         <description>Weblog Michala A. Valáška</description>
         <language>cs-CZ</language>
-        <xsl:for-each select="//file[dcterms:dateAccepted and not(x4w:alternateUrl)]">
+        <xsl:for-each select="//page[dcterms:dateAccepted and not(x4w:alternateUrl)]">
           <xsl:sort select="dcterms:dateAccepted" order="descending" />
           <xsl:if test="position() &lt;= 15">
             <item>
