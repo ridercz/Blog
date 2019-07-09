@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/07/zakazy-v-praze</guid>
+      <title>My se k té zářivé budoucnosti prostě prozákazujem, soudruzi!</title>
+      <description>Z pražského magistrátu se line souvislý a nepřerušený tok zákazů a omezení. "Líp" začalo být už s vládou ANO, ČSSD, Zelených, KDU-ČSL a STAN, ale opravdová povodeň to začala být až s příchodem Pirátů, Prahy Sobě, TOP 09, STAN a KDU-ČSL.</description>
+      <link>https://www.altair.blog/2019/07/zakazy-v-praze</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2019-07-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/06/corestart-a-fialka</guid>
       <title>Fialka.net a CoreStart - materiály z konference</title>
       <description>Minulý týden se v Praze konala konference CoreStart 3.0, na které jsem přednášel o ASP.NET Identity a kryptografii v .NET Core. Nyní dávám k dispozici prezentace a ukázkovou aplikaci Fialka.net.</description>
@@ -133,15 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2019-03-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/03/obs-control</guid>
-      <title>Moje vybavení pro live stream: OBS control rig</title>
-      <description>Příští týden mne čekají hned tři live streamy a proto jsem se rozhodl poněkud upgradovat svou streamovací sestavu, dosud používanou převážně na dálková školení. Vyrobil jsem také hardwarovou konzoli (rig) na ovládání OBS Studia.</description>
-      <link>https://www.altair.blog/2019/03/obs-control</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2019-03-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

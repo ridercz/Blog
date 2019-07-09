@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/07/zakazy-v-praze</guid>
+      <title>My se k té zářivé budoucnosti prostě prozákazujem, soudruzi!</title>
+      <description>Z pražského magistrátu se line souvislý a nepřerušený tok zákazů a omezení. "Líp" začalo být už s vládou ANO, ČSSD, Zelených, KDU-ČSL a STAN, ale opravdová povodeň to začala být až s příchodem Pirátů, Prahy Sobě, TOP 09, STAN a KDU-ČSL.</description>
+      <link>https://www.altair.blog/2019/07/zakazy-v-praze</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2019-07-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.dotnetpodcast.cz/episodes/ep49/</guid>
       <title>Bezpečnost webových aplikací v .NET.CZ Podcastu</title>
       <description>Byl jsem jako host pozván do podcastu .NET.CZ. S Martinem Šimečkem a Vojtou Mádrem jsme se bavili o kybernetické bezpečnosti, resp. zejména bezpečnosti webových aplikací. Bylo to poprvé, co jsem byl v nějakém podcastu a nemám nervy na to je poslouchat, takže vůbec nevím, jak to nakonec dopadlo :)</description>
@@ -136,15 +145,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-04-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66552460-ofaba-8fb891a4cb49ff9</guid>
-      <title>V papírování kolem kyberbezpečnosti jsme nejlepší na světě. V digitalizaci těsně před Uruguayí.</title>
-      <description>Ve svém pravidelném provolání k národu, obecně známém jako "Čaulidi", se premiér Babiš chlubí tím, že jsme "PRVNÍ NA SVĚTĚ!" v žebříčku kyberbezpečnosti. Pomiňme, že si premiér všiml žebříčku zveřejněného v únoru až ve svém dubnovém příspěvku. Problém je v tom, že hodnota českého prvenství je velice nízká.</description>
-      <link>https://tech.ihned.cz/c7-66552460-ofaba-8fb891a4cb49ff9</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-04-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
