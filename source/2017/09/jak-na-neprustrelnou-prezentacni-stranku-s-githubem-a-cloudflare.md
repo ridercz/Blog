@@ -30,7 +30,7 @@ Většina programátorů zná GitHub jako platformu pro verzování zdrojového 
 
 Tuto stránku doporučuji vytvořit vždy, protože i když tak neučiníte (a budete využívat ostatní možnosti), stejně tuto adresu budete potřebovat a budete ji – minimálně při testování funkčnosti – využívat. Jinak je vhodná v případě, že potřebujete nějaký jednoduchý web, ale nemáte nebo nechcete použít vlastní doménu.
 
-Stránky na výchozí adrese `username.github.io` si vytvoříte velice jednoduše: stačí vytvořit repozitář téhož jména. Moje uživatelské jméno na GitHubu je `ridercz`, takže jsem si založil repozitář jménem `[ridercz.github.io](https://github.com/ridercz/ridercz.github.io)`. Nic dalšího není třeba nastavovat. Obsah tohoto repozitáře bude dostupný na adrese `[https://ridercz.github.io/](https://ridercz.github.io/)` (včetně podpory HTTPS), root na root. Vytvoření nemusí být okamžité, pokud to nefunguje, minutku počkejte.
+Stránky na výchozí adrese `username.github.io` si vytvoříte velice jednoduše: stačí vytvořit repozitář téhož jména. Moje uživatelské jméno na GitHubu je `ridercz`, takže jsem si založil repozitář jménem [`ridercz.github.io`](https://github.com/ridercz/ridercz.github.io). Nic dalšího není třeba nastavovat. Obsah tohoto repozitáře bude dostupný na adrese [`https://ridercz.github.io/`](https://ridercz.github.io/) (včetně podpory HTTPS), root na root. Vytvoření nemusí být okamžité, pokud to nefunguje, minutku počkejte.
 
 S repozitářem pracujete standardním způsobem, takže prostě nahrajte soubor `index.html` a hotovo. Přesně to vidíte v citovaném repozitáři. V mém případě obsahuje jediný soubor, kterým je `index.html` a který obsahuje META REFRESH přesměrování na mou skutečnou homepage, na adresu [`https://www.rider.cz/`](https://www.rider.cz/). 
 
@@ -48,7 +48,7 @@ Vše uvedené (včetně adresy) bude fungovat, i když nemáte svou osobní str�
 
 ### Publikování celého repozitáře na adrese `username.github.io/repository-name`
 
-Tento postup se hodí, pokud chete mít pro web samostatný repozitář, kde nebude nic jiného. Použil jsem ho pro svou osobní stránku na [www.rider.cz](http://www.rider.cz), protože jsem si nechtě "zabrat" hlavní stránku s výchozí adresou na doméně `github.io`, kdybych ji někdy potřeboval. Takže jsem vytvořil nový repozitář jménem [HomePage](https://github.com/ridercz/HomePage/)`` (může se jmenovat jakkoliv). 
+Tento postup se hodí, pokud chete mít pro web samostatný repozitář, kde nebude nic jiného. Použil jsem ho pro svou osobní stránku na [www.rider.cz](http://www.rider.cz), protože jsem si nechtě "zabrat" hlavní stránku s výchozí adresou na doméně `github.io`, kdybych ji někdy potřeboval. Takže jsem vytvořil nový repozitář jménem [`HomePage`](https://github.com/ridercz/HomePage/) (může se jmenovat jakkoliv). 
 
 Dále je postup velmi podobný tomu, co bylo popsáno výše. Tj. nahrajte do repozitáře obsah svého webu – root na root. V *Settings* ale jako *Source* zvolte *master branch*. Stránka bude dostupná na adrese `username.github.io/repository-name`.
 
