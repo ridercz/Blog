@@ -1,0 +1,9 @@
+<!-- dcterms:title = Konec světa se blíží: Windows 7 umírají, jako zombie ale budou ještě dlouho mezi námi -->
+<!-- dcterms:abstract = Microsoft začal upozorňovat uživatele Windows 7, že tomuto systému začátkem příštího roku vyprší podpora a po 14. lednu 2020 pro ně nebudou dostupné žádné aktualizace, a to ani bezpečnostní. Nejedná se o žádné překvapení, politika Microsoftu ohledně podpory vydaného softwaru je dopředu definovaná a všeobecně známá. Přesto to vyvolává emoce. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190724-konec-sveta.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2019-07-24 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66612690-psms7-2c3d335986327ac -->
