@@ -1,5 +1,5 @@
 <!-- dcterms:title = Každej jsme nějakej -->
-<!-- dcterms:abstract = Občas hraju sám se sebou takovou hru. Nechám někoho, aby mi náhodně zadal pět-deset slov a já na jejich základě napíšu povídku - obvykle BDSM. Ovšem, kdo má dobré kamarády, nepotřebuje nepřátele. Abych to zkrátíl... už jste někdy psali erotickou povídku, ve které se musí vyskytovat jméno Miroslav Kalousek? -->
+<!-- dcterms:abstract = Občas hraju sám se sebou takovou hru. Nechám někoho, aby mi náhodně zadal pět-deset slov a já na jejich základě napíšu povídku - obvykle BDSM. Ovšem, kdo má dobré kamarády, nepotřebuje nepřátele. Abych to zkrátil... už jste někdy psali erotickou povídku, ve které se musí vyskytovat jméno Miroslav Kalousek? -->
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:dateAccepted = 2019-07-26T20:30:00 -->
