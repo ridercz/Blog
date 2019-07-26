@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Richard C. G. Øiestad, videolan.org -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-07-26 -->
+<!-- dcterms:dateAccepted = 2019-07-26T19:00:00 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok -->
