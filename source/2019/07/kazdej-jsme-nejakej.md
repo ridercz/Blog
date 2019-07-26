@@ -1,0 +1,9 @@
+<!-- dcterms:title = Každej jsme nějakej -->
+<!-- dcterms:abstract = Občas hraju sám se sebou takovou hru. Nechám někoho, aby mi náhodně zadal pět-deset slov a já na jejich základě napíšu povídku - obvykle BDSM. Ovšem, kdo má dobré kamarády, nepotřebuje nepřátele. Abych to zkrátíl... už jste někdy psali erotickou povídku, ve které se musí vyskytovat jméno Miroslav Kalousek? -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2019-07-26T20:30:00 -->
+<!-- x4w:pictureUrl = /perex-pictures/20190726-kazdej-jsme-nejakej.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2019/07/kazdej-jsme-nejakej -->
