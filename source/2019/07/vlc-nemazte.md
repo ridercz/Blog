@@ -1,0 +1,10 @@
+<!-- dcterms:title = Zbytečná panika: Přehrávač VLC mazat nemusíte, chyba je opravená více než rok -->
+<!-- dcterms:abstract = Světová média v čele s Gizmodem šíří zprávu o údajné kritické bezpečnostní chybě v populárním přehrávači VLC. Některá zacházejí tak daleko, že doporučují VLC okamžitě odinstalovat. Skutečnost je ovšem jiná. Chyba je ve staré verzi knihovny, kterou VLC už více než rok nepoužívá. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190726-vlc-nemazte.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Richard C. G. Øiestad, videolan.org -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2019-07-26 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</guid>
+      <title>Zbytečná panika: Přehrávač VLC mazat nemusíte, chyba je opravená více než rok</title>
+      <description>Světová média v čele s Gizmodem šíří zprávu o údajné kritické bezpečnostní chybě v populárním přehrávači VLC. Některá zacházejí tak daleko, že doporučují VLC okamžitě odinstalovat. Skutečnost je ovšem jiná. Chyba je ve staré verzi knihovny, kterou VLC už více než rok nepoužívá.</description>
+      <link>https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-07-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66612690-psms7-2c3d335986327ac</guid>
       <title>Konec světa se blíží: Windows 7 umírají, jako zombie ale budou ještě dlouho mezi námi</title>
       <description>Microsoft začal upozorňovat uživatele Windows 7, že tomuto systému začátkem příštího roku vyprší podpora a po 14. lednu 2020 pro ně nebudou dostupné žádné aktualizace, a to ani bezpečnostní. Nejedná se o žádné překvapení, politika Microsoftu ohledně podpory vydaného softwaru je dopředu definovaná a všeobecně známá. Přesto to vyvolává emoce.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-01-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2019/01/tmeleni-kolektivu</guid>
-      <title>Tmelení kolektivu</title>
-      <description>Nesnáším takové to tmelení kolektivu v rámci firmy. Ať už se tomu říká „teambuilding“, „vánoční večírek“ nebo prostě jenom upřímně firemní chlastačka. Firma se letos plácla přes kapsu a pronajala na vánoční večírek na víkend celý hotel v Krkonoších. Takže místo jednoho ztraceného večera je to celý ztracený víkend. Jenomže v mé pozici je prostě nemožné, abych se té opičárny neúčastnil. Kat aby to spral.</description>
-      <link>https://www.bdsm.cz/2019/01/tmeleni-kolektivu</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2019-01-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

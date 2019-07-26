@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</guid>
+      <title>Zbytečná panika: Přehrávač VLC mazat nemusíte, chyba je opravená více než rok</title>
+      <description>Světová média v čele s Gizmodem šíří zprávu o údajné kritické bezpečnostní chybě v populárním přehrávači VLC. Některá zacházejí tak daleko, že doporučují VLC okamžitě odinstalovat. Skutečnost je ovšem jiná. Chyba je ve staré verzi knihovny, kterou VLC už více než rok nepoužívá.</description>
+      <link>https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-07-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66612690-psms7-2c3d335986327ac</guid>
       <title>Konec světa se blíží: Windows 7 umírají, jako zombie ale budou ještě dlouho mezi námi</title>
       <description>Microsoft začal upozorňovat uživatele Windows 7, že tomuto systému začátkem příštího roku vyprší podpora a po 14. lednu 2020 pro ně nebudou dostupné žádné aktualizace, a to ani bezpečnostní. Nejedná se o žádné překvapení, politika Microsoftu ohledně podpory vydaného softwaru je dopředu definovaná a všeobecně známá. Přesto to vyvolává emoce.</description>
@@ -134,16 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-04-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:3574737</guid>
-      <title>Svinovací držák na pásek</title>
-      <description>Mým nepostradatelným průvodcem je zavírací nůž značky Husky. Jenom ho několikrát týdně někde zapomínám a ztrácím. Proto jsem si ho přidělal na svinovací držák badge. Jenomže jak přidělat ten držák? Jeho očko nevypadá moc spolehlivě, na pásku nedrží, z kapsy leze... Tak jsem si navrhnul vlastní držák, který se navlékne na pásek.</description>
-      <link>https://www.thingiverse.com/thing:3574737</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-04-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
