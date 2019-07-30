@@ -6,6 +6,7 @@ $Orange: #e60;
 
 $NarrowScreen: "max-width: 699px";
 $NormalScreen: "min-width: 700px";
+$WideScreen: "min-width: 1000px";
 
 @mixin monospace() {
     font-size: 100%;

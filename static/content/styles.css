@@ -248,7 +248,7 @@ ins {
 }
 
 section.artlist article {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 @media (min-width: 700px) {
@@ -309,11 +309,26 @@ section.artlist article footer time {
   color: #444;
 }
 
+section.artlist article div.clear {
+  height: 1px;
+  clear: both;
+}
+
 section.artlist.hlfirst article:nth-of-type(1) {
   background-color: #e6e6e6;
   padding: 1em;
   border-radius: 1ex;
   font-size: 120%;
+}
+
+@media (min-width: 1000px) {
+  section.artlist.hlfirst article:nth-of-type(1) img {
+    width: 300px;
+    height: 300px;
+  }
+  section.artlist.hlfirst article:nth-of-type(1) header, section.artlist.hlfirst article:nth-of-type(1) div, section.artlist.hlfirst article:nth-of-type(1) footer {
+    margin-left: 300px;
+  }
 }
 
 @media (max-width: 699px) {

@@ -2,7 +2,7 @@
 
 section.artlist {
     article {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
 
         &.haspicture {
             @media ($NormalScreen) {
@@ -55,6 +55,11 @@ section.artlist {
                 color: $DarkGray;
             }
         }
+
+        div.clear {
+            height: 1px;
+            clear: both;
+        }
     }
 
     &.hlfirst article:nth-of-type(1) {
@@ -62,6 +67,16 @@ section.artlist {
         padding: 1em;
         border-radius: 1ex;
         font-size: 120%;
+
+        @media ($WideScreen) {
+            img {
+                width: 300px;
+                height: 300px;
+            }
+            header, div, footer {
+                margin-left: 300px;
+            }
+        }
 
         @media ($NarrowScreen) {
             padding: 1ex;

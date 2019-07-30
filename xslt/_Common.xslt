@@ -268,6 +268,7 @@
           </ul>
         </xsl:if>
       </footer>
+      <div class="clear"><!----></div>
     </article>
   </xsl:template>
 
