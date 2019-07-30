@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66616170-jedenact-chyb-v-operacnim-systemu-o-kterem-jste-neslyseli-ale-ktery-vas-muze-zabit</guid>
+      <title>Jedenáct kritických chyb v operačním systému, o němž jste neslyšeli, ale který vás může zabít</title>
+      <description>O operačním systému VxWorks jste nejspíš nikdy neslyšeli. Řídí ale průmyslová zařízení, Boeing 787 Dreamliner, auta nebo vozítko Opportunity na Marsu. A obsahuje spoustu kritických bezpečnostních chyb v síťovém stacku.</description>
+      <link>https://tech.ihned.cz/geekosfera/c1-66616170-jedenact-chyb-v-operacnim-systemu-o-kterem-jste-neslyseli-ale-ktery-vas-muze-zabit</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-07-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2019/07/kazdej-jsme-nejakej</guid>
       <title>Každej jsme nějakej</title>
       <description>Občas hraju sám se sebou takovou hru. Nechám někoho, aby mi náhodně zadal pět-deset slov a já na jejich základě napíšu povídku - obvykle BDSM. Ovšem, kdo má dobré kamarády, nepotřebuje nepřátele. Abych to zkrátil... už jste někdy psali erotickou povídku, ve které se musí vyskytovat jméno Miroslav Kalousek?</description>
@@ -133,16 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-05-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/05/meridlo-na-psy</guid>
-      <title>Jak vyrobit měřidlo na psy</title>
-      <description>Kamarádka mne požádala, abych jí vyrobil měřidlo na psy. To je jednoduchý nástroj, který se používá při bonitaci (hodnocení psa za účelem určení chovnosti) a měří se jím kohoutková výška psa. Výroba je poměrně jednoduchá a dala mi možnost použít některé mé oblíbené konstrukční postupy.</description>
-      <link>https://www.altair.blog/2019/05/meridlo-na-psy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-05-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
