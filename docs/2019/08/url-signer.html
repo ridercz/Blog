@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Podepisování URL snadno a rychle | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Pro jeden svůj projekt jsem potřeboval udělat řešení na podepisování URL, resp. parametrů v něm. Napsal jsem na to univerzální řešení, které se může hodit i vám." />
+    <link rel="canonical" href="https://www.altair.blog/2019/08/url-signer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Podepisování URL snadno a rychle" />
+    <meta name="twitter:description" content="Pro jeden svůj projekt jsem potřeboval udělat řešení na podepisování URL, resp. parametrů v něm. Napsal jsem na to univerzální řešení, které se může hodit i vám." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190803-url-signer.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Podepisování URL snadno a rychle" />
+    <meta property="og:description" content="Pro jeden svůj projekt jsem potřeboval udělat řešení na podepisování URL, resp. parametrů v něm. Napsal jsem na to univerzální řešení, které se může hodit i vám." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190803-url-signer.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/08/url-signer" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190803-url-signer.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Podepisování URL snadno a rychle</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-08-03" title="Datum vydání">3. srpna 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Píšu aplikaci, ve které je třeba zajistit bezpečnou komunikaci pomocí odkazů: jedna volá druhou a je třeba zajistit, aby parametry v odkazu nemohl být modifikovány. Je tedy třeba je nějakým způsobem podepsat. Napsal jsem řešení, které to umí zařídit. Je psáno v ASP.NET Core a navrženo tak, aby se dalo zapojit do jeho IoC/DI infrastruktury.</p>
+<h2 id="interface-iurlsigner">Interface <code>IUrlSigner</code></h2>
+<p>Nejvyšší úroveň představuje rozhraní <code>IUrlSigner</code>. Vypadá takto:</p>
+<pre><code class="language-cs">public interface IUrlSigner {
+
+    string Sign(string url);
+
+    Uri Sign(Uri url);
+
+    bool Verify(string url);
+
+    bool Verify(Uri url);
+
+}
+</code></pre>
+<p>Metoda <code>Sign</code> dostane na vstupu URL, které má být podepsáno, a vrátí jeho podepsanou verzi. Metoda <code>Verify</code> dostane podepsané URL a vrátí <code>true</code> nebo <code>false</code>, podle toho, jestli je podpis správný nebo ne. Každá z metod má dva overloady, které umožňují hodnoty předávat buďto jako <code>string</code> nebo jako <code>Uri</code> - někdy se hodí to, někdy ono.</p>
+<p>Interface definuji protože se to hodí pro použití v rámci IoC/DI scénářů a protože to umožňuje mít několik implementací, které bude možné záměnně použít.</p>
+<p>První implementace se jmenuje <code>NullUrlSigner</code> a je významná tím, že nic nedělá. URL nijak nemění a verifikace vždy vrátí <code>true</code>:</p>
+<pre><code class="language-cs">public class NullUrlSigner : IUrlSigner {
+
+    public string Sign(string url) =&gt; url;
+
+    public Uri Sign(Uri url) =&gt; url;
+
+    public bool Verify(string url) =&gt; true;
+
+    public bool Verify(Uri url) =&gt; true;
+
+}
+</code></pre>
+<p>K čemu je taková implementace dobrá? Třeba pro prvotní fáze vývoje a testování, kdy chceme testovat funkčnost implementace s různými parametry a zatím neřešit podepisování. Až bude vše hotovo, můžeme nulovou implementaci nahradit něčím sofistikovanějším a funkčním.</p>
+<h2 id="abstraktni-trida-urlsigner">Abstraktní třída <code>UrlSigner</code></h2>
+<p>Další stupeň je abstraktní třída <code>UrlSigner</code>, která implementuje <code>IUrlSigner</code> a dělá režii, v podstatě všechno kromě vlastního podepisování.</p>
+<ul>
+<li>Implementuje ty overloady metod <code>Sign</code> a <code>Verify</code>, které pracují s typem <code>Uri</code>. Ty jenom převedou tento typ na <code>string</code> a naopak a volají jiné overloady.</li>
+<li>Implementuje metodu <code>Sign</code> se stringovým parametrem. Předanou hodnotu podepíše a pak přidá query stringový parametr <code>sig</code>, jehož hodnotou je URL-safe Base64 kódovaný podpis. Pokud původní URL již query string obsahuje, přidá se na konec <code>&amp;sig=hodnota</code>, pokud neobsahuje, použije se místo ampersandu otazník.</li>
+<li>Implementuje metodu <code>Verify</code> se stringovým parametrem. Ta proparsuje zadanou URL (odstraní z ní parametr <code>sig</code>), dekóduje podpis z URL-safe Base64 a ověří jeho platnost.</li>
+<li>Definuje abstraktní metody <code>GetSignature</code> a <code>VerifySignature</code>, které budou v poděděných třídách řešit vlastní vytváření a ověření podpisu.</li>
+</ul>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Base64">Base64</a> je způsob kódování binárních dat. Umožňuje převést obecná binární data (jako třeba elektronický podpis) do textové podoby, vlastně do šedesát čtyřkové soustavy. Používá jako číslice znaky A-Z, a-z, 0-9 a znaky <code>+</code> a <code>/</code> (kromě toho se ještě používá znak <code>=</code> jako případný padding na konci). Problémem může být, že znaky <code>+</code> a <code>/</code> mají speciální význam v rámci URL. Proto <a href="https://tools.ietf.org/html/rfc4648#section-5">RFC4648</a> definuje &quot;URL-safe&quot; variantu, která místo nich používá znaky <code>-</code> a <code>_</code>.</p>
+</blockquote>
+<p>Zdrojový kód třídy <code>UrlSigner</code> vypadá takto:</p>
+<pre><code class="language-cs">public abstract class UrlSigner : IUrlSigner {
+
+    // Abstract methods to be implemented in derived classes
+
+    protected abstract byte[] GetSignature(byte[] data);
+
+    protected abstract bool VerifySignature(byte[] data, byte[] sig);
+
+    // Helper methods for working with URIs
+
+    public Uri Sign(Uri url) =&gt; new Uri(this.Sign(url.ToString()));
+
+    public bool Verify(Uri url) =&gt; this.Verify(url.ToString());
+
+    // Public methods
+
+    public virtual string Sign(string url) {
+        if (url == null) throw new ArgumentNullException(nameof(url));
+        if (string.IsNullOrWhiteSpace(url)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(url));
+
+        // Convert string to array of bytes
+        var data = Encoding.UTF8.GetBytes(url);
+
+        // Compute signature
+        var sigData = this.GetSignature(data);
+
+        // Convert it to URL-safe Base64
+        var sigString = Convert.ToBase64String(sigData).Replace('+', '-').Replace('/', '_');
+
+        // Append signature
+        url += (url.Contains('?') ? &quot;&amp;&quot; : &quot;?&quot;) + &quot;sig=&quot; + sigString;
+        return url;
+    }
+
+    public virtual bool Verify(string url) {
+        if (url == null) throw new ArgumentNullException(nameof(url));
+        if (string.IsNullOrWhiteSpace(url)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(url));
+
+        // Try to parse the signed URL
+        var lastSeparatorIndex = url.LastIndexOfAny(&quot;?&amp;&quot;.ToCharArray());
+        if (lastSeparatorIndex &lt; 1 || lastSeparatorIndex &gt; url.Length - 6 || !url.Substring(lastSeparatorIndex + 1, 4).Equals(&quot;sig=&quot;)) return false;
+        var urlString = url.Substring(0, lastSeparatorIndex);
+        var sigString = url.Substring(lastSeparatorIndex + 5).Replace('-', '+').Replace('_', '/');
+        var urlData = Encoding.UTF8.GetBytes(urlString);
+        var sigData = Convert.FromBase64String(sigString);
+
+        // Verify signature
+        return this.VerifySignature(urlData, sigData);
+    }
+
+}
+</code></pre>
+<h2 id="trida-hmacurlsigner">Třída <code>HmacUrlSigner</code></h2>
+<p>Rozhraní <code>IUrlSigner</code> definuje API. Abstraktní třída <code>UrlSigner</code> pak obsahuje funkcionalitu, která bude patrně společná prakticky všem implementacím - přidání podpisu do URL a mechanismus jeho ověření. Abstraktní třída však neřeší vlastní výpočet podpisu, jenom definuje metody které to mají dělat. Tyto metody musíme implementovat v poděděné třídě, aby byla implementace kompletní.</p>
+<ul>
+<li>Metoda <code>GetSignature</code> dostane na vstupu data která má podepsat, tedy podepisovanou URL. Vrací hotový podpis.</li>
+<li>Metoda <code>VerifySignature</code> dostane na vstupu podepsaná data a hodnotu podpisu. Vrací <code>true</code> nebo <code>false</code>, podle toho zda podpis sedí nebo nikoliv.</li>
+</ul>
+<p>Data se předávají jako <code>byte[]</code>, protože kryptografické algoritmy obecně pracují právě s polem bajtů, nikoliv třeba s řetězci.</p>
+<p>Existují principiálně dva způsoby, jak URL podepisovat:</p>
+<ul>
+<li>Symetrické řešení na bázi <a href="https://en.wikipedia.org/wiki/HMAC">HMAC (Hash-based Message Authentication Code)</a>.</li>
+<li>Asymetrické řešení využívající algoritmy jako RSA nebo DSA.</li>
+</ul>
+<p>Moje řešení využívá HMAC. Je jednodušší na implementaci, ale jeho nevýhodou je, že obě strany (podepisující i ověřující) používají tentýž klíč, který musí být držen v tajnosti a kdokoliv může podpis ověřit, může jej i padělat. To pro náš scénář nepředstavuje problém, takže se vydáme touto cestou.</p>
+<p>HMAC zjednodušeně řečeno funguje tak, že se k podepisovaným datům přidá tajný klíč a spočítá se hash tohoto součtu. Lze použít jakýkoliv hashovací algoritmus, což v dnešní době znamená, že chceme použít něco z rodiny SHA-2, např. SHA-256 nebo SHA-512. Starší algoritmy jako MD5 nebo SHA-1 mohou být za určitých okolností pro HMAC účely stále použitelné, ale u nového řešení k tomu není důvod.</p>
+<p>V .NETu existuje bázová třída <code>System.Security.Cryptography.KeyedHashAlgorithm</code>, od které jsou pak poděděné implementace využívající různé hashovací funkce, jako například <code>HMACSHA256</code>, <code>HMACSHA384</code> nebo <code>HMACSHA512</code>. Všechny můžeme používat, nabízejí pro většinu případů ekvivalentní úroveň bezpečnosti. Proto definujeme třídu <code>HmacUrlSigner</code> takto, jako generickou:</p>
+<pre><code class="language-cs">public class HmacUrlSigner&lt;TAlg&gt; : UrlSigner where TAlg : KeyedHashAlgorithm, new()
+</code></pre>
+<p>Typový parametr <code>TAlg</code> určuje použitý hashovací algoritmus. Constraint říká, že to musí být třída poděděná od <code>KeyedHashAlgorithm</code> a že musí mít bezparametrický konstruktor.</p>
+<p>Třída <code>HmacUrlSigner&lt;TAlg&gt;</code> vypadá takto:</p>
+<pre><code class="language-cs">public class HmacUrlSigner&lt;TAlg&gt; : UrlSigner where TAlg : KeyedHashAlgorithm, new() {
+    readonly TAlg hmac;
+
+    public HmacUrlSigner(byte[] key) {
+        this.hmac = new TAlg { Key = key };
+    }
+
+    protected override byte[] GetSignature(byte[] data) =&gt; this.hmac.ComputeHash(data);
+
+    protected override bool VerifySignature(byte[] data, byte[] sig) {
+        if (data == null) throw new ArgumentNullException(nameof(data));
+        if (sig == null) throw new ArgumentNullException(nameof(sig));
+
+        // Compute correct signature
+        var correctSig = this.GetSignature(data);
+        if (correctSig.Length != sig.Length) return false;
+
+        // Constant time compare
+        var result = 0;
+        for (var i = 0; i &lt; correctSig.Length; i++) {
+            result |= sig[i] ^ correctSig[i];
+        }
+        return result == 0;
+    }
+
+}
+</code></pre>
+<p>Metoda <code>GetSignature</code> je přímočará, pouze volá metodu <code>ComputeHash</code> příslušné implementace <code>KeyedHashAlgorithm</code>. Metoda <code>VerifySignature</code> spočítá správnou signaturu a výsledek porovná. Je zajímavá jenom poněkud komplikovanou metodou porovnání. Nejjednodušší a obecně nejrychlejší by bylo porovnání napsat takto:</p>
+<pre><code class="language-cs">for (var i = 0; i &lt; correctSig.Length; i++) {
+    if (sig[i] != correctSig[i]) return false;
+}
+return true;
+</code></pre>
+<p>Takto zapsaný kód se ale nehodí pro kryptografické účely jako je např. porovnávání podpisu. Otevřel by naše řešení timing útoku, protože útočník by podle doby, jak dlouho kód běží, mohl poznat, &quot;jak daleko se v podpisu trefil&quot;. Je žádoucí, aby proces porovnávání vždycky běžel stejně dlouho, bez ohledu na konkrétní hodnoty a jak moc se liší.</p>
+<p>Proto používáme specifickou konstrukci, kdy pomocí operátoru <code>^</code> spočítáme XOR obou hodnot a pak je pomocí operátoru <code>|=</code> logicky přičteme k hodnotě <code>result</code>, která je na začátku nula. Pokud je to nula i na konci je jasné, že se hodnoty shodují.</p>
+<h2 id="registrace-a-pouziti">Registrace a použití</h2>
+<p>Následujícím kódem v metodě <code>Configure</code> třídy <code>Startup</code> zaregistrujeme patřičnou implementaci <code>IUrlSigner</code> do IoC/DI kontejneru:</p>
+<pre><code class="language-cs">var keyString = this.configuration[&quot;SigningKey&quot;];
+if (string.IsNullOrEmpty(keyString)) {
+    services.AddSingleton&lt;IUrlSigner&gt;(x =&gt; new NullUrlSigner());
+} else {
+    services.AddSingleton&lt;IUrlSigner&gt;(x =&gt; new HmacUrlSigner&lt;HMACSHA512&gt;(Convert.FromBase64String(keyString)));
+}
+</code></pre>
+<p>Pokud je v konfiguraci zadána hodnota <code>SigningKey</code>, zaregistruje se <code>HmacUrlSigner&lt;HMACSHA512&gt;</code> a klíč se třídě předá jako argument konstrukturu. Pokud hodnota zadána není, podepisovat se nebude a použije se <code>NullUrlSigner</code>.</p>
+<p>Použití je pak triviální. Na potřebné místo nainjectujeme <code>IUrlSigner</code> a zavoláme metody <code>Sign</code> nebo <code>Verify</code>.</p>
+<h2 id="omezeni-a-neresene-problemy">Omezení a neřešené problémy</h2>
+<p>Výše popsaná metoda, kdy při absenci klíče nic nešifrujeme, není z hlediska bezpečnosti ideální, protože při výchozí (prázdné) konfiguraci aplikace funguje, leč nikoliv bezpečně, takže uživateli nedojde, že má někam zadat nějaký klíč. To ale není problém UrlSigneru, ale jeho použití a je na programátorovi aplikace, jak jej do své aplikace začlení, pro potřeby dema je výše uvedený postup dobrý dost.</p>
+<p>Druhým problémem může být, že uvedená implementace neřeší takzvaný replay attack. Tedy neřeší situaci, kdy bude tentýž (podepsaný) odkaz použit vícekrát. Což může a nemusí být problém, v závislosti na tom, jak konkrétně bude odkaz použit a k čemu bude sloužit. Někdy je možnost opakovaného použití naopak žádoucí.</p>
+<p>Pokud bychom chtěli replay attack řešit, je to možné udělat například tím, že se k podpisu přidá nějaké &quot;počítadlo&quot; a ověřující strana bude hlídat, zda nová zpráva má hodnotu počítadla větší než předchozí. To ale znamená, že si musí obě strany někde v trvalém úložišti držet poslední známou hodnotu počítadla.</p>
+<p>Další řešení může spočívat v tom, že součástí podpisu bude časové razítko a bude mít omezenou platnost. To znamená, že obě strany musejí mít synchronizovaný čas a replay attack je sice možný, ale jenom po omezenou dobu (dokud podpis nevydrží).</p>
+<p>Pokud vás zajímá, k čemu může být podepisování URL dobré, vyčkejte. Mám rozepsaný další článek, který představí praktický projekt, který ho využívá a z jehož projektu jsem převzdal ukázkový kód v tomto článku.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Podepisov%c3%a1n%c3%ad+URL+snadno+a+rychle&amp;body=https://www.altair.blog/2019/08/url-signer">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/08/url-signer.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/08/url-signer.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/08/url-signer">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/08/url-signer">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
