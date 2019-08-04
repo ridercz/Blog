@@ -293,7 +293,7 @@ if (string.IsNullOrEmpty(keyString)) {
 <p>Druhým problémem může být, že uvedená implementace neřeší takzvaný replay attack. Tedy neřeší situaci, kdy bude tentýž (podepsaný) odkaz použit vícekrát. Což může a nemusí být problém, v závislosti na tom, jak konkrétně bude odkaz použit a k čemu bude sloužit. Někdy je možnost opakovaného použití naopak žádoucí.</p>
 <p>Pokud bychom chtěli replay attack řešit, je to možné udělat například tím, že se k podpisu přidá nějaké &quot;počítadlo&quot; a ověřující strana bude hlídat, zda nová zpráva má hodnotu počítadla větší než předchozí. To ale znamená, že si musí obě strany někde v trvalém úložišti držet poslední známou hodnotu počítadla.</p>
 <p>Další řešení může spočívat v tom, že součástí podpisu bude časové razítko a bude mít omezenou platnost. To znamená, že obě strany musejí mít synchronizovaný čas a replay attack je sice možný, ale jenom po omezenou dobu (dokud podpis nevydrží).</p>
-<p>Pokud vás zajímá, k čemu může být podepisování URL dobré, vyčkejte. Mám rozepsaný další článek, který představí praktický projekt, který ho využívá a z jehož projektu jsem převzdal ukázkový kód v tomto článku.</p>
+<p>Pokud vás zajímá, k čemu může být podepisování URL dobré, vyčkejte. Mám rozepsaný další článek, který představí praktický projekt, který ho využívá a z jehož projektu jsem převzal ukázkový kód v tomto článku.</p>
 
       </section>
       <section class="issues">

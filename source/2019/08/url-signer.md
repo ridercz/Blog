@@ -215,4 +215,4 @@ Pokud bychom chtěli replay attack řešit, je to možné udělat například t�
 
 Další řešení může spočívat v tom, že součástí podpisu bude časové razítko a bude mít omezenou platnost. To znamená, že obě strany musejí mít synchronizovaný čas a replay attack je sice možný, ale jenom po omezenou dobu (dokud podpis nevydrží).
 
-Pokud vás zajímá, k čemu může být podepisování URL dobré, vyčkejte. Mám rozepsaný další článek, který představí praktický projekt, který ho využívá a z jehož projektu jsem převzdal ukázkový kód v tomto článku.
+Pokud vás zajímá, k čemu může být podepisování URL dobré, vyčkejte. Mám rozepsaný další článek, který představí praktický projekt, který ho využívá a z jehož projektu jsem převzal ukázkový kód v tomto článku.

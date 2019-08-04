@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Podepisování URL ještě jednou | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem včerejšího článku. Přidal jsem (částečnou) ochranu proti replay útokům a vše vyčlenil do samostatné knihovny a NuGet balíčku." />
+    <link rel="canonical" href="https://www.altair.blog/2019/08/url-signer-jeste-jednou" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Podepisování URL ještě jednou" />
+    <meta name="twitter:description" content="Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem včerejšího článku. Přidal jsem (částečnou) ochranu proti replay útokům a vše vyčlenil do samostatné knihovny a NuGet balíčku." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190804-url-signer-jeste-jednou.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Podepisování URL ještě jednou" />
+    <meta property="og:description" content="Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem včerejšího článku. Přidal jsem (částečnou) ochranu proti replay útokům a vše vyčlenil do samostatné knihovny a NuGet balíčku." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190804-url-signer-jeste-jednou.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/08/url-signer-jeste-jednou" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190804-url-signer-jeste-jednou.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Podepisování URL ještě jednou</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-08-04" title="Datum vydání">4. srpna 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Aron Visuals via unsplash.com <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem <a href="https://www.altair.blog/2019/08/url-signer">včerejšího článku</a>. V jeho závěru jsem jako jednu z limitací tohoto řešení uvedl, že nenabízí ochranu proti replay útokům, tj. že podepsané URL lze použít opakovaně. To může být někdy vyloženě žádoucí, ale jindy to může být problém.</p>
+<h2 id="trida-timedurlsigner">Třída <code>TimedUrlSigner</code></h2>
+<p>Při řešení tohoto problému jsem se inspiroval v <em>ASP.NET Data Protection</em>, kde existuje metoda <code>ToTimeLimitedDataProtector</code>, která přidá data protectoru funkcionalitu omezení časové platnosti. Funguje to tak, že se jako součást podepsaného payloadu zadá datum a čas, kdy má expirovat. Po ověření podpisu se prostě tento údaj porovná s aktuálním časem a pokud již tento čas uplynul, prohlásí se podpis za neplatný. Protože je expirace podepsaná, nemůže ji útočník modifikovat.</p>
+<p>Vytvořil jsem tedy třídu <code>TimedUrlSigner</code>, která je jakýsi wrapper nad <code>IUrlSigner</code> a výše uvedené zajišťuje.</p>
+<p>Metoda <code>Sign</code> dostala ještě jeden parametr <code>ttl</code>, což je doba, po kterou má být podpis platný. K URL se před podepsáním ještě přidá parametr <code>exp</code>, který určuje čas expirace. Čas je udáván jako počet sekund od půlnoci 1. 1. 2019.</p>
+<p>Metoda <code>Verify</code> pak nejprve ověří podpis jako takový a pak se podívá, jestli již neexpiroval.</p>
+<p>Toto je zdrojový kód třídy <code>TimedUrl</code>:</p>
+<pre><code class="language-cs">public class TimedUrlSigner {
+    private static readonly DateTime ZeroTime = new DateTime(2019, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+    public IUrlSigner Signer { get; }
+
+    public TimedUrlSigner(IUrlSigner signer) {
+        this.Signer = signer;
+    }
+
+    // Helper methods for working with URIs
+
+    public Uri Sign(Uri url, TimeSpan ttl) =&gt; new Uri(this.Sign(url.ToString(), ttl));
+
+    public bool Verify(Uri url) =&gt; this.Verify(url.ToString());
+
+    // TTL-aware signing and verification
+
+    public string Sign(string url, TimeSpan ttl) {
+        if (url == null) throw new ArgumentNullException(nameof(url));
+        if (string.IsNullOrWhiteSpace(url)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(url));
+
+        // Append expiration timestamp
+        var expTimeStamp = DateTime.UtcNow.Add(ttl).Subtract(ZeroTime).TotalSeconds;
+        url += (url.Contains(&quot;?&quot;) ? &quot;&amp;&quot; : &quot;?&quot;) + &quot;exp=&quot; + expTimeStamp.ToString();
+
+        // Sign value with configured signer
+        return this.Signer.Sign(url);
+    }
+
+    public bool Verify(string url) {
+        if (url == null) throw new ArgumentNullException(nameof(url));
+        if (string.IsNullOrWhiteSpace(url)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(url));
+
+        // Perform signature verification
+        var result = this.Signer.Verify(url);
+        if (!result) return false;
+
+        // Get expiration timestamp
+        var unsignedUrl = url.RemoveLastParameter(&quot;sig&quot;, out var _);
+        unsignedUrl.RemoveLastParameter(&quot;exp&quot;, out var expString);
+
+        // Compare with current time
+        var expTime = ZeroTime.AddSeconds(double.Parse(expString));
+        return expTime &gt;= DateTime.UtcNow;
+    }
+
+}
+</code></pre>
+<p>Nad <code>IUrlSigner</code> jsem pak definoval extension metodu <code>ToTimedSigner</code>, která z libovolné implementace udělá časově omezenou. Při dobré paměti jsem ještě přidat pár testů pomocí xUnit frameworku.</p>
+<h2 id="projekt-altairis.services.urlsigner">Projekt Altairis.Services.UrlSigner</h2>
+<p>Moje původní myšlenka byla, že celé řešení bude natolik jednoduché, že nebude třeba ho vyčleňovat do samostatné knihovny. Nyní se mi to ale poněkud zvrhlo, takže jsem veškerou funkcionalitu vyčlenil do samostatného projektu <code>Altairis.Services.UrlSigner</code>:</p>
+<ul>
+<li>GitHub: <a href="https://github.com/ridercz/Altairis.Services.UrlSigner"><code>ridercz/Altairis.Services.UrlSigner</code></a></li>
+<li>NuGet: <a href="https://www.nuget.org/packages/Altairis.Services.UrlSigner"><code>Altairis.Services.UrlSigner</code></a></li>
+</ul>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Podepisov%c3%a1n%c3%ad+URL+je%c5%a1t%c4%9b+jednou&amp;body=https://www.altair.blog/2019/08/url-signer-jeste-jednou">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/08/url-signer-jeste-jednou.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/08/url-signer-jeste-jednou.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/08/url-signer-jeste-jednou">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/08/url-signer-jeste-jednou">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
