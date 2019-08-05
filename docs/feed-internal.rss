@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/08/tisk-na-webu</guid>
+      <title>Tisk z webové aplikace na lokální tiskárně: jak na to?</title>
+      <description>Svatý grál tisku z webových aplikací: uživatel klepne na tlačítko na webu a z tiskárny okamžitě, bez dalšího dialogu, začne lézt dokument, přesně tak, jak si ho programátor vysnil. Problém je, že to na webu nejde. Nebo ano?</description>
+      <link>https://www.altair.blog/2019/08/tisk-na-webu</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2019-08-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/08/url-signer-jeste-jednou</guid>
       <title>Podepisování URL ještě jednou</title>
       <description>Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem včerejšího článku. Přidal jsem (částečnou) ochranu proti replay útokům a vše vyčlenil do samostatné knihovny a NuGet balíčku.</description>
@@ -134,15 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2019-03-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</guid>
-      <title>Dopravní experimenty podruhé: Soud jsem vyhrál, informace stále nemám</title>
-      <description>O dopravní experimenty vedení Prahy 7 se zajímám dlouhodobě. Nyní jsem po více než dvou letech vyhrál soudní spor a mám pravomocný rozsudek. Informace však stále chybí, protože magistrát rozsudek ignoruje.</description>
-      <link>https://www.altair.blog/2019/03/dopravni-experimenty-podruhe</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2019-03-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
