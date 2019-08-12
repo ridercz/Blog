@@ -43,7 +43,7 @@ Proto jsem vytvořil [mechanismus pro podepisování URL](https://github.com/rid
 
 ## Hotové řešení
 
-Lokálně běžící aplikaci jsem napsal v ASP.NET Core 2.2. Začal jsem s běžnou MVC aplikací: jádrem je jediný controller, jehož zdrojový kód vypadá následovně:
+Lokálně běžící aplikaci jsem napsal v ASP.NET Core 2.2. Začal jsem s běžnou MVC aplikací. Jádrem je jediný controller, jehož zdrojový kód vypadá následovně:
 
 ```cs
 public class PrintController : Controller {
@@ -57,6 +57,7 @@ public class PrintController : Controller {
 
     [Route("/print")]
     public async Task<IActionResult> Index(string src, string url, string sig) {
+        // Verify URL signature
         var result = this.signer.Verify(this.Request.GetEncodedUrl());
         if (!result) return this.BadRequest();
 
@@ -92,16 +93,16 @@ public class PrintController : Controller {
 
 Controller má jedinou akci `Print`, která provede výše uvedené, totiž:
 
-* Ověří elektronický podpis na URL.
+* Ověří elektronický podpis na URL. Pokud nesedí, vrátí stavový kód 400 (_Bad Request_). Sémanticky správnější by bylo vrátit kód 401 (_Unauthorized_) nebo 403 (_Forbidden_), ale to není v ASP.NET tak jednoduché, koliduje to s autentizačním middlewarem, s čímž se mi nechtělo v daném okamžiku zabývat.
 * Stáhne obrázek z adresy zadané jako parametr `src`.
-* Vytiskne ho na tiskárně (název tiskárny a velikost papíru je určená v konfiguraci).
+* Vytiskne ho na tiskárně, jejíž název a velikost papíru jsou určeny konfigurací.
 * Přesměruje uživatele na adresu zadanou jako parametr `url`, tedy zpět do volající aplikace.
 
 Součástí aplikace je ještě `HomeController`, který umí vypsat seznam všech nainstalovaných tiskáren a v nich definovaných rozměrů papíru.
 
 ## Hosting jako Windows Service
 
-Mým záměrem je, aby aplikace běžela na pozadí, jako Windows služba. To je velice snadné, postup je popsán v článku [Host ASP.NET Core in a Windows Service](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/windows-service?view=aspnetcore-2.1&tabs=visual-studio). V jeho duchu jsem upravil třídu `Program` takto:
+Mým záměrem je, aby aplikace běžela na pozadí, jako Windows služba. To je velice snadné, postup je popsán v článku [Host ASP.NET Core in a Windows Service](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/windows-service). V jeho duchu jsem upravil třídu `Program` takto:
 
 ```cs
 public class Program {
@@ -133,7 +134,7 @@ public class Program {
 
 Port je zde zadán napevno, obecně by bylo asi lepší, aby byl konfigurovatelný, nicméně pro účely proof of conceptu je toto dobré dost. Číslo portu `8515` jsem zvolil, protože na portu `515` tradičně naslouchá LPD (Line Printer Daemon), tiskový protokol specifickovaný v [RFC1179](https://tools.ietf.org/html/rfc1179). Přidal jsem k tomu `8000`, jak je u webových řešení tradiční.
 
-Program lze spustit z příkazové řádky (ne jako službu) tím, že se mu předá parametr `--console`, což se hodí pro ladění a občasné použití. Má-li být použit jako služba, je třeba ho zaregistrovat a pak se spouští a zastavuje pomocí Service Manageru.
+Program lze spustit z příkazové řádky (ne jako službu) tím, že se mu předá parametr `--console`, což se hodí pro ladění a občasné použití. Má-li být použit jako služba, je třeba ho zaregistrovat a pak se spouští a zastavuje pomocí _Service Manageru_.
 
 Pro tento účel je žádoucí, aby aplikace byla v EXE podobě, ne jako DLL. Použil jsem proto self-contained deployment pro `win-x64` a aplikaci vypublikoval.
 
@@ -152,6 +153,8 @@ REM -- Open web browser pointing to the service page
 START http://localhost:8515/
 ```
 
+> U příkazu `SC` je nutné přesně dodržet jeho poněkud zvláštní syntaxi, kde mezi `=` a hodnotou je mezera (naopak nesmí být před rovnítkem). Ve skutečnosti se jedná o argument jménem např. `start=` a další argument s hodnotou, což je poněkud nezvyklé.
+
 Pro úplnost, zde je soubor `_stop.cmd`, který službu zastaví a odregistruje:
 
 ```bat
@@ -166,8 +169,9 @@ SC DELETE AltairisLPS
 
 ## Omezení a závěr
 
-Hotovou ukázkovou aplikaci si můžete stáhnout [jako ZIP archiv](https://www.cdn.altairis.cz/Blog/2019/20190805-localprinter.zip). Funguje dobře, ale má určitá omezení.
+Hotovou ukázkovou aplikaci si můžete stáhnout [jako ZIP archiv](https://www.cdn.altairis.cz/Blog/2019/20190805-localprinter.zip). Funguje dobře, ale má určitá omezení:
 
 * Ve své současné implementaci nechrání před replay útoky. Podepsané URL lze využít opakovaně a vytisknout tentýž dokument vícekrát. Tento problém lze omezit použitím třídy `TimedUrlSigner` popsané v [předchozím článku](https://www.altair.blog/2019/08/url-signer-jeste-jednou) nebo vyřešit tím, že se do podpisu přidá sekvenční počítadlo.
 * Služba běží pod speciální identitou `NT AUTHORITY\Network Service` což znamená, že nejspíš nebude fungovat tisk na síťových tiskárnách. Pokud budete chtít tisknout na síťové tiskárně, je třeba buďto nastavit práva tak, aby na ní mohl tisknout computer account nebo rozjet službu pod jiným účtem.
-* Pokud budete chtít tisk testovat na virtuální tiskárně (například `Microsoft Print to PDF`), bude vám to fungovat jenom v režimu konzolové aplikace, ne ve službě. Služba neumí zobrazit dialog pro název výsledného souboru a aplikace vytuhne.
+* Pokud budete chtít tisk testovat na virtuální tiskárně (například _Microsoft Print to PDF_), bude vám to fungovat jenom v režimu konzolové aplikace, ne ve službě. Služba (tak jak je navržena a zaregistrována) neumí zobrazit dialog pro název výsledného souboru a aplikace vytuhne.
+* Není tam žádná rozumná obsluha chybových stavů, např. pokud se z nějakého důvodu nepodaří stáhnout nebo proparsovat obrázek ze zadaného URL, aplikace prostě spadna na 500 (_Internal Server Error_).

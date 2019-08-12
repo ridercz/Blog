@@ -145,7 +145,7 @@
 <p>Výše uvedené řešení přináší jistý bezpečnostní problém: na tiskárně může tisknout kdokoliv, kdo umí udělat odpovídající HTTP požadavek. Útočník by mohl snadno udělat DoS útok na tiskárnu, stačilo by, aby oběť navštívila jeho webovou stránku.</p>
 <p>Proto jsem vytvořil <a href="https://github.com/ridercz/Altairis.Services.UrlSigner">mechanismus pro podepisování URL</a>, který jsem popisoval v <a href="https://www.altair.blog/2019/08/url-signer">minulých</a> <a href="https://www.altair.blog/2019/08/url-signer-jeste-jednou">dvou</a> článcích.</p>
 <h2 id="hotove-reseni">Hotové řešení</h2>
-<p>Lokálně běžící aplikaci jsem napsal v ASP.NET Core 2.2. Začal jsem s běžnou MVC aplikací: jádrem je jediný controller, jehož zdrojový kód vypadá následovně:</p>
+<p>Lokálně běžící aplikaci jsem napsal v ASP.NET Core 2.2. Začal jsem s běžnou MVC aplikací. Jádrem je jediný controller, jehož zdrojový kód vypadá následovně:</p>
 <pre><code class="language-cs">public class PrintController : Controller {
     private readonly AppSettings options;
     private readonly IUrlSigner signer;
@@ -157,6 +157,7 @@
 
     [Route(&quot;/print&quot;)]
     public async Task&lt;IActionResult&gt; Index(string src, string url, string sig) {
+        // Verify URL signature
         var result = this.signer.Verify(this.Request.GetEncodedUrl());
         if (!result) return this.BadRequest();
 
@@ -191,14 +192,14 @@
 </code></pre>
 <p>Controller má jedinou akci <code>Print</code>, která provede výše uvedené, totiž:</p>
 <ul>
-<li>Ověří elektronický podpis na URL.</li>
+<li>Ověří elektronický podpis na URL. Pokud nesedí, vrátí stavový kód 400 (<em>Bad Request</em>). Sémanticky správnější by bylo vrátit kód 401 (<em>Unauthorized</em>) nebo 403 (<em>Forbidden</em>), ale to není v ASP.NET tak jednoduché, koliduje to s autentizačním middlewarem, s čímž se mi nechtělo v daném okamžiku zabývat.</li>
 <li>Stáhne obrázek z adresy zadané jako parametr <code>src</code>.</li>
-<li>Vytiskne ho na tiskárně (název tiskárny a velikost papíru je určená v konfiguraci).</li>
+<li>Vytiskne ho na tiskárně, jejíž název a velikost papíru jsou určeny konfigurací.</li>
 <li>Přesměruje uživatele na adresu zadanou jako parametr <code>url</code>, tedy zpět do volající aplikace.</li>
 </ul>
 <p>Součástí aplikace je ještě <code>HomeController</code>, který umí vypsat seznam všech nainstalovaných tiskáren a v nich definovaných rozměrů papíru.</p>
 <h2 id="hosting-jako-windows-service">Hosting jako Windows Service</h2>
-<p>Mým záměrem je, aby aplikace běžela na pozadí, jako Windows služba. To je velice snadné, postup je popsán v článku <a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/windows-service?view=aspnetcore-2.1&amp;tabs=visual-studio">Host ASP.NET Core in a Windows Service</a>. V jeho duchu jsem upravil třídu <code>Program</code> takto:</p>
+<p>Mým záměrem je, aby aplikace běžela na pozadí, jako Windows služba. To je velice snadné, postup je popsán v článku <a href="https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/windows-service">Host ASP.NET Core in a Windows Service</a>. V jeho duchu jsem upravil třídu <code>Program</code> takto:</p>
 <pre><code class="language-cs">public class Program {
     public static void Main(string[] args) {
         var isService = !(Debugger.IsAttached || args.Contains(&quot;--console&quot;));
@@ -226,7 +227,7 @@
 }
 </code></pre>
 <p>Port je zde zadán napevno, obecně by bylo asi lepší, aby byl konfigurovatelný, nicméně pro účely proof of conceptu je toto dobré dost. Číslo portu <code>8515</code> jsem zvolil, protože na portu <code>515</code> tradičně naslouchá LPD (Line Printer Daemon), tiskový protokol specifickovaný v <a href="https://tools.ietf.org/html/rfc1179">RFC1179</a>. Přidal jsem k tomu <code>8000</code>, jak je u webových řešení tradiční.</p>
-<p>Program lze spustit z příkazové řádky (ne jako službu) tím, že se mu předá parametr <code>--console</code>, což se hodí pro ladění a občasné použití. Má-li být použit jako služba, je třeba ho zaregistrovat a pak se spouští a zastavuje pomocí Service Manageru.</p>
+<p>Program lze spustit z příkazové řádky (ne jako službu) tím, že se mu předá parametr <code>--console</code>, což se hodí pro ladění a občasné použití. Má-li být použit jako služba, je třeba ho zaregistrovat a pak se spouští a zastavuje pomocí <em>Service Manageru</em>.</p>
 <p>Pro tento účel je žádoucí, aby aplikace byla v EXE podobě, ne jako DLL. Použil jsem proto self-contained deployment pro <code>win-x64</code> a aplikaci vypublikoval.</p>
 <p>Pro registraci služby a její spuštění jsem si napsal následující dávkový soubor <code>_start.cmd</code>:</p>
 <pre><code class="language-bat">@ECHO OFF
@@ -240,6 +241,9 @@ NET START AltairisLPS
 REM -- Open web browser pointing to the service page
 START http://localhost:8515/
 </code></pre>
+<blockquote>
+<p>U příkazu <code>SC</code> je nutné přesně dodržet jeho poněkud zvláštní syntaxi, kde mezi <code>=</code> a hodnotou je mezera (naopak nesmí být před rovnítkem). Ve skutečnosti se jedná o argument jménem např. <code>start=</code> a další argument s hodnotou, což je poněkud nezvyklé.</p>
+</blockquote>
 <p>Pro úplnost, zde je soubor <code>_stop.cmd</code>, který službu zastaví a odregistruje:</p>
 <pre><code class="language-bat">@ECHO OFF
 
@@ -250,11 +254,12 @@ REM -- Unregister it
 SC DELETE AltairisLPS
 </code></pre>
 <h2 id="omezeni-a-zaver">Omezení a závěr</h2>
-<p>Hotovou ukázkovou aplikaci si můžete stáhnout <a href="https://www.cdn.altairis.cz/Blog/2019/20190805-localprinter.zip">jako ZIP archiv</a>. Funguje dobře, ale má určitá omezení.</p>
+<p>Hotovou ukázkovou aplikaci si můžete stáhnout <a href="https://www.cdn.altairis.cz/Blog/2019/20190805-localprinter.zip">jako ZIP archiv</a>. Funguje dobře, ale má určitá omezení:</p>
 <ul>
 <li>Ve své současné implementaci nechrání před replay útoky. Podepsané URL lze využít opakovaně a vytisknout tentýž dokument vícekrát. Tento problém lze omezit použitím třídy <code>TimedUrlSigner</code> popsané v <a href="https://www.altair.blog/2019/08/url-signer-jeste-jednou">předchozím článku</a> nebo vyřešit tím, že se do podpisu přidá sekvenční počítadlo.</li>
 <li>Služba běží pod speciální identitou <code>NT AUTHORITY\Network Service</code> což znamená, že nejspíš nebude fungovat tisk na síťových tiskárnách. Pokud budete chtít tisknout na síťové tiskárně, je třeba buďto nastavit práva tak, aby na ní mohl tisknout computer account nebo rozjet službu pod jiným účtem.</li>
-<li>Pokud budete chtít tisk testovat na virtuální tiskárně (například <code>Microsoft Print to PDF</code>), bude vám to fungovat jenom v režimu konzolové aplikace, ne ve službě. Služba neumí zobrazit dialog pro název výsledného souboru a aplikace vytuhne.</li>
+<li>Pokud budete chtít tisk testovat na virtuální tiskárně (například <em>Microsoft Print to PDF</em>), bude vám to fungovat jenom v režimu konzolové aplikace, ne ve službě. Služba (tak jak je navržena a zaregistrována) neumí zobrazit dialog pro název výsledného souboru a aplikace vytuhne.</li>
+<li>Není tam žádná rozumná obsluha chybových stavů, např. pokud se z nějakého důvodu nepodaří stáhnout nebo proparsovat obrázek ze zadaného URL, aplikace prostě spadna na 500 (<em>Internal Server Error</em>).</li>
 </ul>
 
       </section>
