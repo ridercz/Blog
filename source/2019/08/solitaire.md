@@ -235,7 +235,7 @@ Než začnete generovat písmena keystreamu, musíte balíček "naklíčovat", s
 
 Uvědomte si ale, že tajná policie může zjistit, jaký bridžový sloupek používáte a zaznamenat si hodnoty. Můžete zkusit vytvořit nějaký opakovatelný způsob, jaký sloupek použít. Například "použij bridžový sloupek z novin města, kde se právě nacházíš v den, kdy jsi šifroval zprávu". Nebo použijte seznam klíčových slov, zadejte je do vyhledávání na webu New York Times a použijte bridžový sloupek ze dne, ze kterého je první článek, který je nalezen. Pokud nepřítel odposlechne tato klíčová slova, budou vypadat jako passphrase. Vytvořte si svou vlastní konvenci pro převod bridžových sloupků na pořadí karet v balíčku; pamatujte, že i tajná policie čte knihy Neala Stephensona.
 
-> **Poznámka překladatele:** V čechách bridžové články nevychází, ale hrají se téměř každý den nějaké turnaje, kde se generuje vždy sada rozdání. Tento bridžový diagram se pak dá použít jako klíč, protože v každé náhodně generované sadě jsou jiná rozdání. Uživatelé by si tak třeba mohli vzít kód turnaj v bridžovém klubu daný den a zvolit si pro šifrování libovolnou partii z daného dne, čímž by se zase mohla zvýšit složitost dešifrování. 
+> **Poznámka překladatele:** V ČR bridžové články nevycházejí, ale hrají se téměř každý den nějaké turnaje, kde se generuje vždy sada rozdání. Tento bridžový diagram se pak dá použít jako klíč, protože v každé náhodně generované sadě jsou jiná rozdání. 
 >
 > Můžete se podívat třeba na [stránky Evy Fořtové](http://eva.fort.cz/) kde najdete výsledky turnajů nebo na [bridžové kanály](https://www.youtube.com/channel/UCOaZnFbFH1OlbhVm25z4rLQ/videos) na YouTube. Dobrým rozcestníkem je web [Českého bridžového svazu](http://www.czechbridge.cz/).
 
