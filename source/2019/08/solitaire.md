@@ -416,7 +416,7 @@ Pro začátek doporučuji svou vlastní knihu [Applied Cryptography](https://amz
 
 > **Poznámka překladatele:** Nejsem si vědom toho, že by byla některá z knih zmíněných v textu přeložena do češtiny. V češtině existuje kniha _Aplikovaná kryptografie_ od Karla Burdy, kterou ovšem upřímně nedoporučuji, přišla mi dost hrozná a nesrozmitelně napsaná.
 >
-> _Full disclosure:_ Odkazyt na Amazon, které jsou zde v textu, obsahují můj affiliate kód. Pokud si přes ně něco koupíte, dostanu provizi.
+> **Full disclosure:** Odkazy na Amazon, které jsou zde v textu, obsahují můj affiliate kód. Pokud si přes ně něco koupíte, dostanu provizi.
 
 ## Downloads
 
