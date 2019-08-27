@@ -3,7 +3,7 @@
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:dateAccepted = 2019-03-19 -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-youtube.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-youtube.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:alternateUrl = https://www.bdsm.cz/2019/03/bdsm-ponyplay-qna -->
