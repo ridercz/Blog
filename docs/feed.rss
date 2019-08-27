@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/08/live-coding</guid>
+      <title>Live coding: Vlastní password validátor v ASP.NET Core Identity</title>
+      <description>Rozhodl jsem se napsat vlastní validátor síly hesel pro ASP.NET Core Identity. A říkám si, že to bude zajímavější, když to budu živě přenášet na YouTube. Založím nový projekt na GitHubu, napíšu validátor a vypublikuji ho jako NuGet balíček. Alespoň tedy takový je plán, ale v živém přenosu se to může rychle změnit...</description>
+      <link>https://www.altair.blog/2019/08/live-coding</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2019-08-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/08/solitaire</guid>
       <title>Šifrovací algoritmus Solitaire</title>
       <description>Solitaire, známý též jako Pontifex, je zvláštní šifrovací algoritmus, který vyhoví moderním požadavkům na bezpečnost, ale přitom jej můžete používat i ručně. Jediné co potřebujete je papír, tužka a balíček karet. Je jednoduchý a elegantní a může tak sloužit jako dobrá ukázka fungování symetrických proudových šifer. Proto jsem se rozhodl se svolením autora přeložit jeho popis do češtiny.</description>
@@ -132,15 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-05-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/05/nove-tag-helpery</guid>
-      <title>Nové tag helpery v knihovně Altairis Tag Helpers</title>
-      <description>Do knihovny Altairis.TagHelpers jsem přidal několik nových tag helperů pro ASP.NET MVC Core a Razor Pages. Nová verze 1.4 obsahuje potvrzení akce, zobrazení verze aplikace a zejména žádaný ekvivalent komponent CheckBoxList a RadioButtonList.</description>
-      <link>https://www.altair.blog/2019/05/nove-tag-helpery</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2019-05-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

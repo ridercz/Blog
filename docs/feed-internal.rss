@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/08/live-coding</guid>
+      <title>Live coding: Vlastní password validátor v ASP.NET Core Identity</title>
+      <description>Rozhodl jsem se napsat vlastní validátor síly hesel pro ASP.NET Core Identity. A říkám si, že to bude zajímavější, když to budu živě přenášet na YouTube. Založím nový projekt na GitHubu, napíšu validátor a vypublikuji ho jako NuGet balíček. Alespoň tedy takový je plán, ale v živém přenosu se to může rychle změnit...</description>
+      <link>https://www.altair.blog/2019/08/live-coding</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2019-08-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/08/solitaire</guid>
       <title>Šifrovací algoritmus Solitaire</title>
       <description>Solitaire, známý též jako Pontifex, je zvláštní šifrovací algoritmus, který vyhoví moderním požadavkům na bezpečnost, ale přitom jej můžete používat i ručně. Jediné co potřebujete je papír, tužka a balíček karet. Je jednoduchý a elegantní a může tak sloužit jako dobrá ukázka fungování symetrických proudových šifer. Proto jsem se rozhodl se svolením autora přeložit jeho popis do češtiny.</description>
@@ -134,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-04-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/03/ex-oriente-lux</guid>
-      <title>Ex oriente lux: Pária Huawei</title>
-      <description>Společnost Huawei se dostává po celém světě do nezáviděníhodné situace: řada států s ní nechce nic mít. Nejnověji Huawei způsobil diplomatickou při mezi USA a Německem. Skutečné nebezpečí pro budoucnost se ale neskrývá jenom v možnosti špehování.</description>
-      <link>https://www.altair.blog/2019/03/ex-oriente-lux</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-03-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
