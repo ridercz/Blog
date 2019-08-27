@@ -16,7 +16,7 @@ Rozhodl jsem se napsat vlastní validátor síly hesel pro ASP.NET Core Identity
 K napsání vlastního validátoru mne přimělo několik věcí. V první řadě to, že většina validátorů (včetně toho výchozího v ASP.NET Identity) je napsaná špatně. Při volbě hesla uživatele šikanuje příliš a zbytečně. No a pak mne inspirovalo několik článků:
 
 * **[Creating a validator to check for common passwords in ASP.NET Core Identity](https://andrewlock.net/creating-a-validator-to-check-for-common-passwords-in-asp-net-core-identity/)** tohle je dobrý validátor, který ověřuje heslo proti seznamům nejběžněji používaných ([GitHub](https://github.com/andrewlock/CommonPasswordsValidator/tree/master/src/CommonPasswordsValidator/PasswordLists)).
-* **[I've Just Launched "Pwned Passwords" V2 With Half a Billion Passwords for Download]** (https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity) tohle je služba Troye Hunta, provozovatele [Have I Been Pwned](https://haveibeenpwned.com/), která umožňuje prohledávat uniklá hesla.
+* **[I've Just Launched "Pwned Passwords" V2 With Half a Billion Passwords for Download](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity)** tohle je služba Troye Hunta, provozovatele [Have I Been Pwned](https://haveibeenpwned.com/), která umožňuje prohledávat uniklá hesla.
 
 Rád bych napsal validátor, který bude tyto dvě funkcionality kombinovat.
 
