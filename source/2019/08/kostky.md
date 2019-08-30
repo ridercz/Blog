@@ -1,0 +1,9 @@
+<!-- dcterms:title = Šestiúhelníková krabička na kostky -->
+<!-- dcterms:abstract = Při hledání něčeho úplně jiného jsem našel svou více než dvacet let starou sadu kovových hracích kostek. Památka na doby, kdy jsem hrál Dračí doupě a GURPS. Modelů pro 3D tisk pouzder na kostky je všude spousta, ale nenašel jsem žádný, který by vyhovoval rozměrům mých kostek a magnetů, které mám pro použití na zavírání. Tak jsem si navrhl vlastní, parametrický, který si dokáže poradit s jakýmkoliv rozměrem. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190830-kostky.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2019-08-30 -->
+<!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/5390-hexagonal-dice-case -->

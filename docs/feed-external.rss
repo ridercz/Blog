@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</guid>
+      <title>Šestiúhelníková krabička na kostky</title>
+      <description>Při hledání něčeho úplně jiného jsem našel svou více než dvacet let starou sadu kovových hracích kostek. Památka na doby, kdy jsem hrál Dračí doupě a GURPS. Modelů pro 3D tisk pouzder na kostky je všude spousta, ale nenašel jsem žádný, který by vyhovoval rozměrům mých kostek a magnetů, které mám pro použití na zavírání. Tak jsem si navrhl vlastní, parametrický, který si dokáže poradit s jakýmkoliv rozměrem.</description>
+      <link>https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2019-08-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66622930-psms7-ed31b7cebb81ac2</guid>
       <title>Ransomware: Nyní i ve vašem foťáku</title>
       <description>Počítače najdete všude. A kdekoliv je počítač, tam je příležitost k bezpečnostním problémům. Například ve fotoaparátech. Bezpečnostní výzkumníci z Check Point Research objevili utěšenou sbírku bezpečnostních chyb v celé řadě digitálních fotoaparátů společnosti Canon - od kompaktu PowerShot SX740 HS až po svou vlajkovou loď, profesionální EOS-1D X Mark II. Chyby se týkají implementace protokolu PTP (Picture Transfer Protocol) přes USB, Bluetooth nebo wi-fi.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2019-03-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.ceskatelevize.cz/ivysilani/10175540660-mate-slovo-s-m-jilkovou/219411030520004</guid>
-      <title>Máte slovo: Čína jako bezpečnostní hrozba</title>
-      <description>Včera jsem se jako host zúčastnil pořadu České televize Máte slovo s Michaelou Jílkovou. Tématem bylo, nakolik představují čínské technologie (zejména od firem jako Huawei a ZTE) bezpečnostní hrozbu. Záznam pořadu najdete v iVysílání na webu ČT.</description>
-      <link>https://www.ceskatelevize.cz/ivysilani/10175540660-mate-slovo-s-m-jilkovou/219411030520004</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2019-01-31T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
