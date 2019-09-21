@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/09/live-coding-openscad</guid>
+      <title>Live coding: 3D modelování v programu OpenSCAD</title>
+      <description>Od firmy Miroluk jsem dostal na testování nějaké filamenty. Podíváme se na ně a v živém přenosu vymodeluji něco zajímavého, co by se z nich dalo vytisknout, v programu OpenSCAD.</description>
+      <link>https://www.altair.blog/2019/09/live-coding-openscad</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-09-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</guid>
       <title>Šestiúhelníková krabička na kostky</title>
       <description>Při hledání něčeho úplně jiného jsem našel svou více než dvacet let starou sadu kovových hracích kostek. Památka na doby, kdy jsem hrál Dračí doupě a GURPS. Modelů pro 3D tisk pouzder na kostky je všude spousta, ale nenašel jsem žádný, který by vyhovoval rozměrům mých kostek a magnetů, které mám pro použití na zavírání. Tak jsem si navrhl vlastní, parametrický, který si dokáže poradit s jakýmkoliv rozměrem.</description>
@@ -134,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-06-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/06/corestart-a-fialka</guid>
-      <title>Fialka.net a CoreStart - materiály z konference</title>
-      <description>Minulý týden se v Praze konala konference CoreStart 3.0, na které jsem přednášel o ASP.NET Identity a kryptografii v .NET Core. Nyní dávám k dispozici prezentace a ukázkovou aplikaci Fialka.net.</description>
-      <link>https://www.altair.blog/2019/06/corestart-a-fialka</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-06-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

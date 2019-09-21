@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/09/live-coding-openscad</guid>
+      <title>Live coding: 3D modelování v programu OpenSCAD</title>
+      <description>Od firmy Miroluk jsem dostal na testování nějaké filamenty. Podíváme se na ně a v živém přenosu vymodeluji něco zajímavého, co by se z nich dalo vytisknout, v programu OpenSCAD.</description>
+      <link>https://www.altair.blog/2019/09/live-coding-openscad</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-09-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/08/pwned-passwords-validator</guid>
       <title>Pwned Passwords Validator pro ASP.NET Identity</title>
       <description>Včera jsem v živém streamu napsal validátor hesel, který využívá databázi z HaveIBeenPwned.com. K dispozici je záznam streamu, mírně aktualizovaný kód a NuGet balíček.</description>
@@ -135,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-05-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/05/meridlo-na-psy</guid>
-      <title>Jak vyrobit měřidlo na psy</title>
-      <description>Kamarádka mne požádala, abych jí vyrobil měřidlo na psy. To je jednoduchý nástroj, který se používá při bonitaci (hodnocení psa za účelem určení chovnosti) a měří se jím kohoutková výška psa. Výroba je poměrně jednoduchá a dala mi možnost použít některé mé oblíbené konstrukční postupy.</description>
-      <link>https://www.altair.blog/2019/05/meridlo-na-psy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-05-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
