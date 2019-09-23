@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V PrusaLabu budu mít v dohledné době několik přednášek, které vás mohou zajímat. Ať už půjde o přípravy vektorových dat, leptání motivů do skla i kovu nebo novinky v mém oblíbeném 3D modelovacím programu OpenSCAD. První z nich je už zítra!" />
+    <link rel="canonical" href="https://www.altair.blog/2019/09/pozvanka-do-prusalabu" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu" />
+    <meta name="twitter:description" content="V PrusaLabu budu mít v dohledné době několik přednášek, které vás mohou zajímat. Ať už půjde o přípravy vektorových dat, leptání motivů do skla i kovu nebo novinky v mém oblíbeném 3D modelovacím programu OpenSCAD. První z nich je už zítra!" />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190923-pozvanka-do-prusalabu.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu" />
+    <meta property="og:description" content="V PrusaLabu budu mít v dohledné době několik přednášek, které vás mohou zajímat. Ať už půjde o přípravy vektorových dat, leptání motivů do skla i kovu nebo novinky v mém oblíbeném 3D modelovacím programu OpenSCAD. První z nich je už zítra!" />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190923-pozvanka-do-prusalabu.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/09/pozvanka-do-prusalabu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190923-pozvanka-do-prusalabu.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-09-23" title="Datum vydání">23. září 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>PrusaLab <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>V <a href="https://www.prusalab.cz/">PrusaLabu</a>, otevřené dílně nedaleko Nádraží Holešovice v Praze budu v dohledné době mít několik přednášek na různá témata. První z nich už zítra!</p>
+<blockquote>
+<p>Jak si můžete všimnout, členové PrusaLabu mají významnou slevu na vstupném. A od října budete mít možnost si na recepci labu pořídit zkušební měsíční členství za pouhých 99 Kč.</p>
+</blockquote>
+<h2 id="priprava-vektorovych-dat-pro-laser-plotter-router-a-dalsi">Příprava vektorových dat pro laser, plotter, router a další</h2>
+<p><strong>24. září 2019, 18:00-20:00, vstup 300 Kč (pro členy 100 Kč), <a href="https://prusalab.cz/prusalab-events/priprava-vektorovych-dat-pro-laser-plotter-router-a-dalsi-prednaska/">registrace</a></strong></p>
+<p>Mnoho zařízení v Labu – laser, řezací plotter, CNC router a další – vyžaduje jako vstupní data obrázek ve vektorovém formátu. Na této přehledové přednášce si ukážeme, jak taková vektorová data získat a jak s nimi nakládat. Tato dovednost se hodí nejenom pro lab, ale též třeba pro přípravu dat k profesionálnímu tisku a podobně.</p>
+<p>Projdeme si následující témata:</p>
+<ul>
+<li>Vektorová versus bitmapová data: rozdíly a kdy co použít</li>
+<li>Obvyklé vektorové formáty (AI, CDR, EPS, SVG, DXF, PDF a další)</li>
+<li>Programy pro práci s vektorovými daty (Adobe Illustrator, Inkscape)</li>
+<li>Vektory a písmo (fonty)</li>
+<li>Převod vektorů na bitmapy a bitmap na vektory</li>
+<li>Generování vektorových dat v OpenSCADu</li>
+</ul>
+<h2 id="leptani-skla-a-kovu-svepomoci">Leptání skla a kovu svépomocí</h2>
+<ul>
+<li>Přednáška: <strong>8. října 2019, 18:00-20:00, vstup 300 Kč (pro členy 100 Kč), <a href="https://prusalab.cz/prusalab-events/leptani-skla-a-kovu-svepomoci-prednaska/">registrace</a></strong></li>
+<li>Workshop: <strong>15. října 2019, 18:00-20:00, vstup 300 Kč (pro členy 100 Kč), [registrace]https://prusalab.cz/prusalab-events/leptani-skla-a-kovu-svepomoci-workshop/</strong></li>
+</ul>
+<p>Na této přednášce vám předvedu dvě odlišné techniky, které spolu ale úzce souvisejí. Leptání skla speciální pastou a leptání kovů elektrolytickou cestou. Jde o způsob značení materiálu, který je esteticky zajímavý, velmi stálý a odolný a přestože působí luxusním dojmem, je ve skutečnosti velice jednoduchý.</p>
+<p>Do skla (nebo třeba zrcadel či některých druhů keramiky) lze leptat speciální pastou, která způsobí, že povrch zmatní.</p>
+<p>U většiny kovů – zejména hliníku, nerezu, mosazi nebo mědi – pak lze elektrolyticky povrchovou vrstvu odstranit a vyleptat do předmětu prohlubeň. V obou případech se pak používá maska, kterou lze vyrobit třeba ze samolepicí fólie na řezacím plotteru.</p>
+<p>Prakticky vám ukážu, jak tyto dvě techniky používat. O týden později budete mít možnost si leptání pod mým odborným dohledem sami vyzkoušet na navazujícím workshopu.</p>
+<h2 id="openscad-novinky-ve-verzi-2019">OpenSCAD – novinky ve verzi 2019</h2>
+<p><strong>5. listopadu 2019, 18:00-20:00, vstup 100 Kč, <a href="https://prusalab.cz/prusalab-events/openscad-novinky-ve-verzi-2019-prednaska/">registrace</a></strong></p>
+<p>Populární 3D modelovací program OpenSCAD, ve kterém se modely nenavrhují graficky, ale programují, se dočkal nové verze. Ta přináší řadu novinek jak v uživatelském rozhraní tak v jazyce samotném. Přímo součástí OpenSCADu je customizace modelů, fungující téměř totožně jako na webu Thingiverse, ale s možnostmi navíc. Přibyla také řada nových funkcí, včetně lepší obsluhy chyb. Na této přednášce si ukážeme, co je nového a jak to můžete využít ve svých modelech.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Pozv%c3%a1nka+do+PrusaLabu%3a+pr%c3%a1ce+s+vektory%2c+lept%c3%a1n%c3%ad+skla+a+kovu+a+novinky+v+OpenSCADu&amp;body=https://www.altair.blog/2019/09/pozvanka-do-prusalabu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/09/pozvanka-do-prusalabu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/09/pozvanka-do-prusalabu.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/09/pozvanka-do-prusalabu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/09/pozvanka-do-prusalabu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/09/pozvanka-do-prusalabu</guid>
+      <title>Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu</title>
+      <description>V PrusaLabu budu mít v dohledné době několik přednášek, které vás mohou zajímat. Ať už půjde o přípravy vektorových dat, leptání motivů do skla i kovu nebo novinky v mém oblíbeném 3D modelovacím programu OpenSCAD. První z nich je už zítra!</description>
+      <link>https://www.altair.blog/2019/09/pozvanka-do-prusalabu</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>Bastlení</category>
+      <pubDate>2019-09-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/09/live-coding-openscad</guid>
       <title>Live coding: 3D modelování v programu OpenSCAD</title>
       <description>Od firmy Miroluk jsem dostal na testování nějaké filamenty. Podíváme se na ně a v živém přenosu vymodeluji něco zajímavého, co by se z nich dalo vytisknout, v programu OpenSCAD.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-05-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/05/askme-v-dotvvm-zaznamy</guid>
-      <title>Píšeme AskMe v DotVVM - záznam třetího pokračování</title>
-      <description>K dispozici je záznam třetího a předposledního pokračování našeho přepisu aplikace ASKme do DotVVM. Už nám to skoro celé chodí, zbývá jenom napsat pár komponent. To stihneme příště, tedy alespoň v to upřímně doufám.</description>
-      <link>https://www.altair.blog/2019/05/askme-v-dotvvm-zaznamy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-05-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
