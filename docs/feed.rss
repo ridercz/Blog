@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-vektory</guid>
+      <title>Záznam: Jak na přípravu vektorových podkladů</title>
+      <description>Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkáchL. Co to vlastně je, jak takové podklady získat a na co si dát pozor? Záznam z dnešní přednášky.</description>
+      <link>https://www.altair.blog/2019/09/zaznam-vektory</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>Bastlení</category>
+      <pubDate>2019-09-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/09/pozvanka-do-prusalabu</guid>
       <title>Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu</title>
       <description>V PrusaLabu budu mít v dohledné době několik přednášek, které vás mohou zajímat. Ať už půjde o přípravy vektorových dat, leptání motivů do skla i kovu nebo novinky v mém oblíbeném 3D modelovacím programu OpenSCAD. První z nich je už zítra!</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-07-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/07/zakazy-v-praze</guid>
-      <title>My se k té zářivé budoucnosti prostě prozákazujem, soudruzi!</title>
-      <description>Z pražského magistrátu se line souvislý a nepřerušený tok zákazů a omezení. "Líp" začalo být už s vládou ANO, ČSSD, Zelených, KDU-ČSL a STAN, ale opravdová povodeň to začala být až s příchodem Pirátů, Prahy Sobě, TOP 09, STAN a KDU-ČSL.</description>
-      <link>https://www.altair.blog/2019/07/zakazy-v-praze</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2019-07-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
