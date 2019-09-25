@@ -1,10 +1,10 @@
 <!-- dcterms:title = Záznam: 3D modelování v programu OpenSCAD -->
 <!-- dcterms:abstract = V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/20190925-zaznam-livestreamu-openscad.png -->
+<!-- x4w:pictureUrl = /perex-pictures/20190925-zaznam-openscad.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:coverUrl = /cover-pictures/20190925-zaznam-livestreamu-openscad.jpg -->
+<!-- x4w:coverUrl = /cover-pictures/20190925-zaznam-openscad.jpg -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
 <!-- dcterms:dateAccepted = 2019-09-25 -->
