@@ -1,5 +1,5 @@
 <!-- dcterms:title = Záznam: Jak na přípravu vektorových podkladů -->
-<!-- dcterms:abstract = Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkáchL. Co to vlastně je, jak takové podklady získat a na co si dát pozor? Záznam z dnešní přednášky. -->
+<!-- dcterms:abstract = Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkách". Co to vlastně je, jak takové podklady získat a na co si dát pozor? Záznam z dnešní přednášky. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-youtube.svg -->
 <!-- x4w:pictureWidth = 150 -->
