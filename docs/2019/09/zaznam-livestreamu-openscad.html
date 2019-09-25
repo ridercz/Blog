@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Záznam: 3D modelování v programu OpenSCAD | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%." />
+    <link rel="canonical" href="https://www.altair.blog/2019/09/zaznam-livestreamu-openscad" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Záznam: 3D modelování v programu OpenSCAD" />
+    <meta name="twitter:description" content="V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20190925-zaznam-livestreamu-openscad.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Záznam: 3D modelování v programu OpenSCAD" />
+    <meta property="og:description" content="V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20190925-zaznam-livestreamu-openscad.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/09/zaznam-livestreamu-openscad" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20190925-zaznam-livestreamu-openscad.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Záznam: 3D modelování v programu OpenSCAD</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-09-25" title="Datum vydání">25. září 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Dnes jsem (s jistými obtížemi) dělal live stream, ve kterém jsem v OpenSCADu vytvořil model, vodní mlýn jako hračku do vody. Záznam najdete na <a href="https://youtu.be/3m5NESUujRg">YouTube</a>.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/3m5NESUujRg" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="vysledny-model">Výsledný model</h2>
+<p>Výsledkem mého snažení jsou tři díly, které by po sestavení měly dát dohromady vodní mlýnek, hračku do vody:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20190925-mlynek.png" alt="" /></p>
+<ul>
+<li><a href="https://gist.github.com/ridercz/52f1c14f2d490fb26d581dd548190603">Zdrojové soubory OpenSCAD</a></li>
+<li><a href="https://gist.github.com/ridercz/de12f61379cf9e498fbc7cdbd60dd548">Výsledné STL soubory</a></li>
+</ul>
+<script src="https://gist.github.com/ridercz/de12f61379cf9e498fbc7cdbd60dd548.js"></script>
+<p>Zdrojové kódy jsem oproti streamu mírně &quot;učesal&quot;, doplnil komentáře a přidal podporu pro build jednotlivých částí pomocí <a href="https://github.com/ridercz/OSBS">OSBS</a>.</p>
+<h2 id="filamenty-tisk-a-sleva">Filamenty, tisk a sleva</h2>
+<p>Jak jsem již zmínil ve streamu samotném, inspirací pro mne bylo, že mne oslovila společnost <a href="https://www.miroluk.cz">Miroluk</a>, která prodává náplně do tiskáren a nedávno svůj sortiment rozšířila i o filamenty do těch 3D. Díly z tohoto filamentu vytisknu a podělím se během pár dnů o své zkušenosti.</p>
+<blockquote>
+<p>Full disclosure: Dostal jsem zdarma tři cívky filamentu, jinak nejsem se společností Miroluk v žádném vztahu.</p>
+</blockquote>
+<p>Pokud chcete filamenty vyzkoušet sami, dostanete na <a href="https://www.miroluk.cz">miroluk.cz</a> po zadání kódu <code>7FD9CEYUP7</code> slevu 10%. Nabídka platí do konce října 2019.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Z%c3%a1znam%3a+3D+modelov%c3%a1n%c3%ad+v+programu+OpenSCAD&amp;body=https://www.altair.blog/2019/09/zaznam-livestreamu-openscad">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/09/zaznam-livestreamu-openscad.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/09/zaznam-livestreamu-openscad.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/09/zaznam-livestreamu-openscad">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/09/zaznam-livestreamu-openscad">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

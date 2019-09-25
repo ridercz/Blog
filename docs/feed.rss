@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-livestreamu-openscad</guid>
+      <title>Záznam: 3D modelování v programu OpenSCAD</title>
+      <description>V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%.</description>
+      <link>https://www.altair.blog/2019/09/zaznam-livestreamu-openscad</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-09-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-vektory</guid>
       <title>Záznam: Jak na přípravu vektorových podkladů</title>
       <description>Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkáchL. Co to vlastně je, jak takové podklady získat a na co si dát pozor? Záznam z dnešní přednášky.</description>
@@ -137,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-07-26T19:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66612690-psms7-2c3d335986327ac</guid>
-      <title>Konec světa se blíží: Windows 7 umírají, jako zombie ale budou ještě dlouho mezi námi</title>
-      <description>Microsoft začal upozorňovat uživatele Windows 7, že tomuto systému začátkem příštího roku vyprší podpora a po 14. lednu 2020 pro ně nebudou dostupné žádné aktualizace, a to ani bezpečnostní. Nejedná se o žádné překvapení, politika Microsoftu ohledně podpory vydaného softwaru je dopředu definovaná a všeobecně známá. Přesto to vyvolává emoce.</description>
-      <link>https://tech.ihned.cz/c7-66612690-psms7-2c3d335986327ac</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-07-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
