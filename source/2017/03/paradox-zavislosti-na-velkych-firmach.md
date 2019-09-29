@@ -2,7 +2,7 @@
 <!-- x4w:alternateUrl = https://archiv.ihned.cz/c1-65642800-paradox-zavislosti-na-velkych-firmach -->
 <!-- dcterms:abstract = Zákazníky veřejně málo známé společnosti Cloudflare jsou projekty jako Uber, Zendesk, Yelp Fitbit či zhruba tři tisíce českých webů. Před dvěma týdny se v systému Cloudflare objevila chyba. Jejím důsledkem bylo, že se za určitých okolností mohla náhodně část HTTP požadavku nebo odpovědi dostat do odpovědi jiného zákazníka. Včetně citlivých informací. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- dcterms:dateAccepted = 2017-03-03T00:00:00+01:00 -->

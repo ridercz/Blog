@@ -2,7 +2,7 @@
 <!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-65903120-dve-it-ostudy-statu-policiste-maji-nechraneny-web-a-uctenkova-loterie-ma-v-sobe-diry -->
 <!-- dcterms:abstract = Policie ČR špatně chrání svůj web a mlží o možných dopadech, přitom by stačilo málo. Účtenkovka vzbudila bouři odporu kvůli obavám ze šmírování, má ale větší problém. Bezpečný vyhledávač cenzuruje internet tak, že zabrání i snaze nahlásit znásilnění. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- dcterms:dateAccepted = 2017-10-04T15:23:00+02:00 -->

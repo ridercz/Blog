@@ -3,7 +3,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:dateAccepted = 2019-04-10 -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66552460-ofaba-8fb891a4cb49ff9 -->

@@ -2,7 +2,7 @@
 <!-- x4w:alternateUrl = https://archiv.ihned.cz/c1-65734810-wannacrypt-ukazal-co-je-v-it-svete-spatne -->
 <!-- dcterms:abstract = Útok WannaCrypt je typickou ukázkou toho, co je ve světě bezpečnosti špatně. Útok vznikl kvůli snaze NSA získat kybernetické zbraně, v důsledku úniku dat se k nim dostali zločinci. Máslo na hlavě mají postižení, neaktualizovali svoje systémy. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- dcterms:dateAccepted = 2017-05-19T00:00:00+02:00 -->

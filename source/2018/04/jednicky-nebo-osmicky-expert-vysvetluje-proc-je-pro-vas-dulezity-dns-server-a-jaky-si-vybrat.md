@@ -2,7 +2,7 @@
 <!-- x4w:alternateUrl = https://tech.ihned.cz/internet/c1-66112070-jednicky-nebo-osmicky-proc-je-pro-vas-dulezity-dns-server -->
 <!-- dcterms:abstract = Společnost CloudFlare vyvolala novou vlnu zájmu o DNS. Bezplatné servery překládají názvy webů do počítačové řeči. Kvalitní DNS slibuje rychlost i větší bezpečnost, realita je ale složitější. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- dcterms:dateAccepted = 2018-04-16T23:09:00+02:00 -->

@@ -2,7 +2,7 @@
 <!-- x4w:alternateUrl = https://archiv.ihned.cz/c1-65619290-pouceni-pro-uzivatele-temneho-webu -->
 <!-- dcterms:abstract = Útok na takzvaný darknet ukázal, že i v šifrovaných sítích dělají lidé stejné chyby. Útočníci získali data několika tisíc serverů a desítky tisíc e-mailových adres. Anonymní útok se chlubí odhalením velkého množství případů zneužívání dětí. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- dcterms:dateAccepted = 2017-02-10T00:00:00+01:00 -->

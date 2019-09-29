@@ -2,7 +2,7 @@
 <!-- x4w:alternateUrl = https://tech.ihned.cz/geekosfera/c1-65780980-novy-zakon-o-kyberneticke-bezpecnosti-pridava-firmam-hlavne-administrativni-zatez -->
 <!-- dcterms:abstract = Nový zákon o kybernetické bezpečnosti moc nezlepší. Bezpečnostní kamery jsou zranitelné. Dejte si pozor na značku Foscam. Malware lze ovládat i přes Instagram celebrit. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-economia.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- dcterms:dateAccepted = 2017-06-25T11:02:00+02:00 -->
