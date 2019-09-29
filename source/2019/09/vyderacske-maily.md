@@ -7,4 +7,4 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = 3D tisk -->
 <!-- dcterms:dateAccepted = 2019-09-29 -->
-<!-- x4w:alternateUrl = https://tech.ihned.cz/c1-66649530-co-delat-kdyz-vam-vyhrozuji-zverejnenim-intimniho-videa-vyderacske-e-maily-zasahly-cele-cesko -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66649530-psms7-6843282b124f571 -->
