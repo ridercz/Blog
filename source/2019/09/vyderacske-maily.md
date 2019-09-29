@@ -1,0 +1,10 @@
+<!-- dcterms:title = Co dělat, když vám vyhrožují zveřejněním intimního videa? Vyděračské e-maily zasáhly celé Česko -->
+<!-- dcterms:abstract = Možná jste ho dostali také: e-mail, který vyhrožuje zveřejněním masturbačního videa, pokud nezaplatíte výkupné v bitcoinech. Nejste sami, vlna spamu zasáhla celou Českou republiku. Připravili jsme pro vás odpovědi na otázky, co se děje a jak reagovat. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-hn.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2019-09-29 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c1-66649530-co-delat-kdyz-vam-vyhrozuji-zverejnenim-intimniho-videa-vyderacske-e-maily-zasahly-cele-cesko -->

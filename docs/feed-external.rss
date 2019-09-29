@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c1-66649530-co-delat-kdyz-vam-vyhrozuji-zverejnenim-intimniho-videa-vyderacske-e-maily-zasahly-cele-cesko</guid>
+      <title>Co dělat, když vám vyhrožují zveřejněním intimního videa? Vyděračské e-maily zasáhly celé Česko</title>
+      <description>Možná jste ho dostali také: e-mail, který vyhrožuje zveřejněním masturbačního videa, pokud nezaplatíte výkupné v bitcoinech. Nejste sami, vlna spamu zasáhla celou Českou republiku. Připravili jsme pro vás odpovědi na otázky, co se děje a jak reagovat.</description>
+      <link>https://tech.ihned.cz/c1-66649530-co-delat-kdyz-vam-vyhrozuji-zverejnenim-intimniho-videa-vyderacske-e-maily-zasahly-cele-cesko</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>3D tisk</category>
+      <pubDate>2019-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</guid>
       <title>Šestiúhelníková krabička na kostky</title>
       <description>Při hledání něčeho úplně jiného jsem našel svou více než dvacet let starou sadu kovových hracích kostek. Památka na doby, kdy jsem hrál Dračí doupě a GURPS. Modelů pro 3D tisk pouzder na kostky je všude spousta, ale nenašel jsem žádný, který by vyhovoval rozměrům mých kostek a magnetů, které mám pro použití na zavírání. Tak jsem si navrhl vlastní, parametrický, který si dokáže poradit s jakýmkoliv rozměrem.</description>
@@ -136,15 +146,6 @@
       <category>Bezpečnost</category>
       <category>Software</category>
       <pubDate>2019-03-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2019/03/bdsm-ponyplay-qna</guid>
-      <title>BDSM a ponyplay Q&amp;A živě na YouTube</title>
-      <description>Jedna z nejúspěšnějších věcí na mém YouTube jsou záznamy přednášek o BDSM, které jsme pořádali na FHS UK v minulých letech. Letos se žádná konat nebude - aspoň pohud vím - a tak jsem se rozhodl uspořádat totéž online. Ve středu 20. března 2019 od 20:00 bude na mém YouTube kanále živý stream, ve kterém budu odpovídat na vaše otázky.</description>
-      <link>https://www.bdsm.cz/2019/03/bdsm-ponyplay-qna</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2019-03-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

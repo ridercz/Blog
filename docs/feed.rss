@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c1-66649530-co-delat-kdyz-vam-vyhrozuji-zverejnenim-intimniho-videa-vyderacske-e-maily-zasahly-cele-cesko</guid>
+      <title>Co dělat, když vám vyhrožují zveřejněním intimního videa? Vyděračské e-maily zasáhly celé Česko</title>
+      <description>Možná jste ho dostali také: e-mail, který vyhrožuje zveřejněním masturbačního videa, pokud nezaplatíte výkupné v bitcoinech. Nejste sami, vlna spamu zasáhla celou Českou republiku. Připravili jsme pro vás odpovědi na otázky, co se děje a jak reagovat.</description>
+      <link>https://tech.ihned.cz/c1-66649530-co-delat-kdyz-vam-vyhrozuji-zverejnenim-intimniho-videa-vyderacske-e-maily-zasahly-cele-cesko</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>3D tisk</category>
+      <pubDate>2019-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-openscad</guid>
       <title>Záznam: 3D modelování v programu OpenSCAD</title>
       <description>V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%.</description>
@@ -138,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2019-07-26T20:30:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</guid>
-      <title>Zbytečná panika: Přehrávač VLC mazat nemusíte, chyba je opravená více než rok</title>
-      <description>Světová média v čele s Gizmodem šíří zprávu o údajné kritické bezpečnostní chybě v populárním přehrávači VLC. Některá zacházejí tak daleko, že doporučují VLC okamžitě odinstalovat. Skutečnost je ovšem jiná. Chyba je ve staré verzi knihovny, kterou VLC už více než rok nepoužívá.</description>
-      <link>https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-07-26T19:00:00</pubDate>
     </item>
   </channel>
 </rss>
