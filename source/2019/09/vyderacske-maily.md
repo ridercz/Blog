@@ -5,6 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- x4w:category = 3D tisk -->
 <!-- dcterms:dateAccepted = 2019-09-29 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66649530-psms7-6843282b124f571 -->
