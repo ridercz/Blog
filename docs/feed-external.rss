@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.thingiverse.com/thing:3891621</guid>
+      <title>Parametrické držáky do sprchy</title>
+      <description>Šelmíra, mé roztomilé jakovlčí štěňátko, má silnou úchylku na koupelnové vybavení. Nadšeně krade a žere šampony, sprchové gely a podobně. Na AliExpressu jsem koupil přísavky a navrhl držáky na nejrůznější lahvičky, které lze umístit dostatečně vysoko na zeď, aby Šelmu nelákaly. Model je plně parametrický a snadno lze vyrobit držáky v libovolných rozměrech lahvičky i přísavek.</description>
+      <link>https://www.thingiverse.com/thing:3891621</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2019-10-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66649530-psms7-6843282b124f571</guid>
       <title>Co dělat, když vám vyhrožují zveřejněním intimního videa? Vyděračské e-maily zasáhly celé Česko</title>
       <description>Možná jste ho dostali také: e-mail, který vyhrožuje zveřejněním masturbačního videa, pokud nezaplatíte výkupné v bitcoinech. Nejste sami, vlna spamu zasáhla celou Českou republiku. Připravili jsme pro vás odpovědi na otázky, co se děje a jak reagovat.</description>
@@ -135,16 +145,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-04-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=9QszkJh1CPc</guid>
-      <title>KeePass: Jak nainstalovat a používat správce hesel</title>
-      <description>Pokud si heslo dokážete zapamatovat, není dostatečně bezpečné. Zní to trochu jedovatě, ale v základu to je pravda. Dostatek kvalitních hesel si běžný uživatel nemá šanci zapamatovat, chce-li dodržet základní zásadu, že každá služba by měla mít své vlastní heslo. Od toho tu jsou správci hesel (password manager). Já používám KeePass, který je zadarmo a pro všechny možné platformy. V tomto videu vás naučím, jak ho nainstalovat, počeštit a používat.</description>
-      <link>https://www.youtube.com/watch?v=9QszkJh1CPc</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>Software</category>
-      <pubDate>2019-03-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
