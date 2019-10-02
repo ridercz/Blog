@@ -32,7 +32,7 @@ Projdeme si následující témata:
 ## Leptání skla a kovu svépomocí
 
 * Přednáška: **8. října 2019, 18:00-20:00, vstup 300 Kč (pro členy 100 Kč), [registrace](https://prusalab.cz/prusalab-events/leptani-skla-a-kovu-svepomoci-prednaska/)**
-* Workshop: **15. října 2019, 18:00-20:00, vstup 300 Kč (pro členy 100 Kč), [registrace]https://prusalab.cz/prusalab-events/leptani-skla-a-kovu-svepomoci-workshop/**
+* Workshop: **15. října 2019, 18:00-20:00, vstup 300 Kč (pro členy 100 Kč), [registrace](https://prusalab.cz/prusalab-events/leptani-skla-a-kovu-svepomoci-workshop/)**
 
 Na této přednášce vám předvedu dvě odlišné techniky, které spolu ale úzce souvisejí. Leptání skla speciální pastou a leptání kovů elektrolytickou cestou. Jde o způsob značení materiálu, který je esteticky zajímavý, velmi stálý a odolný a přestože působí luxusním dojmem, je ve skutečnosti velice jednoduchý. 
 
