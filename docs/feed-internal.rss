@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/10/bootcamp</guid>
+      <title>ASP.NET Core 3.0 Boot Camp</title>
+      <description>Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním.</description>
+      <link>https://www.altair.blog/2019/10/bootcamp</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <pubDate>2019-10-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-openscad</guid>
       <title>Záznam: 3D modelování v programu OpenSCAD</title>
       <description>V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%.</description>
@@ -138,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-05-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/05/nove-tag-helpery</guid>
-      <title>Nové tag helpery v knihovně Altairis Tag Helpers</title>
-      <description>Do knihovny Altairis.TagHelpers jsem přidal několik nových tag helperů pro ASP.NET MVC Core a Razor Pages. Nová verze 1.4 obsahuje potvrzení akce, zobrazení verze aplikace a zejména žádaný ekvivalent komponent CheckBoxList a RadioButtonList.</description>
-      <link>https://www.altair.blog/2019/05/nove-tag-helpery</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <pubDate>2019-05-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

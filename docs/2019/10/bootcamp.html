@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Core 3.0 Boot Camp | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním." />
+    <link rel="canonical" href="https://www.altair.blog/2019/10/bootcamp" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="ASP.NET Core 3.0 Boot Camp" />
+    <meta name="twitter:description" content="Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20191002-bootcamp.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="ASP.NET Core 3.0 Boot Camp" />
+    <meta property="og:description" content="Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20191002-bootcamp.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/10/bootcamp" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20191002-bootcamp.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>ASP.NET Core 3.0 Boot Camp</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-10-02" title="Datum vydání">2. října 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>David (dbking) via Flickr, CC BY 2.0 <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním.</p>
+<h2 id="pro-koho-je-kurz-urcen-a-co-je-jeho-cilem">Pro koho je kurz určen a co je jeho cílem?</h2>
+<p>Kurz je určen pro programátory, kteří mají rutinní znalost programování v ASP.NET 4.x (.NET Framework) a alespoň základní znalosti ASP.NET MVC 5 (Razor).</p>
+<p>Jeho cílem je upgradovat vaše znalosti a dovednosti na současnou verzi ASP.NET Core 3.0. Je kompletním průvodcem platformou .NET Core, novinkami v ní a také novou technologií Razor Pages, která představuje alternativu k poněkud zkostnatělému MVC.</p>
+<h2 id="jak-bude-kurz-organizovan-a-cim-se-lisi-od-beznych-kurzu">Jak bude kurz organizován a čím se liší od běžných kurzů?</h2>
+<p>Kurz se záměrně koná mimo Prahu a bude podstatně intenzivnější, než je u běžných školení zvykem. Jeho součástí je i ubytování (4 noci) a stravování (3x denně) v hotelu. Bude se konat od 10:00 do 20:00 (s několika přestávkami).</p>
+<p>Budu kombinovat výklad s praktickými příklady (laby). Těch je více než padesát a jsou vzájemně propojené tak, aby vedly k vytvoření aplikace, řešící reálné a praktické problémy.</p>
+<p><strong>Boot camp není určen začátečníkům, ale zkušenějším programátorům</strong>, kteří dokáží (a chtějí) vstřebat poměrně velký objem informací v poměrně krátkém čase. Je dosti náročný, ale oproti armádním boot campům na vás nebudu ošklivě křičet a šikanovat vás (pokud si to výslovně nevyžádáte, pak to samozřejmě lze na individuální žádost zařídit).</p>
+<p>I mimo dobu školení vám budu k dispozici pro případné dotazy. Budu s sebou mít rozličnou zábavnou mikroelektroniku a 3D tiskárnu. Pokud se chcete vzdělat i v těchto oborech, budou vám k dispozici k samostudiu materiály z mých školení o 3D modelování nebo Arduinu.</p>
+<h2 id="kdy-a-kde-se-kurz-kona-a-kolik-stoji">Kdy a kde se kurz koná a kolik stojí?</h2>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191002-sarz-hotel.jpg" alt="Hotel Oáza Srdce Vršov" /></p>
+<p>Kurz se bude konat <strong>od 18. do 22. listopadu 2019 (pondělí-pátek)</strong> v hotelu <a href="http://oazasrdce.cz/">Oáza Srdce ve Vršově</a>, poblíž Chrudimi. Začne společným obědem v pondělí ve 12:00 a bude končit v pátek odpoledne.</p>
+<p><strong>Cena kurzu je 27 000 Kč</strong> za účastníka (bez DPH).</p>
+<p><strong>Na kurz se můžete <a href="https://www.dotnetcollege.cz/objednat-skoleni/2093">registrovat na webu DotNetCollege</a>.</strong></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191002-sarz-kolaz.jpg" alt="Hotel Oáza Srdce Vršov" /></p>
+<p>Cena zahrnuje ubytování ve dvoulůžkových pokojích (čtyři noci) a plnou penzi (snídaně, oběd, večeře). V hotelu je k dispozici bar, masáže, koupele a sauna. Vůkol se rozprostírá geopark Železné hory, takže technologicky intenzivní zážitky můžete kompenzovat pobytem v přírodě. Pokud se přírodě hodláte pokud možno vyhnout, je v hotelu i bar.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191002-sarz-louka.jpg" alt="Hotel Oáza Srdce Vršov" /></p>
+<p>S hotelem mám osobní dlouhodobou zkušenost, pořádám tam akce již léta. Je pohodlný, personál přátelský a kuchyně dobrá (a schopná vyhovět i specifickým nárokům na stravu).</p>
+<h2 id="co-si-maji-vzit-ucastnici-s-sebou">Co si mají vzít účastníci s sebou?</h2>
+<p>Každý účastník potřebuje vlastní počítač s nainstalovanou aktuální verzí Visual Studia 2019 (s workloadem pro vývoj webových aplikací v .NET Core) a jakoukoliv podporovanou verzí SQL Serveru (libovolné edice včetně bezplatné Express).
+Jaký je obsah školení?</p>
+<ul>
+<li>Ideové změny v ASP.NET - proč je tady .NET Core
+<ul>
+<li>Doporučení jaké platformy v různých situacích využívat</li>
+<li>.NET Core runtime, .NET Standard</li>
+<li>Projektový systém a NuGet</li>
+</ul>
+</li>
+<li>Tvorba univerzálních komponent (.NET Core i ASP.NET 4.x)</li>
+<li>Běh ASP.NET Core aplikace - Configure, Run, Middleware
+<ul>
+<li>Tvorba vlastního middleware</li>
+<li>Práce se statickými soubory</li>
+</ul>
+</li>
+<li>Deployment aplikací
+<ul>
+<li>Různé druhy deploymentu: SDK, FDD, SCD</li>
+</ul>
+</li>
+<li>Co je Kestrel a jak spolupracuje s IIS a nginxem
+<ul>
+<li>Zprovoznění a nasazení .NET Core aplikace na IIS</li>
+<li>Zprovoznění a nasazení .NET Core aplikace an Azure AppService</li>
+<li>Zprovoznění a nasazení .NET Core aplikace na Linuxu</li>
+</ul>
+</li>
+<li>.NET Core nejen pro web
+<ul>
+<li>Konzolové aplikace, parsování příkazové řádky</li>
+<li>Windows Services v .NET Core</li>
+<li>Desktopové aplikace ve Windows</li>
+</ul>
+</li>
+<li>Architektura aplikací, SOLID principy (postupně se refactoruje &quot;postaru&quot; napsaná aplikace)
+<ul>
+<li>SRP</li>
+<li>OCP</li>
+<li>LSP</li>
+<li>ISP</li>
+<li>DIP</li>
+</ul>
+</li>
+<li>IoC/DI
+<ul>
+<li>Obecně, k čemu je to dobré</li>
+<li>IoC/DI v .NET Frameworku a .NET Core</li>
+<li>Použití vestavěného kontejneru</li>
+<li>Náhrada vestavěného kontejneru za Autofac</li>
+<li>Pokročilejší scénáře, registrace pomocí konvencí atd.</li>
+</ul>
+</li>
+<li>ASP.NET MVC Core
+<ul>
+<li>Změny proti MVC 5</li>
+<li>NuGet balíčky</li>
+<li>Podpora IoC/DI, direktiva <code>@inject</code></li>
+<li>Soubor <code>_ViewImports.cshtml</code></li>
+<li>Attribute routing</li>
+</ul>
+</li>
+<li>Vytvoření základu funkční aplikace
+<ul>
+<li>JavaScript a CSS v .NET Core</li>
+<li>Client Library Manager (LibMan)</li>
+<li>CSS a JS preprocesory</li>
+<li>Bundling a minifikace</li>
+<li>Použití CDN, fallback, SRI a CORS</li>
+<li>Koncept &quot;Hosting Environment&quot; v ASP.NET</li>
+</ul>
+</li>
+<li>Tag helpers
+<ul>
+<li>Cacheování</li>
+<li>Formuláře</li>
+<li>Tvorba vlastních</li>
+</ul>
+</li>
+<li>Entity Framework Core, úvod - tooling, seeding, migrace</li>
+<li>Razor Pages
+<ul>
+<li>Idea MVVM, ViewModely</li>
+<li>Technologie Razor Pages jako taková</li>
+<li>Routing, handlery</li>
+<li>Využití technik známých z MVC</li>
+</ul>
+</li>
+<li>Konfigurace
+<ul>
+<li>Zdroje konfigurace</li>
+<li>Objektová nadstavba</li>
+<li>User secrets</li>
+</ul>
+</li>
+<li>Odesílání e-mailů v ASP.NET Core</li>
+<li>Automatické generování UI
+<ul>
+<li>Model metadata providers</li>
+<li>Automatická validace</li>
+<li>Šablony pro automatické generování polí</li>
+</ul>
+</li>
+<li>Internacionalizace
+<ul>
+<li>Lokalizace a globalizace, kultury</li>
+<li>Vestavěné mechanismy v ASP.NET Core</li>
+<li>Vlastní lokalizační mechanismy</li>
+<li>Lokalizace a routing</li>
+</ul>
+</li>
+<li>Zabezpečení webových aplikací
+<ul>
+<li>Základní pojmy identifikace, autentizace, autentizační faktory...</li>
+<li>Cookie authentication middleware</li>
+<li>Claims-based authentication</li>
+</ul>
+</li>
+<li>ASP.NET Identity
+<ul>
+<li>Bootstrapping – vytvoření prvotního uživatele</li>
+<li>Přihlášení a odhlášení</li>
+<li>Bezpečný reset hesla</li>
+<li>Práce s rolemi</li>
+<li>Registrace uživatelů</li>
+<li>Ověření e-mailu</li>
+<li>Dvoufaktorová autentizace pomocí OTP</li>
+<li>Recovery keys</li>
+<li>Rozšíření informací o uživateli</li>
+<li>Správa uživatelského profilu</li>
+<li>Bezpečná změna e-mailové adresy</li>
+</ul>
+</li>
+<li>Customizace ASP.NET Identity
+<ul>
+<li>Vlastní password hasher pro migraci z membership providerů atd.</li>
+<li>Rozšíření funkcionality - zakázání uživatele, sledování přihlášení</li>
+<li>Přihlašování pomocí externích identity providerů</li>
+<li>Přihlašování bez hesla</li>
+</ul>
+</li>
+</ul>
+<p><strong>Na kurz se můžete <a href="https://www.dotnetcollege.cz/objednat-skoleni/2093">registrovat na webu DotNetCollege</a>.</strong></p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=ASP.NET+Core+3.0+Boot+Camp&amp;body=https://www.altair.blog/2019/10/bootcamp">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/10/bootcamp.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/10/bootcamp.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/10/bootcamp">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/10/bootcamp">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
