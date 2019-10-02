@@ -1,10 +1,10 @@
 <!-- dcterms:title = ASP.NET Core 3.0 Boot Camp -->
 <!-- dcterms:abstract = Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/20191002-bootcamp.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20191002-aspnet-bootcamp.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:coverUrl = /cover-pictures/20191002-bootcamp.jpg -->
+<!-- x4w:coverUrl = /cover-pictures/20191002-aspnet-bootcamp.jpg -->
 <!-- x4w:coverCredits = David (dbking) via Flickr, CC BY 2.0 -->
 <!-- x4w:category = Akce a události -->
 <!-- dcterms:dateAccepted = 2019-10-02 -->

@@ -6,10 +6,10 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/10/bootcamp</guid>
+      <guid isPermaLink="true">https://www.altair.blog/2019/10/aspnet-bootcamp</guid>
       <title>ASP.NET Core 3.0 Boot Camp</title>
       <description>Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním.</description>
-      <link>https://www.altair.blog/2019/10/bootcamp</link>
+      <link>https://www.altair.blog/2019/10/aspnet-bootcamp</link>
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-10-02T00:00:00</pubDate>
