@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/10/sestnact-vlkosedych-let</guid>
+      <title>Šestnáct vlkošedých let</title>
+      <description>Dnes je tomu přesně rok od doby, co zemřela moje první československá vlčanda, Esta Kanýčo. Včera uplynulo šestnáct let od jejího narození. Tento článek je vzpomínkou na léta, která jsem s ní strávil.</description>
+      <link>https://www.altair.blog/2019/10/sestnact-vlkosedych-let</link>
+      <author>Michal Altair Valášek</author>
+      <category>Vlci</category>
+      <pubDate>2019-10-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/10/aspnet-bootcamp</guid>
       <title>ASP.NET Core 3.0 Boot Camp</title>
       <description>Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním.</description>
@@ -138,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-05-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/05/materialy-z-techedu</guid>
-      <title>Příklady a prezentace z mých přednášek na TechEdu 2019</title>
-      <description>Jako každý rok, i letos jsem měl na pražském TechEdu řadu přednášek. Počínaje tradiční vývojářskou keynote s přehledem věcí současných i budoucích a konče třeba tím, co by podle mne Windowsáci měli vědět o Linuxu. Nyní jsou ke stažení příklady a prezentace z nich.</description>
-      <link>https://www.altair.blog/2019/05/materialy-z-techedu</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2019-05-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
