@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</guid>
+      <title>Jak prolomit EET</title>
+      <description>V médiích se to hemží zprávami o tom, jak dvě ostravské firmy "prolomily EET". Reálných informací o případu je minimum, ale ze zveřejněných fragmentů lze docela dobře usuzovat na to, o co šlo. O případu nevím víc, než kolik bylo zveřejněno, a tento článek je tedy čirou spekulací, ovšem založenou na odborných znalostech a zkušenostech.</description>
+      <link>https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-10-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/10/sestnact-vlkosedych-let</guid>
       <title>Šestnáct vlkošedých let</title>
       <description>Dnes je tomu přesně rok od doby, co zemřela moje první československá vlčanda, Esta Kanýčo. Včera uplynulo šestnáct let od jejího narození. Tento článek je vzpomínkou na léta, která jsem s ní strávil.</description>
@@ -137,16 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2019-08-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/08/url-signer-jeste-jednou</guid>
-      <title>Podepisování URL ještě jednou</title>
-      <description>Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem včerejšího článku. Přidal jsem (částečnou) ochranu proti replay útokům a vše vyčlenil do samostatné knihovny a NuGet balíčku.</description>
-      <link>https://www.altair.blog/2019/08/url-signer-jeste-jednou</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2019-08-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</guid>
+      <title>Jak prolomit EET</title>
+      <description>V médiích se to hemží zprávami o tom, jak dvě ostravské firmy "prolomily EET". Reálných informací o případu je minimum, ale ze zveřejněných fragmentů lze docela dobře usuzovat na to, o co šlo. O případu nevím víc, než kolik bylo zveřejněno, a tento článek je tedy čirou spekulací, ovšem založenou na odborných znalostech a zkušenostech.</description>
+      <link>https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-10-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.thingiverse.com/thing:3891621</guid>
       <title>Parametrické držáky do sprchy</title>
       <description>Šelmíra, mé roztomilé jakovlčí štěňátko, má silnou úchylku na koupelnové vybavení. Nadšeně krade a žere šampony, sprchové gely a podobně. Na AliExpressu jsem koupil přísavky a navrhl držáky na nejrůznější lahvičky, které lze umístit dostatečně vysoko na zeď, aby Šelmu nelákaly. Model je plně parametrický a snadno lze vyrobit držáky v libovolných rozměrech lahvičky i přísavek.</description>
@@ -135,16 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-04-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://josefprusa.cz/jak-na-casosbery-3d-tisku-s-pomoci-mobilu/</guid>
-      <title>Jak na časosběry 3D tisků s pomocí mobilu</title>
-      <description>Mnoho lidí chce pořizovat časosběrné záběry 3D tisku, nicméně ne každý má dnes foťák se vzdálenou spouští, příkladmo zrcadlovku. Mobil s foťákem má ale skoro každý. Proto jsem navrhl řešení, pomocí kterého si pomocí příkazů v G-Code fotoaparát v mobilu může ovládat sama tiskárna přes Bluetooth LE.</description>
-      <link>https://josefprusa.cz/jak-na-casosbery-3d-tisku-s-pomoci-mobilu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-04-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
