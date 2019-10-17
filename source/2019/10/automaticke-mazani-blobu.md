@@ -1,5 +1,5 @@
 <!-- dcterms:title = Automatické mazání blobů v Azure Storage -->
-<!-- dcterms:abstract = Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít. -->
+<!-- dcterms:abstract = Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude hodit Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20191017-automaticke-mazani-blobu.jpg -->
 <!-- x4w:pictureWidth = 150 -->

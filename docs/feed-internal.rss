@@ -8,7 +8,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/10/automaticke-mazani-blobu</guid>
       <title>Automatické mazání blobů v Azure Storage</title>
-      <description>Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít.</description>
+      <description>Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude hodit Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít.</description>
       <link>https://www.altair.blog/2019/10/automaticke-mazani-blobu</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
