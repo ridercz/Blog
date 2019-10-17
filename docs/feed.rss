@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/10/automaticke-mazani-blobu</guid>
+      <title>Automatické mazání blobů v Azure Storage</title>
+      <description>Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít.</description>
+      <link>https://www.altair.blog/2019/10/automaticke-mazani-blobu</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2019-10-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</guid>
       <title>Jak prolomit EET</title>
       <description>V médiích se to hemží zprávami o tom, jak dvě ostravské firmy "prolomily EET". Reálných informací o případu je minimum, ale ze zveřejněných fragmentů lze docela dobře usuzovat na to, o co šlo. O případu nevím víc, než kolik bylo zveřejněno, a tento článek je tedy čirou spekulací, ovšem založenou na odborných znalostech a zkušenostech.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-08-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/08/tisk-na-webu</guid>
-      <title>Tisk z webové aplikace na lokální tiskárně: jak na to?</title>
-      <description>Svatý grál tisku z webových aplikací: uživatel klepne na tlačítko na webu a z tiskárny okamžitě, bez dalšího dialogu, začne lézt dokument, přesně tak, jak si ho programátor vysnil. Problém je, že to na webu nejde. Nebo ano?</description>
-      <link>https://www.altair.blog/2019/08/tisk-na-webu</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2019-08-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Automatické mazání blobů v Azure Storage | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít." />
+    <link rel="canonical" href="https://www.altair.blog/2019/10/automaticke-mazani-blobu" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=3552AA26A82BDBFF19D9B7AE81FDD7FF45721781" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Automatické mazání blobů v Azure Storage" />
+    <meta name="twitter:description" content="Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20191017-automaticke-mazani-blobu.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Automatické mazání blobů v Azure Storage" />
+    <meta property="og:description" content="Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20191017-automaticke-mazani-blobu.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/10/automaticke-mazani-blobu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20191017-automaticke-mazani-blobu.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Automatické mazání blobů v Azure Storage</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-10-17" title="Datum vydání">17. října 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Andrew Stawarz via Flickr, CC BY-SA 2.0 <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Mám rád Azure Storage, protože je to levné, jednoduché a spolehlivé úložiště dat. Používám ho mimo jiné pro &quot;zálohu poslední záchrany&quot; pro databáze. Podrobnosti najdete v článku <a href="https://www.altair.blog/2018/07/zaloha-sql-do-azure">Automatizovaná záloha SQL Serveru do Azure Storage</a>. Můj skript nicméně neřeší mazání starých záloh. Při cenách Azure Storage a velikosti našich databází mi nestálo za to psát na to nějaký skript.</p>
+<p>Od letošního března ale Azure Storage podporuje funkci <a href="https://azure.microsoft.com/en-ca/blog/azure-blob-storage-lifecycle-management-now-generally-available/">Lifecycle Management</a>. Ta umožňuje nastavení pravidel, která budou jednotlivé bloby různě šikanovat, například je po určitém čase přesune do levnějšího pomalejšího úložiště, smaže jejich snapshoty (staré verze) a nebo je třeba úplně smaže. Zcela automaticky, aniž bychom se o to museli nějak starat. Další informace najdete v článku <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts.">Manage the Azure Blob storage lifecycle</a></p>
+<h2 id="jak-na-to">Jak na to</h2>
+<p>Pomocí následujícího návodu nastavíme úložiště tak, aby automaticky smazalo soubory, které byly naposledy modifikovány před rokem (a déle).</p>
+<p>V první řadě si ověřte, že je váš storage account General Purpose Version 2 (GPv2). Pokud ho máte už dlouho, možná je ve starší GPv1 a musíte ho nejprve <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-account-upgrade">upgradovat</a>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191017-deleteblobs-0.png" alt="" /></p>
+<p>Klepněte na odkaz <em>Lifecycle Management</em> a poté <em>Add Rule</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191017-deleteblobs-1.png" alt="" /></p>
+<p>Zadejte název pravidla (může obsahovat pouze malá písmena anglické abecedy a číslice) a zaškrtněte <em>Delete blob</em> a do pole <em>days after last modification</em> zadejte <em>365</em> - tedy jeden rok. Poté klepněte na <em>Review + Add</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191017-deleteblobs-2.png" alt="" /></p>
+<p>Takto zadané pravidlo smaže všechny staré bloby na storage accountu. Pomocí záložky <em>Filter set</em> můžete omezit, na které bloby se pravidlo bude vztahovat.</p>
+<p>Zkontrolujte zadané parametry a klepněte na <em>Add</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191017-deleteblobs-3.png" alt="" /></p>
+<p>Vytvoří se nové pravidlo:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191017-deleteblobs-4.png" alt="" /></p>
+<p>Pravidla se vyhodnotí a aplikují jednou denně. Nadbytečné bloby se tedy nesmažou okamžitě, ale může trvat až 24 hodin, než se změna projeví.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Automatick%c3%a9+maz%c3%a1n%c3%ad+blob%c5%af+v+Azure+Storage&amp;body=https://www.altair.blog/2019/10/automaticke-mazani-blobu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/10/automaticke-mazani-blobu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/10/automaticke-mazani-blobu.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/10/automaticke-mazani-blobu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/10/automaticke-mazani-blobu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
