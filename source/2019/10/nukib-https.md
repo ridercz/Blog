@@ -1,0 +1,9 @@
+<!-- dcterms:title = HTTPS správně: Úřad pro kybernetickou bezpečnost má z ostudy kabát. Poučte se z jeho chyb -->
+<!-- dcterms:abstract = Webové stránky Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB) a vládního CERT byly v úterý nedostupné. Vypršel jim totiž certifikát pro HTTPS. Podle zprávy na oficiálním Twitteru organizace šlo o chybu "dnes již bývalého zaměstnance". Alespoň že se nejednalo o tradiční "stážistku". I tak má ale NÚKIB z ostudy kabát. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20191023-nukib-https.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2019-10-23 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66664450-psms7-a2969b0b45e9f63 -->
