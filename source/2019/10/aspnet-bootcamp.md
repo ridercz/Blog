@@ -11,6 +11,10 @@
 
 Máme zde ASP.NET Core 3.0. A taky spoustu programátorů, kteří se .NET Core nestihli naučit a zjišťují, že to potřebují. Proto jsem se rozhodl uspořádat jedinečnou akci: pětidenní intenzivní školení s ubytováním.
 
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/8r1jS8WjT3c" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
 ## Pro koho je kurz určen a co je jeho cílem?
 
 Kurz je určen pro programátory, kteří mají rutinní znalost programování v ASP.NET 4.x (.NET Framework) a alespoň základní znalosti ASP.NET MVC 5 (Razor).
