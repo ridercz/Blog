@@ -1,0 +1,9 @@
+<!-- dcterms:title = Na komerční VPN nespoléhejte, vytvořte si vlastní; s projektem Outline je to snadné a levné -->
+<!-- dcterms:abstract = Společnosti NordVPN, poskytovatele stejnojmenné VPN služby, utekly privátní klíče a neznámý útočník získal plnou kontrolu nad jejich serverem ve Finsku. NordVPN přitom patří mezi ty lepší společnosti, které VPN provozují. Společnost VPNpro u velkého množství různých VPN služeb zjišťovala, komu vlastně patří. Výsledky byly pozoruhodné: 97 služeb ve vlastněno jenom 23 společnostmi, z nichž řada sídlí v zemích, které neslynou zrovna nejlepší pověstí, pokud jde o dodržování soukromí internetových uživatelů - například v Číně nebo Pákistánu. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20191026-outline.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2019-10-26 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc</guid>
+      <title>Na komerční VPN nespoléhejte, vytvořte si vlastní; s projektem Outline je to snadné a levné</title>
+      <description>Společnosti NordVPN, poskytovatele stejnojmenné VPN služby, utekly privátní klíče a neznámý útočník získal plnou kontrolu nad jejich serverem ve Finsku. NordVPN přitom patří mezi ty lepší společnosti, které VPN provozují. Společnost VPNpro u velkého množství různých VPN služeb zjišťovala, komu vlastně patří. Výsledky byly pozoruhodné: 97 služeb ve vlastněno jenom 23 společnostmi, z nichž řada sídlí v zemích, které neslynou zrovna nejlepší pověstí, pokud jde o dodržování soukromí internetových uživatelů - například v Číně nebo Pákistánu.</description>
+      <link>https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-10-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66664450-psms7-a2969b0b45e9f63</guid>
       <title>HTTPS správně: Úřad pro kybernetickou bezpečnost má z ostudy kabát. Poučte se z jeho chyb</title>
       <description>Webové stránky Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB) a vládního CERT byly v úterý nedostupné. Vypršel jim totiž certifikát pro HTTPS. Podle zprávy na oficiálním Twitteru organizace šlo o chybu "dnes již bývalého zaměstnance". Alespoň že se nejednalo o tradiční "stážistku". I tak má ale NÚKIB z ostudy kabát.</description>
@@ -130,16 +139,6 @@
       <title>Svinovací držák na pásek</title>
       <description>Mým nepostradatelným průvodcem je zavírací nůž značky Husky. Jenom ho několikrát týdně někde zapomínám a ztrácím. Proto jsem si ho přidělal na svinovací držák badge. Jenomže jak přidělat ten držák? Jeho očko nevypadá moc spolehlivě, na pásku nedrží, z kapsy leze... Tak jsem si navrhnul vlastní držák, který se navlékne na pásek.</description>
       <link>https://www.thingiverse.com/thing:3574737</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-04-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:3572066</guid>
-      <title>Držák špendlíku na odznaky</title>
-      <description>Vyrábím dřevěné jakovlčí odznaky. Vlastní placka je vyrobená na laseru z tenké překližky, ale jak na ni přidělat spínací špendlík? Na prototyp jsem ho nalepil lepící páskou, ale to není moc profi řešení. Tak jsem pro produkční verzi připravil plastový držák, do kterého je špendlík zatisknutý.</description>
-      <link>https://www.thingiverse.com/thing:3572066</link>
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <category>3D tisk</category>
