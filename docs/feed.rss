@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/11/layered-text</guid>
+      <title>Textový přívešek na klíče v OpenSCADu</title>
+      <description>OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky.</description>
+      <link>https://www.altair.blog/2019/11/layered-text</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2019-11-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc</guid>
       <title>Na komerční VPN nespoléhejte, vytvořte si vlastní; s projektem Outline je to snadné a levné</title>
       <description>Společnosti NordVPN, poskytovatele stejnojmenné VPN služby, utekly privátní klíče a neznámý útočník získal plnou kontrolu nad jejich serverem ve Finsku. NordVPN přitom patří mezi ty lepší společnosti, které VPN provozují. Společnost VPNpro u velkého množství různých VPN služeb zjišťovala, komu vlastně patří. Výsledky byly pozoruhodné: 97 služeb ve vlastněno jenom 23 společnostmi, z nichž řada sídlí v zemích, které neslynou zrovna nejlepší pověstí, pokud jde o dodržování soukromí internetových uživatelů - například v Číně nebo Pákistánu.</description>
@@ -136,16 +145,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2019-08-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/08/live-coding</guid>
-      <title>Live coding: Vlastní password validátor v ASP.NET Core Identity</title>
-      <description>Rozhodl jsem se napsat vlastní validátor síly hesel pro ASP.NET Core Identity. A říkám si, že to bude zajímavější, když to budu živě přenášet na YouTube. Založím nový projekt na GitHubu, napíšu validátor a vypublikuji ho jako NuGet balíček. Alespoň tedy takový je plán, ale v živém přenosu se to může rychle změnit...</description>
-      <link>https://www.altair.blog/2019/08/live-coding</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2019-08-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Textový přívešek na klíče v OpenSCADu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky." />
+    <link rel="canonical" href="https://www.altair.blog/2019/11/layered-text" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Textový přívešek na klíče v OpenSCADu" />
+    <meta name="twitter:description" content="OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20191110-layered-text.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Textový přívešek na klíče v OpenSCADu" />
+    <meta property="og:description" content="OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20191110-layered-text.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/11/layered-text" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20191110-layered-text.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Textový přívešek na klíče v OpenSCADu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-11-10" title="Datum vydání">10. listopadu 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky.</p>
+<p>Celé to začalo ve chvíli, kdy &quot;můj&quot; Theophilos (jsem členem syndikátu, v jehož barvách běhá) vyhrál Velkou pardubickou. Chtěl jsem na paměť jeho úžasného výkonu něco vytvořit. A napadl mne vícebarevný přívěšek v barvách našeho syndikátu, bílé a zelené. Přidal jsem k tomu ještě červenou barvu čapky a zasedl k OpenSCADu. Výsledek vypadal takto:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191110-theophilos.png" alt="" /></p>
+<p>Římská číslice CXXIX odpovídá 129. ročníku Velké pardubické.</p>
+<p>A když už jsem to celé dělal, tak proč ne rovnou univerzálně, aby se dala vytisknout jakákoliv kombinace slov? Na ukázku třeba heslo &quot;HORSE POWER&quot;:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191110-horsepower.png" alt="" /></p>
+<p>Vrstev může být i víc než dvě. Model jich zvládá neomezené množství. Nicméně za hraniční obecně pokládám tři vrstvy, více jich už bude nečitelných. Zkusil jsem třeba heslo &quot;1918 CZECH REPUBLIC&quot; v národních barvách:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2019/20191110-czech.png" alt="" /></p>
+<h2 id="openscad-kod">OpenSCAD kód</h2>
+<p>Takto vypadá OpenSCAD kód mého modelu:</p>
+<pre><code class="language-scad">/* [Base] */
+base_color = &quot;#333333&quot;;
+base_paddding = 2;
+base_height = 2;
+
+/* [Text layers] */
+layer_heights = [1, 1];
+layer_text_strings = [ &quot;HORSE&quot;, &quot;POWER&quot;];
+layer_text_sizes = [22, 17];
+layer_colors = [ &quot;#FF6600&quot;, &quot;#EEEEEE&quot;];
+font_name = &quot;Arial Rounded MT Bold&quot;;
+
+/* [Hanging hole] */
+hole_position = [55, 5];
+hole_diameter = 5;
+
+// Create base
+color(base_color) linear_extrude(base_height) difference() {
+    offset(base_paddding) union() {
+        for(i = [0:len(layer_heights) - 1]) text(text = layer_text_strings[i], font = font_name, size = layer_text_sizes[i], halign = &quot;center&quot;, valign = &quot;center&quot;);
+        if(hole_diameter &gt; 0) translate(hole_position) circle(d = hole_diameter, $fn = 32);
+    }
+    if(hole_diameter &gt; 0) translate(hole_position) circle(d = hole_diameter, $fn = 32);
+}
+
+// Create text layers
+translate([0, 0, base_height]) for(i = [0:len(layer_heights) - 1]) {
+    lh = csum(layer_heights, i);
+    color(layer_colors[i]) linear_extrude(lh) text(text = layer_text_strings[i], font = font_name, size = layer_text_sizes[i], halign = &quot;center&quot;, valign = &quot;center&quot;);
+}
+
+// Helper function to compute total layer height
+function csum(items, i, val = 0, n = 0) = n &gt;= i ? val + items[n] : csum(items, i, val + items[n], n + 1);
+</code></pre>
+<p>Pojďme se podívat na jednotlivé jeho části. Na začátku je deklarace proměnných, které určují, jak bude model vypadat.</p>
+<pre><code class="language-scad">/* [Base] */
+base_color = &quot;#333333&quot;;
+base_paddding = 2;
+base_height = 2;
+</code></pre>
+<p>První sada proměnných popisuje základnu, na které písmena leží:</p>
+<ul>
+<li><code>base_color</code> popisuje barvu, která se ukáže v náhledu. Informace o barvě není součástí modelu, použije se jenom při náhledu.</li>
+<li><code>base_padding</code> je vzdálenost, o kterou bude základna přečnívat písmena. Hodnotu je nutné určit experimentálně na základě textu a použitého fontu. Podstatné je, aby se písmena &quot;slila&quot; a vytvořila jeden tvar.</li>
+<li><code>base_height</code> je výška základny.</li>
+</ul>
+<pre><code class="language-scad">/* [Text layers] */
+layer_heights = [1, 1];
+layer_text_strings = [ &quot;HORSE&quot;, &quot;POWER&quot;];
+layer_text_sizes = [22, 17];
+layer_colors = [ &quot;#FF6600&quot;, &quot;#EEEEEE&quot;];
+font_name = &quot;Arial Rounded MT Bold&quot;;
+</code></pre>
+<p>Druhá sada proměnných popisuje textové vrstvy - jejich výšku (<code>layer_heights</code>), text (<code>layer_text_strings</code>), velikost písma (<code>layer_text_sizes</code>) a barvy (<code>layer_colors</code>). Ve všech případech se jedná o seznam (pole), který obsahuje tolik prvků, kolik je vrstev - zde dvě. Pořadí vrstev a velikost písma je nutné nakombinovat podle textu, aby to hezky vypadalo.</p>
+<p>Proměnná <code>font_name</code> je název použitého písma. Já používám <em>Arial Rounded MT Bold</em>, protože ze zkušenosti vím, že jeho zaoblené rohy vypadají při tisku dobře.</p>
+<pre><code class="language-scad">/* [Hanging hole] */
+hole_position = [55, 5];
+hole_diameter = 5;
+</code></pre>
+<p>Poslední sada proměnných popisuje průměr díry na pověšení (<code>hole_diameter</code>) a její umístění relativně vůči středu (<code>hole_position</code>). Díra musí být umístěna mimo text a její umístění záleží na účelu a zobrazeném textu. Pokud v modelu nemá díra být, stačí nastavit její průměr na nulu.</p>
+<pre><code>// Create base
+color(base_color) linear_extrude(base_height) difference() {
+    offset(base_paddding) union() {
+        for(i = [0:len(layer_heights) - 1]) text(text = layer_text_strings[i], font = font_name, size = layer_text_sizes[i], halign = &quot;center&quot;, valign = &quot;center&quot;);
+        if(hole_diameter &gt; 0) translate(hole_position) circle(d = hole_diameter, $fn = 32);
+    }
+    if(hole_diameter &gt; 0) translate(hole_position) circle(d = hole_diameter, $fn = 32);
+}
+</code></pre>
+<p>Následuje kód pro vytvoření základny. Nejprve napíšeme jednotlivé textové vrstvy &quot;přes sebe&quot; a přidáme k nim pozici díry. Pomocí <code>union()</code> tvary sloučíme do jednoho a pomocí <code>offset()</code> k výslednému tvaru přidáme padding. Pomocí <code>difference()</code> odečteme z tvaru kruhový otvor. Vše navrhujeme ve 2D, do správné výšky to vytáhneme pomocí <code>linear_extrude</code>.</p>
+<pre><code class="language-scad">// Create text layers
+translate([0, 0, base_height]) for(i = [0:len(layer_heights) - 1]) {
+    lh = csum(layer_heights, i);
+    color(layer_colors[i]) linear_extrude(lh) text(text = layer_text_strings[i], font = font_name, size = layer_text_sizes[i], halign = &quot;center&quot;, valign = &quot;center&quot;);
+}
+</code></pre>
+<p>Další část vytvoří jednotlivé textové vrstvy. Smyčka je velice podobná té předchozí, ale každou vrstvu vytvoříme v jiné výšce, aby bylo možné v průběhu tisku měnit filament a tím i barvu výtisku.</p>
+<pre><code class="language-scad">// Helper function to compute total layer height
+function csum(items, i, val = 0, n = 0) = n &gt;= i ? val + items[n] : csum(items, i, val + items[n], n + 1);
+</code></pre>
+<p>K určení celkové výšky vrstvy slouží funce <code>csum</code>, která sečte definované výšky vrstev.</p>
+<h2 id="vysledny-model">Výsledný model</h2>
+<p>Můžete si stáhnout model, kterým to všechno začalo, oslavu Theophilova vítězství. K dispozici je ve formátu <a href="https://www.cdn.altairis.cz/Blog/2019/20191110-theo.stl">STL</a>, který ale neobsahuje informace o změně filamentu (je nutné ho změnit ve výšce 1,4 a 2,0 mm při výšce vrstvy 0,2 mm). Všehcny tyto informace včetně tiskového profilu pro PrusaSlicer pak obsahuje formát <a href="https://www.cdn.altairis.cz/Blog/2019/20191110-theo.3mf">3MF</a>.</p>
+<p>Všechny tři zmíněné modely v podobě OpenSCAD kódu a <code>.json</code> parametrizačního souboru (pro verzi 2019.05) si můžete stáhnout jako <a href="https://www.cdn.altairis.cz/Blog/2019/20191110-theo.zip">ZIP archiv</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Textov%c3%bd+p%c5%99%c3%adve%c5%a1ek+na+kl%c3%ad%c4%8de+v+OpenSCADu&amp;body=https://www.altair.blog/2019/11/layered-text">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/11/layered-text.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/11/layered-text.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/11/layered-text">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/11/layered-text">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
