@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/11/cloud-scripts</guid>
+      <title>Skripty pro rychlé vytváření VM a App Services v Azure</title>
+      <description>Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. Rozhodně víc, než webové rozhraní, které je typická moderní webová aplikace dneška - pomalá, nespolehlivá a každý týden jiná.</description>
+      <link>https://www.altair.blog/2019/11/cloud-scripts</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2019-11-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/11/layered-text</guid>
       <title>Textový přívešek na klíče v OpenSCADu</title>
       <description>OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky.</description>
@@ -138,15 +147,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2019-08-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/07/zakazy-v-praze</guid>
-      <title>My se k té zářivé budoucnosti prostě prozákazujem, soudruzi!</title>
-      <description>Z pražského magistrátu se line souvislý a nepřerušený tok zákazů a omezení. "Líp" začalo být už s vládou ANO, ČSSD, Zelených, KDU-ČSL a STAN, ale opravdová povodeň to začala být až s příchodem Pirátů, Prahy Sobě, TOP 09, STAN a KDU-ČSL.</description>
-      <link>https://www.altair.blog/2019/07/zakazy-v-praze</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2019-07-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

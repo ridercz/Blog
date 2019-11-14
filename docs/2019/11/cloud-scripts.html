@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Skripty pro rychlé vytváření VM a App Services v Azure | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. Rozhodně víc, než webové rozhraní, které je typická moderní webová aplikace dneška - pomalá, nespolehlivá a každý týden jiná." />
+    <link rel="canonical" href="https://www.altair.blog/2019/11/cloud-scripts" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Skripty pro rychlé vytváření VM a App Services v Azure" />
+    <meta name="twitter:description" content="Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. Rozhodně víc, než webové rozhraní, které je typická moderní webová aplikace dneška - pomalá, nespolehlivá a každý týden jiná." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20191114-cloud-scripts.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Skripty pro rychlé vytváření VM a App Services v Azure" />
+    <meta property="og:description" content="Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. Rozhodně víc, než webové rozhraní, které je typická moderní webová aplikace dneška - pomalá, nespolehlivá a každý týden jiná." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20191114-cloud-scripts.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2019/11/cloud-scripts" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20191114-cloud-scripts.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Skripty pro rychlé vytváření VM a App Services v Azure</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2019-11-14" title="Datum vydání">14. listopadu 2019 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Dennis Amith via Flickr, CC by-nc <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Mám rád cloudové prostředí Microsoft Azure. Umožňuje mi dělat co chci a ne se starat o infrastrukturu, kterou sice nechci, ale musím ji mít. Nelíbí se mi ale <a href="https://portal.azure.com">webový portál pro správu</a>. Je to typická moderní aplikace dnešní doby: křehká květinka plná JavaScriptu, která se zakucká při sebemenší chybyčce ve spojení a o co je nepřehlednější, o to je pomalejší. Navíc se mění pod rukama a co platilo tento týden, neplatí dnes.</p>
+<p>Naštěstí je k dispozici <em>Azure CLI</em> (Command Line Interface) a příkazová řádka na webu, <a href="https://shell.azure.com"><em>Azure Cloud Shell</em></a>. A v tomto shellu lze spouštět bashové skripty. Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. A rozhodně jsem s ním více mentálně kompatibilní než s jeho PowerShell verzí.</p>
+<h2 id="skript-pro-vytvoreni-virtualniho-pocitace">Skript pro vytvoření virtuálního počítače</h2>
+<p>Následující skript po spuštění vytvoří virtuální server (VM) s Windows 2019 Datacenter. Vytvoří vlastní resource group s náhodně vygenerovaným jménem (<code>Test-XXXXXXXXXX</code> kde <code>X</code> jsou náhodně vygenerované šestnáctkové číslice <code>0-f</code>) a VM s podobným jménem (<code>testXXXXXXXXXX</code>). VM bude mít povolené porty <code>80</code> (HTTP), <code>443</code> (HTTPS), <code>3389</code> (RDP) a <code>8172</code> (Web Management Service). Bude mít rozumnou velikost <code>B2ms</code> (2 cores, 8 GB RAM) a bude vytvořena v regionu <code>EastUS</code>, který je dlouhodobě nejlevnější. Bude vytvořen správcovský účet <code>Developer</code> s náhodně vygenerovaným heslem.</p>
+<p>Veškeré parametry můžete upravit snadnou editací záhaví skriptu.</p>
+<p>Takto skript vypadá:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Configuration
+SUFFIX=$(openssl rand -hex 5)
+RG_NAME=Test-$SUFFIX
+NSG_NAME=Test-$SUFFIX-NSG
+REGION=EastUS
+SIZE=Standard_B2ms
+IMAGE=win2019datacenter
+VM_NAME=test$SUFFIX
+USER_NAME=Developer
+USER_PASS=$(openssl rand -base64 18 | sed &quot;s|[+/]|x|g&quot;)
+
+# Display intentions and ask user if they want to proceed
+echo &quot;This will create the following Windows VM:&quot;
+echo &quot;  Name:           $VM_NAME.$REGION.cloudapp.azure.com&quot;
+echo &quot;  User:           $USER_NAME&quot;
+echo &quot;  Password:       $USER_PASS&quot;
+echo &quot;  Region:         $REGION&quot;
+echo &quot;  Resource Group: $RG_NAME&quot;
+echo
+read -p &quot;Do you want to continue (y/n)? &quot; -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+# Create resource group
+echo &quot;Creating the resource group...&quot;
+az group create -n $RG_NAME -l $REGION
+
+# Create network security group
+echo &quot;Creating NSG in $REGION region...&quot;
+az network nsg create -g $RG_NAME -n $NSG_NAME -l $REGION
+
+# Create firewall rules for RDP, HTTP, HTTPS and WMSvc
+echo &quot;Creating RDP rule...&quot;
+az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME --priority 1000 \
+                           --destination-port-ranges 3389 -n RDP
+echo &quot;Creating HTTP rule...&quot;
+az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME --priority 1001 \
+                           --destination-port-ranges 80 -n HTTP
+echo &quot;Creating HTTPS rule...&quot;
+az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME --priority 1002 \
+                           --destination-port-ranges 443 -n HTTPS
+echo &quot;Creating WMSvc rule...&quot;
+az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME --priority 1003 \
+                           --destination-port-ranges 8172 -n WMSvc
+
+# Create virtual machine
+echo &quot;Creating virtual machine...&quot;
+az vm create -n $VM_NAME -g $RG_NAME \
+             --admin-username $USER_NAME --admin-password $USER_PASS \
+             --image $IMAGE --size $SIZE \
+             --nsg $NSG_NAME -l $REGION \
+             --public-ip-address-dns-name $VM_NAME
+
+# Display results
+echo &quot;The following virtual machine has been created:&quot;
+echo &quot;  Name:           $VM_NAME.$REGION.cloudapp.azure.com&quot;
+echo &quot;  User:           $USER_NAME&quot;
+echo &quot;  Password:       $USER_PASS&quot;
+echo &quot;  Region:         $REGION&quot;
+echo &quot;  Resource Group: $RG_NAME&quot;
+</code></pre>
+<h2 id="skript-pro-vytvoreni-app-service-a-databaze">Skript pro vytvoření App Service a databáze</h2>
+<p>Z podobného vrhu je druhý skript, který vytvoří nikoliv VM, ale App Service - tedy website. Vytvoří nový App Service Plan a v něm novou website. K ní vytvoří stejnojmenný SQL server a databázi. Connection string bude přidán do nastavení App Service se jménem <code>DefaultConnectionString</code>. Název bude automaticky náhodně vygenerován, stejně jako vlastní resource group.</p>
+<p>Zdrojový kód vypadá takto:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+SUFFIX=$(openssl rand -hex 5)
+RG_NAME=Test-$SUFFIX
+REGION=EastUS
+PLAN_NAME=TestPlan-$SUFFIX
+PLAN_SKU=B1
+APPSERVICE_NAME=Test$SUFFIX
+SQL_SERVER=test$SUFFIX
+SQL_USER=test$SUFFIX
+SQL_PASSWORD=$(openssl rand -base64 18 | sed &quot;s|[+/]|x|g&quot;)
+SQL_DB=test$SUFFIX
+
+# Display intentions and ask user if they want to proceed
+echo &quot;This will create the following Windows App Service:&quot;
+echo &quot;  Name:           $APPSERVICE_NAME.azurewebsites.net&quot;
+echo &quot;  Region:         $REGION&quot;
+echo &quot;  Resource Group: $RG_NAME&quot;
+echo &quot;  SQL Server:     $SQL_SERVER.database.windows.net&quot;
+echo &quot;  SQL Database:   $SQL_DB&quot;
+echo &quot;  SQL User:       $SQL_USER&quot;
+echo &quot;  SQL Password:   $SQL_PASSWORD&quot;
+echo
+read -p &quot;Do you want to continue (y/n)? &quot; -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+# Create resource group
+echo &quot;Creating the resource group...&quot;
+az group create -n $RG_NAME -l $REGION
+
+# Create app service plan
+echo &quot;Creating appservice plan...&quot;
+az appservice plan create -g $RG_NAME -n $PLAN_NAME -l $REGION --sku $PLAN_SKU
+
+# Create app service (website)
+az webapp create -g $RG_NAME -p $PLAN_NAME -n $APPSERVICE_NAME
+
+# Create SQL server
+az sql server create -g $RG_NAME -n $SQL_SERVER -l $REGION \
+    --admin-user $SQL_USER --admin-password $SQL_PASSWORD
+
+# Allow access from Azure services
+az sql server firewall-rule create -g $RG_NAME -s $SQL_SERVER \
+    -n AllowAzureServices --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+
+# Create database
+az sql db create -g $RG_NAME -s $SQL_SERVER -n $SQL_DB --collation Czech_CI_AI
+
+# Show connection string
+az sql db show-connection-string -s $SQL_SERVER -n $SQL_DB -c ado.net
+
+# Assign connection string to web app
+az webapp config connection-string set -g $RG_NAME -n $APPSERVICE_NAME -t SQLAzure \
+    --settings DefaultConnection=&quot;Server=tcp:$SQL_SERVER.database.windows.net,1433;Database=$SQL_DB;User ID=$SQL_USER;Password=$SQL_PASSWORD;Encrypt=true;Connection Timeout=30;&quot;
+
+# Display result
+echo &quot;The following Windows App Service has been created:&quot;
+echo &quot;  Name:           $APPSERVICE_NAME.azurewebsites.net&quot;
+echo &quot;  Region:         $REGION&quot;
+echo &quot;  Resource Group: $RG_NAME&quot;
+echo &quot;  SQL Server:     $SQL_SERVER.database.windows.net&quot;
+echo &quot;  SQL Database:   $SQL_DB&quot;
+echo &quot;  SQL User:       $SQL_USER&quot;
+echo &quot;  SQL Password:   $SQL_PASSWORD&quot;
+</code></pre>
+<h2 id="jak-skripty-pouzivat">Jak skripty používat</h2>
+<p>Oba dva skripty najdete <a href="https://github.com/ridercz/Scripts/tree/master/Azure">na mém GitHubu</a>. Můžete je použít buďto v Azure Cloud Shellu nebo kdekoliv, kde máte Azure CLI a Bash, například v Linux Subsystému ve Windows 10.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Skripty+pro+rychl%c3%a9+vytv%c3%a1%c5%99en%c3%ad+VM+a+App+Services+v+Azure&amp;body=https://www.altair.blog/2019/11/cloud-scripts">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2019/11/cloud-scripts.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2019/11/cloud-scripts.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2019/11/cloud-scripts">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2019/11/cloud-scripts">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2019</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
