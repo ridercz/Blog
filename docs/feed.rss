@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/11/svoboda</guid>
+      <title>O svobodě se nemluví</title>
+      <description>Třicet let od Velké Listopadové Sametové Revoluce. Ne, nebojte se, nebudu vás oblažovat vzpomínkami na to, jak jsem na Národní třídě prožíval sedmnáctý listopad. Kdyby už jenom protože mi v té době bylo deset, prd jsem tomu rozuměl a bydlel jsem v Karlových Varech kde Národní ulici sice je, ale je to spíš nevýznamná ulička na periferii než třída. Bude řeč o tom, jak se z veřejného diskursu vytrácí slovo svoboda.</description>
+      <link>https://www.altair.blog/2019/11/svoboda</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2019-11-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/11/cloud-scripts</guid>
       <title>Skripty pro rychlé vytváření VM a App Services v Azure</title>
       <description>Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. Rozhodně víc, než webové rozhraní, které je typická moderní webová aplikace dneška - pomalá, nespolehlivá a každý týden jiná.</description>
@@ -135,15 +144,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-09-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</guid>
-      <title>Šestiúhelníková krabička na kostky</title>
-      <description>Při hledání něčeho úplně jiného jsem našel svou více než dvacet let starou sadu kovových hracích kostek. Památka na doby, kdy jsem hrál Dračí doupě a GURPS. Modelů pro 3D tisk pouzder na kostky je všude spousta, ale nenašel jsem žádný, který by vyhovoval rozměrům mých kostek a magnetů, které mám pro použití na zavírání. Tak jsem si navrhl vlastní, parametrický, který si dokáže poradit s jakýmkoliv rozměrem.</description>
-      <link>https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2019-08-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
