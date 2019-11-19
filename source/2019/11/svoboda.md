@@ -12,7 +12,7 @@
 
 Třicet let od _Velké Listopadové Sametové Revoluce_. Ne, nebojte se, nebudu vás oblažovat vzpomínkami na to, jak jsem na Národní třídě prožíval sedmnáctý listopad. Kdyby už jenom protože mi v té době bylo deset, prd jsem tomu rozuměl a bydlel jsem v Karlových Varech kde Národní ulici sice je, ale je to spíš nevýznamná ulička na periferii než třída. Bude řeč o tom, jak se z veřejného diskursu vytrácí slovo _svoboda_.
 
-O svobodě se nemluví. Rozhodně ne veřejně a rozhodně ne ve slušné společnosti. Občas ji sice vytáhne jako volební heslo nějaké více či méně maginální politické uskupení či proud, kterému čisté úmysly věřit můžeme a nemusíme. Po svobodě a její obraně není poptávka. A když už se o ní mluví, tak se k ní automaticky dodává _a demokracie_.
+O svobodě se nemluví. Rozhodně ne veřejně a rozhodně ne ve slušné společnosti. Občas ji sice vytáhne jako volební heslo nějaké více či méně marginální politické uskupení či proud, kterému čisté úmysly věřit můžeme a nemusíme. Po svobodě a její obraně není poptávka. A když už se o ní mluví, tak se k ní automaticky dodává _a demokracie_.
 
 O demokracii, o té se zase mluví hodně, o tom žádná. Hlavně o tom, že je ohrožená (každou chvíli někým jiným, hlavně Babišem a Zemanem) a že je třeba ji bránit, protože je hodnotou sama o sobě.
 
