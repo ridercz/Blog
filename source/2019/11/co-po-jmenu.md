@@ -8,6 +8,8 @@
 <!-- x4w:category = Vlci -->
 <!-- dcterms:dateAccepted = 2019-11-29 -->
 
+Čistokrevní psi mají často dost komplikovaná jména - třeba Šelmíra se oficiálně jmenuje Emiate Šungmánitu-ha Khoyáke. Chcete vědět, proč tomu tak je, co ze jména vyčtete?
+
 Při čistokrevném chovu psů si chovatel nejprve za mírný poplatek zaregistruje jméno své "chovatelské stanice", které se pak stane částí jména všech psů, které odchová, je to trochu jako příjmení. Název záleží zejména na fantazii chovatele, omezení jsou malá.
 
 <figure>
