@@ -24,11 +24,11 @@ Třeba Esta byla z CHS "Kanýčo" a pokud vím, tak její název pochází ze jm
     <figcaption>Tak dlouho jsem lobboval za to, aby někdo pojmenoval chovku "Karkulčin postrach", až jsem si ji muset zaregistrovat sám (ale ještě nemá žádný vrh).</figcaption>
 </figure>
 
-Štěňata z jednoho vrhu se pojmenovávají tak, aby jejich jména vždy začínala stejným písmenem. U prvního vrhu A, u druhého B a tak dále. Pokud chovatel protočí abecedu, po Z následuje znovu A. Až se nám narodí první štěňata, budou se jmenovat A-něco Karkulčin postrach. 
+Štěňata z jednoho vrhu se pojmenovávají tak, aby jejich jména vždy začínala stejným písmenem. U prvního vrhu A, u druhého B a tak dále. Pokud chovatel protočí abecedu, po Z následuje znovu A (označuje se to většinou jako _A2_ atd). Až se nám narodí první štěňata, budou se tedy jmenovat A-něco Karkulčin postrach. 
 
 > Fun fact: Moje první dítě se jmenuje Alexandra, druhé Bert. Teď už víte proč.
 
-Že mají psi stejné "příjmení" ještě neznamená, že jsou jakkoliv příbuzní. Chovatelská stanice může mít (postupně nebo současně) několik chovných fen, dokonce i různých plemen. Navíc za určitých okolností může pod jedním názvem chovatelské stanice chovat víc lidí, pokud je třeba fena ve spolumajitelství a podobně. Typický případ je třeba CHS <a href="http://www.sdivokoukrvi.cz/">S divokou krví</a>, která se už pomalu dostává do poslední třetiny abecedy, ale většina vrhů je <a href="http://www.sdivokoukrvi.cz/planovane-vrhy/externi-vrhy">"externích"</a>. Pokud někdo chce odchovat jeden, dva vrhy, často to nechce zařizovat celé sám a chovatel jeho feny mu může poskytnout i tuto formu podpory.
+Že mají psi stejné "příjmení" ještě neznamená, že jsou jakkoliv příbuzní. Chovatelská stanice může mít (postupně nebo současně) několik chovných fen, dokonce i různých plemen. Pro každé plemeno v chovatelské stanici je vlastní řada písmen - každé plemeno si vede vlastní abecedu. Jména štěňat se v jedné chovatelské stanici v rámci jednoho plemene nesmí opakovat (což zní sice směšně, ale u dlouho existující, velké chovky s více fenami a externími vrhy je to možné). Navíc za určitých okolností může pod jedním názvem chovatelské stanice chovat víc lidí, pokud je třeba fena ve spolumajitelství a podobně. Typický případ je třeba CHS <a href="http://www.sdivokoukrvi.cz/">S divokou krví</a>, která se už pomalu dostává do poslední třetiny abecedy, ale většina vrhů je <a href="http://www.sdivokoukrvi.cz/planovane-vrhy/externi-vrhy">"externích"</a>. Pokud někdo chce odchovat jeden, dva vrhy, často to nechce zařizovat celé sám a chovatel jeho feny mu může poskytnout i tuto formu podpory.
 
 ## Jak je to u nás?
 
