@@ -10,6 +10,8 @@
 
 Mé nejmladší vlčandě Šelmíře, která se vlastně jmenuje [Emiate Šungmánitu-ha Khoyáke](https://www.altair.blog/2019/11/co-po-jmenu) je právě dnes jeden rok a z toho půl roku je u nás. Dostala se k nám poněkud zvláštním způsobem.
 
+![Šelmíra se sourozenci a matkou Karennou](https://www.cdn.altairis.cz/Blog/2019/20191130-selma-01.jpg)
+
 Neměl jsem moc šťastné období, protože v říjnu loňského roku zemřela ve věku patnácti let [Esta Kanýčo](https://facebook.com/jakovlk) a zbyla mi jenom pětiletá [Bystrá s divokou krví](https://facebook.com/BystraJakovlcice). Bystrá se zvolna emancipovala a vžívala do role zodpovědné vlčí dámy, když předposlední květnový den tragicky zahynula když ji přejel vlak. Jedna z mých prvních myšlenek byla, že přece nemohu dost dobře fungovat bez psa. Prakticky okamžitě jsem začal shánět další čévéčko. A naplnilo se mé celoživotní přesvědčení, že kdo má rád psy, žádného shánět nemusí, protože se osud postará.
 
 [![Šelmíra krátce po příchodu k nám](https://gallery.rider.cz/2019/20190702_S_%C5%A0elm%C3%ADrou_v_Troji/20190702-172152-0806.jpg)](https://gallery.rider.cz/2019/20190702_S_%C5%A0elm%C3%ADrou_v_Troji/20190702-172152-0806.jpg)
