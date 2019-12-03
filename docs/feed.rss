@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2019/12/mrpuppy</guid>
+      <title>Rozhovor: Dark, Mr. Puppy CZ 2020</title>
+      <description>Koncem listopadu se v pražském klubu Ateliér konal již třetí ročník soutěže Mr. Puppy Czech Republic. Účastnilo se jej celkem pět zájemců a vítězem se pro rok 2020 stal Vojta, známý jako Dark. Bude tedy jakýmsi reprezentantem českých lidských psů a bude se ucházet i o mezinárodní titul Mr. Puppy Europe. Požádal jsem ho, aby pro BDSM.CZ zodpověděl pár otázek.</description>
+      <link>https://www.bdsm.cz/2019/12/mrpuppy</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2019-12-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/11/rok-selmy</guid>
       <title>Rok šelmy</title>
       <description>Mé nejmladší vlčandě Šelmíře je právě dnes jeden rok. Jaké to je, po letech zase žít s jakovlčím štěnětem?</description>
@@ -132,16 +141,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-09-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-vektory</guid>
-      <title>Záznam: Jak na přípravu vektorových podkladů</title>
-      <description>Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkách". Co to vlastně je, jak takové podklady získat a na co si dát pozor? Záznam z dnešní přednášky.</description>
-      <link>https://www.altair.blog/2019/09/zaznam-vektory</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Bastlení</category>
-      <pubDate>2019-09-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

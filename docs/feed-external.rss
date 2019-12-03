@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2019/12/mrpuppy</guid>
+      <title>Rozhovor: Dark, Mr. Puppy CZ 2020</title>
+      <description>Koncem listopadu se v pražském klubu Ateliér konal již třetí ročník soutěže Mr. Puppy Czech Republic. Účastnilo se jej celkem pět zájemců a vítězem se pro rok 2020 stal Vojta, známý jako Dark. Bude tedy jakýmsi reprezentantem českých lidských psů a bude se ucházet i o mezinárodní titul Mr. Puppy Europe. Požádal jsem ho, aby pro BDSM.CZ zodpověděl pár otázek.</description>
+      <link>https://www.bdsm.cz/2019/12/mrpuppy</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2019-12-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc</guid>
       <title>Na komerční VPN nespoléhejte, vytvořte si vlastní; s projektem Outline je to snadné a levné</title>
       <description>Společnosti NordVPN, poskytovatele stejnojmenné VPN služby, utekly privátní klíče a neznámý útočník získal plnou kontrolu nad jejich serverem ve Finsku. NordVPN přitom patří mezi ty lepší společnosti, které VPN provozují. Společnost VPNpro u velkého množství různých VPN služeb zjišťovala, komu vlastně patří. Výsledky byly pozoruhodné: 97 služeb ve vlastněno jenom 23 společnostmi, z nichž řada sídlí v zemích, které neslynou zrovna nejlepší pověstí, pokud jde o dodržování soukromí internetových uživatelů - například v Číně nebo Pákistánu.</description>
@@ -133,16 +142,6 @@
       <category>Bezpečnost</category>
       <category>Politika</category>
       <pubDate>2019-05-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:3574737</guid>
-      <title>Svinovací držák na pásek</title>
-      <description>Mým nepostradatelným průvodcem je zavírací nůž značky Husky. Jenom ho několikrát týdně někde zapomínám a ztrácím. Proto jsem si ho přidělal na svinovací držák badge. Jenomže jak přidělat ten držák? Jeho očko nevypadá moc spolehlivě, na pásku nedrží, z kapsy leze... Tak jsem si navrhnul vlastní držák, který se navlékne na pásek.</description>
-      <link>https://www.thingiverse.com/thing:3574737</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-04-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
