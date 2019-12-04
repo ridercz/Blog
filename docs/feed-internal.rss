@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/vykrajovatka</guid>
+      <title>Vykrajovátka na vánoční cukroví z 3D tiskárny</title>
+      <description>Jedním z nejoblíbenějších 3D tištěných předmětů jsou kolem Vánoc vykrajovátka na vánoční cukroví. Když si na Thingiverse necháte vyhledat "cookie cutter", najdete skoro 6000 výsledků. Ukážu vám, jak vykrajovátko jednoduše vytvořit z jakéhokoliv SVG souboru pomocí OpenSCADu.</description>
+      <link>https://www.altair.blog/2019/12/vykrajovatka</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2019-12-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/11/rok-selmy</guid>
       <title>Rok šelmy</title>
       <description>Mé nejmladší vlčandě Šelmíře je právě dnes jeden rok. Jaké to je, po letech zase žít s jakovlčím štěnětem?</description>
@@ -136,15 +145,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2019-08-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/08/solitaire</guid>
-      <title>Šifrovací algoritmus Solitaire</title>
-      <description>Solitaire, známý též jako Pontifex, je zvláštní šifrovací algoritmus, který vyhoví moderním požadavkům na bezpečnost, ale přitom jej můžete používat i ručně. Jediné co potřebujete je papír, tužka a balíček karet. Je jednoduchý a elegantní a může tak sloužit jako dobrá ukázka fungování symetrických proudových šifer. Proto jsem se rozhodl se svolením autora přeložit jeho popis do češtiny.</description>
-      <link>https://www.altair.blog/2019/08/solitaire</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-08-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/vykrajovatka</guid>
+      <title>Vykrajovátka na vánoční cukroví z 3D tiskárny</title>
+      <description>Jedním z nejoblíbenějších 3D tištěných předmětů jsou kolem Vánoc vykrajovátka na vánoční cukroví. Když si na Thingiverse necháte vyhledat "cookie cutter", najdete skoro 6000 výsledků. Ukážu vám, jak vykrajovátko jednoduše vytvořit z jakéhokoliv SVG souboru pomocí OpenSCADu.</description>
+      <link>https://www.altair.blog/2019/12/vykrajovatka</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2019-12-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2019/12/mrpuppy</guid>
       <title>Rozhovor: Dark, Mr. Puppy CZ 2020</title>
       <description>Koncem listopadu se v pražském klubu Ateliér konal již třetí ročník soutěže Mr. Puppy Czech Republic. Účastnilo se jej celkem pět zájemců a vítězem se pro rok 2020 stal Vojta, známý jako Dark. Bude tedy jakýmsi reprezentantem českých lidských psů a bude se ucházet i o mezinárodní titul Mr. Puppy Europe. Požádal jsem ho, aby pro BDSM.CZ zodpověděl pár otázek.</description>
@@ -131,16 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-09-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-openscad</guid>
-      <title>Záznam: 3D modelování v programu OpenSCAD</title>
-      <description>V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%.</description>
-      <link>https://www.altair.blog/2019/09/zaznam-openscad</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-09-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
