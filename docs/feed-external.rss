@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</guid>
+      <title>Ransomware útočí i před Vánoci a nevyhýbá se ani Česku. Poradíme, jak se před vyděrači bránit</title>
+      <description>Před několika lety se v IT oblasti objevil nový fenomén zvaný ransomware. Jedná se o viry, které zašifrují data na disku a následně vyžadují zaplacení výpalného. Po prvotní vlně publicity to vypadalo, že vlna ustala, ale je to falešná představa. Ransomware se daří dobře a v dohledné budoucnosti se nejspíš nic nezmění. Jenom v posledních týdnech jsem pomáhal několika obětem.</description>
+      <link>https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-12-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2019/12/mrpuppy</guid>
       <title>Rozhovor: Dark, Mr. Puppy CZ 2020</title>
       <description>Koncem listopadu se v pražském klubu Ateliér konal již třetí ročník soutěže Mr. Puppy Czech Republic. Účastnilo se jej celkem pět zájemců a vítězem se pro rok 2020 stal Vojta, známý jako Dark. Bude tedy jakýmsi reprezentantem českých lidských psů a bude se ucházet i o mezinárodní titul Mr. Puppy Europe. Požádal jsem ho, aby pro BDSM.CZ zodpověděl pár otázek.</description>
@@ -132,16 +141,6 @@
       <category>IT</category>
       <category>Politika</category>
       <pubDate>2019-05-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.ceskatelevize.cz/porady/11412378947-90-ct24/219411058130503/</guid>
-      <title>90' ČT24: Sítě 5G - technologie budoucnosti</title>
-      <description>Včera jsem se jako host zúčastnil pořadu 90' ČT24, jehož tématem byly sítě 5G a jejich bezpečnost. Nesdílím přesvědčení neinformovaných politiků, že 5G sítě jsou panacea, která vyřeší všechny problémy lidstva. Záznam pořadu najdete na webu ČT.</description>
-      <link>https://www.ceskatelevize.cz/porady/11412378947-90-ct24/219411058130503/</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2019-05-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
