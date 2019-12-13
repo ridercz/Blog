@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66694300-psms7-ba0247339e8794d</guid>
+      <title>Jak se bránit ransomware? V první řadě se nedopouštět školáckých chyb.</title>
+      <description>V tentýž den, kdy ransomware vyřadil z provozu nemocnici v Benešově, zastřelil šílený střelec v nemocnici ostravské několik lidí. Média byla plná živých přenosů, na místo si osobně jel dělat PR premiér, ministr vnitra i prezident republiky. Útok aktivního střelce je něco jako přírodní pohroma - nedá se mu realisticky vzato zabránit, nedá se s ním nic dělat, lze jenom řešit následky a doufat, že brzo přestane a nebude se opakovat. Ačkoliv jde o obrovskou osobní tragédii zúčastněných a jejich blízkých, je to problém osobní, malého rozsahu a objektivního významu. Potíže benešovské nemocnice jsou projevem mnohem většího problému, který je potenciálně mnohem horší a který bude v budoucnu stát mnohem více lidských životů. Jenom se na něm mnohem hůř dělá osobní PR.</description>
+      <link>https://tech.ihned.cz/c7-66694300-psms7-ba0247339e8794d</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2019-12-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</guid>
       <title>Ransomware útočí i před Vánoci a nevyhýbá se ani Česku. Poradíme, jak se před vyděrači bránit</title>
       <description>Před několika lety se v IT oblasti objevil nový fenomén zvaný ransomware. Jedná se o viry, které zašifrují data na disku a následně vyžadují zaplacení výpalného. Po prvotní vlně publicity to vypadalo, že vlna ustala, ale je to falešná představa. Ransomware se daří dobře a v dohledné budoucnosti se nejspíš nic nezmění. Jenom v posledních týdnech jsem pomáhal několika obětem.</description>
@@ -130,16 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-10-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.thingiverse.com/thing:3891621</guid>
-      <title>Parametrické držáky do sprchy</title>
-      <description>Šelmíra, mé roztomilé jakovlčí štěňátko, má silnou úchylku na koupelnové vybavení. Nadšeně krade a žere šampony, sprchové gely a podobně. Na AliExpressu jsem koupil přísavky a navrhl držáky na nejrůznější lahvičky, které lze umístit dostatečně vysoko na zeď, aby Šelmu nelákaly. Model je plně parametrický a snadno lze vyrobit držáky v libovolných rozměrech lahvičky i přísavek.</description>
-      <link>https://www.thingiverse.com/thing:3891621</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-10-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

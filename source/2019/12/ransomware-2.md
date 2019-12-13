@@ -1,0 +1,10 @@
+<!-- dcterms:title = Jak se bránit ransomware? V první řadě se nedopouštět školáckých chyb.  -->
+<!-- dcterms:abstract = V tentýž den, kdy ransomware vyřadil z provozu nemocnici v Benešově, zastřelil šílený střelec v nemocnici ostravské několik lidí. Média byla plná živých přenosů, na místo si osobně jel dělat PR premiér, ministr vnitra i prezident republiky. Útok aktivního střelce je něco jako přírodní pohroma - nedá se mu realisticky vzato zabránit, nedá se s ním nic dělat, lze jenom řešit následky a doufat, že brzo přestane a nebude se opakovat. Ačkoliv jde o obrovskou osobní tragédii zúčastněných a jejich blízkých, je to problém osobní, malého rozsahu a objektivního významu. Potíže benešovské nemocnice jsou projevem mnohem většího problému, který je potenciálně mnohem horší a který bude v budoucnu stát mnohem více lidských životů. Jenom se na něm mnohem hůř dělá osobní PR. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20191213-ransomware-2.jpg -->
+<!-- x4w:pictureCredits = Sandro Porfirio (@sporfirios) via Unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2019-12-13 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66694300-psms7-ba0247339e8794d -->
