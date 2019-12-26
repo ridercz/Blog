@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/kalendar</guid>
+      <title>Jak na rodinný kalendář</title>
+      <description>Štědrý večer s rozdáváním dárků je již za námi, ale řada lidí jezdí navštěvovat příbuzné mezi svátky. A zejména babičkám a dědečkům udělají radost fotografické kalendáře s obrázky umělecké kvality sice nevalné, ale zato s milovanými vnoučaty. Výhodou je, že to je dárek, který lze vyrobit poměrně snadno a jednoduše. Tedy, snadno a jednoduše u nás, kde máme k dispozici vybavení středně velkého copy centra. Pokud jste na tom jinak, budete muset počkat na 27., kdy budou mít otevřeno ta oficiální copy centra.</description>
+      <link>https://www.altair.blog/2019/12/kalendar</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2019-12-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/vykrajovatka</guid>
       <title>Vykrajovátka na vánoční cukroví z 3D tiskárny</title>
       <description>Jedním z nejoblíbenějších 3D tištěných předmětů jsou kolem Vánoc vykrajovátka na vánoční cukroví. Když si na Thingiverse necháte vyhledat "cookie cutter", najdete skoro 6000 výsledků. Ukážu vám, jak vykrajovátko jednoduše vytvořit z jakéhokoliv SVG souboru pomocí OpenSCADu.</description>
@@ -135,16 +144,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2019-08-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/08/live-coding</guid>
-      <title>Live coding: Vlastní password validátor v ASP.NET Core Identity</title>
-      <description>Rozhodl jsem se napsat vlastní validátor síly hesel pro ASP.NET Core Identity. A říkám si, že to bude zajímavější, když to budu živě přenášet na YouTube. Založím nový projekt na GitHubu, napíšu validátor a vypublikuji ho jako NuGet balíček. Alespoň tedy takový je plán, ale v živém přenosu se to může rychle změnit...</description>
-      <link>https://www.altair.blog/2019/08/live-coding</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2019-08-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
