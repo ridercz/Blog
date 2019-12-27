@@ -28,7 +28,7 @@ Do jednotlivých vrstev jsem umístil fotografie a pomocí _Layer Compositions_ 
 
 ![](https://www.cdn.altairis.cz/Blog/2019/20191226-kalendar-03.jpg)
 
-V Acrobatu jsem potom zkombinoval obě dvě PDFka dohromady a patřičným způsobem rozházel stránky fotek a kalendárií. Naše tiskárna umí automatický duplex (potisk obou stran), takže jsem to prostě vzal a poslal na tiskárnu, ať si s tím poradí. Pokud máte tiskárnu bez duplexu, bude jednodušší vyrobit dva PDF soubory, jeden pro avers a jeden pro revers.
+V Acrobatu jsem potom zkombinoval obě dvě PDFka dohromady a patřičným způsobem rozházel stránky fotek a kalendárií. Naše tiskárna umí automatický duplex (potisk obou stran), takže jsem to prostě vzal a poslal na tiskárnu, ať si s tím poradí. Pokud máte tiskárnu bez duplexu, bude jednodušší vyrobit dva PDF soubory, jeden pro avers a jeden pro revers. Vytiskl jsem je na papír 250 g/m<sup>2</sup>; lepší by bylo tak 160 g/m<sup>2</sup>, ale ten nemám. Klasický kancelářský papír má 80 g/m<sup>2</sup> a je to málo, trhal by se.
 
 ![](https://www.cdn.altairis.cz/Blog/2019/20191226-kalendar-04.png)
 
