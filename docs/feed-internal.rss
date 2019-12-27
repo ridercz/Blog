@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/digital-signage</guid>
+      <title>Screenly OSE: Digital signage na Raspberry Pi jednoduše</title>
+      <description>Reklamní a informační displeje všeho druhu - tomu se říká digital signage. Vytvářím teď jednu takovou věc pro svou veterinářku (resp. veterinářku mých psů, mne léčit nechce, že prej jsem antropomorfní) a zkoumal jsem, jak na to co nejsnáz. A objevil jsem projekt Screenly. V závěru článku najdete pozvánku na akci, kde se budu různému využití Raspberry Pi věnovat podrobněji.</description>
+      <link>https://www.altair.blog/2019/12/digital-signage</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2019-12-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/kalendar</guid>
       <title>Jak na rodinný kalendář</title>
       <description>Štědrý večer s rozdáváním dárků je již za námi, ale řada lidí jezdí navštěvovat příbuzné mezi svátky. A zejména babičkám a dědečkům udělají radost fotografické kalendáře s obrázky umělecké kvality sice nevalné, ale zato s milovanými vnoučaty. Výhodou je, že to je dárek, který lze vyrobit poměrně snadno a jednoduše. Tedy, snadno a jednoduše u nás, kde máme k dispozici vybavení středně velkého copy centra. Pokud jste na tom jinak, budete muset počkat na 27., kdy budou mít otevřeno ta oficiální copy centra.</description>
@@ -134,16 +143,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-09-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/08/pwned-passwords-validator</guid>
-      <title>Pwned Passwords Validator pro ASP.NET Identity</title>
-      <description>Včera jsem v živém streamu napsal validátor hesel, který využívá databázi z HaveIBeenPwned.com. K dispozici je záznam streamu, mírně aktualizovaný kód a NuGet balíček.</description>
-      <link>https://www.altair.blog/2019/08/pwned-passwords-validator</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <pubDate>2019-08-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

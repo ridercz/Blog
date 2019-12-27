@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/digital-signage</guid>
+      <title>Screenly OSE: Digital signage na Raspberry Pi jednoduše</title>
+      <description>Reklamní a informační displeje všeho druhu - tomu se říká digital signage. Vytvářím teď jednu takovou věc pro svou veterinářku (resp. veterinářku mých psů, mne léčit nechce, že prej jsem antropomorfní) a zkoumal jsem, jak na to co nejsnáz. A objevil jsem projekt Screenly. V závěru článku najdete pozvánku na akci, kde se budu různému využití Raspberry Pi věnovat podrobněji.</description>
+      <link>https://www.altair.blog/2019/12/digital-signage</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2019-12-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/kalendar</guid>
       <title>Jak na rodinný kalendář</title>
       <description>Štědrý večer s rozdáváním dárků je již za námi, ale řada lidí jezdí navštěvovat příbuzné mezi svátky. A zejména babičkám a dědečkům udělají radost fotografické kalendáře s obrázky umělecké kvality sice nevalné, ale zato s milovanými vnoučaty. Výhodou je, že to je dárek, který lze vyrobit poměrně snadno a jednoduše. Tedy, snadno a jednoduše u nás, kde máme k dispozici vybavení středně velkého copy centra. Pokud jste na tom jinak, budete muset počkat na 27., kdy budou mít otevřeno ta oficiální copy centra.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2019-10-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</guid>
-      <title>Jak prolomit EET</title>
-      <description>V médiích se to hemží zprávami o tom, jak dvě ostravské firmy "prolomily EET". Reálných informací o případu je minimum, ale ze zveřejněných fragmentů lze docela dobře usuzovat na to, o co šlo. O případu nevím víc, než kolik bylo zveřejněno, a tento článek je tedy čirou spekulací, ovšem založenou na odborných znalostech a zkušenostech.</description>
-      <link>https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-10-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
