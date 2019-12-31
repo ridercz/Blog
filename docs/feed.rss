@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/pf2020</guid>
+      <title>Pour féliciter: Open source 3D PF MMXX DYI</title>
+      <description>Možná jste ode mne dostali přání k novému roku, možná ho ještě dostanete, pokud se v dohledné době uvidíme. Pokud ne, můžete si ho vyrobit sami, protože je open source a zdrojové soubory jsou k dispozici.</description>
+      <link>https://www.altair.blog/2019/12/pf2020</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2019-12-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/digital-signage</guid>
       <title>Screenly OSE: Digital signage na Raspberry Pi jednoduše</title>
       <description>Reklamní a informační displeje všeho druhu - tomu se říká digital signage. Vytvářím teď jednu takovou věc pro svou veterinářku (resp. veterinářku mých psů, mne léčit nechce, že prej jsem antropomorfní) a zkoumal jsem, jak na to co nejsnáz. A objevil jsem projekt Screenly. V závěru článku najdete pozvánku na akci, kde se budu různému využití Raspberry Pi věnovat podrobněji.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-10-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/10/automaticke-mazani-blobu</guid>
-      <title>Automatické mazání blobů v Azure Storage</title>
-      <description>Pokud používáte Azure Storage pro zálohy a podobné účely, možná se vám bude hodit Lifecycle Management - možnost bloby podle určitých pravidel přesouvat, mazat nebo jinak šikanovat. Ukážu vám, jak tuto funkci využít.</description>
-      <link>https://www.altair.blog/2019/10/automaticke-mazani-blobu</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2019-10-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

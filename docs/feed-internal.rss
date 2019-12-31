@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2019/12/pf2020</guid>
+      <title>Pour féliciter: Open source 3D PF MMXX DYI</title>
+      <description>Možná jste ode mne dostali přání k novému roku, možná ho ještě dostanete, pokud se v dohledné době uvidíme. Pokud ne, můžete si ho vyrobit sami, protože je open source a zdrojové soubory jsou k dispozici.</description>
+      <link>https://www.altair.blog/2019/12/pf2020</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2019-12-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/digital-signage</guid>
       <title>Screenly OSE: Digital signage na Raspberry Pi jednoduše</title>
       <description>Reklamní a informační displeje všeho druhu - tomu se říká digital signage. Vytvářím teď jednu takovou věc pro svou veterinářku (resp. veterinářku mých psů, mne léčit nechce, že prej jsem antropomorfní) a zkoumal jsem, jak na to co nejsnáz. A objevil jsem projekt Screenly. V závěru článku najdete pozvánku na akci, kde se budu různému využití Raspberry Pi věnovat podrobněji.</description>
@@ -133,16 +142,6 @@
       <category>Akce a události</category>
       <category>Bastlení</category>
       <pubDate>2019-09-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/09/live-coding-openscad</guid>
-      <title>Live coding: 3D modelování v programu OpenSCAD</title>
-      <description>Od firmy Miroluk jsem dostal na testování nějaké filamenty. Podíváme se na ně a v živém přenosu vymodeluji něco zajímavého, co by se z nich dalo vytisknout, v programu OpenSCAD.</description>
-      <link>https://www.altair.blog/2019/09/live-coding-openscad</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-09-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
