@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66700230-psms7-a62c3de215960ce</guid>
+      <title>Technologická novoroční předsevzetí: Aby vaše zabezpečení v roce 2020 bylo 20/20</title>
+      <description>ovoroční předsevzetí jen zřídkakdy přežijí první dny nového roku. Sada z oboru kybernetické bezpečnosti, kterou jsem pro vás připravil, má proti těm obyčejným jednu základní výhodu: funguje automaticky. Stačí vše jednou správně nastavit, a o realizaci se postará počítač a telefon.</description>
+      <link>https://tech.ihned.cz/c7-66700230-psms7-a62c3de215960ce</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2020-01-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/pf2020</guid>
       <title>Pour féliciter: Open source 3D PF MMXX DYI</title>
       <description>Možná jste ode mne dostali přání k novému roku, možná ho ještě dostanete, pokud se v dohledné době uvidíme. Pokud ne, můžete si ho vyrobit sami, protože je open source a zdrojové soubory jsou k dispozici.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-10-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66664450-psms7-a2969b0b45e9f63</guid>
-      <title>HTTPS správně: Úřad pro kybernetickou bezpečnost má z ostudy kabát. Poučte se z jeho chyb</title>
-      <description>Webové stránky Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB) a vládního CERT byly v úterý nedostupné. Vypršel jim totiž certifikát pro HTTPS. Podle zprávy na oficiálním Twitteru organizace šlo o chybu "dnes již bývalého zaměstnance". Alespoň že se nejednalo o tradiční "stážistku". I tak má ale NÚKIB z ostudy kabát.</description>
-      <link>https://tech.ihned.cz/c7-66664450-psms7-a2969b0b45e9f63</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-10-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
