@@ -1,5 +1,5 @@
 <!-- dcterms:title = Technologická novoroční předsevzetí: Aby vaše zabezpečení v roce 2020 bylo 20/20  -->
-<!-- dcterms:abstract = ovoroční předsevzetí jen zřídkakdy přežijí první dny nového roku. Sada z oboru kybernetické bezpečnosti, kterou jsem pro vás připravil, má proti těm obyčejným jednu základní výhodu: funguje automaticky. Stačí vše jednou správně nastavit, a o realizaci se postará počítač a telefon. -->
+<!-- dcterms:abstract = Novoroční předsevzetí jen zřídkakdy přežijí první dny nového roku. Sada z oboru kybernetické bezpečnosti, kterou jsem pro vás připravil, má proti těm obyčejným jednu základní výhodu: funguje automaticky. Stačí vše jednou správně nastavit, a o realizaci se postará počítač a telefon. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20200101-predsevzeti.jpg -->
 <!-- x4w:pictureCredits = Danil Aksenov (@danwhale) via Unsplash.com -->
