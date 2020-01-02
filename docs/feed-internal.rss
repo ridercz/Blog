@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/01/scss-menu</guid>
+      <title>SCSS mixin pro responzivní menu</title>
+      <description>Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin.</description>
+      <link>https://www.altair.blog/2020/01/scss-menu</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-01-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2019/12/pf2020</guid>
       <title>Pour féliciter: Open source 3D PF MMXX DYI</title>
       <description>Možná jste ode mne dostali přání k novému roku, možná ho ještě dostanete, pokud se v dohledné době uvidíme. Pokud ne, můžete si ho vyrobit sami, protože je open source a zdrojové soubory jsou k dispozici.</description>
@@ -132,16 +141,6 @@
       <category>Akce a události</category>
       <category>Bastlení</category>
       <pubDate>2019-09-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/09/pozvanka-do-prusalabu</guid>
-      <title>Pozvánka do PrusaLabu: práce s vektory, leptání skla a kovu a novinky v OpenSCADu</title>
-      <description>V PrusaLabu budu mít v dohledné době několik přednášek, které vás mohou zajímat. Ať už půjde o přípravy vektorových dat, leptání motivů do skla i kovu nebo novinky v mém oblíbeném 3D modelovacím programu OpenSCAD. První z nich je už zítra!</description>
-      <link>https://www.altair.blog/2019/09/pozvanka-do-prusalabu</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Bastlení</category>
-      <pubDate>2019-09-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

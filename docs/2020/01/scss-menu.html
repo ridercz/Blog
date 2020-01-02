@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SCSS mixin pro responzivní menu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin." />
+    <link rel="canonical" href="https://www.altair.blog/2020/01/scss-menu" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="SCSS mixin pro responzivní menu" />
+    <meta name="twitter:description" content="Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200102-scss-menu.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="SCSS mixin pro responzivní menu" />
+    <meta property="og:description" content="Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200102-scss-menu.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/01/scss-menu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200102-scss-menu.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>SCSS mixin pro responzivní menu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-01-02" title="Datum vydání">2. ledna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin.</p>
+<h2 id="princip-triku">Princip triku</h2>
+<p>Celý princip menu, které je na širokých obrazovkách horizontální a na úzkých rozbalovací vertikální, spočívá ve dvou technikách. První jsou standardní CSS media queries, které umožní aplikovat různé styly v závislosti na velikosti viewportu. Druhý je obyčejný staromódní <code>&lt;input type=&quot;checkbox&quot; /&gt;</code> a na něj navázaný <code>&lt;label&gt;</code>. Ten umožní změnu a zapamatování stavu, aniž by bylo nutné používat JavaScript.</p>
+<p>Celý tento postup je vcelku standardní a dobře je popsaný třeba v <a href="https://cutcodedown.com/tutorial/mobileMenu">článku na webu Code Cut Down</a>, který mě inspiroval.</p>
+<h2 id="moje-reseni-scss-mixin-a-semanticke-html">Moje řešení: SCSS mixin a sémantické HTML</h2>
+<p>Mým cílem bylo vytvořit jednoduchý SCSS mixin, který nebude předpokládat použití žádného UI frameworku nebo jakýchkoliv dalších závislostí. Bude ho tedy možné použít kdekoliv. HTML kód by měl být co možná nejjednodušší a sémantický.</p>
+<p>HTML kód potřebný pro menu vypadá následovně:</p>
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; id=&quot;mtoggler&quot; hidden=&quot;hidden&quot; /&gt;
+&lt;label for=&quot;mtoggler&quot; class=&quot;open&quot; hidden=&quot;hidden&quot;&gt;&lt;span&gt;&amp;#x2630;&lt;/span&gt;&lt;/label&gt;
+&lt;label for=&quot;mtoggler&quot; class=&quot;close&quot; hidden=&quot;hidden&quot;&gt;&lt;span&gt;&amp;#x1F5D9;&lt;/span&gt;&lt;/label&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ipsum&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dolor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Amet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Prvek <code>input</code> není vidět (což je zařízeno jednak atributem <code>hidden</code> a pro starší prohlížeče ještě umístěním mimo viewport v CSS) a slouží jenom k zapamatování stavu rozbalovacího menu.</p>
+<p>Elementy <code>label</code> se používají pro rozbalovací menu. Ten s <code>class=&quot;open&quot;</code> má obsah, který menu otevírá (v našem případě Unicode trigram pro nebe, který se používá pro &quot;hamburgerové&quot; menu - &quot;☰&quot;). Ten s <code>class=&quot;close&quot;</code> má obsah, který se zobrazí v případě, že je menu rozbalené (v našem případě křížek &quot;🗙&quot; pro zavření menu). Bohužel se mi nepodařilo se obejít bez jednoho sémanticky prázdného <code>span</code>u navíc, ale asi s tím dokážu žít.</p>
+<p>Tyto elementy jsou vzájemně propojeny pomocí atributů <code>id</code> a <code>for</code>, aby aktivace <code>label</code>u ovládala <code>input</code>.</p>
+<p>Vlastní menu je klasický seznam vytvořený pomocí <code>ul</code> a <code>li</code>.</p>
+<p>To celé musí být uzavřeno v nějakém elementu. Sémanticky se nabízí <code>nav</code>, ale může to být i <code>div</code>.</p>
+<p>SCSS mixin vypadá takto:</p>
+<pre><code class="language-scss">@mixin rnav($WidthStop: 40em, $Padding: .5em, $ItemSpacing: 2em, $Color: #fff, $BackColor: #000, $HoverColor: #fd0, $HoverBackColor: #333, $WideAlign: center, $NarrowAlign: left) {
+    input[type=checkbox] {
+        position: absolute;
+        left: -9999em;
+
+        ~ label {
+            display: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+        text-align: $WideAlign;
+        margin: 0;
+        padding: $Padding;
+        background: $BackColor;
+
+        li {
+            display: inline;
+        }
+
+        a {
+            display: inline-block;
+            padding: $Padding $ItemSpacing / 2;
+            text-decoration: none;
+            color: $Color;
+
+            &amp;:active, &amp;:focus, &amp;:hover {
+                color: $HoverColor;
+                background: $HoverBackColor;
+            }
+        }
+    }
+
+    @media (max-width:$WidthStop) {
+        ul {
+            display: none;
+            overflow: hidden;
+
+            li {
+                text-align: $NarrowAlign;
+            }
+
+            a {
+                display: block;
+            }
+        }
+
+        input[type=checkbox] {
+            ~ label {
+                padding: $Padding;
+                text-align: $NarrowAlign;
+                background: $BackColor;
+                color: $Color;
+
+                span {
+                    padding: $Padding;
+                    display: block;
+
+                    &amp;:active, &amp;:focus, &amp;:hover {
+                        background: $HoverBackColor;
+                        color: $HoverColor;
+                    }
+                }
+
+                &amp;.open {
+                    display: block;
+                }
+
+                &amp;.close {
+                    display: none;
+                }
+            }
+
+
+
+            &amp;:checked {
+                ~ label {
+                    margin: 0;
+
+                    &amp;.open {
+                        display: none;
+                    }
+
+                    &amp;.close {
+                        display: block;
+                    }
+                }
+
+                ~ ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<p>Pro popis jeho funkčnosti si přečtěte dříve odkazovaný článek. Já jsem tamo uváděné CSS jenom převedl do SCSS a parametrizoval. Parametry a jejich výchozí hodnoty jsou následující:</p>
+<ul>
+<li><code>$WidthStop: 40em</code> - maximální šířka, při níž se zobrazí sbalovací vertikální menu.</li>
+<li><code>$Padding: .5em</code> - padding použitých prvků.</li>
+<li><code>$ItemSpacing: 2em</code> - vzdálenost mezi položkami horizontálního menu.</li>
+<li><code>$Color: #fff</code> - barva textu v normálním stavu.</li>
+<li><code>$BackColor: #000</code> - barva pozadí v normálním stavu.</li>
+<li><code>$HoverColor: #fd0</code> - barva textu aktivní položky.</li>
+<li><code>$HoverBackColor: #333</code> - barva pozadí aktivní položky.</li>
+<li><code>$WideAlign: center</code> - zarování horizontálního menu.</li>
+<li><code>$NarrowAlign: left</code> - zarovnání vertikálního menu.</li>
+</ul>
+<p>Výše uvedený kód lze uložit do samostatného souboru <code>_rmenu.scss</code>.</p>
+<h2 id="pouziti">Použití</h2>
+<p>V SCSS kódu stačí mixin použít v selektoru, který chcete proměnit v menu. Například:</p>
+<pre><code class="language-scss">@import &quot;_rnav.scss&quot;;
+
+nav {
+    @include rnav();
+}
+</code></pre>
+<p>Zde si můžete vyzkoušet jednoduché, čistě textové menu:</p>
+<iframe height="450" style="width: 100%;" scrolling="no" title="SCSS Responsive Menu - simple" src="https://codepen.io/ridercz/embed/jOEGXbX?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/ridercz/pen/jOEGXbX'>SCSS Responsive Menu - simple</a> by Michal Altair Valášek
+  (<a href='https://codepen.io/ridercz'>@ridercz</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<p>Zde je trochu sofistikovanější varianta, která používá ikonky z Font Awesome:</p>
+<iframe height="450" style="width: 100%;" scrolling="no" title="SCSS Responsive Menu - icons" src="https://codepen.io/ridercz/embed/GRgMPJO?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/ridercz/pen/GRgMPJO'>SCSS Responsive Menu - icons</a> by Michal Altair Valášek
+  (<a href='https://codepen.io/ridercz'>@ridercz</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<p>Kompletní zdrojové soubory jsou <a href="https://www.cdn.altairis.cz/Blog/2020/20200102-scss-menu.zip">k dispozici ke stažení</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=SCSS+mixin+pro+responzivn%c3%ad+menu&amp;body=https://www.altair.blog/2020/01/scss-menu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/01/scss-menu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/01/scss-menu.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/01/scss-menu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/01/scss-menu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
