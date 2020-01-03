@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Automatické zapnutí a vypnutí digital signage na RPi | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde." />
+    <link rel="canonical" href="https://www.altair.blog/2020/01/screenly-shutdown" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Automatické zapnutí a vypnutí digital signage na RPi" />
+    <meta name="twitter:description" content="K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200103-screenly-shutdown.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Automatické zapnutí a vypnutí digital signage na RPi" />
+    <meta property="og:description" content="K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200103-screenly-shutdown.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/01/screenly-shutdown" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200103-screenly-shutdown.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Automatické zapnutí a vypnutí digital signage na RPi</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-01-03" title="Datum vydání">3. ledna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Aleksandar Cvetanovic (@lemonzandtea) via Unsplash.com <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>K <a href="/2019/12/digital-signage">minulému článku o digital signage</a> jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde.</p>
+<p>Většina standardních počítačů má funkci automatického zapnutí a vypnutí přímo v nastavení BIOSu/UEFI. Mají totiž nezávislé hodiny reálného času <a href="https://www.makeuseof.com/tag/why-does-my-motherboard-have-a-battery/">zálohované baterií</a>. Raspberry Pi nic takového nemá. Čas si synchronizuje pomocí NTP z Internetu a jinak neví kolik je hodin. Neumí se tedy &quot;probudit&quot;.</p>
+<h2 id="jak-signage-vypnout">Jak signage vypnout</h2>
+<p>K vypnutí digital Raspberry Pi lze použít <code>cron</code>, což je plánovač úloh na Linuxu. Jenomže jak se k němu dostat?</p>
+<p>Pokud jste Screenly OSE nainstalovali postupem podle <a href="/2019/12/digital-signage">předchozího článku</a> z image, nemáte jak se dostat na shell po síti. Jde to udělat jenom z konzole.</p>
+<p>Doporučuji začít tím, že z webového rozhraní deaktivujete všechny assety typu video. Pokud tak neuděláte, bude se vám přes příkazový řádek neustále spouštět video, což je otravné.</p>
+<p>Připojte k RasPi klávesnici a stiskněte klávesovou zkratku <em>Ctrl+Alt+F1</em>, čímž se připojíte na konzoli <code>tty1</code>. Přihlašte se jako uživatel <code>pi</code> s heslem <code>raspberry</code>.</p>
+<p>Po přihlášení zadejte následující příkaz</p>
+<pre><code>sudo crontab -e
+</code></pre>
+<p>Pokud se vás systém zeptá, jaký editor chcete použít, zvolte výchozí volbu 2 (editor <code>nano</code>).</p>
+<p>Na konec souboru zadejte následující řádek:</p>
+<pre><code>00 20 * * * /sbin/shutdown now
+</code></pre>
+<p>Sestává z několika komponent oddělených mezerou. Jejich význam je následující:</p>
+<ul>
+<li><code>m</code> - minuta</li>
+<li><code>h</code> - hodina</li>
+<li><code>dom</code> - den v měsíci</li>
+<li><code>mon</code> - měsíc</li>
+<li><code>dow</code> - den v týdnu</li>
+<li><code>command</code> - příkaz, který se má spustit</li>
+</ul>
+<p>V našem případě tedy spouštíme každý den (<code>*</code> znamená &quot;vždy&quot;) ve 20:00 příkaz <code>/sbin/shutdown now</code>, který vypne počítač.</p>
+<p>Pokud budete chtít nastavit různá pravidla pro různé dny v týdnu pak vězte, že se označují čísly od <code>0</code> do <code>6</code>, přičemž <code>0</code> je neděle. Následující dva řádky vypnou systém v po-pá ve 20:00 a o víkendu už ve 12:00:</p>
+<pre><code>00 20 * * 1-5 /sbin/shutdown now
+00 12 * * 0,6 /sbin/shutdown now
+</code></pre>
+<p>Poté ukončete editor stiskem klávesové zkratky <em>Ctrl+X</em>. Na otázku, zda chcete soubor uložit, odpovězte <em>y</em> a název souboru ponechte beze změny (stiskněte <em>Enter</em>).</p>
+<h2 id="nastaveni-casove-zony">Nastavení časové zóny</h2>
+<p>Ve výchozím nastavení je Raspberry v londýnské časové zóně. Pokud chcete časovou zónu změnit, můžete tak učinit pomocí utility <strong>Raspi Config</strong>. Spustíte ji příkazem <code>sudo raspi-config</code>. Poté zvolte volby <em>Localisation Options</em> » <em>Change Timezone</em> » <em>Europe</em> » <em>Prague</em>. Pak klávesou <em>Tab</em> doskákejte na Finish a program ukončete.</p>
+<h2 id="jak-signage-zapnout">Jak signage zapnout</h2>
+<p>Jak již bylo řečeno, Raspberry Pi nemá žádnou možnost se samo zapnout. Nejjednodušší tedy je použít klasické elektronické nebo mechanické spínací hodiny, které stojí pár korun (například <a href="https://www.lidl-shop.cz/SILVERCREST-Digitalni-mechanicke-spinaci-hodiny/p100264657">Lidl Shop</a> je prodává za 169 Kč). Nastavte je tak, aby se vypnuly chvíli poté, co se RasPi vypne a zapnuly v požadovaný čas.</p>
+<p>Proč se obtěžovat se softwarovým vypínáním a nepoužít jenom hodiny? Vypnutí &quot;natvrdo&quot; nedělá počítačům dobře, je lepší je nechat, ať se vypnou korektně.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Automatick%c3%a9+zapnut%c3%ad+a+vypnut%c3%ad+digital+signage+na+RPi&amp;body=https://www.altair.blog/2020/01/screenly-shutdown">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/01/screenly-shutdown.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/01/screenly-shutdown.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/01/screenly-shutdown">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/01/screenly-shutdown">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

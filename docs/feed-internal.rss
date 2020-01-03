@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/01/screenly-shutdown</guid>
+      <title>Automatické zapnutí a vypnutí digital signage na RPi</title>
+      <description>K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde.</description>
+      <link>https://www.altair.blog/2020/01/screenly-shutdown</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2020-01-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/01/scss-menu</guid>
       <title>SCSS mixin pro responzivní menu</title>
       <description>Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin.</description>
@@ -131,16 +140,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2019-09-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-vektory</guid>
-      <title>Záznam: Jak na přípravu vektorových podkladů</title>
-      <description>Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkách". Co to vlastně je, jak takové podklady získat a na co si dát pozor? Záznam z dnešní přednášky.</description>
-      <link>https://www.altair.blog/2019/09/zaznam-vektory</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Bastlení</category>
-      <pubDate>2019-09-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
