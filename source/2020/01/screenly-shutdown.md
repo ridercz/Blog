@@ -21,7 +21,7 @@ Pokud jste Screenly OSE nainstalovali postupem podle [předchozího článku](/2
 
 Doporučuji začít tím, že z webového rozhraní deaktivujete všechny assety typu video. Pokud tak neuděláte, bude se vám přes příkazový řádek neustále spouštět video, což je otravné.
 
-Připojte k RasPi klávesnici a stiskněte klávesovou zkratku _Ctrl+Alt+F1_, čímž se připojíte na konzoli `tty1`. Přihlašte se jako uživatel `pi` s heslem `raspberry`.
+Připojte k RasPi klávesnici a stiskněte klávesovou zkratku _Ctrl+Alt+F1_, čímž se připojíte na konzoli `tty1`. (zpět se přepnete pomocí _Ctrl+Alt+F2_.) Přihlašte se jako uživatel `pi` s heslem `raspberry`.
 
 Po přihlášení zadejte následující příkaz
 
