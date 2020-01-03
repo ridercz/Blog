@@ -60,3 +60,9 @@ Ve výchozím nastavení je Raspberry v londýnské časové zóně. Pokud chcet
 Jak již bylo řečeno, Raspberry Pi nemá žádnou možnost se samo zapnout. Nejjednodušší tedy je použít klasické elektronické nebo mechanické spínací hodiny, které stojí pár korun (například [Lidl Shop](https://www.lidl-shop.cz/SILVERCREST-Digitalni-mechanicke-spinaci-hodiny/p100264657) je prodává za 169 Kč). Nastavte je tak, aby se vypnuly chvíli poté, co se RasPi vypne a zapnuly v požadovaný čas.
 
 Proč se obtěžovat se softwarovým vypínáním a nepoužít jenom hodiny? Vypnutí "natvrdo" nedělá počítačům dobře, je lepší je nechat, ať se vypnou korektně.
+
+## Proč tak složitě?
+
+Po zveřejnění tohoto článku jsem dostal ještě několik připomínek a dotazů. První byla, proč softwarově nevypínat jenom monitor a RasPi (s minimální spotřebou) nenechat běžet. Protože zařídit spolehlivé softwarové vypnutí (a zejména pak zase zapnutí) monitoru není zdaleka tak jednoduché. Obšírnější pojednání na toto téma najdete [na blogu Screenly](https://www.screenly.io/blog/2017/07/02/how-to-automatically-turn-off-and-on-your-monitor-from-your-raspberry-pi/) a já mohu potvrdit, že různé metody nejsou zdaleka spolehlivé. Podle mých zkušeností záleží nejenom na typu, ale i na konkrétním kusu monitoru (mám dva stejné, každý se chová jinak). Nicméně můžete to zkusit, možná na tom budou vaše monitory lépe.
+
+Další připomínka byla, že spínací hodiny mohu použít k ovládání monitoru. Ano, mohu, RasPi může zůstat běžet. Nicméně vypnout i RasPi je triviální, je to věc jednoho řádku v konfiguraci, tak proč to neudělat. Kromě toho, počítač umí alespoň pro vypínání snadno řešit změny letního času a podobně.
