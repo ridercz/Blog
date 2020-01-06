@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/01/edc</guid>
+      <title>Co všechno s sebou prosímtě pořád taháš?</title>
+      <description>Otázku zmíněnou v titulku dostávám docela často. A je pravda, že za léta častého cestování jsem sadu věcí, které s sebou pravidelně nosím, vyladil k dokonalosti. K přežití v divočině by mi asi mnoho platná nebyla, ale jako kvalitně domestikovaný valach se divočině spíš vyhýbám. Problematické situace, jejichž výskyt je u mne pravděpodobný, jsou poněkud... civilizovanějšího charakteru. Takže potřebuju spíš ten správný druh USB kabelu než křesadlo na nouzové rozdělání ohně.</description>
+      <link>https://www.altair.blog/2020/01/edc</link>
+      <author>Michal Altair Valášek</author>
+      <category>Tipy, triky</category>
+      <pubDate>2020-01-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/01/screenly-shutdown</guid>
       <title>Automatické zapnutí a vypnutí digital signage na RPi</title>
       <description>K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde.</description>
@@ -130,16 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2019-10-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/09/zaznam-openscad</guid>
-      <title>Záznam: 3D modelování v programu OpenSCAD</title>
-      <description>V živém přenosu jsem vymodeloval hračku do vody a ukázal vám, jak se pracuje s OpenSCADem. V článku také najdete slevový kód, který vám umožní koupit filamenty společnosti Miroluk se slevou 10%.</description>
-      <link>https://www.altair.blog/2019/09/zaznam-openscad</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2019-09-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
