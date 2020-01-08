@@ -174,16 +174,12 @@ nav {
 
 Zde si můžete vyzkoušet jednoduché, čistě textové menu:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="SCSS Responsive Menu - simple" src="https://codepen.io/ridercz/embed/jOEGXbX?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/ridercz/pen/jOEGXbX'>SCSS Responsive Menu - simple</a> by Michal Altair Valášek
-  (<a href='https://codepen.io/ridercz'>@ridercz</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height="450" style="width: 100%;" scrolling="no" src="https://codepen.io/ridercz/embed/Jjopray?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 </iframe>
 
 Zde je trochu sofistikovanější varianta, která používá ikonky z Font Awesome:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="SCSS Responsive Menu - icons" src="https://codepen.io/ridercz/embed/GRgMPJO?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/ridercz/pen/GRgMPJO'>SCSS Responsive Menu - icons</a> by Michal Altair Valášek
-  (<a href='https://codepen.io/ridercz'>@ridercz</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height="450" style="width: 100%;" scrolling="no" src="https://codepen.io/ridercz/embed/yLyvzRY?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 </iframe>
 
 Kompletní zdrojové soubory jsou [k dispozici ke stažení](https://www.cdn.altairis.cz/Blog/2020/20200102-scss-menu.zip).
