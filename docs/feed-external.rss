@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2020/01/spoonslaves</guid>
+      <title>Spoon Slaves: Britské dominy za sebe nechávají platit subíky pomocí mobilní aplikace</title>
+      <description>Technologie a BDSM se dá spojit mnoha nečekanými způsoby. Britský řetězec hotelů a restaurací Wetherspoons přišel s aplikací, která umožňuje hostům objednávat a platit z mobilu. Toho začaly využívat britské dominy, které posty na Twitteru vyzývají subíky, aby je virtuálně pozvali na drink.</description>
+      <link>https://www.bdsm.cz/2020/01/spoonslaves</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2020-01-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66700230-psms7-a62c3de215960ce</guid>
       <title>Technologická novoroční předsevzetí: Aby vaše zabezpečení v roce 2020 bylo 20/20</title>
       <description>Novoroční předsevzetí jen zřídkakdy přežijí první dny nového roku. Sada z oboru kybernetické bezpečnosti, kterou jsem pro vás připravil, má proti těm obyčejným jednu základní výhodu: funguje automaticky. Stačí vše jednou správně nastavit, a o realizaci se postará počítač a telefon.</description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2019-07-26T20:30:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</guid>
-      <title>Zbytečná panika: Přehrávač VLC mazat nemusíte, chyba je opravená více než rok</title>
-      <description>Světová média v čele s Gizmodem šíří zprávu o údajné kritické bezpečnostní chybě v populárním přehrávači VLC. Některá zacházejí tak daleko, že doporučují VLC okamžitě odinstalovat. Skutečnost je ovšem jiná. Chyba je ve staré verzi knihovny, kterou VLC už více než rok nepoužívá.</description>
-      <link>https://tech.ihned.cz/geekosfera/c1-66614930-zbytecna-panika-prehravac-vlc-mazat-nemusite-chyba-je-opravena-vice-nez-rok</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-07-26T19:00:00</pubDate>
     </item>
   </channel>
 </rss>
