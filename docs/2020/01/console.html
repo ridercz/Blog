@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pár tipů pro konzolové aplikace | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu." />
+    <link rel="canonical" href="https://www.altair.blog/2020/01/console" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Pár tipů pro konzolové aplikace" />
+    <meta name="twitter:description" content="Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200109-console.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Pár tipů pro konzolové aplikace" />
+    <meta property="og:description" content="Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200109-console.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/01/console" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200109-console.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Pár tipů pro konzolové aplikace</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-01-09" title="Datum vydání">9. ledna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</p>
+<h2 id="parsovani-argumentu-pomoci-nconsoleru">Parsování argumentů pomocí NConsoleru</h2>
+<p>Jak již bylo řečeno, konzolové aplikace jsou zpravidla neinteraktivní, ovládají se sbírkou argumentů z příkazové řádky. Takže je třeba onu příkazovou řádku nějak vyhodnotit, proparsovat, zjistit co tam je, protože některé parametry jsou volitelné a podobně.</p>
+<p>Jednoduché leč elegantní řešení představuje <strong>NConsoler</strong>. To je knihovna, která slouží k parsování příkazového řádku a jednoduchému command dispatchingu. Najdete ji na <a href="https://github.com/csharpus/NConsoler">github.com/csharpus/NConsoler</a>. Je to projekt dosti letitý a už dlouho na něj nikdo pořádně nesáhl, ale ničemu to zásadně nevadí. Před nějakou dobou se mi podařilo se s původními autory spojit, zapojit se do vývoje a vyřešit licencování. NConsoler historicky neměl žádnou formálně stanovenou licenci, teď je licencován pod MIT.</p>
+<p>Kód jednoduché aplikace může vypadat následovně:</p>
+<pre><code class="language-csharp">using System;
+using NConsoler;
+
+namespace ConsoleApp1 {
+    class Program {
+        static void Main(string[] args) {
+            Console.WriteLine(&quot;Sample application using NConsoler in .NET Core&quot;);
+            Console.WriteLine();
+
+            Consolery.Run();
+        }
+
+        [Action(&quot;Does something&quot;)]
+        public static void DoSomething() {
+            Console.WriteLine(&quot;Doing something&quot;);
+        }
+
+        [Action(&quot;Counts from minimum to maximum&quot;)]
+        public static void Count(
+            [Required(Description = &quot;Minimum value&quot;)] int min,
+            [Required(Description = &quot;Maximum value&quot;)] int max,
+            [Optional(1, &quot;s&quot;, Description = &quot;Step&quot;)] int step,
+            [Optional(false, &quot;b&quot;, Description = &quot;Count backwards&quot;)] bool backwards) {
+
+            if (max &lt;= min) {
+                Console.WriteLine(&quot;FAILED! Maximum value must be greater than minimum value.&quot;);
+                Environment.Exit(1);
+            }
+            if (step &lt; 1) {
+                Console.WriteLine(&quot;FAILED! Step must be greater or equal to 1.&quot;);
+                Environment.Exit(1);
+            }
+
+            if (backwards) {
+                for (var i = max; i &gt;= min; i -= step) {
+                    Console.WriteLine(i);
+                }
+            } else {
+                for (var i = min; i &lt;= max; i += step) {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+    }
+}
+</code></pre>
+<p>Jednotlivé statické metody jsou odekorovány atributem <code>[Action]</code> a jejich argumenty atributy <code>[Required]</code> nebo <code>[Optional]</code>. Na základě těchto atributů NConsoler udělá command dispatching, načte příkazovou řádku a zadané argumenty použije při volání action metody. Zadané údaje - zejména hodnotu <code>Description</code> použije pro automatické vygenerování nápovědy.</p>
+<blockquote>
+<p>Můžete si stáhnout <a href="https://www.cdn.altairis.cz/Blog/2020/20200109-console-nconsoler.zip">kompletní ukázkový projekt</a> aplikace využívající NConsoler.</p>
+</blockquote>
+<h2 id="komplexni-konzolove-aplikace-pomoci-commandlineutils">Komplexní konzolové aplikace pomocí CommandLineUtils</h2>
+<p>NConsoler je jednoduché řešení pro malé projekty. Kromě parsování příkazové řádky toho mnoho nenabízí a předpokládá, že všechny příkazy (akce) budou v jednom souboru, což je pro velké projekty nevhodné.</p>
+<p>Ze zcela opačného konce je knihovna <strong>CommandLineUtils</strong>. Tu původně - jako <code>Microsoft.Extensions.CommandLineUtils</code> - začal vyvíjet Microsoft v rámci ASP.NET Core. Později ji opustil a chopil se jí Nate McMaster, který ji nadále udržuje na <a href="https://github.com/natemcmaster/CommandLineUtils">github.com/natemcmaster/CommandLineUtils</a>. Základním principem psaní aplikací pomocí tohoto frameworku je, že každý příkaz má svou vlastní třídu a argumenty příkazové řádky jsou předávány jako její vlastnosti. Příkazy mohou mít podpříkazy a tak dále. Na ukázku, zde je implementace příkazu <code>Count</code> z předchozího kódu:</p>
+<pre><code class="language-csharp">using McMaster.Extensions.CommandLineUtils;
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace ConsoleApp2 {
+    [Command(Description = &quot;Counts from minimum to maximum&quot;)]
+    [CountCommandValidation]
+    class CountCommand {
+
+        [Argument(0, Name = &quot;min&quot;, Description = &quot;Minimum value&quot;)]
+        [Required]
+        public int Minimum { get; set; }
+
+        [Argument(1, Name = &quot;max&quot;, Description = &quot;Maximum value&quot;)]
+        [Required]
+        public int Maximum { get; set; }
+
+        [Option(&quot;-s:&lt;step&gt;&quot;, Description = &quot;Count step&quot;)]
+        [Range(1, int.MaxValue)]
+        public int Step { get; set; } = 1;
+
+        [Option(&quot;-b&quot;, Description = &quot;Count backwards&quot;)]
+        public bool Backwards { get; set; }
+
+        public int OnExecute(CommandLineApplication app) {
+            if (this.Backwards) {
+                for (var i = this.Maximum; i &gt;= this.Minimum; i -= this.Step) {
+                    Console.WriteLine(i);
+                }
+            } else {
+                for (var i = this.Minimum; i &lt;= this.Maximum; i += this.Step) {
+                    Console.WriteLine(i);
+                }
+            }
+            return 0;
+        }
+
+    }
+}
+</code></pre>
+<p>Na rozdíl od NConsoleru nabízí CommandLineUtils řadu způsobů, jak aplikace psát (použití atributů je jenom jeden z nich) a jde daleko za parsování příkazové řádky. Podporuje asynchronní příkazyt a řadu dalších věcí.</p>
+<blockquote>
+<p>Můžete si stáhnout <a href="https://www.cdn.altairis.cz/Blog/2020/20200109-console-extensions.zip">kompletní ukázkový projekt</a> aplikace využívající CommandLineUtils.</p>
+</blockquote>
+<h2 id="zobrazovani-prubehu-a-osetreni-chyb">Zobrazování průběhu a ošetření chyb</h2>
+<p>Většina mých konzolových aplikací jsou utilitky, které vykonají sekvenčně nějakou sadu kroků, přičemž na konzoli vypisují, co dělají. Uživatel tedy ví co se právě děje a pokud dojde k nějakému problému, kde nastal. Typický kód vypadá nějak takhle:</p>
+<pre><code class="language-csharp">Console.Write(&quot;Doing someting...&quot;);
+try {
+    // Here is code that may fail, ie. I/O code
+    Console.WriteLine(&quot;OK&quot;);
+}
+catch (Exception ex) {
+    Console.WriteLine(&quot;Failed!&quot;);
+    Console.WriteLine(ex.Message);
+    Environment.Exit(1);
+}
+</code></pre>
+<p>Tyto bloky se neustále opakují, pokaždé když je třeba udělat něco, co potenciálně může selhat, například načítání dat ze souboru (který nemusí existovat) atd.</p>
+<p>Postupem času jsem vypracoval základní kostru aplikace (nad NConsolerem), která vypadá následovně:</p>
+<pre><code class="language-csharp">using System;
+using System.IO;
+using NConsoler;
+
+namespace Altairis.Tmd.Compiler {
+    internal class Program {
+        private const int ERRORLEVEL_SUCCESS = 0;
+        private const int ERRORLEVEL_FAILURE = 1;
+
+        private static bool debugMode;
+
+        private static void Main(string[] args) {
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            Console.WriteLine($&quot;Utility that does something {version:4}&quot;);
+            Console.WriteLine(&quot;Copyright (c) Michal Altair Valasek - Altairis, 2020&quot;);
+            Console.WriteLine(&quot;www.altairis.cz | www.rider.cz | github.com/ridercz/&quot;);
+            Console.WriteLine();
+            Consolery.Run();
+        }
+
+        [Action(&quot;Do something&quot;)]
+        public static void DoSomething(
+            [Required(Description = &quot;Input file name&quot;)] string inputFileName,
+            [Optional(null, &quot;o&quot;, Description = &quot;Output file name&quot;)] string outputFileName,
+            [Optional(false, Description = &quot;Show detailed exception messages&quot;)] bool debug
+            ) {
+
+            debugMode = debug;
+
+            // Read source
+            var source = TryDo(
+                $&quot;Reading source from {inputFileName}...&quot;,
+                () =&gt; File.ReadAllText(inputFileName)
+            );
+
+            // Save to output file
+            if (string.IsNullOrWhiteSpace(outputFileName)) outputFileName = Path.Combine(Path.GetDirectoryName(inputFileName), Path.GetFileNameWithoutExtension(inputFileName) + &quot;.out&quot;);
+            TryDo(
+                $&quot;Saving to {outputFileName}...&quot;,
+                () =&gt; File.WriteAllText(outputFileName, source)
+            );
+
+            Environment.Exit(ERRORLEVEL_SUCCESS);
+        }
+
+        // Helper methods
+
+        private static T TryDo&lt;T&gt;(string message, Func&lt;T&gt; func) {
+            try {
+                Console.Write(message);
+                var result = func();
+                Console.WriteLine(&quot;OK&quot;);
+                return result;
+#pragma warning disable CA1031 // Do not catch general exception types
+            } catch (Exception ex) {
+                CrashExit(&quot;FAILED: {0}&quot;, ex);
+                return default;
+            }
+#pragma warning restore CA1031 // Do not catch general exception types
+        }
+
+        private static void TryDo(string message, Action action) {
+            try {
+                Console.Write(message);
+                action();
+                Console.WriteLine(&quot;OK&quot;);
+#pragma warning disable CA1031 // Do not catch general exception types
+            } catch (Exception ex) {
+                CrashExit(&quot;FAILED: {0}&quot;, ex);
+            }
+#pragma warning restore CA1031 // Do not catch general exception types
+        }
+
+        private static void CrashExit(string message, Exception ex = null) {
+            if (ex == null) {
+                Console.Error.WriteLine(message);
+            } else {
+                Console.Error.WriteLine(message, ex.Message);
+                if (debugMode) {
+                    Console.Error.WriteLine(new string('-', Console.BufferWidth));
+                    Console.Error.WriteLine(ex.ToString());
+                    Console.Error.WriteLine(new string('-', Console.BufferWidth));
+                }
+            }
+
+            Console.Error.WriteLine(&quot;Program execution terminated.&quot;);
+            Environment.Exit(ERRORLEVEL_FAILURE);
+        }
+
+    }
+}
+
+</code></pre>
+<p>Metoda <code>Main</code> pouze vypíše základní informace o aplikaci a její verzi a spustí NConsoler command dispatching.</p>
+<p>Akční metody (zde je jediná, <code>DoSomething</code>) dělají vlastní operace (zde se jenom zkopíruje obsah jednoho textového souboru do druhého). Kromě svých vlastních argumentů mají všechny ještě argument <code>debug</code> který, je-li nastaven na <code>true</code> (tj. v příkazové řádce je přítomen přepínač <code>/debug</code>) způsobí, že se v případě chyby zobrazí kompletní informace o exception, nikoliv jenom její <code>Message</code>.</p>
+<p>Tuto logiku (a obecně zobrazení chyb) zajišťuje metoda <code>CrashExit</code>, která slouží k ukončení aplikace s návratovým kódem <code>ERRORLEVEL_FAILURE</code> (<code>1</code>) v případě chyby.</p>
+<p>Hodně používané (i když trochu zvláštním způsobem) jsou dva overloady metody <code>TryDo</code>. Jde v podstatě o wrappery nad libovolnou akcí (která je definována jako <code>Func&lt;T&gt;</code> nebo <code>Action</code>, podle toho zda se má vracet návratová hodnota nebo nikoliv). Tyto wrappery vypíší, co aplikace zrovna dělá a pokud to dopadne špatně, aplikaci ukončí se zobrazením chyby.</p>
+<p>Úplně první příklad z této sekce tedy můžeme snadno zapsat takto:</p>
+<pre><code class="language-csharp">TryDo(&quot;Doing something...&quot;, () =&gt; {
+    // Here is code that may fail, ie. I/O code
+});
+</code></pre>
+<p>Zde je srovnání s předchozím kódem:</p>
+<pre>
+<del>Console.Write("Doing someting...");
+try {</del>
+<ins>TryDo("Doing something...", () => {</ins>
+    // Here is code that may fail, ie. I/O code
+    <del>Console.WriteLine("OK");</del>
+<ins>});</ins>
+<del>catch (Exception ex) {
+    Console.WriteLine("Failed!");
+    Console.WriteLine(ex.Message);
+    Environment.Exit(1);
+}</del>
+</pre>
+<p>Zápis je to dle mého názoru podstatně přehlednější a elegantnější.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=P%c3%a1r+tip%c5%af+pro+konzolov%c3%a9+aplikace&amp;body=https://www.altair.blog/2020/01/console">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/01/console.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/01/console.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/01/console">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/01/console">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

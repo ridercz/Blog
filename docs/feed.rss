@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/01/console</guid>
+      <title>Pár tipů pro konzolové aplikace</title>
+      <description>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</description>
+      <link>https://www.altair.blog/2020/01/console</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-01-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2020/01/spoonslaves</guid>
       <title>Spoon Slaves: Britské dominy za sebe nechávají platit subíky pomocí mobilní aplikace</title>
       <description>Technologie a BDSM se dá spojit mnoha nečekanými způsoby. Britský řetězec hotelů a restaurací Wetherspoons přišel s aplikací, která umožňuje hostům objednávat a platit z mobilu. Toho začaly využívat britské dominy, které posty na Twitteru vyzývají subíky, aby je virtuálně pozvali na drink.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Vlci</category>
       <pubDate>2019-11-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/11/co-po-jmenu</guid>
-      <title>Co po jménu...</title>
-      <description>Čistokrevní psi mají často dost komplikovaná jména - třeba Šelmíra se oficiálně jmenuje Emiate Šungmánitu-ha Khoyáke. Chcete vědět, proč tomu tak je, co ze jména vyčtete?</description>
-      <link>https://www.altair.blog/2019/11/co-po-jmenu</link>
-      <author>Michal Altair Valášek</author>
-      <category>Vlci</category>
-      <pubDate>2019-11-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
