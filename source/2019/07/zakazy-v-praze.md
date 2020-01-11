@@ -33,5 +33,6 @@ Rozhodl jsem se dát dohromady seznam věcí, které momentální vládcové Pra
 * [Neschválené turistické průvodce](https://hlidacipes.org/v-lukrativnim-byznyse-kvete-cerny-trh-praha-chce-vyhnat-destnikarskou-mafii/)
 * [Auta se spalovacími motory](https://plus.rozhlas.cz/auta-se-spalovacimi-motory-budou-muset-z-prahy-zmizet-varuje-novy-sef-komise-8021049)
 * [Lodě na Vltavě](https://ekolist.cz/cz/zpravodajstvi/zpravy/praha-chce-regulovat-lodni-provoz-na-vltave)
+* [Zábavní pyrotechniku](https://www.novinky.cz/domaci/clanek/radni-v-praze-zvazuji-omezit-pyrotechniku-40309216)
 
 > Jsem si vědom toho, že seznam je nutně nekompletní. Pokud máte další tipy na věci, které mi unikly, můžete mi je poslat jako issue nebo rovnou pull request (viz níže). Pokud nevíte jak, pošlete mi je třeba mailem na _blog_@_rider_._cz_.
