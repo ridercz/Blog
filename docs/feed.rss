@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</guid>
+      <title>Magnetický indikátor nálady</title>
+      <description>Ukázkový model pro techniku zatiskávání magnetů dovnitř plastu a vícebarevný tisk. Využívá variability anglického výrazu "FUCK" :-) Celý model je parametrický, lze snadno měnit rozměr, text i počet položek</description>
+      <link>https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-01-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/01/console</guid>
       <title>Pár tipů pro konzolové aplikace</title>
       <description>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2019-12-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/11/rok-selmy</guid>
-      <title>Rok šelmy</title>
-      <description>Mé nejmladší vlčandě Šelmíře je právě dnes jeden rok. Jaké to je, po letech zase žít s jakovlčím štěnětem?</description>
-      <link>https://www.altair.blog/2019/11/rok-selmy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Vlci</category>
-      <pubDate>2019-11-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

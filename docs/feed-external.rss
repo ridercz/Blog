@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</guid>
+      <title>Magnetický indikátor nálady</title>
+      <description>Ukázkový model pro techniku zatiskávání magnetů dovnitř plastu a vícebarevný tisk. Využívá variability anglického výrazu "FUCK" :-) Celý model je parametrický, lze snadno měnit rozměr, text i počet položek</description>
+      <link>https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-01-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2020/01/spoonslaves</guid>
       <title>Spoon Slaves: Britské dominy za sebe nechávají platit subíky pomocí mobilní aplikace</title>
       <description>Technologie a BDSM se dá spojit mnoha nečekanými způsoby. Britský řetězec hotelů a restaurací Wetherspoons přišel s aplikací, která umožňuje hostům objednávat a platit z mobilu. Toho začaly využívat britské dominy, které posty na Twitteru vyzývají subíky, aby je virtuálně pozvali na drink.</description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-07-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2019/07/kazdej-jsme-nejakej</guid>
-      <title>Každej jsme nějakej</title>
-      <description>Občas hraju sám se sebou takovou hru. Nechám někoho, aby mi náhodně zadal pět-deset slov a já na jejich základě napíšu povídku - obvykle BDSM. Ovšem, kdo má dobré kamarády, nepotřebuje nepřátele. Abych to zkrátil... už jste někdy psali erotickou povídku, ve které se musí vyskytovat jméno Miroslav Kalousek?</description>
-      <link>https://www.bdsm.cz/2019/07/kazdej-jsme-nejakej</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2019-07-26T20:30:00</pubDate>
     </item>
   </channel>
 </rss>
