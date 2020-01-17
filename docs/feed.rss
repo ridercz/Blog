@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</guid>
+      <title>Case pro Raspberry Pi Zero WH a TV HAT</title>
+      <description>Pro Raspberry Pi existuje "TV HAT", což je rozšiřující deska umožňující příjem digitálního televizního vysílání. Ve skutečnosti je to ale SDR (software defined radio) a dá se využít k mnoha zajímavějším věcem. Obvykle se používá v kombinaci s Raspberry Pi Zero WH, které výkonově postačuje. Našel jsem pro tuto kombinaci krabičku, která mi ale úplně nevyhovovala, protože je v ní deska jen volně položená a dost "plave". Proto jsem model modifikoval a publikuji jeho upravenou verzi.</description>
+      <link>https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-01-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</guid>
       <title>Magnetický indikátor nálady</title>
       <description>Ukázkový model pro techniku zatiskávání magnetů dovnitř plastu a vícebarevný tisk. Využívá variability anglického výrazu "FUCK" :-) Celý model je parametrický, lze snadno měnit rozměr, text i počet položek</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2019-12-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2019/12/mrpuppy</guid>
-      <title>Rozhovor: Dark, Mr. Puppy CZ 2020</title>
-      <description>Koncem listopadu se v pražském klubu Ateliér konal již třetí ročník soutěže Mr. Puppy Czech Republic. Účastnilo se jej celkem pět zájemců a vítězem se pro rok 2020 stal Vojta, známý jako Dark. Bude tedy jakýmsi reprezentantem českých lidských psů a bude se ucházet i o mezinárodní titul Mr. Puppy Europe. Požádal jsem ho, aby pro BDSM.CZ zodpověděl pár otázek.</description>
-      <link>https://www.bdsm.cz/2019/12/mrpuppy</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2019-12-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
