@@ -323,20 +323,18 @@ cd ..
 rm -rf lego
 exit
 </code></pre>
-<p>Následujícím příkazem zažádáte o vystavení cerifikátu. Změňte ho tak, aby obsahoval vaše hodnoty:</p>
+<p>Následujícím příkazem zažádáte o vystavení cerifikátu:</p>
+<pre><code>sudo \
+CF_ZONE_API_TOKEN=xxxxx 
+CF_DNS_API_TOKEN=yyyyy \
+/opt/lego/lego -a --path /etc/lego  --dns cloudflare --domains mqtt.example.com --email hostmaster@example.com run
+</code></pre>
+<p>Změňte ho tak, aby obsahoval vaše hodnoty:</p>
 <ul>
-<li><p>Místo <code>xxxxx</code> je token <em>MQTT-ListZones</em>.</p>
-</li>
-<li><p>Místo <code>yyyyy</code> je token <em>MQTT-EditDNS</em>.</p>
-</li>
-<li><p>Místo <code>mqtt.example.com</code> je název vašeho serveru.</p>
-</li>
-<li><p>Místo <code>hostmaster@example.com</code> je vaše e-mailová adresa.</p>
-<p>sudo <br />
-CF_ZONE_API_TOKEN=xxxxx
-CF_DNS_API_TOKEN=yyyyy <br />
-/opt/lego/lego -a --path /etc/lego  --dns cloudflare --domains mqtt.example.com --email hostmaster@example.com run</p>
-</li>
+<li>Místo <code>xxxxx</code> je token <em>MQTT-ListZones</em>.</li>
+<li>Místo <code>yyyyy</code> je token <em>MQTT-EditDNS</em>.</li>
+<li>Místo <code>mqtt.example.com</code> je název vašeho serveru.</li>
+<li>Místo <code>hostmaster@example.com</code> je vaše e-mailová adresa.</li>
 </ul>
 <p>Vygenerovaný privátní klíč a veřený klíč (certifikát) budou uloženy do <code>/etc/lego/certificates</code></p>
 <p>Certifikát platí 90 dnů a je nutné ho pravidelně obnovovat. To lze udělat pomocí cronu. Spusťte příkazem <code>sudo crontab -e</code> editaci jeho konfiguračního souboru a  na konec přidejte následující řádek:</p>

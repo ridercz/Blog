@@ -272,17 +272,19 @@ Bohužel, v repozitáři je historická verze, pročež je nutné nainstalovat a
     rm -rf lego
     exit
 
-Následujícím příkazem zažádáte o vystavení cerifikátu. Změňte ho tak, aby obsahoval vaše hodnoty:
-
-* Místo `xxxxx` je token _MQTT-ListZones_.
-* Místo `yyyyy` je token _MQTT-EditDNS_.
-* Místo `mqtt.example.com` je název vašeho serveru.
-* Místo `hostmaster@example.com` je vaše e-mailová adresa.
+Následujícím příkazem zažádáte o vystavení cerifikátu:
 
     sudo \
     CF_ZONE_API_TOKEN=xxxxx 
     CF_DNS_API_TOKEN=yyyyy \
     /opt/lego/lego -a --path /etc/lego  --dns cloudflare --domains mqtt.example.com --email hostmaster@example.com run
+
+Změňte ho tak, aby obsahoval vaše hodnoty:
+
+* Místo `xxxxx` je token _MQTT-ListZones_.
+* Místo `yyyyy` je token _MQTT-EditDNS_.
+* Místo `mqtt.example.com` je název vašeho serveru.
+* Místo `hostmaster@example.com` je vaše e-mailová adresa.
 
 Vygenerovaný privátní klíč a veřený klíč (certifikát) budou uloženy do `/etc/lego/certificates`
 
