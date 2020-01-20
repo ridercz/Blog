@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MQTT server do kapsy: Mosquitto na Orange Pi Zero | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování &quot;chytré domácnosti&quot; měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod." />
+    <link rel="canonical" href="https://www.altair.blog/2020/01/mqtt-do-kapsy" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="MQTT server do kapsy: Mosquitto na Orange Pi Zero" />
+    <meta name="twitter:description" content="Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování &quot;chytré domácnosti&quot; měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200120-mqtt-do-kapsy.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="MQTT server do kapsy: Mosquitto na Orange Pi Zero" />
+    <meta property="og:description" content="Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování &quot;chytré domácnosti&quot; měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200120-mqtt-do-kapsy.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/01/mqtt-do-kapsy" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200120-mqtt-do-kapsy.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>MQTT server do kapsy: Mosquitto na Orange Pi Zero</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-01-20" title="Datum vydání">20. ledna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování &quot;chytré domácnosti&quot; měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM.</p>
+<h2 id="co-je-orange-pi-zero">Co je Orange Pi Zero</h2>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-orangepizero.png" alt="" /></p>
+<p>Předpokládám že znáte <a href="https://www.raspberrypi.org">Raspberry Pi</a>, malý a levný počítač s ARM procesorem, na kterém může běžet Linux nebo jiné operační systémy. Řada <a href="http://www.orangepi.org">Orange Pi</a> je něco podobného. Budu používat model <a href="https://www.orangepi.org/orangepizero">Orange Pi Zero</a>, což je ten úplně nejmenší a nejlevnější model, stojí okolo deseti dolarů.</p>
+<p>Jeho hardwarové charakteristiky nejsou nijak úchvatné: Procesor Allwinner H2 se čtyřmi jádry ARM Cortex-A7, 256 nebo 512 MB DDR3 SDRAM, jeden USB 2.0 port, jeden MicroUSB pro napájení, RJ45 Ethernet 10/100M, slot na MicroSD kartu a WiFi. Na rozdíl od vyšších modelů (a třeba Raspberry Pi) nemá konektory pro zvukový nebo grafický výstup. Sice jsou k dispozici na zvláštní rozšiřující desce, ale obecně je tento počítač určený spíše pro headless aplikace.</p>
+<p>Mám ho tady už několik let, navrhl jsem na něj dokonce i <a href="https://www.prusaprinters.org/prints/8653-compact-and-secure-orange-pi-zero-case">krabičku</a>, vyzkoušel jsem ho, ale pořád jsem nevěděl co s ním. Myslím že pro MQTT server bude zcela ideální.</p>
+<h2 id="co-je-mqtt">Co je MQTT?</h2>
+<p><a href="http://mqtt.org/">MQTT</a> (MQ Telemetry Transport) je komunikařní protokol, který se používá v IoT sítích a nejen tam. Historicky vznikl v roce 1999 pro potřeby monitorování zařízení na ropovodech v poušti. Dokáže si poradit s pomalým spojením s vysokou latencí (např. satelitním), je to velice jednoduchý protokol přinášející minimální overhead. Právě proto je populární pro IoT.</p>
+<p>Existuje mnoho MQTT brokerů (serverů) a klientů. Já budu používat <a href="https://www.mosquitto.org/">Mosquitto</a>, což je jednoduchý multiplatformní open source broker.</p>
+<h2 id="zakladni-nastaveni-armbianu">Základní nastavení Armbianu</h2>
+<p>Kroky v této části nemají nic společného s Mosquittem nebo MQTT. Jde o obecný postup sloužící k nastavení a základnímu zabezpečení v zásadě jakéhokoliv serveru na Linuxu.</p>
+<h3 id="priprava-sd-karty">Příprava SD karty</h3>
+<p>Jako operační systém budu používat <a href="https://www.armbian.org/">Armbian</a>, což je ARM klon Debianu. Je udržovaný a desky Orange Pi patří k <a href="https://www.armbian.com/orange-pi-zero/">oficiálně podporovaným</a>. Z webu Armbianu jsem si tedy stáhl aktuální image Armbian Buster.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-rufus.png" alt="" /></p>
+<p>Image je třeba nahrát na MicroSD kartu o velikosti nejméně 2 GB. K tomu používám utilitu <a href="https://rufus.ie/">Rufus</a>, ale můžete použít cokoliv pro práci s obrazy disků, populární je třeba <a href="http://sourceforge.net/projects/win32diskimager/">Win32DiskImager</a> nebo multiplatformní <a href="https://www.balena.io/etcher/">balenaEtcher</a>.</p>
+<h3 id="prvni-boot-a-prihlaseni">První boot a přihlášení</h3>
+<p>První boot nějakou dobu trvá, protože se při něm zvětšují partitions, generují se SSH klíče dělají a další věci, takže buďte trpěliví. Zjistěte, jakou IP adresu přidělil váš DHCP server klientovi. Já jsem mu rovnou nastavil přes DHCP rezervaci a nasměroval na něj DNS jméno, řekněme <code>mqtt.example.com</code>.</p>
+<p>Připojte se pomocí příkazu SSH, který je součástí aktuální verze Windows 10 nebo pomocí jiného SSH klienta:</p>
+<pre><code>ssh root@mqtt.example.com
+</code></pre>
+<p>Při prvním připojení budete vyzváni k ověření SSH klíče serveru. Pokud by se v budoucnu změnil, budete varováni - obvykle to věští něco nekalého.</p>
+<pre><code>The authenticity of host 'mqtt.example.com (10.7.2.17)' can't be established.
+ECDSA key fingerprint is SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+                                
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'mqtt.example.com,10.0.0.1' (ECDSA) to the list of known hosts.
+</code></pre>
+<p>Výchozí heslo uživatele <code>root</code> je <code>1234</code> a po prvním přihlášení si ho musíte změnit:</p>
+<pre><code>You are required to change your password immediately (administrator enforced)
+ ____  ____  _   _____
+/  _ \|  _ \(_) |__  /___ _ __ ___
+| | | | |_) | |   / // _ \ '__/ _ \
+| |_| |  __/| |  / /|  __/ | | (_) |
+\____/|_|   |_| /____\___|_|  \___/
+
+Welcome to Armbian buster with Linux 5.4.8-sunxi
+
+System load:   0.00 0.00 0.00   Up time:       1:05 hour
+Memory usage:  29 % of 238MB    Zram usage:    17 % of 119Mb    IP:            10.0.0.1
+CPU temp:      50°C
+Usage of /:    7% of 15G
+
+New to Armbian? Check the documentation first: https://docs.armbian.com
+Changing password for root.
+Current password: 1234
+New password: ********
+Retype new password: ********
+
+
+Thank you for choosing Armbian! Support: www.armbian.com
+</code></pre>
+<p>Zároveň jste vyzváni k vytvoření běžného ne-administrátorského uživatele, což sice není povinné, ale je to dobrý nápad, takže vám to vřele doporučuji:</p>
+<pre><code>Creating a new user account. Press &lt;Ctrl-C&gt; to abort
+
+Please provide a username (eg. your forename): altair
+Trying to add user altair
+Adding user `altair' ...
+Adding new group `altair' (1000) ...
+Adding new user `altair' (1000) with group `altair' ...
+Creating home directory `/home/altair' ...
+Copying files from `/etc/skel' ...
+New password: ********
+Retype new password: ********
+passwd: password updated successfully
+Changing the user information for altair
+Enter the new value, or press ENTER for the default
+        Full Name []: Michal Altair Valasek
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n]
+
+Dear Michal Altair Valasek, your account altair has been created and is sudo enabled.
+Please use this account for your daily work from now on.
+</code></pre>
+<p>Ukončete SSH session příkazem <code>exit</code> a znovu se přihlašte, tentokrát jako nově vytvořený uživatel (zde <code>altair</code>):</p>
+<pre><code>ssh altair@mqtt.example.com
+</code></pre>
+<h3 id="nastaveni-prihlaseni-pomoci-klice">Nastavení přihlášení pomocí klíče</h3>
+<p>Přihlašování pomocí hesel není ani pohodlné ani bezpečné. Mnohem lepší je vygenerovat si SSH klíče a přihlašovat se pomocí nich. Pokud ještě žádné nemáte, vygenerujte si je (na klientovi, ne na serveru) pomocí příkazu <code>ssh-keygen</code>. Vygenerované klíče najdete v <code>%USERPROFILE%\.ssh</code> a bezodkladně je zálohujte.</p>
+<p>Na serveru pomocí následujících příkazů vytvořte soubor <code>~/.ssh/authorized_keys</code>:</p>
+<pre><code>mkdir ~/.ssh
+nano ~/.ssh/authorized_keys
+</code></pre>
+<p>Do souboru zkopírujte obsah souboru <code>%USERPROFILE%\.ssh\id_rsa.pub</code>. Měl by vypadat nějak takto:</p>
+<pre><code>ssh-rsa xxxxxxxxxx uzivatel@POCITAC
+</code></pre>
+<p>Stiskem <em>Ctrl+S</em> soubor uložte a stiskem <em>Ctrl+X</em> ukončete editor Nano. Následujícími příkazy nastavte práva na tyto soubory tak, abyste se k nim dostali jenom vy:</p>
+<pre><code>chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+</code></pre>
+<p>Příkazem <code>exit</code> se odhlašte a znovu se přihlašte. Pokud jste udělali všechno správně, nebudete tázáni na heslo a budete automaticky přihlášeni pomocí klíče (pokud jste při generování klíče zadali heslo, budete tázáni na toto heslo ke klíči, lokální).</p>
+<p>Pozor! Své přihlašovací heslo nezapomínejte! Budete ho moci použít pro přihlášení z konzole (ne po síti) a bude potřeba pro příkaz <code>sudo</code>.</p>
+<h3 id="zakladni-konfigurace">Základní konfigurace</h3>
+<p>Následujícím příkazem spusťte konfigurační utilitu Armbian Config:</p>
+<pre><code>sudo armbian-config
+</code></pre>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-armbian-config.png" alt="" /></p>
+<p>V části <em>System</em> - <em>SSH</em> zakažte přihlášení uživatele <code>root</code> a přihlašování pomocí hesla, povolte jenom přihlášení pomocí klíče:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-armbian-config-ssh.png" alt="" /></p>
+<p>V části <em>Personal</em> můžete nastavit časovou zónu. Výchozí je <em>UTC</em>, pravděpodobně budete chtít <em>Europe/Prague</em>. OPi Zero nemá zálohované hodiny reálného času a čas si načítá přes NTP ze sítě.</p>
+<p>Nejspíš budete chtít změnit i název serveru (hostname) z výchozího <code>orangepizero</code>.</p>
+<p>Následujícím příkazem aktualizujte systém:</p>
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+</code></pre>
+<p>Počítejte s tím, že to bude chvíli trvat, v závislosti na rychlosti sítě, množství aktualizací a rychlosti SD karty.</p>
+<h3 id="nastaveni-firewallu">Nastavení firewallu</h3>
+<p>Z hlediska bezpečnosti je dobré nastavit firewall tak, aby odmítal všechna spojení zvenčí, s výjimkou výslovně povolených. K tomu použijeme nástroj UFW (Uncomplicated Firewall).</p>
+<p>Ten není standardní součástí instalace, takže ho musíme nejprve nainstalovat:</p>
+<pre><code>sudo apt-get install ufw -y
+</code></pre>
+<p>Poté povolte OpenSSH a firewall aktivujte. Celé generace správců by mohly vykládat o tom, jak nemoudré je nastavovat pravidla na firewallu po síti, ale nám nic jiného nezbývá. Proto na otázku, zda chcete UFW opravdu povolit, odpovězte <code>y</code>:</p>
+<pre><code>sudo ufw allow OpenSSH
+sudo ufw enable
+</code></pre>
+<h2 id="mosquitto">Mosquitto</h2>
+<p>V této části nainstalujeme a zabezpečíme MQTT broker Mosquitto.</p>
+<h3 id="instalace-a-otestovani-funkcnosti">Instalace a otestování funkčnosti</h3>
+<p>Mosquitto nainstalujte pomocí následujícího příkazu:</p>
+<pre><code>sudo apt-get install mosquitto mosquitto-clients -y
+</code></pre>
+<p>Následujícím příkazem se přihlašte k odběru topicu <code>test</code>. Příkaz zdánlivě nic neudělá a zůstane &quot;viset&quot;. Čeká totiž na příchozí zprávy.</p>
+<pre><code>mosquitto_sub -h localhost -t test
+</code></pre>
+<p>Otevřete si druhé SSH spojení na stejný server a v něm zadejte následující příkaz:</p>
+<pre><code>mosquitto_pub -h localhost -t test -m &quot;Hello, World!&quot;
+</code></pre>
+<p>Zaslaná zpráva <code>Hello, World!</code> se zobrazí v prvním okně. Tam můžete ukončit <code>mosquitto_sub</code> stiskem <em>Ctrl+C</em> a druhé okno zavřít.</p>
+<h3 id="nastaveni-autentizace">Nastavení autentizace</h3>
+<p>Nyní je server zcela otevřený, tj. kdokoliv může bez omezení jako anonym posílat a číst jakékoliv zprávy, což nejspíše nechcete. Zkonfigurujeme server tak, aby pro přístup vyžadoval heslo.</p>
+<p>Následujícími příkazy vytvoříte konfigurační soubor s uživateli a vytvoříte uživatele <code>developer</code> s heslem <code>pass.word123</code>:</p>
+<pre><code>sudo cp /dev/null /etc/mosquitto/passwd
+sudo mosquitto_passwd -b /etc/mosquitto/passwd developer pass.word123
+</code></pre>
+<p>Dále vytvořte soubor <code>/etc/mosquitto/conf.d/default.conf</code> a otevřete jej v editoru Nano:</p>
+<pre><code>sudo nano /etc/mosquitto/conf.d/default.conf
+</code></pre>
+<p>Zadejte do něj následující obsah, kterým zakážete anonymní připojení a specifikujete, ze kterého souboru se mají brát uživatelé a hesla:</p>
+<pre><code>allow_anonymous false
+password_file /etc/mosquitto/passwd
+</code></pre>
+<p>Stiskem <em>Ctrl+S</em> soubor uložte a stiskem <em>Ctrl+X</em> ukončete editor Nano. Následujícím příkazem restartujte Mosquitto:</p>
+<pre><code>sudo systemctl restart mosquitto
+</code></pre>
+<p>Pokud nyní budete chtít číst nebo posílat zprávy, musíte k příkazům <code>mosquitto_sub</code> a <code>mosquitto_pub</code> přidat parametry <code>-u</code> a <code>-P</code> (case sensitive), pomocí kterých určíte jmého a heslo, například:</p>
+<pre><code>mosquitto_sub -h localhost -t test -u developer -P pass.word123
+</code></pre>
+<p>Pokud chcete Mosquitto zpřístupnit ze sítě pomocí nešifrovaného spojení (což může a nemusí být dobrý nápad, v závislosti na tom, jaké použití plánujete), můžete tak učinit na firewallu následujícím příkazem:</p>
+<pre><code>sudo ufw allow 1883
+</code></pre>
+<h3 id="ziskani-tls-certifikatu-od-lets-encrypt">Získání TLS certifikátu od Let's Encrypt</h3>
+<h4 id="overeni-pomoci-http-challenge">Ověření pomocí HTTP challenge</h4>
+<p>Pokud by na port 80 našeho MQTT serveru byl přímý přístup zvenčí, použil bych nástroj <a href="https://certbot.eff.org">CertBot</a> od <a href="https://www.eff.org/">Electronic Frontier Foundation</a>:</p>
+<pre><code># Nainstalovat CertBot
+sudo add-apt-repository ppa:certbot/certbot -y
+sudo apt-get update
+sudo apt-get install certbot -y
+
+# Povolit na firewallu port 80 pro HTTP challenge
+sudo ufw allow HTTP
+
+# Požádat o certifikát
+sudo certbot certonly --standalone --preferred-challenges http-01 -d mqtt.example.com
+</code></pre>
+<p>Poté bych ještě nastavil cron (správce načasovaných úloh) tak, aby každý den v pět ráno obnovil certifikáty, u nichž je to třeba. Pomocí příkazu <code>sudo crontab -e</code> bych spustil editaci seznamu úloh a na konec souboru bych přidal následující řádky:</p>
+<pre><code># Renew certificates using CertBot every day at 05:00
+0 5 * * * certbot renew --noninteractive --post-hook &quot;systemctl restart mosquitto&quot;
+</code></pre>
+<h4 id="overeni-pomoci-dns-challenge">Ověření pomocí DNS challenge</h4>
+<p>Ve chvíli, kdy nelze HTTP challenge použít, je nutné ověření realizovat pomocí DNS. Což může být jednoduché nebo komplikované, v závislosti na tom, jaké DNS servery používáte. Já mám své domény u společnosti <a href="https://www.cloudflare.com/">CloudFlare</a>, jejichž API je v CertBotu podporováno. Bohužel ale CertBot vyžaduje příliš vysoká oprávnění do CloudFlare, protože pracuje s jejich starším API. Proto používám jiného klienta, který se jmenuje <a href="https://go-acme.github.io/lego/">Lego</a>.</p>
+<p>Nejprve je nutné získat API tokeny od Cloudflare. Budeme potřebovat dva: jeden pro výpis seznamu zón a druhý pro práci s DNS záznamy v konkrétní zóně.</p>
+<p>Tokeny můžete generovat ve svém profilu v sekci <a href="https://dash.cloudflare.com/profile/api-tokens">API Tokens</a>. Začněte tím, že klepnete na tlačítko <em>Create Token</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-cf1.png" alt="" /></p>
+<p>Token pojmenujte <em>MQTT-ListZones</em> a nastavte práva <em>Zone / Zone / Read</em> pro všechny zóny a klepněte na <em>Continue to summary</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-cf2.png" alt="" /></p>
+<p>Klepněte na <em>Create Token</em> a poznamenejte si vygenerovaný token - vidíte ho poprvé a naposledy. Stejným způsobem vygenerujte token jménem <em>MQTT-EditDNS</em> a nastavte mu práva <em>Zone / DNS / Edit</em> pro konkrétní zónu (doménu) kterou chcete spravovat:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200120-cf3.png" alt="" /></p>
+<p>Bohužel, v repozitáři je historická verze, pročež je nutné nainstalovat aktuální binárku ručně. Na stránce <a href="https://github.com/go-acme/lego/releases">releases</a> najděte adresu distribučního balíčku aktuální verze pro architekturu <code>linux_armv7</code>. V době psaní tohoto článku je to verze 3.3.0. Odpovídajícím způsobem pak upravte příkazy níže, kterými Lego stáhnete a nainstalujete do cesty <code>/opt/lego/lego</code>:</p>
+<pre><code>sudo su
+mkdir /root/lego
+cd /root/lego
+wget https://github.com/go-acme/lego/releases/download/v3.3.0/lego_v3.3.0_linux_armv7.tar.gz
+tar zxf lego_v3.3.0_linux_armv7.tar.gz
+rm lego_v3.3.0_linux_armv7.tar.gz
+mkdir /opt/lego
+mv * /opt/lego/
+cd ..
+rm -rf lego
+exit
+</code></pre>
+<p>Následujícím příkazem zažádáte o vystavení cerifikátu. Změňte ho tak, aby obsahoval vaše hodnoty:</p>
+<ul>
+<li><p>Místo <code>xxxxx</code> je token <em>MQTT-ListZones</em>.</p>
+</li>
+<li><p>Místo <code>yyyyy</code> je token <em>MQTT-EditDNS</em>.</p>
+</li>
+<li><p>Místo <code>mqtt.example.com</code> je název vašeho serveru.</p>
+</li>
+<li><p>Místo <code>hostmaster@example.com</code> je vaše e-mailová adresa.</p>
+<p>sudo <br />
+CF_ZONE_API_TOKEN=xxxxx
+CF_DNS_API_TOKEN=yyyyy <br />
+/opt/lego/lego -a --path /etc/lego  --dns cloudflare --domains mqtt.example.com --email hostmaster@example.com run</p>
+</li>
+</ul>
+<p>Vygenerovaný privátní klíč a veřený klíč (certifikát) budou uloženy do <code>/etc/lego/certificates</code></p>
+<p>Certifikát platí 90 dnů a je nutné ho pravidelně obnovovat. To lze udělat pomocí cronu. Spusťte příkazem <code>sudo crontab -e</code> editaci jeho konfiguračního souboru a  na konec přidejte následující řádek:</p>
+<pre><code># Renew certificates using Lego every day at 05:00
+0 5 * * * CF_ZONE_API_TOKEN=xxxxx CF_DNS_API_TOKEN=yyyyy /opt/lego/lego -a --path /etc/lego --dns cloudflare --domains mqtt.example.com --email hostmaster@example.com renew --days 30 --renew-hook &quot;systemctl restart mosquitto&quot;
+</code></pre>
+<p>Každý den v pět hodin ráno se spustí příkaz, který obnoví certifikát v případě, že jeho platnost končí za 30 nebo méně dnů. Pokud je certifikát obnoven, restartuje Mosquitto.</p>
+<p>Stiskem <em>Ctrl+S</em> soubor uložte a stiskem <em>Ctrl+X</em> ukončete editor Nano.</p>
+<h3 id="nastaveni-tls-endpointu">Nastavení TLS endpointu</h3>
+<p>Certifikáty máme, teď je ještě třeba zařídit, aby je Mosquitto používalo. Následujícím příkazem editujte jeho konfigurační soubor:</p>
+<pre><code>sudo nano /etc/mosquitto/conf.d/default.conf
+</code></pre>
+<p>Na konec souboru přidejte následující řádky v případě, že jste použili CertBot a HTTP challenge:</p>
+<pre><code># Use non-secure listener
+listener 1883
+
+# Use secure listener
+listener 8883
+certfile /etc/letsencrypt/live/mqtt.example.com/cert.pem
+cafile /etc/letsencrypt/live/mqtt.example.com/chain.pem
+keyfile /etc/letsencrypt/live/mqtt.example.com/privkey.pem
+</code></pre>
+<p>Pokud jste použili Lego a DNS challenge, přidejte následující řádky:</p>
+<pre><code># Use non-secure listener
+listener 1883
+
+# Use secure listener
+listener 8883
+certfile /etc/lego/certificates/mqtt.example.com.crt
+cafile /etc/lego/certificates/mqtt.example.com.issuer.crt
+keyfile /etc/lego/certificates/mqtt.example.com.key
+</code></pre>
+<p>Cestu k souborům samozřejmě upravte podle vašeho názvu serveru. Pokud chcete provozovat pouze šifrované rozhraní, můžete vynechat část s <code>listener 1883</code>.</p>
+<p>Aby se změny projevily, je nutné následujícím příkazem restartovat Mosquitto:</p>
+<pre><code>sudo systemctl restart mosquitto
+</code></pre>
+<p>Aby bylo možné k endpointu přistupovat zvenčí, je nutné povolit port 8883 na firewallu následujícím příkazem:</p>
+<pre><code>sudo ufw allow 8883
+</code></pre>
+<h3 id="otestovani-funkcnosti-tls">Otestování funkčnosti TLS</h3>
+<p>Zbývá jenom otestovat, že vše úspěšně funguje. Můžete tak učinit z libovolného počítače kde je Mosquitto klient (včetně serveru samotného). Příkazům <code>mosquitto_pub</code> a <code>mosquitto_sub</code> je třeba přidat pouze argumenty <code>-p</code> (číslo portu, <code>8883</code>) a <code>--capath</code> (cesta k seznamu důvěryhodných certifikátů, obvykle <code>--/etc/ssl/certs</code>).</p>
+<p>Příkaz pro subscribe je:</p>
+<pre><code>mosquitto_sub -h www.example.com -t test -u developer -P pass.word123 -p 8883 --capath /etc/ssl/certs
+</code></pre>
+<p>Příkaz pro publish je:</p>
+<pre><code>mosquitto_pub -h www.example.com -t test -u developer -P pass.word123 -p 8883 --capath /etc/ssl/certs -m &quot;Hello, secure world!&quot;
+</code></pre>
+<h2 id="zaver">Závěr</h2>
+<p>Nyní máte funkční MQTT server, běžící na počítači za deset dolarů, zabezpečený pomocí TLS certifikátů a uživatelských jmen a hesel.</p>
+<p>Nevíte, k čemu je taková věc dobrá? Nevíte jak lépe nastavit práva, aby každý nemohl dělat všechno? Podrobněji se budu vytváření &quot;Lan of Things&quot; věnovat v několika na sebe navazujících přednáškách na akci <a href="https://www.techfurmeet.org/">TechFurMeet 2020</a>, která se bude konat začátkem února. Co je to za akci, o tom jsem psal <a href="https://www.altair.blog/2019/01/jak-jsme-zviratka-naucili-pajet">před rokem</a>.</p>
+<p>Příští ročník TechFurMeetu se připravuje, ale <a href="https://www.techfurmeet.org/cs/events">program</a> je už teď docela našlapaný. Moje témata budou:</p>
+<ul>
+<li><strong>Odroid GO</strong> - open source platforma retro handheld herní konzole a jak pro ni vytvářet vlastní programy.</li>
+<li><strong>Příliš spořádaný svět, aneb Vesmír nehraje v kostky</strong> - povídání o generování náhodných čísel s možností si vlastní elektronickou hrací kostku postavit.</li>
+<li><strong>.NET Core pro každého</strong> - úvod do platformy .NET Core pro úplné začátečníky.</li>
+<li><strong>Digital Signage a kiosky pomocí Raspberry Pi</strong> - na místě plánuji zprovoznit selfie kiosek s hodně zajímavým příslušenstvím.</li>
+<li><strong>OpenSCAD 2019.05: Co je nového?</strong> - Dlouho očekávaná nová verze OpenSCADu přinesla řadu novinek, o kterých bude řeč. Všich účastníci TFM dostanou přístup do našeho eLearningového systému na školení 3D modelování v OpenSCADu.</li>
+<li><strong>Intranet of Things</strong> - na IoT mi nejvíc vadí ten Internet. Jak si vyrobit chytrou domácnost bez nutnosti opustit bezpečí vnitřní sítě?</li>
+</ul>
+<p>Tradičním hostem bude <strong>Štěpán Bechynský</strong>, který bude mluvit o nové tiskárně Prusa Mini a o tom, jak hlídat, že se nehýbe někdo, komu jste to zakázali, pomocí IoT platformy BigClown. Další položky programu jsou v jednání.</p>
+<p>TFM není jenom pro furries, pokud vás obsah zajímá, neváhejte se <a href="https://www.techfurmeet.org/cs/reg">registrovat</a>. Pokud budete hodní a uděláte to rychle, odpustím vám chaosný poplatek za pozdní registraci.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=MQTT+server+do+kapsy%3a+Mosquitto+na+Orange+Pi+Zero&amp;body=https://www.altair.blog/2020/01/mqtt-do-kapsy">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/01/mqtt-do-kapsy.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/01/mqtt-do-kapsy.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/01/mqtt-do-kapsy">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/01/mqtt-do-kapsy">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

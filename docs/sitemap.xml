@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.altair.blog/2020/01/mqtt-do-kapsy</loc>
+    <lastmod>2020-01-20</lastmod>
+  </url>
+  <url>
     <loc>https://www.altair.blog/2020/01/console</loc>
     <lastmod>2020-01-09</lastmod>
   </url>

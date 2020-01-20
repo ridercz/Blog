@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/01/mqtt-do-kapsy</guid>
+      <title>MQTT server do kapsy: Mosquitto na Orange Pi Zero</title>
+      <description>Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování "chytré domácnosti" měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod.</description>
+      <link>https://www.altair.blog/2020/01/mqtt-do-kapsy</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bastlení</category>
+      <category>Bezpečnost</category>
+      <pubDate>2020-01-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</guid>
       <title>Case pro Raspberry Pi Zero WH a TV HAT</title>
       <description>Pro Raspberry Pi existuje "TV HAT", což je rozšiřující deska umožňující příjem digitálního televizního vysílání. Ve skutečnosti je to ale SDR (software defined radio) a dá se využít k mnoha zajímavějším věcem. Obvykle se používá v kombinaci s Raspberry Pi Zero WH, které výkonově postačuje. Našel jsem pro tuto kombinaci krabičku, která mi ale úplně nevyhovovala, protože je v ní deska jen volně položená a dost "plave". Proto jsem model modifikoval a publikuji jeho upravenou verzi.</description>
@@ -130,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-12-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/12/vykrajovatka</guid>
-      <title>Vykrajovátka na vánoční cukroví z 3D tiskárny</title>
-      <description>Jedním z nejoblíbenějších 3D tištěných předmětů jsou kolem Vánoc vykrajovátka na vánoční cukroví. Když si na Thingiverse necháte vyhledat "cookie cutter", najdete skoro 6000 výsledků. Ukážu vám, jak vykrajovátko jednoduše vytvořit z jakéhokoliv SVG souboru pomocí OpenSCADu.</description>
-      <link>https://www.altair.blog/2019/12/vykrajovatka</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2019-12-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

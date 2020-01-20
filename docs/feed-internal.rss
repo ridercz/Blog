@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/01/mqtt-do-kapsy</guid>
+      <title>MQTT server do kapsy: Mosquitto na Orange Pi Zero</title>
+      <description>Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování "chytré domácnosti" měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod.</description>
+      <link>https://www.altair.blog/2020/01/mqtt-do-kapsy</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bastlení</category>
+      <category>Bezpečnost</category>
+      <pubDate>2020-01-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/01/console</guid>
       <title>Pár tipů pro konzolové aplikace</title>
       <description>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</description>
@@ -130,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2019-10-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/10/sestnact-vlkosedych-let</guid>
-      <title>Šestnáct vlkošedých let</title>
-      <description>Dnes je tomu přesně rok od doby, co zemřela moje první československá vlčanda, Esta Kanýčo. Včera uplynulo šestnáct let od jejího narození. Tento článek je vzpomínkou na léta, která jsem s ní strávil.</description>
-      <link>https://www.altair.blog/2019/10/sestnact-vlkosedych-let</link>
-      <author>Michal Altair Valášek</author>
-      <category>Vlci</category>
-      <pubDate>2019-10-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
