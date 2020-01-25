@@ -1,0 +1,9 @@
+<!-- dcterms:title = Nástěnný držák pro kameru TP-Link Tapo C200 -->
+<!-- dcterms:abstract = TP-Link Tapo C200 je skvělá IP kamera, která podporuje rotaci, má rozumnou kvalitu obrazu, použitelného mobilního klienta a to vše za necelou tisícovku. Co nemá je rozumný držák na zeď. Tak jsem jeden vymodeloval a vytiskl. -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2020-01-25 -->
+<!-- x4w:pictureUrl = /perex-pictures/20200125-tapo.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket -->

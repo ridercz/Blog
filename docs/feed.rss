@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</guid>
+      <title>Nástěnný držák pro kameru TP-Link Tapo C200</title>
+      <description>TP-Link Tapo C200 je skvělá IP kamera, která podporuje rotaci, má rozumnou kvalitu obrazu, použitelného mobilního klienta a to vše za necelou tisícovku. Co nemá je rozumný držák na zeď. Tak jsem jeden vymodeloval a vytiskl.</description>
+      <link>https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-01-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/01/mqtt-do-kapsy</guid>
       <title>MQTT server do kapsy: Mosquitto na Orange Pi Zero</title>
       <description>Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování "chytré domácnosti" měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-12-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</guid>
-      <title>Ransomware útočí i před Vánoci a nevyhýbá se ani Česku. Poradíme, jak se před vyděrači bránit</title>
-      <description>Před několika lety se v IT oblasti objevil nový fenomén zvaný ransomware. Jedná se o viry, které zašifrují data na disku a následně vyžadují zaplacení výpalného. Po prvotní vlně publicity to vypadalo, že vlna ustala, ale je to falešná představa. Ransomware se daří dobře a v dohledné budoucnosti se nejspíš nic nezmění. Jenom v posledních týdnech jsem pomáhal několika obětem.</description>
-      <link>https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-12-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
