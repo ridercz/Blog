@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66712610-psms7-01e250b3085eaf0</guid>
+      <title>Lék horší nemoci: Antiviry mnohdy víc škodí než pomáhají, ukazuje i případ Avastu</title>
+      <description>Pokud za službu neplatíte, nejste zákazník, ale produkt který je prodáván. Nejnověji se to přihodilo produktům užívajícím zdarma dostupný antivirus Avastu. Běžné spotřebitelské "bezpečnostní balíky" mnohdy spíše škodí než aby pomáhaly.</description>
+      <link>https://tech.ihned.cz/c7-66712610-psms7-01e250b3085eaf0</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2020-01-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</guid>
       <title>Nástěnný držák pro kameru TP-Link Tapo C200</title>
       <description>TP-Link Tapo C200 je skvělá IP kamera, která podporuje rotaci, má rozumnou kvalitu obrazu, použitelného mobilního klienta a to vše za necelou tisícovku. Co nemá je rozumný držák na zeď. Tak jsem jeden vymodeloval a vytiskl.</description>
@@ -131,15 +140,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-09-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</guid>
-      <title>Šestiúhelníková krabička na kostky</title>
-      <description>Při hledání něčeho úplně jiného jsem našel svou více než dvacet let starou sadu kovových hracích kostek. Památka na doby, kdy jsem hrál Dračí doupě a GURPS. Modelů pro 3D tisk pouzder na kostky je všude spousta, ale nenašel jsem žádný, který by vyhovoval rozměrům mých kostek a magnetů, které mám pro použití na zavírání. Tak jsem si navrhl vlastní, parametrický, který si dokáže poradit s jakýmkoliv rozměrem.</description>
-      <link>https://www.prusaprinters.org/prints/5390-hexagonal-dice-case</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2019-08-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
