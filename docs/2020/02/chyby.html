@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Globální ošetřování (a logování) chyb v ASP.NET aplikacích | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Aplikace obsahují chyby a nelze se tomu vyhnout. Nicméně pokud už chyba nastala, je třeba zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core." />
+    <link rel="canonical" href="https://www.altair.blog/2020/02/chyby" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Globální ošetřování (a logování) chyb v ASP.NET aplikacích" />
+    <meta name="twitter:description" content="Aplikace obsahují chyby a nelze se tomu vyhnout. Nicméně pokud už chyba nastala, je třeba zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200211-chyby.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Globální ošetřování (a logování) chyb v ASP.NET aplikacích" />
+    <meta property="og:description" content="Aplikace obsahují chyby a nelze se tomu vyhnout. Nicméně pokud už chyba nastala, je třeba zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200211-chyby.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/02/chyby" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200211-chyby.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Globální ošetřování (a logování) chyb v ASP.NET aplikacích</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-02-11" title="Datum vydání">11. února 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Aplikace obsahují chyby a nelze se tomu vyhnout. Musíme s nimi počítat a když k nim dojde, ošetřit je. Což znamená zejména zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core.</p>
+<h2 id="osetrovani-http-chyb">Ošetřování HTTP chyb</h2>
+<p>První druhem jsou HTTP chyby, tj. chyby na web serveru. Zejména se jedná o neexistující stránky (populární HTTP status <code>404 Object Not Found</code>), v menší míře pak chyby týkající se autentizace a autorizace (stavy <code>401 Unauthorized</code>, <code>403 Forbidden</code>). Nejnověji pak třeba <code>451 Unavailable For Legal Reasons</code> dle RFC 7725, který se dočkal masivního rozšíření poté, co se EU ve své nekonečné moudrosti začala snažit nutit GDPR i subjektům mimo svou jurisdikci.</p>
+<p>Ve výchozí konfiguraci Kestrel (HTTP server pro ASP.NET Core) v případě chyby vrátí prázdnou odpověď s odpovídajícím stavovým kódem, což se v prohlížeči zobrazí jako prázdná stránka. To z hlediska UX není úplně optimální a chceme dělat něco jiného. ASP.NET Core obsahuje několik middleware, které s HTTP chybami dokáží naložit jinak - stačí je aplikovat v metodě <code>Configure</code> třídy <code>Startup</code>.</p>
+<h3 id="usestatuscodepages">UseStatusCodePages</h3>
+<pre><code class="language-csharp">app.UseStatusCodePages();
+</code></pre>
+<p>Toto prosté volání způsobí, že server vrátí čistě textovou (content-type <code>text/plain</code>) odpověď, např. <code>Status Code: 404; Not Found</code>.</p>
+<p>Metoda <code>UseStatusCodePages</code> má několik overloadů, jeden z nich umožní určit, jaký má mít vrácená odpověď typ a obsah. Můžete použít placeholder <code>{0}</code>, na jehož místo se doplní číselný kód.Následující volání vygeneruje jednoduchou HTML stránku:</p>
+<pre><code class="language-csharp">app.UseStatusCodePages(&quot;text/html&quot;, &quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;HTTP {0}&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Error {0}&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);
+</code></pre>
+<h3 id="usestatuscodepageswithredirects">UseStatusCodePagesWithRedirects</h3>
+<pre><code class="language-csharp">app.UseStatusCodePagesWithRedirects(&quot;/Errors/{0}.html&quot;);
+</code></pre>
+<p>Tento middleware způsobí přesměrování na zadanou adresu (i zde můžete použít placeholder <code>{0}</code>). <strong>Velice důrazně doporučuji tento způsob nepoužívat</strong>, neboť není strojově detekovatelné, že se jedná o chybu. Uživatel je prostě přesměrován (standardním redirectem) na stránku, která vrátí <code>200 OK</code>.</p>
+<h3 id="usestatuscodepageswithreexecute">UseStatusCodePagesWithReExecute</h3>
+<pre><code class="language-csharp">app.UseStatusCodePagesWithReExecute(&quot;/Errors/{0}&quot;);
+</code></pre>
+<p>Lepší varianta je poslední middleware, který funguje velmi podobně, ale uživatele nepřesměruje. Interně přepíše požadavek na novou adresu, ale adresa na klientovi ani HTTP status se nezmění. Záleží na vás, co umístíte na adresu <code>/Errors/{0}</code> (kde placeholder opět odpovídá číslu chyby).</p>
+<p>Může to být MVC controller, který zobrazí vhodnou chybovou stránku. Já dávám přednost Razor Pages. Vytvořím jednoduchou Razor Page <code>~/Pages/Errors/Index.cshtml</code> (nemusí mít viewmodel) s přibližně následujícím obsahem:</p>
+<pre><code>@page &quot;{statusCode}&quot;
+@{ ViewBag.Title = &quot;HTTP Error &quot; + this.RouteData.Values[&quot;statusCode&quot;]; }
+&lt;h1&gt;@ViewBag.Title&lt;/h1&gt;
+&lt;p&gt;V průběhu zpracování vašeho požadavku došlo k chybě.&lt;/p&gt;
+</code></pre>
+<p>Pro obsluhu nejčastější chyby číslo <code>404</code> pak mám speciální stránku <code>~/Pages/Errors/404.cshtml</code>:</p>
+<pre><code>@page
+@{ ViewBag.Title = &quot;HTTP Error 404: Object Not Found&quot;; }
+&lt;h1&gt;@ViewBag.Title&lt;/h1&gt;
+&lt;p&gt;Požadovaná stránka neexistuje.&lt;/p&gt;
+</code></pre>
+<p>Obojí předpokládá existenci layout page, která do titulku stránky vloží to, co najde ve <code>ViewBag.Title</code>.</p>
+<h2 id="osetrovani-vyjimek">Ošetřování výjimek</h2>
+<p>Výše uvedené si poradí se všemi chybami, kromě vnitřní chyby aplikace - <code>500 Internal Server Error</code>. Pokud vaše aplikace vyhodí výjimku (exception), zobrazí se opět prázdná bílá stránka.</p>
+<p>Pro ošetřování výjimek má ASP.NET Core zvláští middleware, Exception Handler. Aktivujete jej takto:</p>
+<pre><code class="language-csharp">app.UseExceptionHandler(&quot;/Errors/Internal&quot;);
+</code></pre>
+<p>Funguje podobně jako <code>UseStatusCodePagesWithReExecute</code> v případě HTTP chyb. Vnitřně se adresa přepíše na adresu, kterou jste zde uvedli.</p>
+<h2 id="logovani-vyjimek-v-chybove-strance">Logování výjimek v chybové stránce</h2>
+<p>Jak již bylo řečeno, chybová stránka by měla udělat dvě základní věci:</p>
+<ul>
+<li><strong>Informovat uživatele</strong>, že došlo k chybě. Pokud možno nepříliš podrobně, protože detailní informace o chybě mohou být bezpečnostně kritické.</li>
+<li><strong>Zaznamenat podrobné informace o chybě</strong> a informovat vývojáře.</li>
+</ul>
+<p>Obecně lze pro sledování aplikace použít mnoho způsobů, od rozličného logování po sofistikované služby typu Application Insights. Mně se nicméně pro výjimky výtečně osvědčuje jednoduché posílání mailů nebo logování do souboru. Snahou je, aby programátor získal maximum informací ohledně okolností, za nichž se výjimka vyskytla (protože na smysluplný popis od uživatele spoléhat nelze).</p>
+<p>Kromě základních informací (jako je čas, URL, kompletní chybová zpráva a stack trace) se hodí znát:</p>
+<ul>
+<li>Zda byl uživatel přihlášen a pokud ano, tak pod jakým účtem a s jakými claimy.</li>
+<li>Odeslaná formulářová data.</li>
+<li>Cookies.</li>
+<li>HTTP hlavičky.</li>
+</ul>
+<p>Z těchto informací zpravidla dokážete vyčíst, co se v aplikaci stalo za průšvih. Zcela záměrně pro jejich zaznamenávání nepoužívám žádný sofistikovaný logovací framework, ale primitivní kód, který je uloží do textového souboru. Pokud aplikace spadla na exception, bude se nejspíš nacházet v nějakém divném stavu a kód pro jeho vyřešení by měl být pokud možno co nejjednodušší, protože pokud spadne i on, nikdo nepomůže.</p>
+<p>Moje obvyklá chybová stránka obsahuje ještě jednu funkcionalitu: při každém pádu vygeneruje unikátní číslo a zobrazí ho uživateli. Pokud ten kontaktuje podporu, lze jeho konkrétní pád spojit se záznamem v logu.</p>
+<p>Abychom zjistili informace o výjimce, musíme použít <em>HTTP Context Features</em>. Co to je, o tom detailně napíšu někdy jindy, ale nyní je podstatné, že potřebujeme získat informace o výjimce a také o té stránce, kde došlo k chybě (vlastnosti typu <code>Request.Path</code> odkazují na stránku, která ošetřuje chybu):</p>
+<pre><code class="language-csharp">var err = this.HttpContext.Features.Get&lt;IExceptionHandlerPathFeature&gt;();
+var errUrl = new UriBuilder(this.Request.GetDisplayUrl()) { Path = err.Path };
+</code></pre>
+<p>V proměnné <code>err</code> budeme mít k dispozici vlastnost <code>Error</code>, která obsahuje odpovídající <code>Exception</code> a vlastnost <code>Path</code>, která obsahuje cestu původní stránky s chybou. Pomocí URI Builderu pak vytvoříme odpovídající kompletní adresu <code>errUrl</code>.</p>
+<p>Kompletní zdrojový kód ViewModelu stránky <code>~/Pages/Errors/Internal.cshtml.cs</code> vypadá takto:</p>
+<pre><code class="language-csharp">public class InternalModel : PageModel {
+    private readonly IWebHostEnvironment environment;
+
+    public InternalModel(IWebHostEnvironment environment) {
+        this.environment = environment;
+    }
+
+    public string LogId { get; set; }
+
+    public async Task OnGet() {
+        // Gather information
+        this.LogId = $&quot;{DateTime.UtcNow:yyyyMMddHHmmss}-{this.HttpContext.TraceIdentifier}&quot;;
+        var err = this.HttpContext.Features.Get&lt;IExceptionHandlerPathFeature&gt;();
+        var errUrl = new UriBuilder(this.Request.GetDisplayUrl()) { Path = err.Path };
+
+        // Log basic info
+        var sb = new StringBuilder();
+        sb.AppendLine($&quot;ID: {this.LogId}&quot;);
+        sb.AppendLine($&quot;Date: {DateTime.UtcNow:o}&quot;);
+        sb.AppendLine($&quot;Exception: {err.Error.Message}&quot;);
+        sb.AppendLine($&quot;URL: {errUrl}&quot;);
+        sb.AppendLine($&quot;Method: {this.Request.Method}&quot;);
+        sb.AppendLine($&quot;HTTPS: {this.Request.IsHttps}&quot;);
+        sb.AppendLine($&quot;Connection: {this.HttpContext.Connection.RemoteIpAddress} (:{this.HttpContext.Connection.RemotePort}) -&gt; {this.HttpContext.Connection.LocalIpAddress} (:{this.HttpContext.Connection.LocalPort})&quot;);
+        sb.AppendLine();
+
+        // User
+        if (this.User.Identity.IsAuthenticated) {
+            sb.AppendLine(&quot;# Authenticated user&quot;);
+            var cid = this.User.Identity as ClaimsIdentity;
+            foreach (var item in cid.Claims) sb.AppendLine($&quot;{item.Type} = {item.Value}&quot;);
+        } else {
+            sb.AppendLine(&quot;# No authenticated user&quot;);
+        }
+        sb.AppendLine();
+
+        // Form data
+        if (this.Request.HasFormContentType) {
+            sb.AppendLine(&quot;# Form data&quot;);
+            foreach (var item in this.Request.Form) sb.AppendLine($&quot;{item.Key} = {item.Value}&quot;);
+        } else {
+            sb.AppendLine(&quot;# No form data&quot;);
+        }
+        sb.AppendLine();
+
+        // Cookies
+        if (this.Request.Cookies.Any()) {
+            sb.AppendLine(&quot;# Cookies&quot;);
+            foreach (var item in this.Request.Cookies) sb.AppendLine($&quot;{item.Key} = {item.Value}&quot;);
+        } else {
+            sb.AppendLine(&quot;# No cookies&quot;);
+        }
+        sb.AppendLine();
+
+        // Headers
+        sb.AppendLine(&quot;# HTTP headers&quot;);
+        foreach (var item in this.Request.Headers) sb.AppendLine($&quot;{item.Key} = {item.Value}&quot;);
+        sb.AppendLine();
+
+        // Exception
+        sb.AppendLine(&quot;# Exception&quot;);
+        sb.AppendLine(err.Error.ToString());
+        sb.AppendLine();
+
+        // Write log file
+        sb.AppendLine(&quot;# End of file&quot;);
+        var logFileName = Path.Combine(this.environment.ContentRootPath, &quot;App_Data/AppErrorLogs&quot;, this.LogId + &quot;.log&quot;);
+        Directory.CreateDirectory(Path.GetDirectoryName(logFileName));
+        await System.IO.File.WriteAllTextAsync(logFileName, sb.ToString()).ConfigureAwait(false);
+    }
+}
+</code></pre>
+<p>Při pádu aplikace se veškeré informace uloží do souboru ve složce <code>App_Data/AppErrorLogs</code> v rootu aplikace. Název souboru je složen z aktuálního datumu a času a ID požadavku. Odpovídá tedy ID chyby, které je zobrazeno uživateli a podle něj lze odpovídající log dohledat.</p>
+<p>Pro pořádek, soubor <code>~/Pages/Errors/Internal.cshtml</code>, který zobrazuje zprávu uživateli, vypadá takto:</p>
+<pre><code class="language-html">@page
+@model InternalModel
+@{ ViewBag.Title = &quot;HTTP Error 500: Internal Server Error&quot;; }
+&lt;h1&gt;@ViewBag.Title&lt;/h1&gt;
+&lt;p&gt;V průběhu zpracování vašeho požadavku došlo k chybě.&lt;/p&gt;
+&lt;p&gt;Chyba byla zaznamenána pod následujícím ID: &lt;code&gt;@Model.LogId&lt;/code&gt;&lt;/p&gt;
+</code></pre>
+<h2 id="jine-nastaveni-pro-vyvoj-a-produkci">Jiné nastavení pro vývoj a produkci</h2>
+<p>Shora uvedená nastavení jsou určena pro staging a produkci. Pro vývojovou verzi je samozřejmě rozumné zobrazovat informace o chybě přímo. Do metody <code>Configure</code> si tedy nechte nainjectovat <code>IWebHostEnvironment</code> a podle něj rozhodněte, jak se k ošetřování chyb postavíte:</p>
+<pre><code class="language-csharp">if (env.IsDevelopment()) {
+    app.UseDeveloperExceptionPage();
+    app.UseDatabaseErrorPage();
+} else {
+    app.UseExceptionHandler(&quot;/Errors/Internal&quot;);
+    app.UseStatusCodePagesWithReExecute(&quot;/Errors/{0}&quot;);
+}
+</code></pre>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Glob%c3%a1ln%c3%ad+o%c5%a1et%c5%99ov%c3%a1n%c3%ad+(a+logov%c3%a1n%c3%ad)+chyb+v+ASP.NET+aplikac%c3%adch&amp;body=https://www.altair.blog/2020/02/chyby">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/02/chyby.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/02/chyby.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/02/chyby">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/02/chyby">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
