@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/02/fitjpi</guid>
+      <title>Fuck that, I'll just print it!</title>
+      <description>Asi nejlepší by bylo přeložit název této facebookové skupiny jako "kašlu na to, prostě si to vytisknu". Popisuje stav, do které ho se začasté dostávají majitelé 3D tiskáren. Řadu problémů a drobných každodenních prud lze vyřešit pomocí pár minut modelování a pár desítek minut tisku.</description>
+      <link>https://www.altair.blog/2020/02/fitjpi</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-02-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/02/chyby</guid>
       <title>Globální ošetřování (a logování) chyb v ASP.NET aplikacích</title>
       <description>Aplikace obsahují chyby a nelze se tomu vyhnout. Nicméně pokud už chyba nastala, je třeba zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2019-12-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/12/kalendar</guid>
-      <title>Jak na rodinný kalendář</title>
-      <description>Štědrý večer s rozdáváním dárků je již za námi, ale řada lidí jezdí navštěvovat příbuzné mezi svátky. A zejména babičkám a dědečkům udělají radost fotografické kalendáře s obrázky umělecké kvality sice nevalné, ale zato s milovanými vnoučaty. Výhodou je, že to je dárek, který lze vyrobit poměrně snadno a jednoduše. Tedy, snadno a jednoduše u nás, kde máme k dispozici vybavení středně velkého copy centra. Pokud jste na tom jinak, budete muset počkat na 27., kdy budou mít otevřeno ta oficiální copy centra.</description>
-      <link>https://www.altair.blog/2019/12/kalendar</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2019-12-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
