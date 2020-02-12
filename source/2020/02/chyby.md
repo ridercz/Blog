@@ -5,7 +5,7 @@
 <!-- x4w:pictureUrl = /perex-pictures/20200211-chyby.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = IT -->
 <!-- dcterms:dateAccepted = 2020-02-11 -->
 
 Aplikace obsahují chyby a nelze se tomu vyhnout. Musíme s nimi počítat a když k nim dojde, ošetřit je. Což znamená zejména zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core.
