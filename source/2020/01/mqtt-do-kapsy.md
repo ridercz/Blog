@@ -24,7 +24,7 @@ Mám ho tady už několik let, navrhl jsem na něj dokonce i [krabičku](https:/
 
 ## Co je MQTT?
 
-[MQTT](http://mqtt.org/) (MQ Telemetry Transport) je komunikařní protokol, který se používá v IoT sítích a nejen tam. Historicky vznikl v roce 1999 pro potřeby monitorování zařízení na ropovodech v poušti. Dokáže si poradit s pomalým spojením s vysokou latencí (např. satelitním), je to velice jednoduchý protokol přinášející minimální overhead. Právě proto je populární pro IoT.
+[MQTT](http://mqtt.org/) (MQ Telemetry Transport) je komunikační protokol, který se používá v IoT sítích a nejen tam. Historicky vznikl v roce 1999 pro potřeby monitorování zařízení na ropovodech v poušti. Dokáže si poradit s pomalým spojením s vysokou latencí (např. satelitním), je to velice jednoduchý protokol přinášející minimální overhead. Právě proto je populární pro IoT.
 
 Existuje mnoho MQTT brokerů (serverů) a klientů. Já budu používat [Mosquitto](https://www.mosquitto.org/), což je jednoduchý multiplatformní open source broker.
 
