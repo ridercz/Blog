@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/02/ambient-route-values</guid>
+      <title>Ambient route values a ASP.NET Core Endpoint Routing</title>
+      <description>Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak</description>
+      <link>https://www.altair.blog/2020/02/ambient-route-values</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-02-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/02/fitjpi</guid>
       <title>Fuck that, I'll just print it!</title>
       <description>Asi nejlepší by bylo přeložit název této facebookové skupiny jako "kašlu na to, prostě si to vytisknu". Popisuje stav, do které ho se začasté dostávají majitelé 3D tiskáren. Řadu problémů a drobných každodenních prud lze vyřešit pomocí pár minut modelování a pár desítek minut tisku.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2019-11-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/11/cloud-scripts</guid>
-      <title>Skripty pro rychlé vytváření VM a App Services v Azure</title>
-      <description>Spravovat Microsoft cloud z Bashe může někomu připadat jako svatokrádež, ale mně se Azure CLI líbí moc. Rozhodně víc, než webové rozhraní, které je typická moderní webová aplikace dneška - pomalá, nespolehlivá a každý týden jiná.</description>
-      <link>https://www.altair.blog/2019/11/cloud-scripts</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2019-11-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

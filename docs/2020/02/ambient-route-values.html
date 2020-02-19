@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ambient route values a ASP.NET Core Endpoint Routing | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak" />
+    <link rel="canonical" href="https://www.altair.blog/2020/02/ambient-route-values" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Ambient route values a ASP.NET Core Endpoint Routing" />
+    <meta name="twitter:description" content="Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak" />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200219-ambient-route-values.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Ambient route values a ASP.NET Core Endpoint Routing" />
+    <meta property="og:description" content="Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak" />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200219-ambient-route-values.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/02/ambient-route-values" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200219-ambient-route-values.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Ambient route values a ASP.NET Core Endpoint Routing</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-02-19" title="Datum vydání">19. února 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>ASP.NET Core od verze 3.0 ve výchozím nastavení používá a předpokládám použití middleware pro endpoint routing. Co to je? V předchozích verzích si každý middleware řešil routing - tedy jaká akce se vyvolá v závislosti na vybrané URL adrese - vlastními silami a nezávisle na ostatních. Endpoint routing je middleware, který routing dělá sám, jednotně pro všechny.</p>
+<h2 id="co-jsou-ambient-route-values">Co jsou ambient route values?</h2>
+<p>Ve verzích bez endpoint routingu jsou při generování URL routingem automaticky doplňovány hodnoty route parametrů z aktuálních. Tj. pokud máte např. Razor Page s route template <code>products/{productId}/detail</code> a chcete udělat odkaz na stránku <code>Edit</code> s template <code>products/{productId}/edit</code>, stačí ne view první stránky napsat <code>&lt;a asp-page=&quot;Edit&quot;&gt;</code> a není explicitně nutné specifikovat hodnotu <code>productId</code>. Stejně tak lze použít metody pro generování URL nebo přesměrování typu <code>RedirectToPage</code>.</p>
+<p>Endpoint routing ambient route values nepodporuje a hodnoty parametrů je nutné specifikovat vždy explicitně, např. <code>&lt;a asp-page=&quot;Edit&quot; asp-route-productId=&quot;this.RouteData.Values[&quot;productId&quot;]&quot;&gt;</code>. Což některé scénáře docela komplikuje a jiné činí téměř nemožnými.</p>
+<p>Hlavní problém ale tkví v tom, že jde o breaking change proti dosavadní logice, která se projevuje velmi zákeřně. Pokud totiž uděláte pomocí tag helperu pro <code>a</code> odkaz ne neexistující routu (chybějící parametry), nezahlásí se vám nikde žádná chyba, jen se odkaz vygeneruje jako <code>&lt;a href=&quot;&quot;&gt;</code> a prohlížeče prázdný řetězec odkazu vyhodnotí jako odkaz na sebe sama.</p>
+<p>Oficiální zdůvodnění je, že použití ambient hodnot může vést k vygenerování syntakticky validní ale sémanticky chybné URL. Například budete-li mít route templates <code>products/{id}</code> a <code>categories/{id}</code>, může být při generování změněn význam parametru <code>id</code>. Podle mého názoru ovšem platí, že v tomto případě je léčba horší než nemoc, neboť vyhnout se tomuto typu chyb je v podstatě triviální: stačí používat různé názvy pro významově různé parametry, např. <code>productId</code> a <code>categoryId</code> místo prostého <code>id</code>.</p>
+<h2 id="jak-z-toho-ven">Jak z toho ven?</h2>
+<p>Nejjednodušší řešení je vypnout endpoint routing, což lze udělat v metodě <code>Startup.ConfigureServices</code>:</p>
+<pre><code class="language-csharp">services.AddMvc(options =&gt; {
+    options.EnableEndpointRouting = false;
+});
+</code></pre>
+<p>poté v metodě <code>Configure</code> tamtéž odstraňte všechny odkazy na routing middleware a místo toho použijte staré <code>app.UseMvc</code>.</p>
+<p>Nicméně pokud chcete endpoint routing používat -- a v dlouhodobém horizontu vám nic jiného nezbude -- je třeba se z toho nějak vylhat.</p>
+<h2 id="ambient-anchor-tag-helper">Ambient Anchor Tag Helper</h2>
+<p>Pokud chcete dosáhnout podobného chování jako v předchozích verzích i s použitím endpoint routingu, musíte si ho napsat sami. Může k tomu posloužit vlastní tag helper. Jeho kód je jednoduchý:</p>
+<pre><code class="language-csharp">using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+
+namespace Altairis.TagHelpers {
+
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = ActionAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = ControllerAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = AreaAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = PageAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = PageHandlerAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = FragmentAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = HostAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = ProtocolAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = RouteAttributeName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = RouteValuesDictionaryName)]
+    [HtmlTargetElement(&quot;aa&quot;, Attributes = RouteValuesPrefix + &quot;*&quot;)]
+    public class AmbientAnchorTagHelper : AnchorTagHelper {
+        private const string ActionAttributeName = &quot;asp-action&quot;;
+        private const string ControllerAttributeName = &quot;asp-controller&quot;;
+        private const string AreaAttributeName = &quot;asp-area&quot;;
+        private const string PageAttributeName = &quot;asp-page&quot;;
+        private const string PageHandlerAttributeName = &quot;asp-page-handler&quot;;
+        private const string FragmentAttributeName = &quot;asp-fragment&quot;;
+        private const string HostAttributeName = &quot;asp-host&quot;;
+        private const string ProtocolAttributeName = &quot;asp-protocol&quot;;
+        private const string RouteAttributeName = &quot;asp-route&quot;;
+        private const string RouteValuesDictionaryName = &quot;asp-all-route-data&quot;;
+        private const string RouteValuesPrefix = &quot;asp-route-&quot;;
+
+        public AmbientAnchorTagHelper(IHtmlGenerator generator) : base(generator) { }
+
+        public override void Process(TagHelperContext context, TagHelperOutput output) {
+            // Make classic anchor tag
+            output.TagName = &quot;a&quot;;
+
+            // Copy values from current route data
+            foreach (var key in this.ViewContext.RouteData.Values.Keys) {
+                if (!this.RouteValues.ContainsKey(key)) this.RouteValues[key] = this.ViewContext.RouteData.Values[key].ToString();
+            }
+
+            // Process standard anchor helper
+            base.Process(context, output);
+        }
+
+    }
+}
+</code></pre>
+<p>Tag helper je poděděný od standardní třídy <code>AnchorTagHelper</code>, jenom se váže k elementu <code>aa</code> a nikoliv <code>a</code>. Dělá vše co standardní, jenom před jejím voláním zkopíruje hodnoty současných route parametrů do vlastní kolekce <code>RouteValues</code>.</p>
+<p>Obdobně lze pomocí pomocné statické třídy přidat třídě <code>PageModel</code> extension metodu <code>AmbientRedirectToPage</code>, která se opět chová stejně jako standardní <code>RedirectToPage</code> (a má stejné overloady), ale kopíruje hodnoty route parametrů:</p>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace Altairis.TagHelpers {
+    public static class PageModelExtensions {
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page) =&gt; page.AmbientRedirectToPage(pageName: null, pageHandler: null, routeValues: null, fragment: null);
+
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page, object routeValues) =&gt; page.AmbientRedirectToPage(pageName: null, pageHandler: null, routeValues, fragment: null);
+
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page, string pageName) =&gt; page.AmbientRedirectToPage(pageName, pageHandler: null, routeValues: null, fragment: null);
+
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page, string pageName, object routeValues) =&gt; page.AmbientRedirectToPage(pageName, pageHandler: null, routeValues, fragment: null);
+
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page, string pageName, string pageHandler) =&gt; page.AmbientRedirectToPage(pageName, pageHandler, routeValues: null, fragment: null);
+
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page, string pageName, string pageHandler, string fragment) =&gt; page.AmbientRedirectToPage(pageName, pageHandler, routeValues: null, fragment);
+
+        public static RedirectToPageResult AmbientRedirectToPage(this PageModel page, string pageName, string pageHandler, object routeValues, string fragment) {
+            // Copy values from routeValues object
+            var newRouteValues = new Dictionary&lt;string, object&gt;();
+            if (routeValues != null) {
+                foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(routeValues)) {
+                    newRouteValues.Add(descriptor.Name, descriptor.GetValue(routeValues));
+                }
+            }
+
+            // Copy ambient values
+            foreach (var key in page.RouteData.Values.Keys) {
+                if (!newRouteValues.ContainsKey(key)) newRouteValues[key] = page.RouteData.Values[key];
+            }
+
+            // Call original method
+            return page.RedirectToPage(pageName, pageHandler, newRouteValues, fragment);
+        }
+    }
+}
+</code></pre>
+<p>Uvedené alternativní postupy fungují celkem dobře; i když je oproti verzi bez endpoint routingu vyžadována změna kódu, je docela jednoduchá a může být často učiněna částečně automaticky.</p>
+<p>Jistá změna chování oproti předchozí verzi tam nicméně je: zatímco předchozí implementace &quot;nadpočetné&quot; parametry ignorovala, moje řešení je přidává jako query stringové parametry, což je standardní chování ASP.NET Core pro parametry &quot;navíc&quot;.</p>
+<p>Bohužel se mi nepodařilo přijít na způsob, jak změnit vlastní generování URL, nenašel jsem žádný extensibility point. Mimo jiné proto jsem tag helper napsal tak, že vyžaduje použití nestandardního elementu <code>aa</code> a tím jakýsi opt-in, nikoliv abych jím nahradil standardní <code>a</code>.</p>
+<p><em>Poznámka:</em> moje řešení (extension metody nad třídou <code>PageModel</code>) počítá pouze s Razor Pages, nikoliv s ASP.NET MVC (tag helper je univerzální). To nemám v lásce a nepoužívám. Vytvoření obdobné třídy s extension metodami pro MVC by však mělo být triviální a budu rád, pokud mi pošlete pull request.</p>
+<h2 id="altairis-tag-helpers">Altairis Tag Helpers</h2>
+<p>Výše zmíněný Tag Helper (<a href="https://github.com/ridercz/Altairis.TagHelpers/wiki">a řadu dalších</a>) a třídu s extension metodami najdete v knihovně Altairis Tag Helpers. Ta je open source a je k dispozici v <a href="https://github.com/ridercz/Altairis.TagHelpers/">podobě zdrojového kódu na GitHubu</a> nebo jako NuGet balíček <a href="https://www.nuget.org/packages/Altairis.TagHelpers/">Altairis.TagHelpers</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Ambient+route+values+a+ASP.NET+Core+Endpoint+Routing&amp;body=https://www.altair.blog/2020/02/ambient-route-values">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/02/ambient-route-values.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/02/ambient-route-values.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/02/ambient-route-values">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/02/ambient-route-values">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
