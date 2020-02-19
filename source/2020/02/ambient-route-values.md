@@ -1,5 +1,5 @@
 <!-- dcterms:title = Ambient route values a ASP.NET Core Endpoint Routing -->
-<!-- dcterms:abstract = Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak  -->
+<!-- dcterms:abstract = Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak se v případě potřeby vrátit ke starému způsobu generování odkazů, aniž byste se museli vzdávat endpoint routingu. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20200219-ambient-route-values.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20200219-ambient-route-values.jpg -->
