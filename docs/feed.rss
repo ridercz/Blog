@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d</guid>
+      <title>A2D: Moje 2D knihovna pro OpenSCAD</title>
+      <description>Řada technických modelů pro 3D tisk má 2D základ, vytažený do výšky. Při svých návrzích v OpenSCADu často používám sbírku 2D modulů a funkcí, které mi výrazně zjednodušují psaní modelů a zpřehledňují kód. Nyní jsem se rozhodl je zveřejnit pro obecné použití pod MIT licencí.</description>
+      <link>https://www.altair.blog/2020/02/a2d</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-02-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/02/ambient-route-values</guid>
       <title>Ambient route values a ASP.NET Core Endpoint Routing</title>
       <description>Upgradovali jste aplikace na ASP.NET 3.x s Endpoint Routingem a přestalo vám fungovat generování odkazů? Možná je to vinou breaking change, změnou zacházení s ambient route values. Ukážu vám, jak se v případě potřeby vrátit ke starému způsobu generování odkazů, aniž byste se museli vzdávat endpoint routingu.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2020-01-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/12/pf2020</guid>
-      <title>Pour féliciter: Open source 3D PF MMXX DYI</title>
-      <description>Možná jste ode mne dostali přání k novému roku, možná ho ještě dostanete, pokud se v dohledné době uvidíme. Pokud ne, můžete si ho vyrobit sami, protože je open source a zdrojové soubory jsou k dispozici.</description>
-      <link>https://www.altair.blog/2019/12/pf2020</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2019-12-31T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
