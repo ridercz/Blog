@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d-text</guid>
+      <title>A2D 1.1.0: Podpora pro práci s textem</title>
+      <description>Do své OpenSCAD knihovny pro práci s 2D objekty jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.</description>
+      <link>https://www.altair.blog/2020/02/a2d-text</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-02-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d</guid>
       <title>A2D: Moje 2D knihovna pro OpenSCAD</title>
       <description>Řada technických modelů pro 3D tisk má 2D základ, vytažený do výšky. Při svých návrzích v OpenSCADu často používám sbírku 2D modulů a funkcí, které mi výrazně zjednodušují psaní modelů a zpřehledňují kód. Nyní jsem se rozhodl je zveřejnit pro obecné použití pod MIT licencí.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-01-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66700230-psms7-a62c3de215960ce</guid>
-      <title>Technologická novoroční předsevzetí: Aby vaše zabezpečení v roce 2020 bylo 20/20</title>
-      <description>Novoroční předsevzetí jen zřídkakdy přežijí první dny nového roku. Sada z oboru kybernetické bezpečnosti, kterou jsem pro vás připravil, má proti těm obyčejným jednu základní výhodu: funguje automaticky. Stačí vše jednou správně nastavit, a o realizaci se postará počítač a telefon.</description>
-      <link>https://tech.ihned.cz/c7-66700230-psms7-a62c3de215960ce</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2020-01-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
