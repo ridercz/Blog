@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/</guid>
+      <title>Držák USB hubu Axagon HUE-S2BL</title>
+      <description>Použil jsem svou knihovnu A2D k tomu, abych vytvořil držák USB hubu, aby se mi jenom tak neválel po stole. Rozměry zveřejněného modelu jsou určeny pro konkrétní typ Axagon HUE-S2BL, ale hubů s podobnou konstrukcí je spousta. Proto je model parametrický a lze jej změnou pár čísel upravit pro jakékoliv zařízení s podobným form factorem.</description>
+      <link>https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-03-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d-text</guid>
       <title>A2D 1.1.0: Podpora pro práci s textem</title>
       <description>Do své OpenSCAD knihovny pro práci s 2D objekty jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2020-01-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/01/scss-menu</guid>
-      <title>SCSS mixin pro responzivní menu</title>
-      <description>Responzivní menu, které se na menších obrazovkách změní v rozbalovací, je běžnou funkcí webových aplikací. Je součástí každého klientského UI frameworku. Ale co když klientské UI frameworky nepoužíváte? A chcete sémantické řešení bez JavaScriptu? Stačí na to jeden SCSS mixin.</description>
-      <link>https://www.altair.blog/2020/01/scss-menu</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-01-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

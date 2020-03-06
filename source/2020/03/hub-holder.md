@@ -1,0 +1,9 @@
+<!-- dcterms:title = Držák USB hubu Axagon HUE-S2BL -->
+<!-- dcterms:abstract = Použil jsem svou knihovnu A2D k tomu, abych vytvořil držák USB hubu, aby se mi jenom tak neválel po stole. Rozměry zveřejněného modelu jsou určeny pro konkrétní typ Axagon HUE-S2BL, ale hubů s podobnou konstrukcí je spousta. Proto je model parametrický a lze jej změnou pár čísel upravit pro jakékoliv zařízení s podobným form factorem. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20200306-hub-holder.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2020-03-06 -->
+<!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/ -->
