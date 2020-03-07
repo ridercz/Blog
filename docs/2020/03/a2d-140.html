@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>A2D: Novinky ve verzi 1.4.0 | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků." />
+    <link rel="canonical" href="https://www.altair.blog/2020/03/a2d-140" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="A2D: Novinky ve verzi 1.4.0" />
+    <meta name="twitter:description" content="S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200307-a2d-140.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="A2D: Novinky ve verzi 1.4.0" />
+    <meta property="og:description" content="S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200307-a2d-140.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/03/a2d-140" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200307-a2d-140.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>A2D: Novinky ve verzi 1.4.0</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-03-07" title="Datum vydání">7. března 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>S mou <a href="https://github.com/ridercz/A2D/">OpenSCAD knihovnou A2D</a> jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků.</p>
+<h2 id="kontrola-verze">Kontrola verze</h2>
+<p>Doporučený kód pro použití knihovny vypadá takto:</p>
+<pre><code class="language-scad">include &lt;A2D.scad&gt;; // https://github.com/ridercz/A2D
+assert(a2d_required([1, 4, 0]), &quot;Please upgrade A2D library to version 1.4.0 or higher.&quot;);
+</code></pre>
+<p>Využívá funkci <code>a2d_required</code>, která vrací <code>true</code>, pokud je linkovaná knihovna stejné nebo vyšší verze, než jak je specifikováno. Je určena k využití v rámci nového příkazu <code>assert</code>, který umožní vyhodit chybu, pokud není splněna zadaná podmínka.</p>
+<p>Aktuální verzi knihovny můžete získat jako konstantu <code>a2d_version</code>. Stejně jako v případě argumentu funkce <code>a2d_required</code> se jedná o seznam o třech položkách, jehož formát je <code>[major, minor, revision]</code>.</p>
+<h2 id="zmena-logiky-vector_point">Změna logiky <code>vector_point</code></h2>
+<p>Změnil jsem logiku funkce <code>vector_point</code>, která se nyní řídí pravidlem pravé ruky, stejně jako transformace <code>rotate</code> v OpenSCADu a všechny ostatní funkce v knihovně A2D. Je to <strong>breaking change</strong>, ale je to IMHO nutné pro konzistenci a doufám, že tolik lidi ještě knihovnu A2D nepoužívá, aby jim to způsobilo podstatné problémy.</p>
+<h2 id="nove-tvary">Nové tvary</h2>
+<p>Přidal jsem podporu pro vroubkované (knurled) kruhy - <code>knurled_circle</code>. Jejich typické použití je, když chcete udělat ovládací kolečko, kterým má někdo točit. Hladký okraj není příliš vhodný, protože klouže. Pročež je lepší po obvodu udělat vroubky, za které se prsty zachytí.</p>
+<p>Výtečně je to vidět na příkladu <a href="https://github.com/ridercz/A2D/blob/master/Samples/KnurledKnob.scad"><code>KnurledKnob.scad</code></a>, což je univerzální parametrický knoflík na osu s čtvercovým průřezem. Potřeboval jsem držák na elektrorozvodnou skříň v domě, ježto mě rozčilovalo, že je pořád otevřená. <a href="https://www.altair.blog/2020/02/fitjpi">Fuck that, I'll just print it!</a></p>
+<p>Také jsem přidal modul pro vytvoření kruhové výseče (<code>pie</code>, neboli koláč). Jako argumenty si bere průměr (<code>d</code>) a počáteční a koncový úhel <code>a1</code> a <code>a2</code>. Když mluvím o novinkách v OpenSCADU 2019.05, asi nejhůře pochopitelné jsou <em>list generators</em>, tedy funkce pro generování seznamů. Modul Pie obsahuje jeden takový typický. Pojďme se podívat na její zdroják, je jednoduchý:</p>
+<pre><code class="language-scad">module pie(d, a1, a2) {
+    assert(d &gt; 0);
+
+    mask_points = [
+        [0, 0],
+        for(i = [0:4]) vector_point(((4 - i) * a1 + i * a2) / 4, d)
+    ];
+
+    intersection() {
+        circle(d = d);
+        polygon(mask_points);
+    }
+}
+</code></pre>
+<p>Výseč vytvářím tak, že provedu <code>intersection</code> mezi kruhem (<code>circle</code>) a polygonem, který je spočítán na základě zadaných úhlů. Pokud bych se mohl spolehnout na to, že začátek a konec výseče bude v jednom kvadrantu, bylo by to jednoduché. Stačilo by vytvořit trojúhelník, jehož souřadnice by byly následující:</p>
+<pre><code class="language-scad">mask_points = [
+    [0, 0],                     // střed
+    [cos(a1) * d, sin(a1) * d], // počáteční úhel
+    [cos(a2) * d, sin(a2) * d], // koncový úhel
+];
+</code></pre>
+<p>Mohu si to ještě zjednodušit, protože pro projekci bodu na základě úhlu a vzdálenosti mám dříve zmíněnou funkci <code>vector_point</code>:</p>
+<pre><code class="language-scad">mask_points = [
+    [0, 0],                     // střed
+    vector_point(a1, d),        // počáteční úhel
+    vector_point(a2, d),        // koncový úhel
+];
+</code></pre>
+<p>Nicméně, pokud se úhly <code>a1</code> a <code>a2</code> nenacházejí v témže kvadrantu, nehezky se nám to komplikuje. Nestačí trojúhelník, ale je nutné udělat něco jako několik segmentů deštníku, v závislosti na tom, jak velký úhel je. Nejvyšší nutný počet segmentů je 4. Prostě vezmu úhel, který rozdělím na čtvrtiny a vytvořím odpovídající polygon.</p>
+<p>Mohu to samozřejmě udělat ručně, jako třeba uživatel <em>nophead</em> <a href="http://forum.openscad.org/Creating-pie-pizza-slice-shape-need-a-dynamic-length-array-td3148.html">na OpenSCAD fóru</a>. Post je z roku 2012, takže mu nic jiného nezbylo, ale dnes máme možnost používat generátory seznamů, takže seznam bodů polygonu vygenerujeme takto:</p>
+<pre><code class="language-scad">mask_points = [
+    [0, 0],
+    for(i = [0:4]) vector_point(((4 - i) * a1 + i * a2) / 4, d)
+];
+</code></pre>
+<p>První bod je určen staticky, jako střed souřadnicového systému. Ostatních pět je vygenerováno pomocí cyklu <code>for</code> v roli generátoru.</p>
+<p>Tolik k dnešním novinkám. Úplnou a aktuální <a href="https://github.com/ridercz/A2D/wiki">dokumentaci najdete vždy na wiki</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=A2D%3a+Novinky+ve+verzi+1.4.0&amp;body=https://www.altair.blog/2020/03/a2d-140">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/03/a2d-140.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/03/a2d-140.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/03/a2d-140">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/03/a2d-140">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

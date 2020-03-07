@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/03/a2d-140</guid>
+      <title>A2D: Novinky ve verzi 1.4.0</title>
+      <description>S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků.</description>
+      <link>https://www.altair.blog/2020/03/a2d-140</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-03-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d-text</guid>
       <title>A2D 1.1.0: Podpora pro práci s textem</title>
       <description>Do své OpenSCAD knihovny pro práci s 2D objekty jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2019-12-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/11/rok-selmy</guid>
-      <title>Rok šelmy</title>
-      <description>Mé nejmladší vlčandě Šelmíře je právě dnes jeden rok. Jaké to je, po letech zase žít s jakovlčím štěnětem?</description>
-      <link>https://www.altair.blog/2019/11/rok-selmy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Vlci</category>
-      <pubDate>2019-11-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
