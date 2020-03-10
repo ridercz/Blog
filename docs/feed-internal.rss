@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/03/neni-nad-dobry-virus</guid>
+      <title>Není nad dobrý virus</title>
+      <description>Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie.</description>
+      <link>https://www.altair.blog/2020/03/neni-nad-dobry-virus</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2020-03-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/03/a2d-140</guid>
       <title>A2D: Novinky ve verzi 1.4.0</title>
       <description>S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2019-12-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2019/12/vykrajovatka</guid>
-      <title>Vykrajovátka na vánoční cukroví z 3D tiskárny</title>
-      <description>Jedním z nejoblíbenějších 3D tištěných předmětů jsou kolem Vánoc vykrajovátka na vánoční cukroví. Když si na Thingiverse necháte vyhledat "cookie cutter", najdete skoro 6000 výsledků. Ukážu vám, jak vykrajovátko jednoduše vytvořit z jakéhokoliv SVG souboru pomocí OpenSCADu.</description>
-      <link>https://www.altair.blog/2019/12/vykrajovatka</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2019-12-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
