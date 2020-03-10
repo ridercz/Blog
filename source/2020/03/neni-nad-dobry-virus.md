@@ -2,6 +2,7 @@
 <!-- dcterms:abstract = Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20200310-neni-nad-dobry-virus.jpg -->
+<!-- x4w:coverCredits = Matt (@szczur) via Flickr; CC BY-NC-SA -->
 <!-- x4w:pictureUrl = /perex-pictures/20200310-neni-nad-dobry-virus.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
