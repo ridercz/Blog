@@ -1,0 +1,9 @@
+<!-- dcterms:title = Koronavirus může ohrozit i váš počítač a síť, zázračný lék chybí, potřeba je chytrý uživatel -->
+<!-- dcterms:abstract = Nový koronavirus SARS-CoV-2 může pro vaši počítačovou síť představovat nebezpečí ve dvou případech. Za prvé, pokud zaměstnáváte androidy, kombinující bionickou a kybernetickou složku. Za druhé, pokud je nezaměstnáváte. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-03-17 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565 -->

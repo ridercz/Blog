@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565</guid>
+      <title>Koronavirus může ohrozit i váš počítač a síť, zázračný lék chybí, potřeba je chytrý uživatel</title>
+      <description>Nový koronavirus SARS-CoV-2 může pro vaši počítačovou síť představovat nebezpečí ve dvou případech. Za prvé, pokud zaměstnáváte androidy, kombinující bionickou a kybernetickou složku. Za druhé, pokud je nezaměstnáváte.</description>
+      <link>https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2020-03-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/03/neni-nad-dobry-virus</guid>
       <title>Není nad dobrý virus</title>
       <description>Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-01-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2020/01/spoonslaves</guid>
-      <title>Spoon Slaves: Britské dominy za sebe nechávají platit subíky pomocí mobilní aplikace</title>
-      <description>Technologie a BDSM se dá spojit mnoha nečekanými způsoby. Britský řetězec hotelů a restaurací Wetherspoons přišel s aplikací, která umožňuje hostům objednávat a platit z mobilu. Toho začaly využívat britské dominy, které posty na Twitteru vyzývají subíky, aby je virtuálně pozvali na drink.</description>
-      <link>https://www.bdsm.cz/2020/01/spoonslaves</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2020-01-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
