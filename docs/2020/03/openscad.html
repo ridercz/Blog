@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Online školení 3D modelování v OpenSCADu zdarma | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020." />
+    <link rel="canonical" href="https://www.altair.blog/2020/03/openscad" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Online školení 3D modelování v OpenSCADu zdarma" />
+    <meta name="twitter:description" content="Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200321-openscad.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Online školení 3D modelování v OpenSCADu zdarma" />
+    <meta property="og:description" content="Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200321-openscad.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/03/openscad" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200321-openscad.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Online školení 3D modelování v OpenSCADu zdarma</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-03-21" title="Datum vydání">21. března 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020. Registraci na něj najdete na konci článku.</p>
+<h2 id="co-se-naucite">Co se naučíte</h2>
+<p>OpenSCAD je 3D modelovací software, v němž se modely nekreslí vizuálně, ale programují pomocí psaní kódu. To má dvě zásadní výhody: za prvé, velice snadno se v něm vytvářejí modely, které jsou parametrické, změnou několika řádků kódu lze změnit nejenom rozměry, ale také vlastnosti modelu. Druhou výhodou je, že je obvykle snadné se ho naučit pro programátory, zvyklé na psaní kódu. Kromě toho je k dispozici zdarma jako open source.</p>
+<p>Samozřejmě jsou zde i nevýhody. Pokud vám to myslí spíše graficky a chcete modely kreslit, musíte se poohlédnout po něčem jiném. OpenSCAD je také určen pro technické modelování. Různé mechanické součásti, krabičky, držáky a podobné věci v něm navrhnete velice snadno. Pokud ale chcete navrhovat organické tvary, figurky a podobné věci, OpenSCAD není vůbec vhodný.</p>
+<p>OpenSCAD se typicky používá pro návrh modelů k tisku na 3D tiskárnách.</p>
+<p>Školení je určeno jak naprostým začátečníkům, tak uživatelům, kteří si chtějí své znalosti OpenSCADu rozšířit a uspořádat.</p>
+<h2 id="jak-bude-skoleni-probihat">Jak bude školení probíhat</h2>
+<p>Školení bude realizováno online formou pomocí video streamingu a textového chatu v <a href="https://elearning.altairis.cz/">e-learningovém systému</a> společnosti Altairis. Součástí školení jsou také laby (příklady), v nichž si vyzkoušíte funkce OpenSCADu sami, vedeni krok za krokem.</p>
+<p>Pokud se chcete podívat, jak takové laby vypadají, podívejte se třeba na návod <a href="https://elearning.altairis.cz/cs/courses/outline">jak vytvořit vlastní VPN server pomocí Outline</a> - obsah je jiný, ale forma totožná.</p>
+<p>Školení bude probíhat v českém jazyce; prezentační slajdy jsou v angličtině, cvičení jsou k dispozici v češtině i angličtině.</p>
+<h2 id="jak-se-mam-na-skoleni-pripravit">Jak se mám na školení připravit</h2>
+<p>Pro školení samotné nemusíte instalovat žádný software, stačí vám webový prohlížeč a internetové připojení, schopné přehrávat video. Použijte běžný počítač nebo notebook, e-learningový systém není určen pro mobilní zařízení.</p>
+<p>Abyste mohli dělat cvičení, musíte si nainstalovat <strong><a href="https://www.openscad.org/">OpenSCAD</a></strong>. To je open source software, který je dostupný pro Windows, Linux i MacOS a můžete si ho stáhnout pro svou platformu na webu <a href="https://www.openscad.org/downloads.html">openscad.org</a>.</p>
+<p>Vestavěný editor není příliš dobrý a na Windows jeho klávesové zkratky kolidují se zkratkami pro psaní speciálních znaků. Z tohoto důvodu doporučuji používat externí editor. Pokud máte nějaký svůj oblíbený, použijte ho. Pokud žádný takový nemáte, nainstalujte si <strong><a href="https://code.visualstudio.com/">Visual Studio Code</a></strong>. To je velmi schopný editor, který je dostupný zdarma jako open source pro Windows, Linux i MacOS. Stáhněte si ho na <a href="https://code.visualstudio.com/Download">code.visualstudio.com</a>. Po instalaci VS Code si nainstalujte <a href="https://marketplace.visualstudio.com/items?itemName=Antyos.openscad">rozšíření pro OpenSCAD</a>. Není nezbytně nutné, ale dá vám syntax highlighting a další užitečné věci.</p>
+<h2 id="kdy-se-bude-skoleni-konat-a-jak-se-mohu-prihlasit">Kdy se bude školení konat a jak se mohu přihlásit</h2>
+<p>Školení se bude konat v úterý 24. března 2020 od 14:00 do přibližně 18:00 (dle účastníků). Materiály ze školení vám zůstanou k dispozici trvale, stejně jako video záznam. Školení je bezplatné.</p>
+<p>Registrace vyžaduje pouze vaši e-mailovou adresu. Pokud už máte účet v systému <a href="https://elearning.altairis.cz">elearning.altairis.cz</a>, zadejte jeho e-mailovou adresu. Pokud tam účet nemáte, nemusíte se registrovat, účet vám bude vytvořen automaticky. V pondělí večer vám na zadnou e-mailovou adresu přijdou instrukce o tom, jak se školení zúčastnit (doporučuji vám přidat adresy <code>elearning (at) elearning.altairis.cz</code> a <code>michal.valasek (at) altairis.cz</code> do whitelistů, aby mail neskončil ve spamu).</p>
+<iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUMkNRWVRXMEE4T1dPWDNMWVFGOU1CT1pCSS4u&amp;embed=true" style="border: none; max-width:100%; display: block; margin: 0 auto;" width="800px" height="1375px"></iframe>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Online+%c5%a1kolen%c3%ad+3D+modelov%c3%a1n%c3%ad+v+OpenSCADu+zdarma&amp;body=https://www.altair.blog/2020/03/openscad">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/03/openscad.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/03/openscad.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/03/openscad">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/03/openscad">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

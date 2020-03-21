@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/03/openscad</guid>
+      <title>Online školení 3D modelování v OpenSCADu zdarma</title>
+      <description>Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020.</description>
+      <link>https://www.altair.blog/2020/03/openscad</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>3D tisk</category>
+      <pubDate>2020-03-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565</guid>
       <title>Koronavirus může ohrozit i váš počítač a síť, zázračný lék chybí, potřeba je chytrý uživatel</title>
       <description>Nový koronavirus SARS-CoV-2 může pro vaši počítačovou síť představovat nebezpečí ve dvou případech. Za prvé, pokud zaměstnáváte androidy, kombinující bionickou a kybernetickou složku. Za druhé, pokud je nezaměstnáváte.</description>
@@ -132,15 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-01-11T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/01/console</guid>
-      <title>Pár tipů pro konzolové aplikace</title>
-      <description>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</description>
-      <link>https://www.altair.blog/2020/01/console</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-01-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
