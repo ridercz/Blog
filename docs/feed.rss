@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/03/dalsi-plany</guid>
+      <title>Budou další online školení, zdarma i za peníze</title>
+      <description>Bezplatné online školení OpenSCADu, které jsem dělal v úterý, mělo veliký úspěch. Proto připravuji jeho pokračování a další akce, některé zdarma, jiné za peníze. Čtěte dál, pokud chcete vědět, co jsem si pro vás připravil, odpovědi na nejčastější otázky a také mít možnost ovlivnit, o čem školení budou.</description>
+      <link>https://www.altair.blog/2020/03/dalsi-plany</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>3D tisk</category>
+      <pubDate>2020-03-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/03/openscad</guid>
       <title>Online školení 3D modelování v OpenSCADu zdarma</title>
       <description>Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020.</description>
@@ -133,15 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-01-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</guid>
-      <title>Magnetický indikátor nálady</title>
-      <description>Ukázkový model pro techniku zatiskávání magnetů dovnitř plastu a vícebarevný tisk. Využívá variability anglického výrazu "FUCK" :-) Celý model je parametrický, lze snadno měnit rozměr, text i počet položek</description>
-      <link>https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-01-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
