@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://nazory.ihned.cz/c7-66742690-psms7-0ecc76e2dea0fd1</guid>
+      <title>Šití roušek je národní ostuda, ne zdroj hrdosti</title>
+      <description>Na svépomocné výrobě roušek či štítů je pozitivní jediná věc: národ se zabaví a neškodí. Ostatně, to věděli dozorci v kriminálech odjakživa, že když vězně pořádně zaměstnají - byť by měli jenom vozit v kolečku písek z jedné hromady na druhou - nebudou mít čas a energii na rebelování.</description>
+      <link>https://nazory.ihned.cz/c7-66742690-psms7-0ecc76e2dea0fd1</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2020-03-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/03/dalsi-plany</guid>
       <title>Budou další online školení, zdarma i za peníze</title>
       <description>Bezplatné online školení OpenSCADu, které jsem dělal v úterý, mělo veliký úspěch. Proto připravuji jeho pokračování a další akce, některé zdarma, jiné za peníze. Čtěte dál, pokud chcete vědět, co jsem si pro vás připravil, odpovědi na nejčastější otázky a také mít možnost ovlivnit, o čem školení budou.</description>
@@ -134,15 +143,6 @@
       <category>Bastlení</category>
       <category>Bezpečnost</category>
       <pubDate>2020-01-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</guid>
-      <title>Case pro Raspberry Pi Zero WH a TV HAT</title>
-      <description>Pro Raspberry Pi existuje "TV HAT", což je rozšiřující deska umožňující příjem digitálního televizního vysílání. Ve skutečnosti je to ale SDR (software defined radio) a dá se využít k mnoha zajímavějším věcem. Obvykle se používá v kombinaci s Raspberry Pi Zero WH, které výkonově postačuje. Našel jsem pro tuto kombinaci krabičku, která mi ale úplně nevyhovovala, protože je v ní deska jen volně položená a dost "plave". Proto jsem model modifikoval a publikuji jeho upravenou verzi.</description>
-      <link>https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-01-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

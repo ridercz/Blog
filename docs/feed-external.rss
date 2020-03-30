@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://nazory.ihned.cz/c7-66742690-psms7-0ecc76e2dea0fd1</guid>
+      <title>Šití roušek je národní ostuda, ne zdroj hrdosti</title>
+      <description>Na svépomocné výrobě roušek či štítů je pozitivní jediná věc: národ se zabaví a neškodí. Ostatně, to věděli dozorci v kriminálech odjakživa, že když vězně pořádně zaměstnají - byť by měli jenom vozit v kolečku písek z jedné hromady na druhou - nebudou mít čas a energii na rebelování.</description>
+      <link>https://nazory.ihned.cz/c7-66742690-psms7-0ecc76e2dea0fd1</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2020-03-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565</guid>
       <title>Koronavirus může ohrozit i váš počítač a síť, zázračný lék chybí, potřeba je chytrý uživatel</title>
       <description>Nový koronavirus SARS-CoV-2 může pro vaši počítačovou síť představovat nebezpečí ve dvou případech. Za prvé, pokud zaměstnáváte androidy, kombinující bionickou a kybernetickou složku. Za druhé, pokud je nezaměstnáváte.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-10-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</guid>
-      <title>Jak prolomit EET</title>
-      <description>V médiích se to hemží zprávami o tom, jak dvě ostravské firmy "prolomily EET". Reálných informací o případu je minimum, ale ze zveřejněných fragmentů lze docela dobře usuzovat na to, o co šlo. O případu nevím víc, než kolik bylo zveřejněno, a tento článek je tedy čirou spekulací, ovšem založenou na odborných znalostech a zkušenostech.</description>
-      <link>https://tech.ihned.cz/c7-66657600-psms7-cd8974e30818cc6</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-10-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
