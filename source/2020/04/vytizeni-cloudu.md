@@ -1,0 +1,9 @@
+<!-- dcterms:title = Covid-19 má negativní dopady na kybernetickou bezpečnost a násobně zvedá vytížení cloudových služeb -->
+<!-- dcterms:abstract = Podle vyhledávače Shodan výrazně stoupl počet VPN a RDP serverů dostupných z Internetu. Výrazně také stouplo vytížení cloudových služeb a uživatelé Microsoft Azure hlásí občasné problémy s kapacitou. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-04-02 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb -->
