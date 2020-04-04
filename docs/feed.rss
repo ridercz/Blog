@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/04/magclasp</guid>
+      <title>Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu</title>
+      <description>Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu.</description>
+      <link>https://www.altair.blog/2020/04/magclasp</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-04-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</guid>
       <title>Covid-19 má negativní dopady na kybernetickou bezpečnost a násobně zvedá vytížení cloudových služeb</title>
       <description>Podle vyhledávače Shodan výrazně stoupl počet VPN a RDP serverů dostupných z Internetu. Výrazně také stouplo vytížení cloudových služeb a uživatelé Microsoft Azure hlásí občasné problémy s kapacitou.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2020-01-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</guid>
-      <title>Nástěnný držák pro kameru TP-Link Tapo C200</title>
-      <description>TP-Link Tapo C200 je skvělá IP kamera, která podporuje rotaci, má rozumnou kvalitu obrazu, použitelného mobilního klienta a to vše za necelou tisícovku. Co nemá je rozumný držák na zeď. Tak jsem jeden vymodeloval a vytiskl.</description>
-      <link>https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-01-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

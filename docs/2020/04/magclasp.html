@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu." />
+    <link rel="canonical" href="https://www.altair.blog/2020/04/magclasp" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu" />
+    <meta name="twitter:description" content="Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200404-magclasp.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu" />
+    <meta property="og:description" content="Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200404-magclasp.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/04/magclasp" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200404-magclasp.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-04-04" title="Datum vydání">4. dubna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu.</p>
+<h2 id="zadani">Zadání</h2>
+<p>Při návrhu je třeba nejprve definovat problém a požadované řešení. Moje zadání je následující:</p>
+<ul>
+<li>Spona musí fungovat na bavlněnou tkanici šířky 20 mm (s možnou parametrizací pro jiné šířky).</li>
+<li>Sponu musí být snadné zapnout a rozepnout poslepu, s rukama za hlavou.</li>
+<li>Spona musí držet spolehlivě a musí vydržet opakované rozepínání a zapínání.</li>
+<li>Tkanici musí být možné ve sponě utáhnout tak, aby maska dobře držela.</li>
+<li>Bude-li řešení zahrnovat 3D tisk, měl by model být jednoduchý na tisk, bez nutnosti používat podpory.</li>
+</ul>
+<h2 id="existujici-reseni">Existující řešení</h2>
+<p>Samozřejmě nejjednodušší je použít nějaké existující řešení, než vytvářet vlastní. Jako první se nabízí použít klasické &quot;trojzubce&quot;, plastové spony, které se běžně používají u batohů a všude možně. Nicméně ty v rozměru 20 mm nemám a nejsem schopen je v tomto okamžiku rychle koupit. Kromě toho nesplňují podmínku snadného zapínání za hlavou, alespoň pro mne.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-01-trojzubec.jpg" alt="" /></p>
+<p>Dále jsem se podíval na <a href="https://www.thingiverse.com/">Thingiverse</a> a <a href="https://www.prusaprinters.org/">PrusaPrinters.org</a>, jestli tam nenajdu něco použitelného. Bohužel jsem nebyl úspěšný. Asi nejvíc se mému zadání blížil model <a href="https://www.thingiverse.com/thing:2146656/files">Clasp 50mm</a> od uživatele <em>Nys1</em>, ale z mého pohledu má řadu nevýhod:</p>
+<ul>
+<li>Je navržený na šířku 50 mm a není parametrický.</li>
+<li>Nedá se orientovat tak, aby se netisklo &quot;do vzduchu&quot;, což je problém.</li>
+<li>Nejsem si jist, jak by splňoval podmínku snadnosti použití.</li>
+</ul>
+<h2 id="moje-vlastni-reseni">Moje vlastní řešení</h2>
+<p>Napadlo mne pro sponu použít neodymové magnety. S magnety při návrhu pracuji často a rád, protože se snadno dají zalepit nebo zatisknout do modelu a lze je použít pro relativně pevné a přitom opakovaně použitelné spojení. Navíc se magnety umí samy &quot;slícovat&quot;, což usnadňuje použití.</p>
+<p>Ukázkové modely v tomto článku jsou záměrně tištěné z částečně průhledného materiálu, takže jsou magnety vidět. To samozřejmě není podmínkou.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-02-prototyp.jpg" alt="" /></p>
+<p>Moje první řešení spoléhalo čistě na přídržnou funkci magnetů. Ty jsem zatiskl do jednoduchého plastového držáku, který se navlékne na tkanici. Toto řešení bohužel nefungovalo, protože magnety neměly pro tento účel dostatečnou sílu, masku nebylo možné dostatečně utáhnout.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-03-final.jpg" alt="" /></p>
+<p>Druhá verze proto přidala ještě výčnělek, který zapadá do otvoru v protikusu. To drží sponu zavřenou ve směru tahu tkanice. Magnety pak působí ve směru kolmém, drží jenom dvě části spony u sebe. V tomto směru je jejich síla větší a zároveň je spona v tomto směru namáhána minimálně. Zapínání na podobném principu jsem už v minulosti viděl, takže jsem ho jenom upravil pro své potřeby.</p>
+<p>Výsledný model vypadá takto:</p>
+<script src="https://gist.github.com/ridercz/930a9afaa381601c04744996d75be718.js"></script>
+<h2 id="modelovani-v-openscadu">Modelování v OpenSCADu</h2>
+<p>Pro modelování jsem využil samozřejmě svůj oblíbený OpenSCAD. Pro zjednodušení jsem navrhl sponu tak, že oba dva díly jsou zcela identické, liší se jenom orientací vložených magnetů. Pro zapínání klasické masky se dvěma páry tkalounů tedy potřebujete vytisknout čtyři kusy (dva páry).</p>
+<p>Výsledný kód vypadá takto:</p>
+<script src="https://gist.github.com/ridercz/d403dfe63ca1fbc37a08617bdc7583ba.js"></script>
+<p>Pojďme si nyní probrat jeho konstrukci a techniky, které jsem v OpenSCADu využil. Základní princip je jednoduchý: jde v podstatě o 2D tvar vytažený do výšky, ve kterém je jedna část &quot;vykousnutá&quot; a dá se do ní vložit protikus.</p>
+<p>Při návrhu jsem využil svou <a href="https://github.com/ridercz/A2D">knihovnu A2D</a>, protože mi umožňuje snadno dělat tvary se zaoblenými rohy. Zaoblené rohy vypadají lépe, jsou příjemnější na omak a také se snáze tisknou, protože tiskárna může jet plynule a nemusí se na rohu zastavit při náhlé změně směru o 90°.</p>
+<p>Tu tedy referencuji na začátku souboru a ověřím si, že má správnou verzi:</p>
+<pre><code class="language-scad">include &lt;A2D.scad&gt;; // https://github.com/ridercz/A2D
+assert(a2d_required([1, 5, 0]), &quot;Please upgrade A2D library to version 1.5.0 or higher.&quot;);
+</code></pre>
+<h3 id="parametricky-navrh">Parametrický návrh</h3>
+<p>Prakticky při každém návrhu začínám definicí proměnných. Mám pevně dané některé rozměry (zde magnetu a tkanice) a od nich je pak odvozeno všechno ostatní. Proměnné jsou zároveň opatřeny komentáři pro použití rozhraní Customizer, protože mne to v zásadě nic nestojí.</p>
+<pre><code class="language-scad">/* [General] */
+// Render two parts clasped together
+render_preview = false;
+// Add holding peg and corresponding hole
+use_peg = true;
+</code></pre>
+<p>Je-li hodnota <code>render_preview</code> nastavena na <code>false</code>, což je výchozí hodnota, vykreslí se jeden model, který lze vyexportovat a poslat na tiskárnu. Je-li nastavena na <code>true</code>, tak se vykreslí modely dva, napozicované proti sobě tak, jak budou v zapnutém stavu. To umožní vizuálně zkontrolovat, že všechno sedí.</p>
+<p>Proměnná <code>use_peg</code> umožňuje zapnout (<code>true</code>, výchozí nastavení) nebo vypnout (<code>false</code>) generování kolíku a odpovídajícího otvoru. Pokud bude generování vypnuto, vytvoří se první verze spony, která spoléhá jenom na přídržnou sílu magnetů. To se může hodit pro jiné scénáře použití, silnější magnety a podobně.</p>
+<p>Parametrizace nemusí spočívat pouze ve změně rozměru, ale i v chování modelu.</p>
+<pre><code class="language-scad">/* [Ribbon] */
+// Width of ribbon tape
+ribbon_width = 20;      // [20:50]
+// Thickness of ribbon (width of hole)
+ribbon_thickness = 3;   // [2:10]
+// Number of holes
+ribbon_holes = 2;       // [1, 2, 3]
+</code></pre>
+<p>Proměnné v sekci <em>Ribbon</em> nastavují šířku tkalounu (<code>ribbon_width</code>, 20 mm), tloušťku otvorů pro něj (<code>ribbon_thickness</code>, aby se dal otvorem provléknout, případně i dvakrát vedle sebe), tu jsem odhadl na 3 mm. Proměnná <code>ribbon_holes</code> pak určuje počet otvorů. Může být třeba jeden (pokud bude tkaloun pevně přišitý), dva (pro provléknutí tkalounu a držení frikcí) nebo tři (pevnější uchycení, vhodné třeba pro hladké materiály, ale zvětšuje sponu).</p>
+<pre><code class="language-scad">/* [Magnet] */
+// Diameter of magnet hole
+magnet_diameter = 11;
+// Height of magnet hole
+magnet_height = 1.8;
+// Amount of material under and over magnet, should be 2-4 layers
+magnet_cover = .4;
+</code></pre>
+<p>Proměnné v sekci <em>Magnet</em> určují rozměry magnetu. Přesněji rozměr díry pro něj. Mnou použité magnety mají průměr 10 mm a tloušťku 1,7 mm.</p>
+<p>Průměr díry jsem udělal o milimetr větší. V 3D tisku jsou díry vždy ve skutečnosti o něco menší, než v modelu. Je to dáno tím, že průměr otvoru je ve skutečnosti průměr kružnice opsané pravidelnému mnohoúhelníku a z tohoto titulu je skutečný otvor o maličko menší. Navíc roztavený plast má tendenci se maličko &quot;slévat&quot;, což otvor dále zmenšuje. V praxi je tedy třeba otvory navrhovat o něco větší, řádově o 0,5 až 1 mm, podle průměru, nastavení tiskárny, materiálu... Další variantou je otvorypo tisku protáhnout vrtákem o přesném průměru, ale to zde nelze použít, protože magnet bude zatisknutý uvnitř modelu a budu ho vkládat v průběhu tisku. Navíc i kdyby magnet v otvoru trochu &quot;plaval&quot;, při této konstrukci to vadit nebude.</p>
+<p>Výška díry je o 0,1 mm větší, než výška magnetu. Je tomu tak opět ze dvou důvodů. První je, že počítám s tiskem s výškou vrstvy 0,2 mm a tedy je žádoucí, aby všechny horizontální plochy měly výšku v násobcích výšky vrstvy. Druhý je, že při zatiskávání čehokoliv do modelu nesmí zatiskávaný předmět (magnet, matice, ložisko...) vůbec přečnívat, protože by do něj mohla narazit tisková hlava a výtisk zkazit.</p>
+<p>Proměnná <code>magnet_cover</code> určuje, kolik materiálu bude pod a nad zatisknutým magnetem. Chci aby byla spona co možná nejtenčí, ale zároveň aby držela. Zkušenost říká, že pro tento účel jsou vhodné nejméně dvě vrstvy materiálu, tedy 0,4 mm. Pokud bych zatiskával matici, bylo by patrně nutné použít vrstev více, aby ji bylo možné přiráhnout, ale tady mi dvě vrstvy stačí.</p>
+<pre><code class="language-scad">/* [Other] */
+// Minimal wall thickness, should be 4 perimeters
+wall_thickness = 1.67;
+// Radius of rounded corners
+corner_radius = 3;
+// Clearance of pegs
+part_clearance = 1;
+</code></pre>
+<p>Sekce <em>Other</em> obsahuje proměnné, které se jinam nehodily:</p>
+<ul>
+<li><code>wall_thickness</code> je minimální tloušťka svislé stěny, kterou v modelu chci mít. Zkušenost říká, že obecně by to měly být čtyři perimetry, což u standardní trysky o průměru 0,4 mm odpovídá 1,67 mm.</li>
+<li><code>corner_radius</code> je poloměr zaoblení rohů. Při předpokládané velikosti mi 3 mm přišly tak akorát.</li>
+<li><code>part_clearance</code> je tolerance jednotlivých částí. Má-li být možné do sebe části vložit (zasunout kolík do otvoru), musí být průměr kolíku o něco menší, než průměr otvoru a podobně. Nastavení tolerance je závislé na druhu modelu, účelu spoje a vlastnostech tiskárny. Já ho obvykle nastavuji jako 0,25-1 mm. Zde jsem sáhl po relativně vysoké hodnotě 1 mm, protože určitá vůle není na závadu, naopak je žádoucí, aby se spona dala snadno sestavit a rozebrat.</li>
+</ul>
+<pre><code class="language-scad">/* [Hidden] */
+$fudge = 1;
+total_width = ribbon_width + 2 * wall_thickness;
+module_length = ribbon_width / 2 + (wall_thickness + ribbon_thickness) * (ribbon_holes + 1);
+module_height = magnet_height + 2 * magnet_cover;
+polygon_sides = 6;
+polygon_angle = 180 / polygon_sides;
+</code></pre>
+<p>Sekce <em>Hidden</em> se v customizeru nezobrazuje. Obsahuje hodnoty, které nepředpokládám, že by uživatel měnil, nebo které jsou vypočítané z těch zadaných.</p>
+<ul>
+<li><code>$fudge</code> je hodnota pro zamezení vzniku stěn o nulové šířce. Zvětším o ni hodnoty odečítané od základního tvaru.</li>
+<li><code>total_width</code> je celková šířka spony (rozměr ve směru osy Y). Je to šířka tkalounu plus minimální tloušťka zdi z každé strany kolem.</li>
+<li><code>module_length</code> není celkové délka spony, ale délka části vlevo od středu (ve směru osy X). Šetiúhelníková část, kde se spony překrávají, bude na středu a tato proměnná je vypočítána tak, aby se vedle šestiúhelníku přesně vešel zkonfigurovaný počet otvorů plus stěny mezi nimi. Jednu šířku otvoru pak přidávám jako vzdálenost mezi šestiúhelníkem a jemu nejbližším otvorem (ve skutečnosti bude užší o polovinu tolerance, ale k tomu se dostaneme později).</li>
+<li><code>module_height</code> je polovina výšky modelu (rozměr v ose Z). Ta je určena výškou magnetu (resp. otvoru pro něj) plus materiálem, který má být nad ním a pod ním.</li>
+<li><code>polygon_sides</code> je počet stran šestiúhelníku a <code>polygon_angle</code> úhel jeho vrcholů od středovbé osy. Model napevno poučítá s šestiúhelníkem, ale přijde mi čitelnější tu hodnotu psát v podobě proměnné (resp. spíše konstanty, ale OpenSCAD konstanty a proměnné nerozlišuje), aby bylo jasné, co znamená.</li>
+</ul>
+<p>Tohle je koncept, který u svých modelů používám často. Zadám jenom minimální nutné hodnoty a zbytek dynamicky vypočítám z nich tím, že použiju jednu hodnotu pro víc účelů (zde např. šířku díry na tkaloun pro výpočet vzdálenosti díry od šestiúhelníku) nebo použiju nějaký koeficient, kterým hodnoty vynásobím. Zjednodušuje to parametrizovatelnost modelu. Na druhou stranu, ta není neomezená. Když se zadají extrémní hodnoty, nebo hodnoty ve vzájemném nesouladu, model nebude fungovat. Například tento design počítá s tím, že průměr magnetu bude nejvýše zhruba polovina šířky tkalounu. Pokud bu byl větší, bude magnet zasahovat do díry pro kolík a podobně.</p>
+<h3 id="zakladni-2d-navrh">Základní 2D návrh</h3>
+<p>Model je definován v modulu <code>part</code>. To mi umožňuje s ním jednoduše manipulovat, jako třeba udělat více kopií a napozicovat je vůči sobě a podobně.</p>
+<p>Základem je tento 2D tvar:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-04-2d.png" alt="" /></p>
+<p>V levé části je obdélník se zaoblenými rohy, v pravé pak šestiúhelník se zaoblenými rohy. Ty jsou spojeny do jednoho celku funkcí <code>hull</code> (je to jednodušší, než počítat rozměr obdélníku tak, aby se přesně potkal).</p>
+<p>Do tohoto tvaru pak jsou udělány díry pro tkaloun a díra pro kolík. Kód, který to všechno zařizuje, vypadá takto:</p>
+<pre><code class="language-scad">difference() {
+    // Main shape
+    hull() {
+        r_regpoly(od = total_width, vertices = polygon_sides, radius = corner_radius, $fn = 16);
+        translate([-module_length, -total_width / 2]) r_square([corner_radius * 2, total_width], corner_radius, $fn = 16);
+    }
+
+    // Ribbon holes
+    hole_xpos = [ for(i = [0:ribbon_holes - 1]) -module_length + wall_thickness * (i + 1) + ribbon_thickness * i ];
+    for(x = hole_xpos) translate([x, -ribbon_width / 2]) r_square([ribbon_thickness, ribbon_width], ribbon_thickness / 2, $fn = 16);
+
+    // Peg hole
+    if(use_peg) translate([-corner_radius / 2, 0]) hull() 
+        for(a = [-180 + polygon_angle, +180 - polygon_angle]) translate(vector_point(alpha = a, delta = total_width / 2 - corner_radius))
+            circle(d = corner_radius + part_clearance, $fn = 16);
+}
+</code></pre>
+<h3 id="odecteni-otvoru-pro-druhou-cast">Odečtení otvoru pro druhou část</h3>
+<p>Tento tvar je pak příkazem <code>linear_extrude(module_height * 2)</code> vytažen do výšky. Je od něj ale nutné odečíst tvar o polovině výšky, aby se daly dva díly dát do sebe.</p>
+<p>Nejjednodušší řešení by bylo udělat tvar &quot;společné&quot; části prostě obdélníkový a odečíst kvádr. Já jsem se rozhodl pro tvar šestiúhelníku. Dílem z důvodů estetických, ale také protože &quot;vede&quot; dvě části k sobě a mírně omezuje namáhání ve směru osy Y.</p>
+<p>Odečtený tvar je o něco větší (šestiúhelník má větší průměr o 1 mm tolerance). Je tomu tak jednak kvůli prevenci vzniku stěny o nulové šířce a jednak kvůli toleranci tisku.</p>
+<p>V této fázi také vytvořím válcovou díru pro magnet. Ta není na modelu vidět, protože je ze všech stran zakryta, ale uvidíme ji ve sliceru.</p>
+<p>Kód pro vytvoření téměř celé části vypadá takto:</p>
+<pre><code class="language-scad">difference() {
+    // Extruded base 2D shape
+    linear_extrude(module_height * 2) difference() {
+        // Main shape
+        hull() {
+            r_regpoly(od = total_width, vertices = polygon_sides, radius = corner_radius, $fn = 16);
+            translate([-module_length, -total_width / 2]) r_square([corner_radius * 2, total_width], corner_radius, $fn = 16);
+        }
+
+        // Ribbon holes
+        hole_xpos = [ for(i = [0:ribbon_holes - 1]) -module_length + wall_thickness * (i + 1) + ribbon_thickness * i ];
+        for(x = hole_xpos) translate([x, -ribbon_width / 2]) r_square([ribbon_thickness, ribbon_width], ribbon_thickness / 2, $fn = 16);
+
+        // Peg hole
+        if(use_peg) translate([-corner_radius / 2, 0]) hull() 
+            for(a = [-180 + polygon_angle, +180 - polygon_angle]) translate(vector_point(alpha = a, delta = total_width / 2 - corner_radius))
+                circle(d = corner_radius + part_clearance, $fn = 16);
+    }
+
+    // Other half cutout
+    translate([0, 0, module_height]) linear_extrude(module_height + $fudge) r_regpoly(od = total_width + part_clearance, vertices = polygon_sides, radius = corner_radius, $fn = 16);   
+
+    // Magnet hole
+    translate([0, 0, magnet_cover]) cylinder(d = magnet_diameter, h = magnet_height, $fn = 32);
+}
+</code></pre>
+<h3 id="jistici-kolik">Jistící kolík</h3>
+<p>Zbývá jenom vytvořit jistící kolík, umístěný tak, aby zapadl do otvoru na symetrickém místě v druhém dílu. Může mít jakýkoliv tvar, jenom musí odpovídat otvoru.</p>
+<p>Já jsem se rozhodl udělat ho ve tvaru oválu, jsou to dva válce na vrcholech šestiúhelníku, průměr odpovídající poloměru zaoblení rohů. Přes ně pak natáhnu opět <code>hull</code>.</p>
+<pre><code class="language-scad">module part() {
+    difference() {
+        // Extruded base 2D shape
+        linear_extrude(module_height * 2) difference() {
+            // Main shape
+            hull() {
+                r_regpoly(od = total_width, vertices = polygon_sides, radius = corner_radius, $fn = 16);
+                translate([-module_length, -total_width / 2]) r_square([corner_radius * 2, total_width], corner_radius, $fn = 16);
+            }
+
+            // Ribbon holes
+            hole_xpos = [ for(i = [0:ribbon_holes - 1]) -module_length + wall_thickness * (i + 1) + ribbon_thickness * i ];
+            for(x = hole_xpos) translate([x, -ribbon_width / 2]) r_square([ribbon_thickness, ribbon_width], ribbon_thickness / 2, $fn = 16);
+
+            // Peg hole
+            if(use_peg) translate([-corner_radius / 2, 0]) hull() 
+                for(a = [-180 + polygon_angle, +180 - polygon_angle]) translate(vector_point(alpha = a, delta = total_width / 2 - corner_radius))
+                    circle(d = corner_radius + part_clearance, $fn = 16);
+        }
+
+        // Other half cutout
+        translate([0, 0, module_height]) linear_extrude(module_height + $fudge) r_regpoly(od = total_width + part_clearance, vertices = polygon_sides, radius = corner_radius, $fn = 16);   
+
+        // Magnet hole
+        translate([0, 0, magnet_cover]) cylinder(d = magnet_diameter, h = magnet_height, $fn = 32);
+    }
+
+    // Peg
+    if(use_peg) translate([corner_radius / 2, 0]) hull() 
+        for(a = [-polygon_angle, +polygon_angle]) translate(vector_point(alpha = a, delta = total_width / 2 - corner_radius))
+            cylinder(d = corner_radius, h = module_height * 2, $fn = 16);
+}
+</code></pre>
+<p>Tuto konstrukci jsme již viděli, v zrcadlovém provedení, při vytváření otvoru. Používám zde funkci <code>vector_point</code>, která vypočítá bod (střed podstavy válce) na základě úhlu a vzdálenosti od originu.</p>
+<h3 id="zobrazeni-nahledu-a-jednoho-dilu">Zobrazení náhledu a jednoho dílu</h3>
+<p>Následující kód zobrazí buďto jeden díl pro tisk nebo dva díly, jeden červený a modrý, napozicované nad sebe tak, jak budou při složení obou dílů dohromady.</p>
+<pre><code class="language-scad">// Main render
+if(render_preview) {
+    // Render two parts together, to show how it works and also check if it fits
+    color(&quot;#cc0000&quot;) part();
+    color(&quot;#000099&quot;) translate([0, 0, module_height * 2 + part_clearance / 2]) rotate([0, 180, 0]) part();
+} else {
+    // Render single part, for export and printing
+    part();
+}
+</code></pre>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-05-preview.png" alt="" /></p>
+<h2 id="d-tisk">3D tisk</h2>
+<p>Model je navržen tak, aby byl 3D tisk pokud možno co nejjednodušší. Jediná zákeřnost se skrývá v nutnosti ve správné výšce přerušit tisk a vložit magnety.</p>
+<p>Tisk je nutné přerušit před tiskem 12. vrstvy ve výšce 2,4 mm. Při této vrstvě začne tiskárna zakrývat díru novým materiálem.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-06-slicer.png" alt="" /></p>
+<p>Pro přípravu modelu k tisku používám program PrusaSlicer. Ve starších verzích bylo nutné tisk přerušit buďto ručně nebo použít funkci výměna filamentu. Nejnovější verze 2.2.0 ale obsahuje funkci pozastavení tisku, kdy není nutné vyjímat a znovu zavádět tiskovou strunu.</p>
+<p>V nastavení tisku jsem ještě nastavil čtyři perimetry (výchozí jsou dva), protože to tomuto modelu lépe sedí.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-07-preruseni.jpg" alt="" /></p>
+<p>Po přerušení tisku odjede tisková hlava stranou a lze vložit magnety.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-08-magnety.jpg" alt="" /></p>
+<p>Dejte si pozor na jejich správnou orientaci! Jeden pár (jedno  který, všechny díly jsou stejné) musí mít nahoru severní pól, druhý jižní, aby zapadly do sebe.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-09-pokracovani.jpg" alt="" /></p>
+<p>Poté lze pokračovat v tisku. Tisk kompletní sady čtyř dílů trvá cca. hodinu. Jako tiskový materiál jsem použil PLA, ale lze použít cokoliv.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200404-magclasp-10-komplet.jpg" alt="" /></p>
+<h2 id="soubory-ke-stazeni">Soubory ke stažení</h2>
+<ul>
+<li><a href="https://gist.github.com/ridercz/d403dfe63ca1fbc37a08617bdc7583ba/raw/f49b7ca2d34d9e63e371ea1b514a6dc5bcdd44db/MagClasp.scad"><code>MagClasp.scad</code></a> (Zdrojový kód v OpenSCADu)</li>
+<li><a href="https://gist.github.com/ridercz/930a9afaa381601c04744996d75be718/raw/389b3360002fe36159053a6673fa354684f6b99a/MagClasp.stl"><code>MagClasp.stl</code></a> (Výsledný STL soubor pro 20 mm šíři)</li>
+</ul>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Magnetick%c3%a1+spona+nejen+na+rou%c5%a1ku%3a+proces+v%c3%bdvoje+a+model+v+OpenSCADu&amp;body=https://www.altair.blog/2020/04/magclasp">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/04/magclasp.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/04/magclasp.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/04/magclasp">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/04/magclasp">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
