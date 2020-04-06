@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Modrá židle: modelování zase trochu jinak | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu." />
+    <link rel="canonical" href="https://www.altair.blog/2020/04/modra-zidle" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Modrá židle: modelování zase trochu jinak" />
+    <meta name="twitter:description" content="Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200406-modra-zidle.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Modrá židle: modelování zase trochu jinak" />
+    <meta property="og:description" content="Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200406-modra-zidle.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/04/modra-zidle" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200406-modra-zidle.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Modrá židle: modelování zase trochu jinak</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-04-06" title="Datum vydání">6. dubna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu.</p>
+<h2 id="problem">Problém</h2>
+<p>Máme doma židli. Tedy, my máme doma spoustu židlí, ale teď jde o jednu zcela konkrétní, kuchyňskou. Modrou, ale to je podstatné pouze pro nás doma, abychom věděli, o které je řeč. Přesněji, o kterých. Máme dvě. Koupené v bazaru za pár korun před více než deseti lety a dost rozvrzané. Mimo jiné protože při cestě věky ztratily pár takových plochých kovových součástek, které je pomáhají držet pohromadě.</p>
+<p>Kde bych vzal nové nevím, tak jsem se rozhodl vytisknout nové z PETG. Nebudou tak pevné jako kovové, ale lepší něco než nic. Celé to vypadá takhle - kovový díl vpravo je originál, bílý vlevo je plastový výtisk z 3D tiskárny.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200406-modra-zidle-01.jpg" alt="" /></p>
+<h2 id="mereni">Měření</h2>
+<p>Při vytváření náhradního dílu je zpravidla třeba začít měřením. V lepším případě dílu který máte (a je třeba vytvořit kopii), v horším pak jeho okolí a vymyslet díl, o kterém sice nevíte jak původně vypadal, ale potřebujete funkčně ekvivalentní náhradu.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200406-modra-zidle-02.jpg" alt="" /></p>
+<p>Mně po chvilce s posuvným měřítkem vyšel takovýhle nákres, který by mému učiteli technického kreslení z průmyslovky, panu Smrtovi, způsobil nejspíš smrt, ale pro náš účel je dobrý víc než dost.</p>
+<p>Díl je triviální a dá se změřit docela dobře, bývá to horší.</p>
+<h2 id="navrh">Návrh</h2>
+<p>Pro návrh jsem se rozhodl použít jako základ funkci <code>polygon</code>. Základní tvar je obdélník se zkoseným rohem a zaznamenat si souřadnice jeho vrcholů (na nákresu jsou červeně) je velmi jednoduché.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200406-modra-zidle-03.png" alt="" /></p>
+<p>Odečíst od něj kombinaci (<code>hull</code>) kruhu a čtverce je triviální, stejně jako &quot;vytáhnout&quot; ho do požadované výšky 3 mm.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200406-modra-zidle-04.png" alt="" /></p>
+<p>Kód v OpenSCADu vypadá takto:</p>
+<pre><code class="language-scad">base_points = [
+    [ 0,  0],
+    [25,  0],
+    [25, 12],
+    [22, 15],
+    [ 0, 15]
+];
+
+linear_extrude(3) difference() {
+    // Base shape
+    polygon(points = base_points);
+    
+    // Cutout
+    translate([25 / 2, 6]) hull() {
+        circle(d = 6, $fn = 16);
+        translate([-3, -20]) square([6, 2]);
+    }
+}
+</code></pre>
+<p>Žádná velká kouzla v něm nehledejte. Není dokonce ani parametrizovaný, všechno píšu natvrdo, protože u tohoto modelu parametrizace nedává smysl.</p>
+<h2 id="d-tisk">3D tisk</h2>
+<p>Ani tisk není tentokrát nijak komplikovaný. Pouze jsem jako materiál použil místo obvyklého PLA materiál PETG, protože je pevnější a houževnatější, což se může hodit, protože tento díl slouží v podstatě jako podložka, proti které se přitahuje šroub. A vytiskl jsem ho 4×, i když jsem potřeboval jenom dva kusy, protože u malých výtisků je dobré jich dělat víc najednou, aby se výtisk stihl chladit a nedeformoval se teplem.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200406-modra-zidle-05.jpg" alt="" /></p>
+<p>Pak stačilo díl jenom namontovat zespodu pod sedák a židle je... no, ne jako nová, ale rozhodně ještě nějakou dobu poslouží.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20200406-modra-zidle-06.jpg" alt="" /></p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Modr%c3%a1+%c5%beidle%3a+modelov%c3%a1n%c3%ad+zase+trochu+jinak&amp;body=https://www.altair.blog/2020/04/modra-zidle">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/04/modra-zidle.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/04/modra-zidle.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/04/modra-zidle">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/04/modra-zidle">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
