@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</guid>
+      <title>Objednávka výprasku</title>
+      <description>Vzhledem k mimořádné pandemické situaci je - až na vzácné výjimky - v podstatě nemožné udělit či přijmout velikonoční výprask. Mnoho akcí se přesouvá do online podoby, ale protože teledildonika (resp. telespanking) je zatím pouze v počáteční fázi vývoje, není to v tomto případě možné. V jiných oborech se zase vydali cestou "voucherů", které umožňují učinit objednávky nyní a vybrat si ji později. Tento formulář jsem vytvořil, abych odstranil akutní nebezpečí uschnutí do příštího roku. Včasným vyplněním jej lze podmínečně odložit do konce karantény a realizace výprasku v náhradním termínu. Online opt-in forma zároveň elegantně řeší otázku konsensuálního přístupu, která je v tradičním podání přinejlepším komplikovaná.</description>
+      <link>https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2020-04-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/04/modra-zidle</guid>
       <title>Modrá židle: modelování zase trochu jinak</title>
       <description>Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-02-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/02/chyby</guid>
-      <title>Globální ošetřování (a logování) chyb v ASP.NET aplikacích</title>
-      <description>Aplikace obsahují chyby a nelze se tomu vyhnout. Nicméně pokud už chyba nastala, je třeba zařídit dvě věci: nějakým přiměřeným způsobem o ní informovat uživatele a nějakým přiměřeným způsobem o ní zaznamenat data pro programátora. Ukážeme si, jak tyto dvě věci realizovat v aktuální verzi ASP.NET Core.</description>
-      <link>https://www.altair.blog/2020/02/chyby</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-02-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

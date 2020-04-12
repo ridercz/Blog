@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</guid>
+      <title>Objednávka výprasku</title>
+      <description>Vzhledem k mimořádné pandemické situaci je - až na vzácné výjimky - v podstatě nemožné udělit či přijmout velikonoční výprask. Mnoho akcí se přesouvá do online podoby, ale protože teledildonika (resp. telespanking) je zatím pouze v počáteční fázi vývoje, není to v tomto případě možné. V jiných oborech se zase vydali cestou "voucherů", které umožňují učinit objednávky nyní a vybrat si ji později. Tento formulář jsem vytvořil, abych odstranil akutní nebezpečí uschnutí do příštího roku. Včasným vyplněním jej lze podmínečně odložit do konce karantény a realizace výprasku v náhradním termínu. Online opt-in forma zároveň elegantně řeší otázku konsensuálního přístupu, která je v tradičním podání přinejlepším komplikovaná.</description>
+      <link>https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2020-04-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</guid>
       <title>Covid-19 má negativní dopady na kybernetickou bezpečnost a násobně zvedá vytížení cloudových služeb</title>
       <description>Podle vyhledávače Shodan výrazně stoupl počet VPN a RDP serverů dostupných z Internetu. Výrazně také stouplo vytížení cloudových služeb a uživatelé Microsoft Azure hlásí občasné problémy s kapacitou.</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2019-12-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc</guid>
-      <title>Na komerční VPN nespoléhejte, vytvořte si vlastní; s projektem Outline je to snadné a levné</title>
-      <description>Společnosti NordVPN, poskytovatele stejnojmenné VPN služby, utekly privátní klíče a neznámý útočník získal plnou kontrolu nad jejich serverem ve Finsku. NordVPN přitom patří mezi ty lepší společnosti, které VPN provozují. Společnost VPNpro u velkého množství různých VPN služeb zjišťovala, komu vlastně patří. Výsledky byly pozoruhodné: 97 služeb ve vlastněno jenom 23 společnostmi, z nichž řada sídlí v zemích, které neslynou zrovna nejlepší pověstí, pokud jde o dodržování soukromí internetových uživatelů - například v Číně nebo Pákistánu.</description>
-      <link>https://tech.ihned.cz/c7-66666540-psms7-740eeccb76b34cc</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-10-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
