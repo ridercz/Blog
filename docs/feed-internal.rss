@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/04/drozdi</guid>
+      <title>Luxusní recept pro dobu pandemickou: Drožďová pomazánka</title>
+      <description>Největší český dovozce droždí poprvé v historii na trh pro spotřebitele vrhl půlkilové balení droždí. Jedno se mi podařilo uchvátit a na oslavu jsem se rozhodl udělat drožďovou pomazánku. Zde je ilustrovaný recept.</description>
+      <link>https://www.altair.blog/2020/04/drozdi</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2020-04-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/04/modra-zidle</guid>
       <title>Modrá židle: modelování zase trochu jinak</title>
       <description>Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu.</description>
@@ -134,15 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>Tipy, triky</category>
       <pubDate>2020-01-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/01/screenly-shutdown</guid>
-      <title>Automatické zapnutí a vypnutí digital signage na RPi</title>
-      <description>K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde.</description>
-      <link>https://www.altair.blog/2020/01/screenly-shutdown</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2020-01-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
