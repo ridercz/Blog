@@ -37,7 +37,7 @@ Osmažte na něm cibulku, dokud nezesklovatí.
 
 ![](https://www.cdn.altairis.cz/Blog/2020/20200419-drozdi-5.jpg)
 
-Odkrojte z kostky droždí přibližně polovinu. Vzhledem k amorfně drobivé podstatě droždí je nesnadné zachovat kvádrovitý tvar, ale s trochou šikovnosti to je možné.
+Odkrojte z kostky droždí přibližně polovinu. Vzhledem k amorfně drobivé podstatě droždí je nesnadné zachovat kvádrovitý tvar, ale s trochou šikovnosti to je možné, stačí jej jakoby odškrabovat po vrstvách. Výsledek poněkud připomíná kamenolom.
 
 ![](https://www.cdn.altairis.cz/Blog/2020/20200419-drozdi-6.jpg)
 
@@ -45,11 +45,11 @@ Dejte droždí na pánev a smažte, dokud se nerozpustí a nezačne bublat. Jakm
 
 ![](https://www.cdn.altairis.cz/Blog/2020/20200419-drozdi-7.jpg)
 
-Přidejte dvě celá vejce (bez skořápek) a důkladně zamíchejte. Přidejte sůl a pepř (já používám drcený čtyř barev) dle chuti a za stálého míchání smažte, dokud se pomazánka jakoby nesrazí.
+Přidejte dvě celá vejce (bez skořápek) a vše důkladně zamíchejte. Přidejte sůl a pepř (já používám drcený čtyř barev) dle chuti a za stálého míchání smažte, dokud se pomazánka jakoby nesrazí.
 
 ![](https://www.cdn.altairis.cz/Blog/2020/20200419-drozdi-8.jpg)
 
-Vypněte plotnu a přimíchejte šnytlík, neboli pažitku dle chuti.
+Vypněte plotnu a přimíchejte šnytlík (neboli pažitku) dle chuti.
 
 ![](https://www.cdn.altairis.cz/Blog/2020/20200419-drozdi-9.jpg)
 
