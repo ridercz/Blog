@@ -20,6 +20,7 @@ Budete potřebovat:
 * sůl
 * pepř
 * pažitku (volitelně)
+* máslo
 
 ## Technologický postup
 
