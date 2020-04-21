@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší." />
+    <link rel="canonical" href="https://www.altair.blog/2020/04/dateprovider" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času" />
+    <meta name="twitter:description" content="Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200421-dateprovider.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času" />
+    <meta property="og:description" content="Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200421-dateprovider.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/04/dateprovider" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200421-dateprovider.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-04-21" title="Datum vydání">21. dubna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Noor Younis via Unsplash <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Kolik je hodin? Stačí se zeptat na <code>DateTime.Now</code> nebo <code>GETDATE()</code>. Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu <a href="https://github.com/ridercz/Altairis.Services.DateProvider"><strong>Altairis.Services.DateProvider</strong></a>, která uvedené problémy řeší.</p>
+<h2 id="prilis-velka-presnost">Příliš velká přesnost</h2>
+<p>Odpověď na otázku &quot;kolik je hodin&quot; bude s velkou pravděpodobností mnohem přesnější, než jak ji potřebujete. Nechci tady zabíhat do detailů o ukládání datumu a času v .NETu a SQL serveru, jeho různých datových typech a <a href="https://devblogs.microsoft.com/oldnewthing/20050902-00/?p=34333">rozdílech mezi <em>precision</em> a <em>accuracy</em></a>. Nicméně téměř vždy (s výjimkou typu <code>smalldatetime</code> v SQL Serveru) je přesnost vyšší než jedna sekunda. Což zpravidla není třeba a naopak nám to přináší různé obtíže. Tím spíš, že tato hodnota je jiná v .NETu a jiná v databázi (a tam se liší podle toho, jaký datový typ zvolíte).</p>
+<p>V praxi často potřebujeme ukládat pouze datum, a pokud datum tak s přesností nejvýše na sekundy, případně dokonce na minuty.</p>
+<p>Knihovna Altairis.Services.DateProvider nabízí extension metody <code>TrimToSecond</code> a <code>TrimToMinute</code>, které dokáží přebytečné milisekundy odříznout. Přesnost na sekundy je také výchozím nastavením všech providerů.</p>
+<h2 id="casove-zony">Časové zóny</h2>
+<p>Dalším zdrojem zábavy jsou časové zóny. Tato knihovna si <em>neklade</em> za cíl vám pomoci v případě, že s časovými zónami aktivně pracujete a potřebujete o nich uchovávat údaje. V takovém případě použijte typ <code>DateTimeOffset</code> a hrajte si.</p>
+<p>Nicméně často máte server jinde než uživatele (třeba v cloudu) a prosté volání <code>DateTime.Now</code> vám nestačí. Knihovna definuje rozhraní <code>IDateProvider</code>, které má vlastnosti <code>Now</code> a <code>Today</code>, které - stejně jako v případě standardního <code>DateTime</code> - vracejí aktuální čas, potažmo datum.</p>
+<p>K dispozici jsou čtyři implementace:</p>
+<ul>
+<li><code>LocalDateProvider</code> je jenom wrapper okolo <code>DateTime</code>, vrací lokální čas počítače. Můžete si nastavit přesnost (výchozí je sekunda). Toto je provider pro chvíli, kdy chcete jenom snížit přesnost časového údaje, případně chcete být připraveni na budoucí přesun do cloudu.</li>
+<li><code>UtcDateProvider</code> funguje podobně, ale bez ohledu na místní časovou zónu vrací čas v GMT/UTC (a ve výchozím nastavení s přesností na sekundu). Hodí se ve chvíli, kdy máte zákazníky po celém světě (takže chcete používat UTC čas), ale server běží v místním čase.</li>
+<li><code>TzConvertDateProvider</code> umí zkonvertovat čas do libovoné časové zóny. Hodí se například ve chvíli, kdy aplikace běží v cloudu (a hodiny jsou typicky nastavené na UTC), ale zákazníky máte převážně v Čechách, nebo nějakém konkrétním časovém pásmu.</li>
+<li><code>FixedDateProvider</code> vrátí vždy přesně tu samou hodnotu, kterou dostal v konstruktoru. Hodí se pro testy, u nichž chete, aby měly predikovatelné výsledky nad nějakou fixní sadou testovacích dat.</li>
+</ul>
+<p>Kompletní dokumentaci <a href="https://github.com/ridercz/Altairis.Services.DateProvider">najdete na GitHubu</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Altairis.Services.DateProvider+-+jak+na+%c4%8dasov%c3%a9+z%c3%b3ny+a+p%c5%99%c3%adli%c5%a1nou+p%c5%99esnost+%c4%8dasu&amp;body=https://www.altair.blog/2020/04/dateprovider">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/04/dateprovider.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/04/dateprovider.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/04/dateprovider">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/04/dateprovider">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

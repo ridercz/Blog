@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/04/dateprovider</guid>
+      <title>Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času</title>
+      <description>Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší.</description>
+      <link>https://www.altair.blog/2020/04/dateprovider</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-04-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/04/drozdi</guid>
       <title>Luxusní recept pro dobu pandemickou: Drožďová pomazánka</title>
       <description>Největší český dovozce droždí poprvé v historii na trh pro spotřebitele vrhl půlkilové balení droždí. Jedno se mi podařilo uchvátit a na oslavu jsem se rozhodl udělat drožďovou pomazánku. Zde je ilustrovaný recept.</description>
@@ -134,15 +143,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-01-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/01/edc</guid>
-      <title>Co všechno s sebou prosím tě pořád taháš?</title>
-      <description>Otázku zmíněnou v titulku dostávám docela často. A je pravda, že za léta častého cestování jsem sadu věcí, které s sebou pravidelně nosím, vyladil k dokonalosti. K přežití v divočině by mi asi mnoho platná nebyla, ale jako kvalitně domestikovaný valach se divočině spíš vyhýbám. Problematické situace, jejichž výskyt je u mne pravděpodobný, jsou poněkud... civilizovanějšího charakteru. Takže potřebuju spíš ten správný druh USB kabelu než křesadlo na nouzové rozdělání ohně.</description>
-      <link>https://www.altair.blog/2020/01/edc</link>
-      <author>Michal Altair Valášek</author>
-      <category>Tipy, triky</category>
-      <pubDate>2020-01-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
