@@ -1,0 +1,9 @@
+<!-- dcterms:title = Datové schránky dlouho odolávaly spamu, ve výjimečném stavu ale přišla změna. Co s tím? -->
+<!-- dcterms:abstract = Pandemie koronaviru udělala pro rozvoj eGovernmentu v ČR víc, než několik předchozích vlád dohromady. Počet datových schránek výrazně narostl, stejně jako podíl těch, kdo mají povolený příjem komerčních Poštovních datových zpráv. A bezplatné posílání PDZ v době výjimečného stavu otevřelo stavidla spamu -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-05-07 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66760730-psms7-047c2887399a31c -->
