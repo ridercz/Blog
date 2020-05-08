@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/05/hp</guid>
+      <title>DIY hotstamping: Znaky bradavických kolejí</title>
+      <description>Moje dcera Alex se zamilovala do světa Harryho Pottera - ostatně, stejně jako její rodiče. Hlásí se k havraspárské koleji, což jí sedí. Když doma začala chodit s ručně vyrobenou havraspárskou kravatou, rozhodl jsem se vyzkoušet techniku hot stampingu, pomocí níž lze na podklad přidat metalický efekt.</description>
+      <link>https://www.altair.blog/2020/05/hp</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2020-05-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66760730-psms7-047c2887399a31c</guid>
       <title>Datové schránky dlouho odolávaly spamu, ve výjimečném stavu ale přišla změna. Co s tím?</title>
       <description>Pandemie koronaviru udělala pro rozvoj eGovernmentu v ČR víc, než několik předchozích vlád dohromady. Počet datových schránek výrazně narostl, stejně jako podíl těch, kdo mají povolený příjem komerčních Poštovních datových zpráv. A bezplatné posílání PDZ v době výjimečného stavu otevřelo stavidla spamu</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-03-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d-text</guid>
-      <title>A2D 1.1.0: Podpora pro práci s textem</title>
-      <description>Do své OpenSCAD knihovny pro práci s 2D objekty jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.</description>
-      <link>https://www.altair.blog/2020/02/a2d-text</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-02-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

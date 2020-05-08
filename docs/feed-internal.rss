@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/05/hp</guid>
+      <title>DIY hotstamping: Znaky bradavických kolejí</title>
+      <description>Moje dcera Alex se zamilovala do světa Harryho Pottera - ostatně, stejně jako její rodiče. Hlásí se k havraspárské koleji, což jí sedí. Když doma začala chodit s ručně vyrobenou havraspárskou kravatou, rozhodl jsem se vyzkoušet techniku hot stampingu, pomocí níž lze na podklad přidat metalický efekt.</description>
+      <link>https://www.altair.blog/2020/05/hp</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2020-05-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/04/dateprovider</guid>
       <title>Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času</title>
       <description>Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší.</description>
@@ -134,15 +143,6 @@
       <category>Bastlení</category>
       <category>Bezpečnost</category>
       <pubDate>2020-01-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/01/console</guid>
-      <title>Pár tipů pro konzolové aplikace</title>
-      <description>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</description>
-      <link>https://www.altair.blog/2020/01/console</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-01-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
