@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/05/fachidioti</guid>
+      <title>Vláda zbabělců a fachidiotů</title>
+      <description>V českém veřejném diskursu jsme zvyklí na ledacos. Ovšem prohlášení náměstka ministra zdravotnictví Prymuly, který nás vyzývá k návratu ke klanovým společenstvím, je šílené v takové míře, že vzbudilo podiv i u nás. Lidé prý mají do budoucna žít v menších komunitách, že se budou stýkat tři rodiny a "další komunikace moc nebude". Dokud se nevzdáme havlovského mýtu "nepolitické politiky", lepší to nebude.</description>
+      <link>https://www.altair.blog/2020/05/fachidioti</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2020-05-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/05/hp</guid>
       <title>DIY hotstamping: Znaky bradavických kolejí</title>
       <description>Moje dcera Alex se zamilovala do světa Harryho Pottera - ostatně, stejně jako její rodiče. Hlásí se k havraspárské koleji, což jí sedí. Když doma začala chodit s ručně vyrobenou havraspárskou kravatou, rozhodl jsem se vyzkoušet techniku hot stampingu, pomocí níž lze na podklad přidat metalický efekt.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-03-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/</guid>
-      <title>Držák USB hubu Axagon HUE-S2BL</title>
-      <description>Použil jsem svou knihovnu A2D k tomu, abych vytvořil držák USB hubu, aby se mi jenom tak neválel po stole. Rozměry zveřejněného modelu jsou určeny pro konkrétní typ Axagon HUE-S2BL, ale hubů s podobnou konstrukcí je spousta. Proto je model parametrický a lze jej změnou pár čísel upravit pro jakékoliv zařízení s podobným form factorem.</description>
-      <link>https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-03-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
