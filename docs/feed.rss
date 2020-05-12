@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/05/taghelpers</guid>
+      <title>Altairis Tag Helpers - nová verze s kalendářem</title>
+      <description>O své knihovně Altairis.TagHelpers, která přidává různé tag helpery pro Razor v ASP.NET Core (MVC i Razor Pages) jsem zde již několikrát psal. Nyní je k dispozici verze 1.7, která přidává podporu pro zobrazení kalendáře s událostmi.</description>
+      <link>https://www.altair.blog/2020/05/taghelpers</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-05-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/05/fachidioti</guid>
       <title>Vláda zbabělců a fachidiotů</title>
       <description>V českém veřejném diskursu jsme zvyklí na ledacos. Ovšem prohlášení náměstka ministra zdravotnictví Prymuly, který nás vyzývá k návratu ke klanovým společenstvím, je šílené v takové míře, že vzbudilo podiv i u nás. Lidé prý mají do budoucna žít v menších komunitách, že se budou stýkat tři rodiny a "další komunikace moc nebude". Dokud se nevzdáme havlovského mýtu "nepolitické politiky", lepší to nebude.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2020-03-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/03/a2d-140</guid>
-      <title>A2D: Novinky ve verzi 1.4.0</title>
-      <description>S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků.</description>
-      <link>https://www.altair.blog/2020/03/a2d-140</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-03-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
