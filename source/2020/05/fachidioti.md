@@ -37,4 +37,4 @@ Pro uspořádání konkurzu si radnice najala "odborníky" ze spřáteleného sp
 
 Podobnost s odborníkem Prymulou, za kterého se Vojtěch s Babišem schovávají, když se jim to hodí a obětují ho ve chvíli, kdy nevyhovuje jejich záměrům, není jistě náhodná.
 
-Pokud se nezbavíme odporu k politickým stranám a politikům, lepší to nebude. Dokud se nezbavýme mýtu o existenci nějaké magické lepší, nepolitické politiky, bude tohle náš normál.
+Pokud se nezbavíme odporu k politickým stranám a politikům, lepší to nebude. Dokud se nezbavíme mýtu o existenci nějaké magické lepší, nepolitické politiky, bude tohle náš normál.
