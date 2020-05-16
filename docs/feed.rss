@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/05/datalist</guid>
+      <title>DATALIST - zapomenutý HTML5 element</title>
+      <description>Součástí HTML5 je element datalist. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper.</description>
+      <link>https://www.altair.blog/2020/05/datalist</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-05-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/05/taghelpers</guid>
       <title>Altairis Tag Helpers - nová verze s kalendářem</title>
       <description>O své knihovně Altairis.TagHelpers, která přidává různé tag helpery pro Razor v ASP.NET Core (MVC i Razor Pages) jsem zde již několikrát psal. Nyní je k dispozici verze 1.7, která přidává podporu pro zobrazení kalendáře s událostmi.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2020-03-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/03/neni-nad-dobry-virus</guid>
-      <title>Není nad dobrý virus</title>
-      <description>Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie.</description>
-      <link>https://www.altair.blog/2020/03/neni-nad-dobry-virus</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2020-03-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

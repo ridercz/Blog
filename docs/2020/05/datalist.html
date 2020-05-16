@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DATALIST - zapomenutý HTML5 element | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Součástí HTML5 je element datalist. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper." />
+    <link rel="canonical" href="https://www.altair.blog/2020/05/datalist" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="DATALIST - zapomenutý HTML5 element" />
+    <meta name="twitter:description" content="Součástí HTML5 je element datalist. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200516-datalist.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="DATALIST - zapomenutý HTML5 element" />
+    <meta property="og:description" content="Součástí HTML5 je element datalist. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200516-datalist.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/05/datalist" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200516-datalist.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>DATALIST - zapomenutý HTML5 element</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-05-16" title="Datum vydání">16. května 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Součástí HTML5 je element <code>datalist</code>. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper.</p>
+<h2 id="k-cemu-slouzi-datalist">K čemu slouží <code>datalist</code></h2>
+<p>Element <code>datalist</code> je sám o sobě neviditelný (nevizuální) element, který slouží k &quot;nakrmení&quot; autocomplete pro textové vstupní pole, které je na něj navázáno pomocí atrubutů <code>id</code> a <code>list</code>. Celá konstrukce vypadá nějak takto:</p>
+<pre><code>&lt;input type=&quot;text&quot; list=&quot;mujdatalist&quot; /&gt;
+&lt;datalist id=&quot;mujdatalist&quot;&gt;
+    &lt;option value=&quot;aaa&quot; /&gt;
+    &lt;option value=&quot;bbb&quot; /&gt;
+    &lt;option value=&quot;ccc&quot; /&gt;
+&lt;/datalist&gt;
+</code></pre>
+<p>Hodnoty z <code>datalist</code>u budou uživateli nabídnuty při zadávání textu do prvku <code>input</code>. Jak konkrétně, to záleží na prohlížeči, ale typicky se po poklepání zobrazí úplný seznam (jako rozbalovací) a při psaní textu se zobrazí seznam filtrovaný, obsahující pouze položky odpovídající již napsanému.</p>
+<p>Jedná se tedy o aproximaci prvku, kterému se při návrhu UI obvykle říká <em>ComboBox</em>, protože kombinuje běžné textové pole (textbox) a seznam (dropdown list). Uživatel si může buďto vybrat hodnotu ze seznamu nebo zadat vlastní.</p>
+<p>Další informace <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">najdete příkladmo na MDN</a>.</p>
+<h2 id="kdy-pouzit-combobox">Kdy použít combobox</h2>
+<p><a href="https://baymard.com/blog/drop-down-usability">Baymard Institute</a> na svém webu publikoval studii použitelnosti výběru ze seznamů. Obecné závěry studie jsou následující:</p>
+<ul>
+<li>Pokud je položek, z nichž lze vybrat, méně než pět, zobrazte je všechny najednou, třeba jako radio buttony. K tomuto účelu jsem v knihovně Altairis.TagHelpers vytvořil <a href="https://github.com/ridercz/Altairis.TagHelpers/wiki/CheckboxListTagHelper">CheckboxListTagHelper</a>.</li>
+<li>Pokud je položek 5-10, použijte rozbalovací seznam (dropdown list, v HTML element <code>select</code>).</li>
+<li>Pokud je položek více, použijte volný text s nápovědou.</li>
+</ul>
+<p>Typickým příkladem posledního typu je třeba seznam zemí při výběru adresy a podobně.</p>
+<h2 id="vyhody-a-nevyhody-pouziti-prvku-datalist">Výhody a nevýhody použití prvku <code>datalist</code></h2>
+<p>Výhody:</p>
+<ul>
+<li>Triviální na použití.</li>
+<li>Nativní vzhled prohlížeče.</li>
+<li>Nativní chování (ovládání z klávesnice apod.).</li>
+<li>Výborná přístupnost.</li>
+<li>Funguje bez JavaScriptu.</li>
+</ul>
+<p>Nevýhody:</p>
+<ul>
+<li>Seznam položek musí být statický, je dán při načtení stránky, položky nelze dotahovat dynamicky na základě uživatelem zadaného textu. Lze nicméně <a href="https://www.raymondcamden.com/2012/06/14/example-of-a-dynamic-html5-datalist-control">obejít pomocí JavaScriptu</a>.</li>
+<li>Prakticky nelze ovlivnit vzhled (to ale pokládám spíše za výhodu z hlediska konzistence UI).</li>
+<li>Nefunguje ve <a href="https://caniuse.com/#search=datalist">velmi starých prohlížečích</a> (IE 9 a nižších).</li>
+</ul>
+<p>Výhodou i nevýhodou může být - v závislosti na způsobu použití - že uživatel si nemusí vybrat z nabízených možností ale může napsat libovolný vlastní text. Pokud je žádoucí výběr z pevného seznamu možností, je nutné provést validaci textové hodnoty.</p>
+<h2 id="tag-helper">Tag helper</h2>
+<p>Od verze 1.8 je součástí mé knihovny <a href="https://github.com/ridercz/Altairis.TagHelpers">Altairis.TagHelpers</a> nový helper <a href="https://github.com/ridercz/Altairis.TagHelpers/wiki/DatalistTagHelper">DatalistTagHelper</a>. Funguje tak, že se prvku <code>input</code> přidá nový atribut <code>list</code>, který odkazuje na vlastnost modelu nebo viewmodelu, která je typu <code>IEnumerable&lt;string&gt;</code> a obsahuje nabízené hodnoty. Tag helper automaticky vygeneruje odpovídajíci <code>datalist</code> a naváže ho na textové pole.</p>
+<p>Jeho ID bude vygenerováno automaticky podle ID textového pole, ale lze jej i explicitně určit pomocí atributu <code>datalist-id</code>.</p>
+<p>Kompletní dokumentaci najdete tradičně na <a href="https://github.com/ridercz/Altairis.TagHelpers/wiki/DatalistTagHelper">wiki</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=DATALIST+-+zapomenut%c3%bd+HTML5+element&amp;body=https://www.altair.blog/2020/05/datalist">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/05/datalist.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/05/datalist.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/05/datalist">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/05/datalist">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
