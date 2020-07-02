@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit" />
+    <link rel="canonical" href="https://www.altair.blog/2020/07/validace-cisla-uctu" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.8.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu" />
+    <meta name="twitter:description" content="Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit" />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200703-validace-cisla-uctu.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu" />
+    <meta property="og:description" content="Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit" />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200703-validace-cisla-uctu.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/07/validace-cisla-uctu" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200703-validace-cisla-uctu.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div>
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div>
+          <time datetime="2020-07-03" title="Datum vydání">3. července 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div>Česká národní banka <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Pokud vaše aplikace pracuje s číslem bankovního účtu, je dobré ověřit, že je zadané hodnota formálně validní. Pravidla pro tvorbu čísel českých bankovních účtů stanoví <a href="https://www.zakonyprolidi.cz/cs/2011-169">vyhláška České národní banky číslo 169/2011 Sb</a>.</p>
+<blockquote>
+<p>Tato vyhláška určuje i IBAN formát českých čísel účtů. Pokud chcete validovat IBAN (nejenom pro české účty), použijte knihovnu <a href="https://github.com/skwasjer/IbanNet">IbanNet</a>.</p>
+</blockquote>
+<p>Číslo účtu sestává ze dvou nebo třech částí:</p>
+<ul>
+<li>Nepovinné předčíslí o maximální délce šesti číslic.</li>
+<li>Povinné číslo účtu o maximální délce deseti číslic.</li>
+<li>Povinný kód platebního styku (obecně známý jako &quot;kód banky&quot;) o pevné délce čtyř číslic.</li>
+</ul>
+<p>Zpravidla se zapisuje jako <code>předčíslí-číslo/kód</code>.</p>
+<p>Pro základní validaci je tedy možné použít regulární výraz <code>^(\d{1,6}-)?\d{1,10}/\d{4}$</code>. Tento výraz zkontroluje, zda číslo účtu neobsahuje nepovolené znaky a zda jednotlivé části jsou přítomny a mají správnou délku. Pomocí regulárního výrazu nicméně nelze spočítat kontrolní součet, který číslo účtu má.</p>
+<h2 id="vypocet-kontrolniho-souctu-predcisli-a-cisla-uctu">Výpočet kontrolního součtu předčíslí a čísla účtu</h2>
+<p>Předčíslí a vlastní číslo účtu musí být (každé zvlášť) vytvořeno tak, aby splňovalo níže popsanou validační podmínku. Cílem je, aby bylo možné jednoduše odhalit překlep v zadání.</p>
+<p>Algoritmus pro výpočet je následující:</p>
+<ul>
+<li>Každá číslice se jednotlivě vynásobí svou vahou. Ta je určena jako <em>2<sup>n</sup> % 11</em>, kde <em>%</em> je operátor modulo (tj. zbytek po celočíselném dělení) a <em>n</em> je pozice číslice počítaná zprava od jedničky.</li>
+<li>Hodnoty se pro všechny číslice sečtou.</li>
+<li>Výsledek musí být beze zbytku dělitelný jedenácti.</li>
+</ul>
+<p>Zapsán v jazyce C# vypadá tento algoritmus takto:</p>
+<pre><code class="language-c#">bool ValidatePart(string part) {
+    if (string.IsNullOrEmpty(part)) return true;
+
+    var chs = 0;
+    for (var i = 0; i &lt; part.Length; i++) {
+        var num = int.Parse(part.Substring(i, 1));
+        var weight = (int)Math.Pow(2, part.Length - i) % 11;
+        chs += num * weight;
+    }
+    return chs % 11 == 0;
+}
+</code></pre>
+<h2 id="kontrola-kodu-banky-kodu-platebniho-styku">Kontrola kódu banky (kódu platebního styku)</h2>
+<p>Tato část čísla účtu nemá žádný kontrolní algoritmus, ale je dána <a href="https://www.cnb.cz/cs/platebni-styk/ucty-kody-bank/">seznamem, který vydává a zveřejňuje Česká národní banka na svém webu</a>.</p>
+<h2 id="validacni-atribut">Validační atribut</h2>
+<p>Do své knihovny <a href="https://github.com/ridercz/Altairis.ValidationToolkit">Altairis Validation Toolkit</a> jsem přidal nový atribut <code>[CzechBankAccount]</code> (<a href="https://github.com/ridercz/Altairis.ValidationToolkit/blob/master/Altairis.ValidationToolkit/CzechBankAccountAttribute.cs">zdrojový kód</a>), který validaci provádí.</p>
+<p>Ve výchozím nastavení validuje i kód banky, přičemž seznam kódů je napevno zadán ve zdrojovém kódu a když ČNB vydá novou verzi seznamu, bude nutné vydat novou verzi knihovny. Sáhl jsem k tomuto řešení, protože vlastní číselné kódy se příliš nemění. V seznamu se mění názvy subjektů a další údaje, ale vlastní seznam kódů je poměrně stabilní.</p>
+<p>Validaci kódu platebního styku lze vypnout použitím <code>[CzechBankAccount(IgnoreBankCode = true)]</code>. V takovém případě projde jakákoliv čtyřmístná numerická hodnota.</p>
+<p>Zdrojové kódy Altairis Validation Toolkitu si můžete <a href="https://github.com/ridercz/Altairis.ValidationToolkit">stáhnout na GitHubu</a>, knihovna je k dispozici jako NuGet balíček <a href="https://www.nuget.org/packages/Altairis.ValidationToolkit/">Altairis.ValidationToolkit</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Novinka+v+knihovn%c4%9b+Altairis+Validation+Toolkit%3a+Validace+%c4%8d%c3%adsla+bankovn%c3%adho+%c3%ba%c4%8dtu&amp;body=https://www.altair.blog/2020/07/validace-cisla-uctu">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/07/validace-cisla-uctu.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/07/validace-cisla-uctu.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/07/validace-cisla-uctu">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/07/validace-cisla-uctu">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js" integrity="sha256-FA/nNCvKfGdhdbNDRy0q50kSiee+lwHIHXpu0PTD3E0=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dos.min.js" integrity="sha256-2rzI2inyZTuqpt3ZQtgN0ezM8PgkMQLlVCaHshqVLe4=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js" integrity="sha256-rKw1H9B1GnccvcVdRBfRB6EZt3jaXLLbeEWSSEKmtgg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/openscad.min.js" integrity="sha256-Y9GkiAmfiOzodbzy8YHB98RiHtWi5AtEgzxr9k0S5jg=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/powershell.min.js" integrity="sha256-YKxCyo85JjNZ2Dwsj9CUsCPcUemLxwMnUJGAn2PXJU8=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scss.min.js" integrity="sha256-eek2X9CXZFSN3jZUYGcxdvpGUbEjjtXobLOI8/qxZqk=" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js" integrity="sha256-LOa0DHufGN2pVUzWMDfCHhttYdt0S7KcTB98p7Rv2k4=" crossorigin="anonymous">//</script>
+    <script type="text/javascript">
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
