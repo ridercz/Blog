@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/35801-dust-collection-adapter-for-parkside-sander-pbsd-6</guid>
+      <title>Redukce odsávání pro brusku Parkside PBSD 600 A1</title>
+      <description>3D model adaptéru pro připojení běžného vysavače (d = 32 mm) k odsávání pásové brusky Parkside PBSD 600 A1 z Lidlu.</description>
+      <link>https://www.prusaprinters.org/prints/35801-dust-collection-adapter-for-parkside-sander-pbsd-6</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2020-07-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66760730-psms7-047c2887399a31c</guid>
       <title>Datové schránky dlouho odolávaly spamu, ve výjimečném stavu ale přišla změna. Co s tím?</title>
       <description>Pandemie koronaviru udělala pro rozvoj eGovernmentu v ČR víc, než několik předchozích vlád dohromady. Počet datových schránek výrazně narostl, stejně jako podíl těch, kdo mají povolený příjem komerčních Poštovních datových zpráv. A bezplatné posílání PDZ v době výjimečného stavu otevřelo stavidla spamu</description>
@@ -130,15 +139,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2019-12-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</guid>
-      <title>Ransomware útočí i před Vánoci a nevyhýbá se ani Česku. Poradíme, jak se před vyděrači bránit</title>
-      <description>Před několika lety se v IT oblasti objevil nový fenomén zvaný ransomware. Jedná se o viry, které zašifrují data na disku a následně vyžadují zaplacení výpalného. Po prvotní vlně publicity to vypadalo, že vlna ustala, ale je to falešná představa. Ransomware se daří dobře a v dohledné budoucnosti se nejspíš nic nezmění. Jenom v posledních týdnech jsem pomáhal několika obětem.</description>
-      <link>https://tech.ihned.cz/c7-66691260-psms7-e80deacd1e0192c</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2019-12-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
