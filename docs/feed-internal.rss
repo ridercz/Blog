@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
+      <title>Rychlý export databáze do formátu BACPAC</title>
+      <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat</description>
+      <link>https://www.altair.blog/2020/07/bacpac</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-07-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/validace-cisla-uctu</guid>
       <title>Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu</title>
       <description>Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-02-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d</guid>
-      <title>A2D: Moje 2D knihovna pro OpenSCAD</title>
-      <description>Řada technických modelů pro 3D tisk má 2D základ, vytažený do výšky. Při svých návrzích v OpenSCADu často používám sbírku 2D modulů a funkcí, které mi výrazně zjednodušují psaní modelů a zpřehledňují kód. Nyní jsem se rozhodl je zveřejnit pro obecné použití pod MIT licencí.</description>
-      <link>https://www.altair.blog/2020/02/a2d</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-02-20T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
