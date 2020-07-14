@@ -1,5 +1,5 @@
 <!-- dcterms:title = Rychlý export databáze do formátu BACPAC -->
-<!-- dcterms:abstract = Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat -->
+<!-- dcterms:abstract = Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20200713-bacpac.jpg -->
 <!-- x4w:coverCredits = @jankolario via Unsplash.com -->

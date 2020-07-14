@@ -1,5 +1,5 @@
 <!-- dcterms:title = Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu -->
-<!-- dcterms:abstract = Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit -->
+<!-- dcterms:abstract = Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20200703-validace-cisla-uctu.jpg -->
 <!-- x4w:coverCredits = Česká národní banka -->

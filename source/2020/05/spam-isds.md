@@ -1,5 +1,5 @@
 <!-- dcterms:title = Datové schránky dlouho odolávaly spamu, ve výjimečném stavu ale přišla změna. Co s tím? -->
-<!-- dcterms:abstract = Pandemie koronaviru udělala pro rozvoj eGovernmentu v ČR víc, než několik předchozích vlád dohromady. Počet datových schránek výrazně narostl, stejně jako podíl těch, kdo mají povolený příjem komerčních Poštovních datových zpráv. A bezplatné posílání PDZ v době výjimečného stavu otevřelo stavidla spamu -->
+<!-- dcterms:abstract = Pandemie koronaviru udělala pro rozvoj eGovernmentu v ČR víc, než několik předchozích vlád dohromady. Počet datových schránek výrazně narostl, stejně jako podíl těch, kdo mají povolený příjem komerčních Poštovních datových zpráv. A bezplatné posílání PDZ v době výjimečného stavu otevřelo stavidla spamu. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
