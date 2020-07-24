@@ -6,6 +6,19 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/07/evolby</guid>
+      <title>Lesk a bída elektronických voleb</title>
+      <description>Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.</description>
+      <link>https://www.altair.blog/2020/07/evolby</link>
+      <author>Michal Altair Valášek</author>
+      <author>Vladimír Smejkal</author>
+      <author>Jindřich Kodl</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2020-07-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/odpoledni-skoleni</guid>
       <title>Pozvánka na odpolední školení ASP.NET Core</title>
       <description>Máte půl dne času? Zvu vás na komplexní online školení ASP.NET Core. Tedy, pokud budete mít půl dne času dva týdny. Koronavirus řadu lidí i firem přesvědčil, že školení nemusí probíhat jenom osobně, ale lze ho dělat i na dálku. A speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho.</description>
@@ -131,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-04-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</guid>
-      <title>Covid-19 má negativní dopady na kybernetickou bezpečnost a násobně zvedá vytížení cloudových služeb</title>
-      <description>Podle vyhledávače Shodan výrazně stoupl počet VPN a RDP serverů dostupných z Internetu. Výrazně také stouplo vytížení cloudových služeb a uživatelé Microsoft Azure hlásí občasné problémy s kapacitou.</description>
-      <link>https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2020-04-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
