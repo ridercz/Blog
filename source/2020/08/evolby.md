@@ -1,0 +1,12 @@
+<!-- dcterms:title = Šálivý půvab elektronických voleb -->
+<!-- dcterms:abstract = Ještě jednou o elektronických volbách. Poněkud stručněji a aktuálněji. Nedokážeme vytvořit distanční systém, který by měl vlastnosti toho současného papírového. Pokud bychom měli zavádět elektronické nebo korespondenční hlasování, nejedná se o technikálii, ale o změnu principiální, měnící parametry voleb. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20200811-evolby.jpg -->
+<!-- x4w:pictureCredits = Element5 Digital via unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2020-08-11 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3 -->

@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3</guid>
+      <title>Šálivý půvab elektronických voleb</title>
+      <description>Ještě jednou o elektronických volbách. Poněkud stručněji a aktuálněji. Nedokážeme vytvořit distanční systém, který by měl vlastnosti toho současného papírového. Pokud bychom měli zavádět elektronické nebo korespondenční hlasování, nejedná se o technikálii, ale o změnu principiální, měnící parametry voleb.</description>
+      <link>https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2020-08-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/evolby</guid>
       <title>Lesk a bída elektronických voleb</title>
       <description>Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.</description>
@@ -135,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-04-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/magclasp</guid>
-      <title>Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu</title>
-      <description>Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu.</description>
-      <link>https://www.altair.blog/2020/04/magclasp</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-04-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
