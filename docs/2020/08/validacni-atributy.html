@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pokročilejší tvorba validačních atributů a dependency injection | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection." />
+    <link rel="canonical" href="https://www.altair.blog/2020/08/validacni-atributy" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Pokročilejší tvorba validačních atributů a dependency injection" />
+    <meta name="twitter:description" content="Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200813-validacni-atributy.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Pokročilejší tvorba validačních atributů a dependency injection" />
+    <meta property="og:description" content="Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200813-validacni-atributy.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/08/validacni-atributy" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200813-validacni-atributy.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Pokročilejší tvorba validačních atributů a dependency injection</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2020-08-13">13. srpna 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection.</p>
+<h2 id="jednoduchy-validacni-atribut">Jednoduchý validační atribut</h2>
+<p>Tvorba jednoduchého validačního atributu je, inu, jednoduchá. Podívejte se třeba na atribut z knihovny <a href="https://github.com/ridercz/Altairis.ValidationToolkit/">Altairis Validation Toolkit</a> který ověřuje platnost IČO. Kompletní <a href="https://github.com/ridercz/Altairis.ValidationToolkit/blob/master/Altairis.ValidationToolkit/IcoAttribute.cs">zdroják najdete na GitHubu</a>, ale v zásadě stačí pár kroků:</p>
+<p>Za prvé, vytvořte novou třídu, jejíž název bude končit slovem <code>Attribute</code>, zde např. <code>IcoAttribute</code>. Při použití se pak přípona <code>Attribute</code> nepoužívá, takže atribut bude použit jako <code>[Ico]</code>.</p>
+<p>Za druhé, Odekorujte třídu atributem <code>AttributeUsage</code> takto:</p>
+<pre><code class="language-cs">[AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+</code></pre>
+<p>To není absolutně nezbytné, ale nedává smysl používat náš atribut jinde než na vlastnosti nebo ho používat vícekrát, takže omezením použití zabráníme nesmyslné aplikaci.</p>
+<p>Za třetí, poděďte třídu od <code>ValidationAttribute</code>.</p>
+<p>Za čtvrté, označte třídu jako <code>sealed</code>, což znemožní z ní dále dědit. Není to nezbytné, ale je to <a href="https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1813">doporučené</a>, z důvodů bezpečnostních a výkonnostních.</p>
+<p>Za páté, vytvořte obvyklé konstruktory s výchozí chybovou hláškou a možností její změny.</p>
+<p>No a konečně, přepište jednoduchý overload metody <code>IsValid</code>, který bere jako argument validovanou hodnotu a vrací <code>true</code> nebo <code>false</code> podle toho, zda je hodnota validní nebo ne. Zdrojový kód jednoduchého atributu IcoAttribute je následující:</p>
+<pre><code class="language-cs">[AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+public sealed class IcoAttribute : ValidationAttribute {
+
+    public IcoAttribute()
+        : this(&quot;The field {0} must be valid IČO (identification number of person).&quot;) { }
+
+    public IcoAttribute(Func&lt;string&gt; errorMessageAccessor) 
+        : base(errorMessageAccessor) { }
+
+    public IcoAttribute(string errorMessage) 
+        : base(errorMessage) { }
+
+    public override bool IsValid(object value) {
+        // Empty values are valid - use RequiredAttribute instead
+        var s = value as string;
+        if (string.IsNullOrWhiteSpace(s)) return true;
+
+        // IČO is 8 digits, pad with zeroes when not
+        if (!Regex.IsMatch(s, &quot;^[0-9]{1,8}$&quot;)) return false;
+        s = s.PadLeft(8, '0');
+
+        // Calculate sum of digits
+        var sum = 0;
+        for (var i = 0; i &lt; 7; i++) {
+            sum += int.Parse(s[i].ToString()) * (8 - i);
+        }
+
+        // Verify checksum number
+        var chs = 11 - (sum % 11);
+        return chs.ToString().EndsWith(s.Substring(7), StringComparison.Ordinal);
+    }
+}
+</code></pre>
+<h2 id="slozitejsi-atribut-s-pouzitim-validationcontext">Složitější atribut s použitím ValidationContext</h2>
+<p>Tento jednoduchý přístup ale v řadě případů nestačí. Někdy potřebujeme znát víc, než jednu hodnotu. K tomuto účelu slouží třída <code>ValidationContext</code> a jiný overload metody <code>IsValid</code>. Pokud ho chcete využít, musíte v první řadě zařídit, aby vlastnost <code>RequiresValidationContext</code> vracela <code>true</code>:</p>
+<pre><code class="language-cs">public override bool RequiresValidationContext =&gt; true;
+</code></pre>
+<p>Poté přepište jiný overload metody IsValid, který kromě validované hodnoty dostane i <code>ValidationContext</code> a vrací nikoliv boolean, ale instanci třídy <code>ValidationResult</code>. Pomocí třídy <code>ValidationContext</code> se můžete dostat i k jiným vlastnostem validované entity a podobně.</p>
+<p>Podívejte se na <a href="https://github.com/ridercz/Altairis.ValidationToolkit/blob/master/Altairis.ValidationToolkit/GreaterThanAttribute.cs">zdroják <code>GreaterThanAttribute</code> na GitHubu</a>. Tento atribut porovnává hodnotu s hodnotou jiné vlastnosti.</p>
+<h2 id="pouziti-di">Použití DI</h2>
+<p>Nebývá úplně časté používat ve validačních atributech dependency injection, ale možné to je. Typický příklad najdete v nejnovější verzi atributu pro validaci čísla bankovního účtu, který jsem <a href="https://www.altair.blog/2020/07/validace-cisla-uctu">popisoval nedávno</a>. V jeho první verzi jsem použil řešení, na které jsem nebyl moc hrdý, totiž seznam kódů bank je natvrdo zadaný do zdrojáku. Druhá verze je lepší.</p>
+<p>Vytvořil jsem jednoduchý interface <code>IBankCodeValidator</code>, který definuje jedinou metodu <code>Validate</code>, která na vstupu dostane <code>string</code> (kód banky) a vrací <code>true</code> nebo <code>false</code>, podle toho zda jde o validní kód banky nebo ne:</p>
+<pre><code class="language-cs">public interface IBankCodeValidator {
+    bool Validate(string code);
+}
+</code></pre>
+<p>Jednoduchou implementaci pak představuje třída <code>StaticBankCodeValidator</code>, která má hardcoded seznam validních kódů:</p>
+<pre><code class="language-cs">public class StaticBankCodeValidator : IBankCodeValidator {
+    // Bank codes avaliable from https://www.cnb.cz/cs/platebni-styk/.galleries/ucty_kody_bank/download/kody_bank_CR.csv
+    // Valid as of 2020-07-01
+    private static readonly string[] BankCodes = {
+        &quot;0100&quot;,&quot;0300&quot;,&quot;0600&quot;,&quot;0710&quot;,&quot;0800&quot;,&quot;2010&quot;,&quot;2020&quot;,&quot;2030&quot;,&quot;2060&quot;,&quot;2070&quot;,
+        &quot;2100&quot;,&quot;2200&quot;,&quot;2220&quot;,&quot;2240&quot;,&quot;2250&quot;,&quot;2260&quot;,&quot;2275&quot;,&quot;2600&quot;,&quot;2700&quot;,&quot;3030&quot;,
+        &quot;3050&quot;,&quot;3060&quot;,&quot;3500&quot;,&quot;4000&quot;,&quot;4300&quot;,&quot;5500&quot;,&quot;5800&quot;,&quot;6000&quot;,&quot;6100&quot;,&quot;6200&quot;,
+        &quot;6210&quot;,&quot;6300&quot;,&quot;6700&quot;,&quot;6800&quot;,&quot;7910&quot;,&quot;7940&quot;,&quot;7950&quot;,&quot;7960&quot;,&quot;7970&quot;,&quot;7980&quot;,
+        &quot;7990&quot;,&quot;8030&quot;,&quot;8040&quot;,&quot;8060&quot;,&quot;8090&quot;,&quot;8150&quot;,&quot;8190&quot;,&quot;8198&quot;,&quot;8199&quot;,&quot;8200&quot;,
+        &quot;8215&quot;,&quot;8220&quot;,&quot;8225&quot;,&quot;8230&quot;,&quot;8240&quot;,&quot;8250&quot;,&quot;8255&quot;,&quot;8260&quot;,&quot;8265&quot;,&quot;8270&quot;,
+        &quot;8272&quot;,&quot;8280&quot;,&quot;8283&quot;,&quot;8291&quot;,&quot;8292&quot;,&quot;8293&quot;,&quot;8294&quot;,&quot;8296&quot; };
+    public bool Validate(string code) =&gt; BankCodes.Contains(code);
+}
+</code></pre>
+<p>Součástí knihovny Altairis Validation Toolkit jsou tři implementace:</p>
+<ul>
+<li><code>StaticBankCodeValidator</code> je popsán výše. Nemá žádné externí závislosti, ale v případě změny seznamu kódů bude nezbytné, abych jej změnil, vydal novou verzi a uživatelé knihovnu aktualizovali. Není to moc elegantní řešení, ale pokládám jej za použitelné, protože seznam kódů jako takových se nemění příliš často.</li>
+<li><code>EmptyBankCodeValidator</code> prostě na jakýkoliv kód vrátí <code>true</code> a validaci kódu banky neprovádí vůbec. To může mít smysl při prácí s historickými daty, protože zatímco algoritmus výpočtu kontrolní číslice předčíslí a vlastního čísla účtu se nemění, kód banky může ze seznamu smizet, pokud nějaká banka zanikne nebo se sloučí s jinou, jako například když se eBanka sloučila s RaifeeisenBank a její kód <code>2400</code> byl vyřazen a místo toho se používá <code>5500</code>.</li>
+<li><a href="https://github.com/ridercz/Altairis.ValidationToolkit/blob/master/Altairis.ValidationToolkit/OnlineBankCodeValidator.cs"><code>OnlineBankCodeValidator</code></a> si jednou za den stáhne z webu ČNB seznam kódů bank a používá ho. Z hlediska změn je to nejlepší řešení, ale vyžaduje aby měl server přístup na Internet a je nutné řešit co v případě nedostupnosti seznamu. Moje řešení je, že pokud se do pěti sekund nepodaří seznam stáhnout, prohlásí se kód banky vždy za validní.</li>
+</ul>
+<p>Použití je pak snadné, stačí zaregistrovat patřičnou implementaci do IoC/DI kontajneru. To můžete pro ten výchozí v .NET Core udělat jedním řádkem v metodě <code>ConfigureServices</code> třídy <code>Startup</code>:</p>
+<pre><code class="language-cs">services.AddSingleton&lt;IBankCodeValidator&gt;(new OnlineBankCodeValidator());
+</code></pre>
+<p>Jenomže jak zařídit, aby validační atribut dokázal patřičnou službu získat? Obvykle se v .NET Core používá constructor dependency, kdy se požadované služby předávají jako argumenty konstruktoru. Jenomže tento postup nelze v případě atributů použít.</p>
+<p>Nicméně <code>ValidationContext</code> nabízí též metodu <code>GetService</code>, která umožní získat instanci potřebné služby. Toho využívám ve třídě <a href="https://github.com/ridercz/Altairis.ValidationToolkit/blob/master/Altairis.ValidationToolkit/CzechBankAccountAttribute.cs"><code>CzechBankAccountAttribute</code></a>.</p>
+<p>Nejprve si definuji privátní field <code>bankCodeValidator</code> a přidám mu výchozí hodnotu:</p>
+<pre><code class="language-cs">private IBankCodeValidator bankCodeValidator = new StaticBankCodeValidator();
+</code></pre>
+<p>Ve složitějším overloadu metody <code>IsValid</code> se pokusím získat službu registrovanou v DI a zavolám jednodušší overload téže metody, který provede vlastní validaci:</p>
+<pre><code class="language-cs">protected override ValidationResult IsValid(object value, ValidationContext validationContext) {
+    this.bankCodeValidator = (IBankCodeValidator)validationContext.GetService(typeof(IBankCodeValidator)) ?? this.bankCodeValidator;
+    return this.IsValid(value)
+        ? ValidationResult.Success
+        : new ValidationResult(this.FormatErrorMessage(validationContext.MemberName), new string[] { validationContext.MemberName });
+}
+</code></pre>
+<p>Používám tam poněkud zvláštní konstrukci <code>proměnná = Metoda() ?? proměnná</code>. Jejím účelem je zajistit, aby se proměnná aktualizovala jenom v případě, že metoda vrátí něco jiného než <code>null</code>, např. pokud v kontajneru není nic zaregistrováno. Je to jednodušší ekvivalent následujícího zápisu:</p>
+<pre><code class="language-cs">var valService = (IBankCodeValidator)validationContext.GetService(typeof(IBankCodeValidator));
+if(valService != null) this.bankCodeValidator = valService;
+</code></pre>
+<blockquote>
+<p>Acknowledgements: Inspirací pro tento článek mi byl post <a href="https://andrewlock.net/injecting-services-into-validationattributes-in-asp-net-core/">Injecting services into ValidationAttributes in ASP.NET Core</a> od Andrewa Locka.</p>
+</blockquote>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Pokro%c4%8dilej%c5%a1%c3%ad+tvorba+valida%c4%8dn%c3%adch+atribut%c5%af+a+dependency+injection&amp;body=https://www.altair.blog/2020/08/validacni-atributy">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/08/validacni-atributy.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/08/validacni-atributy.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/08/validacni-atributy">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/08/validacni-atributy">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

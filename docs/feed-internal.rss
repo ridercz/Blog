@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/08/validacni-atributy</guid>
+      <title>Pokročilejší tvorba validačních atributů a dependency injection</title>
+      <description>Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection.</description>
+      <link>https://www.altair.blog/2020/08/validacni-atributy</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-08-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/evolby</guid>
       <title>Lesk a bída elektronických voleb</title>
       <description>Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.</description>
@@ -137,15 +146,6 @@
       <category>Akce a události</category>
       <category>3D tisk</category>
       <pubDate>2020-03-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/03/neni-nad-dobry-virus</guid>
-      <title>Není nad dobrý virus</title>
-      <description>Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie.</description>
-      <link>https://www.altair.blog/2020/03/neni-nad-dobry-virus</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2020-03-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
