@@ -6,6 +6,26 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/08/validacni-atributy</guid>
+      <title>Pokročilejší tvorba validačních atributů a dependency injection</title>
+      <description>Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection.</description>
+      <link>https://www.altair.blog/2020/08/validacni-atributy</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-08-13T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3</guid>
+      <title>Šálivý půvab elektronických voleb</title>
+      <description>Ještě jednou o elektronických volbách. Poněkud stručněji a aktuálněji. Nedokážeme vytvořit distanční systém, který by měl vlastnosti toho současného papírového. Pokud bychom měli zavádět elektronické nebo korespondenční hlasování, nejedná se o technikálii, ale o změnu principiální, měnící parametry voleb.</description>
+      <link>https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2020-08-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
       <title>Rychlý export databáze do formátu BACPAC</title>
       <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat.</description>
@@ -121,24 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-04-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</guid>
-      <title>Covid-19 má negativní dopady na kybernetickou bezpečnost a násobně zvedá vytížení cloudových služeb</title>
-      <description>Podle vyhledávače Shodan výrazně stoupl počet VPN a RDP serverů dostupných z Internetu. Výrazně také stouplo vytížení cloudových služeb a uživatelé Microsoft Azure hlásí občasné problémy s kapacitou.</description>
-      <link>https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2020-04-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://nazory.ihned.cz/c7-66742690-psms7-0ecc76e2dea0fd1</guid>
-      <title>Šití roušek je národní ostuda, ne zdroj hrdosti</title>
-      <description>Na svépomocné výrobě roušek či štítů je pozitivní jediná věc: národ se zabaví a neškodí. Ostatně, to věděli dozorci v kriminálech odjakživa, že když vězně pořádně zaměstnají - byť by měli jenom vozit v kolečku písek z jedné hromady na druhou - nebudou mít čas a energii na rebelování.</description>
-      <link>https://nazory.ihned.cz/c7-66742690-psms7-0ecc76e2dea0fd1</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2020-03-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

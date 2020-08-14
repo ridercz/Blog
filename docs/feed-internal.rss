@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/08/validacni-atributy</guid>
+      <title>Pokročilejší tvorba validačních atributů a dependency injection</title>
+      <description>Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection.</description>
+      <link>https://www.altair.blog/2020/08/validacni-atributy</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-08-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
       <title>Rychlý export databáze do formátu BACPAC</title>
       <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-03-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/02/a2d-text</guid>
-      <title>A2D 1.1.0: Podpora pro práci s textem</title>
-      <description>Do své OpenSCAD knihovny pro práci s 2D objekty jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.</description>
-      <link>https://www.altair.blog/2020/02/a2d-text</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-02-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
