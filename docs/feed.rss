@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/08/usb-tethering</guid>
+      <title>Zkuste to s drátem: USB tethering na Androidu</title>
+      <description>Že se z telefonu z Androidem dá udělat Wi-Fi přístupový bod a připojit se z jiného zařízení, třeba PC, je všeobecně známo. Ale pomocí funkce USB Tethering, která je v Androidu standardně od verze 9.0, lze počítač připojit i pomocí USB kabelu, což má mnohé výhody.</description>
+      <link>https://www.altair.blog/2020/08/usb-tethering</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-08-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/08/validacni-atributy</guid>
       <title>Pokročilejší tvorba validačních atributů a dependency injection</title>
       <description>Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-04-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/magclasp</guid>
-      <title>Magnetická spona nejen na roušku: proces vývoje a model v OpenSCADu</title>
-      <description>Jako většinu národa mne zasáhla moudrost naší vlády, která nejdřív občanům zakázala koupit si účinnou ochranu před šířením koronaviru a poté jim přikázala nosit aspoň tu neúčinnou. Protože mne štve zavazování čehokoliv a zejména když na to nevidím, rozhodl jsem se, že na tkaničky od roušky potřebuji nějakou inteligentní sponu. Výsledkem je model univerzální parametrické spony v OpenSCADu, který vám dávám k dispozici. Zároveň popíšu celý proces vzniku modelu, jako jakýsi doplněk svého nedávného online školení o modelování v OpenSCADu.</description>
-      <link>https://www.altair.blog/2020/04/magclasp</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-04-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
