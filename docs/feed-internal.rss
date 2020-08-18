@@ -24,6 +24,29 @@
       <pubDate>2020-08-13T00:00:00</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/07/evolby</guid>
+      <title>Lesk a bída elektronických voleb</title>
+      <description>Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.</description>
+      <link>https://www.altair.blog/2020/07/evolby</link>
+      <author>Michal Altair Valášek</author>
+      <author>Vladimír Smejkal</author>
+      <author>Jindřich Kodl</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2020-07-23T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/07/odpoledni-skoleni</guid>
+      <title>Pozvánka na odpolední školení ASP.NET Core</title>
+      <description>Máte půl dne času? Zvu vás na komplexní online školení ASP.NET Core. Tedy, pokud budete mít půl dne času dva týdny. Koronavirus řadu lidí i firem přesvědčil, že školení nemusí probíhat jenom osobně, ale lze ho dělat i na dálku. A speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho.</description>
+      <link>https://www.altair.blog/2020/07/odpoledni-skoleni</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2020-07-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
       <title>Rychlý export databáze do formátu BACPAC</title>
       <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat.</description>
@@ -122,25 +145,6 @@
       <category>Akce a události</category>
       <category>3D tisk</category>
       <pubDate>2020-03-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/03/openscad</guid>
-      <title>Online školení 3D modelování v OpenSCADu zdarma</title>
-      <description>Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020.</description>
-      <link>https://www.altair.blog/2020/03/openscad</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>3D tisk</category>
-      <pubDate>2020-03-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/03/neni-nad-dobry-virus</guid>
-      <title>Není nad dobrý virus</title>
-      <description>Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie.</description>
-      <link>https://www.altair.blog/2020/03/neni-nad-dobry-virus</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2020-03-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -35,6 +35,29 @@
       <pubDate>2020-08-11T00:00:00</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/07/evolby</guid>
+      <title>Lesk a bída elektronických voleb</title>
+      <description>Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.</description>
+      <link>https://www.altair.blog/2020/07/evolby</link>
+      <author>Michal Altair Valášek</author>
+      <author>Vladimír Smejkal</author>
+      <author>Jindřich Kodl</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2020-07-23T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/07/odpoledni-skoleni</guid>
+      <title>Pozvánka na odpolední školení ASP.NET Core</title>
+      <description>Máte půl dne času? Zvu vás na komplexní online školení ASP.NET Core. Tedy, pokud budete mít půl dne času dva týdny. Koronavirus řadu lidí i firem přesvědčil, že školení nemusí probíhat jenom osobně, ale lze ho dělat i na dálku. A speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho.</description>
+      <link>https://www.altair.blog/2020/07/odpoledni-skoleni</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2020-07-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
       <title>Rychlý export databáze do formátu BACPAC</title>
       <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat.</description>
@@ -123,24 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2020-04-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</guid>
-      <title>Objednávka výprasku</title>
-      <description>Vzhledem k mimořádné pandemické situaci je - až na vzácné výjimky - v podstatě nemožné udělit či přijmout velikonoční výprask. Mnoho akcí se přesouvá do online podoby, ale protože teledildonika (resp. telespanking) je zatím pouze v počáteční fázi vývoje, není to v tomto případě možné. V jiných oborech se zase vydali cestou "voucherů", které umožňují učinit objednávky nyní a vybrat si ji později. Tento formulář jsem vytvořil, abych odstranil akutní nebezpečí uschnutí do příštího roku. Včasným vyplněním jej lze podmínečně odložit do konce karantény a realizace výprasku v náhradním termínu. Online opt-in forma zároveň elegantně řeší otázku konsensuálního přístupu, která je v tradičním podání přinejlepším komplikovaná.</description>
-      <link>https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2020-04-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/modra-zidle</guid>
-      <title>Modrá židle: modelování zase trochu jinak</title>
-      <description>Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu.</description>
-      <link>https://www.altair.blog/2020/04/modra-zidle</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-04-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

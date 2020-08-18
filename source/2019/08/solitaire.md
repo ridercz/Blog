@@ -378,7 +378,7 @@ To je důvod, proč je tak důležité uchovávat klíč v tajnosti. Pokud budet
 
 2. Snažte se, aby byly vaše zprávy krátké. Tento algoritmus je navržen pro krátké zprávy, maximálně pár tisíc znaků dlouhé. Použijte zkratky a slangové výrazy, nebuďte ukecaní. Pokud chcete zašifrovat novelu o 100 000 slovech, použijte počítačový algoritmus.
 
-3. Jako všechny proudové šifry s výstupní zpětnou vazbou má i tento systém tu nešťastnou vlastnost, že nedokáže opravit chyby. Pokud šifrujete zprávu a uděláte v jednom kroku, zbytek zprávy bude zašifrován chybně a nebude možné ho dešifrovat, i s použitím správného klíče. A nikdy se to nedozvíte. Takže pokud šifrujete zprávu, musíte tentýž proces zopakovat dvakrát a porovnat výsledky. Pokud zprávu dešifrujete, průběžně kontrolujte, že dešifrovaný text dává smysl. A pokud jako klíč používáte náhodně zamíchaný balíček, mějte z tohoto důvodu jeden identický záložní.
+3. Jako všechny proudové šifry s výstupní zpětnou vazbou má i tento systém tu nešťastnou vlastnost, že nedokáže opravit chyby. Pokud šifrujete zprávu a uděláte v jednom kroku chybu, zbytek zprávy bude zašifrován chybně a nebude možné ho dešifrovat, i s použitím správného klíče. A nikdy se to nedozvíte. Takže pokud šifrujete zprávu, musíte tentýž proces zopakovat dvakrát a porovnat výsledky. Pokud zprávu dešifrujete, průběžně kontrolujte, že dešifrovaný text dává smysl. A pokud jako klíč používáte náhodně zamíchaný balíček, mějte z tohoto důvodu jeden identický záložní.
 
 4. Solitaire je symetrický reverzibilní algoritmus. To znamená, že pokud necháte zamíchaný balíček někde ležet poté, co jste dokončili práci, tajná policie ho může najít a s jeho pomocí dešifrovat zprávu. Je tedy nutné po dokončení práce balíček důkladně zamíchat, šestkrát.
 
@@ -392,7 +392,7 @@ Psát na cigaretové papírky není tak obtížné, jak by se mohlo zdát. Docel
 
 Každé dobré cigaretové papírky jsou navržené tak, aby shořely úplně a čistě. Papírky značky Club shořely nejlépe volně ve vzduchu, puštěné zhruba z výšky hrudníku. Mají také tu výhodu, že mají velmi malý objem a v případě nutnosti je můžete snadno sníst, pokud to bude potřeba.
 
-Jsou také extrémně tenké. Papírky o ploše tří krychlových palců _(pozn. překladatele: asi jako platební karta)_ mohou být šestkrát přeloženy do čtverečku o straně 1 cm, který je asi milimetr silný. Na jeden papír se pohodlně vejde 80 znaků v osmi řádcích, každý řádek o dvou pětiznakových blocích. Je pravděpodobné, že rozumně pečlivý písař dokáže na takový papírek zapsat až 120 znaků.
+Jsou také extrémně tenké. Papírky o ploše tří čtverečních palců _(pozn. překladatele: asi jako platební karta)_ mohou být šestkrát přeloženy do čtverečku o straně 1 cm, který je asi milimetr silný. Na jeden papír se pohodlně vejde 80 znaků v osmi řádcích, každý řádek o dvou pětiznakových blocích. Je pravděpodobné, že rozumně pečlivý písař dokáže na takový papírek zapsat až 120 znaků.
 
 > **Poznámka překladatele:** U nás běžně dostupné cigaretové papírky značky Vážka jsou menší, mají cca. 68x35 mm, ale bez problémů se mi na ně podařilo zapsat 14 řádků po deseti znacích (dvě skupiny po pěti). Hoří dobře a beze zbytku, pro případ pojídání doporučuji si připravit sklenici s vodou na zapití.
 
