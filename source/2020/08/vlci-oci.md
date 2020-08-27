@@ -1,0 +1,9 @@
+<!-- dcterms:title = Vlčí oči -->
+<!-- dcterms:abstract = Vrhli se na mne hned jakmile jsem odemkl dveře od bytu. Dva chlapi v čerňákách a s kuklami na hlavách mě srazili k zemi, zkroutili mi ruce za zády a zacvakli želízka. O vteřinu později následovala pouta na nohy. Třetí na sobě masku neměl. Nebylo to třeba, protože Milana bych poznal kdykoliv a kdekoliv i s maskou. „Všechno nejlepší k narozeninám, zmrde,“ zazubil se na mne, dal mi pusu a vrazil mi facku. Pak mi přes hlavu přetáhl černý pytel ze silné látky. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2020-08-22 -->
+<!-- x4w:pictureUrl = /perex-pictures/20200822-vlci-oci.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2020/08/vlci-oci -->
