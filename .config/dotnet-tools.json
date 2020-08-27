@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-serve": {
+      "version": "1.7.132",
+      "commands": [
+        "dotnet-serve"
+      ]
+    },
+    "Altairis.XML4web.Compiler": {
+      "version": "2.0.0",
+      "commands": [
+        "x4w-compiler"
+      ]
+    }
+  }
+}

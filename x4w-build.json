@@ -21,6 +21,5 @@
     },
     "TransformParameters": {
         "PageSize": 10
-    },
-    "PrependHtmlDoctype": "<!DOCTYPE html>"
+    }
 }
