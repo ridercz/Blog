@@ -402,53 +402,53 @@ A výhody elektronického hlasování nejsou takové, aby nás k přijetí tako
 
 [^2]: A je důkazem pravdivosti tvrzení, že není důležité, jak se volí, ale jak se počítají hlasy.
 
-[^3]: Informace v této sekci pocházejí zejména z webu ACE Project, <http://www.aceproject.org/>.
+[^3]: Informace v této sekci pocházejí zejména z webu [ACE Project](http://www.aceproject.org/).
 
-[^4]: L'Assemblée des Français de l'étranger, <http://www.assemblee-afe.fr/>.
+[^4]: [L'Assemblée des Français de l'étranger](http://www.assemblee-afe.fr/).
 
 [^5]: ACE Project uvádí: Argentina, Azerbaijan, Belarus, Bulgaria, Chile, Czech Republic, Finland, Greece, Italy, Latvia, Lithuania, Mexico, Nepal, Nigeria, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, South Africa, Spain, South Korea, Sweden
 
-[^6]: <http://www.hs.fi/english/article/1135245067013>
+[^6]: http://www.hs.fi/english/article/1135245067013
 
-[^7]: <http://www.om.fi/Etusivu/Ajankohtaista/Uutiset/1224166604122>
+[^7]: http://www.om.fi/Etusivu/Ajankohtaista/Uutiset/1224166604122
 
-[^8]: Voutsis, N., Zimmerman, F. Anonymous Code Lists For Secure Electronic Voting Over Insecure Mobile Channels. In: Kushchu I., Kuscu M. (Eds.). The Proceedings of the First European Mobile Government Conference (Euro mGov 2005). Brighton, UK , 10-12 July, Mobile Government Consortium International Pub., UK. ISBN: 0-9763341-0-0. <http://www.mgovernment.org/resurces/euromgov2005/PDF/45_R350ZF.pdf>.
+[^8]: Voutsis, N., Zimmerman, F. [Anonymous Code Lists For Secure Electronic Voting Over Insecure Mobile Channels](http://www.mgovernment.org/resurces/euromgov2005/PDF/45_R350ZF.pdf). In: Kushchu I., Kuscu M. (Eds.). The Proceedings of the First European Mobile Government Conference (Euro mGov 2005). Brighton, UK , 10-12 July, Mobile Government Consortium International Pub., UK. ISBN: 0-9763341-0-0.
 
 [^9]: Zejména ve Spojených státech, ale i v Indii, Holandsku, Belgii, Brazílii atd.
 
 [^10]: Podle aktuálního stavu začnou úřady elektronické občanské průkazy vydávat od 1. ledna 2012, nedojde-li ovšem k dalšímu odložení tohoto projektu, což nelze vyloučit.
 
-[^11]: <http://wijvertrouwenstemcomputersniet.nl/Nedap-en>
+[^11]: http://wijvertrouwenstemcomputersniet.nl/Nedap-en
 
-[^12]: <http://www.theregister.co.uk/2007/10/01/dutch_pull_plug_on_evoting/>
+[^12]: http://www.theregister.co.uk/2007/10/01/dutch_pull_plug_on_evoting/
 
-[^13]: <http://www.rte.ie/news/2009/0423/evoting.html>
+[^13]: http://www.rte.ie/news/2009/0423/evoting.html
 
-[^14]: <http://www.bundesverfassungsgericht.de/pressemitteilungen/bvg09-019en.html>
+[^14]: http://www.bundesverfassungsgericht.de/pressemitteilungen/bvg09-019en.html
 
 [^15]: např. Itálie, Francie
 
-[^16]: Problematice se obšírně věnuje web <http://www.indiaevm.org/>, celou zprávu lze nalézt na <http://indiaevm.org/evm_tr2010-jul29.pdf>
+[^16]: Problematice se obšírně věnuje web indiaevm.org, celou zprávu lze nalézt na http://indiaevm.org/evm_tr2010-jul29.pdf.
 
-[^17]: <http://rop.gonggri.jp/?p=431>
+[^17]: http://rop.gonggri.jp/?p=431
 
-[^18]: <http://timesofindia.indiatimes.com/india/Intel-background-check-on-EVM-thief/articleshow/6441674.cms>
+[^18]: http://timesofindia.indiatimes.com/india/Intel-background-check-on-EVM-thief/articleshow/6441674.cms
 
-[^19]: Základní informace jest nalézti příkladně na <http://www.vvk.ee/index.php?id=11178>
+[^19]: Základní informace jest nalézti příkladně na http://www.vvk.ee/index.php?id=11178
 
 [^20]: S jedinou výjimkou srovnání let 2002 a 2006, kde účast naopak vzrostla o šest procentních bodů.
 
 [^21]: Pomineme-li poněkud specifickou situaci voleb v roce 1990, kdy Občanské fórum získalo 53 % hlasů.
 
-[^22]: <http://www.mfcr.cz/cps/rde/xchg/mfcr/xsl/info_zadost_58698.html>
+[^22]: http://www.mfcr.cz/cps/rde/xchg/mfcr/xsl/info_zadost_58698.html
 
-[^23]: http://www.czso.cz/csu/redakce.nsf/i/kolik_z\_nas_pouziva_mobilni_telefon_osobni_pocitac_a\_internet
+[^23]: http://www.czso.cz/csu/redakce.nsf/i/kolik_z_nas_pouziva_mobilni_telefon_osobni_pocitac_a_internet
 
 [^24]: http://www.czso.cz/csu/redakce.nsf/i/k_cemu_vyuzivame_internet
 
 [^25]: Čítající např. v Austrálii přepravu na vzdálenost bezmála čtyř tisíc kilometrů, z Perthu do Canberry nebo Sydney
 
-[^26]: <http://chil.rice.edu/research/pdf/EverettDissertation.pdf>
+[^26]: http://chil.rice.edu/research/pdf/EverettDissertation.pdf
 
 [^27]: Nebo ufoni. Jako ukázku stačí jmenovat několik z IS státní správy, s nimiž byl první z autorů konfrontován při přípravě tohoto článku: volební server ČSÚ, „Veřejná databáze" téhož úřadu, web Ministerstva financí a webové rozhraní ISDS.
 
