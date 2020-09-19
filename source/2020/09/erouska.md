@@ -1,0 +1,11 @@
+<!-- dcterms:title = Placebo, které přišlo pozdě: na rozdíl od jiných opatření ale eRouška 2.0 aspoň neškodí -->
+<!-- dcterms:abstract = Jakou hodnotu má informace "v blíže neurčené době jste se možná vyskytovali poblíž blíže neurčeného nakaženého" s pětinovou šancí, že je falešná? Jaká je očekávaná reakce? Půjdete si na základě takové zprávy stoupnout do několikahodinové fronty na testování, které si budete muset nejspíš sami zaplatit? -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20200919-erouska.jpg -->
+<!-- x4w:pictureCredits = iHNed / Otakar Schön -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2020-09-19 -->
+<!-- x4w:alternateUrl = https://nazory.ihned.cz/c7-66818480-oi0o4-7e68a3d997cdf9c -->

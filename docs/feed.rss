@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://nazory.ihned.cz/c7-66818480-oi0o4-7e68a3d997cdf9c</guid>
+      <title>Placebo, které přišlo pozdě: na rozdíl od jiných opatření ale eRouška 2.0 aspoň neškodí</title>
+      <description>Jakou hodnotu má informace "v blíže neurčené době jste se možná vyskytovali poblíž blíže neurčeného nakaženého" s pětinovou šancí, že je falešná? Jaká je očekávaná reakce? Půjdete si na základě takové zprávy stoupnout do několikahodinové fronty na testování, které si budete muset nejspíš sami zaplatit?</description>
+      <link>https://nazory.ihned.cz/c7-66818480-oi0o4-7e68a3d997cdf9c</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2020-09-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2020/08/vlci-oci</guid>
       <title>Vlčí oči</title>
       <description>Vrhli se na mne hned jakmile jsem odemkl dveře od bytu. Dva chlapi v čerňákách a s kuklami na hlavách mě srazili k zemi, zkroutili mi ruce za zády a zacvakli želízka. O vteřinu později následovala pouta na nohy. Třetí na sobě masku neměl. Nebylo to třeba, protože Milana bych poznal kdykoliv a kdekoliv i s maskou. „Všechno nejlepší k narozeninám, zmrde,“ zazubil se na mne, dal mi pusu a vrazil mi facku. Pak mi přes hlavu přetáhl černý pytel ze silné látky.</description>
@@ -137,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2020-05-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/dateprovider</guid>
-      <title>Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času</title>
-      <description>Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší.</description>
-      <link>https://www.altair.blog/2020/04/dateprovider</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-04-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
