@@ -36,5 +36,8 @@ Rozhodl jsem se dát dohromady seznam věcí, které momentální vládcové Pra
 * [Zábavní pyrotechniku](https://www.novinky.cz/domaci/clanek/radni-v-praze-zvazuji-omezit-pyrotechniku-40309216)
 * [Elektrokola](https://www.praha1.cz/praha-1-prisla-s-resenim-jak-ochranit-obyvatele-prahy-pred-nebezpecnym-fenomenem-elektrokolobezek/)
 * [Prodej beranic soukromými podnikateli v soukromých prostorách](https://twitter.com/ZdenekHrib/status/1217907300066910208)
+* [Hrací automaty](https://www.seznamzpravy.cz/clanek/uz-zadny-hazard-praha-zakazala-automaty-119386)
+* [Dopravu dětí do škol autem](https://www.seznamzpravy.cz/clanek/praha-chce-ochranit-deti-testuje-ranni-zakaz-vjezdu-ke-skolam-118837)
+* [Koně na Staroměstském náměstí](https://www.blesk.cz/clanek/regiony-praha-praha-zpravy/647268/tyrani-koni-v-centru-prahy-jinde-na-svete-nemaji-lepsi-podminky-rikaji-povoznici.html)
 
 > Jsem si vědom toho, že seznam je nutně nekompletní. Pokud máte další tipy na věci, které mi unikly, můžete mi je poslat jako issue nebo rovnou pull request (viz níže). Pokud nevíte jak, pošlete mi je třeba mailem na _blog_@_rider_._cz_.
