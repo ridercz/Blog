@@ -1,0 +1,10 @@
+<!-- dcterms:title = SMS zprávy vyzývající k instalaci eRoušky jsou kybernetickou hrozbou, ta od O2 navíc může narušit soukromí uživatele -->
+<!-- dcterms:abstract = Ukazuje se, že pro stát i v krizové situaci a s podporou českých technologických firem platí nesmrtelná věta někdejšího ruského premiéra Viktora Černomyrdina: Měli jsme ty nejlepší úmysly, ale dopadlo to jako vždy. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20201015-o2erouska.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2020-10-15 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66831160-psms7-2fa8cd3a8d001e3 -->
