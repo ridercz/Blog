@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</guid>
+      <title>Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění</title>
+      <description>Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné.</description>
+      <link>https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2020-10-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66831160-psms7-2fa8cd3a8d001e3</guid>
       <title>SMS zprávy vyzývající k instalaci eRoušky jsou kybernetickou hrozbou, ta od O2 navíc může narušit soukromí uživatele</title>
       <description>Ukazuje se, že pro stát i v krizové situaci a s podporou českých technologických firem platí nesmrtelná věta někdejšího ruského premiéra Viktora Černomyrdina: Měli jsme ty nejlepší úmysly, ale dopadlo to jako vždy.</description>
@@ -139,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2020-05-11T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/05/hp</guid>
-      <title>DIY hotstamping: Znaky bradavických kolejí</title>
-      <description>Moje dcera Alex se zamilovala do světa Harryho Pottera - ostatně, stejně jako její rodiče. Hlásí se k havraspárské koleji, což jí sedí. Když doma začala chodit s ručně vyrobenou havraspárskou kravatou, rozhodl jsem se vyzkoušet techniku hot stampingu, pomocí níž lze na podklad přidat metalický efekt.</description>
-      <link>https://www.altair.blog/2020/05/hp</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2020-05-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

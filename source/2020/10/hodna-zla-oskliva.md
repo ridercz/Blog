@@ -1,0 +1,10 @@
+<!-- dcterms:title = Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění -->
+<!-- dcterms:abstract = Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20201018-hodna-zla-oskliva.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2020-10-18 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5 -->

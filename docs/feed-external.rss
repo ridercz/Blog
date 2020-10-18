@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</guid>
+      <title>Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění</title>
+      <description>Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné.</description>
+      <link>https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2020-10-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66831160-psms7-2fa8cd3a8d001e3</guid>
       <title>SMS zprávy vyzývající k instalaci eRoušky jsou kybernetickou hrozbou, ta od O2 navíc může narušit soukromí uživatele</title>
       <description>Ukazuje se, že pro stát i v krizové situaci a s podporou českých technologických firem platí nesmrtelná věta někdejšího ruského premiéra Viktora Černomyrdina: Měli jsme ty nejlepší úmysly, ale dopadlo to jako vždy.</description>
@@ -134,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-01-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</guid>
-      <title>Magnetický indikátor nálady</title>
-      <description>Ukázkový model pro techniku zatiskávání magnetů dovnitř plastu a vícebarevný tisk. Využívá variability anglického výrazu "FUCK" :-) Celý model je parametrický, lze snadno měnit rozměr, text i počet položek</description>
-      <link>https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-01-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
