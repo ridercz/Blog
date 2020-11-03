@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66838580-psms7-26c20c23d7a4120</guid>
+      <title>Déja vu v klávesnici: Raspberry Pi 400 se vrací ke kořenům domácích počítačů</title>
+      <description>Když jsem byl ještě malý a neškodný, vypadaly prakticky všechny domácí počítače takhle. Plochá, případně - pokud designér věděl něco o ergonomii - mírně zkosená krabička s klávesnicí, uvnitř ní kompletní počítač, to celé připojené k televizi. Nyní se tento koncept vrací jako déjà vu v podobě počítače Raspberry Pi 400.</description>
+      <link>https://tech.ihned.cz/c7-66838580-psms7-26c20c23d7a4120</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</guid>
       <title>Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění</title>
       <description>Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné.</description>
@@ -135,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-01-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</guid>
-      <title>Case pro Raspberry Pi Zero WH a TV HAT</title>
-      <description>Pro Raspberry Pi existuje "TV HAT", což je rozšiřující deska umožňující příjem digitálního televizního vysílání. Ve skutečnosti je to ale SDR (software defined radio) a dá se využít k mnoha zajímavějším věcem. Obvykle se používá v kombinaci s Raspberry Pi Zero WH, které výkonově postačuje. Našel jsem pro tuto kombinaci krabičku, která mi ale úplně nevyhovovala, protože je v ní deska jen volně položená a dost "plave". Proto jsem model modifikoval a publikuji jeho upravenou verzi.</description>
-      <link>https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-01-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

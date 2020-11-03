@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66838580-psms7-26c20c23d7a4120</guid>
+      <title>Déja vu v klávesnici: Raspberry Pi 400 se vrací ke kořenům domácích počítačů</title>
+      <description>Když jsem byl ještě malý a neškodný, vypadaly prakticky všechny domácí počítače takhle. Plochá, případně - pokud designér věděl něco o ergonomii - mírně zkosená krabička s klávesnicí, uvnitř ní kompletní počítač, to celé připojené k televizi. Nyní se tento koncept vrací jako déjà vu v podobě počítače Raspberry Pi 400.</description>
+      <link>https://tech.ihned.cz/c7-66838580-psms7-26c20c23d7a4120</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</guid>
       <title>Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění</title>
       <description>Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné.</description>
@@ -140,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-05-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/05/fachidioti</guid>
-      <title>Vláda zbabělců a fachidiotů</title>
-      <description>V českém veřejném diskursu jsme zvyklí na ledacos. Ovšem prohlášení náměstka ministra zdravotnictví Prymuly, který nás vyzývá k návratu ke klanovým společenstvím, je šílené v takové míře, že vzbudilo podiv i u nás. Lidé prý mají do budoucna žít v menších komunitách, že se budou stýkat tři rodiny a "další komunikace moc nebude". Dokud se nevzdáme havlovského mýtu "nepolitické politiky", lepší to nebude.</description>
-      <link>https://www.altair.blog/2020/05/fachidioti</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2020-05-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
