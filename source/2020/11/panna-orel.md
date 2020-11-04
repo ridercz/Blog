@@ -1,0 +1,11 @@
+<!-- dcterms:title = Panna, nebo orel? Data říkají, že v tramvaji na eRoušku není spoleh, a klamat může i jinde -->
+<!-- dcterms:abstract = Aplikace eRouška je založena na Exposure Notification API. To je API od Apple a Google, které řeší komunikaci zařízení přes Bluetooth. Nad ním postavené aplikace jenom nastavují pravidla pro vyhodnocení kontaktů. Vše vychází z předpokladu, že na základě síly Bluetooth signálu lze vypočítat vzdálenost dvou zařízení a tedy i uživatelů. To výborně funguje teoreticky a v laboratorních podmínkách. V reálném světě to ale funguje podstatně hůře. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20201104-panna-orel.jpg -->
+<!-- x4w:pictureCredits = HN – Lukáš Bíba -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2020-11-04 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66839240-psms7-ab63fc36d4bf866 -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/rpi-400</guid>
+      <title>Déja vu v klávesnici: Raspberry Pi 400 se vrací ke kořenům domácích počítačů</title>
+      <description>Když jsem byl ještě malý a neškodný, vypadaly prakticky všechny domácí počítače takhle. Plochá, případně - pokud designér věděl něco o ergonomii - mírně zkosená krabička s klávesnicí, uvnitř ní kompletní počítač, to celé připojené k televizi. Nyní se tento koncept vrací jako déjà vu v podobě počítače Raspberry Pi 400.</description>
+      <link>https://www.altair.blog/2020/11/rpi-400</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/08/usb-tethering</guid>
       <title>Zkuste to s drátem: USB tethering na Androidu</title>
       <description>Že se z telefonu z Androidem dá udělat Wi-Fi přístupový bod a připojit se z jiného zařízení, třeba PC, je všeobecně známo. Ale pomocí funkce USB Tethering, která je v Androidu standardně od verze 9.0, lze počítač připojit i pomocí USB kabelu, což má mnohé výhody.</description>
@@ -135,16 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-04-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/03/dalsi-plany</guid>
-      <title>Budou další online školení, zdarma i za peníze</title>
-      <description>Bezplatné online školení OpenSCADu, které jsem dělal v úterý, mělo veliký úspěch. Proto připravuji jeho pokračování a další akce, některé zdarma, jiné za peníze. Čtěte dál, pokud chcete vědět, co jsem si pro vás připravil, odpovědi na nejčastější otázky a také mít možnost ovlivnit, o čem školení budou.</description>
-      <link>https://www.altair.blog/2020/03/dalsi-plany</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>3D tisk</category>
-      <pubDate>2020-03-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
