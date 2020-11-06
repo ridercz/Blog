@@ -16,6 +16,15 @@
       <pubDate>2020-11-04T00:00:00</pubDate>
     </item>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66838580-psms7-26c20c23d7a4120</guid>
+      <title>Déja vu v klávesnici: Raspberry Pi 400 se vrací ke kořenům domácích počítačů</title>
+      <description>Když jsem byl ještě malý a neškodný, vypadaly prakticky všechny domácí počítače takhle. Plochá, případně - pokud designér věděl něco o ergonomii - mírně zkosená krabička s klávesnicí, uvnitř ní kompletní počítač, to celé připojené k televizi. Nyní se tento koncept vrací jako déjà vu v podobě počítače Raspberry Pi 400.</description>
+      <link>https://tech.ihned.cz/c7-66838580-psms7-26c20c23d7a4120</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</guid>
       <title>Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění</title>
       <description>Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné.</description>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2020-01-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</guid>
-      <title>Nástěnný držák pro kameru TP-Link Tapo C200</title>
-      <description>TP-Link Tapo C200 je skvělá IP kamera, která podporuje rotaci, má rozumnou kvalitu obrazu, použitelného mobilního klienta a to vše za necelou tisícovku. Co nemá je rozumný držák na zeď. Tak jsem jeden vymodeloval a vytiskl.</description>
-      <link>https://www.prusaprinters.org/prints/18742-tp-link-tapo-c200-bracket</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-01-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
