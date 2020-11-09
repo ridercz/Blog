@@ -1,0 +1,9 @@
+<!-- dcterms:title = Test Raspberry Pi 400: Neobyčejný počítač pro obyčejné lidi je schovaný v klávesnici -->
+<!-- dcterms:abstract = Počítače Raspberry Pi jsou neobyčejné, neboť se nesnaží oslnit schopnostmi a technickými specifikacemi. Jejich parametry jsou ve srovnání s běžnými desktopovými počítači a notebooky velice skromné. Nejsou totiž určeny pro běžné masové použití, ale jako nástroje pro výuku, prototypování nebo třeba domácí kutění a jejich výhodou je nízká cena kolem tisíce korun. Recenzované Raspberry Pi 400 je nicméně jiné, jde o první Raspberry pro obyčejné lidi. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20201109-rpi-400-recenze.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- dcterms:dateAccepted = 2020-11-09 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</guid>
+      <title>Test Raspberry Pi 400: Neobyčejný počítač pro obyčejné lidi je schovaný v klávesnici</title>
+      <description>Počítače Raspberry Pi jsou neobyčejné, neboť se nesnaží oslnit schopnostmi a technickými specifikacemi. Jejich parametry jsou ve srovnání s běžnými desktopovými počítači a notebooky velice skromné. Nejsou totiž určeny pro běžné masové použití, ale jako nástroje pro výuku, prototypování nebo třeba domácí kutění a jejich výhodou je nízká cena kolem tisíce korun. Recenzované Raspberry Pi 400 je nicméně jiné, jde o první Raspberry pro obyčejné lidi.</description>
+      <link>https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=n_A4Z1NK0fk&amp;t=6373</guid>
       <title>Sociální inženýrství ve službách dobra</title>
       <description>Když se řekne sociální inženýrství, většina lidí si pod tím představí buďto zločinné snahy zblbnout uživatele. Nebo sociálně eugenické snahy dávných německých nacistů či současných evropských levičáků. Nicméně sociální inženýrství lze využít i v oblasti kybernetické bezpečnosti: tím, že uživateli umeteme nejbezpečnější cestičku jako tu nejsnazší. Nabízím vám záznam své přednášky na online konferenci LAW FIT 2020.</description>
@@ -142,15 +151,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-07-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/35801-dust-collection-adapter-for-parkside-sander-pbsd-6</guid>
-      <title>Redukce odsávání pro brusku Parkside PBSD 600 A1</title>
-      <description>3D model adaptéru pro připojení běžného vysavače (d = 32 mm) k odsávání pásové brusky Parkside PBSD 600 A1 z Lidlu.</description>
-      <link>https://www.prusaprinters.org/prints/35801-dust-collection-adapter-for-parkside-sander-pbsd-6</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-07-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
