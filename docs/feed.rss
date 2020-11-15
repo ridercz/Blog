@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/futlabis-1</guid>
+      <title>Záznam live codingu aplikace v .NET 5.0 a pozvánka na pokračování</title>
+      <description>Před pár dny Microsoft vydal následovníka .NET Core jménem .NET 5. První aplikace, kterou v něm píšu, bude rezervační systém pro makerspace FutLab. Nabízím vám záznam prvního streamu a pozvánku na další.</description>
+      <link>https://www.altair.blog/2020/11/futlabis-1</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-1</guid>
       <title>Pozvánka na online přednášku Dvounohý kůň versus úřední šiml</title>
       <description>Když popisuji své zážitky s úřady, lidi se mně často ptají, jestli na styk s nimi nedělám nějaké školení. Tak jsem se rozhodl jedno takové udělat, a to online. Lze ho chápat jako jemný úvod do sebeobrany prostřednictvím práva. Nejenom při styku s úřady či policií, ale třeba i ve sporu s obchodníkem při reklamaci nebo sousedem, kterému se nelíbí váš pes.</description>
@@ -144,15 +153,6 @@
       <category>IT</category>
       <category>Akce a události</category>
       <pubDate>2020-07-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
-      <title>Rychlý export databáze do formátu BACPAC</title>
-      <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat.</description>
-      <link>https://www.altair.blog/2020/07/bacpac</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-07-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
