@@ -31,6 +31,10 @@ Něco podobného jsem [už kdysi napsal](https://github.com/ridercz/Rap) v ASP.N
 
 ## Pokračování příště
 
+> * **Kdy:** středa 17. listopadu 2020 od 17:00.
+> * **Kde:** [YouTube stream](https://youtu.be/uSCWcdQYaoU) - tamtéž bude dostupný ihned po skončení záznam.
+> * [Stránka události na Facebooku](https://fb.me/e/280cWpJPA) kde můžete v předstihu pokládat dotazy.
+
 Hlavním tématem druhého dílu bude vytvoření infrastruktury pro přihlášení, odhlášení, reset hesla apod. To si ovšem vyžádá nějaké prerekvizity:
 
 * Instalace a konfigurace knihovny [Conventional Metadata Providers](https://github.com/ridercz/Altairis.ConventionalMetadataProviders) pro lokalizaci validačních chyb a dynamicky generovaného uživatelského rozhraní.
@@ -39,4 +43,5 @@ Hlavním tématem druhého dílu bude vytvoření infrastruktury pro přihláše
 * Implementace resetu hesla.
 * Stylování formulářů.
 
-Na zítřek už mám připravený [jiný stream](https://www.altair.blog/2020/11/obcanka-1), ale pokračování plánují na středu podvečer, na stejnou dobu, tj. cca. 17-19 hodin. Může se to nicméně ještě změnit. Přesný čas oznámím na svém [Twitteru](https://twitter.com/ridercz), [Facebooku](https://facebook.com/rider.cz) a samozřejmě i [YouTube kanálu](https://youtube.com/altairiscz).
+Na zítřek už mám připravený [jiný stream](https://www.altair.blog/2020/11/obcanka-1), ale pokračování plánuji na středu podvečer. 
+
