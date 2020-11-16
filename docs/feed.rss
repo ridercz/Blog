@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-1</guid>
+      <title>Záznam z online přednášky Dvounohý kůň versus úřední šiml</title>
+      <description>Když popisuji své zážitky s úřady, lidi se mně často ptají, jestli na styk s nimi nedělám nějaké školení. Tak jsem se rozhodl jedno takové udělat, a to online. Lze ho chápat jako jemný úvod do sebeobrany prostřednictvím práva. Nejenom při styku s úřady či policií, ale třeba i ve sporu s obchodníkem při reklamaci nebo sousedem, kterému se nelíbí váš pes.</description>
+      <link>https://www.altair.blog/2020/11/obcanka-1</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>Politika</category>
+      <category>Lidé a jiná zvěř</category>
+      <pubDate>2020-11-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/futlabis-1</guid>
       <title>Záznam live codingu aplikace v .NET 5.0 a pozvánka na pokračování</title>
       <description>Před pár dny Microsoft vydal následovníka .NET Core jménem .NET 5. První aplikace, kterou v něm píšu, bude rezervační systém pro makerspace FutLab. Nabízím vám záznam prvního streamu a pozvánku na další.</description>
@@ -13,17 +24,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-1</guid>
-      <title>Pozvánka na online přednášku Dvounohý kůň versus úřední šiml</title>
-      <description>Když popisuji své zážitky s úřady, lidi se mně často ptají, jestli na styk s nimi nedělám nějaké školení. Tak jsem se rozhodl jedno takové udělat, a to online. Lze ho chápat jako jemný úvod do sebeobrany prostřednictvím práva. Nejenom při styku s úřady či policií, ale třeba i ve sporu s obchodníkem při reklamaci nebo sousedem, kterému se nelíbí váš pes.</description>
-      <link>https://www.altair.blog/2020/11/obcanka-1</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Politika</category>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2020-11-12T00:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</guid>
