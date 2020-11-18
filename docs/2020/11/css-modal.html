@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Modální dialog čistě pomocí CSS | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS." />
+    <link rel="canonical" href="https://www.altair.blog/2020/11/css-modal" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Modální dialog čistě pomocí CSS" />
+    <meta name="twitter:description" content="Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200512-taghelpers.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="Modální dialog čistě pomocí CSS" />
+    <meta property="og:description" content="Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20200512-taghelpers.png" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/11/css-modal" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200512-taghelpers.png)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Modální dialog čistě pomocí CSS</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2020-11-17">17. listopadu 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak <a href="/2020/01/scss-menu">pomocí CSS udělat responzivní menu</a>. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS, k čemuž mě inspirovalo <a href="https://codepen.io/timothylong/pen/HhAer">toto demo Timothy Longa</a>.</p>
+<h2 id="ukazkova-aplikace">Ukázková aplikace</h2>
+<p>Ukázková aplikace je <a href="https://github.com/ridercz/FutLabIS">informační systém pro FutLab</a>, který píšu a <a href="https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl">naživo se u toho streamuju</a>.</p>
+<p>Tuto konkrétní změnu jsem neprogramoval při streamu, ale po jeho skončení. Ale ve streamu se párkrát zmiňuji o tom, že akci skončivší úspěchem (např. reset hesla) ukončuji pro jednoduchost tím, že přesměruji uživatele na úvodní stránku a že to později udělám líp. Nyní nastalo to <em>později</em>.</p>
+<p>Kompletní změnu najdete na GitHubu v commitu <a href="https://github.com/ridercz/FutLabIS/commit/e1e013fe7573848c13712d97ffdd6b0d93ea08f7"><code>e1e013f</code></a>.</p>
+<h2 id="kouzlo-selektoru-target">Kouzlo selektoru :target</h2>
+<p>Součástí URL může být též část za znakem <code>#</code>, označovaná jako <em>hash</em> nebo <em>fragment</em>, např. <code>http://www.example.com/path/#neco</code>. Tato část je určena čistě pro klienta a vůbec se neposílá při HTTP requestu na server (server výše uvedený příklad uvidí jenom jako <code>/path/</code>). Často se používá pro různé účely v klientských skriptech, ale její primární účel je jiný. Jedná se o ID elementu ve stránce obsaženého a prohlížeč na dlouhé stránce umí nascrollovat tak, aby byl označený element viditelný. Například <a href="https://en.wikipedia.org/wiki/Penrose_tiling#Features_and_constructions">tento odkaz</a> vás na stránce Wikipedie věnované Penroseovu dláždění nasměruje na nadpis s ID <code>Features_and_constructions</code>.</p>
+<p>No a pomocí CSS selektoru <code>:target</code> můžete pro daný element zařídit speciální stylování v případě, že byl tímto způsobem vybrán. Budete-li například v souboru <code>index.html</code> definovat element <code>&lt;h1 id=&quot;nadpis&quot;&gt;Toto je nadpis&lt;/h1&gt;</code> a jemu odpovídající stylopis <code>h1:target { color: red; }</code>, bude při odkazu na <code>index.html#nadpis</code> element zobrazen červeně.</p>
+<p>Můžeme dokonce zařídit, že ve výchozím stavu nebude prvek vidět vůbec (bude mít nastaveno <code>visibility: hidden</code>) a zobrazí se teprve ve chvíli, kdy na něj odkazuje fragment.</p>
+<blockquote>
+<p>Pozor, není možné použít <code>display: none</code>, protože v takovém případě není element dostupný ani pro fragmentové odkazy.</p>
+</blockquote>
+<h2 id="modalni-dialog">Modální dialog</h2>
+<p>Toho lze využít pro zobrazní modálního informačního okna a jeho zavření, například kliknutím na tlačítko. Mějme jako součást stránky následující HTML fragment:</p>
+<pre><code class="language-html">&lt;div id=&quot;sent&quot; class=&quot;modal&quot;&gt;
+    &lt;article&gt;
+        &lt;header&gt;Info&lt;/header&gt;
+        &lt;p&gt;Password reset instructions were sent to e-mail address registered for this account.&lt;/p&gt;
+        &lt;p&gt;Please follow the instructions in the message.&lt;/p&gt;
+        &lt;footer&gt;
+            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;OK&lt;/a&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+</code></pre>
+<p>a k němu následující kousek CSS, resp. SCSS:</p>
+<pre><code class="language-scss">.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+
+    &amp;:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    article {
+        position: relative;
+        min-width: 30%;
+        max-width: 50%;
+        background-color: #fff;
+        text-align: center;
+
+        header {
+            text-align: left;
+            padding: 5px;
+            background-color: #c00;
+            color: #fff;
+            font-size: 150%;
+        }
+
+        p {
+            margin: 20;
+        }
+
+        footer {
+            margin: 20px;
+        }
+    }
+}
+</code></pre>
+<p>Element <code>div.modal</code> a v něm dlící <code>article</code> atd. je nastylován tak, aby působil dojmem modálního okna - celé okno zakryje poloprůhledný <code>div</code> a v jeho středu bude <code>article</code> nastylovaný jako okno s hlavičkou. Celé to ale nebude vidět, protože <code>div.modal</code> má nastaveno <code>visibility:hidden</code>. Teprve ve chvíli, kdy je aktivní i selektor <code>target</code> se vše zobrazí.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2020/20201117-css-modal.png" alt="Ukázka dialogového okna" /></p>
+<p>Okno lze skrýt klepnutím na odkaz <em>OK</em>, který vede na adresu <code>#</code> - tedy aktuální stránku s prázdným fragmentem. Pokud bychom chtěli okno znovu zobrazit, lze tak učinit třeba po klepnutí na <code>&lt;a href=&quot;#sent&quot;&gt;odkaz&lt;/a&gt;</code>.</p>
+<p>To vše se děje čistě na straně klienta pomocí CSS, není třeba žádná serverová interakce nebo skripty.</p>
+<h2 id="serverova-strana">Serverová strana</h2>
+<p>Na straně serveru sice k fragmentu nemáme přístup, ale můžeme uživatele na stránku a fragmentem přesměrovat. ASP.NET Core má u metod typu <code>RedirectToPage</code> k dispozici overloady, které s fragmentem pracují, stejně tak je v Razoru tag helper <code>asp-fragment</code> který slouží stejnému účelu.</p>
+<p>Podívejte se například na <a href="https://github.com/ridercz/FutLabIS/commit/e1e013fe7573848c13712d97ffdd6b0d93ea08f7#diff-9bf1856ac4acfe88a8c6e88bf489d34b1b621b593848764b03cee42f877dac5a">změnu v souboru <code>ForgotPassword.cshtml.cs</code></a>. Původně tam byl řádek, který uživatele přesměroval na úvodní stránku webu:</p>
+<pre><code class="language-csharp">return this.RedirectToPage(&quot;/Index&quot;);
+</code></pre>
+<p>Nahradil jsem ho přesměrováním na jinou stránku (<code>/Login/Index.cshtml</code>) s fragmentem <code>sent</code>:</p>
+<pre><code class="language-csharp">return this.RedirectToPage(&quot;Index&quot;, null, &quot;sent&quot;);
+</code></pre>
+<p>Na této stránce se pak nachází výše uvedený HTML kód, který zobrazí potvrzovací dialog.</p>
+<h2 id="modalbox-tag-helper">ModalBox tag helper</h2>
+<p>Abych si psaní modálních boxů usnadnil, napsal jsem si na to <a href="https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/TagHelpers/ModalBoxTagHelper.cs">ModalBoxTagHelper</a>. Jedná se o tag helper, který mi vygeneruje výše zmíněné HTML, přičemž v Razoru pak stačí napsat</p>
+<pre><code class="language-html">&lt;modal-box id=&quot;nejakeid&quot; message=&quot;Text zprávy&quot; /&gt;
+</code></pre>
+<p>Využití tag helperu je vidět na <a href="https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/Pages/Login/Index.cshtml">přihlašovací stránce</a>, kde jich na konci mám hned několik, pro zobrazení různých zpráv souvisejících s procesem přihlašování, odhlašování, resetu zapomenutého hesla atd.</p>
+<h2 id="k-cemu-je-to-dobre">K čemu je to dobré?</h2>
+<p>Užitečnost této konstrukce spočívá zejména ve zjednodušení aplikace. Buďto bychom potvrzovací zprávu zobrazili přímo ve stránce vzniklé po POST požadavku, což by ale znamenalo značnou komplikaci view a navíc obecně není vhodné vracet přímou odpověď na POST požadavky, protože to dělá nepořádek v historii a při použití tlačítka <em>Zpět</em> v prohlížeči. Při klasickém <em>POST and redirect</em> zase musíme vytvářet speciální potvrzovací stránku.</p>
+<p>Toto řešení je elegantní, protože fakticky používá metodu <em>POST and redirect</em>, ale uživatele přesměruje ne na speciální stránku, ale na nějakou přibližně logickou (zde přihlašovací) kde zobrazí dialogové okno, které lze snadno zavřít.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Mod%c3%a1ln%c3%ad+dialog+%c4%8dist%c4%9b+pomoc%c3%ad+CSS&amp;body=https://www.altair.blog/2020/11/css-modal">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/11/css-modal.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/11/css-modal.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/11/css-modal">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/11/css-modal">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

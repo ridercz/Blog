@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/css-modal</guid>
+      <title>Modální dialog čistě pomocí CSS</title>
+      <description>Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS.</description>
+      <link>https://www.altair.blog/2020/11/css-modal</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-1</guid>
       <title>Záznam z online přednášky Dvounohý kůň versus úřední šiml</title>
       <description>Když popisuji své zážitky s úřady, lidi se mně často ptají, jestli na styk s nimi nedělám nějaké školení. Tak jsem se rozhodl jedno takové udělat, a to online. Lze ho chápat jako jemný úvod do sebeobrany prostřednictvím práva. Nejenom při styku s úřady či policií, ale třeba i ve sporu s obchodníkem při reklamaci nebo sousedem, kterému se nelíbí váš pes.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2020-04-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/modra-zidle</guid>
-      <title>Modrá židle: modelování zase trochu jinak</title>
-      <description>Praktické modelování v OpenSCADu a využití 3D tisku zase trochu jinak. Často se mne ptáte, co vlastně na 3D tiskárně tisknu. Většinu tvoří různé držáky, krabičky - a náhradní díly. Tohle je ukázka toho třetího případu. A zase trochu jiné techniky modelování v OpenSCADu.</description>
-      <link>https://www.altair.blog/2020/04/modra-zidle</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2020-04-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
