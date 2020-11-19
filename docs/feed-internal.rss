@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/identity-email</guid>
+      <title>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy</title>
+      <description>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</description>
+      <link>https://www.altair.blog/2020/11/identity-email</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/css-modal</guid>
       <title>Modální dialog čistě pomocí CSS</title>
       <description>Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-04-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/drozdi</guid>
-      <title>Luxusní recept pro dobu pandemickou: Drožďová pomazánka</title>
-      <description>Největší český dovozce droždí poprvé v historii na trh pro spotřebitele vrhl půlkilové balení droždí. Jedno se mi podařilo uchvátit a na oslavu jsem se rozhodl udělat drožďovou pomazánku. Zde je ilustrovaný recept.</description>
-      <link>https://www.altair.blog/2020/04/drozdi</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2020-04-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

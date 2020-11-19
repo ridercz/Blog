@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <meta name="Description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
+    <link rel="canonical" href="https://www.altair.blog/2020/11/identity-email" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy" />
+    <meta name="twitter:description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20201118-identity-email.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta property="og:title" content="ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy" />
+    <meta property="og:description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
+    <meta name="og:image" content="https://www.altair.blog/cover-pictures/20201118-identity-email.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2020/11/identity-email" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20201118-identity-email.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2020-11-18">18. listopadu 2020 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</p>
+<p>Toto je jedna ze dvou změn, které jsem od <a href="https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl">live streamu</a> udělal v ukázkové aplikaci <a href="https://github.com/ridercz/FutLabIS">FutLabIS</a> (tou druhou je přidání <a href="/2020/11/css-modal">modálních dialogů pomocí CSS</a>). Změnu najdete jako commit <a href="https://github.com/ridercz/FutLabIS/commit/ec797e8f2eb61a3e2091b99699af3fe5613b14d4"><code>ec797e8</code></a>.</p>
+<h2 id="vlastnosti-identifikujici-uzivatele">Vlastnosti identifikující uživatele</h2>
+<p>ASP.NET Identity o uživatelích schraňuje tři údaje, použitelné pro jejich jednoznačnou identifikaci: <code>Id</code>, <code>UserName</code> a <code>EmailAddress</code>.</p>
+<p><strong>Vlastnost <code>Id</code></strong> je jedinečný automaticky generovaný identifikátor uživatele, který se po celou dobu jeho existence nemění. Ve výchozím nastavení je typu <code>string</code> (v MSSQL databázi má typ <code>nvarchar(max)</code>) a má hodnotu ve formátu GUID (ale uloženou jako řetězec). Typ lze snadno změnit, například na opravdový <code>Guid</code> nebo na <code>int</code>. Stačí podědit třídu reprezentující uživatele od <code>IdentityUser&lt;TKey&gt;</code> kde <code>TKey</code> je typ primárního klíče.</p>
+<p>Například v ukázkové aplikaci <a href="https://github.com/ridercz/FutLabIS">FutLabIS</a> kterou teď <a href="https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl">v live streamu píšu</a> je třída <code>ApplicationUser</code> definována takto:</p>
+<pre><code class="language-cs">namespace Altairis.FutLabIS.Data {
+    public class ApplicationUser : IdentityUser&lt;int&gt; {
+
+        public bool Enabled { get; set; } = true;
+
+        [Required, MinLength(2), MaxLength(2)]
+        public string Language { get; set; }
+
+    }
+}
+</code></pre>
+<p>Jako primární klíč používá automaticky generovaný <code>int</code> (a má navíc vlastnosti <code>Enabled</code> a <code>Language</code>). ID uživatele byste měli používat všude, kde potřebujete uživatele na cokoliv relačně navázat. ASP.NET Identity ho používá třeba pro přiřazení rolí, externích loginů a podobně. Zatímco ostatní dva identifikátory (uživatelské jméno a e-mailová adresa) se případně mohou v čase měnit, ID se měnit nikdy nebude.</p>
+<p><strong>Vlastnost <code>UserName</code></strong> je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte na uživatelské jméno nepoužívejte pro vazbu na jiné objekty.</p>
+<p><strong>Vlastnost <code>EmailAddress</code></strong> je e-mailová adresa, kterou ASP.NET Identity používá. Má specifické API pro potvrzení její změny a patrně budete chtít e-mailovou adresu využít třeba pro reset zapomenutého hesla. Pozor, ve <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0">výchozím nastavení</a> není adresa potvrzována a nemusí být unikátní, tj. pod jednou adresou se může zaregistrovat několik uživatelů.</p>
+<p>Pokud to nepokládáte za dobrý nápad (třeba při použití dále popisovaných řešení), můžete nastavení změnit při registraci služby v <code>ConfigureServices</code>:</p>
+<pre><code class="language-cs">services.AddIdentity&lt;ApplicationUser, ApplicationRole&gt;(options =&gt; {
+    options.User.RequireUniqueEmail = true;
+    options.SignIn.RequireConfirmedEmail = true;
+})
+</code></pre>
+<h2 id="samostatny-username-ano-ci-ne">Samostatný UserName: ano či ne?</h2>
+<p>Je otázkou, zda by vaše aplikace vůbec měla samostatné uživatelské jméno vyžadovat. Kloním se k závěru, že obecně nikoliv. Většina moderních systémů používá místo uživatelského jména e-mailovou adresu, vycházeje z premisy, že si uživatel nebude muset pamatovat další údaj.</p>
+<p>Tento přístup má nicméně i dvě nevýhody:</p>
+<ul>
+<li>Mnoho uživatelů má několik e-mailových adres a nepamatuje si, kterou použili pro registraci ve vaší službě.</li>
+<li>Některé aplikace vyžadují interakci mezi uživateli a v takovém případě je dobré zobrazovat jejich přezdívky nebo něco podobného, ne e-mailové adresy. Uživatelské jméno pro tento účel vyhovuje výtečně.</li>
+</ul>
+<h3 id="e-mailova-adresa-misto-uzivatelskeho-jmena">E-mailová adresa místo uživatelského jména</h3>
+<p>Chcete-li používat e-mailovou adresu místo uživatelského jména, můžete to v ASP.NET Identity vyřešit pomocí vlastní třídy poděděné od <code>UserManager&lt;TUser&gt;</code>. V ní přepište metody pro práci s uživateli tak, aby při jejich vytváření nebo změně prostě vygenerovaly uživatelské jméno na základě e-mailové adresy. Já jsem si udělal metodu <code>PrepareUser</code> a tu volám všude, kde se s uživateli pracuje.</p>
+<p>Třída <code>ApplicationUserManager</code> pak může vypadat třeba takto:</p>
+<pre><code class="language-cs">public class ApplicationUserManager : UserManager&lt;ApplicationUser&gt; {
+    private readonly IDateProvider dateProvider;
+
+    public ApplicationUserManager(IUserStore&lt;ApplicationUser&gt; store, IOptions&lt;IdentityOptions&gt; optionsAccessor, IPasswordHasher&lt;ApplicationUser&gt; passwordHasher, IEnumerable&lt;IUserValidator&lt;ApplicationUser&gt;&gt; userValidators, Enumerable&lt;IPasswordValidator&lt;ApplicationUser&gt;&gt; passwordValidators, ILookupNormalizer keyNormalizer, IdentityErrorDescriber errors, IServiceProvider services, ILogger&lt;UserManager&lt;ApplicationUser&gt;&gt; logger)
+        : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger) {
+    }
+
+    public override Task&lt;IdentityResult&gt; CreateAsync(ApplicationUser user) {
+        if (user is null) throw new ArgumentNullException(nameof(user));
+
+        return base.CreateAsync(this.PrepareUser(user));
+    }
+
+    public override Task&lt;IdentityResult&gt; CreateAsync(ApplicationUser user, string password) {
+        if (user is null) throw new ArgumentNullException(nameof(user));
+        if (password == null) throw new ArgumentNullException(nameof(password));
+        if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(password));
+
+        return base.CreateAsync(this.PrepareUser(user), password);
+    }
+
+    public override Task&lt;IdentityResult&gt; UpdateAsync(ApplicationUser user) {
+        if (user is null) throw new ArgumentNullException(nameof(user));
+
+        return base.UpdateAsync(this.PrepareUser(user));
+    }
+
+    public override Task&lt;IdentityResult&gt; ChangeEmailAsync(ApplicationUser user, string newEmail, string token) {
+        if (user is null) throw new ArgumentNullException(nameof(user));
+        if (newEmail == null) throw new ArgumentNullException(nameof(newEmail));
+        if (string.IsNullOrWhiteSpace(newEmail)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(newEmail));
+        if (token == null) throw new ArgumentNullException(nameof(token));
+        if (string.IsNullOrWhiteSpace(token)) throw new ArgumentException(&quot;Value cannot be empty or whitespace only string.&quot;, nameof(token));
+
+        return base.ChangeEmailAsync(this.PrepareUser(user, newEmail), newEmail, token);
+    }
+
+    private ApplicationUser PrepareUser(ApplicationUser user, string newEmail = null) {
+        // Use e-mail as username
+        if (string.IsNullOrEmpty(user.Email)) throw new ArgumentException(&quot;E-mail address must be specified.&quot;, nameof(user));
+        user.UserName = newEmail?.ToLowerInvariant() ?? user.Email.ToLowerInvariant();
+        return user;
+    }
+
+}
+</code></pre>
+<p>Pokud ji chcete použít všude, kde si necháte nainjectovat <code>UserManager&lt;ApplicationUser&gt;</code>, zaregistrujte ji do IoC/DI kontejneru pomocí metody <code>AddUserManager</code>:</p>
+<pre><code class="language-cs">services.AddIdentity&lt;ApplicationUser, ApplicationRole&gt;(...)
+    .AddUserManager&lt;Services.ApplicationUserManager&gt;();
+</code></pre>
+<h3 id="ponechani-uzivatelskeho-jmena-ale-umozneni-prihlaseni-i-pomoci-e-mailu">Ponechání uživatelského jména, ale umožnění přihlášení i pomocí e-mailu</h3>
+<p>V ukázkové aplikaci FutLabIS výše uvedené řešení použít nechci, protože tam uživatelé budou v rámci systému vystupovat pod svými přezdívkami (uživatelé vidí cizí rezervace). Nicméně pokládám za vhodné, aby uživatelé mohli pro přihlášení použít i svou e-mailovou adresu, nejenom uživatelské jméno.</p>
+<p>V takovém případě je řešení podobné: vytvoříme vlastního potomka třídy <code>SignInManager&lt;TUser&gt;</code> a dopíšeme do něj požadovanou funkcionalitu. Podívejte se, jak vypadá v ukázkové aplikaci třída <a href="https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/Services/ApplicationSignInManager.cs"><code>ApplicationSignInManager</code></a>:</p>
+<pre><code class="language-cs">namespace Altairis.FutLabIS.Web.Services {
+    public class ApplicationSignInManager : SignInManager&lt;ApplicationUser&gt; {
+        public ApplicationSignInManager(UserManager&lt;ApplicationUser&gt; userManager, IHttpContextAccessor contextAccessor, IUserClaimsPrincipalFactory&lt;ApplicationUser&gt; claimsFactory, IOptions&lt;IdentityOptions&gt; optionsAccessor, ILogger&lt;SignInManager&lt;ApplicationUser&gt;&gt; logger, IAuthenticationSchemeProvider schemes, IUserConfirmation&lt;ApplicationUser&gt; confirmation) : base(userManager, contextAccessor, claimsFactory, optionsAccessor, logger, schemes, confirmation) { }
+
+        public override async Task&lt;SignInResult&gt; PasswordSignInAsync(string userName, string password, bool isPersistent, bool lockoutOnFailure) {
+            var result = await base.PasswordSignInAsync(userName, password, isPersistent, lockoutOnFailure);
+
+            // Allow sign-in using e-mail address, not only user name
+            if (result == SignInResult.Failed &amp;&amp; userName.Contains('@')) {
+                var userFoundByEmail = await this.UserManager.FindByEmailAsync(userName);
+                if (userFoundByEmail != null) result = await base.PasswordSignInAsync(userFoundByEmail, password, isPersistent, lockoutOnFailure);
+            }
+            return result;
+        }
+
+        public override async Task&lt;bool&gt; CanSignInAsync(ApplicationUser user) {
+            if (user is null) throw new System.ArgumentNullException(nameof(user));
+
+            return await base.CanSignInAsync(user).ConfigureAwait(false)
+                ? user.Enabled
+                : false;
+        }
+
+    }
+}
+</code></pre>
+<p>Přepsal jsem v ní dvě metody. Metoda <code>CanSignInAsync</code> je mimo téma tohoto článku a zajišťuje, že se smí přihlásit pouze uživatel, jehož vlastnost <code>Enabled</code> je nastavena na <code>true</code>. ASP.NET Identity ve výchozím nastavení nepodporuje blokování uživatelů a tímto způsobem ho lze zařídit.</p>
+<blockquote>
+<p>Poznámka: Metoda <code>CanSignInAsync</code> je jednoduché API, které umožní zablokovat přihlášení uživatele tím, že vrátí <code>false</code>. Neumožňuje ale sdělit volajícímu kódu důvod proč nebyl uživatel přihlášen, vrátí prostě <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinresult?view=aspnetcore-5.0"><code>SignInResult.NotAllowed</code></a>. Pokud byste chtěli dál poslat zdůvodnění, přepište místo toho metodu <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1.presignincheck?view=aspnetcore-5.0"><code>PreSignInCheck</code></a>, která umí vrátit konkrétní důvod (<a href="https://github.com/aspnet/Identity/issues/938">vlastní <code>SignInResult</code></a>).</p>
+</blockquote>
+<p>Pro nás je podstatná metoda <code>PasswordSignInAsync</code>, která se pokusí uživatele přihlásit pomocí kombinace uživatelského jména a hesla. V ní se nejdříve pokusím uživatele přihlásit standardním systémem, voláním bázové metody. Pokud se mi to nepovede, výsledek je <code>Failed</code>. Což může být způsobeno několika příčinami, z nichž jednou je neexistence uživatele.</p>
+<p>Pokud bylo přihlášení neúspěšné a uživatelské jméno obsahuje znak <code>@</code>, pojme můj kód podezření, že uživatel nezadal své jméno ale e-mailovou adresu. V takovém případě se pokusí najít uživatele s danou e-mailovou adresou voláním metody <code>FindByEmailAsync</code> a pokud se mu to podaří, pokusí se uživatele přihlásit se zadaným heslem.</p>
+<p>Naši vlastní třídu pak samozřejmě musíme zaregistrovat do IoC/DI kontejneru:</p>
+<pre><code class="language-cs">services.AddIdentity&lt;ApplicationUser, ApplicationRole&gt;(...)
+    .AddSignInManager&lt;Services.ApplicationSignInManager&gt;();
+</code></pre>
+<h2 id="zaver">Závěr</h2>
+<p>Vše výše uvedené můžeme udělat &quot;jednodušeji&quot; přímo v obsluze akce přihlášení, vytváření uživatele atd. Nicméně to není dobrý nápad, protože se může stát, že uživatele budeme zakládat nebo přihlašovat jinak, třeba při hromadném importu nebo tak něco, a aplikace se bude chovat nekonzistentně.</p>
+<p>Mnohem vhodnější je použít předem připravené extensibility pointy, které nám ASP.NET Identity nabízí v podobě možnosti dědit z výše uvedených tříd.</p>
+<ul>
+<li><code>UserManager&lt;TUser&gt;</code> je třída, pomocí které aplikace spravuje databázi uživatelů. Obsahuje metody pro jejich vytváření, změny, mazání a podobně. Je to vhodný extensibility point pro případy, kdy chceme měnit ukládané hodnoty. Zde například nastavením uživatelského jména podle e-mailu.</li>
+<li><code>SignInManager&lt;TUser&gt;</code> pak řeší přihlašování a odhlašování uživatelů. Umožňuje přepsáním správných metod ovlivnit proces přihlašování, například implementací možnosti zakázání uživatele, nebo kreativní prací s uživatelským jménem.</li>
+</ul>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=ASP.NET+Identity%3a+P%c5%99ihl%c3%a1%c5%a1en%c3%ad+pomoc%c3%ad+u%c5%beivatelsk%c3%a9ho+jm%c3%a9na+nebo+e-mailov%c3%a9+adresy&amp;body=https://www.altair.blog/2020/11/identity-email">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2020/11/identity-email.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2020/11/identity-email.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2020/11/identity-email">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2020/11/identity-email">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2020</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
