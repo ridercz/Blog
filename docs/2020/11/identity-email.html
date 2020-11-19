@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
-    <meta name="Description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
+    <meta name="Description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
     <link rel="canonical" href="https://www.altair.blog/2020/11/identity-email" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
@@ -19,12 +19,12 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy" />
-    <meta name="twitter:description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
+    <meta name="twitter:description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
     <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20201118-identity-email.jpg" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta property="og:title" content="ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy" />
-    <meta property="og:description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
+    <meta property="og:description" content="ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci." />
     <meta name="og:image" content="https://www.altair.blog/cover-pictures/20201118-identity-email.jpg" />
     <meta property="og:locale" content="cs_CZ" />
     <meta property="og:url" content="https://www.altair.blog/2020/11/identity-email" />
@@ -124,11 +124,14 @@
         </div>
       </aside>
       <section class="article-text">
-        <p>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</p>
+        <p>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy <code>UserManager</code> a <code>SignInManager</code>, jejichž změnou můžete v aplikaci udělat velké věci.</p>
+<blockquote>
 <p>Toto je jedna ze dvou změn, které jsem od <a href="https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl">live streamu</a> udělal v ukázkové aplikaci <a href="https://github.com/ridercz/FutLabIS">FutLabIS</a> (tou druhou je přidání <a href="/2020/11/css-modal">modálních dialogů pomocí CSS</a>). Změnu najdete jako commit <a href="https://github.com/ridercz/FutLabIS/commit/ec797e8f2eb61a3e2091b99699af3fe5613b14d4"><code>ec797e8</code></a>.</p>
+</blockquote>
 <h2 id="vlastnosti-identifikujici-uzivatele">Vlastnosti identifikující uživatele</h2>
 <p>ASP.NET Identity o uživatelích schraňuje tři údaje, použitelné pro jejich jednoznačnou identifikaci: <code>Id</code>, <code>UserName</code> a <code>EmailAddress</code>.</p>
-<p><strong>Vlastnost <code>Id</code></strong> je jedinečný automaticky generovaný identifikátor uživatele, který se po celou dobu jeho existence nemění. Ve výchozím nastavení je typu <code>string</code> (v MSSQL databázi má typ <code>nvarchar(max)</code>) a má hodnotu ve formátu GUID (ale uloženou jako řetězec). Typ lze snadno změnit, například na opravdový <code>Guid</code> nebo na <code>int</code>. Stačí podědit třídu reprezentující uživatele od <code>IdentityUser&lt;TKey&gt;</code> kde <code>TKey</code> je typ primárního klíče.</p>
+<h3 id="id">Id</h3>
+<p>Vlastnost <code>Id</code> je jedinečný automaticky generovaný identifikátor uživatele, který se po celou dobu jeho existence nemění. Ve výchozím nastavení je typu <code>string</code> (v MSSQL databázi má typ <code>nvarchar(max)</code>) a má hodnotu ve formátu GUID (ale uloženou jako řetězec). Typ lze snadno změnit, například na opravdový <code>Guid</code> nebo na <code>int</code>. Stačí podědit třídu reprezentující uživatele od <code>IdentityUser&lt;TKey&gt;</code> kde <code>TKey</code> je typ primárního klíče.</p>
 <p>Například v ukázkové aplikaci <a href="https://github.com/ridercz/FutLabIS">FutLabIS</a> kterou teď <a href="https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl">v live streamu píšu</a> je třída <code>ApplicationUser</code> definována takto:</p>
 <pre><code class="language-cs">namespace Altairis.FutLabIS.Data {
     public class ApplicationUser : IdentityUser&lt;int&gt; {
@@ -142,8 +145,10 @@
 }
 </code></pre>
 <p>Jako primární klíč používá automaticky generovaný <code>int</code> (a má navíc vlastnosti <code>Enabled</code> a <code>Language</code>). ID uživatele byste měli používat všude, kde potřebujete uživatele na cokoliv relačně navázat. ASP.NET Identity ho používá třeba pro přiřazení rolí, externích loginů a podobně. Zatímco ostatní dva identifikátory (uživatelské jméno a e-mailová adresa) se případně mohou v čase měnit, ID se měnit nikdy nebude.</p>
-<p><strong>Vlastnost <code>UserName</code></strong> je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte na uživatelské jméno nepoužívejte pro vazbu na jiné objekty.</p>
-<p><strong>Vlastnost <code>EmailAddress</code></strong> je e-mailová adresa, kterou ASP.NET Identity používá. Má specifické API pro potvrzení její změny a patrně budete chtít e-mailovou adresu využít třeba pro reset zapomenutého hesla. Pozor, ve <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0">výchozím nastavení</a> není adresa potvrzována a nemusí být unikátní, tj. pod jednou adresou se může zaregistrovat několik uživatelů.</p>
+<h3 id="username">UserName</h3>
+<p>Vlastnost <code>UserName</code> je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte na uživatelské jméno nepoužívejte pro vazbu na jiné objekty.</p>
+<h3 id="emailaddress">EmailAddress</h3>
+<p>Vlastnost <code>EmailAddress</code> je e-mailová adresa, kterou ASP.NET Identity používá. Má specifické API pro potvrzení její změny a patrně budete chtít e-mailovou adresu využít třeba pro reset zapomenutého hesla. Pozor, ve <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0">výchozím nastavení</a> není adresa potvrzována a nemusí být unikátní, tj. pod jednou adresou se může zaregistrovat několik uživatelů.</p>
 <p>Pokud to nepokládáte za dobrý nápad (třeba při použití dále popisovaných řešení), můžete nastavení změnit při registraci služby v <code>ConfigureServices</code>:</p>
 <pre><code class="language-cs">services.AddIdentity&lt;ApplicationUser, ApplicationRole&gt;(options =&gt; {
     options.User.RequireUniqueEmail = true;
@@ -241,9 +246,9 @@
 </code></pre>
 <p>Přepsal jsem v ní dvě metody. Metoda <code>CanSignInAsync</code> je mimo téma tohoto článku a zajišťuje, že se smí přihlásit pouze uživatel, jehož vlastnost <code>Enabled</code> je nastavena na <code>true</code>. ASP.NET Identity ve výchozím nastavení nepodporuje blokování uživatelů a tímto způsobem ho lze zařídit.</p>
 <blockquote>
-<p>Poznámka: Metoda <code>CanSignInAsync</code> je jednoduché API, které umožní zablokovat přihlášení uživatele tím, že vrátí <code>false</code>. Neumožňuje ale sdělit volajícímu kódu důvod proč nebyl uživatel přihlášen, vrátí prostě <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinresult?view=aspnetcore-5.0"><code>SignInResult.NotAllowed</code></a>. Pokud byste chtěli dál poslat zdůvodnění, přepište místo toho metodu <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1.presignincheck?view=aspnetcore-5.0"><code>PreSignInCheck</code></a>, která umí vrátit konkrétní důvod (<a href="https://github.com/aspnet/Identity/issues/938">vlastní <code>SignInResult</code></a>).</p>
+<p>Metoda <code>CanSignInAsync</code> je jednoduché API, které umožní zablokovat přihlášení uživatele tím, že vrátí <code>false</code>. Neumožňuje ale sdělit volajícímu kódu důvod proč nebyl uživatel přihlášen, vrátí prostě <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinresult?view=aspnetcore-5.0"><code>SignInResult.NotAllowed</code></a>. Pokud byste chtěli dál poslat zdůvodnění, přepište místo toho metodu <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1.presignincheck?view=aspnetcore-5.0"><code>PreSignInCheck</code></a>, která umí vrátit konkrétní důvod (<a href="https://github.com/aspnet/Identity/issues/938">vlastní <code>SignInResult</code></a>).</p>
 </blockquote>
-<p>Pro nás je podstatná metoda <code>PasswordSignInAsync</code>, která se pokusí uživatele přihlásit pomocí kombinace uživatelského jména a hesla. V ní se nejdříve pokusím uživatele přihlásit standardním systémem, voláním bázové metody. Pokud se mi to nepovede, výsledek je <code>Failed</code>. Což může být způsobeno několika příčinami, z nichž jednou je neexistence uživatele.</p>
+<p>Pro nás je podstatná metoda <code>PasswordSignInAsync</code>, která se pokusí uživatele přihlásit pomocí kombinace zadaného uživatelského jména a hesla. V ní se nejdříve pokusím uživatele přihlásit standardním systémem, voláním bázové metody. Pokud se mi to nepovede, výsledek je <code>Failed</code>. Což může být způsobeno několika příčinami, z nichž jednou je neexistence uživatele.</p>
 <p>Pokud bylo přihlášení neúspěšné a uživatelské jméno obsahuje znak <code>@</code>, pojme můj kód podezření, že uživatel nezadal své jméno ale e-mailovou adresu. V takovém případě se pokusí najít uživatele s danou e-mailovou adresou voláním metody <code>FindByEmailAsync</code> a pokud se mu to podaří, pokusí se uživatele přihlásit se zadaným heslem.</p>
 <p>Naši vlastní třídu pak samozřejmě musíme zaregistrovat do IoC/DI kontejneru:</p>
 <pre><code class="language-cs">services.AddIdentity&lt;ApplicationUser, ApplicationRole&gt;(...)

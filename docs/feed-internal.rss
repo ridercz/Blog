@@ -8,7 +8,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/identity-email</guid>
       <title>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy</title>
-      <description>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</description>
+      <description>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</description>
       <link>https://www.altair.blog/2020/11/identity-email</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>

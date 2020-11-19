@@ -1,5 +1,5 @@
 <!-- dcterms:title = ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy -->
-<!-- dcterms:abstract = ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci. -->
+<!-- dcterms:abstract = ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20201118-identity-email.jpg -->
 <!-- x4w:pictureWidth = 150 -->
@@ -8,15 +8,17 @@
 <!-- x4w:category = IT -->
 <!-- dcterms:dateAccepted = 2020-11-18 -->
 
-ASP.NET Identity při přihlášení vyžaduje uživatelské jméno a heslo. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.
+ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy `UserManager` a `SignInManager`, jejichž změnou můžete v aplikaci udělat velké věci.
 
-Toto je jedna ze dvou změn, které jsem od [live streamu](https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl) udělal v ukázkové aplikaci [FutLabIS](https://github.com/ridercz/FutLabIS) (tou druhou je přidání [modálních dialogů pomocí CSS](/2020/11/css-modal)). Změnu najdete jako commit [`ec797e8`](https://github.com/ridercz/FutLabIS/commit/ec797e8f2eb61a3e2091b99699af3fe5613b14d4).
+> Toto je jedna ze dvou změn, které jsem od [live streamu](https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl) udělal v ukázkové aplikaci [FutLabIS](https://github.com/ridercz/FutLabIS) (tou druhou je přidání [modálních dialogů pomocí CSS](/2020/11/css-modal)). Změnu najdete jako commit [`ec797e8`](https://github.com/ridercz/FutLabIS/commit/ec797e8f2eb61a3e2091b99699af3fe5613b14d4).
 
 ## Vlastnosti identifikující uživatele
 
 ASP.NET Identity o uživatelích schraňuje tři údaje, použitelné pro jejich jednoznačnou identifikaci: `Id`, `UserName` a `EmailAddress`.
 
-**Vlastnost `Id`** je jedinečný automaticky generovaný identifikátor uživatele, který se po celou dobu jeho existence nemění. Ve výchozím nastavení je typu `string` (v MSSQL databázi má typ `nvarchar(max)`) a má hodnotu ve formátu GUID (ale uloženou jako řetězec). Typ lze snadno změnit, například na opravdový `Guid` nebo na `int`. Stačí podědit třídu reprezentující uživatele od `IdentityUser<TKey>` kde `TKey` je typ primárního klíče.
+### Id
+
+Vlastnost `Id` je jedinečný automaticky generovaný identifikátor uživatele, který se po celou dobu jeho existence nemění. Ve výchozím nastavení je typu `string` (v MSSQL databázi má typ `nvarchar(max)`) a má hodnotu ve formátu GUID (ale uloženou jako řetězec). Typ lze snadno změnit, například na opravdový `Guid` nebo na `int`. Stačí podědit třídu reprezentující uživatele od `IdentityUser<TKey>` kde `TKey` je typ primárního klíče.
 
 Například v ukázkové aplikaci [FutLabIS](https://github.com/ridercz/FutLabIS) kterou teď [v live streamu píšu](https://www.youtube.com/playlist?list=PLoOpAe_g1x4IxYK9A8aT0To60DF6IHTFl) je třída `ApplicationUser` definována takto:
 
@@ -35,9 +37,13 @@ namespace Altairis.FutLabIS.Data {
 
 Jako primární klíč používá automaticky generovaný `int` (a má navíc vlastnosti `Enabled` a `Language`). ID uživatele byste měli používat všude, kde potřebujete uživatele na cokoliv relačně navázat. ASP.NET Identity ho používá třeba pro přiřazení rolí, externích loginů a podobně. Zatímco ostatní dva identifikátory (uživatelské jméno a e-mailová adresa) se případně mohou v čase měnit, ID se měnit nikdy nebude.
 
-**Vlastnost `UserName`** je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte na uživatelské jméno nepoužívejte pro vazbu na jiné objekty.
+### UserName
 
-**Vlastnost `EmailAddress`** je e-mailová adresa, kterou ASP.NET Identity používá. Má specifické API pro potvrzení její změny a patrně budete chtít e-mailovou adresu využít třeba pro reset zapomenutého hesla. Pozor, ve [výchozím nastavení](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0) není adresa potvrzována a nemusí být unikátní, tj. pod jednou adresou se může zaregistrovat několik uživatelů.
+Vlastnost `UserName` je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte na uživatelské jméno nepoužívejte pro vazbu na jiné objekty.
+
+### EmailAddress
+
+Vlastnost `EmailAddress` je e-mailová adresa, kterou ASP.NET Identity používá. Má specifické API pro potvrzení její změny a patrně budete chtít e-mailovou adresu využít třeba pro reset zapomenutého hesla. Pozor, ve [výchozím nastavení](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0) není adresa potvrzována a nemusí být unikátní, tj. pod jednou adresou se může zaregistrovat několik uživatelů.
 
 Pokud to nepokládáte za dobrý nápad (třeba při použití dále popisovaných řešení), můžete nastavení změnit při registraci služby v `ConfigureServices`:
 
@@ -154,9 +160,9 @@ namespace Altairis.FutLabIS.Web.Services {
 
 Přepsal jsem v ní dvě metody. Metoda `CanSignInAsync` je mimo téma tohoto článku a zajišťuje, že se smí přihlásit pouze uživatel, jehož vlastnost `Enabled` je nastavena na `true`. ASP.NET Identity ve výchozím nastavení nepodporuje blokování uživatelů a tímto způsobem ho lze zařídit.
 
-> Poznámka: Metoda `CanSignInAsync` je jednoduché API, které umožní zablokovat přihlášení uživatele tím, že vrátí `false`. Neumožňuje ale sdělit volajícímu kódu důvod proč nebyl uživatel přihlášen, vrátí prostě [`SignInResult.NotAllowed`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinresult?view=aspnetcore-5.0). Pokud byste chtěli dál poslat zdůvodnění, přepište místo toho metodu [`PreSignInCheck`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1.presignincheck?view=aspnetcore-5.0), která umí vrátit konkrétní důvod ([vlastní `SignInResult`](https://github.com/aspnet/Identity/issues/938)).
+> Metoda `CanSignInAsync` je jednoduché API, které umožní zablokovat přihlášení uživatele tím, že vrátí `false`. Neumožňuje ale sdělit volajícímu kódu důvod proč nebyl uživatel přihlášen, vrátí prostě [`SignInResult.NotAllowed`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinresult?view=aspnetcore-5.0). Pokud byste chtěli dál poslat zdůvodnění, přepište místo toho metodu [`PreSignInCheck`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.signinmanager-1.presignincheck?view=aspnetcore-5.0), která umí vrátit konkrétní důvod ([vlastní `SignInResult`](https://github.com/aspnet/Identity/issues/938)).
 
-Pro nás je podstatná metoda `PasswordSignInAsync`, která se pokusí uživatele přihlásit pomocí kombinace uživatelského jména a hesla. V ní se nejdříve pokusím uživatele přihlásit standardním systémem, voláním bázové metody. Pokud se mi to nepovede, výsledek je `Failed`. Což může být způsobeno několika příčinami, z nichž jednou je neexistence uživatele.
+Pro nás je podstatná metoda `PasswordSignInAsync`, která se pokusí uživatele přihlásit pomocí kombinace zadaného uživatelského jména a hesla. V ní se nejdříve pokusím uživatele přihlásit standardním systémem, voláním bázové metody. Pokud se mi to nepovede, výsledek je `Failed`. Což může být způsobeno několika příčinami, z nichž jednou je neexistence uživatele.
 
 Pokud bylo přihlášení neúspěšné a uživatelské jméno obsahuje znak `@`, pojme můj kód podezření, že uživatel nezadal své jméno ale e-mailovou adresu. V takovém případě se pokusí najít uživatele s danou e-mailovou adresou voláním metody `FindByEmailAsync` a pokud se mu to podaří, pokusí se uživatele přihlásit se zadaným heslem.
 
