@@ -39,7 +39,7 @@ Jako primární klíč používá automaticky generovaný `int` (a má navíc vl
 
 ### UserName
 
-Vlastnost `UserName` je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte na uživatelské jméno nepoužívejte pro vazbu na jiné objekty.
+Vlastnost `UserName` je přihlašovací jméno. Na rozdíl od některých jiných systémů ASP.NET Identity umožňuje, aby si uživatel své jméno změnil. Je samozřejmě na vás, zda mu to dovolíte a dáte mu k tomu odpovídající UI, ale API to umožňuje. Raději ve své aplikaci s možností změny počítejte a uživatelské jméno nepoužívejte pro vazbu na jiné objekty.
 
 ### EmailAddress
 
