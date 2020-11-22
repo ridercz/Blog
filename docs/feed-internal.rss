@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/at-zije-dotnet</guid>
+      <title>.NET Core je mrtvý, ať žije .NET 5!</title>
+      <description>Slavná fráze "Le roi est mort, vive le roi!" poprvé zazněla ve Francii v roce 1422, když po smrti Karla VI na trůn nastoupil Karel VII. Zdánlivě paradoxní výrok "Král je mrtev, ať žije král!" má hluboký smysl: sděluje, že ačkoliv konkrétní král zemřel, na jeho místo nastoupíl jiný a král jako instituce je věčný. Ve Francii to pravda s tou věčností úplně nevyšlo, tak uvidíme jak to dopadne s .NETem.</description>
+      <link>https://www.altair.blog/2020/11/at-zije-dotnet</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2020-11-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/identity-email</guid>
       <title>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy</title>
       <description>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bastlení</category>
       <pubDate>2020-05-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/04/dateprovider</guid>
-      <title>Altairis.Services.DateProvider - jak na časové zóny a přílišnou přesnost času</title>
-      <description>Kolik je hodin? Stačí se zeptat na DateTime.Now nebo GETDATE(). Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu Altairis.Services.DateProvider, která uvedené problémy řeší.</description>
-      <link>https://www.altair.blog/2020/04/dateprovider</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-04-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
