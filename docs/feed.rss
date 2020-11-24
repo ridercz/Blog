@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-2</guid>
+      <title>Svobodný přístup k informacím: záznam z online přednášky</title>
+      <description>Nabízím vám záznam svého včerejšího streamu ze série Dvounohý kůň versus úřední šiml. Byl věnován problematice svobodného přístup k informacím. Tedy postupu, jak od veřejných institucí získat informace které potřebujete a jak se bránit, pokud vám je nechtějí vydat.</description>
+      <link>https://www.altair.blog/2020/11/obcanka-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>Politika</category>
+      <category>Lidé a jiná zvěř</category>
+      <pubDate>2020-11-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/11/at-zije-dotnet</guid>
       <title>.NET Core je mrtvý, ať žije .NET 5!</title>
       <description>Slavná fráze "Le roi est mort, vive le roi!" poprvé zazněla ve Francii v roce 1422, když po smrti Karla VI na trůn nastoupil Karel VII. Zdánlivě paradoxní výrok "Král je mrtev, ať žije král!" má hluboký smysl: sděluje, že ačkoliv konkrétní král zemřel, na jeho místo nastoupíl jiný a král jako instituce je věčný. Ve Francii to pravda s tou věčností úplně nevyšlo, tak uvidíme jak to dopadne s .NETem.</description>
@@ -137,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-08-14T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/08/validacni-atributy</guid>
-      <title>Pokročilejší tvorba validačních atributů a dependency injection</title>
-      <description>Validační atributy, umožňující ověřit, že zadávané hodnoty odpovídají požadovaným omezením, jsou velmi užitečná věc používaná napříč .NETem. V tomto článku se podíváme na jejich pokročilejší tvorbu a také na to, jak v nich využívat dependency injection.</description>
-      <link>https://www.altair.blog/2020/08/validacni-atributy</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-08-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
