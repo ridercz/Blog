@@ -83,7 +83,7 @@ Na rozdíl od "adresy na úřadě" jsou s totální absencí trvalého bydlišt�
 
 Tak například nemůžete získat živnostenské oprávnění nebo být statutárním orgánem obchodní společnosti. Nicméně nepřišel jsem dosud na odpověď na otázku, co se stane ve chvíli, kdy už ŽL máte nebo statutárem jste – zda ta pozice automaticky zaniká nebo jak.
 
-Nemáte volební právo v žádných volbách, kromě těch do Poslanecké sněmovny. A u nich sice máte volební právo, ale nemáte jej jak realizovat, protože nejste nikde zapsáni v seznamu voličů. Chcete-li volit, musíte se "vrátit z ciziny" a přihlásit na úřad (nebo kamkoliv jinam), požádat o voličský průkaz a pobyt zase zrušit.
+Nemáte aktivní volební právo ve volbách do zastupitelstev obcí, krajů nebo do senátu. Sice máte právo volit ve volbách do Poslanecké sněmovny, Evropského parlamentu a v prezidentských volbách, ale nemáte jej jak realizovat, protože nejste nikde zapsáni v seznamu voličů. Chcete-li volit, musíte se "vrátit z ciziny" a přihlásit na úřad (nebo kamkoliv jinam), požádat o voličský průkaz a pobyt zase zrušit.
 
 Je obtížné získat nebo prodloužit řidičský průkaz. Pokud ŘP už máte, tak je vše v pořádku, platí vám i nadále do konce své platnosti. Pokud potřebujete získat nový nebo stávající, nemáte-li trvalý pobyt na území ČR, musíte prokazovat, že se v ČR zdržujete, což je komplikované. Doporučuji proto jednou za deset let projít kolečkem popisovaným o odstavec výše, je to nejjednodušší řešení.
 
