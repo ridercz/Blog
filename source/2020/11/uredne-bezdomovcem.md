@@ -32,7 +32,7 @@ První cestou je úřední zrušení údaje o trvalém pobytu (nezměňovat s uk
 
 Druhou cestou je "ukončení pobytu v cizině" podle § 10a téhož zákona. Tj. trvalý pobyt nejprve ukončíte (postupem popsaným níže) a pak znovu zahájíte, ale nemáte se kam přihlásit.
 
-V případě, že máte "trvalé bydliště na úřadě", máte nadále občanský průkaz a v zásadě se pro vás nic nemění, máte stejná práva a povinnosti jako ostatní občané. Nejsou na vás kladena žádná omezení. Není ani na první pohled zřejmé, že adresa je úřední – všude se zadává normální ulice a číslo a někdo by musel vědět, že zrovna na téhle adrese sídlí úřad. Což pravděpodobně budou vědět v rámci místa samého, ale ne na druhém konci republiky.
+V případě, že máte "trvalé bydliště na úřadě", máte nadále občanský průkaz a v zásadě se pro vás nic nemění, máte stejná práva a povinnosti jako ostatní občané. Nejsou na vás kladena žádná omezení.
 
 * [Zrušení trvalého pobytu](https://www.mvcr.cz/clanek/zruseni-trvaleho-pobytu.aspx) na stránkách MVČR.
 
