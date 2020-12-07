@@ -6,4 +6,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = BDSM -->
+<!-- x4w:category = Recenze -->
 <!-- dcterms:dateAccepted = 2013-08-29T15:48:00+02:00 -->

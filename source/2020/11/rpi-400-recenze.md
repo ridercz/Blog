@@ -5,5 +5,6 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
+<!-- x4w:category = Recenze -->
 <!-- dcterms:dateAccepted = 2020-11-09 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e -->
