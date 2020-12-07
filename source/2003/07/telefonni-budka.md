@@ -10,6 +10,6 @@
 
 Film **Telefonní budka** mne zaujal, už když jsem o něm poprvé slyšel. A odhodlání jít na něj do kina nezkalilo ani pár kousavých poznámek v recenzích (v duchu že oběť v telefonní budce nedrží ani tak sniper, jako spíše scénárista).
 
-A jsem tomu rád, protože tenhle film patří k tomu nejlepšímu, co jsem v kině poslední dobou viděl. Možná je to profesionální deformace, ale jsem přesvědčen, že velká část kouzla tohoto filmu spočívá v jeho střihu, který evokuje spíše pocity, než konkrétní děj (což bude možná příčina nesouhlasu některých recenzentů, z včcné stránky je tenhle film opravdu poněkud nelogický).
+A jsem tomu rád, protože tenhle film patří k tomu nejlepšímu, co jsem v kině poslední dobou viděl. Možná je to profesionální deformace, ale jsem přesvědčen, že velká část kouzla tohoto filmu spočívá v jeho střihu, který evokuje spíše pocity, než konkrétní děj (což bude možná příčina nesouhlasu některých recenzentů, z věcné stránky je tenhle film opravdu poněkud nelogický).
 
 V každém případě vám návštěvu telefonní budky vřele doporučuji.
