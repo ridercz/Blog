@@ -174,7 +174,7 @@
     </xsl:choose>
     <meta property="og:locale" content="cs_CZ" />
     <meta property="og:url" content="{$BaseUrl}{$CanonicalUrl}" />
-    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+    <!-- Fathom - https://github.com/usefathom/fathom -->
     <script>
       (function(f, a, t, h, o, m){
         a[h]=a[h]||function(){
@@ -188,7 +188,8 @@
       fathom('set', 'siteId', 'OBOTR');
       fathom('trackPageview');
     </script>
-    <!-- / Fathom -->
+    <!-- Typo autocorrect - https://github.com/pavelglac/Automaticka-uprava-typografie -->
+    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector()">//</script>
   </xsl:template>
 
   <!-- Link to article with detail -->
