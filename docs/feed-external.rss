@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f</guid>
+      <title>Třiatřicet stříbrných chyb pro IoT: Katastrofa jménem Amnesia:33</title>
+      <description>Život s vytrvalostí hodnou lepší věci opakovaně potvrzuje pravdivost bonmotu, že chybějící písmenko "S" ve zkratce IoT znamená "security". Nejnověji pak půvabnou sbírkou třiatřiceti bezpečnostních chyb v několika různých síťových knihovnách, kterou její objevitelé ze společnosti Forescout pojmenovali AMNESIA:33. Je na ní zákeřné to, že nepostihuje jedno zařízení, nebo jednoho výrobce. Postižených společností je více než sto padesát a počet postižených zařízení se pohybuje v miliónech.</description>
+      <link>https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2020-12-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</guid>
       <title>Test Raspberry Pi 400: Neobyčejný počítač pro obyčejné lidi je schovaný v klávesnici</title>
       <description>Počítače Raspberry Pi jsou neobyčejné, neboť se nesnaží oslnit schopnostmi a technickými specifikacemi. Jejich parametry jsou ve srovnání s běžnými desktopovými počítači a notebooky velice skromné. Nejsou totiž určeny pro běžné masové použití, ale jako nástroje pro výuku, prototypování nebo třeba domácí kutění a jejich výhodou je nízká cena kolem tisíce korun. Recenzované Raspberry Pi 400 je nicméně jiné, jde o první Raspberry pro obyčejné lidi.</description>
@@ -138,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2020-03-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565</guid>
-      <title>Koronavirus může ohrozit i váš počítač a síť, zázračný lék chybí, potřeba je chytrý uživatel</title>
-      <description>Nový koronavirus SARS-CoV-2 může pro vaši počítačovou síť představovat nebezpečí ve dvou případech. Za prvé, pokud zaměstnáváte androidy, kombinující bionickou a kybernetickou složku. Za druhé, pokud je nezaměstnáváte.</description>
-      <link>https://tech.ihned.cz/c7-66736600-psms7-163213b69c9a565</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2020-03-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

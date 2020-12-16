@@ -1,0 +1,11 @@
+<!-- dcterms:title = Třiatřicet stříbrných chyb pro IoT: Katastrofa jménem Amnesia:33 -->
+<!-- dcterms:abstract = Život s vytrvalostí hodnou lepší věci opakovaně potvrzuje pravdivost bonmotu, že chybějící písmenko "S" ve zkratce IoT znamená "security". Nejnověji pak půvabnou sbírkou třiatřiceti bezpečnostních chyb v několika různých síťových knihovnách, kterou její objevitelé ze společnosti Forescout pojmenovali AMNESIA:33. Je na ní zákeřné to, že nepostihuje jedno zařízení, nebo jednoho výrobce. Postižených společností je více než sto padesát a počet postižených zařízení se pohybuje v miliónech. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20201215-amnesia.jpg -->
+<!-- x4w:pictureCredits = Jorge Ramirez via Unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-12-15 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f -->
