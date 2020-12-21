@@ -27,6 +27,7 @@
                 <xsl:with-param name="Description" select="dcterms:abstract" />
                 <xsl:with-param name="CanonicalUrl" select="@path" />
                 <xsl:with-param name="Image" select="x4w:coverUrl" />
+                <xsl:with-param name="Date" select="dcterms:dateAccepted" />
               </xsl:call-template>
               <meta name="robots" content="index, follow" />
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
-    <meta name="Description" content="Původně úložiště Windows Azure Storage neumožňovalo příliš jemné nastavení přístupových práv: data mohla být buďto veřejná, takže k nim mohl kdokoliv, nebo soukromá, takže k nim nemohl nikdo, kdo neznal klíč k úložišti. A zase pokud ho znal, mohl s ním dělat cokoliv. Již zhruba rok nicméně Azure umí takzvané Shared Access Signatures, tedy technologii, která umí přístup omezit operacemi nebo časově." />
     <link rel="canonical" href="https://www.altair.blog/2013/05/windows-azure-storage-a-shared-access-signatures" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
@@ -21,11 +20,13 @@
     <meta name="twitter:title" content="Windows Azure Storage a Shared Access Signatures" />
     <meta name="twitter:description" content="Původně úložiště Windows Azure Storage neumožňovalo příliš jemné nastavení přístupových práv: data mohla být buďto veřejná, takže k nim mohl kdokoliv, nebo soukromá, takže k nim nemohl nikdo, kdo neznal klíč k úložišti. A zase pokud ho znal, mohl s ním dělat cokoliv. Již zhruba rok nicméně Azure umí takzvané Shared Access Signatures, tedy technologii, která umí přístup omezit operacemi nebo časově." />
     <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="article:published_time" content="2013-05-06T08:00:00+02:00" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
-    <meta property="og:title" content="Windows Azure Storage a Shared Access Signatures" />
-    <meta property="og:description" content="Původně úložiště Windows Azure Storage neumožňovalo příliš jemné nastavení přístupových práv: data mohla být buďto veřejná, takže k nim mohl kdokoliv, nebo soukromá, takže k nim nemohl nikdo, kdo neznal klíč k úložišti. A zase pokud ho znal, mohl s ním dělat cokoliv. Již zhruba rok nicméně Azure umí takzvané Shared Access Signatures, tedy technologii, která umí přístup omezit operacemi nebo časově." />
-    <meta name="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Windows Azure Storage a Shared Access Signatures" />
+    <meta name="description" property="og:description" content="Původně úložiště Windows Azure Storage neumožňovalo příliš jemné nastavení přístupových práv: data mohla být buďto veřejná, takže k nim mohl kdokoliv, nebo soukromá, takže k nim nemohl nikdo, kdo neznal klíč k úložišti. A zase pokud ho znal, mohl s ním dělat cokoliv. Již zhruba rok nicméně Azure umí takzvané Shared Access Signatures, tedy technologii, která umí přístup omezit operacemi nebo časově." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
     <meta property="og:locale" content="cs_CZ" />
     <meta property="og:url" content="https://www.altair.blog/2013/05/windows-azure-storage-a-shared-access-signatures" />
     <script>

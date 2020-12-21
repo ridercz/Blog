@@ -116,6 +116,7 @@
     <xsl:param name="Description" />
     <xsl:param name="CanonicalUrl" select="'/'" />
     <xsl:param name="Image" />
+    <xsl:param name="Date" />
 
     <meta charset="utf-8"/>
     <xsl:choose>
@@ -131,9 +132,6 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" /> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
-    <xsl:if test="$Description != ''">
-      <meta name="Description" content="{$Description}"/>
-    </xsl:if>
     <link rel="canonical" href="{$BaseUrl}{$CanonicalUrl}" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
@@ -159,17 +157,21 @@
         <meta name="twitter:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
       </xsl:otherwise>
     </xsl:choose>
+    <xsl:if test="$Date">
+      <meta property="article:published_time" content="{$Date}" />
+    </xsl:if>
     <!-- Facebook-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
-    <meta property="og:title" content="{$Title}" />
-    <meta property="og:description" content="{$Description}" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="{$Title}" />
+    <meta name="description" property="og:description" content="{$Description}" />
     <xsl:choose>
       <xsl:when test="$Image">
-        <meta name="og:image" content="{$BaseUrl}{$Image}" />
+        <meta name="image" property="og:image" content="{$BaseUrl}{$Image}" />
       </xsl:when>
       <xsl:otherwise>
-        <meta name="og:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
+        <meta name="image" property="og:image" content="{$BaseUrl}/content/images/preview-1200.jpg" />
       </xsl:otherwise>
     </xsl:choose>
     <meta property="og:locale" content="cs_CZ" />
