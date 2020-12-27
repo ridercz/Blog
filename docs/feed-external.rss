@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66861920-psms7-baa221a4c79b77e</guid>
+      <title>Drsný konec roku 2020: Aféra SolarWinds s útoky na Microsoft i americké úřady nás bude pronásledovat léta</title>
+      <description>To nejlepší na konec, říká se. Na konec letošního roku připadla aféra se supply chain útokem na společnost SolarWinds a na její klienty. A klienty jejich klientů, což zahrnuje skoro každého. Tomuto typu útoku se těžko brání a může mít extrémní následky.</description>
+      <link>https://tech.ihned.cz/c7-66861920-psms7-baa221a4c79b77e</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2020-12-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2020/12/spatna-nalada</guid>
       <title>Špatná nálada</title>
       <description>Letošní vánoční povídka je tak trochu fantasy a nikdo v ní nemá dobrou náladu. Ale nebojte se, zlepší se to - i když podle hesla, že nejčistší lidská radost je škodolibost. A jak se ukáže, nejenom lidská. Tahle povídka vznikla trochu zvláštním způsobem. Nejdřív byla ilustrace a teprve potom text. Nechal jsem svou kamarádku _Nyemi_, ať nakreslí nějaký obrázek, dle své volby. Téma jsem nechal zcela na ní a slíbil jí, že na základě jejího obrázku napíšu S/M povídku. Jak to dopadlo můžete posoudit sami.</description>
@@ -139,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2020-04-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</guid>
-      <title>Covid-19 má negativní dopady na kybernetickou bezpečnost a násobně zvedá vytížení cloudových služeb</title>
-      <description>Podle vyhledávače Shodan výrazně stoupl počet VPN a RDP serverů dostupných z Internetu. Výrazně také stouplo vytížení cloudových služeb a uživatelé Microsoft Azure hlásí občasné problémy s kapacitou.</description>
-      <link>https://tech.ihned.cz/pocitace/c1-66745090-covid-19-ma-negativni-dopady-na-kybernetickou-bezpecnost-a-nasobne-zveda-vytizeni-cloudovych-sluzeb</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2020-04-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

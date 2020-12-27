@@ -1,0 +1,10 @@
+<!-- dcterms:title = Drsný konec roku 2020: Aféra SolarWinds s útoky na Microsoft i americké úřady nás bude pronásledovat léta -->
+<!-- dcterms:abstract = To nejlepší na konec, říká se. Na konec letošního roku připadla aféra se supply chain útokem na společnost SolarWinds a na její klienty. A klienty jejich klientů, což zahrnuje skoro každého. Tomuto typu útoku se těžko brání a může mít extrémní následky. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20201227-solarwinds.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-12-27 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66861920-psms7-baa221a4c79b77e -->
