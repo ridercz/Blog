@@ -1,0 +1,10 @@
+<!-- dcterms:title = Kletba zajímavých časů v kybernetické bezpečnosti -->
+<!-- dcterms:abstract = Prý existuje jedna kletba, která zní "nechť žiješ v zajímavých časech". Zajímavé časy trvají v kybernetické bezpečnosti několik let a nevypadá to, že by se v tomto ohledu mělo v nejbližší budoucnosti cokoliv měnit. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-hn.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-12-30 -->
+<!-- x4w:alternateUrl = https://archiv.ihned.cz/c7-66863110-psms7-e85c7e21bf267a0 -->

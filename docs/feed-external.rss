@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://archiv.ihned.cz/c7-66863110-psms7-e85c7e21bf267a0</guid>
+      <title>Kletba zajímavých časů v kybernetické bezpečnosti</title>
+      <description>Prý existuje jedna kletba, která zní "nechť žiješ v zajímavých časech". Zajímavé časy trvají v kybernetické bezpečnosti několik let a nevypadá to, že by se v tomto ohledu mělo v nejbližší budoucnosti cokoliv měnit.</description>
+      <link>https://archiv.ihned.cz/c7-66863110-psms7-e85c7e21bf267a0</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2020-12-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66861920-psms7-baa221a4c79b77e</guid>
       <title>Drsný konec roku 2020: Aféra SolarWinds s útoky na Microsoft i americké úřady nás bude pronásledovat léta</title>
       <description>To nejlepší na konec, říká se. Na konec letošního roku připadla aféra se supply chain útokem na společnost SolarWinds a na její klienty. A klienty jejich klientů, což zahrnuje skoro každého. Tomuto typu útoku se těžko brání a může mít extrémní následky.</description>
@@ -140,15 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2020-05-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</guid>
-      <title>Objednávka výprasku</title>
-      <description>Vzhledem k mimořádné pandemické situaci je - až na vzácné výjimky - v podstatě nemožné udělit či přijmout velikonoční výprask. Mnoho akcí se přesouvá do online podoby, ale protože teledildonika (resp. telespanking) je zatím pouze v počáteční fázi vývoje, není to v tomto případě možné. V jiných oborech se zase vydali cestou "voucherů", které umožňují učinit objednávky nyní a vybrat si ji později. Tento formulář jsem vytvořil, abych odstranil akutní nebezpečí uschnutí do příštího roku. Včasným vyplněním jej lze podmínečně odložit do konce karantény a realizace výprasku v náhradním termínu. Online opt-in forma zároveň elegantně řeší otázku konsensuálního přístupu, která je v tradičním podání přinejlepším komplikovaná.</description>
-      <link>https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUN1JWQTZPNjE4RkRPV1c2VU5WVEFNUzRQMy4u</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2020-04-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
