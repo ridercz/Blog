@@ -1,0 +1,10 @@
+<!-- dcterms:title = Konec internetu, jak jsme ho znali: Ideál sítě sítí je pryč a lidé přestávají číst, mají radši obrázky -->
+<!-- dcterms:abstract = Internet začal zhroucením systému po třetím přeneseném znaku. Ale jak skončí? Nebo už se to stalo? Co se stalo s internetem, který jsem znal? Jak se bude vyvíjet dál? Jediné, co je jisté, je nejistota. Internetové revoluce byly vždy překvapivé a nečekané. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20110630-asp-net-universal-providers-blyskani-na-lepsi-casy.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2020-12-31 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82 -->

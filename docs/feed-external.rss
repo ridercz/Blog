@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82</guid>
+      <title>Konec internetu, jak jsme ho znali: Ideál sítě sítí je pryč a lidé přestávají číst, mají radši obrázky</title>
+      <description>Internet začal zhroucením systému po třetím přeneseném znaku. Ale jak skončí? Nebo už se to stalo? Co se stalo s internetem, který jsem znal? Jak se bude vyvíjet dál? Jediné, co je jisté, je nejistota. Internetové revoluce byly vždy překvapivé a nečekané.</description>
+      <link>https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2020-12-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://archiv.ihned.cz/c7-66863110-psms7-e85c7e21bf267a0</guid>
       <title>Kletba zajímavých časů v kybernetické bezpečnosti</title>
       <description>Prý existuje jedna kletba, která zní "nechť žiješ v zajímavých časech". Zajímavé časy trvají v kybernetické bezpečnosti několik let a nevypadá to, že by se v tomto ohledu mělo v nejbližší budoucnosti cokoliv měnit.</description>
@@ -141,15 +151,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2020-07-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66760730-psms7-047c2887399a31c</guid>
-      <title>Datové schránky dlouho odolávaly spamu, ve výjimečném stavu ale přišla změna. Co s tím?</title>
-      <description>Pandemie koronaviru udělala pro rozvoj eGovernmentu v ČR víc, než několik předchozích vlád dohromady. Počet datových schránek výrazně narostl, stejně jako podíl těch, kdo mají povolený příjem komerčních Poštovních datových zpráv. A bezplatné posílání PDZ v době výjimečného stavu otevřelo stavidla spamu.</description>
-      <link>https://tech.ihned.cz/c7-66760730-psms7-047c2887399a31c</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2020-05-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
