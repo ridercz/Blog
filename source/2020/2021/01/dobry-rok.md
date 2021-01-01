@@ -1,0 +1,11 @@
+<!-- dcterms:title = Dobré zprávy do roku 2021: Pandemie měla pozitivní vliv na IT v ČR, kybernetická apokalypsa nepřišla -->
+<!-- dcterms:abstract = Můj editor v Hospodářkách brblal, že píšu příliš pesimisticky. A že by to na svátky chtělo nějaký optimistický článek. V roce 2020. Ale ano, uplynulý rok byl z hlediska IT docela dobrý. Posuďte sami. Úplně sluníčkové mi to sice nevyšlo, ale quantum in me fuit. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210101-dobry-rok.jpg -->
+<!-- x4w:pictureCredits = Kelly Sikkema via Unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-01-01T12:00:00 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89 -->

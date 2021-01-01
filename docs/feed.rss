@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89</guid>
+      <title>Dobré zprávy do roku 2021: Pandemie měla pozitivní vliv na IT v ČR, kybernetická apokalypsa nepřišla</title>
+      <description>Můj editor v Hospodářkách brblal, že píšu příliš pesimisticky. A že by to na svátky chtělo nějaký optimistický článek. V roce 2020. Ale ano, uplynulý rok byl z hlediska IT docela dobrý. Posuďte sami. Úplně sluníčkové mi to sice nevyšlo, ale quantum in me fuit.</description>
+      <link>https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-01-01T12:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2020/2021/01/pf</guid>
       <title>PF 2021</title>
       <description>Do budoucího roku vám za sebe i celou svou smečku přeji hlavně pokoj od lidí dobré vůle. Neboť takoví napáchají nejvíce škody a zůstává po nich nejvíc mrtvých. A hlavně v následujícím volebním roce nezapomeňte, že pokud vám někdo říká, že chce jenom vaše dobro, měli byste se mít před ním obzvláště na pozoru - a nenechat si ho vzít.</description>
@@ -140,16 +150,6 @@
       <category>IT</category>
       <category>Recenze</category>
       <pubDate>2020-11-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=n_A4Z1NK0fk&amp;t=6373</guid>
-      <title>Sociální inženýrství ve službách dobra</title>
-      <description>Když se řekne sociální inženýrství, většina lidí si pod tím představí buďto zločinné snahy zblbnout uživatele. Nebo sociálně eugenické snahy dávných německých nacistů či současných evropských levičáků. Nicméně sociální inženýrství lze využít i v oblasti kybernetické bezpečnosti: tím, že uživateli umeteme nejbezpečnější cestičku jako tu nejsnazší. Nabízím vám záznam své přednášky na online konferenci LAW FIT 2020.</description>
-      <link>https://www.youtube.com/watch?v=n_A4Z1NK0fk&amp;t=6373</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2020-11-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
