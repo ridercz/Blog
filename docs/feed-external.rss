@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</guid>
+      <title>Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér</title>
+      <description>Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy.</description>
+      <link>https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-01-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89</guid>
       <title>Dobré zprávy do roku 2021: Pandemie měla pozitivní vliv na IT v ČR, kybernetická apokalypsa nepřišla</title>
       <description>Můj editor v Hospodářkách brblal, že píšu příliš pesimisticky. A že by to na svátky chtělo nějaký optimistický článek. V roce 2020. Ale ano, uplynulý rok byl z hlediska IT docela dobrý. Posuďte sami. Úplně sluníčkové mi to sice nevyšlo, ale quantum in me fuit.</description>
@@ -141,17 +151,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2020-08-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3</guid>
-      <title>Šálivý půvab elektronických voleb</title>
-      <description>Ještě jednou o elektronických volbách. Poněkud stručněji a aktuálněji. Nedokážeme vytvořit distanční systém, který by měl vlastnosti toho současného papírového. Pokud bychom měli zavádět elektronické nebo korespondenční hlasování, nejedná se o technikálii, ale o změnu principiální, měnící parametry voleb.</description>
-      <link>https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2020-08-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

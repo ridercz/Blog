@@ -1,0 +1,11 @@
+<!-- dcterms:title = Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér -->
+<!-- dcterms:abstract = Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210104-zyxel.jpg -->
+<!-- x4w:pictureCredits = ZyXel -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-01-04 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188 -->

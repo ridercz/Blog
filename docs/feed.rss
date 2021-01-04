@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</guid>
+      <title>Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér</title>
+      <description>Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy.</description>
+      <link>https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-01-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89</guid>
       <title>Dobré zprávy do roku 2021: Pandemie měla pozitivní vliv na IT v ČR, kybernetická apokalypsa nepřišla</title>
       <description>Můj editor v Hospodářkách brblal, že píšu příliš pesimisticky. A že by to na svátky chtělo nějaký optimistický článek. V roce 2020. Ale ano, uplynulý rok byl z hlediska IT docela dobrý. Posuďte sami. Úplně sluníčkové mi to sice nevyšlo, ale quantum in me fuit.</description>
@@ -140,16 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</guid>
-      <title>Test Raspberry Pi 400: Neobyčejný počítač pro obyčejné lidi je schovaný v klávesnici</title>
-      <description>Počítače Raspberry Pi jsou neobyčejné, neboť se nesnaží oslnit schopnostmi a technickými specifikacemi. Jejich parametry jsou ve srovnání s běžnými desktopovými počítači a notebooky velice skromné. Nejsou totiž určeny pro běžné masové použití, ale jako nástroje pro výuku, prototypování nebo třeba domácí kutění a jejich výhodou je nízká cena kolem tisíce korun. Recenzované Raspberry Pi 400 je nicméně jiné, jde o první Raspberry pro obyčejné lidi.</description>
-      <link>https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Recenze</category>
-      <pubDate>2020-11-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
