@@ -45,7 +45,7 @@ Data můžete šifrovat symetrickým klíčem, který zůstává jenom na vašem
 
 * Není to univerzální úložiště, jako třeba OneDrive, DropBox nebo Google Drive. Je to služba specificky určená k zálohování.
 * Není to nástroj na synchronizaci, kterou kromě výše zmíněných nabízí třeba i Resilio Sync (dříve BitTorrent Sync).
-* Uní zálohovat i externí disky (třeba USB disky nebo flashky), ale musíte je pravidelně připojovat k počítači, nejméně jednou za měsíc.
+* Umí zálohovat i externí disky (třeba USB disky nebo flashky), ale musíte je pravidelně připojovat k počítači, nejméně jednou za měsíc.
 * Nehodí se v případě, že máte hodně dat a pomalý upload (uplink) nebo omezený objem dat.
 
 U běžných způsobů připojení k Internetu (jako je xDSL nebo kabelovka) je typické, že jsou asymetrické. Pokud data stahujete, je to rychlejší (i řádově), než když je na Internet nahráváte. Vychází se přitom z toho, že běžný uživatel víc dat stahuje než nahrává. Pro rychlost zálohování je podstatná právě rychlost uploadu (uplinku), což je to _menší_ číslo, které se uvádí u parametrů vašeho připojení. Pokud tedy máte pomalé připojení (třeba u starého ADSL může být jenom 512 kb/s), bude nahrávání velkého objemu dat trvat neprakticky dlouho.
