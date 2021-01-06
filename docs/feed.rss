@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/backblaze</guid>
+      <title>Neomezená záloha pro každého za stovku měsíčně - nyní tři měsíce zdarma</title>
+      <description>Uživatelé se prý dělí na dvě skupiny: jedni zálohují a druzí o svá data ještě nepřišli. Nicméně znám i takové, kteří o svá data přišli už několikrát a nezálohují furt. V každém případě, Backblaze pokládám za velmi dobré a zároveň levné řešení, vhodné pro běžné uživatele. A nyní běží promotion, v jejímž rámci máte možnost získat až tři měsíce zdarma.</description>
+      <link>https://www.altair.blog/2021/01/backblaze</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-01-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</guid>
       <title>Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér</title>
       <description>Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy.</description>
@@ -26,10 +35,10 @@
       <pubDate>2021-01-01T12:00:00</pubDate>
     </item>
     <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/2021/01/pf</guid>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/pf</guid>
       <title>PF 2021</title>
       <description>Do budoucího roku vám za sebe i celou svou smečku přeji hlavně pokoj od lidí dobré vůle. Neboť takoví napáchají nejvíce škody a zůstává po nich nejvíc mrtvých. A hlavně v následujícím volebním roce nezapomeňte, že pokud vám někdo říká, že chce jenom vaše dobro, měli byste se mít před ním obzvláště na pozoru - a nenechat si ho vzít.</description>
-      <link>https://www.altair.blog/2020/2021/01/pf</link>
+      <link>https://www.altair.blog/2021/01/pf</link>
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiné zvěř</category>
       <pubDate>2021-01-01T00:00:00</pubDate>
@@ -141,15 +150,6 @@
       <category>Politika</category>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2020-11-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/futlabis-1</guid>
-      <title>Záznam live codingu aplikace v .NET 5.0 a pozvánka na pokračování</title>
-      <description>Před pár dny Microsoft vydal následovníka .NET Core jménem .NET 5. První aplikace, kterou v něm píšu, bude rezervační systém pro makerspace FutLab. Nabízím vám záznam prvního streamu a pozvánku na další.</description>
-      <link>https://www.altair.blog/2020/11/futlabis-1</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

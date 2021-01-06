@@ -6,10 +6,19 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/2021/01/pf</guid>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/backblaze</guid>
+      <title>Neomezená záloha pro každého za stovku měsíčně - nyní tři měsíce zdarma</title>
+      <description>Uživatelé se prý dělí na dvě skupiny: jedni zálohují a druzí o svá data ještě nepřišli. Nicméně znám i takové, kteří o svá data přišli už několikrát a nezálohují furt. V každém případě, Backblaze pokládám za velmi dobré a zároveň levné řešení, vhodné pro běžné uživatele. A nyní běží promotion, v jejímž rámci máte možnost získat až tři měsíce zdarma.</description>
+      <link>https://www.altair.blog/2021/01/backblaze</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-01-06T00:00:00</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/pf</guid>
       <title>PF 2021</title>
       <description>Do budoucího roku vám za sebe i celou svou smečku přeji hlavně pokoj od lidí dobré vůle. Neboť takoví napáchají nejvíce škody a zůstává po nich nejvíc mrtvých. A hlavně v následujícím volebním roce nezapomeňte, že pokud vám někdo říká, že chce jenom vaše dobro, měli byste se mít před ním obzvláště na pozoru - a nenechat si ho vzít.</description>
-      <link>https://www.altair.blog/2020/2021/01/pf</link>
+      <link>https://www.altair.blog/2021/01/pf</link>
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiné zvěř</category>
       <pubDate>2021-01-01T00:00:00</pubDate>
@@ -140,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-07-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/05/datalist</guid>
-      <title>DATALIST - zapomenutý HTML5 element</title>
-      <description>Součástí HTML5 je element datalist. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper.</description>
-      <link>https://www.altair.blog/2020/05/datalist</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-05-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
