@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/duhove-pla</guid>
+      <title>3D tisk ve všech barvách: duhový filament od značky C-Tech</title>
+      <description>Ten efekt zná každý majitel FDM 3D tiskárny. Když se mění barva filamentu, je nutné extruder vyčistit a teče z něj plast, který postupně mění barvu. Totéž se děje i při výrobě filamentů, když výrobní linka přechází z jedné barvy na druhou. Výsledkem jsou dvoubarevné cívky filamentu, kde jedna barva pomalu přechází v druhou. Značka C-Tech nabízí podobný "duhový" filament jako oficiální výrobek.</description>
+      <link>https://www.altair.blog/2021/01/duhove-pla</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D Tisk</category>
+      <pubDate>2021-01-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/backblaze</guid>
       <title>Neomezená záloha pro každého za stovku měsíčně - nyní tři měsíce zdarma</title>
       <description>Uživatelé se prý dělí na dvě skupiny: jedni zálohují a druzí o svá data ještě nepřišli. Nicméně znám i takové, kteří o svá data přišli už několikrát a nezálohují furt. V každém případě, Backblaze pokládám za velmi dobré a zároveň levné řešení, vhodné pro běžné uživatele. A nyní běží promotion, v jejímž rámci máte možnost získat až tři měsíce zdarma.</description>
@@ -140,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-07-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/07/validace-cisla-uctu</guid>
-      <title>Novinka v knihovně Altairis Validation Toolkit: Validace čísla bankovního účtu</title>
-      <description>Popis algoritmu pro validaci správnosti čísla českého bankovního účtu. Je také k dispozici jako validační atribut v knihovně Altairis Validation Toolkit.</description>
-      <link>https://www.altair.blog/2020/07/validace-cisla-uctu</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-07-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
