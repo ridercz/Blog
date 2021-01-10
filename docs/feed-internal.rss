@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/hvezdy</guid>
+      <title>Žlutá nebo rudá</title>
+      <description>Symboly jsou pro někoho se sociopatickými sklony praktické. Lidé jim obvykle přikládají zvláštní důležitost a my, kteří nejsme nadáni empatií, se jich můžeme rozumově chytit a nahradit tak nedostatek pocitového pochopení a zahrát tu správnou roli. Z konce minulého režimu si pamatuji naprostou vyprázdněnost symbolů, které se staly důležitými až teprve v případě svatokrádeže. Jako dnes davidova hvězda s nápisem "neočkovaný".</description>
+      <link>https://www.altair.blog/2021/01/hvezdy</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-01-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/duhove-pla</guid>
       <title>3D tisk ve všech barvách: duhový filament od značky C-Tech</title>
       <description>Ten efekt zná každý majitel FDM 3D tiskárny. Když se mění barva filamentu, je nutné extruder vyčistit a teče z něj plast, který postupně mění barvu. Totéž se děje i při výrobě filamentů, když výrobní linka přechází z jedné barvy na druhou. Výsledkem jsou dvoubarevné cívky filamentu, kde jedna barva pomalu přechází v druhou. Značka C-Tech nabízí podobný "duhový" filament jako oficiální výrobek.</description>
@@ -140,15 +149,6 @@
       <category>IT</category>
       <category>Akce a události</category>
       <pubDate>2020-07-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/07/bacpac</guid>
-      <title>Rychlý export databáze do formátu BACPAC</title>
-      <description>Microsoft SQL Server umožňuje export a import dat do formátu BACPAC. Jedná se v podstatě o BCP (bulk copy) formát a u menších databází se jedná o asi nejrychlejší způsob, jak ji přenést z jednoho serveru na druhý (třeba z produkce na vývojový server, kde si můžete s reálnými daty hrát beztrestně). Napsal jsem skript, který umí celý proces automatizovat.</description>
-      <link>https://www.altair.blog/2020/07/bacpac</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-07-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/hvezdy</guid>
+      <title>Žlutá nebo rudá</title>
+      <description>Symboly jsou pro někoho se sociopatickými sklony praktické. Lidé jim obvykle přikládají zvláštní důležitost a my, kteří nejsme nadáni empatií, se jich můžeme rozumově chytit a nahradit tak nedostatek pocitového pochopení a zahrát tu správnou roli. Z konce minulého režimu si pamatuji naprostou vyprázdněnost symbolů, které se staly důležitými až teprve v případě svatokrádeže. Jako dnes davidova hvězda s nápisem "neočkovaný".</description>
+      <link>https://www.altair.blog/2021/01/hvezdy</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-01-11T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</guid>
       <title>PaCoBox: Univerzální parametrická krabička s přihrádkami</title>
       <description>Potřeboval jsem krabičku na MicroSD karty. A vytvořil jsem v OpenSCADu parametrický model se zaoblenými přihrádkami (takže se malá součástka neschová do rohu), magneticky drženým víčkem a nápisy na dně přihrádek.</description>
@@ -139,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/identity-email</guid>
-      <title>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy</title>
-      <description>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</description>
-      <link>https://www.altair.blog/2020/11/identity-email</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
