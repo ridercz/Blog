@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</guid>
+      <title>PaCoBox: Univerzální parametrická krabička s přihrádkami</title>
+      <description>Potřeboval jsem krabičku na MicroSD karty. A vytvořil jsem v OpenSCADu parametrický model se zaoblenými přihrádkami (takže se malá součástka neschová do rohu), magneticky drženým víčkem a nápisy na dně přihrádek.</description>
+      <link>https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-01-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/duhove-pla</guid>
       <title>3D tisk ve všech barvách: duhový filament od značky C-Tech</title>
       <description>Ten efekt zná každý majitel FDM 3D tiskárny. Když se mění barva filamentu, je nutné extruder vyčistit a teče z něj plast, který postupně mění barvu. Totéž se děje i při výrobě filamentů, když výrobní linka přechází z jedné barvy na druhou. Výsledkem jsou dvoubarevné cívky filamentu, kde jedna barva pomalu přechází v druhou. Značka C-Tech nabízí podobný "duhový" filament jako oficiální výrobek.</description>
@@ -139,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/css-modal</guid>
-      <title>Modální dialog čistě pomocí CSS</title>
-      <description>Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS.</description>
-      <link>https://www.altair.blog/2020/11/css-modal</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

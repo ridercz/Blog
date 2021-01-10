@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</guid>
+      <title>PaCoBox: Univerzální parametrická krabička s přihrádkami</title>
+      <description>Potřeboval jsem krabičku na MicroSD karty. A vytvořil jsem v OpenSCADu parametrický model se zaoblenými přihrádkami (takže se malá součástka neschová do rohu), magneticky drženým víčkem a nápisy na dně přihrádek.</description>
+      <link>https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-01-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</guid>
       <title>Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér</title>
       <description>Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy.</description>
@@ -142,15 +151,6 @@
       <category>IT</category>
       <category>Politika</category>
       <pubDate>2020-09-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2020/08/vlci-oci</guid>
-      <title>Vlčí oči</title>
-      <description>Vrhli se na mne hned jakmile jsem odemkl dveře od bytu. Dva chlapi v čerňákách a s kuklami na hlavách mě srazili k zemi, zkroutili mi ruce za zády a zacvakli želízka. O vteřinu později následovala pouta na nohy. Třetí na sobě masku neměl. Nebylo to třeba, protože Milana bych poznal kdykoliv a kdekoliv i s maskou. „Všechno nejlepší k narozeninám, zmrde,“ zazubil se na mne, dal mi pusu a vrazil mi facku. Pak mi přes hlavu přetáhl černý pytel ze silné látky.</description>
-      <link>https://www.bdsm.cz/2020/08/vlci-oci</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2020-08-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

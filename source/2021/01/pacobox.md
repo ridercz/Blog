@@ -1,0 +1,9 @@
+<!-- dcterms:title = PaCoBox: Univerzální parametrická krabička s přihrádkami -->
+<!-- dcterms:abstract = Potřeboval jsem krabičku na MicroSD karty. A vytvořil jsem v OpenSCADu parametrický model se zaoblenými přihrádkami (takže se malá součástka neschová do rohu), magneticky drženým víčkem a nápisy na dně přihrádek. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210110-pacobox.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2021-01-10 -->
+<!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca -->
