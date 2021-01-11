@@ -5,7 +5,7 @@
 <!-- x4w:pictureUrl = /perex-pictures/20210108-duhove-pla.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:category = 3D Tisk -->
+<!-- x4w:category = 3D tisk -->
 <!-- dcterms:dateAccepted = 2021-01-08 -->
 
 Ten efekt zná každý majitel FDM 3D tiskárny. Když se mění barva filamentu, je nutné extruder vyčistit a teče z něj plast, který postupně mění barvu. Totéž se děje i při výrobě filamentů, když výrobní linka přechází z jedné barvy na druhou. Výsledkem jsou dvoubarevné cívky filamentu, kde jedna barva pomalu přechází v druhou - říká se jim "přeběhové cívky" a jsou občas k mání v eshopech pro fajnšmekry. Značka C-Tech ale nabízí podobný "duhový" filament jako oficiální výrobek. Společnost [TonerPartner](https://www.tonerpartner.cz/), která filamenty C-Tech u nás prodává, mi nabídla jednu cívku k otestování.
