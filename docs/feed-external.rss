@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</guid>
+      <title>Tři čísla za lomítkem v rezervačním systému jako symbol diletantství u státních IT projektů</title>
+      <description>Asi nikoho nepřekvapilo, že spuštění systému pro rezervaci na očkování proti koronaviru bylo provázeno mnohými problémy. Na to jsme v České republice zvyklí, pravděpodobně bychom dlouho hledali významnější informační systém veřejné správy, který fungoval na první pokus správně. Co je ale příčinou? To nám umožní odhalit tři čísla za lomítkem.</description>
+      <link>https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2021-01-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</guid>
       <title>PaCoBox: Univerzální parametrická krabička s přihrádkami</title>
       <description>Potřeboval jsem krabičku na MicroSD karty. A vytvořil jsem v OpenSCADu parametrický model se zaoblenými přihrádkami (takže se malá součástka neschová do rohu), magneticky drženým víčkem a nápisy na dně přihrádek.</description>
@@ -141,16 +151,6 @@
       <category>IT</category>
       <category>Politika</category>
       <pubDate>2020-10-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://nazory.ihned.cz/c7-66818480-oi0o4-7e68a3d997cdf9c</guid>
-      <title>Placebo, které přišlo pozdě: na rozdíl od jiných opatření ale eRouška 2.0 aspoň neškodí</title>
-      <description>Jakou hodnotu má informace "v blíže neurčené době jste se možná vyskytovali poblíž blíže neurčeného nakaženého" s pětinovou šancí, že je falešná? Jaká je očekávaná reakce? Půjdete si na základě takové zprávy stoupnout do několikahodinové fronty na testování, které si budete muset nejspíš sami zaplatit?</description>
-      <link>https://nazory.ihned.cz/c7-66818480-oi0o4-7e68a3d997cdf9c</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Politika</category>
-      <pubDate>2020-09-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

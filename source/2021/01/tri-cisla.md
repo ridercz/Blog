@@ -1,0 +1,10 @@
+<!-- dcterms:title = Tři čísla za lomítkem v rezervačním systému jako symbol diletantství u státních IT projektů -->
+<!-- dcterms:abstract = Asi nikoho nepřekvapilo, že spuštění systému pro rezervaci na očkování proti koronaviru bylo provázeno mnohými problémy. Na to jsme v České republice zvyklí, pravděpodobně bychom dlouho hledali významnější informační systém veřejné správy, který fungoval na první pokus správně. Co je ale příčinou? To nám umožní odhalit tři čísla za lomítkem. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20191226-kalendar.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2021-01-16 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a -->

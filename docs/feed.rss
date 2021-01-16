@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</guid>
+      <title>Tři čísla za lomítkem v rezervačním systému jako symbol diletantství u státních IT projektů</title>
+      <description>Asi nikoho nepřekvapilo, že spuštění systému pro rezervaci na očkování proti koronaviru bylo provázeno mnohými problémy. Na to jsme v České republice zvyklí, pravděpodobně bychom dlouho hledali významnější informační systém veřejné správy, který fungoval na první pokus správně. Co je ale příčinou? To nám umožní odhalit tři čísla za lomítkem.</description>
+      <link>https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2021-01-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/hvezdy</guid>
       <title>Žlutá nebo rudá</title>
       <description>Symboly jsou pro někoho se sociopatickými sklony praktické. Lidé jim obvykle přikládají zvláštní důležitost a my, kteří nejsme nadáni empatií, se jich můžeme rozumově chytit a nahradit tak nedostatek pocitového pochopení a zahrát tu správnou roli. Z konce minulého režimu si pamatuji naprostou vyprázdněnost symbolů, které se staly důležitými až teprve v případě svatokrádeže. Jako dnes davidova hvězda s nápisem "neočkovaný".</description>
@@ -139,15 +149,6 @@
       <category>Politika</category>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2020-11-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/at-zije-dotnet</guid>
-      <title>.NET Core je mrtvý, ať žije .NET 5!</title>
-      <description>Slavná fráze "Le roi est mort, vive le roi!" poprvé zazněla ve Francii v roce 1422, když po smrti Karla VI na trůn nastoupil Karel VII. Zdánlivě paradoxní výrok "Král je mrtev, ať žije král!" má hluboký smysl: sděluje, že ačkoliv konkrétní král zemřel, na jeho místo nastoupíl jiný a král jako instituce je věčný. Ve Francii to pravda s tou věčností úplně nevyšlo, tak uvidíme jak to dopadne s .NETem.</description>
-      <link>https://www.altair.blog/2020/11/at-zije-dotnet</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
