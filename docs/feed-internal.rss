@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/rodne-cislo</guid>
+      <title>Validace rodného čísla v Altairis Validation Toolkitu</title>
+      <description>Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</description>
+      <link>https://www.altair.blog/2021/01/rodne-cislo</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-01-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/hvezdy</guid>
       <title>Žlutá nebo rudá</title>
       <description>Symboly jsou pro někoho se sociopatickými sklony praktické. Lidé jim obvykle přikládají zvláštní důležitost a my, kteří nejsme nadáni empatií, se jich můžeme rozumově chytit a nahradit tak nedostatek pocitového pochopení a zahrát tu správnou roli. Z konce minulého režimu si pamatuji naprostou vyprázdněnost symbolů, které se staly důležitými až teprve v případě svatokrádeže. Jako dnes davidova hvězda s nápisem "neočkovaný".</description>
@@ -139,16 +148,6 @@
       <category>Bezpečnost</category>
       <category>Politika</category>
       <pubDate>2020-07-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/07/odpoledni-skoleni</guid>
-      <title>Pozvánka na odpolední školení ASP.NET Core</title>
-      <description>Máte půl dne času? Zvu vás na komplexní online školení ASP.NET Core. Tedy, pokud budete mít půl dne času dva týdny. Koronavirus řadu lidí i firem přesvědčil, že školení nemusí probíhat jenom osobně, ale lze ho dělat i na dálku. A speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho.</description>
-      <link>https://www.altair.blog/2020/07/odpoledni-skoleni</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Akce a události</category>
-      <pubDate>2020-07-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

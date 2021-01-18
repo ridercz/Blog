@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Validace rodného čísla v Altairis Validation Toolkitu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/01/rodne-cislo" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Validace rodného čísla v Altairis Validation Toolkitu" />
+    <meta name="twitter:description" content="Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20210118-rodne-cislo.jpg" />
+    <meta property="article:published_time" content="2021-01-18" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Validace rodného čísla v Altairis Validation Toolkitu" />
+    <meta name="description" property="og:description" content="Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20210118-rodne-cislo.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/01/rodne-cislo" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector()">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20210118-rodne-cislo.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Validace rodného čísla v Altairis Validation Toolkitu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-01-18">18. ledna 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Abych <a href="https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a">jenom nekritizoval</a>, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny <a href="https://github.com/ridercz/Altairis.ValidationToolkit/">Altairis Validation Toolkit</a> jsem doprogramoval nový atribut <code>[RodneCislo]</code>, který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</p>
+<h2 id="zaznam-live-streamu">Záznam live streamu</h2>
+<p>Live stream byl dobrodružný, protože mi můj streamovací počítač pár minut před začátkem spadnul do BSOD, takže jsem musel improvizovat a odstreamovat to z jiného, který na to ale nebyl moc připravený a zlobil mi zvuk. Nicméně nakonec se to podařilo a záznam najdete na YouTube:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/6wkMLS1roXw" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="zakladni-ponauceni">Základní ponaučení</h2>
+<p><strong>Spoléhejte se na autoritativní zdroje.</strong> Popisů rodného čísla najdete na Internetu hodně a i na státních serverech jsou uvedeny chybně. Například <a href="https://www.mvcr.cz/clanek/rady-a-sluzby-dokumenty-rodne-cislo.aspx">web Ministerstva vnitra</a> nepočítá s tím, že k měsíci lze přičítat nejenom 50, ale i 20 nebo 70. Stejnou chybou trpí též <a href="https://www.sluzby-isvs.cz/ISDP/DatovyPrvek/DetailDP.aspx?id_procesu=c35c0033-6d4f-4542-b415-dcf1f0c40266">katalog datových prvků</a>.</p>
+<p>Web ČSSZ nabízí <a href="https://www.cssz.cz/standardni-kontrola-rodneho-cisla-a-evidencniho-cisla-pojistence">pěkný postup validace</a>, ale ten zahrnuje i evidenční číslo pojištěnce zdravotního pojištění, což nemusí být jenom rodné číslo. Autoritativním zdrojem tak pro nás je <a href="https://www.zakonyprolidi.cz/cs/2000-133/zneni-20190424#p13">§ 13 zákona č. 133/2000 Sb. o evidenci obyvatel</a>.</p>
+<p><strong>Nespoléhejte na autoritativní zdroje.</strong> V přidělování rodných čísel v minulosti vládl chaos, protože se to dělalo ručně. A byla tedy přidělována duplicitní rodná čísla, čísla s chybnou kontrolní číslicí a podobně. Přišlo se na to až v devadesátých letech při kuponové privatizaci, kdy se poprvé rodná čísla masově zadávala do počítače.</p>
+<p>Naše aplikace tento problém neřeší a vychází striktně z platné zákonné definice rodného čísla. Nicméně u reálné aplikace může být - v závislosti na jejím určení a cílové skupině - rozumné umožnit i zadání nevalidního RČ a validaci použít pouze k upozornění.</p>
+<p><strong>Vytvářejte logické datové typy.</strong> Knihovna umí RČ nejenom validovat, ale také zpracovávat, pomocí <a href="https://github.com/ridercz/Altairis.ValidationToolkit/blob/master/Altairis.ValidationToolkit/LogicalTypes/RodneCislo.cs">logického datového typu <code>RodneCislo</code></a>. Řetězcovou hodnotu můžete pomocí statických metod <code>Parse</code> a <code>TryParse</code> proparsovat a načíst. Poté máte k dispozici vlastnosti, které vám umožní zjistit datum narození osoby, její pohlaví apod. Pomocí metody <code>ToString</code> pak lze rodné číslo získat v normalizované řetězcové podobě s lomítkem nebo bez.</p>
+<p><strong>Neškoďte uživateli příliš.</strong> Logický datový typ (a tím pádem i validátor) si poradí s jakýmkoliv druhem zápisu. Rodné číslo může a nemusí obsahovat lomítko, mezery, cokoliv. Jediné co nás zajímá jsou desítkové číslice. Není tedy třeba uživatele šikanovat, že rodné číslo <code>600702/4826</code> nesmí zadávat jako <code>6007024826</code> nebo třeba <code>60 07 02/4826</code>. Aplikace si to inteligentně přebere. Myslete na to třeba při zadávání telefonního čísla nebo PSČ.</p>
+<h2 id="generovani-testovacich-rodnych-cisel">Generování testovacích rodných čísel</h2>
+<p>Před začátkem streamu jsem si napsal jednoduchý náhodný generátor validních rodných čísel. Jeho kód si můžete prohlédnout níže, nebo přímo <a href="https://dotnetfiddle.net/p6AQ6P">spustit jako fiddle</a>.</p>
+<pre><code class="language-csharp">using System;
+
+public class Program {
+	public static void Main() {
+		var rng = new Random();
+		for (var i = 0; i &lt; 50; i++) {
+			// Datum narození
+			var bd = new DateTime(1890, 1, 1).AddDays(rng.Next(365 * 150));
+			var m = bd.Month;
+			
+			// Pohlaví a druhá řada
+			var sex = rng.Next(2) == 1;
+			var extra = rng.Next(10) == 1;
+			m += extra ? (sex ? 20 : 70) : sex ? 0 : 50;
+			
+			// Pořadové číslo
+			var seq = rng.Next(0, 1000);
+			
+			// Zkonstruovat kandidáta RČ
+			var rcs = bd.Year.ToString()[2..] + m.ToString(&quot;00&quot;) + bd.Day.ToString(&quot;00&quot;) + seq.ToString(&quot;000&quot;);
+			
+			// Spočítat kontrolní číslici
+			if(bd.Year &gt; 1953) {
+				var rc = long.Parse(rcs);
+				var chs = rc % 11;
+				if(chs == 10) continue;
+				rcs = rcs + chs.ToString();
+			}
+
+            // Vypsat RČ
+			Console.WriteLine(rcs[0..6] + &quot;/&quot; + rcs[6..]);
+		}
+	}
+}
+</code></pre>
+<p>Obecně pro generování testovacích dat používám službu <a href="https://www.fakenamegenerator.com/">Fake Name Generator</a>, ale ta česká rodná čísla generovat neumí.</p>
+<h2 id="pouziti-validatoru">Použití validátoru</h2>
+<p>Použití validátoru jako takového je jednoduché. Přidejte do projektu odkaz na NuGet balíček <code>Altairis.ValidationToolkit</code> a pak příslušnou vlastnost odekorujte atributem <code>[RodneCislo]</code>. Pro použití pak nepracujte přímo se stringem, ale s třídou <code>RodneCislo</code> pomocí jejich metod <code>Parse</code>/<code>TryParse</code> a <code>ToString</code>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Validace+rodn%c3%a9ho+%c4%8d%c3%adsla+v+Altairis+Validation+Toolkitu&amp;body=https://www.altair.blog/2021/01/rodne-cislo">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/01/rodne-cislo.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/01/rodne-cislo.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/01/rodne-cislo">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/01/rodne-cislo">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

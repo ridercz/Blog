@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/rodne-cislo</guid>
+      <title>Validace rodného čísla v Altairis Validation Toolkitu</title>
+      <description>Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</description>
+      <link>https://www.altair.blog/2021/01/rodne-cislo</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-01-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</guid>
       <title>Tři čísla za lomítkem v rezervačním systému jako symbol diletantství u státních IT projektů</title>
       <description>Asi nikoho nepřekvapilo, že spuštění systému pro rezervaci na očkování proti koronaviru bylo provázeno mnohými problémy. Na to jsme v České republice zvyklí, pravděpodobně bychom dlouho hledali významnější informační systém veřejné správy, který fungoval na první pokus správně. Co je ale příčinou? To nám umožní odhalit tři čísla za lomítkem.</description>
@@ -138,17 +147,6 @@
       <category>Lidé a jiná zvěř</category>
       <category>Politika</category>
       <pubDate>2020-11-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-2</guid>
-      <title>Svobodný přístup k informacím: záznam z online přednášky</title>
-      <description>Nabízím vám záznam svého včerejšího streamu ze série Dvounohý kůň versus úřední šiml. Byl věnován problematice svobodného přístup k informacím. Tedy postupu, jak od veřejných institucí získat informace které potřebujete a jak se bránit, pokud vám je nechtějí vydat.</description>
-      <link>https://www.altair.blog/2020/11/obcanka-2</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Politika</category>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2020-11-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
