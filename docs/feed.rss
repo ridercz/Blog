@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</guid>
+      <title>Stojánek na M5Stack Core/Basic/Fire/GO</title>
+      <description>M5Stack je je sada vývojových modulů elektroniky. K některým z nich se dodává roztomilý magnetický stojánek. Tenhle není magnetický ani roztomilý, ale zato je univerzální a parametrický.</description>
+      <link>https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-01-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/rodne-cislo</guid>
       <title>Validace rodného čísla v Altairis Validation Toolkitu</title>
       <description>Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</description>
@@ -137,16 +146,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2020-12-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/uredne-bezdomovcem</guid>
-      <title>Úředně bezdomovcem po devíti letech: aktualizace článku</title>
-      <description>V listopadu 2011 jsem napsal a na svém blogu vydal článek "Úředně bezdomovcem: Trvalé bydliště, proč ho mít a proč ne". Je to asi nejčtenější článek na mém blogu, na mnoha místech odkazovaný a mnohokrát citovaný. Za těch devět let se situace mírně změnila. Vydávám tedy jeho aktualizovanou verzi, odpovídající stavu v roce 2020.</description>
-      <link>https://www.altair.blog/2020/11/uredne-bezdomovcem</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <category>Politika</category>
-      <pubDate>2020-11-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

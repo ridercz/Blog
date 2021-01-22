@@ -1,0 +1,9 @@
+<!-- dcterms:title = Stojánek na M5Stack Core/Basic/Fire/GO -->
+<!-- dcterms:abstract = M5Stack je je sada vývojových modulů elektroniky. K některým z nich se dodává roztomilý magnetický stojánek. Tenhle není magnetický ani roztomilý, ale zato je univerzální a parametrický. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210122-m5stack-stand.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2021-01-22 -->
+<!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand -->

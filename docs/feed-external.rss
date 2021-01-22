@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</guid>
+      <title>Stojánek na M5Stack Core/Basic/Fire/GO</title>
+      <description>M5Stack je je sada vývojových modulů elektroniky. K některým z nich se dodává roztomilý magnetický stojánek. Tenhle není magnetický ani roztomilý, ale zato je univerzální a parametrický.</description>
+      <link>https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-01-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</guid>
       <title>Tři čísla za lomítkem v rezervačním systému jako symbol diletantství u státních IT projektů</title>
       <description>Asi nikoho nepřekvapilo, že spuštění systému pro rezervaci na očkování proti koronaviru bylo provázeno mnohými problémy. Na to jsme v České republice zvyklí, pravděpodobně bychom dlouho hledali významnější informační systém veřejné správy, který fungoval na první pokus správně. Co je ale příčinou? To nám umožní odhalit tři čísla za lomítkem.</description>
@@ -141,16 +150,6 @@
       <category>IT</category>
       <category>Politika</category>
       <pubDate>2020-10-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66831160-psms7-2fa8cd3a8d001e3</guid>
-      <title>SMS zprávy vyzývající k instalaci eRoušky jsou kybernetickou hrozbou, ta od O2 navíc může narušit soukromí uživatele</title>
-      <description>Ukazuje se, že pro stát i v krizové situaci a s podporou českých technologických firem platí nesmrtelná věta někdejšího ruského premiéra Viktora Černomyrdina: Měli jsme ty nejlepší úmysly, ale dopadlo to jako vždy.</description>
-      <link>https://tech.ihned.cz/c7-66831160-psms7-2fa8cd3a8d001e3</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Politika</category>
-      <pubDate>2020-10-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
