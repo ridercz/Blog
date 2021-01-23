@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/skoleni-bezpecne-aplikace</guid>
+      <title>Pozvánka na odpolední školení Bezpečné aplikace v .NET</title>
+      <description>Kybernetická bezpečnost je s ohledem na přesun mnoha aktivit do online prostoru čím dál důležitější. Napsal jsem o jejím stavu mnoho kritických článků a snažím se též přiložit ruku k dílu. Zvu vás na nově aktualizované komplexní školení týkající se bezpečnosti webových aplikací v .NET. Toto školení je určeno jak programátorům, kteří webové aplikace vytvářejí, tak IT profesionálům, kteří se starají o infrastrukturu na níž běží. Při zabezpečení totiž musejí obě skupiny spolupracovat a rozhodně není na škodu, aby jedna strana věděla, co dělá druhá.</description>
+      <link>https://www.altair.blog/2021/01/skoleni-bezpecne-aplikace</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2021-01-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</guid>
       <title>Stojánek na M5Stack Core/Basic/Fire/GO</title>
       <description>M5Stack je je sada vývojových modulů elektroniky. K některým z nich se dodává roztomilý magnetický stojánek. Tenhle není magnetický ani roztomilý, ale zato je univerzální a parametrický.</description>
@@ -136,16 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2020-12-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f</guid>
-      <title>Třiatřicet stříbrných chyb pro IoT: Katastrofa jménem Amnesia:33</title>
-      <description>Život s vytrvalostí hodnou lepší věci opakovaně potvrzuje pravdivost bonmotu, že chybějící písmenko "S" ve zkratce IoT znamená "security". Nejnověji pak půvabnou sbírkou třiatřiceti bezpečnostních chyb v několika různých síťových knihovnách, kterou její objevitelé ze společnosti Forescout pojmenovali AMNESIA:33. Je na ní zákeřné to, že nepostihuje jedno zařízení, nebo jednoho výrobce. Postižených společností je více než sto padesát a počet postižených zařízení se pohybuje v miliónech.</description>
-      <link>https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2020-12-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/01/skoleni-bezpecne-aplikace</guid>
+      <title>Pozvánka na odpolední školení Bezpečné aplikace v .NET</title>
+      <description>Kybernetická bezpečnost je s ohledem na přesun mnoha aktivit do online prostoru čím dál důležitější. Napsal jsem o jejím stavu mnoho kritických článků a snažím se též přiložit ruku k dílu. Zvu vás na nově aktualizované komplexní školení týkající se bezpečnosti webových aplikací v .NET. Toto školení je určeno jak programátorům, kteří webové aplikace vytvářejí, tak IT profesionálům, kteří se starají o infrastrukturu na níž běží. Při zabezpečení totiž musejí obě skupiny spolupracovat a rozhodně není na škodu, aby jedna strana věděla, co dělá druhá.</description>
+      <link>https://www.altair.blog/2021/01/skoleni-bezpecne-aplikace</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2021-01-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/01/rodne-cislo</guid>
       <title>Validace rodného čísla v Altairis Validation Toolkitu</title>
       <description>Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</description>
@@ -135,19 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-08-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/07/evolby</guid>
-      <title>Lesk a bída elektronických voleb</title>
-      <description>Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.</description>
-      <link>https://www.altair.blog/2020/07/evolby</link>
-      <author>Michal Altair Valášek</author>
-      <author>Vladimír Smejkal</author>
-      <author>Jindřich Kodl</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2020-07-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
