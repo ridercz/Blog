@@ -2,6 +2,7 @@
 <!-- dcterms:abstract = Aby byla elektronika užitečná, nemusí v sobě mít mikroprocesor. Jedna z drobností, ze nichž jsem poslední dobou nadšený, jsou magnetické univerzální napájecí USB kabely, které lze za pár korun koupit na AliExpressu. A 3D tištěný držáček to posouvá ještě na vyšší úroveň. -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
+<!-- x4w:category = Recenze -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:dateAccepted = 2019-05-11 -->
 <!-- x4w:coverUrl = /cover-pictures/20190511-magneticke-kabely.jpg -->
