@@ -31,6 +31,8 @@ Ke všem materiálům a video záznamu školení účastníkům zůstane trvalý
 
 Cena za jednoho účastníka je **9000 Kč** + DPH. V případě více účastníků z jedné firmy (na jednu objednávku/fakturu) je cena bez DPH **8000 Kč** za účastníka.
 
+**Zaregistrovat se můžete prostřednictvím [webového formuláře](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUNFQ4V0ZYR01VWjNWWk83VzBXRFhYRVdaWC4u).**
+
 ## Co je obsahem školení?
 
 Školení je rozděleno do čtyř logických bloků:
@@ -61,9 +63,7 @@ V poslední části probereme nejběžnější bezpečnostní aspekty, rizika a 
 
 ## Jak se přihlásit
 
-Zaregistrovat se můžete prostřednictvím [webového formuláře](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUNFQ4V0ZYR01VWjNWWk83VzBXRFhYRVdaWC4u):
-
-<iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUNFQ4V0ZYR01VWjNWWk83VzBXRFhYRVdaWC4u&embed=true" style="border:none;max-width:100%;display:block;margin:0 auto;" width="800px" height="750px"></iframe>
+**Zaregistrovat se můžete prostřednictvím [webového formuláře](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAaGd_xhUNFQ4V0ZYR01VWjNWWk83VzBXRFhYRVdaWC4u).**
 
 Na základě odeslané registrace vás budu kontaktovat a pošlu vám zálohovou fakturu.
 
