@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66873770-psms7-e40021d23204918</guid>
+      <title>Chytrá domácnost od Lidlu: Hodně jednoduché muziky za málo peněz a nejistá budoucnost</title>
+      <description>Mezi firmy snažící se uchytit ve světě internetu věcí se nedávno zařadil nový hráč: obchodní řetězec Lidl. Začal prodávat komponenty pro tvorbu "chytré domácnosti". Trpí ale stejnou nevýhodou jako většina konkurence: nejistou bezpečností a budoucností. Dokud se to nezmění, bude to jenom hračka - ale snadno dostupná a celkem levná.</description>
+      <link>https://tech.ihned.cz/c7-66873770-psms7-e40021d23204918</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Recenze</category>
+      <pubDate>2021-01-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</guid>
       <title>Stojánek na M5Stack Core/Basic/Fire/GO</title>
       <description>M5Stack je je sada vývojových modulů elektroniky. K některým z nich se dodává roztomilý magnetický stojánek. Tenhle není magnetický ani roztomilý, ale zato je univerzální a parametrický.</description>
@@ -140,16 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</guid>
-      <title>Hodná, zlá a ošklivá: eRouška nyní nepředstavuje nebezpečí, ale může se to změnit; nepomůže a to se nezmění</title>
-      <description>Podle mého profesionálního názoru v této chvíli instalace eRoušky nepředstavuje významné riziko ohrožení uživatele, ale ani mu nepřinese žádná významná pozitiva. Do budoucna však přináší potenciální ohrožení a zároveň není pravděpodobné, že by přinesla pozitiva. Navíc informace o setkání s nakaženým má téměř nulovou hodnotu a spoléhat na ni je nezodpovědné.</description>
-      <link>https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Politika</category>
-      <pubDate>2020-10-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

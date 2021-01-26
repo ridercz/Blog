@@ -1,0 +1,11 @@
+<!-- dcterms:title = Chytrá domácnost od Lidlu: Hodně jednoduché muziky za málo peněz a nejistá budoucnost -->
+<!-- dcterms:abstract = Mezi firmy snažící se uchytit ve světě internetu věcí se nedávno zařadil nový hráč: obchodní řetězec Lidl. Začal prodávat komponenty pro tvorbu "chytré domácnosti". Trpí ale stejnou nevýhodou jako většina konkurence: nejistou bezpečností a budoucností. Dokud se to nezmění, bude to jenom hračka - ale snadno dostupná a celkem levná. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210126-lidl.jpg -->
+<!-- x4w:pictureCredits = Lidl Česká republika -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Recenze -->
+<!-- dcterms:dateAccepted = 2021-01-26 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66873770-psms7-e40021d23204918 -->
