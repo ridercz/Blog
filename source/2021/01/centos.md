@@ -1,0 +1,9 @@
+<!-- dcterms:title = Red Hat komplikuje život firmám po celém světě, stačilo mu k tomu změnit systém podpory pro serverový CentOS -->
+<!-- dcterms:abstract = Společnost Red Hat oznámila, že mění způsob podpory linuxové distribuce CentOS. Nadále nebudou existovat dlouhodobě podporované číslované verze, ale jenom průběžně aktualizovaný CentOS Stream. Tím v podstatě končí jeden z hlavních důvodů, proč lidé distribuci využívají. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-centos.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- dcterms:dateAccepted = 2021-01-29 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66875480-psms7-94a429ef1998823 -->
