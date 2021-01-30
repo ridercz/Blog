@@ -1,0 +1,10 @@
+<!-- dcterms:title = Jak odstranit citlivé údaje z DOCX nebo PDF dokumentu -->
+<!-- dcterms:abstract = Přestože toto video pochází už z roku 2016, je stále aktuální. Kdyby ten postup znali v EK, mohli si odpustit nepěknou blamáž při zveřejnění smlouvy na dodávku vakcíny proti COVID-19. Kde sice začernili některé údaje, ale v metadatech jim zůstal původní text. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-youtube.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-01-30 -->
+<!-- x4w:alternateUrl = https://youtu.be/V1mdx4W35UE -->

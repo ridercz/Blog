@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://youtu.be/V1mdx4W35UE</guid>
+      <title>Jak odstranit citlivé údaje z DOCX nebo PDF dokumentu</title>
+      <description>Přestože toto video pochází už z roku 2016, je stále aktuální. Kdyby ten postup znali v EK, mohli si odpustit nepěknou blamáž při zveřejnění smlouvy na dodávku vakcíny proti COVID-19. Kde sice začernili některé údaje, ale v metadatech jim zůstal původní text.</description>
+      <link>https://youtu.be/V1mdx4W35UE</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-01-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66875480-psms7-94a429ef1998823</guid>
       <title>Red Hat komplikuje život firmám po celém světě, stačilo mu k tomu změnit systém podpory pro serverový CentOS</title>
       <description>Společnost Red Hat oznámila, že mění způsob podpory linuxové distribuce CentOS. Nadále nebudou existovat dlouhodobě podporované číslované verze, ale jenom průběžně aktualizovaný CentOS Stream. Tím v podstatě končí jeden z hlavních důvodů, proč lidé distribuci využívají.</description>
@@ -140,16 +150,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2020-11-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66839240-psms7-ab63fc36d4bf866</guid>
-      <title>Panna, nebo orel? Data říkají, že v tramvaji na eRoušku není spoleh, a klamat může i jinde</title>
-      <description>Aplikace eRouška je založena na Exposure Notification API. To je API od Apple a Google, které řeší komunikaci zařízení přes Bluetooth. Nad ním postavené aplikace jenom nastavují pravidla pro vyhodnocení kontaktů. Vše vychází z předpokladu, že na základě síly Bluetooth signálu lze vypočítat vzdálenost dvou zařízení a tedy i uživatelů. To výborně funguje teoreticky a v laboratorních podmínkách. V reálném světě to ale funguje podstatně hůře.</description>
-      <link>https://tech.ihned.cz/c7-66839240-psms7-ab63fc36d4bf866</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Politika</category>
-      <pubDate>2020-11-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
