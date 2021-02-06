@@ -14,14 +14,7 @@ Kybernetická bezpečnost je s ohledem na přesun mnoha aktivit do online prosto
 
 ## Kdy a jak se bude školení konat?
 
-Vypsal jsem dva termíny, vždy jde o tři půldny po-st od 12:00 do cca. 17:00 hodin:
-
-* od 08. do 10. února 2021
-* od 22. do 24. února 2021
-
-Na základě zájmu přihlášených se bude konat jeden nebo oba termíny. V případě, že byste o školení měli zájem, ale nevyhovuje vám termín, napište své představy do registračního formuláře - uvidíme, co se dá dělat.
-
-Půldenní školení se mi v minulosti osvědčilo, protože účastníka nevyřadí z provozu na celý den.
+Termín školení je **od 22. do 24. února 2021**, tři půldny po-st **od 12:00 do cca. 17:00** hodin. Půldenní školení se mi v minulosti osvědčilo, protože účastníka nevyřadí z provozu na celý den.
 
 Školení bude probíhat online, prostřednictvím video streamu lektora a textového chatu v [eLearningovém systému společnosti Altairis](https://elearning.altairis.cz/). Součástí školení jsou podrobné cvičení/laby, kde si teoretické znalosti ihned vyzkoušíte v praxi. Zároveň slouží jako návod pro řešení typických situací v praxi. Použité řešení nevyžaduje od účastníků instalaci žádného software ani specifický hardware - stačí běžný webový prohlížeč.
 
