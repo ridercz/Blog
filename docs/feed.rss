@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b</guid>
+      <title>M5Stack je trochu jiná stavebnice pro chytrá zařízení. Hodí se do škol i pro zakázkovou výrobu</title>
+      <description>M5Stack je značka, pod kterou lze koupit velké množství různých elektronických modulů, které lze snadno propojovat a programovat. Její výrobky by bylo poněkud nefér nazvat "elektronickou stavebnicí", protože ač i takové použití je možné a propagované, možnosti jejich využití sahají daleko dál. V tomto článku se budeme zabývat třemi podobnými produkty, založenými na platformě ESP32: M5Stack Basic, M5GO IoT Kit a M5StickC.</description>
+      <link>https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>Recenze</category>
+      <pubDate>2021-02-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://youtu.be/V1mdx4W35UE</guid>
       <title>Jak odstranit citlivé údaje z DOCX nebo PDF dokumentu</title>
       <description>Přestože toto video pochází už z roku 2016, je stále aktuální. Kdyby ten postup znali v EK, mohli si odpustit nepěknou blamáž při zveřejnění smlouvy na dodávku vakcíny proti COVID-19. Kde sice začernili některé údaje, ale v metadatech jim zůstal původní text.</description>
@@ -137,16 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2021-01-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82</guid>
-      <title>Konec internetu, jak jsme ho znali: Ideál sítě sítí je pryč a lidé přestávají číst, mají radši obrázky</title>
-      <description>Internet začal zhroucením systému po třetím přeneseném znaku. Ale jak skončí? Nebo už se to stalo? Co se stalo s internetem, který jsem znal? Jak se bude vyvíjet dál? Jediné, co je jisté, je nejistota. Internetové revoluce byly vždy překvapivé a nečekané.</description>
-      <link>https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2020-12-31T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

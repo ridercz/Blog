@@ -1,0 +1,10 @@
+<!-- dcterms:title = M5Stack je trochu jiná stavebnice pro chytrá zařízení. Hodí se do škol i pro zakázkovou výrobu -->
+<!-- dcterms:abstract = M5Stack je značka, pod kterou lze koupit velké množství různých elektronických modulů, které lze snadno propojovat a programovat. Její výrobky by bylo poněkud nefér nazvat "elektronickou stavebnicí", protože ač i takové použití je možné a propagované, možnosti jejich využití sahají daleko dál. V tomto článku se budeme zabývat třemi podobnými produkty, založenými na platformě ESP32: M5Stack Basic, M5GO IoT Kit a M5StickC. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210209-m5stack.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bastlení -->
+<!-- x4w:category = Recenze -->
+<!-- dcterms:dateAccepted = 2021-02-09 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b -->
