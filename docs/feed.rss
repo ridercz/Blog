@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/02/futlab</guid>
+      <title>Jak to dopadlo s informačním systémem FutLabu?</title>
+      <description>Před časem jsem udělal sérii webcastů o vývoji informačního systému pro otevřenou dílnu FutLab. Šlo o jednoduchou (ale ne triviální) aplikaci pro .NET 5. Jak to dopadlo? Operace dopadla úspěšně, pacient zemřel. Aplikaci jsem sice úspěšně dokončil, ale než došlo k jejímu nasazení, FutLab v podobě otevřené dílny v důsledku vládních opatření skončil.</description>
+      <link>https://www.altair.blog/2021/02/futlab</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-02-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b</guid>
       <title>M5Stack je trochu jiná stavebnice pro chytrá zařízení. Hodí se do škol i pro zakázkovou výrobu</title>
       <description>M5Stack je značka, pod kterou lze koupit velké množství různých elektronických modulů, které lze snadno propojovat a programovat. Její výrobky by bylo poněkud nefér nazvat "elektronickou stavebnicí", protože ač i takové použití je možné a propagované, možnosti jejich využití sahají daleko dál. V tomto článku se budeme zabývat třemi podobnými produkty, založenými na platformě ESP32: M5Stack Basic, M5GO IoT Kit a M5StickC.</description>
@@ -138,15 +147,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-01-01T12:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/pf</guid>
-      <title>PF 2021</title>
-      <description>Do budoucího roku vám za sebe i celou svou smečku přeji hlavně pokoj od lidí dobré vůle. Neboť takoví napáchají nejvíce škody a zůstává po nich nejvíc mrtvých. A hlavně v následujícím volebním roce nezapomeňte, že pokud vám někdo říká, že chce jenom vaše dobro, měli byste se mít před ním obzvláště na pozoru - a nenechat si ho vzít.</description>
-      <link>https://www.altair.blog/2021/01/pf</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2021-01-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
