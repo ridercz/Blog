@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/02/rep</guid>
+      <title>FutLabIS je nyní ReP</title>
+      <description>Včera jsem popsal, jak dopadl informační systém pro otevřenou dílnu FutLab, který jsem živě psal. Abych usnadnil jeho adopci pro jiné účely, rozhodl jsem se ho přejmenovat a odstranit z něj všechny reference na původní určení.</description>
+      <link>https://www.altair.blog/2021/02/rep</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-02-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/02/futlab</guid>
       <title>Jak to dopadlo s informačním systémem FutLabu?</title>
       <description>Před časem jsem udělal sérii webcastů o vývoji informačního systému pro otevřenou dílnu FutLab. Šlo o jednoduchou (ale ne triviální) aplikaci pro .NET 5. Jak to dopadlo? Operace dopadla úspěšně, pacient zemřel. Aplikaci jsem sice úspěšně dokončil, ale než došlo k jejímu nasazení, FutLab v podobě otevřené dílny v důsledku vládních opatření skončil.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/08/usb-tethering</guid>
-      <title>Zkuste to s drátem: USB tethering na Androidu</title>
-      <description>Že se z telefonu z Androidem dá udělat Wi-Fi přístupový bod a připojit se z jiného zařízení, třeba PC, je všeobecně známo. Ale pomocí funkce USB Tethering, která je v Androidu standardně od verze 9.0, lze počítač připojit i pomocí USB kabelu, což má mnohé výhody.</description>
-      <link>https://www.altair.blog/2020/08/usb-tethering</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-08-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
