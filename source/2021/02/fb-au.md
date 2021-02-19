@@ -1,0 +1,10 @@
+<!-- dcterms:title = Facebook bez australských zpráv: Dejte si pozor na svá přání, mohla by se vyplnit -->
+<!-- dcterms:abstract = Když v létě loňského roku australská vláda představila ambiciózní plán na zákon, který by mě přimět technologické giganty Google a Facebook platit tamním médiím za to, že publikují na jejich články odkazy ve výsledcích vyhledávání a na sociálních sítích, australská média mu aplaudovala. Ostatně, bylo to výsledkem jejich dlouhodobého lobbingu. Nabízí se úsloví dejte si pozor na svá přání, mohla by se vyplnit. Protože nyní se plán naplnil, zákon prošel tamním parlamentem a Facebook se mu podřídil. Tím, že přestal publikovat odkazy na australské zpravodajské servery. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-facebook.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2021-02-19 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66885660-psms7-4e0cb21d45f581e -->

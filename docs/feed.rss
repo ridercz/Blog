@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66885660-psms7-4e0cb21d45f581e</guid>
+      <title>Facebook bez australských zpráv: Dejte si pozor na svá přání, mohla by se vyplnit</title>
+      <description>Když v létě loňského roku australská vláda představila ambiciózní plán na zákon, který by mě přimět technologické giganty Google a Facebook platit tamním médiím za to, že publikují na jejich články odkazy ve výsledcích vyhledávání a na sociálních sítích, australská média mu aplaudovala. Ostatně, bylo to výsledkem jejich dlouhodobého lobbingu. Nabízí se úsloví dejte si pozor na svá přání, mohla by se vyplnit. Protože nyní se plán naplnil, zákon prošel tamním parlamentem a Facebook se mu podřídil. Tím, že přestal publikovat odkazy na australské zpravodajské servery.</description>
+      <link>https://tech.ihned.cz/c7-66885660-psms7-4e0cb21d45f581e</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2021-02-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/02/rep</guid>
       <title>FutLabIS je nyní ReP</title>
       <description>Včera jsem popsal, jak dopadl informační systém pro otevřenou dílnu FutLab, který jsem živě psal. Abych usnadnil jeho adopci pro jiné účely, rozhodl jsem se ho přejmenovat a odstranit z něj všechny reference na původní určení.</description>
@@ -136,16 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-01-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</guid>
-      <title>Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér</title>
-      <description>Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy.</description>
-      <link>https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-01-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

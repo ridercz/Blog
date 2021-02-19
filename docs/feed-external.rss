@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66885660-psms7-4e0cb21d45f581e</guid>
+      <title>Facebook bez australských zpráv: Dejte si pozor na svá přání, mohla by se vyplnit</title>
+      <description>Když v létě loňského roku australská vláda představila ambiciózní plán na zákon, který by mě přimět technologické giganty Google a Facebook platit tamním médiím za to, že publikují na jejich články odkazy ve výsledcích vyhledávání a na sociálních sítích, australská média mu aplaudovala. Ostatně, bylo to výsledkem jejich dlouhodobého lobbingu. Nabízí se úsloví dejte si pozor na svá přání, mohla by se vyplnit. Protože nyní se plán naplnil, zákon prošel tamním parlamentem a Facebook se mu podřídil. Tím, že přestal publikovat odkazy na australské zpravodajské servery.</description>
+      <link>https://tech.ihned.cz/c7-66885660-psms7-4e0cb21d45f581e</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Politika</category>
+      <pubDate>2021-02-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b</guid>
       <title>M5Stack je trochu jiná stavebnice pro chytrá zařízení. Hodí se do škol i pro zakázkovou výrobu</title>
       <description>M5Stack je značka, pod kterou lze koupit velké množství různých elektronických modulů, které lze snadno propojovat a programovat. Její výrobky by bylo poněkud nefér nazvat "elektronickou stavebnicí", protože ač i takové použití je možné a propagované, možnosti jejich využití sahají daleko dál. V tomto článku se budeme zabývat třemi podobnými produkty, založenými na platformě ESP32: M5Stack Basic, M5GO IoT Kit a M5StickC.</description>
@@ -140,16 +150,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2020-12-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</guid>
-      <title>Test Raspberry Pi 400: Neobyčejný počítač pro obyčejné lidi je schovaný v klávesnici</title>
-      <description>Počítače Raspberry Pi jsou neobyčejné, neboť se nesnaží oslnit schopnostmi a technickými specifikacemi. Jejich parametry jsou ve srovnání s běžnými desktopovými počítači a notebooky velice skromné. Nejsou totiž určeny pro běžné masové použití, ale jako nástroje pro výuku, prototypování nebo třeba domácí kutění a jejich výhodou je nízká cena kolem tisíce korun. Recenzované Raspberry Pi 400 je nicméně jiné, jde o první Raspberry pro obyčejné lidi.</description>
-      <link>https://tech.ihned.cz/c7-66841620-psms7-e4b3e93a68e279e</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Recenze</category>
-      <pubDate>2020-11-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
