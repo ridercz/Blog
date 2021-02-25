@@ -1,0 +1,10 @@
+<!-- dcterms:title = Modrák & Friends: Leak CD projektu -->
+<!-- dcterms:abstract = Do sbírky divných médií, v nichž jsem zanechal stopu, se po bok Archivního časopisu ministerstva vnitra a Světa motorů zařadil podcast Modrák & Friends, který se zabývá počítačovými hrami. O čem jsem moudře hovořil, když o počítačových hrách nic nevím a systematicky se jim vyhýbám? O hacku společnosti CD Projekt, což je údajně slavný herní producent (já se o její existenci dozvěděl až z toho hacku). Protože o hacku samotném není známo prakticky nic, bylo z toho povídání o bezpečnosti a ransomware. Pokud vám nestačí mne číst, ale chcete mě i poslouchat, zde máte možnost. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210222-modrak.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-02-22 -->
+<!-- x4w:alternateUrl = https://modrak.podbean.com/e/6-leak-cd-projektu/ -->

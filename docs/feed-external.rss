@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://modrak.podbean.com/e/6-leak-cd-projektu/</guid>
+      <title>Modrák &amp; Friends: Leak CD projektu</title>
+      <description>Do sbírky divných médií, v nichž jsem zanechal stopu, se po bok Archivního časopisu ministerstva vnitra a Světa motorů zařadil podcast Modrák &amp; Friends, který se zabývá počítačovými hrami. O čem jsem moudře hovořil, když o počítačových hrách nic nevím a systematicky se jim vyhýbám? O hacku společnosti CD Projekt, což je údajně slavný herní producent (já se o její existenci dozvěděl až z toho hacku). Protože o hacku samotném není známo prakticky nic, bylo z toho povídání o bezpečnosti a ransomware. Pokud vám nestačí mne číst, ale chcete mě i poslouchat, zde máte možnost.</description>
+      <link>https://modrak.podbean.com/e/6-leak-cd-projektu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-02-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66885660-psms7-4e0cb21d45f581e</guid>
       <title>Facebook bez australských zpráv: Dejte si pozor na svá přání, mohla by se vyplnit</title>
       <description>Když v létě loňského roku australská vláda představila ambiciózní plán na zákon, který by mě přimět technologické giganty Google a Facebook platit tamním médiím za to, že publikují na jejich články odkazy ve výsledcích vyhledávání a na sociálních sítích, australská média mu aplaudovala. Ostatně, bylo to výsledkem jejich dlouhodobého lobbingu. Nabízí se úsloví dejte si pozor na svá přání, mohla by se vyplnit. Protože nyní se plán naplnil, zákon prošel tamním parlamentem a Facebook se mu podřídil. Tím, že přestal publikovat odkazy na australské zpravodajské servery.</description>
@@ -140,16 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2020-12-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f</guid>
-      <title>Třiatřicet stříbrných chyb pro IoT: Katastrofa jménem Amnesia:33</title>
-      <description>Život s vytrvalostí hodnou lepší věci opakovaně potvrzuje pravdivost bonmotu, že chybějící písmenko "S" ve zkratce IoT znamená "security". Nejnověji pak půvabnou sbírkou třiatřiceti bezpečnostních chyb v několika různých síťových knihovnách, kterou její objevitelé ze společnosti Forescout pojmenovali AMNESIA:33. Je na ní zákeřné to, že nepostihuje jedno zařízení, nebo jednoho výrobce. Postižených společností je více než sto padesát a počet postižených zařízení se pohybuje v miliónech.</description>
-      <link>https://tech.ihned.cz/c7-66858020-psms7-d2aee691dbc616f</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2020-12-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
