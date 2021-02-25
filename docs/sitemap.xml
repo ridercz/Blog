@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.altair.blog/2021/02/files</loc>
+    <lastmod>2021-02-25</lastmod>
+  </url>
+  <url>
     <loc>https://www.altair.blog/2021/02/rep</loc>
     <lastmod>2021-02-15</lastmod>
   </url>

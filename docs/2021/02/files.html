@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jakým způsobem používat statické soubory v ASP.NET 5? | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/02/files" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jakým způsobem používat statické soubory v ASP.NET 5?" />
+    <meta name="twitter:description" content="Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?" />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20210225-files.jpg" />
+    <meta property="article:published_time" content="2021-02-25" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Jakým způsobem používat statické soubory v ASP.NET 5?" />
+    <meta name="description" property="og:description" content="Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?" />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20210225-files.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/02/files" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector()">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20210225-files.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jakým způsobem používat statické soubory v ASP.NET 5?</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-02-25">25. února 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?</p>
+<p>Webové aplikace historicky vznikly jako rozšíření převážně statických webů. Klasické ASP nebo ASP.NET &amp;lte; 4.x, PHP a řada dalších technologií nemají pro statické soubory žádné zvláštní mechanismy, jednoduše protože je nepotřebují. Pokud někam do WWW rootu umístíte soubor bez speciálně zaregistrované přípony (<code>.aspx</code> apod.), prostě se vezmou a pošlou klientovi, když o ně požádá.</p>
+<p>S příchodem ASP.NET Core/5.0 se situace změnila.</p>
+<h2 id="soubory-jsouci-soucasti-aplikace">Soubory jsoucí součástí aplikace</h2>
+<p>V první řadě je třeba se zaměřit na soubory, které jsou součástí aplikace. Nasazují se společně s ní a nemění se, jenom při nasazení nové verze aplikace. Aplikace je tedy nijak nemodifikuje ani nepřidává nové. Typicky se jedná o obrázky, styly, skripty, favicon a podobné soubory.</p>
+<p>V ASP.NET 5.0 je aplikace hostována zcela jiným způsobem a chcete-li podporu pro statické soubory musíte ji explicitně přidat pomocí <em>static files middleware</em>. Což je speciální middleware, který umí zpřístupnit konkrétní složku.</p>
+<p>Návod pro práci s tímto middlewarem v angličtině najdete na <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0">docs.microsoft.com</a> a v češtině jsem udělal následující <a href="https://youtu.be/6C9wCIAe6_Y">krátké video demo</a>:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/6C9wCIAe6_Y" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="pracovni-soubory-aplikace">Pracovní soubory aplikace</h2>
+<p>Druhou rodinu představují soubory, které jsou pracovními daty aplikace. Například v případě publikačního systému se může jednat o nahrané obrázky k článkům, v jiných případech o přílohy nahrané jedním uživatelem určené ke stažení dalšími uživateli a podobně.</p>
+<p>Pro tento účel je použití static files middleware naprosto nevhodné a soubory tohoto typu by neměly být ukládány do webového prostoru aplikace (do složky <code>wwwroot</code>) ale někam mimo a zpřístupněny jiným způsobem. Důvodů pro to je několik:</p>
+<ul>
+<li>Static files middleware záměrně neobsahuje žádný mechanismus kontroly přístupu, autentizaci a autorizaci. Znalost názvu/adresy souboru je dostatečná pro to, aby soubor získal kdokoliv.</li>
+<li>Nahrávání souborů do WWW rootu komplikuje nasazení a aktualizaci aplikace. Při deploymentu nové verze si musíte pamatovat, že <em>tyhle</em> soubory nesmíte přepsat nebo smazat, protože s nimi aplikace pracuje.</li>
+<li>Při hostování aplikace v cloudu (např. Azure App Service, dříve Azure Web Apps) zpravidla klasického diskového prostoru nemáte k dispozici příliš mnoho a nepočítá se s tím že byste si lokálně ukládali nějaká trvalá pracovní data.</li>
+</ul>
+<p>Je tedy rozumnější obecné soubory ukládat někam jinam, mimo WWW root a možná zcela mimo váš web server a aplikaci na to připravit. Možná úložiště jsou:</p>
+<ul>
+<li>Lokální server, ale adresář mimo vlastní aplikaci.</li>
+<li>Dedikovaný file server ve vlastní infrastruktuře.</li>
+<li>Databázový BLOB.</li>
+<li>Cloudové úložiště s přímým odkazem.</li>
+<li>Cloudové úložiště s vlastní publikací.</li>
+</ul>
+<h2 id="lokalni-souborove-uloziste">Lokální souborové úložiště</h2>
+<p>Nejjednodušší varianta, použitelná zejména u on-premises řešení nebo na klasickém hostovaném serveru/vm. Data jsou uložena buďto na tom samém serveru jako web nebo na separátním file serveru.</p>
+<p>Např. typické fyzické umístění rootu vašeho webu může být v IIS na cestě <code>D:\www-servers\example\www.example.com</code>. Datový adresář pak můžete mít třeba v <code>D:\www-servers\example\files</code>. Pak si napíšete jednoduchý MVC controller, který na základě předaného parametru najde správný soubor a pošle ho klientovi.</p>
+<p>Příslušný zdrojový kód může vypadat třeba takto:</p>
+<pre><code class="language-cs">public class FilesController : Controller {
+    // In real world app, the hardcoded values will be replaced with a configuration option
+    private const string FolderPath = @&quot;D:\www-servers\example\files&quot;;
+    private static readonly TimeSpan CacheMaxAge = TimeSpan.FromDays(365);
+
+    [Route(&quot;/files/{filename:regex(^[[a-zA-Z0-9-_]]+\\.[[a-zA-Z0-9-_]]+$)}&quot;)]
+    public IActionResult SendFile(string fileName) {
+        // Construct the physical file name
+        var physicalPath = System.IO.Path.Combine(FolderPath, fileName);
+
+        // Check if file exists
+        if (!System.IO.File.Exists(physicalPath)) return this.NotFound();
+
+        // Get content type
+        var ep = new FileExtensionContentTypeProvider();
+        var isKnownType = ep.TryGetContentType(Path.GetExtension(physicalPath), out var contentType);
+        if (!isKnownType) contentType = &quot;application/octet-stream&quot;;
+
+        // Enable caching
+        this.HttpContext.Response.Headers.Add(&quot;Cache-Control&quot;, $&quot;public, max-age={CacheMaxAge.TotalSeconds}&quot;);
+
+        // Send the file
+        return this.PhysicalFile(physicalPath, contentType);
+    }
+}
+</code></pre>
+<p>Metoda <code>SendFile</code> dělá následující věci:</p>
+<ol>
+<li>Spočítá fyzickou cestu k souboru na disku (<code>physicalPath</code>). Název souboru se načítá z route parametru, který kontroluje, zda název souboru obsahuje pouze písmena, číslice, pomlčku, podtržítko a právě jednu tečku a příponu. <strong>Je z bezpečnostního hlediska kritické zajistit, aby byl název souboru validován,</strong> aby například nebylo možné pomocí sekvence znaků <code>..</code> vyskočit o úroveň výše a nechat si poslat libovolný soubor z disku, k němuž má aplikace přístup, a který může obsahovat potenciálně citlivá data (např. connection string v konfiguračním souboru).</li>
+<li>Ověří si, že soubor existuje. Pokud ne, vrátí chybu <em>404 Not Found</em>.</li>
+<li>Pomocí třídy <code>FileExtensionContentTypeProvider</code>, která je součástí Static Files Middleware se pokusí zjistit Content-Type, který odpovídá dané příponě souboru. Pokud se jedná o neznámý typ souboru, použije se hodnota <code>application/octet-stream</code>, což znamená obecný proud bajtů bez známého typu.</li>
+<li>Povolí cacheování souboru na nastavenou dobu, zde jeden rok. V reálné aplikaci by možná bylo vhodné aplikovat nějakou sofistikovanější logiku ohledně toho, jak se má cacheovat, v zásadě na povaze zasílaných dat.</li>
+<li>Voláním metody <code>PhysicalFile</code> odešle daný soubor na klienta. Tento overload se postará o vše potřebné, např. nastavení hlaviček <code>Content-Length</code> a <code>Last-Modified</code> v odpovědi nebo o zpracování požadavků obsahujících hlavičku <code>Range</code> a požadujících zaslání pouze části souboru.</li>
+</ol>
+<p>Route je nastavená tak, že pokud se zeptáte na adresu např. <code>http://localhost:5000/files/soubor.jpg</code>, pošle se soubor jsoucí na disku v cestě <code>D:\www-servers\example\files\soubor.jpg</code>.</p>
+<p>Samozřejmě zde můžete mít nějakou sofistikovanější logiku - uvedený kód je v podstatě minimální možný. V reálné aplikaci budete obvykle implementovat alespoň některé z následujících funkcí:</p>
+<ul>
+<li>Autentizaci a autorizaci - ověření, že uživatel má právo si daná data stáhnout.</li>
+<li>Podporu podmíněných požadavků na základě hlavičky <code>If-Modified-Since</code>.</li>
+<li>Nějakou sofistikovanější logiku určení cesty k souboru. Reálná cesta k souboru může být uložena například v databázi a uživatel může požadovat soubor bez znalosti jeho názvu, jenom například podle ID. K určení názvu souboru při downloadu můžete pooužít jiné overloady metody <code>PhysicalFile</code>.</li>
+</ul>
+<h2 id="databazovy-blob">Databázový BLOB</h2>
+<p>Relační databáze umožňují ukládat do polí tabulky i obecná binární data, kterým se v tomto kontextu říká BLOBy, přičemž tato zkratka znamená <em>Binary Large OBject</em>. V Microsoft SQL Serveru je k tomu určen zejména datový typ <code>varbinary</code> potažmo <code>varbinary(max)</code>.</p>
+<p><strong>Obecně není dobrý nápad ukládat binární soubory do databáze</strong>, a to zejména z důvodů výkonových a finančních. Nicméně každé pravidlo má své výjimky. Výhodou ukládání binárních dat do databáze je, že se s nimi snadno pracuje, snadno se udržuje referenční integrita, snadno se zálohují a podobně.</p>
+<p>Pokud se jedná o objemově malá data (v řádu jednotek megabajtů per záznam) a není jich mnoho, může být ukládání do databáze cesta nejmenšího odporu. Typickým příkladem může být například ikona uživatele. To je typicky obrázek o velikosti pár kilobajtů, který je typicky nejsnazší nacpat do dalšího pole v tabulce, než jenom kvůli němu budovat nějakou storage infrastrukturu.</p>
+<h2 id="cloudove-uloziste-s-primym-odkazem">Cloudové úložiště s přímým odkazem</h2>
+<p>Existují cloudové služby, které umožňují ukládat data, která jsou pak dostupná přímým odkazem. Například Microsoft Azure Blob Storage nebo <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a> (je podstatně lacinější než Azure). I pokud vaše aplikace neběží v cloudu, můžete chtít ukládat binární data do tohoto druhu storage, protože je to zpravidla levné a velice spolehlivé.</p>
+<p>Storage lze nastavit tak, že prostě stačí zadat správnou adresu a soubor se stáhne. Ideální v případě, že nechcete řešit autentizaci a autorizaci a je vám jedno, jak adresa vypadá.</p>
+<p>Pokud autentizaci potřebujete, můžete v Azure vytvořit speciální URL, obsahující takzvanou SAS - <em>Shared Access Signature</em>. Pomocí ní můžete omezit (věcně i časově) právo s blobem nakládat, aniž byste museli cokoliv zvláštního programovat. Podrobnější informace o SAS najdete v mém <a href="https://www.altair.blog/2013/05/windows-azure-storage-a-shared-access-signatures">starším článku</a>.</p>
+<p>Poslední možnost je, že si data ze storage stáhnete na web server a pošlete klientovi. To budete dělat zejména ve chvíli, kdy vám záleží na tom, jaká bude URL &quot;souboru&quot; a nechcete tam mít systémovou adresu storage.</p>
+<blockquote>
+<p><em>Poznámka:</em> Tento článek je inspirován dotazem, který jsem dostal na školení. Účastník se zmiňoval i o tom, jak to dělám na tomto blogu. Tento blog je zvláštní případ, protože se nejedná o webovou aplikaci v .NET. Tento blog je sbírka statických stránek, které jsou hostované ve službě <em>GitHub Pages</em>. Statické soubory jsou generovány pomocí nástroje <a href="https://github.com/ridercz/XML4web">XML4web</a> a celý repozitář blogu je <a href="https://github.com/ridercz/Blog">volně dostupný</a>. Část obrázků je uložena na GitHubu (pozadí článku, malé čtvercové obrázky u perexů apod.), obrázky v článcích jsou <a href="https://www.cdn.altairis.cz/">linkovány z CDN</a>.</p>
+</blockquote>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak%c3%bdm+zp%c5%afsobem+pou%c5%be%c3%advat+statick%c3%a9+soubory+v+ASP.NET+5%3f&amp;body=https://www.altair.blog/2021/02/files">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/02/files.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/02/files.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/02/files">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/02/files">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
