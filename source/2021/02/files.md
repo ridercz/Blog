@@ -10,7 +10,7 @@
 
 Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?
 
-Webové aplikace historicky vznikly jako rozšíření převážně statických webů. Klasické ASP nebo ASP.NET &lte; 4.x, PHP a řada dalších technologií nemají pro statické soubory žádné zvláštní mechanismy, jednoduše protože je nepotřebují. Pokud někam do WWW rootu umístíte soubor bez speciálně zaregistrované přípony (`.aspx` apod.), prostě se vezmou a pošlou klientovi, když o ně požádá.
+Webové aplikace historicky vznikly jako rozšíření převážně statických webů. Klasické ASP nebo ASP.NET &leq; 4.x, PHP a řada dalších technologií nemají pro statické soubory žádné zvláštní mechanismy, jednoduše protože je nepotřebují. Pokud někam do WWW rootu umístíte soubor bez speciálně zaregistrované přípony (`.aspx` apod.), prostě se vezmou a pošlou klientovi, když o ně požádá.
 
 S příchodem ASP.NET Core/5.0 se situace změnila.
 
