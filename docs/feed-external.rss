@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</guid>
+      <title>Fanoušci 3D tisku slaví: Stratasysu končí platnost patentu, levné tiskárny budou opět o něco lepší</title>
+      <description>V sobotu vyprší poslední ze tří klíčových patentů týkajících se 3D tisku, které drží společnost Stratasys. Expirace dřívějších patentů umožnila boom 3D tisku jako odvětví, které se z velkých firem a laboratoří dostalo do domácností. Sobotní milník bude mít menší dopady, ale i tak může posunout obor kupředu a ušetřit domácím i malosériovým tiskařům čas, nervy a peníze.</description>
+      <link>https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-02-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://modrak.podbean.com/e/6-leak-cd-projektu/</guid>
       <title>Modrák &amp; Friends: Leak CD projektu</title>
       <description>Do sbírky divných médií, v nichž jsem zanechal stopu, se po bok Archivního časopisu ministerstva vnitra a Světa motorů zařadil podcast Modrák &amp; Friends, který se zabývá počítačovými hrami. O čem jsem moudře hovořil, když o počítačových hrách nic nevím a systematicky se jim vyhýbám? O hacku společnosti CD Projekt, což je údajně slavný herní producent (já se o její existenci dozvěděl až z toho hacku). Protože o hacku samotném není známo prakticky nic, bylo z toho povídání o bezpečnosti a ransomware. Pokud vám nestačí mne číst, ale chcete mě i poslouchat, zde máte možnost.</description>
@@ -141,15 +150,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2020-12-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2020/12/spatna-nalada</guid>
-      <title>Špatná nálada</title>
-      <description>Letošní vánoční povídka je tak trochu fantasy a nikdo v ní nemá dobrou náladu. Ale nebojte se, zlepší se to - i když podle hesla, že nejčistší lidská radost je škodolibost. A jak se ukáže, nejenom lidská. Tahle povídka vznikla trochu zvláštním způsobem. Nejdřív byla ilustrace a teprve potom text. Nechal jsem svou kamarádku _Nyemi_, ať nakreslí nějaký obrázek, dle své volby. Téma jsem nechal zcela na ní a slíbil jí, že na základě jejího obrázku napíšu S/M povídku. Jak to dopadlo můžete posoudit sami.</description>
-      <link>https://www.bdsm.cz/2020/12/spatna-nalada</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2020-12-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

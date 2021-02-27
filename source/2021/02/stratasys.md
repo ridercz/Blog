@@ -1,0 +1,9 @@
+<!-- dcterms:title = Fanoušci 3D tisku slaví: Stratasysu končí platnost patentu, levné tiskárny budou opět o něco lepší -->
+<!-- dcterms:abstract = V sobotu vyprší poslední ze tří klíčových patentů týkajících se 3D tisku, které drží společnost Stratasys. Expirace dřívějších patentů umožnila boom 3D tisku jako odvětví, které se z velkých firem a laboratoří dostalo do domácností. Sobotní milník bude mít menší dopady, ale i tak může posunout obor kupředu a ušetřit domácím i malosériovým tiskařům čas, nervy a peníze. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210227-stratasys.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2021-02-27 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95 -->

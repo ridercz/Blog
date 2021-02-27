@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</guid>
+      <title>Fanoušci 3D tisku slaví: Stratasysu končí platnost patentu, levné tiskárny budou opět o něco lepší</title>
+      <description>V sobotu vyprší poslední ze tří klíčových patentů týkajících se 3D tisku, které drží společnost Stratasys. Expirace dřívějších patentů umožnila boom 3D tisku jako odvětví, které se z velkých firem a laboratoří dostalo do domácností. Sobotní milník bude mít menší dopady, ale i tak může posunout obor kupředu a ušetřit domácím i malosériovým tiskařům čas, nervy a peníze.</description>
+      <link>https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-02-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/02/files</guid>
       <title>Jakým způsobem používat statické soubory v ASP.NET 5?</title>
       <description>Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2021-01-11T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</guid>
-      <title>PaCoBox: Univerzální parametrická krabička s přihrádkami</title>
-      <description>Potřeboval jsem krabičku na MicroSD karty. A vytvořil jsem v OpenSCADu parametrický model se zaoblenými přihrádkami (takže se malá součástka neschová do rohu), magneticky drženým víčkem a nápisy na dně přihrádek.</description>
-      <link>https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2021-01-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
