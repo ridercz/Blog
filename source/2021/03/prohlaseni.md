@@ -1,0 +1,9 @@
+<!-- dcterms:title = Generátor čestných prohlášení pro cesty mezi okresy -->
+<!-- dcterms:abstract = S platností ode dneška vláda omezila cestování mezi okresy. Existuje spousta výjimek, ale je je třeba dokládat, většinou čestným prohlášením. Protože ve veřejném prostoru panují různé chaotické rady o tom, co je všechno potřeba, napsal jsem jednoduchou aplikaci, která vám položí pár otázek a na základě toho vygeneruje příslušný dokument. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210301-prohlaseni.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2021-03-01 -->
+<!-- x4w:alternateUrl = https://prohlaseni.altair.blog/ -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://prohlaseni.altair.blog/</guid>
+      <title>Generátor čestných prohlášení pro cesty mezi okresy</title>
+      <description>S platností ode dneška vláda omezila cestování mezi okresy. Existuje spousta výjimek, ale je je třeba dokládat, většinou čestným prohlášením. Protože ve veřejném prostoru panují různé chaotické rady o tom, co je všechno potřeba, napsal jsem jednoduchou aplikaci, která vám položí pár otázek a na základě toho vygeneruje příslušný dokument.</description>
+      <link>https://prohlaseni.altair.blog/</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-03-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</guid>
       <title>Fanoušci 3D tisku slaví: Stratasysu končí platnost patentu, levné tiskárny budou opět o něco lepší</title>
       <description>V sobotu vyprší poslední ze tří klíčových patentů týkajících se 3D tisku, které drží společnost Stratasys. Expirace dřívějších patentů umožnila boom 3D tisku jako odvětví, které se z velkých firem a laboratoří dostalo do domácností. Sobotní milník bude mít menší dopady, ale i tak může posunout obor kupředu a ušetřit domácím i malosériovým tiskařům čas, nervy a peníze.</description>
@@ -137,15 +146,6 @@
       <category>IT</category>
       <category>Politika</category>
       <pubDate>2021-01-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/hvezdy</guid>
-      <title>Žlutá nebo rudá</title>
-      <description>Symboly jsou pro někoho se sociopatickými sklony praktické. Lidé jim obvykle přikládají zvláštní důležitost a my, kteří nejsme nadáni empatií, se jich můžeme rozumově chytit a nahradit tak nedostatek pocitového pochopení a zahrát tu správnou roli. Z konce minulého režimu si pamatuji naprostou vyprázdněnost symbolů, které se staly důležitými až teprve v případě svatokrádeže. Jako dnes davidova hvězda s nápisem "neočkovaný".</description>
-      <link>https://www.altair.blog/2021/01/hvezdy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2021-01-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
