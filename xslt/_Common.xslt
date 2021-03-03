@@ -145,7 +145,7 @@
     <link rel="shortcut icon" href="{$BaseUrl}/favicon.ico" />
     <link rel="icon" href="{$BaseUrl}/favicon.ico" />
     <!-- Twitter-->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="{$Title}" />
     <meta name="twitter:description" content="{$Description}" />
