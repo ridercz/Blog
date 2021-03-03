@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=Y0NzSa7QJDE</guid>
+      <title>Video představení systému ReP</title>
+      <description>Natočil jsem krátké video, které představuje funkce rezervačního systému ReP. Aplikace sama je dostupná zdarma, pokud potřebujete pomoci s instalací a nasazením, rád vám pomohu za mírný poplatek.</description>
+      <link>https://www.youtube.com/watch?v=Y0NzSa7QJDE</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-03-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://prohlaseni.altair.blog/</guid>
       <title>Generátor čestných prohlášení pro cesty mezi okresy</title>
       <description>S platností ode dneška vláda omezila cestování mezi okresy. Existuje spousta výjimek, ale je je třeba dokládat, většinou čestným prohlášením. Protože ve veřejném prostoru panují různé chaotické rady o tom, co je všechno potřeba, napsal jsem jednoduchou aplikaci, která vám položí pár otázek a na základě toho vygeneruje příslušný dokument.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-01-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</guid>
-      <title>Tři čísla za lomítkem v rezervačním systému jako symbol diletantství u státních IT projektů</title>
-      <description>Asi nikoho nepřekvapilo, že spuštění systému pro rezervaci na očkování proti koronaviru bylo provázeno mnohými problémy. Na to jsme v České republice zvyklí, pravděpodobně bychom dlouho hledali významnější informační systém veřejné správy, který fungoval na první pokus správně. Co je ale příčinou? To nám umožní odhalit tři čísla za lomítkem.</description>
-      <link>https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Politika</category>
-      <pubDate>2021-01-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
