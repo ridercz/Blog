@@ -6,6 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20201115-futlabis-1.jpg -->
 <!-- x4w:category = IT -->
+<!-- x4w:category = ReP -->
 <!-- dcterms:dateAccepted = 2020-11-15 -->
 
 Před pár dny Microsoft vydal následovníka .NET Core jménem .NET 5. První aplikace, kterou v něm píšu, bude rezervační systém pro makerspace FutLab a rozhodl jsem se, že její tvorbu budu živě streamovat.
