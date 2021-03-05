@@ -6,13 +6,22 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=RfptWCq6LHc</guid>
+      <title>Dvounohý kůň versus úřední šiml: Cestování mezi okresy (záznam live streamu)</title>
+      <description>Vláda svým usnesením omezila svobodu pohybu obyvatel a pro cesty mezi okresy musíte být vybaveni rozličnými doklady, i když pro většinu důvodů stačí čestné prohlášení. Nabízím vám záznam svého včerejšího streamu na toto téma.</description>
+      <link>https://www.youtube.com/watch?v=RfptWCq6LHc</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-03-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=Y0NzSa7QJDE</guid>
       <title>Video představení systému ReP</title>
       <description>Natočil jsem krátké video, které představuje funkce rezervačního systému ReP. Aplikace sama je dostupná zdarma, pokud potřebujete pomoci s instalací a nasazením, rád vám pomohu za mírný poplatek.</description>
       <link>https://www.youtube.com/watch?v=Y0NzSa7QJDE</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
-      <pubDate>2021-03-09T00:00:00</pubDate>
+      <pubDate>2021-03-02T00:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://prohlaseni.altair.blog/</guid>
@@ -138,16 +147,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-01-01T12:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82</guid>
-      <title>Konec internetu, jak jsme ho znali: Ideál sítě sítí je pryč a lidé přestávají číst, mají radši obrázky</title>
-      <description>Internet začal zhroucením systému po třetím přeneseném znaku. Ale jak skončí? Nebo už se to stalo? Co se stalo s internetem, který jsem znal? Jak se bude vyvíjet dál? Jediné, co je jisté, je nejistota. Internetové revoluce byly vždy překvapivé a nečekané.</description>
-      <link>https://tech.ihned.cz/c7-66863660-psms7-c9887888f93ee82</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2020-12-31T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

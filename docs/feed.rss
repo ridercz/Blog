@@ -6,13 +6,22 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=RfptWCq6LHc</guid>
+      <title>Dvounohý kůň versus úřední šiml: Cestování mezi okresy (záznam live streamu)</title>
+      <description>Vláda svým usnesením omezila svobodu pohybu obyvatel a pro cesty mezi okresy musíte být vybaveni rozličnými doklady, i když pro většinu důvodů stačí čestné prohlášení. Nabízím vám záznam svého včerejšího streamu na toto téma.</description>
+      <link>https://www.youtube.com/watch?v=RfptWCq6LHc</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-03-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=Y0NzSa7QJDE</guid>
       <title>Video představení systému ReP</title>
       <description>Natočil jsem krátké video, které představuje funkce rezervačního systému ReP. Aplikace sama je dostupná zdarma, pokud potřebujete pomoci s instalací a nasazením, rád vám pomohu za mírný poplatek.</description>
       <link>https://www.youtube.com/watch?v=Y0NzSa7QJDE</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
-      <pubDate>2021-03-09T00:00:00</pubDate>
+      <pubDate>2021-03-02T00:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://prohlaseni.altair.blog/</guid>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2021-01-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/rodne-cislo</guid>
-      <title>Validace rodného čísla v Altairis Validation Toolkitu</title>
-      <description>Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</description>
-      <link>https://www.altair.blog/2021/01/rodne-cislo</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-01-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
