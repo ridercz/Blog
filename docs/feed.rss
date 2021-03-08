@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/03/token-providers</guid>
+      <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</title>
+      <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
+      <link>https://www.altair.blog/2021/03/token-providers</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-03-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=RfptWCq6LHc</guid>
       <title>Dvounohý kůň versus úřední šiml: Cestování mezi okresy (záznam live streamu)</title>
       <description>Vláda svým usnesením omezila svobodu pohybu obyvatel a pro cesty mezi okresy musíte být vybaveni rozličnými doklady, i když pro většinu důvodů stačí čestné prohlášení. Nabízím vám záznam svého včerejšího streamu na toto téma.</description>
@@ -139,15 +149,6 @@
       <category>IT</category>
       <category>Akce a události</category>
       <pubDate>2021-01-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</guid>
-      <title>Stojánek na M5Stack Core/Basic/Fire/GO</title>
-      <description>M5Stack je je sada vývojových modulů elektroniky. K některým z nich se dodává roztomilý magnetický stojánek. Tenhle není magnetický ani roztomilý, ale zato je univerzální a parametrický.</description>
-      <link>https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2021-01-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

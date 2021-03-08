@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/03/token-providers</guid>
+      <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</title>
+      <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
+      <link>https://www.altair.blog/2021/03/token-providers</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-03-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/02/files</guid>
       <title>Jakým způsobem používat statické soubory v ASP.NET 5?</title>
       <description>Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?</description>
@@ -137,17 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-1</guid>
-      <title>Záznam z online přednášky Dvounohý kůň versus úřední šiml</title>
-      <description>Když popisuji své zážitky s úřady, lidi se mně často ptají, jestli na styk s nimi nedělám nějaké školení. Tak jsem se rozhodl jedno takové udělat, a to online. Lze ho chápat jako jemný úvod do sebeobrany prostřednictvím práva. Nejenom při styku s úřady či policií, ale třeba i ve sporu s obchodníkem při reklamaci nebo sousedem, kterému se nelíbí váš pes.</description>
-      <link>https://www.altair.blog/2020/11/obcanka-1</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Politika</category>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2020-11-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

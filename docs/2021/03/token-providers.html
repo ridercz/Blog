@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/03/token-providers" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=958FDE84446584982622A36C117C0CB25FEAEF0C" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat" />
+    <meta name="twitter:description" content="Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20210308-token-providers.jpg" />
+    <meta property="article:published_time" content="2021-03-08" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat" />
+    <meta name="description" property="og:description" content="Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20210308-token-providers.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/03/token-providers" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector()">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20210308-token-providers.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-03-08">8. března 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Pro řadu scénářů v ASP.NET Identity potřebujeme nějaký potvrzovací kód (token) který pošleme uživateli a on pomocí něj potvrdí, že je skutečně tím, za koho se vydává. V tomto článku budeme řešit tři takové situace:</p>
+<ul>
+<li>Potvrzení e-mailové adresy po prvotní registraci.</li>
+<li>Potvrzení nové e-mailové adresy při její změně.</li>
+<li>Reset hesla.</li>
+</ul>
+<p>Ve všech zmíněných případech se postupuje následovně:</p>
+<ol>
+<li>Pomocí metody např. <code>GeneratePasswordResetTokenAsync</code> vygeneruje <code>UserManager</code> patřičný token.</li>
+<li>Vygenerujeme URL, která tento token obsahuje, typicky v query stringu, něco jako <code>https://www.example.com/reset-password?user=johndoe&amp;token=XXXXX</code>.</li>
+<li>Zašleme uživateli e-mailem zprávu s vygenerovanou adresou a instrukcí, že má tuto stránku navštívit, aby si zresetoval heslo.</li>
+<li>Na této stránce zavoláme metodu např. <code>ResetPasswordAsync</code>, v níž ověříme kód a zresetujeme heslo nebo potvrdíme e-mail.</li>
+</ol>
+<h2 id="strategie-generovani-tokenu">Strategie generování tokenů</h2>
+<p>Existují v zásadě dvě možnosti (strategie) jak tokeny generovat.</p>
+<p>První možnost je, že token je náhodně vygenerován (je bezvýznamový) a někde na straně serveru je uloženo, že token <code>ABCDEF</code> slouží třeba k potvrzení resetu hesla uživatele XYZ. Výhodou těchto tokenů je, že mohou být (relativně) krátké, protože stačí zařídit, aby nemohlo dojít k brute force útoku nebo konfliktu. Zásadní nevýhodou ovšem je nutnost udržovat na straně serveru odpovídající úložiště.</p>
+<p>Druhá možnost je místo úložiště použít kryptografii. Token zaslaný uživateli obsahuje nějaké &quot;hodnotné&quot; informace (třeba že jde o reset hesla uživatele s ID 1234) a tato informace je digitálně podepsána a zašifrována. To zajistí, že token není možné podvrhnout.</p>
+<p>Výchozí implementaci v ASP.NET Identity představuje třída <code>DataProtectorTokenProvider</code>, jejíž <a href="https://github.com/dotnet/aspnetcore/blob/main/src/Identity/Core/src/DataProtectorTokenProvider.cs">zdrojový kód najdete na GitHubu</a>. Ta pro ochranu tokenu používá druhý zmíněný způsob. Vygeneruje token obsahující účel a ID uživatele a poté ho ochrání (zašifruje a podepíše) pomocí ASP.NET Data Protection.</p>
+<p>Výsledkem je hromádka binárních dat, které se zakódují pomocí Base64.</p>
+<h2 id="problemy-s-base64">Problémy s Base64</h2>
+<p>Base64 je jedna z mnoha možností, jak binární hodnoty zakódovat do tisknutelných znaků. Používá se přitom &quot;šedesátičtyřková&quot; číselná soustava, která obsahuje velká a malá písmena anglické abecedy, číslice a znaky plus a lomítko. Výhodou Base64 je, že jde o univerzální, standardizovaný mechanismus, který je dostupný na všech platformách. Má také relativně malý overhead (33 %).</p>
+<p>Má ale i signifikantní nevýhody:</p>
+<ul>
+<li>Obsahuje znaky <code>+</code> a <code>/</code>, které mají v URL (kde se tokeny obvykle vyskytují) speciální význam. Je tedy nutné je buďto zakódovat, nebo použít speciální url-safe variantu, kde jsou nahrazeny znaky <code>-</code> a <code>_</code>. Tu ale .NET standardně nepodporuje.</li>
+<li>V závislosti na délce vstupních dat se může na konci vyskytnout jeden nebo dva znaky <code>=</code>, jako padding.</li>
+</ul>
+<p>Tyto speciální znaky mohou představovat problém třeba v některých e-mailových programech, které nesprávně automaticky generují z odkazů hyperlinky nebo zalamují řádky.</p>
+<h2 id="base32-a-zbase32">Base32 a ZBase32</h2>
+<p>Existují i různé jiné další možnosti kódování. Jedním z nich je Base32. To používá omezenější abecedu o 32 znacích. V závislosti na konkrétní implementaci může obsahovat různou kombinaci písmen a číslic. Často bývá použita kombinace, která neobsahuje znaky, které jsou vizuálně záměnné, jako například písmeno <code>O</code> a nulu <code>0</code>. To sice vede k většímu overheadu, ale řeší problém se &quot;speciálními&quot; znaky.</p>
+<p>Variantou je kódování ZBase32, které jako <a href="https://philzimmermann.com/docs/human-oriented-base-32-encoding.txt">&quot;human-oriented base-32 encoding&quot;</a> navrhl Phil Zimmermann. Používá pouze běžná písmena a číslice a nepotřebuje padding. Nevýhodou je, že výsledek je delší, než v případě Base64, ale s tím dokážeme žít.</p>
+<h2 id="vlastni-implementace-token-providera">Vlastní implementace Token Providera</h2>
+<p>Výše zmíněnou implementaci lze nahradit vlastní. Zdrojový kód je k dispozici, takže bychom jej mohli prostě zkopírovat a Base64 kódování nahradit vlastním ZBase32. S licencí není problém, Apache licence takový postup umožňuje. Nicméně museli bychom duplikovat spoustu kódu, navíc implementace využívá interní extensions pro logování... A vlastně ani nechceme do funkce příliš zasahovat, jenom použít jiný druh kódování. Takže jsem napsal wrapper, který volá funkce výchozí implementace a jenom je překóduje do ZBase32.</p>
+<p>Zdrojový kód mé třídy <code>ZBase32DataProtectorTokenProvider</code> vypadá takto:</p>
+<pre><code>public class ZBase32DataProtectorTokenProvider&lt;TUser&gt; : DataProtectorTokenProvider&lt;TUser&gt; where TUser : class {
+    public ZBase32DataProtectorTokenProvider(IDataProtectionProvider dataProtectionProvider, IOptions&lt;DataProtectionTokenProviderOptions&gt; options, ILogger&lt;DataProtectorTokenProvider&lt;TUser&gt;&gt; logger)
+        : base(dataProtectionProvider, options, logger) { }
+
+    public async override Task&lt;string&gt; GenerateAsync(string purpose, UserManager&lt;TUser&gt; manager, TUser user) {
+        var b64string = await base.GenerateAsync(purpose, manager, user).ConfigureAwait(false);
+        var bytes = Convert.FromBase64String(b64string);
+        return Base32Encoding.ZBase32.GetString(bytes);
+    }
+
+    public override Task&lt;bool&gt; ValidateAsync(string purpose, string token, UserManager&lt;TUser&gt; manager, TUser user) {
+        var bytes = Base32Encoding.ZBase32.ToBytes(token);
+        var b64string = Convert.ToBase64String(bytes);
+        return base.ValidateAsync(purpose, b64string, manager, user);
+    }
+}
+</code></pre>
+<p>Pro vlastní kódování používám knihovnu <a href="https://github.com/wiry-net/Wiry.Base32">Wiry.Base32</a>. Metody <code>GenerateAsync</code> a <code>ValidateAsync</code> jenom obalují bázovou třídu a překódovávají token z/do Base32.</p>
+<p>Dále pak je třeba ASP.NET Identity říct, že má náš token provider použít. To se děje při registraci identity, typicky tedy v metodě <code>ConfigureServices</code> třídy <code>Startup</code>:</p>
+<pre><code>services.AddIdentity&lt;ApplicationUser, ApplicationRole&gt;(options =&gt; {
+    options.Tokens.ChangeEmailTokenProvider = &quot;ZBase32&quot;;
+    options.Tokens.EmailConfirmationTokenProvider = &quot;ZBase32&quot;;
+    options.Tokens.PasswordResetTokenProvider = &quot;ZBase32&quot;;
+})
+    .AddDefaultTokenProviders()
+    .AddTokenProvider&lt;ZBase32DataProtectorTokenProvider&lt;ApplicationUser&gt;&gt;(&quot;ZBase32&quot;);
+</code></pre>
+<p>V <code>options.Tokens</code> můžeme nastavit, pro jaké typy tokenů se má použít jaký provider. Používají se totiž různé, pro tokeny do URL je třeba jiný mechanismus než třeba pro tokeny zasílané SMSkou, které uživatel bude odesílat. Říkáme tedy, že se má použít provider jménem <code>ZBase32</code>.</p>
+<p>Metodou <code>AddDefaultTokenProviders</code> přidáme výchozí implementace pro všechny účely a pak pomocí <code>AddTokenProvider</code> zaregistrujeme pod jménem <code>ZBase32</code> naši implementaci.</p>
+<p>A to je celé. Aplikaci stačí restartovat a místo Base64 se pro generování tokenů použije jednodušší ZBase32.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Pro%c4%8d+chcete+vlastn%c3%adho+token+providera+pro+ASP.NET+Identity+a+jak+ho+napsat&amp;body=https://www.altair.blog/2021/03/token-providers">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/03/token-providers.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/03/token-providers.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/03/token-providers">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/03/token-providers">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
