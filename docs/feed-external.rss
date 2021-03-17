@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</guid>
+      <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
+      <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
+      <link>https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Historie</category>
+      <pubDate>2021-03-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=RfptWCq6LHc</guid>
       <title>Dvounohý kůň versus úřední šiml: Cestování mezi okresy (záznam live streamu)</title>
       <description>Vláda svým usnesením omezila svobodu pohybu obyvatel a pro cesty mezi okresy musíte být vybaveni rozličnými doklady, i když pro většinu důvodů stačí čestné prohlášení. Nabízím vám záznam svého včerejšího streamu na toto téma.</description>
@@ -138,16 +148,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-01-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89</guid>
-      <title>Dobré zprávy do roku 2021: Pandemie měla pozitivní vliv na IT v ČR, kybernetická apokalypsa nepřišla</title>
-      <description>Můj editor v Hospodářkách brblal, že píšu příliš pesimisticky. A že by to na svátky chtělo nějaký optimistický článek. V roce 2020. Ale ano, uplynulý rok byl z hlediska IT docela dobrý. Posuďte sami. Úplně sluníčkové mi to sice nevyšlo, ale quantum in me fuit.</description>
-      <link>https://tech.ihned.cz/c7-66863690-psms7-1e0ff7dd2756f89</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-01-01T12:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</guid>
+      <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
+      <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
+      <link>https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Historie</category>
+      <pubDate>2021-03-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/03/token-providers</guid>
       <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</title>
       <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
@@ -139,16 +149,6 @@
       <category>IT</category>
       <category>Recenze</category>
       <pubDate>2021-01-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/skoleni-bezpecne-aplikace</guid>
-      <title>Pozvánka na odpolední školení Bezpečné aplikace v .NET</title>
-      <description>Kybernetická bezpečnost je s ohledem na přesun mnoha aktivit do online prostoru čím dál důležitější. Napsal jsem o jejím stavu mnoho kritických článků a snažím se též přiložit ruku k dílu. Zvu vás na nově aktualizované komplexní školení týkající se bezpečnosti webových aplikací v .NET. Toto školení je určeno jak programátorům, kteří webové aplikace vytvářejí, tak IT profesionálům, kteří se starají o infrastrukturu na níž běží. Při zabezpečení totiž musejí obě skupiny spolupracovat a rozhodně není na škodu, aby jedna strana věděla, co dělá druhá.</description>
-      <link>https://www.altair.blog/2021/01/skoleni-bezpecne-aplikace</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Akce a události</category>
-      <pubDate>2021-01-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

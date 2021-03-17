@@ -1,0 +1,11 @@
+<!-- dcterms:title = SAPO: první československý počítač, v němž se o výsledku hlasovalo -->
+<!-- dcterms:abstract = První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210317-sapo.png -->
+<!-- x4w:pictureCredits = Teknad via Wikimedia Commons, CC BY-SA -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Historie -->
+<!-- dcterms:dateAccepted = 2021-03-17 -->
+<!-- x4w:alternateUrl = https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/ -->
