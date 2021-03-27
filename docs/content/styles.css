@@ -559,3 +559,7 @@ section.sharing a {
 section.sharing a:hover {
   color: #e60;
 }
+
+.gist table td, .gist table th {
+  border: none !important;
+}
