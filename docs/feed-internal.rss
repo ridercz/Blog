@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/03/kamera</guid>
+      <title>Nový život pro staré harampádí pomocí 3D tisku</title>
+      <description>Včera jsem se dozvěděl, že budu dneska něco točit. V místě, kde nejspíš nebude dost světla. Z různého harampádí, které mám doma, jsem se rozhodl operativně vyrobit světlo pro kameru. Stačí 3D tiskárna a pár šroubů.</description>
+      <link>https://www.altair.blog/2021/03/kamera</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2021-03-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/03/token-providers</guid>
       <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</title>
       <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
@@ -138,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/css-modal</guid>
-      <title>Modální dialog čistě pomocí CSS</title>
-      <description>Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak pomocí CSS udělat responzivní menu. Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS.</description>
-      <link>https://www.altair.blog/2020/11/css-modal</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
