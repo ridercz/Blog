@@ -56,7 +56,7 @@ Změřil jsem si rozteč děr pro šrouby a vymodeloval jednoduchý díl, který
     <figcaption>"Přebývající" hohu vepředu jsem uřízl a nahradil tištěným dílem.</figcaption>
 </figure>
 
-Zbývající nohu vepředu jsem uřízl a ze čtvernožky udělal torjnožku. Vymodeloval jsem jednoduchý díl, který se zespodu přišroubuje na stativový šroub (který v sobě sám má stativový závit, aby celá konstrukce šla nejenom držet v ruce, ale též přidělat na stativ).
+Zbývající nohu vepředu jsem uřízl a ze čtvernožky udělal trojnožku. Vymodeloval jsem jednoduchý díl, který se zespodu přišroubuje na stativový šroub (který v sobě sám má stativový závit, aby celá konstrukce šla nejenom držet v ruce, ale též přidělat na stativ).
 
 <script src="https://gist.github.com/ridercz/929ff45e7e0ad8fe03013ebdcff15268.js"></script>
 
