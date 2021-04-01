@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</guid>
+      <title>BrowserChoice.eu aneb Válka prohlížečů</title>
+      <description>"Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek?</description>
+      <link>https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-04-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</guid>
       <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
       <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
@@ -138,16 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2021-01-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</guid>
-      <title>Síťové prvky ZyXel pro menší firmy mají v sobě zadní vrátka. Bez aktualizace je zvládne napadnout i amatér</title>
-      <description>Velké množství modelů síťových prvků ZyXel (které jsou populární i u nás) obsahuje backdoor: skrytého uživatele s administrátorskými právy a pevně nastaveným heslem. Triviálně zneužitelná zranitelnost umožňuje útočníkovi získat naprostou kontrolu nad zařízením. Problém se týká řady firewallů, VPN routerů a řídících jednotek AP. Chyba se netýká běžných domácích routerů a modemů, které ZyXel vyrábí také, ale vyšší řady určené pro menší a střední firmy.</description>
-      <link>https://tech.ihned.cz/c7-66864000-psms7-10c3c148559b188</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-01-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

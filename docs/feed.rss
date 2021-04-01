@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</guid>
+      <title>BrowserChoice.eu aneb Válka prohlížečů</title>
+      <description>"Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek?</description>
+      <link>https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2021-04-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/03/kamera</guid>
       <title>Nový život pro staré harampádí pomocí 3D tisku</title>
       <description>Včera jsem se dozvěděl, že budu dneska něco točit. V místě, kde nejspíš nebude dost světla. Z různého harampádí, které mám doma, jsem se rozhodl operativně vyrobit světlo pro kameru. Stačí 3D tiskárna a pár šroubů.</description>
@@ -140,15 +149,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-01-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66875480-psms7-94a429ef1998823</guid>
-      <title>Red Hat komplikuje život firmám po celém světě, stačilo mu k tomu změnit systém podpory pro serverový CentOS</title>
-      <description>Společnost Red Hat oznámila, že mění způsob podpory linuxové distribuce CentOS. Nadále nebudou existovat dlouhodobě podporované číslované verze, ale jenom průběžně aktualizovaný CentOS Stream. Tím v podstatě končí jeden z hlavních důvodů, proč lidé distribuci využívají.</description>
-      <link>https://tech.ihned.cz/c7-66875480-psms7-94a429ef1998823</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-01-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

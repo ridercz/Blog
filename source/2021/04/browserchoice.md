@@ -1,0 +1,9 @@
+<!-- dcterms:title = BrowserChoice.eu aneb Válka prohlížečů -->
+<!-- dcterms:abstract = "Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek? -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210401-browserchoice.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:dateAccepted = 2021-04-01 -->
+<!-- x4w:alternateUrl = https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/ -->
