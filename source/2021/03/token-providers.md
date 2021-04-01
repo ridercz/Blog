@@ -1,5 +1,5 @@
 <!-- dcterms:title = Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat -->
-<!-- dcterms:abstract = Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré. -->
+<!-- dcterms:abstract = Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problémy. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20210308-token-providers.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20210308-token-providers.jpg -->

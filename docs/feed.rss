@@ -37,7 +37,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/03/token-providers</guid>
       <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</title>
-      <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problému. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
+      <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problémy. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
       <link>https://www.altair.blog/2021/03/token-providers</link>
       <author>Michal Altair Valášek</author>
       <category>IT</category>
