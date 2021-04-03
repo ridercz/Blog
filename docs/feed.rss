@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66904790-psms7-8b51a0fd2bb7aea</guid>
+      <title>Facebooku unikla data o více než půl miliardě uživatelů, v ČR se problém týká 1,3 milionu lidí</title>
+      <description>Údaje o zhruba 20 % uživatelů FB jsou volně ke stažení. Nejde o žádnou bezprostřední katastrofu, ale povede to nejspíš ke zvýšení počtu phishingových útoků. Pokud vám dojdou nějaké divné SMS nebo jiné zprávu, NEREAGUJTE NA NĚ!</description>
+      <link>https://tech.ihned.cz/c7-66904790-psms7-8b51a0fd2bb7aea</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2021-04-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</guid>
       <title>BrowserChoice.eu aneb Válka prohlížečů</title>
       <description>"Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek?</description>
@@ -139,16 +148,6 @@
       <category>Bastlení</category>
       <category>Recenze</category>
       <pubDate>2021-02-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://youtu.be/V1mdx4W35UE</guid>
-      <title>Jak odstranit citlivé údaje z DOCX nebo PDF dokumentu</title>
-      <description>Přestože toto video pochází už z roku 2016, je stále aktuální. Kdyby ten postup znali v EK, mohli si odpustit nepěknou blamáž při zveřejnění smlouvy na dodávku vakcíny proti COVID-19. Kde sice začernili některé údaje, ale v metadatech jim zůstal původní text.</description>
-      <link>https://youtu.be/V1mdx4W35UE</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-01-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
