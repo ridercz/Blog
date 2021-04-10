@@ -1,0 +1,10 @@
+<!-- dcterms:title = Další půlmiliarda osobních údajů k dispozici: po Facebooku přišli na řadu uživatelé LinkedInu -->
+<!-- dcterms:abstract = Jenom pár dnů po zveřejnění údajů o více než půl miliardě uživatelů Facebooku je tady další půlmiliarda: tentokrát jsou postižení uživatelé služby LinkedIn. Nejde o následek klasického narušení bezpečnosti interních systémů, ale o takzvaný scraping – automatizované stažení veřejně dostupných údajů. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210410-linkedin.jpg -->
+<!-- x4w:pictureCredits = Inlytic via unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-04-10 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66907740-psms7-78193782dfcccd0 -->

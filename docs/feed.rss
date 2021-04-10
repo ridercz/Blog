@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66907740-psms7-78193782dfcccd0</guid>
+      <title>Další půlmiliarda osobních údajů k dispozici: po Facebooku přišli na řadu uživatelé LinkedInu</title>
+      <description>Jenom pár dnů po zveřejnění údajů o více než půl miliardě uživatelů Facebooku je tady další půlmiliarda: tentokrát jsou postižení uživatelé služby LinkedIn. Nejde o následek klasického narušení bezpečnosti interních systémů, ale o takzvaný scraping – automatizované stažení veřejně dostupných údajů.</description>
+      <link>https://tech.ihned.cz/c7-66907740-psms7-78193782dfcccd0</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2021-04-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=dOMR-KnVF_M</guid>
       <title>Dvounohý kůň versus kybernetická bezpečnost: Úniky dat a co s nimi</title>
       <description>Záznam live streamu o nedávném úniku dat z Facebooku. K čemu došlo? Jaké si z toho máme vzít ponaučení? Co s tím můžeme dělat a jak se bránit?</description>
@@ -137,16 +146,6 @@
       <category>IT</category>
       <category>ReP</category>
       <pubDate>2021-02-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/02/futlab</guid>
-      <title>Jak to dopadlo s informačním systémem FutLabu?</title>
-      <description>Před časem jsem udělal sérii webcastů o vývoji informačního systému pro otevřenou dílnu FutLab. Šlo o jednoduchou (ale ne triviální) aplikaci pro .NET 5. Jak to dopadlo? Operace dopadla úspěšně, pacient zemřel. Aplikaci jsem sice úspěšně dokončil, ale než došlo k jejímu nasazení, FutLab v podobě otevřené dílny v důsledku vládních opatření skončil.</description>
-      <link>https://www.altair.blog/2021/02/futlab</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>ReP</category>
-      <pubDate>2021-02-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
