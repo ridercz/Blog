@@ -19,7 +19,7 @@ Zde je zdrojový kód:
 Knihovna definuje dva moduly, `gopro_mount_m` a `gopro_mount_f`.
 
 * Modul `gopro_mount_m` je "samčí" část, tedy ta, která má vyčnívající "ploutvičky" a obvykle je součástí toho, _co přiděláváme_ - třeba kamery nebo pouzdra na ni. Hloubka (velikost v ose `y`) samčí části je vždy 9.5 mm.
-* Modul `gopro_mount_f` je jeho "samičí" protikus a obvykle je součástí toho, _na co přiděláváme_ - třeba stativu nebo něčeho podobného. Hloubka (velikost v ose `y`) samičí části je vždy 16 mm.
+* Modul `gopro_mount_f` je jeho "samičí" protikus a obvykle je součástí toho, _na co přiděláváme_ - třeba stativu nebo něčeho podobného. Hloubka (velikost v ose `y`) samičí části je vždy 19 mm.
 
 Oba dva moduly berou jako hlavní parametry `base_width` a `base_height`, což jsou rozměry kvádru, na kterém se držák nachází. Musí mít z technologických důvodů nenulovou výšku. Pokud se vám nehodí, musíte ho "zapustit" do podkladu nebo později uříznout. Jsou tam ještě nějaké další parametry, ale ty nejspíš nebudete potřebovat měnit. Pokud ano, podívejte se do zdrojáku, jsou tam komentáře.
 
