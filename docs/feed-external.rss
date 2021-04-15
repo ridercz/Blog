@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-covid-a-michelangelo/</guid>
+      <title>Covid a Michelangelo</title>
+      <description>Začalo to všechno vlastně zcela nenápadně. Psal se rok 1949 a jistý Neumann János Lajos na universitě v Illionis držel přednášku s komplikovaným názvem "Teorie a organizace složitých automatů". Tak se zrodil koncept počítačového viru. A ty klasické mají hodně společného s těmi organickými, jako momentálně populární koronavirus SARS-CoV-2.</description>
+      <link>https://byznysvcesku.cz/michal-valasek-covid-a-michelangelo/</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2021-04-15T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66907740-psms7-78193782dfcccd0</guid>
       <title>Další půlmiliarda osobních údajů k dispozici: po Facebooku přišli na řadu uživatelé LinkedInu</title>
       <description>Jenom pár dnů po zveřejnění údajů o více než půl miliardě uživatelů Facebooku je tady další půlmiliarda: tentokrát jsou postižení uživatelé služby LinkedIn. Nejde o následek klasického narušení bezpečnosti interních systémů, ale o takzvaný scraping – automatizované stažení veřejně dostupných údajů.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-01-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66873770-psms7-e40021d23204918</guid>
-      <title>Chytrá domácnost od Lidlu: Hodně jednoduché muziky za málo peněz a nejistá budoucnost</title>
-      <description>Mezi firmy snažící se uchytit ve světě internetu věcí se nedávno zařadil nový hráč: obchodní řetězec Lidl. Začal prodávat komponenty pro tvorbu "chytré domácnosti". Trpí ale stejnou nevýhodou jako většina konkurence: nejistou bezpečností a budoucností. Dokud se to nezmění, bude to jenom hračka - ale snadno dostupná a celkem levná.</description>
-      <link>https://tech.ihned.cz/c7-66873770-psms7-e40021d23204918</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Recenze</category>
-      <pubDate>2021-01-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
