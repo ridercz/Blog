@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/04/gopro-mount</guid>
+      <title>Knihovna pro GoPro držáky v OpenSCADu</title>
+      <description>Poslední dobou zjišťuju, že dost často modeluju držáky na GoPro kamery. Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby.</description>
+      <link>https://www.altair.blog/2021/04/gopro-mount</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2021-04-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/03/kamera</guid>
       <title>Nový život pro staré harampádí pomocí 3D tisku</title>
       <description>Včera jsem se dozvěděl, že budu dneska něco točit. V místě, kde nejspíš nebude dost světla. Z různého harampádí, které mám doma, jsem se rozhodl operativně vyrobit světlo pro kameru. Stačí 3D tiskárna a pár šroubů.</description>
@@ -139,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2020-11-22T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/identity-email</guid>
-      <title>ASP.NET Identity: Přihlášení pomocí uživatelského jména nebo e-mailové adresy</title>
-      <description>ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy UserManager a SignInManager, jejichž změnou můžete v aplikaci udělat velké věci.</description>
-      <link>https://www.altair.blog/2020/11/identity-email</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

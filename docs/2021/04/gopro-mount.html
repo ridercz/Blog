@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Knihovna pro GoPro držáky v OpenSCADu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/04/gopro-mount" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Knihovna pro GoPro držáky v OpenSCADu" />
+    <meta name="twitter:description" content="Poslední dobou zjišťuju, že dost často modeluju držáky na GoPro kamery. Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20210416-gopro-mount.jpg" />
+    <meta property="article:published_time" content="2021-04-16" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Knihovna pro GoPro držáky v OpenSCADu" />
+    <meta name="description" property="og:description" content="Poslední dobou zjišťuju, že dost často modeluju držáky na GoPro kamery. Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20210416-gopro-mount.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/04/gopro-mount" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector()">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20210416-gopro-mount.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Knihovna pro GoPro držáky v OpenSCADu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-04-16">16. dubna 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">Jakob Owens (@jakobowens1) via Unsplash.com <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Poslední dobou zjišťuju, že dost často modeluju <a href="https://www.altair.blog/2021/03/kamera">držáky na GoPro kamery</a>. Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby.</p>
+<p>Zde je zdrojový kód:</p>
+<script src="https://gist.github.com/ridercz/fb9a9a4730ac393cea68e363ddf806ed.js"></script>
+<p>Knihovna definuje dva moduly, <code>gopro_mount_m</code> a <code>gopro_mount_f</code>.</p>
+<ul>
+<li>Modul <code>gopro_mount_m</code> je &quot;samčí&quot; část, tedy ta, která má vyčnívající &quot;ploutvičky&quot; a obvykle je součástí toho, <em>co přiděláváme</em> - třeba kamery nebo pouzdra na ni. Hloubka (velikost v ose <code>y</code>) samčí části je vždy 9.5 mm.</li>
+<li>Modul <code>gopro_mount_f</code> je jeho &quot;samičí&quot; protikus a obvykle je součástí toho, <em>na co přiděláváme</em> - třeba stativu nebo něčeho podobného. Hloubka (velikost v ose <code>y</code>) samičí části je vždy 16 mm.</li>
+</ul>
+<p>Oba dva moduly berou jako hlavní parametry <code>base_width</code> a <code>base_height</code>, což jsou rozměry kvádru, na kterém se držák nachází. Musí mít z technologických důvodů nenulovou výšku. Pokud se vám nehodí, musíte ho &quot;zapustit&quot; do podkladu nebo později uříznout. Jsou tam ještě nějaké další parametry, ale ty nejspíš nebudete potřebovat měnit. Pokud ano, podívejte se do zdrojáku, jsou tam komentáře.</p>
+<p>Ke spojení obou částí potřebujete ještě šroub M5 a čtvercovou matici M5. Změnou parametrů modulu <code>gopro_mount_f</code> lze vytvořit i díru pro běžnou (nebo zaslepenou, jako to má originál) šestihrannou matici, ale hrozí nebezpečí, že se při silnějším dotažení začne protáčet. Pro tento účel jsou prostě čtverhranné matice vhodnější.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Knihovna+pro+GoPro+dr%c5%be%c3%a1ky+v+OpenSCADu&amp;body=https://www.altair.blog/2021/04/gopro-mount">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/04/gopro-mount.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/04/gopro-mount.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/04/gopro-mount">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/04/gopro-mount">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
