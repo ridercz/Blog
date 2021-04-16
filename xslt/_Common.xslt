@@ -191,7 +191,7 @@
       fathom('trackPageview');
     </script>
     <!-- Typo autocorrect - https://github.com/pavelglac/Automaticka-uprava-typografie -->
-    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector()">//</script>
+    <script src="/content/scripts/autocorrect.js" defer="defer" onload="typo.runAutoCorrector({{number: false}})">//</script>
   </xsl:template>
 
   <!-- Link to article with detail -->
