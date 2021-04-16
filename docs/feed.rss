@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416</guid>
+      <title>Rozhovor k plánu Hospodářské komory na mobilní aplikaci pro rozvolnění covidových opatření</title>
+      <description>Hospodářská komora plánuje - pokud bude stát spolupracovat - vytvořit mobilní aplikaci, která by měla pomoci s otevřením provozoven a kontrolou testů a očkování. To ale není jednoduché a nese to s sebou potenciální rizika. ČT 24 na toto téma odvysílala rozhovor s viceprezidentem HK Zdeňkem Zajíčkem a mnou jako nezávislým IT expertem.</description>
+      <link>https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-04-16T16:30:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/04/gopro-mount</guid>
       <title>Knihovna pro GoPro držáky v OpenSCADu</title>
       <description>Poslední dobou zjišťuju, že dost často modeluju držáky na GoPro kamery. Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby.</description>
@@ -135,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-02-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://modrak.podbean.com/e/6-leak-cd-projektu/</guid>
-      <title>Modrák &amp; Friends: Leak CD projektu</title>
-      <description>Do sbírky divných médií, v nichž jsem zanechal stopu, se po bok Archivního časopisu ministerstva vnitra a Světa motorů zařadil podcast Modrák &amp; Friends, který se zabývá počítačovými hrami. O čem jsem moudře hovořil, když o počítačových hrách nic nevím a systematicky se jim vyhýbám? O hacku společnosti CD Projekt, což je údajně slavný herní producent (já se o její existenci dozvěděl až z toho hacku). Protože o hacku samotném není známo prakticky nic, bylo z toho povídání o bezpečnosti a ransomware. Pokud vám nestačí mne číst, ale chcete mě i poslouchat, zde máte možnost.</description>
-      <link>https://modrak.podbean.com/e/6-leak-cd-projektu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-02-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

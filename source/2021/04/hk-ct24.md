@@ -1,0 +1,11 @@
+<!-- dcterms:title = Rozhovor k plánu Hospodářské komory na mobilní aplikaci pro rozvolnění covidových opatření -->
+<!-- dcterms:abstract = Hospodářská komora plánuje - pokud bude stát spolupracovat - vytvořit mobilní aplikaci, která by měla pomoci s otevřením provozoven a kontrolou testů a očkování. To ale není jednoduché a nese to s sebou potenciální rizika. ČT 24 na toto téma odvysílala rozhovor s viceprezidentem HK Zdeňkem Zajíčkem a mnou jako nezávislým IT expertem. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210416-hk-ct24.png -->
+<!-- x4w:pictureCredits = repro ČT24 -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-04-16T16:30:00 -->
+<!-- x4w:alternateUrl = https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416 -->
