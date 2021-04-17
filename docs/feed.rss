@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff</guid>
+      <title>Hospodářská komora navrhuje aplikaci pro uvolnění po covidu. Míč je ale na straně státu</title>
+      <description>Hospodářská komora v pátek představila návrh aplikace, která by měla pomoci s otevíráním provozoven obchodů a služeb. Předpokládá, že stát pro otevření provozoven stanoví nějaké podmínky pro podnikatele i zákazníky, a chce živnostníkům a firmám usnadnit plnění těchto podmínek. Snaha je to dobrá a jistě chvályhodná, ale naráží na nedostatek ochoty státu konat – nebo alespoň o budoucnosti podnikání pod vlivem covidu jednat.</description>
+      <link>https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-04-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416</guid>
       <title>Rozhovor k plánu Hospodářské komory na mobilní aplikaci pro rozvolnění covidových opatření</title>
       <description>Hospodářská komora plánuje - pokud bude stát spolupracovat - vytvořit mobilní aplikaci, která by měla pomoci s otevřením provozoven a kontrolou testů a očkování. To ale není jednoduché a nese to s sebou potenciální rizika. ČT 24 na toto téma odvysílala rozhovor s viceprezidentem HK Zdeňkem Zajíčkem a mnou jako nezávislým IT expertem.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2021-02-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/02/files</guid>
-      <title>Jakým způsobem používat statické soubory v ASP.NET 5?</title>
-      <description>Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?</description>
-      <link>https://www.altair.blog/2021/02/files</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-02-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,11 @@
+<!-- dcterms:title = Hospodářská komora navrhuje aplikaci pro uvolnění po covidu. Míč je ale na straně státu -->
+<!-- dcterms:abstract = Hospodářská komora v pátek představila návrh aplikace, která by měla pomoci s otevíráním provozoven obchodů a služeb. Předpokládá, že stát pro otevření provozoven stanoví nějaké podmínky pro podnikatele i zákazníky, a chce živnostníkům a firmám usnadnit plnění těchto podmínek. Snaha je to dobrá a jistě chvályhodná, ale naráží na nedostatek ochoty státu konat – nebo alespoň o budoucnosti podnikání pod vlivem covidu jednat. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
+<!-- x4w:pictureCredits = repro ČT24 -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-04-17 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff -->
