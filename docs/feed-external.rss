@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</guid>
+      <title>Osborne nebyl první, stručná historie notebooků</title>
+      <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
+      <link>https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-04-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff</guid>
       <title>Hospodářská komora navrhuje aplikaci pro uvolnění po covidu. Míč je ale na straně státu</title>
       <description>Hospodářská komora v pátek představila návrh aplikace, která by měla pomoci s otevíráním provozoven obchodů a služeb. Předpokládá, že stát pro otevření provozoven stanoví nějaké podmínky pro podnikatele i zákazníky, a chce živnostníkům a firmám usnadnit plnění těchto podmínek. Snaha je to dobrá a jistě chvályhodná, ale naráží na nedostatek ochoty státu konat – nebo alespoň o budoucnosti podnikání pod vlivem covidu jednat.</description>
@@ -136,16 +145,6 @@
       <category>IT</category>
       <category>Politika</category>
       <pubDate>2021-02-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b</guid>
-      <title>M5Stack je trochu jiná stavebnice pro chytrá zařízení. Hodí se do škol i pro zakázkovou výrobu</title>
-      <description>M5Stack je značka, pod kterou lze koupit velké množství různých elektronických modulů, které lze snadno propojovat a programovat. Její výrobky by bylo poněkud nefér nazvat "elektronickou stavebnicí", protože ač i takové použití je možné a propagované, možnosti jejich využití sahají daleko dál. V tomto článku se budeme zabývat třemi podobnými produkty, založenými na platformě ESP32: M5Stack Basic, M5GO IoT Kit a M5StickC.</description>
-      <link>https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>Recenze</category>
-      <pubDate>2021-02-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

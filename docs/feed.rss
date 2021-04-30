@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</guid>
+      <title>Osborne nebyl první, stručná historie notebooků</title>
+      <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
+      <link>https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-04-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff</guid>
       <title>Hospodářská komora navrhuje aplikaci pro uvolnění po covidu. Míč je ale na straně státu</title>
       <description>Hospodářská komora v pátek představila návrh aplikace, která by měla pomoci s otevíráním provozoven obchodů a služeb. Předpokládá, že stát pro otevření provozoven stanoví nějaké podmínky pro podnikatele i zákazníky, a chce živnostníkům a firmám usnadnit plnění těchto podmínek. Snaha je to dobrá a jistě chvályhodná, ale naráží na nedostatek ochoty státu konat – nebo alespoň o budoucnosti podnikání pod vlivem covidu jednat.</description>
@@ -137,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2021-03-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</guid>
-      <title>Fanoušci 3D tisku slaví: Stratasysu končí platnost patentu, levné tiskárny budou opět o něco lepší</title>
-      <description>V sobotu vyprší poslední ze tří klíčových patentů týkajících se 3D tisku, které drží společnost Stratasys. Expirace dřívějších patentů umožnila boom 3D tisku jako odvětví, které se z velkých firem a laboratoří dostalo do domácností. Sobotní milník bude mít menší dopady, ale i tak může posunout obor kupředu a ušetřit domácím i malosériovým tiskařům čas, nervy a peníze.</description>
-      <link>https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2021-02-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
