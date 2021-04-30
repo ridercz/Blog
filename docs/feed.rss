@@ -11,7 +11,7 @@
       <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
       <link>https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</link>
       <author>Michal Altair Valášek</author>
-      <category>IT</category>
+      <category>IT historie</category>
       <pubDate>2021-04-30T00:00:00</pubDate>
     </item>
     <item>
@@ -50,6 +50,7 @@
       <description>Začalo to všechno vlastně zcela nenápadně. Psal se rok 1949 a jistý Neumann János Lajos na universitě v Illionis držel přednášku s komplikovaným názvem "Teorie a organizace složitých automatů". Tak se zrodil koncept počítačového viru. A ty klasické mají hodně společného s těmi organickými, jako momentálně populární koronavirus SARS-CoV-2.</description>
       <link>https://byznysvcesku.cz/michal-valasek-covid-a-michelangelo/</link>
       <author>Michal Altair Valášek</author>
+      <category>IT historie</category>
       <category>Bezpečnost</category>
       <pubDate>2021-04-15T00:00:00</pubDate>
     </item>
@@ -86,6 +87,7 @@
       <description>"Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek?</description>
       <link>https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</link>
       <author>Michal Altair Valášek</author>
+      <category>IT historie</category>
       <category>Politika</category>
       <pubDate>2021-04-01T00:00:00</pubDate>
     </item>
@@ -105,8 +107,7 @@
       <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
       <link>https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</link>
       <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Historie</category>
+      <category>IT historie</category>
       <pubDate>2021-03-17T00:00:00</pubDate>
     </item>
     <item>

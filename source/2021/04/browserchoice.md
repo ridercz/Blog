@@ -4,6 +4,7 @@
 <!-- x4w:pictureUrl = /perex-pictures/20210401-browserchoice.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT historie -->
 <!-- x4w:category = Politika -->
 <!-- dcterms:dateAccepted = 2021-04-01 -->
 <!-- x4w:alternateUrl = https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/ -->
