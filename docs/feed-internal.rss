@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/05/zakazpdz</guid>
+      <title>Jak v datových schránkách zakázat příjem poštovních datových zpráv?</title>
+      <description>Datové schránky umožňují zasílání tzv. "poštovních datových zpráv", tedy zpráv zasílaných soukromými osobami nebo firmami, nikoliv orgány veřejné moci. V současnosti je pro nové schránky jejich příjem standardně povolen. Pokud ho chcete zakázat, třeba kvůli spamu, je to velice jednoduché.</description>
+      <link>https://www.altair.blog/2021/05/zakazpdz</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2021-05-01T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/04/gopro-mount</guid>
       <title>Knihovna pro GoPro držáky v OpenSCADu</title>
       <description>Poslední dobou zjišťuju, že dost často modeluju držáky na GoPro kamery. Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby.</description>
@@ -140,15 +149,6 @@
       <category>Politika</category>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2020-11-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/at-zije-dotnet</guid>
-      <title>.NET Core je mrtvý, ať žije .NET 5!</title>
-      <description>Slavná fráze "Le roi est mort, vive le roi!" poprvé zazněla ve Francii v roce 1422, když po smrti Karla VI na trůn nastoupil Karel VII. Zdánlivě paradoxní výrok "Král je mrtev, ať žije král!" má hluboký smysl: sděluje, že ačkoliv konkrétní král zemřel, na jeho místo nastoupíl jiný a král jako instituce je věčný. Ve Francii to pravda s tou věčností úplně nevyšlo, tak uvidíme jak to dopadne s .NETem.</description>
-      <link>https://www.altair.blog/2020/11/at-zije-dotnet</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2020-11-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
