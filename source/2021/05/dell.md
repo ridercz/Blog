@@ -1,0 +1,9 @@
+<!-- dcterms:title = Dell po dvanácti letech opravil závažnou chybu v ovladači, stovky milionů počítačů jsou v ohrožení -->
+<!-- dcterms:abstract = Společnost Dell vydala opravu ovladače DBUtil, který dvanáct let obsahoval sbírku chyb umožňujících elevation of privilege a DoS útoky. Zranitelný ovladač se nachází na stovkách miliónů prodaných počítačů, od levných notebooků Vostro přes profesionální Latitude až po pracovní stanice Precision. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-dell.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-05-05 -->
+<!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66920470-psms7-dbb7f538171798c -->
