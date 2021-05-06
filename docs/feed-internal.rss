@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/05/camtasia-recorder</guid>
+      <title>Jak používat starý Recorder v programu Camtasia 2021</title>
+      <description>Moje oblíbená Camtasia má novou verzi 2021. Je v ní i nový Recorder, který má krásné nové rozhraní kompatibilní s high DPI obrazovkami a podobně. Bohužel se v něm (zatím?) nedá nic nastavit. Naštěstí je stále k dispozici stará verze a ukážu vám, jak je mezi sebou přepínat.</description>
+      <link>https://www.altair.blog/2021/05/camtasia-recorder</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <category>Akce a události</category>
+      <pubDate>2021-05-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/05/zakazpdz</guid>
       <title>Jak v datových schránkách zakázat příjem poštovních datových zpráv?</title>
       <description>Datové schránky umožňují zasílání tzv. "poštovních datových zpráv", tedy zpráv zasílaných soukromými osobami nebo firmami, nikoliv orgány veřejné moci. V současnosti je pro nové schránky jejich příjem standardně povolen. Pokud ho chcete zakázat, třeba kvůli spamu, je to velice jednoduché.</description>
@@ -138,17 +148,6 @@
       <category>Lidé a jiná zvěř</category>
       <category>Politika</category>
       <pubDate>2020-11-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2020/11/obcanka-2</guid>
-      <title>Svobodný přístup k informacím: záznam z online přednášky</title>
-      <description>Nabízím vám záznam svého včerejšího streamu ze série Dvounohý kůň versus úřední šiml. Byl věnován problematice svobodného přístup k informacím. Tedy postupu, jak od veřejných institucí získat informace které potřebujete a jak se bránit, pokud vám je nechtějí vydat.</description>
-      <link>https://www.altair.blog/2020/11/obcanka-2</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <category>Politika</category>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2020-11-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
