@@ -5,8 +5,8 @@
 <!-- x4w:pictureUrl = /perex-pictures/logo-camtasia.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- x4w:category = Bastlení -->
-<!-- x4w:category = Akce a události -->
+<!-- x4w:category = Software -->
+<!-- x4w:category = Tipy, triky -->
 <!-- dcterms:dateAccepted = 2021-05-06 -->
 
 Moje oblíbená Camtasia má novou verzi 2021. Je v ní i nový Recorder, který má krásné nové rozhraní kompatibilní s high DPI obrazovkami a podobně. Bohužel se v něm (zatím?) nedá nic nastavit. Naštěstí je stále k dispozici stará verze a ukážu vám, jak je mezi sebou přepínat.
