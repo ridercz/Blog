@@ -31,7 +31,7 @@ Podobným způsobem můžete nakládat i s elementy `AssemblyVersion` a `FileVer
 
 U každé assembly můžete určovat tři verze, přičemž hodnota každé z nich může být zcela jiná (ne že by to byl dobrý nápad):
 
-* `Version` je verze NuGet balíčku a její hodnota by bělo být to, jak je produkt označován v běžné komunikaci, dokumentaci atd.
+* `Version` je verze NuGet balíčku a její hodnota by mělo být to, jak je produkt označován v běžné komunikaci, dokumentaci atd.
 * `AssemblyVersion` je hodnota, se kterou pracuje .NET interně, např. pro určování kompatibility a podobné účely.
 * `FileVersion` pak může sloužit k unikátní identifikaci konkrétního buildu.
 
