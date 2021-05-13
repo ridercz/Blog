@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</guid>
+      <title>Když BASIC vládnul světu</title>
+      <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
+      <link>https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT historie</category>
+      <pubDate>2021-05-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66920470-psms7-dbb7f538171798c</guid>
       <title>Dell po dvanácti letech opravil závažnou chybu v ovladači, stovky milionů počítačů jsou v ohrožení</title>
       <description>Společnost Dell vydala opravu ovladače DBUtil, který dvanáct let obsahoval sbírku chyb umožňujících elevation of privilege a DoS útoky. Zranitelný ovladač se nachází na stovkách miliónů prodaných počítačů, od levných notebooků Vostro přes profesionální Latitude až po pracovní stanice Precision.</description>
@@ -135,16 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>3D tisk</category>
       <pubDate>2021-02-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://modrak.podbean.com/e/6-leak-cd-projektu/</guid>
-      <title>Modrák &amp; Friends: Leak CD projektu</title>
-      <description>Do sbírky divných médií, v nichž jsem zanechal stopu, se po bok Archivního časopisu ministerstva vnitra a Světa motorů zařadil podcast Modrák &amp; Friends, který se zabývá počítačovými hrami. O čem jsem moudře hovořil, když o počítačových hrách nic nevím a systematicky se jim vyhýbám? O hacku společnosti CD Projekt, což je údajně slavný herní producent (já se o její existenci dozvěděl až z toho hacku). Protože o hacku samotném není známo prakticky nic, bylo z toho povídání o bezpečnosti a ransomware. Pokud vám nestačí mne číst, ale chcete mě i poslouchat, zde máte možnost.</description>
-      <link>https://modrak.podbean.com/e/6-leak-cd-projektu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-02-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

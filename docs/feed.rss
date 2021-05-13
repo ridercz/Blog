@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</guid>
+      <title>Když BASIC vládnul světu</title>
+      <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
+      <link>https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT historie</category>
+      <pubDate>2021-05-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/05/screencasty</guid>
       <title>Online školení zdarma: Screencasty pomocí programů Camtasia a OBS Studio (a anonce nového projektu)</title>
       <description>Připravuji projekt nového technického YouTube kanálu a při té příležitosti dávám zdarma všem k dispozici elearningový kurz na programy OBS Studio a Camtasia.</description>
@@ -138,15 +147,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2021-03-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</guid>
-      <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
-      <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
-      <link>https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2021-03-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
