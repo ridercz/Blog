@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</guid>
+      <title>Kritická bezpečnostní díra v HTTP.SYS ohrožuje Windows 10 i servery, stáhněte si záplatu</title>
+      <description>Operační systém Windows obsahuje přímo v jádře knihovnu HTTP.SYS, která se stará o zpracování příchozích HTTP spojení (pokud počítač funguje jako web server). A ta knihovna ve verzích 20H2 a 2004 (jak pro Windows 10, tak Windows Server) obsahuje velice nepříjemnou chybu. Nemá žádné sexy jméno jako Heartbleed nebo Shellshock a „CVE 2021-31166 HTTP Protocol Stack Remote Code Execution Vulnerability“, nevypadá na první pohled nijak zvlášť zajímavě.</description>
+      <link>https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2021-05-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</guid>
       <title>Když BASIC vládnul světu</title>
       <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
@@ -137,16 +146,6 @@
       <category>IT historie</category>
       <category>Politika</category>
       <pubDate>2021-04-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/03/kamera</guid>
-      <title>Nový život pro staré harampádí pomocí 3D tisku</title>
-      <description>Včera jsem se dozvěděl, že budu dneska něco točit. V místě, kde nejspíš nebude dost světla. Z různého harampádí, které mám doma, jsem se rozhodl operativně vyrobit světlo pro kameru. Stačí 3D tiskárna a pár šroubů.</description>
-      <link>https://www.altair.blog/2021/03/kamera</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <category>3D tisk</category>
-      <pubDate>2021-03-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
