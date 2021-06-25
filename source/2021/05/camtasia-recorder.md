@@ -17,7 +17,7 @@ Pomocí skriptu `UseLegacyRecorder.cmd` můžete nahradit nový Camtasia Recorde
 @ECHO OFF
 
 REM -- Rename CamtasiaRecorder to NewCamtasiaRecorder
-cd "C:\Program Files\TechSmith\Camtasia 2021"
+pushd "C:\Program Files\TechSmith\Camtasia 2021"
 ren CamtasiaRecorder.* NewCamtasiaRecorder.*
 
 REM -- Rename LegacyCamRecorder to CamtasiaRecorder
@@ -26,6 +26,8 @@ ren LegacyCamRecorder.exe CamtasiaRecorder.exe
 REM -- Change shortcut in Start Menu
 del "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk"
 powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk');$s.TargetPath='C:\Program Files\TechSmith\Camtasia 2021\CamtasiaRecorder.exe';$s.Save()"
+
+popd
 ```
 
 Bude nahrazen odkaz ve Start Menu a pokud v Camtasii zvolíte _Record_, zavolá se stará verze. Nová verze bude dostupná jako `NewCamtasiaRecorder.exe`.
@@ -36,7 +38,7 @@ Chcete-li se poté vrátit k použití nového Recorderu, použijte skript `UseN
 @ECHO OFF
 
 REM -- Rename CamtasiaRecorder to LegacyCamRecorder
-cd "C:\Program Files\TechSmith\Camtasia 2021"
+pushd "C:\Program Files\TechSmith\Camtasia 2021"
 ren CamtasiaRecorder.exe LegacyCamRecorder.exe
 
 REM -- Rename NewCamtasiaRecorder to CamtasiaRecorder
@@ -45,6 +47,7 @@ ren NewCamtasiaRecorder.* CamtasiaRecorder.*
 REM -- Update shortcut in Start Menu
 del "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk"
 powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk');$s.TargetPath='C:\Program Files\TechSmith\Camtasia 2021\CamtasiaRecorder.exe';$s.Save()"
+popd
 ```
 
 Je pravděpodobné, že se nový Recorder v následujících aktualizacích dočká požadované funkcionality. Ale prozatím se mi lépe používá starší verze.

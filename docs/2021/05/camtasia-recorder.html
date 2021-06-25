@@ -135,7 +135,7 @@
 <pre><code class="language-bat">@ECHO OFF
 
 REM -- Rename CamtasiaRecorder to NewCamtasiaRecorder
-cd &quot;C:\Program Files\TechSmith\Camtasia 2021&quot;
+pushd &quot;C:\Program Files\TechSmith\Camtasia 2021&quot;
 ren CamtasiaRecorder.* NewCamtasiaRecorder.*
 
 REM -- Rename LegacyCamRecorder to CamtasiaRecorder
@@ -144,13 +144,15 @@ ren LegacyCamRecorder.exe CamtasiaRecorder.exe
 REM -- Change shortcut in Start Menu
 del &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk&quot;
 powershell &quot;$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk');$s.TargetPath='C:\Program Files\TechSmith\Camtasia 2021\CamtasiaRecorder.exe';$s.Save()&quot;
+
+popd
 </code></pre>
 <p>Bude nahrazen odkaz ve Start Menu a pokud v Camtasii zvolíte <em>Record</em>, zavolá se stará verze. Nová verze bude dostupná jako <code>NewCamtasiaRecorder.exe</code>.</p>
 <p>Chcete-li se poté vrátit k použití nového Recorderu, použijte skript <code>UseNewRecorder.cmd</code>:</p>
 <pre><code class="language-bat">@ECHO OFF
 
 REM -- Rename CamtasiaRecorder to LegacyCamRecorder
-cd &quot;C:\Program Files\TechSmith\Camtasia 2021&quot;
+pushd &quot;C:\Program Files\TechSmith\Camtasia 2021&quot;
 ren CamtasiaRecorder.exe LegacyCamRecorder.exe
 
 REM -- Rename NewCamtasiaRecorder to CamtasiaRecorder
@@ -159,6 +161,7 @@ ren NewCamtasiaRecorder.* CamtasiaRecorder.*
 REM -- Update shortcut in Start Menu
 del &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk&quot;
 powershell &quot;$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\TechSmith\Camtasia Recorder 2021.lnk');$s.TargetPath='C:\Program Files\TechSmith\Camtasia 2021\CamtasiaRecorder.exe';$s.Save()&quot;
+popd
 </code></pre>
 <p>Je pravděpodobné, že se nový Recorder v následujících aktualizacích dočká požadované funkcionality. Ale prozatím se mi lépe používá starší verze.</p>
 
