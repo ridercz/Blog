@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/07/nervy</guid>
+      <title>Nervy</title>
+      <description>Na Twitteru teď běží "co byste vzkázali sami sobě když vám bylo dvacet, ve třech slovech". Upřímně, stručnost mi nikdy nešla. Napadá mě jenom "buy Bitcoin" a na to mi ještě jedno slovo zbylo. A to zatím nejzásadnější poznání, k němuž jsem ve věku od dvaceti do současných dvaačtyřiceti dospěl, se do třech slov nevejde.</description>
+      <link>https://www.altair.blog/2021/07/nervy</link>
+      <author>Michal Altair Valášek</author>
+      <category>Koně</category>
+      <pubDate>2021-07-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</guid>
       <title>Kritická bezpečnostní díra v HTTP.SYS ohrožuje Windows 10 i servery, stáhněte si záplatu</title>
       <description>Operační systém Windows obsahuje přímo v jádře knihovnu HTTP.SYS, která se stará o zpracování příchozích HTTP spojení (pokud počítač funguje jako web server). A ta knihovna ve verzích 20H2 a 2004 (jak pro Windows 10, tak Windows Server) obsahuje velice nepříjemnou chybu. Nemá žádné sexy jméno jako Heartbleed nebo Shellshock. „CVE 2021-31166 HTTP Protocol Stack Remote Code Execution Vulnerability“ nevypadá na první pohled nijak zvlášť zajímavě, ale zdání klame.</description>
@@ -136,16 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-04-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</guid>
-      <title>BrowserChoice.eu aneb Válka prohlížečů</title>
-      <description>"Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek?</description>
-      <link>https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <category>Politika</category>
-      <pubDate>2021-04-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
