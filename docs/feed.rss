@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</guid>
+      <title>Průšvih jménem WD My Book Live. Ponaučení z aféry problematického síťového disku</title>
+      <description>Majitelé mnoha síťových disků řady My Book Live od společnosti Western Digital se v uplynulých týdnech dočkali nemilých překvapení. Jejich zařízení byla najednou zcela prázdná. Přišli o všechna data, která měli na NAS uložena. Mnohdy o léta svých digitálních životů a práce. Nyní už víme, proč se to stalo: na vině bylo několik v zásadě triviálních chyb a ukončená podpora ze strany výrobce. Jenomže co s tím? Obětem aktuálního útoku nabízí Western Digital pomoc s obnovou dat, ale řešení příčiny problémů je v nedohlednu a neomezuje se jen na jednu značku.</description>
+      <link>https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-07-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/07/nervy</guid>
       <title>Nervy</title>
       <description>Na Twitteru teď běží "co byste vzkázali sami sobě když vám bylo dvacet, ve třech slovech". Upřímně, stručnost mi nikdy nešla. Napadá mě jenom "buy Bitcoin" a na to mi ještě jedno slovo zbylo. A to zatím nejzásadnější poznání, k němuž jsem ve věku od dvaceti do současných dvaačtyřiceti dospěl, se do třech slov nevejde.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-04-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66904790-psms7-8b51a0fd2bb7aea</guid>
-      <title>Facebooku unikla data o více než půl miliardě uživatelů, v ČR se problém týká 1,3 milionu lidí</title>
-      <description>Údaje o zhruba 20 % uživatelů FB jsou volně ke stažení. Nejde o žádnou bezprostřední katastrofu, ale povede to nejspíš ke zvýšení počtu phishingových útoků. Pokud vám dojdou nějaké divné SMS nebo jiné zprávu, NEREAGUJTE NA NĚ!</description>
-      <link>https://tech.ihned.cz/c7-66904790-psms7-8b51a0fd2bb7aea</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</guid>
+      <title>Průšvih jménem WD My Book Live. Ponaučení z aféry problematického síťového disku</title>
+      <description>Majitelé mnoha síťových disků řady My Book Live od společnosti Western Digital se v uplynulých týdnech dočkali nemilých překvapení. Jejich zařízení byla najednou zcela prázdná. Přišli o všechna data, která měli na NAS uložena. Mnohdy o léta svých digitálních životů a práce. Nyní už víme, proč se to stalo: na vině bylo několik v zásadě triviálních chyb a ukončená podpora ze strany výrobce. Jenomže co s tím? Obětem aktuálního útoku nabízí Western Digital pomoc s obnovou dat, ale řešení příčiny problémů je v nedohlednu a neomezuje se jen na jednu značku.</description>
+      <link>https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-07-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</guid>
       <title>Kritická bezpečnostní díra v HTTP.SYS ohrožuje Windows 10 i servery, stáhněte si záplatu</title>
       <description>Operační systém Windows obsahuje přímo v jádře knihovnu HTTP.SYS, která se stará o zpracování příchozích HTTP spojení (pokud počítač funguje jako web server). A ta knihovna ve verzích 20H2 a 2004 (jak pro Windows 10, tak Windows Server) obsahuje velice nepříjemnou chybu. Nemá žádné sexy jméno jako Heartbleed nebo Shellshock. „CVE 2021-31166 HTTP Protocol Stack Remote Code Execution Vulnerability“ nevypadá na první pohled nijak zvlášť zajímavě, ale zdání klame.</description>
@@ -135,15 +145,6 @@
       <category>IT</category>
       <category>ReP</category>
       <pubDate>2021-03-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://prohlaseni.altair.blog/</guid>
-      <title>Generátor čestných prohlášení pro cesty mezi okresy</title>
-      <description>S platností ode dneška vláda omezila cestování mezi okresy. Existuje spousta výjimek, ale je je třeba dokládat, většinou čestným prohlášením. Protože ve veřejném prostoru panují různé chaotické rady o tom, co je všechno potřeba, napsal jsem jednoduchou aplikaci, která vám položí pár otázek a na základě toho vygeneruje příslušný dokument.</description>
-      <link>https://prohlaseni.altair.blog/</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2021-03-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
