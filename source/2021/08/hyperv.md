@@ -1,0 +1,11 @@
+<!-- dcterms:title = Kritická bezpečnostní chyba v Hyper-V umožňuje kompromitaci fyzického stroje z virtuálu -->
+<!-- dcterms:abstract = Schopnost přeskočit z virtuálního stroje na fyzický počítač a případně nakazit i další virtuální stroje běžící na stejném hardwaru je alarmující chyba, která v hodnocení rizik CVSS získala 9,9 bodu z deseti. Na chybu už je k dispozici záplata, ale historická zkušenost říká, že se zneužíváním této chyby se pravděpodobně budeme setkávat ještě velmi dlouho. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20190107-ddos.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Evil Nick via Flickr, CC BY-NC-ND -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-08-06 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-66958850-psms7-ea32dc379cce88f -->

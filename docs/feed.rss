@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66958850-psms7-ea32dc379cce88f</guid>
+      <title>Kritická bezpečnostní chyba v Hyper-V umožňuje kompromitaci fyzického stroje z virtuálu</title>
+      <description>Schopnost přeskočit z virtuálního stroje na fyzický počítač a případně nakazit i další virtuální stroje běžící na stejném hardwaru je alarmující chyba, která v hodnocení rizik CVSS získala 9,9 bodu z deseti. Na chybu už je k dispozici záplata, ale historická zkušenost říká, že se zneužíváním této chyby se pravděpodobně budeme setkávat ještě velmi dlouho.</description>
+      <link>https://tech.hn.cz/c7-66958850-psms7-ea32dc379cce88f</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-08-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</guid>
       <title>Průšvih jménem WD My Book Live. Ponaučení z aféry problematického síťového disku</title>
       <description>Majitelé mnoha síťových disků řady My Book Live od společnosti Western Digital se v uplynulých týdnech dočkali nemilých překvapení. Jejich zařízení byla najednou zcela prázdná. Přišli o všechna data, která měli na NAS uložena. Mnohdy o léta svých digitálních životů a práce. Nyní už víme, proč se to stalo: na vině bylo několik v zásadě triviálních chyb a ukončená podpora ze strany výrobce. Jenomže co s tím? Obětem aktuálního útoku nabízí Western Digital pomoc s obnovou dat, ale řešení příčiny problémů je v nedohlednu a neomezuje se jen na jednu značku.</description>
@@ -137,15 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-04-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=dOMR-KnVF_M</guid>
-      <title>Dvounohý kůň versus kybernetická bezpečnost: Úniky dat a co s nimi</title>
-      <description>Záznam live streamu o nedávném úniku dat z Facebooku. K čemu došlo? Jaké si z toho máme vzít ponaučení? Co s tím můžeme dělat a jak se bránit?</description>
-      <link>https://www.youtube.com/watch?v=dOMR-KnVF_M</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
