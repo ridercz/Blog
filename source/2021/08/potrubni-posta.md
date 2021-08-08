@@ -1,0 +1,11 @@
+<!-- dcterms:title = Nepravděpodobná bezpečnostní krize: I potrubní pošta může podlehnout hackerům, třeba v nemocnicích -->
+<!-- dcterms:abstract = Jakmile to má procesor, dá se to hacknout. I když je to třeba potrubní pošta. Zní to jako něco z přelomu devatenáctého a dvacátého století, ale potrubní pošta se nadále používá. Jenom se nejedná o veřejné systémy, ale o uzavřené systémy v areálech jako jsou nemocnice anebo třeba pokladny v supermarketech. Společnost Swisslog vyrábí a dodává systém Translogic a je docela úspěšná - používá ho 80 % nemocnic v USA a celosvětový počet instalací přesahuje 3000. A právě tento systém obsahuje devět zranitelností, které umožňují útočníkovi získat nad celým systémem úplnou kontrolu, jak objevili Ben Seri a Barak Hadad ze společnosti Armis. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210808-potrubni-posta.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:pictureCredits = Swisslog -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-08-08 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-66960120-psms7-a80951720f8ca1c -->
