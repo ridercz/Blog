@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66960170-psms7-c13bb8619eaf4de</guid>
+      <title>Apple končí s ochranou soukromí, z iPhonu je udavač ve vaší kapse</title>
+      <description>Bylo jenom otázkou času, která z velkých technologických firem hodí u end to end encryption ručník do ringu a pod jakou záminkou. Nakonec to byl Apple a záminka je nejklasičtější možná: ochrana dětí.</description>
+      <link>https://tech.hn.cz/c7-66960170-psms7-c13bb8619eaf4de</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-08-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66960120-psms7-a80951720f8ca1c</guid>
       <title>Nepravděpodobná bezpečnostní krize: I potrubní pošta může podlehnout hackerům, třeba v nemocnicích</title>
       <description>Jakmile to má procesor, dá se to hacknout. I když je to třeba potrubní pošta. Zní to jako něco z přelomu devatenáctého a dvacátého století, ale potrubní pošta se nadále používá. Jenom se nejedná o veřejné systémy, ale o uzavřené systémy v areálech jako jsou nemocnice anebo třeba pokladny v supermarketech. Společnost Swisslog vyrábí a dodává systém Translogic a je docela úspěšná - používá ho 80 % nemocnic v USA a celosvětový počet instalací přesahuje 3000. A právě tento systém obsahuje devět zranitelností, které umožňují útočníkovi získat nad celým systémem úplnou kontrolu, jak objevili Ben Seri a Barak Hadad ze společnosti Armis.</description>
@@ -137,15 +147,6 @@
       <category>IT historie</category>
       <category>Politika</category>
       <pubDate>2021-04-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</guid>
-      <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
-      <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
-      <link>https://byznysvcesku.cz/sapo-prvni-ceskoslovensky-pocitac-v-nemz-se-o-vysledku-hlasovalo/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2021-03-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

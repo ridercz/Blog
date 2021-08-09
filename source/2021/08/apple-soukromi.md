@@ -1,0 +1,10 @@
+<!-- dcterms:title = Apple končí s ochranou soukromí, z iPhonu je udavač ve vaší kapse -->
+<!-- dcterms:abstract = Bylo jenom otázkou času, která z velkých technologických firem hodí u end to end encryption ručník do ringu a pod jakou záminkou. Nakonec to byl Apple a záminka je nejklasičtější možná: ochrana dětí. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-apple.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-08-09 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-66960170-psms7-c13bb8619eaf4de -->
