@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/08/ztech-launch</guid>
+      <title>Se Zásilkovnou spouštíme nový technologický kanál Z-TECH</title>
+      <description>Možná jste si povšimli, že v uplynulých několika měsících má kreativní činnost poněkud poklesla, článků na tomto blogu bylo minimum, videa na mém YouTube žádná...  Po dlouhé době příprav, natáčení a střihu je to zde: spouštíme nový technologický YouTube kanál Z-TECH. A začínáme bezplatným školením 3D modelování v OpenSCADu.</description>
+      <link>https://www.altair.blog/2021/08/ztech-launch</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>Bastlení</category>
+      <category>3D tisk</category>
+      <pubDate>2021-08-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/07/nervy</guid>
       <title>Nervy</title>
       <description>Na Twitteru teď běží "co byste vzkázali sami sobě když vám bylo dvacet, ve třech slovech". Upřímně, stručnost mi nikdy nešla. Napadá mě jenom "buy Bitcoin" a na to mi ještě jedno slovo zbylo. A to zatím nejzásadnější poznání, k němuž jsem ve věku od dvaceti do současných dvaačtyřiceti dospěl, se do třech slov nevejde.</description>
@@ -139,15 +150,6 @@
       <category>3D tisk</category>
       <category>Recenze</category>
       <pubDate>2021-01-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/backblaze</guid>
-      <title>Neomezená záloha pro každého za stovku měsíčně - nyní tři měsíce zdarma</title>
-      <description>Uživatelé se prý dělí na dvě skupiny: jedni zálohují a druzí o svá data ještě nepřišli. Nicméně znám i takové, kteří o svá data přišli už několikrát a nezálohují furt. V každém případě, Backblaze pokládám za velmi dobré a zároveň levné řešení, vhodné pro běžné uživatele. A nyní běží promotion, v jejímž rámci máte možnost získat až tři měsíce zdarma.</description>
-      <link>https://www.altair.blog/2021/01/backblaze</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-01-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
