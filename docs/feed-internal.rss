@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/08/csharp-pro-mirne-pokrocile</guid>
+      <title>Nový seriál na Z-TECHU: C# pro mírně pokročilé</title>
+      <description>C# je univerzální imperativní procedurální objektový reflexivní staticky typovaný jazyk s unifikovaným systémem typů. To vám teoreticky říká vše, co o něm potřebujete vědět. Ale co to znamená? A je to po dvaceti letech vývoje vlastně ještě vůbec pravda? Dneškem začínáme na kanále Z-TECH nový seriál o C# pro mírně pokročilé, kde si postupně ukážeme vývoj pokročilejších konstrukcí a možnosti současné verze C# 9.0 (a trochu i těch budoucích).</description>
+      <link>https://www.altair.blog/2021/08/csharp-pro-mirne-pokrocile</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-08-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/08/ztech-launch</guid>
       <title>Se Zásilkovnou spouštíme nový technologický kanál Z-TECH</title>
       <description>Možná jste si povšimli, že v uplynulých několika měsících má kreativní činnost poněkud poklesla, článků na tomto blogu bylo minimum, videa na mém YouTube žádná...  Po dlouhé době příprav, natáčení a střihu je to zde: spouštíme nový technologický YouTube kanál Z-TECH. A začínáme bezplatným školením 3D modelování v OpenSCADu.</description>
@@ -140,16 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2021-01-11T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/duhove-pla</guid>
-      <title>3D tisk ve všech barvách: duhový filament od značky C-Tech</title>
-      <description>Ten efekt zná každý majitel FDM 3D tiskárny. Když se mění barva filamentu, je nutné extruder vyčistit a teče z něj plast, který postupně mění barvu. Totéž se děje i při výrobě filamentů, když výrobní linka přechází z jedné barvy na druhou. Výsledkem jsou dvoubarevné cívky filamentu, kde jedna barva pomalu přechází v druhou. Značka C-Tech nabízí podobný "duhový" filament jako oficiální výrobek.</description>
-      <link>https://www.altair.blog/2021/01/duhove-pla</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <category>Recenze</category>
-      <pubDate>2021-01-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
