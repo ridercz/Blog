@@ -36,3 +36,5 @@ To C# umožňoval odjakživa v podobě dnes už poněkud pozapomenuté feature d
 Vedlejšími tématy tohoto videa jsou zajímavá konstrukce `yield return` a pro úplnost se podíváme na extension metody, které umožňují rozšiřovat objekty o instanční metody, aniž by bylo nutné je modifikovat (nebo mít k modifikaci vůbec možnost).
 
 Kombinace výše zmíněných technik pak vede k možnosti vytvoření technologie LINQ (Language Integrated Query), sloužící k dotazování do objektových datových struktur. V podobě _LINQ to Enumerable_ jednoduše vykoná předaný kód jako argument, ale v pokročilejších variantách (jako je _LINQ to entities_) umí předanou lambda expression (resp. expression tree) nikoliv spustit, ale analyzovat a přeložit do jazyka úložiště (např. příslušného dialektu SQL), což umožňuje C# programátorům užívajícím Entity Framework psát komplexní dotazy, aniž by museli znát SQL nebo řešit rozdíly mezi jednotlivými relačními databázemi.
+
+Zajímavé podrobnější informace o fungování delegátů v C# najdete v článku [Understanding the cost of C# delegates](https://devblogs.microsoft.com/dotnet/understanding-the-cost-of-csharp-delegates/) od Paola Morgada.
