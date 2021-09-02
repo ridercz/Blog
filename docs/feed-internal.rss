@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-generika-delegati</guid>
+      <title>C# pro mírně pokročilé: Generické typy a od delegátů po lambda expression</title>
+      <description>Uplynulý týden jsem bohužel strávil neplánovaně v nemocnici, což poněkud narušilo mé plány na vydávání nového seriálu o C# na kanálu Z-TECH. Dnes jsem vydal nový díl o cestě od delegátů k lambda expressions, ale v článku bude řeč i o generických typech z týdne minulého.</description>
+      <link>https://www.altair.blog/2021/09/csharp-generika-delegati</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-09-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/08/csharp-pro-mirne-pokrocile</guid>
       <title>Nový seriál na Z-TECHU: C# pro mírně pokročilé</title>
       <description>C# je univerzální imperativní procedurální objektový reflexivní staticky typovaný jazyk s unifikovaným systémem typů. To vám teoreticky říká vše, co o něm potřebujete vědět. Ale co to znamená? A je to po dvaceti letech vývoje vlastně ještě vůbec pravda? Dneškem začínáme na kanále Z-TECH nový seriál o C# pro mírně pokročilé, kde si postupně ukážeme vývoj pokročilejších konstrukcí a možnosti současné verze C# 9.0 (a trochu i těch budoucích).</description>
@@ -141,15 +151,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-01-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/hvezdy</guid>
-      <title>Žlutá nebo rudá</title>
-      <description>Symboly jsou pro někoho se sociopatickými sklony praktické. Lidé jim obvykle přikládají zvláštní důležitost a my, kteří nejsme nadáni empatií, se jich můžeme rozumově chytit a nahradit tak nedostatek pocitového pochopení a zahrát tu správnou roli. Z konce minulého režimu si pamatuji naprostou vyprázdněnost symbolů, které se staly důležitými až teprve v případě svatokrádeže. Jako dnes davidova hvězda s nápisem "neočkovaný".</description>
-      <link>https://www.altair.blog/2021/01/hvezdy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2021-01-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
