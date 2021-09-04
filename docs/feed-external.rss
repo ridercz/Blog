@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</guid>
+      <title>Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků</title>
+      <description>Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá.</description>
+      <link>https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-09-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66960170-psms7-c13bb8619eaf4de</guid>
       <title>Apple končí s ochranou soukromí, z iPhonu je udavač ve vaší kapse</title>
       <description>Bylo jenom otázkou času, která z velkých technologických firem hodí u end to end encryption ručník do ringu a pod jakou záminkou. Nakonec to byl Apple a záminka je nejklasičtější možná: ochrana dětí.</description>
@@ -137,16 +147,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-04-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</guid>
-      <title>BrowserChoice.eu aneb Válka prohlížečů</title>
-      <description>"Je váš program tak špatný, že ho uživatelé nechtějí ani když je zadarmo? Obraťte se na Evropskou unii. Ta může přikázat výrobci jiného, úspěšnějšího programu, aby distribuoval i ten váš." Těmito slovy jsem před více než jedenácti lety zahájil video, které ukazovalo, jak vypadala tehdejší horká novinka, totiž "Browser Choice" nebo "Ballot Screen" ve Windows 7. Jednalo se o jeden z posledních záchvěvů války prohlížečů, nepříliš povznášejícího období v historii výpočetní techniky. Jak to vlastně s prohlížeči a jejich jádry tenkrát bylo? A jaké ponaučení si z toho můžeme vzít pro dnešek?</description>
-      <link>https://byznysvcesku.cz/michal-valasek-browserchoice-eu-aneb-valka-prohlizecu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <category>Politika</category>
-      <pubDate>2021-04-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,10 @@
+<!-- dcterms:title = Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků -->
+<!-- dcterms:abstract = Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20210904-apple-e2e.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-09-04 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658 -->

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</guid>
+      <title>Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků</title>
+      <description>Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá.</description>
+      <link>https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-09-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-generika-delegati</guid>
       <title>C# pro mírně pokročilé: Generické typy a od delegátů po lambda expression</title>
       <description>Uplynulý týden jsem bohužel strávil neplánovaně v nemocnici, což poněkud narušilo mé plány na vydávání nového seriálu o C# na kanálu Z-TECH. Dnes jsem vydal nový díl o cestě od delegátů k lambda expressions, ale v článku bude řeč i o generických typech z týdne minulého.</description>
@@ -140,15 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-05-01T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</guid>
-      <title>Osborne nebyl první, stručná historie notebooků</title>
-      <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
-      <link>https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2021-04-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
