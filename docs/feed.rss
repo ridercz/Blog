@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/09/odpoledni-skoleni</guid>
+      <title>Pozvánka na odpolední online školení .NET 5 pro web (ASP.NET)</title>
+      <description>Více než po roce jsem se rozhodl uspořádat další běh svých odpoledních školení .NET 5 pro web (ASP.NET Core)Máte půl dne času? Zvu vás na komplexní online školení ASP.NET Core. Tedy, pokud budete mít půl dne času dva týdny. Speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho.</description>
+      <link>https://www.altair.blog/2021/09/odpoledni-skoleni</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2021-09-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</guid>
       <title>Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků</title>
       <description>Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá.</description>
@@ -141,15 +151,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-05-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/05/zakazpdz</guid>
-      <title>Jak v datových schránkách zakázat příjem poštovních datových zpráv?</title>
-      <description>Datové schránky umožňují zasílání tzv. "poštovních datových zpráv", tedy zpráv zasílaných soukromými osobami nebo firmami, nikoliv orgány veřejné moci. V současnosti je pro nové schránky jejich příjem standardně povolen. Pokud ho chcete zakázat, třeba kvůli spamu, je to velice jednoduché.</description>
-      <link>https://www.altair.blog/2021/05/zakazpdz</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-05-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/09/odpoledni-skoleni</guid>
+      <title>Pozvánka na odpolední online školení .NET 5 pro web (ASP.NET)</title>
+      <description>Více než po roce jsem se rozhodl uspořádat další běh svých odpoledních školení .NET 5 pro web (ASP.NET Core)Máte půl dne času? Zvu vás na komplexní online školení ASP.NET Core. Tedy, pokud budete mít půl dne času dva týdny. Speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho.</description>
+      <link>https://www.altair.blog/2021/09/odpoledni-skoleni</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2021-09-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-generika-delegati</guid>
       <title>C# pro mírně pokročilé: Generické typy a od delegátů po lambda expression</title>
       <description>Uplynulý týden jsem bohužel strávil neplánovaně v nemocnici, což poněkud narušilo mé plány na vydávání nového seriálu o C# na kanálu Z-TECH. Dnes jsem vydal nový díl o cestě od delegátů k lambda expressions, ale v článku bude řeč i o generických typech z týdne minulého.</description>
@@ -142,15 +152,6 @@
       <category>IT</category>
       <category>Akce a události</category>
       <pubDate>2021-01-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/01/rodne-cislo</guid>
-      <title>Validace rodného čísla v Altairis Validation Toolkitu</title>
-      <description>Abych jenom nekritizoval, rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny Altairis Validation Toolkit jsem doprogramoval nový atribut [RodneCislo], který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.</description>
-      <link>https://www.altair.blog/2021/01/rodne-cislo</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-01-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
