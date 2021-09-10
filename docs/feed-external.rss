@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</guid>
+      <title>Pilulka pro lepší 3D tisk: Karmen Pill pro vzdálenou správu tiskáren je raná verze, ale na solidním základu</title>
+      <description>3D tisk je dneska už stará vesta. Vytvoříte model, ve sliceru z něj vygenerujete G-Code, nahrajete na paměťovou kartu a na tiskárně zmáčknete tlačítko. Nebo ne? Výše uvedený postup stačí, když si jen tak tisknete na jedné tiskárně doma pár kousků. Ale co když máte tiskáren celou farmu? A chcete je vzdáleně dohledovat po síti? České řešení Karmen nabízí hardware i software pro vzdálené řízení tiskáren po síti.</description>
+      <link>https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <category>Recenze</category>
+      <pubDate>2021-09-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</guid>
       <title>Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků</title>
       <description>Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá.</description>
@@ -138,15 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-04-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66904790-psms7-8b51a0fd2bb7aea</guid>
-      <title>Facebooku unikla data o více než půl miliardě uživatelů, v ČR se problém týká 1,3 milionu lidí</title>
-      <description>Údaje o zhruba 20 % uživatelů FB jsou volně ke stažení. Nejde o žádnou bezprostřední katastrofu, ale povede to nejspíš ke zvýšení počtu phishingových útoků. Pokud vám dojdou nějaké divné SMS nebo jiné zprávu, NEREAGUJTE NA NĚ!</description>
-      <link>https://tech.ihned.cz/c7-66904790-psms7-8b51a0fd2bb7aea</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

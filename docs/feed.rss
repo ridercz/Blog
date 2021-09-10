@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</guid>
+      <title>Pilulka pro lepší 3D tisk: Karmen Pill pro vzdálenou správu tiskáren je raná verze, ale na solidním základu</title>
+      <description>3D tisk je dneska už stará vesta. Vytvoříte model, ve sliceru z něj vygenerujete G-Code, nahrajete na paměťovou kartu a na tiskárně zmáčknete tlačítko. Nebo ne? Výše uvedený postup stačí, když si jen tak tisknete na jedné tiskárně doma pár kousků. Ale co když máte tiskáren celou farmu? A chcete je vzdáleně dohledovat po síti? České řešení Karmen nabízí hardware i software pro vzdálené řízení tiskáren po síti.</description>
+      <link>https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <category>Recenze</category>
+      <pubDate>2021-09-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-properties</guid>
       <title>C# pro mírně pokročilé: Vlastnosti vlastností</title>
       <description>Některé programovací jazyky se bez vlastností (properties) docela dobře obejdou. Ale v C# jsou od samého počátku a jejich zápis se s každou verzí zjednodušuje. Hodí se to, protože se mění kód který píšeme. Nově často místo funkčního kódu píšeme modely a tam se rychlé vytváření vlastností hodí.</description>
@@ -142,16 +152,6 @@
       <category>Bastlení</category>
       <category>Akce a události</category>
       <pubDate>2021-05-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/05/camtasia-recorder</guid>
-      <title>Jak používat starý Recorder v programu Camtasia 2021</title>
-      <description>Moje oblíbená Camtasia má novou verzi 2021. Je v ní i nový Recorder, který má krásné nové rozhraní kompatibilní s high DPI obrazovkami a podobně. Bohužel se v něm (zatím?) nedá nic nastavit. Naštěstí je stále k dispozici stará verze a ukážu vám, jak je mezi sebou přepínat.</description>
-      <link>https://www.altair.blog/2021/05/camtasia-recorder</link>
-      <author>Michal Altair Valášek</author>
-      <category>Software</category>
-      <category>Tipy, triky</category>
-      <pubDate>2021-05-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
