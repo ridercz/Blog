@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</guid>
+      <title>Microsoft radí uživatelům, aby se zbavili hesel. Nemusí to být tak dobrý nápad, jak se v Redmondu tváří</title>
+      <description>Microsoft oznámil, že se běžné spotřebitelské účty Microsoft Account obejdou bez hesel. V nastavení lze heslo odebrat, a pokud tak učiníte, systém vám pogratuluje, že jste zvýšili bezpečnost svého účtu a vylepšili pocit z přihlašování.  Není to ale tak jednoduché a v některých případech si můžete život zrušením hesla zkomplikovat.</description>
+      <link>https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-09-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-arguments</guid>
       <title>C# pro mírně pokročilé: Argumenty metod</title>
       <description>Metody (procedury, funkce...) a jejich argumenty jsou v C# základní jazykovou konstrukcí. Za dvacet let existence jazyka však doznaly změn a značného vývoje, již tradičně směrem ke zjednodušení a zpříjemnění práce programátora. V dnešním videu si ukážeme, k čemu slouží klíčová slova in a out, operátor nameof či caller info attributes.</description>
@@ -143,15 +153,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-05-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</guid>
-      <title>Když BASIC vládnul světu</title>
-      <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
-      <link>https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2021-05-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

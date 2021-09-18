@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</guid>
+      <title>Microsoft radí uživatelům, aby se zbavili hesel. Nemusí to být tak dobrý nápad, jak se v Redmondu tváří</title>
+      <description>Microsoft oznámil, že se běžné spotřebitelské účty Microsoft Account obejdou bez hesel. V nastavení lze heslo odebrat, a pokud tak učiníte, systém vám pogratuluje, že jste zvýšili bezpečnost svého účtu a vylepšili pocit z přihlašování.  Není to ale tak jednoduché a v některých případech si můžete život zrušením hesla zkomplikovat.</description>
+      <link>https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-09-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</guid>
       <title>Pilulka pro lepší 3D tisk: Karmen Pill pro vzdálenou správu tiskáren je raná verze, ale na solidním základu</title>
       <description>3D tisk je dneska už stará vesta. Vytvoříte model, ve sliceru z něj vygenerujete G-Code, nahrajete na paměťovou kartu a na tiskárně zmáčknete tlačítko. Nebo ne? Výše uvedený postup stačí, když si jen tak tisknete na jedné tiskárně doma pár kousků. Ale co když máte tiskáren celou farmu? A chcete je vzdáleně dohledovat po síti? České řešení Karmen nabízí hardware i software pro vzdálené řízení tiskáren po síti.</description>
@@ -139,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-04-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=dOMR-KnVF_M</guid>
-      <title>Dvounohý kůň versus kybernetická bezpečnost: Úniky dat a co s nimi</title>
-      <description>Záznam live streamu o nedávném úniku dat z Facebooku. K čemu došlo? Jaké si z toho máme vzít ponaučení? Co s tím můžeme dělat a jak se bránit?</description>
-      <link>https://www.youtube.com/watch?v=dOMR-KnVF_M</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

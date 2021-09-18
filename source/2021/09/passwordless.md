@@ -1,0 +1,10 @@
+<!-- dcterms:title = Microsoft radí uživatelům, aby se zbavili hesel. Nemusí to být tak dobrý nápad, jak se v Redmondu tváří -->
+<!-- dcterms:abstract = Microsoft oznámil, že se běžné spotřebitelské účty Microsoft Account obejdou bez hesel. V nastavení lze heslo odebrat, a pokud tak učiníte, systém vám pogratuluje, že jste zvýšili bezpečnost svého účtu a vylepšili pocit z přihlašování.  Není to ale tak jednoduché a v některých případech si můžete život zrušením hesla zkomplikovat.  -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20110103-reset-zapomenuteho-hesla-jak-to-delat-spravne.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-09-18 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf -->
