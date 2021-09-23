@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-format</guid>
+      <title>C# pro mírně pokročilé: Formátování řetězců, rozhraní IFormattable a string interpolation</title>
+      <description>Každý objekt v C# lze pomocí metody ToString převést na řetězec. Ale jak si poradit, když je třeba řešit formátování a internacionalizaci? Od toho je tady rozhraní IFormattable. A další radosti zažijete s metodou String.Format a string interpolation.</description>
+      <link>https://www.altair.blog/2021/09/csharp-format</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-09-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</guid>
       <title>Microsoft radí uživatelům, aby se zbavili hesel. Nemusí to být tak dobrý nápad, jak se v Redmondu tváří</title>
       <description>Microsoft oznámil, že se běžné spotřebitelské účty Microsoft Account obejdou bez hesel. V nastavení lze heslo odebrat, a pokud tak učiníte, systém vám pogratuluje, že jste zvýšili bezpečnost svého účtu a vylepšili pocit z přihlašování.  Není to ale tak jednoduché a v některých případech si můžete život zrušením hesla zkomplikovat.</description>
@@ -144,15 +154,6 @@
       <author>Michal Altair Valášek</author>
       <category>Koně</category>
       <pubDate>2021-07-14T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</guid>
-      <title>Kritická bezpečnostní díra v HTTP.SYS ohrožuje Windows 10 i servery, stáhněte si záplatu</title>
-      <description>Operační systém Windows obsahuje přímo v jádře knihovnu HTTP.SYS, která se stará o zpracování příchozích HTTP spojení (pokud počítač funguje jako web server). A ta knihovna ve verzích 20H2 a 2004 (jak pro Windows 10, tak Windows Server) obsahuje velice nepříjemnou chybu. Nemá žádné sexy jméno jako Heartbleed nebo Shellshock. „CVE 2021-31166 HTTP Protocol Stack Remote Code Execution Vulnerability“ nevypadá na první pohled nijak zvlášť zajímavě, ale zdání klame.</description>
-      <link>https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-05-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
