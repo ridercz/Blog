@@ -150,7 +150,7 @@ Congrats to your &quot;&quot;baby&quot;&quot;.&quot;;
 <h2 id="string.format-a-string-interpolation">String.Format a string interpolation</h2>
 <p>Pro skládání řetězců podle šablon slouží metoda <code>String.Format</code>. Ta umožňuje definovat šablonu, obsahující očíslované placeholdery <code>{0}</code>, <code>{1}</code> atd. a na jejich místo se doplní hodnoty dalších argumentů. Většina lidí ví, že za číslo můžete napsat dvojtečky a požadovaný formátovací řetězec právě pro <code>IFormattable</code>:</p>
 <pre><code class="language-cs">var t = 20;
-var s = string.Format(&quot;Teplota {0:F2} °C&quot;); // Výsledek: Teplota 20,00 °C
+var s = string.Format(&quot;Teplota {0:F2} °C&quot;, t); // Výsledek: Teplota 20,00 °C
 </code></pre>
 <p>Již méně lidí ale ví, že před dvojtečku lze napsat ještě čárku a číslo. Pokud je kladné, bude výsledek zleva doplněn mezerami, aby celkový počet znaků odpovídal zadanému číslu; pokud je číslo záporné, budou se doplňovat mezery zprava. To je velice užitečné při vytváření tabulek v podobě prostého textu, třeba při výpisu na konzoli.</p>
 <p>Z podobného vrhu je i funkce <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated">string interpolation</a>. Pokud před řetězec napíšete znak <code>$</code>, umožňuje to totéž jako <code>String.Format</code>, ale do složených závorek můžete napsat jakýkoliv C# výraz. I zde lze používat formátování pomocí čárky a dvojtečky:</p>

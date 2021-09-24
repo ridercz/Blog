@@ -44,7 +44,7 @@ Pro skládání řetězců podle šablon slouží metoda `String.Format`. Ta umo
 
 ```cs
 var t = 20;
-var s = string.Format("Teplota {0:F2} °C"); // Výsledek: Teplota 20,00 °C
+var s = string.Format("Teplota {0:F2} °C", t); // Výsledek: Teplota 20,00 °C
 ```
 
 Již méně lidí ale ví, že před dvojtečku lze napsat ještě čárku a číslo. Pokud je kladné, bude výsledek zleva doplněn mezerami, aby celkový počet znaků odpovídal zadanému číslu; pokud je číslo záporné, budou se doplňovat mezery zprava. To je velice užitečné při vytváření tabulek v podobě prostého textu, třeba při výpisu na konzoli.
