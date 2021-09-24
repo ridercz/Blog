@@ -58,6 +58,10 @@ Jeho součástí bývá i čistící houbička, kterou je třeba před použití
 
 Na opravy špatně udělaných spojů si kupte rovnou [odsávačku cínu](https://s.click.aliexpress.com/e/_9HmLai), kdy špatně udělaný spoj zahřejete a do odsávačky vcucnete rozpálený cín.
 
+Při pájení potřebujdete jednou rukou držet páječku, druhou cín a třetí rukou pájený předmět. I když máte - jako naprostá většina lidí - nadprůměrný počet rukou, tři má málokdo, takže si "třetí ruku" musíte obstarat jinak. Univerzální držáky se vyrábějí v mnoha variantách. K dispozici je [jednoduchý držák se dvěma úchyty a lupou](https://s.click.aliexpress.com/e/_AVOlGQ) nebo různé [chobotnice s mnoha chapadly a osvětlenou lupou](https://s.click.aliexpress.com/e/_9veAWQ). Pro osoby s horším zrakem je neocenitelným pomocníkem stolní lupa s osvětlením. Mně dobře slouží [Livarno Lux](https://www.lidl.cz/p/livarno-lux-led-lampa-s-lupou/p100312890) z Lidlu.
+
+Konečně se hodí nějaká tepluvzdorná podložka, abyste si nepropálili stůl. Můžete si koupit [profesionální silikonovou](https://s.click.aliexpress.com/e/_9u8uQe), ale mně osobně se osvědčuje klasický reklamní blok formátu A4. Když už je horní list moc špinavý a propálený, prostě ho odtrhnu a pokračuju dál.
+
 ## Na čem trénovat
 
 Na první trénování doporučuju koupit si [univerzální desku plošných spojů](https://s.click.aliexpress.com/e/_AXANOa) a pájet do ní cvičně [STL hlavičky](https://s.click.aliexpress.com/e/_AXLQG2). Je to levné a snadno dostupné.
