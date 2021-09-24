@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/09/nebojte-se-pajecky</guid>
+      <title>Informace k workshopu Nebojte se páječky na Make More MB</title>
+      <description>V týdnu jsem se jako lektor zúčastnil workshopu o pájení na akci Make More v Mladé Boleslavi. Účastníkům jsem slíbil, že napíšu článek o doporučeném vybavení a kde ho sehnat a svůj slib tímto plním.</description>
+      <link>https://www.altair.blog/2021/09/nebojte-se-pajecky</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bastlení</category>
+      <pubDate>2021-09-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-format</guid>
       <title>C# pro mírně pokročilé: Formátování řetězců, rozhraní IFormattable a string interpolation</title>
       <description>Každý objekt v C# lze pomocí metody ToString převést na řetězec. Ale jak si poradit, když je třeba řešit formátování a internacionalizaci? Od toho je tady rozhraní IFormattable. A další radosti zažijete s metodou String.Format a string interpolation.</description>
@@ -145,15 +154,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-07-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/07/nervy</guid>
-      <title>Nervy</title>
-      <description>Na Twitteru teď běží "co byste vzkázali sami sobě když vám bylo dvacet, ve třech slovech". Upřímně, stručnost mi nikdy nešla. Napadá mě jenom "buy Bitcoin" a na to mi ještě jedno slovo zbylo. A to zatím nejzásadnější poznání, k němuž jsem ve věku od dvaceti do současných dvaačtyřiceti dospěl, se do třech slov nevejde.</description>
-      <link>https://www.altair.blog/2021/07/nervy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2021-07-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
