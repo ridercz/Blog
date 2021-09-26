@@ -1,7 +1,7 @@
 <!-- dcterms:title = Jak zmigrovat z Azure DevOps (ex- Visual Studio Online) na GitHub -->
 <!-- dcterms:abstract = GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. Psal jsem o tom již včera, s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/logo-github.png -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-github.svg -->
 <!-- x4w:coverUrl = /cover-pictures/20190109-vso2gh.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
