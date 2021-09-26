@@ -1,0 +1,10 @@
+<!-- dcterms:title = Umělá inteligence GitHub Copilot má vývojářům pomáhat, do kódu jim ale přidává bezpečnostní chyby -->
+<!-- dcterms:abstract = Měla to být velká pomoc programátorům. Umělá inteligence GitHub Copilot umí programátorům navrhnout kód, který nejspíš chtějí napsat. Řídí se přitom analýzou kódu mnoha open source projektů. Aktuální studie však ukázala, že 40 procent návrhů vytvořených na základě strojového učení obsahuje bezpečnostní chyby. To je samozřejmě bezprostřední problém, ale ukazuje to i na obecné limity toho, čemu rádi říkáme umělá inteligence. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-github.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:dateAccepted = 2021-09-26 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33 -->

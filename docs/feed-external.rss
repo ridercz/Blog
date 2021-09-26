@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</guid>
+      <title>Umělá inteligence GitHub Copilot má vývojářům pomáhat, do kódu jim ale přidává bezpečnostní chyby</title>
+      <description>Měla to být velká pomoc programátorům. Umělá inteligence GitHub Copilot umí programátorům navrhnout kód, který nejspíš chtějí napsat. Řídí se přitom analýzou kódu mnoha open source projektů. Aktuální studie však ukázala, že 40 procent návrhů vytvořených na základě strojového učení obsahuje bezpečnostní chyby. To je samozřejmě bezprostřední problém, ale ukazuje to i na obecné limity toho, čemu rádi říkáme umělá inteligence.</description>
+      <link>https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-09-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</guid>
       <title>Microsoft radí uživatelům, aby se zbavili hesel. Nemusí to být tak dobrý nápad, jak se v Redmondu tváří</title>
       <description>Microsoft oznámil, že se běžné spotřebitelské účty Microsoft Account obejdou bez hesel. V nastavení lze heslo odebrat, a pokud tak učiníte, systém vám pogratuluje, že jste zvýšili bezpečnost svého účtu a vylepšili pocit z přihlašování.  Není to ale tak jednoduché a v některých případech si můžete život zrušením hesla zkomplikovat.</description>
@@ -140,15 +150,6 @@
       <category>IT historie</category>
       <category>Bezpečnost</category>
       <pubDate>2021-04-15T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66907740-psms7-78193782dfcccd0</guid>
-      <title>Další půlmiliarda osobních údajů k dispozici: po Facebooku přišli na řadu uživatelé LinkedInu</title>
-      <description>Jenom pár dnů po zveřejnění údajů o více než půl miliardě uživatelů Facebooku je tady další půlmiliarda: tentokrát jsou postižení uživatelé služby LinkedIn. Nejde o následek klasického narušení bezpečnosti interních systémů, ale o takzvaný scraping – automatizované stažení veřejně dostupných údajů.</description>
-      <link>https://tech.ihned.cz/c7-66907740-psms7-78193782dfcccd0</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

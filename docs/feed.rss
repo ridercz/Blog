@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</guid>
+      <title>Umělá inteligence GitHub Copilot má vývojářům pomáhat, do kódu jim ale přidává bezpečnostní chyby</title>
+      <description>Měla to být velká pomoc programátorům. Umělá inteligence GitHub Copilot umí programátorům navrhnout kód, který nejspíš chtějí napsat. Řídí se přitom analýzou kódu mnoha open source projektů. Aktuální studie však ukázala, že 40 procent návrhů vytvořených na základě strojového učení obsahuje bezpečnostní chyby. To je samozřejmě bezprostřední problém, ale ukazuje to i na obecné limity toho, čemu rádi říkáme umělá inteligence.</description>
+      <link>https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-09-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/nebojte-se-pajecky</guid>
       <title>Informace k workshopu Nebojte se páječky na Make More MB</title>
       <description>V týdnu jsem se jako lektor zúčastnil workshopu o pájení na akci Make More v Mladé Boleslavi. Účastníkům jsem slíbil, že napíšu článek o doporučeném vybavení a kde ho sehnat a svůj slib tímto plním.</description>
@@ -144,16 +154,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-08-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</guid>
-      <title>Průšvih jménem WD My Book Live. Ponaučení z aféry problematického síťového disku</title>
-      <description>Majitelé mnoha síťových disků řady My Book Live od společnosti Western Digital se v uplynulých týdnech dočkali nemilých překvapení. Jejich zařízení byla najednou zcela prázdná. Přišli o všechna data, která měli na NAS uložena. Mnohdy o léta svých digitálních životů a práce. Nyní už víme, proč se to stalo: na vině bylo několik v zásadě triviálních chyb a ukončená podpora ze strany výrobce. Jenomže co s tím? Obětem aktuálního útoku nabízí Western Digital pomoc s obnovou dat, ale řešení příčiny problémů je v nedohlednu a neomezuje se jen na jednu značku.</description>
-      <link>https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-07-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
