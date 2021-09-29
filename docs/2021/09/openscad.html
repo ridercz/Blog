@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Přehled dílů online školení 3D modelování v OpenSCADu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/09/openscad" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Přehled dílů online školení 3D modelování v OpenSCADu" />
+    <meta name="twitter:description" content="Jak jste patrně již zaznamenali, na novém technickém YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, běží bezplatný online kurz modelování v OpenSCADu. Pro přehlednost přináším přehled všech dosud vydaných i připravovaných dílů." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200321-openscad.jpg" />
+    <meta property="article:published_time" content="2021-09-29" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Přehled dílů online školení 3D modelování v OpenSCADu" />
+    <meta name="description" property="og:description" content="Jak jste patrně již zaznamenali, na novém technickém YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, běží bezplatný online kurz modelování v OpenSCADu. Pro přehlednost přináším přehled všech dosud vydaných i připravovaných dílů." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20200321-openscad.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/09/openscad" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200321-openscad.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Přehled dílů online školení 3D modelování v OpenSCADu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-09-29">29. září 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Jak jste patrně již zaznamenali, na novém technickém YouTube kanálu <a href="https://www.ztech.cz/">Z-TECH</a>, který provozuju společně se Zásilkovnou, běží bezplatný online kurz modelování v OpenSCADu.</p>
+<p>Nový díl vychází každé úterý v poledne a všechny díly najdete v <a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ">playlistu</a>. K dispozici je také bezplatný <a href="https://go.ztech.cz/OPENSCAD">elearningový kurz</a>, kde jsou ke každému dílu cvičení a další materiály.</p>
+<p>V tomto okamžiku jsou k dispozici následující díly:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=7562pU6gDyo&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=1&amp;t=1s">Úvod - co je OpenSCAD, jak vypadá uživatelské rozhraní</a></li>
+<li><a href="https://www.youtube.com/watch?v=OicDgAjho18&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=2&amp;t=2s">Základní tvary a jejich interakce (sčítání, odečítání...)</a></li>
+<li><a href="https://www.youtube.com/watch?v=MBdOIPMjrKA&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=3&amp;t=1s">Transformace (posuny, změny velikosti...)</a></li>
+<li><a href="https://www.youtube.com/watch?v=YkvZX-96bew&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=4&amp;t=3s">Proměnné a funkce</a></li>
+<li><a href="https://www.youtube.com/watch?v=X5-FIuRAnus&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=5&amp;t=1298s">Řízení toku programu (podmínky, cykly)</a></li>
+<li><a href="https://www.youtube.com/watch?v=al5THsbJ2gc&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=6">2D kreslení</a></li>
+<li><a href="https://www.youtube.com/watch?v=8Xu084sZfmg&amp;list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ&amp;index=7&amp;t=2s">Plugin pro export vektorové grafiky z Inkscape</a></li>
+</ul>
+<p>Natočena a připravena jsou následující témata:</p>
+<ul>
+<li>Import a export vektorové grafiky (SVG)</li>
+<li>Práce s textem a symboly</li>
+<li>Použití privátních fontů</li>
+<li>Pokročilejší využití funkce <code>linear_extrude</code></li>
+<li>Funkce <code>rotate_extrude</code></li>
+</ul>
+<p>Ve stavu rozpracovanosti pak jsou:</p>
+<ul>
+<li>Tvorba vlastních transformací</li>
+<li>Direktivy <code>include</code> a <code>use</code>, práce s externími knihovnami</li>
+<li>Animace, tvorba videa s rotujícím modelem</li>
+<li>Customizer, GUI pro parametrizaci modelů</li>
+<li>Pokročilé konstrukce, aneb co se jinam nevešlo</li>
+<li>Knihovna A2D pro 2D kreslení</li>
+<li>Praktické tipy pro konstrukci</li>
+<li>Povídání o šroubcích, matičkách a 3D tisku</li>
+</ul>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=P%c5%99ehled+d%c3%adl%c5%af+online+%c5%a1kolen%c3%ad+3D+modelov%c3%a1n%c3%ad+v+OpenSCADu&amp;body=https://www.altair.blog/2021/09/openscad">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/09/openscad.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/09/openscad.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/09/openscad">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/09/openscad">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

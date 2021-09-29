@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/09/openscad</guid>
+      <title>Přehled dílů online školení 3D modelování v OpenSCADu</title>
+      <description>Jak jste patrně již zaznamenali, na novém technickém YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, běží bezplatný online kurz modelování v OpenSCADu. Pro přehlednost přináším přehled všech dosud vydaných i připravovaných dílů.</description>
+      <link>https://www.altair.blog/2021/09/openscad</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>3D tisk</category>
+      <pubDate>2021-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/09/nebojte-se-pajecky</guid>
       <title>Informace k workshopu Nebojte se páječky na Make More MB</title>
       <description>V týdnu jsem se jako lektor zúčastnil workshopu o pájení na akci Make More v Mladé Boleslavi. Účastníkům jsem slíbil, že napíšu článek o doporučeném vybavení a kde ho sehnat a svůj slib tímto plním.</description>
@@ -142,16 +152,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2021-03-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/03/token-providers</guid>
-      <title>Proč chcete vlastního token providera pro ASP.NET Identity a jak ho napsat</title>
-      <description>Potvrzení registrace nebo změna e-mailové adresy a reset hesla vyžadují zaslání potvrzovacího tokenu e-mailem, nejčastěji v podobě odkazu. Standardní implementace v ASP.NET Identity využívá kódování Base64, což s sebou nese jisté problémy. Ukážu vám, jak místo toho použít kódování ZBase32 a k čemu je to vlastně dobré.</description>
-      <link>https://www.altair.blog/2021/03/token-providers</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-03-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
