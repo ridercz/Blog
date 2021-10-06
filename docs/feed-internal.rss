@@ -6,10 +6,10 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/privesky</guid>
+      <guid isPermaLink="true">https://www.altair.blog/2021/10/privesky</guid>
       <title>Praktické modelování v OpenSCADU: číslované přívěšky</title>
       <description>Ve své oblíbené 3D tiskařské skupině na Facebooku jsem našel zajímavý dotaz. Někdo se ptal, jak jednoduše udělat 120 modelů štítků na klíče, s čísly od 1 do 120. To je naprosto skvělé zadání pro OpenSCAD, takže jsem natočil krátké video, jak na to.</description>
-      <link>https://www.altair.blog/2021/11/privesky</link>
+      <link>https://www.altair.blog/2021/10/privesky</link>
       <author>Michal Altair Valášek</author>
       <category>Z-TECH</category>
       <category>3D tisk</category>
