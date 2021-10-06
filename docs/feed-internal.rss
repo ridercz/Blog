@@ -6,6 +6,14 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/10/nejzbytecnejsi-volby</guid>
+      <title>Nejzbytečnější volby: jak hlasovat když nemáte koho volit</title>
+      <description>V pátek začnou nejdůležitější volby v historii státu a určitě běžte volit. To je asi jediná věc, na které se shodnou Babiš, Okamura, Bartoš, Fiala i ten pán, na kterého momentálně vyšlo předsednictví ČSSD. Samozřejmě to není pravda, ale kdo by od politika čekal pravdomluvnost, tomu by stejně volební právo mělo být beztak odebráno pro blbost.</description>
+      <link>https://www.altair.blog/2021/10/nejzbytecnejsi-volby</link>
+      <author>Michal Altair Valášek</author>
+      <pubDate>2021-10-06T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/10/privesky</guid>
       <title>Praktické modelování v OpenSCADU: číslované přívěšky</title>
       <description>Ve své oblíbené 3D tiskařské skupině na Facebooku jsem našel zajímavý dotaz. Někdo se ptal, jak jednoduše udělat 120 modelů štítků na klíče, s čísly od 1 do 120. To je naprosto skvělé zadání pro OpenSCAD, takže jsem natočil krátké video, jak na to.</description>
@@ -143,15 +151,6 @@
       <category>Software</category>
       <category>Tipy, triky</category>
       <pubDate>2021-05-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/05/zakazpdz</guid>
-      <title>Jak v datových schránkách zakázat příjem poštovních datových zpráv?</title>
-      <description>Datové schránky umožňují zasílání tzv. "poštovních datových zpráv", tedy zpráv zasílaných soukromými osobami nebo firmami, nikoliv orgány veřejné moci. V současnosti je pro nové schránky jejich příjem standardně povolen. Pokud ho chcete zakázat, třeba kvůli spamu, je to velice jednoduché.</description>
-      <link>https://www.altair.blog/2021/05/zakazpdz</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-05-01T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
