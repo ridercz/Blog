@@ -14,7 +14,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
-> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje, jako napříkad [tento seriál](/serials/asp-net-na-raspberry-pi).
 
 V předchozích dílech seriálu o vytvoření "zlé maliny" jsme si ukázali, jak na Raspberry Pi nainstalovat operační systém Raspbian, ASP.NET 5 a jak aplikaci pomocí nginxu vypublikovat do Internetu. Dnes z Raspberry vytvoříme Wi-Fi honeypot, tedy Wi-Fi access point, který každému dovolí, aby se připojil, a všechny HTTP požadavky bude směřovat sám na sebe.
 

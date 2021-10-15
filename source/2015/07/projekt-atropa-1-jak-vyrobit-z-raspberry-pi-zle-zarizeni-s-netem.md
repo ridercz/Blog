@@ -14,7 +14,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
-> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje, jako napříkad [tento seriál](/serials/asp-net-na-raspberry-pi).
 
 Líbí se mi malé počítače, ASP.NET a jsem celkově zlé stvoření. Rozhodl jsem se tyto obory spojit a rozchodit na minipočítači Raspberry Pi nové ASP.NET 5 a udělat z něj wifi honeypot, který bude lákat z hloupých lidí jejich přihlašovací údaje. No a rozhodl jsem se postup dokumentovat a zveřejnit zde jako návod. Nechávám na posouzení laskavého čtenáře, zda to vyhodnotí jako okolnost polehčující nebo přitěžující.
 

@@ -14,7 +14,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->
 
-> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje.
+> **Upozornění:** Tento text je několik let starý a spousta věcí se změnila. Zejména v ASP.NET Core (zde pod starým názvem ASP.NET 5). Článek ponechávám jako referenci, ale obecně doporučuji nalézt novější zdroje, jako napříkad [tento seriál](/serials/asp-net-na-raspberry-pi).
 
 V předchozích dílech seriálu jsme si řekli, proč a jak budeme tvořit "zlý" počítač založený na Raspberry Pi a Raspbian Linuxu a ukázali si, jak jej nainstalovat. V dnešním pokračování si ukážeme, jak na něj nainstalovat Mono, ASP.NET 5 a jak napsat a spustit jednoduchou aplikaci. Uvedený postup je sice psán na míru Raspberry Pi a Raspbianu, ale mělo by být možné jej použít obecně, i pro jiné distribuce Linuxu.
 
