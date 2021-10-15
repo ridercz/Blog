@@ -12,7 +12,7 @@
 
 Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Když jsem o .NETu na Raspberry [psal před šesti lety naposledy](https://www.altair.blog/serials/projekt-atropa), byla to ještě betaverze pod jménem ASPNET 5.
 
-Od té doby se toho hodně změnilo (a zjednodušilo), takže jsem pro vás na kanálu Z-TECH připravil jsem nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit.
+Od té doby se toho hodně změnilo (a zjednodušilo), takže jsem pro vás na kanálu Z-TECH připravil nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit.
 
 ## Co budete potřebovat
 
