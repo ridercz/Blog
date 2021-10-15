@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kompletní průvodce ASP.NET na Raspberry Pi: Základní instalace | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/10/dotnet-raspi-1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Kompletní průvodce ASP.NET na Raspberry Pi: Základní instalace" />
+    <meta name="twitter:description" content="Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Připravil jsem pro vás nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211015-dotnet-raspi-1.jpg" />
+    <meta property="article:published_time" content="2021-10-15" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Kompletní průvodce ASP.NET na Raspberry Pi: Základní instalace" />
+    <meta name="description" property="og:description" content="Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Připravil jsem pro vás nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211015-dotnet-raspi-1.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/10/dotnet-raspi-1" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211015-dotnet-raspi-1.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Kompletní průvodce ASP.NET na Raspberry Pi: Základní instalace</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/asp-net-na-raspberry-pi" title="Seriál">
+              <i class="fal fa-list-alt"> </i>ASP.NET na Raspberry Pi</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-10-15">15. října 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Když jsem o .NETu na Raspberry <a href="https://www.altair.blog/serials/projekt-atropa">psal před šesti lety naposledy</a>, byla to ještě betaverze pod jménem ASPNET 5.</p>
+<p>Od té doby se toho hodně změnilo (a zjednodušilo), takže jsem pro vás na kanálu Z-TECH připravil jsem nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit.</p>
+<h2 id="co-budete-potrebovat">Co budete potřebovat</h2>
+<ul>
+<li><strong>Raspberry Pi</strong> 2 nebo novější. Platforma .NET potřebuje k běhu procesory ARMv7 nebo novější a proto <em>nebude</em> fungovat na prvním Raspberry Pi nebo na Raspberry Pi Zero a jeho variantách.</li>
+<li><strong>Napájecí zdroj</strong> s MicroUSB (RPi 3 a starší) nebo USB-C (RPi 4) konektorem, který dá alespoň 2 A, lépe 3 A.</li>
+<li><strong>MicroSD kartu</strong> o velikosti 8 GB a větší. Také budete potřebovat patřičnou čtečku pro vaše PC a případně redukci z MicroSD na velkou SD. Redukce bývá u některých karet přímo součástí balení.</li>
+</ul>
+<blockquote>
+<p>Prodám (i jednotlivě) 2 ks Raspberry Pi 2 Model B V 1.1. Starší generace, ale na řadu věcí stále v pohodě stačí. Cena za kus 600 Kč. Zdarma přidám krabičku (jednu tištěnou na 3D tiskárně, jednu průmyslově vyráběnou). K odběru ihned na Praze 7 nebo kamkoliv přes Zásilkovnu za 65 Kč. V případě zájmu mě <a href="https://www.rider.cz/#contact">kontaktujte</a>.</p>
+</blockquote>
+<p>Raspberry budeme instalovat jako server a ukážeme si variantu provisioningu, kdy nebudete potřebovat klávesnici, myš a monitor.</p>
+<h2 id="obsah-serialu">Obsah seriálu</h2>
+<p>Celý proces jsem rozdělil do čtyř dílů, které postupně najdete každý čtvrtek na kanálu Z-TECH v <a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMb5AlcI9vwBAEiI_V3hDCYa">playlistu Raspberry Pi</a>. Budeme nasazovat mou ukázkovou aplikaci <a href="https://github.com/ridercz/AskMe">AskMe</a>, ale postup je stejný pro všechny aplikace.</p>
+<ol>
+<li><strong>Základní instalace a headless provisioning.</strong> Ukážu vám jak vytvořit bootovací kartu se serverovou variantou Raspberry Pi OS a jak ji nakonfigurovat tak, aby se připojila do sítě. Připojíte se na dálku přes SSH a nebudete potřebovat klávesnici a monitor.</li>
+<li><strong>Zapnutí SSH autentizace pomocí klíče.</strong> Ve druhém dílu vám ukážu, jak SSH zkonfigurovat tak, aby používalo pro autentizaci asymetrický klíč a nikoliv heslo. Je to výrazně bezpečnější a pohodlnější.</li>
+<li><strong>Nasazení ASP.NET aplikace.</strong> Ukážu vám, jak aplikaci zkompilovat a nasadit jako Self-Contained Deployment (SCD). Tj. na RPi nebudeme muset instalovat žádný runtime ani nic podobného, vytvoříme nativní binárku, kterou stačí pouze spustit. Také vám ukážu, jak aplikaci spustit jako daemona: aby běžela na pozadí a automaticky se spustila při startu systému. A v neposlední řadě, jak to celé udělat bezpečně.</li>
+<li><strong>Publikace pomocí Nginxu a zabezpečení firewallem.</strong> V (zatím?) posledním dílu vám ukážu, jak Kestrel (vestavěný webový server v .NET 5) publikovat do sítě pomocí software Nginx a jak RPi základně zabezpečit pomocí firewallu UFW.</li>
+</ol>
+<h2 id="zakladni-instalace">Základní instalace</h2>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ROtpqqaNXZ0" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Nejjednodušší způsob jak vyrobit bootovací kartu s Raspberry OS představuje <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a>. Ten si umí sám stáhnout odpovídající image a &quot;vypálit&quot; ho na MicroSD kartu. Pro server nám stačí Raspberry Pi Lite, tedy verze bez grafického uživatelského rozhraní.</p>
+<h3 id="headless-provisioning-ssh">Headless provisioning - SSH</h3>
+<p>Výchozí image počítá s tím, že se k Raspberry připojí HDMI monitor, klávesnice a myš a pracuje se s ním z konzole. To se nám u serveru úplně nehodí, tam chceme takzvaný headless provisioning - bez konzole, připojíme se rovnou přes SSH.</p>
+<p>Jako první musíte povolit automatické spouštění SSH, tedy vzdáleného shellu. To je něco jako Remote Desktop (RDP) na Windows, ale bez grafického rozhraní, pouze příkazová řádka.</p>
+<p>Vytvořená MicroSD karta má dva logické oddíly (uvidíte ji jako dva disky) a jeden z nich se jmenuje <code>boot</code>. V něm vytvořte soubor jménem <code>ssh</code> (bez přípony, ne třeba <code>ssh.txt</code>). Může být prázdný nebo mít jakýkoliv obsah, při první spuštění bude stejně smazán, jenom se počítač zkonfiguruje tak, že spustí SSH daemona pro vzdálený přístup.</p>
+<h3 id="headless-provisioning-wi-fi">Headless provisioning - Wi-Fi</h3>
+<p>Pokud budete Raspberry připojovat do počítače drátovou sítí, nemusíte dělat nic dalšího. Pokud ho budete připojovat přes Wi-Fi, musíte ještě nastavit název sítě a heslo.</p>
+<p>Vytvořte v partition <code>boot</code> soubor jménem <code>wpa_supplicant.conf</code> a zadejte do něj následující obsah:</p>
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CZ
+
+network={
+    scan_ssid=1
+    ssid=&quot;název_sítě&quot;
+    psk=&quot;heslo&quot;
+    proto=RSN
+    key_mgmt=WPA-PSK
+    pairwise=CCMP
+    auth_alg=OPEN
+}
+</code></pre>
+<p>Hodnoty <code>ssid</code> a <code>psk</code> upravte tak, aby obsahovaly název vaší bezdrátové sítě a heslo.</p>
+<h3 id="prvni-spusteni-a-vzdalene-pripojeni">První spuštění a vzdálené připojení</h3>
+<p>Pak stačí MicroSD kartu vložit do RPi a zapojit napájení (případně síťový kabel). Buďte trpěliví, protože první start může trvat i několik minut, v závislosti na velikosti a rychlosti SD karty. Bohužel, na počítači nijak vizuálně nepoznáte, že proces úspěšně doběhl. Běžte si uvařit kafe nebo se podívejte na <a href="https://www.youtube.com/ztechcz">nějaké moje video</a>.</p>
+<p>Dále pak musíte zjistit, jakou IP adresu ve vaší síti Raspberry Pi dostalo. Přesný postup záleží na tom, jak máte síť udělanou, ale obecně je nejjednodušší se podívat na router a v seznamu zařízení najít to nejnovější. Já jsem dostal IP adresu <code>10.7.2.126</code>.</p>
+<p>Pro vzdálené připojení potřebujete SSH klienta. Ten je součástí Windows 10, takže nemusíte nic instalovat (ale pokud jste zvyklí používat třeba PuTTY, klidně tak čiňte nadále). Z příkazové řádky spusťte následující příkaz (samozřejmě s IP adresou platnou pro váš případ):</p>
+<pre><code class="language-bash">ssh pi@10.7.2.126
+</code></pre>
+<p>Budete vyzváni k zadání hesla, které je <code>raspberry</code>. Výchozí heslo uživatele <code>pi</code> můžete změnit příkazem <code>passwd</code>. V následujícím dílu seriálu vám ukážu, jak přihlašování heslem zakázat úplně a použít místo toho asymetrický klíč.</p>
+<p>Poté zadejte následující příkaz:</p>
+<pre><code class="language-bash">sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+</code></pre>
+<p>Tím spustíte aktualizaci software, něco jako Microsoft Update na Windows. Tento proces může nějakou dobu trvat, v závislosti na množství aktualizací a rychlosti vaší linky. Běžte si uvařit další kafe a podívejte se na další video, nějaké delší, třeba <a href="https://www.youtube.com/watch?v=nY6cDvpSUHw">záznam live streamu o volebním systému u nás</a>.</p>
+<p>Jakmile aktualizace doběhnou, máte připravený čistě nainstalovaný server s Raspberry OS. Co s ním dál se dozvíte příští týden ve čtvrtek na kanálu <a href="https://www.youtube.com/ztechcz">Z-TECH</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Kompletn%c3%ad+pr%c5%afvodce+ASP.NET+na+Raspberry+Pi%3a+Z%c3%a1kladn%c3%ad+instalace&amp;body=https://www.altair.blog/2021/10/dotnet-raspi-1">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/10/dotnet-raspi-1.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/10/dotnet-raspi-1.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/10/dotnet-raspi-1">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/10/dotnet-raspi-1">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
