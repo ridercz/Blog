@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/10/dotnet-raspi-2</guid>
+      <title>ASP.NET na Raspberry Pi: Autentizace SSH klíčem</title>
+      <description>První díl našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem.</description>
+      <link>https://www.altair.blog/2021/10/dotnet-raspi-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-10-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/10/dotnet-raspi-1</guid>
       <title>Kompletní průvodce ASP.NET na Raspberry Pi: Základní instalace</title>
       <description>Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Připravil jsem pro vás nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit.</description>
@@ -142,15 +152,6 @@
       <category>Bastlení</category>
       <category>3D tisk</category>
       <pubDate>2021-08-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/07/nervy</guid>
-      <title>Nervy</title>
-      <description>Na Twitteru teď běží "co byste vzkázali sami sobě když vám bylo dvacet, ve třech slovech". Upřímně, stručnost mi nikdy nešla. Napadá mě jenom "buy Bitcoin" a na to mi ještě jedno slovo zbylo. A to zatím nejzásadnější poznání, k němuž jsem ve věku od dvaceti do současných dvaačtyřiceti dospěl, se do třech slov nevejde.</description>
-      <link>https://www.altair.blog/2021/07/nervy</link>
-      <author>Michal Altair Valášek</author>
-      <category>Koně</category>
-      <pubDate>2021-07-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

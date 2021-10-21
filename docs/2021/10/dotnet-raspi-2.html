@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ASP.NET na Raspberry Pi: Autentizace SSH klíčem | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/10/dotnet-raspi-2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="ASP.NET na Raspberry Pi: Autentizace SSH klíčem" />
+    <meta name="twitter:description" content="První díl našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211021-dotnet-raspi-2.jpg" />
+    <meta property="article:published_time" content="2021-10-21" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="ASP.NET na Raspberry Pi: Autentizace SSH klíčem" />
+    <meta name="description" property="og:description" content="První díl našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211021-dotnet-raspi-2.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/10/dotnet-raspi-2" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211021-dotnet-raspi-2.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>ASP.NET na Raspberry Pi: Autentizace SSH klíčem</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/asp-net-na-raspberry-pi" title="Seriál">
+              <i class="fal fa-list-alt"> </i>ASP.NET na Raspberry Pi</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-10-21">21. října 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">Chunli Ju via Unsplash.com <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p><a href="https://www.altair.blog/2021/10/dotnet-raspi-1">První díl</a> našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/TtU4HAmmjbs" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="vygenerovani-klice">Vygenerování klíče</h2>
+<p>V první řadě potřebujete SSH klienta. Ve Windows je součástí od poměrně dávného buildu Windows 10 a můj návod se týká jeho. Můžete samozřejmě použít i jiného klienta, jako <a href="https://www.chiark.greenend.org.uk/%7Esgtatham/putty/latest.html">PuTTY</a> nebo <a href="https://www.bitvise.com/ssh-client-download">Bitvise SSH Client</a>, ale pak bude postup jiný.</p>
+<p>Pokud již máte SSH klíč, který chcete použít, můžete tento krok přeskočit. Pokud ne, použijte pro vytvoření nového klíče příkaz <code>ssh-keygen</code> v příkazové řádce. V průběhu generování budete dotázáni na heslo. Pokud ho zadáte, bude klíč uložen v zašifrovaném tvaru a pro jeho použití budete muset zadat heslo. To se ale zadává pouze lokálně, nepřenáší se nikam po síti.</p>
+<blockquote>
+<p>Pokud chcete modifikovat existující klíč (přidat mu heslo, odebrat ho nebo změnit), použijte příkaz <code>ssh-keygen -p</code>.</p>
+</blockquote>
+<p>Výchozí jméno souboru je <code>id_rsa</code> (bez přípony, privátní klíč) a <code>id_rsa.pub</code> (veřejný klíč) a nachází se ve vašem uživatelském profilu ve složce <code>.ssh</code>, tj. např. <code>C:\User\johndoe\.ssh\id_rsa</code>. <strong>Tyto soubory ihned zazálohujte.</strong> Pokud o ně v budoucnu přijdete a zakážete přihlašování pomocí hesla, na server se v budoucnu po síti nedostanete.</p>
+<p>Je bezpečné používat tentýž klíč k přihlašování k více serverům.</p>
+<h2 id="nahrani-klice-na-server">Nahrání klíče na server</h2>
+<p>Druhým krokem je, že musíte vzdálenému serveru říct, že se k němu hodláte do budoucna přihlašovat konkrétním klíčem. Na Linuxu a nejspíš i Macu se k tomuto účelu používá příkaz <a href="https://www.ssh.com/academy/ssh/copy-id"><code>ssh-copy-id</code></a>, ale na Windows není z nějakého důvodu k dispozici.</p>
+<p>Na Windows tedy musíte použít následující poněkud krkolomný příkaz:</p>
+<pre><code>type %USERPROFILE%\.ssh\id_rsa.pub | ssh pi@10.7.0.126 &quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; .ssh/authorized_keys&quot;
+</code></pre>
+<p>Místo <code>10.7.0.126</code> samozřejmě zadejte IP adresu nebo jméno vašeho Raspberry Pi. Tento příkaz přidá váš veřejný klíč do souboru <code>~/.ssh/authorized_keys</code> na serveru. Budete vyzváni k zadání současného hesla (pokud jste ho na konci předchozího dílu nezměnili, je <code>raspberry</code>).</p>
+<p>Nyní stačí napsat <code>ssh pi@10.7.0.126</code> a budete automaticky přihlášeni pomocí klíče, bez hesla.</p>
+<h2 id="zakaz-prihlasovani-pomoci-hesla">Zákaz přihlašování pomocí hesla</h2>
+<p>V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla jse však dobrý nápad zakázat.</p>
+<p>Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor <em>Nano</em> a v něm soubor <code>/etc/ssj/sshd_config</code>:</p>
+<pre><code>sudo nano /etc/ssj/sshd_config
+</code></pre>
+<p>Najděte v souboru řádek <code># PasswordAuthentication yes</code> a změňte ho na <code>PasswordAuthentication no</code> (tj. odkomentujte smazáním úvodního <code>#</code> a změňte hodnotu na <code>no</code>).</p>
+<p>Stiskněte <em>Ctrl+X</em> pro ukončení editoru. Na otázku <em>Save modified buffer?</em> odpovězte <em>Y</em> a poté klávesou <em>ENTER</em> potvrďte uložení souboru.</p>
+<p>Aby se změna projevila, musíte restartovat počítač (příkazem <code>sudo reboot now</code>) nebo alespoň SSH službu (daemona) příkazem <code>sudo /etc/init.d/ssh restart</code>. Použití druhého příkazu vás možná odpojí od serveru a budete se muset znovu připojit.</p>
+<p>V tomto okamžiku máte na serveru povoleno vzdálené přihlašování pouze pomocí klíče. Za týden se v dalším pokračování tohoto seriálu podíváme, jak na ARM Linux nasadit aplikaci napsanou v ASP.NET 5.0</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=ASP.NET+na+Raspberry+Pi%3a+Autentizace+SSH+kl%c3%ad%c4%8dem&amp;body=https://www.altair.blog/2021/10/dotnet-raspi-2">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/10/dotnet-raspi-2.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/10/dotnet-raspi-2.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/10/dotnet-raspi-2">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/10/dotnet-raspi-2">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

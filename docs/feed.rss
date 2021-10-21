@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/10/dotnet-raspi-2</guid>
+      <title>ASP.NET na Raspberry Pi: Autentizace SSH klíčem</title>
+      <description>První díl našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem.</description>
+      <link>https://www.altair.blog/2021/10/dotnet-raspi-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-10-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/10/dotnet-raspi-1</guid>
       <title>Kompletní průvodce ASP.NET na Raspberry Pi: Základní instalace</title>
       <description>Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Připravil jsem pro vás nový seriál, který vám ukáže, jak ASP.NET aplikaci na Raspberry rozchodit.</description>
@@ -141,16 +151,6 @@
       <category>IT</category>
       <category>Akce a události</category>
       <pubDate>2021-09-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</guid>
-      <title>Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků</title>
-      <description>Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá.</description>
-      <link>https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-09-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
