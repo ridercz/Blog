@@ -157,9 +157,9 @@
 <p>Místo <code>10.7.0.126</code> samozřejmě zadejte IP adresu nebo jméno vašeho Raspberry Pi. Tento příkaz přidá váš veřejný klíč do souboru <code>~/.ssh/authorized_keys</code> na serveru. Budete vyzváni k zadání současného hesla (pokud jste ho na konci předchozího dílu nezměnili, je <code>raspberry</code>).</p>
 <p>Nyní stačí napsat <code>ssh pi@10.7.0.126</code> a budete automaticky přihlášeni pomocí klíče, bez hesla.</p>
 <h2 id="zakaz-prihlasovani-pomoci-hesla">Zákaz přihlašování pomocí hesla</h2>
-<p>V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla jse však dobrý nápad zakázat.</p>
-<p>Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor <em>Nano</em> a v něm soubor <code>/etc/ssj/sshd_config</code>:</p>
-<pre><code>sudo nano /etc/ssj/sshd_config
+<p>V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla je však dobrý nápad zakázat.</p>
+<p>Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor <em>Nano</em> a v něm soubor <code>/etc/ssh/sshd_config</code>:</p>
+<pre><code>sudo nano /etc/ssh/sshd_config
 </code></pre>
 <p>Najděte v souboru řádek <code># PasswordAuthentication yes</code> a změňte ho na <code>PasswordAuthentication no</code> (tj. odkomentujte smazáním úvodního <code>#</code> a změňte hodnotu na <code>no</code>).</p>
 <p>Stiskněte <em>Ctrl+X</em> pro ukončení editoru. Na otázku <em>Save modified buffer?</em> odpovězte <em>Y</em> a poté klávesou <em>ENTER</em> potvrďte uložení souboru.</p>
