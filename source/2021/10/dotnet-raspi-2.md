@@ -43,11 +43,11 @@ Nyní stačí napsat `ssh pi@10.7.0.126` a budete automaticky přihlášeni pomo
 
 ## Zákaz přihlašování pomocí hesla
 
-V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla jse však dobrý nápad zakázat.
+V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla je však dobrý nápad zakázat.
 
-Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor _Nano_ a v něm soubor `/etc/ssj/sshd_config`:
+Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor _Nano_ a v něm soubor `/etc/ssh/sshd_config`:
 
-	sudo nano /etc/ssj/sshd_config
+	sudo nano /etc/ssh/sshd_config
 
 Najděte v souboru řádek `# PasswordAuthentication yes` a změňte ho na `PasswordAuthentication no` (tj. odkomentujte smazáním úvodního `#` a změňte hodnotu na `no`).
 
