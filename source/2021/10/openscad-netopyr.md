@@ -1,0 +1,10 @@
+<!-- dcterms:title = Modelování v OpenSCADu prakticky: Netopýří odznak na Halloween -->
+<!-- dcterms:abstract = Dnes nabízím mimo plán jedno kraťoučké video: Jak vymodelovat odznak z jakéhokoliv tvaru. Ukážeme si to na halloweenském netopýrovi, ale postup je zcela univerzální.  -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20211024-openscad-netopyr.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Z-TECH -->
+<!-- x4w:category = 3D tisk -->
+<!-- dcterms:dateAccepted = 2021-10-24 -->
+<!-- x4w:alternateUrl = https://youtu.be/RrBcL2nM4Bc -->
