@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Malý kabel, velká díra: příběh z konstrukce | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/10/pruchodka" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Malý kabel, velká díra: příběh z konstrukce" />
+    <meta name="twitter:description" content="Obvykle u svých modelů prezentuji hotová řešení. Jenomže ono to často nevyjde na první pokus. 3D tisk je ovšem nástrojem pro rychlé prototypování a iterativní vývoj. Na příkladu jednoduché průchodky vám ukážu postupný vývoj a ladění." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211026-pruchodka.jpg" />
+    <meta property="article:published_time" content="2021-10-26" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Malý kabel, velká díra: příběh z konstrukce" />
+    <meta name="description" property="og:description" content="Obvykle u svých modelů prezentuji hotová řešení. Jenomže ono to často nevyjde na první pokus. 3D tisk je ovšem nástrojem pro rychlé prototypování a iterativní vývoj. Na příkladu jednoduché průchodky vám ukážu postupný vývoj a ladění." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211026-pruchodka.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/10/pruchodka" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ==" crossorigin="anonymous" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211026-pruchodka.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Malý kabel, velká díra: příběh z konstrukce</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/3d-tisk" title="Rubrika">
+              <i class="fal fa-tag"> </i>3D tisk</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-10-26">26. října 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Obvykle u svých modelů prezentuji hotová řešení. Jenomže ono to často nevyjde na první pokus. 3D tisk je ovšem nástrojem pro rychlé prototypování a iterativní vývoj. Na příkladu jednoduché průchodky vám ukážu postupný vývoj a ladění.</p>
+<p>V základu je zadání jednoduché. Mám velkou díru (⌀ 20 mm), kterou potřebuju protáhnout malý kabel (⌀ 4-5 mm). Což je v mnoha ohledech pořád lepší situace, než kdybych měl malou díru a velký kabel, ale ani tak nic moc. Aby byla situace ještě o něco zábavnější, kabel má na konci USB konektor, takže velká díra se hodí, ale po protažení ji potřebuju nějak zaslepit, aby se dovnitř neprášilo a výsledek vypadal aspoň trochu profesionálně.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211026-pruchodka-1.jpg" alt="" /></p>
+<p>Sice existují různé průchodky, ale nepodařilo se mi najít takovou, která by vyhohovala všem parametrům. <a href="https://www.altair.blog/2020/02/fitjpi">FITJPI!</a></p>
+<h2 id="tri-generace-prototypu">Tři generace prototypů</h2>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211026-pruchodka-2.jpg" alt="" /></p>
+<p>Základní koncept je jednoduchý: Šroub a matka, uprostřed šroubu díra pro kabel a šroub rozdělený na dvě části, aby prošel i konektor.</p>
+<p>Na obrázku vidíte tři iterace prototypu:</p>
+<p><strong>První pokus (vlevo)</strong> vyšel překvapivě dobře. Bál jsem se, jestli tištěný závit bude funkční, ale přestože vizuálně není dokonalý, funguje v praxi dobře. Nicméně po praktickém vyzkoušení jsem našel tři problémy:</p>
+<ol>
+<li>Kulatá základna znamená, že se to špatně utahuje, protože to není za co chytit.</li>
+<li>Rozdělení šroubu na dvě části je funkční, ale vzhledem k nepřesnosti tisku je třeba vkládaný díl (ve tvaru <em>V</em>) lepší udělat o malý kousek menší.</li>
+<li>Venkovní matice o výšce 12 mm je zbytečně robustní, lze ji udělat nižší, což mimo jiné zkrátí dobu tisku.</li>
+</ol>
+<p><strong>Druhý pokus (uprostřed)</strong> vyřešil první a druhý problém. Čtvercová základna zabraňuje protočení šroubu a o 0,25 mm zmenšená menší výseč šroubu je tak akorát. Nicméně přinesl další, protože jsem si neuvědomil, že v krabičce jsou v rozích malé nálitky, které zabraňují tomu, aby čtvercová základna zapadla na místo. Nicméně koncept je funkční, což jsem ověřil tím, že jsem rohy prostě uštípl kleštěmi.</p>
+<p><strong>Třetí pokus (vpravo)</strong> je zatím poslední iterace. Větší zaoblení rohů vyřešilo problém s nálitky a snížení matice ze 7 mm na 5 mm přineslo zkrácení doby tisku na půl hodiny</p>
+<p>Hotový výrobek je zcela uspokojivý:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211026-pruchodka-3.jpg" alt="" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211026-pruchodka-4.jpg" alt="" /></p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211026-pruchodka-5.jpg" alt="" /></p>
+<h2 id="vysledny-kod">Výsledný kód</h2>
+<p>Pro vlastní generování metrického závitu M20 jsem použil <a href="https://github.com/rcolyer/threads-scad">hotovou knihovnu</a>. Pro generování zaoblených rohů pak používám svou vlastní knihovnu <a href="https://github.com/ridercz/A2D/">A2D</a> Kód v OpenSCADu vypadá takto:</p>
+<script src="https://gist.github.com/ridercz/c301e139817d6044c66b63ea7e6659e0.js"></script>
+<h2 id="naucte-se-openscad">Naučte se OpenSCAD</h2>
+<p>Pokud vás modelování v OpenSCADu zaujalo, podívejte se na <a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMa_CTpYev0dB7HzkeOUe5SZ">seriál video školení na kanálu Z-TECH</a>. Je k němu i <a href="https://go.ztech.cz/OPENSCAD">bezplatný eLearning</a>. Nový díl vychází každé úterý v poledne.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Mal%c3%bd+kabel%2c+velk%c3%a1+d%c3%adra%3a+p%c5%99%c3%adb%c4%9bh+z+konstrukce&amp;body=https://www.altair.blog/2021/10/pruchodka">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/10/pruchodka.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/10/pruchodka.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/10/pruchodka">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/10/pruchodka">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/csharp.min.js" integrity="sha512-dQorbxHDJF0jQ9jDdUgFc3PfpIxRV18/EMI7ToQTe2fbD8HAms+eNjpLI+A0SMB/YQIc/NeFhBYSX/UCaEoIzg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/css.min.js" integrity="sha512-UBNT6+S1FuSLwHTzfo6BqVU4AOKftOiict0fXKr4Vwz3YIjgsVURHxzHg3wWIwDawWumMO7JrluSLost+8i3UA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/dos.min.js" integrity="sha512-LRcU/W7unzxQuTXoNa9NeNEoRXpWF/VQox8aCXnYPJHr21ymV27zmTXxxPALiMvDuFVMMBLHHUGXCiYFiR2uZg==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/markdown.min.js" integrity="sha512-utO8hnm2PGjXvKsyf/H6ZUaFlctc2aiDmC9fNqcyycD8rEAxFM6rTrcpY9MUfkbrXLF9tfU8kQWD9dotZ77gKQ==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/openscad.min.js" integrity="sha512-bSZUmtiZseL0VujlVGN75faBxoAE9RAyJaDjAb+vd/RgWupGOxaZ79PKBHRtZTim+xgC5aCUPkpGlQt5Lw5TlA==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/scss.min.js" integrity="sha512-E2Gmd9vH0BXoGHlWshFIjW985slDBATPs4P4OJo9vK9zBvvKUJsQTDTuQAPaZ2xiDAvL6gZ7j9tdj1Nx8I6/8g==" crossorigin="anonymous">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/xml.min.js" integrity="sha512-dICltIgnUP+QSJrnYGCV8943p3qSDgvcg2NU4W8IcOZP4tdrvxlXjbhIznhtVQEcXow0mOjLM0Q6/NvZsmUH4g==" crossorigin="anonymous">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

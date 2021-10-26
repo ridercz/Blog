@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/10/pruchodka</guid>
+      <title>Malý kabel, velká díra: příběh z konstrukce</title>
+      <description>Obvykle u svých modelů prezentuji hotová řešení. Jenomže ono to často nevyjde na první pokus. 3D tisk je ovšem nástrojem pro rychlé prototypování a iterativní vývoj. Na příkladu jednoduché průchodky vám ukážu postupný vývoj a ladění.</description>
+      <link>https://www.altair.blog/2021/10/pruchodka</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2021-10-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/10/openscad-netopyr</guid>
       <title>Modelování v OpenSCADu prakticky: Netopýří odznak na Halloween</title>
       <description>Dnes nabízím mimo plán jedno kraťoučké video: Jak vymodelovat odznak z jakéhokoliv tvaru. Ukážeme si to na halloweenském netopýrovi, ale postup je zcela univerzální.</description>
@@ -141,16 +150,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-09-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/08/csharp-pro-mirne-pokrocile</guid>
-      <title>Nový seriál na Z-TECHU: C# pro mírně pokročilé</title>
-      <description>C# je univerzální imperativní procedurální objektový reflexivní staticky typovaný jazyk s unifikovaným systémem typů. To vám teoreticky říká vše, co o něm potřebujete vědět. Ale co to znamená? A je to po dvaceti letech vývoje vlastně ještě vůbec pravda? Dneškem začínáme na kanále Z-TECH nový seriál o C# pro mírně pokročilé, kde si postupně ukážeme vývoj pokročilejších konstrukcí a možnosti současné verze C# 9.0 (a trochu i těch budoucích).</description>
-      <link>https://www.altair.blog/2021/08/csharp-pro-mirne-pokrocile</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-08-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
