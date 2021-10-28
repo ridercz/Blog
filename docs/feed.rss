@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/10/dotnet-raspi-3</guid>
+      <title>ASP.NET na Raspberry Pi: Kompilace a nasazení .NET aplikace</title>
+      <description>Ve třetím pokračování našeho seriálu se konečně dostáváme k .NET aplikaci jako takové. Ukážu vám, jak aplikaci zkompilovat a nasadit v režimu SCD (self-contained deployment) a jak nastavit, aby běžela aspoň trochu bezpečně a spouštěla se automaticky.</description>
+      <link>https://www.altair.blog/2021/10/dotnet-raspi-3</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-10-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/10/pruchodka</guid>
       <title>Malý kabel, velká díra: příběh z konstrukce</title>
       <description>Obvykle u svých modelů prezentuji hotová řešení. Jenomže ono to často nevyjde na první pokus. 3D tisk je ovšem nástrojem pro rychlé prototypování a iterativní vývoj. Na příkladu jednoduché průchodky vám ukážu postupný vývoj a ladění.</description>
@@ -140,16 +150,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-09-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</guid>
-      <title>Pilulka pro lepší 3D tisk: Karmen Pill pro vzdálenou správu tiskáren je raná verze, ale na solidním základu</title>
-      <description>3D tisk je dneska už stará vesta. Vytvoříte model, ve sliceru z něj vygenerujete G-Code, nahrajete na paměťovou kartu a na tiskárně zmáčknete tlačítko. Nebo ne? Výše uvedený postup stačí, když si jen tak tisknete na jedné tiskárně doma pár kousků. Ale co když máte tiskáren celou farmu? A chcete je vzdáleně dohledovat po síti? České řešení Karmen nabízí hardware i software pro vzdálené řízení tiskáren po síti.</description>
-      <link>https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <category>Recenze</category>
-      <pubDate>2021-09-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
