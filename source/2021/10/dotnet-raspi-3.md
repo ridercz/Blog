@@ -51,7 +51,7 @@ Stále ale přetrvává problém s tím, že aplikace běží jenom pokud je ru�
 
 Vytvoříme tedy démona jménem `kestrel-askme`. Začneme tím, že vytvoříme soubor jménem `/etc/systemd/system/kestrel-askme.service` (název souboru určuje název služby). Zadáme do něj následující obsah:
 
-```
+```ini
 [Unit]
 Description=ASKme .NET 5 Web Application
 
@@ -72,7 +72,7 @@ Význam obsahu souboru je myslím dostatečně srozumitelný, [podrobnější in
 
 Následujícími dvěma příkazy službu povolíme (nainstalujeme) a spustíme:
 
-```sh
+```bash
 sudo systemctl enable kestrel-askme.service
 sudo systemctl start kestrel-askme.service
 ```

@@ -34,8 +34,9 @@ Je bezpečné používat tentýž klíč k přihlašování k více serverům.
 Druhým krokem je, že musíte vzdálenému serveru říct, že se k němu hodláte do budoucna přihlašovat konkrétním klíčem. Na Linuxu a nejspíš i Macu se k tomuto účelu používá příkaz [`ssh-copy-id`](https://www.ssh.com/academy/ssh/copy-id), ale na Windows není z nějakého důvodu k dispozici.
 
 Na Windows tedy musíte použít následující poněkud krkolomný příkaz:
-
-	type %USERPROFILE%\.ssh\id_rsa.pub | ssh pi@10.7.0.126 "mkdir -p ~/.ssh && cat >> .ssh/authorized_keys"
+```dos
+type %USERPROFILE%\.ssh\id_rsa.pub | ssh pi@10.7.0.126 "mkdir -p ~/.ssh && cat >> .ssh/authorized_keys"
+```
 
 Místo `10.7.0.126` samozřejmě zadejte IP adresu nebo jméno vašeho Raspberry Pi. Tento příkaz přidá váš veřejný klíč do souboru `~/.ssh/authorized_keys` na serveru. Budete vyzváni k zadání současného hesla (pokud jste ho na konci předchozího dílu nezměnili, je `raspberry`).
 
@@ -47,7 +48,9 @@ V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla
 
 Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor _Nano_ a v něm soubor `/etc/ssh/sshd_config`:
 
-	sudo nano /etc/ssh/sshd_config
+```bash
+sudo nano /etc/ssh/sshd_config
+```
 
 Najděte v souboru řádek `# PasswordAuthentication yes` a změňte ho na `PasswordAuthentication no` (tj. odkomentujte smazáním úvodního `#` a změňte hodnotu na `no`).
 
