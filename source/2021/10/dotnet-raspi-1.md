@@ -16,7 +16,7 @@ Od té doby se toho hodně změnilo (a zjednodušilo), takže jsem pro vás na k
 
 ## Co budete potřebovat
 
-* **Raspberry Pi** 2 nebo novější. Platforma .NET potřebuje k běhu procesory ARMv7 nebo novější a proto _nebude_ fungovat na prvním Raspberry Pi nebo na Raspberry Pi Zero a jeho variantách.
+* **Raspberry Pi** 2 nebo novější. Platforma .NET potřebuje k běhu procesory ARMv7 nebo novější a proto _nebude_ fungovat na prvním Raspberry Pi nebo na Raspberry Pi Zero a Zero W. Funguje - byť nepříliš rychle - na novém Zero 2.
 * **Napájecí zdroj** s MicroUSB (RPi 3 a starší) nebo USB-C (RPi 4) konektorem, který dá alespoň 2 A, lépe 3 A.
 * **MicroSD kartu** o velikosti 8 GB a větší. Také budete potřebovat patřičnou čtečku pro vaše PC a případně redukci z MicroSD na velkou SD. Redukce bývá u některých karet přímo součástí balení.
 
