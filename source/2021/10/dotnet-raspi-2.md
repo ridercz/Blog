@@ -1,5 +1,5 @@
 <!-- dcterms:title = ASP.NET na Raspberry Pi: Autentizace SSH klíčem -->
-<!-- dcterms:abstract = První díl našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem. -->
+<!-- dcterms:abstract = První díl našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okamžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20211021-dotnet-raspi-2.jpg -->
 <!-- x4w:pictureWidth = 150 -->
@@ -11,7 +11,7 @@
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
 <!-- dcterms:dateAccepted = 2021-10-21 -->
 
-[První díl](https://www.altair.blog/2021/10/dotnet-raspi-1) našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okmžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem.
+[První díl](https://www.altair.blog/2021/10/dotnet-raspi-1) našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okamžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem.
 
 <div style="position:relative;padding-top:56.25%;">
   <iframe src="https://www.youtube-nocookie.com/embed/TtU4HAmmjbs" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
@@ -44,7 +44,7 @@ Nyní stačí napsat `ssh pi@10.7.0.126` a budete automaticky přihlášeni pomo
 
 ## Zákaz přihlašování pomocí hesla
 
-V této chvíli si můžete vybrat. Můžete se přohlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla je však dobrý nápad zakázat.
+V této chvíli si můžete vybrat. Můžete se přihlásit buďto pomocí hesla nebo klíče. Přihlašování pomocí hesla je však dobrý nápad zakázat.
 
 Připojte se přes SSH na vzdálený server a následujícím příkazem otevřete textový editor _Nano_ a v něm soubor `/etc/ssh/sshd_config`:
 
