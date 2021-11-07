@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak publikovat ASP.NET aplikaci na Linux pomocí SCP a Visual Studia | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/11/scp-publish" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak publikovat ASP.NET aplikaci na Linux pomocí SCP a Visual Studia" />
+    <meta name="twitter:description" content="Vypublikovat hotovou ASP.NET aplikaci na server přes FTP nebo Web Management Service je snadné: stačí ve Visual Studiu vytvořit publishing profil a klepnout na Publish. Ale co když chcete aplikaci nasadit na server s Linuxem, kde chcete použít SCP, třeba na Raspberry Pi z našeho seriálu? Je to možné, ale vyžaduje to trochu ručních zásahů do projektového souboru." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211107-scp-publish.jpg" />
+    <meta property="article:published_time" content="2021-11-07" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Jak publikovat ASP.NET aplikaci na Linux pomocí SCP a Visual Studia" />
+    <meta name="description" property="og:description" content="Vypublikovat hotovou ASP.NET aplikaci na server přes FTP nebo Web Management Service je snadné: stačí ve Visual Studiu vytvořit publishing profil a klepnout na Publish. Ale co když chcete aplikaci nasadit na server s Linuxem, kde chcete použít SCP, třeba na Raspberry Pi z našeho seriálu? Je to možné, ale vyžaduje to trochu ručních zásahů do projektového souboru." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211107-scp-publish.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/11/scp-publish" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211107-scp-publish.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak publikovat ASP.NET aplikaci na Linux pomocí SCP a Visual Studia</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-11-07">7. listopadu 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Vypublikovat hotovou ASP.NET aplikaci na server přes FTP nebo Web Management Service je snadné: stačí ve Visual Studiu vytvořit publishing profil a klepnout na <em>Publish</em>. Ale co když chcete aplikaci nasadit na server s Linuxem, kde chcete použít SCP, třeba na <a href="https://www.altair.blog/serials/asp-net-na-raspberry-pi">Raspberry Pi z našeho seriálu</a>? Je to možné, ale vyžaduje to trochu ručních zásahů do projektového souboru.</p>
+<blockquote>
+<p>Tento článek vznikl na základě dotazu, který mi poslal čtenář tohoto blogu Michal Krchnavy. Budiž vám to inspirací: pokud máte nějaké dotazy nebo náměy, <a href="https://www.rider.cz/#contact">napište mi</a>. Nezaručuji vám odpověď, ale možná z toho bude článek. Pokud chcete mít radu s jistotou, nabízím <a href="https://www.altair.blog/2018/10/co-stoji-dobra-rada">placené konzultace</a>.</p>
+</blockquote>
+<h2 id="predpoklady">Předpoklady</h2>
+<p>Níže popsaný postup je možné použít pro jakoukoliv aplikaci a jakýkoliv server, na který se lze připojit přes SSH, potažmo kopírovat soubory přes SCP. Aby fungoval jak je popsán, musíte mít <a href="https://www.altair.blog/2021/10/dotnet-raspi-2">nastavenu autentizaci výchozím SSH klíčem</a> a tento klíč nesmí být chráněn lokální passphrasí (heslem).</p>
+<p>Tento postup také smaže všechny soubory ve vzdáleném adresáři a nahraje tam nové, což nemusí být zcela žádoucí, jak bude popsáno dále.</p>
+<h2 id="postup">Postup</h2>
+<p>Publishing profily (soubory <code>~/Properties/PublishProfiles/*.pubxml</code>) jsou ve své podstatě standardní MSBuild projektové soubory. Můžeme tedy celkem snadno přidat akci, která se spustí ve správný okamžik při zpracování tohoto souboru, v tomto případě po dokončení publikování.</p>
+<p>Začněte tím, že vytvoříte standardní publishing profil, který bude publikovat do složky. Jak, to jsem popisoval ve <a href="https://www.altair.blog/2021/10/dotnet-raspi-3">třetím dílu seriálu o běhu ASP.NET na Raspberry Pi</a>. Otevřete výsledný soubor a téměř na jeho konec (před uzavírací tag <code>&lt;/Project&gt;</code>) přidejte následující kód:</p>
+<pre><code class="language-xml">&lt;Target Name=&quot;ScpUploadAfterPublish&quot; AfterTargets=&quot;AfterPublish&quot;&gt;
+    &lt;PropertyGroup&gt;
+        &lt;SshUserName&gt;pi&lt;/SshUserName&gt;
+        &lt;SshServerName&gt;10.7.0.126&lt;/SshServerName&gt;
+        &lt;SshServerPath&gt;~/AskMe/&lt;/SshServerPath&gt;
+    &lt;/PropertyGroup&gt;
+    &lt;Exec Command=&quot;%WINDIR%\sysnative\cmd /C ssh $(SshUserName)@$(SshServerName) &amp;quot;rm -rf $(SshServerPath)*&amp;quot;&quot; /&gt;
+    &lt;Exec Command=&quot;%WINDIR%\sysnative\cmd /C scp -r &amp;quot;$(PublishDir)*&amp;quot; &amp;quot;$(SshUserName)@$(SshServerName):$(SshServerPath)&amp;quot;&quot; /&gt;
+&lt;/Target&gt;
+</code></pre>
+<p>Jeho název (<code>Name</code>) může být jakýkoliv, ale důležité je, aby atribut <code>AfterTargets</code> měl hodnotu <code>AfterPublish</code>. V elementu <code>PropertyGroup</code> pak definujeme tři proměnné (nenechte se zmást tím, že vám je IntelliSense podtrhá jako neznámé):</p>
+<ul>
+<li><code>SshUserName</code> je uživatelské jméno na vzdáleném serveru.</li>
+<li><code>SshServerName</code> je název nebo IP adresa vzdáleného serveru.</li>
+<li><code>SshServerPath</code> je cesta do adresáře, do kterého se má nasazovat, a to <strong>včetně posledního lomítka</strong>.</li>
+</ul>
+<p>Následující dva elementy <code>Exec</code> pak smažou všechno, co na serveru je a nahrají tam aktuální verzi. Nejprve se pomocí SSH vzdáleně zavolá příkaz <code>rm -rf ~/AskMe/*</code>, který smaže veškerý obsah adresáře, ale ne adresář samotný. Potom se pomocí SCP do téhož adresáře nahraje výsledek publishingu.</p>
+<h2 id="mozne-zakernosti-a-upravy">Možné zákeřnosti a úpravy</h2>
+<p>Nepodařilo se mi přijít na způsob, jak přesměrovat výstup ze SCP do konzole Visual Studia. V průběhu publikace tedy není vypisován žádný průběh, což může působit dojmem, že se proces někde zasekl. Buďte trpěliví.</p>
+<p>Tento kód předpokládá, že bude spouštěn na 64-bitovém počítači z Visual Studia, v němž běží 32-bitový MSBuild, což je výchozí nastavení. Z tohoto důvodu používám ono podivné volání <code>%WINDIR%\sysnative\cmd /C</code>, protože příkazy <code>scp</code> a <code>ssh</code> jsou 64-bitové a normálně pro 32-bitový MSBuild nejsou vidět.</p>
+<p>Při nasazení postupuji tak, že na serveru úplně všechno smažu a nahraju tam novou vypublikovanou verzi. Což nemusí být úplně dobrý nápad, například ve chvíli, kdy se v adresáři aplikace nacházejí nějaká aplikační data, jako třeba SQLite databáze v <code>App_Data/ask.db</code> v případě <a href="https://github.com/ridercz/AskMe">ukázkové aplikace AskMe</a>. Nejjednodušší řešení v tomto případě je ukládat data někam jinam, mimo adresář do kterého se nasazuje.</p>
+<p>Uvedený postup také není úplně nejefektivnější. Mnohem lepší by bylo třeba použít <code>rsync</code>, ale ten (zatím?) na Windows není standardně dostupný.</p>
+<p>Pomocí syntaxe <code>ssh user@server &quot;...&quot;</code> můžete vzdáleně na serveru vykonat jakýkoliv příkaz. Lze tedy například po dobu nasazování ručně zastavit službu Kestrelu nebo nějak jinak zkonfigurovat, aby se po dobu nasazování ukázala nějaká hláška typu &quot;aplikace se právě aktualizuje&quot;.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+publikovat+ASP.NET+aplikaci+na+Linux+pomoc%c3%ad+SCP+a+Visual+Studia&amp;body=https://www.altair.blog/2021/11/scp-publish">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/11/scp-publish.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/11/scp-publish.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/11/scp-publish">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/11/scp-publish">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/bash.min.js" integrity="sha512-HIFqAH4BgdlJE3A1Uoyl6weoDR1WtdufmKBPWtemvTI+12lrV5dfPR5ekvJaePkq6w+zuPAek2X2hHxo/T5kag==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/c.min.js" integrity="sha512-+2nEdmDIEQVBw4y3LD2BLOgAvX1+xx9kPQawjQB/HNfi4bDgSF4ywg8yIQ67ijrLLO2ruHaX9dZ25ruG3HwZSg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js" integrity="sha512-OsjySiIaNsR3uFe7uEH6yht3is/WrIXKocWeO0YHFs25jOwHwMtzIdkUENQjblQihTUIN78bpnLKbhMxRegjLw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/csharp.min.js" integrity="sha512-v7mtZg9ySysViDE/8FxpWzLPe4Qzj+xQ//OqdMkl0UapomXAjp79QNiziv6PLmG5GSXjTcfCOzEBv5B/Rp6COg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/css.min.js" integrity="sha512-YPTikIv0LRFoecQ53pI2EkYJ6tPal8/Yt7wqs2pg9k/3dcBWNNBUTaXhmiP31cHJWLzw9lITxY/nPp008hEQ8g==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/dos.min.js" integrity="sha512-rSz72KBUqBNvTYerDKClwWXCnKh0KzaZuPZKBlBTXl0yfPAVwjFXXdKvBZXn5EE6SLDo8ZoGVUMjOamZFWUjiw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/gcode.min.js" integrity="sha512-LlfaoxE1AmrmFU1UquZMB1mjbkB/gRZrtSs/uunxKJtjB3lEz0D6Qk5XlstgpN5CGm0qxf3ZR6W1wjgYcEHcKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/http.min.js" integrity="sha512-Skje8zLT7byYmzJt9b5tx61nBRk5OIq+Uc3W+DMb9kbQAiTPQmtYBLeHfRz6NMxXWMLRxPX6k9614xJJ06ywnA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/ini.min.js" integrity="sha512-1kSQ/fL3452y9xKXX07vK6MlVabIIe93sVIwF2Hbz28FQ2k5cx4yp5g+OsYd9Ik4T8SxDTjI9CnHujU44xhgZw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/javascript.min.js" integrity="sha512-Jvh5kXa0Zu4HoSxPaZIVhCWPkD7b7gnWHVzv6jiaJwAJ18a/U6BOXludYfJYwHorpy2WFH0Df6EcFi5udu1dWA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/markdown.min.js" integrity="sha512-LdAorkqTMw8zT1g38/JJ0ZAG5BMSKlueJOrfdgzkpb/Griqbi1TiKYAplo7Mha+8t7RzMdglwO4mxyxuTM+Afg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/nginx.min.js" integrity="sha512-y3Mryvd8MCT1x8PScKC/zmbJTai3P3H6+5WH1yPpCV3UzoI3dKum7qyTeB92e1qwKnhMWjfWkTEN1Okz5rvvWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/openscad.min.js" integrity="sha512-Vty2aofH9rMWd1UD+/hwWokgM4tNJHM3jy4t7foAxULaoT46JVhe87D/p2yQeAto5jm7PDao6K0EJa7eI4GcWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/powershell.min.js" integrity="sha512-YuSWm92dJVnrfmPg7UEqLnCTUB2fjuHWW85wj9lB16S4pfJ6xGgkD0bg005VqOYgQXUkwILCLZxh4WxvJfvUhw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/scss.min.js" integrity="sha512-dN9nogHEDJR7Ci37xBwKkB1z//k/iBGM6gHtwKYCeEdGx395nIvwVcSLH2feCrkxhMFRgo8YydNHqyqD8OSOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/sql.min.js" integrity="sha512-dPGKIbhyiX3A5dkNqttabOo7ASCqbOHbTL2PdPKNrojC2CWx/uCAgpZpVkd0HK82vQsEfAWzy9+8Np07wxjiJw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/xml.min.js" integrity="sha512-1UdiK7+k2GhyGJMG9hmQXQ51TP2NPjHjh65uWhCeqSXSZ4UlzDG5+/st9VWRksKWYxKeU37/qwSAuPfSkcWD6A==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
