@@ -9,6 +9,6 @@ dotnet x4w-compiler x4w-build.json
 IF %ERRORLEVEL% NEQ 0 GOTO END
 
 REM -- Run local server
-dotnet serve -d docs --default-extensions:html -o
+dotnet serve -d:docs --default-extensions:html -o
 
 :END
