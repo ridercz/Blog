@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/11/dotnet-raspi-5</guid>
+      <title>ASP.NET na Raspberry Pi: Raspberry Pi Zero 2 a Framework-Dependent Deployment</title>
+      <description>Seriál o ASP.NET Core na Raspberry Pi měl původně mít jenom čtyři pokračování. Ale výrobce v jeho průběhu uvedl nový model, Raspberry Pi Zero 2. Ten je z mnoha důvodů zajímavý, takže jsem mu věnoval bonusový, pátý díl seriálu. A zároveň jsem popsal, jak používat framework-dependent deployment, tedy jak nainstalovat na Raspberry .NET runtime a provozovat univerzální multiplatformní binárky.</description>
+      <link>https://www.altair.blog/2021/11/dotnet-raspi-5</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2021-11-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/11/scp-publish</guid>
       <title>Jak publikovat ASP.NET aplikaci na Linux pomocí SCP a Visual Studia</title>
       <description>Vypublikovat hotovou ASP.NET aplikaci na server přes FTP nebo Web Management Service je snadné: stačí ve Visual Studiu vytvořit publishing profil a klepnout na Publish. Ale co když chcete aplikaci nasadit na server s Linuxem, kde chcete použít SCP, třeba na Raspberry Pi z našeho seriálu? Je to možné, ale vyžaduje to trochu ručních zásahů do projektového souboru.</description>
@@ -139,16 +149,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-09-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/09/csharp-arguments</guid>
-      <title>C# pro mírně pokročilé: Argumenty metod</title>
-      <description>Metody (procedury, funkce...) a jejich argumenty jsou v C# základní jazykovou konstrukcí. Za dvacet let existence jazyka však doznaly změn a značného vývoje, již tradičně směrem ke zjednodušení a zpříjemnění práce programátora. V dnešním videu si ukážeme, k čemu slouží klíčová slova in a out, operátor nameof či caller info attributes.</description>
-      <link>https://www.altair.blog/2021/09/csharp-arguments</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-09-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
