@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak zastavit robotické depo Zásilkovny: Představení projektu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/11/robodepo-1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak zastavit robotické depo Zásilkovny: Představení projektu" />
+    <meta name="twitter:description" content="Zásilkovna nedávno otevřela své první robotické depo, kde zásilky místo lidí třídí roboti - nebo alespoň proti lidem hrají přesilovku. Ukážeme si, jak takové depo funguje a také jaký bude můj konstruktérský úkol: vyrobit tlačítko, které ho dokáže celé zastavit." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211118-robodepo-1.jpg" />
+    <meta property="article:published_time" content="2021-11-18" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Jak zastavit robotické depo Zásilkovny: Představení projektu" />
+    <meta name="description" property="og:description" content="Zásilkovna nedávno otevřela své první robotické depo, kde zásilky místo lidí třídí roboti - nebo alespoň proti lidem hrají přesilovku. Ukážeme si, jak takové depo funguje a také jaký bude můj konstruktérský úkol: vyrobit tlačítko, které ho dokáže celé zastavit." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211118-robodepo-1.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/11/robodepo-1" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211118-robodepo-1.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak zastavit robotické depo Zásilkovny: Představení projektu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-11-18">18. listopadu 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Zásilkovna před nedávnem ve Šterboholích otevřela nové depo. Je první svého druhu, protože zásilky v něm třídí roboti. Bez lidí se zatím úplně neobejdou, ale jsou jich skoro dvě stovky a hrají proti lidem výraznou přesilovku. Depo jsem navštívil a po technickém řediteli Zásilkovny, Adamu Hörzenbergerovi, vyzvěděl jak funguje. A zároveň jsem v rámci projektu dostal úkol: navrhnout tlačítko, které ho celé zastaví.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/oihLfHliR5g" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="k-cemu-je-dobre-roboticke-depo">K čemu je dobré robotické depo?</h2>
+<p>Zjednodušeně řečeno funguje doprava balíčků v síti Zásilkovny tak, že se zásilka z podacího místa přiveze na nejbližší z padesáti dep po republice. Tam se zásilky roztřídí podle toho kam směřují a dovezou se do depa nejbližšího výdejnímu místu. Třídění lze dělat buďto ručně nebo automaticky pomocí třídící linky. Třídící linka má ovšem jednu zásadní nevýhodu: špatně škáluje. Když ji jednou postavíte, je těžké výrazně navýšit její kapacitu. Nebo ji přestěhovat. Nebo v ní vlastně udělat jakoukoliv změnu. Takže Zásilkovna většinově využívá při třídení lidskou práci.</p>
+<p>Jenomže lidí je pro takovou práci škoda. Není příliš povznášející, lidé dělají chyby a obecně jich je málo a bylo by lepší jejich sílu a inteligenci využít pro poněkud sofistikovanější zadání. A proto vzniklo robotické depo, jedno z prvních svého druhu na světě (a určitě první v republice). Bez lidí se neobejde (zatím ještě, i to je v plánu), ale sto osmdesát robotů hraje proti lidem přesilovku.</p>
+<p>V třídící hale se nachází dvoupatrové &quot;molo&quot;, což je jakási rampa, po které jezdí roboti. Kolem mola jsou stanice, na kterých lidé u příchozí zásilky naskenují čárový kód a položí ji na připraveného malého robota. Ten ji odveze k některému ze skluzů, pro každý směr je jeden.</p>
+<p>Počítače a roboti jsou rychlejší než lidé a dělají méně chyb a jsou výrazně levnější než klasická třídící linka. A hlavně, mnohem variabilnější. Molo lze jednoduše rozšířit, překonfigurovat, přestěhovat...</p>
+<h2 id="roboti-na-sachovnici">Roboti na šachovnici</h2>
+<p>Zásilkovní robot je úžasný svou jednoduchostí. Je to v základu jednoduchý podvozek s elektromotory na spodní straně a malým dopravníkovým pásem na horní straně. Na pás obsluha položí zásilku, robot ji odveze k patřičnému shozu a pohybem pásu shodí. Roboti jezdí po speciálních gumových dlaždicích, které připomínají pěnové puzzle pro malé děti. Každý dlaždice má uprostřed RFID čip s unikátním identifikátorem, podle kterého robot ví, na které dlaždici se právě nachází. Dále pak obsahuje magnetické pásky a robot pomocí Hallových sond dokáže zjistit za prvé svou vlastní orientaci, kterým směrem stojí, ale také na centimetr přesnou pozici v rámci dlaždice.</p>
+<p>Roboti sami jsou hotové řešení od čínského dodavatele a nejsou nijak zvlášť drazí, stojí něco okolo tří tisíc dolarů. Dají se snadno dokoupit a nahradit. Důležitý je ale systém který je řídí, říká jim kam a jak se mají pohybovat, aby k cíli dorazili nejefektivnější trasou a nikde se cestou nesrazili. Ten je dílem Zásilkovny.</p>
+<p>Řídící systém sleduje i stav baterií robotů a drží jej v optimálním pásmu z hlediska životnosti. Pokud stav baterie poklesne pod 40 %, robot si samočinně zajede do nabíječky a několik minut se nabíjí. Vydrží tak fungovat zhruba hodinu či dvě, přičemž v tomto režimu - kdy se baterie chrání před přílišným vybitím i nabitím - má plánovanou životnost osm let.</p>
+<h2 id="jak-zastavit-robota">Jak zastavit robota?</h2>
+<p>I když je poměr robotů k lidem vysoce ve prospěch robotů, není nutné se obávat jejich vzpoury. Do pozitronických mozků schopných vstřebat - a případně porušit - Asimovovy tři robotické zákony mají ještě dosti daleko. Ale nehody se stávají. Špatně naložená zásilka může spadnout a zablokovat trasu a podobně. V takovém případě je nutné provoz na molu zastavit, problém vyřešit a pokračovat v práci. Jenomže zastavit čtyřikrát pětačtytřicet robotů (dvě mola po dvou patrech) není úplně jednoduché. Fungují částečně autonomně, takže nestačí &quot;vyhodit jistič&quot;. Je nutné je zastavit softwarově.</p>
+<p>Dostal jsem za úkol vyvinout zařízení, které to dokáže zajistit. Navenek bude vypadat velice jednoduše, klasické velké červené &quot;STOP&quot; tlačítko. Ale stiskem tlačítka se zavolá webhook (udělá HTTP request), který backendu řekne, co je třeba udělat. Zadání to není složité, ale úplně jednoduché také není. S jakými obtížemi se budu muset vyrovnat?</p>
+<ul>
+<li>Molo nabízí připojení k napájení (USB 5 V), ale ne žádnou datovou konektivitu. Veškerá komunikace probíhá přes Wi-Fi a i tlačítko bude muset komunikovat bezdrátově.</li>
+<li>Komunikaci je třeba rozumně zabezpečit, aby molo nedokázal zastavit každý, kdo jde kolem s mobilem. Nelze spoléhat na zabezpečení sítě jako takové, je třeba se chránit proti replay útokům...</li>
+<li>Tlačítek je třeba v první fázi vyrobit asi čtyřicet, postupně jich budou malé stovky. Což je trochu málo na nějaké zásadní originální hardwarové řešení, ale zase trochu moc na rozsáhlou ruční montáž. Je třeba správně navrhnout hardware, ale i nějaký provisioning a věci související.</li>
+</ul>
+<p>Naštěstí ale už mám nápad jak se s tím vyrovnat a nenechám si ho pro sebe. Každý týden budu nyní na kanálu Z-TECH zveřejňovat jedno video, které bude popisovat stav vývoje a výsledek bude zveřejněn jako open source. Rešení není specifické pro Zásilkovnu, pomůže každému, kdo potřebuje tlačítko jehož stisknutím se spustí webhook.</p>
+<p>Dnes si můžete prohlédnout první díl, který popisuje depo jako takové. Co nás čeká do budoucna? To v době psaní tohoto článku ještě nevím, ale můj plán je následující:</p>
+<ul>
+<li>Příští týden se podíváme na hardwarovou platformu. Jak bude tlačítko vypadat a na jaké platformě bude postavené. Mám několik prototypů, které vám představím.</li>
+<li>Další díl se bude věnovat zabezpečení. Provedeme jednoduchou bezpečnostní analýzu a vymyslíme, jak si v rámci zadání poradit s riziky, která pokládáme za relevantní.</li>
+<li>V dalším pokračování se detailněji podíváme na firmware, který v tlačítku poběží a také na software na serverové straně.</li>
+<li>Závěrem se podíváme na provisioning, na aplikaci pro konfiguraci parametrů zařízení a jejich celkovou správu.</li>
+</ul>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+zastavit+robotick%c3%a9+depo+Z%c3%a1silkovny%3a+P%c5%99edstaven%c3%ad+projektu&amp;body=https://www.altair.blog/2021/11/robodepo-1">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/11/robodepo-1.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/11/robodepo-1.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/11/robodepo-1">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/11/robodepo-1">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/bash.min.js" integrity="sha512-HIFqAH4BgdlJE3A1Uoyl6weoDR1WtdufmKBPWtemvTI+12lrV5dfPR5ekvJaePkq6w+zuPAek2X2hHxo/T5kag==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/c.min.js" integrity="sha512-+2nEdmDIEQVBw4y3LD2BLOgAvX1+xx9kPQawjQB/HNfi4bDgSF4ywg8yIQ67ijrLLO2ruHaX9dZ25ruG3HwZSg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js" integrity="sha512-OsjySiIaNsR3uFe7uEH6yht3is/WrIXKocWeO0YHFs25jOwHwMtzIdkUENQjblQihTUIN78bpnLKbhMxRegjLw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/csharp.min.js" integrity="sha512-v7mtZg9ySysViDE/8FxpWzLPe4Qzj+xQ//OqdMkl0UapomXAjp79QNiziv6PLmG5GSXjTcfCOzEBv5B/Rp6COg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/css.min.js" integrity="sha512-YPTikIv0LRFoecQ53pI2EkYJ6tPal8/Yt7wqs2pg9k/3dcBWNNBUTaXhmiP31cHJWLzw9lITxY/nPp008hEQ8g==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/dos.min.js" integrity="sha512-rSz72KBUqBNvTYerDKClwWXCnKh0KzaZuPZKBlBTXl0yfPAVwjFXXdKvBZXn5EE6SLDo8ZoGVUMjOamZFWUjiw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/gcode.min.js" integrity="sha512-LlfaoxE1AmrmFU1UquZMB1mjbkB/gRZrtSs/uunxKJtjB3lEz0D6Qk5XlstgpN5CGm0qxf3ZR6W1wjgYcEHcKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/http.min.js" integrity="sha512-Skje8zLT7byYmzJt9b5tx61nBRk5OIq+Uc3W+DMb9kbQAiTPQmtYBLeHfRz6NMxXWMLRxPX6k9614xJJ06ywnA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/ini.min.js" integrity="sha512-1kSQ/fL3452y9xKXX07vK6MlVabIIe93sVIwF2Hbz28FQ2k5cx4yp5g+OsYd9Ik4T8SxDTjI9CnHujU44xhgZw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/javascript.min.js" integrity="sha512-Jvh5kXa0Zu4HoSxPaZIVhCWPkD7b7gnWHVzv6jiaJwAJ18a/U6BOXludYfJYwHorpy2WFH0Df6EcFi5udu1dWA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/markdown.min.js" integrity="sha512-LdAorkqTMw8zT1g38/JJ0ZAG5BMSKlueJOrfdgzkpb/Griqbi1TiKYAplo7Mha+8t7RzMdglwO4mxyxuTM+Afg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/nginx.min.js" integrity="sha512-y3Mryvd8MCT1x8PScKC/zmbJTai3P3H6+5WH1yPpCV3UzoI3dKum7qyTeB92e1qwKnhMWjfWkTEN1Okz5rvvWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/openscad.min.js" integrity="sha512-Vty2aofH9rMWd1UD+/hwWokgM4tNJHM3jy4t7foAxULaoT46JVhe87D/p2yQeAto5jm7PDao6K0EJa7eI4GcWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/powershell.min.js" integrity="sha512-YuSWm92dJVnrfmPg7UEqLnCTUB2fjuHWW85wj9lB16S4pfJ6xGgkD0bg005VqOYgQXUkwILCLZxh4WxvJfvUhw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/scss.min.js" integrity="sha512-dN9nogHEDJR7Ci37xBwKkB1z//k/iBGM6gHtwKYCeEdGx395nIvwVcSLH2feCrkxhMFRgo8YydNHqyqD8OSOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/sql.min.js" integrity="sha512-dPGKIbhyiX3A5dkNqttabOo7ASCqbOHbTL2PdPKNrojC2CWx/uCAgpZpVkd0HK82vQsEfAWzy9+8Np07wxjiJw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/xml.min.js" integrity="sha512-1UdiK7+k2GhyGJMG9hmQXQ51TP2NPjHjh65uWhCeqSXSZ4UlzDG5+/st9VWRksKWYxKeU37/qwSAuPfSkcWD6A==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
