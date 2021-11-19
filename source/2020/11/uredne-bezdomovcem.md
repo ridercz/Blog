@@ -62,6 +62,11 @@ Způsobíte patrně značný rozruch, protože (nebudete-li to předvádět na �
 
 ### Troubleshooting při rušení pobytu
 
+Správný název požadované činnosti - na co úředník slyší:
+"Chci ukončit trvalý pobyt na území ČR"
+
+Vyhněte se slovu "zrušit", neboť z pohledu zákona se jedná o jinou činnost, a trvalý pobyt nelze sám sobě zrušit (ruší se jiné osobě).
+
 **Problém:** "To nejde, musíte mít nějaké trvalé bydliště."   
 **Řešení:** Donutit úředníka, aby našel a přečetl si zákon, podle kterého funguje (snadné) a intelektuálně jej vstřebal (obtížné). V praxi se mi osvědčila metoda kolovrátku a působení dojmem "tady stojím a nehnu se, dokud neuděláte co chci".
 
@@ -87,6 +92,13 @@ Nemáte aktivní volební právo ve volbách do zastupitelstev obcí, krajů neb
 
 Je obtížné získat nebo prodloužit řidičský průkaz. Pokud ŘP už máte, tak je vše v pořádku, platí vám i nadále do konce své platnosti. Pokud potřebujete získat nový nebo stávající, nemáte-li trvalý pobyt na území ČR, musíte prokazovat, že se v ČR zdržujete, což je komplikované. Doporučuji proto jednou za deset let projít kolečkem popisovaným o odstavec výše, je to nejjednodušší řešení.
 
+Nepochodíte na evidenci silničních vozidel, například s registrací nového silničního vozidla nebo s nějakou změnou. Pokud jste majitelem/provozovatelem silničního vozidla, při změně adresy trvalého pobytu, kam pravděpodobně spadá i ukončení trvalého pobytu na území ČR, máte povinnost do 10ti dnů požádat "O zápis změny údaje v registru silničních vozidel". Úřad ale změnu neprovede, protože nesplňujete zákonné podmínky, zejména:
+
+> provozovatel silničního vozidla má na území České republiky
+> 1. trvalý pobyt, dlouhodobý pobyt nebo, jedná-li se o občana jiného členského státu, přechodný pobyt v délce alespoň 6 měsíců v kalendářním roce, nebo jí byl udělen azyl,
+
+Nelze tedy provést změnu adresy trvalého pobytu v "osvědčení o registraci vozidla" (malý a velký technický průkaz). Nepodařilo se mi zjistit, zda má toto v praxi nějaké důsledky, třeba při silniční kontrole.
+
 Můžete mít problém se zdravotním pojištěním. Podle § 2 zákona č. [48/1997 Sb. o veřejném zdravotním pojištění](https://www.zakonyprolidi.cz/cs/1997-48) jsou pojištěny osoby, které buďto mají trvalý pobyt na území ČR, nebo pokud jsou zaměstnanci českého zaměstnavatele. Pokud jste běžnými zaměstnanci, nic se pro vás nemění. Nejste-li, nemusíte platit zdravotní pojištění, ale také nemáte nárok na lékařské ošetření placené z veřejných zdrojů. Vše musíte platit z vlastní kapsy nebo mít komerční zdravotní pojištění.
 
 Patrně jsou ještě nějaká další omezení, ale zatím jsem na ně nenarazil. Nepochybně budete mít problém v případě, kdy po úřadu budete něco chtít vy – sociální dávky a podobně.
@@ -109,19 +121,26 @@ V případě, že po vás někdo bude chtít dva doklady totožnosti, budete pat
 
 ### Opětovné získání trvalého pobytu
 
+Správný název požadované činnosti - na co úředník slyší:
+"Chci se přihlásit k trvalému pobytu na území ČR po návratu ze zahraničí"
+
 Při opětovném získávání trvalého pobytu musíte prokázat svou totožnost a státní občanství České republiky. To se nejlépe dělá pomocí cestovního pasu (proto jsem vám o pár odstavců výše doporučoval, abyste si na něj dávali pozor).
 
 Pokud nemáte adresu, kam se přihlásit, budete přihlášeni na adresu ohlašovny, což stanoví § 10a zákona o evidenci obyvatel:
 
 > Nemůže-li občan po ukončení pobytu v cizině nebo po nabytí státního občanství České republiky předložit doklady podle § 10 odst. 6 písm. c), je místem jeho trvalého pobytu sídlo ohlašovny, v jejímž územním obvodu na území České republiky měl občan poslední místo trvalého pobytu nebo hlášené místo pobytu podle zvláštních právních předpisů.
 
-(Doklady podle odst. 6 jsou doklady o právu uživat objekt, viz následující část). Máte-li cestovní pas nebo občanský průkaz, je získání (a případně opětovné zrušení) trvalého pobytu triviální úkon. 
+(Doklady podle odst. 6 jsou doklady o právu uživat objekt, viz následující část). Máte-li cestovní pas nebo občanský průkaz, je získání (a případně opětovné zrušení) trvalého pobytu triviální úkon.
+
+Z toho plyne, že pokud se nemáte kam přihlásit, nelze opětovné získání trvalého pobytu provést na libovolné ohlašovně. Musíte na ohlašovnu, která přísluší adrese vašeho předchozího trvalého pobytu.
 
 ### Troubleshooting pokud trvalý pobyt potřebujete
 
 Jsou situace, kdy trvalý pobyt potřebujete. Typicky třeba výše zmíněné volby a nebo vydání ŘP. Řešení je jednoduché: na chvíli si jej zřídíte a pak zase zrušíte. Může to být na několik minut nebo na několik dnů.
 
 Například u voleb do PS jsem to řešil tak, že jsem se přihlásil k trvalému pobytu (viz výše), nechal si u vedlejšího okénka vydat voličský průkaz a zase se odhlásil, to celé během asi patnácti minut.
+
+POZOR: Máte-li OP (i bez adresy trvalého pobytu), bude vám při opětovném přihlášení trvalého pobytu na území ČR ustřižen jeho pravý dolní roh. Takový doklad zůstává platný po dobu 45 dnů od data změny. Nemine vás tak kolečko vyřizování nového OP.
 
 ## Mýty a fámy o trvalém pobytu
 
@@ -160,7 +179,10 @@ Jak byste tedy měli postupovat, chcete-li se stát úředně bezdomovcem?
 2. Pokud nehodláte mít občanský průkaz (což nedoporučuji), tak si ověřte, že máte platný cestovní pas. Pokud nemáte, nebo mu bude brzo končit platnost, požádejte o jeho vydání. Pokud nemáte jiný státem vydaný průkaz totožnosti (typicky ŘP), požádejte o vydání druhého cestovního pasu. Platnost pasu si hlídejte – bude vaším základním dokladem totožnosti a pokud vám vyprší, bude získání dalšího podstatně komplikovanější. 
 3. Zajděte na ohlašovnu pobytu v místě trvalého bydliště. To je typicky obecní/městský úřad, případně úřad městské části. Tam postupem popsaným výše ukončete trvalý pobyt.
 4. V rámci tohoto procesu požádejte o nový OP.
-5. Enjoy :)   
+5. Enjoy :)
+
+V praxi se může hodit:
+* Zajistit si nejprve adresu trvalého pobytu v obci, kde sídlí Evidence obyvatel (ohlašovna) a Oddělení dokladů, Evidence vozidel a podobně, na jedné adrese nebo alespoň poblíž - i když si můžete trvalý pobyt opětovně přihlásit i jen na několik okamžiků, vždy když něco potřebujete zařídit, nechcete přeci při každé změně cestovat napříč městěm či dokonce krajem. Vhodnou volbou může být okresní město, kde na úřadech nebývají denně fronty až ven, jako v krajských městech. Úplně nevhodné jsou velmi malé obce, kde obecní úřad (ohlašovna) funguje jen jeden den v měsíci, nebo "po domluvě", zatímco veškeré další úřady sídlí v obci s rozšířenou působností, často desítky kilometrů daleko. Určitě je lepší "otravovat" v domě plném placených úředníků, než vaše sousedy z místní samosprávy ve volném čase.
 
 Zásadní otázka samozřejmě je, proč byste toto měli podstoupit. 
 
