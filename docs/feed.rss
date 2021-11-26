@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-2</guid>
+      <title>Jak zastavit robotické depo Zásilkovny: Hardware</title>
+      <description>V minulém videu jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč.</description>
+      <link>https://www.altair.blog/2021/11/robodepo-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <category>Bastlení</category>
+      <pubDate>2021-11-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-1</guid>
       <title>Jak zastavit robotické depo Zásilkovny: Představení projektu</title>
       <description>Zásilkovna nedávno otevřela své první robotické depo, kde zásilky místo lidí třídí roboti - nebo alespoň proti lidem hrají přesilovku. Ukážeme si, jak takové depo funguje a také jaký bude můj konstruktérský úkol: vyrobit tlačítko, které ho dokáže celé zastavit.</description>
@@ -140,16 +151,6 @@
       <category>Z-TECH</category>
       <category>3D tisk</category>
       <pubDate>2021-09-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</guid>
-      <title>Umělá inteligence GitHub Copilot má vývojářům pomáhat, do kódu jim ale přidává bezpečnostní chyby</title>
-      <description>Měla to být velká pomoc programátorům. Umělá inteligence GitHub Copilot umí programátorům navrhnout kód, který nejspíš chtějí napsat. Řídí se přitom analýzou kódu mnoha open source projektů. Aktuální studie však ukázala, že 40 procent návrhů vytvořených na základě strojového učení obsahuje bezpečnostní chyby. To je samozřejmě bezprostřední problém, ale ukazuje to i na obecné limity toho, čemu rádi říkáme umělá inteligence.</description>
-      <link>https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-09-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

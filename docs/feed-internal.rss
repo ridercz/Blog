@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-2</guid>
+      <title>Jak zastavit robotické depo Zásilkovny: Hardware</title>
+      <description>V minulém videu jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč.</description>
+      <link>https://www.altair.blog/2021/11/robodepo-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <category>Bastlení</category>
+      <pubDate>2021-11-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-1</guid>
       <title>Jak zastavit robotické depo Zásilkovny: Představení projektu</title>
       <description>Zásilkovna nedávno otevřela své první robotické depo, kde zásilky místo lidí třídí roboti - nebo alespoň proti lidem hrají přesilovku. Ukážeme si, jak takové depo funguje a také jaký bude můj konstruktérský úkol: vyrobit tlačítko, které ho dokáže celé zastavit.</description>
@@ -140,15 +151,6 @@
       <category>Z-TECH</category>
       <category>3D tisk</category>
       <pubDate>2021-09-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/09/nebojte-se-pajecky</guid>
-      <title>Informace k workshopu Nebojte se páječky na Make More MB</title>
-      <description>V týdnu jsem se jako lektor zúčastnil workshopu o pájení na akci Make More v Mladé Boleslavi. Účastníkům jsem slíbil, že napíšu článek o doporučeném vybavení a kde ho sehnat a svůj slib tímto plním.</description>
-      <link>https://www.altair.blog/2021/09/nebojte-se-pajecky</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bastlení</category>
-      <pubDate>2021-09-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

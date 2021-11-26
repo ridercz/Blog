@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak zastavit robotické depo Zásilkovny: Hardware | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2021/11/robodepo-2" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak zastavit robotické depo Zásilkovny: Hardware" />
+    <meta name="twitter:description" content="V minulém videu jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211126-robodepo-2.jpg" />
+    <meta property="article:published_time" content="2021-11-26" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Jak zastavit robotické depo Zásilkovny: Hardware" />
+    <meta name="description" property="og:description" content="V minulém videu jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211126-robodepo-2.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2021/11/robodepo-2" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211126-robodepo-2.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak zastavit robotické depo Zásilkovny: Hardware</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2021-11-26">26. listopadu 2021 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>V <a href="https://www.altair.blog/2021/11/robodepo-1">minulém videu</a> jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/7rJuuVYUSQE" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="pouzita-platforma">Použitá platforma</h2>
+<p>Potřebou je Wi-Fi konektivita a schopnost udělat HTTP (resp. HTTPS) dotaz. Kromě toho potřebujeme jenom jeden GPIO port pro připojení tlačítka. Pro řešení zadání tohoto typu jsou v zásadě dvě možné cesty. V té první se použije počítač s Linuxem, typicky něco malého s ARM, v duchu Raspberry Pi, třeba <a href="https://www.altair.blog/2021/11/dotnet-raspi-5">Zero 2</a>, o kterém byla řeč nedávo. V té druhé se použije mnohem jednodušší a omezenější mikrokontroler.</p>
+<p>Pro tento problém jsem zvolil cestu mikrokontroleru. Je to mnohem jednodušší a levnější varianta, počítač s Linuxem je na obsluhu jednoho tlačítka a jednoho HTTP requestu skutečně zbytečně moc. Použití počítače by vyřešilo jediný problém: ověření certifikátu serveru. Nicméně za hodně vysokou cenu. Ani ne tak finanční, jako organizační. Bylo by třeba sofistikovaně řešit deployment, zabezpečení, aktualizace... Proto jsem se rozhodl pro druhou cestu a zabezpečení komunikace vlastními prostředky (o tom bude další díl seriálu).</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211126-d1mini.jpg" alt="Wemos D1 Mini" /></p>
+<p>Rozhodl jsem se použít procesor (nebo spíše SoC, system on chip) <strong>ESP8266</strong> na vývojové desce <strong>Wemos D1 Mini</strong>. Bastlířům není třeba ESP8266 nijak extra představovat. Je to stejná platforma, na které jsem postavil svůj projekt HoneyESP a v <a href="https://www.altair.blog/2018/11/honeyesp">článku o něm</a> je odkaz na mou přednášku, kde mluvím i o hardware.</p>
+<p>Ve zkratce: ESP8266 nabízí 32-bitový RISC procesor běžící na 80 MHz, až 16 GPIO pinů, SPI, I2C, 2x UART a hlavně podporu pro 2,4 GHz Wi-Fi /IEEE 802.11 b/g/n). Dá se programovat v mnoha jazycích, mimo jiné jako Arduino v C, což je přesně to, co budu dělat.</p>
+<p>Tento modul k činnosti potřebuje nějaké podpůrné obvody, třeba řízení napájení a podobně. Buďto bych si musel navrhnout vlastní desku (což za prvé neumím a za druhé se to pro tak malý počet zařízení nevyplatí) anebo musím použít nějakou hotovou. Vývojových desek nad ESP8266 je spousta, se všemi možnými parametry. Asi nejmenší z nich se jmenuje Wemos D1 mini. Je snadno dostupná, stojí v Číně desetikoruny, mám jich plný šuplík a hlavně - je maličká, což se mi bude hodit.</p>
+<h2 id="tlacitko-a-krabicka">Tlačítko a krabička</h2>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211126-prototyp.jpg" alt="První prototyp" /></p>
+<p>Trochu paradoxně (ale zdaleka ne výjimečně) bude mechanická část (tlačítko s krabičkou) dražší než vlastní elektronika. První prototyp (vycházející ještě z poněkud jiného zadání a mající vlastní napájení v podobě baterií) jsem dal do běžné elektroinstalační krabičky, kam jsem nainstaloval jakési malé tlačítko, které se mi válelo v šuplíku (mám v šuplících <em>spoustu</em> nejrůznějších tlačítek).</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211126-box-schneider.jpg" alt="Box od Schneider Electric" /></p>
+<p>Další prototyp byl od Schneider Electric. To je známá firma vyrábějící kvalitní zboží. Také bohužel drahé, krabička s tlačítkem vyjde skoro na tisícovku. A co je horší, uvnitř není moc místa. Což je pochopitelné, protože do krabiček tohoto typu se obvykle nic nemontuje, jenom se tam natáhne kabel, který se připojí k tlačítku. Nicméně já tam potřebuju schovat i tu desku D1 mini.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2021/20211126-box-gme.jpg" alt="Box z GME" /></p>
+<p>Nakonec si mé srdce získal jednodychý noname box z GM Electronic. Sice nemá tak sexy design, ale je výrazně levnější (celé řešení stojí několik stokorun) a v krabičce je více místa, kam se pohodlně vejde D1 mini i USB konektor.</p>
+<h2 id="mechanicke-provedeni">Mechanické provedení</h2>
+<p>Celou dobu je řeč o stop tlačítku, ale součástí zadání je i varianta s několika tlačítky, která dokáže roboty třeba znovu rozběhnout a podobně. Naštěstí se ovládací skříňky dělají v mnoha vícetlačítkových variantách a celý systém je modulární, takže je možné kombinovat mezi sebou různé varianty a barvy tlačítek a podobně.</p>
+<p>Elektrické zapojení je jednoduché. Tlačítko se zapojí mezi GPIO pin a zem. Na D1 mini jsem se rozhodl použít vstupy <code>D5</code> až <code>D7</code>:</p>
+<ul>
+<li><code>D5</code> - stop (červená), NC</li>
+<li><code>D6</code> - žlutá, NO</li>
+<li><code>D7</code> - zelená, NO</li>
+</ul>
+<p>Tlačítka se vyskytují ve variantách <em>NO</em> (normally open, tlačítko je normálně rozpojené a stiskem se kontakty spojí) a <em>NC</em> (normally closed, tlačítko je normálně spojené a stiskem se rozpojí). Moje řešení počítá s tím, že stop tlačítko bude NC (protože obvykle bývají) a ostatní budou NO. Ale protože se vše vyhodnocuje softwarově je to vlastně jedno, případná změna si vyžádá jednu řádku v kódu.</p>
+<p>Napájel jsem tedy krátké drátky do desky a zašrouboval je do šroubovacích kontaktů tlačítek.</p>
+<h2 id="vyvod-kabelu">Vývod kabelu</h2>
+<p>Paradoxně největším problémem byla průchodka pro USB kabel, protože běžná řešení nepočítají s tím, že z boxu povede tak tenký kabel (běžně se používají mnohem silnější). Vyřešil jsem to tím, že jsem si <a href="https://www.altair.blog/2021/10/pruchodka">vymodeloval vlastní průchodku</a> a vytiskl ji na 3D tiskárně. To se ale nakonec ukázalo zbytečné, protože jsem našel průmyslově vyráběný model, který splnil všechny mé požadavky.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+zastavit+robotick%c3%a9+depo+Z%c3%a1silkovny%3a+Hardware&amp;body=https://www.altair.blog/2021/11/robodepo-2">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/11/robodepo-2.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/11/robodepo-2.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/11/robodepo-2">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/11/robodepo-2">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2021</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/bash.min.js" integrity="sha512-HIFqAH4BgdlJE3A1Uoyl6weoDR1WtdufmKBPWtemvTI+12lrV5dfPR5ekvJaePkq6w+zuPAek2X2hHxo/T5kag==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/c.min.js" integrity="sha512-+2nEdmDIEQVBw4y3LD2BLOgAvX1+xx9kPQawjQB/HNfi4bDgSF4ywg8yIQ67ijrLLO2ruHaX9dZ25ruG3HwZSg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js" integrity="sha512-OsjySiIaNsR3uFe7uEH6yht3is/WrIXKocWeO0YHFs25jOwHwMtzIdkUENQjblQihTUIN78bpnLKbhMxRegjLw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/csharp.min.js" integrity="sha512-v7mtZg9ySysViDE/8FxpWzLPe4Qzj+xQ//OqdMkl0UapomXAjp79QNiziv6PLmG5GSXjTcfCOzEBv5B/Rp6COg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/css.min.js" integrity="sha512-YPTikIv0LRFoecQ53pI2EkYJ6tPal8/Yt7wqs2pg9k/3dcBWNNBUTaXhmiP31cHJWLzw9lITxY/nPp008hEQ8g==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/dos.min.js" integrity="sha512-rSz72KBUqBNvTYerDKClwWXCnKh0KzaZuPZKBlBTXl0yfPAVwjFXXdKvBZXn5EE6SLDo8ZoGVUMjOamZFWUjiw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/gcode.min.js" integrity="sha512-LlfaoxE1AmrmFU1UquZMB1mjbkB/gRZrtSs/uunxKJtjB3lEz0D6Qk5XlstgpN5CGm0qxf3ZR6W1wjgYcEHcKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/http.min.js" integrity="sha512-Skje8zLT7byYmzJt9b5tx61nBRk5OIq+Uc3W+DMb9kbQAiTPQmtYBLeHfRz6NMxXWMLRxPX6k9614xJJ06ywnA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/ini.min.js" integrity="sha512-1kSQ/fL3452y9xKXX07vK6MlVabIIe93sVIwF2Hbz28FQ2k5cx4yp5g+OsYd9Ik4T8SxDTjI9CnHujU44xhgZw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/javascript.min.js" integrity="sha512-Jvh5kXa0Zu4HoSxPaZIVhCWPkD7b7gnWHVzv6jiaJwAJ18a/U6BOXludYfJYwHorpy2WFH0Df6EcFi5udu1dWA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/markdown.min.js" integrity="sha512-LdAorkqTMw8zT1g38/JJ0ZAG5BMSKlueJOrfdgzkpb/Griqbi1TiKYAplo7Mha+8t7RzMdglwO4mxyxuTM+Afg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/nginx.min.js" integrity="sha512-y3Mryvd8MCT1x8PScKC/zmbJTai3P3H6+5WH1yPpCV3UzoI3dKum7qyTeB92e1qwKnhMWjfWkTEN1Okz5rvvWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/openscad.min.js" integrity="sha512-Vty2aofH9rMWd1UD+/hwWokgM4tNJHM3jy4t7foAxULaoT46JVhe87D/p2yQeAto5jm7PDao6K0EJa7eI4GcWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/powershell.min.js" integrity="sha512-YuSWm92dJVnrfmPg7UEqLnCTUB2fjuHWW85wj9lB16S4pfJ6xGgkD0bg005VqOYgQXUkwILCLZxh4WxvJfvUhw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/scss.min.js" integrity="sha512-dN9nogHEDJR7Ci37xBwKkB1z//k/iBGM6gHtwKYCeEdGx395nIvwVcSLH2feCrkxhMFRgo8YydNHqyqD8OSOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/sql.min.js" integrity="sha512-dPGKIbhyiX3A5dkNqttabOo7ASCqbOHbTL2PdPKNrojC2CWx/uCAgpZpVkd0HK82vQsEfAWzy9+8Np07wxjiJw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/xml.min.js" integrity="sha512-1UdiK7+k2GhyGJMG9hmQXQ51TP2NPjHjh65uWhCeqSXSZ4UlzDG5+/st9VWRksKWYxKeU37/qwSAuPfSkcWD6A==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>
