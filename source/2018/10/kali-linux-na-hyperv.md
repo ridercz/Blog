@@ -9,6 +9,9 @@
 <!-- x4w:category = Software -->
 <!-- dcterms:dateAccepted = 2018-10-07 -->
 
+> **Tento text je zastaralý a ponechávám ho zde jenom pro informaci.** 
+> K dispozici je [aktualizovaná verze článku](/2021/11/kali-linux-na-hyperv) z roku 2021 pro verzi Kali 2021.3a.
+
 Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Často se používá jako "live" distribuce, která se neinstaluje, ale jenom se nahraje na DVD nebo USB disk a nabootuje. Já ji nicméně používám pro různá dema a laby a mám ji nainstalovanou ve virtualizační platformě Hyper-V.
 
 Pro konkurenční platformy VMWare a VirtualBox jsou k dispozici přímo oficiální předinstalované images. Pro Hyper-V nic takového není a virtuálku si musíte vytvořit sami. Není to obtížné a nádavkem přidávám pár konfiguračních tipů. Takhle konfiguruji svoje Kali já pro účely výuky a dema. Samozřejmě pro praktické použití budete chtít postupovat jiným způsobem.

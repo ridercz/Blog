@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
-    <link rel="canonical" href="https://www.altair.blog/2018/10/kali-linux-na-hyperv" />
+    <link rel="canonical" href="https://www.altair.blog/2021/11/kali-linux-na-hyperv" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
@@ -19,16 +19,16 @@
     <meta name="twitter:site" content="@ridercz" />
     <meta name="twitter:title" content="Instalace a konfigurace Kali Linuxu na Hyper-V" />
     <meta name="twitter:description" content="Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu." />
-    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
-    <meta property="article:published_time" content="2018-10-07" />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20211127-kali-linux-na-hyperv.jpg" />
+    <meta property="article:published_time" content="2021-11-27" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta name="author" content="Michal Altair Valášek" />
     <meta name="title" property="og:title" content="Instalace a konfigurace Kali Linuxu na Hyper-V" />
     <meta name="description" property="og:description" content="Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu." />
-    <meta name="image" property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20211127-kali-linux-na-hyperv.jpg" />
     <meta property="og:locale" content="cs_CZ" />
-    <meta property="og:url" content="https://www.altair.blog/2018/10/kali-linux-na-hyperv" />
+    <meta property="og:url" content="https://www.altair.blog/2021/11/kali-linux-na-hyperv" />
     <script>
       (function(f, a, t, h, o, m){
         a[h]=a[h]||function(){
@@ -46,7 +46,7 @@
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="hascover" style="background-image: url(/cover-pictures/20211127-kali-linux-na-hyperv.jpg)">
     <header>
       <div>
         <a href="/">
@@ -130,18 +130,14 @@
           <i class="fal fa-user">​</i>
         </div>
         <div title="Datum vydání">
-          <time datetime="2018-10-07">7. října 2018 <i class="fal fa-calendar-alt">​</i></time>
+          <time datetime="2021-11-27">27. listopadu 2021 <i class="fal fa-calendar-alt">​</i></time>
         </div>
       </aside>
       <section class="article-text">
-        <blockquote>
-<p><strong>Tento text je zastaralý a ponechávám ho zde jenom pro informaci.</strong>
-K dispozici je <a href="/2021/11/kali-linux-na-hyperv">aktualizovaná verze článku</a> z roku 2021 pro verzi Kali 2021.3a.</p>
-</blockquote>
-<p>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Často se používá jako &quot;live&quot; distribuce, která se neinstaluje, ale jenom se nahraje na DVD nebo USB disk a nabootuje. Já ji nicméně používám pro různá dema a laby a mám ji nainstalovanou ve virtualizační platformě Hyper-V.</p>
+        <p>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Často se používá jako &quot;live&quot; distribuce, která se neinstaluje, ale jenom se nahraje na DVD nebo USB disk a nabootuje. Já ji nicméně používám pro různá dema a laby a mám ji nainstalovanou ve virtualizační platformě Hyper-V.</p>
 <p>Pro konkurenční platformy VMWare a VirtualBox jsou k dispozici přímo oficiální předinstalované images. Pro Hyper-V nic takového není a virtuálku si musíte vytvořit sami. Není to obtížné a nádavkem přidávám pár konfiguračních tipů. Takhle konfiguruji svoje Kali já pro účely výuky a dema. Samozřejmě pro praktické použití budete chtít postupovat jiným způsobem.</p>
 <h2 id="ziskani-instalacniho-image-a-vytvoreni-hyper-v-vm">Získání instalačního image a vytvoření Hyper-V VM</h2>
-<p>Instalační ISO image si stáhnete na webu <a href="https://www.kali.org/downloads/">kali.org v sekci Downloads</a>. Bude vás zajímat ten nejběžnější image - <em>Kali Linux 64 bit</em>. V době vydání článku je aktuální verze 2018.3a a můj návod se vztahuje právě k ní - postup je nicméně stejný již mnoho verzí a předpokládám, že bude aktuální i do budoucna.</p>
+<p>Instalační ISO image si stáhnete na webu <a href="https://www.kali.org/downloads/">kali.org v sekci Downloads</a>. Zvolte si možnost <a href="https://www.kali.org/get-kali/#kali-bare-metal">Bare Metal</a> a stáhněte si image NetInstaller. Ten má jenom asi 50 MB a vše potřebné si stáhne až při instalaci. Můžete si stáhnout i kompletní instalační image, který má 3,2 GB. V době vydání článku je aktuální verze 2021.3a a můj návod se vztahuje právě k ní - postup je nicméně stejný již mnoho verzí a předpokládám, že bude aktuální i do budoucna.</p>
 <p><img src="https://www.cdn.altairis.cz/Blog/2018/20181007-kali-01.png" alt="VM musí být &quot;Generation 1&quot;" /></p>
 <p>Vytvoření VM je velmi jednoduché a v průvodci postupujte běžným způsobem. Jenom si dejte pozor, abyste vytvořili <em>Generation 1</em> VM. Po vytvoření VM ji nabootuje z ISO image.</p>
 <h2 id="instalace-operacniho-systemu">Instalace operačního systému</h2>
@@ -149,51 +145,61 @@ K dispozici je <a href="/2021/11/kali-linux-na-hyperv">aktualizovaná verze čl�
 <p>Měla by se vám ukázat úvodní obrazovka s možnostmi umožňujícími spustit Kali jako live distribuci a nebo jej nainstalovat. Zvolte Graphical Install.</p>
 <p>Občas se mi stává, že se boot screen zobrazí chybně - je tam jenom prázdný obrázek bez textu. V takovém případě pomáhá se odpojit (zavřít okno <em>Virtual Machine Connection</em>) a zase se připojit.</p>
 <p>Samotnou instalaci OS nechávám s výchozími hodnotami, včetně regionálních nastavení (je to poněkud zmatené, takže všechno nechávám na English/US a měním dodatečně).</p>
-<p>U Kali se vzhledem k jeho speciálnímu určení vesměs předpokládá, že budete pracovat jako <code>root</code> (administrátor), takže v rámci instalace zadávám jeho heslo a nevytvářím speciálního uživatele.</p>
+<p>U živé distribuce Kali se vzhledem k jejímu speciálnímu určení vesměs předpokládá, že budete pracovat jako <code>root</code> (administrátor), ale při instalaci budete vyzváni k zadání jména a hesla non-root uživatele.</p>
 <h2 id="nastaveni-rozliseni">Nastavení rozlišení</h2>
-<p>Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné editovat soubor <code>/etc/default/grub</code>. Najděte následující řádek:</p>
+<p>Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné (jako root) editovat soubor <code>/etc/lightdm/lightdm.conf</code>. Najděte následující řádek:</p>
 <pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
 </code></pre>
 <p>a nahraďte jej tímto:</p>
 <pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash video=hyperv_fb:1280x720&quot;
 </code></pre>
-<p>Poté spusťte příkaz <code>update-grub</code> a restartujte počítač.</p>
+<p>Poté spusťte příkaz <code>sudo update-grub</code> a restartujte počítač příkazem <code>sudo rebootF</code>.</p>
 <h2 id="nastaveni-automatickeho-prihlasovani">Nastavení automatického přihlašování</h2>
-<p>Pro dema se hodí mít nastavené automatické přihlašování. To zapnete tak, že editujete soubor <code>/etc/gdm3/daemon.conf</code>. Odstraněním <code>#</code> v něm odkomentujte následující řádky:</p>
-<pre><code>AutomaticLoginEnable = true
-AutomaticLogin = root
+<p>Pro dema se hodí mít nastavené automatické přihlašování. To zapnete tak, že editujete soubor <code>/etc/lightdm/lightdm.conf</code>.</p>
+<p>Najděte sekci <code>[Seat:*]</code> a najděte následující řádky:</p>
+<pre><code>#autologin-user=
+#autologin-user-timeout=
 </code></pre>
-<p>To zařídí automatické přihlašování. Ještě je třeba zakázat automatické zamykání konzole a vypínání obrazovky. To se dá udělat ze systémového menu (šipka dolů vpravo nahoře):</p>
+<p>Změňte je následujícím způsobem (místo <em>developer</em> napište jméno svého uživatele):</p>
+<pre><code>autologin-user=developer
+autologin-user-timeout=0
+</code></pre>
+<p>Dále pak jako root editujte soubor <code>/etc/pam.d/lightdm-autologin</code>. Najděte v něm následující řádek:</p>
+<pre><code>auth required pam_succeed_if.so user != root quiet_success
+</code></pre>
+<p>a zakomentujte ho tím, že před něj napíšete <code>#</code>:</p>
+<pre><code>#auth required pam_succeed_if.so user != root quiet_success
+</code></pre>
+<p>To zařídí automatické přihlašování. Vyzkoušejte to tím, že restartujete počítač.</p>
+<h2 id="zakaz-zamykani-konzole-a-vypinani-obrazovky">Zákaz zamykání konzole a vypínání obrazovky</h2>
+<p>Ještě je třeba zakázat automatické zamykání konzole a vypínání obrazovky. To se dá udělat ze systémového menu (logo Kali vlevo nahoře) vyberete <em>Settings &gt; Power Manager</em>.</p>
 <ul>
-<li><em>Settings &gt; Power &gt; Blank screen</em></li>
-<li><em>Settings &gt; Privacy &gt; Screen lock</em></li>
+<li>Na záložce <em>Display</em> vypněte <em>Display power management</em> a přetáhněte slider <em>Blank after</em> úplně doleva (na <em>Never</em>).</li>
+<li>Na záložce <em>Security</em> nastavte <em>Automatically lock the session</em> na <em>Never</em>.</li>
 </ul>
-<h2 id="regionalni-nastaveni">Regionální nastavení</h2>
-<p>Chci, aby na mne systém mluvil anglicky, ale abych měl českou QWERTY klávesnici, české formáty datumu a času a českou časovou zónu. To se dá opět udělat ze systémového menu v <em>Settings &gt; Region &amp; Language</em>.</p>
-<h2 id="nastaveni-pozadi">Nastavení pozadí</h2>
-<p>Všechny moje VM pro dema mají na pozadí vycentrované firemní logo a barvu, která je specifická pro dané VM, aby se daly snadno rozeznat. To je nejjednodušší nastavit z příkazové řádky následujícími příkazy:</p>
-<pre><code>gsettings set org.gnome.desktop.background picture-uri &quot;file:///root/Pictures/Wallpapers/Altairis-Background-for-Virtual-PC.png&quot;
-gsettings set org.gnome.desktop.background picture-options &quot;centered&quot;
-gsettings set org.gnome.desktop.background primary-color &quot;#F26631&quot;
-</code></pre>
+<h2 id="nastaveni-rozlozeni-klavesnice">Nastavení rozložení klávesnice</h2>
+<p>V systémovém menu vyberte <em>Settings &gt; Keyboard</em>. Na záložce Layout zakažte <em>Use system defaults</em> a v části <em>Keyboard layout</em> klepněte na <em>Edit</em> a vyberte požadované rozložení klávesnice.</p>
+<blockquote>
+<p>Pokud se vám zdá, že jste podobný článek již v minulosti četli, tak se vám to nezdá. O instalaci Kali na Hyper-V jsem už psal <a href="/2018/10/kali-linux-na-hyperv">v říjnu 2018</a>. Toto je verze aktualizovaná pro Kali 2021.3a.</p>
+</blockquote>
 
       </section>
       <section class="issues">
         <header>
           <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
-        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Instalace+a+konfigurace+Kali+Linuxu+na+Hyper-V&amp;body=https://www.altair.blog/2018/10/kali-linux-na-hyperv">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2018/10/kali-linux-na-hyperv.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
-        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2018/10/kali-linux-na-hyperv.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Instalace+a+konfigurace+Kali+Linuxu+na+Hyper-V&amp;body=https://www.altair.blog/2021/11/kali-linux-na-hyperv">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2021/11/kali-linux-na-hyperv.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2021/11/kali-linux-na-hyperv.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>
         <ul>
           <li>
-            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2018/10/kali-linux-na-hyperv">
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2021/11/kali-linux-na-hyperv">
               <i class="fab fa-twitter">​</i>
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2018/10/kali-linux-na-hyperv">
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2021/11/kali-linux-na-hyperv">
               <i class="fab fa-facebook-f">​</i>
             </a>
           </li>

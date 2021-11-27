@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/11/kali-linux-na-hyperv</guid>
+      <title>Instalace a konfigurace Kali Linuxu na Hyper-V</title>
+      <description>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu.</description>
+      <link>https://www.altair.blog/2021/11/kali-linux-na-hyperv</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <category>Software</category>
+      <pubDate>2021-11-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-2</guid>
       <title>Jak zastavit robotické depo Zásilkovny: Hardware</title>
       <description>V minulém videu jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč.</description>
@@ -141,16 +152,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-09-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/09/openscad</guid>
-      <title>Přehled dílů online školení 3D modelování v OpenSCADu</title>
-      <description>Jak jste patrně již zaznamenali, na novém technickém YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, běží bezplatný online kurz modelování v OpenSCADu. Pro přehlednost přináším přehled všech dosud vydaných i připravovaných dílů.</description>
-      <link>https://www.altair.blog/2021/09/openscad</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>3D tisk</category>
-      <pubDate>2021-09-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
