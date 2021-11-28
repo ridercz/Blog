@@ -38,6 +38,15 @@ U živé distribuce Kali se vzhledem k jejímu speciálnímu určení vesměs p�
 
 V systémovém menu vyberte _Settings > Keyboard_. Na záložce Layout zakažte _Use system defaults_ a v části _Keyboard layout_ klepněte na _Edit_ a vyberte požadované rozložení klávesnice.
 
+## Instalace nástrojů
+
+Současná verze Kali je "štíhlejší" než byly verze předchozí. Pokud chcete nainstalovat sadu stejných nástrojů, jaká byla výchozí v předchozí verzi, můžete tak učinit následujícím příkazem:
+
+```bash
+sudo apt-get update && sudo apt-get install kali-linux-large -y
+```
+Podrobnější informace o metapackages najdete v [dokumentaci Kali](https://www.kali.org/docs/general-use/metapackages/).
+
 ## Nastavení rozlišení
 
 Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné (jako root) editovat soubor `/etc/default/grub`. Najděte následující řádek:
