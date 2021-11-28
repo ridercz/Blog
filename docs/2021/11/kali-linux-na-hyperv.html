@@ -146,14 +146,19 @@
 <p>Občas se mi stává, že se boot screen zobrazí chybně - je tam jenom prázdný obrázek bez textu. V takovém případě pomáhá se odpojit (zavřít okno <em>Virtual Machine Connection</em>) a zase se připojit.</p>
 <p>Samotnou instalaci OS nechávám s výchozími hodnotami, včetně regionálních nastavení (je to poněkud zmatené, takže všechno nechávám na English/US a měním dodatečně).</p>
 <p>U živé distribuce Kali se vzhledem k jejímu speciálnímu určení vesměs předpokládá, že budete pracovat jako <code>root</code> (administrátor), ale při instalaci budete vyzváni k zadání jména a hesla non-root uživatele.</p>
+<h2 id="nastaveni-rozlozeni-klavesnice">Nastavení rozložení klávesnice</h2>
+<p>V systémovém menu vyberte <em>Settings &gt; Keyboard</em>. Na záložce Layout zakažte <em>Use system defaults</em> a v části <em>Keyboard layout</em> klepněte na <em>Edit</em> a vyberte požadované rozložení klávesnice.</p>
 <h2 id="nastaveni-rozliseni">Nastavení rozlišení</h2>
-<p>Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné (jako root) editovat soubor <code>/etc/lightdm/lightdm.conf</code>. Najděte následující řádek:</p>
+<p>Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné (jako root) editovat soubor <code>/etc/default/grub</code>. Najděte následující řádek:</p>
 <pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
 </code></pre>
 <p>a nahraďte jej tímto:</p>
 <pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash video=hyperv_fb:1280x720&quot;
 </code></pre>
-<p>Poté spusťte příkaz <code>sudo update-grub</code> a restartujte počítač příkazem <code>sudo rebootF</code>.</p>
+<p>Poté spusťte příkaz <code>sudo update-grub</code> a restartujte počítač příkazem <code>sudo reboot</code>.</p>
+<blockquote>
+<p>Postupem popsaným v článku <a href="https://www.kali.org/docs/virtualization/install-hyper-v-guest-enhanced-session-mode/">Installing Hyper-V Enhanced Session Mode</a> by mělo být možné nastavit podporu Enhanced Session v Hyper-V, což by umožnilo nastavení rozlišení z klienta. To se mi ale nikdy nepodařilo rozchodit.</p>
+</blockquote>
 <h2 id="nastaveni-automatickeho-prihlasovani">Nastavení automatického přihlašování</h2>
 <p>Pro dema se hodí mít nastavené automatické přihlašování. To zapnete tak, že editujete soubor <code>/etc/lightdm/lightdm.conf</code>.</p>
 <p>Najděte sekci <code>[Seat:*]</code> a najděte následující řádky:</p>
@@ -177,8 +182,6 @@ autologin-user-timeout=0
 <li>Na záložce <em>Display</em> vypněte <em>Display power management</em> a přetáhněte slider <em>Blank after</em> úplně doleva (na <em>Never</em>).</li>
 <li>Na záložce <em>Security</em> nastavte <em>Automatically lock the session</em> na <em>Never</em>.</li>
 </ul>
-<h2 id="nastaveni-rozlozeni-klavesnice">Nastavení rozložení klávesnice</h2>
-<p>V systémovém menu vyberte <em>Settings &gt; Keyboard</em>. Na záložce Layout zakažte <em>Use system defaults</em> a v části <em>Keyboard layout</em> klepněte na <em>Edit</em> a vyberte požadované rozložení klávesnice.</p>
 <blockquote>
 <p>Pokud se vám zdá, že jste podobný článek již v minulosti četli, tak se vám to nezdá. O instalaci Kali na Hyper-V jsem už psal <a href="/2018/10/kali-linux-na-hyperv">v říjnu 2018</a>. Toto je verze aktualizovaná pro Kali 2021.3a.</p>
 </blockquote>

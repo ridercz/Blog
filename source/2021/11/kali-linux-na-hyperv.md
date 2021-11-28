@@ -34,9 +34,13 @@ Samotnou instalaci OS nechávám s výchozími hodnotami, včetně regionálníc
 
 U živé distribuce Kali se vzhledem k jejímu speciálnímu určení vesměs předpokládá, že budete pracovat jako `root` (administrátor), ale při instalaci budete vyzváni k zadání jména a hesla non-root uživatele.
 
+## Nastavení rozložení klávesnice
+
+V systémovém menu vyberte _Settings > Keyboard_. Na záložce Layout zakažte _Use system defaults_ a v části _Keyboard layout_ klepněte na _Edit_ a vyberte požadované rozložení klávesnice.
+
 ## Nastavení rozlišení
 
-Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné (jako root) editovat soubor `/etc/lightdm/lightdm.conf`. Najděte následující řádek:
+Po instalaci má počítač nastavené rozlišení 1152x864 (XGA+). Já Kali používám hodně pro prezentace a videa a tam se hodí širokoúhlé rozlišení - já používám 1280x720. Pro jeho nastavení je nutné (jako root) editovat soubor `/etc/default/grub`. Najděte následující řádek:
 
     GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 
@@ -44,7 +48,9 @@ a nahraďte jej tímto:
 
     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1280x720"
 
-Poté spusťte příkaz `sudo update-grub` a restartujte počítač příkazem `sudo rebootF`.
+Poté spusťte příkaz `sudo update-grub` a restartujte počítač příkazem `sudo reboot`.
+
+> Postupem popsaným v článku [Installing Hyper-V Enhanced Session Mode](https://www.kali.org/docs/virtualization/install-hyper-v-guest-enhanced-session-mode/) by mělo být možné nastavit podporu Enhanced Session v Hyper-V, což by umožnilo nastavení rozlišení z klienta. To se mi ale nikdy nepodařilo rozchodit.
 
 ## Nastavení automatického přihlašování
 
@@ -76,9 +82,5 @@ Ještě je třeba zakázat automatické zamykání konzole a vypínání obrazov
 
 * Na záložce _Display_ vypněte _Display power management_ a přetáhněte slider _Blank after_ úplně doleva (na _Never_).
 * Na záložce _Security_ nastavte _Automatically lock the session_ na _Never_.
-
-## Nastavení rozložení klávesnice
-
-V systémovém menu vyberte _Settings > Keyboard_. Na záložce Layout zakažte _Use system defaults_ a v části _Keyboard layout_ klepněte na _Edit_ a vyberte požadované rozložení klávesnice.
 
 > Pokud se vám zdá, že jste podobný článek již v minulosti četli, tak se vám to nezdá. O instalaci Kali na Hyper-V jsem už psal [v říjnu 2018](/2018/10/kali-linux-na-hyperv). Toto je verze aktualizovaná pro Kali 2021.3a.
