@@ -1,5 +1,5 @@
 <!-- dcterms:title = Jak zastavit robotické depo Zásilkovny: Bezpečnost -->
-<!-- dcterms:abstract = Časté dotazy ke stop tlačítku prom robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS. -->
+<!-- dcterms:abstract = Časté dotazy ke stop tlačítku pro robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20211202-robodepo-3.jpg -->
 <!-- x4w:pictureWidth = 150 -->
@@ -10,7 +10,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:dateAccepted = 2021-12-02 -->
 
-Časté dotazy ke stop tlačítku prom robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.
+Časté dotazy ke stop tlačítku pro robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.
 
 <div style="position:relative;padding-top:56.25%;">
   <iframe src="https://www.youtube-nocookie.com/embed/FWUkR0MhXIA" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>

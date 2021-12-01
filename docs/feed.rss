@@ -8,7 +8,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/12/robodepo-3</guid>
       <title>Jak zastavit robotické depo Zásilkovny: Bezpečnost</title>
-      <description>Časté dotazy ke stop tlačítku prom robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.</description>
+      <description>Časté dotazy ke stop tlačítku pro robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.</description>
       <link>https://www.altair.blog/2021/12/robodepo-3</link>
       <author>Michal Altair Valášek</author>
       <category>Z-TECH</category>
