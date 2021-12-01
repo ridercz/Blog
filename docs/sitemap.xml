@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.altair.blog/2021/12/robodepo-3</loc>
+    <lastmod>2021-12-02</lastmod>
+  </url>
+  <url>
     <loc>https://www.altair.blog/2021/11/kali-linux-na-hyperv</loc>
     <lastmod>2021-11-27</lastmod>
   </url>
