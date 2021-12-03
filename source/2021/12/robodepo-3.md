@@ -44,7 +44,7 @@ Z tohoto důvodu jsem dospěl k poněkud netradičnímu řešení: HTTPS sice po
 
 Ochranu zajistí podepisování zaslané zprávy, přesněji query stringových parametrů URL. Tomuto tématu jsem se už na tomto blogu věnoval ve [dvou](https://www.altair.blog/2019/08/url-signer) [článcích](https://www.altair.blog/2019/08/url-signer-jeste-jednou).
 
-Používám zde algoritmus HMAC (Hash Message Authentication Code). Každé zařízení má svůj vlastní tajný klíč. To jsou náhodně vygenerovaná data, pro každé zařízení jiná, známá jenom tomu zařízení (jsou uložena v konfiguraci) a serveru, který má podpis ověřit. HAMC funguje tak, že se vezme podepisovaná zpráva a přidá se k ní tajný klíč a z toho celého se spočítá kryptografický hash, v našem případě SHA256.
+Používám zde algoritmus HMAC (Hash Message Authentication Code). Každé zařízení má svůj vlastní tajný klíč. To jsou náhodně vygenerovaná data, pro každé zařízení jiná, známá jenom tomu zařízení (jsou uložena v konfiguraci) a serveru, který má podpis ověřit. HMAC funguje tak, že se vezme podepisovaná zpráva a přidá se k ní tajný klíč a z toho celého se spočítá kryptografický hash, v našem případě SHA256.
 
 > Celý ten mechanismus je o něco komplikovanější, aby byl celý proces odolnější proti různým druhům útoků. Podrobnější informace najdete příkladmo na [Wikipedii](https://en.wikipedia.org/wiki/HMAC).
 
