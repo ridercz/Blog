@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2021/12/vykrajovatka</guid>
+      <title>3D tisk vánočních vykrajovátek</title>
+      <description>Vykrajovátka na vánoční cukroví jsou oblíbeným produktem 3D tiskařů. Lze je vyrobit velice snadno, rychle se tisknou a potěší skoro každého - snad kromě nás diabetiků. Patřičný model lze vytvořit mnoha různými způsoby. Já vám ukážu, jak můžete z libovolného obrysového obrázku udělat vykrajovátko pomocí grafického editoru Inkscape a OpenSCADu.</description>
+      <link>https://www.altair.blog/2021/12/vykrajovatka</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <category>Z-TECH</category>
+      <pubDate>2021-12-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/12/robodepo-3</guid>
       <title>Jak zastavit robotické depo Zásilkovny: Bezpečnost</title>
       <description>Časté dotazy ke stop tlačítku pro robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.</description>
@@ -143,16 +153,6 @@
       <link>https://www.altair.blog/2021/10/nejzbytecnejsi-volby</link>
       <author>Michal Altair Valášek</author>
       <pubDate>2021-10-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/10/privesky</guid>
-      <title>Praktické modelování v OpenSCADU: číslované přívěšky</title>
-      <description>Ve své oblíbené 3D tiskařské skupině na Facebooku jsem našel zajímavý dotaz. Někdo se ptal, jak jednoduše udělat 120 modelů štítků na klíče, s čísly od 1 do 120. To je naprosto skvělé zadání pro OpenSCAD, takže jsem natočil krátké video, jak na to.</description>
-      <link>https://www.altair.blog/2021/10/privesky</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>3D tisk</category>
-      <pubDate>2021-10-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
