@@ -1,5 +1,5 @@
 <!-- dcterms:title = C# pro mírně pokročilé: IEquatable, IComparable a operátory -->
-<!-- dcterms:abstract = Dnešní video o C# pro mírně pokročilé se zabývá rozhraními IEquatable, IComparable, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářeř třídu pro reprezentaci hodnoty úhlu. -->
+<!-- dcterms:abstract = Dnešní video o C# pro mírně pokročilé se zabývá rozhraními IEquatable, IComparable, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářet třídu pro reprezentaci hodnoty úhlu. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20211216-csharp-oper.jpg -->
 <!-- x4w:pictureWidth = 150 -->
@@ -9,7 +9,7 @@
 <!-- x4w:category = IT -->
 <!-- dcterms:dateAccepted = 2021-12-26 -->
 
-Dnešní video o C# pro mírně pokročilé se zabývá rozhraními `IEquatable`, `IComparable`, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářeř třídu pro reprezentaci hodnoty úhlu.
+Dnešní video o C# pro mírně pokročilé se zabývá rozhraními `IEquatable`, `IComparable`, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářet třídu pro reprezentaci hodnoty úhlu.
 
 <div style="position:relative;padding-top:56.25%;">
   <iframe src="https://www.youtube-nocookie.com/embed/0Qn_S9sCR4g" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>

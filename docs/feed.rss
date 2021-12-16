@@ -8,7 +8,7 @@
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2021/12/csharp-oper</guid>
       <title>C# pro mírně pokročilé: IEquatable, IComparable a operátory</title>
-      <description>Dnešní video o C# pro mírně pokročilé se zabývá rozhraními IEquatable, IComparable, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářeř třídu pro reprezentaci hodnoty úhlu.</description>
+      <description>Dnešní video o C# pro mírně pokročilé se zabývá rozhraními IEquatable, IComparable, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářet třídu pro reprezentaci hodnoty úhlu.</description>
       <link>https://www.altair.blog/2021/12/csharp-oper</link>
       <author>Michal Altair Valášek</author>
       <category>Z-TECH</category>
