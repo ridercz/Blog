@@ -6,6 +6,7 @@
 <!-- x4w:pictureUrl = /perex-pictures/20200723-evolby.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Politika -->
 <!-- dcterms:dateAccepted = 2021-10-06 -->
 
 V pátek začnou nejdůležitější volby v historii státu a určitě běžte volit. To je asi jediná věc, na které se shodnou Babiš, Okamura, Bartoš, Fiala i ten pán, na kterého momentálně vyšlo předsednictví ČSSD. Asi jediný kdo tvrdí opak je Urza, ale ten je všeobecně podezřelej, zejména tím že volby neprezentuje jako instantní cestu k blahobytu.
