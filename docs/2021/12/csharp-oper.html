@@ -136,6 +136,9 @@
 </div>
 <h2 id="rozhrani-iequatable">Rozhraní IEquatable</h2>
 <p>Rozhraní <code>IEquatable</code> a jeho generická varianta <code>IEquatable&lt;T&gt;</code> definují různé overloady metody <code>Equals</code>, která umožňuje rozhodnout, zda jsou si dvě různé instance téže třídy rovny. Nikoliv z hlediska C# a .NET (např. zda se jedná o tutéž instanci nebo zda mají jejich vlastnosti tutéž hodnotu), ale z hlediska vnitřní logiky oné třídy samé.</p>
+<blockquote>
+<p>Řeč je z krátkosti jenom o třídách, ale i <code>struct</code> nebo <code>record</code> může implementovat interface a článek se na ně vztahuje také.</p>
+</blockquote>
 <p>Například naše třída <code>Angle</code>, reprezentující rovinný úhel, může být zadána několika způsoby. V desetinných stupních, minutách nebo vteřinách, případně v radiánech. Platí tedy, že <em>12,5°</em> a <em>12°30'</em> nebo <em>90°</em> a <em>π / 2 rad</em> reprezentují tytéž hodnoty a toto rozhraní to dokáže postihnout.</p>
 <h2 id="rozhrani-icomparable">Rozhraní IComparable</h2>
 <p>I rozhraní <code>IComparable</code> má generickou variantu <code>IComparable&lt;T&gt;</code> a je o něco schopnější, než to předchozí. Metoda <code>CompareTo</code> dokáže porovnat dvě instance téže třídy a vrátit <code>-1</code>, <code>0</code> nebo <code>1</code> podle toho, která z nich je větší. Opět platí, že co je <em>větší</em> a co <em>menší</em> rozhoduje vnitřní logika dané třídy.</p>

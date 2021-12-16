@@ -19,6 +19,8 @@ Dnešní video o C# pro mírně pokročilé se zabývá rozhraními `IEquatable`
 
 Rozhraní `IEquatable` a jeho generická varianta `IEquatable<T>` definují různé overloady metody `Equals`, která umožňuje rozhodnout, zda jsou si dvě různé instance téže třídy rovny. Nikoliv z hlediska C# a .NET (např. zda se jedná o tutéž instanci nebo zda mají jejich vlastnosti tutéž hodnotu), ale z hlediska vnitřní logiky oné třídy samé.
 
+> Řeč je z krátkosti jenom o třídách, ale i `struct` nebo `record` může implementovat interface a článek se na ně vztahuje také.
+
 Například naše třída `Angle`, reprezentující rovinný úhel, může být zadána několika způsoby. V desetinných stupních, minutách nebo vteřinách, případně v radiánech. Platí tedy, že _12,5°_ a _12°30'_ nebo _90°_ a _&pi; / 2 rad_ reprezentují tytéž hodnoty a toto rozhraní to dokáže postihnout.
 
 ## Rozhraní IComparable
