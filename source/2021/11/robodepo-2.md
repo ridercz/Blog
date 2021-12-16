@@ -8,6 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bastlení -->
+<!-- x4w:serial = Robotické depo -->
 <!-- dcterms:dateAccepted = 2021-11-26 -->
 
 V [minulém videu](https://www.altair.blog/2021/11/robodepo-1) jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč.

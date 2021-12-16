@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210909-csharp-properties.jpg-->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = C# pro mírně pokročilé -->
 <!-- dcterms:dateAccepted = 2021-09-09 -->
 
 Vlastnosti (properties) v C# umožňují publikovat privátní fieldy navenek. Bez konceptu vlastností se v zásadě obejdete: některé programovací jazyky ho vůbec nemají a nahrazují je getter a setter metodami:

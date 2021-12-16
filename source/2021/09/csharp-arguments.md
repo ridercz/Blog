@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210916-csharp-arguments.jpg-->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = C# pro mírně pokročilé -->
 <!-- dcterms:dateAccepted = 2021-09-16 -->
 
 Metody (procedury, funkce...) a jejich argumenty jsou v C# základní jazykovou konstrukcí. Za dvacet let existence jazyka však doznaly změn a značného vývoje, již tradičně směrem ke zjednodušení a zpříjemnění práce programátora. V dnešním videu si ukážeme, k čemu slouží klíčová slova `in` a `out`, operátor `nameof` či caller info attributes.

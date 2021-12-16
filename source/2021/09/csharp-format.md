@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210923-csharp-format.jpg-->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = C# pro mírně pokročilé -->
 <!-- dcterms:dateAccepted = 2021-09-23 -->
 
 Řetězce se v C# zapisují do uvozovek a pro speciální znaky se používají stejné escape sekvence jako v C, tedy zpětné lomítko a za ním něco dalšího. Např. pomocí sekvence `\"` lze zapsat uvozovky jako součást řetězce, `\r\n` je zalomení řádku pomocí CRLF a `\\` je obyčejné zpětné lomítko. 

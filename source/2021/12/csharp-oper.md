@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20211216-csharp-oper.jpg-->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = C# pro mírně pokročilé -->
 <!-- dcterms:dateAccepted = 2021-12-16 -->
 
 Dnešní video o C# pro mírně pokročilé se zabývá rozhraními `IEquatable`, `IComparable`, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářet třídu pro reprezentaci hodnoty úhlu.

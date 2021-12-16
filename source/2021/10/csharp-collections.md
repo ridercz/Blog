@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20211007-csharp-collections.jpg-->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = C# pro mírně pokročilé -->
 <!-- dcterms:dateAccepted = 2021-10-07 -->
 
 Kolekce v C# slouží k práci s větším množstvím objektů stejného typu. Je jich mnoho druhů a každý se hodí k něčemu trochu jinému. V dnešním videu z série C# pro mírně pokročilé se na ně podíváme trochu důkladněji.

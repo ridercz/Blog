@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20200512-taghelpers.png-->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = C# pro mírně pokročilé -->
 <!-- dcterms:dateAccepted = 2021-08-19 -->
 
 C# je univerzální imperativní procedurální objektový reflexivní staticky typovaný jazyk s unifikovaným systémem typů. To vám teoreticky říká vše, co o něm potřebujete vědět. Ale co to znamená? A je to po dvaceti letech vývoje vlastně ještě vůbec pravda?

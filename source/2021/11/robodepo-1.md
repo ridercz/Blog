@@ -7,6 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20211118-robodepo-1.jpg -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:serial = Robotické depo -->
 <!-- dcterms:dateAccepted = 2021-11-18 -->
 
 Zásilkovna před nedávnem ve Šterboholích otevřela nové depo. Je první svého druhu, protože zásilky v něm třídí roboti. Bez lidí se zatím úplně neobejdou, ale jsou jich skoro dvě stovky a hrají proti lidem výraznou přesilovku. Depo jsem navštívil a po technickém řediteli Zásilkovny, Adamu Hörzenbergerovi, vyzvěděl jak funguje. A zároveň jsem v rámci projektu dostal úkol: navrhnout tlačítko, které ho celé zastaví.

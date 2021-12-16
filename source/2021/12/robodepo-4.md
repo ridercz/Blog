@@ -8,6 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
+<!-- x4w:serial = Robotické depo -->
 <!-- dcterms:dateAccepted = 2021-12-11 -->
 
 Software pro Z-Button je ve skutečnosti docela jednoduchý, ostatně nechce se od něj nic jiného, než aby na stisk tlačítka udělal HTTP request plus nějaká konfigurační omáčka kolem. Ve skutečnosti je ta konfigurační omáčka v podstatě to nejsložitější.
