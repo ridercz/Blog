@@ -1,5 +1,5 @@
 <!-- dcterms:title = Špatná nálada -->
-<!-- dcterms:abstract = Letošní vánoční povídka je tak trochu fantasy a nikdo v ní nemá dobrou náladu. Ale nebojte se, zlepší se to - i když podle hesla, že nejčistší lidská radost je škodolibost. A jak se ukáže, nejenom lidská. Tahle povídka vznikla trochu zvláštním způsobem. Nejdřív byla ilustrace a teprve potom text. Nechal jsem svou kamarádku _Nyemi_, ať nakreslí nějaký obrázek, dle své volby. Téma jsem nechal zcela na ní a slíbil jí, že na základě jejího obrázku napíšu S/M povídku. Jak to dopadlo můžete posoudit sami. -->
+<!-- dcterms:abstract = Letošní vánoční povídka je tak trochu fantasy a nikdo v ní nemá dobrou náladu. Ale nebojte se, zlepší se to - i když podle hesla, že nejčistší lidská radost je škodolibost. A jak se ukáže, nejenom lidská. Tahle povídka vznikla trochu zvláštním způsobem. Nejdřív byla ilustrace a teprve potom text. Nechal jsem svou kamarádku Nyemi, ať nakreslí nějaký obrázek, dle své volby. Téma jsem nechal zcela na ní a slíbil jí, že na základě jejího obrázku napíšu S/M povídku. Jak to dopadlo můžete posoudit sami. -->
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:dateAccepted = 2020-12-24 -->

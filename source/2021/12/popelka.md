@@ -1,0 +1,9 @@
+<!-- dcterms:title = Popelka ze statku -->
+<!-- dcterms:abstract = Veřejný diskurz je plný pohoršení nad zahraničním remakem Tří oříšků pro Popelku. Rozhodl jsem se k němu přispět tím, že jsem jako letošní vánoční povídku napsal její S/M remix. A smazat tak dluh, který u mne filmové zpracování má už pětatřicet let. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20211226-popelka.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:dateAccepted = 2021-12-26 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2021/12/popelka -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2021/12/popelka</guid>
+      <title>Popelka ze statku</title>
+      <description>Veřejný diskurz je plný pohoršení nad zahraničním remakem Tří oříšků pro Popelku. Rozhodl jsem se k němu přispět tím, že jsem jako letošní vánoční povídku napsal její S/M remix. A smazat tak dluh, který u mne filmové zpracování má už pětatřicet let.</description>
+      <link>https://www.bdsm.cz/2021/12/popelka</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2021-12-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</guid>
       <title>Umělá inteligence GitHub Copilot má vývojářům pomáhat, do kódu jim ale přidává bezpečnostní chyby</title>
       <description>Měla to být velká pomoc programátorům. Umělá inteligence GitHub Copilot umí programátorům navrhnout kód, který nejspíš chtějí napsat. Řídí se přitom analýzou kódu mnoha open source projektů. Aktuální studie však ukázala, že 40 procent návrhů vytvořených na základě strojového učení obsahuje bezpečnostní chyby. To je samozřejmě bezprostřední problém, ale ukazuje to i na obecné limity toho, čemu rádi říkáme umělá inteligence.</description>
@@ -140,16 +149,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2021-04-16T16:30:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-covid-a-michelangelo/</guid>
-      <title>Covid a Michelangelo</title>
-      <description>Začalo to všechno vlastně zcela nenápadně. Psal se rok 1949 a jistý Neumann János Lajos na universitě v Illionis držel přednášku s komplikovaným názvem "Teorie a organizace složitých automatů". Tak se zrodil koncept počítačového viru. A ty klasické mají hodně společného s těmi organickými, jako momentálně populární koronavirus SARS-CoV-2.</description>
-      <link>https://byznysvcesku.cz/michal-valasek-covid-a-michelangelo/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-15T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
