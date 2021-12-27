@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.altair.blog/2021/12/cs10-namespaces</loc>
+    <lastmod>2021-12-27</lastmod>
+  </url>
+  <url>
     <loc>https://www.altair.blog/2021/12/csharp-oper</loc>
     <lastmod>2021-12-16</lastmod>
   </url>
