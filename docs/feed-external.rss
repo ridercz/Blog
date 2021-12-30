@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://youtu.be/C3ljUE0q3U8</guid>
+      <title>Jak vznikají chyby: příběh inspirovaný Log4Shell</title>
+      <description>Jak vlastně vznikají bezpečnostní chyby v software? Jak je možné, že jsou v rozšířených knihovnách, které používá spousta projektů? A proč nestačí, když se chyba opraví a vydá se nová verze? Mnoho čtenářů mého blogu a diváků kanálu Z-TECH to ví, protože je s celým procesem intimně obeznámena (začasté mnohem intimněji, než by si byli přáli). Pro ty ostatní jsem natočil video, inspirované aktuálním bezpečnostním průšvihem.</description>
+      <link>https://youtu.be/C3ljUE0q3U8</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>Bezpečnost</category>
+      <pubDate>2021-12-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2021/12/popelka</guid>
       <title>Popelka ze statku</title>
       <description>Veřejný diskurz je plný pohoršení nad zahraničním remakem Tří oříšků pro Popelku. Rozhodl jsem se k němu přispět tím, že jsem jako letošní vánoční povídku napsal její S/M remix. A smazat tak dluh, který u mne filmové zpracování má už pětatřicet let.</description>
@@ -139,16 +149,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2021-04-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416</guid>
-      <title>Rozhovor k plánu Hospodářské komory na mobilní aplikaci pro rozvolnění covidových opatření</title>
-      <description>Hospodářská komora plánuje - pokud bude stát spolupracovat - vytvořit mobilní aplikaci, která by měla pomoci s otevřením provozoven a kontrolou testů a očkování. To ale není jednoduché a nese to s sebou potenciální rizika. ČT 24 na toto téma odvysílala rozhovor s viceprezidentem HK Zdeňkem Zajíčkem a mnou jako nezávislým IT expertem.</description>
-      <link>https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-16T16:30:00</pubDate>
     </item>
   </channel>
 </rss>
