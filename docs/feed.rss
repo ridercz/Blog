@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67023950-psms7-add8e8bde7bdde9</guid>
+      <title>Jadernou hlavicí na mravence aneb Na koho míří britská kampaň proti šifrování</title>
+      <description>Britská vláda spustila pod značkou No place to hide další kampaň proti end to end šifrování. Moc se k ní tedy nehlásí, snaží se místo toho, aby celá věc vypadala jako přirozená aktivita několika organizací snažících se o ochranu dětí.</description>
+      <link>https://tech.hn.cz/c7-67023950-psms7-add8e8bde7bdde9</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/01/tisk-textu</guid>
       <title>Tisk textu na 3D tiskárnách</title>
       <description>Vymodelovat text v OpenSCADu je snadné. Ale jak ho tisknout? Vypadá lépe extrudovaný nebo embosovaný? Tisknutý na horní, spodní nebo boční stranu? Vyplatí se používat ironing?</description>
@@ -147,16 +157,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-11-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/dotnet-raspi-5</guid>
-      <title>ASP.NET na Raspberry Pi: Raspberry Pi Zero 2 a Framework-Dependent Deployment</title>
-      <description>Seriál o ASP.NET Core na Raspberry Pi měl původně mít jenom čtyři pokračování. Ale výrobce v jeho průběhu uvedl nový model, Raspberry Pi Zero 2. Ten je z mnoha důvodů zajímavý, takže jsem mu věnoval bonusový, pátý díl seriálu. A zároveň jsem popsal, jak používat framework-dependent deployment, tedy jak nainstalovat na Raspberry .NET runtime a provozovat univerzální multiplatformní binárky.</description>
-      <link>https://www.altair.blog/2021/11/dotnet-raspi-5</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-11-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

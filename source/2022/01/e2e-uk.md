@@ -1,0 +1,10 @@
+<!-- dcterms:title = Jadernou hlavicí na mravence aneb Na koho míří britská kampaň proti šifrování -->
+<!-- dcterms:abstract = Britská vláda spustila pod značkou No place to hide další kampaň proti end to end šifrování. Moc se k ní tedy nehlásí, snaží se místo toho, aby celá věc vypadala jako přirozená aktivita několika organizací snažících se o ochranu dětí. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-01-19 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220119-e2e-uk.png -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67023950-psms7-add8e8bde7bdde9 -->

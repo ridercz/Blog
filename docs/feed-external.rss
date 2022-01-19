@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67023950-psms7-add8e8bde7bdde9</guid>
+      <title>Jadernou hlavicí na mravence aneb Na koho míří britská kampaň proti šifrování</title>
+      <description>Britská vláda spustila pod značkou No place to hide další kampaň proti end to end šifrování. Moc se k ní tedy nehlásí, snaží se místo toho, aby celá věc vypadala jako přirozená aktivita několika organizací snažících se o ochranu dětí.</description>
+      <link>https://tech.hn.cz/c7-67023950-psms7-add8e8bde7bdde9</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://youtu.be/C3ljUE0q3U8</guid>
       <title>Jak vznikají chyby: příběh inspirovaný Log4Shell</title>
       <description>Jak vlastně vznikají bezpečnostní chyby v software? Jak je možné, že jsou v rozšířených knihovnách, které používá spousta projektů? A proč nestačí, když se chyba opraví a vydá se nová verze? Mnoho čtenářů mého blogu a diváků kanálu Z-TECH to ví, protože je s celým procesem intimně obeznámena (začasté mnohem intimněji, než by si byli přáli). Pro ty ostatní jsem natočil video, inspirované aktuálním bezpečnostním průšvihem.</description>
@@ -139,16 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT historie</category>
       <pubDate>2021-04-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff</guid>
-      <title>Hospodářská komora navrhuje aplikaci pro uvolnění po covidu. Míč je ale na straně státu</title>
-      <description>Hospodářská komora v pátek představila návrh aplikace, která by měla pomoci s otevíráním provozoven obchodů a služeb. Předpokládá, že stát pro otevření provozoven stanoví nějaké podmínky pro podnikatele i zákazníky, a chce živnostníkům a firmám usnadnit plnění těchto podmínek. Snaha je to dobrá a jistě chvályhodná, ale naráží na nedostatek ochoty státu konat – nebo alespoň o budoucnosti podnikání pod vlivem covidu jednat.</description>
-      <link>https://tech.ihned.cz/c7-66911170-psms7-4fa093f1a483dff</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-04-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
