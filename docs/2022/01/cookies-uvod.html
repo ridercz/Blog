@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cookies: Co jsou a jak fungují? | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2022/01/cookies-uvod" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Cookies: Co jsou a jak fungují?" />
+    <meta name="twitter:description" content="Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?" />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20220120-cookies-uvod.jpg" />
+    <meta property="article:published_time" content="2022-01-20" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Cookies: Co jsou a jak fungují?" />
+    <meta name="description" property="og:description" content="Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?" />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20220120-cookies-uvod.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2022/01/cookies-uvod" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20220120-cookies-uvod.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Cookies: Co jsou a jak fungují?</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <ul class="serials">
+          <li>
+            <a href="/serials/cookies" title="Seriál">
+              <i class="fal fa-list-alt"> </i>Cookies</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2022-01-20">20. ledna 2022 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">Ali Jouyandeh  via Unsplash.com <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/HxEtTXfGQyY" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Připravil jsem pro vás krátký seriál, který se zabývá cookies, jejich fungováním, zabezpečením a také riziky a alternativami. Tento první díl je technologicky nezávislý a popisuje, jak cookies fungují principiálně, na úrovni HTTP. V dalším dílu, který vyjde příští čtvrtek, se podíváme na to, jak s cookies pracovat z prostředí ASP.NET.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Cookies%3a+Co+jsou+a+jak+funguj%c3%ad%3f&amp;body=https://www.altair.blog/2022/01/cookies-uvod">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2022/01/cookies-uvod.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2022/01/cookies-uvod.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2022/01/cookies-uvod">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2022/01/cookies-uvod">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2022</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/bash.min.js" integrity="sha512-HIFqAH4BgdlJE3A1Uoyl6weoDR1WtdufmKBPWtemvTI+12lrV5dfPR5ekvJaePkq6w+zuPAek2X2hHxo/T5kag==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/c.min.js" integrity="sha512-+2nEdmDIEQVBw4y3LD2BLOgAvX1+xx9kPQawjQB/HNfi4bDgSF4ywg8yIQ67ijrLLO2ruHaX9dZ25ruG3HwZSg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js" integrity="sha512-OsjySiIaNsR3uFe7uEH6yht3is/WrIXKocWeO0YHFs25jOwHwMtzIdkUENQjblQihTUIN78bpnLKbhMxRegjLw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/csharp.min.js" integrity="sha512-v7mtZg9ySysViDE/8FxpWzLPe4Qzj+xQ//OqdMkl0UapomXAjp79QNiziv6PLmG5GSXjTcfCOzEBv5B/Rp6COg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/css.min.js" integrity="sha512-YPTikIv0LRFoecQ53pI2EkYJ6tPal8/Yt7wqs2pg9k/3dcBWNNBUTaXhmiP31cHJWLzw9lITxY/nPp008hEQ8g==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/dos.min.js" integrity="sha512-rSz72KBUqBNvTYerDKClwWXCnKh0KzaZuPZKBlBTXl0yfPAVwjFXXdKvBZXn5EE6SLDo8ZoGVUMjOamZFWUjiw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/gcode.min.js" integrity="sha512-LlfaoxE1AmrmFU1UquZMB1mjbkB/gRZrtSs/uunxKJtjB3lEz0D6Qk5XlstgpN5CGm0qxf3ZR6W1wjgYcEHcKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/http.min.js" integrity="sha512-Skje8zLT7byYmzJt9b5tx61nBRk5OIq+Uc3W+DMb9kbQAiTPQmtYBLeHfRz6NMxXWMLRxPX6k9614xJJ06ywnA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/ini.min.js" integrity="sha512-1kSQ/fL3452y9xKXX07vK6MlVabIIe93sVIwF2Hbz28FQ2k5cx4yp5g+OsYd9Ik4T8SxDTjI9CnHujU44xhgZw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/javascript.min.js" integrity="sha512-Jvh5kXa0Zu4HoSxPaZIVhCWPkD7b7gnWHVzv6jiaJwAJ18a/U6BOXludYfJYwHorpy2WFH0Df6EcFi5udu1dWA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/markdown.min.js" integrity="sha512-LdAorkqTMw8zT1g38/JJ0ZAG5BMSKlueJOrfdgzkpb/Griqbi1TiKYAplo7Mha+8t7RzMdglwO4mxyxuTM+Afg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/nginx.min.js" integrity="sha512-y3Mryvd8MCT1x8PScKC/zmbJTai3P3H6+5WH1yPpCV3UzoI3dKum7qyTeB92e1qwKnhMWjfWkTEN1Okz5rvvWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/openscad.min.js" integrity="sha512-Vty2aofH9rMWd1UD+/hwWokgM4tNJHM3jy4t7foAxULaoT46JVhe87D/p2yQeAto5jm7PDao6K0EJa7eI4GcWg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/powershell.min.js" integrity="sha512-YuSWm92dJVnrfmPg7UEqLnCTUB2fjuHWW85wj9lB16S4pfJ6xGgkD0bg005VqOYgQXUkwILCLZxh4WxvJfvUhw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/scss.min.js" integrity="sha512-dN9nogHEDJR7Ci37xBwKkB1z//k/iBGM6gHtwKYCeEdGx395nIvwVcSLH2feCrkxhMFRgo8YydNHqyqD8OSOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/sql.min.js" integrity="sha512-dPGKIbhyiX3A5dkNqttabOo7ASCqbOHbTL2PdPKNrojC2CWx/uCAgpZpVkd0HK82vQsEfAWzy9+8Np07wxjiJw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/xml.min.js" integrity="sha512-1UdiK7+k2GhyGJMG9hmQXQ51TP2NPjHjh65uWhCeqSXSZ4UlzDG5+/st9VWRksKWYxKeU37/qwSAuPfSkcWD6A==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script>
+                  hljs.initHighlightingOnLoad();
+              </script>
+  </body>
+</html>

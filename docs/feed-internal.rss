@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/01/cookies-uvod</guid>
+      <title>Cookies: Co jsou a jak fungují?</title>
+      <description>Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?</description>
+      <link>https://www.altair.blog/2022/01/cookies-uvod</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-01-20T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/01/tisk-textu</guid>
       <title>Tisk textu na 3D tiskárnách</title>
       <description>Vymodelovat text v OpenSCADu je snadné. Ale jak ho tisknout? Vypadá lépe extrudovaný nebo embosovaný? Tisknutý na horní, spodní nebo boční stranu? Vyplatí se používat ironing?</description>
@@ -147,16 +157,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2021-11-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/dotnet-raspi-4</guid>
-      <title>ASP.NET na Raspberry Pi: Publikace pomocí Nginxu a nastavení firewallu</title>
-      <description>Čtvrtý díl seriálu o ASP.NET na Raspberry Pi se zabývá instalací a konfigurací Nginxu jako reverzní proxy pro publikaci a základním nastavením firewallu.</description>
-      <link>https://www.altair.blog/2021/11/dotnet-raspi-4</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-11-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
