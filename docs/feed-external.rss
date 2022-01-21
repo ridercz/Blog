@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</guid>
+      <title>Olympijská aféra My 2022: Mobilní aplikace je ten nejmenší problém</title>
+      <description>Mobilní aplikace My 2022, kterou si povinně musejí nainstalovat všichni účastníci olympiády v Pekingu, má bezpečnostní díry. V reálu je to ale ten nejmenší problém, který z hlediska kybernetické bezpečnosti účastníci her budou mít. Mnoho zemí riziko řeší, český olympijský výbor na problém tradičně kašle, přestože je pro české účastníky značné.</description>
+      <link>https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67023950-psms7-add8e8bde7bdde9</guid>
       <title>Jadernou hlavicí na mravence aneb Na koho míří britská kampaň proti šifrování</title>
       <description>Britská vláda spustila pod značkou No place to hide další kampaň proti end to end šifrování. Moc se k ní tedy nehlásí, snaží se místo toho, aby celá věc vypadala jako přirozená aktivita několika organizací snažících se o ochranu dětí.</description>
@@ -140,15 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-05-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</guid>
-      <title>Osborne nebyl první, stručná historie notebooků</title>
-      <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
-      <link>https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2021-04-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

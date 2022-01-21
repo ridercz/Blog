@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</guid>
+      <title>Olympijská aféra My 2022: Mobilní aplikace je ten nejmenší problém</title>
+      <description>Mobilní aplikace My 2022, kterou si povinně musejí nainstalovat všichni účastníci olympiády v Pekingu, má bezpečnostní díry. V reálu je to ale ten nejmenší problém, který z hlediska kybernetické bezpečnosti účastníci her budou mít. Mnoho zemí riziko řeší, český olympijský výbor na problém tradičně kašle, přestože je pro české účastníky značné.</description>
+      <link>https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/01/cookies-uvod</guid>
       <title>Cookies: Co jsou a jak fungují?</title>
       <description>Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?</description>
@@ -146,17 +156,6 @@
       <category>IT</category>
       <category>Software</category>
       <pubDate>2021-11-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-2</guid>
-      <title>Jak zastavit robotické depo Zásilkovny: Hardware</title>
-      <description>V minulém videu jsem vám představil robotické depo Zásilkovny a svůj úkol: vytvořit tlačítko, které při stisku dokáže přes Wi-Fi kontaktovat řídící backend a roboty zastavit. Ve druhém pokračování si ukážeme, jaký hardware jsem pro projekt Z-Button zvolil a proč.</description>
-      <link>https://www.altair.blog/2021/11/robodepo-2</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <category>Bastlení</category>
-      <pubDate>2021-11-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
