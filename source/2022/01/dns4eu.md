@@ -1,0 +1,10 @@
+<!-- dcterms:title = EU buduje vlastní síť DNS, aby nebyla závislá na amerických firmách; jde o snahu cenzurovat Internet -->
+<!-- dcterms:abstract = Evropská unie chce změnit způsob, jakým obyvatelé „starého kontinentu“ používají internet. Pod technickým plánem na vytvoření sítě rekurzivních DNS resolverů DNS4EU se prakticky skrývá možnost evropských orgánů omezovat to, jaké webové stránky uživatelé budou moci navštěvovat. Snaha filtrovat „nevhodné“ weby ovšem není nic nového. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-01-28 -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-eu.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973 -->

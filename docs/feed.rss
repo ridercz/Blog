@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</guid>
+      <title>EU buduje vlastní síť DNS, aby nebyla závislá na amerických firmách; jde o snahu cenzurovat Internet</title>
+      <description>Evropská unie chce změnit způsob, jakým obyvatelé „starého kontinentu“ používají internet. Pod technickým plánem na vytvoření sítě rekurzivních DNS resolverů DNS4EU se prakticky skrývá možnost evropských orgánů omezovat to, jaké webové stránky uživatelé budou moci navštěvovat. Snaha filtrovat „nevhodné“ weby ovšem není nic nového.</description>
+      <link>https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</guid>
       <title>Olympijská aféra My 2022: Mobilní aplikace je ten nejmenší problém</title>
       <description>Mobilní aplikace My 2022, kterou si povinně musejí nainstalovat všichni účastníci olympiády v Pekingu, má bezpečnostní díry. V reálu je to ale ten nejmenší problém, který z hlediska kybernetické bezpečnosti účastníci her budou mít. Mnoho zemí riziko řeší, český olympijský výbor na problém tradičně kašle, přestože je pro české účastníky značné.</description>
@@ -145,17 +155,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-12-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/kali-linux-na-hyperv</guid>
-      <title>Instalace a konfigurace Kali Linuxu na Hyper-V</title>
-      <description>Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Přináším návod, jak ji nainstalovat na Hyper-V a jak ji zkonfigurovat pro účely dema/labu.</description>
-      <link>https://www.altair.blog/2021/11/kali-linux-na-hyperv</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <category>IT</category>
-      <category>Software</category>
-      <pubDate>2021-11-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
