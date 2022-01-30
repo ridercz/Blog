@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</guid>
+      <title>Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu</title>
+      <description>Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá.</description>
+      <link>https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</guid>
       <title>EU buduje vlastní síť DNS, aby nebyla závislá na amerických firmách; jde o snahu cenzurovat Internet</title>
       <description>Evropská unie chce změnit způsob, jakým obyvatelé „starého kontinentu“ používají internet. Pod technickým plánem na vytvoření sítě rekurzivních DNS resolverů DNS4EU se prakticky skrývá možnost evropských orgánů omezovat to, jaké webové stránky uživatelé budou moci navštěvovat. Snaha filtrovat „nevhodné“ weby ovšem není nic nového.</description>
@@ -144,17 +154,6 @@
       <category>3D tisk</category>
       <category>Z-TECH</category>
       <pubDate>2021-12-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/12/robodepo-3</guid>
-      <title>Jak zastavit robotické depo Zásilkovny: Bezpečnost</title>
-      <description>Časté dotazy ke stop tlačítku pro robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.</description>
-      <link>https://www.altair.blog/2021/12/robodepo-3</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-12-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

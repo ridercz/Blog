@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</guid>
+      <title>Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu</title>
+      <description>Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá.</description>
+      <link>https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-01-30T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</guid>
       <title>EU buduje vlastní síť DNS, aby nebyla závislá na amerických firmách; jde o snahu cenzurovat Internet</title>
       <description>Evropská unie chce změnit způsob, jakým obyvatelé „starého kontinentu“ používají internet. Pod technickým plánem na vytvoření sítě rekurzivních DNS resolverů DNS4EU se prakticky skrývá možnost evropských orgánů omezovat to, jaké webové stránky uživatelé budou moci navštěvovat. Snaha filtrovat „nevhodné“ weby ovšem není nic nového.</description>
@@ -142,15 +152,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2021-05-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</guid>
-      <title>Když BASIC vládnul světu</title>
-      <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
-      <link>https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2021-05-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

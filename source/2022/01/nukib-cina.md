@@ -1,0 +1,10 @@
+<!-- dcterms:title = Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu -->
+<!-- dcterms:abstract = Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-01-30 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220130-nukib-cina.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7 -->
