@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/02/newimager</guid>
+      <title>Raspberry Pi Imager 1.7: Jednodušší provisioning</title>
+      <description>První dva díly seriálu o ASP.NET na Raspberry Pi jsem věnoval jeho prvotnímu nastavení, nebo chcete-li provisioningu. Jak nastavit parametry Wi-Fi, autentizace, povolení SSH... Nyní je všechno mnohem jednodušší.</description>
+      <link>https://www.altair.blog/2022/02/newimager</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-02-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/01/cookies-uvod</guid>
       <title>Cookies: Co jsou a jak fungují?</title>
       <description>Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?</description>
@@ -148,15 +158,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-11-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/scp-publish</guid>
-      <title>Jak publikovat ASP.NET aplikaci na Linux pomocí SCP a Visual Studia</title>
-      <description>Vypublikovat hotovou ASP.NET aplikaci na server přes FTP nebo Web Management Service je snadné: stačí ve Visual Studiu vytvořit publishing profil a klepnout na Publish. Ale co když chcete aplikaci nasadit na server s Linuxem, kde chcete použít SCP, třeba na Raspberry Pi z našeho seriálu? Je to možné, ale vyžaduje to trochu ručních zásahů do projektového souboru.</description>
-      <link>https://www.altair.blog/2021/11/scp-publish</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2021-11-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/02/newimager</guid>
+      <title>Raspberry Pi Imager 1.7: Jednodušší provisioning</title>
+      <description>První dva díly seriálu o ASP.NET na Raspberry Pi jsem věnoval jeho prvotnímu nastavení, nebo chcete-li provisioningu. Jak nastavit parametry Wi-Fi, autentizace, povolení SSH... Nyní je všechno mnohem jednodušší.</description>
+      <link>https://www.altair.blog/2022/02/newimager</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-02-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</guid>
       <title>Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu</title>
       <description>Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá.</description>
@@ -144,16 +154,6 @@
       <category>3D tisk</category>
       <category>Z-TECH</category>
       <pubDate>2021-12-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/12/vykrajovatka</guid>
-      <title>3D tisk vánočních vykrajovátek</title>
-      <description>Vykrajovátka na vánoční cukroví jsou oblíbeným produktem 3D tiskařů. Lze je vyrobit velice snadno, rychle se tisknou a potěší skoro každého - snad kromě nás diabetiků. Patřičný model lze vytvořit mnoha různými způsoby. Já vám ukážu, jak můžete z libovolného obrysového obrázku udělat vykrajovátko pomocí grafického editoru Inkscape a OpenSCADu.</description>
-      <link>https://www.altair.blog/2021/12/vykrajovatka</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <category>Z-TECH</category>
-      <pubDate>2021-12-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
