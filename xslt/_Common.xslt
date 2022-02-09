@@ -136,7 +136,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha={x4h:ComputeHash('/content/styles.min.css')}" />
-    <link rel="stylesheet" type="text/css" href="/content/fa-5.13.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.0.0/css/all.min.css" />
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="{$BaseUrl}/feed-internal.rss" title="RSS (pouze místní články)" />
