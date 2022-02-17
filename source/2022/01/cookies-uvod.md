@@ -8,7 +8,6 @@
 <!-- x4w:coverCredits = Ali Jouyandeh  via Unsplash.com -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- x4w:serial = Cookies -->
 <!-- dcterms:dateAccepted = 2022-01-20 -->
 
 Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?

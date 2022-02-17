@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Cookies: Co jsou a jak fungují? | ALTAIR.blog</title>
+    <title>Cookies: Všechno co jste o nich kdy chtěli vědět a ještě něco navíc | ALTAIR.blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs-CZ" />
-    <link rel="canonical" href="https://www.altair.blog/2022/01/cookies-uvod" />
+    <link rel="canonical" href="https://www.altair.blog/2022/02/cookies" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
     <link rel="stylesheet" type="text/css" href="/content/fa-6.0.0/css/all.min.css" />
@@ -17,18 +17,18 @@
     <link rel="icon" href="https://www.altair.blog/favicon.ico" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ridercz" />
-    <meta name="twitter:title" content="Cookies: Co jsou a jak fungují?" />
-    <meta name="twitter:description" content="Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?" />
+    <meta name="twitter:title" content="Cookies: Všechno co jste o nich kdy chtěli vědět a ještě něco navíc" />
+    <meta name="twitter:description" content="HTTP cookies jsou jedním ze základních stavebních kamenů současného webu. Občas jsou prezentovány jako symbol zla a ohrožení soukromí, ale ve skutečnosti problém se soukromím leží poněkud jinde a cookies jsou skutečně jenom symbolem. Připravil jsem pro vás šestidílný seriál, ve kterém vám ukážu, jak obecně fungují a jak s nimi pracovat v ASP.NET." />
     <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20220120-cookies-uvod.jpg" />
-    <meta property="article:published_time" content="2022-01-20" />
+    <meta property="article:published_time" content="2022-02-17" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="ALTAIR.blog" />
     <meta name="author" content="Michal Altair Valášek" />
-    <meta name="title" property="og:title" content="Cookies: Co jsou a jak fungují?" />
-    <meta name="description" property="og:description" content="Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?" />
+    <meta name="title" property="og:title" content="Cookies: Všechno co jste o nich kdy chtěli vědět a ještě něco navíc" />
+    <meta name="description" property="og:description" content="HTTP cookies jsou jedním ze základních stavebních kamenů současného webu. Občas jsou prezentovány jako symbol zla a ohrožení soukromí, ale ve skutečnosti problém se soukromím leží poněkud jinde a cookies jsou skutečně jenom symbolem. Připravil jsem pro vás šestidílný seriál, ve kterém vám ukážu, jak obecně fungují a jak s nimi pracovat v ASP.NET." />
     <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20220120-cookies-uvod.jpg" />
     <meta property="og:locale" content="cs_CZ" />
-    <meta property="og:url" content="https://www.altair.blog/2022/01/cookies-uvod" />
+    <meta property="og:url" content="https://www.altair.blog/2022/02/cookies" />
     <script>
       (function(f, a, t, h, o, m){
         a[h]=a[h]||function(){
@@ -109,7 +109,7 @@
       </ul>
     </nav>
     <main>
-      <h1>Cookies: Co jsou a jak fungují?</h1>
+      <h1>Cookies: Všechno co jste o nich kdy chtěli vědět a ještě něco navíc</h1>
       <aside class="article-info">
         <ul class="categories">
           <li>
@@ -126,34 +126,40 @@
           <i class="fal fa-user">​</i>
         </div>
         <div title="Datum vydání">
-          <time datetime="2022-01-20">20. ledna 2022 <i class="fal fa-calendar-alt">​</i></time>
+          <time datetime="2022-02-17">17. února 2022 <i class="fal fa-calendar-alt">​</i></time>
         </div>
         <div title="Autor úvodního obrázku">Ali Jouyandeh  via Unsplash.com <i class="fal fa-camera">​</i></div>
       </aside>
       <section class="article-text">
-        <p>Cookies jsou kořenem všího zla. Alespoň tedy dle všemoudré EU, jejíž zásluhou musíme nyní na každém webu odkliknout sedmnáct různých potvrzení. Jak ale fungují a co vlastně umí? A jak ohrožují (nebo neohrožují) soukromí uživatelů?</p>
-<div style="position:relative;padding-top:56.25%;">
-  <iframe src="https://www.youtube-nocookie.com/embed/HxEtTXfGQyY" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-<p>Připravil jsem pro vás krátký seriál, který se zabývá cookies, jejich fungováním, zabezpečením a také riziky a alternativami. Tento první díl je technologicky nezávislý a popisuje, jak cookies fungují principiálně, na úrovni HTTP. V dalším dílu, který vyjde příští čtvrtek, se podíváme na to, jak s cookies pracovat z prostředí ASP.NET.</p>
+        <p>HTTP cookies jsou jedním ze základních stavebních kamenů současného webu. Občas jsou prezentovány jako symbol zla a ohrožení soukromí, ale ve skutečnosti problém se soukromím leží poněkud jinde a cookies jsou skutečně jenom symbolem. Připravil jsem pro vás <a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMb9ina9Hd67ufiEKqlTXuzU">šestidílný seriál</a>, ve kterém vám ukážu, jak obecně fungují a jak s nimi pracovat v ASP.NET.</p>
+<h2 id="prehled-dilu">Přehled dílů</h2>
+<ol>
+<li><strong><a href="https://www.youtube.com/watch?v=HxEtTXfGQyY">Co jsou cookies a jak fungují?</a></strong> - úvodní povídání o tom, co jsou cookies vlastně zač, jak si v rámci HTTP povídá klient a server a jak si přitom vyměňují cookies.</li>
+<li><strong><a href="https://www.youtube.com/watch?v=e3ymTSeYC9M">Cookies v ASP.NET</a></strong> - popis API pro práci s cookies v ASP.NET.</li>
+<li><strong><a href="https://www.youtube.com/watch?v=uAqLRQmrWI4">Cookies v ASP.NET prakticky</a></strong> - praktická ukázka použití cookies v ASP.NET (+<a href="https://www.cdn.altairis.cz/Blog/2022/20220217-cookies-demo.zip">příklad ke stažení</a>).</li>
+<li><strong><a href="https://www.youtube.com/watch?v=8dYOpBj0uK0">Cookie policy middleware v ASP.NET</a></strong> - praktické demo použití middleware, které umí nastavovat parametry cookies a také zablokovat neesenciální cookies, dokud s nimi uživatel nesouhlasí (+<a href="https://www.cdn.altairis.cz/Blog/2022/20220217-cookiepolicy-demo.zip">příklad ke stažení</a>).</li>
+<li><strong><a href="https://www.youtube.com/watch?v=0D6sfeDlonk">Problémy cookies a alternativy</a></strong> - problémy a omezení technologie cookies a jejich možné alternativy.</li>
+<li><strong>Bonus: <a href="https://www.youtube.com/watch?v=PtfmxAUEmBU">Představují cookies skutečné ohrožení našeho soukromí na Internetu?</a></strong> - úvaha nad soukromím uživatelů na současném Internetu.</li>
+</ol>
+<p>Líbilo se vám povídání o cookies? Jaké téma byste si přáli probrat příště? Napište mi to do komentářů na YouTube!</p>
 
       </section>
       <section class="issues">
         <header>
           <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
-        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Cookies%3a+Co+jsou+a+jak+funguj%c3%ad%3f&amp;body=https://www.altair.blog/2022/01/cookies-uvod">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2022/01/cookies-uvod.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
-        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2022/01/cookies-uvod.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Cookies%3a+V%c5%a1echno+co+jste+o+nich+kdy+cht%c4%9bli+v%c4%9bd%c4%9bt+a+je%c5%a1t%c4%9b+n%c4%9bco+nav%c3%adc&amp;body=https://www.altair.blog/2022/02/cookies">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2022/02/cookies.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2022/02/cookies.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
       </section>
       <section class="sharing">
         <span>Pošli to dál:</span>
         <ul>
           <li>
-            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2022/01/cookies-uvod">
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2022/02/cookies">
               <i class="fab fa-twitter">​</i>
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2022/01/cookies-uvod">
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2022/02/cookies">
               <i class="fab fa-facebook-f">​</i>
             </a>
           </li>
