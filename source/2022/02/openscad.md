@@ -36,11 +36,11 @@ Přináším vám kompletní přehled dílů. Všechny díly najdete v [playlist
 * 18 [Praktické tipy pro konstrukci 1](https://www.youtube.com/watch?v=-z_spNfEwHc)
 * 19 [Praktické tipy pro konstrukci 2](https://www.youtube.com/watch?v=rNIbCKDGkTU)
 * 20 [Praktické tipy pro konstrukci 3](https://www.youtube.com/watch?v=DU53j-jVHX0)
-* 21 [Praktický tisk textu](https://www.youtube.com/watch?v=QBAzC4BWW7w)
-* 22 [Šrouby, matky, magnety](https://www.youtube.com/watch?v=ttgGw3gRDXU)
+* 21 [Praktický tisk textu](https://www.youtube.com/watch?v=QBAzC4BWW7w) ([článek](/2022/01/tisk-textu))
+* 22 [Šrouby, matky, magnety](https://www.youtube.com/watch?v=ttgGw3gRDXU) ([článek](/2020/04/magclasp))
 
 ## Praktická tvorba modelů
 
-* [Automatizace modelu - přívěšky na klíče s čísly](https://www.youtube.com/watch?v=PyaaVIcbjKc)
-* [Netopýří odznak](https://www.youtube.com/watch?v=RrBcL2nM4Bc)
-* [Vykrajovátka na vánoční cukroví](https://www.youtube.com/watch?v=JEw8EaZmjWY)
+* [Automatizace modelu - přívěšky na klíče s čísly](https://www.youtube.com/watch?v=PyaaVIcbjKc) ([článek](/2021/10/privesky))
+* [Netopýří odznak](https://www.youtube.com/watch?v=RrBcL2nM4Bc) ([článek](/2021/10/openscad-netopyr))
+* [Vykrajovátka na vánoční cukroví](https://www.youtube.com/watch?v=JEw8EaZmjWY) ([článek](/2021/12/vykrajovatka-2))
