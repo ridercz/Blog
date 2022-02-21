@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/02/openscad</guid>
+      <title>Kompletní přehled dílů online školení 3D modelování v OpenSCADu</title>
+      <description>Na YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, jsem dokončil bezplatný online kurz modelování v OpenSCADu. Přináším vám kompletní přehled dílů.</description>
+      <link>https://www.altair.blog/2022/02/openscad</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>3D tisk</category>
+      <pubDate>2022-02-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/02/cookies</guid>
       <title>Cookies: Všechno co jste o nich kdy chtěli vědět a ještě něco navíc</title>
       <description>HTTP cookies jsou jedním ze základních stavebních kamenů současného webu. Občas jsou prezentovány jako symbol zla a ohrožení soukromí, ale ve skutečnosti problém se soukromím leží poněkud jinde a cookies jsou skutečně jenom symbolem. Připravil jsem pro vás šestidílný seriál, ve kterém vám ukážu, jak obecně fungují a jak s nimi pracovat v ASP.NET.</description>
@@ -148,16 +158,6 @@
       <category>IT</category>
       <category>Bastlení</category>
       <pubDate>2021-11-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/11/robodepo-1</guid>
-      <title>Jak zastavit robotické depo Zásilkovny: Představení projektu</title>
-      <description>Zásilkovna nedávno otevřela své první robotické depo, kde zásilky místo lidí třídí roboti - nebo alespoň proti lidem hrají přesilovku. Ukážeme si, jak takové depo funguje a také jaký bude můj konstruktérský úkol: vyrobit tlačítko, které ho dokáže celé zastavit.</description>
-      <link>https://www.altair.blog/2021/11/robodepo-1</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-11-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
