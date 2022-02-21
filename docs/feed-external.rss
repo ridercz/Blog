@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</guid>
+      <title>Kybernetický útok na Červený kříž připomíná, že ženevské konvence by měly platit i na internetu</title>
+      <description>Červený kříž se stal obětí přesně cíleného a velmi pokročilého kybernetického útoku. Neznámí útočníci získali osobní údaje půl milionu lidí, kterým tato humanitární organizace pomáhá. Za útokem by mohl být některý stát. ICRC si zaslouží uznání když ne za zabezpečení, tak za zodpovědnou komunikaci.</description>
+      <link>https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-02-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</guid>
       <title>Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu</title>
       <description>Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá.</description>
@@ -143,15 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-07-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</guid>
-      <title>Kritická bezpečnostní díra v HTTP.SYS ohrožuje Windows 10 i servery, stáhněte si záplatu</title>
-      <description>Operační systém Windows obsahuje přímo v jádře knihovnu HTTP.SYS, která se stará o zpracování příchozích HTTP spojení (pokud počítač funguje jako web server). A ta knihovna ve verzích 20H2 a 2004 (jak pro Windows 10, tak Windows Server) obsahuje velice nepříjemnou chybu. Nemá žádné sexy jméno jako Heartbleed nebo Shellshock. „CVE 2021-31166 HTTP Protocol Stack Remote Code Execution Vulnerability“ nevypadá na první pohled nijak zvlášť zajímavě, ale zdání klame.</description>
-      <link>https://tech.ihned.cz/c7-66929030-psms7-718b062f1b78a33</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2021-05-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

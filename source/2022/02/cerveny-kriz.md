@@ -1,0 +1,11 @@
+<!-- dcterms:title = Kybernetický útok na Červený kříž připomíná, že ženevské konvence by měly platit i na internetu -->
+<!-- dcterms:abstract = Červený kříž se stal obětí přesně cíleného a velmi pokročilého kybernetického útoku. Neznámí útočníci získali osobní údaje půl milionu lidí, kterým tato humanitární organizace pomáhá. Za útokem by mohl být některý stát. ICRC si zaslouží uznání když ne za zabezpečení, tak za zodpovědnou komunikaci. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-02-21 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220221-cerveny-kriz.jpg -->
+<!-- x4w:credits = Červený kříž -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2 -->

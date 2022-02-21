@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</guid>
+      <title>Kybernetický útok na Červený kříž připomíná, že ženevské konvence by měly platit i na internetu</title>
+      <description>Červený kříž se stal obětí přesně cíleného a velmi pokročilého kybernetického útoku. Neznámí útočníci získali osobní údaje půl milionu lidí, kterým tato humanitární organizace pomáhá. Za útokem by mohl být některý stát. ICRC si zaslouží uznání když ne za zabezpečení, tak za zodpovědnou komunikaci.</description>
+      <link>https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-02-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/02/openscad</guid>
       <title>Kompletní přehled dílů online školení 3D modelování v OpenSCADu</title>
       <description>Na YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, jsem dokončil bezplatný online kurz modelování v OpenSCADu. Přináším vám kompletní přehled dílů.</description>
@@ -143,16 +153,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2021-12-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/12/csharp-oper</guid>
-      <title>C# pro mírně pokročilé: IEquatable, IComparable a operátory</title>
-      <description>Dnešní video o C# pro mírně pokročilé se zabývá rozhraními IEquatable, IComparable, operátory a type cast operátory. Všechny tyto věci se hodí, když chcete vytvořit třídu, reprezentující nějaký "reálný" fenomén a chcete s ní pohodlně pracovat. Zde budeme vytvářet třídu pro reprezentaci hodnoty úhlu.</description>
-      <link>https://www.altair.blog/2021/12/csharp-oper</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-12-16T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
