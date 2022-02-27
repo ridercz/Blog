@@ -1,0 +1,11 @@
+<!-- dcterms:title = Hackerem snadno, rychle a bez námahy: Jaký smysl má zapojit se do útoků na ruské webové servery -->
+<!-- dcterms:abstract = V souvislosti s válkou na Ukrajině se vynořilo velké množství služeb, které nabízejí možnost stát se „hackerem snadno a rychle“. Jedná se o prostou webovou stránku, na kterou když vstoupíte, zahájí velké množství dotazů na weby, které se jejímu autorovi znelíbily, obvykle ruských státních orgánů a státem kontrolovaných médií. Je použití takových služeb bezpečné? A jsou reálně k něčemu dobré? -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-02-26 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220226-ddos.jpg -->
+<!-- x4w:credits = Yehor Milohrodskyi via Unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1 -->

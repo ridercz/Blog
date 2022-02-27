@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</guid>
+      <title>Hackerem snadno, rychle a bez námahy: Jaký smysl má zapojit se do útoků na ruské webové servery</title>
+      <description>V souvislosti s válkou na Ukrajině se vynořilo velké množství služeb, které nabízejí možnost stát se „hackerem snadno a rychle“. Jedná se o prostou webovou stránku, na kterou když vstoupíte, zahájí velké množství dotazů na weby, které se jejímu autorovi znelíbily, obvykle ruských státních orgánů a státem kontrolovaných médií. Je použití takových služeb bezpečné? A jsou reálně k něčemu dobré?</description>
+      <link>https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-02-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</guid>
       <title>Kybernetický útok na Červený kříž připomíná, že ženevské konvence by měly platit i na internetu</title>
       <description>Červený kříž se stal obětí přesně cíleného a velmi pokročilého kybernetického útoku. Neznámí útočníci získali osobní údaje půl milionu lidí, kterým tato humanitární organizace pomáhá. Za útokem by mohl být některý stát. ICRC si zaslouží uznání když ne za zabezpečení, tak za zodpovědnou komunikaci.</description>
@@ -143,16 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-08-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</guid>
-      <title>Průšvih jménem WD My Book Live. Ponaučení z aféry problematického síťového disku</title>
-      <description>Majitelé mnoha síťových disků řady My Book Live od společnosti Western Digital se v uplynulých týdnech dočkali nemilých překvapení. Jejich zařízení byla najednou zcela prázdná. Přišli o všechna data, která měli na NAS uložena. Mnohdy o léta svých digitálních životů a práce. Nyní už víme, proč se to stalo: na vině bylo několik v zásadě triviálních chyb a ukončená podpora ze strany výrobce. Jenomže co s tím? Obětem aktuálního útoku nabízí Western Digital pomoc s obnovou dat, ale řešení příčiny problémů je v nedohlednu a neomezuje se jen na jednu značku.</description>
-      <link>https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-07-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
