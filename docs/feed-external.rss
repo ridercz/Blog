@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246</guid>
+      <title>NÚKIB vydal doporučení ke správnému používání aplikace Signal. Jak ho správně číst?</title>
+      <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal sadu doporučení k bezpečnému používání aplikace Signal. Bohužel však celou akci komunikuje s typickou úřední nesrozumitelností, takže je Twitter plný dotazů, jestli se to má chápat jako doporučení „používejte Signal“, nebo jako varování „když už musíte používat Signal, dělejte to aspoň bezpečně“. Pojďme to přeložit z úředničtiny do češtiny.</description>
+      <link>https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-03T08:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</guid>
       <title>Hackerem snadno, rychle a bez námahy: Jaký smysl má zapojit se do útoků na ruské webové servery</title>
       <description>V souvislosti s válkou na Ukrajině se vynořilo velké množství služeb, které nabízejí možnost stát se „hackerem snadno a rychle“. Jedná se o prostou webovou stránku, na kterou když vstoupíte, zahájí velké množství dotazů na weby, které se jejímu autorovi znelíbily, obvykle ruských státních orgánů a státem kontrolovaných médií. Je použití takových služeb bezpečné? A jsou reálně k něčemu dobré?</description>
@@ -143,16 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-08-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66958850-psms7-ea32dc379cce88f</guid>
-      <title>Kritická bezpečnostní chyba v Hyper-V umožňuje kompromitaci fyzického stroje z virtuálu</title>
-      <description>Schopnost přeskočit z virtuálního stroje na fyzický počítač a případně nakazit i další virtuální stroje běžící na stejném hardwaru je alarmující chyba, která v hodnocení rizik CVSS získala 9,9 bodu z deseti. Na chybu už je k dispozici záplata, ale historická zkušenost říká, že se zneužíváním této chyby se pravděpodobně budeme setkávat ještě velmi dlouho.</description>
-      <link>https://tech.hn.cz/c7-66958850-psms7-ea32dc379cce88f</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-08-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

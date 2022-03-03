@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = Chunli Ju via Unsplash.com -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-03-03 -->
+<!-- dcterms:dateAccepted = 2022-03-03T12:00:00 -->
 
 Pro ochranu (šifrování a digitální podepisování) dat je v ASP.NET Core funkce Data Protection. Ve čtyřech dílech video seriálu vám o ní řeknu všechno, co potřebujete vědět.
 

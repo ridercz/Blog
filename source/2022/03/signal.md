@@ -1,0 +1,10 @@
+<!-- dcterms:title = NÚKIB vydal doporučení ke správnému používání aplikace Signal. Jak ho správně číst? -->
+<!-- dcterms:abstract = Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal sadu doporučení k bezpečnému používání aplikace Signal. Bohužel však celou akci komunikuje s typickou úřední nesrozumitelností, takže je Twitter plný dotazů, jestli se to má chápat jako doporučení „používejte Signal“, nebo jako varování „když už musíte používat Signal, dělejte to aspoň bezpečně“. Pojďme to přeložit z úředničtiny do češtiny. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-03-03T08:00:00 -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-signal.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246 -->
