@@ -1,0 +1,11 @@
+<!-- dcterms:title = Informační válka vedle té skutečné: Česko je terčem první kategorie, cenzura ale není odpověď -->
+<!-- dcterms:abstract = Válka o Ukrajinu přináší jedno prvenství: je první, ve které se se vší vážností válčí ve třech dimenzích. Tou první je samozřejmě boj fyzický. Druhou dimenzí je válka informační, propagandistická. Třetí dimenzí pak válka kybernetická. Česká republika je dlouhodobě cílem ruské informační války. Dlouhodobě prohrává a kroky současné vlády tomu ještě napomáhají. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-03-06T12:00:00 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220306-infovalka.jpg -->
+<!-- x4w:pictureCredits = Bermix Studio via Unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67042080-psms7-81b28d17fc0dd7e -->

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67042080-psms7-81b28d17fc0dd7e</guid>
+      <title>Informační válka vedle té skutečné: Česko je terčem první kategorie, cenzura ale není odpověď</title>
+      <description>Válka o Ukrajinu přináší jedno prvenství: je první, ve které se se vší vážností válčí ve třech dimenzích. Tou první je samozřejmě boj fyzický. Druhou dimenzí je válka informační, propagandistická. Třetí dimenzí pak válka kybernetická. Česká republika je dlouhodobě cílem ruské informační války. Dlouhodobě prohrává a kroky současné vlády tomu ještě napomáhají.</description>
+      <link>https://tech.hn.cz/c7-67042080-psms7-81b28d17fc0dd7e</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-06T12:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67038080-psms7-76c91df19657c1f</guid>
       <title>Jak hacknout jízdní kolo či koloběžku pomocí obyčejného QR kódu? Stačí drzost</title>
       <description>Uživatelé služby Citi Bike, půjčovny kol v New Yorku, občas zaplatí za svezení, ale kvůli specifickému typu útoku založenému na modifikaci QR kódů se jim kolo neodemkne a oni na něm tedy neodjedou. Podobný mechanismus lze použít i pro řadu českých služeb. Podíváme se tedy na to, jak takový útok funguje a jaké jsou možnosti obrany proti němu.</description>
@@ -143,16 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-09-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66960170-psms7-c13bb8619eaf4de</guid>
-      <title>Apple končí s ochranou soukromí, z iPhonu je udavač ve vaší kapse</title>
-      <description>Bylo jenom otázkou času, která z velkých technologických firem hodí u end to end encryption ručník do ringu a pod jakou záminkou. Nakonec to byl Apple a záminka je nejklasičtější možná: ochrana dětí.</description>
-      <link>https://tech.hn.cz/c7-66960170-psms7-c13bb8619eaf4de</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-08-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
