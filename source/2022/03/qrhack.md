@@ -1,0 +1,10 @@
+<!-- dcterms:title = Jak hacknout jízdní kolo či koloběžku pomocí obyčejného QR kódu? Stačí drzost -->
+<!-- dcterms:abstract = Uživatelé služby Citi Bike, půjčovny kol v New Yorku, občas zaplatí za svezení, ale kvůli specifickému typu útoku založenému na modifikaci QR kódů se jim kolo neodemkne a oni na něm tedy neodjedou. Podobný mechanismus lze použít i pro řadu českých služeb. Podíváme se tedy na to, jak takový útok funguje a jaké jsou možnosti obrany proti němu. -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-03-06T08:00:00 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220306-qrhack.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67038080-psms7-76c91df19657c1f -->
