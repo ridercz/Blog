@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</guid>
+      <title>Dva internety místo jednoho. Rusko se připravuje na spuštění nové železné opony</title>
+      <description>Situace kolem blokování na Internetu je v těchto dnech poněkud nepřehledná. Různé technologické společnosti více či méně dobrovolně blokují využívání svých služeb z Ruska, potažmo klienty odtamtud. Rusko zase naopak blokuje přístup ze svých sítí do týchž nebo i jiných služeb. Časem patrně dojde k pokusu o odstřižení Ruska od globálního Internetu, ať už z té, či oné strany.</description>
+      <link>https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-07T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67042080-psms7-81b28d17fc0dd7e</guid>
       <title>Informační válka vedle té skutečné: Česko je terčem první kategorie, cenzura ale není odpověď</title>
       <description>Válka o Ukrajinu přináší jedno prvenství: je první, ve které se se vší vážností válčí ve třech dimenzích. Tou první je samozřejmě boj fyzický. Druhou dimenzí je válka informační, propagandistická. Třetí dimenzí pak válka kybernetická. Česká republika je dlouhodobě cílem ruské informační války. Dlouhodobě prohrává a kroky současné vlády tomu ještě napomáhají.</description>
@@ -143,16 +153,6 @@
       <category>3D tisk</category>
       <category>Recenze</category>
       <pubDate>2021-09-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</guid>
-      <title>Apple se zhrozil reakcí a odsouvá svůj plán na hledání závadového obsahu v mobilech zákazníků</title>
-      <description>Zhruba před měsícem společnost Apple oznámila, že do operačního systému iOS přidá funkci, která bude prohledávat šifrovaná data na uživatelově mobilním zařízení a vyhledávat v nich informace označené americkou vládní organizací jako závadové. Po záplavě negativních reakcí ze všech stran se její zavedení odkládá.</description>
-      <link>https://tech.hn.cz/c7-66970300-psms7-ea384fb04406658</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-09-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

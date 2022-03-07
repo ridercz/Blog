@@ -1,0 +1,11 @@
+<!-- dcterms:title = Dva internety místo jednoho. Rusko se připravuje na spuštění nové železné opony -->
+<!-- dcterms:abstract = Situace kolem blokování na Internetu je v těchto dnech poněkud nepřehledná. Různé technologické společnosti více či méně dobrovolně blokují využívání svých služeb z Ruska, potažmo klienty odtamtud. Rusko zase naopak blokuje přístup ze svých sítí do týchž nebo i jiných služeb. Časem patrně dojde k pokusu o odstřižení Ruska od globálního Internetu, ať už z té, či oné strany. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-03-07 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220307-dva-internety.jpg -->
+<!-- x4w:pictureCredits = Jordan Harrison via Unsplash.com -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f -->
