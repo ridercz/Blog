@@ -8,6 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
 <!-- dcterms:dateAccepted = 2022-02-21 -->
+<!-- dcterms:dateModified = 2022-03-09 -->
 
 Na YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, jsem dokončil bezplatný online kurz modelování v OpenSCADu.
 
@@ -44,3 +45,4 @@ Přináším vám kompletní přehled dílů. Všechny díly najdete v [playlist
 * [Automatizace modelu - přívěšky na klíče s čísly](https://www.youtube.com/watch?v=PyaaVIcbjKc) ([článek](/2021/10/privesky))
 * [Netopýří odznak](https://www.youtube.com/watch?v=RrBcL2nM4Bc) ([článek](/2021/10/openscad-netopyr))
 * [Vykrajovátka na vánoční cukroví](https://www.youtube.com/watch?v=JEw8EaZmjWY) ([článek](/2021/12/vykrajovatka-2))
+* [Jmenovky na ohlávku](https://www.youtube.com/watch?v=ZCpzIFiazd0)
