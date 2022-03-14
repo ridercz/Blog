@@ -19,7 +19,7 @@ Ruská vláda blokuje weby, které označuje jako dezinformační; česká také
 
 ## Opera "VPN"
 
-Na nejnižší úrovni stačí si nainstalovat prohlížeč Opera a použít funkci, kterou nazývá VPN. Ve skutečnosti nejde o klasickou virtuální privátní síť ale spíše o proxy server, ale to je technologický detail. Prakticky funguje tak, že se z vašeho počítače ustanoví šifrovaný tunel na servery Opery (a dokonce si můžete vybrat ve které zemi se mají nacházet) a odtamtud se pak požadavek pošle dál. Tím je skryta vaše IP adresa a geografická lokace, což může pomoci obejít nejobvyklejší formy šifrování.
+Na nejnižší úrovni stačí si nainstalovat prohlížeč Opera a použít funkci, kterou nazývá VPN. Ve skutečnosti nejde o klasickou virtuální privátní síť ale spíše o proxy server, ale to je technologický detail. Prakticky funguje tak, že se z vašeho počítače ustanoví šifrovaný tunel na servery Opery (a dokonce si můžete vybrat ve které zemi se mají nacházet) a odtamtud se pak požadavek pošle dál. Tím je skryta vaše IP adresa a geografická lokace, což může pomoci obejít nejobvyklejší formy blokování.
 
 Je to jednoduché, ale má to i své nevýhody. V první řadě Operu momentálně vlastní čínská firma, které můžete a nemusíte věřit. V řadě druhé jsou adresy proxy serverů Opery veřejně známy a tato funkcionalita bude zřejmě jedna z prvních, kterou cenzura zablokuje.
 
