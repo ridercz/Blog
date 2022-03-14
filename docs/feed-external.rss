@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</guid>
+      <title>Rusko spustilo vlastní certifikační autoritu, pro webové prohlížeče budou ruské stránky nedůvěryhodné</title>
+      <description>Rusko pokračuje v přípravách na technické problémy které mohou vzniknout při odpojení jeho národních sítí od zbytku Internetu, ať už jeho vlastním rozhodnutím nebo zásahem zvenčí. Jedním z takových problémů jsou TLS certifikáty, určené pro provoz zabezpečených služeb, například webových stránek dostupných protokolem HTTPS. Zřejmě v obavách z dalších sankcí spustilo vlastní kořenovou certifikační autoritu, která má v případě výpadku nahradit ty zahraniční. Ale může být použita k dalším, mnohem méně nevinným účelům.</description>
+      <link>https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</guid>
       <title>Dva internety místo jednoho. Rusko se připravuje na spuštění nové železné opony</title>
       <description>Situace kolem blokování na Internetu je v těchto dnech poněkud nepřehledná. Různé technologické společnosti více či méně dobrovolně blokují využívání svých služeb z Ruska, potažmo klienty odtamtud. Rusko zase naopak blokuje přístup ze svých sítí do týchž nebo i jiných služeb. Časem patrně dojde k pokusu o odstřižení Ruska od globálního Internetu, ať už z té, či oné strany.</description>
@@ -143,16 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-09-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</guid>
-      <title>Pilulka pro lepší 3D tisk: Karmen Pill pro vzdálenou správu tiskáren je raná verze, ale na solidním základu</title>
-      <description>3D tisk je dneska už stará vesta. Vytvoříte model, ve sliceru z něj vygenerujete G-Code, nahrajete na paměťovou kartu a na tiskárně zmáčknete tlačítko. Nebo ne? Výše uvedený postup stačí, když si jen tak tisknete na jedné tiskárně doma pár kousků. Ale co když máte tiskáren celou farmu? A chcete je vzdáleně dohledovat po síti? České řešení Karmen nabízí hardware i software pro vzdálené řízení tiskáren po síti.</description>
-      <link>https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <category>Recenze</category>
-      <pubDate>2021-09-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
