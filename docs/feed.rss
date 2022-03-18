@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky</guid>
+      <title>Když už fangličkaříte, dělejte to správně</title>
+      <description>V souvislosti s válkou na Ukrajině se ve veřejném prostoru množí vlajky - české, ukrajinské, občas i ruské. Ne vždy jsou použité správně, což mne dráždí, neboť se zde potkává můj specifický vztah k symbolům obecně (daný mými sociopatickými sklony), vlajkám zejména (jedním z mých mnoha low-key koníčků je vexilologie, tedy nauka o vlajkách) a obecná mírná OCD. Jak s vlajkou coby symbolem správně nakládat?</description>
+      <link>https://www.altair.blog/2022/03/vlajky</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2022-03-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</guid>
       <title>Rusko spustilo vlastní certifikační autoritu, pro webové prohlížeče budou ruské stránky nedůvěryhodné</title>
       <description>Rusko pokračuje v přípravách na technické problémy které mohou vzniknout při odpojení jeho národních sítí od zbytku Internetu, ať už jeho vlastním rozhodnutím nebo zásahem zvenčí. Jedním z takových problémů jsou TLS certifikáty, určené pro provoz zabezpečených služeb, například webových stránek dostupných protokolem HTTPS. Zřejmě v obavách z dalších sankcí spustilo vlastní kořenovou certifikační autoritu, která má v případě výpadku nahradit ty zahraniční. Ale může být použita k dalším, mnohem méně nevinným účelům.</description>
@@ -144,16 +153,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-01-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</guid>
-      <title>EU buduje vlastní síť DNS, aby nebyla závislá na amerických firmách; jde o snahu cenzurovat Internet</title>
-      <description>Evropská unie chce změnit způsob, jakým obyvatelé „starého kontinentu“ používají internet. Pod technickým plánem na vytvoření sítě rekurzivních DNS resolverů DNS4EU se prakticky skrývá možnost evropských orgánů omezovat to, jaké webové stránky uživatelé budou moci navštěvovat. Snaha filtrovat „nevhodné“ weby ovšem není nic nového.</description>
-      <link>https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-01-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
