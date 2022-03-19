@@ -1,6 +1,7 @@
 <!-- dcterms:title = Když už fangličkaříte, dělejte to správně -->
 <!-- dcterms:abstract = V souvislosti s válkou na Ukrajině se ve veřejném prostoru množí vlajky - české, ukrajinské, občas i ruské. Ne vždy jsou použité správně, což mne dráždí, neboť se zde potkává můj specifický vztah k symbolům obecně (daný mými sociopatickými sklony), vlajkám zejména (jedním z mých mnoha low-key koníčků je vexilologie, tedy nauka o vlajkách) a obecná mírná OCD. Jak s vlajkou coby symbolem správně nakládat? -->
 <!-- x4w:category = Politika -->
+<!-- x4w:category = Vexilologie -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:dateAccepted = 2022-03-18 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220318-vlajky.jpg -->

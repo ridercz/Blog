@@ -6,12 +6,22 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky-moje</guid>
+      <title>Moje vlajky: Ama-gi Flag a Pony Pride Flag</title>
+      <description>V souvislosti se svým včerejším článkem o vlajkách jsem dostal několik dotazů, které se týkají dvou vlajek, které mám vyvěšené za sebou a které jsou vidět při mých školeních a v dalších videích. Jsou docela zajímavé, takže pokud vám to včera nestačilo, můžeme v tématu fun with flags pokračovat.</description>
+      <link>https://www.altair.blog/2022/03/vlajky-moje</link>
+      <author>Michal Altair Valášek</author>
+      <category>Vexilologie</category>
+      <pubDate>2022-03-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky</guid>
       <title>Když už fangličkaříte, dělejte to správně</title>
       <description>V souvislosti s válkou na Ukrajině se ve veřejném prostoru množí vlajky - české, ukrajinské, občas i ruské. Ne vždy jsou použité správně, což mne dráždí, neboť se zde potkává můj specifický vztah k symbolům obecně (daný mými sociopatickými sklony), vlajkám zejména (jedním z mých mnoha low-key koníčků je vexilologie, tedy nauka o vlajkách) a obecná mírná OCD. Jak s vlajkou coby symbolem správně nakládat?</description>
       <link>https://www.altair.blog/2022/03/vlajky</link>
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
+      <category>Vexilologie</category>
       <pubDate>2022-03-18T00:00:00</pubDate>
     </item>
     <item>
@@ -143,16 +153,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-02-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</guid>
-      <title>Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu</title>
-      <description>Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá.</description>
-      <link>https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-01-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
