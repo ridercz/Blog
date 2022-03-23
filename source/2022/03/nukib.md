@@ -1,0 +1,10 @@
+<!-- dcterms:title = Varování NÚKIB před Ruskem? Je to méně absurdní, než se na první pohled zdá -->
+<!-- dcterms:abstract = Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal oficiální varování v souvislosti s ekonomickými sankcemi spojenými s Ruskou federací. Co to v praxi znamená? Že bychom měli přestat používat počítače ruské výroby? Realita je ale mnohem méně směšná a varování má svůj význam, i když z laického hlediska není úplně intuitivní. -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-03-23 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220130-nukib-cina.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6 -->

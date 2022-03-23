@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</guid>
+      <title>Varování NÚKIB před Ruskem? Je to méně absurdní, než se na první pohled zdá</title>
+      <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal oficiální varování v souvislosti s ekonomickými sankcemi spojenými s Ruskou federací. Co to v praxi znamená? Že bychom měli přestat používat počítače ruské výroby? Realita je ale mnohem méně směšná a varování má svůj význam, i když z laického hlediska není úplně intuitivní.</description>
+      <link>https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</guid>
       <title>Rusko spustilo vlastní certifikační autoritu, pro webové prohlížeče budou ruské stránky nedůvěryhodné</title>
       <description>Rusko pokračuje v přípravách na technické problémy které mohou vzniknout při odpojení jeho národních sítí od zbytku Internetu, ať už jeho vlastním rozhodnutím nebo zásahem zvenčí. Jedním z takových problémů jsou TLS certifikáty, určené pro provoz zabezpečených služeb, například webových stránek dostupných protokolem HTTPS. Zřejmě v obavách z dalších sankcí spustilo vlastní kořenovou certifikační autoritu, která má v případě výpadku nahradit ty zahraniční. Ale může být použita k dalším, mnohem méně nevinným účelům.</description>
@@ -143,16 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2021-09-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</guid>
-      <title>Microsoft radí uživatelům, aby se zbavili hesel. Nemusí to být tak dobrý nápad, jak se v Redmondu tváří</title>
-      <description>Microsoft oznámil, že se běžné spotřebitelské účty Microsoft Account obejdou bez hesel. V nastavení lze heslo odebrat, a pokud tak učiníte, systém vám pogratuluje, že jste zvýšili bezpečnost svého účtu a vylepšili pocit z přihlašování.  Není to ale tak jednoduché a v některých případech si můžete život zrušením hesla zkomplikovat.</description>
-      <link>https://tech.hn.cz/c7-66976260-psms7-1c2005073d90cbf</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-09-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

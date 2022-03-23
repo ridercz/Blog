@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</guid>
+      <title>Varování NÚKIB před Ruskem? Je to méně absurdní, než se na první pohled zdá</title>
+      <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal oficiální varování v souvislosti s ekonomickými sankcemi spojenými s Ruskou federací. Co to v praxi znamená? Že bychom měli přestat používat počítače ruské výroby? Realita je ale mnohem méně směšná a varování má svůj význam, i když z laického hlediska není úplně intuitivní.</description>
+      <link>https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky-moje</guid>
       <title>Moje vlajky: Ama-gi Flag a Pony Pride Flag</title>
       <description>V souvislosti se svým včerejším článkem o vlajkách jsem dostal několik dotazů, které se týkají dvou vlajek, které mám vyvěšené za sebou a které jsou vidět při mých školeních a v dalších videích. Jsou docela zajímavé, takže pokud vám to včera nestačilo, můžeme v tématu fun with flags pokračovat.</description>
@@ -143,16 +153,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-02-17T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/02/newimager</guid>
-      <title>Raspberry Pi Imager 1.7: Jednodušší provisioning</title>
-      <description>První dva díly seriálu o ASP.NET na Raspberry Pi jsem věnoval jeho prvotnímu nastavení, nebo chcete-li provisioningu. Jak nastavit parametry Wi-Fi, autentizace, povolení SSH... Nyní je všechno mnohem jednodušší.</description>
-      <link>https://www.altair.blog/2022/02/newimager</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-02-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
