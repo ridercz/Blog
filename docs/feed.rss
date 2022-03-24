@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</guid>
+      <title>Anonymous kvůli Ukrajině vyhrožují Raiffeisenbank a dalším firmám</title>
+      <description>Kyberútočné družstvo Anonymous vyhrožuje firmám, které se podle jeho názoru nedostatečně vymezují proti Rusku v souvislosti s válkou na Ukrajině. Nejnovějším cílem těchto výhrůžek je i Raiffeisen - jedna z největších bank u nás. Hrozí běžným klientům že přijdou o své peníze? Nikoliv, ale obecně je dobré udělat pár příprav.</description>
+      <link>https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</guid>
       <title>Varování NÚKIB před Ruskem? Je to méně absurdní, než se na první pohled zdá</title>
       <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal oficiální varování v souvislosti s ekonomickými sankcemi spojenými s Ruskou federací. Co to v praxi znamená? Že bychom měli přestat používat počítače ruské výroby? Realita je ale mnohem méně směšná a varování má svůj význam, i když z laického hlediska není úplně intuitivní.</description>
@@ -143,16 +153,6 @@
       <category>Z-TECH</category>
       <category>3D tisk</category>
       <pubDate>2022-02-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/02/cookies</guid>
-      <title>Cookies: Všechno co jste o nich kdy chtěli vědět a ještě něco navíc</title>
-      <description>HTTP cookies jsou jedním ze základních stavebních kamenů současného webu. Občas jsou prezentovány jako symbol zla a ohrožení soukromí, ale ve skutečnosti problém se soukromím leží poněkud jinde a cookies jsou skutečně jenom symbolem. Připravil jsem pro vás šestidílný seriál, ve kterém vám ukážu, jak obecně fungují a jak s nimi pracovat v ASP.NET.</description>
-      <link>https://www.altair.blog/2022/02/cookies</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-02-17T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

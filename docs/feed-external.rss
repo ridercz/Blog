@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</guid>
+      <title>Anonymous kvůli Ukrajině vyhrožují Raiffeisenbank a dalším firmám</title>
+      <description>Kyberútočné družstvo Anonymous vyhrožuje firmám, které se podle jeho názoru nedostatečně vymezují proti Rusku v souvislosti s válkou na Ukrajině. Nejnovějším cílem těchto výhrůžek je i Raiffeisen - jedna z největších bank u nás. Hrozí běžným klientům že přijdou o své peníze? Nikoliv, ale obecně je dobré udělat pár příprav.</description>
+      <link>https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>Bezpečnost</category>
+      <pubDate>2022-03-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</guid>
       <title>Varování NÚKIB před Ruskem? Je to méně absurdní, než se na první pohled zdá</title>
       <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal oficiální varování v souvislosti s ekonomickými sankcemi spojenými s Ruskou federací. Co to v praxi znamená? Že bychom měli přestat používat počítače ruské výroby? Realita je ale mnohem méně směšná a varování má svůj význam, i když z laického hlediska není úplně intuitivní.</description>
@@ -143,16 +153,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2021-12-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</guid>
-      <title>Umělá inteligence GitHub Copilot má vývojářům pomáhat, do kódu jim ale přidává bezpečnostní chyby</title>
-      <description>Měla to být velká pomoc programátorům. Umělá inteligence GitHub Copilot umí programátorům navrhnout kód, který nejspíš chtějí napsat. Řídí se přitom analýzou kódu mnoha open source projektů. Aktuální studie však ukázala, že 40 procent návrhů vytvořených na základě strojového učení obsahuje bezpečnostní chyby. To je samozřejmě bezprostřední problém, ale ukazuje to i na obecné limity toho, čemu rádi říkáme umělá inteligence.</description>
-      <link>https://tech.hn.cz/c7-66979080-psms7-9263b5d963fee33</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-09-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
