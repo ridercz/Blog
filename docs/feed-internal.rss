@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/03/ngrok</guid>
+      <title>NGROK: Užitečný nástroj pro dočasné zpřístupnění localhostu z Internetu</title>
+      <description>Aplikace úspěšně běží na localhostu ve vývojovém serveru. Ale je třeba ji otestovat z mobilu, nebo ukázat někomu zvenčí. Jak to udělat, aniž byste museli aplikaci nasazovat na hosting nebo složitě nastavovat forwardování portů z Internetu, což někdy není možné? Od toho je tady služba NGrok.</description>
+      <link>https://www.altair.blog/2022/03/ngrok</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2022-03-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky-moje</guid>
       <title>Moje vlajky: Ama-gi Flag a Pony Pride Flag</title>
       <description>V souvislosti se svým včerejším článkem o vlajkách jsem dostal několik dotazů, které se týkají dvou vlajek, které mám vyvěšené za sebou a které jsou vidět při mých školeních a v dalších videích. Jsou docela zajímavé, takže pokud vám to včera nestačilo, můžeme v tématu fun with flags pokračovat.</description>
@@ -143,17 +152,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2021-12-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/12/robodepo-4</guid>
-      <title>Jak zastavit robotické depo Zásilkovny: Software</title>
-      <description>Software pro Z-Button je ve skutečnosti docela jednoduchý, ostatně nechce se od něj nic jiného, než aby na stisk tlačítka udělal HTTP request plus nějaká konfigurační omáčka kolem. Ve skutečnosti je ta konfigurační omáčka v podstatě to nejsložitější.</description>
-      <link>https://www.altair.blog/2021/12/robodepo-4</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-12-11T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
