@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/04/live-upgrade</guid>
+      <title>Pozvánka na live coding: Upgrade aplikace z ASP.NET 5 na 6</title>
+      <description>Konec podpory .NET 5 se blíží a je třeba upgradovat na .NET 6. V úterním živém streamu budeme upgradovat aplikaci AskMe na ASP.NET 6.0</description>
+      <link>https://www.altair.blog/2022/04/live-upgrade</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Z-TECH</category>
+      <pubDate>2022-04-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/03/ngrok</guid>
       <title>NGROK: Užitečný nástroj pro dočasné zpřístupnění localhostu z Internetu</title>
       <description>Aplikace úspěšně běží na localhostu ve vývojovém serveru. Ale je třeba ji otestovat z mobilu, nebo ukázat někomu zvenčí. Jak to udělat, aniž byste museli aplikaci nasazovat na hosting nebo složitě nastavovat forwardování portů z Internetu, což někdy není možné? Od toho je tady služba NGrok.</description>
@@ -142,16 +152,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-02-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</guid>
-      <title>Kybernetický útok na Červený kříž připomíná, že ženevské konvence by měly platit i na internetu</title>
-      <description>Červený kříž se stal obětí přesně cíleného a velmi pokročilého kybernetického útoku. Neznámí útočníci získali osobní údaje půl milionu lidí, kterým tato humanitární organizace pomáhá. Za útokem by mohl být některý stát. ICRC si zaslouží uznání když ne za zabezpečení, tak za zodpovědnou komunikaci.</description>
-      <link>https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-02-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
