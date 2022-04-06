@@ -1,0 +1,11 @@
+<!-- dcterms:title = Z Messengeru zprávy třeba do WhatsAppu. Umožnit to má nová regulace, nebude to mít ale snadné -->
+<!-- dcterms:abstract = Význam programů pro předávání zpráv (IM, instant messaging) za posledních několik let prudce vzrostl. Aplikace pro předávání zpráv téměř vytlačují standardizované způsoby komunikace, jako je e-mail nebo SMS. Trh si přitom mezi sebe rozdělilo několik populárních aplikací, Facebook Messenger, WhatsApp, iMessage, Signal či Telegram, které se snaží udržet uživatele ve vlastním rybníku a ještě k tomu podchytit SMS a získat co nejvíce dalších kontaktů. A s tím je podle Evropské komise potřeba něco udělat. -->
+<!-- x4w:category = IT -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = Politika -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:dateAccepted = 2022-04-05 -->
+<!-- x4w:pictureUrl = /perex-pictures/20220405-dma.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229 -->

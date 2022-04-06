@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</guid>
+      <title>Z Messengeru zprávy třeba do WhatsAppu. Umožnit to má nová regulace, nebude to mít ale snadné</title>
+      <description>Význam programů pro předávání zpráv (IM, instant messaging) za posledních několik let prudce vzrostl. Aplikace pro předávání zpráv téměř vytlačují standardizované způsoby komunikace, jako je e-mail nebo SMS. Trh si přitom mezi sebe rozdělilo několik populárních aplikací, Facebook Messenger, WhatsApp, iMessage, Signal či Telegram, které se snaží udržet uživatele ve vlastním rybníku a ještě k tomu podchytit SMS a získat co nejvíce dalších kontaktů. A s tím je podle Evropské komise potřeba něco udělat.</description>
+      <link>https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <category>Politika</category>
+      <pubDate>2022-04-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/04/live-upgrade</guid>
       <title>Pozvánka na live coding: Upgrade aplikace z ASP.NET 5 na 6</title>
       <description>Konec podpory .NET 5 se blíží a je třeba upgradovat na .NET 6. V úterním živém streamu budeme upgradovat aplikaci AskMe na ASP.NET 6.0</description>
@@ -142,16 +153,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-03T08:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</guid>
-      <title>Hackerem snadno, rychle a bez námahy: Jaký smysl má zapojit se do útoků na ruské webové servery</title>
-      <description>V souvislosti s válkou na Ukrajině se vynořilo velké množství služeb, které nabízejí možnost stát se „hackerem snadno a rychle“. Jedná se o prostou webovou stránku, na kterou když vstoupíte, zahájí velké množství dotazů na weby, které se jejímu autorovi znelíbily, obvykle ruských státních orgánů a státem kontrolovaných médií. Je použití takových služeb bezpečné? A jsou reálně k něčemu dobré?</description>
-      <link>https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-02-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
