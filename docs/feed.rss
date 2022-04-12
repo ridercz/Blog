@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/04/decimal-numbers</guid>
+      <title>Desetinná čísla v C# a .NET</title>
+      <description>Ve starším článku a videu jsem se zabýval tím, jak jsou v .NETu ukládána celá čísla se znaménkem i bez něj. Logický dotaz byl jak jsou ukládána čísla desetinná. V .NETu na to máme čtyři datové typy a je s tím spousta zábavy.</description>
+      <link>https://www.altair.blog/2022/04/decimal-numbers</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-04-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</guid>
       <title>Z Messengeru zprávy třeba do WhatsAppu. Umožnit to má nová regulace, nebude to mít ale snadné</title>
       <description>Význam programů pro předávání zpráv (IM, instant messaging) za posledních několik let prudce vzrostl. Aplikace pro předávání zpráv téměř vytlačují standardizované způsoby komunikace, jako je e-mail nebo SMS. Trh si přitom mezi sebe rozdělilo několik populárních aplikací, Facebook Messenger, WhatsApp, iMessage, Signal či Telegram, které se snaží udržet uživatele ve vlastním rybníku a ještě k tomu podchytit SMS a získat co nejvíce dalších kontaktů. A s tím je podle Evropské komise potřeba něco udělat.</description>
@@ -143,16 +153,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-03-03T12:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246</guid>
-      <title>NÚKIB vydal doporučení ke správnému používání aplikace Signal. Jak ho správně číst?</title>
-      <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal sadu doporučení k bezpečnému používání aplikace Signal. Bohužel však celou akci komunikuje s typickou úřední nesrozumitelností, takže je Twitter plný dotazů, jestli se to má chápat jako doporučení „používejte Signal“, nebo jako varování „když už musíte používat Signal, dělejte to aspoň bezpečně“. Pojďme to přeložit z úředničtiny do češtiny.</description>
-      <link>https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-03T08:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/04/decimal-numbers</guid>
+      <title>Desetinná čísla v C# a .NET</title>
+      <description>Ve starším článku a videu jsem se zabýval tím, jak jsou v .NETu ukládána celá čísla se znaménkem i bez něj. Logický dotaz byl jak jsou ukládána čísla desetinná. V .NETu na to máme čtyři datové typy a je s tím spousta zábavy.</description>
+      <link>https://www.altair.blog/2022/04/decimal-numbers</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-04-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/04/live-upgrade</guid>
       <title>Pozvánka na live coding: Upgrade aplikace z ASP.NET 5 na 6</title>
       <description>Konec podpory .NET 5 se blíží a je třeba upgradovat na .NET 6. V úterním živém streamu budeme upgradovat aplikaci AskMe na ASP.NET 6.0</description>
@@ -142,16 +152,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-01-06T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2021/12/cs10-namespaces</guid>
-      <title>C# pro mírně pokročilé: Namespaces v C# 10</title>
-      <description>Nejnovější verze C# 10 přináší novinky - zjednodušení - v práci s namespaces a tomu odpovídá i nová podoba výchozích šablon pro projekty. V tomto dílu seriálu o C# pro mírně pokročilé se na tyto novinky podíváme podrobněji.</description>
-      <link>https://www.altair.blog/2021/12/cs10-namespaces</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2021-12-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
