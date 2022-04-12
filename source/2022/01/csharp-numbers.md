@@ -52,7 +52,7 @@ C# má speciální datové typy `nshort`, `nushort`, `nint`, `nuint`, `nlong` a 
 
 ## Proč tedy spadl ten Exchange?
 
-Bystřejším ze čtenářů to patrně došlo už při pohledu na nejvyšší hodnotu, kterou umí uchovávat datový typ `Int32`: 2147483647. Programátor modulu pro antimalware kontrolu se rozhodl ukládat datum a čas jako číselnou hodnotu ve formátu `YYYYMMDDhhmm`. Takže zatímco poslední sekunda starého roku měla hodnotu `2112312359` (což se do rozsahu `Int32` vejde), první sekunda roku nového je `2201010000`, což maximální kapacitu `Int32` přesahuje.
+Bystřejším ze čtenářů to patrně došlo už při pohledu na nejvyšší hodnotu, kterou umí uchovávat datový typ `Int32`: 2147483647. Programátor modulu pro antimalware kontrolu se rozhodl ukládat datum a čas jako číselnou hodnotu ve formátu `YYMMDDhhmm`. Takže zatímco poslední sekunda starého roku měla hodnotu `2112312359` (což se do rozsahu `Int32` vejde), první sekunda roku nového je `2201010000`, což maximální kapacitu `Int32` přesahuje.
 
 > Jsem si vědom toho, že podle chybové hlášky patřičný modul nejspíše nebyl programován v .NETu. Nehodlám si ale hezkou a poučnou historku kazit nudnou realitou ;-)
 
