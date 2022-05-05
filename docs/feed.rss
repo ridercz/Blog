@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/05/corestart6</guid>
+      <title>Materiály z konference CoreStart 6.0 a nová videa o C#</title>
+      <description>Nabízím vám ke stažení prezentace a příklady z konference CoreStart 6.0, která se konala minulý týden, a videa s demy, která se mi už na konferenci nevešla.</description>
+      <link>https://www.altair.blog/2022/05/corestart6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-05-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/04/decimal-numbers</guid>
       <title>Desetinná čísla v C# a .NET</title>
       <description>Ve starším článku a videu jsem se zabýval tím, jak jsou v .NETu ukládána celá čísla se znaménkem i bez něj. Logický dotaz byl jak jsou ukládána čísla desetinná. V .NETu na to máme čtyři datové typy a je s tím spousta zábavy.</description>
@@ -143,16 +153,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-06T08:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/data-protection</guid>
-      <title>ASP.NET Data Protection: Vše co o něm potřebujete vědět</title>
-      <description>Pro ochranu (šifrování a digitální podepisování) dat je v ASP.NET Core funkce Data Protection. Ve čtyřech dílech video seriálu vám o ní řeknu všechno, co potřebujete vědět.</description>
-      <link>https://www.altair.blog/2022/03/data-protection</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-03-03T12:00:00</pubDate>
     </item>
   </channel>
 </rss>

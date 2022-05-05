@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/05/corestart6</guid>
+      <title>Materiály z konference CoreStart 6.0 a nová videa o C#</title>
+      <description>Nabízím vám ke stažení prezentace a příklady z konference CoreStart 6.0, která se konala minulý týden, a videa s demy, která se mi už na konferenci nevešla.</description>
+      <link>https://www.altair.blog/2022/05/corestart6</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-05-05T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/04/decimal-numbers</guid>
       <title>Desetinná čísla v C# a .NET</title>
       <description>Ve starším článku a videu jsem se zabýval tím, jak jsou v .NETu ukládána celá čísla se znaménkem i bez něj. Logický dotaz byl jak jsou ukládána čísla desetinná. V .NETu na to máme čtyři datové typy a je s tím spousta zábavy.</description>
@@ -142,16 +152,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-01-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/01/csharp-numbers</guid>
-      <title>Jak se uchovávají čísla v C# a jak to souvisí s chybou v Exchange serveru</title>
-      <description>I úplní počítačoví laici vědí, že počítače počítají ve dvojkové soustavě - že přemýšlejí v jedničkách a nulách. Pojďme se podívat na to, jak je to doopravdy a jak funguje ukládání celých čísel se znaménkem i bez znaménka v jazyce C# a prostředí .NET. A jak to souvisí s tím, že mnoho Microsoft Exchange serverů přestalo na Nový rok 2022 úderem půlnoci doručovat poštu.</description>
-      <link>https://www.altair.blog/2022/01/csharp-numbers</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-01-06T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
