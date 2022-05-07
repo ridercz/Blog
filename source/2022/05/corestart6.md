@@ -21,9 +21,11 @@ Nabízím vám ke stažení prezentace a příklady z konference CoreStart 6.0, 
   * Chybějící demo: [Střípky z jazyka C#: Co se jinam nevešlo](https://www.youtube.com/watch?v=ZwfG7iIZ4rc)
 * **Dlouho běžící úlohy jako zabiják výkonu web serveru**
   * [Prezentace](https://www.cdn.altairis.cz/Blog/2022/20220505-03-longtasks.pdf)
-  * [Ping a TraceRoute v .NET](https://www.youtube.com/watch?v=yglCUKiZcnw)
-  * [Background worker ve Windows službě](https://www.youtube.com/watch?v=-8phkcv4QB8)
-  * [Nastavení identity Windows služby](https://www.youtube.com/watch?v=f2acAHLhsYE)
-  * [Zpracování dlouho běžících úloh na pozadí v ASP.NET](https://www.youtube.com/watch?v=SHF5WSHr7RU&t=2s)
+  * [Ukázková aplikace](https://github.com/ridercz/NetUtilsDemo)
+  * YouTube videa:
+    * [Ping a TraceRoute v .NET](https://www.youtube.com/watch?v=yglCUKiZcnw)
+    * [Background worker ve Windows službě](https://www.youtube.com/watch?v=-8phkcv4QB8)
+    * [Nastavení identity Windows služby](https://www.youtube.com/watch?v=f2acAHLhsYE)
+    * [Zpracování dlouho běžících úloh na pozadí v ASP.NET](https://www.youtube.com/watch?v=SHF5WSHr7RU&t=2s)
 * **ASP.NET Identity: Jak to dělat správně**
   * [Prezentace](https://www.cdn.altairis.cz/Blog/2022/20220505-04-identity.pdf)

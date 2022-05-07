@@ -15,7 +15,7 @@ Naštěstí je k dispozici _Azure CLI_ (Command Line Interface) a příkazová �
 
 ## Skript pro vytvoření virtuálního počítače
 
-Následující skript po spuštění vytvoří virtuální server (VM) s Windows 2019 Datacenter. Vytvoří vlastní resource group s náhodně vygenerovaným jménem (`Test-XXXXXXXXXX` kde `X` jsou náhodně vygenerované šestnáctkové číslice `0-f`) a VM s podobným jménem (`testXXXXXXXXXX`). VM bude mít povolené porty `80` (HTTP), `443` (HTTPS), `3389` (RDP) a `8172` (Web Management Service). Bude mít rozumnou velikost `B2ms` (2 cores, 8 GB RAM) a bude vytvořena v regionu `EastUS`, který je dlouhodobě nejlevnější. Bude vytvořen správcovský účet `Developer` s náhodně vygenerovaným heslem.
+Následující skript po spuštění vytvoří virtuální server (VM) s Windows 2022 Datacenter. Vytvoří vlastní resource group s náhodně vygenerovaným jménem (`Test-XXXXXXXXXX` kde `X` jsou náhodně vygenerované šestnáctkové číslice `0-f`) a VM s podobným jménem (`testXXXXXXXXXX`). VM bude mít povolené porty `80` (HTTP), `443` (HTTPS), `3389` (RDP) a `8172` (Web Management Service). Bude mít rozumnou velikost `B2ms` (2 cores, 8 GB RAM) a bude vytvořena v regionu `EastUS`, který je dlouhodobě nejlevnější. Bude vytvořen správcovský účet `Developer` s náhodně vygenerovaným heslem.
 
 Veškeré parametry můžete upravit snadnou editací záhaví skriptu.
 
@@ -30,7 +30,7 @@ RG_NAME=Test-$SUFFIX
 NSG_NAME=Test-$SUFFIX-NSG
 REGION=EastUS
 SIZE=Standard_B2ms
-IMAGE=win2019datacenter
+IMAGE=win2022datacenter
 VM_NAME=test$SUFFIX
 USER_NAME=Developer
 USER_PASS=$(openssl rand -base64 18 | sed "s|[+/]|x|g")
@@ -78,6 +78,7 @@ az vm create -n $VM_NAME -g $RG_NAME \
              --admin-username $USER_NAME --admin-password $USER_PASS \
              --image $IMAGE --size $SIZE \
              --nsg $NSG_NAME -l $REGION \
+             --public-ip-sku Standard \
              --public-ip-address-dns-name $VM_NAME
 
 # Display results
