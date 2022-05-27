@@ -1,0 +1,10 @@
+<!-- dcterms:title = CZ.NIC už neblokuje dezinformační weby; škody zůstaly a náprava je nepravděpodobná -->
+<!-- dcterms:abstract = Sdružení CZ.NIC přestalo blokovat „závadové“ domény, na kterých mělo docházet k šíření dezinformací. Bylo na čase, protože se vůbec nemělo snažit zabránit uživatelům v přístupu k nim. V tomto textu se podíváme nejen na technické náležitosti blokování nežádoucích webových serverů, ale také na unikátní postavení CZ.NIC a na možnosti, jak do budoucna zajistit ochranu webů před rozhodnutími správce české národní domény, která nemají oporu v legislativě. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-cznic.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Politika -->
+<!-- x4w:category = IT -->
+<!-- dcterms:dateAccepted = 2022-05-27 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe -->

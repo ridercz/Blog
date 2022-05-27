@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</guid>
+      <title>CZ.NIC už neblokuje dezinformační weby; škody zůstaly a náprava je nepravděpodobná</title>
+      <description>Sdružení CZ.NIC přestalo blokovat „závadové“ domény, na kterých mělo docházet k šíření dezinformací. Bylo na čase, protože se vůbec nemělo snažit zabránit uživatelům v přístupu k nim. V tomto textu se podíváme nejen na technické náležitosti blokování nežádoucích webových serverů, ale také na unikátní postavení CZ.NIC a na možnosti, jak do budoucna zajistit ochranu webů před rozhodnutími správce české národní domény, která nemají oporu v legislativě.</description>
+      <link>https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>IT</category>
+      <pubDate>2022-05-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</guid>
       <title>Z Messengeru zprávy třeba do WhatsAppu. Umožnit to má nová regulace, nebude to mít ale snadné</title>
       <description>Význam programů pro předávání zpráv (IM, instant messaging) za posledních několik let prudce vzrostl. Aplikace pro předávání zpráv téměř vytlačují standardizované způsoby komunikace, jako je e-mail nebo SMS. Trh si přitom mezi sebe rozdělilo několik populárních aplikací, Facebook Messenger, WhatsApp, iMessage, Signal či Telegram, které se snaží udržet uživatele ve vlastním rybníku a ještě k tomu podchytit SMS a získat co nejvíce dalších kontaktů. A s tím je podle Evropské komise potřeba něco udělat.</description>
@@ -145,16 +155,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-01-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://youtu.be/C3ljUE0q3U8</guid>
-      <title>Jak vznikají chyby: příběh inspirovaný Log4Shell</title>
-      <description>Jak vlastně vznikají bezpečnostní chyby v software? Jak je možné, že jsou v rozšířených knihovnách, které používá spousta projektů? A proč nestačí, když se chyba opraví a vydá se nová verze? Mnoho čtenářů mého blogu a diváků kanálu Z-TECH to ví, protože je s celým procesem intimně obeznámena (začasté mnohem intimněji, než by si byli přáli). Pro ty ostatní jsem natočil video, inspirované aktuálním bezpečnostním průšvihem.</description>
-      <link>https://youtu.be/C3ljUE0q3U8</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>Bezpečnost</category>
-      <pubDate>2021-12-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</guid>
+      <title>CZ.NIC už neblokuje dezinformační weby; škody zůstaly a náprava je nepravděpodobná</title>
+      <description>Sdružení CZ.NIC přestalo blokovat „závadové“ domény, na kterých mělo docházet k šíření dezinformací. Bylo na čase, protože se vůbec nemělo snažit zabránit uživatelům v přístupu k nim. V tomto textu se podíváme nejen na technické náležitosti blokování nežádoucích webových serverů, ale také na unikátní postavení CZ.NIC a na možnosti, jak do budoucna zajistit ochranu webů před rozhodnutími správce české národní domény, která nemají oporu v legislativě.</description>
+      <link>https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <category>IT</category>
+      <pubDate>2022-05-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/05/corestart6</guid>
       <title>Materiály z konference CoreStart 6.0 a nová videa o C#</title>
       <description>Nabízím vám ke stažení prezentace a příklady z konference CoreStart 6.0, která se konala minulý týden, a videa s demy, která se mi už na konferenci nevešla.</description>
@@ -143,16 +153,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-06T12:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67038080-psms7-76c91df19657c1f</guid>
-      <title>Jak hacknout jízdní kolo či koloběžku pomocí obyčejného QR kódu? Stačí drzost</title>
-      <description>Uživatelé služby Citi Bike, půjčovny kol v New Yorku, občas zaplatí za svezení, ale kvůli specifickému typu útoku založenému na modifikaci QR kódů se jim kolo neodemkne a oni na něm tedy neodjedou. Podobný mechanismus lze použít i pro řadu českých služeb. Podíváme se tedy na to, jak takový útok funguje a jaké jsou možnosti obrany proti němu.</description>
-      <link>https://tech.hn.cz/c7-67038080-psms7-76c91df19657c1f</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-06T08:00:00</pubDate>
     </item>
   </channel>
 </rss>
