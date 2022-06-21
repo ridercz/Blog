@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/06/long-tasks</guid>
+      <title>Dlouze běžící úlohy jako zabiják výkonu webových aplikací</title>
+      <description>Jedním z největších problémů webového vývoje jsou dlouho běžící úlohy zpracovávané na web serveru. Web servery na ně nejsou připraveny a neumí si s nimi dobře poradit. Připravil jsem seriál videí a příkladů, které radí, jak si s tímto fenoménem poradit. V tomto článku najdete souhrn všech dílů ve věcně logickém pořadí (které z různých důvodů neodpovídá pořadí, v jakém byly zveřejněny).</description>
+      <link>https://www.altair.blog/2022/06/long-tasks</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-06-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</guid>
       <title>CZ.NIC už neblokuje dezinformační weby; škody zůstaly a náprava je nepravděpodobná</title>
       <description>Sdružení CZ.NIC přestalo blokovat „závadové“ domény, na kterých mělo docházet k šíření dezinformací. Bylo na čase, protože se vůbec nemělo snažit zabránit uživatelům v přístupu k nim. V tomto textu se podíváme nejen na technické náležitosti blokování nežádoucích webových serverů, ale také na unikátní postavení CZ.NIC a na možnosti, jak do budoucna zajistit ochranu webů před rozhodnutími správce české národní domény, která nemají oporu v legislativě.</description>
@@ -143,16 +153,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-07T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67042080-psms7-81b28d17fc0dd7e</guid>
-      <title>Informační válka vedle té skutečné: Česko je terčem první kategorie, cenzura ale není odpověď</title>
-      <description>Válka o Ukrajinu přináší jedno prvenství: je první, ve které se se vší vážností válčí ve třech dimenzích. Tou první je samozřejmě boj fyzický. Druhou dimenzí je válka informační, propagandistická. Třetí dimenzí pak válka kybernetická. Česká republika je dlouhodobě cílem ruské informační války. Dlouhodobě prohrává a kroky současné vlády tomu ještě napomáhají.</description>
-      <link>https://tech.hn.cz/c7-67042080-psms7-81b28d17fc0dd7e</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-06T12:00:00</pubDate>
     </item>
   </channel>
 </rss>

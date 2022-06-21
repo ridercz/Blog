@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/06/long-tasks</guid>
+      <title>Dlouze běžící úlohy jako zabiják výkonu webových aplikací</title>
+      <description>Jedním z největších problémů webového vývoje jsou dlouho běžící úlohy zpracovávané na web serveru. Web servery na ně nejsou připraveny a neumí si s nimi dobře poradit. Připravil jsem seriál videí a příkladů, které radí, jak si s tímto fenoménem poradit. V tomto článku najdete souhrn všech dílů ve věcně logickém pořadí (které z různých důvodů neodpovídá pořadí, v jakém byly zveřejněny).</description>
+      <link>https://www.altair.blog/2022/06/long-tasks</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-06-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/05/corestart6</guid>
       <title>Materiály z konference CoreStart 6.0 a nová videa o C#</title>
       <description>Nabízím vám ke stažení prezentace a příklady z konference CoreStart 6.0, která se konala minulý týden, a videa s demy, která se mi už na konferenci nevešla.</description>
@@ -142,16 +152,6 @@
       <category>3D tisk</category>
       <category>Z-TECH</category>
       <pubDate>2022-01-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/01/html5-details</guid>
-      <title>DETAILS a SUMMARY: zapomenuté HTML 5 elementy</title>
-      <description>Ve specifikaci HTML 5 se najde řada užitečných elementů, které nejsou příliš známé a weboví programátoři je nevyužívají nebo nevyužívají dostatečně a zbytečně pak používají složité CSS konstrukce nebo JavaScript. Jedním z takových elementů je details a jeho průvodce summary.</description>
-      <link>https://www.altair.blog/2022/01/html5-details</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-01-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
