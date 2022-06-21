@@ -11,6 +11,10 @@
 
 Jedním z největších problémů webového vývoje jsou dlouho běžící úlohy zpracovávané na web serveru. Web servery na ně nejsou připraveny a neumí si s nimi dobře poradit. Připravil jsem seriál videí a příkladů, které radí, jak si s tímto fenoménem poradit. V tomto článku najdete souhrn všech dílů ve věcně logickém pořadí (které z různých důvodů neodpovídá pořadí, v jakém byly zveřejněny).
 
+## Zdrojové kódy příkladů
+
+Všechny zdrojové kódy najdete v [repozitáři NetUtilsDemo na mém GitHubu](https://github.com/ridercz/NetUtilsDemo).
+
 ## Předehra: Traceroute a ping
 
 Pro dema jsem potřeboval nějaký příklad dlouho (sekundy, desítky sekund a déle) běžící úlohy. Většina reálných úloh tohoto typu jsou logicky věci dosti náročné a pro dema nevhodné, jako náročné databázové věci, generování reportů, práce s velkými objemy dat... Nicméně pro síťovou diagnostiku se používají příkazy `ping` a `traceroute`/`tracert`. 
