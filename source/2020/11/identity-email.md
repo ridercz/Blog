@@ -128,7 +128,7 @@ services.AddIdentity<ApplicationUser, ApplicationRole>(...)
 
 V ukázkové aplikaci FutLabIS výše uvedené řešení použít nechci, protože tam uživatelé budou v rámci systému vystupovat pod svými přezdívkami (uživatelé vidí cizí rezervace). Nicméně pokládám za vhodné, aby uživatelé mohli pro přihlášení použít i svou e-mailovou adresu, nejenom uživatelské jméno.
 
-V takovém případě je řešení podobné: vytvoříme vlastního potomka třídy `SignInManager<TUser>` a dopíšeme do něj požadovanou funkcionalitu. Podívejte se, jak vypadá v ukázkové aplikaci třída [`ApplicationSignInManager`](https://github.com/ridercz/FutLabIS/blob/master/Altairis.ReP.Web/Services/ApplicationSignInManager.cs):
+V takovém případě je řešení podobné: vytvoříme vlastního potomka třídy `SignInManager<TUser>` a dopíšeme do něj požadovanou funkcionalitu. Podívejte se, jak vypadá v ukázkové aplikaci třída [`ApplicationSignInManager`](https://github.com/ridercz/ReP/blob/master/Altairis.ReP.Web/Services/ApplicationSignInManager.cs):
 
 ```cs
 namespace Altairis.FutLabIS.Web.Services {
