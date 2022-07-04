@@ -209,10 +209,10 @@
 </code></pre>
 <p>Na této stránce se pak nachází výše uvedený HTML kód, který zobrazí potvrzovací dialog.</p>
 <h2 id="modalbox-tag-helper">ModalBox tag helper</h2>
-<p>Abych si psaní modálních boxů usnadnil, napsal jsem si na to <a href="https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/TagHelpers/ModalBoxTagHelper.cs">ModalBoxTagHelper</a>. Jedná se o tag helper, který mi vygeneruje výše zmíněné HTML, přičemž v Razoru pak stačí napsat</p>
+<p>Abych si psaní modálních boxů usnadnil, napsal jsem si na to <a href="https://github.com/ridercz/ReP/blob/master/Altairis.ReP.Web/TagHelpers/ModalBoxTagHelper.cs">ModalBoxTagHelper</a>. Jedná se o tag helper, který mi vygeneruje výše zmíněné HTML, přičemž v Razoru pak stačí napsat</p>
 <pre><code class="language-html">&lt;modal-box id=&quot;nejakeid&quot; message=&quot;Text zprávy&quot; /&gt;
 </code></pre>
-<p>Využití tag helperu je vidět na <a href="https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/Pages/Login/Index.cshtml">přihlašovací stránce</a>, kde jich na konci mám hned několik, pro zobrazení různých zpráv souvisejících s procesem přihlašování, odhlašování, resetu zapomenutého hesla atd.</p>
+<p>Využití tag helperu je vidět na <a href="https://github.com/ridercz/ReP/blob/master/Altairis.ReP.Web/Pages/Login/Index.cshtml">přihlašovací stránce</a>, kde jich na konci mám hned několik, pro zobrazení různých zpráv souvisejících s procesem přihlašování, odhlašování, resetu zapomenutého hesla atd.</p>
 <h2 id="k-cemu-je-to-dobre">K čemu je to dobré?</h2>
 <p>Užitečnost této konstrukce spočívá zejména ve zjednodušení aplikace. Buďto bychom potvrzovací zprávu zobrazili přímo ve stránce vzniklé po POST požadavku, což by ale znamenalo značnou komplikaci view a navíc obecně není vhodné vracet přímou odpověď na POST požadavky, protože to dělá nepořádek v historii a při použití tlačítka <em>Zpět</em> v prohlížeči. Při klasickém <em>POST and redirect</em> zase musíme vytvářet speciální potvrzovací stránku.</p>
 <p>Toto řešení je elegantní, protože fakticky používá metodu <em>POST and redirect</em>, ale uživatele přesměruje ne na speciální stránku, ale na nějakou přibližně logickou (zde přihlašovací) kde zobrazí dialogové okno, které lze snadno zavřít.</p>

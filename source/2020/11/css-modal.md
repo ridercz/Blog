@@ -120,13 +120,13 @@ Na této stránce se pak nachází výše uvedený HTML kód, který zobrazí po
 
 ## ModalBox tag helper
 
-Abych si psaní modálních boxů usnadnil, napsal jsem si na to [ModalBoxTagHelper](https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/TagHelpers/ModalBoxTagHelper.cs). Jedná se o tag helper, který mi vygeneruje výše zmíněné HTML, přičemž v Razoru pak stačí napsat
+Abych si psaní modálních boxů usnadnil, napsal jsem si na to [ModalBoxTagHelper](https://github.com/ridercz/ReP/blob/master/Altairis.ReP.Web/TagHelpers/ModalBoxTagHelper.cs). Jedná se o tag helper, který mi vygeneruje výše zmíněné HTML, přičemž v Razoru pak stačí napsat
 
 ```html
 <modal-box id="nejakeid" message="Text zprávy" />
 ```
 
-Využití tag helperu je vidět na [přihlašovací stránce](https://github.com/ridercz/FutLabIS/blob/master/Altairis.FutLabIS.Web/Pages/Login/Index.cshtml), kde jich na konci mám hned několik, pro zobrazení různých zpráv souvisejících s procesem přihlašování, odhlašování, resetu zapomenutého hesla atd.
+Využití tag helperu je vidět na [přihlašovací stránce](https://github.com/ridercz/ReP/blob/master/Altairis.ReP.Web/Pages/Login/Index.cshtml), kde jich na konci mám hned několik, pro zobrazení různých zpráv souvisejících s procesem přihlašování, odhlašování, resetu zapomenutého hesla atd.
 
 ## K čemu je to dobré?
 
