@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/07/rep</guid>
+      <title>Aktualizace aplikace ReP: Rezervace prostředků</title>
+      <description>Před časem jsem vytvořil open source (a částečně demo/ukázkovou) aplikaci ReP. Nyní jsem ji aktualizoval na ASP.NET Core 6.0 a přidal řadu praktických vylepšení a oprav chyb.</description>
+      <link>https://www.altair.blog/2022/07/rep</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>ReP</category>
+      <pubDate>2022-07-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/06/long-tasks</guid>
       <title>Dlouze běžící úlohy jako zabiják výkonu webových aplikací</title>
       <description>Jedním z největších problémů webového vývoje jsou dlouho běžící úlohy zpracovávané na web serveru. Web servery na ně nejsou připraveny a neumí si s nimi dobře poradit. Připravil jsem seriál videí a příkladů, které radí, jak si s tímto fenoménem poradit. V tomto článku najdete souhrn všech dílů ve věcně logickém pořadí (které z různých důvodů neodpovídá pořadí, v jakém byly zveřejněny).</description>
@@ -143,16 +153,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2022-03-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</guid>
-      <title>Dva internety místo jednoho. Rusko se připravuje na spuštění nové železné opony</title>
-      <description>Situace kolem blokování na Internetu je v těchto dnech poněkud nepřehledná. Různé technologické společnosti více či méně dobrovolně blokují využívání svých služeb z Ruska, potažmo klienty odtamtud. Rusko zase naopak blokuje přístup ze svých sítí do týchž nebo i jiných služeb. Časem patrně dojde k pokusu o odstřižení Ruska od globálního Internetu, ať už z té, či oné strany.</description>
-      <link>https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

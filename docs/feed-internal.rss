@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/07/rep</guid>
+      <title>Aktualizace aplikace ReP: Rezervace prostředků</title>
+      <description>Před časem jsem vytvořil open source (a částečně demo/ukázkovou) aplikaci ReP. Nyní jsem ji aktualizoval na ASP.NET Core 6.0 a přidal řadu praktických vylepšení a oprav chyb.</description>
+      <link>https://www.altair.blog/2022/07/rep</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>ReP</category>
+      <pubDate>2022-07-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/06/long-tasks</guid>
       <title>Dlouze běžící úlohy jako zabiják výkonu webových aplikací</title>
       <description>Jedním z největších problémů webového vývoje jsou dlouho běžící úlohy zpracovávané na web serveru. Web servery na ně nejsou připraveny a neumí si s nimi dobře poradit. Připravil jsem seriál videí a příkladů, které radí, jak si s tímto fenoménem poradit. V tomto článku najdete souhrn všech dílů ve věcně logickém pořadí (které z různých důvodů neodpovídá pořadí, v jakém byly zveřejněny).</description>
@@ -142,16 +152,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-01-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/01/tisk-textu</guid>
-      <title>Tisk textu na 3D tiskárnách</title>
-      <description>Vymodelovat text v OpenSCADu je snadné. Ale jak ho tisknout? Vypadá lépe extrudovaný nebo embosovaný? Tisknutý na horní, spodní nebo boční stranu? Vyplatí se používat ironing?</description>
-      <link>https://www.altair.blog/2022/01/tisk-textu</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <category>Z-TECH</category>
-      <pubDate>2022-01-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
