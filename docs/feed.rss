@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/07/taghelpers</guid>
+      <title>Nová verze Altairis Tag Helpers pro ASP.NET Core</title>
+      <description>Po delší době jsem vydal novou verzi 1.12 své knihovny Altairis Tag Helpers. Využívá nových vlastností platformy .NET a jazyka C# a nabízí nový EditorTagHelper.</description>
+      <link>https://www.altair.blog/2022/07/taghelpers</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2022-07-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/07/rep</guid>
       <title>Aktualizace aplikace ReP: Rezervace prostředků</title>
       <description>Před časem jsem vytvořil open source (a částečně demo/ukázkovou) aplikaci ReP. Nyní jsem ji aktualizoval na ASP.NET Core 6.0 a přidal řadu praktických vylepšení a oprav chyb.</description>
@@ -144,15 +153,6 @@
       <category>Bezpečnost</category>
       <category>Z-TECH</category>
       <pubDate>2022-03-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/roskomsvoboda</guid>
-      <title>Prohlášení sdružení Roskomsvoboda v souvislosti se sankcemi zahraničních IT společností vůči ruským uživatelům Internetu</title>
-      <description>Sdružení Роскомсвобода (Roskomsvoboda) bylo založeno 1. listopadu 2012, v den, kdy vstoupil v platnost Jednotný rejstřík zakázaných webů. Název Roskomsvoboda byl zvolen jako stylistický protiklad k agentuře Roskomnadzor, která se přímo podílí na vedení černých listin a omezování přístupu k internetovým stránkám v Rusku na státní úrovni. Nyní sdružení vydalo prohlášení týkající se opačného směru blokování - zamezování přístupu ruských uživatelů na globální Internet. Protože ho pokládám za důležité a zcela se ztotožňuji s jeho obsahem, přeložil jsem ho do českého jazyka.</description>
-      <link>https://www.altair.blog/2022/03/roskomsvoboda</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2022-03-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
