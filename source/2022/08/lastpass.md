@@ -1,0 +1,10 @@
+<!-- dcterms:title = LastPass napadli hackeři, ale panika je zbytečná. Správci hesel jsou stále nejlepší záruka bezpečí -->
+<!-- dcterms:abstract = Populární online správce hesel LastPass byl nedávno terčem kybernetického útoku. Hlavní heslo (master password) ke svému účtu si ale měnit nemusíte a nemáte se vlastně čeho bát. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-lastpass.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:category = IT -->
+<!-- dcterms:dateAccepted = 2022-08-28 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67107410-psms7-1aed0e43d2d2bc8 -->

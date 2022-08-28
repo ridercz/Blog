@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://tech.hn.cz/c7-67107410-psms7-1aed0e43d2d2bc8</guid>
+      <title>LastPass napadli hackeři, ale panika je zbytečná. Správci hesel jsou stále nejlepší záruka bezpečí</title>
+      <description>Populární online správce hesel LastPass byl nedávno terčem kybernetického útoku. Hlavní heslo (master password) ke svému účtu si ale měnit nemusíte a nemáte se vlastně čeho bát.</description>
+      <link>https://tech.hn.cz/c7-67107410-psms7-1aed0e43d2d2bc8</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2022-08-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/07/svetylka</guid>
       <title>Výroba vodotěsných LED lampiček za pár korun</title>
       <description>Začaly prázdniny a možná by se vám hodily jednoduché LED lampičky, které jsou navíc vodotěsné. Ukážu vám jak takové vyrobit s pomocí dózy od žvýkaček, CR2032 baterie, svítivé diody a (volitelně) trochy 3D tisku. Výrobu zvládnou i děti.</description>
@@ -143,16 +153,6 @@
       <category>Politika</category>
       <category>Vexilologie</category>
       <pubDate>2022-03-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</guid>
-      <title>Rusko spustilo vlastní certifikační autoritu, pro webové prohlížeče budou ruské stránky nedůvěryhodné</title>
-      <description>Rusko pokračuje v přípravách na technické problémy které mohou vzniknout při odpojení jeho národních sítí od zbytku Internetu, ať už jeho vlastním rozhodnutím nebo zásahem zvenčí. Jedním z takových problémů jsou TLS certifikáty, určené pro provoz zabezpečených služeb, například webových stránek dostupných protokolem HTTPS. Zřejmě v obavách z dalších sankcí spustilo vlastní kořenovou certifikační autoritu, která má v případě výpadku nahradit ty zahraniční. Ale může být použita k dalším, mnohem méně nevinným účelům.</description>
-      <link>https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
