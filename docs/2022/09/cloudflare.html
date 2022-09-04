@@ -128,6 +128,9 @@
       </aside>
       <section class="article-text">
         <p>Cloudflare je populární služba zajišťující (mimo jiné) CDN a reverzní proxy. To znamená, že se postaví mezi váš server a klienta a zařizuje různé zajímavé služby, od geografické dostupnosti přes zabezpečení po cacheování. Skrývá ale IP adresu klienta. Napsal jsem knihovnu, která umožňuje ASP.NET Core aplikaci transparentně zjistit IP adresu klienta, i když je publikována přes Cloudflare.</p>
+<blockquote>
+<p>TL;DR: Knihovnu najdete na <a href="https://github.com/ridercz/Altairis.Services.Cloudflare">https://github.com/ridercz/Altairis.Services.Cloudflare</a> a NuGet balíček se jmenuje <code>Altairis.Services.Cloudflare</code>.</p>
+</blockquote>
 <h2 id="cloudflare-a-proxy">Cloudflare a proxy</h2>
 <p>Reverzní proxy je server (nebo tedy zpravidla více serverů), které se postaví mezi webovou aplikaci (web server) a klienta (browser). Reverzní proxy může poskytovat různé zajímavé služby, například:</p>
 <ul>
