@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/cloudflare</guid>
+      <title>Jak zkonfigurovat Cloudflare proxy v ASP.NET</title>
+      <description>Cloudflare je populární služba zajišťující (mimo jiné) CDN a reverzní proxy. To znamená, že se postaví mezi váš server a klienta a zařizuje různé zajímavé služby, od geografické dostupnosti přes zabezpečení po cacheování. Skrývá ale IP adresu klienta. Napsal jsem knihovnu, která umožňuje ASP.NET Core aplikaci transparentně zjistit IP adresu klienta, i když je publikována přes Cloudflare.</description>
+      <link>https://www.altair.blog/2022/09/cloudflare</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2022-09-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67107410-psms7-1aed0e43d2d2bc8</guid>
       <title>LastPass napadli hackeři, ale panika je zbytečná. Správci hesel jsou stále nejlepší záruka bezpečí</title>
       <description>Populární online správce hesel LastPass byl nedávno terčem kybernetického útoku. Hlavní heslo (master password) ke svému účtu si ale měnit nemusíte a nemáte se vlastně čeho bát.</description>
@@ -143,16 +152,6 @@
       <author>Michal Altair Valášek</author>
       <category>Vexilologie</category>
       <pubDate>2022-03-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky</guid>
-      <title>Když už fangličkaříte, dělejte to správně</title>
-      <description>V souvislosti s válkou na Ukrajině se ve veřejném prostoru množí vlajky - české, ukrajinské, občas i ruské. Ne vždy jsou použité správně, což mne dráždí, neboť se zde potkává můj specifický vztah k symbolům obecně (daný mými sociopatickými sklony), vlajkám zejména (jedním z mých mnoha low-key koníčků je vexilologie, tedy nauka o vlajkách) a obecná mírná OCD. Jak s vlajkou coby symbolem správně nakládat?</description>
-      <link>https://www.altair.blog/2022/03/vlajky</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Vexilologie</category>
-      <pubDate>2022-03-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
