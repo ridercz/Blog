@@ -128,11 +128,34 @@
       </aside>
       <section class="article-text">
         <p>Můj oblíbený systém <a href="https://www.altair.blog/2018/11/automaticke-verzovani-v-core">automatického verzování podle datumu a času</a> není kompatibilní s novými funkcemi .NETu pro snazší vývoj, jako je hot reload a částečná kompilace. To přestane fungovat pokud se při buildu změní verze assembly. Proto jsem musel přijít s jiným způsobem, jak zjistit datum a čas buildu aplikace.</p>
+<h2 id="assembly-metadata">Assembly metadata</h2>
+<p>Po vydání první verze článku (která popisuje automatické generování resource souboru) jsem byl <a href="https://twitter.com/harrison314_sk/status/1568204506218872834">uživatelem <em>harrison314_sk</em> na Twitteru upozorněn</a>, že existuje jednodušší způsob, jak do assembly vložit datum buildu (a v podstatě jakákoliv jiná metadata).</p>
+<p>Stačí do <code>.csproj</code> souboru vložit element <code>AssemblyMetadata</code>, kterým můžete přidat do assembly vlastní informace stylem klíč-hodnota. Zde vkládám datum buildu a název počítače, na kterém byl build proveden:</p>
+<pre><code class="language-xml">&lt;ItemGroup&gt;
+    &lt;AssemblyMetadata Include=&quot;BuildDate&quot; Value=&quot;$([System.DateTime]::UtcNow.ToString('s'))&quot; /&gt;
+    &lt;AssemblyMetadata Include=&quot;BuildComputer&quot; Value=&quot;$(ComputerName)&quot; /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
 <blockquote>
-<p>TL;DR: Pre-build eventem vygenerujte textový soubor, který do aplikace zahrnete jako resource.</p>
+<p>Popis použité syntaxe a možností najdete v článku <a href="https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-properties?view=vs-2022">MSBuild properties</a> na docs.microsoft.com.</p>
 </blockquote>
-<p>Jako většina ostatních platforem, i .NET zná koncept <em>resources</em>. Tedy ukládání dat jako jsou řetězce, obrázky, ikony a obecná data mimo zdrojový kód tak, aby byla z tohoto kódu snadno dostupná a snadno lokalizovatelná. Tento koncept využijeme pro automatické generování času buildu.</p>
-<h2 id="krok-za-krokem-pro-visual-studio-2022">Krok za krokem pro Visual Studio 2022</h2>
+<p>Hodnotu pak můžete načíst přes reflexi. Zde jsou dvě funkce, které načtou a vrátí shora uvedené vlastnosti:</p>
+<pre><code class="language-cs">private static DateTime GetAssemblyBuildDate(Assembly? assembly) {
+    if (assembly == null) return DateTime.MinValue;
+    var attrs = assembly.GetCustomAttributes&lt;AssemblyMetadataAttribute&gt;();
+    var dateString = attrs.FirstOrDefault(x =&gt; x.Key.Equals(&quot;BuildDate&quot;))?.Value;
+    var parseResult = DateTime.TryParseExact(dateString, &quot;s&quot;, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var dt);
+    return parseResult ? dt : DateTime.MinValue;
+}
+
+private static string? GetAssemblyBuildComputer(Assembly? assembly) {
+    if (assembly == null) return null;
+    var attrs = assembly.GetCustomAttributes&lt;AssemblyMetadataAttribute&gt;();
+    return attrs.FirstOrDefault(x =&gt; x.Key.Equals(&quot;BuildComputer&quot;))?.Value;
+}
+</code></pre>
+<h2 id="automaticke-generovani-do-resources">Automatické generování do resources</h2>
+<p>Jako většina ostatních platforem, i .NET zná koncept <em>resources</em>. Tedy ukládání dat jako jsou řetězce, obrázky, ikony a obecná data mimo zdrojový kód tak, aby byla z tohoto kódu snadno dostupná a snadno lokalizovatelná. Tento koncept využívá moje původní metoda pro automatické generování času buildu.</p>
 <p>Nejdříve si zobrazte vlastnosti projektu. V sekci <em>Build</em> zvolte <em>Events</em> a do pole <em>Pre-build event</em> zadejte následující příkaz:</p>
 <pre><code class="language-cmd">powershell -Command &quot;((Get-Date).ToUniversalTime()).ToString(\&quot;s\&quot;) | Out-File '$(ProjectDir)Properties\BuildDate.txt'&quot;
 </code></pre>
