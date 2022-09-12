@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/scheinherr</guid>
+      <title>Dvojí metr vládců pražského magistrátu aneb kážou vodu, pijou víno</title>
+      <description>Je to jenom pár dnů, co Twitterem prolétl obrázek auta primátora v očekávání Svobody, nešikovně zaparkovaného před přechodem. Uvidíme, zda fotografie podobně zaparkovaného služebáku náměstka proti dopravě způsobí stejné morální pohoršení v řadách odpůrců lidí v autech.</description>
+      <link>https://www.altair.blog/2022/09/scheinherr</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2022-09-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/build-date</guid>
       <title>Jak získat datum a čas buildu ASP.NET Core aplikace</title>
       <description>Můj oblíbený systém automatického verzování podle datumu a času není kompatibilní s novými funkcemi .NETu pro snazší vývoj, jako je hot reload částečná kompilace. Proto jsem musel přijít s jiným způsobem, jak zjistit datum a čas buildu aplikace.</description>
@@ -142,16 +151,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2022-03-31T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</guid>
-      <title>Anonymous kvůli Ukrajině vyhrožují Raiffeisenbank a dalším firmám</title>
-      <description>Kyberútočné družstvo Anonymous vyhrožuje firmám, které se podle jeho názoru nedostatečně vymezují proti Rusku v souvislosti s válkou na Ukrajině. Nejnovějším cílem těchto výhrůžek je i Raiffeisen - jedna z největších bank u nás. Hrozí běžným klientům že přijdou o své peníze? Nikoliv, ale obecně je dobré udělat pár příprav.</description>
-      <link>https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

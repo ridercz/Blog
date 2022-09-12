@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/scheinherr</guid>
+      <title>Dvojí metr vládců pražského magistrátu aneb kážou vodu, pijou víno</title>
+      <description>Je to jenom pár dnů, co Twitterem prolétl obrázek auta primátora v očekávání Svobody, nešikovně zaparkovaného před přechodem. Uvidíme, zda fotografie podobně zaparkovaného služebáku náměstka proti dopravě způsobí stejné morální pohoršení v řadách odpůrců lidí v autech.</description>
+      <link>https://www.altair.blog/2022/09/scheinherr</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2022-09-12T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/build-date</guid>
       <title>Jak získat datum a čas buildu ASP.NET Core aplikace</title>
       <description>Můj oblíbený systém automatického verzování podle datumu a času není kompatibilní s novými funkcemi .NETu pro snazší vývoj, jako je hot reload částečná kompilace. Proto jsem musel přijít s jiným způsobem, jak zjistit datum a čas buildu aplikace.</description>
@@ -141,15 +150,6 @@
       <category>Bezpečnost</category>
       <category>Z-TECH</category>
       <pubDate>2022-03-13T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/roskomsvoboda</guid>
-      <title>Prohlášení sdružení Roskomsvoboda v souvislosti se sankcemi zahraničních IT společností vůči ruským uživatelům Internetu</title>
-      <description>Sdružení Роскомсвобода (Roskomsvoboda) bylo založeno 1. listopadu 2012, v den, kdy vstoupil v platnost Jednotný rejstřík zakázaných webů. Název Roskomsvoboda byl zvolen jako stylistický protiklad k agentuře Roskomnadzor, která se přímo podílí na vedení černých listin a omezování přístupu k internetovým stránkám v Rusku na státní úrovni. Nyní sdružení vydalo prohlášení týkající se opačného směru blokování - zamezování přístupu ruských uživatelů na globální Internet. Protože ho pokládám za důležité a zcela se ztotožňuji s jeho obsahem, přeložil jsem ho do českého jazyka.</description>
-      <link>https://www.altair.blog/2022/03/roskomsvoboda</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2022-03-12T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
