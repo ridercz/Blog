@@ -7,6 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
 <!-- dcterms:dateAccepted = 2022-09-12 -->
+<!-- dcterms:dateUpdated = 2022-09-13 -->
 
 V pondělí 5. 9. 2022 kolem třetí jsem před domem na Veletržní viděl na chodníku zaparkované auto. To není nijak pozoruhodné, neboť tam často stojí někdo, kdo potřebuje do některého z domů něco odnosit a podobně. Chodník je v těch místech nejméně pět metrů široký, takže auto ničemu nepřekáží, kolem dokáže pohodlně projít třeba i organizovaný průvod spojeného svazu vozíčkářů a kočárkářek (ty jsem tam ještě neviděl) nebo vysokou rychlostí prosvištět několik cyklistů vedle sebe, ignorujících pro ně speciálně namalovaný pruh na vozovce (ty tam naopak potkávám velmi často).
 
@@ -24,7 +25,7 @@ Ve druhé řadě pak to, že prázdný vůz měl otevřená okénka. To je jedna
 
 V řadě třetí mne pak zarazilo známé logo Prahy a výrazná kartička konstatující, že _vozidlo RZ EL265AJ je služebním vozidlem magistrátu Hlavního města Prahy_.
 
-![Fotografie kartičky za okněm](https://www.cdn.altairis.cz/Blog/2022/20220912-scheinherr-2.jpg)
+![Fotografie kartičky za oknem](https://www.cdn.altairis.cz/Blog/2022/20220912-scheinherr-2.jpg)
 
 To mi přišlo jako zajímavá strategie. Už jsem viděl ledasjaké metody jakými se snaží řidiči nenápadně přesvědčit úřední orgán, že jsou taky orgán a že tedy mají držet basu - svého času byly populární policejní čepice nebo vlaječky sportovního klubu Policie ČR.
 
@@ -47,3 +48,16 @@ Dnes se mi dostalo odpovědi, z níž vyjímám (plné znění je k dispozici na
 Podle dokumentu [Působnost členů Rady hlavního města Prahy](https://www.praha.eu/public/4c/92/bd/1858165_1238822_Brozura_pusobnosti_clenu_Rady_HMP___27_06__2022.pdf) je tímto náměstkem jistý **Ing. Adam Scheinherr, Ph.D., MSc.**
 
 Je to jenom pár dnů, co Twitterem prolétl obrázek auta primátora v očekávání Svobody, nešikovně zaparkovaného před přechodem. Uvidíme, zda fotografie podobně zaparkovaného služebáku náměstka proti dopravě způsobí stejné morální pohoršení v řadách odpůrců lidí v autech.
+
+## Dějství čtvrté (dopsáno 13. září)
+
+Náměstek proti dopravě Scheinherr na svém Facebooku na článek [reagoval takto](https://www.facebook.com/adam.praha.sobe/posts/pfbid0SCntKRcM6oGDRFYLmDncLTZSZC4tdzZwxVBZ7jde3671ssRFhnMRki7k5XzsMfQwl):
+
+![Screenshot příspěvku](https://www.cdn.altairis.cz/Blog/2022/20220912-scheinherr-3.png)
+
+K tomu doplním jenom dvě poznámky. 
+
+* Za prvé, lež by měla být jednoduchá, uvěřitelná a pokud možno logická. Komplikované výmluvy věci obvykle nepomohou.
+* Za druhé, je hezké že si pan náměstek uvědomuje, že pokud se chce někam dostat rychle, je nejrozumnější jet autem.
+
+Bylo by hezké, kdyby se podle toho i choval. Naštěstí jsou ale za pár dní volby a budou-li bohové Praze milostiví, na současném panu náměstkovi už nebude vůbec záležet.
