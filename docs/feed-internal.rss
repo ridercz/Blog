@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/proc-jsem-byl-komunistou</guid>
+      <title>Proč jsem byl komunistou a proč se dnes bojím Pirátů</title>
+      <description>"Proč nejsem komunistou" se jmenovala anketa, v níž na tuto otázku odpovídaly Ferdinandu Peroutkovi významné prvorepublikové osobnosti (asi nejznámější je odpověď Karla Čapka). Já komunistou byl. Rád bych vám řekl proč a proč se jich nyní bojím, i když si momentálně říkají různě, u nás nejčastěji Piráti.</description>
+      <link>https://www.altair.blog/2022/09/proc-jsem-byl-komunistou</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2022-09-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/scheinherr</guid>
       <title>Dvojí metr vládců pražského magistrátu aneb kážou vodu, pijou víno</title>
       <description>Je to jenom pár dnů, co Twitterem prolétl obrázek auta primátora v očekávání Svobody, nešikovně zaparkovaného před přechodem. Uvidíme, zda fotografie podobně zaparkovaného služebáku náměstka proti dopravě způsobí stejné morální pohoršení v řadách odpůrců lidí v autech.</description>
@@ -139,17 +148,6 @@
       <category>Politika</category>
       <category>Vexilologie</category>
       <pubDate>2022-03-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/cenzura</guid>
-      <title>Obcházení cenzury Internetu</title>
-      <description>Ruská vláda blokuje weby, které označuje jako dezinformační; česká také, ale nemohou se shodnout na tom, které to jsou. Jak takovou cenzuru obejít? Ukážeme si hned tři způsoby, jaké vám mohou v podobných případech pomoci.</description>
-      <link>https://www.altair.blog/2022/03/cenzura</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <category>Z-TECH</category>
-      <pubDate>2022-03-13T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
