@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/static-content</guid>
+      <title>Skoro statický obsah: Od konkrétní aplikace k univerzální komponentě</title>
+      <description>Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V osmidílném seriálu jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.</description>
+      <link>https://www.altair.blog/2022/09/static-content</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Z-TECH</category>
+      <pubDate>2022-09-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/proc-jsem-byl-komunistou</guid>
       <title>Proč jsem byl komunistou a proč se dnes bojím Pirátů</title>
       <description>"Proč nejsem komunistou" se jmenovala anketa, v níž na tuto otázku odpovídaly Ferdinandu Peroutkovi významné prvorepublikové osobnosti (asi nejznámější je odpověď Karla Čapka). Já komunistou byl. Rád bych vám řekl proč a proč se jich nyní bojím, i když si momentálně říkají různě, u nás nejčastěji Piráti.</description>
@@ -138,16 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>Vexilologie</category>
       <pubDate>2022-03-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky</guid>
-      <title>Když už fangličkaříte, dělejte to správně</title>
-      <description>V souvislosti s válkou na Ukrajině se ve veřejném prostoru množí vlajky - české, ukrajinské, občas i ruské. Ne vždy jsou použité správně, což mne dráždí, neboť se zde potkává můj specifický vztah k symbolům obecně (daný mými sociopatickými sklony), vlajkám zejména (jedním z mých mnoha low-key koníčků je vexilologie, tedy nauka o vlajkách) a obecná mírná OCD. Jak s vlajkou coby symbolem správně nakládat?</description>
-      <link>https://www.altair.blog/2022/03/vlajky</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Vexilologie</category>
-      <pubDate>2022-03-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

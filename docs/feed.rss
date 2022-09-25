@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/static-content</guid>
+      <title>Skoro statický obsah: Od konkrétní aplikace k univerzální komponentě</title>
+      <description>Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V osmidílném seriálu jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.</description>
+      <link>https://www.altair.blog/2022/09/static-content</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Z-TECH</category>
+      <pubDate>2022-09-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/proc-jsem-byl-komunistou</guid>
       <title>Proč jsem byl komunistou a proč se dnes bojím Pirátů</title>
       <description>"Proč nejsem komunistou" se jmenovala anketa, v níž na tuto otázku odpovídaly Ferdinandu Peroutkovi významné prvorepublikové osobnosti (asi nejznámější je odpověď Karla Čapka). Já komunistou byl. Rád bych vám řekl proč a proč se jich nyní bojím, i když si momentálně říkají různě, u nás nejčastěji Piráti.</description>
@@ -141,16 +151,6 @@
       <category>Bezpečnost</category>
       <category>Politika</category>
       <pubDate>2022-04-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/04/live-upgrade</guid>
-      <title>Pozvánka na live coding: Upgrade aplikace z ASP.NET 5 na 6</title>
-      <description>Konec podpory .NET 5 se blíží a je třeba upgradovat na .NET 6. V úterním živém streamu budeme upgradovat aplikaci AskMe na ASP.NET 6.0</description>
-      <link>https://www.altair.blog/2022/04/live-upgrade</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Z-TECH</category>
-      <pubDate>2022-04-03T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
