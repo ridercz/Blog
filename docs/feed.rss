@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/esp-tmep</guid>
+      <title>Jak ze tří součástek vyrobit internetový teploměr</title>
+      <description>Twitter zaplavily fotky domácích teploměrů. Teplota v místnosti je nová rouška. Ať už doma ve jmému úspor a boje proti Putinovi mrznete při patnácti nebo se naopak potíte při třiceti stupních a chcete to sdělit světu, technika vám s virtue signallingem může pomoci. Ukážu vám, jak si ze tří součástek můžete postavit teploměr, který naměřená data odesílá do české služby TMEP.CZ.</description>
+      <link>https://www.altair.blog/2022/09/esp-tmep</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>3D tisk</category>
+      <category>Bastlení</category>
+      <pubDate>2022-09-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/static-content</guid>
       <title>Skoro statický obsah: Od konkrétní aplikace k univerzální komponentě</title>
       <description>Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V osmidílném seriálu jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.</description>
@@ -140,17 +151,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-04-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</guid>
-      <title>Z Messengeru zprávy třeba do WhatsAppu. Umožnit to má nová regulace, nebude to mít ale snadné</title>
-      <description>Význam programů pro předávání zpráv (IM, instant messaging) za posledních několik let prudce vzrostl. Aplikace pro předávání zpráv téměř vytlačují standardizované způsoby komunikace, jako je e-mail nebo SMS. Trh si přitom mezi sebe rozdělilo několik populárních aplikací, Facebook Messenger, WhatsApp, iMessage, Signal či Telegram, které se snaží udržet uživatele ve vlastním rybníku a ještě k tomu podchytit SMS a získat co nejvíce dalších kontaktů. A s tím je podle Evropské komise potřeba něco udělat.</description>
-      <link>https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2022-04-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/09/esp-tmep</guid>
+      <title>Jak ze tří součástek vyrobit internetový teploměr</title>
+      <description>Twitter zaplavily fotky domácích teploměrů. Teplota v místnosti je nová rouška. Ať už doma ve jmému úspor a boje proti Putinovi mrznete při patnácti nebo se naopak potíte při třiceti stupních a chcete to sdělit světu, technika vám s virtue signallingem může pomoci. Ukážu vám, jak si ze tří součástek můžete postavit teploměr, který naměřená data odesílá do české služby TMEP.CZ.</description>
+      <link>https://www.altair.blog/2022/09/esp-tmep</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>3D tisk</category>
+      <category>Bastlení</category>
+      <pubDate>2022-09-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/09/static-content</guid>
       <title>Skoro statický obsah: Od konkrétní aplikace k univerzální komponentě</title>
       <description>Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V osmidílném seriálu jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.</description>
@@ -139,15 +150,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2022-03-31T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/03/vlajky-moje</guid>
-      <title>Moje vlajky: Ama-gi Flag a Pony Pride Flag</title>
-      <description>V souvislosti se svým včerejším článkem o vlajkách jsem dostal několik dotazů, které se týkají dvou vlajek, které mám vyvěšené za sebou a které jsou vidět při mých školeních a v dalších videích. Jsou docela zajímavé, takže pokud vám to včera nestačilo, můžeme v tématu fun with flags pokračovat.</description>
-      <link>https://www.altair.blog/2022/03/vlajky-moje</link>
-      <author>Michal Altair Valášek</author>
-      <category>Vexilologie</category>
-      <pubDate>2022-03-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
