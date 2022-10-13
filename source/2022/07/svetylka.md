@@ -20,7 +20,7 @@ Výdrž takového světýlka záleží na barvě použité LED, protože mají r
 
 > Pro účely tohoto článku pomíjím různé speciality jako vysocesvítivé LED s velkým odběrem, infračervené, ultrafialové a podobné radosti. Laiků se to netýká a odborníci to stejně už vědí.
 
-Takové světýlko ale má tu nevýhodu, že docela oslňuje a paradoxně není moc vidět, protože působí bodově. Je tedy třeba ho rozplýlit pomocí nějakého difuzéru. Můžete třeba na LEDku postavit láhev s vodou vyrobíte si improvizovanou lahvičku.
+Takové světýlko ale má tu nevýhodu, že docela oslňuje a paradoxně není moc vidět, protože působí bodově. Je tedy třeba ho rozplýlit pomocí nějakého difuzéru. Můžete třeba na LEDku postavit láhev s vodou s trochou mléka (aby nebyla čirá) a vyrobíte si improvizovanou lampičku.
 
 Nebo můžete umístit LEDku i s baterií do průsvitné (ne průhledné) lahvičky. Já ve velkém žeru žvýkačky JetGum, které Lidl prodává v malých bílých dózách, které jsou pro tento účel naprosto ideální. Mají tu výhodu, že jsou vodotěsné a prakticky nerozbitné.
 
