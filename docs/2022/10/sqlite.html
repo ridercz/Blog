@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sqlite: Databáze pro menší projekty | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2022/10/sqlite" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.0.0/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Sqlite: Databáze pro menší projekty" />
+    <meta name="twitter:description" content="Když se před .NET vývojářem řekne &quot;databáze&quot;, zpravidla si představí Microsoft SQL Server. Nicméně nejpoužívanější relační databází na světě je něco jiného: embedded databáze Sqlite. A ta má přímo od Microsoftu velmi dobrou podporu i v .NETu." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20200713-bacpac.jpg" />
+    <meta property="article:published_time" content="2022-10-29" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Sqlite: Databáze pro menší projekty" />
+    <meta name="description" property="og:description" content="Když se před .NET vývojářem řekne &quot;databáze&quot;, zpravidla si představí Microsoft SQL Server. Nicméně nejpoužívanější relační databází na světě je něco jiného: embedded databáze Sqlite. A ta má přímo od Microsoftu velmi dobrou podporu i v .NETu." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20200713-bacpac.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2022/10/sqlite" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20200713-bacpac.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Sqlite: Databáze pro menší projekty</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2022-10-29">29. října 2022 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">@jankolario via Unsplash.com <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Když se před .NET vývojářem řekne &quot;databáze&quot;, zpravidla si představí Microsoft SQL Server. Nicméně nejpoužívanější relační databází na světě je něco jiného: embedded databáze <a href="https://www.sqlite.com/">Sqlite</a>. A ta má přímo od Microsoftu velmi dobrou podporu i v .NETu.</p>
+<h2 id="embedded-database">Embedded database</h2>
+<p>Co jsou <em>embedded database</em>? Formy úložiště dat, které nejsou aplikaci poskytovány externě jako služba, ale spravuje si je aplikace sama vlastními prostředky, obvykle za pomoci nějaké knihovny. Zatímco klasické databáze běží v samostatném procesu na aplikaci nezávislém (a často běžícím třeba i na jiném serveru), embedded databáze běží v procesu aplikace samé.</p>
+<p>Pravděpodobně nejpoužívanější embedded databází je Sqlite. Máte ji pravděpodobně v desítkách kopií na svém počítači, mobilu a možná i v autě. Jako formát pro ukládání dat ji používá třeba Adobe Lightroom, iTunes (a řada dalších aplikací od Apple), Dropbox, prakticky všechny webové prohlížeče (Chrome, Firefox, Edge, Opera), Skype, automobilové infotainment systémy od firmy Bosch, letadlo A350 XWB od firmy Airbus a řada dalších.</p>
+<p>Nejedná se však o jedinou embedded databázi. Z těch známějších:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/extensible-storage-engine/extensible-storage-engine">Extensible Storage Engine</a> je embedded nerelační databáze, kterou používá Exchange, Microsoft Update a řada dalších produktů od Microsoftu.</li>
+<li>Microsoft měl ještě jednu embedded databázi, SQL Server Compact, ale ta je již delší dobu deprecated a Microsoft místo ní doporučuje právě Sqlite.</li>
+<li>Firebird, Informix, InterBase a MySql mají své embedded verze.</li>
+</ul>
+<h3 id="vyhody-embedded-databazi">Výhody embedded databází</h3>
+<ul>
+<li>Malý footprint, potřebné knihovny mají obvykle jednotky až desítky megabajtů.</li>
+<li>Není nutné je samostatně instalovat, jsou součástí programu.</li>
+<li>Neběží pokud neběží aplikace která je využívá.</li>
+<li>Lze je použít jako interní souborový formát (srovnatelné např. s JSON, XML nebo různými samo-domo formáty).</li>
+<li>Jsou zpravidla zdarma a není nutné platit licenční poplatky. Sqlite je dokonce public domain.</li>
+</ul>
+<h3 id="nevyhody-embedded-databazi">Nevýhody embedded databází</h3>
+<ul>
+<li>Neřeší automatizovanou zálohu a údržbu dat, to si musí aplikace zajistit sama.</li>
+<li>Nejsou vhodné, pokud je databáze od klienta oddělena sítí.</li>
+<li>Špatně zvládají paralelní zápisy od více klientů současně. Sqlite takové požadavky řadí do fronty.</li>
+<li>Nejsou vhodné pro velké objemy dat (řádově gigabajty až desítky gigabajtů a více).</li>
+<li>Jedná se o &quot;bázi dat&quot; v nejortodoxnějším smyslu, tedy &quot;úložiště dat&quot;. Embedded databáze zpravidla nepodporují jakoukoliv funkcionalitu na straně databáze, jako uložené procedury a podobně.</li>
+<li>&quot;Velké&quot; databáze zpravidla nabízejí různé pokročilejší funkce jako fultextové vyhledávání, analytiku, reporty... Embedded databáze nic takového nemívají.</li>
+</ul>
+<h2 id="serial-na-kanalu-z-tech">Seriál na kanálu Z-TECH</h2>
+<p>Natočil jsem trojici videí, která popisuje použití Sqlite v .NET a ASP.NET aplikacích. Jako první doporučuji shlédnout video obecně popisující embedded databáze a Sqlite:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/LHbZzr23q0o" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Další video se zabývá tím, jak lze používat Sqlite z Entity Frameworku Core a hlavně jak napsat univerzální aplikaci, která umí fungovat jak proti Microsoft SQL Serveru, tak proti Sqlite, včetně podpory migrací:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Z-3Kx2oAZrs" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Z mého hlediska zásadní nevýhodou Sqlite je, že nemá automatizovanou zálohu. Abych tento problém vyřešil, napsal jsem knihovnu <a href="https://github.com/ridercz/Altairis.SqliteBackup">Altairis.SqliteBackup</a>, která umí Sqlite databáze automaticky zálohovat na lokální server, vzdálený server nebo do Microsoft Azure:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/XQErfo-yVhM" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="hodi-se-sqlite-na-webove-aplikace">Hodí se Sqlite na webové aplikace?</h2>
+<p>Podle mého názoru na většinu menších aplikací ano. Pod pojmem &quot;menší&quot; aplikace rozumím takovou, která má jeden aplikační server (tj. ne webovou farmu/cluster), databáze o velikosti do řádově jednotek gigabajtů, stovky až menší tisíce uživatelů a hodně se z ní čte a málo zapisuje. Za těchto podmínek Sqlite svými funkcemi i výkonem většinou zcela postačuje.</p>
+<p>Zásadní překážkou je podle mne absence automatické zálohy. Proto jsem vytvořil výše zmíněnou knihovnu Altairis.SqliteBackup, která tento nedostatek odstraňuje.</p>
+<p>Samozřejmě pokud máte infrastrukturu, v níž již máte SQL Server a není pro vás problém vytvořit si tam další databázi, Sqlite můžete možná pominout. Anebo taky ne. Mnohde je s databázemi menších aplikací problém cenový a/nebo organizační.Na hostingu nebo v cloudu za mini databázi o pěti tabulkách pro mini splikaci zaplatíte stejně jako za poměrně slušnou databázi. Viz například Azure, kde se se SQL Serverem pod $5 měsíčně nedostanete - a pokud máte malých aplikací desítky, leze to docela do peněz. Viděl jsem úspěšné použití Sqlite databází i v korporacích, kde interní náklady na zprovoznění nové databáze (papírování a schvalování) jsou tak velké, že je lepší použít Sqlite. Minimálně jako dočasné řešení, přičemž se zde často projevuje česká národní zkušenost, že jednotkou dočasnosti je jeden furt.</p>
+<p>V neposlední řadě lze Sqlite použít pro vývoj, testování a dema, kdy nechcete dodatečný overhead v podobě nutnosti vytvářet a udržovat databáze na SQL Serveru, byť třeba bezplatné Expres edici.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Sqlite%3a+Datab%c3%a1ze+pro+men%c5%a1%c3%ad+projekty&amp;body=https://www.altair.blog/2022/10/sqlite">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2022/10/sqlite.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2022/10/sqlite.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2022/10/sqlite">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2022/10/sqlite">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2022</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/arduino.min.js" integrity="sha512-bOF+tbLNVPwsmPKbwZAJT2KD7J2soKGicZMV+iFZVyqD7qgZtpWOiY9+EmB+HyPgTP3Kah7K0aQVtX6mVK3sBg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/bash.min.js" integrity="sha512-yyMT1pQvQ9ZFAB8j/dUWeEjWTEQZBmV9pitXN7fmJYbqsoizQ0kVw8wONhrwBHE0Z/S8tKQyRcvbW4pG4m5cIw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/c.min.js" integrity="sha512-lzcjwENIEpri/9RQiWGJLxGxZ21Pr1qWvzEIpEa4yxPTSEderzTew+5Ff5XBbTC3OuLrb4P0qSwISoq1E/ddLg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/csharp.min.js" integrity="sha512-2S5x4UDJdymqDOBGIz88WSMwb/HC27t9gZyAus7RyUA2n3YXVJlYUrX606FkkU5+XrE+i12FNOhczUpPEh2XiQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/css.min.js" integrity="sha512-2EZCMzH/v5Q+9kXnio4UlG/iGM7Iy16NPjb4fFmtu501/gdvebqlP3sa2VvJsxnTJVWlFX8EN+BHxG4efqELWw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>¨
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/dos.min.js" integrity="sha512-4QYHD9PAHudNw8hYXd79O8t7BrFe2kl19eYIPAwdCxiJ7bYxERRpvS2VbFixd+kfLqVzUH9m1LBnmZlUf3VuAA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/gcode.min.js" integrity="sha512-BIiAVlWdHwCcZSixwJwhoUJSVGaNtPXCDzcyR5AVlyzXS9FDies/go5012bSdZr15eCTZG4G42GqMSkIhKpSoQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js" integrity="sha512-Z5vOg00atIeZ04QhYxz3iRlFnU5qnrB0eYbBDmXMhHqJYx4dc6n1KY5qzh3fEfrFzaR05D34mOin6ObjPjuWdA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/json.min.js" integrity="sha512-WRejcYn/ITFLjqnYYgF3Es2b2dc3GnVc70wF3nO/G6uQtsN/LhxSlZp5y7E9JP3gqQ5gY/TPg9QdOlB3SY+ucQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/markdown.min.js" integrity="sha512-8YFObAd0dPoua15RGQBCDtnXMA4zJnAxaL4QSjgLLEKmJ1A2Aar7M1gamz2512/mKzx1ut96KNV7ggEV8WvRxg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/openscad.min.js" integrity="sha512-r7SipMjtLS3BxLiHtjRORcw8/sJDk6Ums0BwzuEMQoWe4hSKYQs3Zk2qClX3AwVw9lrTFIu3rTVcGgODqwBMww==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/scss.min.js" integrity="sha512-0U8Ud0Dh6EsQR0cokSx1hPYzG3i8AnfYEaDXNGi5rSsVJMdAaas/gif/b/8JrGsuuC7xl7dfBGHFgZrhWb39Bg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/sql.min.js" integrity="sha512-LxrbI3MKe/9KnjAs8zlLrZFRpp2J+jp0pML7zd6OAo/LHH8CEKM2Ef/jTfSX1gm8Auex3J5Jdj0rMkYejmMVMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/xml.min.js" integrity="sha512-2EQPABfCqv0Tr9AxzXh2U9DrbRre5g5H/BL7j/hGbES3mRjQ44bBks0I+2EoPbA4YzWHQ8BsVHNTaHr7t5RHKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script>
+                  hljs.initHighlightingOnLoad();
+              </script></body>
+</html>
