@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jak na chybu připjení k SQL Serveru po upgrade na .NET 7 | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2022/12/sqlcert" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.0.0/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Jak na chybu připjení k SQL Serveru po upgrade na .NET 7" />
+    <meta name="twitter:description" content="Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou. Ukážu vám, jak tento problém vyřešit hned třikrát: dvakrát rychle a jednou správně." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20221208-sqlcert.jpg" />
+    <meta property="article:published_time" content="2022-12-08" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Jak na chybu připjení k SQL Serveru po upgrade na .NET 7" />
+    <meta name="description" property="og:description" content="Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou. Ukážu vám, jak tento problém vyřešit hned třikrát: dvakrát rychle a jednou správně." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20221208-sqlcert.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2022/12/sqlcert" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20221208-sqlcert.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Jak na chybu připjení k SQL Serveru po upgrade na .NET 7</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/z-tech" title="Rubrika">
+              <i class="fal fa-tag"> </i>Z-TECH</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2022-12-08">8. prosince 2022 <i class="fal fa-calendar-alt">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">Midjourney AI <i class="fal fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ve většině případů stačí jenom změnit verzi runtime v <code>.csproj</code> souboru a upgradovat NuGet balíčky. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou:</p>
+<blockquote>
+<p>Unhandled exception. Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)</p>
+</blockquote>
+<p>Hláška je to trochu matoucí, protože z ní na první pohled vyplývá, že je něco špatně s přihlašováním uživatele. Ale není to pravda. Ta důležitá informace se skrývá v následující zprávě, že se jedná o nedůvěryhodnou certifikační autoritu.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/xG0OCG34kZE" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Nová verze balíčku <code>Microsoft.Data.SqlClient</code> (na níž závisí třeba Entity Framework Core) totiž ve výchozím nastavení používá šifrované připojení k SQL Serveru. Což je nepochybně myšlenka dobrá a z hlediska vyššího principu mravního správná. Problém ovšem je, že většina serverů nemá platný certifikát, ale používá dynamicky vygenerovaný self-signed. A klient na to reaguje právě shora zmíněnou chybou.</p>
+<h2 id="dve-rychla-reseni">Dvě rychlá řešení</h2>
+<p>Nejrychlejší, ne ovšem nutně správná, řešení spočívají v prosté modifikaci connection stringu.</p>
+<p>Váš stávající connection string vypadá nejspíše nějak takhle:</p>
+<pre><code class="language-connectionstring">SERVER=.\SqlExpress;TRUSTED_CONNECTION=yes;DATABASE=Northwind
+</code></pre>
+<p>nebo:</p>
+<pre><code class="language-connectionstring">Data Source=db.example.com,1433; Initial Catalog=Northwind;User ID=Northwind;Password=Pass.word123
+</code></pre>
+<p>Možných podob a kombinací je celá řada.</p>
+<p>Symptomy shora uvedeného problému vyřešíte tak, že k connection stringu přidáte <code>;ENCRYPT=no</code> nebo <code>;TRUSTSERVERCERTIFICATE=yes</code>.</p>
+<ul>
+<li>Přidání <code>ENCRYPT=no</code> řekne klientovi, že má používat nešifrované spojení, tak jak to bylo před popisovanou změnou výchozí.</li>
+<li>Přidání <code>TRUSTSERVERCERTIFICATE=yes</code> zase řekne, že sice má použít výchozí (šifrované) spojení, ale jakýkoliv serverem předaný certifikát má akceptovat jako důvěryhodný. I když bude self-signed nebo vydaný neznámou CA.</li>
+</ul>
+<h2 id="jedno-spravne-reseni">Jedno správné řešení</h2>
+<p>Popisovaná řešení nejsou správná. Jedná se o léčbu symptomů, nikoliv příčiny. Příčinou je nedůvěryhodný certifikát na straně serveru.</p>
+<p>Certifikát můžete (z PFX nebo PEM souboru) nainstalovat pomocí nástroje <em>Computer Management</em>, viz následující obrázek:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2022/20221208-sqlcert.png" alt="Screenshot" /></p>
+<h2 id="hrabeci-rada">Hraběcí rada</h2>
+<p>Ono správné řešení je ovšem poněkud hraběcí rada.</p>
+<p>V první řadě, někdy je takový certifikát v podstatě nemožné od důvěryhodné autority získat, typicky pokud nepoužíváte pro připojení FQDN, ale lokální hostname, IP adresu nebo něco takového.</p>
+<p>Ostatně nemusíme chodit daleko, třeba pro připojení k lokálnímu SQL Serveru Express na vývojářském stroji se jako název obvykle používá <code>.\SqlExpress</code> nebo <code>(local)\SqlExpress</code> a ani pro jedno z toho vám nikdo certifikát nevydá.</p>
+<p>Obecně, pokud je databázový server a klient na jednom počítači (nekomunikují spolu po síti) není šifrované spojení z bezpečnostních důvodů nezbytné.</p>
+<p>Další problém spočívá v tom, že se mi nepodařilo přijít na způsob, jak instalaci a aktualizaci serverového certifikátu aktualizovat. Všechny návody počítají s nastavením pomocí GUI, jak bylo popsáno výše. Nepřišel jsem na to, jak tuto operaci udělat pomocí příkazové řádky nebo powershellu.</p>
+<blockquote>
+<p>Pokud na takový způsob přijdete, dejte mi vědět, rád o tom napíšu článek nebo udělám video.</p>
+</blockquote>
+<p>To prakticky vylučuje možnost použití bezplatných certifikátů od Let's Encrypt CA, které mají platnost pouze tři měsíce. A i komerční CA vám nevystaví certifikát na déle než rok.</p>
+<p>Zbývá poslední cesta, a to vytvořit si vlastní CA a tu použít k vydání certifikátu s dlouhodobou platností. Nicméně krátká platnost certifikátů má své dobré důvody a provoz vlastní CA je ve většině případů cesta do pekel.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Jak+na+chybu+p%c5%99ipjen%c3%ad+k+SQL+Serveru+po+upgrade+na+.NET+7&amp;body=https://www.altair.blog/2022/12/sqlcert">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2022/12/sqlcert.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2022/12/sqlcert.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2022/12/sqlcert">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2022/12/sqlcert">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2022</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/arduino.min.js" integrity="sha512-bOF+tbLNVPwsmPKbwZAJT2KD7J2soKGicZMV+iFZVyqD7qgZtpWOiY9+EmB+HyPgTP3Kah7K0aQVtX6mVK3sBg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/bash.min.js" integrity="sha512-yyMT1pQvQ9ZFAB8j/dUWeEjWTEQZBmV9pitXN7fmJYbqsoizQ0kVw8wONhrwBHE0Z/S8tKQyRcvbW4pG4m5cIw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/c.min.js" integrity="sha512-lzcjwENIEpri/9RQiWGJLxGxZ21Pr1qWvzEIpEa4yxPTSEderzTew+5Ff5XBbTC3OuLrb4P0qSwISoq1E/ddLg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/csharp.min.js" integrity="sha512-2S5x4UDJdymqDOBGIz88WSMwb/HC27t9gZyAus7RyUA2n3YXVJlYUrX606FkkU5+XrE+i12FNOhczUpPEh2XiQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/css.min.js" integrity="sha512-2EZCMzH/v5Q+9kXnio4UlG/iGM7Iy16NPjb4fFmtu501/gdvebqlP3sa2VvJsxnTJVWlFX8EN+BHxG4efqELWw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>¨
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/dos.min.js" integrity="sha512-4QYHD9PAHudNw8hYXd79O8t7BrFe2kl19eYIPAwdCxiJ7bYxERRpvS2VbFixd+kfLqVzUH9m1LBnmZlUf3VuAA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/gcode.min.js" integrity="sha512-BIiAVlWdHwCcZSixwJwhoUJSVGaNtPXCDzcyR5AVlyzXS9FDies/go5012bSdZr15eCTZG4G42GqMSkIhKpSoQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js" integrity="sha512-Z5vOg00atIeZ04QhYxz3iRlFnU5qnrB0eYbBDmXMhHqJYx4dc6n1KY5qzh3fEfrFzaR05D34mOin6ObjPjuWdA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/json.min.js" integrity="sha512-WRejcYn/ITFLjqnYYgF3Es2b2dc3GnVc70wF3nO/G6uQtsN/LhxSlZp5y7E9JP3gqQ5gY/TPg9QdOlB3SY+ucQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/markdown.min.js" integrity="sha512-8YFObAd0dPoua15RGQBCDtnXMA4zJnAxaL4QSjgLLEKmJ1A2Aar7M1gamz2512/mKzx1ut96KNV7ggEV8WvRxg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/openscad.min.js" integrity="sha512-r7SipMjtLS3BxLiHtjRORcw8/sJDk6Ums0BwzuEMQoWe4hSKYQs3Zk2qClX3AwVw9lrTFIu3rTVcGgODqwBMww==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/scss.min.js" integrity="sha512-0U8Ud0Dh6EsQR0cokSx1hPYzG3i8AnfYEaDXNGi5rSsVJMdAaas/gif/b/8JrGsuuC7xl7dfBGHFgZrhWb39Bg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/sql.min.js" integrity="sha512-LxrbI3MKe/9KnjAs8zlLrZFRpp2J+jp0pML7zd6OAo/LHH8CEKM2Ef/jTfSX1gm8Auex3J5Jdj0rMkYejmMVMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/xml.min.js" integrity="sha512-2EQPABfCqv0Tr9AxzXh2U9DrbRre5g5H/BL7j/hGbES3mRjQ44bBks0I+2EoPbA4YzWHQ8BsVHNTaHr7t5RHKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script>
+                  hljs.initHighlightingOnLoad();
+              </script></body>
+</html>

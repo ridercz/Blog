@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2022/12/sqlcert</guid>
+      <title>Jak na chybu připjení k SQL Serveru po upgrade na .NET 7</title>
+      <description>Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou. Ukážu vám, jak tento problém vyřešit hned třikrát: dvakrát rychle a jednou správně.</description>
+      <link>https://www.altair.blog/2022/12/sqlcert</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2022-12-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/11/net7</guid>
       <title>Pozvánka na online školení Novinky v .NET 7</title>
       <description>Před několika dny Microsoft vydal .NET 7.0, další verzi této platformy. Oproti LTS verzi 6.0 toho nepřináší přehnaně mnoho, ale pár novinek se tam najde. Proto jsem se rozhodl uspořádat jednodenní školení, které se bude zabývat novinkami v současných verzích C#, .NET. ASP.NET a Entity Frameworku. Volně rozházené po školení budou též různé tipy platné i pro starší verze .NETu, které se mi jinam úplně nevešly.</description>
@@ -140,16 +150,6 @@
       <category>IT</category>
       <category>ReP</category>
       <pubDate>2022-07-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/06/long-tasks</guid>
-      <title>Dlouze běžící úlohy jako zabiják výkonu webových aplikací</title>
-      <description>Jedním z největších problémů webového vývoje jsou dlouho běžící úlohy zpracovávané na web serveru. Web servery na ně nejsou připraveny a neumí si s nimi dobře poradit. Připravil jsem seriál videí a příkladů, které radí, jak si s tímto fenoménem poradit. V tomto článku najdete souhrn všech dílů ve věcně logickém pořadí (které z různých důvodů neodpovídá pořadí, v jakém byly zveřejněny).</description>
-      <link>https://www.altair.blog/2022/06/long-tasks</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-06-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
