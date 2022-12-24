@@ -49,7 +49,7 @@ Druhý jmenovaný typ cookies je držen pouze v paměti, jeho neoprávněná zm�
 
 *   Někteří uživatelé je mohou mít vypnuté. Pro vypínání first-hand cookies sice není žádný zásadní důvod a vypnout je je poměrně komplikované, ale přesto to někdo může udělat. 
 *   Do cookie můžete uložit pouze celkem malé množství dat. 
-*   Cookies se posílají s každým požadavkem, včetně požřadavků na statické stránky atd. V případě navštěvovaných webů a objemnějších cookies to může znamenat slušné zvýšení obejmu přenášených dat. 
+*   Cookies se posílají s každým požadavkem, včetně požadavků na statické stránky atd. V případě navštěvovaných webů a objemnějších cookies to může znamenat slušné zvýšení obejmu přenášených dat. 
 *   Nemůžete se spolehnout na to, že se vám hodnota uložená v cookie vrátí v pořádku a nepoškozená. Uživatel nebo útočník ji může přečíst a modifikovat, pokud ji nějakým způsobem nezabezpečíte.
 
 ### Doporučení
