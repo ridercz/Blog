@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2022/12/liska</guid>
+      <title>Kde lišky dávají dobrou noc</title>
+      <description>Ingredience do bramborového salátu jsou téma natolik zásadní, aby se tím zabýval i státní rozhlas. Jaké ingredience jsem dostal já, abych z nich ukuchtil tradiční vánoční povídku na BDSM.CZ? Původně to měl být, stejně jako v minulých letech, obrázek. Ale autorka měla příliš mnoho práce se svou zvířenou, než aby mi ho stihla včas nakreslit. Takže jsem požádal své přátele na Facebooku, aby mi zadali deset slov a já že na jejich základě napíšu povídku.</description>
+      <link>https://www.bdsm.cz/2022/12/liska</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2022-12-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67107410-psms7-1aed0e43d2d2bc8</guid>
       <title>LastPass napadli hackeři, ale panika je zbytečná. Správci hesel jsou stále nejlepší záruka bezpečí</title>
       <description>Populární online správce hesel LastPass byl nedávno terčem kybernetického útoku. Hlavní heslo (master password) ke svému účtu si ale měnit nemusíte a nemáte se vlastně čeho bát.</description>
@@ -145,16 +154,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-01-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</guid>
-      <title>Olympijská aféra My 2022: Mobilní aplikace je ten nejmenší problém</title>
-      <description>Mobilní aplikace My 2022, kterou si povinně musejí nainstalovat všichni účastníci olympiády v Pekingu, má bezpečnostní díry. V reálu je to ale ten nejmenší problém, který z hlediska kybernetické bezpečnosti účastníci her budou mít. Mnoho zemí riziko řeší, český olympijský výbor na problém tradičně kašle, přestože je pro české účastníky značné.</description>
-      <link>https://tech.hn.cz/c7-67024710-psms7-2de4b8701255b5b</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-01-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

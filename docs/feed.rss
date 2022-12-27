@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2022/12/liska</guid>
+      <title>Kde lišky dávají dobrou noc</title>
+      <description>Ingredience do bramborového salátu jsou téma natolik zásadní, aby se tím zabýval i státní rozhlas. Jaké ingredience jsem dostal já, abych z nich ukuchtil tradiční vánoční povídku na BDSM.CZ? Původně to měl být, stejně jako v minulých letech, obrázek. Ale autorka měla příliš mnoho práce se svou zvířenou, než aby mi ho stihla včas nakreslit. Takže jsem požádal své přátele na Facebooku, aby mi zadali deset slov a já že na jejich základě napíšu povídku.</description>
+      <link>https://www.bdsm.cz/2022/12/liska</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2022-12-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/12/sqlcert</guid>
       <title>Jak na chybu připjení k SQL Serveru po upgrade na .NET 7</title>
       <description>Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou. Ukážu vám, jak tento problém vyřešit hned třikrát: dvakrát rychle a jednou správně.</description>
@@ -141,15 +150,6 @@
       <category>3D tisk</category>
       <category>Bastlení</category>
       <pubDate>2022-07-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/07/taghelpers</guid>
-      <title>Nová verze Altairis Tag Helpers pro ASP.NET Core</title>
-      <description>Po delší době jsem vydal novou verzi 1.12 své knihovny Altairis Tag Helpers. Využívá nových vlastností platformy .NET a jazyka C# a nabízí nový EditorTagHelper.</description>
-      <link>https://www.altair.blog/2022/07/taghelpers</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2022-07-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
