@@ -134,6 +134,10 @@
 <p>Níže popsaný postup je možné použít pro jakoukoliv aplikaci a jakýkoliv server, na který se lze připojit přes SSH, potažmo kopírovat soubory přes SCP. Aby fungoval jak je popsán, musíte mít <a href="https://www.altair.blog/2021/10/dotnet-raspi-2">nastavenu autentizaci výchozím SSH klíčem</a> a tento klíč nesmí být chráněn lokální passphrasí (heslem).</p>
 <p>Tento postup také smaže všechny soubory ve vzdáleném adresáři a nahraje tam nové, což nemusí být zcela žádoucí, jak bude popsáno dále.</p>
 <h2 id="postup">Postup</h2>
+<blockquote>
+<p>Pozor, následující text je zastaralý. V současnosti už existuje 64-bitový MSBuild, kde lze již SSH a SCP volat přímo.</p>
+<p>Připravil jsem návod, jak z publishing profilu kompletně administrovat celé nasazení, včetně zastavení webu atd. Najdete ho <a href="https://www.youtube.com/watch?v=jtpvWHJZdYc">ve videu na kanálu Z-TECH</a> nebo v <a href="https://elearning.altairis.cz/courses/netlinux">bezplatném online školení</a>.</p>
+</blockquote>
 <p>Publishing profily (soubory <code>~/Properties/PublishProfiles/*.pubxml</code>) jsou ve své podstatě standardní MSBuild projektové soubory. Můžeme tedy celkem snadno přidat akci, která se spustí ve správný okamžik při zpracování tohoto souboru, v tomto případě po dokončení publikování.</p>
 <p>Začněte tím, že vytvoříte standardní publishing profil, který bude publikovat do složky. Jak, to jsem popisoval ve <a href="https://www.altair.blog/2021/10/dotnet-raspi-3">třetím dílu seriálu o běhu ASP.NET na Raspberry Pi</a>. Otevřete výsledný soubor a téměř na jeho konec (před uzavírací tag <code>&lt;/Project&gt;</code>) přidejte následující kód:</p>
 <pre><code class="language-xml">&lt;Target Name=&quot;ScpUploadAfterPublish&quot; AfterTargets=&quot;AfterPublish&quot;&gt;
@@ -191,7 +195,7 @@
       </ul>
       <ul class="text">
         <li>
-          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2022</li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2023</li>
         <li>
           Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
         <li>
