@@ -20,6 +20,10 @@ Tento postup také smaže všechny soubory ve vzdáleném adresáři a nahraje t
 
 ## Postup
 
+> Pozor, následující text je zastaralý. V současnosti už existuje 64-bitový MSBuild, kde lze již SSH a SCP volat přímo.
+>
+> Připravil jsem návod, jak z publishing profilu kompletně administrovat celé nasazení, včetně zastavení webu atd. Najdete ho [ve videu na kanálu Z-TECH](https://www.youtube.com/watch?v=jtpvWHJZdYc) nebo v [bezplatném online školení](https://elearning.altairis.cz/courses/netlinux).
+
 Publishing profily (soubory `~/Properties/PublishProfiles/*.pubxml`) jsou ve své podstatě standardní MSBuild projektové soubory. Můžeme tedy celkem snadno přidat akci, která se spustí ve správný okamžik při zpracování tohoto souboru, v tomto případě po dokončení publikování.
 
 Začněte tím, že vytvoříte standardní publishing profil, který bude publikovat do složky. Jak, to jsem popisoval ve [třetím dílu seriálu o běhu ASP.NET na Raspberry Pi](https://www.altair.blog/2021/10/dotnet-raspi-3). Otevřete výsledný soubor a téměř na jeho konec (před uzavírací tag `</Project>`) přidejte následující kód:
