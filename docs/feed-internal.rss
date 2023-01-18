@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/01/oci-linux</guid>
+      <title>ASP.NET Core na Linuxu: Jak získat výkonný cloudový server zdarma</title>
+      <description>Společnost Oracle nabízí zdarma ve svém cloudu server se čtyřmi jádry, 24 GB RAM a 200 GB disku. Jaký je v tom háček? Má ARM architekturu a běží na něm Linux. V novém seriálu vám ukážu, jak na takovém serveru bezpečně a odděleně od sebe hostovat více ASP.NET Core aplikací.</description>
+      <link>https://www.altair.blog/2023/01/oci-linux</link>
+      <author>Michal Altair Valášek</author>
+      <category>Z-TECH</category>
+      <category>IT</category>
+      <pubDate>2023-01-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2022/12/healthchecks</guid>
       <title>ASP.NET Core Health Checks: Jak sledovat zdraví vaší aplikace</title>
       <description>Pokud provozujete webovou aplikaci, je dobré vědět, že se těší dobrému zdraví. Že běží, odpovídá na HTTP requesty, ale také že běží správně. Tedy nejenom že běží web server, ale třeba také jestli se dokáže připojit k databázi, k cloudovému úložišti, jestli je dost místa na disku, jestli nezabírá moc paměti a podobně. To lze samozřejmě monitorovat zvnějšku aplikace, například pomocí performance counterů, ale to musíte mít pod kontrolou celou infrastrukturu, což často není možné nebo praktické. Proto je v ASP.NET Core přítomna technologie health checků, které fungují zevnitř. Aplikace pomocí nich dokáže otestovat sama sebe a reportovat, zda jednotlivé její části fungují tak jak mají.</description>
@@ -141,15 +151,6 @@
       <category>3D tisk</category>
       <category>Bastlení</category>
       <pubDate>2022-07-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/07/taghelpers</guid>
-      <title>Nová verze Altairis Tag Helpers pro ASP.NET Core</title>
-      <description>Po delší době jsem vydal novou verzi 1.12 své knihovny Altairis Tag Helpers. Využívá nových vlastností platformy .NET a jazyka C# a nabízí nový EditorTagHelper.</description>
-      <link>https://www.altair.blog/2022/07/taghelpers</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2022-07-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
