@@ -307,6 +307,7 @@ section.artlist article footer time {
   float: right;
   font-size: 90%;
   color: #444;
+  margin-left: 1em;
 }
 
 section.artlist article div.clear {

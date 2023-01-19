@@ -242,10 +242,18 @@
         <xsl:value-of select="dcterms:abstract" />
       </div>
       <footer>
-        <time datetime="{dcterms:date}" title="Datum vydání">
-          <i class="fal fa-calendar-alt">&#8197;</i>
-          <xsl:value-of select="x4h:FormatDateTime(dcterms:date, 'D', 'cs-CZ') "/>
-        </time>
+        <xsl:if test="dcterms:date">
+          <time datetime="{dcterms:date}" title="Datum vydání">
+            <i class="fal fa-calendar-lines">&#8197;</i>
+            <xsl:value-of select="x4h:FormatDateTime(dcterms:date, 'D', 'cs-CZ') "/>
+          </time>
+        </xsl:if>
+        <xsl:if test="x4w:dateUpdated">
+          <time datetime="{x4w:dateUpdated}" title="Datum aktualizace">
+            <i class="fal fa-calendar-lines-pen">&#8197;</i>
+            <xsl:value-of select="x4h:FormatDateTime(x4w:dateUpdated, 'D', 'cs-CZ') "/>
+          </time>
+        </xsl:if>
         <xsl:if test="$ShowCategories = 1 and x4w:category">
           <ul class="categories">
             <xsl:for-each select="x4w:category">

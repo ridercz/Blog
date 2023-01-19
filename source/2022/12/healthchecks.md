@@ -9,6 +9,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- dcterms:date = 2022-12-29 -->
+<!-- x4w:dateUpdated = 2023-01-19 -->
 
 Pokud provozujete webovou aplikaci, je dobré vědět, že se těší dobrému zdraví. Že běží, odpovídá na HTTP requesty, ale také že běží správně. Tedy nejenom že běží web server, ale třeba také jestli se dokáže připojit k databázi, k cloudovému úložišti, jestli je dost místa na disku, jestli nezabírá moc paměti a podobně. To lze samozřejmě monitorovat zvnějšku aplikace, například pomocí performance counterů, ale to musíte mít pod kontrolou celou infrastrukturu, což často není možné nebo praktické. Proto je v ASP.NET Core přítomna technologie health checků, které fungují zevnitř. Aplikace pomocí nich dokáže otestovat sama sebe a reportovat, zda jednotlivé její části fungují tak jak mají.
 
@@ -50,3 +51,11 @@ Health checky nemusíte psát sami. Často to je potřeba, pokud potřebujete ot
 </div>
 
 V předchozím videu zmíněná knihovna AspNetCore.Diagnostics.HealthChecks umí ještě jednu zajímavou věc: vytvořit hezké webové grafické uživatelské rozhraní, které umožní podívat se na stav aplikace, a ukládat historii změn stavů checků do nějakého trvalého úložiště, typicky do databáze. S health check infrastrukturou přitom komunikuje pomocí HTTP a JSON formátovaného výstupu, takže to webové UI může běžet úplně jinde, než samotná aplikace.
+
+## Externí služby pro monitoring stavu
+
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/7W_7GtgPsfM" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
+Mít API pro health checks je jenom polovina řešení. Ještě potřebujete něco, co bude zdraví aplikace pravidelně kontrolovat a dá vám vědět, že je něco špatně. Ukážu vám dvě služby, UptimeRobot a Wedos Online, které to umí - a do určitého rozsahu zdarma.

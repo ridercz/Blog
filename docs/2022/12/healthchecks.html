@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <link rel="canonical" href="https://www.altair.blog/2022/12/healthchecks" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C19CD55613F8A8210E05CBD8634AB3877810578E" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=BF864F04C34E971C1ED99356C9516D5A9FCEED63" />
     <link rel="stylesheet" type="text/css" href="/content/fa-6.0.0/css/all.min.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -123,12 +123,15 @@
         </ul>
         <div title="Autor">
           <a href="https://www.rider.cz/">Michal Altair Valášek </a>
-          <i class="fal fa-user">​</i>
+          <i class="fal fa-fw fa-user">​</i>
         </div>
         <div title="Datum vydání">
-          <time datetime="2022-12-29">29. prosince 2022 <i class="fal fa-calendar-alt">​</i></time>
+          <time datetime="2022-12-29">29. prosince 2022 <i class="fal fa-fw fa-calendar-lines">​</i></time>
         </div>
-        <div title="Autor úvodního obrázku">Midjourney AI <i class="fal fa-camera">​</i></div>
+        <div title="Datum aktualizace">
+          <time datetime="2023-01-19">19. ledna 2023 <i class="fal fa-fw fa-calendar-lines-pen">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">Midjourney AI <i class="fal fa-fw fa-camera">​</i></div>
       </aside>
       <section class="article-text">
         <p>Pokud provozujete webovou aplikaci, je dobré vědět, že se těší dobrému zdraví. Že běží, odpovídá na HTTP requesty, ale také že běží správně. Tedy nejenom že běží web server, ale třeba také jestli se dokáže připojit k databázi, k cloudovému úložišti, jestli je dost místa na disku, jestli nezabírá moc paměti a podobně. To lze samozřejmě monitorovat zvnějšku aplikace, například pomocí performance counterů, ale to musíte mít pod kontrolou celou infrastrukturu, což často není možné nebo praktické. Proto je v ASP.NET Core přítomna technologie health checků, které fungují zevnitř. Aplikace pomocí nich dokáže otestovat sama sebe a reportovat, zda jednotlivé její části fungují tak jak mají.</p>
@@ -158,6 +161,11 @@
   <iframe src="https://www.youtube-nocookie.com/embed/AD_1dTNq4F4" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
 <p>V předchozím videu zmíněná knihovna AspNetCore.Diagnostics.HealthChecks umí ještě jednu zajímavou věc: vytvořit hezké webové grafické uživatelské rozhraní, které umožní podívat se na stav aplikace, a ukládat historii změn stavů checků do nějakého trvalého úložiště, typicky do databáze. S health check infrastrukturou přitom komunikuje pomocí HTTP a JSON formátovaného výstupu, takže to webové UI může běžet úplně jinde, než samotná aplikace.</p>
+<h2 id="externi-sluzby-pro-monitoring-stavu">Externí služby pro monitoring stavu</h2>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/7W_7GtgPsfM" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Mít API pro health checks je jenom polovina řešení. Ještě potřebujete něco, co bude zdraví aplikace pravidelně kontrolovat a dá vám vědět, že je něco špatně. Ukážu vám dvě služby, UptimeRobot a Wedos Online, které to umí - a do určitého rozsahu zdarma.</p>
 
       </section>
       <section class="issues">

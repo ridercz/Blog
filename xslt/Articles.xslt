@@ -71,20 +71,28 @@
                   </xsl:if>
                   <div title="Autor">
                     <a href="https://www.rider.cz/">Michal Altair Valášek&#160;</a>
-                    <i class="fal fa-user">&#8203;</i>
+                    <i class="fal fa-fw fa-user">&#8203;</i>
                   </div>
                   <xsl:if test="dcterms:date">
                     <div title="Datum vydání">
                       <time datetime="{dcterms:date}">
                         <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:date, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
-                        <i class="fal fa-calendar-alt">&#8203;</i>
+                        <i class="fal fa-fw fa-calendar-lines">&#8203;</i>
+                      </time>
+                    </div>
+                  </xsl:if>
+                  <xsl:if test="x4w:dateUpdated">
+                    <div title="Datum aktualizace">
+                      <time datetime="{x4w:dateUpdated}">
+                        <xsl:value-of select="concat(x4h:FormatDateTime(x4w:dateUpdated, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
+                        <i class="fal fa-fw fa-calendar-lines-pen">&#8203;</i>
                       </time>
                     </div>
                   </xsl:if>
                   <xsl:if test="x4w:coverCredits">
                     <div title="Autor úvodního obrázku">
                       <xsl:value-of select="concat(x4w:coverCredits, '&#160;')" />
-                      <i class="fal fa-camera">&#8203;</i>
+                      <i class="fal fa-fw fa-camera">&#8203;</i>
                     </div>
                   </xsl:if>
                 </aside>
