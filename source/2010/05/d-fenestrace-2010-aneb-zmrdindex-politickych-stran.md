@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-05-19T00:22:19.21+02:00 -->
-<!-- dcterms:dateAccepted = 2010-05-19T00:22:19.757+02:00 -->
+<!-- dcterms:date = 2010-05-19T00:22:19.757+02:00 -->
 
 Pravděpodobně jste se již setkali s iniciativou "[Defenestrace 2010 – kroužkujte ty dole](http://www.defenestrace2010.cz/)". D-FENS přišel s [upgradovanou verzí](http://www.dfens-cz.com/view.php?cisloclanku=2010041804). Její princip spočívá v tom, dát preferenční hlasy těm lidem, kteří nejsou profesionální politikové a kteří nejsou závislí na státu. D-Fens radí preferovat kandidáty, kteří se živí způsobem nezávislým na státu, což je způsob myšlení, který jest mně celkem blízký.
 

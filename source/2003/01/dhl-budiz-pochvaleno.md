@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-01-31T23:26:06+01:00 -->
-<!-- dcterms:dateAccepted = 2003-01-31T23:26:06+01:00 -->
+<!-- dcterms:date = 2003-01-31T23:26:06+01:00 -->
 
 Jistou část dnešního dne jsem strávil komunikací s kurýrní službou [DHL](http://www.dhl.cz/). Doručovali mi dvě zásilky a jaksi mne nezastihli doma. Volali mi na mé staré telefonní číslo, kde jim můj hlasový informační systém doporučil, aby se ozvali mailem. I poslali mi mail (jediná chybička, že se jednalo o zbytečný wordovský dokument a nenapsali zprávu do těla mailu). Dohodli jsme doručení na dnešek večer.
 

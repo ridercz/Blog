@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-01-16T17:14:14.667+01:00 -->
-<!-- dcterms:dateAccepted = 2012-01-16T17:14:00+01:00 -->
+<!-- dcterms:date = 2012-01-16T17:14:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120116-sest-novorocnich-predsevzeti-pro-sefy-vyvojaru.jpg -->

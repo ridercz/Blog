@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-10-18T03:12:53.057+02:00 -->
-<!-- dcterms:dateAccepted = 2004-10-18T03:12:53.057+02:00 -->
+<!-- dcterms:date = 2004-10-18T03:12:53.057+02:00 -->
 
 Na nedávném svodu československých vlčáků ([fotogalerie](http://gallery.rider.cz/esta/20041002_svod_csv/default.xhtml)) jsme si při společném venčení psíčků s ostatními majiteli líčili zážitky [z návštěvy pražské ZOO](http://weblog.bestijka.cz/ShowRecord.aspx?day=20040705#152224). Slovo dalo slovo a dohodli jsme se, že ZOO Praha poctíme hromadnou návštěvou.
 

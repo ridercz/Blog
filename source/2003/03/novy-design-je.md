@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-21T16:37:57+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-21T16:37:57+01:00 -->
+<!-- dcterms:date = 2003-03-21T16:37:57+01:00 -->
 
 Několik *drobných chybiček* mne přimělo trochu přehodnotit priority a vytvořit novou verzi dříve, než jsem sám čekal.
 

@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = shaireproductions.com via Flickr, CC BY -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Tipy, triky -->
-<!-- dcterms:dateAccepted = 2019-01-28 -->
+<!-- dcterms:date = 2019-01-28 -->
 
 Používám na většinu svých webů (bezplatné) služby společnosti CloudFlare a mám rád možnosti URL Rewrite modulu pro IIS. A tyto dvě věci spolu umí výborně spolupracovat. Ukažme si to na příkladu geolokace a reakce na to, ze které země uživatel pochází.
 

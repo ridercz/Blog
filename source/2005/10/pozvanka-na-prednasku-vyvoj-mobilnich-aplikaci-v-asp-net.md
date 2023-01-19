@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-10-10T23:13:19.397+02:00 -->
-<!-- dcterms:dateAccepted = 2005-10-10T23:13:19.397+02:00 -->
+<!-- dcterms:date = 2005-10-10T23:13:19.397+02:00 -->
 
 ![](https://www.cdn.altairis.cz/Blog/2005/20051010-firstslide.jpg) 
 

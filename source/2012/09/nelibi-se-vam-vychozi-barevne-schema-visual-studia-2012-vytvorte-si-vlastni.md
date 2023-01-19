@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-09-06T22:18:03.367+02:00 -->
-<!-- dcterms:dateAccepted = 2012-09-06T22:08:00+02:00 -->
+<!-- dcterms:date = 2012-09-06T22:08:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120906-nelibi-se-vam-vychozi-barevne-schema-visual-studia-2012-vytvorte-si-vlastni.png -->

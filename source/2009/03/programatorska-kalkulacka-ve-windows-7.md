@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-03-19T13:17:36.423+01:00 -->
-<!-- dcterms:dateAccepted = 2009-03-19T13:17:36.423+01:00 -->
+<!-- dcterms:date = 2009-03-19T13:17:36.423+01:00 -->
 
 Pár dní už na notebooku používám betu Windows 7 Ultimate. Čirou náhodou jsem před chvílí objevil, že vestavěná kalkulačka doznala změn, které potěší zejména programátory.
 

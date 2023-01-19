@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-04-26T19:37:20.193+02:00 -->
-<!-- dcterms:dateAccepted = 2008-04-26T19:37:20.193+02:00 -->
+<!-- dcterms:date = 2008-04-26T19:37:20.193+02:00 -->
 
 Každý o tom mluví: LINQ, LINQ-to-kdeco... Co je to vlastně zač a k čemu je to dobré? Mám to používat a nebo se na to vykašlat, protože za chvíli přijde nějaká další technologie a tohle bude zapomenuto?
 

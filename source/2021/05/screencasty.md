@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2021-05-07 -->
+<!-- dcterms:date = 2021-05-07 -->
 
 Připravuji nový projekt technického YouTube kanálu. Témata budou to, co byste ode mne asi tak očekávali: programování, elektronika, 3D modelování a tisk, kybernetická bezpečnost a podobně.
 

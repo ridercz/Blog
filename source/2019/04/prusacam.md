@@ -3,7 +3,7 @@
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-04-05 -->
+<!-- dcterms:date = 2019-04-05 -->
 <!-- x4w:pictureUrl = /perex-pictures/20190405-prusacam.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

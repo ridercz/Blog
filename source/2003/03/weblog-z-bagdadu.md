@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-29T14:01:47+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-29T14:01:47+01:00 -->
+<!-- dcterms:date = 2003-03-29T14:01:47+01:00 -->
 
 Dostal se mi do rukou link na stránku [http://dearraed.blogspot.com/](http://dearraed.blogspot.com/), což je weblog uživatele jménem (nebo přezdívkou) **Salam Pax**.
 

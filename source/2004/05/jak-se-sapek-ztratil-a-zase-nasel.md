@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-05-10T10:29:35+02:00 -->
-<!-- dcterms:dateAccepted = 2004-05-10T10:29:35+02:00 -->
+<!-- dcterms:date = 2004-05-10T10:29:35+02:00 -->
 
 Ve svém předchozím zápisku jsem se -- ohledně onoho přeinstalování počítače -- neměl rouhat. Je to totiř činnost, které se aktuálně, leč zcela neplánovaně jmenuji.
 

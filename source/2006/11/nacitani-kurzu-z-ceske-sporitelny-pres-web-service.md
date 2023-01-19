@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-11-01T16:42:16.977+01:00 -->
-<!-- dcterms:dateAccepted = 2006-11-01T16:42:16.977+01:00 -->
+<!-- dcterms:date = 2006-11-01T16:42:16.977+01:00 -->
 
 
 		<p>Před nějakým časem jsem zde zveřejnil <a href="https://www.aspnet.cz/Articles/113-nacitani-kurzu-men-z-ruznych-bank-maly-exkurz-do-zakladu-objektoveho-programovani.aspx">kód pro načítání kurzů měn z různých bank</a>. Krátce poté přestal fungovat modul pro načítání z ČS, protože banka změnila adresu, na níž se CSV data nacházejí (funkční adresu se mi dosud nepodařilo odhalit).</p>

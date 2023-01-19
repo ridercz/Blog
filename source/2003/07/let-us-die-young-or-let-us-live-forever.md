@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-07-10T01:51:58+02:00 -->
-<!-- dcterms:dateAccepted = 2003-07-10T01:51:58+02:00 -->
+<!-- dcterms:date = 2003-07-10T01:51:58+02:00 -->
 
 <p>Jsem slaměný vdovec, anžto Mysh se odjela utopit na Berounku. Každý vybíjíme svůj masochismus jinak: někdo si nechá seřezat zadek, někdo jde spát do stanu na břehu řeky, ve vlhku a interesantní společnosti roztodivných hmyzáků a hnusíků.</p>
 <p><em>Some are like water <br>Some are like the heat <br>Some are a melody and some are the beat <br>Sooner or later, they all will be gone </em></p>

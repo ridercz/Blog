@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-14T04:37:43+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-14T04:37:43+02:00 -->
+<!-- dcterms:date = 2003-05-14T04:37:43+02:00 -->
 
 Omlouvám se oběma příznivcům svého blogu, že jsem ho poslední dobou zanedbával. Měl jsem příliš mnoho práce, a upřímně řečeno i málo námětů.
 

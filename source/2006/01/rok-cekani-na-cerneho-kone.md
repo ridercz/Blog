@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-01T02:56:28.643+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-01T02:56:28.643+01:00 -->
+<!-- dcterms:date = 2006-01-01T02:56:28.643+01:00 -->
 
 Nahlédneme-li přes dým z odpálených silvestrovských rachejtlí do budoucnosti v podobě nadcházejícího volebního roku 2006, vidíme vyhlídky poněkud chmurné. Obecné přesvědčení je takové, že ve volbách do Poslanecké sněmovny ODS utrpí volební vítězství, ale nebude schopná sestavit vládu. Po několika nezdařených pokusech páně Topolánkových se pak vlády chopí koalice sociálních demokratů s komunisty, ať už pouze *de facto* nebo i s *de iure* posvěcením.
 

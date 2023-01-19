@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-03-11T04:11:42.277+01:00 -->
-<!-- dcterms:dateAccepted = 2005-03-11T04:11:42.277+01:00 -->
+<!-- dcterms:date = 2005-03-11T04:11:42.277+01:00 -->
 
 Většina českých internetových uživatelů pravděpodobně zná [Pixyho sbírku žárovkových vtipů](http://www.pixy.cz/osobni/zar.html). Ale jak žárovky vyměňují koně Jedná-li se o koně antropomorfní, postup je poměrně standardní, alespoň mohu-li soudit podle sebe.
 

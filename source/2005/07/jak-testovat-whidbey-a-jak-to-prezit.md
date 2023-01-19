@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-07-23T04:12:13.107+02:00 -->
-<!-- dcterms:dateAccepted = 2005-07-23T04:12:13.107+02:00 -->
+<!-- dcterms:date = 2005-07-23T04:12:13.107+02:00 -->
 
 Bystřejší povahy si nepochybně již povšimly toho, že se zde již delší dobu nic neobjevilo. Abych si vypůjčil [slova své drahé polovičky](http://weblog.bestijka.cz/ShowRecord.aspx?day=20030522): *Nepíšu, protože konám! *Jmenovitě tedy bádám v hlubinách Whidbey a píšu rozličné testovací a ukázkové aplikace - dočkáte se.
 

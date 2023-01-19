@@ -3,7 +3,7 @@
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-01-19 -->
+<!-- dcterms:date = 2022-01-19 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220119-e2e-uk.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

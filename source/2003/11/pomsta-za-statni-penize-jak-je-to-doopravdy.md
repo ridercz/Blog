@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-10T16:46:19+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-10T16:46:19+01:00 -->
+<!-- dcterms:date = 2003-11-10T16:46:19+01:00 -->
 
 Obdržel jsem od karlovarského magistrátu odpověď na svůj [dotaz ze včerejška](http://weblog.rider.cz/ShowRecord.aspx?day=20031109). Přetiskuji jeji v plném znění, a s radostí.
 

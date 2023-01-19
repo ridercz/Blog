@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-08-24T04:28:49.687+02:00 -->
-<!-- dcterms:dateAccepted = 2010-08-24T04:28:50.343+02:00 -->
+<!-- dcterms:date = 2010-08-24T04:28:50.343+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100824-nova-verze-iis-network-diagnostic-tools.jpg -->

@@ -1,7 +1,7 @@
 <!-- dcterms:title = Hack the LACK -->
 <!-- dcterms:abstract = Švédská společnost IKEA letos slaví 75 let od svého vzniku a v rámci oslav nabízí od 30. 8. do 5. 9. svůj stolek LACK se slevou za 169 Kč. Tenhle výrobek je nejenom ikonou značky, ale také oblíbeným základem všech možných kutilských projektů. Je snadno dostupný po celém světě, levný a jeho design je dostatečně jednoduchý na to, aby se na něm dalo snadno stavět. Proto jsem pro vás připravil přehled kutilských projektů, které lze na bázi stolku LACK postavit. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2018-08-28 -->
+<!-- dcterms:date = 2018-08-28 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:pictureUrl = /perex-pictures/20180828-lack.jpg -->

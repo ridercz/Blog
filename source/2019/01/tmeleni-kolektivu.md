@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Nesnáším takové to tmelení kolektivu v rámci firmy. Ať už se tomu říká „teambuilding“, „vánoční večírek“ nebo prostě jenom upřímně firemní chlastačka. Firma se letos plácla přes kapsu a pronajala na vánoční večírek na víkend celý hotel v Krkonoších. Takže místo jednoho ztraceného večera je to celý ztracený víkend. Jenomže v mé pozici je prostě nemožné, abych se té opičárny neúčastnil. Kat aby to spral. -->
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-01-14 -->
+<!-- dcterms:date = 2019-01-14 -->
 <!-- x4w:pictureUrl = /perex-pictures/20190114-tmeleni-kolektivu.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

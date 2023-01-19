@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2021-01-23 -->
+<!-- dcterms:date = 2021-01-23 -->
 
 Kybernetická bezpečnost je s ohledem na přesun mnoha aktivit do online prostoru čím dál důležitější. Napsal jsem o jejím stavu mnoho kritických článků a snažím se též přiložit ruku k dílu. Zvu vás na nově aktualizované komplexní školení týkající se bezpečnosti webových aplikací v .NET. Toto školení je určeno jak programátorům, kteří webové aplikace vytvářejí, tak IT profesionálům, kteří se starají o infrastrukturu na níž běží. Při zabezpečení totiž musejí obě skupiny spolupracovat a rozhodně není na škodu, aby jedna strana věděla, co dělá druhá.
 

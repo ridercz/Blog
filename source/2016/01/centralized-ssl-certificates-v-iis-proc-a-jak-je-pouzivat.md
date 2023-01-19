@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2016-01-31T00:12:08.447+01:00 -->
-<!-- dcterms:dateAccepted = 2016-01-31T00:00:00+01:00 -->
+<!-- dcterms:date = 2016-01-31T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 149 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20160131-centralized-ssl-certificates-v-iis-proc-a-jak-je-pouzivat.jpg -->

@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-04-14T01:24:17.97+02:00 -->
 <!-- dcterms:dateSubmitted = 2011-04-14T01:29:08.313+02:00 -->
-<!-- dcterms:dateAccepted = 2011-04-14T13:00:00+02:00 -->
+<!-- dcterms:date = 2011-04-14T13:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20110414-iis-express-sql-compact-a-nuget-priklady-ke-stazeni.png -->

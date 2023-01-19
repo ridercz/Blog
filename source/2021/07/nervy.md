@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Koně -->
-<!-- dcterms:dateAccepted = 2021-07-14 -->
+<!-- dcterms:date = 2021-07-14 -->
 
 Na Twitteru teď běží "co byste vzkázali sami sobě když vám bylo dvacet, ve třech slovech". Upřímně, stručnost mi nikdy nešla. Napadá mě jenom "buy Bitcoin" a na to mi ještě jedno slovo zbylo. A to zatím nejzásadnější poznání, k němuž jsem ve věku od dvaceti do současných dvaačtyřiceti dospěl, se do třech slov nevejde.
 

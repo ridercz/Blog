@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210215-rep.jpg -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = ReP -->
-<!-- dcterms:dateAccepted = 2022-07-04 -->
+<!-- dcterms:date = 2022-07-04 -->
 
 Před časem jsem vytvořil open source (a částečně demo/ukázkovou) aplikaci ReP. Nyní jsem ji aktualizoval na ASP.NET Core 6.0 a přidal řadu praktických vylepšení a oprav chyb.
 

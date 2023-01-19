@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-09-26T17:31:56.313+02:00 -->
-<!-- dcterms:dateAccepted = 2004-09-26T17:31:56.313+02:00 -->
+<!-- dcterms:date = 2004-09-26T17:31:56.313+02:00 -->
 
 Pro většinu z vás asi nebude nikterak překvapivé zjištění, že moje firma [Altair Communications](http://www.altaircom.net/) má ve znaku koně. Pro účely jejího nového webu jsem požádal svého kamaráda [Štefana Spoda](http://www.horse.sk/), zda bych nemohl některé jeho fotografie koní nabídnout ke stažení jako obrázky na plochu.
 

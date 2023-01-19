@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-07-03 -->
+<!-- dcterms:date = 2020-07-03 -->
 
 Pokud vaše aplikace pracuje s číslem bankovního účtu, je dobré ověřit, že je zadané hodnota formálně validní. Pravidla pro tvorbu čísel českých bankovních účtů stanoví [vyhláška České národní banky číslo 169/2011 Sb](https://www.zakonyprolidi.cz/cs/2011-169).
 

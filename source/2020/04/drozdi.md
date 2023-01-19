@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2020-04-19 -->
+<!-- dcterms:date = 2020-04-19 -->
 
 Největší český dovozce droždí poprvé v historii na trh pro spotřebitele vrhl půlkilové balení droždí. Jedno se mi podařilo uchvátit a na oslavu jsem se rozhodl udělat drožďovou pomazánku. Zde je ilustrovaný recept. 
 

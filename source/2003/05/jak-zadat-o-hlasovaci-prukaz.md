@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-23T23:31:46+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-23T23:31:46+02:00 -->
+<!-- dcterms:date = 2003-05-23T23:31:46+02:00 -->
 
 <p>Byl jsem požádán, abych zde zveřejnil postup, jakým jest žádati o hlasovací průkaz pro referendum o vstupu do Evropské unie.</p>
 <p>Konání referenda ošetřuje <a href="http://www.euroskop.cz/utils/get_file.asp?company=91&news=85&file=4530">Zákon o provádění referenda o přistoupení České republiky k Evropské unii</a>.</p>

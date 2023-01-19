@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2018-02-09T17:37:03.167+01:00 -->
-<!-- dcterms:dateAccepted = 2018-02-09T17:00:00+01:00 -->
+<!-- dcterms:date = 2018-02-09T17:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-makerslab.png -->

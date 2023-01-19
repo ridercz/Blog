@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2018-11-05T12:00:00 -->
+<!-- dcterms:date = 2018-11-05T12:00:00 -->
 
 Žijeme v turbulentní době a skutečnosti, dříve pokládány za neměnné, se hroutí jako domečky z karet. Naposledy se tímto stylem zhroutila jedna z konstant českého Internetu, když weby Ministerstva vnitra a Policie ČR začaly podporovat HTTPS. Samozřejmě, není všechno zlato co se třpytí, takže i když mají weby mvcr.cz a policie.cz ono magické "S" na konci protokolu, v testu kvality implementace dostaly od Qualysu známku F - tedy nejhorší možnou.
 

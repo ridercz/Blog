@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-11-14T19:20:50.543+01:00 -->
-<!-- dcterms:dateAccepted = 2005-11-14T19:20:50.543+01:00 -->
+<!-- dcterms:date = 2005-11-14T19:20:50.543+01:00 -->
 
 Společnost Microsoft zveřejnila s novou verzí .NET Frameworku i novinku: Express edici vývojových nástrojů. Přináším několik odkazů, které se toho týkají.
 

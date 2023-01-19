@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-30T16:50:03.817+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-30T16:50:03.817+02:00 -->
+<!-- dcterms:date = 2005-04-30T16:50:03.817+02:00 -->
 
 <p __designer:dtid="1688849860263940">Na&#353;i prohl&#237;dku světa Whidbey započneme třemi jednoduch&#253;mi ovl&#225;dac&#237;mi prvky.</p>
 <h2 __designer:dtid="1688849860263941">MultiView</h2>

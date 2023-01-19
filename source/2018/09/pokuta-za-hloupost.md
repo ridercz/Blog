@@ -6,6 +6,6 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2018-09-23 -->
+<!-- dcterms:date = 2018-09-23 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c1-66254420-pokuta-za-hloupost-ne-za-masturbaci-vyderac-hrozi-zverejnenim-neexistujiciho-videa -->
 

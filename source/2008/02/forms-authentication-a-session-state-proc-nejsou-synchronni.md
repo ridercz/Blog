@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-02-16T13:55:53.117+01:00 -->
-<!-- dcterms:dateAccepted = 2008-02-16T13:55:53.117+01:00 -->
+<!-- dcterms:date = 2008-02-16T13:55:53.117+01:00 -->
 
 Ticket vystavení forms authentication modulem má danou platnost v minutách a lze nastavit, že bude "sliding", tedy že platnost bude prodlužována při každém požadavku. Stejně tak session timeout se udává v minutách a také se prodlužuje při každém požadavku. Zdravý rozum tedy říká, že pokud oba parametry nastavím na stejnou hodnotu, budou tickety i sessions platit vždy stejnou dobu. Leč, není tomu tak. Pojďme se podívat na to, jak tyto mechanismy vlastně fungují.
 

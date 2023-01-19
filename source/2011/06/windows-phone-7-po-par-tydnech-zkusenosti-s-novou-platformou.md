@@ -7,5 +7,5 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-06-03T10:23:11.047+02:00 -->
-<!-- dcterms:dateAccepted = 2011-06-11T00:28:45.95+02:00 -->
+<!-- dcterms:date = 2011-06-11T00:28:45.95+02:00 -->
 <!-- x4w:alternateUrl = http://www.lupa.cz/clanky/windows-phone-7-po-par-tydnech-zkusenosti-s-novou-platformou/ -->

@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190301-pameti-v-arduinu.jpg -->
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2019-03-05 -->
+<!-- dcterms:date = 2019-03-05 -->
 
 Data v operační paměti se ztratí ve chvíli, kdy vypnete napájení nebo zařízení restartujete. Pro trvalejší úschovu dat máte na PC k dispozici pevný disk. Ale co Arduino? Ve dvou online streamech jsme si ukázali, jak využít EEPROM, Flash pamět a běžné SD karty k ukládání informací, které mají přežít reset.
 

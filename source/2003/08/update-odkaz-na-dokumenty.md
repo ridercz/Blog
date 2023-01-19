@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-08-06T14:32:34+02:00 -->
-<!-- dcterms:dateAccepted = 2003-08-06T14:32:34+02:00 -->
+<!-- dcterms:date = 2003-08-06T14:32:34+02:00 -->
 
 Podařilo se mi onen dokument najít:
 

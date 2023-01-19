@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-11-24T18:40:45.557+01:00 -->
-<!-- dcterms:dateAccepted = 2011-11-24T18:40:47.197+01:00 -->
+<!-- dcterms:date = 2011-11-24T18:40:47.197+01:00 -->
 
 Pro železnici mám slabost a vlakem jezdím velmI často. Nejenom proto, že rodina Valášků má dlouhou ajznboňáckou tradici, ale především proto, že to je nejrozumnější způsob dopravy mezi Prahou a Brnem, což je trasa, po které jezdím velmi často.
 

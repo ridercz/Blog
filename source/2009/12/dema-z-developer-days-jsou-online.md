@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-12-02T12:09:02.167+01:00 -->
-<!-- dcterms:dateAccepted = 2009-12-02T12:09:02.167+01:00 -->
+<!-- dcterms:date = 2009-12-02T12:09:02.167+01:00 -->
 
 Na webu [MSTV.CZ](http://www.mstv.cz/) jsou k dispozici záznamy z Microsoft Developer Days. Pokud se těšíte na záznam opiček, které jsme předváděli se Štěpánem Bechynským, tak vás ovšem musím zklamat, jsou to jenom zvlášť natočené screencasty.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-10-13T01:51:59+02:00 -->
-<!-- dcterms:dateAccepted = 2003-10-13T01:51:59+02:00 -->
+<!-- dcterms:date = 2003-10-13T01:51:59+02:00 -->
 
 [![Registana před dostihem](http://weblog.rider.cz/files/registana_1_lq.jpg)](http://weblog.rider.cz/files/registana_1_hq.jpg)Najít na Internetu výsledky včera proběhnuvší **Velké pardubické** není tak triviální úkol, jak by se mohlo zdát.
 

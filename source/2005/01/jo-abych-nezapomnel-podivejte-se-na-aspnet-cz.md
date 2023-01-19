@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-10T04:50:56.143+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-10T04:50:56.143+01:00 -->
+<!-- dcterms:date = 2005-01-10T04:50:56.143+01:00 -->
 
 V předchozím spotu linkovaný článek mne vyprudil natolik, že jsem zapomněl co jsem chtěl napsat původně.
 

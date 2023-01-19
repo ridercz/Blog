@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-04-13T00:43:35.64+02:00 -->
-<!-- dcterms:dateAccepted = 2008-04-13T00:43:35.64+02:00 -->
+<!-- dcterms:date = 2008-04-13T00:43:35.64+02:00 -->
 
 Po [pozvánce na letošní ročník pražského TechEdu](http://www.aspnet.cz/Articles/194-pozvanka-na-teched-praha-2008.aspx) je zde tradiční soutěž o volnou vstupenku na tuto akci, kterou jsme připravili společně s počítačovou školou Gopas.
 

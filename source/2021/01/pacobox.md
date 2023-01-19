@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-01-10 -->
+<!-- dcterms:date = 2021-01-10 -->
 <!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/51594-pacobox-parametric-compartmentalized-box-for-sd-ca -->

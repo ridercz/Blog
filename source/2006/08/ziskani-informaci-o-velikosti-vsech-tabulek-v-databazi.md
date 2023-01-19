@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-08-10T04:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2006-08-10T04:00:00+02:00 -->
+<!-- dcterms:date = 2006-08-10T04:00:00+02:00 -->
 
 
 		<p>SQL Server Management Studio umí informace o velikosti jednotlivých tabulek zobrazit v podobě krásného reportu. Nicméně jak si poradit, pokud chcete tyto informace zobrazit pomocí vlastní aplikace, nebo pokud máte k dispozici pouze SQL Server 2000?</p>

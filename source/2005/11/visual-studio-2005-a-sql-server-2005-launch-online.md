@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-11-07T13:39:48.77+01:00 -->
-<!-- dcterms:dateAccepted = 2005-11-07T13:39:48.77+01:00 -->
+<!-- dcterms:date = 2005-11-07T13:39:48.77+01:00 -->
 
 Oficiální uvedení nové verze vývojových nástrojů Microsoftu se odehraje dnes večer v několika městech po celém světě. Pokud se nedostanete do Amsterdamu (to je nejbližší z nich), můžete se na celou show podívat živě na adrese [http://www.microsoft.com/emea/steveballmerlive/](http://www.microsoft.com/emea/steveballmerlive/)
 

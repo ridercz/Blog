@@ -3,7 +3,7 @@
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-02-21 -->
+<!-- dcterms:date = 2022-02-21 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220221-cerveny-kriz.jpg -->
 <!-- x4w:credits = Červený kříž -->
 <!-- x4w:pictureWidth = 150 -->

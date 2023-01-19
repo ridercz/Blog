@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-30T15:03:21.12+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-30T15:03:21.12+02:00 -->
+<!-- dcterms:date = 2005-04-30T15:03:21.12+02:00 -->
 
 Jak jsem již [avizoval dříve](/entry/article-20050419.aspx), definitivně se vzdávám a odhazuji v dál své původní přesvědčení nepsat o Whidbey dříve, než bude k dispozici ostrá verze. Byl to ale od Microsoftu podlý tah, vnutit mi knihy *Introducing Microsoft ASP.NET 2.0*! Začal jsem ji z nedostatku jiné literatury studovat a virus Whidbey mne nakazil též.
 

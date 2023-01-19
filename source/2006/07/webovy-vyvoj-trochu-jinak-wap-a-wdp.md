@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-07-03T01:14:33.133+02:00 -->
-<!-- dcterms:dateAccepted = 2006-07-03T01:14:33.133+02:00 -->
+<!-- dcterms:date = 2006-07-03T01:14:33.133+02:00 -->
 
 V jedničkové verzi ASP.NET byl vývoj webových aplikací sice zcela jiný než v ASP 3.0, ale zároveň celkem snadno pochopitelný: veškerý back-endový kód se zkompiloval do jedné dynamické knihovny a předmětné DLLko se nakopírovalo na web server, spolu s ASPX soubory, které obsahovaly HTML kód a definice server controls.
 

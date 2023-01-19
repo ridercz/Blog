@@ -6,4 +6,4 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = BDSM -->
-<!-- dcterms:dateAccepted = 2017-08-21T00:00:00+02:00 -->
+<!-- dcterms:date = 2017-08-21T00:00:00+02:00 -->

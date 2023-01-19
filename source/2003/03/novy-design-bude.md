@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-19T15:34:59+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-19T15:34:59+01:00 -->
+<!-- dcterms:date = 2003-03-19T15:34:59+01:00 -->
 
 [Diskuse nad designem weblogu](http://weblog.rider.cz/CommentList.aspx?day=20030317), která se rozjela pod mým minulým záznamem, mne nutí objasnit minulost a budoucnost tohoto webu.
 

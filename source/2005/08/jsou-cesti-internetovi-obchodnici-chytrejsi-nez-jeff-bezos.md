@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-27T02:27:49.88+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-27T02:27:49.88+02:00 -->
+<!-- dcterms:date = 2005-08-27T02:27:49.88+02:00 -->
 
 Ivo Lukačovič vydal na svém blogu [článek](http://blog.lide.cz/ilblog/2005/08/25/161) o tom, že čeští internetoví obchodníci (kteří obchodují s ledničkami) jsou chytřejší, než Jeff Bezos (který obchoduje především s knihami, neb založil [Amazon](http://www.amazon.com), pravděpodobně největší internetový obchod na světě). Ačkoliv s některými jeho tezemi souhlasím, myslím že pominul několik důležitých parametrů. A protože nemohu spát (ačkoliv musím dneska brzo vstávat), píšu tady k tomu svoje.
 

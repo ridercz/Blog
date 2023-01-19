@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2021-03-04 -->
+<!-- dcterms:date = 2021-03-04 -->
 <!-- x4w:alternateUrl = https://www.youtube.com/watch?v=RfptWCq6LHc -->

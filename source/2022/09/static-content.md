@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Z-TECH -->
-<!-- dcterms:dateAccepted = 2022-09-26 -->
+<!-- dcterms:date = 2022-09-26 -->
 
 Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V [osmidílném seriálu](https://www.youtube.com/playlist?list=PLFZurxJN0pMY1Iy0i4N6dYJ6eY2vOSsEO) jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.
 

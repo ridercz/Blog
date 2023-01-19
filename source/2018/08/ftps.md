@@ -1,7 +1,7 @@
 <!-- dcterms:title = FTPS: bezpečná varianta prastarého protokolu -->
 <!-- dcterms:abstract = Přes existenci lepších metod přenosu souborů a deploymentu tady s námi stařičký FTP je a ještě drahnou dobu zůstane. Doufejme, že povětšinou v šifrované variantě, implicitní nebo explicitní. Ukážeme si, jak se tyto varianty liší a jak je na IIS použít. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2018-08-15 -->
+<!-- dcterms:date = 2018-08-15 -->
 <!-- x4w:category = IT -->
 <!-- x4w:pictureUrl = /perex-pictures/20180815-ftps.jpg -->
 <!-- x4w:pictureWidth = 150 -->

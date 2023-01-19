@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-03-02T21:07:37+01:00 -->
-<!-- dcterms:dateAccepted = 2004-03-02T21:07:37+01:00 -->
+<!-- dcterms:date = 2004-03-02T21:07:37+01:00 -->
 
 Že nepatřím mezi nadšené fanoušky učitelstva je o mne jednak všeobecně známo, druhak poměrně přesně vyplývá i z mého dřívejšího zápisku o [stávce učitelů](http://weblog.rider.cz/ShowRecord.aspx?day=20030831).
 

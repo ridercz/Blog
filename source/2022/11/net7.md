@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-11-21 -->
+<!-- dcterms:date = 2022-11-21 -->
 
 Před několika dny Microsoft vydal .NET 7.0, další verzi této platformy. Oproti LTS verzi 6.0 toho nepřináší přehnaně mnoho, ale pár novinek se tam najde. Proto jsem se rozhodl uspořádat jednodenní školení, které se bude zabývat novinkami v současných verzích C#, .NET. ASP.NET a Entity Frameworku. Volně rozházené po školení budou též různé tipy platné i pro starší verze .NETu, které se mi jinam úplně nevešly.
 

@@ -9,7 +9,7 @@
 <!-- np9:serialId = 4 -->
 <!-- x4w:serial = Stavové HTTP -->
 <!-- dcterms:created = 2008-03-21T08:00:29+01:00 -->
-<!-- dcterms:dateAccepted = 2008-03-21T08:00:29+01:00 -->
+<!-- dcterms:date = 2008-03-21T08:00:29+01:00 -->
 
 V [minulém díle tohoto seriálu](https://www.aspnet.cz/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx) jsme si řekli, že HTTP je protokol bezstavový a že jednou z technik, jak tuto bezstavovost obejít, je použití cookies.
 

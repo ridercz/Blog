@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-01-28T12:30:00+01:00 -->
-<!-- dcterms:dateAccepted = 2009-01-28T12:30:00+01:00 -->
+<!-- dcterms:date = 2009-01-28T12:30:00+01:00 -->
 
 <iframe style="border-bottom-style: none; border-right-style: none; border-top-style: none; float: left; border-left-style: none; margin-right: 2ex" height="300" src="http://www.microsoft.cz/rsstoframe/transform.msdn.axd" frameborder="0" width="200" scrolling="no"></iframe>  
 

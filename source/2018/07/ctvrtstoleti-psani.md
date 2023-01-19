@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Koně -->
-<!-- dcterms:dateAccepted = 2018-07-11 -->
+<!-- dcterms:date = 2018-07-11 -->
 
 Všechno to začalo tak nevinně: jedním z mnoha pokusů mých rodičů zajistit, abych si vydělal nějaké peníze poctivou prací. Těch pokusů bylo nepočítaně - měl jsem roznášet sobotní noviny, prodávat lázeňské oplatky, kompletovat zásilky do obálek, dávat letáky do schránek... Všechny tedy bez výjimky skončily neslavně - poctivá práce mi nikdy nešla. S pouličním prodejem _Týdeníku Karlovarska_ to nebylo jiné.
 

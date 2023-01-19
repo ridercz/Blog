@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-05T22:37:54.79+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-05T22:37:54.79+02:00 -->
+<!-- dcterms:date = 2005-08-05T22:37:54.79+02:00 -->
 
 Nový .NET framework přináší řadu funkcí, které předtím nebyly dostupné buď vůbec a nebo mnohem komplikovaněji. V dnešním příkladu se podíváme na tři z nich.
 

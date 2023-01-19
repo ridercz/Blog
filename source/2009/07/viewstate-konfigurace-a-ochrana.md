@@ -9,7 +9,7 @@
 <!-- np9:serialId = 5 -->
 <!-- x4w:serial = ViewState -->
 <!-- dcterms:created = 2009-07-01T09:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2009-07-01T09:00:00+02:00 -->
+<!-- dcterms:date = 2009-07-01T09:00:00+02:00 -->
 
 V předchozích dílech tohoto seriálu jsme se podívali na ViewState a ControlState. Nyní se budeme zabývat konfigurací celého systému a ochranou obsahu.
 

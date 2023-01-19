@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-13T17:29:38+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-13T17:29:38+02:00 -->
+<!-- dcterms:date = 2003-06-13T17:29:38+02:00 -->
 
 Při montáži [webové kamery](http://www.rider.cz/cs/webcam/default.xtml) na nové místo jsem urazil koně. Tedy, přesněji řečeno, urazil jsem kousek z figurky koníka, kterou mám vedle jednoho z počítačů. Žádný problém, máme výkonné vteřinové lepidlo, slepím to. Výsledek byl úspěšný, ale lepidlo mne pobavilo. 
 

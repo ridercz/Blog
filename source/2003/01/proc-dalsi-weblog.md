@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-01-29T22:10:47+01:00 -->
-<!-- dcterms:dateAccepted = 2003-01-29T22:10:47+01:00 -->
+<!-- dcterms:date = 2003-01-29T22:10:47+01:00 -->
 
 Své grafomaniakální sklony již drahná léta kompenzuji psaním článků pro rozličné, převážně počítačové časopisy. Nicméně poslední dobou mám spoustu myšlenek, které nejsou příliš počítačové, nevydají na samostatný článek a i kdyby vydaly, žádná z redakcí, s nimiž spolupracuji, by je asi nevydala.
 

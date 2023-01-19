@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-20T03:28:01+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-20T03:28:01+02:00 -->
+<!-- dcterms:date = 2003-04-20T03:28:01+02:00 -->
 
 Podle [Seznamu](http://sms.seznam.cz/operatori.html) zavedl T-Mobile novou službu: tarif, ke kterému dostanete zadarmo firemní vlajku (vzhledem k růžovoučké grafice TMO obzvláště vhodné pro jistý typ homosexuálů ;-) Jenom tak si lze - s jistou dávkou fantazie, samozřejmě - vyložit pojem "standartní tarif", kterým Seznam operuje na výše uvedené stránce.
 

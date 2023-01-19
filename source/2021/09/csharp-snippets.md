@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = C# pro mírně pokročilé -->
-<!-- dcterms:dateAccepted = 2021-09-30 -->
+<!-- dcterms:date = 2021-09-30 -->
 
 Striktně vzato se code snippets netýkají jazyka C#, protože jde o funkci Visual Studia, která je nezávislá na použitém jazyce. Ale je to příliš užitečná (a moje oblíbená) funkce, než abych se o ní nezmínil. 
 

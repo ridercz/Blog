@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-11-27T01:26:31.26+01:00 -->
-<!-- dcterms:dateAccepted = 2005-11-27T01:26:31.26+01:00 -->
+<!-- dcterms:date = 2005-11-27T01:26:31.26+01:00 -->
 
 Starter kity, nebo chcete-li "startovací sady" jsou ukázkové aplikace, které jsou určeny začínajícím (nebo zaneprázdněným) programátorům, kteří chtějí proniknout to tajů platformy Microsoft .NET 2.0.
 

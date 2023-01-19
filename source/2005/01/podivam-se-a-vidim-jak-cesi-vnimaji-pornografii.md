@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-26T01:38:31.663+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-26T01:38:31.663+01:00 -->
+<!-- dcterms:date = 2005-01-26T01:38:31.663+01:00 -->
 
 Zhruba před rokem jsem [zde upozorňoval](/entry/article-20040224.aspx#135011) na projekt Martina Chocholy, jehož cílem bylo zmapovat vnímání pojmů "erotika" a "pornografie" mezi současnými obyvateli ČR. Nyní jsou k dispozici výsledky v podobě [diplomové práce](http://diplomka.chochola.net), kterou autor 24. ledna úspěšně obhájil.
 

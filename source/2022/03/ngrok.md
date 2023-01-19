@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Aplikace úspěšně běží na localhostu ve vývojovém serveru. Ale je třeba ji otestovat z mobilu, nebo ukázat někomu zvenčí. Jak to udělat, aniž byste museli aplikaci nasazovat na hosting nebo složitě nastavovat forwardování portů z Internetu, což někdy není možné? Od toho je tady služba NGrok.  -->
 <!-- x4w:category = IT -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-03-31 -->
+<!-- dcterms:date = 2022-03-31 -->
 <!-- x4w:coverUrl = /cover-pictures/20220331-ngrok.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20220331-ngrok.jpg -->
 <!-- x4w:pictureWidth = 150 -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-07-09T23:07:09.517+02:00 -->
-<!-- dcterms:dateAccepted = 2004-07-09T23:07:09.517+02:00 -->
+<!-- dcterms:date = 2004-07-09T23:07:09.517+02:00 -->
 
 ![](https://www.cdn.altairis.cz/Blog/politika.gif)Oblíbeným tématem, tedy zda komunisté představují nebezpečí pro demokracii, se posledně zabýval z bloggerů příkladně [Binární ládin](http://binarniladin.bloguje.cz/52248_item.php).
 

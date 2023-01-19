@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-07-26T17:44:57.153+02:00 -->
-<!-- dcterms:dateAccepted = 2004-07-26T17:44:57.153+02:00 -->
+<!-- dcterms:date = 2004-07-26T17:44:57.153+02:00 -->
 
 S velkým humbukem se v Praze rozjela akce [CowParade](http://www.cowparade.cz/). Některé z krav (včetně mediálně nejznámějšího případu "krávy číslo 23") byly různě poškozeny. Jako reakce na to se objevily po celé Praze plakáty hlásající v češtině i angličtině, že *to není obyčejné vandalství, ale mezinárodní ostuda*.
 

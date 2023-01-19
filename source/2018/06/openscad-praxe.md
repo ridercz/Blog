@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2018-06-29 -->
+<!-- dcterms:date = 2018-06-29 -->
 <!-- x4w:alternateUrl = https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/ -->

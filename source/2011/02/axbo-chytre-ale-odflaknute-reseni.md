@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-02-25T20:38:07.27+01:00 -->
-<!-- dcterms:dateAccepted = 2011-02-25T20:42:25.363+01:00 -->
+<!-- dcterms:date = 2011-02-25T20:42:25.363+01:00 -->
 
 Ať vstávám kdy vstávám, probouzím se v poledne. Nejdřív. A nerad. A ačkoliv nemusím vstávat každé ráno do práce, najde se dost případů, kdy musím vstávat mnohem dříve, než by mi bylo milé. S velkou nelibostí, ovšem. Abych ušetřil nervy sobě i svému okolí, rozhodl jsem se vyzkoušet inteligentní budík Axbo, který by měl z procesu vstávání udělat přímo rajský požitek, podle svého výrobce. A nebo alespoň menší peklo. Několik mých známých mne požádalo, abych jim sdělil své zkušenosti s tímto zařízením. Dost na to, aby to vydalo na článek, který by mohl být užitečný pro další zájemce o toto zařízení.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-05-01T00:44:37.337+02:00 -->
-<!-- dcterms:dateAccepted = 2013-05-01T00:47:23+02:00 -->
+<!-- dcterms:date = 2013-05-01T00:47:23+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20130501-pozvanka-na-teched-a-moje-prednasky.png -->

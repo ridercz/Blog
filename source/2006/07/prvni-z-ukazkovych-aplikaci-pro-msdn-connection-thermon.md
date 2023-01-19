@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-07-31T11:27:47.397+02:00 -->
-<!-- dcterms:dateAccepted = 2006-07-31T11:27:47.397+02:00 -->
+<!-- dcterms:date = 2006-07-31T11:27:47.397+02:00 -->
 
 Dohodl jsem se s českou pobočkou Microsoftu, že pro jejich program MSDN Connection připravím sérii ukázkových aplikací, zaměřených na různé části .NET Frameworku. Převážně se bude jednat o webové aplikace, ale nejenom o ty. První z příkladů - monitoring teploty - byl dnes zveřejněn.
 

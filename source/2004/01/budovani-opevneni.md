@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-18T18:56:11+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-18T18:56:11+01:00 -->
+<!-- dcterms:date = 2004-01-18T18:56:11+01:00 -->
 
 Zásadní část dnešního dne jsem strávil budováním opevnění. Snažil jsem se udělat BDSM.CZ blbvzdorné a svoji pracovnu vlkuvzdornou :)
 

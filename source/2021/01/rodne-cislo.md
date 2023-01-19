@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2021-01-18 -->
+<!-- dcterms:date = 2021-01-18 -->
 
 Abych [jenom nekritizoval](https://tech.ihned.cz/c7-66870010-psms7-e882c2115d7c68a), rozhodl jsem se ukázat, jak se tedy ta validace rodného čísla dělá správně. Do knihovny [Altairis Validation Toolkit](https://github.com/ridercz/Altairis.ValidationToolkit/) jsem doprogramoval nový atribut `[RodneCislo]`, který umí číslo zvalidovat a ještě něco navíc. A to všechno živě v rámci live codingu.
 

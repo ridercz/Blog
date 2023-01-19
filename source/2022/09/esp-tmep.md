@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2022-09-27 -->
+<!-- dcterms:date = 2022-09-27 -->
 
 Twitter zaplavily fotky domácích teploměrů. Teplota v místnosti je nová rouška. Ať už doma ve jmému úspor a boje proti Putinovi mrznete při patnácti nebo se naopak potíte při třiceti stupních a chcete to sdělit světu, technika vám s virtue signallingem může pomoci. Ukážu vám, jak si ze tří součástek můžete postavit teploměr, který naměřená data odesílá do české služby [TMEP.CZ](https://www.tmep.cz).
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-12-21T03:42:26.93+01:00 -->
-<!-- dcterms:dateAccepted = 2011-12-21T03:42:28.417+01:00 -->
+<!-- dcterms:date = 2011-12-21T03:42:28.417+01:00 -->
 
 Čas vánoční je oblíbenou příležitostí k více či méně přímému citovému vydírání za účelem vylákání peněz na dobročinné účely. Jak a komu darovat peníze, abyste se za to pak nemuseli stydět?
 

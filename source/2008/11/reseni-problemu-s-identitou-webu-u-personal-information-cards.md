@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-11-19T01:55:29.763+01:00 -->
-<!-- dcterms:dateAccepted = 2008-11-19T01:55:29.763+01:00 -->
+<!-- dcterms:date = 2008-11-19T01:55:29.763+01:00 -->
 
 Téměř přesně před rokem jsem si v článku [Jak se zjišťuje identita webu u Personal Information Cards?](http://www.aspnet.cz/Articles/171-jak-se-zjistuje-identita-webu-u-personal-information-cards.aspx) stěžoval na to, že algoritmus pro výpočet identity relying party (tedy typicky webu) je špatný. Specifikace [ISIP verze 1.5](http://www.microsoft.com/downloads/details.aspx?FamilyID=b94817fc-3991-4dd0-8e85-b73e626f6764&DisplayLang=en) tento problém řeší. Problém u Windows CardSpace řeší .NET Framework 3.5 SP1.
 

@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2022-02-21 -->
+<!-- dcterms:date = 2022-02-21 -->
 <!-- dcterms:dateModified = 2022-03-09 -->
 
 Na YouTube kanálu Z-TECH, který provozuju společně se Zásilkovnou, jsem dokončil bezplatný online kurz modelování v OpenSCADu.

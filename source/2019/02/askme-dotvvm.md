@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190216-askme-dotvvm.jpg -->
 <!-- x4w:coverCredits = Jan Vašek via JESHOOTS.COM, CC0 -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-02-16 -->
+<!-- dcterms:date = 2019-02-16 -->
 <!-- x4w:serial = AskMe v DotVVM -->
 
 Z mých kurzů a konferencí znáte ukázkovou aplikaci [AskMe](https://github.com/ridercz/AskMe). Je psaná v ASP.NET Core a je k dispozici ve dvou variantách, v MVC a v Razor Pages. Je dostatečně jednoduchá, aby mohla sloužit jako demo a příklad, ale zároveň dost složitá, aby to nebylo jenom "Hello, world!", ale aby se v ní řešily real-world problémy.

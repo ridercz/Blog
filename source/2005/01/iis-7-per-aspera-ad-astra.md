@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-12T23:15:30.547+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-12T23:15:30.547+01:00 -->
+<!-- dcterms:date = 2005-01-12T23:15:30.547+01:00 -->
 
 *Per aspera ad astra* - tedy "utrpením ke hvězdám" - je dle mého názoru docela přesný popis způsobu, jakým se vyvíjel webový server od Microsoftu - Internet Information Services. Moje první setkání s IIS se uskutečnilo ve verzi 2.0 (byla součástí Windows NT 4.0). Používat ji bylo opravdové utrpení, které příliš nezměkčil ani SP3 (tuším) na NT Server, který IIS upgradoval na verzi 3.0.
 

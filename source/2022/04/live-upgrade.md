@@ -3,7 +3,7 @@
 <!-- x4w:category = IT -->
 <!-- x4w:category = Z-TECH -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-04-03 -->
+<!-- dcterms:date = 2022-04-03 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220403-live-upgrade.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

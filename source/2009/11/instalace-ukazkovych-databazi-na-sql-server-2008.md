@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-11-24T11:23:58.58+01:00 -->
-<!-- dcterms:dateAccepted = 2009-11-24T11:23:58.58+01:00 -->
+<!-- dcterms:date = 2009-11-24T11:23:58.58+01:00 -->
 
 Občas se hodí mít na SQL Serveru nainstalované ukázkové databáze Adventure Works. Je snadné je [stáhnout](http://msftdbprodsamples.codeplex.com/), ale s instalací je to už horší. Logika "spustit MSI" moc nefunguje, zejména pokud máte SQL Server Express.
 

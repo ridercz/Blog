@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-03-11T23:02:03+01:00 -->
-<!-- dcterms:dateAccepted = 2004-03-11T23:02:03+01:00 -->
+<!-- dcterms:date = 2004-03-11T23:02:03+01:00 -->
 
 K problematice týrání zvířat si obvykle udržuji jistý odstup. Jsem pro tvrdý postih těch, kdo zvířata týrají bezdůvodně. Na druhou stranu mne ale nijak zvlášť nedojímá postavení zvířat ve velkochovech. Myslím si, že ve zásadě jedno, zda mají kuřata *n* (podle českých norem) nebo *n + 20* (podle norem evropských) centimetrů čtverečních na osobu, když stejně během velmi krátké doby skončí jako mražené kuřecí v igelitovém sáčku.
 

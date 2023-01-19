@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-12-31T00:07:51.287+01:00 -->
-<!-- dcterms:dateAccepted = 2012-01-01T00:00:00+01:00 -->
+<!-- dcterms:date = 2012-01-01T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120101-pour-feliciter-2012.jpg -->

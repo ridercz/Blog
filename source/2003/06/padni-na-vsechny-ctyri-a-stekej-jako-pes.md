@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-10T15:34:09+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-10T15:34:09+02:00 -->
+<!-- dcterms:date = 2003-06-10T15:34:09+02:00 -->
 
 > Honem, padni na všechny čtyři a štěkej jako pes. Hni zadkem, vylez z postele a běž mi pro pantofle...
 

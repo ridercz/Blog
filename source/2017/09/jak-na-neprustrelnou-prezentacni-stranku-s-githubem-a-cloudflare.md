@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Chcete si udělat jednoduchou statickou stránku na nezničitelné infrastruktuře a zadarmo? Kombinace GitHubu a CloudFlare vám to zajistí. -->
 <!-- x4w:category = Software -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2017-09-03 -->
+<!-- dcterms:date = 2017-09-03 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20170903-jak-na-neprustrelnou-prezentacni-stranku-s-githubem-a-cloudflare.jpg -->

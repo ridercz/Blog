@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-26T11:19:55+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-26T11:19:55+01:00 -->
+<!-- dcterms:date = 2003-03-26T11:19:55+01:00 -->
 
 *   Když se útočník snaží minimalizovat protivníkovy civilní ztráty.
 *   Vojsko obránce se schovává za vlastní cvilní obyvatelstvo, aby maximalizovalo civilní ztráty.

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-09-21T03:27:03.133+02:00 -->
-<!-- dcterms:dateAccepted = 2010-09-21T03:27:03.977+02:00 -->
+<!-- dcterms:date = 2010-09-21T03:27:03.977+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100921-kriticka-bezpecnostni-chyba-v-asp-net.png -->

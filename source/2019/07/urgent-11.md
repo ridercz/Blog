@@ -5,6 +5,6 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-07-30 -->
+<!-- dcterms:date = 2019-07-30 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/geekosfera/c1-66616170-jedenact-chyb-v-operacnim-systemu-o-kterem-jste-neslyseli-ale-ktery-vas-muze-zabit -->
 

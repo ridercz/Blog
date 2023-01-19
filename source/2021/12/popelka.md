@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = BDSM -->
-<!-- dcterms:dateAccepted = 2021-12-26 -->
+<!-- dcterms:date = 2021-12-26 -->
 <!-- x4w:alternateUrl = https://www.bdsm.cz/2021/12/popelka -->

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-03T22:25:31+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-03T22:25:31+01:00 -->
+<!-- dcterms:date = 2003-03-03T22:25:31+01:00 -->
 
 I navštívil jsem dnešního (quick look: ano, ještě dnešního) dne místní sídlištní prodejnu firmy Julius Meinl, abych si tam koupil nějaké pečivo, což je asi tak to jediné, co tam mají dobré.
 

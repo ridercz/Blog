@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-12T20:08:52+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-12T20:08:52+02:00 -->
+<!-- dcterms:date = 2003-04-12T20:08:52+02:00 -->
 
 Ačkoliv jeden humorista dnes svět opustil, o zábavné okamžiky není nouze. Leckdy se však jedná o kouzlo nechtěného. Moje [bestijčí polovička](http://www.bestijka.cz) dnes zakoupila kuchyňské váhy. Jednu z mnoha vrstev obalu tvoří igelitvý sáček, nesoucí v odhadem deseti jazycích výstražný nápis:
 

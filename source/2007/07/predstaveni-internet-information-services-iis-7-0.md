@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-07-23T10:30:07+02:00 -->
-<!-- dcterms:dateAccepted = 2007-07-23T10:30:07+02:00 -->
+<!-- dcterms:date = 2007-07-23T10:30:07+02:00 -->
 
 Internet Information Services 7.0, nová generace webového a aplikačního serveru od Microsoftu, přinášejí řadu novinek, které jistě potěší vývojáře i administrátory. IIS 7.0 je součástí Windows Vista a bude součástí Windows Server 2008 (alias "Longhorn").  
 

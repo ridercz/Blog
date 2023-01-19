@@ -8,7 +8,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190306-dopravni-experimenty-podruhe.jpg -->
 <!-- x4w:coverCredits = Shayan Sanyal via Flickr, CC BY -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2019-03-06 -->
+<!-- dcterms:date = 2019-03-06 -->
 
 O dopravní experimenty na Praze 7 se zajímám od minulého období, kdy se zde k moci dostala parta kolem wannabe-primátora Čižinského. Na sedmičce je doprava konzistentně hodnocena jako jeden z největších problémů a amatérské a chaotické zásahy našich současných vládců, zejména pak radního proti dopravě Mirovského za Zelené, situaci ještě zhoršují.
 

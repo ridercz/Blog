@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Photo by edu aguilera via Flickr, CC-BY-NC -->
 <!-- x4w:category = Lidé a jiná zvěř -->
-<!-- dcterms:dateAccepted = 2018-09-18 -->
+<!-- dcterms:date = 2018-09-18 -->
 
 Nemalá část mé sociální bubliny se rozčiluje nad sentimentem nemalé části české společnost jako takové, která odmítá přijímat jakékoliv uprchlíky – byť by šlo o padesát syrských sirotků. A že z toho těží populisté typu Babiš, kteří si jsou těchto nálad vědomi.
 

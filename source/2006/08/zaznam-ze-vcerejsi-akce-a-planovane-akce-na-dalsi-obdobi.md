@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-08-09T17:27:54.817+02:00 -->
-<!-- dcterms:dateAccepted = 2006-08-09T17:27:54.817+02:00 -->
+<!-- dcterms:date = 2006-08-09T17:27:54.817+02:00 -->
 
 ## Seminář Novinky v ASP.NET 2.0
 

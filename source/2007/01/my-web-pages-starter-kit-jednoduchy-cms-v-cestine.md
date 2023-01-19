@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-01-09T20:55:48.173+01:00 -->
-<!-- dcterms:dateAccepted = 2007-01-09T20:55:48.173+01:00 -->
+<!-- dcterms:date = 2007-01-09T20:55:48.173+01:00 -->
 
 Evropská DPE group Microsoftu zveřejnila před časem nový content management systém jménem **My Web Pages Starter Kit (MWSK)**. Je to jednoduchý CMS, který je ale dostatečně univerzální na to, aby byl pro menší weby reálně použitelný. 
 

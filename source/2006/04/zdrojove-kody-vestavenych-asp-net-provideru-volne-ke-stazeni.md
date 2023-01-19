@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-04-14T11:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2006-04-14T11:00:00+02:00 -->
+<!-- dcterms:date = 2006-04-14T11:00:00+02:00 -->
 
 Předpokládám, že jste obeznámeni s provider modelem v ASP.NET 2.0 (nejste-li, [přijďte na náš seminář](https://www.aspnet.cz/Articles/85-petidilny-seminar-novinky-v-asp-net-2-0.aspx), obeznámíme vás). Microsoft dnes uvolnil zdrojové kódy většiny vestavěných providerů pro membership, role, profily a sitemap. To vám může pomoci k pochopení, co a jak ti provideři vlastně dělají.
 

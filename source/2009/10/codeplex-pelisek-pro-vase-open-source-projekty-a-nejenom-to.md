@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-10-05T18:40:00+02:00 -->
-<!-- dcterms:dateAccepted = 2009-10-05T18:40:00+02:00 -->
+<!-- dcterms:date = 2009-10-05T18:40:00+02:00 -->
 
 [![20090403-170540-0000_jpg](https://www.cdn.altairis.cz/Blog/2009/20091005-20090403-170540-0000_jpg_thumb.jpg "20090403-170540-0000_jpg")](https://www.cdn.altairis.cz/Blog/2009/20091005-20090403-170540-0000_jpg_2.jpg) Můj psíček (fena československého vlčáka, kterou možná znáte z některých mých akcí) s oblibou lehává buďto v mé posteli a nebo na dlaždičkách v předsíni – podle toho, jaká panuje venku teplota. Oficiální pelíšek sice má, ale využívá ho jenom, když si myslí, že se na ni nikdo nedívá. Pokud by ale Esta byla open source projektem, jistě by si bez váhání za svůj pelíšek zvolila server [CodePlex](http://www.codeplex.com).
 

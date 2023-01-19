@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-10-29T02:55:35.787+02:00 -->
-<!-- dcterms:dateAccepted = 2004-10-29T02:55:35.787+02:00 -->
+<!-- dcterms:date = 2004-10-29T02:55:35.787+02:00 -->
 
 Hodně času trávím prací s digitálními fotografiemi. Jednak se tím částečně živím, druhak toho sám poměrně dost nafotím. Takže zoufale nutně potřebuju *kvalitní* program na práci s obrázky, zejména pak digitálními fotografiemi. Už několik let se trápím s ACDsee, které s každou vyšší verzí získává nové a nové chyby, aniž by se zbavovalo převážné části těch starých.
 

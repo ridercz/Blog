@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-10T02:33:57.373+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-10T02:33:57.373+02:00 -->
+<!-- dcterms:date = 2005-04-10T02:33:57.373+02:00 -->
 
 Zařekl jsem se, že se Whidbey vůbec nebudu zabývat, dokud nebude na světě alespoň beta 2 (kdo přepisoval aplikace pro .NET 1.0 z bety 1 do bety 2 ví proč). Nicméně toto mé úsilí jest systematicky podkopáváno Microsoftem i rozličnými nadšenci. Jedním z nich je jistý Egypťan jménem Khaled Hussein, který napsal sérii třech článků o možnostech pesonalizace v ASP.NET 2.0:
 

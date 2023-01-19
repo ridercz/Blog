@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-02T05:06:40.607+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-02T05:06:40.607+01:00 -->
+<!-- dcterms:date = 2006-01-02T05:06:40.607+01:00 -->
 
 Dlouhodobě se nijak netajím s názorem, že vývojářský software Microsoftu je mnohem snazší ukrást, než koupit. Ba co více, ono je obvykle téměř nemožné snadno zjistit, kolik že vlastně stojí. Proto jsem, za laskavé spolupráce spřátelených odborníků, sepsal tento článek, který popíše aktuální stav ohledně Visual Studia a Microsoft SQL Serveru.
 

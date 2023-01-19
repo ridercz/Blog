@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-24T23:14:02+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-24T23:14:02+01:00 -->
+<!-- dcterms:date = 2003-11-24T23:14:02+01:00 -->
 
 V době psaní předchozího příspěvku jsem ještě netušil, že zmiňovanému tématu česká věnuje sedm minut i v dnešní zpravodajské relaci.
 

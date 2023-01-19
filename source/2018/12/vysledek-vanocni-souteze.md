@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2018-12-23 -->
+<!-- dcterms:date = 2018-12-23 -->
 
 Včera jsem vyhlásil [vánoční soutěž](/2018/12/vanocni-soutez), kde bylo vaším úkolem vyluštit zprávu, zakódovanou od obrázku. Trvalo jenom pár hodin, než ji [Tomáš Jecha](https://github.com/ridercz/Blog/issues/7) (a za ním v závěsu [Jakub Bouček](https://github.com/ridercz/Blog/issues/7)) vyhrál.
 

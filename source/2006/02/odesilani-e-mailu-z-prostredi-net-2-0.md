@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-02-27T04:16:24.957+01:00 -->
-<!-- dcterms:dateAccepted = 2006-02-27T04:16:24.957+01:00 -->
+<!-- dcterms:date = 2006-02-27T04:16:24.957+01:00 -->
 
 
 		<p>Odesílání mailů z webových aplikací je tak často kladený dotaz, že jsem mu věnoval hned <a href="https://www.aspnet.cz/Articles/3-mailovani-z-asp-net-vykon-a-specialitky.aspx">třetí článek</a>, který na tomto serveru vůbec vyšel. Vzhledem k tomu, že .NET 2.0 přináší změny i v tomto oboru, je na čase vydat jeho novelizovanou verzi.</p>

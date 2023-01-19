@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2022-09-23 -->
+<!-- dcterms:date = 2022-09-23 -->
 
 "Proč nejsem komunistou" se jmenovala anketa, v níž na tuto otázku odpovídaly Ferdinandu Peroutkovi významné prvorepublikové osobnosti (asi nejznámější je odpověď Karla Čapka). Já komunistou byl. Rád bych vám řekl proč a proč se jich nyní bojím, i když si momentálně říkají různě, u nás nejčastěji Piráti.
 

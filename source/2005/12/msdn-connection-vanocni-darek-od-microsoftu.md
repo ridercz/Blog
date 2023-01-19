@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-20T16:42:58.183+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-20T16:42:58.183+01:00 -->
+<!-- dcterms:date = 2005-12-20T16:42:58.183+01:00 -->
 
 ![Logo MSDN](https://www.cdn.altairis.cz/Blog/logo-msdn.gif) 
 

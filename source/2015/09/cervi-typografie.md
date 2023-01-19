@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-09-21T17:07:20.093+02:00 -->
-<!-- dcterms:dateAccepted = 2015-09-21T17:00:00+02:00 -->
+<!-- dcterms:date = 2015-09-21T17:00:00+02:00 -->
 
 Už jste někdy viděli otevřenou plechovku s červy? Je to hnus, ale stejně vás perverzní fascinace nutí, abyste se na to znovu a znovu podívali. Stejný vztah mám k tomu, co označuji za "lidovou typografii".
 

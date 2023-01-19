@@ -17,8 +17,8 @@
 
   <xsl:template match="/">
     <x4o:root>
-      <xsl:for-each select="//page[not(x4w:alternateUrl) and dcterms:dateAccepted]">
-        <xsl:sort select="dcterms:dateAccepted"/>
+      <xsl:for-each select="//page[not(x4w:alternateUrl) and dcterms:date]">
+        <xsl:sort select="dcterms:date"/>
         <x4o:document href="{@path}.html">
           <html>
             <head>
@@ -27,7 +27,7 @@
                 <xsl:with-param name="Description" select="dcterms:abstract" />
                 <xsl:with-param name="CanonicalUrl" select="@path" />
                 <xsl:with-param name="Image" select="x4w:coverUrl" />
-                <xsl:with-param name="Date" select="dcterms:dateAccepted" />
+                <xsl:with-param name="Date" select="dcterms:date" />
               </xsl:call-template>
               <meta name="robots" content="index, follow" />
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -73,10 +73,10 @@
                     <a href="https://www.rider.cz/">Michal Altair Valášek&#160;</a>
                     <i class="fal fa-user">&#8203;</i>
                   </div>
-                  <xsl:if test="dcterms:dateAccepted">
+                  <xsl:if test="dcterms:date">
                     <div title="Datum vydání">
-                      <time datetime="{dcterms:dateAccepted}">
-                        <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:dateAccepted, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
+                      <time datetime="{dcterms:date}">
+                        <xsl:value-of select="concat(x4h:FormatDateTime(dcterms:date, 'd. MMMM yyyy', 'cs-CZ'), '&#160;')"/>
                         <i class="fal fa-calendar-alt">&#8203;</i>
                       </time>
                     </div>

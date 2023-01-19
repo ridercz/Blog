@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-04-08T22:06:40.83+02:00 -->
-<!-- dcterms:dateAccepted = 2008-04-08T22:06:40.83+02:00 -->
+<!-- dcterms:date = 2008-04-08T22:06:40.83+02:00 -->
 
 Ve dnech 22.-25. dubna se v Praze uskuteční další ročník TechEdu. To nejlepší z amerického a evropského TechEdu, okořeněné trochou zkušeností z praxe, najdete ve Village Cinemas na Černém Mostě. Exhibicionista mého formátu samozřejmě na takové akci nemůže chybět, takže co jsem si pro vás letos připravil?
 

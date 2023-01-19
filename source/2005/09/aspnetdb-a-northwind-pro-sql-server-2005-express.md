@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-09-19T22:17:40.733+02:00 -->
-<!-- dcterms:dateAccepted = 2005-09-19T22:17:40.733+02:00 -->
+<!-- dcterms:date = 2005-09-19T22:17:40.733+02:00 -->
 
 Vývojové prostředí Whidbey umožňuje jeden zajímavý trik, kterým je přímé připojení databázového MDF souboru. Pokud máte na klientovi nainstalovaný SQL Server 2005 Express, můžete do adresáře *App_Data* uložit přímo MDF soubor a napojit se na něj tímto connection stringem:
 

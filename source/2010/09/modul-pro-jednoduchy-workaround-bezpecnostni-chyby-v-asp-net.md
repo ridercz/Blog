@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-09-21T05:24:19.993+02:00 -->
-<!-- dcterms:dateAccepted = 2010-09-21T05:24:21.663+02:00 -->
+<!-- dcterms:date = 2010-09-21T05:24:21.663+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100921-modul-pro-jednoduchy-workaround-bezpecnostni-chyby-v-asp-net.png -->

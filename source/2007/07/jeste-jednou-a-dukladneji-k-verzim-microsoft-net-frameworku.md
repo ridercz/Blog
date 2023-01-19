@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-07-30T08:49:16+02:00 -->
-<!-- dcterms:dateAccepted = 2007-07-30T08:49:16+02:00 -->
+<!-- dcterms:date = 2007-07-30T08:49:16+02:00 -->
 
 Poslední dobou se množí dotazy, jejichž společným jmenovatelem je nepochopení systému verzí .NET Frameworku a souvisejících technologií (tématu jsem se již věnoval v článku [Co je vlastně .NET Framework 3.0](http://www.aspnet.cz/Articles/123-co-je-vlastne-net-framework-3-0.aspx)). Není se čenu divit, protože v tom zmatek skutečně je. 
 

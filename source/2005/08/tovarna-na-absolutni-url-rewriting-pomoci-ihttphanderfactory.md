@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-12T03:10:27.403+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-12T03:10:27.403+02:00 -->
+<!-- dcterms:date = 2005-08-12T03:10:27.403+02:00 -->
 
 U řady webových aplikací (tento blog nevyjímaje) jest se setkati se zvláštním formátem URL, kdy je nějaký parametr (třeba ID článku) předáván nikoliv jako hodnota v Query Stringu (*http://server/Clanek.aspx?ID=neco*), ale přímo jako název souboru (*http://server/Clanky/neco.aspx*). Důvodů k tomu vedoucích může být povícero, ale obvykle převažuje skutečnost, že tato URL jsou obvykle snáze indexovatelná vyhledávači - a protože se právě nacházíme na vrcholu SEO bubliny, musí to mít každý.
 

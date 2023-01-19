@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-28T00:39:37.31+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-28T00:39:37.31+01:00 -->
+<!-- dcterms:date = 2005-01-28T00:39:37.31+01:00 -->
 
 Jedním z námětů, které jsem obdržel v rámci své výzvy [ptejte se mne na co chcete, já na co chci odpovím](/entry/article-20050125.aspx), byla žádost o vysvětlení práce s textovými soubory. Zadání jsem si rozšířil na práci s obsahem souborů obecně - nebo chcete-li se streamy.
 

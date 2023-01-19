@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-12-04T01:52:20.847+01:00 -->
-<!-- dcterms:dateAccepted = 2006-12-04T01:52:20.847+01:00 -->
+<!-- dcterms:date = 2006-12-04T01:52:20.847+01:00 -->
 
 Na webu soutěže [Komponenta roku 2006](http://komponenta-roku.aspnet.cz/) je k vidění seznam všech přihlášených komponent. Nyní zasedne odborná porota (ve složení já, Michal Bláha a Štěpán Bechynský) a vybere vítěze, který bude slavnostně vyhlášen 15. prosince. 
 

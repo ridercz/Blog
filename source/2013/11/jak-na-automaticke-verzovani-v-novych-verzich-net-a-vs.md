@@ -3,7 +3,7 @@
 <!-- dcterms:abstract = Starší verze .NET Frameworku podporovaly automatické verzování, kdy se část informace o verzi vygenerovala automaticky podle datumu a času. Verze 4.5 nicméně přešla na sémantické verzování a tuto funkcionalitu ztratila. Jak ji vrátit zpátky? -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-11-08T19:54:51.947+01:00 -->
-<!-- dcterms:dateAccepted = 2013-11-08T19:54:52+01:00 -->
+<!-- dcterms:date = 2013-11-08T19:54:52+01:00 -->
 <!-- dcterms:modified = 2018-11-08 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

@@ -9,7 +9,7 @@
 <!-- np9:serialId = 5 -->
 <!-- x4w:serial = ViewState -->
 <!-- dcterms:created = 2009-06-29T09:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2009-06-29T09:00:00+02:00 -->
+<!-- dcterms:date = 2009-06-29T09:00:00+02:00 -->
 
 <p>V předchozím článku jsme se podívali na technologii ViewState a na to, jak se dá využívat ve vlastních ovládacích prvcích. A také jsem psal, že se na ni nemůžeme spolehnout, protože ji programátor může vypnout, na úrovni aplikace, stránky nebo konkrétního prvku. Pokud přesto chceme uchovávat nějaké údaje napříč postbacky, musíme použít technologii ControlState.</p>
 <p>V první generaci ASP.NET (1.0, 1.1) jste měli na výběr: ViewState zapnout a užívat si funkčnosti všech prvků a platit za to obrovským objemem dat a nebo ho vypnout a rozloučit se s mnohou pokročilou funkčností. Proto v ASP.NET 2.0 Microsoft ViewState rozdělil na dvě velmi podobné technologie. Tou druhou je tzv. ControlState. Technicky je to v zásadě totéž, co ViewState: data se serializují a uchovají ve skrytém poli formuláře. Význam ControlState spočívá v tom, že nejde vypnout.</p>

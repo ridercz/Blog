@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-03T05:01:35.627+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-03T05:01:35.627+01:00 -->
+<!-- dcterms:date = 2005-01-03T05:01:35.627+01:00 -->
 
 K rozesílání e-mailových zpráv z prostředí ASP.NET aplikací se obvykle používá tříd z namespace `System.Web.Mail`, potažmo `System.Web.Mail.SmtpMail`. Pro většínu případů plně postačuje základní nastavení opsané z příruček. Problémy nastanou v případě, kdy je e-mailů třeba rozeslat hodně, nebo pokud je architektura sítě komplikovaná. Nezaškodí tedy podívat se na to, jakým způsobem mailování probíhá a co vše můžeme nastavit.
 

@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190829-pwned-passwords-validator.jpg -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-08-29 -->
+<!-- dcterms:date = 2019-08-29 -->
 
 Udělat validaci hesel správně, to je kumšt. Obvyklá pravidla - že heslo musí obsahovat velké písmeno, malé písmeno, číslici, sumerské klínové písmo a krev jednorožce - jsou obvykle spíše k vzteku než k užitku. Pokud jde o pravidla pro hesla, doporučuji používat následující:
 

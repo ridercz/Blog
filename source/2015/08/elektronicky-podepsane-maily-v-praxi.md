@@ -6,4 +6,4 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Tipy, triky -->
-<!-- dcterms:dateAccepted = 2015-08-12T00:39:07+02:00 -->
+<!-- dcterms:date = 2015-08-12T00:39:07+02:00 -->

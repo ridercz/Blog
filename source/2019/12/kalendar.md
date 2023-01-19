@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Štědrý večer s rozdáváním dárků je již za námi, ale řada lidí jezdí navštěvovat příbuzné mezi svátky. A zejména babičkám a dědečkům udělají radost fotografické kalendáře s obrázky umělecké kvality sice nevalné, ale zato s milovanými vnoučaty. Výhodou je, že to je dárek, který lze vyrobit poměrně snadno a jednoduše. Tedy, snadno a jednoduše u nás, kde máme k dispozici vybavení středně velkého copy centra. Pokud jste na tom jinak, budete muset počkat na 27., kdy budou mít otevřeno ta oficiální copy centra. -->
 <!-- x4w:category = Bastlení -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-12-26 -->
+<!-- dcterms:date = 2019-12-26 -->
 <!-- x4w:coverUrl = /cover-pictures/20191226-kalendar.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20191226-kalendar.png -->
 <!-- x4w:pictureWidth = 150 -->

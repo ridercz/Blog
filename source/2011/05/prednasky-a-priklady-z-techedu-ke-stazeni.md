@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-04-23T14:09:33.577+02:00 -->
 <!-- dcterms:dateSubmitted = 2011-04-23T14:12:29.403+02:00 -->
-<!-- dcterms:dateAccepted = 2011-05-05T23:44:19.013+02:00 -->
+<!-- dcterms:date = 2011-05-05T23:44:19.013+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20110505-prednasky-a-priklady-z-techedu-ke-stazeni.png -->

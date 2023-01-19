@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-05-28T12:35:56.263+02:00 -->
-<!-- dcterms:dateAccepted = 2010-05-28T12:35:57.14+02:00 -->
+<!-- dcterms:date = 2010-05-28T12:35:57.14+02:00 -->
 
 Za pár hodin začnou letošní volby do Poslanecké sněmovny. Páté v historii samostatné České republiky. A já ještě pořád nevím, koho budu volit. Jaké možnosti se nám nabízejí, v pořadí podle volebních čísel?
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-02-01T16:01:51.87+01:00 -->
-<!-- dcterms:dateAccepted = 2007-02-01T16:01:51.87+01:00 -->
+<!-- dcterms:date = 2007-02-01T16:01:51.87+01:00 -->
 
 Od uvedení ASP.NET 2.0, Visual Studia 2005 a SQL Serveru 2005 se objevila celá řada doplňků a rozšíření pro tyto produkty. Jsou dostupné zdarma a často včetně zdrojového kódu. Ač jsou tyto doplňky relativně drobné, mohou výrazně zvýšit možnosti technologie ASP.NET 2.0 a zejména efektivitu vývoje, nasazení a správy ASP.NET aplikací. V některých případech se také jedná o odpovědi na nářky programátorů a odstranění jinak svazujících omezení technologie ASP.NET.
 

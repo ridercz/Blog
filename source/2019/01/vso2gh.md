@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-01-09 -->
+<!-- dcterms:date = 2019-01-09 -->
 
 GitHub umožnil bezplatným uživatelům zakládat neomezené množství privátních repozitářů. [Psal jsem o tom již včera](https://www.altair.blog/2019/01/github), s nadšením že budu moci konečně na GitHub převést všechny svoje projekty. Na migraci z Azure DevOps (dříve Visual Studio Online, ještě dříve TFS Online) jsem si dokonce napsal skript.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-03-13T04:07:26.567+01:00 -->
-<!-- dcterms:dateAccepted = 2005-03-13T04:07:26.567+01:00 -->
+<!-- dcterms:date = 2005-03-13T04:07:26.567+01:00 -->
 
 Poslední dobou se věnuji jistému šílenému projektu, jehož součástí bylo mimo jiné nainstalovat osm broadcastových serverů. Každý z nich má tři síťové karty připojené do třech různých sítí, a na každém rozhraní jsou nastavena jiná pravidla filtrování portů (firewallu). Společné mají jenom to, že jsou velmi komplikovaná.
 

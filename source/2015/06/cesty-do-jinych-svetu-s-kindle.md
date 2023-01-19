@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-06-27T23:42:02.797+02:00 -->
-<!-- dcterms:dateAccepted = 2015-06-28T00:00:00+02:00 -->
+<!-- dcterms:date = 2015-06-28T00:00:00+02:00 -->
 
 Když jsem byl mladší, velice rád jsem četl science fiction a fantasy. Mám je pořád rád, ale časem jsem zjistil, že ty nejzajímavější světy se nacházejí v naší realitě. Jenom kolem nich chodíme, aniž bychom si jich všimli.
 

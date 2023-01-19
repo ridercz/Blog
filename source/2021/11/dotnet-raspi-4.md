@@ -9,7 +9,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
-<!-- dcterms:dateAccepted = 2021-11-04 -->
+<!-- dcterms:date = 2021-11-04 -->
 
 Naše Raspberry Pi jsme na konci třetího pokračování opustili ve stavu, kdy naše ASP.NET aplikace běží v Kestrelu jako služba (daemon) na nestandardním portu 5002. Dnes se podíváme na to, jak ji vypublikovat na portu 80 (případně 443) pomocí Nginxu a jak server zabezpečit pomocí firewallu.
 

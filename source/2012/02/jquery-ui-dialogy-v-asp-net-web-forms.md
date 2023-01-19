@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-02-11T16:54:36.187+01:00 -->
-<!-- dcterms:dateAccepted = 2012-02-11T16:55:00+01:00 -->
+<!-- dcterms:date = 2012-02-11T16:55:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120211-jquery-ui-dialogy-v-asp-net-web-forms.png -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-11-23T02:49:02.407+01:00 -->
-<!-- dcterms:dateAccepted = 2005-11-23T02:49:02.407+01:00 -->
+<!-- dcterms:date = 2005-11-23T02:49:02.407+01:00 -->
 
 V komentáři k mému článku [Vytváření vlastních parametrů podruhé - "bezpečný" query string parametr](/entry/article-20051109.aspx) nabídl uživatel Meap své vlastní řešení: třídu QueryStringParser. Jeho řešení je pro jisté scénáře užitečné a zároveň technologicky zajímavé, a autor laskavě souhlasil s jeho zveřejněním na ASP Network.
 

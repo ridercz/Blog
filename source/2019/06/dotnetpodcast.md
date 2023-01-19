@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Byl jsem jako host pozván do podcastu .NET.CZ. S Martinem Šimečkem a Vojtou Mádrem jsme se bavili o kybernetické bezpečnosti, resp. zejména bezpečnosti webových aplikací. Bylo to poprvé, co jsem byl v nějakém podcastu a nemám nervy na to je poslouchat, takže vůbec nevím, jak to nakonec dopadlo :) -->
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-06-26 -->
+<!-- dcterms:date = 2019-06-26 -->
 <!-- x4w:pictureUrl = /perex-pictures/20190626-dotnetpodcast.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

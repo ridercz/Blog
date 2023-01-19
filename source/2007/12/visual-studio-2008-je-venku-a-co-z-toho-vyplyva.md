@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-12-05T09:00:55+01:00 -->
-<!-- dcterms:dateAccepted = 2007-12-05T09:00:55+01:00 -->
+<!-- dcterms:date = 2007-12-05T09:00:55+01:00 -->
 
 Jak jste patrně zaznamenali, byl před pár dny zveřejněn Microsoft .NET Framework 3.5 a Visual Studio 2008. Co z toho vyplývá pro vývojáře, a to zejména webové?
 

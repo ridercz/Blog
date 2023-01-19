@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-26T06:16:51+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-26T06:16:51+01:00 -->
+<!-- dcterms:date = 2003-11-26T06:16:51+01:00 -->
 
 O diskusních fórech a kvalitě příspěvků v nich bylo napsáno mnoho. Vzhledem k tomu, že vyvíjím [poměrně bohatou publikační činnost](http://www.rider.cz/cs/articles/default.xtml) a dost často se věnuji i kontroverzním tématům, mám s reakcemi čtenářské obce bohaté zkušenosti.
 

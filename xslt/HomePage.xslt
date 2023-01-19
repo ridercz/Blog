@@ -29,8 +29,8 @@
         <xsl:call-template name="SiteHeader" />
         <main>
           <section class="artlist hlfirst">
-            <xsl:for-each select="//page[dcterms:dateAccepted]">
-              <xsl:sort select="dcterms:dateAccepted" order="descending" />
+            <xsl:for-each select="//page[dcterms:date]">
+              <xsl:sort select="dcterms:date" order="descending" />
               <xsl:if test="position() &lt;= $x4c:PageSize">
                 <xsl:call-template name="ArticleLink" />
               </xsl:if>

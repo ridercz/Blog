@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-01-30T14:09:36+01:00 -->
-<!-- dcterms:dateAccepted = 2003-01-30T14:09:36+01:00 -->
+<!-- dcterms:date = 2003-01-30T14:09:36+01:00 -->
 
 Jak si pravděpodobně všimli i ti největší političtí ignoranti, druhého února definitivně opustí Pražský hrad poslední prezident Českoslovenka a první prezident České Republiky v jedné osobě.
 

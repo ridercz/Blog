@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-02-19 -->
+<!-- dcterms:date = 2020-02-19 -->
 
 ASP.NET Core od verze 3.0 ve výchozím nastavení používá a předpokládám použití middleware pro endpoint routing. Co to je? V předchozích verzích si každý middleware řešil routing - tedy jaká akce se vyvolá v závislosti na vybrané URL adrese - vlastními silami a nezávisle na ostatních. Endpoint routing je middleware, který routing dělá sám, jednotně pro všechny.
 

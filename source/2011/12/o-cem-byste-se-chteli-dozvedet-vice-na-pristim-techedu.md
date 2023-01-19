@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-12-29T01:28:06.603+01:00 -->
-<!-- dcterms:dateAccepted = 2011-12-29T11:30:00+01:00 -->
+<!-- dcterms:date = 2011-12-29T11:30:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20111229-o-cem-byste-se-chteli-dozvedet-vice-na-pristim-techedu.png -->

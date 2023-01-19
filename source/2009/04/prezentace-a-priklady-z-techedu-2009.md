@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-04-30T19:40:53.313+02:00 -->
-<!-- dcterms:dateAccepted = 2009-04-30T19:40:53.313+02:00 -->
+<!-- dcterms:date = 2009-04-30T19:40:53.313+02:00 -->
 
 [![Logo TechEd 2009](https://www.cdn.altairis.cz/Blog/2009/20090430-TechEd2009_thumb_1.png "Logo TechEd 2009")](https://www.cdn.altairis.cz/Blog/2009/20090430-TechEd2009_5.png) Jak jsem slíbil, zveřejňuji dnes prezentace a příklady ze svých pěti přednášek na letošním pražském TechEdu.
 

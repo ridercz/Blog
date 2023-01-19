@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = Recenze -->
-<!-- dcterms:dateAccepted = 2021-02-09 -->
+<!-- dcterms:date = 2021-02-09 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66880270-psms7-ed7acd3b1c0f50b -->

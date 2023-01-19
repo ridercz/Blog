@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-05-16 -->
+<!-- dcterms:date = 2020-05-16 -->
 
 Součástí HTML5 je element `datalist`. Těší se široké podpoře v prohlížečích a jednoduše řeší typický UX problém. Přesto se s ním na webu setkáte jenom zřídka. Kromě vysvětlení k čemu je dobrý jsem pro vás připravil i užitečný tag helper.
 

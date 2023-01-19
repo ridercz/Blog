@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-12T07:23:59.137+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-12T07:23:59.137+02:00 -->
+<!-- dcterms:date = 2005-06-12T07:23:59.137+02:00 -->
 
 Pokud chcete provozovat na jednom serveru ASP.NET verze 1.1 a 2.0 Beta 2 (Whidbey), je to možné. Mapování jednotlivých verzí ve struktuře IIS (na jednotlivé virtuální servery a adresáře) je na sobě naprosto nezávislé. Jedinou podmínkou je, že různé verze nemohou běžet v jednom *Application Poolu*.
 

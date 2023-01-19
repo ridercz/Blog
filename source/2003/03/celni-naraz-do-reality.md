@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-03T10:58:55+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-03T10:58:55+01:00 -->
+<!-- dcterms:date = 2003-03-03T10:58:55+01:00 -->
 
 Tak jsem se vám onehdá zase díval na svůj oblíbený film [Spirit: Stallion of the Cimarron](http://www.dreamworks.com/spirit/).
 

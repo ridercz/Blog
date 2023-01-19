@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-02-22 -->
+<!-- dcterms:date = 2021-02-22 -->
 <!-- x4w:alternateUrl = https://modrak.podbean.com/e/6-leak-cd-projektu/ -->

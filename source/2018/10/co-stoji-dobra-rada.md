@@ -7,7 +7,7 @@
 <!-- x4w:pictureCredits = Zdroj: Česká národní banka -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Koně -->
-<!-- dcterms:dateAccepted = 2018-10-23 -->
+<!-- dcterms:date = 2018-10-23 -->
 
 Poslední dobou mi přišlo několik dotazů, zda je možné si mne najmout jako konzultanta nebo programátora a pokud ano, za jakých podmínek. Odpověď je, že samozřejmě to možné je, protože se tím živím. I mé ceny jsou pevné a nevidím důvod je nezveřejnit. Takže co pro vás mohu udělat?
 

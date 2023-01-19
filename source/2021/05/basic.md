@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT historie -->
-<!-- dcterms:dateAccepted = 2021-05-13 -->
+<!-- dcterms:date = 2021-05-13 -->
 <!-- x4w:alternateUrl = https://byznysvcesku.cz/michal-valasek-kdyz-basic-vladnul-svetu/ -->
 
 

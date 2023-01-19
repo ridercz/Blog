@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Z-TECH -->
-<!-- dcterms:dateAccepted = 2022-09-08 -->
+<!-- dcterms:date = 2022-09-08 -->
 
 Za všechno může pan Sobota. Nemyslím českého herce ani zombie z Pratchettovy knihy _Čarodějky na cestách_. Myslím tím Bohumíra Sobotu, učitele fyziky na ZŠ J. A. Komenského v Karlových Varech, někdy před více než třiceti lety. Byl mi osobně i lidsky velmi sympatický, stejně jako jeho styl výkladu a proto jsem se začal zajímat o fyziku a přihlásil se na jím vedený kroužek výpočetní techniky. Od té doby jsem se živil a přiživoval kdečím, od psaní přes přednášení po produkci sadomasochistických filmů, ale vždycky se nějak motám kolem počítačů. Možná, kdyby naše tehdejší učitelka přírodopisu (jejíž jméno jsem milosrdně zapomněl) nebyla neschopná kráva, která mi naopak vštípila odpor ke všemu přírodnímu, možná to všechno v mém životě mohlo dopadnout jinak.
 

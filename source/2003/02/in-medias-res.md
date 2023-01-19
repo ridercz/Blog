@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-14T19:01:21+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-14T19:01:21+01:00 -->
+<!-- dcterms:date = 2003-02-14T19:01:21+01:00 -->
 
 Bojoval jsem s pokušením použít pro nadpis tohoto zápisu "In Medias Res" - a jak je vidět, prohrál jsem :-) Jedná se o titul sloupku o médiích v Reflexu nebo Týdnu (jsem příliš líný, než abych se zvedl a šel se podívat, který z těch plátků to je). Z věcného hlediska je to samozřejmě nesmysl, protože dotyčný výraz znamená "přímo k věci" a nevím, proč se mi tak dere na jazyk.
 

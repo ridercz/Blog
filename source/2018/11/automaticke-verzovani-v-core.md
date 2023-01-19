@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2018-11-09 -->
+<!-- dcterms:date = 2018-11-09 -->
 
 Trendem při určování nových verzí je v současnosti [sémantické verzování](https://semver.org/). To má význam zejména u knihoven a komponent, která jsou využívána v dalších aplikacích. V případě vývoje koncových aplikací nicméně může být lepší používat automatické generování verzí podle datumu.
 

@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-11-10 -->
+<!-- dcterms:date = 2019-11-10 -->
 
 OpenSCAD je 3D modelovací software, ve kterém se modely nekreslí, ale programují. Výtečně se proto hodí na parametrické a generativní modelování. Udělal jsem parametrický model, který na sebe umí vrstvit texty v různých barvách a velikostech. Výsledný model se pak dá použít třeba na klíče nebo zajímavě vypadající tabulky.
 

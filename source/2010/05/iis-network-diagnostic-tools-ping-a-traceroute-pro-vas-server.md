@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-05-22T18:03:17.313+02:00 -->
-<!-- dcterms:dateAccepted = 2010-05-22T18:03:17.313+02:00 -->
+<!-- dcterms:date = 2010-05-22T18:03:17.313+02:00 -->
 
 Neocenitelnými nástroji pro diagnostiku síťových problémů všeho druhu jsou příkazy `ping` a `traceroute` (`tracert`). Pro zjištění, ve které části síťové infrastruktury je ale obvykle žádoucí spustit je z několika různých míst. Existuje proto množství veřejných serverů, které vám tyto nástroje umožní spustit. Jejich přehled najdete například na [www.traceroute.org](http://www.traceroute.org). Chce to ovšem trpělivost, řada serverů tamo uvedených je nefunkční.
 

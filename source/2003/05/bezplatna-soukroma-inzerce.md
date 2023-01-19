@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-01T14:23:15+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-01T14:23:15+02:00 -->
+<!-- dcterms:date = 2003-05-01T14:23:15+02:00 -->
 
 Zjistil jsem, že se mi doma povalují rozličné elektronické hračky, které jsou mi k ničemu. Všechny jsou zcela v pořádku, jenom pro ně nemám využití, protože už mám jiné a lepší nebo náhradu za ně. Takže pokud máte někdo zájem, prodávám níže uvedené předměty. Uvedená cena je odhadem a orientační, pokud mi řeknete nějaký rozumný důvod, proč by měla být nižší, můžeme se dohodnout.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-07T01:33:49+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-07T01:33:49+01:00 -->
+<!-- dcterms:date = 2003-12-07T01:33:49+01:00 -->
 
 V posledním Reflexu vyšel článek, který mne vyloženě potěšil. Konečně mám černé na bílém, že si mezi své úchylky mohu zapsat i fetišismus. Tohle je text mailu, který jsem poslal redakci Reflexu.
 

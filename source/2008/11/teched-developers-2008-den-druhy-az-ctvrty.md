@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-11-14T00:39:55.69+01:00 -->
-<!-- dcterms:dateAccepted = 2008-11-14T00:39:55.69+01:00 -->
+<!-- dcterms:date = 2008-11-14T00:39:55.69+01:00 -->
 
 Konečně jsem získal dostatek času, abych sepsal zážitky z druhého až čtvrtého dne TechEdu.
 

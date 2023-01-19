@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-04T15:32:31+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-04T15:32:31+02:00 -->
+<!-- dcterms:date = 2003-04-04T15:32:31+02:00 -->
 
 Naivně jsem předpokládal, že bude stačit, když své stránky dám k dispozici ve standardizovaném kódování UTF-8 a poradí si s tím všechna mobilní i nemobilní zařízení.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2016-10-02T22:58:51.057+02:00 -->
-<!-- dcterms:dateAccepted = 2016-10-03T00:00:00+02:00 -->
+<!-- dcterms:date = 2016-10-03T00:00:00+02:00 -->
 
 Dnes je tomu třináct let, co se narodila Esta Kanýčo, moje psí průvodkyně životem. Přišel jsem k ní tak trochu jako slepý k houslím a od té doby nikdy nezalitoval.
 

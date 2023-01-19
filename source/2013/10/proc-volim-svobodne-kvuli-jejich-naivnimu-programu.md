@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-10-25T03:22:54.533+02:00 -->
-<!-- dcterms:dateAccepted = 2013-10-25T03:22:54.893+02:00 -->
+<!-- dcterms:date = 2013-10-25T03:22:54.893+02:00 -->
 
 Za necelých dvanáct hodin se otevřou volební místnosti. Moje volba nejspíš nikoho nepřekvapí, je o mně všeobecně známo, že jsem členem a voličem Strany svobodných občanů. Poslední dobou se v řadách mých Facebookových přátel ozývá mrmlání nad tím, že Svobodné ano, ale že si to představují jako Hurvínek válku, že jejich program je nerealistický, že úřady nelze rušit a z EU vystupovat ze dne na den…
 

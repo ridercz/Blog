@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-10-07T20:56:19.773+02:00 -->
-<!-- dcterms:dateAccepted = 2013-10-07T20:56:20+02:00 -->
+<!-- dcterms:date = 2013-10-07T20:56:20+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20131007-pozvanka-na-ms-fest-2013.png -->

@@ -8,7 +8,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-02-14 -->
+<!-- dcterms:date = 2019-02-14 -->
 
 Minulý týden jsem přednášel na akcích G2B TechEd (Brno) a ShowIT (Bratislava). Nyní vám ke stažení nabízím své prezentace a příklady.
 

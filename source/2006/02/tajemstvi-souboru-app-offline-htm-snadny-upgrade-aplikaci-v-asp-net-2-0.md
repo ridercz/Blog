@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-02-23T00:46:27.777+01:00 -->
-<!-- dcterms:dateAccepted = 2006-02-23T00:46:27.777+01:00 -->
+<!-- dcterms:date = 2006-02-23T00:46:27.777+01:00 -->
 
 Často je potřeba aktualizovat běžící aplikaci. Pokud vám na ni chodí pět lidí za den, není to velký problém, prostě se stará data přepíší novými. Pokud je ale aplikace navštěvovanější, začínají problémy. Soubory jsou zamčené a není možné je přepsat, u větších updatů může dojít ke zmatení aplikace, o uživateli nemluvě a podobně.
 

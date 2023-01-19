@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-21T03:37:44+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-21T03:37:44+01:00 -->
+<!-- dcterms:date = 2004-01-21T03:37:44+01:00 -->
 
 Začínám mít pocit, že bych měl svému weblogu dát podtitul *aneb život štěněte*. Skutečnost je taková, že nový člen domácnosti, skoro čtyřměsíční vlčanda Esta, mi efektivně zabírá většinu času. A o tom zbytku tady psát nechci -- popisování jednání o implementaci geografického informačního systému nepochybně zaujme ještě méně lidí, než štěněcí historky.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-03-29T04:51:42.85+02:00 -->
-<!-- dcterms:dateAccepted = 2005-03-29T04:51:42.85+02:00 -->
+<!-- dcterms:date = 2005-03-29T04:51:42.85+02:00 -->
 
 V životě programujícího koně (a předpokládám, že i v životě lidském) se najde řada příležitostí, které vyžadují dynamické vytváření uživatelského rozhraní. V klasických ASP 3.0 bylo v tomto ohledu řešení snadné: prostě se do výsledného kódu vygenerovalo nějaké HTML. 
 

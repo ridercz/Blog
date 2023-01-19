@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-07-19T23:23:07.187+02:00 -->
-<!-- dcterms:dateAccepted = 2010-07-19T23:23:07.89+02:00 -->
+<!-- dcterms:date = 2010-07-19T23:23:07.89+02:00 -->
 
 Veřejností, nebo alespoň sdělovacími prostředky, se šíří panika z toho, že na pozice ministerských náměstků nastupují lidé spjatí s bezpečnostní agenturou ABL. Nechápu překvapení ani paniku a v zásadě v tom nevidím problém.
 

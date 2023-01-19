@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-05-08T16:10:12.067+02:00 -->
-<!-- dcterms:dateAccepted = 2007-05-08T16:10:12.067+02:00 -->
+<!-- dcterms:date = 2007-05-08T16:10:12.067+02:00 -->
 
 XML je jedno z oblíbených buzz-words poslední doby. Jedná se ovšem také o navýsost užitečný formát pro přenos počítače čitelných informací. Většina novějších technologií XML nějakým způsobem využívá. 
 

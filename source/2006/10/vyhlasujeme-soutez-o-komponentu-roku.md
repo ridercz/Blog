@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-10-26T19:21:11.567+02:00 -->
-<!-- dcterms:dateAccepted = 2006-10-26T19:21:11.567+02:00 -->
+<!-- dcterms:date = 2006-10-26T19:21:11.567+02:00 -->
 
 Jednou z velkých výhod technologie ASP.NET je možnost komponentizace. Aplikaci můžete snadno rozdělit do různých modulů, které můžete využívat v různých aplikacích společně. Řada takových modulů může být užitečná nejenom vám, ale i ostatním.
 

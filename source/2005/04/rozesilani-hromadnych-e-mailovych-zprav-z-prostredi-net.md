@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-07T05:06:19.08+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-07T05:06:19.08+02:00 -->
+<!-- dcterms:date = 2005-04-07T05:06:19.08+02:00 -->
 
 ![Poštovní schránka](https://www.cdn.altairis.cz/Blog/letterbox.jpg "Poštovní schránka // via sxc.hu, used by permission")Jeden článek o mailování z ASP.NET jsem už svého času [napsal](/entry/article-20050103.aspx). Dotazy v konferencích a v neposlední řadě můj téměř shozený mailový server jsou však důkazem toho, že toto téma je stále živé.
 

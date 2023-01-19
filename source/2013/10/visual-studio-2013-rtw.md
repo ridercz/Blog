@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-10-17T14:23:21.377+02:00 -->
-<!-- dcterms:dateAccepted = 2013-10-17T14:23:21+02:00 -->
+<!-- dcterms:date = 2013-10-17T14:23:21+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20131017-visual-studio-2013-rtw.png -->

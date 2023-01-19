@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-29T03:23:34.23+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-29T03:23:34.23+01:00 -->
+<!-- dcterms:date = 2005-12-29T03:23:34.23+01:00 -->
 
 Od doby, co jsem začal rozum brát, mám Vánoce spojené s tím, že se něco *musí*. Volno ze školy, vánoční dárky, to bylo fajn. Ale člověk *musí* jíst kapra s bramborovým salátem (ryby nesnáším), *musí* si uklidit pokoj a *musí* se účastnit společné večeře s příbuznými, ačkoliv jinak se rodina u stolu nesejde, jak je rok dlouhý. Protože jsou Vánoce, svátky klidu, míru a rozzářených dětských očí.
 

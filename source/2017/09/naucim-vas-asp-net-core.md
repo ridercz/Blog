@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2017-09-09T23:44:55.733+02:00 -->
-<!-- dcterms:dateAccepted = 2017-09-09T23:44:56+02:00 -->
+<!-- dcterms:date = 2017-09-09T23:44:56+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-dnc.png -->

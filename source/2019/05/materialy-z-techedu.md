@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190503-pozvanka-na-teched.jpg -->
 <!-- x4w:coverCredits = Gopas, a. s. -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-05-16 -->
+<!-- dcterms:date = 2019-05-16 -->
 
 Jako každý rok, i letos jsem měl na pražském TechEdu řadu přednášek. Počínaje tradiční vývojářskou keynote s přehledem věcí současných i budoucích a konče třeba tím, co by podle mne Windowsáci měli vědět o Linuxu. Nyní jsou ke stažení příklady a prezentace z nich.
 

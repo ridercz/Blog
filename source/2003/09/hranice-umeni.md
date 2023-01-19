@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-09-10T14:26:13+02:00 -->
-<!-- dcterms:dateAccepted = 2003-09-10T14:26:13+02:00 -->
+<!-- dcterms:date = 2003-09-10T14:26:13+02:00 -->
 
 Včera se mne jeden kamarád (mimochodem nadaný kreslíř) zeptal, kde je podle mne hranice mezi uměním a tím, když si někdo jen tak kreslí pro zábavu. Odpověděl jsem mu, že je tak subjektivní, že podle mého názoru neexistuje.
 

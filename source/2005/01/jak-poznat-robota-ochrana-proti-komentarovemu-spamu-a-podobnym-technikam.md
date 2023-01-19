@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-04T02:53:54.547+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-04T02:53:54.547+01:00 -->
+<!-- dcterms:date = 2005-01-04T02:53:54.547+01:00 -->
 
 Nafouknutá bublina optimalizace pro vyhledávače (<acronym title="Search Engine Optimization">SEO</acronym>) přinesla fenomén *komentářového spamu* - tedy robotů, kteří automatizovaně vkládají odkazy na své weby do každého diskusního fóra, na které narazí, a které se jim podaří objevit. To vedlo k nebývalému rozšíření technik, které slouží k odhalení, který z návštěvníků je robot. Nejedná se samozřejmě o jedinou oblast využití - stejnou metodu používají mobilní operátoři aby zabránili automatizovanému rozesílání SMS přes své webové brány nebo [Úřad pro ochranu osobních údajů](http://www.uoou.cz/int/spam_stiznost.php3) na rozhraní pro elektronické podání stížnosti na spammery.
 

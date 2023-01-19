@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-20T01:57:48+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-20T01:57:48+01:00 -->
+<!-- dcterms:date = 2003-03-20T01:57:48+01:00 -->
 
 Překvapuje mne, že moje stránky navštěvuje tolik lidí. Podle statistiky průměrný denní počet sessions přesahuje stovku, což upřímně nechápu. Je to docela slušné číslo, zejména uvážíme-li, že:
 

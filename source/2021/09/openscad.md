@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-09-29 -->
+<!-- dcterms:date = 2021-09-29 -->
 
 > **Tento článek je nyní již zastaralý.** Vydal jsem všechny díly školení a jejich kompletní seznam najdete v [aktualizované verzi článku](/2022/02/openscad). Původní text článku zde ponechávám jenom pro úplnost.
 

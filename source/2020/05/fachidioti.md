@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2020-05-11 -->
+<!-- dcterms:date = 2020-05-11 -->
 
 V českém veřejném diskursu jsme zvyklí na ledacos. Ovšem prohlášení náměstka ministra zdravotnictví Prymuly, který nás vyzývá k návratu ke klanovým společenstvím, je šílené v takové míře, že vzbudilo podiv i u nás. Lidé prý mají do budoucna žít v menších komunitách, že se budou stýkat tři rodiny a "další komunikace moc nebude". 
 

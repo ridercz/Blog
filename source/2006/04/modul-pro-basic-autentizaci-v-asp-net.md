@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-04-04T13:23:36.07+02:00 -->
-<!-- dcterms:dateAccepted = 2006-04-04T13:23:36.07+02:00 -->
+<!-- dcterms:date = 2006-04-04T13:23:36.07+02:00 -->
 
 
 		<h2>Jak funguje 'basic authentication'</h2>

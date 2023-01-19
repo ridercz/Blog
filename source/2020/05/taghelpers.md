@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-05-12 -->
+<!-- dcterms:date = 2020-05-12 -->
 
 O své knihovně Altairis.TagHelpers, která přidává různé tag helpery pro Razor v ASP.NET Core (MVC i Razor Pages) jsem zde již několikrát psal. 
 

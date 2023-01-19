@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-05-03T22:00:24.473+02:00 -->
-<!-- dcterms:dateAccepted = 2013-05-03T22:03:18.277+02:00 -->
+<!-- dcterms:date = 2013-05-03T22:03:18.277+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20130503-jak-jednoduse-prevadet-casove-udaje-mezi-jednotlivymi-casovymi-pasmy.png -->

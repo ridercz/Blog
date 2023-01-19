@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-07-24T04:14:36.727+02:00 -->
-<!-- dcterms:dateAccepted = 2005-07-24T04:14:36.727+02:00 -->
+<!-- dcterms:date = 2005-07-24T04:14:36.727+02:00 -->
 
 *Tento článek navazuje na *[*první díl*](/entry/article-20050615.aspx)*, vydaný zde 15. června.*
 

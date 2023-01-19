@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-10-29T18:23:00.253+01:00 -->
-<!-- dcterms:dateAccepted = 2006-10-29T18:23:00.253+01:00 -->
+<!-- dcterms:date = 2006-10-29T18:23:00.253+01:00 -->
 
 Nejpoužívanější službou internetu není kupodivu WWW, ale elektronická pošta: e-mail. Zatímco odesílání e-mailových zpráv z prostředí ASP.NET je jednoduché, se zpracováváním příchozích mailů to už není ani zdaleka tak snadné.
 

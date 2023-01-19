@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-02-11T03:41:07+01:00 -->
-<!-- dcterms:dateAccepted = 2004-02-11T03:41:07+01:00 -->
+<!-- dcterms:date = 2004-02-11T03:41:07+01:00 -->
 
 Na příslovích, úslovích, lidových moudrostech a Bibli je perfektní jedna věc: při troše snahy jimi můžete odůvodnit a podepřít v podstatě cokoliv. V případě oněch prvně jmenovaných nám pěkně nahrává to, že jsou často komplementární. Dozvíme se tedy současně, že "*mluviti stříbro, mlčeti zlato*", jakož i "*líná huba, holé neštěstí*", případně "*sedávej panenko v koutě, budeš-li hodná najdou tě*" vs. "*drzé čelo lepší než poplužní dvůr*". Předpokládám že i z prostého obsahu mých webů je poměrně zřejmé, kterou ze stran hájím, a to i pomineme-li otázku mého panictví ;-)
 

@@ -6,6 +6,6 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Sandstein via Wikimedia Commons -->
 <!-- x4w:category = IT historie -->
-<!-- dcterms:dateAccepted = 2021-04-30 -->
+<!-- dcterms:date = 2021-04-30 -->
 <!-- x4w:alternateUrl = https://byznysvcesku.cz/michal-valasek-osborne-nebyl-prvni-strucna-historie-notebooku/ -->
 

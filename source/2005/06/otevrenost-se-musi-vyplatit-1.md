@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-15T03:02:12.893+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-15T03:02:12.893+02:00 -->
+<!-- dcterms:date = 2005-06-15T03:02:12.893+02:00 -->
 
 *Nemám nic proti pánubohu, ale jeho fanklub mne štve. *Autora tohoto známého výroku se mi sice odhalit nepodařilo, ale velmi výstižně vyjadřuje můj vztah k open source a jisté části jeho propagátorů.
 

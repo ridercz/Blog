@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-10T04:44:58.09+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-10T04:44:58.09+01:00 -->
+<!-- dcterms:date = 2005-01-10T04:44:58.09+01:00 -->
 
 Pixy se [pobuřuje nad skutečností](http://www.pixy.cz/pixylophone/2005_01_archiv.html#1105304556), že stát věnoval na pomoc obětem tsunami v Asii jenom deset miliónů, méně než jeho vlastní občané. Mne pobuřuje, že dal i těch deset miliónů. Tím spíše, že [doprava této pomoci stála víc, než pomoc sama](http://www.ceskenoviny.cz/domov/index_view.php?id=109381).
 

@@ -6,6 +6,6 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Photo by mjtmail via Flickr, CC-BY -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2018-11-07 -->
+<!-- dcterms:date = 2018-11-07 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66329960-psms7-edf3501bc6d3bf2 -->
 

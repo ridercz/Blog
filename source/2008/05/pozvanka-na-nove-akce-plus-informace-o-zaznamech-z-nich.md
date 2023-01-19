@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-05-18T01:55:23.393+02:00 -->
-<!-- dcterms:dateAccepted = 2008-05-18T01:55:23.393+02:00 -->
+<!-- dcterms:date = 2008-05-18T01:55:23.393+02:00 -->
 
 Jednou ze zásadních výhod veskrze pesimistického přístupu k životu jest skutečnost, že člověk je většinou přkvapen toliko příjemně. Nejnověji se mi to podařilo při odezvě na můj článek, ve kterém jsem vyhlásil sbírku na koupi zařízení pro nahrávání přednášek, které pořádáme. Původně jsem snad ani nepočítal, že se mi někdo ozve, spíš jsem chtěl mít pádný argument jako zdůvodnění toho, proč záznamy nejsou :-)
 

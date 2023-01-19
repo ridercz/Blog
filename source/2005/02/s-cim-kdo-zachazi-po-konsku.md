@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-02-20T01:33:49.527+01:00 -->
-<!-- dcterms:dateAccepted = 2005-02-20T01:33:49.527+01:00 -->
+<!-- dcterms:date = 2005-02-20T01:33:49.527+01:00 -->
 
 K napsání tohoto zápisu mne přiměl [tento](http://jandudik.bloguje.cz/116267_item.php) zápisek na cizím blogu. Poslední dobou se cíleně snažím počet používaných programů minimalizovat a zaměřit se spíše na maximální využití těch které mám. Moje základní pracovní nástroje tedy jsou:
 

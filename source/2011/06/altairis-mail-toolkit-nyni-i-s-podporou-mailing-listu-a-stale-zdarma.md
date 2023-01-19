@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-06-13T17:06:15.14+02:00 -->
 <!-- dcterms:dateSubmitted = 2011-06-13T17:06:54.173+02:00 -->
-<!-- dcterms:dateAccepted = 2011-06-13T00:00:00+02:00 -->
+<!-- dcterms:date = 2011-06-13T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 130 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100608-altairis-mail-toolkit-mailovani-z-webovych-aplikaci-snadno-a-korektne.png -->

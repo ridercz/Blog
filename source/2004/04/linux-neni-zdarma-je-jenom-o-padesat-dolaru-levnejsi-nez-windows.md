@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-04-07T09:45:58+02:00 -->
-<!-- dcterms:dateAccepted = 2004-04-07T09:45:58+02:00 -->
+<!-- dcterms:date = 2004-04-07T09:45:58+02:00 -->
 
 Tak tohle byla asi jediná věta z dnešního dne summitu, se kterou se vám mohu svěřit. Pokud bych prozradil cokoliv dalšího, měl by Microsoft právo mě prodat do otroctví, nebo alespoň něco takového je v non-disclosure agreementu, který jsem podepsal.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-06-19T12:09:55.797+02:00 -->
-<!-- dcterms:dateAccepted = 2007-06-19T12:09:55.797+02:00 -->
+<!-- dcterms:date = 2007-06-19T12:09:55.797+02:00 -->
 
 Na webu [http://videoarchiv.altairis.cz/](http://videoarchiv.altairis.cz/) najdete dva nové záznamy z akcí:
 

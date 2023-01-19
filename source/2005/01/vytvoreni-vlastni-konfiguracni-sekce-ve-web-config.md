@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-09T06:54:43.36+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-09T06:54:43.36+01:00 -->
+<!-- dcterms:date = 2005-01-09T06:54:43.36+01:00 -->
 
 .NET aplikace jsou předurčeny k tomu, aby své konfigurační údaje ukládaly do souboru `jménoaplikace.config` (v případě webových `web.config`). K takto uloženým údajům lze přistupovat pomocí namespace `System.Configuration.ConfigurationSettings`.
 

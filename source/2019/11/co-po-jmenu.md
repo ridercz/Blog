@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20191129-co-po-jmenu.jpg -->
 <!-- x4w:category = Vlci -->
-<!-- dcterms:dateAccepted = 2019-11-29 -->
+<!-- dcterms:date = 2019-11-29 -->
 
 Čistokrevní psi mají často dost komplikovaná jména - třeba Šelmíra se oficiálně jmenuje Emiate Šungmánitu-ha Khoyáke. Chcete vědět, proč tomu tak je, co ze jména vyčtete?
 

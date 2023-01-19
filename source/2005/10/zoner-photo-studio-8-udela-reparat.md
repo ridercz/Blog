@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-10-23T21:09:42.063+02:00 -->
-<!-- dcterms:dateAccepted = 2005-10-23T21:09:42.063+02:00 -->
+<!-- dcterms:date = 2005-10-23T21:09:42.063+02:00 -->
 
 Od kohosi kdo si říká "autor omalovánek" jsem se [v komentáři](/CommentView.aspx?CID=183#b475c47b20054f39880b25c42b15d4f6) dozvěděl o nové verzi mnou [dříve zavrženého](/entry/article-20041029.aspx) Zoner Photo Studia / Media Exploreru nebo jak se to momentálně jmenuje.
 

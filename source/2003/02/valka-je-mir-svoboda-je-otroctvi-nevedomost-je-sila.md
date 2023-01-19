@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-06T23:36:30+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-06T23:36:30+01:00 -->
+<!-- dcterms:date = 2003-02-06T23:36:30+01:00 -->
 
 Kdysi, ještě na střední škole, jsme měli vyjmenovat tři knihy, které by si podle nás měl každý přečíst. Nepamatuji si, jakou knihu jsem jmenoval jako první. Druhý byl - trochu z recese - **Stopařův průvodce po galaxii** a třetí román **1984** od George Orwella, z něhož pochází i tři hesla, která jsou titulkem tohoto zápisu.
 

@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2020-05-08 -->
+<!-- dcterms:date = 2020-05-08 -->
 
 Moje dcera Alex se zamilovala do světa Harryho Pottera - ostatně, stejně jako její rodiče. Hlásí se k havraspárské koleji, což jí sedí. 
 

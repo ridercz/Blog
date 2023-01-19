@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-20T23:01:28+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-20T23:01:28+02:00 -->
+<!-- dcterms:date = 2003-04-20T23:01:28+02:00 -->
 
 Ačkoliv nárok býti poselstvím budoucím generacím si osobuje nejnovější české kinematografické veledílo [Pupendo](http://www.pupendo.com/), já jsem to pravé objevil na pánské toaletě jedné restautrace v Praze na Letné:
 

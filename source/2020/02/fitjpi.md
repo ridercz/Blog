@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-02-12 -->
+<!-- dcterms:date = 2020-02-12 -->
 
 Asi nejlepší by bylo přeložit název [této facebookové skupiny](https://www.facebook.com/groups/444164956225496/) jako "kašlu na to, prostě si to vytisknu". Popisuje stav, do které ho se začasté dostávají majitelé 3D tiskáren. Řadu problémů a drobných každodenních prud lze vyřešit pomocí pár minut modelování a pár desítek minut tisku.
 

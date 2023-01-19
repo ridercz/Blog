@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-03-29T03:00:15.223+02:00 -->
-<!-- dcterms:dateAccepted = 2005-03-29T03:00:15.223+02:00 -->
+<!-- dcterms:date = 2005-03-29T03:00:15.223+02:00 -->
 
 Podle zprávy oficiálního webu Zastoupení Evropské komise v ČR se mnou vroucně milovaná EU chystá v roce 2007 [založit Institut pro rovnost pohlaví](http://evropska-unie.cz/cz/article.asp?id=3295), s počátečním rozpočtem 52.5 milionů EUR (asi 1.5 miliardy Kč). Vznik tohoto bohulibého institutu přivítal i Vladimír Špidla, vykopnutý do křesla evropského komisaře ve škodolibém přesvědčení, že nebude aspoň škodit jenom doma.
 

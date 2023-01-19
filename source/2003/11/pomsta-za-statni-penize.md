@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-09T17:54:12+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-09T17:54:12+01:00 -->
+<!-- dcterms:date = 2003-11-09T17:54:12+01:00 -->
 
 Zaujal mne [tento článek na Novinkách](http://www.novinky.cz/01/92/43.html): Pavel Krbec, obžalovaný ze zavinění dopravní nehody, při které zahynulo 19 lidí, se soudně domáhá zrušení internetových stránek [www.autobus2003.info](http://www.autobus2003.info/). Na těch Karel Hart, jehož syn byl jedním z mrtvých, rozpoutal internetovou kampaň proti řidiči autobusu.
 

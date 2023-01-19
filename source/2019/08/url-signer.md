@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190803-url-signer.jpg -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-08-03 -->
+<!-- dcterms:date = 2019-08-03 -->
 
 Píšu aplikaci, ve které je třeba zajistit bezpečnou komunikaci pomocí odkazů: jedna volá druhou a je třeba zajistit, aby parametry v odkazu nemohl být modifikovány. Je tedy třeba je nějakým způsobem podepsat. Napsal jsem řešení, které to umí zařídit. Je psáno v ASP.NET Core a navrženo tak, aby se dalo zapojit do jeho IoC/DI infrastruktury.
 

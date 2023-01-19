@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-10-10T01:48:50+02:00 -->
-<!-- dcterms:dateAccepted = 2003-10-10T01:48:50+02:00 -->
+<!-- dcterms:date = 2003-10-10T01:48:50+02:00 -->
 
 Blogeři se poslední dobou intenzivně věnují diskusím nad kradením článků a autorským právem obecně. Vzhledem k tomu, že se už nějaký pátek tvorbou autorských děl rozličné povahy živím, mám i v tomto oboru zkušenosti. Nabízím vám tedy jednoduchý návod, kterak se zachovat v případě, že se článek, jehož jste autorem, objeví neoprávněně na cizím webu.
 

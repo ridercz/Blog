@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-25T20:55:35+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-25T20:55:35+01:00 -->
+<!-- dcterms:date = 2004-01-25T20:55:35+01:00 -->
 
 V idylických časech mého dětství mne matka občas ráno budila do školy se šátkem přes obličej. Ne snad proto, že by se dala na muslimskou víru, ale proto, že měla nateklý obličej a bála se, aby mne svým vzhledem nevyděsila. Nutno říci že zbytečně, protože v mém případě dojemně se snoubící kombinace špatného zraku a obecné nevšímavosti je dobrou obranou proti podobným šokům :)
 

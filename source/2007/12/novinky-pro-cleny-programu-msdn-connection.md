@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-12-04T09:00:07+01:00 -->
-<!-- dcterms:dateAccepted = 2007-12-04T09:00:07+01:00 -->
+<!-- dcterms:date = 2007-12-04T09:00:07+01:00 -->
 
 Microsoft přidal nové benefity pro členy programu MSDN Connection.
 

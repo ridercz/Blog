@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-01T04:52:19+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-01T04:52:19+01:00 -->
+<!-- dcterms:date = 2003-11-01T04:52:19+01:00 -->
 
 Obecně přijímaný názor "Televize kazí mládež" se nám úspěšně rozrůstá i do podoby "Počítače kazí mládež". [Článek na Novinkách](http://www.novinky.cz/01/86/74.html) úspěšně staví počítač do jedné roviny s televizí.
 

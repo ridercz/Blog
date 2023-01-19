@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = Alexander Sinn via Unsplash.com -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-04-12 -->
+<!-- dcterms:date = 2022-04-12 -->
 
 Ve [starším článku a videu](https://www.altair.blog/2022/01/csharp-numbers) jsem se zabýval tím, jak jsou v .NETu ukládána celá čísla se znaménkem i bez něj. Logický dotaz byl jak jsou ukládána čísla desetinná. V .NETu na to máme čtyři datové typy a je s tím spousta zábavy.
 

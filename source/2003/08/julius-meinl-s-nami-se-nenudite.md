@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-08-08T21:02:56+02:00 -->
-<!-- dcterms:dateAccepted = 2003-08-08T21:02:56+02:00 -->
+<!-- dcterms:date = 2003-08-08T21:02:56+02:00 -->
 
 Strašně rád nakupuji v místní pobočce supermarketů Julius Meinl (už jsem ho na weblogu [do huby bral](http://weblog.rider.cz/ShowRecord.aspx?day=20030303#222531)). Ne že by tam nedej bože měli něco tak dobrého, ale člověk se tam odreaguje.
 

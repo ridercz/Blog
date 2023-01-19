@@ -1,7 +1,7 @@
 <!-- dcterms:title = Automatizovaná záloha SQL Serveru do Azure Storage -->
 <!-- dcterms:abstract = Před lety jsem napsal populární skript na automatizaci záloh databází na SQL Serveru Express. Microsoft SQL Server se mezitím naučil zálohování do Azure Storage, což je velmi jednoduchý, levný a spolehlivý způsob, jak nepřijít o data. Svůj skript jsem tedy rozšířil o možnost záloh do cloudového úložiště. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2018-07-26 -->
+<!-- dcterms:date = 2018-07-26 -->
 <!-- x4w:category = IT -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-azure.png -->
 <!-- x4w:pictureWidth = 150 -->

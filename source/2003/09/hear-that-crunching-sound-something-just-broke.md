@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-09-30T14:32:50+02:00 -->
-<!-- dcterms:dateAccepted = 2003-09-30T14:32:50+02:00 -->
+<!-- dcterms:date = 2003-09-30T14:32:50+02:00 -->
 
 Chybová hlášení počítačových programů jsou odpradávna zdrojem zábavy, neboť se jedná o jeden z mála způsobů, jakými si mohou programátoři kompenzovat vztek na počítač, překladač a uživatele.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-10-09T03:58:20.79+02:00 -->
-<!-- dcterms:dateAccepted = 2013-10-11T00:00:00+02:00 -->
+<!-- dcterms:date = 2013-10-11T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20131011-azure-ve-vasem-datacentru-pozvanka-na-akci.jpg -->

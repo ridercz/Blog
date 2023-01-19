@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-02-01T15:55:49.78+01:00 -->
-<!-- dcterms:dateAccepted = 2007-02-01T15:55:49.78+01:00 -->
+<!-- dcterms:date = 2007-02-01T15:55:49.78+01:00 -->
 
 Do našeho videoarchivu jsem přidal záznam z poslední akce, **[**ASP.NET quid pro quo, aneb Web Forms pro starší a pokročilé**](http://videoarchiv.altairis.cz/Entry/13-asp-net-quid-pro-quo-web-forms-pro-starsi-a-pokrocile.aspx)**. Na stejném místě si můžete stáhnout i příklady a prezentaci.
 

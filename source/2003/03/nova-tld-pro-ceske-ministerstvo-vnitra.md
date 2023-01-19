@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-21T19:35:23+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-21T19:35:23+01:00 -->
+<!-- dcterms:date = 2003-03-21T19:35:23+01:00 -->
 
 [Ministerstvo vnitra České republiky](http://www.mvcr.cz/) chystá internetovou expanzi!
 

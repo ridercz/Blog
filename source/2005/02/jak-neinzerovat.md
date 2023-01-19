@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-02-21T19:01:06.99+01:00 -->
-<!-- dcterms:dateAccepted = 2005-02-21T19:01:06.99+01:00 -->
+<!-- dcterms:date = 2005-02-21T19:01:06.99+01:00 -->
 
 Tak si tak ráno (no dobře, kolem druhé odpoledne, ale ráno je když se vstává) hledám na [IDOSu](http://idos.datis.cdrail.cz/) spojení a vykoukne na mne banner společnosti, hledající *vývojáře internotvých aplikací* (klepněte na obrázek pro zvětšení).
 

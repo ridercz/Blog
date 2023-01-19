@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2016-03-27T03:11:40.837+02:00 -->
-<!-- dcterms:dateAccepted = 2016-03-27T00:00:00+01:00 -->
+<!-- dcterms:date = 2016-03-27T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20160327-bezpecnost-vec-verejna.png -->

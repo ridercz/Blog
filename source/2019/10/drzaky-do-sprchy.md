@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-10-01 -->
+<!-- dcterms:date = 2019-10-01 -->
 <!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3891621 -->

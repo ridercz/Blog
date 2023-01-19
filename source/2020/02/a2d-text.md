@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-02-22 -->
+<!-- dcterms:date = 2020-02-22 -->
 
 Do své [OpenSCAD knihovny pro práci s 2D objekty](https://github.com/ridercz/A2D) jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.
 

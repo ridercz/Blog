@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-08-04T00:31:00.847+02:00 -->
-<!-- dcterms:dateAccepted = 2010-08-04T00:31:03.58+02:00 -->
+<!-- dcterms:date = 2010-08-04T00:31:03.58+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-vlajka.png -->

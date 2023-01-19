@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-09-04T00:37:48.827+02:00 -->
-<!-- dcterms:dateAccepted = 2004-09-04T00:37:48.827+02:00 -->
+<!-- dcterms:date = 2004-09-04T00:37:48.827+02:00 -->
 
 Expedice zatím probíhá vcelku podle plánu. Ano, i chaos při nečekaném nakládání Vlka patří do plánu - přece jenom jsem zažil už pár akcí s furry, aby mne taková drobnost mohla zaskočit. Dokonce jsme cestou ani nezabloudili a byla obzvláštněna toliko labilním žaludkem canidae: Esta s Apou se v autě kolektivně pozvracely a Vlkovi v tomtéž zabránil toliko včasný příjezd na místo určení.
 

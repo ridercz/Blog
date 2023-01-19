@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-02-21T01:40:20.597+01:00 -->
-<!-- dcterms:dateAccepted = 2012-02-23T01:36:00+01:00 -->
+<!-- dcterms:date = 2012-02-23T01:36:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120223-kyberkriminalnikem-snadno-a-rychle-pozvanka-na-akci.jpg -->

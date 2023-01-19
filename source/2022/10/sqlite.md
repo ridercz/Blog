@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-10-29 -->
+<!-- dcterms:date = 2022-10-29 -->
 
 Když se před .NET vývojářem řekne "databáze", zpravidla si představí Microsoft SQL Server. Nicméně nejpoužívanější relační databází na světě je něco jiného: embedded databáze [Sqlite](https://www.sqlite.com/). A ta má přímo od Microsoftu velmi dobrou podporu i v .NETu.
 

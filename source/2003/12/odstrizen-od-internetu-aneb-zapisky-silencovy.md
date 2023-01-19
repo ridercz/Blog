@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-31T02:32:49+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-31T02:32:49+01:00 -->
+<!-- dcterms:date = 2003-12-31T02:32:49+01:00 -->
 
 Jsem již desátý den odstřižen od Internetu. Všechno začalo tím, že jsme se rozhodli přestěhovat. Jedna z prvních věcí, které jsem zařizoval, bylo přepojení internetové linky, poskytované společností UPC, do nového bytu. Informoval jsem se (v rámci [již popisovaného harakiri](http://weblog.rider.cz/ShowRecord.aspx?day=20031215)) o způsobech žádosti a termínech. Odpověď infolinky byla, že realizace zabere 7-10 dnů. Žádost jsem tedy odeslal faxem, jak bylo požadováno, 15.12.2003.
 

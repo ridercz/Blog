@@ -7,5 +7,5 @@
 <!-- x4w:pictureCredits = Evil Nick via Flickr, CC BY-NC-ND -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-08-06 -->
+<!-- dcterms:date = 2021-08-06 -->
 <!-- x4w:alternateUrl = https://tech.hn.cz/c7-66958850-psms7-ea32dc379cce88f -->

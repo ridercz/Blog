@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-11-18T04:01:55.033+01:00 -->
-<!-- dcterms:dateAccepted = 2004-11-18T04:01:55.033+01:00 -->
+<!-- dcterms:date = 2004-11-18T04:01:55.033+01:00 -->
 
 I hlavy mnohem moudřejší než ta moje již drahnou dobu upozorňují, že přebytek informací může způsobovat ještě větší škody než jejich nedostatek. Čím dál tím očividnější je, že informace na Internetu může dnes publikovat každý nedouk a je velmi obtížné rozeznat relevantní zdroje od nesmyslných.
 

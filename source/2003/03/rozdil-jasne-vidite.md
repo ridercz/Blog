@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-09T03:12:39+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-09T03:12:39+01:00 -->
+<!-- dcterms:date = 2003-03-09T03:12:39+01:00 -->
 
 Že se [rodiče učí pracovat s Internetem, aby mohli komunikovat se svými dětmi](http://weblog.rider.cz/ShowRecord.aspx?day=20030216) jsem už psal. Moji rodiče si také stěžují, že nevědí co dělám. Považuji za jaksi nadbytečné je informovat o svých činech, názorech a pocitech. Vše, co si přeji, aby se svět o mně dozvěděl, publikuji prostřednictvím Internetu. Tak nějak jsem si ovšem uvědomil, že moji příbuzní jsou zřejmě asi jediní lidé v celé dot-cz, kteří o mých webových stránkách nevědí. Tak teď už vědí a doufám, že si budou schopni tento příspěvek přečíst!
 

@@ -8,7 +8,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-08-23T03:44:49.987+02:00 -->
-<!-- dcterms:dateAccepted = 2015-08-24T00:00:00+02:00 -->
+<!-- dcterms:date = 2015-08-24T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->

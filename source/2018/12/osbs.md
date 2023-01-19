@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2018-12-27 -->
+<!-- dcterms:date = 2018-12-27 -->
 
 Pro vytváření 3D modelů používám program OpenSCAD. Ten je specifický tím, že se v něm model programuje, nikoliv kreslí. V minulosti jsem o něm už také napsal [několik](https://josefprusa.cz/priklad-z-praxe-naprogramujte-si-model-pro-3d-tisk-v-openscad/) [článků](https://josefprusa.cz/parametricke-modelovani-v-openscadu/).
 

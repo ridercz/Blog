@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-21T05:30:39+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-21T05:30:39+01:00 -->
+<!-- dcterms:date = 2003-02-21T05:30:39+01:00 -->
 
 Projekt [Cheetah](/AboutCheetah.aspx), tedy software tohoto weblogu, má konečně pořádné logo. Díky [LioN'Sovi](http://www.tigress.com/lions/), kterému bych chtěl touto cestou upřímně poděkovat!
 

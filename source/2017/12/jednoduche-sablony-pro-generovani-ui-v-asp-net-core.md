@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2017-12-27T01:52:35.187+01:00 -->
-<!-- dcterms:dateAccepted = 2017-12-27T01:53:52.03+01:00 -->
+<!-- dcterms:date = 2017-12-27T01:53:52.03+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20171227-jednoduche-sablony-pro-generovani-ui-v-asp-net-core.png -->

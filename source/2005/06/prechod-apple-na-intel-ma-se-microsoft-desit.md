@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-07T02:48:20.833+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-07T02:48:20.833+02:00 -->
+<!-- dcterms:date = 2005-06-07T02:48:20.833+02:00 -->
 
 Internet je plný zpráv o tom, že [Apple přechází na Intelovské procesory](http://www.pixy.cz/pixylophone/2005_06_archiv.html#1118100008). Osobně se mne tato záležitost netýká, ale myslím si, že řadě komentátorů uniká jedna zásadní věc: Tímto krokem se v brzké době stane Apple jediným konkurentem Microsoftu na trhu desktopových operačních systémů.
 

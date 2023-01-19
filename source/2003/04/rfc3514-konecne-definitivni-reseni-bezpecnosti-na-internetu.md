@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-01T14:41:23+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-01T14:41:23+02:00 -->
+<!-- dcterms:date = 2003-04-01T14:41:23+02:00 -->
 
 Bezpečnost je u internetových aplikací jednou ze zásadních priority. Dnes ovšem Internet Society vydala zásadní normu RFC (request for comment), která jednou provždy řeší všechny bezpečnostní problémy sítí používajících IP.
 

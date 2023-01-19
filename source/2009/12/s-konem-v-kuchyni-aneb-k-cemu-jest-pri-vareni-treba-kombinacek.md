@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-12-15T00:30:19.403+01:00 -->
-<!-- dcterms:dateAccepted = 2009-12-15T00:30:19.73+01:00 -->
+<!-- dcterms:date = 2009-12-15T00:30:19.73+01:00 -->
 
 Nudně se to opakuje znovu a znovu: pokaždé, když se někde zmíním o tom, že cosi vařím nebo peču, ozve se z různých stran záplava překvapených výkřiků. Nastal čas tomu učinit přítrž. Zvažoval jsem uspořádání tiskové konference nebo publikaci prohlášení prostřednictvím ČTK, ale nakonec jsem se rozhodl, že se spokojím jenom se zápiskem na blogu.
 

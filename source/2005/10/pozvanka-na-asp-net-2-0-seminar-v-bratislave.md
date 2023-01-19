@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-10-24T20:00:32.837+02:00 -->
-<!-- dcterms:dateAccepted = 2005-10-24T20:00:32.837+02:00 -->
+<!-- dcterms:date = 2005-10-24T20:00:32.837+02:00 -->
 
 ![Vývoj webových aplikací v ASP.NET 2.0](https://www.cdn.altairis.cz/Blog/2005/20051104-firstslide.jpg) 
 

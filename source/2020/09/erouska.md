@@ -7,5 +7,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2020-09-19 -->
+<!-- dcterms:date = 2020-09-19 -->
 <!-- x4w:alternateUrl = https://nazory.ihned.cz/c7-66818480-oi0o4-7e68a3d997cdf9c -->

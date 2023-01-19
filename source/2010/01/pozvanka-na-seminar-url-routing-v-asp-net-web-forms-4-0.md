@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-01-21T16:28:52.993+01:00 -->
-<!-- dcterms:dateAccepted = 2010-01-21T16:28:52.993+01:00 -->
+<!-- dcterms:date = 2010-01-21T16:28:52.993+01:00 -->
 
 V ASP.NET 4.0 se routing dostal z hájemství MVC aplikací i do běžných Web Forms. Zvu vás na bezplatný seminář, v němž se podíváme na jeho využití od základů až po různé specialitky.
 

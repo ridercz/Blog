@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-09-07T19:36:54.82+02:00 -->
-<!-- dcterms:dateAccepted = 2015-09-07T20:00:00+02:00 -->
+<!-- dcterms:date = 2015-09-07T20:00:00+02:00 -->
 
 Xenofobie je poslední dobou často citovaný pojem. Nálepku xenofoba si dnes snadno vyslouží každý, kdo nesdílí názor, že nejlepší řešení války v Sýrii a obecně neutěšené situace v přilehlém okolí je nastěhovat si všechny postižené do vlastní země. Skutečná xenofobie vypadá jinak a výborně to předvádí [článek v Krajských listech](http://www.krajskelisty.cz/kralovehradecky-kraj/okres-hradec-kralove/10703-mestske-lazne-v-hradci-kralove-zazivaji-sok-arabky-se-koupou-mezi-skolaky-v-habitech-od-hlavy-az-k-pate.htm) a paní Věra (67) z Hradce Králové.
 

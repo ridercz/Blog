@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-01-08 -->
+<!-- dcterms:date = 2019-01-08 -->
 
 Když Microsoft před půl rokem koupil GitHub, moje první myšlenka byla, že konečně budou privátní repozitáře zadarmo. [Nyní na to konečně došlo.](https://blog.github.com/2019-01-07-new-year-new-github/) V myslích poněkud zpozdilejších geeků ovšem Microsoft stále zaujímá pozici arciďábla a vidí v tom zradu myšlenek open source. Je tomu skutečně tak?
 

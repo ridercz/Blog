@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-16T21:07:04.99+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-16T21:07:04.99+02:00 -->
+<!-- dcterms:date = 2005-08-16T21:07:04.99+02:00 -->
 
 V mnoha aplikacích je třeba umožnit uživateli, aby nahrál nějaký obrázek. Tato operace je triviální pouze zdánlivě. Ačkoliv pro webdesignéra znalého práce s Photoshopem je řekněme úprava velikosti obrázku či jeho ořez triviální, pro mnoho uživatelů představuje překážku téměř nepřekonatelnou. 
 

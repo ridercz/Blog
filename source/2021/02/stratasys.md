@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-02-27 -->
+<!-- dcterms:date = 2021-02-27 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66889720-psms7-3d9a5b07e791d95 -->

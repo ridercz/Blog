@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-01-30 -->
+<!-- dcterms:date = 2021-01-30 -->
 <!-- x4w:alternateUrl = https://youtu.be/V1mdx4W35UE -->

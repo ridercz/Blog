@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-10-27T00:14:36.09+02:00 -->
-<!-- dcterms:dateAccepted = 2010-10-27T00:14:37.247+02:00 -->
+<!-- dcterms:date = 2010-10-27T00:14:37.247+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20101027-optimalizace-html-v-asp-net-web-forms.jpg -->

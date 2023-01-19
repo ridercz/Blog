@@ -4,7 +4,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Z-TECH -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-03-13 -->
+<!-- dcterms:date = 2022-03-13 -->
 <!-- x4w:pictureUrl = /perex-pictures/20200103-screenly-shutdown.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

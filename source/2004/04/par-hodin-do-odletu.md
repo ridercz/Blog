@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-04-04T03:45:19+02:00 -->
-<!-- dcterms:dateAccepted = 2004-04-04T03:45:19+02:00 -->
+<!-- dcterms:date = 2004-04-04T03:45:19+02:00 -->
 
 Za pár hodin odlétám do Seattle na konferenci **Microsoft MVP Summit 2004**. Původně jsem měl v úmyslu o ní průběžně psát na [ASP Network](http://www.aspnetwork.cz/) nebo sem, nicméně celý její obsah je pod NDA (non-disclosure agreement), takže nic takového udělat nemohu.
 

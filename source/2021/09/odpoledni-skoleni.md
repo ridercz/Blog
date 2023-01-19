@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2021-09-07 -->
+<!-- dcterms:date = 2021-09-07 -->
 
 Máte půl dne času? Zvu vás na komplexní online školení .NET 5 pro web (dříve ASP.NET Core). Tedy, pokud budete mít půl dne času dva týdny. Koronavirus řadu lidí i firem přesvědčil, že školení nemusí probíhat jenom osobně, ale lze ho dělat i na dálku. A speciální formát školení zařídí, že účastníci nebudou vyřazeni z provozu na příliš dlouho. Školení je určeno programátory, kteří mají obecnou znalost webových technologií (HTML, CSS, JavaScript...) a alespoň základů .NET (C#, Razor, Web Forms, MVC 5...). Cílem je upgradovat jejich znalosti a dovednosti na aktuální úroveň. Oproti předchozímu běhu školení (které se konalo před rokem) je obsah o něco rozšířen (přibyly části věnované dotnet tools, logování a REST API) a aktualizován na .NET 5.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-11T03:54:51.78+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-11T03:54:51.78+02:00 -->
+<!-- dcterms:date = 2005-04-11T03:54:51.78+02:00 -->
 
 Poslední dobou jsem mnoha lidem rozmlouval koupi "fototiskárny" - barevné inkoustové tiskárny na fotografie. K napsání tohoto příspěvku mne ovšem bezprostředně vedl [zápis na blogu Jiřího Macicha](http://blog.macich.net/1113076711-vyber-vhodne-tiskarny-pro-tisk-fotografii.html).
 

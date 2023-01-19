@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20210225-files.jpg -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2021-02-25 -->
+<!-- dcterms:date = 2021-02-25 -->
 
 Prakticky všechny webové aplikace potřebují pracovat se statickými soubory. Některé jsou součástí aplikace samotné, jako například obrázky, styly a skripty. Jiné představují data, nahraná do aplikace - třeba obrázky v článcích nebo přílohy. Jakým způsobem s nimi zacházet, kde je ukládat a jak je zpřístupňovat?
 

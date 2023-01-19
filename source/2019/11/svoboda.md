@@ -8,7 +8,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190306-dopravni-experimenty-podruhe.jpg -->
 <!-- x4w:coverCredits = Shayan Sanyal via Flickr, CC BY -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2019-11-17 -->
+<!-- dcterms:date = 2019-11-17 -->
 
 Třicet let od _Velké Listopadové Sametové Revoluce_. Ne, nebojte se, nebudu vás oblažovat vzpomínkami na to, jak jsem na Národní třídě prožíval sedmnáctý listopad. Kdyby už jenom protože mi v té době bylo deset, prd jsem tomu rozuměl a bydlel jsem v Karlových Varech kde Národní ulici sice je, ale je to spíš nevýznamná ulička na periferii než třída. Bude řeč o tom, jak se z veřejného diskursu vytrácí slovo _svoboda_.
 

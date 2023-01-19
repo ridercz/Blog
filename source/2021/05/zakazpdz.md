@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210501-zakazpdz.jpg -->
 <!-- x4w:coverCredits = Waldemar Brandt via Unsplash.com -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2021-05-01 -->
+<!-- dcterms:date = 2021-05-01 -->
 
 Datové schránky umožňují zasílání tzv. "poštovních datových zpráv", tedy zpráv zasílaných soukromými osobami nebo firmami, nikoliv orgány veřejné moci. V současnosti je pro nové schránky jejich příjem standardně povolen. Pokud ho chcete zakázat, třeba kvůli spamu, je to velice jednoduché.
 

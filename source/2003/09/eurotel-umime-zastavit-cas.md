@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-09-12T01:58:46+02:00 -->
-<!-- dcterms:dateAccepted = 2003-09-12T01:58:46+02:00 -->
+<!-- dcterms:date = 2003-09-12T01:58:46+02:00 -->
 
 Pokud to o mně ještě nevíte, tak *miluju reklamy*, zejména pak ty televizní a filmové. Tvůrci filmu mají nejméně hodinu na to, aby odvyprávěli příběh. Tvůrce televizní reklamy na to má v průměru okolo čtyřiceti vteřin.
 

@@ -17,14 +17,14 @@
 
   <xsl:template match="/">
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      <xsl:for-each select="//page[dcterms:dateAccepted and not(x4w:alternateUrl)]">
-        <xsl:sort select="dcterms:dateAccepted" order="descending" />
+      <xsl:for-each select="//page[dcterms:date and not(x4w:alternateUrl)]">
+        <xsl:sort select="dcterms:date" order="descending" />
         <url>
           <loc>
             <xsl:value-of select="concat('https://www.altair.blog', @path)" />
           </loc>
           <lastmod>
-            <xsl:value-of select="dcterms:dateAccepted"/>
+            <xsl:value-of select="dcterms:date"/>
           </lastmod>
         </url>
       </xsl:for-each>

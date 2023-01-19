@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-16T14:35:58+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-16T14:35:58+01:00 -->
+<!-- dcterms:date = 2003-02-16T14:35:58+01:00 -->
 
 Dnes mne zaujala [tato](http://www.ceskenoviny.cz/view-id.php4?id=20030212E03486) zpráva ČTK: *Naučit se práci s počítačem, aby mohli komunikovat se svými dětmi, které odmítají zasílat jiné než emailové dopisy, je častá motivace lidí, kteří se v prvním týdnu od vyhlášení přihlásili do kurzů národního programu počítačové gramotnosti.*
 

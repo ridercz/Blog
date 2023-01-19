@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-12-18T04:00:00+01:00 -->
-<!-- dcterms:dateAccepted = 2006-12-18T04:00:00+01:00 -->
+<!-- dcterms:date = 2006-12-18T04:00:00+01:00 -->
 
 Před malou chvílí jsem na webu publikoval oficiální výsledky soutěže[Komponenta roku 2006](http://komponenta-roku.aspnet.cz/), kterou vyhlásily společnosti Altairis, Gopas a Microsoft. Srdečně gratuluji výherci, kterým se stal Jiří Kanda a jeho control Scriptlet.
 

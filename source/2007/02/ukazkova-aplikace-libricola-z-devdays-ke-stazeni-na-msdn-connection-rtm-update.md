@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-02-23T22:53:22.087+01:00 -->
-<!-- dcterms:dateAccepted = 2007-02-23T22:53:22.087+01:00 -->
+<!-- dcterms:date = 2007-02-23T22:53:22.087+01:00 -->
 
 ***Update: Původně publikovaná verze byla určena pro ASP.NET AJAX Beta 2 a novější pro Release Candidate. Nyní na MSDN Connection najdete i variantu pro finální, ostrou verzi ASP.NET Ajax Extensions 1.0.***
 

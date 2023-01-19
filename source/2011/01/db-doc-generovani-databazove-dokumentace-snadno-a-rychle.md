@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-01-27T01:34:29.46+01:00 -->
 <!-- dcterms:dateSubmitted = 2011-01-27T01:35:00.973+01:00 -->
-<!-- dcterms:dateAccepted = 2011-01-27T01:37:38.787+01:00 -->
+<!-- dcterms:date = 2011-01-27T01:37:38.787+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20110127-db-doc-generovani-databazove-dokumentace-snadno-a-rychle.png -->

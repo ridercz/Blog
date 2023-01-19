@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-05-27 -->
+<!-- dcterms:date = 2022-05-27 -->
 <!-- x4w:alternateUrl = https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe -->

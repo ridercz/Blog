@@ -8,7 +8,7 @@
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2020-01-20 -->
+<!-- dcterms:date = 2020-01-20 -->
 
 Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování "chytré domácnosti" měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM.
 

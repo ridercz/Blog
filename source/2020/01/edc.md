@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Tipy, triky -->
-<!-- dcterms:dateAccepted = 2020-01-07 -->
+<!-- dcterms:date = 2020-01-07 -->
 
 Otázku zmíněnou v titulku dostávám docela často. A je pravda, že za léta častého cestování jsem sadu věcí, které s sebou pravidelně nosím, vyladil k dokonalosti. K přežití v divočině by mi asi mnoho platná nebyla, ale jako kvalitně domestikovaný valach se divočině spíš vyhýbám. Problematické situace, jejichž výskyt je u mne pravděpodobný, jsou poněkud... civilizovanějšího charakteru. Takže potřebuju spíš ten správný druh USB kabelu než křesadlo na nouzové rozdělání ohně.
 

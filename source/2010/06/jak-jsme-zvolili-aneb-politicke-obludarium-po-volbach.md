@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-06-02T23:25:39.7+02:00 -->
-<!-- dcterms:dateAccepted = 2010-06-03T12:19:10.717+02:00 -->
+<!-- dcterms:date = 2010-06-03T12:19:10.717+02:00 -->
 
 Nastal den zúčtování. Národ se vzepjal k výkonu volebního práva, jehož výronem jsou dvě stovky poslanců, na které budeme moci následující čtyři roky nadávat. Prvotním pocitem po skončení voleb je, alespoň v mém případě, úleva. Že skončila hysterická volební kampaň, která v podstatě nepřestala od minulých voleb.
 

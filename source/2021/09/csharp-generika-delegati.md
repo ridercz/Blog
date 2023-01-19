@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = C# pro mírně pokročilé -->
-<!-- dcterms:dateAccepted = 2021-09-02 -->
+<!-- dcterms:date = 2021-09-02 -->
 
 Uplynulý týden jsem bohužel zcela neplánovaně strávil v laskavé péči zdravotnického personálu Nemocnice na Bulovce. Ve čtvrtek se sice stihl vydat naplánovaný první díl seriálu o genetických typech v C#, ale už jsem nebyl schopen k tomu nic napsat. Činím tak tedy alespoň teď, spolu s popisem nového dílu o cestě od delegátů k lambda expressions.
 

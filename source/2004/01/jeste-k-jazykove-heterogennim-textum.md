@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-12T15:51:34+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-12T15:51:34+01:00 -->
+<!-- dcterms:date = 2004-01-12T15:51:34+01:00 -->
 
 Víceméně náhodou jsem se dostal na webové stránky [Jazykové poradny Ústavu pro jazyk český](http://www.ujc.cas.cz/poradna/). Vzpomněl jsem si na svůj problém se [začleňováním cizích slov do českého textu](http://weblog.rider.cz/ShowRecord.aspx?day=20031126#194641), a poslal v tomto duchu dotaz.
 

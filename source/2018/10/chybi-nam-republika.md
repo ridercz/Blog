@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Koně -->
-<!-- dcterms:dateAccepted = 2018-10-28 -->
+<!-- dcterms:date = 2018-10-28 -->
 
 Za několik okamžiků začnou bombastické oslavy stoletého výročí vzniku československé republiky. Tento státní svátek zcela zapadá do konceptu našich státních svátků, které jsou přehlídkou absurdna. Jako státní svátek oslavujeme zavraždění našeho národního patrona. Upálení další významné postavy českých dějin, jejíž následovníci utopili zemi v krvi. Příchod Cyrila a Metoděje, kteří nám přivezli náboženství ve které nevěříme, písmo jímž nepíšeme a jazyk jímž nemluvíme. To vše doplněno náboženskými svátky církví, k nimž se podle posledního sčítání lidu hlásí okolo deseti procent obyvatel. 
 

@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2021-01-11 -->
+<!-- dcterms:date = 2021-01-11 -->
 
 Vyrostl jsem v reálném socialismu a jeho mytologii. Jako rituály kola roku jsme měli v zimě Vítězný únor, na jaře 1. 5. a 9. květen a na podzim VŘSR (v létě byly prázdniny, všichni odjeli na chaty a žádný komunistický svátek se nekonal). A když se zrovna žádný rituál nechystal, stejně se všudypřítomným symbolům vyhnout nedalo. Kde nebyly rudé hvězdy, tam byl srp a kladivo nebo politická hesla, v čele s proslulým "Se Sovětským svazem na věčné časy a nikdy jinak".
 

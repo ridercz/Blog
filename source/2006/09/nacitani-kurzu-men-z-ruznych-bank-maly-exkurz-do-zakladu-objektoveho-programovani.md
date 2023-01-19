@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-09-19T01:46:48.023+02:00 -->
-<!-- dcterms:dateAccepted = 2006-09-19T01:46:48.023+02:00 -->
+<!-- dcterms:date = 2006-09-19T01:46:48.023+02:00 -->
 
 
 		<p>Do jednoho systému, který právě píšu, potřebuji automatické přepočítávání měn pomocí právě platného kurzu, a to navíc hned několika bank. Což je výborná možnost jak ukázat zase trochu <em>opravdového programování,</em> aby mi na cizích blozích v komentářích nevyčítali, že ukazuji jenom klikání uživatelského rozhraní.</p>

@@ -8,7 +8,7 @@
 <!-- x4w:category = Software -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2018-11-15 -->
+<!-- dcterms:date = 2018-11-15 -->
 
 Ještě nepříliš dávno jste pro vytvoření falešného přístupového bodu pro sociálně-inženýrské útoky potřebovali aspoň notebook s ne zcela běžnou Wi-Fi kartou. O něco později vám stačilo Raspberry Pi. Teď stačí mikrokontroler za dva dolary a můj open source projekt **[HoneyESP](https://github.com/ridercz/HoneyESP)**.
 

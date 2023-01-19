@@ -5,6 +5,6 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2018-09-29 -->
+<!-- dcterms:date = 2018-09-29 -->
 <!-- x4w:alternateUrl = https://byznys.ihned.cz/c7-66262960-psms7-238c9e12295e29c -->
 

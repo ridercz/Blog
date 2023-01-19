@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-10T21:05:02.03+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-10T21:05:02.03+01:00 -->
+<!-- dcterms:date = 2006-01-10T21:05:02.03+01:00 -->
 
 Při hraní si s novou RSS čtečkou jsem si uvědomil, že čtu řadu zajímavých webů, které ale mnohdy nepatří mezi příliš známé. Tímto je vřele doporučuji vaší pozornosti.
 

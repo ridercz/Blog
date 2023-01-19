@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20201118-identity-email.jpg -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-11-18 -->
+<!-- dcterms:date = 2020-11-18 -->
 
 ASP.NET Identity při přihlášení vyžaduje uživatelské jméno. Jak ale zařídit, aby se uživatel mohl přihlásit i bez něj, pouze pomocí e-mailové adresy? Nebo aby separátní uživatelské jméno vůbec neměl? Ukážu vám třídy `UserManager` a `SignInManager`, jejichž změnou můžete v aplikaci udělat velké věci.
 

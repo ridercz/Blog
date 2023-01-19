@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-03-25T20:13:24+01:00 -->
-<!-- dcterms:dateAccepted = 2004-03-25T20:13:24+01:00 -->
+<!-- dcterms:date = 2004-03-25T20:13:24+01:00 -->
 
 V duchu nejlepších tradic tohoto blogu nabízím k prodeji chytré zařízení s názvem **iTec V-MP3H**.
 

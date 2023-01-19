@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-09-03T17:23:54.903+02:00 -->
-<!-- dcterms:dateAccepted = 2004-09-03T17:23:54.903+02:00 -->
+<!-- dcterms:date = 2004-09-03T17:23:54.903+02:00 -->
 
 Ačkoliv jsem [před rokem](/entry/month-200308.aspx) prohlašoval, že mne na vodu už nikdo nikdy nedostane, potvrdila se pravdivost úsloví "nikdy neříkej nikdy". Po mém [památném posledním místě](http://www.bdsm.cz/art/clanek.asp?id=916) v parkuru Mysh prohlásila cosi v tom smyslu, že koně je třeba prohnat a Valáška zejména a že další výlet na Vltavu je přesně tím ideálním prostředkem. Kdo jsem já, abych protestoval.
 

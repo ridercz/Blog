@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Reklamní a informační displeje všeho druhu - tomu se říká digital signage. Vytvářím teď jednu takovou věc pro svou veterinářku (resp. veterinářku mých psů, mne léčit nechce, že prej jsem antropomorfní) a zkoumal jsem, jak na to co nejsnáz. A objevil jsem projekt Screenly. V závěru článku najdete pozvánku na akci, kde se budu různému využití Raspberry Pi věnovat podrobněji. -->
 <!-- x4w:category = Bastlení -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-12-27 -->
+<!-- dcterms:date = 2019-12-27 -->
 <!-- x4w:coverUrl = /cover-pictures/20191227-digital-signage.jpg -->
 <!-- x4w:coverCredits = Omar Davis via Flickr, CC BY-ND -->
 <!-- x4w:pictureUrl = /perex-pictures/20191227-digital-signage.jpg -->

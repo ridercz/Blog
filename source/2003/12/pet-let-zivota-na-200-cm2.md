@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-04T05:13:26+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-04T05:13:26+01:00 -->
+<!-- dcterms:date = 2003-12-04T05:13:26+01:00 -->
 
 [![DVD-R v mechanice](http://weblog.rider.cz/files/tech_placka_lq.jpg)](http://weblog.rider.cz/files/tech_placka_hq.jpg)Poslední dobou se mi zdá, že začínám trpět DVD obsesí. Moje spotřeba DVD-R médií poslední dobou přesahuje spotřebu cédéček a potvrzuje tak variaci na Murphyho: *každé neočekávané příjmy jsou provázeny stejně neočekávanými výdaji*. V tomto případě tedy spíše *řádové zvýšení kapacity záznamových médií znamená řádové zvýšení objemu dat, která je třeba uchovat*.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-26T05:05:51+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-26T05:05:51+01:00 -->
+<!-- dcterms:date = 2004-01-26T05:05:51+01:00 -->
 
 [![Esta](http://gallery.rider.cz/Esta/20040122-154648-0000.jpg?w=200 "Esta")](http://gallery.rider.cz/Esta/) 
 

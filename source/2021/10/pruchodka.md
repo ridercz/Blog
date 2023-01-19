@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-10-26 -->
+<!-- dcterms:date = 2021-10-26 -->
 
 Obvykle u svých modelů prezentuji hotová řešení. Jenomže ono to často nevyjde na první pokus. 3D tisk je ovšem nástrojem pro rychlé prototypování a iterativní vývoj. Na příkladu jednoduché průchodky vám ukážu postupný vývoj a ladění.
 

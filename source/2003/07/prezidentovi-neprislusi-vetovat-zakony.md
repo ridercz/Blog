@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-07-20T15:29:24+02:00 -->
-<!-- dcterms:dateAccepted = 2003-07-20T15:29:24+02:00 -->
+<!-- dcterms:date = 2003-07-20T15:29:24+02:00 -->
 
 Alepoň si to myslí podle [této zprávy ČTK](http://www.ceskenoviny.cz/view-id.php4?vid=130062) náš slovutný ministerský předseda. Chápu, že ho příliš nerozradostňuje situace, kdy na Hradě sedí jeho největší politický rival, ale upírat prezidentovi ústavou dané právo je IMHO trochu moc.
 

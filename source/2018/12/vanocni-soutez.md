@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2018-12-22 -->
+<!-- dcterms:date = 2018-12-22 -->
 
 Všechno začalo tím, že jsem vytvořil naprosto nevinnou novoročenku, ostatně jako každý rok. Vypadá takto:
 

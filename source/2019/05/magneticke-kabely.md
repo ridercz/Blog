@@ -4,7 +4,7 @@
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Recenze -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-05-11 -->
+<!-- dcterms:date = 2019-05-11 -->
 <!-- x4w:coverUrl = /cover-pictures/20190511-magneticke-kabely.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20190511-magneticke-kabely.jpg -->
 <!-- x4w:pictureWidth = 150 -->

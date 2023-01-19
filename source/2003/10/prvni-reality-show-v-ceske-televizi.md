@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-10-26T15:14:20+01:00 -->
-<!-- dcterms:dateAccepted = 2003-10-26T15:14:20+01:00 -->
+<!-- dcterms:date = 2003-10-26T15:14:20+01:00 -->
 
 Jest třeba zapsat do analů, že kam až má paměť sahá - což na druhou stranu nic moc neznamená - historicky poprvé souhlasím s Vladimírem Špidlou, který podle iDnes [označil připravovaný přímý přenos přelíčení s Karlem Srbou](http://zpravy.idnes.cz/domaci.asp?r=domaci&c=A031024_155810_domaci_has&l=1) za reality show.
 

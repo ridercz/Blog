@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-11-05T14:41:40.033+01:00 -->
-<!-- dcterms:dateAccepted = 2011-11-05T14:41:41+01:00 -->
+<!-- dcterms:date = 2011-11-05T14:41:41+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20111105-chcete-vedet-na-co-se-pripravit-v-roce-2012-prijdte-na-devcon-2011.png -->

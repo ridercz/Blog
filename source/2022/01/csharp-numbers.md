@@ -9,7 +9,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = C# pro mírně pokročilé -->
-<!-- dcterms:dateAccepted = 2022-01-06 -->
+<!-- dcterms:date = 2022-01-06 -->
 
 I úplní počítačoví laici vědí, že počítače počítají ve dvojkové soustavě - že přemýšlejí v jedničkách a nulách. Pojďme se podívat na to, jak je to doopravdy a jak funguje ukládání celých čísel se znaménkem i bez znaménka v jazyce C# a prostředí .NET. A jak to souvisí s tím, že mnoho Microsoft Exchange serverů přestalo na Nový rok 2022 úderem půlnoci doručovat poštu.
 

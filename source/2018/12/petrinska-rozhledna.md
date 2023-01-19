@@ -9,7 +9,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Koně -->
 <!-- x4w:category = BDSM -->
-<!-- dcterms:dateAccepted = 2018-12-20 -->
+<!-- dcterms:date = 2018-12-20 -->
 
 Na [Asku](https://ask.fm/ridercz) se mne někdo zeptal, co už nikdy v životě neudělám. Takových věcí je hodně, ale k jedné se váže zajímavá historka, o kterou se s vámi chci podělit. Už nikdy v životě nevylezu na petřínskou rozhlednu.
 

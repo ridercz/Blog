@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-11-14T06:10:36.463+01:00 -->
-<!-- dcterms:dateAccepted = 2004-11-14T06:10:36.463+01:00 -->
+<!-- dcterms:date = 2004-11-14T06:10:36.463+01:00 -->
 
 Invaze Spojených států do Iráku a nověji prezidentské volby poněkud polarizovaly světovou i českou veřejnost. Začala se dělit na amerikanofily a američanobijce. Jsem kus od obojího.
 

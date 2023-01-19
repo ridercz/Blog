@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-08T23:59:57.61+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-08T23:59:57.61+01:00 -->
+<!-- dcterms:date = 2005-01-08T23:59:57.61+01:00 -->
 
 Ačkoliv ASP.NET samy řeší řadu úloh, ke kterým se zpravidla používají cookies, představují HTTP sušenky užitečný způsob, jak si klienta "označkovat" a příště ho zase poznat. Implementace práce s cookies v ASP.NET ovšem neskrývá jisté záludnosti. Pokud se chcete dozvědět něco málo o základních principech fungování cookies, přečtěte si [článek](http://archive.aspnetwork.cz/art/clanek.asp?id=151) dříve vydaný na ASP Network. Týká se sice klasických ASP 3.0, ale princip je pořád stejný.
 

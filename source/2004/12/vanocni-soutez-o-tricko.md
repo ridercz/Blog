@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-12-24T04:30:23.727+01:00 -->
-<!-- dcterms:dateAccepted = 2004-12-24T04:30:23.727+01:00 -->
+<!-- dcterms:date = 2004-12-24T04:30:23.727+01:00 -->
 
 Onehdá jsem se tady rozepisoval o [přidělování jmen počítačům](/entry/article-20041205.aspx). Od té doby se řady našich serverů rozrostly o další dva kousky jménem **Chalco** a **Registana**.
 

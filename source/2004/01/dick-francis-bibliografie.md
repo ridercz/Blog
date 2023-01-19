@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-14T17:31:35+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-14T17:31:35+01:00 -->
+<!-- dcterms:date = 2004-01-14T17:31:35+01:00 -->
 
 Jak jsem slíbil, zde je bibliografie Dicka Francise. Poslední sloupec je rok anglického vydání knihy.
 

@@ -56,7 +56,7 @@
     <xsl:param name="Category" />
     <xsl:param name="PageNumber" select="1" />
 
-    <xsl:variable name="ArticleCount" select="count(//page[x4w:category = $Category and dcterms:dateAccepted])" />
+    <xsl:variable name="ArticleCount" select="count(//page[x4w:category = $Category and dcterms:date])" />
     <xsl:variable name="PageCount" select="ceiling($ArticleCount div $x4c:PageSize)" />
 
     <x4o:document>
@@ -88,8 +88,8 @@
               <xsl:value-of select="concat('Rubrika ', $Category)"/>
             </h1>
             <section class="artlist">
-              <xsl:for-each select="//page[x4w:category = $Category and dcterms:dateAccepted]">
-                <xsl:sort select="dcterms:dateAccepted" order="descending" />
+              <xsl:for-each select="//page[x4w:category = $Category and dcterms:date]">
+                <xsl:sort select="dcterms:date" order="descending" />
                 <xsl:if test="position() &gt;= $FromPosition and position() &lt;= $ToPosition">
                   <xsl:call-template name="ArticleLink" >
                     <xsl:with-param name="ShowCategories" select="0" />

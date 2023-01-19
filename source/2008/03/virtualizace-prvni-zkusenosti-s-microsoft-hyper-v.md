@@ -9,7 +9,7 @@
 <!-- np9:serialId = 1 -->
 <!-- x4w:serial = Virtualizace -->
 <!-- dcterms:created = 2008-03-18T18:31:41.287+01:00 -->
-<!-- dcterms:dateAccepted = 2008-03-18T18:31:41.287+01:00 -->
+<!-- dcterms:date = 2008-03-18T18:31:41.287+01:00 -->
 
 Technologie Hyper-V je součástí Windows Serveru 2008. Svým určením je to v podstatě nástupce Virtual Serveru 2005 (o kterém jsem zde již [psal](https://www.aspnet.cz/Articles/110-virtualizace-virtual-server-2005-r2.aspx), stejně jako o obecných principech [virtualizace](https://www.aspnet.cz/Articles/103-virtualizace-uvod.aspx)).
 

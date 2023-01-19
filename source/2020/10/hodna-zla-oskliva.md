@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2020-10-18 -->
+<!-- dcterms:date = 2020-10-18 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66831580-psms7-e490013d4667ce5 -->

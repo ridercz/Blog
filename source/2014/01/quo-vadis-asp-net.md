@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-12-31T04:41:57.71+01:00 -->
-<!-- dcterms:dateAccepted = 2014-01-01T12:00:00+01:00 -->
+<!-- dcterms:date = 2014-01-01T12:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20140101-quo-vadis-asp-net.png -->

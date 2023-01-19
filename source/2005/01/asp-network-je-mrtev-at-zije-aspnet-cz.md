@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-01T21:45:08+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-01T21:45:08+01:00 -->
+<!-- dcterms:date = 2005-01-01T21:45:08+01:00 -->
 
 Po necelých pěti letech jsem se rozhodl ukončit provoz serveru **ASP Network** (alias **ASP.CZ**). Archiv článků najdete na adrese [http://archive.aspnetwork.cz/](http://archive.aspnetwork.cz/). Publikování se ovšem nevzdávám, mé hlubokomyslné myšlenky jest nadále nalézti na tomto serveru s názvem **ASPNET.CZ**.
 

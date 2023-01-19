@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-04-01T19:45:35+02:00 -->
-<!-- dcterms:dateAccepted = 2004-04-01T19:45:35+02:00 -->
+<!-- dcterms:date = 2004-04-01T19:45:35+02:00 -->
 
 Vlka správně odhadla, že při nastoleném vývoji trendu svého charakteru má velkou šanci že dříve či později skončí za mřížemi. A protože si cení své svobody, začala se připravovat na útěk metodou ostřílených kriminálníků: kutáním tunelů.
 

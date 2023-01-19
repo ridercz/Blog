@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-14T00:34:34+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-14T00:34:34+02:00 -->
+<!-- dcterms:date = 2003-06-14T00:34:34+02:00 -->
 
 Tak nějak si říkám, zda nežiji v nějakém divném státě. Z [článku na iDnes](http://zpravy.idnes.cz/eunie.asp?r=eunie&c=A030611_103507_eunie_mhk&l=1), dotazů a odpovědí **Vladimíra Špidly**:
 

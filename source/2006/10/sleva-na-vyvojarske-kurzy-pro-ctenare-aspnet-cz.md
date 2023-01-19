@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-10-18T02:31:08.5+02:00 -->
-<!-- dcterms:dateAccepted = 2006-10-18T02:31:08.5+02:00 -->
+<!-- dcterms:date = 2006-10-18T02:31:08.5+02:00 -->
 
  ![Počítačová škola GOPAS](https://www.cdn.altairis.cz/Blog/2006/20061018-gopas.jpg)Jak je minimálně některým z vás již známo, pracuji mimo jiné jako lektor pro [počítačovou školu Gopas](http://www.gopas.cz/). Naše spolupráce se slibně rozvíjí a to je dobrá zpráva i pro čtenáře webu ASPNET.CZ.
 

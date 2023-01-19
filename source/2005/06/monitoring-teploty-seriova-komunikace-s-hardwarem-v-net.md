@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-18T17:52:04.293+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-18T17:52:04.293+02:00 -->
+<!-- dcterms:date = 2005-06-18T17:52:04.293+02:00 -->
 
 
 		<p>Jednou z velmi užitečných vlastností platformy .NET je, že se neomezuje jenom na jeden typ aplikací. Ve stejném jazyce, vývojovém prostředí a stejnými technologiemi lze psát aplikace webové (Web Forms), desktopové (Windows Forms) i pro kapesní počítače (Compact Framework).</p>

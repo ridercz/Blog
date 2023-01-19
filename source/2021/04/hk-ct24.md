@@ -7,5 +7,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-04-16T16:30:00 -->
+<!-- dcterms:date = 2021-04-16T16:30:00 -->
 <!-- x4w:alternateUrl = https://www.ceskatelevize.cz/ivysilani/10101491767-studio-ct24/221411058310416 -->

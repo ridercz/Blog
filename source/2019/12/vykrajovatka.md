@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Jedním z nejoblíbenějších 3D tištěných předmětů jsou kolem Vánoc vykrajovátka na vánoční cukroví. Když si na Thingiverse necháte vyhledat "cookie cutter", najdete skoro 6000 výsledků. Ukážu vám, jak vykrajovátko jednoduše vytvořit z jakéhokoliv SVG souboru pomocí OpenSCADu. -->
 <!-- x4w:category = 3D tisk -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-12-04 -->
+<!-- dcterms:date = 2019-12-04 -->
 <!-- x4w:pictureUrl = /perex-pictures/20191204-vykrajovatka.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

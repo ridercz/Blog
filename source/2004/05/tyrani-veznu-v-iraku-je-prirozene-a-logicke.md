@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-05-08T23:58:41+02:00 -->
-<!-- dcterms:dateAccepted = 2004-05-08T23:58:41+02:00 -->
+<!-- dcterms:date = 2004-05-08T23:58:41+02:00 -->
 
 Celý svět je zdá se pobouřen a překvapen tím, že [američtí vojáci v Iráku ponižují a týrají své vězně](http://www.cnn.com/2004/WORLD/meast/05/08/iraq.abuse.main/index.html).
 

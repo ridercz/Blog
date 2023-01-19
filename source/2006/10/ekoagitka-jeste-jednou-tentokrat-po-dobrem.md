@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-10-29T15:42:32.217+01:00 -->
-<!-- dcterms:dateAccepted = 2006-10-29T15:42:32.217+01:00 -->
+<!-- dcterms:date = 2006-10-29T15:42:32.217+01:00 -->
 
 Před pár dny jsem se v článku [Koňský trus a ekologická agitka](https://www.weblog.rider.cz/Articles/230-konsky-trus-a-ekologicka-agitka.aspx) nelaskavě vyjadřoval o negativní agitaci doprovázející výstavu fotografií *Země krásná neznámá*. Včera na ČN vyšel rozhovor s dánským statistikem Bjornem Lomborgem, pod provokujícím titulkem [Skeptický ekolog: Ropa nikdy nedojde a svět je krásný](http://cestovani.idnes.cz/skepticky-ekolog-ropa-nikdy-nedojde-a-svet-je-krasny-f91-/igsvet.asp?c=A061027_184125_igsvet_tom).
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-05T19:07:03+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-05T19:07:03+02:00 -->
+<!-- dcterms:date = 2003-05-05T19:07:03+02:00 -->
 
 Slovy v titulku reagoval podle zprávy [iDnes](http://zpravy.idnes.cz/domaci.asp?r=domaci&c=A030504_220935_domaci_pol&t=A030504_220935_domaci_pol&r2=domaci) zřejmě šokovaný ředitel pražského Ústavu pro péči o matku a dítě, když se dozvěděl o poslaneckém návrhu zákona, který by měl postavit mimo zákon interrupce, a to pod trestem až pěti let vězení. Moje reakce obsahovala cosi o blahoslavených chudých duchem. Vzhledem k tomu, že hlavní předkladatelé zákona pocházejí z KDU-ČSL, mohl by jim tento biblický citát být povědomý.
 

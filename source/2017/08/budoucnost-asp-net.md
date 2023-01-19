@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2017-08-04T01:49:39.51+02:00 -->
-<!-- dcterms:dateAccepted = 2017-08-04T02:42:17+02:00 -->
+<!-- dcterms:date = 2017-08-04T02:42:17+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20170804-budoucnost-asp-net.jpg -->

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-05-09T07:09:55+02:00 -->
-<!-- dcterms:dateAccepted = 2004-05-09T07:09:55+02:00 -->
+<!-- dcterms:date = 2004-05-09T07:09:55+02:00 -->
 
 Nepočítám-li předpůlnoční [výkřik ohledně Iráku](http://weblog.rider.cz/ShowRecord.aspx?day=20040508), měsíc jsem na blog nic nenapsal.
 

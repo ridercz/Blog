@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-21T17:50:21.667+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-21T17:50:21.667+01:00 -->
+<!-- dcterms:date = 2005-12-21T17:50:21.667+01:00 -->
 
 ![Age of Empires III](https://www.cdn.altairis.cz/Blog/2005/20051221-AgeOfEmpires.jpg) 
 

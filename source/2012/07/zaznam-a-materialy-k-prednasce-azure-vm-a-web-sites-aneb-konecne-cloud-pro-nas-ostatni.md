@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-07-05T15:59:37.757+02:00 -->
-<!-- dcterms:dateAccepted = 2012-07-05T15:45:00+02:00 -->
+<!-- dcterms:date = 2012-07-05T15:45:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120705-zaznam-a-materialy-k-prednasce-azure-vm-a-web-sites-aneb-konecne-cloud-pro-nas-ostatni.jpg -->

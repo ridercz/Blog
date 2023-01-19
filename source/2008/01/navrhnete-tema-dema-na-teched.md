@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-01-23T08:23:01.25+01:00 -->
-<!-- dcterms:dateAccepted = 2008-01-23T08:23:01.25+01:00 -->
+<!-- dcterms:date = 2008-01-23T08:23:01.25+01:00 -->
 
 Na Developer Days 2006 měla obrovský úspěch přednáška "[ASP.NET pro školu, úřad i dům](http://videoarchiv.altairis.cz/Entry/10-microsoft-developer-days-2006-asp-net-pro-skolu-urad-i-dum.aspx)", která byla v podstatě celá jedno velké demo a v průběhu které jsem pomocí (tehdy) aktuáních technologií napsal kompletní aplikaci. Rád bych totéž předvedl na letošním [TechEdu](http://www.teched.cz/). 
 

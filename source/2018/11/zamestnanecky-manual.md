@@ -3,7 +3,7 @@
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2018-07-07 -->
-<!-- dcterms:dateAccepted = 2018-11-08 -->
+<!-- dcterms:date = 2018-11-08 -->
 <!-- x4w:pictureUrl = /perex-pictures/20181108-zamestnanecky-manual.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

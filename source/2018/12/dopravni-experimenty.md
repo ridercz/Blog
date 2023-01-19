@@ -8,7 +8,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20181225-dopravni-experimenty.jpg -->
 <!-- x4w:coverCredits = Daniel Lobo via Flickr, CC BY -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2018-12-25 -->
+<!-- dcterms:date = 2018-12-25 -->
 
 Praha 7 je od začátku minulého volebního období výkladní skříní a vzorem všech omezovačů dopravy. Radním proti dopravě se stal Ondřej Mirovský za Stranu zelených a to není nikdy dobré znamení. Takže tu máme všechno: nesmyslnou "zónu 30", zákaz vjezdu Segwayů, rušení parkovacích míst, nevyužívané a nebezpečné cyklopruhy&hellip; prostě obvyklé znaky dopravního džihádu.
 

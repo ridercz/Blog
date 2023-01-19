@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-22T00:17:23.627+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-22T00:17:23.627+01:00 -->
+<!-- dcterms:date = 2005-01-22T00:17:23.627+01:00 -->
 
 Používat či nepoužívat? Mezi příznivci a odpůrci uložených procedur se vede letitá zákopová válka. Jeden z nejaktuálnějších výstřelů najdete například na blogu [Franse Boumy](http://weblogs.asp.net/fbouma/archive/2003/11/18/38178.aspx). Velká část programátorů (zejména začínajících) ale vůbec neví co uložené procedury (stored procedures) jsou a jak se používají. Právě jim je určen tento článek. Zda je budete využívat nebo ne, už nechávám na vás.
 

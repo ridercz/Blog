@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-06-06T16:12:25.63+02:00 -->
-<!-- dcterms:dateAccepted = 2006-06-06T16:12:25.63+02:00 -->
+<!-- dcterms:date = 2006-06-06T16:12:25.63+02:00 -->
 
 Dne **8. června 2006 (čtvrtek) v 17:00** se v Brně uskuteční v rámci aktivit [CsWUG](http://www.wug.cz/) moje přednáška o pokročilé tvorbě uživatelského rozhraní v ASP.NET 2.0. Můžete ji chápat jako volné pokračování [akce uskutečněné 26. 04. v Praze](https://www.aspnet.cz/Articles/90-zaznam-seminare-net-group-o-asp-net-2-0.aspx).
 

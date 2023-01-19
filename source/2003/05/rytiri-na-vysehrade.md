@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-18T02:37:45+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-18T02:37:45+02:00 -->
+<!-- dcterms:date = 2003-05-18T02:37:45+02:00 -->
 
 ![Rytířské klání na Vyšehradě](https://www.cdn.altairis.cz/Blog/traken.jpg)Včera jsme s Myshí navštívili rytířské klání, které na Vyšehradě pořádá skupina Traken (bohužel se mi nepodařilo najít nikde na Internetu jejich webovské stránky).
 

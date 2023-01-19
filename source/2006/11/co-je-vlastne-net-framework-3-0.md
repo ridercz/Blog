@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-11-16T21:10:30.447+01:00 -->
-<!-- dcterms:dateAccepted = 2006-11-16T21:10:30.447+01:00 -->
+<!-- dcterms:date = 2006-11-16T21:10:30.447+01:00 -->
 
 Před několika dny byla uvolněna finální verze .NET Frameworku 3.0. Číslování je to vpravdě poněkud nešťastné a matoucí, protože prakticky vzato se o novou verzi .NETu nejedná.
 

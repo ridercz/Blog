@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = ReP -->
-<!-- dcterms:dateAccepted = 2021-03-02 -->
+<!-- dcterms:date = 2021-03-02 -->
 <!-- x4w:alternateUrl = https://www.youtube.com/watch?v=Y0NzSa7QJDE -->

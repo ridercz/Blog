@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-04T13:15:55+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-04T13:15:55+01:00 -->
+<!-- dcterms:date = 2003-03-04T13:15:55+01:00 -->
 
 Než jsem začal vyrábět DVDčka, pochvaloval jsem si, jak mám rychlý počítač (1.7GHz P4). Komprimace MPEG-2 a muxování DVD mne nutí tento názor trochu přehodnotit ;-)
 

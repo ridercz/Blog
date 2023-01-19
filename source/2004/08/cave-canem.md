@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-08-05T02:47:45.5+02:00 -->
-<!-- dcterms:dateAccepted = 2004-08-05T02:47:45.5+02:00 -->
+<!-- dcterms:date = 2004-08-05T02:47:45.5+02:00 -->
 
 Jako by nestačil přirozený úbytek obyvatelstva způsobený neochotou Čechů množit se, je česká populace systematicky decimována útoky psů, zakusujících jedno dítě za druhým. Přibližně tohoto dojmu lze nabýt v okamžiku, podíváme-li se na zpravodajství českých médií. <acronym title="Pozor, pes! (lat.)">Cave canem!</acronym>
 

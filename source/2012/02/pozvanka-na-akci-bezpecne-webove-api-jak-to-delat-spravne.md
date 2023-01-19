@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-02-21T01:29:28.643+01:00 -->
-<!-- dcterms:dateAccepted = 2012-02-22T01:28:00+01:00 -->
+<!-- dcterms:date = 2012-02-22T01:28:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120222-pozvanka-na-akci-bezpecne-webove-api-jak-to-delat-spravne.jpg -->

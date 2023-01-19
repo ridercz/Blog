@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-03-23T23:00:46.677+01:00 -->
-<!-- dcterms:dateAccepted = 2012-03-23T23:00:49+01:00 -->
+<!-- dcterms:date = 2012-03-23T23:00:49+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-altairis.png -->

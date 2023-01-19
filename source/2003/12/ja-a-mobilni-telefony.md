@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-10T20:25:40+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-10T20:25:40+01:00 -->
+<!-- dcterms:date = 2003-12-10T20:25:40+01:00 -->
 
 Někdo má heroin, já komunikaci -- typ závislosti, cenová náročnost a abstinenční příznaky jsou zhruba stejné :-) K úvaze mne přivedl [článeček na jakémsi blogu](http://www.pooh.cz/a.asp?a=2007813&db=): podle čeho si vlastně vybírám mobilní telefon?
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-04-30T22:24:34.52+02:00 -->
-<!-- dcterms:dateAccepted = 2008-04-30T22:24:34.52+02:00 -->
+<!-- dcterms:date = 2008-04-30T22:24:34.52+02:00 -->
 
 Jak mi laskavě připomněla řada z vás v [komentářích](http://www.aspnet.cz/Articles/198-novinky-v-c-3-0-a-linq-pro-bezne-smrtelniky.aspx#comments) k pozvánce na dnešní seminář, náš videoarchiv by potřeboval oživit a z přednášek by bylo dobré pořizovat záznamy. Lidé z daleka, pohybově omezení, časově vytížení... Zájem je velký (přednášku udělám pro sto lidí a záznam si stáhne 3-10 000). Tak proč to nedělám?
 

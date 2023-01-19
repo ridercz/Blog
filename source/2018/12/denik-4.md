@@ -7,4 +7,4 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Steven Depolo via Flickr, CC BY -->
 <!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-4 -->
-<!-- dcterms:dateAccepted = 2018-12-17 -->
+<!-- dcterms:date = 2018-12-17 -->

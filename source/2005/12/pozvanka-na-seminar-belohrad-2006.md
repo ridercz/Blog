@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-02T04:55:25.653+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-02T04:55:25.653+01:00 -->
+<!-- dcterms:date = 2005-12-02T04:55:25.653+01:00 -->
 
 Letošní programátorský seminář Bělohrad 2006 se bude konat **15-16. března 2006**.
 

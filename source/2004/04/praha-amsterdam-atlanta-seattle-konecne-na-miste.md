@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-04-06T08:04:14+02:00 -->
-<!-- dcterms:dateAccepted = 2004-04-06T08:04:14+02:00 -->
+<!-- dcterms:date = 2004-04-06T08:04:14+02:00 -->
 
 Vždycky jsem záviděl románovým hrdinům samozřejmou lehkost, s jakou letadly cestovali po celém světě. Cestu skoro kolem světa lze podniknout i nedobrovolně a poté, co jsem tak učinil, jsem přestal Forsythovým literárním postavám závidět.
 

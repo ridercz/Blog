@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20220113-html5-details.jpg -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-01-13 -->
+<!-- dcterms:date = 2022-01-13 -->
 
 Ve specifikaci HTML 5 se najde řada užitečných elementů, které nejsou příliš známé a weboví programátoři je nevyužívají nebo nevyužívají dostatečně a zbytečně pak používají složité CSS konstrukce nebo JavaScript. Před časem jsem [psal o elementu `DATALIST`](/2020/05/datalist), který umožňuje nativní autocomplete. Nyní přišla řada na element `DETAILS` a jeho druha `SUMMARY`.
 

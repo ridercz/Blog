@@ -17,7 +17,7 @@
 
   <xsl:param name="x4c:PageSize" />
 
-  <xsl:variable name="ArticleCount" select="count(//page[dcterms:dateAccepted])" />
+  <xsl:variable name="ArticleCount" select="count(//page[dcterms:date])" />
   <xsl:variable name="PageCount" select="ceiling($ArticleCount div $x4c:PageSize)" />
 
   <xsl:template match="/">
@@ -54,8 +54,8 @@
           <main>
             <h1>Archiv článků</h1>
             <section class="artlist">
-              <xsl:for-each select="//page[dcterms:dateAccepted]">
-                <xsl:sort select="dcterms:dateAccepted" order="descending" />
+              <xsl:for-each select="//page[dcterms:date]">
+                <xsl:sort select="dcterms:date" order="descending" />
                 <xsl:if test="position() &gt;= $FromPosition and position() &lt;= $ToPosition">
                   <xsl:call-template name="ArticleLink" />
                 </xsl:if>

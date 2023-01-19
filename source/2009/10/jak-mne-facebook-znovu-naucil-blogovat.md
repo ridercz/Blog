@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-10-29T04:42:17.5+01:00 -->
-<!-- dcterms:dateAccepted = 2009-10-29T04:42:17.697+01:00 -->
+<!-- dcterms:date = 2009-10-29T04:42:17.697+01:00 -->
 
 Začal jsem blogovat před více než šesti lety (koncem ledna 2003) a přesně před třemi lety jsem s tím přestal. Začal jsem mít pocit, že už nějak nemám světu co říct. Díky Facebooku jsem ho po letech zase získal a obnovuji tedy činnost tohoto webu. 
 

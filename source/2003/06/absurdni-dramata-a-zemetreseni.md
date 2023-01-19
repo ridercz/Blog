@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-09T04:15:31+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-09T04:15:31+02:00 -->
+<!-- dcterms:date = 2003-06-09T04:15:31+02:00 -->
 
 Přestože absurdního dramatika na prezidentském postu jsme se už chválabohu konečně zbavili, česká politika absurdní drama připomíná i nadále. Další dějiství má na svědomí dnes již bývalý ministr obrany **Jaroslav Tvrdík**. Demise podaná, odvolaná, pak znovu podaná... Jak "u blbejch na dvorečku".
 

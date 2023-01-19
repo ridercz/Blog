@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-09-23T16:25:39.927+02:00 -->
-<!-- dcterms:dateAccepted = 2004-09-23T16:25:39.927+02:00 -->
+<!-- dcterms:date = 2004-09-23T16:25:39.927+02:00 -->
 
 Vařím celkem rád. Tak jednou měsíčně. A Mysh je na tom vcelku podobně. Obvykle tedy stravovací potřeby řešíme buď návštěvou blízkých pohostinství nebo s povzdechem splichtíme jakousi potravu.
 

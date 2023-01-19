@@ -3,7 +3,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Politika -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-01-31 -->
+<!-- dcterms:date = 2019-01-31 -->
 <!-- x4w:pictureUrl = /perex-pictures/20190131-mate-slovo.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

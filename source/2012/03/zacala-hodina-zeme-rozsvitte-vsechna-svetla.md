@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-03-31T20:34:20.533+02:00 -->
-<!-- dcterms:dateAccepted = 2012-03-31T20:30:00+02:00 -->
+<!-- dcterms:date = 2012-03-31T20:30:00+02:00 -->
 
 Právě u nás začala akce nazvaná Hodina Země, v rámci které jsou po celém světě vypínána veřejná a slavnostní osvětlení. Pokud vás opravdu zajímá trvalá udržitelnost života na zemi a nejenom prázdná gesta, rozsviťte místo toho všechna světla, co jich doma máte. Zhasnutí světel je krok čistě symbolický. A symbolický v mnoha rovinách, včetně mnohých, u kterých se to tvůrcům akce líbit nebude.
 

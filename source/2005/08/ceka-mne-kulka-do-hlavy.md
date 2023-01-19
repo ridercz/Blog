@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-05T16:57:23.7+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-05T16:57:23.7+02:00 -->
+<!-- dcterms:date = 2005-08-05T16:57:23.7+02:00 -->
 
 Když se kácí les, lítají třísky. Vypadá to, že vbrzku položím život ve válce proti terorismu. Jako nevinná oběť.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-03-07T14:26:27.663+01:00 -->
-<!-- dcterms:dateAccepted = 2007-03-07T14:26:27.663+01:00 -->
+<!-- dcterms:date = 2007-03-07T14:26:27.663+01:00 -->
 
 Ve spolupráci s počítačovou školou Gopas jsme pro vás připravili soutěž. Hlavní cenou je poukaz na bezplatnou účast na dvoudenním kurzu **GOC37: ASP.NET Ajax a další rozšíření ASP.NET 2.0 **. 
 

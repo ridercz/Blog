@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-08-24T03:43:12.343+02:00 -->
-<!-- dcterms:dateAccepted = 2004-08-24T03:43:12.343+02:00 -->
+<!-- dcterms:date = 2004-08-24T03:43:12.343+02:00 -->
 
 Právě jsme se s [Estou](http://www.vlcak.cz/) vrátili z půlnočního venčení. Tedy, ne že bychom venku běhali od půlnoci, to je jenom náš malý terminus technicus pro krátkou noční procházku za účelem vyčurání.
 

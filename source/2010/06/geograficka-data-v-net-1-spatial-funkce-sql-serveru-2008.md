@@ -9,7 +9,7 @@
 <!-- np9:serialId = 6 -->
 <!-- x4w:serial = Geografická data v .NET -->
 <!-- dcterms:created = 2010-06-03T19:06:25.327+02:00 -->
-<!-- dcterms:dateAccepted = 2010-06-03T19:06:27+02:00 -->
+<!-- dcterms:date = 2010-06-03T19:06:27+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100603-geograficka-data-v-net-1-spatial-funkce-sql-serveru-2008.png -->

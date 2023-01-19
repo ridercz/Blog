@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-03-27T14:34:03.847+01:00 -->
-<!-- dcterms:dateAccepted = 2009-03-27T14:34:03.847+01:00 -->
+<!-- dcterms:date = 2009-03-27T14:34:03.847+01:00 -->
 
 Máte rádi odborné konference, ale nemáte čas, peníze či sílu na to cestovat na druhou půlku Evropy nebo ještě lépe světa? Upřímně řečeno, ani se vám nedivím. Po návratu z MVP Summitu v Seattle mě zadek od sedačky v letadle bolel ještě týden. Ay ušetřil vaše pozadí a nejenom to, pořádá Microsoft virtuální akci, kterou si můžete vychutnat, aniž byste museli vstát od počítače.
 

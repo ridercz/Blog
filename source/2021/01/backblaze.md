@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210106-backblaze.jpg -->
 <!-- x4w:coverCredits = Backblaze.com -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2021-01-06 -->
+<!-- dcterms:date = 2021-01-06 -->
 
 Uživatelé se prý dělí na dvě skupiny: jedni zálohují a druzí o svá data ještě nepřišli. Nicméně znám i takové, kteří o svá data přišli už několikrát a nezálohují furt. V každém případě, Backblaze pokládám za velmi dobré a zároveň levné řešení, vhodné pro běžné uživatele. A nyní běží promotion, v jejímž rámci máte možnost získat až tři měsíce zdarma.
 

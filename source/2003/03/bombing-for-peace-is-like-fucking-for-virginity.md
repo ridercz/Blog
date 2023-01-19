@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-21T12:27:56+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-21T12:27:56+01:00 -->
+<!-- dcterms:date = 2003-03-21T12:27:56+01:00 -->
 
 Radujte se, žijeme ve světě bez válek! Přestože se neustále někde válčí a bojuje, nevzpomínám si, že by poslední dobou nějaký stát jinému vyhlásil válku. Typicky se jedná o občanskou válku nebo třenice toho typu, že se nikdo s formálním vyhlašováním války neobtěžuje. Nebo to přece není válka, ale "mírová operace", "policejní akce".
 

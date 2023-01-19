@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-12-08 -->
+<!-- dcterms:date = 2022-12-08 -->
 
 Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ve většině případů stačí jenom změnit verzi runtime v `.csproj` souboru a upgradovat NuGet balíčky. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou:
 

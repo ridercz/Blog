@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-11-29T15:50:01.513+01:00 -->
-<!-- dcterms:dateAccepted = 2006-11-29T15:50:01.513+01:00 -->
+<!-- dcterms:date = 2006-11-29T15:50:01.513+01:00 -->
 
 Přihlášky do soutěže **Komponenta roku**, kterou za mediální podpory ASPNET.CZ a [Vývojář.cz](http://www.vyvojar.cz/) vyhlásily společnosti [Altairis](http://www.altairis.cz/), [Gopas](http://www.gopas.cz/) a [Microsoft](http://www.microsoft.cz/), lze posílat pouze do konce listopadu.
 

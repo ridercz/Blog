@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-10-03T22:22:18.467+02:00 -->
-<!-- dcterms:dateAccepted = 2010-10-03T22:22:19.717+02:00 -->
+<!-- dcterms:date = 2010-10-03T22:22:19.717+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20101003-padding-oracle-chyba-v-asp-net-o-co-vlastne-slo.png -->

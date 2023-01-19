@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2014-08-18T12:40:45.19+02:00 -->
-<!-- dcterms:dateAccepted = 2014-08-18T14:52:10.15+02:00 -->
+<!-- dcterms:date = 2014-08-18T14:52:10.15+02:00 -->
 
 Prahou o víkendu prošel duhový pochod, kterým vyvrcholila týdenní akce Prague Pride 2014. Kromě obvyklé hrstky protestujících mašíblů vzbudila tato akce nesouhlasné reakce v lidech, u kterých mne to poněkud překvapuje. Jejich hlavní otázka zní: Proč se ta akce koná? Pokusím se na tuto otázku odpovědět, silně subjektivně. Ta odpověď se dá shrnout do dvou slov: "Protože můžem."
 

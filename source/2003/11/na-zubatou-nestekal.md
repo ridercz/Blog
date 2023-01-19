@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-13T19:02:21+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-13T19:02:21+01:00 -->
+<!-- dcterms:date = 2003-11-13T19:02:21+01:00 -->
 
 Seznámil jsem se s ním dosti kuriózním způsobem. Jednoho krásného dne před zhruba třemi lety mi zazvonil telefon a dívka, se kterou jsem v té době flirtoval (což je eufemistický výraz pro to, že jsem ji řezal jako koně :o) do něj pronesla památnou větu: *"Matka nás vyhodila z domova i se psem, můžeme k tobě přijet bydlet?"*
 

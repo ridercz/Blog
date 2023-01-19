@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-10T23:31:49+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-10T23:31:49+01:00 -->
+<!-- dcterms:date = 2003-02-10T23:31:49+01:00 -->
 
 ![Moje počítačové doupě za temné noci](https://www.cdn.altairis.cz/Blog/atnight.jpg)
 

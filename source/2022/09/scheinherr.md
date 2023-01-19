@@ -6,8 +6,8 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2022-09-12 -->
-<!-- dcterms:dateUpdated = 2022-09-13 -->
+<!-- dcterms:date = 2022-09-12 -->
+<!-- x4w:dateUpdated = 2022-09-13 -->
 
 V pondělí 5. 9. 2022 kolem třetí jsem před domem na Veletržní viděl na chodníku zaparkované auto. To není nijak pozoruhodné, neboť tam často stojí někdo, kdo potřebuje do některého z domů něco odnosit a podobně. Chodník je v těch místech nejméně pět metrů široký, takže auto ničemu nepřekáží, kolem dokáže pohodlně projít třeba i organizovaný průvod spojeného svazu vozíčkářů a kočárkářek (ty jsem tam ještě neviděl) nebo vysokou rychlostí prosvištět několik cyklistů vedle sebe, ignorujících pro ně speciálně namalovaný pruh na vozovce (ty tam naopak potkávám velmi často).
 

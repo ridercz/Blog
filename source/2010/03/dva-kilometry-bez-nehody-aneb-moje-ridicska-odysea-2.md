@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-03-18T23:54:55+01:00 -->
-<!-- dcterms:dateAccepted = 2010-03-18T23:54:56.017+01:00 -->
+<!-- dcterms:date = 2010-03-18T23:54:56.017+01:00 -->
 
 Pamětliv neúspěchů při prvním pokusu o získání řidičského oprávnění jsem naznal, že pro účastníky silničního provozu, včetně mne samotného, bude bezpečnější, když Valášek řidičák mít nebude. Toto přesvědčení mi vydrželo dlouhých dvanáct let. 
 

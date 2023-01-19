@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-04-16T00:00:00 -->
+<!-- dcterms:date = 2021-04-16T00:00:00 -->
 
 Poslední dobou zjišťuju, že dost často modeluju [držáky na GoPro kamery](https://www.altair.blog/2021/03/kamera). Staly se jakýmsi standardem i mimo svět akčních kamer a hodí se jako rozebíratelné úhlově nastavitelné spojení dvou komponent. Udělal jsem proto OpenSCADovou knihovnu pro generování jejich samčí i samičí podoby.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-03-26T10:03:34.857+02:00 -->
-<!-- dcterms:dateAccepted = 2007-03-26T10:03:34.857+02:00 -->
+<!-- dcterms:date = 2007-03-26T10:03:34.857+02:00 -->
 
 Můj vztah k technologii Ajax a Ajax Extensions je poněkud schizofrenní. Jsem si vědom možností, jaké přináší, jak může snadné použití pokročilých technik zlepšit rozhraní webových aplikací. Zároveň jsem si však vědom toho, že okouzlení novou technolgií nevyhnutelně - jako vždy na Internetu - přinese její nadužívání a nerozumné použití naopak praktickou použitelnost webových aplikací sníží.
 

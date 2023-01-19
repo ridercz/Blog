@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-03-16T13:27:36.917+01:00 -->
-<!-- dcterms:dateAccepted = 2005-03-16T13:27:36.917+01:00 -->
+<!-- dcterms:date = 2005-03-16T13:27:36.917+01:00 -->
 
 Patříte-li mezi ty ubohé duše, které jsou nuceny vyvíjet webové aplikace na klientské platformě Windows XP, mohl by vás zajímat program [Windows XP IIS Manager](http://www.codeproject.com/w2k/EasyIIS.asp).
 

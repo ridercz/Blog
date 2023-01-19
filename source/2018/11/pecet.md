@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = Tipy, triky -->
-<!-- dcterms:dateAccepted = 2018-11-01 -->
+<!-- dcterms:date = 2018-11-01 -->
 
 Protože se zabývám kybernetickou bezpečností a kryptografií, když řeknu slovo "pečeť", většina lidí si představí pečeť elektronickou, digitální podpis, certifikáty, časová razítka... V tomto článku nicméně bude řeč o skutečných pečetích, fyzicky vytvořených z pečetního vosku. Ukážeme si, jak takovou pečeť vyrobit a používat.
 

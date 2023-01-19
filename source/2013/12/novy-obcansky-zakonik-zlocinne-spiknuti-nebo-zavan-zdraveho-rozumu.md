@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-12-30T17:47:46.15+01:00 -->
-<!-- dcterms:dateAccepted = 2013-12-30T17:47:47.073+01:00 -->
+<!-- dcterms:date = 2013-12-30T17:47:47.073+01:00 -->
 
 Říká se, že občanský zákoník je kodexem, který nás provází od narození až do smrti. Není to pravda. Jeho působnost je ještě mnohem širší, protože řeší náš život už od početí a až do vypořádání dědictví. Je to jeden ze základních zákonů tohoto státu, pro praktický život a svými bezprostředními důsledky možná podstatnější, než Ústava s Listinou základních lidských práv dohromady. Ten současný platí od února roku 1964 a zažil za to necelé půl století víc novelizací, než já teplých večeří. Hnidopich by mohl namítnout, že má patnáct let náskok, ale tuto námitku si dovolím odmítnout, protože první novely se dočkal až tři roky po mém narození.
 

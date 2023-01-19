@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190216-askme-dotvvm.jpg -->
 <!-- x4w:coverCredits = Jan Vašek via JESHOOTS.COM, CC0 -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-02-21T17:00:00 -->
+<!-- dcterms:date = 2019-02-21T17:00:00 -->
 <!-- x4w:serial = AskMe v DotVVM -->
 
 Včera jsme se s Tomášem Hercegem sešli, abychom [přepsali mou ukázkovou aplikaci AskMe do DotVVM](/2019/02/askme-dotvvm). A abychom na to nebyli sami, rozhodli jsme se to živě streamovat přes [Twitch](https://twitch.tv/dotvvm).

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-12T06:47:46.92+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-12T06:47:46.92+01:00 -->
+<!-- dcterms:date = 2006-01-12T06:47:46.92+01:00 -->
 
 Základní specifikace web services (WS-I) jest praktickým důkazem pravdivosti tvrzení, že v jednoduchosti je síla. Tato specifikace je ve své podstatě neuvěřitelně primitivní. To má ovšem za následek skutečnost, že webové služby podle ní sepsané neumějí spoustu užitečných věcí, které by bylo lze od nich očekávati, příkladně autentizaci. S tím se ovšem počítalo a existuje řešení.
 

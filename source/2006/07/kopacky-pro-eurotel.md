@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-07-21T09:13:26.547+02:00 -->
-<!-- dcterms:dateAccepted = 2006-07-21T09:13:26.547+02:00 -->
+<!-- dcterms:date = 2006-07-21T09:13:26.547+02:00 -->
 
 Tento blog jsem před více než třemi lety otevíral příspěvkem nazvaným *[Kopačky pro T-Mobile](https://www.weblog.rider.cz/Articles/2-kopacky-pro-t-mobile.aspx)*. Pokrok nezastavíš, takže když jsem se rozhodl po letech opět změnit mobilního operátora, máme zde přenositelnost mobilních čísel. Funguje už zhruba od února, takže by se dalo očekávat, že koncem července bude mechanismus vychytaný. Možná, ale jisté masařky zůstaly.
 

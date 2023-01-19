@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-08-15T04:18:32.39+02:00 -->
-<!-- dcterms:dateAccepted = 2015-08-15T04:18:00+02:00 -->
+<!-- dcterms:date = 2015-08-15T04:18:00+02:00 -->
 
 Alexandr Mitrofanov se v komentáři pro ČRo pozastavuje nad vzrůstající mírou nenávisti v české společnosti, nad jejími přičinami. Mimo jiné píše:
 

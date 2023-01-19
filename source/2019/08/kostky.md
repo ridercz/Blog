@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-08-30 -->
+<!-- dcterms:date = 2019-08-30 -->
 <!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/5390-hexagonal-dice-case -->

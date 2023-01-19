@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-01-08T04:04:56.53+01:00 -->
-<!-- dcterms:dateAccepted = 2013-01-08T04:04:59+01:00 -->
+<!-- dcterms:date = 2013-01-08T04:04:59+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20130108-pozvanka-na-akce-devcon-e-mail-https-ssl-a-sass-less.jpg -->

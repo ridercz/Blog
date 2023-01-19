@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-09-17T11:00:37+02:00 -->
-<!-- dcterms:dateAccepted = 2007-09-17T11:00:37+02:00 -->
+<!-- dcterms:date = 2007-09-17T11:00:37+02:00 -->
 
 *Poznámka: Tento článek je první součástí seriálu o konfiguraci ASP.NET a vychází z [přednášky](http://akce.altairis.cz/Events/122.aspx), kterou jsem měl v Praze 30. srpna 2007. Nebyl z ní pořízen záznam a těm, kdož se jí nezúčastnili, by patrně nebyly pouhé slajdy k ničemu.*
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-21T11:46:43+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-21T11:46:43+01:00 -->
+<!-- dcterms:date = 2003-12-21T11:46:43+01:00 -->
 
 Za necelých pětadvacet let svého života jsem se stěhoval devětkrát. Jednou, pravda, co batole, ale zbylých osm případů jsem se aktivně a ve vlastním zájmu účastnil, neb jsem stěhoval vlastní domácnost.
 

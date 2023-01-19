@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-07-26T23:49:13.283+02:00 -->
-<!-- dcterms:dateAccepted = 2010-07-26T23:49:13.86+02:00 -->
+<!-- dcterms:date = 2010-07-26T23:49:13.86+02:00 -->
 
 Společnost Microsoft uvedla [českou lokalizaci Visual Studia 2010 Professional](http://www.msdn.cz/vscz/). Chcete ji používat? A jaké jazyky vlastně používáte při psaní software?
 

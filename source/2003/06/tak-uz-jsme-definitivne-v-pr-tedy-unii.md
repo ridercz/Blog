@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-15T00:42:51+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-15T00:42:51+02:00 -->
+<!-- dcterms:date = 2003-06-15T00:42:51+02:00 -->
 
 Mohl bych být velmi snadno usvědčen ze lži, kdybych se vám snažil namluvit, že mne [výsledek referenda](http://www.volby.cz/pls/ref2003/re13?xjazyk=CZ) překvapil. Masivní přesvědčovací kampaň prostě zabrala. A teď nemám na mysli onu trapnou záležitost za 200 miliónů. Mám na mysli mnoho let trvající manipulaci, v rámci které je nám EU prezentována jako jediná cesta ke spáse a jakýkoliv jiný názor je div ne vlastizrada a s euroskeptiky je zacházeno v nejlepším duchu tradic *zachvátí-li tě, zahyneš*.
 

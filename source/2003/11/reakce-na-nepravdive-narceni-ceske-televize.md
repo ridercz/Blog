@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-24T20:28:57+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-24T20:28:57+01:00 -->
+<!-- dcterms:date = 2003-11-24T20:28:57+01:00 -->
 
 Ve své hlavní zpravodajské relaci **Události** odvysílala včera Česká televize reportáž, ve které její reportérka opakovaně obvinila filmovou společnost pro kterou pracuji, i mne osobně z podvodu.
 

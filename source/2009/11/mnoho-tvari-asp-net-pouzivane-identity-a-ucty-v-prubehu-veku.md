@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-11-04T22:32:25.06+01:00 -->
-<!-- dcterms:dateAccepted = 2009-11-04T22:32:25.06+01:00 -->
+<!-- dcterms:date = 2009-11-04T22:32:25.06+01:00 -->
 
 Často kladená otázka je: pod jakým účtem běží ASP.NET? Protože je často kladena, je i často zodpovídána, leč bohužel ne vždy správně a protože se odpověď s časem (a verzemi IIS) mění, odpověď může být neaktuální. I já jsem na toto téma napsal před lety [článek](http://www.aspnet.cz/Articles/74-pod-jakym-uzivatelem-bezi-asp-net.aspx). Pojďme se na problematiku podívat poněkud hlouběji, včetně historického vývoje.
 

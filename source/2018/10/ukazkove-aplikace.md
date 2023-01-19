@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Software -->
-<!-- dcterms:dateAccepted = 2018-10-24 -->
+<!-- dcterms:date = 2018-10-24 -->
 
 Pro účely svých školení a prezentací používám dvě ukázkové aplikace, které jsou postavené na aktuálních Microsoft technologiích. Tedy na ASP.NET Core, Razor Pages a ASP.NET Identity.
 

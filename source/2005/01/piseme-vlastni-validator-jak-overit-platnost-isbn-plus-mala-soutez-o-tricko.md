@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-29T03:17:44.853+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-29T03:17:44.853+01:00 -->
+<!-- dcterms:date = 2005-01-29T03:17:44.853+01:00 -->
 
 ISBN (International Standard Book Number) je unikátní identifikátor přidělovaný knihám. Celosvětová koordinace zajišťuje, že žádné dvě knihy nemají stejné ISBN. Pro jeho formát platí jisté zákonitosti, které není možné snadno ověřit prostřednictvím prvku `RegularExpressionValidator`. Pokud potřebujete validovat vstup ISBN, musíte si validaci napsat sami. Pokud to děláte jednou v celé aplikaci, vystačíte si s prvkem `CustomValidator`, ale pokud se toto zadání opakuje vícekrát, je výhodnější si napsat vlastní specializovaný validátor.
 

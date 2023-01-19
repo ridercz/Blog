@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Software -->
-<!-- dcterms:dateAccepted = 2018-11-12 -->
+<!-- dcterms:date = 2018-11-12 -->
 
 Nedávno jsem zde zveřejnil [článek o svých ukázkových aplikacích](/2018/10/ukazkove-aplikace) pro ASP.NET Core.
 

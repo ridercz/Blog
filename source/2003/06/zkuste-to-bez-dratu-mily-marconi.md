@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-03T12:23:36+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-03T12:23:36+02:00 -->
+<!-- dcterms:date = 2003-06-03T12:23:36+02:00 -->
 
 Osobně si myslím, že největším prokletím počítačového lidu jsou kabely. V našem bytě se musejí nacházet *kilometry* rozličné kabeláže, z každého počítače se jich linou spousty. U notebooku to ještě jde - napájení, síť, myš (málem jsem napsal [Mysh](http://www.bestijka.cz), ale ta je naštěstí bezdrátová ;) a synchronizace s PDA. Ale můj druhý počítač, na kterém stříhám video, to je hotová apokalypsa: napájení, klávesnice, myš, jog, digitální video (+ napájení), analogové video (+ napájení), DV konvertor (+ napájení), reproduktory (+ napájení), dva monitory (+ 2x napájení), scanner, čtečka čipových karet, tiskárna (+ napájení), síť. Další tři počítače, které s námi momentálně sdílí domácnost vynechám, neboť představu už nepochybně máte.
 

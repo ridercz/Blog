@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = K minulému článku o digital signage jsem dostal řadu dotazů, jestli to jako má běžet nonstop a jestli se monitor nezničí a případně jak to automaticky vypnout a zapnout. Současné LCD monitory by měly vydržet nepřetržitý provoz (alespoň ty co mám doma proti němu nijak neprotestují) a zapnout a vypnout to samozřejmě jde. -->
 <!-- x4w:category = Bastlení -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2020-01-03 -->
+<!-- dcterms:date = 2020-01-03 -->
 <!-- x4w:coverUrl = /cover-pictures/20200103-screenly-shutdown.jpg -->
 <!-- x4w:coverCredits = Aleksandar Cvetanovic (@lemonzandtea) via Unsplash.com -->
 <!-- x4w:pictureUrl = /perex-pictures/20200103-screenly-shutdown.jpg -->

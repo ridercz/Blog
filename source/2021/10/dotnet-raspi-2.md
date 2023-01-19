@@ -9,7 +9,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
-<!-- dcterms:dateAccepted = 2021-10-21 -->
+<!-- dcterms:date = 2021-10-21 -->
 
 [První díl](https://www.altair.blog/2021/10/dotnet-raspi-1) našeho seriálu o ASP.NET na Raspberry Pi jsme skončili v okamžiku vzdáleného přihlášení jménem a heslem. Místo hesla ale lze pro přihlášení přes SSH (Secure SHell) použít asymetrický klíč. To je mnohem bezpečnější a zároveň pohodlnější. Ukážeme si, jak povolit autentizaci klíčem a zakázat použití hesla. Tento návod se navíc netýká pouze Raspberry Pi, ale jakéhokoliv počítače s Linuxem.
 

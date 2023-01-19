@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-01-18T16:17:38.11+01:00 -->
-<!-- dcterms:dateAccepted = 2007-01-18T16:17:38.11+01:00 -->
+<!-- dcterms:date = 2007-01-18T16:17:38.11+01:00 -->
 
 Pro počítačovou školu Gopas připravuji nový dvoudenní kurz **GOC37 - ASP.NET AJAX a další rozšíření ASP.NET 2.0**. Od uvedení ASP.NET 2.0 Microsoft publikoval celou řadu různých užitečných nástrojů a rozšíření. Některé z nich jsou známější, jiné nikoliv.
 

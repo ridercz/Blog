@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-09-24T22:15:40.07+02:00 -->
-<!-- dcterms:dateAccepted = 2010-09-24T22:24:29.617+02:00 -->
+<!-- dcterms:date = 2010-09-24T22:24:29.617+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100924-skripty-pro-vytvareni-webu-a-uzivatelu-na-iis-7-0.png -->

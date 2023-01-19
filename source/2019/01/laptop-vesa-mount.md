@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-01-29 -->
+<!-- dcterms:date = 2019-01-29 -->
 <!-- x4w:alternateUrl = https://www.thingiverse.com/thing:3388670 -->

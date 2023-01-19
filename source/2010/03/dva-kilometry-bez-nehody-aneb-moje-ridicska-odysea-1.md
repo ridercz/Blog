@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-03-05T15:08:27.5+01:00 -->
-<!-- dcterms:dateAccepted = 2010-03-05T15:08:27+01:00 -->
+<!-- dcterms:date = 2010-03-05T15:08:27+01:00 -->
 
 Můj kamarád Max říká, že jsou lidé, kterým osud postupně, přesto důrazně, sděluje, že by neměli vlastnit motorizovaný dopravní prostředek. Občas se mi do hlavy vkrádá myšlenka, že možná mluví o mně.
 

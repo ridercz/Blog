@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-03-16T01:26:53.27+01:00 -->
-<!-- dcterms:dateAccepted = 2007-03-16T01:26:53.27+01:00 -->
+<!-- dcterms:date = 2007-03-16T01:26:53.27+01:00 -->
 
 Microsoft ASP.NET 2.0´[Ajax Extensions](http://ajax.asp.net/) a [Ajax Control Toolkit](http://www.codeplex.com/AtlasControlToolkit) představují snadný způsob, jak můžete v ASP.NET vyvíjet akční a dynamické aplikace, využívající bohaté klientské skriptování a technologii Ajax. Tento seminář vás seznámí s principy fungování a použití těchto technologií.
 

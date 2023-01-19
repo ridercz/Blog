@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-06-19T04:22:27.383+02:00 -->
-<!-- dcterms:dateAccepted = 2012-06-19T04:05:00+02:00 -->
+<!-- dcterms:date = 2012-06-19T04:05:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120619-pozvanka-na-tri-akce-v-nejblizsi-budoucnosti.jpg -->

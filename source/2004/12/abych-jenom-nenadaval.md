@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-12-11T04:22:08.503+01:00 -->
-<!-- dcterms:dateAccepted = 2004-12-11T04:22:08.503+01:00 -->
+<!-- dcterms:date = 2004-12-11T04:22:08.503+01:00 -->
 
 Letmý pohled do [historie](/Archive.aspx) mých geniálních myšlenek zveřejněných na tomto blogu odhalí, že si furt jenom na něco stěžuju. Je pravda, že k literární aktivitě mne vyburcuje především to, když mne něco naštve (někdy taky [nadrženost](http://www.bdsm.cz/Search.aspx?text=falko&idx=a), ale to je jiná pohádka). Nuže, nyní bych rád prokázal, že se na život umím v odůvodněných případech dívat i optimisticky.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-07-18T21:50:16.17+02:00 -->
-<!-- dcterms:dateAccepted = 2006-07-18T21:50:16.17+02:00 -->
+<!-- dcterms:date = 2006-07-18T21:50:16.17+02:00 -->
 
 Omlouvám se všem, ale bohužel nebude k dispozici záznam z dnešního semináře o novinkách v ASP.NET 2.0. Stíhaly nás problémy s projektorem a museli jsme se stěhovat. Protože jsem jenom hloupý kůň, zapomněl jsem po přestěhování zapnout záznam. Takže mám záznam pouze druhé půlky akce, a ten samostatně vůbec nedává smysl :-(
 

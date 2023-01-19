@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-25T02:01:01.717+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-25T02:01:01.717+01:00 -->
+<!-- dcterms:date = 2005-01-25T02:01:01.717+01:00 -->
 
 Jedním z nejužitečnějších zdrojů pro programátory a správce Windows systémů na českém Internetu jsou konference na [EMWACu](http://www.emwac.cz/). Na ten link ani neklikejte - stránky jsou již drahnou dobu mimo provoz (a ostatně ani předtím nestály za mnoho). Proto je zde tento článek, který si klade za cíl vás seznámit s mailovými konferencemi všeobecně a těmito konkrétními zejména.
 

@@ -8,7 +8,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-08-14 -->
+<!-- dcterms:date = 2020-08-14 -->
 
 Že se z telefonu z Androidem dá udělat Wi-Fi přístupový bod a připojit se z jiného zařízení, třeba PC, je všeobecně známo. Ale pomocí funkce USB Tethering, která je v Androidu standardně od verze 9.0, lze počítač připojit i pomocí USB kabelu, což má mnohé výhody.
 

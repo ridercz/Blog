@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-13T17:46:25.75+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-13T17:46:25.75+02:00 -->
+<!-- dcterms:date = 2005-04-13T17:46:25.75+02:00 -->
 
 Můj oblíbený server [CodeProject](http://www.codeproject.com/) jest zdrojem všeliké zábavy a poučení. V poslední sobě mne zaujaly dva projekty tamo se vyskytnuvší.
 

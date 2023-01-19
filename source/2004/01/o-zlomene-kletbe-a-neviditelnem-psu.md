@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-23T04:46:08+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-23T04:46:08+01:00 -->
+<!-- dcterms:date = 2004-01-23T04:46:08+01:00 -->
 
 Po více než půl roce mi poněkud otrnulo a rozhodl jsem se vyzkoušet, zda [boží kletba](http://weblog.rider.cz/ShowRecord.aspx?day=20030603) stále účinkuje. Pravděpodobně byla vázána na místo, nikoliv na osobu, neb po zhruba dvou dnech provozu si dovolím s opatrným optimismem prohlásit, že mi Wi-Fi funguje.
 

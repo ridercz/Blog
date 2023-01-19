@@ -7,5 +7,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Recenze -->
-<!-- dcterms:dateAccepted = 2021-01-26 -->
+<!-- dcterms:date = 2021-01-26 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66873770-psms7-e40021d23204918 -->

@@ -6,4 +6,4 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2016-12-20T21:03:39+01:00 -->
+<!-- dcterms:date = 2016-12-20T21:03:39+01:00 -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-23T00:05:06.293+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-23T00:05:06.293+01:00 -->
+<!-- dcterms:date = 2005-01-23T00:05:06.293+01:00 -->
 
 Microsoft [uvolnil novou verzi](http://www.microsoft.com/downloads/details.aspx?FamilyID=890cd06b-abf8-4c25-91b2-f8d975cf8c07&displaylang=en) svého málo známého, ale o to užitečnějšího nástroje **Microsoft LogParser**. Tento program umí zpracovat v podstatě jakákoliv zdrojová data (zejména nejrůznější logy, jak již jeho název napovídá) a dotazovat se do nich pomocí SQL-like dotazů. Výsledek umí vygenerovat v mnoha různých formátech. Přibližnou představu vám může dát následující schéma činnosti:
 

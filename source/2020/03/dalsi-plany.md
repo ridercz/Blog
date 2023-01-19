@@ -8,7 +8,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-03-29 -->
+<!-- dcterms:date = 2020-03-29 -->
 
 Bezplatné online školení OpenSCADu, které jsem dělal v úterý, mělo veliký úspěch. Proto připravuji jeho pokračování a další akce, některé zdarma, jiné za peníze. Čtěte dál, pokud chcete vědět, co jsem si pro vás připravil, odpovědi na nejčastější otázky a také mít možnost ovlivnit, o čem školení budou.
 

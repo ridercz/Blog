@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-11-12T16:06:02.003+01:00 -->
-<!-- dcterms:dateAccepted = 2007-11-12T16:06:02.003+01:00 -->
+<!-- dcterms:date = 2007-11-12T16:06:02.003+01:00 -->
 
 V následujícím roce nás čeká spousta novinek. Proto je tu DevCon '07, kde se o nich dozvíte víc. Akce se koná **16. listopadu 2007 v Praze** nebo **14. prosince 2007 v Bratislavě**. Akci pořádá počítačová škola Gopas, vstupné činí 990 Kč (po [slevě pro čtenáře ASPNET.CZ](http://www.aspnet.cz/StaticPages/SlevaGopas.aspx "Sleva 10% z kurzovn&eacute;ho v poč&iacute;tačov&eacute; &scaron;kole Gopas") je to 891 Kč). Podrobnější informace a možnost přihlášení najdete na [http://www.gopas.cz/kurzy/DevCon/](http://www.gopas.cz/kurzy/DevCon/).
 

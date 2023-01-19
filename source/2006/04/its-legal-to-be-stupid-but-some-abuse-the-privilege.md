@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-04-23T23:49:49.937+02:00 -->
-<!-- dcterms:dateAccepted = 2006-04-23T23:49:49.937+02:00 -->
+<!-- dcterms:date = 2006-04-23T23:49:49.937+02:00 -->
 
 Miluju dobrou reklamu. A nesnáším špatnou, která z lidí dělá blbce. To je důvod, proč mne politická reklama v českých zemích dlouhodobě odpuzuje. Po léta se české politické strany omezily na tváře svých lídrů a univerzální, vzájemně zaměnitelná hesla typu "klidná síla" nebo "s lidmi pro lidi". 
 

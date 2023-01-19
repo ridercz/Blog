@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-16T05:10:22.947+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-16T05:10:22.947+01:00 -->
+<!-- dcterms:date = 2006-01-16T05:10:22.947+01:00 -->
 
 Odpověď na otázku kladenou v titulku není - bohužel - zcela triviální. Proto se pojďme na uživatelské účty podívat poněkud zevrubněji.
 

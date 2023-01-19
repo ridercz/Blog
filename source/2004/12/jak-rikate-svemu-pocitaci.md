@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-12-05T19:14:50.43+01:00 -->
-<!-- dcterms:dateAccepted = 2004-12-05T19:14:50.43+01:00 -->
+<!-- dcterms:date = 2004-12-05T19:14:50.43+01:00 -->
 
 Včera v noci jsem instaloval náš nový vývojový SQL server a z nedostatku invence jsem ho pojmenoval SQLDEV - jako SQL Development. Když jsem to okolo čtvrté ráno oznamoval své [horší polovičce](http://www.bestijka.cz/), obořila se na mne, co mi ten počítač udělal že jsem ho pojmenoval takhle ošklivě, a že se zase projevuje moje zaujatost proti databázovým serverům, které různě ustrkuji. No, radši jsem ho přejmenoval na Geparda - má dva procesory, rychlost by měla být slušná.
 

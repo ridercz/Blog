@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-21T04:55:29+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-21T04:55:29+01:00 -->
+<!-- dcterms:date = 2003-02-21T04:55:29+01:00 -->
 
 Jsou ještě horší než trpaslíci. Jsou všude a strašně rychle se množej. Kdo? Hvězdičky Evropské unie. Již mnohokrát jsem byl tázán na svůj názor na toto uskupení. Ale až včera v noci jsem byl schopen ho správně a úderně formulovat: EU je *ministerstvo gravitace*.
 

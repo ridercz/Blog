@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-08T00:56:16.243+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-08T00:56:16.243+01:00 -->
+<!-- dcterms:date = 2005-12-08T00:56:16.243+01:00 -->
 
 Můj [seminář o novinkách v ASP.NET 2.0](/entry/article-20051203.aspx) je prakticky vyprodán. Díky laskavosti pořadatele, [počítačové školy Gopas](http://www.gopas.cz/), má jeden z vás možnost ušetřit 500 Kč a získat na něj volný vstup. Máte zájem?
 

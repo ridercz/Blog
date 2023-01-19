@@ -6,6 +6,6 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Facebooková stránka Českého telekomunikačního úřadu -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-01-20 -->
+<!-- dcterms:date = 2019-01-20 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66441960-psms7-d7f47a377760ff4 -->
 

@@ -7,5 +7,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-07-19 -->
+<!-- dcterms:date = 2021-07-19 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66953100-psms7-801a09b122a7ad1 -->

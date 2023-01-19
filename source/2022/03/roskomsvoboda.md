@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Sdružení Роскомсвобода (Roskomsvoboda) bylo založeno 1. listopadu 2012, v den, kdy vstoupil v platnost Jednotný rejstřík zakázaných webů. Název Roskomsvoboda byl zvolen jako stylistický protiklad k agentuře Roskomnadzor, která se přímo podílí na vedení černých listin a omezování přístupu k internetovým stránkám v Rusku na státní úrovni. Nyní sdružení vydalo prohlášení týkající se opačného směru blokování - zamezování přístupu ruských uživatelů na globální Internet. Protože ho pokládám za důležité a zcela se ztotožňuji s jeho obsahem, přeložil jsem ho do českého jazyka. -->
 <!-- x4w:category = Politika -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-03-12 -->
+<!-- dcterms:date = 2022-03-12 -->
 <!-- x4w:pictureUrl = /perex-pictures/20191117-svoboda.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

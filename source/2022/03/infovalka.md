@@ -3,7 +3,7 @@
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-03-06T12:00:00 -->
+<!-- dcterms:date = 2022-03-06T12:00:00 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220306-infovalka.jpg -->
 <!-- x4w:pictureCredits = Bermix Studio via Unsplash.com -->
 <!-- x4w:pictureWidth = 150 -->

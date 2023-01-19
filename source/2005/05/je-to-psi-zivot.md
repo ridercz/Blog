@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-05-01T22:33:22.597+02:00 -->
-<!-- dcterms:dateAccepted = 2005-05-01T22:33:22.597+02:00 -->
+<!-- dcterms:date = 2005-05-01T22:33:22.597+02:00 -->
 
 V sobotu se na výstavišti v Letňanech konala mezinárodní výstavu psů. Byli jsme tam s [Estou](http://www.vlcak.cz/) přihlášeni a na to konto jsem se dokonce dokopal k tomu, že jsem *v šest ráno* vstával (pro nezasvěcené: tou dobou obvykle chodím spát). Ledva jsem se exhumoval zjistil jsem, že nám v zdechl disk v mail serveru. Následujících několik hodin jsem strávil přesunem jeho funkcí na záložní server a na výstavu se nedostal.
 

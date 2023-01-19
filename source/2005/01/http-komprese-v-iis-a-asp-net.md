@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-02T02:16:39.593+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-02T02:16:39.593+01:00 -->
+<!-- dcterms:date = 2005-01-02T02:16:39.593+01:00 -->
 
 Pravděpodobně všichni znáte a používáte klasickou komprimaci souborů - jejich "sbalení" do ZIP nebo RAR archivu, čímž se zmenší jejich datový objem. Takovou kompresi je možno provádět i automaticky při přenosu mezi webovým serverem a klientem. Můžete si to představit tak, že server posílaná data sbalí do ZIPu a klient (prohlížeč) je zase rozbalí a zobrazí. V případě HTML kódu je možno dosáhnout značné úspory přenášených dat a tím zrychlit stahování stránek, zejména na pomalejších linkách.
 

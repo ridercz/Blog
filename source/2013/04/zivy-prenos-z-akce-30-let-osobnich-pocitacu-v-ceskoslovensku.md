@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-04-08T00:43:59.203+02:00 -->
-<!-- dcterms:dateAccepted = 2013-04-08T00:43:00+02:00 -->
+<!-- dcterms:date = 2013-04-08T00:43:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20130408-zivy-prenos-z-akce-30-let-osobnich-pocitacu-v-ceskoslovensku.png -->

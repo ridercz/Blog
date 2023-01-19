@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-27T14:40:32+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-27T14:40:32+02:00 -->
+<!-- dcterms:date = 2003-05-27T14:40:32+02:00 -->
 
 Asi nikoho nepřekvapí, že film **The Matrix** patří k mým nejoblíbenějším. Včera jsem viděl i jeho pokračování, film **Matrix Reloaded**.
 

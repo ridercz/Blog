@@ -3,7 +3,7 @@
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-10-08 -->
-<!-- dcterms:dateAccepted = 2018-07-23 -->
+<!-- dcterms:date = 2018-07-23 -->
 <!-- x4w:pictureUrl = /perex-pictures/20180723-the-sacred-place.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

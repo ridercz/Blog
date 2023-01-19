@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-08-06T14:25:26+02:00 -->
-<!-- dcterms:dateAccepted = 2003-08-06T14:25:26+02:00 -->
+<!-- dcterms:date = 2003-08-06T14:25:26+02:00 -->
 
 Vatikán vydal dokument "[Úvahy o plánech legalizace homosexuálních svazků](http://tisk.cirkev.cz/art/clanek.asp?id=4320)", ve kterém se mimo jiné praví (podle překladu Týdne, dokument samotný nemám k dispozici):
 

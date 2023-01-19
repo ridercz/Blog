@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-22T05:04:02.117+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-22T05:04:02.117+01:00 -->
+<!-- dcterms:date = 2005-12-22T05:04:02.117+01:00 -->
 
  
 

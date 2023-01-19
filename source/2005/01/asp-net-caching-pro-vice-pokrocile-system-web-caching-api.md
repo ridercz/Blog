@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-07T06:16:35.437+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-07T06:16:35.437+01:00 -->
+<!-- dcterms:date = 2005-01-07T06:16:35.437+01:00 -->
 
 V předchozích dvou zápisech o cacheování jsem se věnoval ukládání hotových výstupů, ať už [celých stránek](/entry/article-20050105.aspx) nebo jenom [jejich částí](/entry/article-20050106.aspx) (user controls). To ovšem není jediná forma cachingu, jakou ASP.NET podporují. Prostřednictvím caching API (namespace `System.Web.Caching.Cache`) můžete ukládat v podstatě libovolné objekty. Patřičné rozhraní je jednoduché, ale velmi užitečné.
 

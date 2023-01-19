@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-21T06:18:33.937+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-21T06:18:33.937+02:00 -->
+<!-- dcterms:date = 2005-04-21T06:18:33.937+02:00 -->
 
 Jedním z nejčastějších požadavků kladených na vývoj webových aplikací je možnost zadávat formátovaný (HTML) text pomocí uživatelsky přítulného WYSIWYG editoru. Dříve doména a středobod činnosti publikačních systémů, dnes téměř nezbytná součást jakékoliv složitější aplikace. Komponent, které zajišťují takovou funkčnost, jest nepřeberné množství. Některé fungují výhradně na straně klienta v JavaScriptu, jiné umějí přímo spolupracovat s ASP.NET.
 

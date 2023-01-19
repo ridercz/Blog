@@ -3,7 +3,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Software -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-03-23 -->
+<!-- dcterms:date = 2019-03-23 -->
 <!-- x4w:pictureUrl = /perex-pictures/20190323-keepass.png -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

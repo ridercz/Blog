@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190827-live-coding.jpg -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-08-27 -->
+<!-- dcterms:date = 2019-08-27 -->
 
 Rozhodl jsem se napsat vlastní validátor síly hesel pro ASP.NET Core Identity. A říkám si, že to bude zajímavější, když to budu živě přenášet na YouTube. Založím nový projekt na GitHubu, napíšu validátor a vypublikuji ho jako NuGet balíček. Alespoň tedy takový je plán, ale v živém přenosu se to může rychle změnit...
 

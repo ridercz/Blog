@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-09-07T15:26:01.847+02:00 -->
-<!-- dcterms:dateAccepted = 2010-09-07T15:26:02.643+02:00 -->
+<!-- dcterms:date = 2010-09-07T15:26:02.643+02:00 -->
 
 Po delší době mám konečně zase přednášku v Akvárku (pro neznalé: sál Aquarius v pobočce pražského Microsoftu). Tentokrát se bude týkat technologie ASP.NET Dynamic Data. Přednáška se bude konat v pondělí, **13. září 2010, od 18:00**. 
 

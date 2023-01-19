@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-11T22:38:16.657+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-11T22:38:16.657+01:00 -->
+<!-- dcterms:date = 2005-01-11T22:38:16.657+01:00 -->
 
 V rámci psaní článků o HTTP modulech jsem se rozhodl vydat dva své programy, [SkinAnywhere](http://software.altaircom.net/software/skinanywhere.aspx) a [HighlightAnywhere](http://software.altaircom.net/software/highlightanywhere.aspx). Oba dva jsou k dispozici zdarma včetně zdrojového kódu, pod licencí LGPL. Ta vám umožní je implementovat do svých aplikací, a to i pokud mají kód uzavřený.
 

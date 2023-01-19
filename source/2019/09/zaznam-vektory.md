@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = PrusaLab -->
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2019-09-24 -->
+<!-- dcterms:date = 2019-09-24 -->
 
 Pro řadu scénářů, jako třeba řezání na plotteru, laseru, CNC nebo třeba obyčejný profesionální tisk potřebujete grafiku "ve křivkáchL. Co to vlastně je, jak takové podklady získat a na co si dát pozor?
 

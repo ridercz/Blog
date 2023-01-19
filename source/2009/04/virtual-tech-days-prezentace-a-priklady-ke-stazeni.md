@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-04-01T19:45:31.203+02:00 -->
-<!-- dcterms:dateAccepted = 2009-04-01T19:45:31.203+02:00 -->
+<!-- dcterms:date = 2009-04-01T19:45:31.203+02:00 -->
 
 [![Virtual Tech Days](https://www.cdn.altairis.cz/Blog/2009/20090401-msvtd_3.png "Virtual Tech Days")](http://www.msfttechdays.com/) 
 

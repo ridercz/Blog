@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-03-06 -->
+<!-- dcterms:date = 2020-03-06 -->
 <!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/ -->

@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20190315-samolepky.jpg -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2019-03-15 -->
+<!-- dcterms:date = 2019-03-15 -->
 
 Dostali jste - třeba ode mne - samolepku vyřezanou z fólie a nevíte, jak ji správně nalepit? Pokud je z jednoho kusu, je to snadné. Ale co když jsou to třeba písmenka, nebo jiné složité tvary? Přináším jednoduchý návod, jak na to. 
 

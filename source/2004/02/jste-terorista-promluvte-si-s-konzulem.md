@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-02-16T21:04:03+01:00 -->
-<!-- dcterms:dateAccepted = 2004-02-16T21:04:03+01:00 -->
+<!-- dcterms:date = 2004-02-16T21:04:03+01:00 -->
 
 Jakožto čerstvě jmenovaný Microsoft MVP se hodlám účastnit MVP Summitu, který se koná začátkem dubna v Seattle. V souvislosti s tím žádám o vydání amerického vstupního víza. Což obnáší mimo jiné vyplnění formulářů DS-156 a DS-157. Vyplňoval jsem je v Photoshopu, protože jsou k dispozici jenom jako PDF (bez formulářových vlastností) a kdybych do nich psal rukou, asi by mi bylo vydání víza odmítnuto pro negramotnost.
 

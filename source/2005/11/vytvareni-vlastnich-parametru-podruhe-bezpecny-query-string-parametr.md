@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-11-09T03:21:35.817+01:00 -->
-<!-- dcterms:dateAccepted = 2005-11-09T03:21:35.817+01:00 -->
+<!-- dcterms:date = 2005-11-09T03:21:35.817+01:00 -->
 
 V článku [Tvorba vlastního parametru pro data binding v ASP.NET 2.0](/entry/article-20051005.aspx) jsem popisoval, kterak lze vytvořit vlastní parametr pro deklarativní data binding, novinku to v nové verzi ASP.NET. Obdobnou metodu je možno použít k odstranění problému, který mne štve od doby, co jsem ASP.NET 2.0 prakticky nasadil.
 

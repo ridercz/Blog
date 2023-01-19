@@ -1,7 +1,7 @@
 <!-- dcterms:title = Jak na migraci Azure Storage z Classic do ARM -->
 <!-- dcterms:abstract = Pokud používáte Azure již nějakou dobu, nejspíš máte řadu Azure Storage účtů ve starém režimu "Classic". Většina nových nástrojů a služeb nicméně předpokládá, že vaše účty budou již v novém režimu, který používá Azure Resource Manager (ARM). Upgrade není úplně triviální, ale ani nemožný. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2018-07-27 -->
+<!-- dcterms:date = 2018-07-27 -->
 <!-- x4w:category = IT -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-azure.png -->
 <!-- x4w:pictureWidth = 150 -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-08-30T10:46:39.02+02:00 -->
-<!-- dcterms:dateAccepted = 2006-08-30T10:46:39.02+02:00 -->
+<!-- dcterms:date = 2006-08-30T10:46:39.02+02:00 -->
 
 Včerejší akce se nám nádherně vydařila a i účast byla hojná. Videozáznam semináře najdete jako obvykle na našem [video serveru](http://videoarchiv.altairis.cz/Entry/9-sql-server-20005-pro-webove-vyvojare.aspx).
 

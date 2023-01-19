@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Technologie a BDSM se dá spojit mnoha nečekanými způsoby. Britský řetězec hotelů a restaurací Wetherspoons přišel s aplikací, která umožňuje hostům objednávat a platit z mobilu. Toho začaly využívat britské dominy, které posty na Twitteru vyzývají subíky, aby je virtuálně pozvali na drink. -->
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2020-01-08 -->
+<!-- dcterms:date = 2020-01-08 -->
 <!-- x4w:pictureUrl = /perex-pictures/20200108-spoonslaves.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

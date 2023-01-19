@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-10-24 -->
+<!-- dcterms:date = 2021-10-24 -->
 
 Blíží se Halloween, tak proč si nevyrobit stylový odznak ve tvaru netopýra? Tím spíše že v OpenSCADu jde vytvořit univerzální model, který si poradí s jakýmkoliv tvarem.
 

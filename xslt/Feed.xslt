@@ -22,8 +22,8 @@
         <link>https://www.altair.blog/</link>
         <description>Weblog Michala A. Valáška</description>
         <language>cs-CZ</language>
-        <xsl:for-each select="//page[dcterms:dateAccepted]">
-          <xsl:sort select="dcterms:dateAccepted" order="descending" />
+        <xsl:for-each select="//page[dcterms:date]">
+          <xsl:sort select="dcterms:date" order="descending" />
           <xsl:if test="position() &lt;= 15">
             <item>
               <guid isPermaLink="true">
@@ -63,7 +63,7 @@
                 </category>
               </xsl:for-each>
               <pubDate>
-                <xsl:value-of select="x4h:FormatDateTime(dcterms:dateAccepted, 's', 'cs-CZ')"/>
+                <xsl:value-of select="x4h:FormatDateTime(dcterms:date, 's', 'cs-CZ')"/>
               </pubDate>
             </item>
           </xsl:if>

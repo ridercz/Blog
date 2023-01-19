@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-02-22T04:01:22.793+01:00 -->
-<!-- dcterms:dateAccepted = 2006-02-22T04:01:22.793+01:00 -->
+<!-- dcterms:date = 2006-02-22T04:01:22.793+01:00 -->
 
 
 		<p>Co je potřeba k aktualizaci redakčního systému na ASPNET.CZ? Inu, řečeno s klasikem:</p>

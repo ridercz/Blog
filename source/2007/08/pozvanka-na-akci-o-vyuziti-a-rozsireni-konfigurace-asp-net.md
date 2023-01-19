@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-08-21T09:10:57.467+02:00 -->
-<!-- dcterms:dateAccepted = 2007-08-21T09:10:57.467+02:00 -->
+<!-- dcterms:date = 2007-08-21T09:10:57.467+02:00 -->
 
 Po prázdninové přestávce vás znovu zvu do pražského Microsoftu na programátorský seminář. 
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-04-20T17:59:34.833+02:00 -->
-<!-- dcterms:dateAccepted = 2006-04-20T17:59:34.833+02:00 -->
+<!-- dcterms:date = 2006-04-20T17:59:34.833+02:00 -->
 
 Ta dvě S v nadpisu nejsou překlep. Nejedná se totiž o novinky podávané expresní rychlostí, ale o novinky týkající se převážně Express edic produktů od Microsoftu. S příchodem .NET 2.0 Microsoft změnil svůj letitý přístup a od všech vývojových nástrojů uvolnil základní "Express" edici, která je k dispozici zdarma.
 

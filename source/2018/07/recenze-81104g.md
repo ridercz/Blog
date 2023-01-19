@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Recenze -->
-<!-- dcterms:dateAccepted = 2018-07-18 -->
+<!-- dcterms:date = 2018-07-18 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66195650-psms7-db00268db807cb4 -->

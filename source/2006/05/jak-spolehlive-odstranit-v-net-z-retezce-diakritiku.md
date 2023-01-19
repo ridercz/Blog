@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-05-10T23:32:05.487+02:00 -->
-<!-- dcterms:dateAccepted = 2006-05-10T23:32:05.487+02:00 -->
+<!-- dcterms:date = 2006-05-10T23:32:05.487+02:00 -->
 
 
 		<p>Již léta opakuji, kdykoliv přijde řeč na česká "nabodeníčka", že Jana Husa upálili po právu a bohužel pozdě. Historicky se většina pokroku v počítačových technologiích odehrávala v anglosaských zemích. Národy, mající ve zvyku okrašlovat nudná písmenka háčky, čárkami, ocásky a podobně jsou tedy v řadě případů poněkud diskriminovány.</p>

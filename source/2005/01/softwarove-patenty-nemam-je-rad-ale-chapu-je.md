@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-27T04:25:55.61+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-27T04:25:55.61+01:00 -->
+<!-- dcterms:date = 2005-01-27T04:25:55.61+01:00 -->
 
 Mnoho témat obyvatele Internetu rozděluje. Naproti tomu názor na softwarové patenty zní napříč všemi sítěmi silným chórem: proti! Nicméně vypadá to, že velká část lidí vlbec neví proti čemu že to vlastně bojuje a proč. V současné situaci je můj názor shodný s většinou: jsem proti. Nicméně situace není tak jednoduchá, jak vypadá na první pohled.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-25T19:44:52.333+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-25T19:44:52.333+01:00 -->
+<!-- dcterms:date = 2006-01-25T19:44:52.333+01:00 -->
 
 ![Windows User Group](https://www.cdn.altairis.cz/Blog/2006/20060125-logo-wug.gif) 
 

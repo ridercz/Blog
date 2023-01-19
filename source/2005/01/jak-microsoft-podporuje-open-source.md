@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-21T04:54:15.733+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-21T04:54:15.733+01:00 -->
+<!-- dcterms:date = 2005-01-21T04:54:15.733+01:00 -->
 
 [![Fotografie geparda](http://gallery.rider.cz/locations/20040704_zoo_prague/20040704-182832-0000.jpg?w=212&h=300 "Gepard ze ZOO Praha")](http://gallery.rider.cz/locations/20040704_zoo_prague/20040704-182832-0000.jpg.xhtml) 
 

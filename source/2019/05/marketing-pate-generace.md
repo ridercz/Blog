@@ -3,7 +3,7 @@
 <!-- x4w:category = IT -->
 <!-- x4w:category = Politika -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-05-10 -->
+<!-- dcterms:date = 2019-05-10 -->
 <!-- x4w:pictureUrl = /perex-pictures/20190510-marketing-pate-generace.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

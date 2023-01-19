@@ -7,6 +7,6 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-05-02T14:42:01.167+02:00 -->
-<!-- dcterms:dateAccepted = 2006-05-02T14:42:01.167+02:00 -->
+<!-- dcterms:date = 2006-05-02T14:42:01.167+02:00 -->
 
 Plánovaný seminář .NET Group o zabezpečení ASP.NET aplikací se ruší. Nový termín je 23. 5.

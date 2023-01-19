@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-11-09 -->
+<!-- dcterms:date = 2022-11-09 -->
 
 Windows 10 a Windows 11 obsahují možnost jak spustit "virtuální počítač" s čistou instalací Windows, který je izolovaný od toho fyzického, skutečného. To můžete využít v případě, že chcete vyzkoušet něco, co na svém běžném PC dělat nechcete. Například nainstalovat nějakou aplikaci kterou nechcete používat dlouhodobě. Po vypnutí Sandboxu se totiž všechny provedené změny ztratí a vše se vrátí do původního stavu.
 

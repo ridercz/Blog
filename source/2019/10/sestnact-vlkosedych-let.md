@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20191004-sestnact-vlkosedych-let.jpg -->
 <!-- x4w:coverCredits = Lukáš Procházka -->
 <!-- x4w:category = Vlci -->
-<!-- dcterms:dateAccepted = 2019-10-04 -->
+<!-- dcterms:date = 2019-10-04 -->
 
 Kam čert nemůže, nastrčí ženskou. Nejinak to bylo i s mým vztahem k československým vlčákům. Jako dítě jsem se o psy - potažmo o jakákoliv zvířata - nijak zvlášť nezajímal. Důvodem bylo mimo jiné i to, že jsme nic chlupatého doma mít nemohli, neboť moje matka je alergická na kdeco, včetně zvířecí srsti, a příslušné léky nebyly v době mého mládí tak snadno dostupné jako dneska.
 

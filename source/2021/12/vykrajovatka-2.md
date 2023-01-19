@@ -3,7 +3,7 @@
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Z-TECH -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2021-12-08 -->
+<!-- dcterms:date = 2021-12-08 -->
 <!-- x4w:pictureUrl = /perex-pictures/20211208-vykrajovatka-2.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

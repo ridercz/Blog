@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2016-08-12T20:34:50.957+02:00 -->
-<!-- dcterms:dateAccepted = 2016-08-13T10:00:00+02:00 -->
+<!-- dcterms:date = 2016-08-13T10:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20160813-zpracovani-aktualnich-a-historickych-kurzu-men-pres-api-cnb.png -->

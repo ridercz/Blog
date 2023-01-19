@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = Ali Jouyandeh  via Unsplash.com -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-02-17 -->
+<!-- dcterms:date = 2022-02-17 -->
 
 HTTP cookies jsou jedním ze základních stavebních kamenů současného webu. Občas jsou prezentovány jako symbol zla a ohrožení soukromí, ale ve skutečnosti problém se soukromím leží poněkud jinde a cookies jsou skutečně jenom symbolem. Připravil jsem pro vás [šestidílný seriál](https://www.youtube.com/playlist?list=PLFZurxJN0pMb9ina9Hd67ufiEKqlTXuzU), ve kterém vám ukážu, jak obecně fungují a jak s nimi pracovat v ASP.NET.
 

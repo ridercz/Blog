@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-07T04:39:57+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-07T04:39:57+01:00 -->
+<!-- dcterms:date = 2003-03-07T04:39:57+01:00 -->
 
 Nejdu si lehnout, protože musím počkat, až můj vedlejší počítač dokončí nějaké zvrácené dávkové operace nad několika tisíci obrázků, takže si tak prolézám zajímavé stránky. Tak jsem narazil i na [Blogistický weblog](http://sweb.cz/blogistik/).
 

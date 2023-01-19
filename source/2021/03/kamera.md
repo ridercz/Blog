@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-03-27 -->
+<!-- dcterms:date = 2021-03-27 -->
 
 Včera jsem se dozvěděl, že budu dneska něco točit. V místě, kde nejspíš nebude dost světla. Z různého harampádí, které mám doma, jsem se rozhodl operativně vyrobit světlo pro kameru. Stačí 3D tiskárna a pár šroubů.
 

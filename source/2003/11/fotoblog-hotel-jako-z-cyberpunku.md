@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-06T00:10:09+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-06T00:10:09+01:00 -->
+<!-- dcterms:date = 2003-11-06T00:10:09+01:00 -->
 
 Jedna z výhod vlastnictví malého digitálního foťáčku (v mém případě Sony CyberShot DSC-P1) spočívá v možnosti průběžně dokumentovat vše, co vás zaujme ve světě kolem.
 

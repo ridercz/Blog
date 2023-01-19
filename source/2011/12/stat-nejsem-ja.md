@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-12-18T19:36:24.98+01:00 -->
-<!-- dcterms:dateAccepted = 2011-12-18T19:36:26.353+01:00 -->
+<!-- dcterms:date = 2011-12-18T19:36:26.353+01:00 -->
 
 Zítra ráno se mimořádně sejde vláda, aby vyhlásila státní smutek za zemřelého Václava Havla. Stát může smutnit, už tak dělá spoustu věcí, se kterými nesouhlasím a pokládám je za škodlivé.
 

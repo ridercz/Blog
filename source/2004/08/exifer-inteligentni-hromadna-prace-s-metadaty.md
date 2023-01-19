@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-08-03T03:28:32.763+02:00 -->
-<!-- dcterms:dateAccepted = 2004-08-03T03:28:32.763+02:00 -->
+<!-- dcterms:date = 2004-08-03T03:28:32.763+02:00 -->
 
 Pravidelní návštěvníci mé [galerie](http://gallery.rider.cz/) a uživatelé jejího systému [SilverWolf](http://software.altaircom.net/software/silverwolf.aspx) si jistě již všimli, že poslední dobou ujíždím na EXIF metadatech. Pro neznalé stručné vysvětlení, co to je:
 

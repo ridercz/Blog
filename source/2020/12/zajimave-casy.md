@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2020-12-30 -->
+<!-- dcterms:date = 2020-12-30 -->
 <!-- x4w:alternateUrl = https://archiv.ihned.cz/c7-66863110-psms7-e85c7e21bf267a0 -->

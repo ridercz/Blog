@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-03-02T04:25:21.623+01:00 -->
-<!-- dcterms:dateAccepted = 2012-03-03T10:52:46.623+01:00 -->
+<!-- dcterms:date = 2012-03-03T10:52:46.623+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120303-windows-8-visual-studio-11-prvni-dojmy.png -->

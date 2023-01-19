@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-05-17T14:53:05.017+02:00 -->
-<!-- dcterms:dateAccepted = 2006-05-17T14:53:05.017+02:00 -->
+<!-- dcterms:date = 2006-05-17T14:53:05.017+02:00 -->
 
 Heslo francouzské revoluce „volnost, rovnost, bratrství“ se v případě webových aplikací příliš neujalo. Zpravidla je žádoucí, ne-li přímo nevyhnutelné, uživatele nějakým způsobem omezit a kastovat.
 

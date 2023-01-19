@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-06-27T23:00:05.783+02:00 -->
-<!-- dcterms:dateAccepted = 2004-06-27T23:00:05.783+02:00 -->
+<!-- dcterms:date = 2004-06-27T23:00:05.783+02:00 -->
 
 Neuvěřitelné se stalo skutkem: **Michal Martinka** přepsal [osobní publikační systém Cheetah](/entry/article-20040621.aspx) z VB.NET do C#. Přestože to praktický význam příliš nemá, je to dobře protože kromě praktického použití má Cheetah sloužit i jako ukázkový a výukový program.
 

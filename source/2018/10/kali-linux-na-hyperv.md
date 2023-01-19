@@ -7,7 +7,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Software -->
-<!-- dcterms:dateAccepted = 2018-10-07 -->
+<!-- dcterms:date = 2018-10-07 -->
 
 > **Tento text je zastaralý a ponechávám ho zde jenom pro informaci.** 
 > K dispozici je [aktualizovaná verze článku](/2021/11/kali-linux-na-hyperv) z roku 2021 pro verzi Kali 2021.3a.

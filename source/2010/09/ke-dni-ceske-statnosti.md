@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-09-28T23:51:41.757+02:00 -->
-<!-- dcterms:dateAccepted = 2010-09-28T23:51:42.367+02:00 -->
+<!-- dcterms:date = 2010-09-28T23:51:42.367+02:00 -->
 
 Bývá zvykem, že státním svátkem národy připomínají světlé body své národní historie, případně jiné události pozitivního charakteru. Narozeniny právě vládnoucího monarchy, oslava významných činů synů (zřídkavěji dcer) příslušného národa a podobně. Ne tak v případě českých státních svátků.
 

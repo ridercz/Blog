@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2014-03-22T23:25:17.183+01:00 -->
-<!-- dcterms:dateAccepted = 2014-03-22T23:25:17+01:00 -->
+<!-- dcterms:date = 2014-03-22T23:25:17+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20140322-zaznam-ze-seminaru-pro-mlcici-vetsinu-a-tridenni-akce-pro-ni.jpg -->

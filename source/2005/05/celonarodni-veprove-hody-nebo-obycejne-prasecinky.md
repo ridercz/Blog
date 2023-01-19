@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-05-27T06:32:20.573+02:00 -->
-<!-- dcterms:dateAccepted = 2005-05-27T06:32:20.573+02:00 -->
+<!-- dcterms:date = 2005-05-27T06:32:20.573+02:00 -->
 
 ![Prase // via sxc.hu, used by permission](https://www.cdn.altairis.cz/Blog/prase.jpg)S jistou nadsázkou se dá říci, že naši společnost v uplynulých dnech až týdnech ovládla prasata. 
 

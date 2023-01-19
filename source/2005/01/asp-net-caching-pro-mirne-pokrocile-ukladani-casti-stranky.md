@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-06T06:40:36.86+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-06T06:40:36.86+01:00 -->
+<!-- dcterms:date = 2005-01-06T06:40:36.86+01:00 -->
 
 V [minulém zápisu](/entry/article-20050105.aspx) jsem načal téma cacheování výstupů ASP.NET stránek. Popsané metody zajišťují cacheování výstupů *celých* stránek. Což je v mnohých případech užitečné, v jiných ovšem nepoužitelné. ASP.NET proto umožňuje cacheovat nejenom celé stránky, ale i jejich části - web user controly.
 

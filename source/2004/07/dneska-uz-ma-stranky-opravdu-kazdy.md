@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-07-17T02:55:45.76+02:00 -->
-<!-- dcterms:dateAccepted = 2004-07-17T02:55:45.76+02:00 -->
+<!-- dcterms:date = 2004-07-17T02:55:45.76+02:00 -->
 
 [![Ikonka vlčák.cz](http://www.vlcak.cz/files/gfx/ikonka.png "VLČÁK.CZ: Osobní stránky Esty Kanýčo")](http://www.vlcak.cz/) Bylo by naivní předpokládat, že kterýkoliv z obyvatel domácnosti, [která má víc aktivních síťových prvků než obyvatel](/entry/article-20030220.aspx), dlouho vydrží bez webových stránek. To, že má čtyři nohy a špičaté uši už nehraje tak zásadní roli. Pokud vás tedy zajímají názory naší vlčandy Esty, podívejte se na adresu [**www.vlcak.cz**](http://www.vlcak.cz/).
 

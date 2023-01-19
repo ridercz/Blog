@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-05-05T14:42:07.37+02:00 -->
-<!-- dcterms:dateAccepted = 2005-05-05T14:42:07.37+02:00 -->
+<!-- dcterms:date = 2005-05-05T14:42:07.37+02:00 -->
 
 <p __designer:dtid="281474976710658">ASP.NET představily technologii <em __designer:dtid="281474976710659">adaptivn&#237;ho renderov&#225;n&#237;</em>. Jedn&#225; se v z&#225;sadě o to, že si runtime zjist&#237;, kter&#253; browser uživatel použ&#237;v&#225; a podle toho uprav&#237; generovan&#253; k&#243;d. Což o to, my&#353;lenka je to dobr&#225;, ale poněkud zpozdil&#225;. Tato funkce by se hodila v době, kdy nezanedbateln&#225; č&#225;st uživatelů použ&#237;vala př&#237;&#353;ern&#253; bazmek jm&#233;nem <em __designer:dtid="281474976710660">Netscape Communicator</em>. </p>
 <p __designer:dtid="281474976710661">Teď je sp&#237;&#353; pro zlost, neboť ve standardn&#237;m nastaven&#237; nepozn&#225; Mozillu jako "advanced browser". Takže nab&#253;v&#225; dojmu, že nepodporuje CSS a podobně a pos&#237;l&#225; mu jin&#253; k&#243;d, než IE, č&#237;mž &#250;spě&#353;ně rozhod&#237; zobrazen&#237;.</p>

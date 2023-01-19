@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = Aron Visuals via unsplash.com -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-08-04 -->
+<!-- dcterms:date = 2019-08-04 -->
 
 Nedalo mi to a ještě jednou jsem se podíval na podepisování URL, které bylo tématem [včerejšího článku](https://www.altair.blog/2019/08/url-signer). V jeho závěru jsem jako jednu z limitací tohoto řešení uvedl, že nenabízí ochranu proti replay útokům, tj. že podepsané URL lze použít opakovaně. To může být někdy vyloženě žádoucí, ale jindy to může být problém.
 

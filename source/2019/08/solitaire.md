@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190823-solitaire.jpg -->
 <!-- x4w:coverCredits = Nadia Hatoum via Flickr, CC BY -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-08-23 -->
+<!-- dcterms:date = 2019-08-23 -->
 
 > Verze 1.2, 26. 5. 1999
 >

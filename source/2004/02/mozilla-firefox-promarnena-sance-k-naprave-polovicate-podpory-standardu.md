@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-02-23T04:53:46+01:00 -->
-<!-- dcterms:dateAccepted = 2004-02-23T04:53:46+01:00 -->
+<!-- dcterms:date = 2004-02-23T04:53:46+01:00 -->
 
 Mnoho stránek již bylo popsáno úvahami o užitečnosti podpory webových standardů a o přístupnosti a snadné použitelnosti webů. Často z nich Microsoft se svým Internet Explorerem vychází co ten zlý tyran, pro jehož uživatele je vysvobozením z čirého světla open source pocházející Mozilla. Ve skutečnosti je to i ve své nejnovější verzi právě Mozilla, kdo minimálně na platformě Windows nabízí podporu standardů méně než polovičatou.
 

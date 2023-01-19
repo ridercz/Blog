@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-09-15T09:10:18+02:00 -->
-<!-- dcterms:dateAccepted = 2003-09-15T09:10:18+02:00 -->
+<!-- dcterms:date = 2003-09-15T09:10:18+02:00 -->
 
 Jsem evakuován, protože na té straně našeho bytu, kde mám své počítačové doupě, vyměňují okna za nová, lepší a krásnější. Takže jsou moji miláčci zakryti plachtou a živoří bez mé láskyplné péče.
 

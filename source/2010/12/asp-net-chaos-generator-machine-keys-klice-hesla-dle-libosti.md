@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-12-31T06:11:35.61+01:00 -->
 <!-- dcterms:dateSubmitted = 2010-12-31T06:23:06.157+01:00 -->
-<!-- dcterms:dateAccepted = 2010-12-31T06:24:39.92+01:00 -->
+<!-- dcterms:date = 2010-12-31T06:24:39.92+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20101231-asp-net-chaos-generator-machine-keys-klice-hesla-dle-libosti.png -->

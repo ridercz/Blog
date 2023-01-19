@@ -9,7 +9,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
-<!-- dcterms:dateAccepted = 2022-02-08 -->
+<!-- dcterms:date = 2022-02-08 -->
 
 [První](https://www.altair.blog/2021/10/dotnet-raspi-1) [dva](https://www.altair.blog/2021/10/dotnet-raspi-2) díly seriálu o ASP.NET na Raspberry Pi jsem věnoval jeho prvotnímu nastavení, nebo chcete-li provisioningu. Jak nastavit parametry Wi-Fi, autentizace, povolení SSH... Nyní je všechno mnohem jednodušší.
 

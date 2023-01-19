@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-06-09T07:59:35.933+02:00 -->
-<!-- dcterms:dateAccepted = 2006-06-09T07:59:35.933+02:00 -->
+<!-- dcterms:date = 2006-06-09T07:59:35.933+02:00 -->
 
  Včera se uskutečnila v rámci WUG Brno [avizovaná přednáška](https://www.aspnet.cz/Articles/94-pozvanka-na-prednasku-pokrocila-tvorba-uzivatelskeho-rozhrani-v-asp-net-2-0-aktualizovano.aspx) o pokročilé tvorbě uživatelského rozhraní v ASP.NET 2.0. Navzdory všem protivenstvím se podařilo zajistit její záznam, který je nyní k dispozici na následující adrese: [http://videoarchiv.altairis.cz/Category/7-novinky-v-asp-net-2-0.aspx](http://videoarchiv.altairis.cz/Category/7-novinky-v-asp-net-2-0.aspx) 
 

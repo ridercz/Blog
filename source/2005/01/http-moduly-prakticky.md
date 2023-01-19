@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-16T07:00:28.063+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-16T07:00:28.063+01:00 -->
+<!-- dcterms:date = 2005-01-16T07:00:28.063+01:00 -->
 
 <p>Douf&#225;m, že v&#225;s můj <a href="/entry/article-20050110.aspx">předchoz&#237; čl&#225;nek</a> navnadil na psan&#237; HTTP modulů a <a href="/entry/article-20050112.aspx">pohled do budoucnosti přesvědčil</a>, že se jedn&#225; o užitečnou dovednost. Pod&#237;vejme se tedy do &#250;trob jednoho HTTP modulu, jak funguje.</p>
 <p>On&#237;m kouskem software bude můj modůlek <a href="http://software.altaircom.net/software/skinanywhere.aspx">SkinAnywhere</a>. Princip jeho činnosti je jednoduch&#253;: v jak&#233;koliv aplikaci "pod n&#237;m" lze jeho prostřednictv&#237;m přep&#237;nat kask&#225;dov&#233; styly. Funguje to tak, že můj modul prohl&#237;ž&#237; aplikac&#237; vygenerovan&#233; HTML a hled&#225; v něm odkaz na origin&#225;ln&#237; stylesheet. Pokud ho najde, modifikuje HTML tak, aby m&#237;sto něj byl odkaz na nějak&#253; jin&#253; stylesheet, v z&#225;vislosti na nastaven&#237; konfiguračn&#237; cookie. Tuto cookie lze nastavit zavol&#225;n&#237;m speci&#225;ln&#237; str&#225;nky s vhodn&#253;mi parametry. </p>

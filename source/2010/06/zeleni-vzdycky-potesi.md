@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-06-08T18:59:38.497+02:00 -->
-<!-- dcterms:dateAccepted = 2010-06-08T18:59:39.217+02:00 -->
+<!-- dcterms:date = 2010-06-08T18:59:39.217+02:00 -->
 
 Ondřej Liška, skoroemeritní předseda Strany zelených, se chystá v následujících komunálních volbách kandidovat na pražského primátora. V současné době je co nezaměstnaný hlášen na Úřadu práce, k čemuž podle Aktualne.cz řekl:
 

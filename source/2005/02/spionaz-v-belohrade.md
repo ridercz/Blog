@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-02-26T04:17:26.727+01:00 -->
-<!-- dcterms:dateAccepted = 2005-02-26T04:17:26.727+01:00 -->
+<!-- dcterms:date = 2005-02-26T04:17:26.727+01:00 -->
 
 Jakožto rodilý Karlovarák, odkojený Vřídlem, jsem se vydal na špionážní výpravu do [Lázní Bělohrad](http://www.lazne-belohrad.cz/). Krytím mi byl sedmý ročník [tamo se konajícího programátorského semináře](http://www.haes.cz/ws_pozv.asp?r=workshop). Při nejlepší vůli se mi nepodařilo najít v tomto "městě" cokoliv, co by se byť jenom vzdáleně podobalo lázeňství. Kromě "Bělohradských lázeňských oplatek", made in Luhačovice.
 

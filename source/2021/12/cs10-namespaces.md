@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = C# pro mírně pokročilé -->
-<!-- dcterms:dateAccepted = 2021-12-27 -->
+<!-- dcterms:date = 2021-12-27 -->
 
 Nejnovější verze C# 10 přináší novinky - zjednodušení - v práci s namespaces a tomu odpovídá i nová podoba výchozích šablon pro projekty. V tomto dílu seriálu o C# pro mírně pokročilé se na tyto novinky podíváme podrobněji.
 

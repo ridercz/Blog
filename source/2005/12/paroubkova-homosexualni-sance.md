@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-15T23:02:23.657+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-15T23:02:23.657+01:00 -->
+<!-- dcterms:date = 2005-12-15T23:02:23.657+01:00 -->
 
 Premiér Paroubek je čistým produktem demokracie: osobou bez názoru a postoje, jejíž činy jsou křišťálovým populismem, řízeny toliko průzkumy veřejného mínění, jichž je otrokem. Takže když si přečetl, že podle [průzkumů](http://www.ceskenoviny.cz/vyhledavani/index_view.php?id=159937) je 62% české veřejnosti pro registrované partnertství homosexuálů, začal jednat.
 

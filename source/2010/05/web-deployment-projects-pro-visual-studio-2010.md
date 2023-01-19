@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-05-25T21:20:15.87+02:00 -->
-<!-- dcterms:dateAccepted = 2010-05-25T21:20:15.87+02:00 -->
+<!-- dcterms:date = 2010-05-25T21:20:15.87+02:00 -->
 
 Microsoft včera uvolnil rozšíření Web Deployment Projects pro Visual Studio 2010. To je dobrá zpráva pro všechny, kdo WDP používali v předchozích verzích a nechtěli nebo nemohli přejít na nový model deploymentu ve VS 2010. Původní stanovisko Microsoftu totiž bylo, že WDP podporovány nebudou.
 

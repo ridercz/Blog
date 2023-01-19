@@ -7,4 +7,4 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = Arduino -->
-<!-- dcterms:dateAccepted = 2016-06-22T00:04:26+02:00 -->
+<!-- dcterms:date = 2016-06-22T00:04:26+02:00 -->

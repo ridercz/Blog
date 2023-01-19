@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-22T23:28:43.91+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-22T23:28:43.91+02:00 -->
+<!-- dcterms:date = 2005-08-22T23:28:43.91+02:00 -->
 
 Teď jsem si přečetl [moudrý příspěvek](http://binarniladin.bloguje.cz/187389_item.php) literárního teroristy Binárního Ládina. S jednou jeho částí se natolik ztotožňuji, že si ji tímto znamenám, abych ji nezapomněl:
 

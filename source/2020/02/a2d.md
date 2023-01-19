@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-02-20 -->
+<!-- dcterms:date = 2020-02-20 -->
 
 Řada technických modelů pro 3D tisk má 2D základ, vytažený do výšky. Při svých návrzích v OpenSCADu často používám sbírku 2D modulů a funkcí, které mi výrazně zjednodušují psaní modelů a zpřehledňují kód. Nyní jsem se rozhodl je zveřejnit pro obecné použití pod MIT licencí.
 

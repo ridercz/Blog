@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-09-14T02:57:51.413+02:00 -->
-<!-- dcterms:dateAccepted = 2005-09-14T02:57:51.413+02:00 -->
+<!-- dcterms:date = 2005-09-14T02:57:51.413+02:00 -->
 
 ![Graf zastoupení mobilních operátorů](https://www.cdn.altairis.cz/Blog/2005/20050914-operatori.png)Výherce [volného vstupu na TechEd Praha](/entry/article-20050912.aspx) dosud neznáme - budu ho losovat a kontaktovat až přes den - ale už nyní vás mohu obeznámit s několika statistickými daty, které lze ze soutěže vyvodit.
 

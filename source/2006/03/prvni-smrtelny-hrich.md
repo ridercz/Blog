@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-03-15T14:35:57.673+01:00 -->
-<!-- dcterms:dateAccepted = 2006-03-15T14:35:57.673+01:00 -->
+<!-- dcterms:date = 2006-03-15T14:35:57.673+01:00 -->
 
 Ve svém [článku o mailování z ASP.NET 2.0](https://www.aspnet.cz/Articles/79-odesilani-e-mailu-z-prostredi-net-2-0.aspx) jsem napsal, že posílání mailů v HTML považuji za druhý nejhorší programátorský hřích. Tato zmínka vyvolala předpokládané dotazy, jaký že je tedy ten první nejhorší hřích, jakého se dle mého názoru může .NET vývojář dopustit. 
 

@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20211107-scp-publish.jpg -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2021-11-07 -->
+<!-- dcterms:date = 2021-11-07 -->
 
 Vypublikovat hotovou ASP.NET aplikaci na server přes FTP nebo Web Management Service je snadné: stačí ve Visual Studiu vytvořit publishing profil a klepnout na _Publish_. Ale co když chcete aplikaci nasadit na server s Linuxem, kde chcete použít SCP, třeba na [Raspberry Pi z našeho seriálu](https://www.altair.blog/serials/asp-net-na-raspberry-pi)? Je to možné, ale vyžaduje to trochu ručních zásahů do projektového souboru.
 

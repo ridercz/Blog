@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-31T15:28:53+02:00 -->
-<!-- dcterms:dateAccepted = 2003-03-31T15:28:53+02:00 -->
+<!-- dcterms:date = 2003-03-31T15:28:53+02:00 -->
 
 Zaplaťte tisíc korun a máte neomezený přístup na Internet odkudkoliv, bez dalších poplatků! Přesně to nabízí od prvního dubna (a není to apríl) svým zákazníkům Eurotel. K jakémukoliv standardnímu hlasovému tarifu si nyní můžete aktivovat program [Data Nonstop](http://www.eurotel.cz/site/cz/servicesAndTariffs/services.html?list=23292). Zaplatíte za něj 1000 Kč (bez 5% DPH) , a budete moci libovolně využívat služby GPRS – bez počítání objemu přenesených dat.
 

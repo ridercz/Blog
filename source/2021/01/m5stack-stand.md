@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-01-22 -->
+<!-- dcterms:date = 2021-01-22 -->
 <!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/53196-m5stack-basiccorefirego-stand -->

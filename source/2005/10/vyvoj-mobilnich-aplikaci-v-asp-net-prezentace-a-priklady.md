@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-10-20T17:23:28.217+02:00 -->
-<!-- dcterms:dateAccepted = 2005-10-20T17:23:28.217+02:00 -->
+<!-- dcterms:date = 2005-10-20T17:23:28.217+02:00 -->
 
 ![Vývoj mobilních aplikací v ASP.NET](https://www.cdn.altairis.cz/Blog/2005/20051010-firstslide.jpg)Včera večer jsem pro [.NET Group](http://www.dng.cz/) přednášel  o vývoji mobilních webových aplikací v ASP.NET. Mile mne překvapila hojná účast, zaplnili jsme největší sál, co v českém Microsoftu mají :-)
 

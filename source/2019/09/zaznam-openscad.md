@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190925-zaznam-openscad.jpg -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-09-25 -->
+<!-- dcterms:date = 2019-09-25 -->
 
 Dnes jsem (s jistými obtížemi) dělal live stream, ve kterém jsem v OpenSCADu vytvořil model, vodní mlýn jako hračku do vody. Záznam najdete na [YouTube](https://youtu.be/3m5NESUujRg).
 

@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-02-28T22:55:39.583+01:00 -->
 <!-- dcterms:dateSubmitted = 2011-02-28T22:56:35.567+01:00 -->
-<!-- dcterms:dateAccepted = 2011-02-28T00:00:00+01:00 -->
+<!-- dcterms:date = 2011-02-28T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20110228-prezentace-a-priklady-z-prednasky-pro-wug.png -->

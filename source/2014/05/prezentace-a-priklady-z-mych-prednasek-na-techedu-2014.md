@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2014-05-25T18:40:50.227+02:00 -->
-<!-- dcterms:dateAccepted = 2014-05-25T18:40:52+02:00 -->
+<!-- dcterms:date = 2014-05-25T18:40:52+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20140525-prezentace-a-priklady-z-mych-prednasek-na-techedu-2014.jpg -->

@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-01-03T00:10:36.78+01:00 -->
 <!-- dcterms:dateSubmitted = 2011-01-03T00:17:17.857+01:00 -->
-<!-- dcterms:dateAccepted = 2011-01-03T05:27:27+01:00 -->
+<!-- dcterms:date = 2011-01-03T05:27:27+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20110103-reset-zapomenuteho-hesla-jak-to-delat-spravne.png -->

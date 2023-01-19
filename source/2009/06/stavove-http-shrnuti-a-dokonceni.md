@@ -9,7 +9,7 @@
 <!-- np9:serialId = 4 -->
 <!-- x4w:serial = Stavové HTTP -->
 <!-- dcterms:created = 2009-06-23T00:01:08.363+02:00 -->
-<!-- dcterms:dateAccepted = 2009-06-23T00:01:08.363+02:00 -->
+<!-- dcterms:date = 2009-06-23T00:01:08.363+02:00 -->
 
 Při přípravě článku, který se podrobně zabývá technologií ViewState sjem zjistil, že vám již více než rok dlužím jeden díl seriálu o (bez)stavovém HTTP. Ba dokonce možná díl nejdůležitější, totiž poslední, shrnující a hodnotící. Nuže, tady je. Odkazy na předchozí díly seriálu najdete v boxu v pravé části stránky.
 

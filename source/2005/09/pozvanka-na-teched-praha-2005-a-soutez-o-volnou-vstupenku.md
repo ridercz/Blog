@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-09-12T07:10:45.51+02:00 -->
-<!-- dcterms:dateAccepted = 2005-09-12T07:10:45.51+02:00 -->
+<!-- dcterms:date = 2005-09-12T07:10:45.51+02:00 -->
 
 Pro ty, kdož se z rozličných důvodů nedostali na konferenci Microsoft TechEd 2005 tradičně Microsoft a Počítačová škola Gopas pořádají akci nazvanou [Gopas & Microsoft TechEd 2005](http://www.teched.cz/) v Praze. Jedná se o výběr nejzajímavějších přednášek z "velkého" TechEdu.
 

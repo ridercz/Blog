@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2014-05-12T16:44:01.837+02:00 -->
-<!-- dcterms:dateAccepted = 2014-05-12T16:44:02+02:00 -->
+<!-- dcterms:date = 2014-05-12T16:44:02+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20140512-pozvanka-na-teched-devcon-2014.png -->

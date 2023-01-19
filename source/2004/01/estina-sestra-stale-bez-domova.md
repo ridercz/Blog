@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-26T18:35:34+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-26T18:35:34+01:00 -->
+<!-- dcterms:date = 2004-01-26T18:35:34+01:00 -->
 
 Pokud vás moje příhody s vlčandou Estou přiměly uvažovat nad pořízením podobného dárečka, máte šanci. Dnes jsem mluvil s chovatelem a Estina sestra [Era Kanýčo](http://www.cswolfdog.cz/art/clanek.asp?id=300) stále hledá páníčka či paničku.
 

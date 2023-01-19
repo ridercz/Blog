@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-01-05T20:40:41.977+01:00 -->
-<!-- dcterms:dateAccepted = 2006-01-05T20:40:41.977+01:00 -->
+<!-- dcterms:date = 2006-01-05T20:40:41.977+01:00 -->
 
 ASP.NET 2.0 nabízí dvě nové a mocné technologie pro vytváření vzhledu webových stránek: Master pages a Themes. Nyní si můžete stáhnout sadu ukázkových "aplikací", které tuto funkcionalitu předvádějí.
 

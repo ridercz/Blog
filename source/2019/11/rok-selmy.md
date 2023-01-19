@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20191130-rok-selmy.jpg -->
 <!-- x4w:category = Vlci -->
-<!-- dcterms:dateAccepted = 2019-11-30 -->
+<!-- dcterms:date = 2019-11-30 -->
 
 Mé nejmladší vlčandě Šelmíře, která se vlastně jmenuje [Emiate Šungmánitu-ha Khoyáke](https://www.altair.blog/2019/11/co-po-jmenu) je právě dnes jeden rok a z toho půl roku je u nás. Dostala se k nám poněkud zvláštním způsobem.
 

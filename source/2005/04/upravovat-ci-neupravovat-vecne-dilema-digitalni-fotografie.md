@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-03T04:05:19.527+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-03T04:05:19.527+02:00 -->
+<!-- dcterms:date = 2005-04-03T04:05:19.527+02:00 -->
 
 Jak jest možno se přesvědčit v mé [galerii](http://gallery.rider.cz/), fotografuji spíše rád a často, než dobře. Leč snažím se a v rámci těchto snah navštěvuji rozličná fóra věnovaná fotografii, najmě pak digitální. Nejoblíbenějším flamewarovým tématem jsou dis protkuze na téma "analogové vs. digitální". 
 

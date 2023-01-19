@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-17T14:07:22+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-17T14:07:22+02:00 -->
+<!-- dcterms:date = 2003-05-17T14:07:22+02:00 -->
 
 ![NE EU!](https://www.cdn.altairis.cz/Blog/ne-eu.gif)O svém vztahu k Evropské unii jsem již na weblogu [psal](/ShowRecord.aspx?day=20030221#045529), a stálým čtenářům je jistě jasné, že nepatřím mezi její přívržence.
 

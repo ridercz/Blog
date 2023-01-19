@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-16T21:46:21+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-16T21:46:21+02:00 -->
+<!-- dcterms:date = 2003-05-16T21:46:21+02:00 -->
 
 Zákonodárné iniciativy KDU-ČSL pro mne představují obveselení v nudné šedi všedního dne. Možná by byl dobrý nápad vyhlásit nějakou cenu "**Nejblbější nápad volebního období**". Vyhodnocovala a slavnostně by se předávala tak týden řed volbami do PSP.
 

@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20220710-taghelpers.jpg -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-07-10 -->
+<!-- dcterms:date = 2022-07-10 -->
 
 **Po delší době jsem vydal novou verzi 1.12 své knihovny [Altairis Tag Helpers](https://github.com/ridercz/Altairis.TagHelpers).**
 

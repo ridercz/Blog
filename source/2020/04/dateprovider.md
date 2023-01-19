@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-04-21 -->
+<!-- dcterms:date = 2020-04-21 -->
 
 Kolik je hodin? Stačí se zeptat na `DateTime.Now` nebo `GETDATE()`. Jenomže ne tak docela. Často potřebujeme řešit přesnost poskytnutého časového údaje anebo převody časových pásem. Proto jsem napsal knihovnu [**Altairis.Services.DateProvider**](https://github.com/ridercz/Altairis.Services.DateProvider), která uvedené problémy řeší.
 

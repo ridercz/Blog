@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-08T19:12:34+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-08T19:12:34+01:00 -->
+<!-- dcterms:date = 2004-01-08T19:12:34+01:00 -->
 
 > There are three kinds of death in this world. There's heart death, there's brain death, and there's being off the network.
 > 

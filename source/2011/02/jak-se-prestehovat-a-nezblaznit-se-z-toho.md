@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-02-09T23:26:54.27+01:00 -->
-<!-- dcterms:dateAccepted = 2011-02-09T23:26:55.567+01:00 -->
+<!-- dcterms:date = 2011-02-09T23:26:55.567+01:00 -->
 
 Říká se, že je prý lepší vyhořet, než se stěhovat. S následky požáru osobní zkušenost nemám, ale pokud se týče stěhování, posledních dvanáct let si držím hezký průměr jednoho stěhování ročně. Ostatně, naposledy jsem se stěhoval včera. Myslím si tedy, že mám dostatečnou kvalifikaci k udílení moudrých rad v tomto oboru. K sepsání tohoto článku mne inspirovala kamarádka, která se stěhovala poprvé v životě, bezmála tři týdny a bezmála se z toho fyzicky i psychicky zhroutila.
 

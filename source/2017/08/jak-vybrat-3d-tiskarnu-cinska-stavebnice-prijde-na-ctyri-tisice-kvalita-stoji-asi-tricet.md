@@ -5,6 +5,6 @@
 <!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- dcterms:dateAccepted = 2017-08-23T01:19:00+02:00 -->
+<!-- dcterms:date = 2017-08-23T01:19:00+02:00 -->
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Bastlení -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-09-09T02:28:53.437+02:00 -->
-<!-- dcterms:dateAccepted = 2008-09-09T02:28:53.437+02:00 -->
+<!-- dcterms:date = 2008-09-09T02:28:53.437+02:00 -->
 
 [![20080909-GopasBA](https://www.cdn.altairis.cz/Blog/2008/20080909-20080909-GopasBA_thumb.jpg "20080909-GopasBA")](https://www.cdn.altairis.cz/Blog/2008/20080909-20080909-GopasBA_2.jpg) Po velkém úspěchu zde si můžete moji přednášku o LINQ-to-SQL poslechnout i v Bratislavě, navíc v rozšířené a aktualizované verzi. 
 

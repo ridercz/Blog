@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-09-14T21:49:02.35+02:00 -->
-<!-- dcterms:dateAccepted = 2005-09-14T21:49:02.35+02:00 -->
+<!-- dcterms:date = 2005-09-14T21:49:02.35+02:00 -->
 
 Jistá netriviálnost zadání soutěže přilákala menší než obvyklý počet zájemců - hezké počítačové číslo 32. Proto jsem se rozhodl vylosovat výherce binárně, pěti hody mince.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-14T19:01:52+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-14T19:01:52+01:00 -->
+<!-- dcterms:date = 2003-12-14T19:01:52+01:00 -->
 
 Do Microsoftu si taky kopne každý. Nejnověji [New York Times](http://www.nytimes.com/2003/12/14/magazine/14POWER.html?ex=1071982800&en=799ad449b398c2d7&ei=5062&partner=DIGIWEB.CZ), citující zprávu NASA o havárii Columbie. Jedním z viníků havárie je prý i Microsoft PowerPoint. Prý nutí lidi prezentovat data příliš zjednodušující formou atd.
 

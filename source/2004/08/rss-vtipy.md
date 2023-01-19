@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-08-08T22:03:10.983+02:00 -->
-<!-- dcterms:dateAccepted = 2004-08-08T22:03:10.983+02:00 -->
+<!-- dcterms:date = 2004-08-08T22:03:10.983+02:00 -->
 
 Jako ukázkovou aplikaci pro [ASP Network](http://www.aspnetwork.cz/) (článek vyjde příští týden) jsem vytvořil aplikaci na generování RSS z databáze vtipů.
 

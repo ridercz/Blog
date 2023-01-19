@@ -9,7 +9,7 @@
 <!-- np9:serialId = 7 -->
 <!-- x4w:serial = Projekt Atropa -->
 <!-- dcterms:created = 2015-07-13T04:48:35.75+02:00 -->
-<!-- dcterms:dateAccepted = 2015-07-27T00:00:00+02:00 -->
+<!-- dcterms:date = 2015-07-27T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150713-projekt-atropa-1-jak-vyrobit-z-raspberry-pi-zle-zarizeni-s-netem.jpg -->

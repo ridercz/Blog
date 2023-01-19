@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-11-25T00:18:38.21+01:00 -->
-<!-- dcterms:dateAccepted = 2010-11-25T14:00:00+01:00 -->
+<!-- dcterms:date = 2010-11-25T14:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20101125-async-ctp-odata-prezentace-a-priklady-z-devnetconu.png -->

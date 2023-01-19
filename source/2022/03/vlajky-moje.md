@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = V souvislosti se svým včerejším článkem o vlajkách jsem dostal několik dotazů, které se týkají dvou vlajek, které mám vyvěšené za sebou a které jsou vidět při mých školeních a v dalších videích. Jsou docela zajímavé, takže pokud vám to včera nestačilo, můžeme v tématu fun with flags pokračovat. -->
 <!-- x4w:category = Vexilologie -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-03-19 -->
+<!-- dcterms:date = 2022-03-19 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220319-vlajky-moje.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-05-15T02:22:16+02:00 -->
-<!-- dcterms:dateAccepted = 2003-05-15T02:22:16+02:00 -->
+<!-- dcterms:date = 2003-05-15T02:22:16+02:00 -->
 
 V posledním čísle časopisu [Týden](http://www.tyden.cz) vyšel článek o nových trendech v pohřbívání. Pozůstalí (a prý i zemřelí) si čím dál tím častěji přejí být bez obřadů a ceremonií zpopelněni. Autorka článku se nad tím mírně podivuje.
 

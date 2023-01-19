@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-05-14T22:49:35.907+02:00 -->
-<!-- dcterms:dateAccepted = 2011-05-14T22:49:37.42+02:00 -->
+<!-- dcterms:date = 2011-05-14T22:49:37.42+02:00 -->
 
 Zálohovat data, třeba vypalováním na DVD nebo kopírování na druhý disk, nemusí vždycky stačit. Pokud vás vykradou a nebo dojde třeba k požáru, přijdete i o ně. Přesvědčila se o tom teď třeba Aneta Langerová:
 

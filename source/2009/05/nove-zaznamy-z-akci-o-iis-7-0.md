@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-05-20T15:35:59.89+02:00 -->
-<!-- dcterms:dateAccepted = 2009-05-20T15:35:59.89+02:00 -->
+<!-- dcterms:date = 2009-05-20T15:35:59.89+02:00 -->
 
 Do [Videoarchivu](http://videoarchiv.altairis.cz/) přibyly záznamy z akce Microsoft Web Academy, která se konala v Praze a v Brně (záznam je z pražské akce). Oba záznamy se týkají IIS 7.0 a budou zajímavé zejména pro hostery a provozovatele webových aplikací.
 

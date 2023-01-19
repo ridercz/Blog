@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-11-11T00:30:36.513+01:00 -->
-<!-- dcterms:dateAccepted = 2008-11-11T00:30:36.513+01:00 -->
+<!-- dcterms:date = 2008-11-11T00:30:36.513+01:00 -->
 
 Přes své obavy vyjádřené v [předchozím článku](http://www.aspnet.cz/Articles/212-co-nas-ceka-na-techedu.aspx) jsem nakonec úspěšně odletěl a doletěl. Moje servery opět nezklamaly, takže už cestou na letiště jsem dostal z monitoringu hromadu SMSek, že popadalo co mohlo. Naštěstí se problém podařilo vyřešit a ač jsem po přistání v Barceloně zapínal telefon s mírným mrazením v zádech, všechno dobře dopadlo.
 

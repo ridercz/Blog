@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2018-04-25T16:36:45.987+02:00 -->
-<!-- dcterms:dateAccepted = 2018-04-25T16:36:46+02:00 -->
+<!-- dcterms:date = 2018-04-25T16:36:46+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20180425-jak-vymenit-v-serveru-disk-za-vetsi.jpg -->

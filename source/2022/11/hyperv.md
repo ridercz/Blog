@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-11-19 -->
+<!-- dcterms:date = 2022-11-19 -->
 
 Většina serverů jejichž služby využíváte je nejspíš virtualizovaná. Jejich software neběží přímo na hardware, ale ve virtuálním, emulovaném počítači, který umožňuje na jednom fyzickém hardware provozovat několik logických serverů. Děje se tak z důvodu snazší správy i z důvodů ekonomických, umožňuje to lépe využívat dostupný výpočetní výkon. 
 

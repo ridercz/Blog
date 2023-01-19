@@ -9,7 +9,7 @@
 <!-- np9:serialId = 4 -->
 <!-- x4w:serial = Stavové HTTP -->
 <!-- dcterms:created = 2008-03-20T08:00:42+01:00 -->
-<!-- dcterms:dateAccepted = 2008-03-20T08:00:42+01:00 -->
+<!-- dcterms:date = 2008-03-20T08:00:42+01:00 -->
 
 Web byl stvořen jako bezstavový. Přesněji řečeno, standardy HTTP a HTML jsou navržené jako bezstavové. Co to znamená? Že jednotlivé požadavky na server položené (HTTP requesty) spolu nejsou nijak svázány. Server neví, zda jsou od téhož uživatele, zda spolu nějak souvisejí atd. 
 

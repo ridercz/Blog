@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-09-04T14:11:06.063+02:00 -->
-<!-- dcterms:dateAccepted = 2004-09-04T14:11:06.063+02:00 -->
+<!-- dcterms:date = 2004-09-04T14:11:06.063+02:00 -->
 
 Ledva jsme vystrčili čumák z chatky, začlalo pršet. Fest. Vydali jsme se nicméně na nákup do "města", takže už mám sandály do vody. Dorazili i Felix s Muflonem, takže ZOO je kompletní. Radost z triumfálního vstupu Felixovi zkazila skutečnost, že kvůli rozvratnému působení vlčáků jsme beztak byli vzhůru. Kromě toho jeho rozlet zarazilo dvojhlasné výhružné vrčení našich zlatíček.
 

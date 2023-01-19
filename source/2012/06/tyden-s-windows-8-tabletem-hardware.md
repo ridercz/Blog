@@ -9,7 +9,7 @@
 <!-- np9:serialId = 2 -->
 <!-- x4w:serial = Týden s Windows 8 Tabletem -->
 <!-- dcterms:created = 2012-06-26T23:58:07.023+02:00 -->
-<!-- dcterms:dateAccepted = 2012-06-26T23:45:00+02:00 -->
+<!-- dcterms:date = 2012-06-26T23:45:00+02:00 -->
 
 Momentálně se nacházím daleko (relativně) od domova, na TechEdu v Amsterdamu. Kromě účasti na konferenci zde také testuji Windows 8 na tabletu – viz [úvodní článek této série](http://www.weblog.rider.cz/articles/270-tyden-s-windows-8-tabletem-den-nula).
 

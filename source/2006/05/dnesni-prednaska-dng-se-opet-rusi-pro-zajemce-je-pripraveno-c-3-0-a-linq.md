@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-05-23T12:33:26.94+02:00 -->
-<!-- dcterms:dateAccepted = 2006-05-23T12:33:26.94+02:00 -->
+<!-- dcterms:date = 2006-05-23T12:33:26.94+02:00 -->
 
 Plánovaná přednáška Honzy Šedy o ASP.NET Security, [která byla již jednou přeložena](https://www.aspnet.cz/Articles/91-dnesni-prednaska-honzy-sedy-o-asp-net-security-se-rusi.aspx), a to na dnešek, se opět ruší.
 

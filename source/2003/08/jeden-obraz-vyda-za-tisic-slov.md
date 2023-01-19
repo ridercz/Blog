@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-08-02T01:49:23+02:00 -->
-<!-- dcterms:dateAccepted = 2003-08-02T01:49:23+02:00 -->
+<!-- dcterms:date = 2003-08-02T01:49:23+02:00 -->
 
 ...a vteřina videa za několik tlustých knih. Grabuji tady nějaké video a napadlo mne několik souvislostí:
 

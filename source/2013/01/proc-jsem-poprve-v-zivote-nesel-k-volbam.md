@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-01-12T04:05:36.523+01:00 -->
-<!-- dcterms:dateAccepted = 2013-01-12T04:05:37.323+01:00 -->
+<!-- dcterms:date = 2013-01-12T04:05:37.323+01:00 -->
 
 Právě probíhající prezidentské volby jsou první v mém životě, kterých se plánovitě neúčastním. Jinak jsem se vždycky zúčastňoval všech voleb a na všech úrovních, kdykoliv jsem měl tu možnost. A to i přesto, že jako osoba bez trvalého pobytu sice mám formálně volební právo, ale nemám jak jej realizovat a musím podnikat složitou administrativní obezličku (přihlásit se k pobytu, požádat o voličský průkaz a zase se odhlásit).
 

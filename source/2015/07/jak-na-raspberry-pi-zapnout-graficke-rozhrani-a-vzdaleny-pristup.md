@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-07-13T21:21:28.983+02:00 -->
-<!-- dcterms:dateAccepted = 2015-07-23T19:53:00+02:00 -->
+<!-- dcterms:date = 2015-07-23T19:53:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150723-jak-na-raspberry-pi-zapnout-graficke-rozhrani-a-vzdaleny-pristup.png -->

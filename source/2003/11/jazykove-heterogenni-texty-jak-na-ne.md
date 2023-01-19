@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-26T19:46:41+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-26T19:46:41+01:00 -->
+<!-- dcterms:date = 2003-11-26T19:46:41+01:00 -->
 
 <p>Křížová výprava proti přechylování cizích ženských příjmení, na kterou se vydal <a href="http://www.pixy.cz/blog/2003_11_archiv.html#1069285170">Pixy</a>, mne přivedla k systemizovaným úvahám o vhodném uchopení jazykově heterogenních textů obecně.</p>
 <p>Vzhledem k tomu, že se psaním sice neživím, ale dost často zabývám, je mým cílem vyjadřovat se co možná nejčtivěji. Netrvám na dogmatické formální správnosti (i když hrubky se snažím nedělat :-), ale doufám ve vysokou <em>ergonomii</em> textu - že se bude prostě snadno číst a půjde jednoduše pochopit.</p>

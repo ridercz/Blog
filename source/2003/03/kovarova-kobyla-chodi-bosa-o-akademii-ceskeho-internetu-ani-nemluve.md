@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-09T00:31:57+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-09T00:31:57+01:00 -->
+<!-- dcterms:date = 2003-03-09T00:31:57+01:00 -->
 
 Jedna ze zvláštností života před [webovou kamerou](http://www.rider.cz/cs/webcam/) spočívá v tom, že vám různí (často i cizí) lidé pomocí ICQ nebo jiných programů posílají reakce na to, jak se momentálně tváříte. Takže už jsem si zvykl, že si tak v klidu tvořím, najednou mi kníkne počítač a na obrazovce se objeví vzkaz od [Alraune](http://www.alraune.cz): *Valášku, nedloubej se v nose!* či podobně. Včera večer se mne zase jeden furrík snažil rozveselit, protože se mu zdálo, že se tvářím příliš smutně.
 

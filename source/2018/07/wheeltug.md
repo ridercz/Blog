@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Arduino -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2018-07-19 -->
+<!-- dcterms:date = 2018-07-19 -->
 
 Po většinu své programátorské kariéry píšu "divné programy" - obvykle různé bezpečnostní podivnosti, na které si běžní smrtelníci netroufají. Na stará kolena jsem začal tvočit i "divný hardware" - různé specialitky, které se nedají koupit nebo velmi draho. Do téhle kategorie patří i ovládání HDMI switche pro projekt leteckého simulátoru.
 

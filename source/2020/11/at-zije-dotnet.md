@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20201122-at-zije-dotnet.jpg -->
 <!-- x4w:coverCredits = Roman Synkevych via Unsplash.com -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-11-22 -->
+<!-- dcterms:date = 2020-11-22 -->
 
 Slavná fráze "Le roi est mort, vive le roi!" poprvé zazněla ve Francii v roce 1422, když po smrti Karla VI na trůn nastoupil Karel VII. Zdánlivě paradoxní výrok "Král je mrtev, ať žije král!" má hluboký smysl: sděluje, že ačkoliv konkrétní král zemřel, na jeho místo nastoupíl jiný a král jako instituce je věčný. Ve Francii to pravda s tou věčností úplně nevyšlo, tak uvidíme jak to dopadne s .NETem.
 

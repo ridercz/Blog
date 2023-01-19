@@ -6,4 +6,4 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Lidé a jiná zvěř -->
-<!-- dcterms:dateAccepted = 2016-11-08T23:27:13+01:00 -->
+<!-- dcterms:date = 2016-11-08T23:27:13+01:00 -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-05-26T20:48:46.627+02:00 -->
-<!-- dcterms:dateAccepted = 2007-05-26T20:48:46.627+02:00 -->
+<!-- dcterms:date = 2007-05-26T20:48:46.627+02:00 -->
 
 Právě jsem na CodePlex nahrál novou verzi svých Simple ASP.NET Providers. Podrobnější informace o tomto projektu lze nalézti v článku [Altairis Simple ASP.NET SQL Providers ke stažení](http://www.aspnet.cz/Articles/115-altairis-simple-asp-net-sql-providers-ke-stazeni.aspx).
 

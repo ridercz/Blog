@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190827-live-coding.jpg -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-09-21 -->
+<!-- dcterms:date = 2019-09-21 -->
 
 Po měsíci tady máme další live stream s psaním kódu. Tentokrát poněkud netradičního, nebudu totiž programovat v C#, ale vytvářet 3D model v programu OpenSCAD. 
 

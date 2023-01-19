@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT historie -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-04-15 -->
+<!-- dcterms:date = 2021-04-15 -->
 <!-- x4w:alternateUrl = https://byznysvcesku.cz/michal-valasek-covid-a-michelangelo/ -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-08-25T00:15:38.18+02:00 -->
-<!-- dcterms:dateAccepted = 2012-08-25T00:05:00+02:00 -->
+<!-- dcterms:date = 2012-08-25T00:05:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120825-windows-azure-a-kyberkriminalnici-v-bratislave.png -->

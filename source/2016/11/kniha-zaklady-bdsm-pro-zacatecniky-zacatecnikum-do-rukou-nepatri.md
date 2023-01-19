@@ -7,4 +7,4 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = BDSM -->
 <!-- x4w:category = Recenze -->
-<!-- dcterms:dateAccepted = 2016-11-24T00:00:00+01:00 -->
+<!-- dcterms:date = 2016-11-24T00:00:00+01:00 -->

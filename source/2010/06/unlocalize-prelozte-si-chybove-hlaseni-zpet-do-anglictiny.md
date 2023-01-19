@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-06-26T21:22:04.147+02:00 -->
-<!-- dcterms:dateAccepted = 2010-06-27T09:00:00+02:00 -->
+<!-- dcterms:date = 2010-06-27T09:00:00+02:00 -->
 
 Nepřítelem lidu – toho programátorského rozhodně – jsou lokalizovaná chybová hlášení. Pomineme-li skutečnost, že je zřejmě překládá někdo, kdo nikdy nenaprogramoval ani *Hello World*, bez originálního textu se zpravidla na Internetu nedohledáme žádných vysvětlujících informací.
 

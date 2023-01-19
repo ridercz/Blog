@@ -9,7 +9,7 @@
 <!-- np9:serialId = 5 -->
 <!-- x4w:serial = ViewState -->
 <!-- dcterms:created = 2009-07-03T09:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2009-07-03T09:00:00+02:00 -->
+<!-- dcterms:date = 2009-07-03T09:00:00+02:00 -->
 
 <p>V předchozích článcích této série jsem popsal implementaci ViewState a ControlState v aktuální verzi ASP.NET, tedy 3.5 SP1. V tomto, posledním, článku se podíváme do budoucnosti: na novinky, které nás čekají ve verzi 4.0. Mnou popisovaný stav se týká verze Beta 1 a je dobré ho tedy brát s rezervou – zde prezentované informace se mohou ještě změnit.</p>
 <p>ASP.NET 4.0 změní logiku zapínání a vypínání ViewState. Dosavadní vlastnost <code>EnableViewState</code> sice zůstává zachována, ale jenom na úrovni aplikace nebo stránky. Na úrovni jednotlivého controlu bude ignorována. Tímto způsobem tedy nebude možné ViewState u jednotlivých ovládacích prvků vypnout. Zůstává také zachováno chování, že touto metodou vypnutý ViewState nelze na nižší úrvni zapnout.</p>

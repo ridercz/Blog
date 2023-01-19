@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-09-12T15:27:54.487+02:00 -->
-<!-- dcterms:dateAccepted = 2015-09-12T15:27:54+02:00 -->
+<!-- dcterms:date = 2015-09-12T15:27:54+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150912-jake-aplikace-pro-windows-phone-pouzivam.png -->

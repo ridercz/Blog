@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-05-10T03:22:42+02:00 -->
-<!-- dcterms:dateAccepted = 2004-05-10T03:22:42+02:00 -->
+<!-- dcterms:date = 2004-05-10T03:22:42+02:00 -->
 
 Poslední dobou se na českém Internetu vyrojila smečka tu věcných, tu emotivních vyznání, v nichž se jejich pachatelé svěřují světu s tím, jak prozřeli a začali používat místo MSIE jiný webový prohlížeč. Skoro to vypadá, jako by MSIE používali pouze naprostí začátečníci a kdo má mozek v hlavě, prchá ke konkurenci, seč může.
 

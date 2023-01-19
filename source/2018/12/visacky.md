@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2018-12-13 -->
+<!-- dcterms:date = 2018-12-13 -->
 
 Před dvěma lety jsem z náhlé inspirace vyrobil zajímavé a jednoduché jmenovky/visačky na vánoční dárky. Letos mi došly a pracoval jsem na nové dávce. Napadlo mne návod na ně zveřejnit, aby se mohli inspirovat i ostatní. Pokud nemáte potřebné vybavení, nezoufejte - na konci článku najdete pozvánku na workshop, kde si budete moci přesně tyto visačky zdarma vyrobit. 
 

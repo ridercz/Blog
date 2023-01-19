@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-28T02:27:10+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-28T02:27:10+02:00 -->
+<!-- dcterms:date = 2003-04-28T02:27:10+02:00 -->
 
 Na poštu chodím jenom zřídkakdy. Hlavním důvodem je, že se tam zpravidla strašlivě pohádám. Jednou z věcí, které mne dokáží totálně vytočit, je lidská blbost.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-12-12T13:28:03.31+01:00 -->
-<!-- dcterms:dateAccepted = 2007-12-12T13:28:03.31+01:00 -->
+<!-- dcterms:date = 2007-12-12T13:28:03.31+01:00 -->
 
 Jedná se o mírně rozšířenou a novelizovanou verzi mé rok staré přednášky **ASP.NET Quid Pro Quo aneb Web Forms pro starší a pokročilé**.
 

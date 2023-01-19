@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-10T12:02:37+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-10T12:02:37+02:00 -->
+<!-- dcterms:date = 2003-04-10T12:02:37+02:00 -->
 
 <p>Se zájmem jsem si přečetl <a href="http://www.klaus.cz/klaus2/asp/clanek.asp?id=GJeaEl15kfEr">Otevřený dopis prezidenta republiky k opakovaným případům sebevražd upálením se</a>. Myslím si, že docela dobře chápu pohnutky, které vedou - zejména mladé - lidi k tomu, aby podstoupili pravděpodobně nejbolestivější způsob sebevraždy. Sám je totož v jisté míře prožívám, i když vás mohu ujistit (s vědomím, že se najde dost lidí, kteří budou zklamání), že se upalovat nehodlám.</p>
 <p>Psychohistorie je věda, která matematickými cestami odhaluje budoucnost. Vychází z předpokladu, že zatímco chování jednotlivců je příliš svobodné a nepředvídatelné, chování velké masy lidí lze predikovat na základě matematických simulací. Základy psychohistorie položil Aurorský politik Dr. Han Fastolfe, ale do stavu praktické použitelnosti je dovedl o mnoho let později až slavný matematik Hari Seldon. Simulací zjistil, že galaktické impérium, považované za věčné&nbsp;a nezničitelné čeká brzký zánik a lidstvo se na desítky tisíc let propadne znovu do temnoty a nevědomosti. Ačkoliv přesvědčen, že se tomuto vývoji nedá zabránit, pokusil se alespoň následné období zkrátit. Založil nadaci, jejímž cílem bylo v kritických momentech působit tak, aby napomohla pozitivnímu vývoji.</p>

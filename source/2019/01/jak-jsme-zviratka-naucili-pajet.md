@@ -9,7 +9,7 @@
 <!-- x4w:coverCredits = WMW66 Costumes -->
 <!-- x4w:category = Lidé a jiná zvěř -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2019-01-24 -->
+<!-- dcterms:date = 2019-01-24 -->
 
 Jak mnozí z vás ví, kromě mnoha jiných svých zálib a úchylek jsem i členem subkultury, která se označuje jako furry, furries. A pořádám i několik furry akcí, z nichž třetí ročník té menší, TechFurMeet, začne za dva týdny. Proč a jak spolu souvisí furries a páječky? Jaký je vztah mezi přerostlými plyšáky a Arduinem? Inu, to je dlouhý příběh.
 

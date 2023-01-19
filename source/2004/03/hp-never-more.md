@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-03-10T06:13:54+01:00 -->
-<!-- dcterms:dateAccepted = 2004-03-10T06:13:54+01:00 -->
+<!-- dcterms:date = 2004-03-10T06:13:54+01:00 -->
 
 Když jsem si před více než rokem kupoval nový notebook, nechal jsem se přemluvit ke značce HP. Už to víckrát neudělám.
 

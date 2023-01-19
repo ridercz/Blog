@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-14T05:06:25+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-14T05:06:25+01:00 -->
+<!-- dcterms:date = 2003-03-14T05:06:25+01:00 -->
 
 Ačkoliv se to dnes moc nenosí, s chutí se přiznám k tomu, že mám rád různá nákupní centra. Takové ty obří kolosy, ve kterých (teoreticky) koupíte cokoliv a mezitím si zajdete do kina.
 

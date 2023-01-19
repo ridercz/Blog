@@ -9,7 +9,7 @@
 <!-- np9:serialId = 3 -->
 <!-- x4w:serial = Čárové kódy na webu -->
 <!-- dcterms:created = 2007-08-16T11:00:20+02:00 -->
-<!-- dcterms:dateAccepted = 2007-08-16T11:00:20+02:00 -->
+<!-- dcterms:date = 2007-08-16T11:00:20+02:00 -->
 
 V minulém článku jsem se zabýval teoretickými aspekty použití čárových kódů na webu. Ve druhém pokračování se podíváme na praktickou stránku věci, tedy jak kódy reálně generovat a použít.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-01-27T23:19:31.293+01:00 -->
-<!-- dcterms:dateAccepted = 2009-01-27T23:19:31.293+01:00 -->
+<!-- dcterms:date = 2009-01-27T23:19:31.293+01:00 -->
 
 [![dro-mo 226](http://static.flickr.com/3396/3229779152_a79f0d8e0d.jpg)](http://www.flickr.com/photos/30842692@N06/3229779152/ "dro-mo 226")
 

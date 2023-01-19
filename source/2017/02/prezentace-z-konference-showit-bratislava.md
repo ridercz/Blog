@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2017-02-21T22:54:37.333+01:00 -->
-<!-- dcterms:dateAccepted = 2017-02-22T09:00:00+01:00 -->
+<!-- dcterms:date = 2017-02-22T09:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20170222-prezentace-z-konference-showit-bratislava.png -->

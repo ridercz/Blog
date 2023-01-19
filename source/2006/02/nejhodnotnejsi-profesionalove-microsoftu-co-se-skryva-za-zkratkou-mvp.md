@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-02-24T03:09:14.687+01:00 -->
-<!-- dcterms:dateAccepted = 2006-02-24T03:09:14.687+01:00 -->
+<!-- dcterms:date = 2006-02-24T03:09:14.687+01:00 -->
 
 Před několika lety se na různých českých webech bez velkého humbuku začalo objevovat poměrně ošklivé logo opatřené třemi písmeny - MVP. A před pár dny na Živě vyšel [článek](http://www.zive.cz/h/Uzivatel/AR.asp?ARI=128333) o "nejhodnotnějších profesionálech" - Microsoft MVPs. Diskuze pod článkem je očekávatelně hrozná a článek sám také není právě informačně hodnotný. Za tu poslední výtku nesu částečnou zodpovědnost - původně jsem byl totiž požádán já sám, abych o MVP programu něco napsal. To jsem odmítl s tím, že mi nepřísluší psát o MVP jako celku, mohu říct jenom svůj vlastní subjektivní názor. A to je právě účel tohoto článku.
 

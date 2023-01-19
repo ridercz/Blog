@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-10-22T16:48:34.027+02:00 -->
-<!-- dcterms:dateAccepted = 2004-10-22T16:48:34.027+02:00 -->
+<!-- dcterms:date = 2004-10-22T16:48:34.027+02:00 -->
 
 [![Esta Kanýčo](http://gallery.rider.cz/esta/20040704-175118-0000.jpg?w=221&h=300 "Už zase přemýšlí nad nějakou lumpárnou")](http://gallery.rider.cz/esta/20040704-175118-0000.jpg.xhtml)Jako ekologicky smýšlející domácnost máme tři odpadkové koše: na směsný odpad, na papír a na plasty. Protože kromě toho smýšlíme i logicky, jsou poslední dva jmenované realizovány formou velkých otevřených košů. [Esta](http://www.vlcak.cz/), trpí-li zlobivostí a destrukčními choutkami, si z nich může vytáhnout plastovou lahev či papír a žvýkat ho dle libosti. Zjistili jsme, že je lepší jednou za čas smést zbytky rozžvýkaných krabic od počítačových komponent, které si pejsek samoobslužně vytáhl z koše na papír, než činiti totéž s knihami, které si pejsek samoobslužně vytáhl z knihovny.
 

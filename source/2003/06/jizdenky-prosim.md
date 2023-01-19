@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-06-22T22:43:21+02:00 -->
-<!-- dcterms:dateAccepted = 2003-06-22T22:43:21+02:00 -->
+<!-- dcterms:date = 2003-06-22T22:43:21+02:00 -->
 
 Tak jsem si tak včera seděl v tramvaji číslo 16, směřujíc směr Karlovo náměstí, abych polechtal chuťové pohárky ve výtečné pizzerii [Di Carlo](http://www.dicarlo.cz/). Kdesi na nábřeží ke mně přistupul mírně oplešatělý pán, ukázal odznáček a pravil: "Ugghshhh grmblf!".
 

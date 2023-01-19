@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-19T20:48:50+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-19T20:48:50+02:00 -->
+<!-- dcterms:date = 2003-04-19T20:48:50+02:00 -->
 
 Moji prarodiče mne snad nepřestanou fascinovat. Zejména pak dědeček, kterému je přes osmdesát. Před několika lety jsem mu přivezl představit svoji přítelkyni - tekdy ještě ve víru D/s vášní. Očekával jsem, že budu muset nějak citlivě starému pánovi vysvětlit, proč že má ona dívenka na krku psí obojek. Nečekal jsem, že se na ni podívá, za ten obojek si ji přitáhne a s oceňujícím pohledem řekne "to je praktické...".
 

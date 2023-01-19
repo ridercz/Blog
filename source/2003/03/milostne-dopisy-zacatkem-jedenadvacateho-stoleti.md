@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-17T20:33:17+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-17T20:33:17+01:00 -->
+<!-- dcterms:date = 2003-03-17T20:33:17+01:00 -->
 
 ![Můj nejnovější milostný dopis](http://weblog.rider.cz/files/dymo_love.jpg)Že mi moje babička prorokovala, že budu milostné dopisy psát na stroji, [jsem už psal](http://weblog.rider.cz/ShowRecord.aspx?day=20030216).
 

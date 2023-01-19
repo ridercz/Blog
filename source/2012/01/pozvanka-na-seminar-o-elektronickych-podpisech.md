@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-01-06T03:29:56.117+01:00 -->
-<!-- dcterms:dateAccepted = 2012-01-06T03:29:57+01:00 -->
+<!-- dcterms:date = 2012-01-06T03:29:57+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120106-pozvanka-na-seminar-o-elektronickych-podpisech.png -->

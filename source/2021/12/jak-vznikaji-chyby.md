@@ -8,5 +8,5 @@
 <!-- x4w:coverUrl = /cover-pictures/20211230-jak-vznikaji-chyby.jpg -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-12-30 -->
+<!-- dcterms:date = 2021-12-30 -->
 <!-- x4w:alternateUrl = https://youtu.be/C3ljUE0q3U8 -->

@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2018-10-20 -->
+<!-- dcterms:date = 2018-10-20 -->
 
 Jedním z nejčastějších bezpečnostních problémů je používání zastaralých verzí závislostí (knihoven, komponent), které obsahují známé a opravené bezpečnostní chyby. V poslední verzi [OWASP Top 10](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf) se dostal na deváté místo. GitHub již od listopadu 2017 disponuje funkcí [Security Alerts](https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/), která umí tyto zastaralé komponenty najít a upozornit vás, pokud je používáte.
 

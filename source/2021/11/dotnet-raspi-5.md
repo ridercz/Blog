@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
-<!-- dcterms:dateAccepted = 2021-11-12 -->
+<!-- dcterms:date = 2021-11-12 -->
 
 Seriál o ASP.NET Core na Raspberry Pi měl původně mít jenom čtyři pokračování. Ale výrobce v jeho průběhu uvedl nový model, Raspberry Pi Zero 2. Ten je z mnoha důvodů zajímavý, takže jsem mu věnoval bonusový, pátý díl seriálu. A zároveň jsem popsal, jak používat framework-dependent deployment, tedy jak nainstalovat na Raspberry .NET runtime a provozovat univerzální multiplatformní binárky.
 

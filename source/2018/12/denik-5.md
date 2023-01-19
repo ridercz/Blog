@@ -7,4 +7,4 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureCredits = Andrew Knapp via Flickr, CC BY-NC-ND -->
 <!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/denik-5 -->
-<!-- dcterms:dateAccepted = 2018-12-19 -->
+<!-- dcterms:date = 2018-12-19 -->

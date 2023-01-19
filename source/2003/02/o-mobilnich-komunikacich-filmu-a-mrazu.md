@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-07T22:10:09+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-07T22:10:09+01:00 -->
+<!-- dcterms:date = 2003-02-07T22:10:09+01:00 -->
 
 Za tento zápis ve weblogu vděčíte dobrodiní mobilní komunikace, konkrétně technologii GPRS v síti Eurotel. Pracovní povinnosti mne zavály do míst, kam bych jinak zavítal jenom stěží. Abych řekl pravdu, nevím přesně kde jsem. Zatímco v Praze jsem schopen svou polohu vcelku přesně odhadnout, protože přes cell broadcast na displeji telefonu vidím lokace typu „Náměstí I. P. Pavlova“ nebo alespoň „Praha 4 – Háje“, tady je to nápis „České středohoří“. Tak dík.
 

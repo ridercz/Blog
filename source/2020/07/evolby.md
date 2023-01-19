@@ -11,7 +11,7 @@
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2020-07-23 -->
+<!-- dcterms:date = 2020-07-23 -->
 
 > Obsáhlý článek o elektronických volbách jsme s Vladimírem Smejkalem a Jindřichem Kodlem napsali před devíti lety, vyšel v DSM v roce 2011. Ačkoliv se od té doby dost změnilo, myšlenky v něm vyjádřené jsou platné stále. Vzhledem k tomu, že se nyní začíná o elektronizaci voleb znovu mluvit, se souhlasem spoluautorů jej (v původní podobě) vydávám znovu.
 

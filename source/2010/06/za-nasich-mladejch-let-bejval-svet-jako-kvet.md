@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-06-26T21:04:39.113+02:00 -->
-<!-- dcterms:dateAccepted = 2010-06-26T21:04:40.333+02:00 -->
+<!-- dcterms:date = 2010-06-26T21:04:40.333+02:00 -->
 
 …bejvávalo, bejvávalo, bejvávalo dobře. Alespoň to tedy tvrdí jedna stará písnička. Poslední dobou mám ovšem pocit, že velká část lidí vnímá své mládí jako záležitost krušnou a dnešní "mládeži" její přístup závidí.
 

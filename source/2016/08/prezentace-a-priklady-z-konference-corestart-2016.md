@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2016-08-25T18:09:43.187+02:00 -->
-<!-- dcterms:dateAccepted = 2016-08-25T18:00:00+02:00 -->
+<!-- dcterms:date = 2016-08-25T18:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20160825-prezentace-a-priklady-z-konference-corestart-2016.png -->

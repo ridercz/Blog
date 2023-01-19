@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-09-09 -->
+<!-- dcterms:date = 2022-09-09 -->
 
 Můj oblíbený systém [automatického verzování podle datumu a času](https://www.altair.blog/2018/11/automaticke-verzovani-v-core) není kompatibilní s novými funkcemi .NETu pro snazší vývoj, jako je hot reload a částečná kompilace. To přestane fungovat pokud se při buildu změní verze assembly. Proto jsem musel přijít s jiným způsobem, jak zjistit datum a čas buildu aplikace.
 

@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190805-tisk-na-webu.jpg -->
 <!-- x4w:coverCredits = Nimalan Tharmalingam via freeimages.com -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-08-05 -->
+<!-- dcterms:date = 2019-08-05 -->
 
 Evergreenem webových aplikací je tisk. Svatým grálem je, aby uživatel klepnul na tlačítko v aplikaci a z jeho tiskárny okamžitě začal lézt dokument, vytištěný přesně tak, jak aplikace určila, na milimetr přesně. Hloupé je, že to prostředky webového prohlížeče nejde. Browsery prostě nebyly zrozeny pro tisk.
 

@@ -9,7 +9,7 @@
 <!-- np9:serialId = 1 -->
 <!-- x4w:serial = Virtualizace -->
 <!-- dcterms:created = 2006-08-25T17:31:25.503+02:00 -->
-<!-- dcterms:dateAccepted = 2006-08-25T17:31:25.503+02:00 -->
+<!-- dcterms:date = 2006-08-25T17:31:25.503+02:00 -->
 
  
 

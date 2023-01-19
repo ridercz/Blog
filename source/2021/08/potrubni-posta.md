@@ -7,5 +7,5 @@
 <!-- x4w:pictureCredits = Swisslog -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-08-08 -->
+<!-- dcterms:date = 2021-08-08 -->
 <!-- x4w:alternateUrl = https://tech.hn.cz/c7-66960120-psms7-a80951720f8ca1c -->

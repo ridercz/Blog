@@ -9,7 +9,7 @@
 <!-- np9:serialId = 1 -->
 <!-- x4w:serial = Virtualizace -->
 <!-- dcterms:created = 2006-12-17T16:24:53.98+01:00 -->
-<!-- dcterms:dateAccepted = 2006-12-17T16:24:53.98+01:00 -->
+<!-- dcterms:date = 2006-12-17T16:24:53.98+01:00 -->
 
 VHD soubory se nám utěšeně rozmáhají. Kromě Virtual PC a Virtual Serveru je najdete například i ve Windows Vista, protože do tohoto formátu se ukládají zálohy kompletního systému. Tím zajímavější může být možnost připojit si VHD soubor jako další harddisk k fyzickému počítači.
 

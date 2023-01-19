@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-29T15:25:34.64+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-29T15:25:34.64+02:00 -->
+<!-- dcterms:date = 2005-04-29T15:25:34.64+02:00 -->
 
 Zatímco ještě před několika lety byla možnost zapojit se do betatestování Microsoft produktů spíše teoretická, poslední dobou MS rozdává bety kdečeho jako na běžícím pásu.
 

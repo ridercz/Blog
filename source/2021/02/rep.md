@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20210215-rep.jpg -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = ReP -->
-<!-- dcterms:dateAccepted = 2021-02-15 -->
+<!-- dcterms:date = 2021-02-15 -->
 
 Včera jsem [popsal, jak dopadl informační systém](/2021/02/futlab) pro otevřenou dílnu FutLab, který jsem živě psal. Abych usnadnil jeho adopci pro jiné účely, rozhodl jsem se ho přejmenovat a odstranit z něj všechny reference na původní určení.
 

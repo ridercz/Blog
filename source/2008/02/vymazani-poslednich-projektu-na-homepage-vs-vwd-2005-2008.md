@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-02-25T08:00:33+01:00 -->
-<!-- dcterms:dateAccepted = 2008-02-25T08:00:33+01:00 -->
+<!-- dcterms:date = 2008-02-25T08:00:33+01:00 -->
 
 Když si hraju s větším množstvím pokusných projektů a příkladů, esteticky mne uráží, že se jejich názvy drží v seznamu naposledy otevřených projektů na úvodní stránce Visual Studia. Vymazání tohoto seznamu je ale vemi snadné.
 

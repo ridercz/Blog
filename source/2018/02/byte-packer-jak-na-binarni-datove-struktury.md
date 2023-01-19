@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2018-02-07T22:57:07.167+01:00 -->
 <!-- dcterms:dateSubmitted = 2018-05-25T11:24:00+02:00 -->
-<!-- dcterms:dateAccepted = 2018-02-07T23:00:00+01:00 -->
+<!-- dcterms:date = 2018-02-07T23:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20180207-byte-packer-jak-na-binarni-datove-struktury.png -->

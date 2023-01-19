@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-03-16T20:46:01+01:00 -->
-<!-- dcterms:dateAccepted = 2004-03-16T20:46:01+01:00 -->
+<!-- dcterms:date = 2004-03-16T20:46:01+01:00 -->
 
 ![Upravená knihovna](https://www.cdn.altairis.cz/Blog/knihovna.jpg)Historicky mám k veškerému domácímu kutilství spíše rezervovaný vztah. Je to dáno osobností mého otce. Dělá to sice špatně, zato ale často a rád. 
 

@@ -8,7 +8,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-01-24T01:15:18.867+01:00 -->
 <!-- dcterms:dateSubmitted = 2011-01-24T01:15:55.723+01:00 -->
-<!-- dcterms:dateAccepted = 2011-01-24T00:00:00+01:00 -->
+<!-- dcterms:date = 2011-01-24T00:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20110124-altairis-web-security-toolkit-nova-verze-2-2-0-ke-stazeni.png -->

@@ -8,7 +8,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190304-nocni-starosta.jpg -->
 <!-- x4w:coverCredits = Martyn Smith via Flickr, CC-BY -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2019-03-04 -->
+<!-- dcterms:date = 2019-03-04 -->
 
 Není tomu tak dávno, co vedení Hlavního města Prahy s velkou pompou a propagací zřídilo funkci "nočního starosty", který by se měl starat o noční život v Praze. Od samého počátku to vypadalo jako populistický krok. Současné vedení hlavního města se od Andreje Babiše a jeho ANO naučilo jednu základní věc: není třeba něco dělat, ale je nezbytné tvářit se, jako že se něco dělá. Mohutně medializované zřízení nesmyslné funkce je z tohoto hlediska přímo ideální nástroj.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-09-28T16:10:04.113+02:00 -->
-<!-- dcterms:dateAccepted = 2005-09-28T16:10:04.113+02:00 -->
+<!-- dcterms:date = 2005-09-28T16:10:04.113+02:00 -->
 
 Už se mi dlouho nestalo, že bych se v půl šesté ráno probudil, protože nemohu spát. Situaci vysvětluje skutečnost, že jsem v Seattle, a moje biologické hodiny mají dvě hodiny odpoledne, což je ta pravá doba ke vstávání.
 

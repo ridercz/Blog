@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-10-23T10:01:03.307+02:00 -->
-<!-- dcterms:dateAccepted = 2004-10-23T10:01:03.307+02:00 -->
+<!-- dcterms:date = 2004-10-23T10:01:03.307+02:00 -->
 
 Každý den se člověk učí něco nového. Například já jsem si do dnešního rána myslel, že nejhorší možné probuzení je, když vám československý vlčák okusuje končetiny, případně stojí na hrudníku a olizuje obličej. Není. Mnohem horší je být probuzen *dvěma* československými vlčáky, přičemž vám jeden stojí na hrudníku a olizuje obličej a druhý okusuje ruce. Ještě že [tajemný Q](http://weblog.bestijka.cz/CommentList.aspx?day=20041022) spí o chatku vedle, jinak bych možná rozšířil své obzory ještě o jednoho vlčáka...
 

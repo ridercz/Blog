@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-03-24T04:04:51+01:00 -->
-<!-- dcterms:dateAccepted = 2004-03-24T04:04:51+01:00 -->
+<!-- dcterms:date = 2004-03-24T04:04:51+01:00 -->
 
 Právě před chvílí mne po vzrušené IRC debatě jeden Amík označil za levičáka. Oproti tomu pro řadu Čechů jsem nechutný pravičák. Je rozdíl jenom v americkém versus českém pojímání těchto pojmů nebo někde jinde?
 

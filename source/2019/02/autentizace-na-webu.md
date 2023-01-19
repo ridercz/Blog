@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190225-autentizace-na-webu.jpg -->
 <!-- x4w:coverCredits = Mário Moreira via FREEIMAGES.COM -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-02-25 -->
+<!-- dcterms:date = 2019-02-25 -->
 
 Na svém [ASK.FM](https://ask.fm/ridercz) jsem dostal otázku, proč používáme pro autentizaci cookies místo vestavěných mechanismů v HTTP. Jednoduchá otázka a jednoduchá odpověď: protože tam žádné použitelné nejsou. Nicméně tohle téma si zaslouží hlubší úvahu.
 

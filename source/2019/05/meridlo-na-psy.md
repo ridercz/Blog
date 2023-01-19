@@ -3,7 +3,7 @@
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-05-01 -->
+<!-- dcterms:date = 2019-05-01 -->
 <!-- x4w:coverUrl = /cover-pictures/20190501-meridlo-na-psy.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20190501-meridlo-na-psy.jpg -->
 <!-- x4w:pictureWidth = 150 -->

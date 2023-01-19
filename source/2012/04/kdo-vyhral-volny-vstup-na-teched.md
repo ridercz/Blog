@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-04-16T23:45:40.073+02:00 -->
-<!-- dcterms:dateAccepted = 2012-04-16T23:45:41+02:00 -->
+<!-- dcterms:date = 2012-04-16T23:45:41+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120410-aktualizovano-pozvanka-na-teched-devcon-2012-praha.png -->

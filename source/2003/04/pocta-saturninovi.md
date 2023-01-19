@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-12T16:45:19+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-12T16:45:19+02:00 -->
+<!-- dcterms:date = 2003-04-12T16:45:19+02:00 -->
 
 Cestující v pražské hromadné dopravě se většinou s nepochopením dívali na magora, který koukal do kapesního počítače a strašně se přitom smál. Ten magor jsem byl já a smál jsem se proto, že v tom kapesním počítači jsem měl otevřenou knihu **Saturnin** od Zdeňka Jirotky.
 

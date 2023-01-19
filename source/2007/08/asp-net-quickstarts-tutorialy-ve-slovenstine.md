@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-08-20T14:26:42.73+02:00 -->
-<!-- dcterms:dateAccepted = 2007-08-20T14:26:42.73+02:00 -->
+<!-- dcterms:date = 2007-08-20T14:26:42.73+02:00 -->
 
 Nejenom Harry Potter má své fandovské překladatele. Slovenské verze se dočkaly i QuickStart tutoriály pro ASP.NET 2.0.
 

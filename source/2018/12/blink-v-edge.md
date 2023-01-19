@@ -5,7 +5,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2018-12-05 -->
+<!-- dcterms:date = 2018-12-05 -->
 
 Společnost Microsoft oznámila, že končí s vývojem vlastního vykreslovacího jádra EdgeHTML, které používá její prohlížeč Microsoft Edge a bude v budoucnu používat jádro Blink - stejné, jaké používá Chrome nebo třeba Opera. Její rozhodnutí je pochopitelné, ale nešťastné. Ve svých důsledcích poškodí všechny, včetně uživatelů.
 

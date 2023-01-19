@@ -3,7 +3,7 @@
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Z-TECH -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-01-18 -->
+<!-- dcterms:date = 2022-01-18 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220118-tisk-textu.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

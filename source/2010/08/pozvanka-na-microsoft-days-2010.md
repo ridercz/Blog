@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-08-12T04:17:14.813+02:00 -->
-<!-- dcterms:dateAccepted = 2010-08-12T04:17:15.737+02:00 -->
+<!-- dcterms:date = 2010-08-12T04:17:15.737+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100812-pozvanka-na-microsoft-days-2010.png -->

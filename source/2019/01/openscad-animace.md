@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2019-01-25 -->
+<!-- dcterms:date = 2019-01-25 -->
 <!-- x4w:alternateUrl = https://josefprusa.cz/jak-na-animace-modelu-v-programu-openscad/ -->

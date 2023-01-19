@@ -6,7 +6,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:coverUrl = /cover-pictures/20200512-taghelpers.png -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2020-11-17 -->
+<!-- dcterms:date = 2020-11-17 -->
 
 Jsem stará konzerva a s radostí se obejdu bez JavaScriptu, pokud je to možné. Před časem jsem popisoval, jak [pomocí CSS udělat responzivní menu](/2020/01/scss-menu). Dnes vám ukážu, jak udělat modální dialogové okno pomocí CSS, k čemuž mě inspirovalo [toto demo Timothy Longa](https://codepen.io/timothylong/pen/HhAer).
 

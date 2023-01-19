@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = Jindřich Pergler -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2022-05-05 -->
+<!-- dcterms:date = 2022-05-05 -->
 
 Nabízím vám ke stažení prezentace a příklady z konference CoreStart 6.0, která se konala minulý týden, a videa s demy, která se mi už na konferenci nevešla.
 

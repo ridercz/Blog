@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-08-29T22:44:55.227+02:00 -->
-<!-- dcterms:dateAccepted = 2012-08-29T22:35:00+02:00 -->
+<!-- dcterms:date = 2012-08-29T22:35:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120829-novinky-v-asp-net-4-5-novy-pristup-k-praci-s-javascriptem-a-css-zaznam-a-priklady.jpg -->

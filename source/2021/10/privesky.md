@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-10-02 -->
+<!-- dcterms:date = 2021-10-02 -->
 
 Ve své oblíbené 3D tiskařské skupině na Facebooku jsem našel zajímavý dotaz. Někdo se ptal, jak jednoduše udělat 120 modelů štítků na klíče, s čísly od 1 do 120. To je naprosto skvělé zadání pro OpenSCAD, takže jsem natočil krátké video, jak na to.
 

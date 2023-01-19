@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-05-31T00:57:59.187+02:00 -->
-<!-- dcterms:dateAccepted = 2008-05-31T00:57:59.187+02:00 -->
+<!-- dcterms:date = 2008-05-31T00:57:59.187+02:00 -->
 
 Abych nebyl nařčen z pragocentrismu, pořádáme historicky první altairisí akci v novém [Inovačním centru Microsoftu v Brně](http://www.msic.cz/).
 

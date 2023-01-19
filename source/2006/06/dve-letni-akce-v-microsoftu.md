@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-06-06T16:06:29.537+02:00 -->
-<!-- dcterms:dateAccepted = 2006-06-06T16:06:29.537+02:00 -->
+<!-- dcterms:date = 2006-06-06T16:06:29.537+02:00 -->
 
 Na [weblogu české DPE Group](http://blogs.msdn.com/vyvojari/) zveřejnil Štěpán Bechyňský článek s [pozvánkou](http://blogs.msdn.com/vyvojari/archive/2006/06/05/617882.aspx) na dvě připravované prázdninové akce.
 

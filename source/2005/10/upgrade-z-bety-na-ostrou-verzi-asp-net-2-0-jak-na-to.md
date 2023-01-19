@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-10-31T13:25:50.5+01:00 -->
-<!-- dcterms:dateAccepted = 2005-10-31T13:25:50.5+01:00 -->
+<!-- dcterms:date = 2005-10-31T13:25:50.5+01:00 -->
 
 Pokud jste si - stejně jako já - nadšeně hráli s pre-release verzemi Whidbey, možná uvítáte pár tipů, jak správně přejít na ostrou verzi.
 

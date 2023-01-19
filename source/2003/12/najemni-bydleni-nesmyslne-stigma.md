@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-30T01:56:26+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-30T01:56:26+01:00 -->
+<!-- dcterms:date = 2003-12-30T01:56:26+01:00 -->
 
 Ze všech stran jsem bombardován otevřenou i skrytou reklamou, která říká jediné: nejzásadnějším přáním každého člověka je a musí být pořízení vlastního domu, nebo alespoň bytu. *Každý* přece chce bydlet ve svém! 
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-09-24T11:34:21.987+02:00 -->
-<!-- dcterms:dateAccepted = 2006-09-24T11:34:21.987+02:00 -->
+<!-- dcterms:date = 2006-09-24T11:34:21.987+02:00 -->
 
 Jest českým národním folklórem nadávat na vysoké platy našich poslanců a na to, jak zneužívají svého postavení tím, že jako své asistenty zaměstnávají své rodinné příslušníky. Naposledy toto téma otevřeli na [iDnes](http://zpravy.idnes.cz/rodinne-firmy-zustaly-i-v-nove-snemovne-f07-/domaci.asp?c=A060923_113132_domaci_jan). Já na tom zase nic tak špatného nevidím.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2013-08-05T20:07:12.287+02:00 -->
-<!-- dcterms:dateAccepted = 2013-08-05T20:07:12+02:00 -->
+<!-- dcterms:date = 2013-08-05T20:07:12+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20130805-predstavuji-net-klienta-pro-fakturoid-api.png -->

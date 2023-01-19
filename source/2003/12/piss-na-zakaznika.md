@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-15T19:43:08+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-15T19:43:08+01:00 -->
+<!-- dcterms:date = 2003-12-15T19:43:08+01:00 -->
 
 Titulek nepředstavuje odkaz na nějaké bizarní sexuální praktiky, jak by se mohlo zdát. PISS je zkratka z "Passive Ignorance - Silent Strike". Tedy metodu nenásilného odporu, který používali v Indii proti anglickým kolonizátorům. V Indii minulého století byla tato taktika korunována úspěchem - získáním nezávislosti.
 

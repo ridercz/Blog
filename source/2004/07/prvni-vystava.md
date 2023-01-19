@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-07-25T17:59:26.7+02:00 -->
-<!-- dcterms:dateAccepted = 2004-07-25T17:59:26.7+02:00 -->
+<!-- dcterms:date = 2004-07-25T17:59:26.7+02:00 -->
 
 "Světská sláva polní tráva", brblal jsem, když jsem včera v pět ráno (po třech hodinách spánku) vylézal z postele, abychom mohli s [Myshí](http://www.bestijka.cz/) a [Estou](http://www.vlcak.cz/) navštívit národní výstavu psů v Mladé Boleslavi. Už před nějakým časem jsme se s jejím chovatelem Karlem Hladíkem dohodli, že na tu výstavu společně zajedeme. Bohužel cesta přes celou prahu do Dejvic a pak do Boleslavi zabere nějaký čas a přejímka psů končí v devět.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-04-09T00:11:03+02:00 -->
-<!-- dcterms:dateAccepted = 2003-04-09T00:11:03+02:00 -->
+<!-- dcterms:date = 2003-04-09T00:11:03+02:00 -->
 
 Na včerejší fotografii je **Core Network část řídícího centra testovací UMTS sítě** Eurotelu, kterou pro něj postavila firma Ericsson.
 

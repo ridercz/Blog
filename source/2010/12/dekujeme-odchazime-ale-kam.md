@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-12-29T03:37:20.937+01:00 -->
-<!-- dcterms:dateAccepted = 2010-12-29T03:37:22.28+01:00 -->
+<!-- dcterms:date = 2010-12-29T03:37:22.28+01:00 -->
 
 Obdivuji profesionálně provedenou práci. A pokládám za velice smutné, že se jediným předmětem mého obdivu za posledních deset let v českém zdravotnictví stala práce agentury Ewing PR, která pro Lékařský odborový klub – svaz českých lékařů organizuje akci "Děkujeme, odcházíme". Nejsem příliš častým klientem českého zdravotnictví, ale i ty řídké zážitky, které jsem měl, mne vedou k přesvědčení, že kdyby šlo do tuhého, raději bych se svěřil do péče veterináře, který se stará o moji čubu.
 

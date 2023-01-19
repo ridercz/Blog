@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190216-askme-dotvvm.jpg -->
 <!-- x4w:coverCredits = Jan Vašek via JESHOOTS.COM, CC0 -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-05-02 -->
+<!-- dcterms:date = 2019-05-02 -->
 <!-- x4w:serial = AskMe v DotVVM -->
 
 

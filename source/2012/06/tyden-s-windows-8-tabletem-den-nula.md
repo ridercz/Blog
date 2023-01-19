@@ -9,7 +9,7 @@
 <!-- np9:serialId = 2 -->
 <!-- x4w:serial = Týden s Windows 8 Tabletem -->
 <!-- dcterms:created = 2012-06-24T04:41:52.743+02:00 -->
-<!-- dcterms:dateAccepted = 2012-06-24T04:30:00+02:00 -->
+<!-- dcterms:date = 2012-06-24T04:30:00+02:00 -->
 
 Zítra na týden odjíždím na TechEd Europe do Amsterdamu. A poprvé za posledních zhruba deset let jsem se rozhodl, že někam pojedu bez notebooku. Laskavostí českého Microsoftu jsem dostal na týden zapůjčený tablet s Windows 8. Chci ho otestovat v boji a své zážitky budu P. T. čtenářům tohoto listu průběžně zvěstovat.
 

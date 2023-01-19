@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-09-15T16:50:57.04+02:00 -->
-<!-- dcterms:dateAccepted = 2006-09-15T16:50:57.04+02:00 -->
+<!-- dcterms:date = 2006-09-15T16:50:57.04+02:00 -->
 
 Nepoužíváte source control, ale přesto byste se rádi vrátili ke starší verzi aplikace, když se plánované opravy či úpravy drobet zvrhnou? Řešením je archivovat si průběžně zdrojové kódy svých aplikací. Našel jsem addin do Visual Studia, který vám v tomhle směru pomůže.
 

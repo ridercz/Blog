@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-11-08T17:55:06.083+01:00 -->
-<!-- dcterms:dateAccepted = 2008-11-08T17:55:06.083+01:00 -->
+<!-- dcterms:date = 2008-11-08T17:55:06.083+01:00 -->
 
 Když se mne někdo ptá, kde bydlím, odpovídám, že v průměru kdesi od Jihlavy – polovinu času trávím v Praze a polovinu v Brně. Teď se mi ten průměr trochu pohne, protože následující tři týdny strávím v Barceloně na [TechEd Developers](http://www.microsoft.com/europe/teched-developers/default.htm), v Bratislavě na konferenci [Daily Web](https://www.dailyweb.sk/) (sice tam přednáším, ale za ten blbý název nemůžu) a v Londýně na [RBW](http://www.rbw.org.uk/).
 

@@ -2,7 +2,7 @@
 <!-- dcterms:abstract = Ingredience do bramborového salátu jsou téma natolik zásadní, aby se tím zabýval i státní rozhlas. Jaké ingredience jsem dostal já, abych z nich ukuchtil tradiční vánoční povídku na BDSM.CZ? Původně to měl být, stejně jako v minulých letech, obrázek. Ale autorka měla příliš mnoho práce se svou zvířenou, než aby mi ho stihla včas nakreslit. Takže jsem požádal své přátele na Facebooku, aby mi zadali deset slov a já že na jejich základě napíšu povídku. -->
 <!-- x4w:category = BDSM -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-12-26 -->
+<!-- dcterms:date = 2022-12-26 -->
 <!-- x4w:pictureUrl = /perex-pictures/20221226-liska.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

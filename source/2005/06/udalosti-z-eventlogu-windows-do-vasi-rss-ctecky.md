@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-13T04:50:10.063+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-13T04:50:10.063+02:00 -->
+<!-- dcterms:date = 2005-06-13T04:50:10.063+02:00 -->
 
 Již dlouho pasu po řešení, které by mi umožnilo nějak jednoduše sledovat důležité události v event logu našich asi dvaceti počítačů. Vyzkoušel jsem (a částečně napsal) kdejakou variantu různého přeposílání vybraných eventů mailem a podobně, ale s ničím jsem nebyl zcela spokojen.
 

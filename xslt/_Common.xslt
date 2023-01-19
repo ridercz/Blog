@@ -242,9 +242,9 @@
         <xsl:value-of select="dcterms:abstract" />
       </div>
       <footer>
-        <time datetime="{dcterms:dateAccepted}" title="Datum vydání">
+        <time datetime="{dcterms:date}" title="Datum vydání">
           <i class="fal fa-calendar-alt">&#8197;</i>
-          <xsl:value-of select="x4h:FormatDateTime(dcterms:dateAccepted, 'D', 'cs-CZ') "/>
+          <xsl:value-of select="x4h:FormatDateTime(dcterms:date, 'D', 'cs-CZ') "/>
         </time>
         <xsl:if test="$ShowCategories = 1 and x4w:category">
           <ul class="categories">
@@ -363,7 +363,7 @@
               <xsl:value-of select="."/>
             </a>
             <span>
-              <xsl:value-of select="concat('(', count(//page[x4w:serial = $Value and dcterms:dateAccepted]), ')')"/>
+              <xsl:value-of select="concat('(', count(//page[x4w:serial = $Value and dcterms:date]), ')')"/>
             </span>
           </li>
         </xsl:for-each>
@@ -399,7 +399,7 @@
               <xsl:value-of select="."/>
             </a>
             <span>
-              <xsl:value-of select="concat('(', count(//page[x4w:category = $Value and dcterms:dateAccepted]), ')')"/>
+              <xsl:value-of select="concat('(', count(//page[x4w:category = $Value and dcterms:date]), ')')"/>
             </span>
           </li>
         </xsl:for-each>

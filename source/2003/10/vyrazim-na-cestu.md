@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-10-30T06:10:38+01:00 -->
-<!-- dcterms:dateAccepted = 2003-10-30T06:10:38+01:00 -->
+<!-- dcterms:date = 2003-10-30T06:10:38+01:00 -->
 
 Náš pes leží ve svém pelechu, koulí očima a nevěří vlastním zrakům: páníček vstává, jakkoliv touto dobou obvykle chodí spát :o)
 

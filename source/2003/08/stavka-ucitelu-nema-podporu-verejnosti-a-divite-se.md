@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-08-31T19:16:48+02:00 -->
-<!-- dcterms:dateAccepted = 2003-08-31T19:16:48+02:00 -->
+<!-- dcterms:date = 2003-08-31T19:16:48+02:00 -->
 
 Hodně vody uplynulo od doby, co jsem naposledy pořádně napsal zápis do weblogu. Nebylo to proto, že bych neměl o čem psát: navštívil jsem [Prague Biennale](http://www.praguebiennale.org/), [Vltavu](http://weblog.bestijka.cz/ShowRecord.aspx?day=20030820) a [Eurofurenci](http://www.eurofurence.org). Bohužel jsem se však nedostal k tomu, abych o tom něco napsal - jako obvykle totálně nestíhám.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-17T06:14:19.237+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-17T06:14:19.237+01:00 -->
+<!-- dcterms:date = 2005-01-17T06:14:19.237+01:00 -->
 
 [![Esta ve třech měsících](http://gallery.rider.cz/esta/20040117-204444-0000.jpg?w=225&h=300 "Takhle to začínalo - Esta první den doma")](http://gallery.rider.cz/esta/20040117-204444-0000.jpg.xhtml) 
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-02-24T13:50:11+01:00 -->
-<!-- dcterms:dateAccepted = 2004-02-24T13:50:11+01:00 -->
+<!-- dcterms:date = 2004-02-24T13:50:11+01:00 -->
 
 Martin Chochola si jako téma své diplomové práce vybral "Kriteria subjektivního určování hranice mezi erotikou a pornografií".
 

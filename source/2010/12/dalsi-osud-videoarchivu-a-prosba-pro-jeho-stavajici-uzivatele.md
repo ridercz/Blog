@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-12-06T22:09:56.933+01:00 -->
-<!-- dcterms:dateAccepted = 2010-12-06T22:09:57.56+01:00 -->
+<!-- dcterms:date = 2010-12-06T22:09:57.56+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20101206-dalsi-osud-videoarchivu-a-prosba-pro-jeho-stavajici-uzivatele.png -->

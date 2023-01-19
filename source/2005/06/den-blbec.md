@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-23T03:15:17.383+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-23T03:15:17.383+02:00 -->
+<!-- dcterms:date = 2005-06-23T03:15:17.383+02:00 -->
 
 Den začíná nadmíru roztomile: telefonát od daňového poradce, který mi naznačuje předběžnou výši daně z příjmu za loňský rok. Přijde mi vcelku přiměřená, pokud je to ovšem v lirách.
 

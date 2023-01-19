@@ -10,7 +10,7 @@
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-11-15-->
 <!-- dcterms:updated = 2020-11-25-->
-<!-- dcterms:dateAccepted = 2020-11-25 -->
+<!-- dcterms:date = 2020-11-25 -->
 
 "Ale přece musíte mít nějakou adresu, aspoň na úřadě!", "To nejde, být bez trvalého bydliště!" Kdybych dostal korunu pokaždé, když nějakou podobnou větu slyším, měl bych na dobrou večeři ve slušné restauraci. Na základě četných dotazů rozhodl jsem se, že sepíšu pojednání o tom, jak že to s tím trvalým pobytem podle českého práva vlastně je. Je to asi nejčtenější článek na mém blogu, na mnoha místech odkazovaný a mnohokrát citovaný. Za těch devět let se situace mírně změnila. Vydávám tedy jeho aktualizovanou verzi, odpovídající stavu v roce 2020.
 

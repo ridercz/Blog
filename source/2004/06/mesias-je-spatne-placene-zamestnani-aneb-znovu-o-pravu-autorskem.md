@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-06-04T05:06:36+02:00 -->
-<!-- dcterms:dateAccepted = 2004-06-04T05:06:36+02:00 -->
+<!-- dcterms:date = 2004-06-04T05:06:36+02:00 -->
 
 Tento zápis vznikl původně jako komentář k Alraunímu [zápisu o autorském právu](http://weblog.alraune.cz/ShowRecord.aspx?day=20040602). Nicméně svým rozsahem si časem vydobyl právo na samostatnou existenci.
 

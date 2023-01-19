@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-02-28T19:51:55.75+01:00 -->
-<!-- dcterms:dateAccepted = 2008-02-28T19:51:55.75+01:00 -->
+<!-- dcterms:date = 2008-02-28T19:51:55.75+01:00 -->
 
 Otázky na forms autentizaci, její použití a implementaci patří na [mých kurzech](http://www.gopas.cz/kurzy/GOC36/) k velmi častým. I místní článek [Forms authentication a session state - proč nejsou synchronní?](http://www.aspnet.cz/Articles/184-forms-authentication-a-session-state-proc-nejsou-synchronni.aspx) vzbudil jistý zájem. Pojďme se tedy podrobněji podívat na to, jak forms authentication funguje, a rozeberme si onen magický autentizační ticket.
 

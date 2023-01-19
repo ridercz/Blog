@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-12-24T04:16:37.327+01:00 -->
-<!-- dcterms:dateAccepted = 2004-12-24T04:16:37.327+01:00 -->
+<!-- dcterms:date = 2004-12-24T04:16:37.327+01:00 -->
 
 Již několik let se snažím dodržovat tradici, že každý rok provedu redesign svých webových stránek. V letošním roce jsem to ovšem stihl na poslední chvíli, a to mám novou grafiku připravenou už od loňského prosince.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-03-15T12:00:00+01:00 -->
-<!-- dcterms:dateAccepted = 2006-03-15T12:00:00+01:00 -->
+<!-- dcterms:date = 2006-03-15T12:00:00+01:00 -->
 
 Pokud jde všechno podle plánu, začínám právě v okamžiku vydání tohoto článku na programátorském semináři v Bělohradě.
 

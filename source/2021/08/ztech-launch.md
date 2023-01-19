@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2021-08-17 -->
+<!-- dcterms:date = 2021-08-17 -->
 
 Možná jste si povšimli, že v uplynulých několika měsících má kreativní činnost poněkud poklesla, článků na tomto blogu bylo minimum, videa na mém YouTube žádná...  Po dlouhé době příprav, natáčení a střihu je to zde: spouštíme nový technologický YouTube kanál Z-TECH.
 

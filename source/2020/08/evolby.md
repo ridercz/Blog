@@ -8,5 +8,5 @@
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2020-08-11 -->
+<!-- dcterms:date = 2020-08-11 -->
 <!-- x4w:alternateUrl = https://tech.ihned.cz/c7-66800560-psms7-14beeb877bacae3 -->

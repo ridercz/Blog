@@ -3,7 +3,7 @@
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Bezpečnost -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-02-26 -->
+<!-- dcterms:date = 2022-02-26 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220226-ddos.jpg -->
 <!-- x4w:credits = Yehor Milohrodskyi via Unsplash.com -->
 <!-- x4w:pictureWidth = 150 -->

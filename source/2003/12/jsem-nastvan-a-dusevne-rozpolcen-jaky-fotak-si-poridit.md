@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-19T03:52:38+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-19T03:52:38+01:00 -->
+<!-- dcterms:date = 2003-12-19T03:52:38+01:00 -->
 
 [**![PF 2004 - click to see more](http://www.rider.cz/pf2k4/pf2004teaser.gif)**](http://www.rider.cz/pf2k4/)**Jsem naštván.** Někdo mi ukradl foťák (Minolta DiMAGE 5). Nejhorší na tom je, že všichni potenciální pachatelé jsou dlouhodobí spolupracovníci a řada z nich přátelé. Ach jo.
 

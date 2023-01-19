@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-07-28T07:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2008-07-28T07:00:00+02:00 -->
+<!-- dcterms:date = 2008-07-28T07:00:00+02:00 -->
 
 <p>Všechny jazyky založené na SGML (zejména tedy HTML a XML) využívají k zápisu specifických, jinak obtížně definovatelných znaků, takzvané entity. Ty jsou v zásadě dvojího druhu: buďto se odkazují symbolickým jménem na určitý znak a nebo obsahují číselnou specifikaci dle normy ASCII či UNICODE.</p>
 <p>Například znak pro copyright - © - lze entitou zapsat třemi způsoby:</p>

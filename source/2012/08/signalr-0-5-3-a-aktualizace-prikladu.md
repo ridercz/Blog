@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-08-24T17:16:27.053+02:00 -->
-<!-- dcterms:dateAccepted = 2012-08-24T17:00:00+02:00 -->
+<!-- dcterms:date = 2012-08-24T17:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120824-signalr-0-5-3-a-aktualizace-prikladu.png -->

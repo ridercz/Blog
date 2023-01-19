@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-09-02T19:28:15.82+02:00 -->
-<!-- dcterms:dateAccepted = 2012-09-03T08:00:00+02:00 -->
+<!-- dcterms:date = 2012-09-03T08:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20120903-jak-si-vytvorit-vlastni-site-boilerplate-pro-asp-net-pomoci-nugetu.png -->

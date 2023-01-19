@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2022-07-12 -->
+<!-- dcterms:date = 2022-07-12 -->
 
 Začaly prázdniny a možná by se vám hodily jednoduché LED lampičky, které jsou navíc vodotěsné. Ukážu vám jak takové vyrobit s pomocí dózy od žvýkaček, CR2032 baterie, svítivé diody a (volitelně) trochy 3D tisku. Výrobu zvládnou i děti.
 

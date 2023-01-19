@@ -8,7 +8,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Software -->
-<!-- dcterms:dateAccepted = 2021-11-27 -->
+<!-- dcterms:date = 2021-11-27 -->
 
 Kali je speciální distribuce Linuxu pro bezpečnostní účely, penetrační testy a další bohulibé aktivity. Často se používá jako "live" distribuce, která se neinstaluje, ale jenom se nahraje na DVD nebo USB disk a nabootuje. Já ji nicméně používám pro různá dema a laby a mám ji nainstalovanou ve virtualizační platformě Hyper-V.
 

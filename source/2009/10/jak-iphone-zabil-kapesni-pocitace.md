@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-10-29T04:53:10.32+01:00 -->
-<!-- dcterms:dateAccepted = 2009-10-29T09:00:00+01:00 -->
+<!-- dcterms:date = 2009-10-29T09:00:00+01:00 -->
 
 Demokracie je systém, ve kterém všichni dostanou to, co si většina zaslouží. Tento bonmot je vcelku přesným vyjádřením toho, co se stalo s kapesními počítači v průběhu uplynulých let. Historicky byly přenosné a později kapesní počítače nástrojem pro profesionály. Pamatuji si živě nadšení, které v řadách adminů všeho druhu způsobily první kapesní počítače, které umožnily řešit tím či oním způsobem havarijní stavy na dálku, na cestách, přes mobil. Tomuto určení odpovídalo též pojetí kapesních počítačů a jejich schopnosti. A také cena, poměrně vysoká při srovnání s běžnými mobilními telefony.
 

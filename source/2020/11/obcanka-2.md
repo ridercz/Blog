@@ -8,7 +8,7 @@
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Lidé a jiná zvěř -->
-<!-- dcterms:dateAccepted = 2020-11-24 -->
+<!-- dcterms:date = 2020-11-24 -->
 
 Nabízím vám záznam svého včerejšího streamu ze série Dvounohý kůň versus úřední šiml. Byl věnován problematice svobodného přístup k informacím. Tedy postupu, jak od veřejných institucí získat informace které potřebujete a jak se bránit, pokud vám je nechtějí vydat.
 

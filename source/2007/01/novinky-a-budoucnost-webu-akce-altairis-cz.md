@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-01-25T03:55:07.5+01:00 -->
-<!-- dcterms:dateAccepted = 2007-01-25T03:55:07.5+01:00 -->
+<!-- dcterms:date = 2007-01-25T03:55:07.5+01:00 -->
 
 Když jsem před zhruba půl rokem spouštěl web [http://akce.altairis.cz/](http://akce.altairis.cz/), byla moje představa o jeho smyslu a funkci jednoduchá. Chtěl jsem napsat systém, který by všem dal vědět, když se pořádaná akce, přesune nebo zruší. Počítal jsem s pár akcemi do roka. Jak už to bývá, trochu se to zvrhlo a shora uvedený web je prakticky největším kalendářem vývojářských akcí pro .NET. Rád bych vás seznámil s novinkami, které jsem na tomto webu spustil, a nebo které se plánují.
 

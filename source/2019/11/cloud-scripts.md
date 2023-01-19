@@ -7,7 +7,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-11-14 -->
+<!-- dcterms:date = 2019-11-14 -->
 
 Mám rád cloudové prostředí Microsoft Azure. Umožňuje mi dělat co chci a ne se starat o infrastrukturu, kterou sice nechci, ale musím ji mít. Nelíbí se mi ale [webový portál pro správu](https://portal.azure.com). Je to typická moderní aplikace dnešní doby: křehká květinka plná JavaScriptu, která se zakucká při sebemenší chybyčce ve spojení a o co je nepřehlednější, o to je pomalejší. Navíc se mění pod rukama a co platilo tento týden, neplatí dnes.
 

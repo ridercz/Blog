@@ -8,7 +8,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190709-zakazy-v-praze.jpg -->
 <!-- x4w:coverCredits = Nadine Shaabana via Unsplash -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2019-07-09 -->
+<!-- dcterms:date = 2019-07-09 -->
 
 Z pražského magistrátu se line souvislý a nepřerušený tok zákazů a omezení. "Líp" začalo být už s vládou ANO, ČSSD, Zelených, KDU-ČSL a STAN, ale opravdová povodeň to začala být až s příchodem Pirátů, Prahy Sobě, TOP 09, STAN a KDU-ČSL.
 

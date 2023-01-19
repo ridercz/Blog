@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-06-07T23:44:56.427+02:00 -->
-<!-- dcterms:dateAccepted = 2005-06-07T23:44:56.427+02:00 -->
+<!-- dcterms:date = 2005-06-07T23:44:56.427+02:00 -->
 
 [RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) (HTTP) definuje mimo jiné stavové kódy, kterými HTTP servery odpovídají na požadavky. Notoricky známý (a nenáviděný) je například *404 Object not found*. Kompletní přehled najdete ve zmíněném RFCčku, já si dovolím upozornit na dva specifické. Jedná se o *301 Moved Permanently* a *410 Gone*. Oba dva jsou užitečné zejména při komunikaci s vyhledávači.
 

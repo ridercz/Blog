@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20191017-automaticke-mazani-blobu.jpg -->
 <!-- x4w:coverCredits = Andrew Stawarz via Flickr, CC BY-SA 2.0 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:dateAccepted = 2019-10-17 -->
+<!-- dcterms:date = 2019-10-17 -->
 
 Mám rád Azure Storage, protože je to levné, jednoduché a spolehlivé úložiště dat. Používám ho mimo jiné pro "zálohu poslední záchrany" pro databáze. Podrobnosti najdete v článku [Automatizovaná záloha SQL Serveru do Azure Storage](https://www.altair.blog/2018/07/zaloha-sql-do-azure). Můj skript nicméně neřeší mazání starých záloh. Při cenách Azure Storage a velikosti našich databází mi nestálo za to psát na to nějaký skript.
 

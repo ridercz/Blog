@@ -4,7 +4,7 @@
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Politika -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2022-04-05 -->
+<!-- dcterms:date = 2022-04-05 -->
 <!-- x4w:pictureUrl = /perex-pictures/20220405-dma.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->

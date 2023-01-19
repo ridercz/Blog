@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-07-02T23:08:00.123+02:00 -->
-<!-- dcterms:dateAccepted = 2008-07-02T23:08:00.123+02:00 -->
+<!-- dcterms:date = 2008-07-02T23:08:00.123+02:00 -->
 
 Tenhle článek jsem se chystal napsat už pěkně dlouho, ale vždycky mi do toho něco vlezlo. Týká se tajemného souboru *app_offline.htm*.
 

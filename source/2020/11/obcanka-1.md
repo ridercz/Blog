@@ -10,7 +10,7 @@
 <!-- x4w:category = Politika -->
 <!-- x4w:category = Lidé a jiná zvěř -->
 <!-- dcterms:dateCreated = 2020-11-12 -->
-<!-- dcterms:dateAccepted = 2020-11-16 -->
+<!-- dcterms:date = 2020-11-16 -->
 
 Když popisuji své zážitky s úřady, lidi se mně často ptají, jestli na styk s nimi nedělám nějaké školení. Tak jsem se rozhodl jedno takové udělat, a to online jako live stream na Youtube. Lze ho chápat jako jemný úvod do sebeobrany prostřednictvím práva. Nejenom při styku s úřady či policií, ale třeba i ve sporu s obchodníkem při reklamaci nebo sousedem, kterému se nelíbí váš pes.
 

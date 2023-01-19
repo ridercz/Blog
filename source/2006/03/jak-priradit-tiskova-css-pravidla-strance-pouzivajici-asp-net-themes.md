@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-03-14T20:47:06.903+01:00 -->
-<!-- dcterms:dateAccepted = 2006-03-14T20:47:06.903+01:00 -->
+<!-- dcterms:date = 2006-03-14T20:47:06.903+01:00 -->
 
 
 		<p>Mezi uživateli jsou i tací, kdo prahnou po tom, aby si mohli webové stránky tisknout. A papír je médium s trochu jinou podstatou, než web a tisková verze stránky s tím musí počítat. Měla by se soustředit na to, co uživatel pravděpodobně chce vytisknout (např. text článku) a zanedbat věci, které vytištěné na papíře nemají smysl, například navigaci. Neměla by rovněž hýřit barvami. Dnes je sice barevný tisk podstatně dostupnější, než před lety, ale stále je tisk barevné stránky pomalejíší a nákladnější, než tisk černobílý.</p>

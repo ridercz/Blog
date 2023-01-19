@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-02-23T23:19:22.41+01:00 -->
-<!-- dcterms:dateAccepted = 2007-02-23T23:19:22.41+01:00 -->
+<!-- dcterms:date = 2007-02-23T23:19:22.41+01:00 -->
 
 Jednou z nejlepších věcí na programování je, že se člověk pořád učí něco nového. Jednou z nejhorších věcí na programování je, že si přitom uvědomuje, jak *strašné* věci psal ještě před pár měsíci - obzvláště je-li nucen je osobně používat. U mne takové stavy nastávají pravidelně šest až osm měsíců po napsání nového webu. Za tu dobu se naučím pár nových triků, objeví se nové verze použitých komponent... Něco jde upravit snadno, něco vyžaduje hlubší zásah, něco holt kompletní změnu architektury.
 

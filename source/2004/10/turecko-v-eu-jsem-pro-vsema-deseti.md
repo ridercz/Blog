@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-10-20T23:21:07.43+02:00 -->
-<!-- dcterms:dateAccepted = 2004-10-20T23:21:07.43+02:00 -->
+<!-- dcterms:date = 2004-10-20T23:21:07.43+02:00 -->
 
 Jest o mně všeobecně známo, že [nepatřím k příznivcům Evropské unie](/entry/article-20030517.aspx#140722), protože ji [považuji za zbytečnou](/entry/article-20030221.aspx#045529). Nesmírně mne ovšem pobavila momentální debata o tom, zda by Turecko mělo či nemělo vstoupit do EU.
 

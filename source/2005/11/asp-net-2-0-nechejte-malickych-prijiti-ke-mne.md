@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-11-09T21:22:13.087+01:00 -->
-<!-- dcterms:dateAccepted = 2005-11-09T21:22:13.087+01:00 -->
+<!-- dcterms:date = 2005-11-09T21:22:13.087+01:00 -->
 
 ## Komu Microsoft neumí prodávat
 

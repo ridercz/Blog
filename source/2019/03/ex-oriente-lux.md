@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190318-ex-oriente-lux.jpg -->
 <!-- x4w:coverCredits = Anton Strogonoff via Flickr, CC BY -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-03-18 -->
+<!-- dcterms:date = 2019-03-18 -->
 
 > Zkrácená verze tohoto textu vyšla dnes v Hospodářských novinách
 

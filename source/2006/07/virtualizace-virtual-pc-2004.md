@@ -9,7 +9,7 @@
 <!-- np9:serialId = 1 -->
 <!-- x4w:serial = Virtualizace -->
 <!-- dcterms:created = 2006-07-17T04:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2006-07-17T04:00:00+02:00 -->
+<!-- dcterms:date = 2006-07-17T04:00:00+02:00 -->
 
  ![Okno Virtual PC](https://www.cdn.altairis.cz/Blog/2006/20060715-VirtualPC.png)Tématu virtualizace jsem se na tomto webu dosud nevěnoval a na českém Internetu mu není věnován zdaleka takový prostor, jaký by si zaloužilo. Microsoft nyní uvolnil zdarma k použití pro všechny oba dva své virtualizační produkty: Virtual PC 2004 i Virtual Server 2005 R2. To mne vede k nápadu sepsat sérii článků o virtualizaci a jejím využití. 
 

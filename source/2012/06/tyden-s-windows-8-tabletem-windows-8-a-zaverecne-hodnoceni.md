@@ -9,7 +9,7 @@
 <!-- np9:serialId = 2 -->
 <!-- x4w:serial = Týden s Windows 8 Tabletem -->
 <!-- dcterms:created = 2012-06-30T01:36:30.71+02:00 -->
-<!-- dcterms:dateAccepted = 2012-06-30T01:25:00+02:00 -->
+<!-- dcterms:date = 2012-06-30T01:25:00+02:00 -->
 
 Jak pravidelní čtenáři mého webu vědí, poslední týden jsem strávil bez notebooku, jenom ve společnosti tabletu s Windows 8. Toto je závěrečný díl mých postřehů a konečně také vyjádření k softwarovému řešení, Windows 8 na tabletu.
 

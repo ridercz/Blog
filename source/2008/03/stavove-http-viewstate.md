@@ -9,7 +9,7 @@
 <!-- np9:serialId = 4 -->
 <!-- x4w:serial = Stavové HTTP -->
 <!-- dcterms:created = 2008-03-23T08:00:00+01:00 -->
-<!-- dcterms:dateAccepted = 2008-03-23T08:00:00+01:00 -->
+<!-- dcterms:date = 2008-03-23T08:00:00+01:00 -->
 
 V minulých dílech tohoto seriálu jsme se zabývali použitím [cookies](http://www.aspnet.cz/Articles/191-stavove-http-cookies.aspx) a [sessions](http://www.aspnet.cz/Articles/193-stavove-http-sessions.aspx) k překlenutí bezstavovosti HTTP. Poslední takovou technikou, o které se chci zmínit, je ViewState, která se od dříve uvedených dosti liší.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-07-03T09:00:00+02:00 -->
-<!-- dcterms:dateAccepted = 2008-07-03T09:00:00+02:00 -->
+<!-- dcterms:date = 2008-07-03T09:00:00+02:00 -->
 
 [![New Orleans - D-Day Museum - Enigma Machine - 3-9-08](http://static.flickr.com/2295/2333133387_1e87ddba6e.jpg)](http://www.flickr.com/photos/14481705@N04/2333133387/ "New Orleans - D-Day Museum - Enigma Machine - 3-9-08")Poslední dobou se mi hned několikrát dostalo té pochybné cti pracovat s několika různými API a technologiemi, využívajícími technologie digitálního podpisu, případně šifrování. Smutné je, že většinou byla implementace těchto technologií do značné míry Potěmkinovou vesnicí: architektura systému byla navržena tak špatně, že i přes poměrně značné vynaložené úsilí byly diskutované systémy stále napadnutelné.
 

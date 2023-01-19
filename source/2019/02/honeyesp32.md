@@ -10,7 +10,7 @@
 <!-- x4w:category = Software -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2019-02-28 -->
+<!-- dcterms:date = 2019-02-28 -->
 
 Před časem jsem [zde na blogu představil](/2018/11/honeyesp) projekt HoneyESP - falešné AP pro sociálně inženýrské útoky za stovku. Od té doby jsem ho vylepšil. Obejde se bez SD karty a nově je podporován i na deskách s čipem ESP32, který je nástupcem ESP8266.
 

@@ -9,7 +9,7 @@
 <!-- np9:serialId = 3 -->
 <!-- x4w:serial = Čárové kódy na webu -->
 <!-- dcterms:created = 2007-08-14T22:05:36.997+02:00 -->
-<!-- dcterms:dateAccepted = 2007-08-14T22:05:36.997+02:00 -->
+<!-- dcterms:date = 2007-08-14T22:05:36.997+02:00 -->
 
 Od doby, co jsem na webu `akce.altairis.cz` spustil tisk pozvánek s čárovým kódem, byl jsem opakovaně dotazován na zkušenosti. Tento článek popisuje souhrnně zkušenosti a poznatky, ke kterým jsem dospěl. Může být užitečný všem, kdo chtějí implementovat čárové kódy ve svých webových aplikacích.
 

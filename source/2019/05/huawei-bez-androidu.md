@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190318-ex-oriente-lux.jpg -->
 <!-- x4w:coverCredits = Anton Strogonoff via Flickr, CC BY -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2019-05-21 -->
+<!-- dcterms:date = 2019-05-21 -->
 
 Podle zprávy agentury Reuters společnost Google přerušila spolupráci s Huawei. Což pro výrobce telefonů založených na platformě Android znamená docela zásadní problém. Je to součást systematického tažení americké vlády proti čínské firmě. Jaké dopady to bude mít na uživatele telefonů Huawei po celém světě, včetně České republiky?
 

@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2021-03-08 -->
+<!-- dcterms:date = 2021-03-08 -->
 
 Pro řadu scénářů v ASP.NET Identity potřebujeme nějaký potvrzovací kód (token) který pošleme uživateli a on pomocí něj potvrdí, že je skutečně tím, za koho se vydává. V tomto článku budeme řešit tři takové situace:
 

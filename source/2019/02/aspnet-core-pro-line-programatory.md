@@ -8,7 +8,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190215-aspnet-core-pro-line-programatory.jpg -->
 <!-- x4w:coverCredits = Update Conference -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-02-15 -->
+<!-- dcterms:date = 2019-02-15 -->
 
 Včera a dnes se v Praze v Microsoftu konala konference o ASP.NET Core v rámci Update Days - s pracovním názvem "ASP.NET Core pro líné programátory", protože tématem prvního dne bylo vesměs jak aplikace generovat automaticky a bez námahy.
 

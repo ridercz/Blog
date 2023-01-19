@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-05-19T19:07:28.537+02:00 -->
-<!-- dcterms:dateAccepted = 2010-05-19T19:07:29.177+02:00 -->
+<!-- dcterms:date = 2010-05-19T19:07:29.177+02:00 -->
 
 Říká se, že nejefektivnější formou vlády je osvícená diktatura, jejíž zásadní problém spočívá v tom, že nejpozději ve druhé generaci přestává být osvícenou. S trochou jedovatosti se dá toto pravidlo vztáhnout na ty z českých úřadů, které mají hlídat úřady ostatní.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-07-04T09:28:00+02:00 -->
-<!-- dcterms:dateAccepted = 2003-07-04T09:28:00+02:00 -->
+<!-- dcterms:date = 2003-07-04T09:28:00+02:00 -->
 
 Film **Telefonní budka** mne zaujal, už když jsem o něm poprvé slyšel. A odhodlání jít na něj do kina nezkalilo ani pár kousavých poznámek v recenzích (v duchu že oběť v telefonní budce nedrží ani tak sniper, jako spíše scénárista).
 

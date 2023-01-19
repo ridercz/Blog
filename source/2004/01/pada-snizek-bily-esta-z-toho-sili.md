@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-20T03:05:24+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-20T03:05:24+01:00 -->
+<!-- dcterms:date = 2004-01-20T03:05:24+01:00 -->
 
 Při nočím venčení jsem zjistil, že venku hustě sněží. Esta taky. Narozdíl ode mne to uvítala. Ze začátku se jí sněhové vločky ladně se snášející (čti: větrem prudce vrhané) na čumák nelíbily stejně jako mně, ale posléze ve sněhu radostně běhala a skákala a moc si to užívala.
 

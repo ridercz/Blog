@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-04-27T05:27:37.783+02:00 -->
-<!-- dcterms:dateAccepted = 2006-04-27T05:27:37.783+02:00 -->
+<!-- dcterms:date = 2006-04-27T05:27:37.783+02:00 -->
 
 Neuvěřitelné se stalo skutkem a na světě je záznam prvních dvou částí [semináře o novinkách v ASP.NET 2.0](https://www.aspnet.cz/Articles/85-petidilny-seminar-novinky-v-asp-net-2-0.aspx).
 

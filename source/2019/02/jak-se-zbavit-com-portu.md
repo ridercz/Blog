@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20181115-honeyesp.jpg -->
 <!-- x4w:category = Bastlení -->
 <!-- x4w:category = Tipy, triky -->
-<!-- dcterms:dateAccepted = 2019-02-26 -->
+<!-- dcterms:date = 2019-02-26 -->
 
 Pokud si taky rádi hrajete s elektronikou, Arduinem a podobnými radostmi, patrně máte na svém počítači přehršel neaktivních sériových portů (COM portů). Dám vám návod, jak od nich váš systém vyčistit.
 

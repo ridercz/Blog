@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-22T10:12:13+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-22T10:12:13+01:00 -->
+<!-- dcterms:date = 2003-12-22T10:12:13+01:00 -->
 
 Dnešek je dnem S - tedy Stěhování. Všechny věci jsou sbaleny, želví akvárium odvodněno, počítčové sítě zlikvidovány. A ani v tento den mne nemohou minout zábavné příhody.
 

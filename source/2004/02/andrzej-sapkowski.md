@@ -9,7 +9,7 @@
 <!-- np9:serialId = 1 -->
 <!-- x4w:serial = Řekni mi, co čteš -->
 <!-- dcterms:created = 2004-02-27T06:19:58+01:00 -->
-<!-- dcterms:dateAccepted = 2004-02-27T06:19:58+01:00 -->
+<!-- dcterms:date = 2004-02-27T06:19:58+01:00 -->
 
 Mám několik oblíbených spisovatelů. Podle mého názoru se jedná o velice známá jména, nicméně poslední dobou jsem zjistil, že některým lidem mnoho neříkají - a to i těm, kteří hodně čtou.
 

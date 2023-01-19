@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20201115-futlabis-1.jpg -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = ReP -->
-<!-- dcterms:dateAccepted = 2021-02-14 -->
+<!-- dcterms:date = 2021-02-14 -->
 
 Před časem jsem udělal sérii webcastů o vývoji informačního systému pro otevřenou dílnu FutLab. Jak to dopadlo? Operace dopadla úspěšně, pacient zemřel. Aplikaci jsem sice úspěšně dokončil, ale než došlo k jejímu nasazení, FutLab v podobě otevřené dílny v důsledku vládních opatření skončil.
 

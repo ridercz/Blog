@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-02-11T15:06:41.41+01:00 -->
-<!-- dcterms:dateAccepted = 2008-02-11T15:06:41.41+01:00 -->
+<!-- dcterms:date = 2008-02-11T15:06:41.41+01:00 -->
 
 Jak již patrně víte, Microsoft [zveřejnil zdrojové kódy většiny .NET Frameworku](http://blogs.msdn.com/sburke/archive/2008/01/16/configuring-visual-studio-to-debug-net-framework-source-code.aspx). Zatím však jenom pro prohlížení v rámci debuggingu ve Visual Studiu. Lepší než nic, ale debuggingu ve Visual Studiu jsem nikdy nepřišel nějak na chuť, neumím s ním zacházet a přijde mi to nepohodlné.
 

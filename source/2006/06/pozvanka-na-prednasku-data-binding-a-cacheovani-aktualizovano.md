@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-06-18T05:57:59.807+02:00 -->
-<!-- dcterms:dateAccepted = 2006-06-18T05:57:59.807+02:00 -->
+<!-- dcterms:date = 2006-06-18T05:57:59.807+02:00 -->
 
 V úterý **27. června 2006** se od 18:00 v pražské centrále Microsoftu uskuteční další ze [série přednášek o novinkách v ASP.NET 2.0](https://www.aspnet.cz/Articles/85-petidilny-seminar-novinky-v-asp-net-2-0.aspx). Tématem bude tentokráte přístup k datům z webových aplikací.
 

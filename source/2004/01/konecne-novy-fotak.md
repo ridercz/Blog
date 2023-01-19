@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-28T23:05:21+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-28T23:05:21+01:00 -->
+<!-- dcterms:date = 2004-01-28T23:05:21+01:00 -->
 
 Konečně jsem se dočkal. Poté, co mi koncem roku ukradli **Minoltu DiMAGE 5** jsem trpěl s malým kompaktem **Sony ChyberShot DSC-P1**. Slovo "trpět" je přehnané, ale jenom mírně. Za nějakého zvláštního fotografa se nepovažuji, ale foťák, který neumí manuálně nastavit ani vyvážení bílé (o takových zbytečnostech jako je třeba doba expozie nemluvě) se mi nehodí. Jeho výhodou jsou malé rozměry, pročež ho s sebou mohu neustále tahat po kapsách a zhusta tak činím.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-12-10T05:13:24.813+01:00 -->
-<!-- dcterms:dateAccepted = 2011-12-10T05:13:26+01:00 -->
+<!-- dcterms:date = 2011-12-10T05:13:26+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20111210-font-embedding-v-asp-net-a-iis.png -->

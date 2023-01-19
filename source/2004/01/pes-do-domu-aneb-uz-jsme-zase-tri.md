@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-01-17T20:08:48+01:00 -->
-<!-- dcterms:dateAccepted = 2004-01-17T20:08:48+01:00 -->
+<!-- dcterms:date = 2004-01-17T20:08:48+01:00 -->
 
 [![Fotografie Esty](http://weblog.rider.cz/files/esta1st_lq.jpg "Esta Kanýčo a Mysh (Esta je ta hezčí)")](http://weblog.rider.cz/files/esta1st_hq.jpg)Dlouho nám to [bezpsí období](http://weblog.rider.cz/ShowRecord.aspx?day=20031113) nevydrželo. Dnešního večera obohatila naši domácnost Esta Kanýčo, čtyřměsíční fenka [československého vlčáka](http://www.cswolfdog.cz/). Ano, je to jedna z těch dvou slečen, co se je [snažila udat Alraune](http://weblog.alraune.cz/ShowRecord.aspx?day=20040112).
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-11-03T03:36:18.61+01:00 -->
-<!-- dcterms:dateAccepted = 2006-11-03T03:36:18.61+01:00 -->
+<!-- dcterms:date = 2006-11-03T03:36:18.61+01:00 -->
 
 Konference WINNT-L, SQL-L a VSNET-L, hostované na EMWACu, jsem navštěvoval léta. Nejprve jako zdroj poučení, posléze jako zdroj inspirace, mimo jiné i pro tento web. Nyní jim je konec, alespoň tedy v podobě, v jaké je známe. Rýsuje se však jejich zdatný nástupce.
 

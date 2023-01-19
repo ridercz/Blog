@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-03-19T10:24:28.49+01:00 -->
-<!-- dcterms:dateAccepted = 2006-03-19T10:24:28.49+01:00 -->
+<!-- dcterms:date = 2006-03-19T10:24:28.49+01:00 -->
 
 Se začátkem volební kampaně je myslím přesně ten správný čas, abychom si připomněli několik vhodných citátů [Lazara Longa](http://en.wikipedia.org/wiki/Lazarus_Long "Lazarus Long na Wikipedii").
 

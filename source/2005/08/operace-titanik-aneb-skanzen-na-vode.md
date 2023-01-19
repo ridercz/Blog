@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-08-01T14:11:33.88+02:00 -->
-<!-- dcterms:dateAccepted = 2005-08-01T14:11:33.88+02:00 -->
+<!-- dcterms:date = 2005-08-01T14:11:33.88+02:00 -->
 
 Jak moc pěkně napsaly České noviny, [Karlovarský kraj zasáhla dosud největší kalamita v jeho historii](http://www.ceskenoviny.cz/domov/index_view.php?id=141180). Letní vodácké výpravy našeho zvěřince se staly v určitých kruzích svého druhu legendou. Když se rozkřiklo, že se letos hodláme na vodu vydat opět, davy účastníků se rozrostly na pětadvacet lidí. Několik z nich samozřejmě odpadlo (jeden se dokonce zmrzačil, aby měl dobrou výmluvu), ale i tak nás jelo celkem asi dvacet.
 

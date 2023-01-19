@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Politika -->
-<!-- dcterms:dateAccepted = 2021-03-01 -->
+<!-- dcterms:date = 2021-03-01 -->
 <!-- x4w:alternateUrl = https://prohlaseni.altair.blog/ -->

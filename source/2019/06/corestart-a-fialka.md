@@ -7,7 +7,7 @@
 <!-- x4w:coverUrl = /cover-pictures/20190706-corestart-a-fialka.jpg -->
 <!-- x4w:coverCredits = Fichtenspargel via Wikimedia Commons, CC BY-SA -->
 <!-- x4w:category = Akce a události -->
-<!-- dcterms:dateAccepted = 2019-06-14 -->
+<!-- dcterms:date = 2019-06-14 -->
 
 Minulý týden se v Praze konala konference CoreStart 3.0, na které jsem přednášel o ASP.NET Identity a kryptografii v .NET Core. Nyní dávám k dispozici prezentace a ukázkovou aplikaci Fialka.net.
 

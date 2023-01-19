@@ -6,7 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2021-09-24 -->
+<!-- dcterms:date = 2021-09-24 -->
 
 V týdnu jsem se jako lektor zúčastnil workshopu o pájení na akci Make More v Mladé Boleslavi. Účastníkům jsem slíbil, že napíšu článek o doporučeném vybavení a kde ho sehnat a svůj slib tímto plním.
 

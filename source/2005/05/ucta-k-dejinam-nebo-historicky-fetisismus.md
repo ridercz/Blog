@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-05-20T03:18:11.043+02:00 -->
-<!-- dcterms:dateAccepted = 2005-05-20T03:18:11.043+02:00 -->
+<!-- dcterms:date = 2005-05-20T03:18:11.043+02:00 -->
 
 U příležitosti výročí konce druhé světové války uspořádala MF Dnes [objevný test](http://zpravy.idnes.cz/domaci.asp?r=domaci&c=A050506_203929_domaci_miz), v němž odhalila, že znalosti žactva šestých až devátých tříd o WWII nejsou právě v nejlepším stavu. Záhy se vyrojila očekávatelná přehršel komentářů o tom, jak je to špatně. Za všechny citujme například [lkaní režisérky Třeštíkové](http://zpravy.idnes.cz/nazory.asp?r=nazory&c=A050509_222501_nazory_itu), z větší části o tom, že se nikdo moc nezajímá o dokumentární filmy (které předpokládám točí):
 

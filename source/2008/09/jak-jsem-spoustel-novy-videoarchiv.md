@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-09-21T14:27:39.167+02:00 -->
-<!-- dcterms:dateAccepted = 2008-09-21T14:27:39.167+02:00 -->
+<!-- dcterms:date = 2008-09-21T14:27:39.167+02:00 -->
 
  Jedno z mých nejoblíbenějších úsloví zní, že *cesta do pekel je dlážděná dobrými úmysly*. V jeho duchu se snažím zpravidla mít úmysly spíše špatné, aby výsledný efekt odpovídal směru vynaloženého úsilí, ale občas mi to nedá a ozvou se zbytky takových vlastností jako dobré vychování, pomoc bližnímu, služba veřejnosti a tak všelijak vůbec. No, a podle toho to pak dopadá. Jako například, když jsem pojal úmysl oživit web [videoarchiv.altairis.cz](http://videoarchiv.altairis.cz/).  
 

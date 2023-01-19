@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-04-12T01:18:58.34+02:00 -->
-<!-- dcterms:dateAccepted = 2006-04-12T01:18:58.34+02:00 -->
+<!-- dcterms:date = 2006-04-12T01:18:58.34+02:00 -->
 
 Uživatelské instance (user instances) jsou užitečnou novinkou v Microsoft SQL Serveru Express 2005 . Jako každá novinka však přinášejí též různé potíže a nedorozumění, především z důvodu nepochopení. Pojďme se tedy podrobněji podívat na to, co to vlastně "uživatelské instance" jsou a jak fungují.
 

@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-11-16T06:41:38+01:00 -->
-<!-- dcterms:dateAccepted = 2003-11-16T06:41:38+01:00 -->
+<!-- dcterms:date = 2003-11-16T06:41:38+01:00 -->
 
 Nikdy jsem neměl s (vlastní) výpočetní technikou zásadnější problémy. Přičítal jsem to následujícím faktorům:
 

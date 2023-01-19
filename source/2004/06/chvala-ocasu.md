@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-06-22T23:34:49.327+02:00 -->
-<!-- dcterms:dateAccepted = 2004-06-22T23:34:49.327+02:00 -->
+<!-- dcterms:date = 2004-06-22T23:34:49.327+02:00 -->
 
 Z ložnice se ozval zvuk padajícího předmětu. Vzápětí volným krokem vstupila do místnosti Esta, tvářila se, jako by se nic nestalo, snažila se mi otírat o obě strany nohou zároveň a vesele mrskala ocasem. Tento postoj je typickou známkou toho, že zvíře zase něco provedlo.
 

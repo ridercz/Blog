@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-09-29T21:07:30.08+02:00 -->
-<!-- dcterms:dateAccepted = 2011-09-29T21:07:31+02:00 -->
+<!-- dcterms:date = 2011-09-29T21:07:31+02:00 -->
 
 [![Kindle Keyboard with WiFi - model, který mám](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_thumb.jpg "Kindle Keyboard with WiFi - model, který mám")](https://www.cdn.altairis.cz/Blog/2011/20110929-kindle_2.jpg)
 

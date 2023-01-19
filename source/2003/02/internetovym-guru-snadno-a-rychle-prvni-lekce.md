@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-02-17T05:11:34+01:00 -->
-<!-- dcterms:dateAccepted = 2003-02-17T05:11:34+01:00 -->
+<!-- dcterms:date = 2003-02-17T05:11:34+01:00 -->
 
 Přes své nesporné mládí jsem si stihl vybudovat poměrně slušnou pověst odborníka na microsoftí webové technologie. Neustále si pohrávám s myšlenkou, že začnu fakturovat Microsoftu provoz hotline ;-)
 

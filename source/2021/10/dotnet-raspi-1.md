@@ -8,7 +8,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
-<!-- dcterms:dateAccepted = 2021-10-15 -->
+<!-- dcterms:date = 2021-10-15 -->
 
 Raspberry Pi je miniaturní počítač za pár korun, který pravidelným čtenářům tohoto blogu jistě nemusím představovat. A bez problémů na něm můžete spouštět aplikace napsané v .NETu, včetně webových aplikací v ASP.NET. Když jsem o .NETu na Raspberry [psal před šesti lety naposledy](https://www.altair.blog/serials/projekt-atropa), byla to ještě betaverze pod jménem ASPNET 5.
 

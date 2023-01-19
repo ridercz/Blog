@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-05-22T05:38:24+02:00 -->
-<!-- dcterms:dateAccepted = 2004-05-22T05:38:24+02:00 -->
+<!-- dcterms:date = 2004-05-22T05:38:24+02:00 -->
 
 Že jsou rozličná zviřátka přizpůsobivá, poznamenala onehdá například [bestijka](http://weblog.bestijka.cz/ShowRecord.aspx?day=20030608 ). Totéž se vztahuje i na naše momentálně sedmiměsíční štěně československého vlčáka. To vyrůstá obklopeno vymoženostmi moderní techniky.
 

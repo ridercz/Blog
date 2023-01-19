@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-12-02T23:38:52.65+01:00 -->
-<!-- dcterms:dateAccepted = 2007-12-02T23:38:52.65+01:00 -->
+<!-- dcterms:date = 2007-12-02T23:38:52.65+01:00 -->
 
 Následující měsíc si budou technických akcí a mé přítomnosti na nich užívat naši východní sousedé. 12. prosince pořádá slovenský Microsoft seminář [ASP.NET quid pro quo, aneb web forms pro starší a pokročilé](http://msevents.microsoft.com/CUI/EventDetail.aspx?EventID=1032359850&Culture=SK-SK). Registrační web tvrdí, že kapacita sálu je zaplněna (což mne trochu děsí, vzhledem k tomu, že se tam vejde 300 lidí), ale máte ještě šanci se registrovat jako náhradníci.
 

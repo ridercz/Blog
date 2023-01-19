@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-04-19T03:52:26.537+02:00 -->
-<!-- dcterms:dateAccepted = 2005-04-19T03:52:26.537+02:00 -->
+<!-- dcterms:date = 2005-04-19T03:52:26.537+02:00 -->
 
 Pokud jsou bohové milostiví, je programování *zábava*. Úkol (pokud možno takový, co si sami zadáte) je technickou výzvou a umožní vám hrát si s kódem a napsat něco co vás bude opravdu bavit a uspokojí vás.
 

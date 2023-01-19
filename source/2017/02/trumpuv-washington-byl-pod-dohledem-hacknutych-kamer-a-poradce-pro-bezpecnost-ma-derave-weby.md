@@ -5,4 +5,4 @@
 <!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- dcterms:dateAccepted = 2017-02-20T23:53:00+01:00 -->
+<!-- dcterms:date = 2017-02-20T23:53:00+01:00 -->

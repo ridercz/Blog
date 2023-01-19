@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-11-11T18:14:19.73+01:00 -->
-<!-- dcterms:dateAccepted = 2010-11-12T08:00:00+01:00 -->
+<!-- dcterms:date = 2010-11-12T08:00:00+01:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 143 -->
 <!-- x4w:pictureUrl = /perex-pictures/20101112-reknete-microsoftu-co-si-o-nem-myslite-na-aspnet-cz.png -->

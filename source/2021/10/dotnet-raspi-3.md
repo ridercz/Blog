@@ -9,7 +9,7 @@
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
 <!-- x4w:serial = ASP.NET na Raspberry Pi -->
-<!-- dcterms:dateAccepted = 2021-10-28 -->
+<!-- dcterms:date = 2021-10-28 -->
 
 V [prvním](https://www.altair.blog/2021/10/dotnet-raspi-1) a [druhém](https://www.altair.blog/2021/10/dotnet-raspi-2) dílu seriálu o běhu ASP.NET na Raspberry Pi jsme se k .NETu vůbec nedostali. Ukázal jsem vám jenom obecné zprovoznění Linuxu na Raspberry Pi, aktualizaci systému a zabezpečení vzdáleného přístupu pomocí kryptografického klíče místo hesla. Nyní však nadešel čas .NETu. Ukážu vám, jak aplikaci zkompilovat tak, aby na RPi běžela a jak ji nastavit, aby se automaticky spouštěla při restartu a běžela na pozadí.
 

@@ -9,7 +9,7 @@
 <!-- np9:serialId = 5 -->
 <!-- x4w:serial = ViewState -->
 <!-- dcterms:created = 2009-06-25T14:42:33.133+02:00 -->
-<!-- dcterms:dateAccepted = 2009-06-25T14:42:33.133+02:00 -->
+<!-- dcterms:date = 2009-06-25T14:42:33.133+02:00 -->
 
 <p>Snad žádná jiná technologie v ASP.NET nezpůsobila tolik zlé krve jako právě ViewState. Hromady na první pohled zbytečných a nesmyslných Base64 kódovaných dat ve skrytém formulážovém poli <code>__VIEWSTATE</code> jsou to první, na co si obvykle odpůrci ASP.NET Web Forms vzpomenou, často s uštěpačnou poznámkou v duchu "nojo, co byste chtěli od Microsoftu". Jako u každé technologie ovšem i zde platí, že nejsou technologie dobré a špatné, ale pouze vhodně a nevhodně použité.</p>
 <p>Technologie ViewState a její věrná sestřička ControlState jsou ve Web Forms přítomny proto, aby pomohly obcházet bezstavovost HTTP. Tomuto tématu jsem se již na stránkách ASP.NET věnoval, takže pro obecnější úvod do problematiky se můžete podívat na <a shape="rect" href="http://www.aspnet.cz/Articles/190-stavove-http-jak-funguji-cookies-session-a-viewstate-a-proc-je-nepouzivat.aspx" shape="rect">starší články</a>. Byla v nich řeč i o <a shape="rect" href="http://www.aspnet.cz/Articles/192-stavove-http-viewstate.aspx" shape="rect">ViewState</a>, ale spíše z pohledu autora stránky. V tomto seriálu se podíváme na ViewState poněkud detailněji, také z pohledu autora komponenty.</p>

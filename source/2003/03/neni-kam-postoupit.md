@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-03-07T03:52:14+01:00 -->
-<!-- dcterms:dateAccepted = 2003-03-07T03:52:14+01:00 -->
+<!-- dcterms:date = 2003-03-07T03:52:14+01:00 -->
 
 Tak už nejsme [země bez prezidenta](http://weblog.rider.cz/ShowRecord.aspx?day=20030130). Z výše uvedeného zápisu je snadno dovoditelné, že mne **Václav Klaus na hradě** neuráží - ostatně, mohlo to dopadnout podstatně hůř.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2012-04-12T17:32:30.777+02:00 -->
-<!-- dcterms:dateAccepted = 2012-04-12T17:32:32.167+02:00 -->
+<!-- dcterms:date = 2012-04-12T17:32:32.167+02:00 -->
 
 Google a jeho služby představují podle mého názoru největší ohrožení soukromí uživatelů. Používám některé jeho služby a tento článek je tak trochu mým osobním akčním plánem, jak se preventivně vymanit z jeho sevření.
 

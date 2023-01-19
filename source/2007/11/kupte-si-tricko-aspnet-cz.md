@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-11-17T20:40:52.973+01:00 -->
-<!-- dcterms:dateAccepted = 2007-11-17T20:40:52.973+01:00 -->
+<!-- dcterms:date = 2007-11-17T20:40:52.973+01:00 -->
 
 Chcete ukázat světu, že jste vývojáři? A zpropagovat přitom ASPNET.CZ a přitom finančně podpořit tento projekt? Na adrese [http://wwwapp.altairis.cz/TrickaASPNET/](http://wwwapp.altairis.cz/TrickaASPNET/ "http://wwwapp.altairis.cz/TrickaASPNET/") najdete pokusnou verzi elektronického obchodu, kde si můžete zakoupit trička s logem ASPNET.CZ a několika zajímavými nápisy.
 

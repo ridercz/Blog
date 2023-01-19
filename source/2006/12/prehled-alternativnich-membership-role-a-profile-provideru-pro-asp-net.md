@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-12-19T02:52:22.573+01:00 -->
-<!-- dcterms:dateAccepted = 2006-12-19T02:52:22.573+01:00 -->
+<!-- dcterms:date = 2006-12-19T02:52:22.573+01:00 -->
 
 Za jeden z nejlepších nápadů v ASP.NET 2.0 považuji provider model, zejména pak Membership, Profile a Role providery. Vestavěná sbírka providerů ovšem není moc použitelná pro složitější aplikace. Nabízím vám tedy přehled alternativ.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-01-25T01:19:45.417+01:00 -->
-<!-- dcterms:dateAccepted = 2005-01-25T01:19:45.417+01:00 -->
+<!-- dcterms:date = 2005-01-25T01:19:45.417+01:00 -->
 
 Píšu rád, a doufám že i dobře. Jenom poslední dobou nemám o čem - připadá mi, že pokud jde o ASP.NET a věci související, tak:
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2015-07-31T23:01:30.31+02:00 -->
-<!-- dcterms:dateAccepted = 2015-08-01T00:00:00+02:00 -->
+<!-- dcterms:date = 2015-08-01T00:00:00+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20150801-jak-na-staronove-start-menu-ve-windows-10.png -->

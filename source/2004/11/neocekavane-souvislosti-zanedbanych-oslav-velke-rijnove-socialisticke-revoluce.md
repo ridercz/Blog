@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-11-07T02:04:35.89+01:00 -->
-<!-- dcterms:dateAccepted = 2004-11-07T02:04:35.89+01:00 -->
+<!-- dcterms:date = 2004-11-07T02:04:35.89+01:00 -->
 
 Když jsem byl malý, velmi jsem se těšil na předvečer oslav **Velké říjnové socialistické revoluce**. Národ vyrazil do ulic s lampióny. Plebs se svíčkou uvnitř, v technologicky pokročilejší domácnosti (jako ta naše) na štangli lepící páskou přilepili plochou baterii a dovnitř dali žárovičku.
 

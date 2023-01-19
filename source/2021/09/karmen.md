@@ -6,5 +6,5 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
 <!-- x4w:category = Recenze -->
-<!-- dcterms:dateAccepted = 2021-09-10 -->
+<!-- dcterms:date = 2021-09-10 -->
 <!-- x4w:alternateUrl = https://tech.hn.cz/c7-66972810-psms7-155a6439f166a90 -->

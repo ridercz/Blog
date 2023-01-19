@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2010-09-23T21:55:53.243+02:00 -->
-<!-- dcterms:dateAccepted = 2010-09-23T21:55:56.007+02:00 -->
+<!-- dcterms:date = 2010-09-23T21:55:56.007+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20100923-installutil-exe-instalacni-a-odinstalacni-procedury.png -->

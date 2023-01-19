@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-06-29T02:17:43.24+02:00 -->
-<!-- dcterms:dateAccepted = 2004-06-29T02:17:43.24+02:00 -->
+<!-- dcterms:date = 2004-06-29T02:17:43.24+02:00 -->
 
 Přehnanou pořádkumilovností rozhodně netrpím. Už co prepubertální potomek jsem svou matku přesvědčoval o tom, že pojmy jako "uklizeno" a "pořádek" jsou relativní. To jsem ještě netušil, kam až je významově posune soužití s osmiměsíčním štěnětem československého vlčáka.
 

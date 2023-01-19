@@ -9,7 +9,7 @@
 <!-- np9:serialId = 4 -->
 <!-- x4w:serial = Stavové HTTP -->
 <!-- dcterms:created = 2008-03-22T08:00:00+01:00 -->
-<!-- dcterms:dateAccepted = 2008-03-22T08:00:00+01:00 -->
+<!-- dcterms:date = 2008-03-22T08:00:00+01:00 -->
 
 V [minulém díle](http://www.aspnet.cz/Articles/191-stavove-http-cookies.aspx) našeho seriálu jsme se podívali na technologii cookies a mimo jiné též na problémy, které přináší. Některé problémy cookies lze vyřešit poměrně snadno. Do cookie si uložíme pouze nějaký identifikační řetězec, jednoznačný identifikátor klienta, třeba nějaký GUID. A vlastní obsah si budeme držet na serveru, v paměti, v databázi, na disku nebo kdekoliv jinde.
 

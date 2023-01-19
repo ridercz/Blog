@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-10-01T09:12:24.22+02:00 -->
-<!-- dcterms:dateAccepted = 2005-10-01T09:12:24.22+02:00 -->
+<!-- dcterms:date = 2005-10-01T09:12:24.22+02:00 -->
 
 Jednou z nejčastěji se vyskytujících chyb je *script injection*. Mechanismus, který dovolí uživateli zadat HTML kód, který, jsa zobrazen jinému uživateli, bude mít negativní efekt. Oním negativním efektem může být ledacos, obvykle se ale jedná o:
 

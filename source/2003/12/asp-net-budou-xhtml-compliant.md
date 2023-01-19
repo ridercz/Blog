@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-12-19T14:36:55+01:00 -->
-<!-- dcterms:dateAccepted = 2003-12-19T14:36:55+01:00 -->
+<!-- dcterms:date = 2003-12-19T14:36:55+01:00 -->
 
 Před nějakou dobou jsem objevil, že psát stránky jako valid HTML se vyplatí - člověk pak zhusta nemusí řešit problémy s kompatibilitou v různých prohlížečích, pomineme-li prohlížeče z doby kamenné, jako např. Netscape 4.x.
 

@@ -9,7 +9,7 @@
 <!-- x4w:category = IT -->
 <!-- x4w:category = Bezpečnost -->
 <!-- x4w:serial = Robotické depo -->
-<!-- dcterms:dateAccepted = 2021-12-02 -->
+<!-- dcterms:date = 2021-12-02 -->
 
 Časté dotazy ke stop tlačítku pro robotické depo Zásilkovny směřovaly k tomu, proč se používá Wi-Fi a ne nějaký jiný (bezpečnější) komunikační kanál. To se dozvíte v tomto videu, stejně jako jak jsem se rozhodl komunikaci zabezpečit i přesto, že na ESP8266 je obtížné naimplementovat správnou podporu HTTPS.
 

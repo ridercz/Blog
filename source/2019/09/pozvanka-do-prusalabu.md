@@ -8,7 +8,7 @@
 <!-- x4w:coverCredits = PrusaLab -->
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = Bastlení -->
-<!-- dcterms:dateAccepted = 2019-09-23 -->
+<!-- dcterms:date = 2019-09-23 -->
 
 V [PrusaLabu](https://www.prusalab.cz/), otevřené dílně nedaleko Nádraží Holešovice v Praze budu v dohledné době mít několik přednášek na různá témata. První z nich už zítra!
 

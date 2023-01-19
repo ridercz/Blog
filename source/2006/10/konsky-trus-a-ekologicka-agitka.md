@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-10-27T20:37:22.097+02:00 -->
-<!-- dcterms:dateAccepted = 2006-10-27T20:37:22.097+02:00 -->
+<!-- dcterms:date = 2006-10-27T20:37:22.097+02:00 -->
 
 Dnes jsme s Myshí navštívili na Kampě výstavu [Země krásná neznámá](http://www.zemekrasnaneznama.cz/) (pokud to chcete udělat také, máte možnost, ale jenom do 30. 10.). Fotografie Yanna Arthuse Bertranda jsou nádherné a zajímavé, ale v mých očích je značně deklasují komentáře na úrovni primitivní ekoagitky.
 

@@ -7,7 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Akce a události -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-03-21 -->
+<!-- dcterms:date = 2020-03-21 -->
 
 Co dělat, když musíte sedět doma? Učit se! Nabízím vám možnost zúčastnit se školení 3D modelování v programu OpenSCAD, a to zcela zdarma. Online školení se bude konat v úterý 24. března 2020. Registraci na něj najdete na konci článku.
 

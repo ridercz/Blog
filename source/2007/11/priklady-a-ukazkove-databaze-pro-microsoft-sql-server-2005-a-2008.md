@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-11-27T02:56:26.633+01:00 -->
-<!-- dcterms:dateAccepted = 2007-11-27T02:56:26.633+01:00 -->
+<!-- dcterms:date = 2007-11-27T02:56:26.633+01:00 -->
 
 Doba, kdy součástí každé instalace databázového serveru byly ukázkové databáze `pubs` a `Northwind` naštěstí již dávno skončila. Ukázkovou databáze `AdventureWorks` si nyní musíte stáhnout a nainstalovat zvlášť. O škodlivosti předinstalovaných příkladů by se dalo napsat mnohé. Ostatně, kdo spravoval IIS 4.0 mi jistě dá za pravdu, že pokud jeden ručně neodstranil z produkčního serveru příklady, děly se podivuhodné věci - protože příklady obsahovaly roztomilou sbírku bezpečnostních chyb.
 

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2007-01-27T03:28:04.32+01:00 -->
-<!-- dcterms:dateAccepted = 2007-01-27T03:28:04.32+01:00 -->
+<!-- dcterms:date = 2007-01-27T03:28:04.32+01:00 -->
 
 Uživatel "vacan" mne upozornil, že v nové verzi **[**My Web Pages Starter Kitu**](https://www.aspnet.cz/Articles/132-my-web-pages-starter-kit-jednoduchy-cms-v-cestine.aspx)** (1.1.1) je opět chyba v českém překladu. Způsobuje nemožnost smazat přidanou sekci kvůli JavaScriptové chybě. 
 

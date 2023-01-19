@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2004-10-30T01:15:03.99+02:00 -->
-<!-- dcterms:dateAccepted = 2004-10-30T01:15:03.99+02:00 -->
+<!-- dcterms:date = 2004-10-30T01:15:03.99+02:00 -->
 
 ![](https://www.cdn.altairis.cz/Blog/xnviewlogo.png)Teenageři se (prý) svým deníčkům svěřují s nešťastnými láskami a intimními tužbami. Já jsem se ve svém [minulém příspěvku](/entry/article-20041029.aspx) zkusil svěřit s problémem trochu jiné povahy - a světě div se, pomohlo to.
 

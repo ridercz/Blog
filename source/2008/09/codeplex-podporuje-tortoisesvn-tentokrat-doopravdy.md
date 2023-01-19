@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2008-09-17T01:16:14.183+02:00 -->
-<!-- dcterms:dateAccepted = 2008-09-17T01:16:14.183+02:00 -->
+<!-- dcterms:date = 2008-09-17T01:16:14.183+02:00 -->
 
 Microsoft už dva roky provozuje server [CodePlex](http://www.codeplex.com/). Slouží k podpoře open source projektů, jejichž vývojářům poskytuje potřebnou infrastrukturu. CodePlex podporuje sledování problémů, zveřejňování nových verzí a především code repository, nutnost v případě, že se má na projektu podílet větší množství lidí. Podobné služby nabízí například [SourceForge](http://www.sourceforge.net/) nebo [Google Code](http://code.google.com/hosting/).
 

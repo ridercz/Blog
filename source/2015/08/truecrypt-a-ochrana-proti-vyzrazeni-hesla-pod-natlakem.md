@@ -6,4 +6,4 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2015-08-12T00:38:09+02:00 -->
+<!-- dcterms:date = 2015-08-12T00:38:09+02:00 -->

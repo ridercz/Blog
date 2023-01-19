@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-03-30T19:49:44.707+02:00 -->
-<!-- dcterms:dateAccepted = 2011-03-30T19:49:46.33+02:00 -->
+<!-- dcterms:date = 2011-03-30T19:49:46.33+02:00 -->
 
 Každých deset let pořádá statistický úřad pro pobavení prostého lidu za jeho peníze kratochvilnou taškařici jménem Sčítání lidu, bytů a domů. Lze o něm vést sáhodlouhé debaty a na základě vlastního politického přesvědčení dovozovat, jak moc by měl stát strkat čumák do soukromí svých občanů. Ve světle oduševnělé reklamní kampaně se můžeme zamýšlet nad tím, zda nedostatek míst ve školkách a potíže s dopravou jsou skutečně způsobeny tím, že by zodpovědní činitelé neměli dostatek informací. 
 

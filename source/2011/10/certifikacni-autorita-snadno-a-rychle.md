@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-10-17T22:34:19.43+02:00 -->
-<!-- dcterms:dateAccepted = 2011-10-17T22:39:52.57+02:00 -->
+<!-- dcterms:date = 2011-10-17T22:39:52.57+02:00 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20111017-certifikacni-autorita-snadno-a-rychle.png -->

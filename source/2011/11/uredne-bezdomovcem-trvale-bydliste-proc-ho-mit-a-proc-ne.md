@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2011-11-15T15:06:20.333+01:00 -->
-<!-- dcterms:dateAccepted = 2011-11-15T15:06:22.1+01:00 -->
+<!-- dcterms:date = 2011-11-15T15:06:22.1+01:00 -->
 
 Článek, který byl zveřejněn na tomto místě, zastaral a již neodpovídá současné legislativě.
 

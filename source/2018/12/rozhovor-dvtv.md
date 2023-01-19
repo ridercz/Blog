@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Bezpečnost -->
-<!-- dcterms:dateAccepted = 2018-12-17T19:00:00 -->
+<!-- dcterms:date = 2018-12-17T19:00:00 -->
 <!-- x4w:alternateUrl = https://video.aktualne.cz/dvtv/firma-huawei-je-udem-cinskeho-statu-telefon-od-nich-bych-si/r~9f9984fa021e11e9a446ac1f6b220ee8/ -->

@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-02-10T18:42:39.183+01:00 -->
-<!-- dcterms:dateAccepted = 2006-02-10T18:42:39.183+01:00 -->
+<!-- dcterms:date = 2006-02-10T18:42:39.183+01:00 -->
 
 Toto je text e-mailu, který jsem odeslal tiskovému mluvčímu prezidenta republiky na adresu [petr.hajek@hrad.cz](mailto:petr.hajek@hrad.cz). Pokud se uvedená čísla zakládají pravdě (což snad i předpokládám), nastal dle mého názoru čas statistiku trochu změnit. Jste-li téhož názoru, učiňte prosím totéž.na 
 

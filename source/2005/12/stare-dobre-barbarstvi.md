@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2005-12-24T03:10:23.04+01:00 -->
-<!-- dcterms:dateAccepted = 2005-12-24T03:10:23.04+01:00 -->
+<!-- dcterms:date = 2005-12-24T03:10:23.04+01:00 -->
 
 Náš svět je zařízen tak, že se národy dělí na „civilizované“ a „necivilizované“, přičemž o umístění dělící linie rozhodujeme my, civilizovaní. 
 

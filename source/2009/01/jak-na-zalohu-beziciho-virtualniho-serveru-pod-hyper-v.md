@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2009-01-29T00:38:00+01:00 -->
-<!-- dcterms:dateAccepted = 2009-01-29T00:38:00+01:00 -->
+<!-- dcterms:date = 2009-01-29T00:38:00+01:00 -->
 
 Jednou z velkých výhod virtualizačních technologií je snadnost zálohování. Stačí spustit zálohu fyzického serveru a máme zazálohovány i virtuální stroje na něm běžící. Tolik tedy praví teorie. V praxi to bývá poněkud složitější.
 

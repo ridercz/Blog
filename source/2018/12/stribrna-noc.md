@@ -6,5 +6,5 @@
 <!-- x4w:pictureCredits = Reborn Brudeira -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
-<!-- dcterms:dateAccepted = 2018-12-24 -->
+<!-- dcterms:date = 2018-12-24 -->
 <!-- x4w:alternateUrl = https://www.bdsm.cz/2018/12/stribrna-noc -->

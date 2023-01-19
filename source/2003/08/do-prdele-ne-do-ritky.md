@@ -6,7 +6,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2003-08-07T16:19:21+02:00 -->
-<!-- dcterms:dateAccepted = 2003-08-07T16:19:21+02:00 -->
+<!-- dcterms:date = 2003-08-07T16:19:21+02:00 -->
 
 Včera jsem opět využil služeb pražské taxislužby. Řidič z mé zakázky dohozené mu dispečinkem neměl přílišnou radost, protože už chtěl jet domů a já ho zavedl na druhý konec Prahy.
 

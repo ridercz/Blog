@@ -5,5 +5,5 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = 3D tisk -->
-<!-- dcterms:dateAccepted = 2020-01-11 -->
+<!-- dcterms:date = 2020-01-11 -->
 <!-- x4w:alternateUrl = https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator -->

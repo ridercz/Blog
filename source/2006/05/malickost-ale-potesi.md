@@ -7,7 +7,7 @@
 <!-- np9:authorEmail = michal.valasek@altairis.cz -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:created = 2006-05-24T02:19:38.397+02:00 -->
-<!-- dcterms:dateAccepted = 2006-05-24T02:19:38.397+02:00 -->
+<!-- dcterms:date = 2006-05-24T02:19:38.397+02:00 -->
 
  *„Maličkost, ale potěší.“* Tak přesně těmito slovy reagoval jeden můj známý, když došla řeč na facku, kterou uštědřil enfant terrible ODS Miroslav Macek momentálnímu ministru zdravotnictví Davidu Rathovi.
 

@@ -1,7 +1,7 @@
 <!-- dcterms:title = Nové tag helpery v knihovně Altairis Tag Helpers -->
 <!-- dcterms:abstract = Do knihovny Altairis.TagHelpers jsem přidal několik nových tag helperů pro ASP.NET MVC Core a Razor Pages. Nová verze 1.4 obsahuje potvrzení akce, zobrazení verze aplikace a zejména žádaný ekvivalent komponent CheckBoxList a RadioButtonList. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- dcterms:dateAccepted = 2019-05-12 -->
+<!-- dcterms:date = 2019-05-12 -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:pictureUrl = /perex-pictures/20171226-altairis-tag-helpers-pro-asp-net-core-razor-pages-a-asp-net-mvc-core.png -->
