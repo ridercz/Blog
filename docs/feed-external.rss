@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</guid>
+      <title>Kryt na ovladač dveří od garáže</title>
+      <description>Ovladač DoorHan Transmitter 2 Pro, který používám na vrata od garáže, nemá dobrou konstrukci. Tlačítka jsou náchylná ke zmáčknutí omylem. Vymodeloval a vytiskl jsem tedy kryt, který tomu brání. Navíc umožňuje zaslepit jedno ze dvou tlačítek, pokud se nepoužívá. Model najdete zdarma na Printables.</description>
+      <link>https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2023-01-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2022/12/liska</guid>
       <title>Kde lišky dávají dobrou noc</title>
       <description>Ingredience do bramborového salátu jsou téma natolik zásadní, aby se tím zabýval i státní rozhlas. Jaké ingredience jsem dostal já, abych z nich ukuchtil tradiční vánoční povídku na BDSM.CZ? Původně to měl být, stejně jako v minulých letech, obrázek. Ale autorka měla příliš mnoho práce se svou zvířenou, než aby mi ho stihla včas nakreslit. Takže jsem požádal své přátele na Facebooku, aby mi zadali deset slov a já že na jejich základě napíšu povídku.</description>
@@ -144,16 +153,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-01-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</guid>
-      <title>EU buduje vlastní síť DNS, aby nebyla závislá na amerických firmách; jde o snahu cenzurovat Internet</title>
-      <description>Evropská unie chce změnit způsob, jakým obyvatelé „starého kontinentu“ používají internet. Pod technickým plánem na vytvoření sítě rekurzivních DNS resolverů DNS4EU se prakticky skrývá možnost evropských orgánů omezovat to, jaké webové stránky uživatelé budou moci navštěvovat. Snaha filtrovat „nevhodné“ weby ovšem není nic nového.</description>
-      <link>https://tech.hn.cz/c7-67027160-12jd05-a839162f79ac973</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-01-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

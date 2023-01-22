@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</guid>
+      <title>Kryt na ovladač dveří od garáže</title>
+      <description>Ovladač DoorHan Transmitter 2 Pro, který používám na vrata od garáže, nemá dobrou konstrukci. Tlačítka jsou náchylná ke zmáčknutí omylem. Vymodeloval a vytiskl jsem tedy kryt, který tomu brání. Navíc umožňuje zaslepit jedno ze dvou tlačítek, pokud se nepoužívá. Model najdete zdarma na Printables.</description>
+      <link>https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</link>
+      <author>Michal Altair Valášek</author>
+      <category>3D tisk</category>
+      <pubDate>2023-01-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/01/oci-linux</guid>
       <title>ASP.NET Core na Linuxu: Jak získat výkonný cloudový server zdarma</title>
       <description>Společnost Oracle nabízí zdarma ve svém cloudu server se čtyřmi jádry, 24 GB RAM a 200 GB disku. Jaký je v tom háček? Má ARM architekturu a běží na něm Linux. V novém seriálu vám ukážu, jak na takovém serveru bezpečně a odděleně od sebe hostovat více ASP.NET Core aplikací.</description>
@@ -140,15 +149,6 @@
       <category>IT</category>
       <category>Z-TECH</category>
       <pubDate>2022-09-08T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/09/cloudflare</guid>
-      <title>Jak zkonfigurovat Cloudflare proxy v ASP.NET</title>
-      <description>Cloudflare je populární služba zajišťující (mimo jiné) CDN a reverzní proxy. To znamená, že se postaví mezi váš server a klienta a zařizuje různé zajímavé služby, od geografické dostupnosti přes zabezpečení po cacheování. Skrývá ale IP adresu klienta. Napsal jsem knihovnu, která umožňuje ASP.NET Core aplikaci transparentně zjistit IP adresu klienta, i když je publikována přes Cloudflare.</description>
-      <link>https://www.altair.blog/2022/09/cloudflare</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2022-09-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
