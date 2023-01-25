@@ -1,0 +1,11 @@
+<!-- dcterms:title = Místo gauče -->
+<!-- dcterms:abstract = Nedávám si novoroční předsevzetí. Nicméně pro letošní rok mám ušlechtilý záměr každý měsíc vydat na BDSM.CZ jednu povídku nebo jiný článek. Tenhle příběh mě hodně baví a navíc má do jisté míry edukativní přesah, protože popisuje základy správné techniky, když chcete chlapa ojet připínákem. Nikdy nevíte, kdy se vám taková znalost a dovednost bude hodit! -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2023-01-25 -->
+<!-- x4w:pictureCredits = Midjourney AI -->
+<!-- x4w:pictureUrl = /perex-pictures/20230125-misto-gauce.jpg -->
+<!-- x4w:coverUrl = /cover-pictures/20230125-misto-gauce.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2023/01/misto-gauce -->

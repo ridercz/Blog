@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2023/01/misto-gauce</guid>
+      <title>Místo gauče</title>
+      <description>Nedávám si novoroční předsevzetí. Nicméně pro letošní rok mám ušlechtilý záměr každý měsíc vydat na BDSM.CZ jednu povídku nebo jiný článek. Tenhle příběh mě hodně baví a navíc má do jisté míry edukativní přesah, protože popisuje základy správné techniky, když chcete chlapa ojet připínákem. Nikdy nevíte, kdy se vám taková znalost a dovednost bude hodit!</description>
+      <link>https://www.bdsm.cz/2023/01/misto-gauce</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2023-01-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</guid>
       <title>Kryt na ovladač dveří od garáže</title>
       <description>Ovladač DoorHan Transmitter 2 Pro, který používám na vrata od garáže, nemá dobrou konstrukci. Tlačítka jsou náchylná ke zmáčknutí omylem. Vymodeloval a vytiskl jsem tedy kryt, který tomu brání. Navíc umožňuje zaslepit jedno ze dvou tlačítek, pokud se nepoužívá. Model najdete zdarma na Printables.</description>
@@ -143,16 +152,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-02-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</guid>
-      <title>Pozdě ale přece: NÚKIB vydal doporučení pro cestu na olympiádu</title>
-      <description>Zimní olympiáda v Číně začíná za pár dnů a Národní úřad pro kybernetickou a informační bezpečnost se přestal tvářit že to není jeho problém. Vydal sadu doporučení pro české olympioniky. V zásadě s nimi lze souhlasit, ale pár věcí v nich chybí a pár přebývá.</description>
-      <link>https://tech.hn.cz/c7-67027800-psms7-7e87ca525c4eab7</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-01-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

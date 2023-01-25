@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2023/01/misto-gauce</guid>
+      <title>Místo gauče</title>
+      <description>Nedávám si novoroční předsevzetí. Nicméně pro letošní rok mám ušlechtilý záměr každý měsíc vydat na BDSM.CZ jednu povídku nebo jiný článek. Tenhle příběh mě hodně baví a navíc má do jisté míry edukativní přesah, protože popisuje základy správné techniky, když chcete chlapa ojet připínákem. Nikdy nevíte, kdy se vám taková znalost a dovednost bude hodit!</description>
+      <link>https://www.bdsm.cz/2023/01/misto-gauce</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2023-01-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/01/fio</guid>
       <title>API klient pro Fio banku</title>
       <description>Napsal jsem C#/.NET klienta pro načítání seznamu plateb z Fio banky přes její API. Je k dispozici jako open source na GitHubu a NuGetu.</description>
@@ -140,15 +149,6 @@
       <author>Michal Altair Valášek</author>
       <category>Politika</category>
       <pubDate>2022-09-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/09/build-date</guid>
-      <title>Jak získat datum a čas buildu ASP.NET Core aplikace</title>
-      <description>Můj oblíbený systém automatického verzování podle datumu a času není kompatibilní s novými funkcemi .NETu pro snazší vývoj, jako je hot reload částečná kompilace. Proto jsem musel přijít s jiným způsobem, jak zjistit datum a čas buildu aplikace.</description>
-      <link>https://www.altair.blog/2022/09/build-date</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2022-09-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
