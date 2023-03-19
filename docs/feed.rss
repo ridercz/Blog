@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/03/powerpoint-dpi</guid>
+      <title>Jak nastavit rozlišení pro obrázky exportované z PowerPointu</title>
+      <description>PowerPoint umí snímky z prezentace uložit jako obrázky ve formátech PNG, JPEG nebo TIFF, což se občas hodí. Výchozí nastavení je ale generuje v příliš malém rozlišení (1280 × 720) a v GUI není způsob, jak to změnit. Naštěstí stačí jednoduchý zásah do registrů.</description>
+      <link>https://www.altair.blog/2023/03/powerpoint-dpi</link>
+      <author>Michal Altair Valášek</author>
+      <category>Tipy, triky</category>
+      <pubDate>2023-03-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/01/wug-days</guid>
       <title>Prezentace a příklady z WUG Days 2023.1 v Brně</title>
       <description>Dnes jsem měl dvě přednášky na WUG Days 2023.1 v Brně. Nabízím ke stažení prezentace a příklady z nich.</description>
@@ -140,15 +149,6 @@
       <category>IT</category>
       <category>Z-TECH</category>
       <pubDate>2022-09-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/09/proc-jsem-byl-komunistou</guid>
-      <title>Proč jsem byl komunistou a proč se dnes bojím Pirátů</title>
-      <description>"Proč nejsem komunistou" se jmenovala anketa, v níž na tuto otázku odpovídaly Ferdinandu Peroutkovi významné prvorepublikové osobnosti (asi nejznámější je odpověď Karla Čapka). Já komunistou byl. Rád bych vám řekl proč a proč se jich nyní bojím, i když si momentálně říkají různě, u nás nejčastěji Piráti.</description>
-      <link>https://www.altair.blog/2022/09/proc-jsem-byl-komunistou</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <pubDate>2022-09-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
