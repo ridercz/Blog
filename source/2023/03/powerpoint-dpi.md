@@ -14,7 +14,7 @@ V registrech se nastavuje rozlišení v dpi (dots per inch), ze kterého se vypo
 
 dpi | Rozměr 4:3  | Rozměr 16:9
 --: | :---------: | :---------:
-50  |   500 × 375 |  667 × 375
+50  |   500 × 375 |   667 × 375
 96  |   960 × 720 |  1280 × 720
 100 |  1000 × 750 |  1333 × 750
 150 | 1500 × 1125 | 2000 × 1125
