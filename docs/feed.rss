@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/05/entity-framework</guid>
+      <title>Entity Framework Core 7.0: Novinky, tipy, triky</title>
+      <description>Entity Framework je nejpoužívanější object/relational mapper pro .NET. Připravil jsem pro vás seriál videí o novinkách v aktuální verzi 7.0, ale i s různými tipy a triky, které sice nejsou vždy úplně nové, ale hodí se je znát.</description>
+      <link>https://www.altair.blog/2023/05/entity-framework</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2023-05-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/03/powerpoint-dpi</guid>
       <title>Jak nastavit rozlišení pro obrázky exportované z PowerPointu</title>
       <description>PowerPoint umí snímky z prezentace uložit jako obrázky ve formátech PNG, JPEG nebo TIFF, což se občas hodí. Výchozí nastavení je ale generuje v příliš malém rozlišení (1280 × 720) a v GUI není způsob, jak to změnit. Naštěstí stačí jednoduchý zásah do registrů.</description>
@@ -139,16 +148,6 @@
       <category>3D tisk</category>
       <category>Bastlení</category>
       <pubDate>2022-09-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/09/static-content</guid>
-      <title>Skoro statický obsah: Od konkrétní aplikace k univerzální komponentě</title>
-      <description>Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V osmidílném seriálu jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.</description>
-      <link>https://www.altair.blog/2022/09/static-content</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Z-TECH</category>
-      <pubDate>2022-09-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
