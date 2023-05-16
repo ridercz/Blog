@@ -1,0 +1,50 @@
+@import "_variables.scss";
+
+form {
+    padding: 1ex;
+    text-align: center;
+  }
+
+    form input[type=search] {
+        width: 75%;
+        font-size: 150%;
+        line-height: 150%;
+        padding: .5ex;
+        border: 1px solid #333;
+        border-radius: 5px;
+    }
+
+    form input[type=submit] {
+        font-size: 150%;
+        line-height: 150%;
+        padding: .5ex;
+        border: none;
+    }
+
+  h1 {
+      font-size: 200%;
+      font-weight: normal;
+      margin-top: 0;
+  }
+
+  div.error {
+      background-color: #fc0;
+      color: #c00;
+      text-align: center;
+      padding: 1ex;
+  }
+
+  #results article {
+      margin: 1em;
+      clear: both;
+  }
+
+    #results article > header {
+        font-size: 125%;
+        font-weight: bold;
+    }
+
+    #results article > aside {
+        float: right;
+        color: #666;
+    }

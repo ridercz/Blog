@@ -29,19 +29,11 @@
         <xsl:call-template name="SiteHeader" />
         <main>
           <h1>Vyhledávání</h1>
-          <div class="gcse-searchbox" data-personalizedAds="false" data-safeSearch="off">&#8197;</div>
-          <div class="gcse-searchresults">Vyhledávání používá Google Custom Search. Pokud vidíte tento text, pravděpodobně vám ho blokuje nějaký doplněk prohlížeče.</div>
-          <script>
-            (function () {
-            var cx = '008719556634765943184:sgxqsp1qwmm';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-            })();
-          </script>
+          <form id="searchform" method="dialog">
+            <p><input type="search" name="query" placeholder="Zadejte dotaz..." /><input type="submit" value="&#x1F50D;" /></p>
+          </form>
+          <div id="results"></div>
+          <script type="text/javascript" src="/content/scripts/search.js?v=2">//</script>
         </main>
         <xsl:call-template name="SiteFooter" />
       </body>
