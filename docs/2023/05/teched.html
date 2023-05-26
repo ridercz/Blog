@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prezentace a příklady z TechEdu 2023 | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2023/05/teched" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C08933CAEAD84611B3C84A85BB63A51E6E3A8C62" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.2.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Prezentace a příklady z TechEdu 2023" />
+    <meta name="twitter:description" content="V tomto týdnu se konal TechEd 2023 a já na něm měl sedm přednášek. Nabízím vám ke stažení prezentace, příklady a odkazy." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20230525-teched.jpg" />
+    <meta property="article:published_time" content="2023-05-26" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Prezentace a příklady z TechEdu 2023" />
+    <meta name="description" property="og:description" content="V tomto týdnu se konal TechEd 2023 a já na něm měl sedm přednášek. Nabízím vám ke stažení prezentace, příklady a odkazy." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20230525-teched.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2023/05/teched" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20230525-teched.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Prezentace a příklady z TechEdu 2023</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2023-05-26">26. května 2023 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <h2 id="keynote.net-pro-zejmena-webove-vyvojare-v-roce-2023">Keynote: .NET pro (zejména) webové vývojáře v roce 2023</h2>
+<p>Tradiční úvodní přednáška shrnující novinky v aktuální verzi C#, .NETu a Visual Studia pro (zejména) webové vývojáře.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-01_Keynote.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_01_Keynote.zip">Příklady</a></strong></li>
+<li><a href="https://www.youtube.com/watch?v=UPNaCg3sFZQ">Z-TECH video: Dev Tunnels ve Visual Studiu 2022</a></li>
+<li><a href="https://www.youtube.com/watch?v=vTVCfrT6Sf8">Z-TECH video: Dev Tunnels ve Visual Studiu 2022 - vylepšení v update 17.5</a></li>
+<li><a href="https://www.youtube.com/watch?v=yZzyPR4rd0Q">Z-TECH video: Rate limiting middleware v ASP.NET Core</a></li>
+</ul>
+<h2 id="cacheovani-v.netu-a-http">Cacheování v .NETu a HTTP</h2>
+<p>Správně použité cacheování je jedním z důležitých nástrojů jak zvýšit výkon webové aplikace. Správně použít cacheování je ale těžké, a nesprávné použití udělá víc škody než užitku. Ukážu vám tři způsoby cacheování v ASP.NET Core: Response Cache, Output Cache a Object Cache. Ukážu vám i jak zařídit závislost na externích zdrojích (typicky na souborech) anebo jak zařídit cacheování na webové farmě.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-02_Cacheovani.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_02_Caching.zip">Příklady</a></strong></li>
+<li><a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMbTTXyhI7SQIEEr04YlylPG">Z-TECH seriál: Cacheování v ASP.NET</a></li>
+</ul>
+<h2 id="syntakticky-uzasne-css">Syntakticky úžasné CSS</h2>
+<p>Kaskádové styly jsou fajn, pokud jich máte málo. Ale co když jsou pro složitější weby pravidel stovky nebo tisíce? Pak pomůže preprocesor SASS/SCSS. Ten do jazyka CSS přináší věci, které v něm chybí: přehlednější zápis pravidel, vizuální dědičnost, proměnné, funkce matematické i jiné a řadu dalších. Představím vám jak jazyk SASS/SCSS samotný, tak nástroje. Jak s ním pracovat ve Visual Studiu, VS Code a dalších vývojových prostředích.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-03_SCSS.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_03_SCSS.zip">Příklady</a></strong></li>
+<li><a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMZE53l5QYowXnNb8xcXBwcb&amp;pp=iAQB">Z-TECH seriál: SCSS/SASS</a></li>
+</ul>
+<h2 id="health-checks-pro-mirne-pokrocile">Health checks pro mírně pokročilé</h2>
+<p>ASP.NET Core Health Checks jsou způsob, jakým může aplikace otestovat sama sebe a externímu monitoringu ukázat, že se těší dobrému zdraví. Ukážu vám také, jak Health Checks používat za hranicemi obvyklého Hello World: jak sledovat služby běžící na pozadí v rámci aplikace, ale i jak využít veřejné sledovací nástroje pro sledování stavu služeb, které jsou schované ve vnitřní síti a nelze se na ně dostat zvenčí.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-04_HealthChecks.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_04_HealthChecks.zip">Příklady</a></strong></li>
+<li><a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMbFy_R9q7MQwPAwA_bwIZyG">Z-TECH seriál: Health checks in ASP.NET Core</a></li>
+</ul>
+<h2 id="mqtt-nejen-pro-iot">MQTT nejen pro IoT</h2>
+<p>O komunikačním protokolu MQTT se hodně mluví v souvislosti s IoT zařízeními. Je pravda, že je pro ně extrémně vhodný. Ale zdaleka to není jeho jediné využití. MQTT je výtečnou volbou i pro &quot;velké&quot; aplikace, které potřebují elegantní, jednoduchý a zároveň robustní systém pro předávání zpráv v pub/sub architektuře. Ukážu vám, jakým způsobem lze využívat MQTT z prostředí .NET, ale třeba i z jednoduchých mikrokontrolerů za desetikoruny. A třeba jak tyto dvě věci jednoduše propojit.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-05_MQTT.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_05_MQTT.zip">Příklady</a></strong></li>
+</ul>
+<h2 id="autentizace-asp.net-web-api-pomoci-api-klicu">Autentizace ASP.NET Web API pomocí API klíčů</h2>
+<p>V souvislosti s autentizací REST API se často mluví o OData, JWT a podobně. Ale pro mnoho (zejména M2M) API jsou pořád nejlepší variantou staré dobré API klíče. Ukážu vám postup, jakým to celé naimplementovat správně, rozšiřitelně a kompatibilně jak s obecnými standardy, tak s ASP.NET Core infrastrukturou.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-06_ApiKeyAuth.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_06_ApiKeyAuth.zip">Příklady</a></strong></li>
+<li><a href="https://github.com/ridercz/Incitatus">Projekt Incitatus - GitHub</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMaEzNvfyDMB5eiECURGh5D5">Z-TECH seriál: Napište si vlastní Google</a></li>
+</ul>
+<h2 id="sqlite-neviditelna-databaze-i-pro-web">Sqlite - neviditelná databáze i pro web</h2>
+<p>Na svém počítači ji nejspíš máte v desítkách kopií a ani o tom nevíte. Řeč je o embedded databázi Sqlite, kterou používá velké množství desktopových i mobilních aplikací. V mnoha případech je ale vhodná i pro web. Je malá, elegantní, zdarma a překvapivě výkonná. Ve své přednášce vám ukážu, co Sqlite umí, jak se dá použít na webu v ASP.NET (včetně návodu jak napsat univerzální datovou vrstvu fungující proti Microsoft SQL Serveru i proti Sqlite), jak databáze spravovat a zálohovat.</p>
+<ul>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-07_Sqlite.pdf">Prezentace</a></strong></li>
+<li><strong><a href="https://www.cdn.altairis.cz/Blog/2023/20230526-Demo_07_Sqlite.zip">Příklady</a></strong></li>
+<li><a href="https://www.youtube.com/playlist?list=PLFZurxJN0pMZl_W9qflSsUzcCSPYb_93P">Z-TECH seriál: SQLite</a></li>
+</ul>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Prezentace+a+p%c5%99%c3%adklady+z+TechEdu+2023&amp;body=https://www.altair.blog/2023/05/teched">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2023/05/teched.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2023/05/teched.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2023/05/teched">
+              <i class="fab fa-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2023/05/teched">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2023</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/arduino.min.js" integrity="sha512-bOF+tbLNVPwsmPKbwZAJT2KD7J2soKGicZMV+iFZVyqD7qgZtpWOiY9+EmB+HyPgTP3Kah7K0aQVtX6mVK3sBg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/bash.min.js" integrity="sha512-yyMT1pQvQ9ZFAB8j/dUWeEjWTEQZBmV9pitXN7fmJYbqsoizQ0kVw8wONhrwBHE0Z/S8tKQyRcvbW4pG4m5cIw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/c.min.js" integrity="sha512-lzcjwENIEpri/9RQiWGJLxGxZ21Pr1qWvzEIpEa4yxPTSEderzTew+5Ff5XBbTC3OuLrb4P0qSwISoq1E/ddLg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/csharp.min.js" integrity="sha512-2S5x4UDJdymqDOBGIz88WSMwb/HC27t9gZyAus7RyUA2n3YXVJlYUrX606FkkU5+XrE+i12FNOhczUpPEh2XiQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/css.min.js" integrity="sha512-2EZCMzH/v5Q+9kXnio4UlG/iGM7Iy16NPjb4fFmtu501/gdvebqlP3sa2VvJsxnTJVWlFX8EN+BHxG4efqELWw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>¨
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/dos.min.js" integrity="sha512-4QYHD9PAHudNw8hYXd79O8t7BrFe2kl19eYIPAwdCxiJ7bYxERRpvS2VbFixd+kfLqVzUH9m1LBnmZlUf3VuAA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/gcode.min.js" integrity="sha512-BIiAVlWdHwCcZSixwJwhoUJSVGaNtPXCDzcyR5AVlyzXS9FDies/go5012bSdZr15eCTZG4G42GqMSkIhKpSoQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js" integrity="sha512-Z5vOg00atIeZ04QhYxz3iRlFnU5qnrB0eYbBDmXMhHqJYx4dc6n1KY5qzh3fEfrFzaR05D34mOin6ObjPjuWdA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/json.min.js" integrity="sha512-WRejcYn/ITFLjqnYYgF3Es2b2dc3GnVc70wF3nO/G6uQtsN/LhxSlZp5y7E9JP3gqQ5gY/TPg9QdOlB3SY+ucQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/markdown.min.js" integrity="sha512-8YFObAd0dPoua15RGQBCDtnXMA4zJnAxaL4QSjgLLEKmJ1A2Aar7M1gamz2512/mKzx1ut96KNV7ggEV8WvRxg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/openscad.min.js" integrity="sha512-r7SipMjtLS3BxLiHtjRORcw8/sJDk6Ums0BwzuEMQoWe4hSKYQs3Zk2qClX3AwVw9lrTFIu3rTVcGgODqwBMww==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/scss.min.js" integrity="sha512-0U8Ud0Dh6EsQR0cokSx1hPYzG3i8AnfYEaDXNGi5rSsVJMdAaas/gif/b/8JrGsuuC7xl7dfBGHFgZrhWb39Bg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/sql.min.js" integrity="sha512-LxrbI3MKe/9KnjAs8zlLrZFRpp2J+jp0pML7zd6OAo/LHH8CEKM2Ef/jTfSX1gm8Auex3J5Jdj0rMkYejmMVMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/xml.min.js" integrity="sha512-2EQPABfCqv0Tr9AxzXh2U9DrbRre5g5H/BL7j/hGbES3mRjQ44bBks0I+2EoPbA4YzWHQ8BsVHNTaHr7t5RHKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script>
+                  hljs.initHighlightingOnLoad();
+              </script></body>
+</html>

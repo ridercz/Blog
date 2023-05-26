@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/05/teched</guid>
+      <title>Prezentace a příklady z TechEdu 2023</title>
+      <description>V tomto týdnu se konal TechEd 2023 a já na něm měl sedm přednášek. Nabízím vám ke stažení prezentace, příklady a odkazy.</description>
+      <link>https://www.altair.blog/2023/05/teched</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <pubDate>2023-05-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/05/fulltext</guid>
       <title>Napište si vlastní Google: Fulltextové vyhledávání v SQL Serveru</title>
       <description>Mirosoft SQL Server obsahuje docela schopné fulltextové vyhledávání. Google se sice nevyrovná, ale zase nad ním máte úplnou kontrolu. Využil jsem ho k tomu, že jsem si napsal vlastní software pro prohledávání statického webu, jako je třeba tento blog.</description>
@@ -139,16 +149,6 @@
       <category>3D tisk</category>
       <category>Bastlení</category>
       <pubDate>2022-09-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/09/static-content</guid>
-      <title>Skoro statický obsah: Od konkrétní aplikace k univerzální komponentě</title>
-      <description>Skoro každá webová aplikace má nějaký skoro statický obsah. Obsah, který sice není měněn zcela pravidelně a nejde o její hlavní úkol, ale přesto je dobré mít možnost ho editovat jinak než zásahem do zdrojáku. Různé pomocné texty jako podmínky použití, kontakty a podobně. V osmidílném seriálu jsem vám ukázal, jak lze specifické řešení pro jednu aplikaci přeměnit v univerzální komponentu.</description>
-      <link>https://www.altair.blog/2022/09/static-content</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Z-TECH</category>
-      <pubDate>2022-09-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
