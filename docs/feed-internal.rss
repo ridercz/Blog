@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/05/cloud</guid>
+      <title>Aplikace v cloudu, nohy na zemi - pozvánka na online seminář</title>
+      <description>Tlak na přesun aplikací do cloudu je značný a v mnoha ohledech oprávněný. Bohužel je nevyhnutelně provázen spoustou buzzwordů a v důsledku též mnohým zklamáním. Nabízím vám online seminář, který vám na praktickém příkladu ukáže, jak přesunout typickou webovou aplikaci běžící on-premises nebo na pronajatém serveru do Microsoft Azure.</description>
+      <link>https://www.altair.blog/2023/05/cloud</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>IT</category>
+      <pubDate>2023-05-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/05/teched</guid>
       <title>Prezentace a příklady z TechEdu 2023</title>
       <description>V tomto týdnu se konal TechEd 2023 a já na něm měl sedm přednášek. Nabízím vám ke stažení prezentace, příklady a odkazy.</description>
@@ -138,17 +148,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2022-10-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/09/esp-tmep</guid>
-      <title>Jak ze tří součástek vyrobit internetový teploměr</title>
-      <description>Twitter zaplavily fotky domácích teploměrů. Teplota v místnosti je nová rouška. Ať už doma ve jmému úspor a boje proti Putinovi mrznete při patnácti nebo se naopak potíte při třiceti stupních a chcete to sdělit světu, technika vám s virtue signallingem může pomoci. Ukážu vám, jak si ze tří součástek můžete postavit teploměr, který naměřená data odesílá do české služby TMEP.CZ.</description>
-      <link>https://www.altair.blog/2022/09/esp-tmep</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>3D tisk</category>
-      <category>Bastlení</category>
-      <pubDate>2022-09-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

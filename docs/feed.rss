@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/05/cloud</guid>
+      <title>Aplikace v cloudu, nohy na zemi - pozvánka na online seminář</title>
+      <description>Tlak na přesun aplikací do cloudu je značný a v mnoha ohledech oprávněný. Bohužel je nevyhnutelně provázen spoustou buzzwordů a v důsledku též mnohým zklamáním. Nabízím vám online seminář, který vám na praktickém příkladu ukáže, jak přesunout typickou webovou aplikaci běžící on-premises nebo na pronajatém serveru do Microsoft Azure.</description>
+      <link>https://www.altair.blog/2023/05/cloud</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>IT</category>
+      <pubDate>2023-05-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/05/teched</guid>
       <title>Prezentace a příklady z TechEdu 2023</title>
       <description>V tomto týdnu se konal TechEd 2023 a já na něm měl sedm přednášek. Nabízím vám ke stažení prezentace, příklady a odkazy.</description>
@@ -136,16 +146,6 @@
       <category>Akce a události</category>
       <category>IT</category>
       <pubDate>2022-11-21T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/11/hyperv</guid>
-      <title>Hyper-V: Velmi jemný úvod do virtualizace na Windows</title>
-      <description>Většina serverů jejichž služby využíváte je nejspíš virtualizovaná. Jejich software neběží přímo na hardware, ale ve virtuálním, emulovaném počítači, který umožňuje na jednom fyzickém hardware provozovat několik logických serverů. Děje se tak z důvodu snazší správy i z důvodů ekonomických, umožňuje to lépe využívat dostupný výpočetní výkon. Na Z-TECHu jsem pro vás připravil seriál o virtualizační platformě Hyper-V, která je součástí Windows.</description>
-      <link>https://www.altair.blog/2022/11/hyperv</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-11-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
