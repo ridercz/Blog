@@ -1,5 +1,5 @@
 <!-- dcterms:title = Aplikace v cloudu, nohy na zemi - pozvánka na online seminář -->
-<!-- dcterms:abstract = Tlak na přesun aplikací do cloudu je značný a v mnoha ohledech oprávněný. Bohužel je nevyhnutelně provázen spoustou buzzwordů a v důsledku též mnohým zklamáním. Nabízím vám online seminář, který vám na praktickém příkladu ukáže, jak přesunout typickou webovou aplikaci běžící on-premises nebo na pronajatém serveru do Microsoft Azure. -->
+<!-- dcterms:abstract = Tlak na přesun aplikací do cloudu je značný a v mnoha ohledech oprávněný. Bohužel je nevyhnutelně provázen spoustou buzzwordů a v důsledku též mnohým zklamáním. Nabízím vám realisticky pojatý online seminář, který vám na praktickém příkladu ukáže, jak přesunout typickou webovou aplikaci běžící on-premises nebo na pronajatém serveru do Microsoft Azure. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20230528-cloud.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20230528-cloud.jpg -->
@@ -9,7 +9,7 @@
 <!-- x4w:category = IT -->
 <!-- dcterms:date = 2023-05-28 -->
 
-Tlak na přesun aplikací do cloudu je značný a v mnoha ohledech oprávněný. Bohužel je nevyhnutelně provázen spoustou buzzwordů a v důsledku též mnohým zklamáním. Nabízím vám online seminář, který vám na praktickém příkladu ukáže, jak přesunout typickou webovou aplikaci běžící on-premises nebo na pronajatém serveru do Microsoft Azure.
+Tlak na přesun aplikací do cloudu je značný a v mnoha ohledech oprávněný. Bohužel je nevyhnutelně provázen spoustou buzzwordů a v důsledku též mnohým zklamáním. Nabízím vám realisticky pojatý online seminář, který vám na praktickém příkladu ukáže, jak přesunout typickou webovou aplikaci běžící on-premises nebo na pronajatém serveru do Microsoft Azure.
 
 ## Témata semináře
 
