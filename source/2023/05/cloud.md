@@ -34,7 +34,7 @@ Prostor samozřejmě bude i pro dotazy účastníků.
 
 ## Termín a cena
 
-**Seminář se bude konat online, prostřednictvím video streamu a chatu v systému [Altairis eLearning](https://elearning.altairis.cz/). Termín je úterý 13. července 2023 od 12:00 do 17:00**. 
+**Seminář se bude konat online, prostřednictvím video streamu a chatu v systému [Altairis eLearning](https://elearning.altairis.cz/). Termín je úterý 13. června 2023 od 12:00 do 17:00**. 
 
 Pro účastníky bude po skončení k dispozici záznam, prezentace a příklady.
 
