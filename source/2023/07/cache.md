@@ -1,5 +1,5 @@
 <!-- dcterms:title = Cacheování v .NET i HTTP -->
-<!-- dcterms:abstract = Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikací a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování? -->
+<!-- dcterms:abstract = Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikacích a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování? -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:coverUrl = /cover-pictures/20230725-cache.jpg -->
 <!-- x4w:pictureUrl = /perex-pictures/20230725-cache.jpg -->
@@ -8,7 +8,7 @@
 <!-- x4w:category = IT -->
 <!-- dcterms:date = 2023-07-25 -->
 
-Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikací a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování?
+Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikacích a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování?
 
 Kompletní seriál najdete na YouTube kanálu Z-TECH, který pro české programátory produkuje Zásilkovna, v **playlistu [ASP.NET Cache](https://www.youtube.com/playlist?list=PLFZurxJN0pMbTTXyhI7SQIEEr04YlylPG)**.
 
