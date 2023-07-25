@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/07/cache</guid>
+      <title>Cacheování v .NET i HTTP</title>
+      <description>Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikací a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování?</description>
+      <link>https://www.altair.blog/2023/07/cache</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2023-07-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/06/markdown</guid>
       <title>Markdown pro uživatele i pro vývojáře</title>
       <description>Mám rád Markdown. Jednoduchý značkovací jazyk, který umožňuje do textu přidat formátování, odkazy a podobně. Nejsem sám, protože Markdown dneska používá kdekdo - GitHub, Reddit, Telegram, Facebook Messenger a další. Připravil jsem pro vás dvě videa, ve kterých se naučíte jak MD psát jako uživatelé a využívat jako vývojáři.</description>
@@ -135,16 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>BDSM</category>
       <pubDate>2022-12-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/12/sqlcert</guid>
-      <title>Jak na chybu připjení k SQL Serveru po upgrade na .NET 7</title>
-      <description>Upgrade ASP.NET aplikací z 6.0 na 7.0 je snadný a téměř bezpracný. Ale můžete narazit na to, že se vám po upgrade databáze odmítne připojit k databázi s poněkud kryptickou chybou. Ukážu vám, jak tento problém vyřešit hned třikrát: dvakrát rychle a jednou správně.</description>
-      <link>https://www.altair.blog/2022/12/sqlcert</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-12-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
