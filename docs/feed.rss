@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/08/clear-site-data</guid>
+      <title>HTTP hlavička Clear-Site-Data</title>
+      <description>Méně známá HTTP hlavička "Clear-Site-Data" dokáže být velmi užitečná. Umí totiž prohlížeči přikázat, aby smazal všechny stopy po návštěvě daného webu. To se hodí zejména při odhlášení uživatele.</description>
+      <link>https://www.altair.blog/2023/08/clear-site-data</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2023-08-03T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/07/cache</guid>
       <title>Cacheování v .NET i HTTP</title>
       <description>Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikacích a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování?</description>
@@ -135,15 +144,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2022-12-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2022/12/liska</guid>
-      <title>Kde lišky dávají dobrou noc</title>
-      <description>Ingredience do bramborového salátu jsou téma natolik zásadní, aby se tím zabýval i státní rozhlas. Jaké ingredience jsem dostal já, abych z nich ukuchtil tradiční vánoční povídku na BDSM.CZ? Původně to měl být, stejně jako v minulých letech, obrázek. Ale autorka měla příliš mnoho práce se svou zvířenou, než aby mi ho stihla včas nakreslit. Takže jsem požádal své přátele na Facebooku, aby mi zadali deset slov a já že na jejich základě napíšu povídku.</description>
-      <link>https://www.bdsm.cz/2022/12/liska</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2022-12-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
