@@ -32,7 +32,9 @@ Až do pondělka ale máte možnost si koupit předplatné za stávající cenu 
 
 **Prvotní upload může trvat velmi dlouho,** v závislosti na objemu uložených dat a rychlosti uploadu vašeho připojení k Internetu. Následné zálohy jsou změnové, takže už se přenášejí jenom přírůstky.
 
-**Backblaze zálohuje pouze lokální disky,** tedy všechno "co má písmenko". Nezálohuje síťová úložiště typu NAS apod. Umí zálohovat externí disky připojené přes USB, ale musíte je (po prvotním zálohování) připojit alespoň jednou za měsíc. Viz [informace na webu Backblaze](https://help.backblaze.com/hc/en-us/articles/217665398-Backing-up-External-Hard-Drives). Pokud chcete zálohovat NAS, [u některých typů je to možné](https://www.backblaze.com/cloud-storage/solutions/nas-backup), ale ne v ceně paušálu, stojí to $5/TB/měs.
+**Backblaze zálohuje pouze lokální disky,** tedy interní disky připojené přes SATA, NVMe a podobně. Umí zálohovat externí disky připojené přes USB, Thunderbolt a podobně, ale musíte je (po prvotním zálohování) připojit alespoň jednou za měsíc. Viz [informace na webu Backblaze](https://help.backblaze.com/hc/en-us/articles/217665398-Backing-up-External-Hard-Drives). 
+
+Nezálohuje síťová úložiště typu NAS, namapované síťové disky apod. (ale umí zálohovat disk připojený přes iSCSI).Pokud chcete zálohovat NAS, [u některých typů je to možné](https://www.backblaze.com/cloud-storage/solutions/nas-backup), ale ne v ceně paušálu, stojí to $5/TB/měs. Což na druhou stranu není tak moc a pro řadu uživatelů to vyjde i levněji, než zde popisovaný _computer backup_. Ale musíte na to mít vlastní software.
 
 **Data můžete před zálohou zašifrovat vlastním klíčem,** takže ani provozovatel služby neví, co zálohuje. Nicméně pokud data chcete obnovit, musíte mu klíč sdělit.
 
