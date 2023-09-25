@@ -63,7 +63,7 @@ Ostatně nemusíme chodit daleko, třeba pro připojení k lokálnímu SQL Serve
 
 Obecně, pokud je databázový server a klient na jednom počítači (nekomunikují spolu po síti) není šifrované spojení z bezpečnostních důvodů nezbytné.
 
-Další problém spočívá v tom, že se mi nepodařilo přijít na způsob, jak instalaci a aktualizaci serverového certifikátu aktualizovat. Všechny návody počítají s nastavením pomocí GUI, jak bylo popsáno výše. Nepřišel jsem na to, jak tuto operaci udělat pomocí příkazové řádky nebo powershellu. 
+Další problém spočívá v tom, že se mi nepodařilo přijít na způsob, jak instalaci a aktualizaci serverového certifikátu automatizovat. Všechny návody počítají s nastavením pomocí GUI, jak bylo popsáno výše. Nepřišel jsem na to, jak tuto operaci udělat pomocí příkazové řádky nebo powershellu. 
 
 > Pokud na takový způsob přijdete, dejte mi vědět, rád o tom napíšu článek nebo udělám video.
 
