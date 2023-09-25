@@ -81,7 +81,7 @@ Ostatně, právě disputace s brněnskou městskou policií na téma psího popl
 
 Na rozdíl od "adresy na úřadě" jsou s totální absencí trvalého bydliště spojeny i některé nevýhody. 
 
-Tak například nemůžete získat živnostenské oprávnění nebo být statutárním orgánem obchodní společnosti. Nicméně nepřišel jsem dosud na odpověď na otázku, co se stane ve chvíli, kdy už ŽL máte nebo statutárem jste – zda ta pozice automaticky zaniká nebo jak.
+Tak například nemůžete získat živnostenské oprávnění. Nicméně nepřišel jsem dosud na odpověď na otázku, co se stane ve chvíli, kdy už ŽL máte – zda ta živnost automaticky zaniká nebo jak.
 
 Nemáte aktivní volební právo ve volbách do zastupitelstev obcí, krajů nebo do senátu. Sice máte právo volit ve volbách do Poslanecké sněmovny, Evropského parlamentu a v prezidentských volbách, ale nemáte jej jak realizovat, protože nejste nikde zapsáni v seznamu voličů. Chcete-li volit, musíte se "vrátit z ciziny" a přihlásit na úřad (nebo kamkoliv jinam), požádat o voličský průkaz a pobyt zase zrušit.
 
@@ -150,7 +150,7 @@ Pokud doručování nechcete mařit, ale naopak chcete mít jistotu, že se k v�
 1. Zřiďte si datovou schránku. Ačkoliv s nimi jsou jisté problémy, pro běžného počítačově zdatného uživatele jsou datové schránky výrazným přínosem. Pokud máte datovou schránku, musí vám do ní být zasílána veškerá úřední korespondence, jinak není platně doručena (tj. úřad si nemůže vybrat, musí vám zprávu poslat elektronicky).
 2. Zřiďte si doručovací adresu. To je údaj, který se zanáší do registru obyvatel a označuje adresu, na níž má být doručováno. Můžete uvést jakoukoliv adresu a nemusíte nijak prokazovat žádný vztah k ní. Může to být i P. O. Box nebo adresa v zahraničí.
 
-Doručovací adresa je řešení nejenom pro úřední bezdomovce, ale také pro lidi, kteří reálně bydlí jinde, než kde mají trvalé bydliště. Opět, je-li tato adresa uvedena, musí být doručováno na ni. Pozor – doručovací adresu musíte uvést předtím, než si zrušíte pobyt, potom to nejde. Podrobnější informace o zřízení doručovací adresy najdete na [Portálu veřejné správy](https://portal.gov.cz/obcan/zivotni-situace/obcan-a-stat/evidence-obyvatel/zavedeni-zmena-zruseni-adresy-na-kterou-maji-byt-dorucovany-pisemnosti-podle-zvlastniho-pravniho-predpisu.html).
+Doručovací adresa je řešení nejenom pro úřední bezdomovce, ale také pro lidi, kteří reálně bydlí jinde, než kde mají trvalé bydliště. Opět, je-li tato adresa uvedena, musí být doručováno na ni. Pozor – doručovací adresu musíte uvést předtím, než si zrušíte pobyt, potom to nejde. Podrobnější informace o zřízení doručovací adresy najdete na [webu MVČR](https://www.mvcr.cz/clanek/zavedeni-adresy-na-kterou-maji-byt-dorucovany-pisemnosti-podle-zvlastniho-pravniho-predpisu-prostrednictvim-informacniho-systemu-evidence-obyvatel.aspx).
 
 ## Takže jak na to?
 
