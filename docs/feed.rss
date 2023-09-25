@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/09/backblaze</guid>
+      <title>Backblaze zdražuje: poslední šance předplatného za starou cenu</title>
+      <description>Moje oblíbená služba Backblaze bude od 3. října zdražovat. I tak zůstane velice výhodnou službou, ale nyní máte poslední šanci na nákup předplatného za starou cenu.</description>
+      <link>https://www.altair.blog/2023/09/backblaze</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2023-09-25T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/08/clear-site-data</guid>
       <title>HTTP hlavička Clear-Site-Data</title>
       <description>Méně známá HTTP hlavička "Clear-Site-Data" dokáže být velmi užitečná. Umí totiž prohlížeči přikázat, aby smazal všechny stopy po návštěvě daného webu. To se hodí zejména při odhlášení uživatele.</description>
@@ -134,16 +143,6 @@
       <category>Z-TECH</category>
       <category>IT</category>
       <pubDate>2023-01-18T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2022/12/healthchecks</guid>
-      <title>ASP.NET Core Health Checks: Jak sledovat zdraví vaší aplikace</title>
-      <description>Pokud provozujete webovou aplikaci, je dobré vědět, že se těší dobrému zdraví. Že běží, odpovídá na HTTP requesty, ale také že běží správně. Tedy nejenom že běží web server, ale třeba také jestli se dokáže připojit k databázi, k cloudovému úložišti, jestli je dost místa na disku, jestli nezabírá moc paměti a podobně. To lze samozřejmě monitorovat zvnějšku aplikace, například pomocí performance counterů, ale to musíte mít pod kontrolou celou infrastrukturu, což často není možné nebo praktické. Proto je v ASP.NET Core přítomna technologie health checků, které fungují zevnitř. Aplikace pomocí nich dokáže otestovat sama sebe a reportovat, zda jednotlivé její části fungují tak jak mají.</description>
-      <link>https://www.altair.blog/2022/12/healthchecks</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2022-12-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
