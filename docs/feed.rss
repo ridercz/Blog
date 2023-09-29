@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</guid>
+      <title>Kauza CryptoCult: U aplikací pro bezpečnou komunikaci rozhodně neplatí, že dražší je lepší a bezpečnější</title>
+      <description>Ministr vnitra Vít Rakušan používá ke komunikaci aplikaci, která podporuje end-to-end šifrování. To je výborná zpráva a bylo by ještě lepší, kdyby to byla taková samozřejmost, aby to nebyla ani zpráva. Jím zvolená aplikace ovšem radost poněkud kalí.</description>
+      <link>https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2023-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/09/solid</guid>
       <title>Co jsou SOLID principy v .NET a proč by vás měly zajímat?</title>
       <description>SOLID je sada pěti principů používaných při psaní objektově orientovaného kódu. Pro .NET programátory je podstatná především proto, že ji dodržuje samotný .NET. A proto ji musíte znát, i kdybyste ji nechtěli sami dodržovat.</description>
@@ -134,15 +144,6 @@
       <category>Software</category>
       <category>IT</category>
       <pubDate>2023-01-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</guid>
-      <title>Kryt na ovladač dveří od garáže</title>
-      <description>Ovladač DoorHan Transmitter 2 Pro, který používám na vrata od garáže, nemá dobrou konstrukci. Tlačítka jsou náchylná ke zmáčknutí omylem. Vymodeloval a vytiskl jsem tedy kryt, který tomu brání. Navíc umožňuje zaslepit jedno ze dvou tlačítek, pokud se nepoužívá. Model najdete zdarma na Printables.</description>
-      <link>https://www.printables.com/model/375371-button-cover-for-doorhan-transmitter-2-pro</link>
-      <author>Michal Altair Valášek</author>
-      <category>3D tisk</category>
-      <pubDate>2023-01-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

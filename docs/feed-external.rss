@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</guid>
+      <title>Kauza CryptoCult: U aplikací pro bezpečnou komunikaci rozhodně neplatí, že dražší je lepší a bezpečnější</title>
+      <description>Ministr vnitra Vít Rakušan používá ke komunikaci aplikaci, která podporuje end-to-end šifrování. To je výborná zpráva a bylo by ještě lepší, kdyby to byla taková samozřejmost, aby to nebyla ani zpráva. Jím zvolená aplikace ovšem radost poněkud kalí.</description>
+      <link>https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2023-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2023/01/misto-gauce</guid>
       <title>Místo gauče</title>
       <description>Nedávám si novoroční předsevzetí. Nicméně pro letošní rok mám ušlechtilý záměr každý měsíc vydat na BDSM.CZ jednu povídku nebo jiný článek. Tenhle příběh mě hodně baví a navíc má do jisté míry edukativní přesah, protože popisuje základy správné techniky, když chcete chlapa ojet připínákem. Nikdy nevíte, kdy se vám taková znalost a dovednost bude hodit!</description>
@@ -142,16 +152,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-02-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</guid>
-      <title>Kybernetický útok na Červený kříž připomíná, že ženevské konvence by měly platit i na internetu</title>
-      <description>Červený kříž se stal obětí přesně cíleného a velmi pokročilého kybernetického útoku. Neznámí útočníci získali osobní údaje půl milionu lidí, kterým tato humanitární organizace pomáhá. Za útokem by mohl být některý stát. ICRC si zaslouží uznání když ne za zabezpečení, tak za zodpovědnou komunikaci.</description>
-      <link>https://tech.hn.cz/c7-67035800-psms7-b31a36bf7ff23a2</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-02-21T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
