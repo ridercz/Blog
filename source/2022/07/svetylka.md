@@ -58,7 +58,7 @@ Zde je výsledný kód a STL model:
 
 <figure>
     <img src="https://www.cdn.altairis.cz/Blog/2022/20220712-svetylka-2.jpg" alt="Instalace držáku" />
-    <figcaption<b>Krok 2:</b> Dózu zbavte štítku a do víčka vložte vytištěný držák. Pokud nechce držet, přilepte ho tavným lepidlem nebo něčím podobným.</figcaption>
+    <figcaption><b>Krok 2:</b> Dózu zbavte štítku a do víčka vložte vytištěný držák. Pokud nechce držet, přilepte ho tavným lepidlem nebo něčím podobným.</figcaption>
 </figure>
 
 <figure>
