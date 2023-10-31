@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/10/pooka</guid>
+      <title>Pooka: Automatické vypnutí počítače při odchodu</title>
+      <description>Stihnete vypnout počítač, když vám zásahovka vyrazí dveře? Nebo ho jenom zapomínáte zamknout, když jdete na oběd? V obou případech vám pomůže trocha hardware a pomocník jménem Pooka.</description>
+      <link>https://www.altair.blog/2023/10/pooka</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2023-10-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/10/hartl</guid>
       <title>Návrh na udělení státního vyznamenání ing. Karlu Hartlovi</title>
       <description>Dne 28. října se tradičně udělují státní vyznamenání. Kromě toho uplynul právě měsíc od smrti ing. Karla Hartla, "otce" plemene československý vlčák. Podal jsem prezidentu republiky návrh na to, aby mu byla udělena medaile Za zásluhy in memoriam. Pokud s mým návrhem souhlasíte, můžete se k němu připojit.</description>
@@ -134,16 +144,6 @@
       <category>Software</category>
       <category>IT</category>
       <pubDate>2023-01-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/01/oci-linux</guid>
-      <title>ASP.NET Core na Linuxu: Jak získat výkonný cloudový server zdarma</title>
-      <description>Společnost Oracle nabízí zdarma ve svém cloudu server se čtyřmi jádry, 24 GB RAM a 200 GB disku. Jaký je v tom háček? Má ARM architekturu a běží na něm Linux. V novém seriálu vám ukážu, jak na takovém serveru bezpečně a odděleně od sebe hostovat více ASP.NET Core aplikací.</description>
-      <link>https://www.altair.blog/2023/01/oci-linux</link>
-      <author>Michal Altair Valášek</author>
-      <category>Z-TECH</category>
-      <category>IT</category>
-      <pubDate>2023-01-18T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

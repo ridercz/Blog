@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2023/10/pooka</guid>
+      <title>Pooka: Automatické vypnutí počítače při odchodu</title>
+      <description>Stihnete vypnout počítač, když vám zásahovka vyrazí dveře? Nebo ho jenom zapomínáte zamknout, když jdete na oběd? V obou případech vám pomůže trocha hardware a pomocník jménem Pooka.</description>
+      <link>https://www.altair.blog/2023/10/pooka</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2023-10-31T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/10/hartl</guid>
       <title>Návrh na udělení státního vyznamenání ing. Karlu Hartlovi</title>
       <description>Dne 28. října se tradičně udělují státní vyznamenání. Kromě toho uplynul právě měsíc od smrti ing. Karla Hartla, "otce" plemene československý vlčák. Podal jsem prezidentu republiky návrh na to, aby mu byla udělena medaile Za zásluhy in memoriam. Pokud s mým návrhem souhlasíte, můžete se k němu připojit.</description>
@@ -134,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <pubDate>2023-01-30T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2023/01/misto-gauce</guid>
-      <title>Místo gauče</title>
-      <description>Nedávám si novoroční předsevzetí. Nicméně pro letošní rok mám ušlechtilý záměr každý měsíc vydat na BDSM.CZ jednu povídku nebo jiný článek. Tenhle příběh mě hodně baví a navíc má do jisté míry edukativní přesah, protože popisuje základy správné techniky, když chcete chlapa ojet připínákem. Nikdy nevíte, kdy se vám taková znalost a dovednost bude hodit!</description>
-      <link>https://www.bdsm.cz/2023/01/misto-gauce</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2023-01-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
