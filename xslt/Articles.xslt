@@ -112,7 +112,7 @@
                   <ul>
                     <li>
                       <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog{@path}">
-                        <i class="fab fa-twitter">&#8203;</i>
+                        <i class="fab fa-x-twitter">&#8203;</i>
                       </a>
                     </li>
                     <li>
