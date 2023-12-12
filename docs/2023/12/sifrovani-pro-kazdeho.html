@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Šifrování pro každého | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2023/12/sifrovani-pro-kazdeho" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C08933CAEAD84611B3C84A85BB63A51E6E3A8C62" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Šifrování pro každého" />
+    <meta name="twitter:description" content="&quot;A vy jste už někdy šifroval? Nikdo nešifruje, samozřejmě.&quot; Tento výrok někdejšího náměstka ministra financí Ondřeje Závodského se s realitou míjí přímo ukázkově. Chcete umět šifrovat svoje data? Nový seriál vás to naučí. Chcete zašifrovat jeden soubor s citlivými daty? Udělat si šifrovaný kontejner? Zašifrovat přenosný flashdisk? Nebo dokonce celý systém, Windows nebo Linux? Ukážu vám, jak používat BitLocker, VeraCrypt nebo LUKS." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20231212-sifrovani-pro-kazdeho.jpg" />
+    <meta property="article:published_time" content="2023-12-12" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Šifrování pro každého" />
+    <meta name="description" property="og:description" content="&quot;A vy jste už někdy šifroval? Nikdo nešifruje, samozřejmě.&quot; Tento výrok někdejšího náměstka ministra financí Ondřeje Závodského se s realitou míjí přímo ukázkově. Chcete umět šifrovat svoje data? Nový seriál vás to naučí. Chcete zašifrovat jeden soubor s citlivými daty? Udělat si šifrovaný kontejner? Zašifrovat přenosný flashdisk? Nebo dokonce celý systém, Windows nebo Linux? Ukážu vám, jak používat BitLocker, VeraCrypt nebo LUKS." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20231212-sifrovani-pro-kazdeho.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2023/12/sifrovani-pro-kazdeho" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20231212-sifrovani-pro-kazdeho.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Šifrování pro každého</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2023-12-12">12. prosince 2023 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>&quot;A vy jste už někdy šifroval? Nikdo nešifruje, samozřejmě.&quot; Tento výrok někdejšího náměstka ministra financí Ondřeje Závodského se s realitou míjí přímo ukázkově. Chcete umět šifrovat svoje data? Nový seriál vás to naučí. Chcete zašifrovat jeden soubor s citlivými daty? Udělat si šifrovaný kontejner? Zašifrovat přenosný flashdisk? Nebo dokonce celý systém, Windows nebo Linux? Ukážu vám, jak používat BitLocker, VeraCrypt nebo LUKS.</p>
+<p>K čemu se jednotlivé varianty hodí?</p>
+<ul>
+<li><strong>Šifrování konkrétního souboru nebo archivu</strong> je nejjednodušší a umožňuje ochránit konkrétní soubory, které nechcete jen tak nechat někde ležet. Také se hodí pro případy, kdy chcete někomu jinému poslat citlivá data a nevíte, komu se cestou mohou dostat do rukou. Můžete mu tak data poslat třeba e-mailem nebo poštou a heslo mu sdělit SMSkou a podobně.</li>
+<li><strong>Šifrování celého přenosného disku</strong> se hodí ve chvíli, kdy máte svou &quot;osobní flashku&quot; s důležitými daty, kterou nosíte s sebou. Strčíte ji tu do počítače doma, tu v práci... Co kdybyste ji ztratili a někdo ji našel? Je to pro vás problém? Pak vám pomůže BitLocker To Go, který z jakékoliv flashky udělá šifrovanou.</li>
+<li><strong>Multiplatformní VeraCrypt</strong> vás bude zajímat, pokud se neomezujete jenom na Windows. Jeho použití není tak snadné, ale funguje i na Linuxu a Macu. A umí docela zajímavé věci.</li>
+<li><strong>Šifrování systémového disku</strong> zařídí, že se bude šifrovat prostě všechno, co na počítači máte. Včetně třeba dočasných souborů a podobně. Na Windows k tomu slouží BitLocker nebo Device Encryption, na Linuxu LUKS. Použití těchto nástrojů je podle mého názoru věcí základní informační hygieny, a to i pro případ ztráty nebo třeba reklamace daného zařízení.</li>
+<li><strong>Pre-boot autentizace</strong> nabízí ještě větší úroveň bezpečí. Ve výchozím nastavení je u BitLockeru obsah disku chráněn pomocí TPM, Trusted Platform Modulu. Tj. když útočník najde vypnutý počítač, operační systém normálně nabootuje a čeká na přihlášení. To ho otevírá celé řadě útoků. Netriviálních, ale možná jsou součástí vašeho threat modelu. Pokud ano, chcete zapnout autentizaci ještě před bootem operačního systému, kterou podporuje jak BitLocker na Windows tak LUKS na Linuxu. V takovém případě musíte zadat heslo ještě předtím, než operační systém vůbec začne startovat. Což vám sice poněkud zkomplikuje život (např. tím, že není možné systém na dálku restartovat), ale mnohem víc to zkomplikuje život útočníkovi.</li>
+</ul>
+<h2 id="pouziti-programu-7-zip">Použití programu 7-Zip</h2>
+<p>Začneme zlehka. <a href="https://www.7zip.org">7-Zip</a> většina lidí zná jako výborný komprimační program a tím také bezpochyby je. Ale kromě toho disponuje i možností vytvořené 7Z archivy zašifrovat pomocí standardního algoritmu AES. Nějakou formu &quot;ochrany heslem&quot; nabízí kdejaký program a formát, ale skutečná úroveň bezpečnosti se mezi jednotlivými programy a jejich verzemi dramaticky liší. Takže pokud potřebujete zašifrovan nějaká specifická data, třeba pro přenos nespolehlivým způsobem nebo pro archiv, 7-Zip je docela dobrá volba.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/EdjLHSNW2qc" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="bitlocker-to-go">BitLocker To Go</h2>
+<p>Další level představuje šifrování celého přenosného úložiště, třeba USB flashky. Asi nejjednodušší způsob jak něco takového udělat představuje BitLocker To Go. Je součástí Windows už řadu verzí a funguje na nich jednoduše a spolehlivě. Má ovšem dvě nevýhody. První je, že pořádně funguje jenom na Windows a pokud tedy potřebujete šifrovanou flashku přečíst i na jiném operačním systému, není to řešení pro vás. Druhá nevýhoda je, že pro vytvoření šifrovaného disku potřebujete Pro edici Windows, nestačí Home edice. Pro práci s diskem pak můžete použít Windows Home, ale vytvořit ho musíte na Pro.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/tHg01Nasq2w" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="veracrypt">VeraCrypt</h2>
+<p>Pokud je pro vás důležitá nezávislost na platformě, je tady pro vás <a href="https://veracrypt.fr/">VeraCrypt</a>, nejvíce životaschopný nástupce legendárního programu TrueCrypt. Funguje na Windows, Linuxu i Mac OS. Jeho použití není tak jednoduché jako v případě BitLockeru, ale zato nabízí víc možností. Věnoval jsem mu hned tři díly tohoto seriálu.</p>
+<p>První díl ukazuje základní použití se souborovým kontejnerem:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ji5T0suq6co" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Další díl ukazuje, jak vytvořit hidden volume. Tedy takový, který lze &quot;otevřít&quot; dvěma hesly - a pro každé vydá jiný obsah. Představuje jistou formu proti &quot;kryptoanalýze gumovou hadicí&quot;. Tedy proti situaci, kdy se útočník pokusí z vás heslo dostat nátlakem. Pokud jste na to připraveni, můžete vyzradit krycí heslo a nebude možné zjistit - natož prokázat - že kontejner obsahuje i něco jiného.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/wpuS8n4aGEM" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Poslední díl věnovaný VeraCryptu ukazuje, jak pomocí něj zašifrovat celý disk. VeraCrypt umí zašifrovat celý disk nebo konkrétní partition. Pokud zašifrujete celý disk, bude vypadat jako zcela nový, nikdy nepoužitý a nebude možné zjistit, že na něm jsou uložena nějaká šifrovaná data (natož je dešifrovat), což nabízí další možnost plausible deniability. Pokud by vám to bylo málo, můžete to zkombinovat s předchozím tipem a udělat na něm hidden volume.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/i5IpQgQE1VQ" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="intermezzo-proc-vlastne-sifrovat">Intermezzo - proč vlastně šifrovat?</h2>
+<p>Kdo nic neprovedl, nemá se čeho bát. Spořádaný občan šifrování nepotřebuje. Mantry odpůrců práva na soukromí. Proč byste o šifrování měli stát, i když na svém počítači nemáte nic super tajného?</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ZS6BcXatdX8" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="plnokrevny-bitlocker-a-sifrovani-systemoveho-disku">&quot;Plnokrevný&quot; BitLocker a šifrování systémového disku</h2>
+<p>O verzi &quot;To Go&quot; už řeč byla hned ve druhém dílu našeho seriálu. Ale &quot;plnokrevný&quot; BitLocker toho umí víc. Třeba zašifrovat i systémový disk a ochránit tak celý počítač.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/gvHDAQj8TEk" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>BitLocker umí zašifrovat disk i tak, že bude nutné ještě před startem operačního systému zadat heslo (kterému říká PIN). To umožní ochránit vypnutý počítač před ještě větším množstvím útoků.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/jC02daVBWHc" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2 id="luks-linux-unified-key-setup">LUKS - Linux Unified Key Setup</h2>
+<p>Obdobou BitLockeru pro Linux je program jménem LUKS - Linux Unified Key Setup. Umí toho opravdu hodně, včetně podpory TPM a dalších věcí, ale to už jsou záležitosti poněkud za hranicemi tohoto seriálu. Nicméně ukážu vám, jak LUKS jednoduše zkonfigurovat při instalaci Ubuntu a ochránit disk heslem, který je nutné zadat před spuštěním.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/QqkNzMPKfYI" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=%c5%a0ifrov%c3%a1n%c3%ad+pro+ka%c5%bed%c3%a9ho&amp;body=https://www.altair.blog/2023/12/sifrovani-pro-kazdeho">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2023/12/sifrovani-pro-kazdeho.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2023/12/sifrovani-pro-kazdeho.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2023/12/sifrovani-pro-kazdeho">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2023/12/sifrovani-pro-kazdeho">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2023</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/arduino.min.js" integrity="sha512-bOF+tbLNVPwsmPKbwZAJT2KD7J2soKGicZMV+iFZVyqD7qgZtpWOiY9+EmB+HyPgTP3Kah7K0aQVtX6mVK3sBg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/bash.min.js" integrity="sha512-yyMT1pQvQ9ZFAB8j/dUWeEjWTEQZBmV9pitXN7fmJYbqsoizQ0kVw8wONhrwBHE0Z/S8tKQyRcvbW4pG4m5cIw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/c.min.js" integrity="sha512-lzcjwENIEpri/9RQiWGJLxGxZ21Pr1qWvzEIpEa4yxPTSEderzTew+5Ff5XBbTC3OuLrb4P0qSwISoq1E/ddLg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/csharp.min.js" integrity="sha512-2S5x4UDJdymqDOBGIz88WSMwb/HC27t9gZyAus7RyUA2n3YXVJlYUrX606FkkU5+XrE+i12FNOhczUpPEh2XiQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/css.min.js" integrity="sha512-2EZCMzH/v5Q+9kXnio4UlG/iGM7Iy16NPjb4fFmtu501/gdvebqlP3sa2VvJsxnTJVWlFX8EN+BHxG4efqELWw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>¨
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/dos.min.js" integrity="sha512-4QYHD9PAHudNw8hYXd79O8t7BrFe2kl19eYIPAwdCxiJ7bYxERRpvS2VbFixd+kfLqVzUH9m1LBnmZlUf3VuAA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/gcode.min.js" integrity="sha512-BIiAVlWdHwCcZSixwJwhoUJSVGaNtPXCDzcyR5AVlyzXS9FDies/go5012bSdZr15eCTZG4G42GqMSkIhKpSoQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js" integrity="sha512-Z5vOg00atIeZ04QhYxz3iRlFnU5qnrB0eYbBDmXMhHqJYx4dc6n1KY5qzh3fEfrFzaR05D34mOin6ObjPjuWdA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/json.min.js" integrity="sha512-WRejcYn/ITFLjqnYYgF3Es2b2dc3GnVc70wF3nO/G6uQtsN/LhxSlZp5y7E9JP3gqQ5gY/TPg9QdOlB3SY+ucQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/markdown.min.js" integrity="sha512-8YFObAd0dPoua15RGQBCDtnXMA4zJnAxaL4QSjgLLEKmJ1A2Aar7M1gamz2512/mKzx1ut96KNV7ggEV8WvRxg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/openscad.min.js" integrity="sha512-r7SipMjtLS3BxLiHtjRORcw8/sJDk6Ums0BwzuEMQoWe4hSKYQs3Zk2qClX3AwVw9lrTFIu3rTVcGgODqwBMww==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/scss.min.js" integrity="sha512-0U8Ud0Dh6EsQR0cokSx1hPYzG3i8AnfYEaDXNGi5rSsVJMdAaas/gif/b/8JrGsuuC7xl7dfBGHFgZrhWb39Bg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/sql.min.js" integrity="sha512-LxrbI3MKe/9KnjAs8zlLrZFRpp2J+jp0pML7zd6OAo/LHH8CEKM2Ef/jTfSX1gm8Auex3J5Jdj0rMkYejmMVMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/xml.min.js" integrity="sha512-2EQPABfCqv0Tr9AxzXh2U9DrbRre5g5H/BL7j/hGbES3mRjQ44bBks0I+2EoPbA4YzWHQ8BsVHNTaHr7t5RHKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script><script>
+                  hljs.initHighlightingOnLoad();
+              </script></body>
+</html>
