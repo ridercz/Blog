@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2023/12/vune-mandragory</guid>
+      <title>Vůně mandragory</title>
+      <description>Moje první fan fiction v životě. Když jsem před nějakými dvaceti lety poprvé četl příběhy Harryho Pottera, samozřejmě mě zaujali zvěromágové - kouzelníci, kteří se umí přeměnit ve zvíře. Umět ze sebe doopravdy udělat koně, to by bylo něco! A jak se svět J. K. Rowlingové dál rozvíjel, našel jsem i další informace o zvěromázích. Postup jak se jím stát... A také informaci, že pokud se přesně nedodrží, může být kouzelník dosmrti zaklet do podoby napůl lidské, napůl zvířecí. Okamžitě se mi v hlavě začal rodit příběh takového nešikového kouzelníka, kterému Brumbál - jako jiným outsiderům kouzelnického světa - poskytne v Bradavicích útočiště. A krásné dominantní a sadistické čarodějce ze Zmijozelu, samozřejmě.</description>
+      <link>https://www.bdsm.cz/2023/12/vune-mandragory</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2023-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</guid>
       <title>Kauza CryptoCult: U aplikací pro bezpečnou komunikaci rozhodně neplatí, že dražší je lepší a bezpečnější</title>
       <description>Ministr vnitra Vít Rakušan používá ke komunikaci aplikaci, která podporuje end-to-end šifrování. To je výborná zpráva a bylo by ještě lepší, kdyby to byla taková samozřejmost, aby to nebyla ani zpráva. Jím zvolená aplikace ovšem radost poněkud kalí.</description>
@@ -142,16 +151,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-03T08:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</guid>
-      <title>Hackerem snadno, rychle a bez námahy: Jaký smysl má zapojit se do útoků na ruské webové servery</title>
-      <description>V souvislosti s válkou na Ukrajině se vynořilo velké množství služeb, které nabízejí možnost stát se „hackerem snadno a rychle“. Jedná se o prostou webovou stránku, na kterou když vstoupíte, zahájí velké množství dotazů na weby, které se jejímu autorovi znelíbily, obvykle ruských státních orgánů a státem kontrolovaných médií. Je použití takových služeb bezpečné? A jsou reálně k něčemu dobré?</description>
-      <link>https://tech.hn.cz/c7-67038850-psms7-68a335812cfb1e1</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-02-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

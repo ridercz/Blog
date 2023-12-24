@@ -1,0 +1,11 @@
+<!-- dcterms:title = Vůně mandragory -->
+<!-- dcterms:abstract = Moje první fan fiction v životě. Když jsem před nějakými dvaceti lety poprvé četl příběhy Harryho Pottera, samozřejmě mě zaujali zvěromágové - kouzelníci, kteří se umí přeměnit ve zvíře. Umět ze sebe doopravdy udělat koně, to by bylo něco! A jak se svět J. K. Rowlingové dál rozvíjel, našel jsem i další informace o zvěromázích. Postup jak se jím stát... A také informaci, že pokud se přesně nedodrží, může být kouzelník dosmrti zaklet do podoby napůl lidské, napůl zvířecí. Okamžitě se mi v hlavě začal rodit příběh takového nešikového kouzelníka, kterému Brumbál - jako jiným outsiderům kouzelnického světa - poskytne v Bradavicích útočiště. A krásné dominantní a sadistické čarodějce ze Zmijozelu, samozřejmě. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureCredits = Midjourney AI -->
+<!-- x4w:pictureUrl = /perex-pictures/20231224-vune-mandragory.jpg -->
+<!-- x4w:coverUrl = /cover-pictures/20231224-vune-mandragory.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- dcterms:date = 2023-12-24 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2023/12/vune-mandragory -->

@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2023/12/vune-mandragory</guid>
+      <title>Vůně mandragory</title>
+      <description>Moje první fan fiction v životě. Když jsem před nějakými dvaceti lety poprvé četl příběhy Harryho Pottera, samozřejmě mě zaujali zvěromágové - kouzelníci, kteří se umí přeměnit ve zvíře. Umět ze sebe doopravdy udělat koně, to by bylo něco! A jak se svět J. K. Rowlingové dál rozvíjel, našel jsem i další informace o zvěromázích. Postup jak se jím stát... A také informaci, že pokud se přesně nedodrží, může být kouzelník dosmrti zaklet do podoby napůl lidské, napůl zvířecí. Okamžitě se mi v hlavě začal rodit příběh takového nešikového kouzelníka, kterému Brumbál - jako jiným outsiderům kouzelnického světa - poskytne v Bradavicích útočiště. A krásné dominantní a sadistické čarodějce ze Zmijozelu, samozřejmě.</description>
+      <link>https://www.bdsm.cz/2023/12/vune-mandragory</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2023-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/12/sifrovani-pro-kazdeho</guid>
       <title>Šifrování pro každého</title>
       <description>"A vy jste už někdy šifroval? Nikdo nešifruje, samozřejmě." Tento výrok někdejšího náměstka ministra financí Ondřeje Závodského se s realitou míjí přímo ukázkově. Chcete umět šifrovat svoje data? Nový seriál vás to naučí. Chcete zašifrovat jeden soubor s citlivými daty? Udělat si šifrovaný kontejner? Zašifrovat přenosný flashdisk? Nebo dokonce celý systém, Windows nebo Linux? Ukážu vám, jak používat BitLocker, VeraCrypt nebo LUKS.</description>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2023-05-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/03/powerpoint-dpi</guid>
-      <title>Jak nastavit rozlišení pro obrázky exportované z PowerPointu</title>
-      <description>PowerPoint umí snímky z prezentace uložit jako obrázky ve formátech PNG, JPEG nebo TIFF, což se občas hodí. Výchozí nastavení je ale generuje v příliš malém rozlišení (1280 × 720) a v GUI není způsob, jak to změnit. Naštěstí stačí jednoduchý zásah do registrů.</description>
-      <link>https://www.altair.blog/2023/03/powerpoint-dpi</link>
-      <author>Michal Altair Valášek</author>
-      <category>Tipy, triky</category>
-      <pubDate>2023-03-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
