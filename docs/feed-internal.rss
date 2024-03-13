@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/03/webove-sluzby-pro-vyvojare</guid>
+      <title>Bezplatné online služby nejen pro webové vývojáře</title>
+      <description>Na záložkové liště mého prohlížeče je složka Tools, která obsahuje odkazy na užitečné webové služby, které používám prakticky denně. Možná se budou líbit i vám.</description>
+      <link>https://www.altair.blog/2024/03/webove-sluzby-pro-vyvojare</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2024-03-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2023/12/sifrovani-pro-kazdeho</guid>
       <title>Šifrování pro každého</title>
       <description>"A vy jste už někdy šifroval? Nikdo nešifruje, samozřejmě." Tento výrok někdejšího náměstka ministra financí Ondřeje Závodského se s realitou míjí přímo ukázkově. Chcete umět šifrovat svoje data? Nový seriál vás to naučí. Chcete zašifrovat jeden soubor s citlivými daty? Udělat si šifrovaný kontejner? Zašifrovat přenosný flashdisk? Nebo dokonce celý systém, Windows nebo Linux? Ukážu vám, jak používat BitLocker, VeraCrypt nebo LUKS.</description>
@@ -135,15 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>Tipy, triky</category>
       <pubDate>2023-03-19T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/01/wug-days</guid>
-      <title>Prezentace a příklady z WUG Days 2023.1 v Brně</title>
-      <description>Dnes jsem měl dvě přednášky na WUG Days 2023.1 v Brně. Nabízím ke stažení prezentace a příklady z nich.</description>
-      <link>https://www.altair.blog/2023/01/wug-days</link>
-      <author>Michal Altair Valášek</author>
-      <category>Akce a události</category>
-      <pubDate>2023-01-30T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

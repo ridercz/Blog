@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/03/webove-sluzby-pro-vyvojare</guid>
+      <title>Bezplatné online služby nejen pro webové vývojáře</title>
+      <description>Na záložkové liště mého prohlížeče je složka Tools, která obsahuje odkazy na užitečné webové služby, které používám prakticky denně. Možná se budou líbit i vám.</description>
+      <link>https://www.altair.blog/2024/03/webove-sluzby-pro-vyvojare</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2024-03-13T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2023/12/vune-mandragory</guid>
       <title>Vůně mandragory</title>
       <description>Moje první fan fiction v životě. Když jsem před nějakými dvaceti lety poprvé četl příběhy Harryho Pottera, samozřejmě mě zaujali zvěromágové - kouzelníci, kteří se umí přeměnit ve zvíře. Umět ze sebe doopravdy udělat koně, to by bylo něco! A jak se svět J. K. Rowlingové dál rozvíjel, našel jsem i další informace o zvěromázích. Postup jak se jím stát... A také informaci, že pokud se přesně nedodrží, může být kouzelník dosmrti zaklet do podoby napůl lidské, napůl zvířecí. Okamžitě se mi v hlavě začal rodit příběh takového nešikového kouzelníka, kterému Brumbál - jako jiným outsiderům kouzelnického světa - poskytne v Bradavicích útočiště. A krásné dominantní a sadistické čarodějce ze Zmijozelu, samozřejmě.</description>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2023-05-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/05/entity-framework</guid>
-      <title>Entity Framework Core 7.0: Novinky, tipy, triky</title>
-      <description>Entity Framework je nejpoužívanější object/relational mapper pro .NET. Připravil jsem pro vás seriál videí o novinkách v aktuální verzi 7.0, ale i s různými tipy a triky, které sice nejsou vždy úplně nové, ale hodí se je znát.</description>
-      <link>https://www.altair.blog/2023/05/entity-framework</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2023-05-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
