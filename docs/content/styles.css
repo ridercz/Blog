@@ -238,13 +238,13 @@ blockquote {
   font-style: italic;
 }
 
-del {
-  color: #444;
-  text-decoration: line-through solid #444;
+ins {
+  font-weight: bold;
+  text-decoration: none;
 }
 
-ins {
-  text-decoration: underline dotted #ccc;
+del {
+  text-decoration: line-through;
 }
 
 section.artlist article {
@@ -612,4 +612,100 @@ div.error {
 #results article > aside {
   float: right;
   color: #666;
+}
+
+section.article-text table.steps {
+  border: 1px solid #999;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+section.article-text table.steps td {
+  background-color: transparent;
+  border: 1px solid #999;
+  padding: 1ex;
+}
+
+section.article-text table.steps td *:nth-child(1) {
+  margin-top: 0;
+}
+
+section.article-text table.steps td *:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+section.article-text table.steps td img {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section.article-text table.steps th {
+  background-color: transparent;
+  border: 1px solid #999;
+  padding: 1ex;
+  width: 4ex;
+  vertical-align: top;
+  text-align: right;
+  font-weight: normal;
+}
+
+section.article-text table.steps tr.information th {
+  background-color: #ffa;
+  font-size: 150%;
+  padding: 1ex 0;
+  text-align: center;
+  border-right: none;
+}
+
+section.article-text table.steps tr.information td {
+  background-color: #ffa;
+  font-style: italic;
+  border-left: none;
+}
+
+section.article-text table.steps tr.information code {
+  background-color: transparent;
+}
+
+section.article-text table.steps tr.information em,
+section.article-text table.steps tr.information i {
+  font-style: normal;
+}
+
+section.article-text table.steps tr.warning th {
+  background-color: #faa;
+  font-size: 150%;
+  padding: 1ex 0;
+  text-align: center;
+  border-right: none;
+}
+
+section.article-text table.steps tr.warning td {
+  background-color: #faa;
+  font-weight: bold;
+  border-left: none;
+}
+
+section.article-text table.steps tr.warning code {
+  background-color: transparent;
+}
+
+section.article-text table.steps tr.warning strong,
+section.article-text table.steps tr.warning b {
+  font-weight: normal;
+}
+
+section.article-text table.steps tr.download th {
+  background-color: #9cf;
+  font-size: 150%;
+  padding: 1ex 0;
+  text-align: center;
+  border-right: none;
+}
+
+section.article-text table.steps tr.download td {
+  background-color: #9cf;
+  border-left: none;
 }

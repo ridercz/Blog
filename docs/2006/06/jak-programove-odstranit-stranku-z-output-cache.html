@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <link rel="canonical" href="https://www.altair.blog/2006/06/jak-programove-odstranit-stranku-z-output-cache" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C08933CAEAD84611B3C84A85BB63A51E6E3A8C62" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=91D6BA748236CD1ED74480D626BE188ECC76A47B" />
     <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -141,12 +141,15 @@
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.Cache.VaryByParams[&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;MediaTypeId&quot;&lt;/span&gt;] = &lt;span style=&quot;COLOR: blue&quot;&gt;true&lt;/span&gt;;&lt;/p&gt;
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt;context.Response.AddCacheItemDependency(&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;MediaTypeIconFlag&quot;&lt;/span&gt;);&lt;/p&gt;
 	&lt;/div&gt;
+	&lt;!--EndFragment--&gt;
 	&lt;p&gt;Poté, v okamžiku kdy chcete takto závislé stránky z cache odstranit, stačí změnit hodnotu předmětné položky v cache:&lt;/p&gt;
 	&lt;div style=&quot;FONT-SIZE: 10pt; BACKGROUND: white; COLOR: black; FONT-FAMILY: 'Courier New', monospace&quot;&gt;
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt;Cache.Insert(&lt;span style=&quot;COLOR: maroon&quot;&gt;&quot;MediaTypeIconFlag&quot;&lt;/span&gt;, &lt;span style=&quot;COLOR: teal&quot;&gt;DateTime&lt;/span&gt;.Now, &lt;span style=&quot;COLOR: blue&quot;&gt;null&lt;/span&gt;, System.Web.Caching.&lt;span style=&quot;COLOR: teal&quot;&gt;Cache&lt;/span&gt;.NoAbsoluteExpiration, System.Web.Caching.&lt;span style=&quot;COLOR: teal&quot;&gt;Cache&lt;/span&gt;.NoSlidingExpiration, System.Web.Caching.&lt;span style=&quot;COLOR: teal&quot;&gt;CacheItemPriority&lt;/span&gt;.NotRemovable, &lt;span style=&quot;COLOR: blue&quot;&gt;null&lt;/span&gt;);&lt;/p&gt;
 	&lt;/div&gt;
+	&lt;!--EndFragment--&gt;
 	&lt;p&gt;Tento složitější zápis používám proto, aby mi server při nedostatku paměti můj &quot;flag&quot; neodstranil. Není to nezbytně nutné, ale pak může dojít k &quot;řetězové reakci&quot;.&lt;/p&gt;
 	&lt;p&gt;Cacheování bylo též tématem včerejšího semináře konaného v Microsoftu, záznam z něho zpracovávám, až bude k dispozici, napíšu o něm zprávu na tento web.&lt;/p&gt;
+	&lt;!--EndFragment--&gt;
 </code></pre>
 
       </section>

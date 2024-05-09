@@ -71,11 +71,11 @@ blockquote {
     font-style: italic;
 }
 
-del {
-    color: $DarkGray;
-    text-decoration: line-through solid $DarkGray;
+ins {
+    font-weight: bold;
+    text-decoration: none;
 }
 
-ins {
-    text-decoration: underline dotted $LightGray;
+del {
+    text-decoration: line-through;
 }

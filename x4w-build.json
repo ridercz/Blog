@@ -20,6 +20,6 @@
         "Sitemap.xslt": "sitemap.xml"
     },
     "TransformParameters": {
-        "PageSize": 10
+        "PageSize": "10"
     }
 }

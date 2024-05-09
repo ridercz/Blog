@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <link rel="canonical" href="https://www.altair.blog/2007/02/usersdatasource-a-rolesdatasource-deklarativni-pristup-k-membership-datum" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C08933CAEAD84611B3C84A85BB63A51E6E3A8C62" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=91D6BA748236CD1ED74480D626BE188ECC76A47B" />
     <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -212,6 +212,7 @@
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt;}&lt;/p&gt;
 	&lt;/div&gt;
+	&lt;!--EndFragment--&gt;
 	&lt;p&gt;Control sám je třída, odvozená od base class &lt;code&gt;System.Web.UI.DataSourceControl&lt;/code&gt;. Implementuje dvě pro nás zajímavé metody:&lt;/p&gt;
 	&lt;ul&gt;
 			&lt;li&gt;
@@ -263,6 +264,7 @@
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt; &lt;/p&gt;
 			&lt;p style=&quot;MARGIN: 0px&quot;&gt;}&lt;/p&gt;
 	&lt;/div&gt;
+	&lt;!--EndFragment--&gt;
 	&lt;p&gt;Designerem je třída &lt;code&gt;RolesDataSourceDesigner&lt;/code&gt;, poděděná od &lt;code&gt;System.Web.UI.Design.DataSourceDesigner&lt;/code&gt;. Namespace &lt;code&gt;System.Web.UI.Design&lt;/code&gt; se nachází v assembly &lt;code&gt;System.Design&lt;/code&gt;, kterou si musíte nareferencovat.&lt;/p&gt;
 	&lt;p&gt;Rozhraní designéru je velmi podobné rozhraní opravdového prvku, pouze vrací ukázková data vycucaná z prstu. Pro nás je zajímavá zejména vlastnost &lt;code&gt;Schema&lt;/code&gt;, protože ta vrací popis struktury používaných dat. Využívám zde pomocnou třídu&lt;code&gt;TypeSchema&lt;/code&gt;, která automaticky vygeneruje potřebné přes reflection. Pokud chcete mít nad výsledkem větší kontrolu, doporučuji vaší laskavé pozornosti článek linkovaný níže.&lt;/p&gt;
 	&lt;p&gt;Důležitým krokem je také sdělit systému, že pro control má použít vámi určený designer. To se dělá pomocí atributu &lt;code&gt;System.ComponentModel.Designer&lt;/code&gt;. V prvním výpisu je již přítomen, stačí příslušný řádek odkomentovat.&lt;/p&gt;

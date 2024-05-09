@@ -97,7 +97,14 @@
                   </xsl:if>
                 </aside>
                 <section class="article-text" x4o:unescape="true">
-                  <xsl:value-of select="x4h:GetItemHtml(@path)" />
+                  <xsl:choose>
+                    <xsl:when test="x4w:type = 'TMD'">
+                      <xsl:value-of select="x4h:GetItemTutorialHtml(@path)" />
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="x4h:GetItemHtml(@path)" />
+                    </xsl:otherwise>
+                  </xsl:choose>
                 </section>
                 <section class="issues">
                   <xsl:variable name="GitHubIssueUrl" select="concat('https://github.com/ridercz/Blog/issues/new?title=', x4h:UrlEncode(dcterms:title), '&amp;body=https://www.altair.blog', @path)" />

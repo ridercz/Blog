@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="cs-CZ" />
     <link rel="canonical" href="https://www.altair.blog/2009/01/jak-na-zalohu-beziciho-virtualniho-serveru-pod-hyper-v" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=C08933CAEAD84611B3C84A85BB63A51E6E3A8C62" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=91D6BA748236CD1ED74480D626BE188ECC76A47B" />
     <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
     <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
@@ -176,11 +176,11 @@
 <p>ECHO This is a marker file for determining backup phase. Do not delete. &gt; %HVBS_PHAMARKERFILE%</p>
 <p>ECHO Determining backup sequence...</p>
 <p>IF EXIST %HVBS_SEQMARKERFILE% (</p>
-<p>  DEL %HVBS_SEQMARKERFILE%</p>
-<p>  SET HVBS_SEQ=SetB</p>
+<p>DEL %HVBS_SEQMARKERFILE%</p>
+<p>SET HVBS_SEQ=SetB</p>
 <p>) ELSE (</p>
-<p>  ECHO This is a marker file for determining backup sequence. &gt; %HVBS_SEQMARKERFILE%</p>
-<p>  SET HVBS_SEQ=SetA</p>
+<p>ECHO This is a marker file for determining backup sequence. &gt; %HVBS_SEQMARKERFILE%</p>
+<p>SET HVBS_SEQ=SetA</p>
 <p>)</p>
 <p>ECHO This is backup sequence &quot;%HVBS_SEQ%&quot;</p>
 <p>ECHO [%DATE%%TIME%] Backup sequence &quot;%HVBS_SEQ%&quot; started &gt; %HVBS_LOGFILE%</p>

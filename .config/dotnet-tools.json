@@ -3,13 +3,13 @@
   "isRoot": true,
   "tools": {
     "dotnet-serve": {
-      "version": "1.10.149",
+      "version": "1.10.175",
       "commands": [
         "dotnet-serve"
       ]
     },
-    "Altairis.XML4web.Compiler": {
-      "version": "2.0.2",
+    "altairis.xml4web.compiler": {
+      "version": "3.0.0",
       "commands": [
         "x4w-compiler"
       ]
