@@ -641,6 +641,27 @@ section.article-text table.steps td img {
   margin: 0 auto;
 }
 
+section.article-text table.steps td code {
+  font-size: 100%;
+  font-family: 'Fira Code', Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
+  font-feature-settings: "calt" 1;
+  font-variant-ligatures: normal;
+  color: #600;
+}
+
+section.article-text table.steps td pre {
+  font-size: 100%;
+  font-family: 'Fira Code', Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
+  font-feature-settings: "calt" 1;
+  font-variant-ligatures: normal;
+  color: #600;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  overflow-x: auto;
+}
+
 section.article-text table.steps th {
   background-color: transparent;
   border: 1px solid #999;

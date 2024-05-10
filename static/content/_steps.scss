@@ -22,6 +22,22 @@ section.article-text table.steps {
             max-width: 90%;
             margin: 0 auto;
         }
+
+        code {
+            @include monospace;
+            color: #600;
+        }
+
+        pre {
+            @include monospace;
+            color: #600;
+            margin: 0;
+            padding: 10px;
+            border: none;
+            background-color: $White;
+            overflow-x: auto;
+        }
+
     }
 
     th {

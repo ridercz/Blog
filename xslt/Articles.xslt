@@ -131,24 +131,6 @@
                 </section>
               </main>
               <xsl:call-template name="SiteFooter" />
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/arduino.min.js" integrity="sha512-bOF+tbLNVPwsmPKbwZAJT2KD7J2soKGicZMV+iFZVyqD7qgZtpWOiY9+EmB+HyPgTP3Kah7K0aQVtX6mVK3sBg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/bash.min.js" integrity="sha512-yyMT1pQvQ9ZFAB8j/dUWeEjWTEQZBmV9pitXN7fmJYbqsoizQ0kVw8wONhrwBHE0Z/S8tKQyRcvbW4pG4m5cIw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/c.min.js" integrity="sha512-lzcjwENIEpri/9RQiWGJLxGxZ21Pr1qWvzEIpEa4yxPTSEderzTew+5Ff5XBbTC3OuLrb4P0qSwISoq1E/ddLg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/csharp.min.js" integrity="sha512-2S5x4UDJdymqDOBGIz88WSMwb/HC27t9gZyAus7RyUA2n3YXVJlYUrX606FkkU5+XrE+i12FNOhczUpPEh2XiQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/css.min.js" integrity="sha512-2EZCMzH/v5Q+9kXnio4UlG/iGM7Iy16NPjb4fFmtu501/gdvebqlP3sa2VvJsxnTJVWlFX8EN+BHxG4efqELWw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>¨
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/dos.min.js" integrity="sha512-4QYHD9PAHudNw8hYXd79O8t7BrFe2kl19eYIPAwdCxiJ7bYxERRpvS2VbFixd+kfLqVzUH9m1LBnmZlUf3VuAA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/gcode.min.js" integrity="sha512-BIiAVlWdHwCcZSixwJwhoUJSVGaNtPXCDzcyR5AVlyzXS9FDies/go5012bSdZr15eCTZG4G42GqMSkIhKpSoQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/javascript.min.js" integrity="sha512-Z5vOg00atIeZ04QhYxz3iRlFnU5qnrB0eYbBDmXMhHqJYx4dc6n1KY5qzh3fEfrFzaR05D34mOin6ObjPjuWdA==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/json.min.js" integrity="sha512-WRejcYn/ITFLjqnYYgF3Es2b2dc3GnVc70wF3nO/G6uQtsN/LhxSlZp5y7E9JP3gqQ5gY/TPg9QdOlB3SY+ucQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/markdown.min.js" integrity="sha512-8YFObAd0dPoua15RGQBCDtnXMA4zJnAxaL4QSjgLLEKmJ1A2Aar7M1gamz2512/mKzx1ut96KNV7ggEV8WvRxg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/openscad.min.js" integrity="sha512-r7SipMjtLS3BxLiHtjRORcw8/sJDk6Ums0BwzuEMQoWe4hSKYQs3Zk2qClX3AwVw9lrTFIu3rTVcGgODqwBMww==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/scss.min.js" integrity="sha512-0U8Ud0Dh6EsQR0cokSx1hPYzG3i8AnfYEaDXNGi5rSsVJMdAaas/gif/b/8JrGsuuC7xl7dfBGHFgZrhWb39Bg==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/sql.min.js" integrity="sha512-LxrbI3MKe/9KnjAs8zlLrZFRpp2J+jp0pML7zd6OAo/LHH8CEKM2Ef/jTfSX1gm8Auex3J5Jdj0rMkYejmMVMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/xml.min.js" integrity="sha512-2EQPABfCqv0Tr9AxzXh2U9DrbRre5g5H/BL7j/hGbES3mRjQ44bBks0I+2EoPbA4YzWHQ8BsVHNTaHr7t5RHKw==" crossorigin="anonymous" referrerpolicy="no-referrer">//</script>
-              <script>
-                  hljs.initHighlightingOnLoad();
-              </script>
             </body>
           </html>
         </x4o:document>
