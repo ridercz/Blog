@@ -1,21 +1,43 @@
-<!-- dcterms:title = Jak rozběhnout Syncthing na Linuxu -->
-<!-- dcterms:abstract =  -->
+<!-- dcterms:title = Jak rozběhnout synchronizační software Syncthing na Windows i na Linuxu -->
+<!-- dcterms:abstract = Na synchronizaci dat mezi počítači používám nástroj Syncthing. Na kanálu Z-TECH o něm vytvářím seriál a nabízím vám návod, jak ho rozběhnout na Windows i na Linuxu. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:pictureUrl = /perex-pictures/20240313-weby-pro-vyvojare.jpg -->
-<!-- x4w:coverUrl = /cover-pictures/20240313-weby-pro-vyvojare.jpg -->
+<!-- x4w:pictureUrl = /perex-pictures/20240514-syncthing-linux.png -->
+<!-- x4w:coverUrl = /cover-pictures/20240514-syncthing-linux.jpg -->
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
-<!-- dcterms:date = 2024-05-16 -->
+<!-- dcterms:date = 2024-05-14 -->
 <!-- x4w:type = TMD -->
 
 <!-- $ -->
+Na synchronizaci dat mezi počítači používám bezplatný a otevřený nástroj [Syncthing](https://syncthing.net/). Dříve jsem používal Resilio Sync, ale poté co změnili licenční politiku a pro běh na serverovém OS je třeba měsíční platba, přešel jsem právě na Syncthing. A na kanálu Z-TECH jsem o něm vytvořil seriál:
+
+1. [Základní představení a instalace na Windows](https://youtu.be/khn4ki850nE)
+2. [Instalace na Linux a Raspberry Pi](https://youtu.be/S9OFykSyvAU)
+3. [Pokročilejší nastavení synchronizace](https://youtu.be/xdUcCBodx9s) (připravuje se, vyjde 16. 5. 2024)
+4. Instalace na Syncthing jako služba (připravuje se)
+
+Instalace na Windows je poměrně přímočará, ale na Linuxu je to o něco složitější, je tam více manuálních kroků. Proto jsem připravil návod krok za krokem.
+
+## Instalace aplikace Syncthing na Linuxu
+
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/S9OFykSyvAU" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
 Tento návod popisuje, jak nainstalovat synchronizační software na Linux. Počítá s následujícími distribucemi, aktuálními ke dni vydání článku:
 
 * **Ubuntu Linux** 24.04 LTS
 * **Raspberry Pi OS** 2024-03-15 (Debian 12 - Bookworm)
+
+Z mého pohledu je důležitá zejména instalace na Raspberry Pi, protože pomocí něj a externího disku (ukážu vám, jak ho zprovoznit) si můžete jednoduše vytvořit off-site zálohu. V práci, u známého, kdekoliv kde je připojení k Internetu, si můžete jednoduše vytvořit zálohovací server, který ochrání vaše data i v případě, že by primární lokace byla zničena, například požárem.
+
+Návodů na zprovoznění Syncthingu na Linuxu jsem našel spoustu, ale mají z mého pohledu dvě zásadní vady z hlediska bezpečnosti:
+
+* Syncthing běží pod rootem, nebo pod uživatelem s vysokými oprávněními. Můj návod počítá s vytvořením speciálního uživatele s nízkými právy.
+* Jeho webové administrační rozhraní je dostupné přímo z vnější sítě (případně z Internetu). Můj návod schovává rozhraní za nginx proxy.
 - - -
-## Základní instalace
+### Základní instalace
 - - -
 Připojte se na server z konzole nebo přes SSH.
 - - -
@@ -25,7 +47,7 @@ Následujícími příkazy plně aktualizujte systém
 
 Vyčkejte, dokud vše neproběhne, což může v závislosti na rychlosti vašeho připojení a počítače trvat i několik desítek minut.
 - - -
-## Instalace aplikace Syncthing
+### Instalace aplikace Syncthing
 - - -
 Přidejte klíč APT repository Syncthingu mezi důvěryhodné:
 
@@ -43,7 +65,7 @@ Nainstalujte aplikaci Syncthing:
 
     sudo apt-get install syncthing -y
 - - -
-## Vytvoření uživatele
+### Vytvoření uživatele
 
 Chceme, aby aplikace běžela nikoliv pod rootem (nebo jiným uživatelem s vysokými právy), ale pod svým vlastním uživatelem `syncthing` s minimálními oprávněními.
 - - -
@@ -61,7 +83,7 @@ Spusťte z konzole Syncthing, aby se vytvořila konfigurace:
 - - -
 Měli byste vidět log, zhruba jako na následujícím obrázku:
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-01.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-01.png)
 
 Ukončete aplikaci stiskem _Ctrl+C_.
 - - -
@@ -69,7 +91,7 @@ Opusťte kontext uživatele služby:
 
     exit
 - - -
-## Konfigurace aplikace a registrace daemona
+### Konfigurace aplikace a registrace daemona
 
 Protože budeme chtít webové rozhraní aplikace publikovat do Internetu pomocí nginxu, je třeba provést změnu v konfiguraci, aby fungovala publikace pomocí proxy. Také je nutné nastavit Syncthing jako daemona, automaticky spouštěnou aplikaci běžící na pozadí.
 - - -
@@ -81,7 +103,7 @@ Najděte v XML dokumentu element `/configuration/gui` a přidejte do něj násle
 
     <insecureSkipHostcheck>true</insecureSkipHostcheck>
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-02.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-02.png)
 - - -
 Stiskem _Ctrl+S_ uložte změny a stiskem _Ctrl+X_ ukončete editor.
 - - -
@@ -125,12 +147,12 @@ Následujícím příkazem si ověřte, že úspěšně běží (je tam `Active:
 
     sudo systemctl status syncthing
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-03.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-03.png)
 - - -
 (i)
 Nyní již Syncthing běží a mohli byste se k němu připojit pomocí adresy `http://127.0.0.1:8384` - ale jenom z lokálního počítače, ne zvenčí.
 - - -
-## Publikace pomocí nginxu
+### Publikace pomocí nginxu
 
 Nechceme, aby byl Syncthing do sítě (Internetu) vystaven přímo, ale prostřednictvím proxy nginx. Z bezpečnostních důvodů a i z důvodů praktických -- například je výrazně jednodušší nastavit automatické vystavení a obnovování HTTPS certifikátů od Let's Encrypt CA pro nginx než přímo pro Syncthing.
 - - -
@@ -169,11 +191,11 @@ Reloadněte konfiguraci nginxu:
 
     sudo nginx -s reload
 - - -
-## Základní zabezpečení
+### Základní zabezpečení
 - - -
 Podívejte se v prohlížeči na IP adresu nebo název vašeho serveru. Zobrazí se vám webové GUI aplikace Syncthing:
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-04.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-04.png)
 - - -
 <!-- #userinfo -->
 V tomto okamžiku není nastaveno pro webové rozhraní žádné uživatelské jméno a heslo. 
@@ -184,7 +206,7 @@ V tomto okamžiku není nastaveno pro webové rozhraní žádné uživatelské j
 4. Vyplňte požadované heslo.
 5. Klepněte na _Save_.
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-05.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-05.png)
 - - -
 (!)
 Po klepnutí na _Save_ se Syncthing restartuje, což chvíli trvá. Nenechte se zmást chybovými hlášeními jako například _502 Gateway Timeout_. Chvíli vyčkejte a obnovte stránku.
@@ -214,7 +236,7 @@ Následujícím příkazem restartujte server a ověřte si, že všechny služb
 
     sudo reboot now
 - - -
-## Instalace dalšího disku
+### Instalace dalšího disku
 
 Syncthing nám úspěšně běží a můžeme s ním běžným způsobem pracovat. Nicméně v případě Raspberry Pi máme k dispozici pouze úložiště na paměťové kartě, což není ideální. Následujícím postupem lze připojit k Raspberry externí disk pomocí USB a zpřístupnit ho pro použití Syncthingem.
 - - -
@@ -232,7 +254,7 @@ Následujícím příkazem si vypište seznam všech disků:
 - - -
 Najděte svůj disk. Poznáte jej podle velikosti (zde _931,51 GiB_) a modelu (zde _024 HN-M101MBB_). Pro náš případ se tento disk jmenuje `/dev/sda`.
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-06.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-06.png)
 - - -
 (!)
 Pokud se váš disk jmenuje jinak, musíte `/dev/sda` v následujících příkazech nahradit za váš název.
@@ -243,12 +265,12 @@ Spusťte interaktivní aplikaci pro vytvoření partitions cfdisk:
 - - -
 Jako label type zvolte výchozí hodnotu `gpt` (stačí stisknout _Enter_).
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-07.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-07.png)
 - - -
 <!-- #partition -->
 Pokud je váš disk prázdný, uvidíte pouze informaci _Free space_. Pokud by na něm byly partitions, musíte všechny smazat (_Delete_), dokud se do tohoto stavu nedostanete.
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-08.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-08.png)
 - - -
 Šipkami vyberte _New_ a klepněte na _Enter_.
 - - -
@@ -258,7 +280,7 @@ Vyberte _Write_. Na otázku _Are you sure you want to write the partition table 
 - - -
 Podívejte se, jak se jmenuje nově vytvořená partition. Zde `/dev/sda1`. Poté vyberte _Quit_ a ukončete cfdisk.
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-09.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-09.png)
 - - -
 (!)
 Pokud se vaše partition jmenuje jinak, musíte `/dev/sda1` v následujících příkazech nahradit za váš název.
@@ -297,7 +319,7 @@ Přidejte na konec souboru následující řádek (oddělovač je tabulátor):
 
     /dev/sda1       /syncthing-data ext4    defaults        0       0
 
-![](https://www.cdn.altairis.cz/Blog/2024/20240516-syncthing-10.png)
+![](https://www.cdn.altairis.cz/Blog/2024/20240514-syncthing-10.png)
 - - -
 Stiskem _Ctrl+S_ uložte změny a stiskem _Ctrl+X_ ukončete editor.
 - - -
