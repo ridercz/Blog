@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/05/syncthing-linux</guid>
+      <title>Jak rozběhnout synchronizační software Syncthing na Windows i na Linuxu</title>
+      <description>Na synchronizaci dat mezi počítači používám nástroj Syncthing. Na kanálu Z-TECH o něm vytvářím seriál a nabízím vám návod, jak ho rozběhnout na Windows i na Linuxu.</description>
+      <link>https://www.altair.blog/2024/05/syncthing-linux</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2024-05-14T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/03/webove-sluzby-pro-vyvojare</guid>
       <title>Bezplatné online služby nejen pro webové vývojáře</title>
       <description>Na záložkové liště mého prohlížeče je složka Tools, která obsahuje odkazy na užitečné webové služby, které používám prakticky denně. Možná se budou líbit i vám.</description>
@@ -136,15 +145,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2023-05-16T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/05/linux-pro-windowsaky</guid>
-      <title>Co by měli windowsáci vědět o Linuxu</title>
-      <description>Windows a Linux. Oheň a voda. Microsoft a open source. Dva nesmiřitelní soupeři. Anebo ne? Přijde mi, že ta animozita je hlavně směrem od linuxáků k Windows; naopak je to spíš že jsme jako uživatelé Windows Linux k ničemu nepotřebovali. Nicméně, s multiplatformností .NETu se situace poněkud mění. Proto jsem připravil seriál o Linuxu pro Windowsáky.</description>
-      <link>https://www.altair.blog/2023/05/linux-pro-windowsaky</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2023-05-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
