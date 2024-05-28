@@ -14,8 +14,8 @@ Na synchronizaci dat mezi počítači používám bezplatný a otevřený nástr
 
 1. [Základní představení a instalace na Windows](https://youtu.be/khn4ki850nE)
 2. [Instalace na Linux a Raspberry Pi](https://youtu.be/S9OFykSyvAU)
-3. [Pokročilejší nastavení synchronizace](https://youtu.be/xdUcCBodx9s) (připravuje se, vyjde 16. 5. 2024)
-4. Instalace na Syncthing jako služba (připravuje se)
+3. [Pokročilejší nastavení synchronizace](https://youtu.be/xdUcCBodx9s)
+4. [Instalace na Windows jako služba](https://youtu.be/H2m47dAi9q4)
 
 Instalace na Windows je poměrně přímočará, ale na Linuxu je to o něco složitější, je tam více manuálních kroků. Proto jsem připravil návod krok za krokem.
 
