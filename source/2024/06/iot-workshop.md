@@ -7,6 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- x4w:category = Akce a události -->
+<!-- x4w:category = Bastlení -->
 <!-- dcterms:date = 2024-06-04 -->
 
 Internet of things (IoT) úspěšně překonal svou hype fázi a nyní se postupně dostáváme do situace, kdy to začíná být k něčemu dobré a je na čase začít to brát vážně. Proto jsem pro vás připravil workshop, který se tohoto tématu týká.
@@ -37,13 +38,19 @@ Pak se podíváme na to, jak propojit mikrokontroler s PC nebo serverovou aplika
 
 **V ceně workshopu dostanete M5Stack Core S3 a ENVIII senzor.** To obsahuje procesor (lépe řečeno SoC, system on chip) ESP32-S3. 
 
-![M5Stack Core S3 a ENVIII senzor](/cover-pictures/20240604-iot-workshop.jpg)
+<figure>
+    <img src="/cover-pictures/20240604-iot-workshop.jpg" alt="M5Stack Core S3 a ENVIII senzor" />
+    <figcaption>M5Stack Core S3 a ENVIII senzor</figcaption>
+</figure>
 
 ESP32 je řada čipů od společnosti Espressif, které jsou velmi populární jak pro hobby vývoj tak pro profesionální návrh zařízení. Existuje k nim výborná dokumentace a podpora pro řadu programovacích jazyků. Varianta [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3) je v současnosti nejvýkonnější.
 
 [M5Stack Core S3](https://docs.m5stack.com/en/core/CoreS3) je vývojový kit, který obsahuje řadu vstupních a výstupních zařízení a je součástí modulárního systému, kde můžete jednoduše propojit různé komponenty bez nutnosti něco pájet nebo laborovat se součástkami na breadboardu.
 
-![M5Stack Core S3 + DIN Base](https://www.cdn.altairis.cz/Blog/2024/20240604-cores3.jpg)
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2024/20240604-cores3.jpg" alt="M5Stack Core S3 + DIN Base" />
+    <figcaption>M5Stack Core S3 + DIN Base - pohled ze všech stran</figcaption>
+</figure>
 
 * **MCU:** ESP32-S3, dual-core Xtensa LX7
 * **Paměť:** 8 MB PSRAM, 16 MB flash, možnost MicroSD karty jako úložiště
@@ -56,7 +63,7 @@ ESP32 je řada čipů od společnosti Espressif, které jsou velmi populární j
 * **Programování:** přes USB rozhraní nebo na dálku po síti (OTA - over the air); M5Flow, C++ (jako Arduino nebo ESP IDF), MicroPython, Lua, Rust, NanoFramework a mnoho dalšího
 * **Ostatní:** Hodiny reálného času, základna k montáži na DIN lištu, rozšiřitelnost pomocí GPIO pinů, I2C, SPI a řada dalších
 
-Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit programovat mikrokontrolery a nebyli omezováni tím, že vám něco chybí. Je na IoT svět relativně drahý (na RpiShopu stojí [1404 Kč](https://rpishop.cz/m5stack/6112-m5stack-cores3-esp32s3-lot-development-kit.html) + [156 Kč](https://rpishop.cz/498367/m5stack-env-iv-unit-se-senzorem-teploty-vlhkosti-a-tlaku-sht40-bmp280/) bez DPH), ale koncová zařízení jsou výrazně levnější (hotové vývojové desky lze koupit za cený v řádech desetikorun). U kitu platíte za pohodlnost a za možnost vyvíjet software bez nutnosti řešit hardware.
+Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit programovat mikrokontrolery a nebyli omezováni tím, že vám něco chybí. Je na IoT svět relativně drahý (na RpiShopu stojí [1404 Kč](https://rpishop.cz/m5stack/6112-m5stack-cores3-esp32s3-lot-development-kit.html) + [156 Kč](https://rpishop.cz/498367/m5stack-env-iv-unit-se-senzorem-teploty-vlhkosti-a-tlaku-sht40-bmp280/) bez DPH), ale koncová zařízení jsou výrazně levnější (hotové vývojové desky lze koupit za ceny v řádech desetikorun). U kitu platíte za pohodlnost a za možnost vyvíjet software bez nutnosti řešit hardware.
 
 ## Kdy a kde se bude workshop konat
 
