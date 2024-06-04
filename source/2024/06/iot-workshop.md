@@ -45,13 +45,16 @@ ESP32 je řada čipů od společnosti Espressif, které jsou velmi populární j
 
 ![M5Stack Core S3 + DIN Base](https://www.cdn.altairis.cz/Blog/2024/20240604-cores3.jpg)
 
-* **MCU:** ESP32-S3@Xtensa LX7, 16MFLASH AND 8M-PSRAM, WIFI, OTG\CDC functions
+* **MCU:** ESP32-S3, dual-core Xtensa LX7
+* **Paměť:** 8 MB PSRAM, 16 MB flash, možnost MicroSD karty jako úložiště
+* **Konektivita:** 2.4 GHz Wi-Fi, Bluetooth 5 LE
 * **Dotykvé LCD:** 2" 320*240 ILI9342C
 * **Kamera:** GC0308, 0,3 mpix
 * **Senzory:** Akcelerometr, gyroskop, magnetometr, proximity senzor; ENVIII modul obsahuje snímače teploty, tlaku a vlhkosti
 * **Audio:** dva mikrofonní vstupy, zesilovač, reproduktor
 * **Napájení:** přes USB-C konektor nebo souosý konektor 9-24 V, vestavěná baterie 500 mAh
-* **Další:** Hodiny reálného času, čtečka MicroSD karet, základna k montáži na DIN lištu, rozšiřitelnost pomocí GPIO pinů, I2C, SPI a řada dalších
+* **Programování:** přes USB rozhraní nebo na dálku po síti (OTA - over the air); M5Flow, C++ (jako Arduino nebo ESP IDF), MicroPython, Lua, Rust, NanoFramework a mnoho dalšího
+* **Ostatní:** Hodiny reálného času, základna k montáži na DIN lištu, rozšiřitelnost pomocí GPIO pinů, I2C, SPI a řada dalších
 
 Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit programovat mikrokontrolery a nebyli omezováni tím, že vám něco chybí. Je na IoT svět relativně drahý (na RpiShopu stojí [1404 Kč](https://rpishop.cz/m5stack/6112-m5stack-cores3-esp32s3-lot-development-kit.html) + [156 Kč](https://rpishop.cz/498367/m5stack-env-iv-unit-se-senzorem-teploty-vlhkosti-a-tlaku-sht40-bmp280/) bez DPH), ale koncová zařízení jsou výrazně levnější (hotové vývojové desky lze koupit za cený v řádech desetikorun). U kitu platíte za pohodlnost a za možnost vyvíjet software bez nutnosti řešit hardware.
 
