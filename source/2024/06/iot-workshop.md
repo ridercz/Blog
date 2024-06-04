@@ -57,6 +57,8 @@ Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit
 
 ## Kdy a kde se bude workshop konat
 
+> Pokud byste se workshopu rádi zúčastnili, ale v tomto termínu nemůžete, nezoufejte. Napište o svém zájmu mně nebo Gopasu. Pokud bude zájem, vyhlásíme další termín nebo najdeme nějaké jiné řešení.
+
 * Kdy: **20. června 2024, 9-16 hodin**
 * Kde: **Praha, Microsoft**, BB Centrum Delta, Vyskočilova 1561/4a, Praha 4
 * Cena: **4990 Kč + DPH**, v ceně je hardware v ceně cca. 1600 Kč
