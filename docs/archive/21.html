@@ -111,97 +111,6 @@
       <section class="artlist">
         <article class="haspicture">
           <aside>
-            <a href="/2020/03/neni-nad-dobry-virus">
-              <img src="/perex-pictures/20200310-neni-nad-dobry-virus.jpg" width="150" height="150" alt="" title="" />
-            </a>
-          </aside>
-          <header>
-            <a href="/2020/03/neni-nad-dobry-virus">Není nad dobrý virus</a>
-          </header>
-          <div>Ve státní správě koluje takové rčení: není nad dobrý požár. Pokud někde dojde k ohni, je neuvěřitelné, jak moc užitečného majetku a neužitečných spisů a dokumentů bylo v nedávné době do příslušného objektu přesunuto. České úřednictvo dosud se slzou v oku vzpomíná na rozsáhlé povodně, které před lety postihly republiku. Koronavirus je úkaz z přesně stejné kategorie.</div>
-          <footer>
-            <time datetime="2020-03-10" title="Datum vydání">
-              <i class="fal fa-calendar-lines"> </i>úterý 10. března 2020</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/politika" title="Rubrika">
-                  <i class="fal fa-tag"> </i>Politika</a>
-              </li>
-            </ul>
-          </footer>
-          <div class="clear" />
-        </article>
-        <article class="haspicture">
-          <aside>
-            <a href="/2020/03/a2d-140">
-              <img src="/perex-pictures/20200307-a2d-140.png" width="150" height="150" alt="" title="" />
-            </a>
-          </aside>
-          <header>
-            <a href="/2020/03/a2d-140">A2D: Novinky ve verzi 1.4.0</a>
-          </header>
-          <div>S mou OpenSCAD knihovnou A2D jste se na tomto blogu naposledy potkali ve verzi 1.1.0, ve které jsem přidal podporu pro práci s textem. Teď je venku verze 1.4.0 a s ní pár užitečných triků.</div>
-          <footer>
-            <time datetime="2020-03-07" title="Datum vydání">
-              <i class="fal fa-calendar-lines"> </i>sobota 7. března 2020</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/3d-tisk" title="Rubrika">
-                  <i class="fal fa-tag"> </i>3D tisk</a>
-              </li>
-            </ul>
-          </footer>
-          <div class="clear" />
-        </article>
-        <article class="haspicture">
-          <aside>
-            <a href="https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/">
-              <img src="/perex-pictures/20200306-hub-holder.png" width="150" height="150" alt="" title="" />
-            </a>
-          </aside>
-          <header>
-            <a href="https://www.prusaprinters.org/prints/24944-axagon-hue-s2bl-4-port-usb-30-hub-wall-mount/">Držák USB hubu Axagon HUE-S2BL</a>
-            <sup title="Odkaz na můj článek jinde">
-              <i class="fal fa-external-link"> </i>
-            </sup>
-          </header>
-          <div>Použil jsem svou knihovnu A2D k tomu, abych vytvořil držák USB hubu, aby se mi jenom tak neválel po stole. Rozměry zveřejněného modelu jsou určeny pro konkrétní typ Axagon HUE-S2BL, ale hubů s podobnou konstrukcí je spousta. Proto je model parametrický a lze jej změnou pár čísel upravit pro jakékoliv zařízení s podobným form factorem.</div>
-          <footer>
-            <time datetime="2020-03-06" title="Datum vydání">
-              <i class="fal fa-calendar-lines"> </i>pátek 6. března 2020</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/3d-tisk" title="Rubrika">
-                  <i class="fal fa-tag"> </i>3D tisk</a>
-              </li>
-            </ul>
-          </footer>
-          <div class="clear" />
-        </article>
-        <article class="haspicture">
-          <aside>
-            <a href="/2020/02/a2d-text">
-              <img src="/perex-pictures/20200222-a2d-text.png" width="150" height="150" alt="" title="" />
-            </a>
-          </aside>
-          <header>
-            <a href="/2020/02/a2d-text">A2D 1.1.0: Podpora pro práci s textem</a>
-          </header>
-          <div>Do své OpenSCAD knihovny pro práci s 2D objekty jsem přidal dvě funkce pro práci s textem: text na kružnici a víceřádkový text.</div>
-          <footer>
-            <time datetime="2020-02-22" title="Datum vydání">
-              <i class="fal fa-calendar-lines"> </i>sobota 22. února 2020</time>
-            <ul class="categories">
-              <li>
-                <a href="/categories/3d-tisk" title="Rubrika">
-                  <i class="fal fa-tag"> </i>3D tisk</a>
-              </li>
-            </ul>
-          </footer>
-          <div class="clear" />
-        </article>
-        <article class="haspicture">
-          <aside>
             <a href="/2020/02/a2d">
               <img src="/perex-pictures/20200220-a2d.png" width="150" height="150" alt="" title="" />
             </a>
@@ -338,6 +247,108 @@
           </footer>
           <div class="clear" />
         </article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2020/01/mqtt-do-kapsy">
+              <img src="/perex-pictures/20200120-mqtt-do-kapsy.jpg" width="150" height="150" alt="" title="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2020/01/mqtt-do-kapsy">MQTT server do kapsy: Mosquitto na Orange Pi Zero</a>
+          </header>
+          <div>Na IoT mi vadí hlavně to první písmenko - Internet. Nevidím důvod, proč by při budování "chytré domácnosti" měla vnitřní komunikace být závislá na externí internetové službě - a na připojení k Internetu vůbec. Základem pro komunikaci (nejen) IoT komponent je protokol MQTT. Rozhodl jsem si tedy postavit vlastní MQTT server na bázi Orange Pi Zero, miniaturního počítače s ARM. Přináším vám kompletní návod.</div>
+          <footer>
+            <time datetime="2020-01-20" title="Datum vydání">
+              <i class="fal fa-calendar-lines"> </i>pondělí 20. ledna 2020</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/it" title="Rubrika">
+                  <i class="fal fa-tag"> </i>IT</a>
+              </li>
+              <li>
+                <a href="/categories/bastleni" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Bastlení</a>
+              </li>
+              <li>
+                <a href="/categories/bezpecnost" title="Rubrika">
+                  <i class="fal fa-tag"> </i>Bezpečnost</a>
+              </li>
+            </ul>
+          </footer>
+          <div class="clear" />
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat">
+              <img src="/perex-pictures/20200117-raspitv.jpg" width="150" height="150" alt="" title="" />
+            </a>
+          </aside>
+          <header>
+            <a href="https://www.prusaprinters.org/prints/17844-case-for-raspberry-pi-zero-tv-hat">Case pro Raspberry Pi Zero WH a TV HAT</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
+          </header>
+          <div>Pro Raspberry Pi existuje "TV HAT", což je rozšiřující deska umožňující příjem digitálního televizního vysílání. Ve skutečnosti je to ale SDR (software defined radio) a dá se využít k mnoha zajímavějším věcem. Obvykle se používá v kombinaci s Raspberry Pi Zero WH, které výkonově postačuje. Našel jsem pro tuto kombinaci krabičku, která mi ale úplně nevyhovovala, protože je v ní deska jen volně položená a dost "plave". Proto jsem model modifikoval a publikuji jeho upravenou verzi.</div>
+          <footer>
+            <time datetime="2020-01-17" title="Datum vydání">
+              <i class="fal fa-calendar-lines"> </i>pátek 17. ledna 2020</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/3d-tisk" title="Rubrika">
+                  <i class="fal fa-tag"> </i>3D tisk</a>
+              </li>
+            </ul>
+          </footer>
+          <div class="clear" />
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator">
+              <img src="/perex-pictures/20200111-fu.jpg" width="150" height="150" alt="" title="" />
+            </a>
+          </aside>
+          <header>
+            <a href="https://www.prusaprinters.org/prints/16741-magnetic-mood-indicator">Magnetický indikátor nálady</a>
+            <sup title="Odkaz na můj článek jinde">
+              <i class="fal fa-external-link"> </i>
+            </sup>
+          </header>
+          <div>Ukázkový model pro techniku zatiskávání magnetů dovnitř plastu a vícebarevný tisk. Využívá variability anglického výrazu "FUCK" :-) Celý model je parametrický, lze snadno měnit rozměr, text i počet položek</div>
+          <footer>
+            <time datetime="2020-01-11" title="Datum vydání">
+              <i class="fal fa-calendar-lines"> </i>sobota 11. ledna 2020</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/3d-tisk" title="Rubrika">
+                  <i class="fal fa-tag"> </i>3D tisk</a>
+              </li>
+            </ul>
+          </footer>
+          <div class="clear" />
+        </article>
+        <article class="haspicture">
+          <aside>
+            <a href="/2020/01/console">
+              <img src="/perex-pictures/20200109-console.jpg" width="150" height="150" alt="" title="" />
+            </a>
+          </aside>
+          <header>
+            <a href="/2020/01/console">Pár tipů pro konzolové aplikace</a>
+          </header>
+          <div>Mám rád konzolové aplikace a často je píšu. Tedy aplikace spouštěné z příkazové řádky, bez grafického rozhraní, typicky ovládané pomocí přepínačů z příkazové řádky. Je jednoduché je psát (a jednoduché psát je tak, aby fungovaly na Windows, Linuxu i Mac OS). Hodí se pro jednorázové úkoly nebo naopak pro úkoly, které se spouštějí často a fungují automaticky. Dnes bych se s vámi rád podělil o několik triků, jak konzolové aplikace psát v .NETu.</div>
+          <footer>
+            <time datetime="2020-01-09" title="Datum vydání">
+              <i class="fal fa-calendar-lines"> </i>čtvrtek 9. ledna 2020</time>
+            <ul class="categories">
+              <li>
+                <a href="/categories/it" title="Rubrika">
+                  <i class="fal fa-tag"> </i>IT</a>
+              </li>
+            </ul>
+          </footer>
+          <div class="clear" />
+        </article>
         <footer>
           <span class="prev">
             <a href="/archive" rel="first">
@@ -350,10 +361,10 @@
           <span class="next">
             <a href="/archive/22" rel="next">
             Starší <i class="fal fa-chevron-right">​</i></a>
-            <a href="/archive/109" rel="last">
+            <a href="/archive/108" rel="last">
             Nejstarší <i class="fal fa-chevron-double-right">​</i></a>
           </span>
-          <span class="info">21 / 109</span>
+          <span class="info">21 / 108</span>
         </footer>
       </section>
     </main>

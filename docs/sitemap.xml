@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.altair.blog/2024/06/osborne</loc>
+    <lastmod>2024-06-05</lastmod>
+  </url>
+  <url>
     <loc>https://www.altair.blog/2024/06/iot-workshop</loc>
     <lastmod>2024-06-04</lastmod>
   </url>
