@@ -70,7 +70,7 @@ Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit
 > Pokud byste se workshopu rádi zúčastnili, ale v tomto termínu nemůžete, nezoufejte. Napište o svém zájmu mně nebo Gopasu. Pokud bude zájem, vyhlásíme další termín nebo najdeme nějaké jiné řešení.
 
 * Kdy: **20. června 2024, 9-16 hodin**
-* Kde: **Praha, Microsoft**, BB Centrum Delta, Vyskočilova 1561/4a, Praha 4
+* Kde: **Praha, Gopas**, Kodaňská 46, Praha 10 _(pozor, změna místa konání)_
 * Cena: **4990 Kč + DPH**, v ceně je hardware v ceně cca. 1600 Kč
 * Pořádá: **Počítačová škola Gopas**
 * **[Přihlašujte se na webu Gopasu](https://www.gopas.cz/workshop-altairovy-magicke-krabicky-aneb-hrajeme-si-s-iot_wamagbox)**
