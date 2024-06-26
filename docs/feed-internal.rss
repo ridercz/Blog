@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/06/basic</guid>
+      <title>Když BASIC vládnul světu</title>
+      <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
+      <link>https://www.altair.blog/2024/06/basic</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT historie</category>
+      <pubDate>2024-06-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/06/sapo</guid>
       <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
       <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
@@ -136,16 +145,6 @@
       <category>Akce a události</category>
       <category>IT</category>
       <pubDate>2023-05-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/05/teched</guid>
-      <title>Prezentace a příklady z TechEdu 2023</title>
-      <description>V tomto týdnu se konal TechEd 2023 a já na něm měl sedm přednášek. Nabízím vám ke stažení prezentace, příklady a odkazy.</description>
-      <link>https://www.altair.blog/2023/05/teched</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Akce a události</category>
-      <pubDate>2023-05-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

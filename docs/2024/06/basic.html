@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Když BASIC vládnul světu | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/06/basic" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Když BASIC vládnul světu" />
+    <meta name="twitter:description" content="Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC." />
+    <meta name="twitter:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="article:published_time" content="2024-06-26" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Když BASIC vládnul světu" />
+    <meta name="description" property="og:description" content="Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/content/images/preview-1200.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/06/basic" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Když BASIC vládnul světu</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it-historie" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT historie</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-06-26">26. června 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Když startoval (tehdy se tomu ještě neříkalo &quot;bootoval&quot;) můj první počítač, na pár sekund zobrazil hlášku <code>Testing memory</code>. Pak pípnul a přivítalo mě hlášení <code>BASIC G /V3.0</code>. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby - včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 - po startu automaticky nabídl prostředí programovacího jazyka BASIC. Počítače tohoto typu neměly spouštěné aplikace tak jak je známe teď, ale očekávalo se, že se programy budou psát v BASICu nebo ve strojovém kódu a načítat typicky z kazet přes magnetofon.</p>
+<p>Programovací jazyk BASIC vznikl před 57 lety, v roce 1964 na univerzitě Darthmoung College v USA. Jeho autory byli pánové John G. Kemeny a Thomas E. Kurtz. Název BASIC - kromě toho, že je to anglické slovo znamenající &quot;jednoduchý&quot; je zkratka z Beginners' All-purpose Symbolic Instruction Code, tedy všestranný programovací jazyk pro začátečníky. To bylo jeho hlavní určení. Programovací jazyky té doby byly typicky uživatelsky dost nepřívětivé a komplikované. BASIC měl sice často omezenější možnosti, ale zato byl jednoduchý, srozumitelný a dostupný uživatelům.</p>
+<p>Ukázka programování v BASICu na počítači PMD 85-3 (natočeno v <a href="https://pmd85.borik.net/wiki/Emulator">softwarovém emulátoru od Romana a Martina Bórikových</a>):</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ILvHAdSheAg" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Jazyk BASIC vzal svět malých domácích počítačů útokem a v sedmdesátých a osmdesátých letech dvacátého století vznikly stovky jeho dialektů, běžící na stovkách modelů počítačů. Asi jenom těžko bychom hledali platformu té doby, na které by nějaká varianta BASICu neběžela. Býval základním - a mnohdy také jediným - programovým vybavením, které novopečený majitel počítače dostal. Většina z malých počítačů jej měla přímo v ROM, do jiných se dal nahrát, často vložením nějaké EPROM cartridge. Prostředí jazyka BASIC defacto nahrazovalo operační systém tak, jak ho dneska chápeme.</p>
+<p>S rozšířením počítačů mezi uživateli samozřejmě nastala situace, že mnoho z nich programovat neumělo ani nechtělo umět. Na počítači hráli hry nebo používali nějaký jiný software. Jeden příkaz znal ale každý. Jmenoval se LOAD a sloužil k nahrání programu z kazety.</p>
+<p>Podívejte se, jak takové nahrání a spuštění programu v BASICu vypadalo. Na videu je také zachycen typický problém starší generace počítače PMD 85, totiž zasekávání kláves:</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/VxIJMGFXT9w" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Pokud jste na počítači nechtěli programovat, ale používat existující software, byl typicky uložen na běžné magnetofonové kazetě. Pokud vám zvukový záznam ve videu výše připomíná o zhruba dekádu novější zvuk modemu pro dial-up připojení k Internetu, připomíná vám ho správně -- princip je v zásadě tentýž, včetně úvodního pískání na začátku. V některých zemích (typicky v UK) se programy vysílaly třeba i v televizi nebo v rozhlase. Očekávalo se, že uživatelé si pořad nahrají a poté ho pustí do počítače. V československu programy vycházely i tiskem, třeba v časopisech jako Amatérské rádio nebo ABC a očekávalo se, že si je uživatelé do počítače opíší. Ruční opisování byl proces pracný a náchylný k chybám, ale zase měl tu výhodu, že při něm zkušenější uživatel mohl program upravit pro konkrétní dialekt BASICu, používaný jeho počítačem. Jednotlivé modely totiž zpravidla nebyly kompatibilní natolik, aby mohly z kazety nahrát program určený pro jiný počítač, i když vlastní zdrojový kód byl totožný nebo velice podobný.</p>
+<p>Klasický BASIC měl jednotlivé řádky číslované a číslovalo se obvykle po deseti - 10, 20, 30 atd., aby bylo možné v případě potřeby mezi řádky ještě jeden vložit (třeba 15). Pokročilejší verze pak uměly řádky automaticky přečíslovat (obvykle příkazem <code>AUTO</code>). Číslování řádků bylo nezbytné, protože tyto počítače neměly vestavěný textový editor, který by uměl editovat delší text. Vždy bylo nutné editovat jednu konkrétní řádku. Takže pokud jste chtěli upravit kód na řádku 100, napsali jste <code>LLIST 100</code> a řádek změnili a uložili.</p>
+<p>BASIC byl milován i nenáviděn. Edsger W. Dijkstra kdysi prohlásil, že <em>&quot;Je prakticky nemožné naučit dobrý programátorský styl studenty, kteří byli předtím vystaveni BASICu. Jako potenciální programátoři jsou mentálně zmrzačení tak, že není naděje na uzdravení.&quot;</em> Pan Dijkstra byl ovšem znám svými kritickými názory a nebylo snadné ho uspokojit; ostatně, další z jeho známých výroků je, že výuka jazyka COBOL by měla být brána jako trestný čin. Ostatně, já jsem na Basicu začínal (stejně jako téměř celá generace mých vrstevníků) a myslím, že to na mně žádné nevratné mentální poškození nezanechalo.</p>
+<p>Jenomže u programovacích jazyků je to tak, že jejich technologická kvalita je nepřímo úměrná jejich snadné pochopitelnosti (příkladem z novější doby je třeba PHP). A BASIC se dokázal naučit... no, ne úplně každý, ale dokázalo se ho naučit hodně lidí.</p>
+<p>Programovací jazyk BASIC stál i za úspěchem společnosti Microsoft. V lednu 1975 vyšel v časopise Popular Electronics článek o počítači Altair 8800 (který se stal později prvním masově prodávaným modelem počítače v USA) a Paula Allena napadlo, že by pro něj šel napsat interpreter BASICu. Jeho kamarád Bill Gates zavolal výrobci s tím, že mají funkční program a jestli ho nechtějí koupit. Výrobce, společnost MITS, předběžně souhlasil a požádal o předvedení programu. Allen a Gates ovšem počítač Altair 8800 neměli k dispozici. Celý kód vyvinuli na emulátoru a na skutečném počítači běžel až v okamžiku předvedení u MITS. Běžel bezchybně a Altair Basic se stal prvním komerčně prodávaným produktem společnosti Microsoft (která se tehdy jmenovala Micro-Soft, jako Microcomputer Software). Microsoft potom dodával BASIC interpreter pro celou řadu dalších výrobců a modelů, například Commodore, IBM, NEC nebo Radio Shack/TRS.</p>
+<p>Kromě počítačů se BASIC dostal i do programovatelných kalkulaček. Jeho dialekty najdeme v kalkulačkách od všech tří hlavních výrobců, TI, HP i Casio.</p>
+<p>S vývojem počítačů se vyvíjel i Basic. Postupně přišel o čísla řádků a přibyly v něm pokročilejší konstrukty jako procedury a funkce, programování se změnilo z lineárního na procedurální. Součástí DOSu a starších verzí Windows bylo vývojové prostředí GW-BASIC a později QBasic od Microsoftu. GW-BASIC byl loni Microsoftem <a href="https://devblogs.microsoft.com/commandline/microsoft-open-sources-gw-basic/">zveřejněn jako open source na GitHubu</a> a stále je k dispozici a aktivně vyvíjen <a href="https://www.freebasic.net/">FreeBasic</a>, open source kompatibilní alternativa QBasicu.</p>
+<p>V roce 1991 společnost Microsoft vydala produkt jménem Visual Basic. Jednalo se o zcela nový programovací jazyk, určený pro tvorbu Windows aplikací, založený na klasickém BASICu. Motivace byla podobná jako u toho původního - nabídnout jednoduchý, snadno použitelný jazyk pro začátečníky a neprogramátory. Visual Basic umožňoval také jednoduchý vizuální návrh uživatelského rozhraní. A přestože se nad ním &quot;opravdoví programátoři&quot; ušklíbali, Visual Basic měl obrovský úspěch. Nebo přesněji, má obrovský úspěch. Protože jej dones jako VBA (Visual Basic for Applications) najdeme pro programování maker v Microsoft Office (a OpenOffice Basic je pro tentýž účel v Open Office). Existuje velké množství velkých firem, jejichž line of business systémy stále závisejí na komponentách napsaných ve Visual Basicu, včetně třeba některých českých bank.</p>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2024/20240626-basic-01.jpg" alt="Visual Basic 6.0 na Windows XP" />
+    <figcaption>Visual Basic 6.0 na Windows XP</figcaption>
+</figure>
+<p>Když v roce 2002 Microsoft přišel s platformou .NET, představil i nový programovací jazyk C#. Ale kromě něj nabídl i VB.NET (Visual Basic .NET), který měl umožnit snadný přechod VB programátorů na novou platformu. I v tom byl úspěšný. Většina programátorů (včetně autora tohoto článku) postupem času přešla na C#, který je výrazně protěžován a je, upřímně řečeno, podstatně elegantnější. Ale VB.NET je neustále vyvíjen a má sice malou, ale velmi věrnou skupinu uživatelů.</p>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2024/20240626-basic-02.jpg" alt="Visual Basic .NET ve Visual Studiu 2013" />
+    <figcaption>Visual Basic .NET ve Visual Studiu 2013</figcaption>
+</figure>
+<p>BASIC ukázal, že přístupnost a uživatelská přívětivost je nutná i u programovacích jazyků a že ne vše, nad čím se hardcore ajťáci ofrňují, si zaslouží zatracení. Ostatně, nejpopulárnější programovací jazyk pro začátečníky dnes je Python a přestože je výrazně mladší a modernější, jednoduchost a přístupnost staví na stejných principech, s jakými původně přišli pánové Kemeny a Kurtz.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Kdy%c5%be+BASIC+vl%c3%a1dnul+sv%c4%9btu&amp;body=https://www.altair.blog/2024/06/basic">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/06/basic.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/06/basic.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/06/basic">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/06/basic">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
