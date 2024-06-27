@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/06/cloudflare-certbot</guid>
+      <title>Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare</title>
+      <description>Při získávání certifikátů od CA Let's Encrypt se zpravidla používá http-01 challenge, kdy se ověřuje kontrola nad doménou pomocí HTTP requestu na definovanou URL. To je velice snadné a dá se to jednoduše automatizovat. Někdy se ale hodí dns-01 challenge, kdy se kontrola nad doménou ověřuje pomocí DNS záznamů. To je náročnější, ale umožňuje získat wildcard certifikáty nebo certifikáty pro server schovaný v neveřejné síti, případně ne webový. Nabízím podrobný návod, jak na to.</description>
+      <link>https://www.altair.blog/2024/06/cloudflare-certbot</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Bezpečnost</category>
+      <pubDate>2024-06-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/06/basic</guid>
       <title>Když BASIC vládnul světu</title>
       <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2023-08-03T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/07/cache</guid>
-      <title>Cacheování v .NET i HTTP</title>
-      <description>Dneškem končí dvanáctým dílem rozsáhlý seriál o cacheování v ASP.NET webových aplikacích a soudím, že se asi jedná o nejrozsáhlejší informační zdroj na toto téma v češtině. Co všechno potřebujete vědět o cacheování?</description>
-      <link>https://www.altair.blog/2023/07/cache</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2023-07-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/06/cloudflare-certbot" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare" />
+    <meta name="twitter:description" content="Při získávání certifikátů od CA Let's Encrypt se zpravidla používá http-01 challenge, kdy se ověřuje kontrola nad doménou pomocí HTTP requestu na definovanou URL. To je velice snadné a dá se to jednoduše automatizovat. Někdy se ale hodí dns-01 challenge, kdy se kontrola nad doménou ověřuje pomocí DNS záznamů. To je náročnější, ale umožňuje získat wildcard certifikáty nebo certifikáty pro server schovaný v neveřejné síti, případně ne webový. Nabízím podrobný návod, jak na to." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20240627-cloudflare-certbot.jpg" />
+    <meta property="article:published_time" content="2024-06-27" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare" />
+    <meta name="description" property="og:description" content="Při získávání certifikátů od CA Let's Encrypt se zpravidla používá http-01 challenge, kdy se ověřuje kontrola nad doménou pomocí HTTP requestu na definovanou URL. To je velice snadné a dá se to jednoduše automatizovat. Někdy se ale hodí dns-01 challenge, kdy se kontrola nad doménou ověřuje pomocí DNS záznamů. To je náročnější, ale umožňuje získat wildcard certifikáty nebo certifikáty pro server schovaný v neveřejné síti, případně ne webový. Nabízím podrobný návod, jak na to." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20240627-cloudflare-certbot.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/06/cloudflare-certbot" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20240627-cloudflare-certbot.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/bezpecnost" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bezpečnost</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-06-27">27. června 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">rivage via Unsplash.com <i class="fal fa-fw fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>Při získávání certifikátů od CA <a href="https://www.letsencrypt.org/">Let's Encrypt</a> se zpravidla používá <em>http-01</em> challenge, kdy se ověřuje kontrola nad doménou pomocí HTTP requestu na definovanou URL. To je velice snadné a dá se to jednoduše automatizovat. Na Linuxu můžete použít <a href="https://certbot.eff.org">Certbot</a>, na Windows + IIS třeba <a href="https://www.autoacme.net/">AutoACME</a> nebo <a href="https://www.win-acme.com/">win-acme</a>.</p>
+<p>Někdy se ale hodí <em>dns-01</em> challenge, kdy se kontrola nad doménou ověřuje pomocí DNS záznamů. To je náročnější (protože je třeba mít možnost vytvořit patřičné DNS záznamy pomocí nějakého API, což ne každé řešení umožňuje), ale má to své výhody:</p>
+<ul>
+<li>Můžete tak získat wildcard certifikát, platný pro všechny záznamy v dané doméně, např. <code>*.example.com</code>.</li>
+<li>Můžete tak získat certifikát pro server, který není dostupný přes HTTP (SMTP, FTP, MQTT...) anebo dokonce sice má FQDN z veřejné domény, ale není z Internetu přímo dostupný. Může být například dostupný pouze z vnitřní sítě nebo pomocí VPN.</li>
+</ul>
+<p>V tomto labu si ukážeme, jak takový certifikát získat, pokud je váš DNS provozován u Cloudflare. Návod je psán pro Raspberry Pi OS, ale bude přiměřeně platit i pro ostatní distribuce Linuxu.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/pGrYUbgA7DQ" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<h2>Získání API tokenu od Cloudflare</h2>
+<p>Nejprve budeme muset získat autentizační údaj, který umožní pracovat s danou doménou (zónou). Cloudflare rozeznává dva druhy takových údajů:</p>
+<ul>
+<li><em>API keys</em> jsou globální a můžeme je použít k jakýmkoliv operacím v rámci daného CF účtu.</li>
+<li><em>API tokens</em> jsou omezené na určitou množinu operací s konkrétní doménou (zónou).</li>
+</ul>
+<p>Budeme používat tokeny, protože je to bezpečnější.</p>
+<table class="steps">
+<tr data-step-seqid="1" data-step-sha256="+BQ2SiSaykrxUEir905FgNDyfgxaAYUIcPxHmrOLiPo">
+	<th>1.</th>
+	<td><p>Přihlašte se do Cloudflare Dashboard na adrese <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a>.</p></td>
+</tr>
+<tr data-step-seqid="2" data-step-sha256="VHZKfDG36JuLfpFbR3M/YrR+2tooDRRKE8jz6Gb0Bzg">
+	<th>2.</th>
+	<td><p>Klepněte v pravém horním rohu na ikonu uživatele a pak na <em>My Profile</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2024/20240627-cloudflare-certtbot-01.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="3" data-step-sha256="mikI1QlroBjonkaFEyPdL+gFKv/SRWWA2i9bGzkzmHk">
+	<th>3.</th>
+	<td><p>Klepněte v levém menu na <a href="https://dash.cloudflare.com/profile/api-tokens">API Tokens</a> a poté na <em>Create Token</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2024/20240627-cloudflare-certtbot-02.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="4" data-step-sha256="hj4D4TKNN3RkKSj4WAe0PKNAWU4yaIqwyizfzlHjm+Y">
+	<th>4.</th>
+	<td><p>Vyberte šablonu <em>Edit zone DNS</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2024/20240627-cloudflare-certtbot-03.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="5" data-step-sha256="ebMv9wtIhszYNylrXS21xw7JwnuaQ28HZfeLFVMO7+E">
+	<th>5.</th>
+	<td><p>Vyberte jednu nebo více zón, které má mít tento token možnost editovat a klepněte na <em>Continue to summary</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2024/20240627-cloudflare-certtbot-04.png" alt="" /></p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Můžete také nastavit časové omezení platnosti tokenu a případě omezení IP adres, z nichž smí být používán.</p></td>
+</tr>
+<tr data-step-seqid="6" data-step-sha256="b90dfIq4gkdxIfOuAWAw8Ht517dc8viTqS2P+4fBTPI">
+	<th>6.</th>
+	<td><p>V potvrzovacím dialogu klepněte na <em>Create token</em>.</p></td>
+</tr>
+<tr id="cftoken" data-step-seqid="7" data-step-sha256="bLQSBUhtskvazEEqeEPduNlxPj4JKZ6yL6JtXHXyb3w">
+	<th>7.</th>
+	<td><p>Zobrazí se vám token, který si pečlivě poznamenejte. Nebudete ho moci později zobrazit, ale budete ho později potřebovat.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2024/20240627-cloudflare-certtbot-05.png" alt="" /></p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Pomocí příkazu <code>curl</code> si můžete ověřit, že je zadaný token funkční. Pokud ano, vrátí se vám odpověď v následujícím tvaru:</p>
+<pre><code>{
+&quot;result&quot;: {
+    &quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;,
+    &quot;status&quot;: &quot;active&quot;
+},
+&quot;success&quot;: true,
+&quot;errors&quot;: [],
+&quot;messages&quot;: [
+    {
+    &quot;code&quot;: 10000,
+    &quot;message&quot;: &quot;This API Token is valid and active&quot;,
+    &quot;type&quot;: null
+    }
+]
+}</code></pre>
+<p>Pozor, Cloudflarem nabídnutý příkaz bude fungovat jenom v Bashi. Ve Windows s <code>cmd</code> musíte příkaz napsat na jeden řádek nebo místo <code>\</code> použít <code>^</code>, např.:</p>
+<pre><code>curl -X GET &quot;https://api.cloudflare.com/client/v4/user/tokens/verify&quot; ^
+     -H &quot;Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot; ^
+     -H &quot;Content-Type:application/json&quot;</code></pre>
+<p>V PowesShellu musíte název příkazu napsat včetně přípony <code>.exe</code> a pro pokračování řádku se používá zpětný apostrof:</p>
+<pre><code>curl.exe -X GET &quot;https://api.cloudflare.com/client/v4/user/tokens/verify&quot; `
+         -H &quot;Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot; `
+         -H &quot;Content-Type:application/json&quot;</code></pre></td>
+</tr>
+</table>
+<h2>Instalace utility Certbot</h2>
+<p><a href="https://certbot.eff.org/">Certbot</a> je program od EFF, který se stará o získávání a obnovování certifikátů. Bohužel nefunguje na Windows, ale na Linuxu funguje výborně.</p>
+<table class="steps">
+<tr data-step-seqid="8" data-step-sha256="AU43nNyok1vopIKtYSUFPAQUouQTS2WkeCEbRW7kZms">
+	<th>8.</th>
+	<td><p>Pokud váš systém podporuje Snap (Ubuntu a některé další distribuce), naninstalujte ho následujícím příkazem:</p>
+<pre><code>sudo snap install --classic certbot</code></pre></td>
+</tr>
+<tr data-step-seqid="9" data-step-sha256="5ednnzpfqMB4QbIc7HBBLkgwYM/V7Fl/SQyERy72CaM">
+	<th>9.</th>
+	<td><p>Pokud příkaz skončil chybou, např. <code>sudo: snap: command not found</code>, musíte nejprve nainstalovat <code>snap</code>, což učiníte následující sekvencí příkazů:</p>
+<pre><code>sudo apt-get update
+sudo apt-get install snapd -y
+sudo snap install core</code></pre>
+<p>Poté znovu zadejte příkaz pro instalaci Certbota:</p>
+<pre><code>sudo snap install --classic certbot</code></pre></td>
+</tr>
+<tr data-step-seqid="10" data-step-sha256="I4mxDxC1LqKEaq1zGd0JOE62zbxMq5JBYrBgLTWMR+U">
+	<th>10.</th>
+	<td><p>Následujícím příkazem vytvořte symlink, pomocí kterého bude možné Certbota snadno spouštět:</p>
+<pre><code>sudo ln -s /snap/bin/certbot /usr/bin/certbot</code></pre></td>
+</tr>
+<tr data-step-seqid="11" data-step-sha256="iYoKyBBdCjrVyp7zCq+teI+EG9iShDTD3/oJxTLOOSU">
+	<th>11.</th>
+	<td><p>Následujícími příkazy nainstalujte plugin pro Cloudflare a určíte, že má běžet ve stejném kontextu, jako certbot sám:</p>
+<pre><code>sudo snap set certbot trust-plugin-with-root=ok
+sudo snap install certbot-dns-cloudflare</code></pre></td>
+</tr>
+<tr data-step-seqid="12" data-step-sha256="KssDeopYtqN3CstLzGSiInoclzof0DJIqQeh9MC2myk">
+	<th>12.</th>
+	<td><p>Vytvořte adresář <code>/root/.secrets</code>:</p>
+<pre><code>sudo mkdir /root/.secrets</code></pre></td>
+</tr>
+<tr data-step-seqid="13" data-step-sha256="DbRPeHoMtKAveBF9EruXY040xrfEUvE5eYx1bOg3BwA">
+	<th>13.</th>
+	<td><p>Následujícím příkazem vytvořte soubor <code>/root/.secrets/cloudflare.ini</code> pomocí editoru <code>nano</code>:</p>
+<pre><code>sudo nano /root/.secrets/cloudflare.ini</code></pre></td>
+</tr>
+<tr data-step-seqid="14" data-step-sha256="T7YXOZBpvqSk8XXhngG8F0LNwVoT2dosKOOmNlayFJc">
+	<th>14.</th>
+	<td><p>Zadejte do souboru následující obsah (použijte token, který jste vytvořili v kroku <a href="#cftoken">7</a>):</p>
+<pre><code>dns_cloudflare_api_token = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</code></pre></td>
+</tr>
+<tr data-step-seqid="15" data-step-sha256="A9Z1wNm46VUc08rgpK8ZwtPMGksSpvrP6J4ojDjADsQ">
+	<th>15.</th>
+	<td><p>Uložte provedené změny klávesovou zkratkou <em>Ctrl+S</em> a ukončete editor pomocí <em>Ctrl+X</em>.</p></td>
+</tr>
+<tr data-step-seqid="16" data-step-sha256="xlIjhrDodKwdxTtuHJmxLsfwASImxkIIJzO5w38pS8U">
+	<th>16.</th>
+	<td><p>Následujícími příkazy zajistěte, že k souboru nebude mít přístup nikdo jiný, než <code>root</code>:</p>
+<pre><code>sudo chmod 0700 /root/.secrets/
+sudo chmod 0400 /root/.secrets/cloudflare.ini</code></pre></td>
+</tr>
+</table>
+<h2>Žádost o certifikát</h2>
+<table class="steps">
+<tr data-step-seqid="17" data-step-sha256="Q8ZNKPC9pzn8m5u2wHnkS2QXwbLM1ZFWizgj/YHQY60">
+	<th>17.</th>
+	<td><p>Následujícím příkazem pošlete žádost o certifikát (samozřejmě nahraďte <code>www.example.com</code> vlastním názvem serveru):</p>
+<pre><code>sudo certbot certonly \
+    --dns-cloudflare \
+    --dns-cloudflare-credentials /root/.secrets/cloudflare.ini \
+    --preferred-challenges dns-01 \
+    -d www.example.com</code></pre>
+<p>Při prvním spuštění budete požádáni o zadání e-mailové adresy, souhlas s licenčními podmínkami a souhlas se zasíláním zpráv od EFF (ten je volitelný).</p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Pokud chcete vydat certifikát platný pro více DNS jmen, použijte parametr <code>-d</code> vícekrát, např.:</p>
+<pre><code>sudo certbot certonly \
+    --dns-cloudflare \
+    --dns-cloudflare-credentials /root/.secrets/cloudflare.ini \
+    --preferred-challenges dns-01 \
+    -d www.example.com -d example.com</code></pre>
+<p>Pokud chcete požádat o wildcard certifikát, použijte hvězdičku:</p>
+<pre><code>sudo certbot certonly \
+    --dns-cloudflare \
+    --dns-cloudflare-credentials /root/.secrets/cloudflare.ini \
+    --preferred-challenges dns-01 \
+    -d *.example.com -d example.com</code></pre></td>
+</tr>
+<tr class="warning">
+	<th><i class="fal fa-exclamation-triangle"></i></th>
+	<td><p>Pozor, wildcard certifikát <code>*.example.com</code> bude fungovat například pro <code>www.example.com</code> nebo <code>praha.example.com</code>. Nebude ale fungovat pro <code>example.com</code> (to musíte uvést zvlášť) nebo <code>www.praha.example.com</code>.</p>
+<p>Wildcard <code>*</code> je povolen jenom před první tečkou ve jméně. Můžete tedy požádat o <code>*.praha.example.com</code> ale ne třeba o <code>www.*.example.com</code>.</p></td>
+</tr>
+<tr data-step-seqid="18" data-step-sha256="0xtr7o7IhjYOxFRmcROqrrOuno4sfCZZms55cNo8Gv0">
+	<th>18.</th>
+	<td><p>Nyní máte v adresáři <code>/etc/letsencrypt/live/www.example.com/</code> vše, co potřebujete k použití certifikátu. Najdete tam následující soubory:</p>
+<ul>
+<li><code>privkey.pem</code> je privátní klíč k certifikátu.</li>
+<li><code>fullchain.pem</code> certifikát (veřejný klíč) a všechny certifikáty potřebné pro jeho ověření.</li>
+<li><code>cert.pem</code> je pouze certifikát.</li>
+<li><code>chain.pem</code> jsou certifikáty potřebné pro jeho ověření.</li>
+</ul>
+<p>Záleží na použitém serverovém software, zda bude chtít certifikát a chain dohromady nebo zvlášť a jakou formou má být konfigurován.</p></td>
+</tr>
+</table>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Z%c3%adsk%c3%a1n%c3%ad+certifik%c3%a1t%c5%af+od+Let%27s+Encrypt+pomoc%c3%ad+dns-01+challenge+s+Cloudflare&amp;body=https://www.altair.blog/2024/06/cloudflare-certbot">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/06/cloudflare-certbot.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/06/cloudflare-certbot.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/06/cloudflare-certbot">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/06/cloudflare-certbot">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
