@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/06/michelangelo</guid>
+      <title>Covid a Michelangelo</title>
+      <description>Začalo to všechno vlastně zcela nenápadně. Psal se rok 1949 a jistý Neumann János Lajos na universitě v Illinois držel přednášku s komplikovaným názvem "Teorie a organizace složitých automatů". Tak se zrodil koncept počítačového viru. A ty klasické mají hodně společného s těmi organickými, jako druhdy populární koronavirus SARS-CoV-2.</description>
+      <link>https://www.altair.blog/2024/06/michelangelo</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT historie</category>
+      <category>Bezpečnost</category>
+      <pubDate>2024-06-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/06/cloudflare-certbot</guid>
       <title>Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare</title>
       <description>Při získávání certifikátů od CA Let's Encrypt se zpravidla používá http-01 challenge, kdy se ověřuje kontrola nad doménou pomocí HTTP requestu na definovanou URL. To je velice snadné a dá se to jednoduše automatizovat. Někdy se ale hodí dns-01 challenge, kdy se kontrola nad doménou ověřuje pomocí DNS záznamů. To je náročnější, ale umožňuje získat wildcard certifikáty nebo certifikáty pro server schovaný v neveřejné síti, případně ne webový. Nabízím podrobný návod, jak na to.</description>
@@ -136,15 +146,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2023-07-25T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/06/markdown</guid>
-      <title>Markdown pro uživatele i pro vývojáře</title>
-      <description>Mám rád Markdown. Jednoduchý značkovací jazyk, který umožňuje do textu přidat formátování, odkazy a podobně. Nejsem sám, protože Markdown dneska používá kdekdo - GitHub, Reddit, Telegram, Facebook Messenger a další. Připravil jsem pro vás dvě videa, ve kterých se naučíte jak MD psát jako uživatelé a využívat jako vývojáři.</description>
-      <link>https://www.altair.blog/2023/06/markdown</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2023-06-08T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
