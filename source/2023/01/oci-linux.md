@@ -7,6 +7,7 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = Z-TECH -->
 <!-- x4w:category = IT -->
+<!-- x4w:category = Linux -->
 <!-- dcterms:date = 2023-01-18 -->
 
 Společnost Oracle nabízí zdarma ve svém cloudu server se čtyřmi jádry, 24 GB RAM a 200 GB disku. Je to součást [always free cloud services](https://www.oracle.com/cloud/free/), nejedná se tedy o trial nebo o nabídku omezenou na rok, jak to má třeba [Azure](https://azure.microsoft.com/en-us/pricing/free-services/) nebo [AWS](https://aws.amazon.com/free/). Můj názor je, že Oracle je se svým cloudem relativně nový a méně významný hráč, proto se snaží touto cestou přitáhnout zákazníky.

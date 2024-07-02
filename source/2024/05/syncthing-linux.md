@@ -7,6 +7,8 @@
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
 <!-- dcterms:date = 2024-05-14 -->
+<!-- x4w:category = Lab -->
+<!-- x4w:category = Linux -->
 <!-- x4w:type = TMD -->
 
 <!-- $ -->

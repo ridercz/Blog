@@ -6,6 +6,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 <!-- x4w:category = IT -->
+<!-- x4w:category = Linux -->
 <!-- dcterms:date = 2023-05-04 -->
 
 Windows a Linux. Oheň a voda. Microsoft a open source. Dva nesmiřitelní soupeři. Anebo ne? Přijde mi, že ta animozita je hlavně směrem od linuxáků k Windows; naopak je to spíš že jsme jako uživatelé Windows Linux k ničemu nepotřebovali. Nicméně, s multiplatformností .NETu se situace poněkud mění. Proto jsem připravil seriál o Linuxu pro Windowsáky.
