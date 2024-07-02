@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/07/mosquitto-linux</guid>
+      <title>Instalace MQTT serveru Mosquitto na Linux</title>
+      <description>V prvním a druhém dílu seriálu o MQTT jsem používal veřejný MQTT broker. To se hodí pro demo, ale produkční systém na tom stavět nechcete. Pokud pro svůj MQTT server nechcete používat hostované řešení, můžete si rozjet vlastní server. Asi nejpoužívanějším softwarem pro tento účel je Mosquitto. Je to open source multiplatformní projekt, který funguje na Windows, Linuxu i Mac OS. Ukážu vám, jak Mosquitto nainstalovat na Linux, nastavit na něm TLS zabezpečení a WebSockets rozhraní.</description>
+      <link>https://www.altair.blog/2024/07/mosquitto-linux</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2024-07-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/06/michelangelo</guid>
       <title>Covid a Michelangelo</title>
       <description>Začalo to všechno vlastně zcela nenápadně. Psal se rok 1949 a jistý Neumann János Lajos na universitě v Illinois držel přednášku s komplikovaným názvem "Teorie a organizace složitých automatů". Tak se zrodil koncept počítačového viru. A ty klasické mají hodně společného s těmi organickými, jako druhdy populární koronavirus SARS-CoV-2.</description>
@@ -138,15 +147,6 @@
       <category>IT</category>
       <category>Z-TECH</category>
       <pubDate>2023-09-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/09/backblaze</guid>
-      <title>Backblaze zdražuje: poslední šance předplatného za starou cenu</title>
-      <description>Moje oblíbená služba Backblaze bude od 3. října zdražovat. I tak zůstane velice výhodnou službou, ale nyní máte poslední šanci na nákup předplatného za starou cenu.</description>
-      <link>https://www.altair.blog/2023/09/backblaze</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2023-09-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

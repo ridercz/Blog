@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Instalace MQTT serveru Mosquitto na Linux | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/07/mosquitto-linux" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Instalace MQTT serveru Mosquitto na Linux" />
+    <meta name="twitter:description" content="V prvním a druhém dílu seriálu o MQTT jsem používal veřejný MQTT broker. To se hodí pro demo, ale produkční systém na tom stavět nechcete. Pokud pro svůj MQTT server nechcete používat hostované řešení, můžete si rozjet vlastní server. Asi nejpoužívanějším softwarem pro tento účel je Mosquitto. Je to open source multiplatformní projekt, který funguje na Windows, Linuxu i Mac OS. Ukážu vám, jak Mosquitto nainstalovat na Linux, nastavit na něm TLS zabezpečení a WebSockets rozhraní." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20240702-mosquitto-linux.jpg" />
+    <meta property="article:published_time" content="2024-07-02" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Instalace MQTT serveru Mosquitto na Linux" />
+    <meta name="description" property="og:description" content="V prvním a druhém dílu seriálu o MQTT jsem používal veřejný MQTT broker. To se hodí pro demo, ale produkční systém na tom stavět nechcete. Pokud pro svůj MQTT server nechcete používat hostované řešení, můžete si rozjet vlastní server. Asi nejpoužívanějším softwarem pro tento účel je Mosquitto. Je to open source multiplatformní projekt, který funguje na Windows, Linuxu i Mac OS. Ukážu vám, jak Mosquitto nainstalovat na Linux, nastavit na něm TLS zabezpečení a WebSockets rozhraní." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20240702-mosquitto-linux.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/07/mosquitto-linux" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20240702-mosquitto-linux.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Instalace MQTT serveru Mosquitto na Linux</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-07-02">2. července 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+        <div title="Autor úvodního obrázku">Thomas Jensen via Unsplash.com <i class="fal fa-fw fa-camera">​</i></div>
+      </aside>
+      <section class="article-text">
+        <p>V prvním a druhém dílu seriálu o MQTT jsem používal veřejný MQTT broker. To se hodí pro demo, ale produkční systém na tom stavět nechcete. Pokud pro svůj MQTT server nechcete používat hostované řešení, můžete si rozjet vlastní server. Asi nejpoužívanějším softwarem pro tento účel je <a href="https://www.mosquitto.org">Mosquitto</a>. Je to open source multiplatformní projekt, který funguje na Windows, Linuxu i Mac OS. Ukážu vám, jak Mosquitto nainstalovat na Linux, nastavit na něm TLS zabezpečení a WebSockets rozhraní.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/G2P_n9IDE4c" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Následující postup funguje na aktuálním Ubuntu a Raspberry Pi OS. Měl by přiměřeně fungovat i na ostatních distribucích.</p>
+<h2>Instalace</h2>
+<table class="steps">
+<tr data-step-seqid="1" data-step-sha256="uCmW22Am/Mf68o5BXYJMkgsN/vCOxgMOmShOkCGj9HM">
+	<th>1.</th>
+	<td><p>Ve většině distribucí Linuxu je Mosquitto součástí standardních repozitářů. Mělo by tedy stačit nainstalovat balíčky <code>mosquitto</code> a <code>mosquitto-clients</code>:</p>
+<pre><code>sudo apt-get install mosquitto mosquitto-clients -y</code></pre></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Pokud výše uvedený příkaz skončí chybou, postupujte podle návodu pro vaši distribuci na webu <a href="https://mosquitto.org/download/">mosquitto.org</a>.</p></td>
+</tr>
+<tr id="checkmqtt" data-step-seqid="2" data-step-sha256="FkZuQlULBFehh7oN9dFNb5v5AGAQvjzDpW2mM79u1rU">
+	<th>2.</th>
+	<td><p>Mosquitto nyní běží s výchozími nastaveními. Máte k dispozici utility <code>mosquitto_pub</code> a <code>mosquitto_sub</code>, které slouží jako publisher a subscriber.</p>
+<p>Následujícím příkazem spusťte subcriber tak, že bude naslouchat na topicu <code>test</code>:</p>
+<pre><code>mosquitto_sub -h localhost -t test &amp;</code></pre></td>
+</tr>
+<tr id="pid" data-step-seqid="3" data-step-sha256="Vp4gzq6cwHSFjBt9zf2AN+A6SxjbEo5aP+gUyBzfn+Y">
+	<th>3.</th>
+	<td><p>Znak <code>&amp;</code> na konci příkazu znamená, že proces má běžet na pozadí a tedy nemá blokovat interaktivní konzoli. Příkaz vypsal něco jako:</p>
+<pre><code>[1] 12345</code></pre>
+<p>To druhé číslo (zde <code>12345</code>) je PID, číselný identifikátor procesu. Poznamenejte si ho, budete ho později potřebovat k jeho ukončení.</p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Seznam svých běžících procesů si můžete vypsat pomocí příkazu <code>ps</code>. Měli byste vidět něco jako:</p>
+<pre><code>PID   TTY          TIME CMD
+12100 pts/0    00:00:00 bash
+12345 pts/0    00:00:00 mosquitto_sub
+12347 pts/0    00:00:00 ps</code></pre></td>
+</tr>
+<tr data-step-seqid="4" data-step-sha256="ZeQs+A8DbqnKM/sRzPGtwO8QSMxt8zkra+IChgp/zC8">
+	<th>4.</th>
+	<td><p>Následujícím příkazem pošlete pomocí publishera zprávu <code>Hello, world!</code> do topicu <code>test</code>:</p>
+<pre><code>mosquitto_pub -h localhost -t test -m &quot;Hello, world!&quot;</code></pre></td>
+</tr>
+<tr data-step-seqid="5" data-step-sha256="9+S7G0WXZAuLryI9FiF9WiUJDOVkiez0hZFZVIf/HeA">
+	<th>5.</th>
+	<td><p>Zpráva bude vypsána na konzoli. Vypsal ji tam proces <code>mosquitto_sub</code>.</p></td>
+</tr>
+<tr data-step-seqid="6" data-step-sha256="NyLpMMpu/LqHm/sjR6QScyZRn4K4WMp9iCGvLVsznjQ">
+	<th>6.</th>
+	<td><p>Pomocí <code>kill</code> můžete ukončit subscribera běžícího na pozadí. Použijte k tomu PID zjištěné v kroku <a href="#pid">3</a>.</p>
+<pre><code>kill 12345</code></pre></td>
+</tr>
+<tr data-step-seqid="7" data-step-sha256="4h/bB3x9SvyufghUvsQD02qURpvWa4zyx3Px/B9MWbI">
+	<th>7.</th>
+	<td><p>Pomocí <code>ps</code> si můžete ověřit, že proces subscribera neběží.</p></td>
+</tr>
+</table>
+<h2>Nastavení firewallu</h2>
+<p>MQTT obvykle využívá následující porty:</p>
+<ul>
+<li>Standardní port pro nešifrované spojení: <code>1883</code></li>
+<li>MQTT over TLS (šifrované): <code>8883</code></li>
+<li>MQTT over QUIC: <code>14567</code></li>
+<li>MQTT over Web Sockets: výchozí HTTPS port <code>443</code>, případně jiné, jako <code>8884</code> nebo <code>8443</code>, pokud na výchozím běží jiný web server.</li>
+</ul>
+<table class="steps">
+<tr data-step-seqid="8" data-step-sha256="gYxTsHOHHS7cuKT/516zZyzozGN11qVWtLI/Xlhttj8">
+	<th>8.</th>
+	<td><p>V tomto návodu budeme pracovat s porty <code>1883</code> (MQTT), <code>8883</code> (šifrované MQTTS), <code>8884</code> (MQTT over WebSockets). Zpřístupněte tyto porty na firewallu. Pomocí UFW tak můžete učinit následujícími příkazy:</p>
+<pre><code>sudo ufw allow 1883/tcp
+sudo ufw allow 8883/tcp
+sudo ufw allow 8884/tcp
+sudo ufw reload</code></pre></td>
+</tr>
+</table>
+<h2>Nastavení TLS</h2>
+<p>Název serveru v příkladu je <code>mqtt.ztech.cz</code>. Upravte postup podle vašeho názvu serveru.</p>
+<table class="steps">
+<tr data-step-seqid="9" data-step-sha256="wg/Xfjgxn+djstWZzUTDqwzh3krsKN5BwjAMZkv6EPI">
+	<th>9.</th>
+	<td><p>Abyste mohli používat Mosquitto s TLS (ať už přímo nebo přes WebSockets), musíte mít certifikát vydané důvěryhodnou certifikační autoritou.</p>
+<p>Pokud takový certifikát máte, musíte ho zpřístupnit Mosquittu, například tak, že vytvoříte následující soubory:</p>
+<ul>
+<li><code>/etc/mosquitto/certs/cert.pem</code> - vlastní certifikát,</li>
+<li><code>/etc/mosquitto/certs/privkey.pem</code> - privátní klíč k certifikátu,</li>
+<li><code>/etc/mosquitto/certs/chain.pem</code> - certifikát CA a mezilehlých autorit.</li>
+</ul>
+<p>Následující postup předpokládá, že máte certifikáty získané od Let's Encrypt CA pomocí utility Certbot. Pokud máte certifikáty získané jinak, např. od vlastní CA, nakopírujte je na výše uvedené cesty a pokračujte krokem <a href="#mosquittoconf">16</a>.</p></td>
+</tr>
+</table>
+<h3>Zpřístupnění certifikátů získaných od Let's Encrypt</h3>
+<p>Pokud nemáte validní certifikát, můžete ho zdarma získat od Let's Encrypt certifikační autority. Pokud na stejném serveru běží web server a má veřejnou adresu, je to triviální. Pokud ne, můžete použít například postup popsaný v článku <a href="https://www.altair.blog/2024/06/cloudflare-certbot">Získání certifikátů od Let’s Encrypt pomocí dns-01 challenge s Cloudflare</a>.</p>
+<p>Certbot certifikáty ve výchozím nastavení umístí do adresáře <code>/etc/letsencrypt/live/</code> a nastaví práva tak, že k privátnímu klíči má přístup jenom <code>root</code>. Nicméně můžeme nastavit deploy hook, který vždy po získání nových certifikátů tyto nakopíruje do <code>/etc/mosquitto/certs</code> a dá práva uživateli <code>mosquitto</code>.</p>
+<table class="steps">
+<tr data-step-seqid="10" data-step-sha256="HQ7xCbjwFOSVfKPxTUAIbyxZPVsjqZqZM+3pH/GYD3E">
+	<th>10.</th>
+	<td><p>Vytvořte soubor <code>/usr/local/sbin/copy-to-mosquitto.sh</code>, který bude obsahovat příkazy pro zkopírování souborů a nastavení práv:</p>
+<pre><code>sudo nano /usr/local/sbin/copy-to-mosquitto.sh</code></pre></td>
+</tr>
+<tr data-step-seqid="11" data-step-sha256="VWGzYlHOPHP6nDW1UyQ1Dp6Mrw5eGBupJYFABlej1pc">
+	<th>11.</th>
+	<td><p>Zadejte do souboru následující příkazy (místo <code>mqtt.ztech.cz</code> zadejte název vašeho certifikátu):</p>
+<pre><code>cp /etc/letsencrypt/live/mqtt.ztech.cz/cert.pem /etc/mosquitto/certs/
+cp /etc/letsencrypt/live/mqtt.ztech.cz/privkey.pem /etc/mosquitto/certs/
+cp /etc/letsencrypt/live/mqtt.ztech.cz/chain.pem /etc/mosquitto/certs/
+chown mosquitto:mosquitto /etc/mosquitto/certs/*.pem</code></pre></td>
+</tr>
+<tr data-step-seqid="12" data-step-sha256="zoXXk0+wZJHYapumc0UVyT959D5nsjHbKOhGsdY7stc">
+	<th>12.</th>
+	<td><p>Stiskem <em>Ctrl+S</em> uložte soubor a <em>Ctrl+X</em> ukončete editor.</p></td>
+</tr>
+<tr data-step-seqid="13" data-step-sha256="qXbVUMFfo+AGjAna1JPjDSsgdUyefiybcAUTTOUDqT0">
+	<th>13.</th>
+	<td><p>Následujícím příkazem nastavte soubor jako spustitelný:</p>
+<pre><code>sudo chmod +x /usr/local/sbin/copy-to-mosquitto.sh</code></pre></td>
+</tr>
+<tr data-step-seqid="14" data-step-sha256="VwD7jgZEJ8GIR1r2L/1B9BKum2V9JhJSPNzbkrVDC1k">
+	<th>14.</th>
+	<td><p>Následujícím příkazem (místo <code>mqtt.ztech.cz</code> zadejte název vašeho certifikátu) nastavíte, že se má po vydání nového certifikátu shora uvedený soubor spustit (a zároveň ho spustíte ihned):</p>
+<pre><code>sudo certbot reconfigure --cert-name mqtt.ztech.cz \
+                         --deploy-hook &quot;/usr/local/sbin/copy-to-mosquitto.sh&quot; \
+                         --run-deploy-hooks</code></pre></td>
+</tr>
+<tr data-step-seqid="15" data-step-sha256="5eOfkwdCwOBBtIObK7deYgHSt8cfM2bFSgqOmWkrPyU">
+	<th>15.</th>
+	<td><p>Následujícím příkazem si zkontrolujte, že vše v pořádku proběhlo:</p>
+<pre><code>sudo ls -la /etc/mosquitto/certs/</code></pre>
+<p>Měli byste vidět něco jako:</p>
+<pre><code>drwxr-xr-x 2 root      root      4096 Jun 28 21:41 .
+drwxr-xr-x 5 root      root      4096 Jun 28 18:22 ..
+-rw-r-xr-- 1 mosquitto mosquitto 1302 Jun 28 21:41 cert.pem
+-rw-r-xr-- 1 mosquitto mosquitto 1566 Jun 28 21:41 chain.pem
+-rw-r-x--- 1 mosquitto mosquitto  241 Jun 28 21:41 privkey.pem
+-rw-r--r-- 1 root      root       130 Sep 30  2023 README</code></pre></td>
+</tr>
+</table>
+<h3>Konfigurace Mosquitta</h3>
+<table class="steps">
+<tr id="mosquittoconf" data-step-seqid="16" data-step-sha256="qW3wczSMM5MPIP2I5TXySPTEJy9hZoKXecCxNADWd3w">
+	<th>16.</th>
+	<td><p>Následujícím příkazem vytvořte konfigurační soubor Mosquitta:</p>
+<pre><code>sudo nano /etc/mosquitto/conf.d/default.conf</code></pre></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Soubor se může jmenovat jakkoliv, ale musí být umístěn v adresáři <code>/etc/mosquitto/conf.d/</code> a mít příponu <code>.conf</code>.</p></td>
+</tr>
+<tr data-step-seqid="17" data-step-sha256="D0RVXXeGnfVuPx/266upoFPm9QAh61WitQyUOx+QjFY">
+	<th>17.</th>
+	<td><p>Zadejte do něj následující obsah (upravte cestu k certifikátům a privátnímu klíči dle potřeby). Za textem v posledním řádku (<code>keyfile...</code>) stiskněte <em>Enter</em> - musí tam být zalomení řádku. Pokud tomu tak není, bude ho Mosquitto ignorovat.</p>
+<pre>
+allow_anonymous true
+
+# Non-secure listener
+listener 1883
+
+# TLS-enabled listener
+listener 8883
+certfile /etc/mosquitto/certs/cert.pem
+cafile /etc/mosquitto/certs/chain.pem
+keyfile /etc/mosquitto/certs/privkey.pem
+
+</pre></td>
+</tr>
+<tr class="warning">
+	<th><i class="fal fa-exclamation-triangle"></i></th>
+	<td><p>Volba <code>allow_anonymous true</code> říká, že se na náš server může připojit kdokoliv a může cokoliv kamkoliv publikovat a číst. To obecně není dobrý nápad. Nastavení práv probereme v dalším pokračování tohoto seriálu.</p></td>
+</tr>
+<tr data-step-seqid="18" data-step-sha256="zoXXk0+wZJHYapumc0UVyT959D5nsjHbKOhGsdY7stc">
+	<th>18.</th>
+	<td><p>Stiskem <em>Ctrl+S</em> uložte soubor a <em>Ctrl+X</em> ukončete editor.</p></td>
+</tr>
+<tr data-step-seqid="19" data-step-sha256="TXjMr96OW+wiTf+O0X3ZUXtZ1++sveezMmThslqV5Io">
+	<th>19.</th>
+	<td><p>Následujícím příkazem Mosquitto restartujete</p>
+<pre><code>sudo systemctl restart mosquitto</code></pre></td>
+</tr>
+<tr data-step-seqid="20" data-step-sha256="HtZpVg7wFE5vBu9vS4iT6f5xOrfiVGBzTQaMb/qZGIA">
+	<th>20.</th>
+	<td><p>Že vše funguje si můžete ověřit podobně jako v kroku <a href="#checkmqtt">2</a>. Místo <code>mqtt.ztech.cz</code> zadejte název vašeho serveru.</p>
+<p>Příkaz pro spuštění subscribera na pozadí je:</p>
+<pre><code>mosquitto_sub -h mqtt.ztech.cz -p 8883 --capath /etc/ssl/certs \
+              -t test &amp;</code></pre>
+<p>Příkaz pro zaslání zprávy do topicu <code>test</code> je:</p>
+<pre><code>mosquitto_pub -h mqtt.ztech.cz -p 8883 --capath /etc/ssl/certs \
+              -t test -m &quot;Hello, world!&quot;</code></pre></td>
+</tr>
+</table>
+<h2>Nastavení MQTT over WebSockets</h2>
+<p>Pokud chcete využívat MQTT přímo z prohlížeče, musí být MQTT server dostupný pomocí HTTPS a WebSockets.</p>
+<table class="steps">
+<tr data-step-seqid="21" data-step-sha256="xUxX2mYxg2dDyYmla29KeqVAiWO8Xny+J8weeltOw+Y">
+	<th>21.</th>
+	<td><p>Následujícím příkazem otevřete k editaci konfigurační soubor Mosquitta:</p>
+<pre><code>sudo nano /etc/mosquitto/conf.d/default.conf</code></pre></td>
+</tr>
+<tr data-step-seqid="22" data-step-sha256="oVR2Q7ASow9W3qUGWuziiSacotsHt4eiEgEPyl71amk">
+	<th>22.</th>
+	<td><p>Přidejte do něj následující konfiguraci (a nezapomeňte na prázdný řádek na konci souboru):</p>
+<pre>
+allow_anonymous true
+
+# Non-secure listener
+listener 1883
+
+# TLS-enabled listener
+listener 8883
+certfile /etc/mosquitto/certs/cert.pem
+cafile /etc/mosquitto/certs/chain.pem
+keyfile /etc/mosquitto/certs/privkey.pem
+
+<ins># WebSockets+TLS listener
+listener 8884
+protocol websockets
+certfile /etc/mosquitto/certs/cert.pem
+cafile /etc/mosquitto/certs/chain.pem
+keyfile /etc/mosquitto/certs/privkey.pem</ins>
+
+</pre></td>
+</tr>
+<tr data-step-seqid="23" data-step-sha256="zoXXk0+wZJHYapumc0UVyT959D5nsjHbKOhGsdY7stc">
+	<th>23.</th>
+	<td><p>Stiskem <em>Ctrl+S</em> uložte soubor a <em>Ctrl+X</em> ukončete editor.</p></td>
+</tr>
+<tr data-step-seqid="24" data-step-sha256="DWkILaZQGu1pt3qJWRmDLJWkp2oY4WBt06XdUz5gpDU">
+	<th>24.</th>
+	<td><p>Následujícím příkazem Mosquitto restartujte, aby se projevila změna konfigurace:</p>
+<pre><code>sudo systemctl restart mosquitto</code></pre></td>
+</tr>
+<tr data-step-seqid="25" data-step-sha256="L6xb2J32VSooJUYs2S3Qxey95ECazLqQoTmr8GhRFoM">
+	<th>25.</th>
+	<td><p>Že vše funguje přes WebSockets si můžete ověřit např. z <a href="https://www.hivemq.com/demos/websocket-client/">webového klienta od HiveMQ</a>.</p></td>
+</tr>
+</table>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Instalace+MQTT+serveru+Mosquitto+na+Linux&amp;body=https://www.altair.blog/2024/07/mosquitto-linux">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/07/mosquitto-linux.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/07/mosquitto-linux.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/07/mosquitto-linux">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/07/mosquitto-linux">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
