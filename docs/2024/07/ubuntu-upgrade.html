@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/07/ubuntu-upgrade" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS" />
+    <meta name="twitter:description" content="V dubnu vyšla další long term support (LTS) verze Ubuntu Linuxu 24.04. Naučím vás, jak na ni rychle a bezbolestně upgradovat z předchozí LTS verze 22.04." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20240704-ubuntu-upgrade.jpg" />
+    <meta property="article:published_time" content="2024-07-04" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS" />
+    <meta name="description" property="og:description" content="V dubnu vyšla další long term support (LTS) verze Ubuntu Linuxu 24.04. Naučím vás, jak na ni rychle a bezbolestně upgradovat z předchozí LTS verze 22.04." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20240704-ubuntu-upgrade.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/07/ubuntu-upgrade" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20240704-ubuntu-upgrade.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/lab" title="Rubrika">
+              <i class="fal fa-tag"> </i>Lab</a>
+          </li>
+          <li>
+            <a href="/categories/linux" title="Rubrika">
+              <i class="fal fa-tag"> </i>Linux</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-07-04">4. července 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>V dubnu letošního roku vyšla nová verze Ubuntu LTS (Long Term Support), 24.04 (Noble Numbat). Pokud máte na svých serverech předchozí verzi 22.04 (Jammy Jellyfish) a chcete upgradovat, připravil jsem pro vás návod, jak na to.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/qNWe4UWGVOc" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Upgrade není dnes nezbytně nutný, protože Ubuntu má podobnou politiku podpory jako Microsoft: LTS systémy jsou podporovány pět let od uvedení v režimu Standard Security Maintenance a dalších pět v Expanded Security Maintenance. Verze 22.04 bude podporována až do roku 2027, resp. 2032.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2024/20240704-ubuntu-upgrade.png" alt="" /></p>
+<p>Podrobnější informace najdete na stránce <a href="https://ubuntu.com/about/release-cycle">The Ubuntu lifecycle and release cadence</a>, ze které jsem převzal i výše uvedený obrázek.</p>
+<h2>Příprava</h2>
+<table class="steps">
+<tr data-step-seqid="1" data-step-sha256="t1HVerUoAhmVT0PnPgItgCXPNG2V6iTU2iYoFLFnJCM">
+	<th>1.</th>
+	<td><p>Před započetím prací se důrazně doporučuje provést zálohu systému.</p></td>
+</tr>
+<tr data-step-seqid="2" data-step-sha256="OoQV1yYfBx4JQ70OgwCd+X79y/wYxY+TjXi0RBFgYm8">
+	<th>2.</th>
+	<td><p>Když se na svůj server přihlásíte, přivítá vás hlášení podobné následujícímu (část v závorce se může lišit):</p>
+<pre><code>Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 6.5.0-1023-azure x86_64)</code></pre>
+<p>Případně si můžete verzi vypsat příkazem <code>lsb_release -a</code>, který vypíše něco jako:</p>
+<pre><code>Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.4 LTS
+Release:        22.04
+Codename:       jammy</code></pre>
+<p>Pokud ve výpisu nevidíte verzi <code>22.04</code>, ale nějakou jinou, tento návod není pro vás.</p></td>
+</tr>
+<tr data-step-seqid="3" data-step-sha256="bRF6lHC285rQmlGUC4yaXnwpQy4WkS7HQnKhgyeM8Wg">
+	<th>3.</th>
+	<td><p>Začněte tím, že následujícími příkazy aktualizujete všechny balíčky na nejnovější verzi pro stávající systém:</p>
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y &amp;&amp; sudo apt-get dist-upgrade</code></pre>
+<p>To bude, v závislosti na množství aktualizací a rychlosti vašeho připojení nějakou dobu trvat.</p></td>
+</tr>
+<tr data-step-seqid="4" data-step-sha256="WMBL+YnLgrMl8sjy47hngVCbwuzrYf2vdwLp1ElwVA8">
+	<th>4.</th>
+	<td><p>Je dobrý nápad server před aktualizací restartovat:</p>
+<pre><code>sudo reboot now</code></pre></td>
+</tr>
+</table>
+<h2>Nastavení firewallu</h2>
+<table class="steps">
+<tr data-step-seqid="5" data-step-sha256="xYf2V7b00bQ7LgnjulOUh3mhMuptu8jtkt8eKhj5PDU">
+	<th>5.</th>
+	<td><p>Canonical poněkud alibisticky nedoporučuje provádět upgrade systému na dálku, pomocí SSH. Nicméně v praxi vám často nic jiného nezbude, zejména u cloudových systémů. V průběhu instalace bude vytvořen záložní SSH server na portu <code>1022</code> (pro případ, že by ten standardní byl nedostupný). Nemáte-li přístup na konzoli serveru, je dobrý nápad povolit tento port na firewallu.</p>
+<p>Pokud používáte UFW, můžete tak učinit následujícími příkazy:</p>
+<pre><code>sudo ufw allow 1022/tcp
+sudo ufw reload</code></pre>
+<p>Pokud používáte Iptables, můžete totéž učinit následujícím příkazem:</p>
+<pre><code>sudo iptables -I INPUT -p tcp --dport 1022 -j ACCEPT</code></pre></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Pokud váš server běží v cloudu, bude nejspíše nutné tento port povolit i na cloudovém firewallu. To ale teď nemusíte dělat, jenom na to pamatujte v případě, že by došlo k havárii a museli byste rento záložní SSH server skutečně využít.</p></td>
+</tr>
+</table>
+<h2>Upgrade</h2>
+<table class="steps">
+<tr data-step-seqid="6" data-step-sha256="QoncF+hpznaas5pQIR6M3TKcu8d2pxG/wN9YIJWwdks">
+	<th>6.</th>
+	<td><p>Upgrade spustíte následujícím příkazem:</p>
+<pre><code>sudo do-release-upgrade -d</code></pre></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Pokud váš systém <code>do-release-upgrade</code> nezná, nainstalujte si balíček <code>ubuntu-release-upgrader-core</code>:</p>
+<pre><code>sudo apt install ubuntu-release-upgrader-core</code></pre>
+<p>Poté příkaz spusťte znovu:</p>
+<pre><code>sudo do-release-upgrade -d</code></pre></td>
+</tr>
+<tr data-step-seqid="7" data-step-sha256="6WEN8BSZjDnO2/zTtKvXt0gV/Hcf/IvSZ4NkLhgtvyw">
+	<th>7.</th>
+	<td><p>Zobrazí se vám základní informace a otázka <code>Continue [yN]</code>. Odpovězte <code>y</code> a odešlete <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="8" data-step-sha256="PQMOhfQjpXa2Kj+wk12XDSpcpsnyR3FmFjEWbHfIocM">
+	<th>8.</th>
+	<td><p>Zobrazí se vám varování o nevhodnosti upgrade pomocí SSH. Na <code>Continue [yN]</code>. Odpovězte <code>y</code> a odešlete <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="9" data-step-sha256="Ed9AYC6Y0RNQhlfhCpLX4gIibDPTQFIB1fi6f1vkZc4">
+	<th>9.</th>
+	<td><p>Budete vyzváni k otevření portu <code>1022</code> na firewallu, což jste už udělali v předchozím kroku. Klepněte na <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="10" data-step-sha256="PVHxSApRuG3RcTesYA0+Y0FZvEQM9RlZCNNGapKMfoU">
+	<th>10.</th>
+	<td><p>Vytvoří se seznam balíčků potřebných pro upgrade a vypíše se zpráva v následujícím duchu:</p>
+<pre><code>Do you want to start the upgrade?
+
+
+2 installed packages are no longer supported by Canonical. You can
+still get support from the community.
+
+60 packages are going to be removed. 143 new packages are going to be
+installed. 609 packages are going to be upgraded.
+
+You have to download a total of 474 M. This download will take about
+1 minute with your connection.
+
+Installing the upgrade can take several hours. Once the download has
+finished, the process cannot be canceled.
+
+Continue [yN]  Details [d]</code></pre>
+<p>Odpovězte <code>y</code> a odešlete <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="11" data-step-sha256="1aXsC/J2LrnHxv8lV/Wrphwmh77EDjr+IWbG+eHjulk">
+	<th>11.</th>
+	<td><p>Začne vlastní proces upgrade, který může trvat - jak vás předchozí zpráva varovala - i několik hodin, v závislosti na rychlosti vašeho serveru, připojení a množství balíčků.</p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>V průběhu instalace můžete být dotázáni, zda chcete dříve modifikovaný soubor přepsat novou verzí. Můžete si nechat zobrazit porovnání změn (diff), ale pokud nevíte co odpovědět, většinou je bezpečnější nechat původní verzi.</p></td>
+</tr>
+<tr data-step-seqid="12" data-step-sha256="Zy2zkVFHIbLGtYEBMbr0gACbuYo8MxZZTpSgbQc+euo">
+	<th>12.</th>
+	<td><p>Budete dotázáni, zda chcete odstranit zastaralé balíčky, čímž se mimo jiné uvolní místo na disku.</p>
+<pre><code>Remove obsolete packages?
+
+
+106 packages are going to be removed.
+
+Removing the packages can take several hours.
+
+Continue [yN]  Details [d]</code></pre>
+<p>Odpovězte dle vlastního uvážení a odešlete <em>Enter</em>. Ačkoliv program varuje, že to může trvat několik hodin, většinou to bývá podstatně rychlejší, v řádu minut.</p></td>
+</tr>
+<tr data-step-seqid="13" data-step-sha256="3h3+mC93hlVkvLITilXTyJNTGYcrMhuh2pqlsmMgaP8">
+	<th>13.</th>
+	<td><p>Pro dokončení upgrade je nutné restartovat počítač:</p>
+<pre><code>System upgrade is complete.
+
+Restart required
+
+To finish the upgrade, a restart is required.
+If you select 'y' the system will be restarted.
+
+Continue [yN]</code></pre>
+<p>Odpovězte <code>y</code> a odešlete <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="14" data-step-sha256="m8HYtesKRq6H3VBjkOTjmJiVmQkx4roYssurvsjkyrs">
+	<th>14.</th>
+	<td><p>Vyčkejte, dokud se server nerestartuje.</p></td>
+</tr>
+<tr data-step-seqid="15" data-step-sha256="VR3B/ebM7U1zSXwDSGDuEcS32Xg0QTMPede7AKZibFE">
+	<th>15.</th>
+	<td><p>Měli byste být přivítáni přibližně následujícím hlášením:</p>
+<pre><code>Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-1009-azure x86_64)</code></pre>
+<p>Proces upgrade byl úspěšně dokončen.</p></td>
+</tr>
+</table>
+<h2>Konfigurace firewallu</h2>
+<table class="steps">
+<tr data-step-seqid="16" data-step-sha256="hq0hJ5t4iF/LsCty1uNutvmrtQieo32rCA5WZaVnDmw">
+	<th>16.</th>
+	<td><p>Můžete zrušit pravidlo na firewallu, které povolilo přístup na port 1022.</p>
+<p>Pokud používáte UFW, můžete tak učinit následujícími příkazy:</p>
+<pre><code>sudo ufw delete allow 1022/tcp
+sudo ufw reload</code></pre>
+<p>Pokud používáte Iptables, můžete totéž učinit následujícím příkazem:</p>
+<pre><code>sudo iptables -D INPUT -p tcp --dport 1022 -j ACCEPT</code></pre></td>
+</tr>
+</table>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Upgrade+Ubuntu+Linuxu+z+verze+22.04+LTS+na+verzi+24.04+LTS&amp;body=https://www.altair.blog/2024/07/ubuntu-upgrade">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/07/ubuntu-upgrade.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/07/ubuntu-upgrade.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/07/ubuntu-upgrade">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/07/ubuntu-upgrade">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
