@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/07/vpn</guid>
+      <title>Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec</title>
+      <description>Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu. Většina běžných návodů předpokládá, že máte na svém počítači speciální klientský software. Já vám ukážu, jak vytvořit VPN server, na který se připojíte čistě pomocí toho, co máte k dispozici ve svém operačním systému.</description>
+      <link>https://www.altair.blog/2024/07/vpn</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Lab</category>
+      <category>Linux</category>
+      <pubDate>2024-07-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/07/ubuntu-upgrade</guid>
       <title>Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS</title>
       <description>V dubnu vyšla další long term support (LTS) verze Ubuntu Linuxu 24.04. Naučím vás, jak na ni rychle a bezbolestně upgradovat z předchozí LTS verze 22.04.</description>
@@ -144,16 +155,6 @@
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2023-10-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</guid>
-      <title>Kauza CryptoCult: U aplikací pro bezpečnou komunikaci rozhodně neplatí, že dražší je lepší a bezpečnější</title>
-      <description>Ministr vnitra Vít Rakušan používá ke komunikaci aplikaci, která podporuje end-to-end šifrování. To je výborná zpráva a bylo by ještě lepší, kdyby to byla taková samozřejmost, aby to nebyla ani zpráva. Jím zvolená aplikace ovšem radost poněkud kalí.</description>
-      <link>https://archiv.hn.cz/c7-67248280-psms7-b7742bdc8f3abf8</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2023-09-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

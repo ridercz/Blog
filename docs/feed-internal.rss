@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/07/vpn</guid>
+      <title>Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec</title>
+      <description>Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu. Většina běžných návodů předpokládá, že máte na svém počítači speciální klientský software. Já vám ukážu, jak vytvořit VPN server, na který se připojíte čistě pomocí toho, co máte k dispozici ve svém operačním systému.</description>
+      <link>https://www.altair.blog/2024/07/vpn</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Lab</category>
+      <category>Linux</category>
+      <pubDate>2024-07-09T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/07/ubuntu-upgrade</guid>
       <title>Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS</title>
       <description>V dubnu vyšla další long term support (LTS) verze Ubuntu Linuxu 24.04. Naučím vás, jak na ni rychle a bezbolestně upgradovat z předchozí LTS verze 22.04.</description>
@@ -145,15 +156,6 @@
       <category>IT</category>
       <category>Z-TECH</category>
       <pubDate>2023-09-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/09/backblaze</guid>
-      <title>Backblaze zdražuje: poslední šance předplatného za starou cenu</title>
-      <description>Moje oblíbená služba Backblaze bude od 3. října zdražovat. I tak zůstane velice výhodnou službou, ale nyní máte poslední šanci na nákup předplatného za starou cenu.</description>
-      <link>https://www.altair.blog/2023/09/backblaze</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2023-09-25T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

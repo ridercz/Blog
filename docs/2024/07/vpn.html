@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/07/vpn" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec" />
+    <meta name="twitter:description" content="Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu. Většina běžných návodů předpokládá, že máte na svém počítači speciální klientský software. Já vám ukážu, jak vytvořit VPN server, na který se připojíte čistě pomocí toho, co máte k dispozici ve svém operačním systému." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20240709-vpn.jpg" />
+    <meta property="article:published_time" content="2024-07-09" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec" />
+    <meta name="description" property="og:description" content="Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu. Většina běžných návodů předpokládá, že máte na svém počítači speciální klientský software. Já vám ukážu, jak vytvořit VPN server, na který se připojíte čistě pomocí toho, co máte k dispozici ve svém operačním systému." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20240709-vpn.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/07/vpn" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20240709-vpn.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/lab" title="Rubrika">
+              <i class="fal fa-tag"> </i>Lab</a>
+          </li>
+          <li>
+            <a href="/categories/linux" title="Rubrika">
+              <i class="fal fa-tag"> </i>Linux</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-07-09">9. července 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu.</p>
+<p>Nejjednodušší z uživatelsky nejpřívětivější je použít nějakou komerční VPN službu. Reklam na ně je plný Internet a jsou jich plné appstory na všech platformách. Důrazně vám doporučuji se jim všem vyhnout. Proč?</p>
+<ol>
+<li>Jsou jenom tak bezpečné a důvěryhodné, jak důvěryhodný je jejich provozovatel, což většinou není mnoho.</li>
+<li>Jsou drahé. Na jednorázový poplatek nevěřte (není to ekonomicky únosný model a poskytovatel přestane časem existovat a začne fungovat pod jinou vlajkou) a měsíční poplatky se rychle nasčítají. Vlastní řešení bude nejspíš podstatně výhodnější.</li>
+<li>Dají se snadno blokovat. Je jich celkem malé množství a je snadné je zablokovat síťově a ještě snazší donutit Apple nebo Google, aby aplikace stáhli z app store, jak se nedávno stalo v Rusku.</li>
+</ol>
+<p>Provozovat vlastní VPN server je snadné. Ostatně, vytvořil jsem <a href="https://elearning.altairis.cz/courses/outline">bezplatný online kurz</a>, jak si nainstalovat Outline VPN, což je program, který to výrazně usnadňuje i laikům. To se blokuje hůře. Není to nemožné, ale je to technologicky podstatně komplikovanější, než zablokovat pár nejpopulárnějších poskytovatelů komerčních VPN služeb. Pokud budete používat svou soukromou VPN sami, nebude nápadná. Navíc tyto technologie jsou tak rozšířené, že jejich plošné blokování by přineslo spoustu problémů i z hlediska režimu žádoucích cílů.</p>
+<p>Nicméně Outline má jednu nevýhodu: vyžaduje speciální klientskou aplikaci. Proto vás naučím, jak jednoduše vytvořit VPN pomocí standardních technologií IKEv2 a L2TP/IPsec. Ty pro standardní operační systémy (včetně mobilních) nepotřebují žádnou speciální aplikaci, ale podpora pro ně je součástí systému samotného.</p>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/udeTS5GDk-c" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Jediné co je nutné, je mít k dispozici server, na kterém běží Ubuntu, Debian nebo CentOS, je dostupný z Internetu (má veřejnou IP adresu) a byl umístěn v síťové lokaci, kterou pokládáte pro svůj účel za vhodnou, neboť pro zbytek Internetu budete přistupovat z ní. O všechno ostatní se postarají skripty projektu <a href="https://setupvpn.net/">setupvpn.net</a>.</p>
+<blockquote>
+<p><strong>Já s oblibou používám cloudového poskytovatele Digital Ocean. Pokud se zaregistrujete přes odkaz <a href="https://altair.is/digitalocean">https://altair.is/digitalocean</a>, dostanete do začátku kredit $200 na 60 dnů.</strong> Můžete ale použít i jiného cloudového poskytovatele - Microsoft Azure, Amazon EC2, Oracle Cloud Infrastructure... Případně normální VPS hosting nebo vlastní server.</p>
+</blockquote>
+<table class="steps">
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Tento návod předpokládá, že váš server má IP adresu <code>198.51.100.42</code>. Místo ní použijte skutečnou adresu vašeho serveru.</p></td>
+</tr>
+</table>
+<h2>Konfigurace serveru</h2>
+<table class="steps">
+<tr data-step-seqid="1" data-step-sha256="VCSsRWgbVNZRIjXHrKR81YNUUADVdd8MBhnNiIQ0rVg">
+	<th>1.</th>
+	<td><p>Připojte se přes SSH na server, např.:</p>
+<pre><code>ssh root@198.51.100.42</code></pre>
+<p>Budete-li vyzváni k potvrzení otisku klíčů serveru, zadejte <code>yes</code>.</p></td>
+</tr>
+<tr data-step-seqid="2" data-step-sha256="x35qayLrunPWd7UUUZStJ0Tn/50qhowhNSRd8Ukb/M4">
+	<th>2.</th>
+	<td><p>Na serveru zadejte následující příkaz:</p>
+<pre><code>wget https://get.vpnsetup.net -O vpn.sh &amp;&amp; sudo sh vpn.sh</code></pre>
+<p>Tím stáhnete setup skript a automaticky ho spustíte.</p></td>
+</tr>
+<tr id="credentials" data-step-seqid="3" data-step-sha256="E+nx+OEN8b8dTw+msylvUMxVGeTBOU2FzSN8d6V/zac">
+	<th>3.</th>
+	<td><p>Na konci vám vypíše důležité údaje, poznamenejte si je:</p>
+<pre>
+================================================
+
+IPsec VPN server is now ready for use!
+
+Connect to your new VPN with these details:
+
+Server IP: <ins>198.51.100.42</ins>
+IPsec PSK: <ins>xxxxxxxxxxxxxxxxxxxx</ins>
+Username: vpnuser
+Password: <ins>xxxxxxxxxxxxxxxx</ins>
+
+Write these down. You'll need them to connect!
+
+VPN client setup: https://vpnsetup.net/clients
+
+================================================
+
+================================================
+
+IKEv2 setup successful. Details for IKEv2 mode:
+
+VPN server address: <ins>198.51.100.42</ins>
+VPN client name: vpnclient
+
+Client configuration is available at:
+/root/vpnclient.p12 (for Windows & Linux)
+/root/vpnclient.sswan (for Android)
+/root/vpnclient.mobileconfig (for iOS & macOS)
+
+Next steps: Configure IKEv2 clients. See:
+https://vpnsetup.net/clients
+
+================================================
+</pre></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>V tomto okamžiku vám na serveru běží VPN server pro dva protokoly:</p>
+<ul>
+<li><strong><a href="https://en.wikipedia.org/wiki/Internet_Key_Exchange">IKEv2/IPSec</a></strong> - zkratka znamená <em>Internet Key Exchange version 2</em> a je to (relativně) nový standard, který pro autentizaci používá asymetrickou kryptografii. Pokud je to možné, použijte tento protokol, mimo jiné protože lépe funguje skrz různé NATy, firewally a podobně.</li>
+<li><strong><a href="https://en.wikipedia.org/wiki/Layer_2_Tunneling_Protocol">L2TP/IPsec</a></strong> - zkratka znamená <em>Layer 2 Tunneling Protocol</em> a je to (relativně) starší standard, který v našem případě pro autentizaci používá uživatelské jméno, heslo a další <em>sdílené tajemství</em> - pre-shared key, PSK.</li>
+</ul>
+<p>Kromě toho můžete jednoduše pomocí podobných skriptů nastavit podporu i pro <a href="https://github.com/hwdsl2/wireguard-install">WireGuard</a> a <a href="https://github.com/hwdsl2/openvpn-install">OpenVPN</a>. To jsou další protokoly pro VPN, které ale nemají v klientských OS vestavěnou podporu (potřebujete doinstalovat odpovídajícího klienta).</p>
+<p>Na klientovi můžete nastavit podporu pro jeden nebo více protokolů, nezávisle na sobě. Doporučuji jich přidat více, zvýšíte tím šanci, že skrz restriktivní firewall jeden z nich projde.</p></td>
+</tr>
+</table>
+<h2>Konfigurace klienta</h2>
+<p>Následující návod je určen pro Windows. Pro jiné operační systémy najdete postup na adrese <a href="https://vpnsetup.net/clients">https://vpnsetup.net/clients</a>.</p>
+<ul>
+<li>Pokud chcete nastavit IKEv2/IPsec VPN, pokračujte následujícím krokem číslo <a href="#setup-ikev2">4</a>.</li>
+<li>Pokud chcete nastavit L2TP/IPsec VPN, pokračujte krokem číslo <a href="#setup-l2tp">12</a>.</li>
+</ul>
+<h3>Konfigurace IKEv2/IPsec na Windows</h3>
+<table class="steps">
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Následující návod bude fungovat na Windows 11, na starších verzích se postup může mírně lišit. Na dnes již nepodporovaných verzích Windows (7, 8) standardně není nainstalováno <code>curl</code> a <code>scp</code> a budete tedy muset soubory přenést jinak a dávkový soubor stáhnout ručně.</p></td>
+</tr>
+<tr id="setup-ikev2" data-step-seqid="4" data-step-sha256="g2N/VbnaK9f2nqZvzSZoLC0DKA6v35JQg6Lnb0WTddM">
+	<th>4.</th>
+	<td><p>Na serveru byl vytvořen soubor <code>/root/vpnclient.p12</code>, který obsahuje klíče, které potřebujete pro připojení k VPN. Následujícím příkazem ho zkopírujete na lokální počítač:</p>
+<pre><code>scp root@198.51.100.42:/root/vpnclient.p12 .</code></pre></td>
+</tr>
+<tr data-step-seqid="5" data-step-sha256="zyi1tzcr68sQbiiVFqfaFITYM+EZikqdPBo653/eFeM">
+	<th>5.</th>
+	<td><p>Dále pak do stejného adresáře stáhněte z GitHubu soubor <a href="https://github.com/hwdsl2/vpn-extras/releases/latest/download/ikev2_config_import.cmd">ikev2_config_import.cmd</a>, například následujícím příkazem:</p>
+<pre><code>curl -L https://github.com/hwdsl2/vpn-extras/releases/latest/download/ikev2_config_import.cmd &gt; ikev2_config_import.cmd</code></pre></td>
+</tr>
+<tr data-step-seqid="6" data-step-sha256="eN6cJ6yEe+QRLOh+T04aYy4u7gQ1pSNFT8vOfZUedeI">
+	<th>6.</th>
+	<td><p>Spusťte tento soubor jako administrátor (klepnout pravým tlačítkem a zvolit <em>Run as administrator</em> nebo <em>Spustit jako správce</em>).</p></td>
+</tr>
+<tr data-step-seqid="7" data-step-sha256="P5oFSycPlufkRauoRl3otEeYU1y0EYzWFLDZ4GPk1EU">
+	<th>7.</th>
+	<td><p>Skript vypíše úvodní zprávu:</p>
+<pre><code>===================================================================
+Welcome! Use this helper script to import an IKEv2 configuration
+into a PC running Windows 8, 10 or 11.
+For more details, see https://vpnsetup.net/ikev2
+
+Before continuing, you must put the .p12 file you transferred from
+the VPN server in the *same folder* as this script.
+===================================================================
+
+Enter the name of the IKEv2 VPN client to import.
+Note: This is the same as the .p12 filename without extension.
+To accept the suggested client name, press Enter.
+VPN client name: [vpnclient]</code></pre>
+<p>Pokud jste soubor <code>vpnclient.p12</code> nepřejmenovali, stačí stisknout <em>Enter</em>. Pokud ano, zadejte nový název souboru (bez přípony).</p></td>
+</tr>
+<tr data-step-seqid="8" data-step-sha256="kV1D8NlTbvjWJ/3RL8BauqIQC93F+g00TBZHCTtDBEk">
+	<th>8.</th>
+	<td><p>Skript vypíše:</p>
+<pre><code>Enter the IP address (or DNS name) of the VPN server.
+Note: This must exactly match the VPN server address in the output
+of the IKEv2 helper script on your server.
+VPN server address:</code></pre>
+<p>Zde zadejte název nebo IP adresu vašeho VPN serveru (v příkladu <code>198.51.100.42</code>).</p></td>
+</tr>
+<tr data-step-seqid="9" data-step-sha256="bk19xIjCpscK9tnp3sBEAXQqLzg5Pvv7LKBrdhmubvk">
+	<th>9.</th>
+	<td><p>Skript vypíše:</p>
+<pre><code>Provide a name for the new IKEv2 connection.
+To accept the suggested connection name, press Enter.
+IKEv2 connection name: [IKEv2 VPN 198.51.100.42]</code></pre>
+<p>Zde zadejte název VPN, pod kterým bude vidět v systému. Standarně je to <code>IKEv2 VPN &lt;název serveru&gt;</code>, ale můžete zadat cokoliv, např. <code>VPN Test IKEv2</code>.</p></td>
+</tr>
+<tr data-step-seqid="10" data-step-sha256="rPxJLtcJf5t/j8RByPA8Zhr4DGUBrHuEZz1yL+VA77g">
+	<th>10.</th>
+	<td><p>Skript na konci vypíše:</p>
+<pre><code>IKEv2 configuration successfully imported!
+To connect to the VPN, click on the wireless/network icon in your system tray,
+select the &quot;IKEv2 VPN 198.51.100.42&quot; VPN entry, and click Connect.
+
+Press any key to exit.</code></pre>
+<p>Stiskněte <em>Enter</em> pro ukončení nastavení.</p></td>
+</tr>
+<tr data-step-seqid="11" data-step-sha256="HTHjoonxhrgSyONFlxYDeEfMcZ2i3e3O7l4+mJoJ9sE">
+	<th>11.</th>
+	<td><p>Pro připojení k VPN klepněte na ikonu síťových připojení na hlavním panelu. Vyberte ikonu VPN a klepněte na název nově vytvořené VPN. Tím budete připojeni.</p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Že jste připojeni přes VPN si můžete ověřit například na stránce <a href="https://www.whatismyip.com/">https://www.whatismyip.com/</a>. Ta vypíše, z jaké IP adresy přicházíte a kde se (podle její geolokace) nachází.</p></td>
+</tr>
+</table>
+<h3>Konfigurace L2TP/IPSec VPN na Windows 7 a novějších</h3>
+<table class="steps">
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Následující návod bude fungovat na Windows 11, na starších verzích se postup může mírně lišit.</p></td>
+</tr>
+<tr id="setup-l2tp" data-step-seqid="12" data-step-sha256="U5YRhtExsi2N0B0IEa4MnsyHKqF/CQyfoL/tA2yK64w">
+	<th>12.</th>
+	<td><p>Pokud je váš počítač za NAT (což asi je), spusťte jako administrátor z příkazové řádky následující příkaz, kterým nastavíte podporu příslušné funkce:</p>
+<pre><code>REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AssumeUDPEncapsulationContextOnSendRule /t REG_DWORD /d 0x2 /f</code></pre>
+<p>Alternativně můžete stáhnout a spustit <a href="https://github.com/hwdsl2/vpn-extras/releases/download/v1.0.0/Fix_VPN_Error_809_Windows_Vista_7_8_10_Reboot_Required.reg">připravený .reg soubor</a>, který udělá totéž.</p></td>
+</tr>
+<tr data-step-seqid="13" data-step-sha256="WOlfcgI0ARWV+u0eIqPBmSWxoPsEjWst+wX22KX9DU8">
+	<th>13.</th>
+	<td><p>Poté restartujte počítač.</p></td>
+</tr>
+<tr data-step-seqid="14" data-step-sha256="XNH678pYWvY4KPKHMIad/Mwe6qpIjn7xLo7VadXAT8s">
+	<th>14.</th>
+	<td><p>Otevřete nastavení Windows (například stiskem <em>Win+I</em>).</p></td>
+</tr>
+<tr data-step-seqid="15" data-step-sha256="J4spEY9uEpm1kafY2eU6FeSpFUgl06OtDaL3VtegfWo">
+	<th>15.</th>
+	<td><p>Vyberte <em>Network &amp; Internet</em> (<em>Síť a Internet</em>) a poté <em>VPN</em>.</p></td>
+</tr>
+<tr data-step-seqid="16" data-step-sha256="YeTNoI/nCNeXMaa2vE3R/LcaKZUGP7WFpf9RnfN+2eU">
+	<th>16.</th>
+	<td><p>Klepněte na tlačítko <em>Add VPN</em>.</p></td>
+</tr>
+<tr data-step-seqid="17" data-step-sha256="j2Zck1uOehOUP3kk12C7mxtI7fCZadGrrsHFVZiTk4M">
+	<th>17.</th>
+	<td><p>V dialogu pro přidání VPN zadejte následující hodnoty:</p>
+<ul>
+<li><strong>VPN provider:</strong> <em>Windows (built-in)</em></li>
+<li><strong>Connection name:</strong> cokoliv chcete, např. <em>VPN Test L2TP</em></li>
+<li><strong>Server name or address:</strong> název či adresu vašeho serveru, např. <em>198.51.100.42</em></li>
+<li><strong>VPN type:</strong> <em>L2TP/IPsec with pre-shared key</em></li>
+<li><strong>Pre-shared key:</strong> hodnotu <em>IPsec PSK</em> zjištěnou v kroku <a href="#credentials">3</a></li>
+<li><strong>Type of sign-in info:</strong> <em>Username and password</em></li>
+<li><strong>Username:</strong> <em>vpnuser</em></li>
+<li><strong>Password:</strong> heslo zjištěné v kroku <a href="#credentials">3</a></li>
+</ul>
+<p>Poté klepněte na <em>Save</em> pro ukončení nastavení.</p></td>
+</tr>
+<tr data-step-seqid="18" data-step-sha256="HTHjoonxhrgSyONFlxYDeEfMcZ2i3e3O7l4+mJoJ9sE">
+	<th>18.</th>
+	<td><p>Pro připojení k VPN klepněte na ikonu síťových připojení na hlavním panelu. Vyberte ikonu VPN a klepněte na název nově vytvořené VPN. Tím budete připojeni.</p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Že jste připojeni přes VPN si můžete ověřit například na stránce <a href="https://myip.sh/">https://myip.sh/</a>. Ta vypíše, z jaké IP adresy přicházíte a kde se (podle její geolokace) nachází.</p></td>
+</tr>
+</table>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Vlastn%c3%ad+VPN+bez+speci%c3%a1ln%c3%adho+software+-+IKEv2+nebo+L2TP%2fIPsec&amp;body=https://www.altair.blog/2024/07/vpn">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/07/vpn.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/07/vpn.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/07/vpn">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/07/vpn">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
