@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=1ZVSbOjW-5Y</guid>
+      <title>Černý pátek světového IT: Chyba v CrowdStrike Falcon, výpadek Azure a útoky APT41</title>
+      <description>Kombinace tří faktorů přinesla výpadky IT systémů po celém světě. Jde o chybu v bezpečnostním software CrowdStrike, výpadek jednoho regionu cloudu Microsoft Azure a útoky čínské skupiny APT41. Pokusil jsem se srozumitelně shrnout, co se vlastně děje.</description>
+      <link>https://www.youtube.com/watch?v=1ZVSbOjW-5Y</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Z-TECH</category>
+      <pubDate>2024-07-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.youtube.com/watch?v=jM0vqnFosYY</guid>
       <title>Automatická tvorba titulků pomocí nástrojů Whisper a Subtitle Edit</title>
       <description>Od začátku července ke svým YouTube videím přidávám titulky. Pomůže to neslyšícím, ale třeba i AI. Ovšem ruční tvorba titulků je dost náročná. Naštěstí ale existuje speech-to-text engine Whisper, který docela obstojně funguje i pro češtinu a program Subtitle Edit, který z přepisu umí udělat titulky.</description>
@@ -146,16 +156,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2023-12-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/10/pooka</guid>
-      <title>Pooka: Automatické vypnutí počítače při odchodu</title>
-      <description>Stihnete vypnout počítač, když vám zásahovka vyrazí dveře? Nebo ho jenom zapomínáte zamknout, když jdete na oběd? V obou případech vám pomůže trocha hardware a pomocník jménem Pooka.</description>
-      <link>https://www.altair.blog/2023/10/pooka</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2023-10-31T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
