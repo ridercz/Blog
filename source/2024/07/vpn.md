@@ -100,6 +100,14 @@ V tomto okamžiku vám na serveru běží VPN server pro dva protokoly:
 Kromě toho můžete jednoduše pomocí podobných skriptů nastavit podporu i pro [WireGuard](https://github.com/hwdsl2/wireguard-install) a [OpenVPN](https://github.com/hwdsl2/openvpn-install). To jsou další protokoly pro VPN, které ale nemají v klientských OS vestavěnou podporu (potřebujete doinstalovat odpovídajícího klienta).
 
 Na klientovi můžete nastavit podporu pro jeden nebo více protokolů, nezávisle na sobě. Doporučuji jich přidat více, zvýšíte tím šanci, že skrz restriktivní firewall jeden z nich projde.
+
+Pokud je mezi serverem a klientem firewall, je třeba ho patřičně nastavit. Je třeba povolit:
+
+* Port 500/udp (IKE)
+* Port 1701/udp (L2TP)
+* Port 4500/udp (NAT-T-IKE)
+* IP Protocol 50 (ESP, Encapsulated Security Payload)
+* IP Protocol 51 (AH, Authentication Header)
 - - -
 ## Konfigurace klienta
 

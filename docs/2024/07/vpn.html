@@ -217,7 +217,15 @@ https://vpnsetup.net/clients
 <li><strong><a href="https://en.wikipedia.org/wiki/Layer_2_Tunneling_Protocol">L2TP/IPsec</a></strong> - zkratka znamená <em>Layer 2 Tunneling Protocol</em> a je to (relativně) starší standard, který v našem případě pro autentizaci používá uživatelské jméno, heslo a další <em>sdílené tajemství</em> - pre-shared key, PSK.</li>
 </ul>
 <p>Kromě toho můžete jednoduše pomocí podobných skriptů nastavit podporu i pro <a href="https://github.com/hwdsl2/wireguard-install">WireGuard</a> a <a href="https://github.com/hwdsl2/openvpn-install">OpenVPN</a>. To jsou další protokoly pro VPN, které ale nemají v klientských OS vestavěnou podporu (potřebujete doinstalovat odpovídajícího klienta).</p>
-<p>Na klientovi můžete nastavit podporu pro jeden nebo více protokolů, nezávisle na sobě. Doporučuji jich přidat více, zvýšíte tím šanci, že skrz restriktivní firewall jeden z nich projde.</p></td>
+<p>Na klientovi můžete nastavit podporu pro jeden nebo více protokolů, nezávisle na sobě. Doporučuji jich přidat více, zvýšíte tím šanci, že skrz restriktivní firewall jeden z nich projde.</p>
+<p>Pokud je mezi serverem a klientem firewall, je třeba ho patřičně nastavit. Je třeba povolit:</p>
+<ul>
+<li>Port 500/udp (IKE)</li>
+<li>Port 1701/udp (L2TP)</li>
+<li>Port 4500/udp (NAT-T-IKE)</li>
+<li>IP Protocol 50 (ESP, Encapsulated Security Payload)</li>
+<li>IP Protocol 51 (AH, Authentication Header)</li>
+</ul></td>
 </tr>
 </table>
 <h2>Konfigurace klienta</h2>
