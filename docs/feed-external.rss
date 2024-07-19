@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=jM0vqnFosYY</guid>
+      <title>Automatická tvorba titulků pomocí nástrojů Whisper a Subtitle Edit</title>
+      <description>Od začátku července ke svým YouTube videím přidávám titulky. Pomůže to neslyšícím, ale třeba i AI. Ovšem ruční tvorba titulků je dost náročná. Naštěstí ale existuje speech-to-text engine Whisper, který docela obstojně funguje i pro češtinu a program Subtitle Edit, který z přepisu umí udělat titulky.</description>
+      <link>https://www.youtube.com/watch?v=jM0vqnFosYY</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Z-TECH</category>
+      <pubDate>2024-07-19T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2023/12/vune-mandragory</guid>
       <title>Vůně mandragory</title>
       <description>Moje první fan fiction v životě. Když jsem před nějakými dvaceti lety poprvé četl příběhy Harryho Pottera, samozřejmě mě zaujali zvěromágové - kouzelníci, kteří se umí přeměnit ve zvíře. Umět ze sebe doopravdy udělat koně, to by bylo něco! A jak se svět J. K. Rowlingové dál rozvíjel, našel jsem i další informace o zvěromázích. Postup jak se jím stát... A také informaci, že pokud se přesně nedodrží, může být kouzelník dosmrti zaklet do podoby napůl lidské, napůl zvířecí. Okamžitě se mi v hlavě začal rodit příběh takového nešikového kouzelníka, kterému Brumbál - jako jiným outsiderům kouzelnického světa - poskytne v Bradavicích útočiště. A krásné dominantní a sadistické čarodějce ze Zmijozelu, samozřejmě.</description>
@@ -141,16 +151,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-06T08:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246</guid>
-      <title>NÚKIB vydal doporučení ke správnému používání aplikace Signal. Jak ho správně číst?</title>
-      <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal sadu doporučení k bezpečnému používání aplikace Signal. Bohužel však celou akci komunikuje s typickou úřední nesrozumitelností, takže je Twitter plný dotazů, jestli se to má chápat jako doporučení „používejte Signal“, nebo jako varování „když už musíte používat Signal, dělejte to aspoň bezpečně“. Pojďme to přeložit z úředničtiny do češtiny.</description>
-      <link>https://tech.hn.cz/c7-67040010-psms7-2ee2ac01e122246</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-03T08:00:00</pubDate>
     </item>
   </channel>
 </rss>
