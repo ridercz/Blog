@@ -1,0 +1,9 @@
+<!-- dcterms:title = Bomba týden pro Hizballáh: Jak fungují pagery a proč vybuchovaly teroristům po celém Libanonu v rukou a po kapsách -->
+<!-- dcterms:abstract = Bomba týden, který zažívají teroristé z hnutí Hizballáh v Libanonu je výbornou příležitostí, proč se podívat na to, jak fungují zařízení, která se po několika desetiletích díky němu vrátila do popředí veřejného zájmu: pagery. Proč se pagery příliš neuchytily v České republice a proč jsou naopak oblíbené mezi teroristy. Tedy, spíše byly, dá se očekávat, že nyní jejich popularita v těchto kruzích poněkud opadne. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/20240920-pager.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:date = 2024-09-20 -->
+<!-- x4w:alternateUrl = https://tech.hn.cz/c7-67384730-hdq8q-cb8aa8935c27efe -->
