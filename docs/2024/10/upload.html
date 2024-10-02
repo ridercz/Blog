@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upload souborů v ASP.NET Core | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/10/upload" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Upload souborů v ASP.NET Core" />
+    <meta name="twitter:description" content="V ASP.NET Core existují dvě hlavní cesty, jak dostat soubory z klienta na server: bufferovaný a streamovaný upload. Oba dva si ukážeme a představíme si jejich výhody a nevýhody." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20241002-upload.jpg" />
+    <meta property="article:published_time" content="2024-10-02" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Upload souborů v ASP.NET Core" />
+    <meta name="description" property="og:description" content="V ASP.NET Core existují dvě hlavní cesty, jak dostat soubory z klienta na server: bufferovaný a streamovaný upload. Oba dva si ukážeme a představíme si jejich výhody a nevýhody." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20241002-upload.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/10/upload" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20241002-upload.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Upload souborů v ASP.NET Core</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-10-02">2. října 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Ve webových aplikacích je často potřeba uploadovat soubory z klienta na server. Buďto se tam mají nějakým způsobem zpracovat, nebo třeba jenom uložit a zpřístupnit někomu dalšímu. ASP.NET Core nabízí dvě základní metody bufferovaný a streamovaný upload.</p>
+<ul>
+<li><strong>Bufferovaný upload</strong> je nejjednodušší na zpracování. Celý uploadovaný soubor se natáhne do paměti a je k dispozici jako <code>IFormFile</code> a mohu zjistit jeho velikost, původní název a samozřejmě přistupovat k jeho obsahu. Tato metoda je vhodná zejména pro menší soubory, ve velikosti jednotek nebo malých desítek MB.</li>
+<li><strong>Streamovaný upload</strong> je vhodnější pro větší soubory, protože nevyžaduje, aby se všechno načetlo do paměti najednou, ale data lze zpracovávat nebo ukládat postupně. Díky tomu lze ukládat i data o objemu stovek megabajtů až gigabajtů.</li>
+</ul>
+<p>Připravil jsem pro vás dvoudílný seriál, který toto téma pojednává. K dispozici jsou i <a href="https://www.cdn.altairis.cz/Blog/2024/20241001-LargeFileUpload.zip">zdrojové kódy příkladu</a>.</p>
+<h2 id="bufferovany-upload-a-validace-nazvu-souboru">Bufferovaný upload a validace názvů souborů</h2>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/uJhVb9-p6MU" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>V prvním videu vám ukážu, jak používat klasický bufferovaný upload, což je velmi jednoduché. Také zde mluvím o důležitém tématu, kterým je sanitizace názvů souborů.</p>
+<h3 id="file-name-sanitizer">File name sanitizer</h3>
+<p>Klient sice pošle s daty i název souboru (jaký název měl původně), ale těmto datům není dobré věřit. Protože zlovolný klient může podstrčit v podstatě cokoliv. Nelze tedy bez dalšího vzít název souboru zaslaný klientem a použít ho jako název souboru na serveru. Ideální z hlediska bezpečnosti by bylo, kdybychom mohli klientem zaslaný název souboru zcela ignorovat a vytvořit si vlastní název, o kterém víme, že je bezpečný. To ale často není možné.</p>
+<p>Vyvořil jsem proto interface <code>IFileNameSanitizer</code>, který má jedinou metodu <code>SanitizeFileName</code> a ta dostane na vstupu data zadaná z klienta a na výstupu vrátí bezpečný název souboru:</p>
+<pre><code class="language-csharp">public interface IFileNameSanitizer {
+
+    public string? SanitizeFileName(string fileName);
+
+}
+</code></pre>
+<p>Zároveň jsem vytvořil jeho implementaci <code>WindowsFileNameSanitizer</code>, což je třída, která provádí velice konzervativní ošetření názvů souborů, mimo jiné na základě pravidel zmíněných v článku <a href="https://learn.microsoft.com/windows/win32/fileio/naming-a-file#naming-conventions">Naming Files, Paths, and Namespaces</a>. Pravidla pro Linux by byla poněkud volnější (název souboru může na Linuxu obsahovat i znaky, které by na Windows možné nebyly), ale chceme-li aby byla aplikace multiplatformní, je lepší používat konzervativnější přístup Windows.</p>
+<p>Třída vypadá takto:</p>
+<pre><code class="language-csharp">public class WindowsFileNameSanitizer : IFileNameSanitizer {
+
+    private const string ValidFileNameChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.&quot;;
+    private static readonly string[] ReservedNames = [&quot;^CON$&quot;, &quot;^PRN$&quot;, &quot;^AUX$&quot;, &quot;^NUL$&quot;, @&quot;^COM\d*$&quot;, @&quot;^LPT\d*$&quot;];
+
+    public string? SanitizeFileName(string fileName) {
+        // Get file name without path
+        fileName = Path.GetFileName(fileName);
+
+        // Replace spaces with underscores
+        fileName = fileName.Replace(' ', '_');
+
+        // Remove diacritic from file name
+        fileName = string.Join(&quot;&quot;, fileName.Normalize(NormalizationForm.FormD).Where(c =&gt; CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)).Normalize(NormalizationForm.FormC);
+
+        // Remove all unsupported characters
+        fileName = string.Join(&quot;&quot;, fileName.Where(ValidFileNameChars.Contains));
+
+        // Shorten the file name to 64 characters and extension to 32 characters
+        var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
+        var extension = Path.GetExtension(fileName);
+        if (fileNameWithoutExtension.Length &gt; 64) fileNameWithoutExtension = fileNameWithoutExtension[..64];
+        if (extension.Length &gt; 32) extension = extension[..32];
+
+        // Replace all dots in filename part with underscores
+        fileNameWithoutExtension = fileNameWithoutExtension.Replace('.', '_');
+
+        // Do not accept files whose names or extensions are empty after removing unsupported characters
+        if (string.IsNullOrEmpty(fileNameWithoutExtension)) return null;
+        if (string.IsNullOrEmpty(extension)) return null;
+
+        // Do not accept files with reserved names
+        foreach (var reservedName in ReservedNames) {
+            if (Regex.IsMatch(fileNameWithoutExtension, reservedName, RegexOptions.IgnoreCase)) return null;
+        }
+
+        // Join the file name and extension
+        return fileNameWithoutExtension + extension;
+    }
+
+}
+</code></pre>
+<p>Postup sanitizace je následující:</p>
+<ul>
+<li>Z názvu souboru odstraníme cestu, pokud je přítomna.</li>
+<li>Případné mezery nahradíme podtržítky.</li>
+<li>Odstraníme diakritiku běžně používaným trikem, kdy string převedeme na Unicode Form D, kdy jsou diakritická znaménka jako samostatné znaky a ty odstraníme. Poté převedeme string na běžnější Form C. Nejsem si zcela jist, zda toto odstranění diakritiky funguje zcela spolehlivě za všech okolností, ale pro české znaky je uspokojivé.</li>
+<li>Odstraníme z názvu souboru všechny znaky, které nejsou v seznamu povolených. Povolená jsou pouze velká a malá písmena anglické abecedy, číslice, mínus, podtržítko a tečka.</li>
+<li>Název souboru zkrátíme na 64 znaků a příponu na 32 znaků. Tento limit jsem zvolil zcela odhadem, limit délky cesty závisí na použitém souborovém systému atd., ale 64 + 32 znaků mi přijde jako rozumný limit pro běžné soubory.</li>
+<li>Tečky v názvu souboru nahradíme podtržítky. Název souboru bude obsahovat právě jednu tečku, před příponou.</li>
+<li>Ověříme si, že soubor má jak název, tak příponu. Neakceptujeme tedy soubory bez přípony.</li>
+<li>Odmítneme soubory s názvy, které jsou na Windows rezervované, jako <code>CON</code>, <code>PRN</code>, <code>AUX</code>, <code>NUL</code>, <code>COMx</code> nebo <code>LPTx</code>.</li>
+</ul>
+<p>Výsledek vrátíme zpět. Pokud se nepodařilo vytvořit validní název (třeba protože název souboru obsahuje pouze nepovolené znaky nebo je rezervovaný), vrátí metoda <code>null</code>. Volající kód se s tím musí nějak vyrovnat, třeba vrátit chybu.</p>
+<h2 id="streamovany-upload-na-nekolik-souboru">Streamovaný upload na několik souborů</h2>
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/MHpXk8GO5XM" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+<p>Druhé video se zabývá streamovaným uploadem souborů. Tam přistupujeme k datům na mnohem nižší úrovni, nemáme k dispozici pohodlné zpracování formulářových dat a podobně. Navíc je třeba trocha klientského JavaScriptu. Výměnou za to ale dokážeme uploadovat i větší soubory a hlavně v průběhu uploadu komunikovat s klientem -- ukázat mu průběh uploadu, rychlost a podobné věci.</p>
+<p>Ve videu ukážu postupně tři varianty uploadu, z nichž v praxi použitelná je vlastně jenom ta poslední. První dvě totiž neumějí zjistit, že se soubor v pořádku nahrál celý, pokud bude upload přerušen, zůstane soubor nekompletní. Poslední příklad ale používá dočasný soubor, pomocí jehož názvu sváže uploadovaný soubor s ostatními odeslanými formulářovými daty.</p>
+<h2 id="to-neni-vsechno">To není všechno</h2>
+<p>Obě popisované metody mají jednu velkou výhodu i nevýhodu zároveň: přenos běží v rámci jednoho HTTP requestu. Je velmi jednoduchý, ale pořád jsme omezeni maximální velikostí jednoho requestu a nedokážeme třeba navázat spojení v případě jeho výpadku a podobně.</p>
+<p>Pokud bychom potřebovali takovou funkcionalitu, použitelnou i pro souboru o velikosti mnoha gigabajtů, bylo by zapotřebí k tomu přistupovat výrazně jinak. Pomocí JavaScriptového <a href="https://developer.mozilla.org/en-US/docs/Web/API/File">File API</a> lze z browseru přistupovat k (některým, uživatelem vybraným) souborům ve file systému. Můžeme je postupně po částech načítat a postupně posílat v několika HTTP requestech na server. Nicméně to je podstatně složitější postup a jím se budu možná zabývat někdy příště, stejně jako způsoby zpracování a ukládání souborů na straně serveru.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Upload+soubor%c5%af+v+ASP.NET+Core&amp;body=https://www.altair.blog/2024/10/upload">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/10/upload.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/10/upload.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/10/upload">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/10/upload">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

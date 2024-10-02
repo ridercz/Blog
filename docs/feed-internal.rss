@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/10/upload</guid>
+      <title>Upload souborů v ASP.NET Core</title>
+      <description>V ASP.NET Core existují dvě hlavní cesty, jak dostat soubory z klienta na server: bufferovaný a streamovaný upload. Oba dva si ukážeme a představíme si jejich výhody a nevýhody.</description>
+      <link>https://www.altair.blog/2024/10/upload</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2024-10-02T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/07/vpn</guid>
       <title>Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec</title>
       <description>Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu. Většina běžných návodů předpokládá, že máte na svém počítači speciální klientský software. Já vám ukážu, jak vytvořit VPN server, na který se připojíte čistě pomocí toho, co máte k dispozici ve svém operačním systému.</description>
@@ -146,16 +155,6 @@
       <author>Michal Altair Valášek</author>
       <category>Lidé a jiná zvěř</category>
       <pubDate>2023-10-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/09/solid</guid>
-      <title>Co jsou SOLID principy v .NET a proč by vás měly zajímat?</title>
-      <description>SOLID je sada pěti principů používaných při psaní objektově orientovaného kódu. Pro .NET programátory je podstatná především proto, že ji dodržuje samotný .NET. A proto ji musíte znát, i kdybyste ji nechtěli sami dodržovat.</description>
-      <link>https://www.altair.blog/2023/09/solid</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Z-TECH</category>
-      <pubDate>2023-09-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
