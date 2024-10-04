@@ -6,6 +6,17 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/10/iot-workshop</guid>
+      <title>Zvu vás na druhý běh IoT workshopu pro .NET programátory</title>
+      <description>IoT hype je za námi a je tedy čas se jím začít seriózně zabývat. Připravil jsem pro vás workshop o programování mikrokontrolerů, ale hlavně o tom, jak je využít v běžné praxi a propojit je s "velkými" .NET aplikacemi.</description>
+      <link>https://www.altair.blog/2024/10/iot-workshop</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <category>Akce a události</category>
+      <category>Bastlení</category>
+      <pubDate>2024-10-04T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/10/upload</guid>
       <title>Upload souborů v ASP.NET Core</title>
       <description>V ASP.NET Core existují dvě hlavní cesty, jak dostat soubory z klienta na server: bufferovaný a streamovaný upload. Oba dva si ukážeme a představíme si jejich výhody a nevýhody.</description>
@@ -146,15 +157,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2023-10-31T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/10/hartl</guid>
-      <title>Návrh na udělení státního vyznamenání ing. Karlu Hartlovi</title>
-      <description>Dne 28. října se tradičně udělují státní vyznamenání. Kromě toho uplynul právě měsíc od smrti ing. Karla Hartla, "otce" plemene československý vlčák. Podal jsem prezidentu republiky návrh na to, aby mu byla udělena medaile Za zásluhy in memoriam. Pokud s mým návrhem souhlasíte, můžete se k němu připojit.</description>
-      <link>https://www.altair.blog/2023/10/hartl</link>
-      <author>Michal Altair Valášek</author>
-      <category>Lidé a jiná zvěř</category>
-      <pubDate>2023-10-28T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

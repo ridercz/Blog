@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zvu vás na druhý běh IoT workshopu pro .NET programátory | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2024/10/iot-workshop" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Zvu vás na druhý běh IoT workshopu pro .NET programátory" />
+    <meta name="twitter:description" content="IoT hype je za námi a je tedy čas se jím začít seriózně zabývat. Připravil jsem pro vás workshop o programování mikrokontrolerů, ale hlavně o tom, jak je využít v běžné praxi a propojit je s &quot;velkými&quot; .NET aplikacemi." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20240604-iot-workshop.jpg" />
+    <meta property="article:published_time" content="2024-10-04" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Zvu vás na druhý běh IoT workshopu pro .NET programátory" />
+    <meta name="description" property="og:description" content="IoT hype je za námi a je tedy čas se jím začít seriózně zabývat. Připravil jsem pro vás workshop o programování mikrokontrolerů, ale hlavně o tom, jak je využít v běžné praxi a propojit je s &quot;velkými&quot; .NET aplikacemi." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20240604-iot-workshop.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2024/10/iot-workshop" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20240604-iot-workshop.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Zvu vás na druhý běh IoT workshopu pro .NET programátory</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+          <li>
+            <a href="/categories/bastleni" title="Rubrika">
+              <i class="fal fa-tag"> </i>Bastlení</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2024-10-04">4. října 2024 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Internet of things (IoT) úspěšně překonal svou hype fázi a nyní se postupně dostáváme do situace, kdy to začíná být k něčemu dobré a je na čase začít to brát vážně. Proto jsem pro vás připravil workshop, který se tohoto tématu týká. Minulý běh měl docela úspěch a řada lidí mi psala, že by se rádi zúčastnili, ale nevyhovuje jim termín. Proto jsme vypsali druhý běh.</p>
+<blockquote>
+<p>Stručně: Workshop se bude konat dne 18. 10. 2024 v Praze; pořádá ho počítačová škola Gopas. Jeho cena je 4990 Kč a objednat si ho můžete <a href="https://www.gopas.cz/iot-workshop-pro-net-vyvojare-aneb-propojeni-sveta-mikrokontroleru-s-aplikacemi-v-netu_wamagbox">na webu Gopasu</a>.</p>
+</blockquote>
+<h2 id="komu-je-workshop-urcen">Komu je workshop určen</h2>
+<p>Cílová skupina jsou .NET programátoři, kteří se chtějí naučit programovat mikrokontrolery a propojit je se svými &quot;velkými&quot; aplikacemi v .NETu. Tutoriálů ve stylu &quot;jak začít s Arduinem&quot; je plný Internet, ale pokročilejší témata chybí. Navíc ve firemní praxi obvykle nestačí naprogramovat nějakou malou krabičku s procesorem, ale je ji třeba začlenit do většího systému, aby spolupracovala s existujícím softwarem a podobně.</p>
+<p>Budu předpokládat, že máte základní znalosti programování v .NETu, že umíte napsat běžnou webovou nebo konzolovou aplikaci. Naopak se od vás neočekávají žádné předchozí znalosti programování mikrokontrolerů, elektroniky, pájení a drátování. Pokud je máte, nebudou vám překážet, ale mít je nemusíte.</p>
+<p>Budete potřebovat jenom vlastní notebook s možností instalovat software (zejména Visual Studio Code a pluginy do něj). Všechno ostatní dostanete v ceně kurzu.</p>
+<h2 id="co-se-naucite">Co se naučíte?</h2>
+<p>V první řadě vám ukážu základy obecného programování mikrokontrolerů. Nejprve vám ukážu použití vizuálního nástroje M5Flow, který sice působí trochu jako hračka pro děti, ale pro řadu scénářů je překvapivě dobře použitelný. Hlavně budeme ale používat <a href="https://platformio.org/">PlatformIO</a>. To je takové lepší Arduino IDE. To můžete použít taky, ale pokládám ho za dost omezené a pro již znalé programátory ne zcela pohodlné. Mnou představovaná platforma ESP32 se dá programovat i mnoha různými způsoby, pomocí jazyka Python, Lua, Rust a dokonce i v .NETu pomocí <a href="https://www.nanoframework.net/">.NET NanoFrameworku</a>, ale o tom možná někdy příště.</p>
+<p>Pak se podíváme na to, jak propojit mikrokontroler s PC nebo serverovou aplikací:</p>
+<ul>
+<li>Lokálně, pomocí sériového portu nebo Bluetoothu. To se hodí ve chvíli, když potřebujete ke své lokálně bežící aplikaci přidat zařízení, které něco snímá nebo ovládá. Pomocí sériového rozhraní můžete komunikovat z .NETu, ale třeba i přímo z webového prohlížeče a naučit tak svou webovou aplikaci komunikovat s místním zařízením u uživatele.</li>
+<li>Po síti nebo přes Internet pomocí REST API. Schopnější mikrokontrolery mají podporu Wi-Fi nebo Ethernet rozhraní a můžete je připojit k síti. Jsou dostatečně schopné na to, aby uměly fungovat jako web server (se kterým může přímo komunikovat vaše aplikace) nebo jako klient (a vaší aplikace se budou ptát).</li>
+<li>Pomocí MQTT. To je protokol pro předávání zpráv pomocí front, hojně používaný (nejenom) v IoT světě. Nevyžaduje přímé propojení klienta a serveru, stačí když mají oba přístup k MQTT serveru. Ukážu vám, jak využít veřejné MQTT servery anebo jak si rozběhnout vlastní. Ukážu vám, jak s MQTT komunikovat z .NETu nebo přímo z webového prohlížeče.</li>
+</ul>
+<p><strong>V důsledku se naučíte, jak propojit svět běžných (nejenom) webových aplikací se světem IoT a mikrokontrolerů. Můžete tak zařídit, že stisknutím tlačítka na webu se něco stane ve fyzickém světě, třeba se odemknou dveře. Nebo naopak, pokud se něco stane ve fyzickém světě, dozví se o tom váš server a může na to reagovat. Můžete tak malá a levná zařízení používat jako smysly a svaly a .NET jako mozek.</strong></p>
+<h2 id="jake-zarizeni-budeme-pouzivat">Jaké zařízení budeme používat</h2>
+<p><strong>V ceně workshopu dostanete M5Stack Core S3 a ENVIII senzor.</strong> To obsahuje procesor (lépe řečeno SoC, system on chip) ESP32-S3.</p>
+<figure>
+    <img src="/cover-pictures/20240604-iot-workshop.jpg" alt="M5Stack Core S3 a ENVIII senzor" />
+    <figcaption>M5Stack Core S3 a ENVIII senzor</figcaption>
+</figure>
+<p>ESP32 je řada čipů od společnosti Espressif, které jsou velmi populární jak pro hobby vývoj tak pro profesionální návrh zařízení. Existuje k nim výborná dokumentace a podpora pro řadu programovacích jazyků. Varianta <a href="https://www.espressif.com/en/products/socs/esp32-s3">ESP32-S3</a> je v současnosti nejvýkonnější.</p>
+<p><a href="https://docs.m5stack.com/en/core/CoreS3">M5Stack Core S3</a> je vývojový kit, který obsahuje řadu vstupních a výstupních zařízení a je součástí modulárního systému, kde můžete jednoduše propojit různé komponenty bez nutnosti něco pájet nebo laborovat se součástkami na breadboardu.</p>
+<figure>
+    <img src="https://www.cdn.altairis.cz/Blog/2024/20240604-cores3.jpg" alt="M5Stack Core S3 + DIN Base" />
+    <figcaption>M5Stack Core S3 + DIN Base - pohled ze všech stran</figcaption>
+</figure>
+<ul>
+<li><strong>MCU:</strong> ESP32-S3, dual-core Xtensa LX7</li>
+<li><strong>Paměť:</strong> 8 MB PSRAM, 16 MB flash, možnost MicroSD karty jako úložiště</li>
+<li><strong>Konektivita:</strong> 2.4 GHz Wi-Fi, Bluetooth 5 LE</li>
+<li><strong>Dotykvé LCD:</strong> 2&quot; 320*240 ILI9342C</li>
+<li><strong>Kamera:</strong> GC0308, 0,3 mpix</li>
+<li><strong>Senzory:</strong> Akcelerometr, gyroskop, magnetometr, proximity senzor; ENVIII modul obsahuje snímače teploty, tlaku a vlhkosti</li>
+<li><strong>Audio:</strong> dva mikrofonní vstupy, zesilovač, reproduktor</li>
+<li><strong>Napájení:</strong> přes USB-C konektor nebo souosý konektor 9-24 V, vestavěná baterie 500 mAh</li>
+<li><strong>Programování:</strong> přes USB rozhraní nebo na dálku po síti (OTA - over the air); M5Flow, C++ (jako Arduino nebo ESP IDF), MicroPython, Lua, Rust, NanoFramework a mnoho dalšího</li>
+<li><strong>Ostatní:</strong> Hodiny reálného času, základna k montáži na DIN lištu, rozšiřitelnost pomocí GPIO pinů, I2C, SPI a řada dalších</li>
+</ul>
+<p>Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit programovat mikrokontrolery a nebyli omezováni tím, že vám něco chybí. Je na IoT svět relativně drahý (na RpiShopu stojí <a href="https://rpishop.cz/m5stack/6112-m5stack-cores3-esp32s3-lot-development-kit.html">1404 Kč</a> + <a href="https://rpishop.cz/498367/m5stack-env-iv-unit-se-senzorem-teploty-vlhkosti-a-tlaku-sht40-bmp280/">156 Kč</a> bez DPH), ale koncová zařízení jsou výrazně levnější (hotové vývojové desky lze koupit za ceny v řádech desetikorun). U kitu platíte za pohodlnost a za možnost vyvíjet software bez nutnosti řešit hardware.</p>
+<h2 id="kdy-a-kde-se-bude-workshop-konat">Kdy a kde se bude workshop konat</h2>
+<blockquote>
+<p>Pokud byste se workshopu rádi zúčastnili, ale v tomto termínu nemůžete, nezoufejte. Napište o svém zájmu mně nebo Gopasu. Pokud bude zájem, vyhlásíme další termín nebo najdeme nějaké jiné řešení.</p>
+</blockquote>
+<ul>
+<li>Kdy: <strong>18. října 2024, 9-16 hodin</strong></li>
+<li>Kde: <strong>Praha, Gopas</strong>, Kodaňská 46, Praha 10 <em>(pozor, změna místa konání)</em></li>
+<li>Cena: <strong>4990 Kč + DPH</strong>, v ceně je hardware v ceně cca. 1600 Kč</li>
+<li>Pořádá: <strong>Počítačová škola Gopas</strong></li>
+<li><strong><a href="https://www.gopas.cz/iot-workshop-pro-net-vyvojare-aneb-propojeni-sveta-mikrokontroleru-s-aplikacemi-v-netu_wamagbox">Přihlašujte se na webu Gopasu</a></strong></li>
+</ul>
+<iframe style="border:none" src="https://frame.mapy.cz/s/bupohupapo" width="100%" height="300" frameborder="0"></iframe>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Zvu+v%c3%a1s+na+druh%c3%bd+b%c4%9bh+IoT+workshopu+pro+.NET+program%c3%a1tory&amp;body=https://www.altair.blog/2024/10/iot-workshop">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2024/10/iot-workshop.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2024/10/iot-workshop.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2024/10/iot-workshop">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2024/10/iot-workshop">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2024</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
