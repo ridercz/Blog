@@ -70,9 +70,9 @@ Tento vývojový kit představuje dobrý základ k tomu, abyste se mohli naučit
 > Pokud byste se workshopu rádi zúčastnili, ale v tomto termínu nemůžete, nezoufejte. Napište o svém zájmu mně nebo Gopasu. Pokud bude zájem, vyhlásíme další termín nebo najdeme nějaké jiné řešení.
 
 * Kdy: **18. října 2024, 9-16 hodin**
-* Kde: **Praha, Gopas**, Kodaňská 46, Praha 10 _(pozor, změna místa konání)_
+* Kde: **Praha, Gopas**, Kodaňská 46, Praha 10
 * Cena: **4990 Kč + DPH**, v ceně je hardware v ceně cca. 1600 Kč
 * Pořádá: **Počítačová škola Gopas**
 * **[Přihlašujte se na webu Gopasu](https://www.gopas.cz/iot-workshop-pro-net-vyvojare-aneb-propojeni-sveta-mikrokontroleru-s-aplikacemi-v-netu_wamagbox)**
 
-<iframe style="border:none" src="https://frame.mapy.cz/s/bupohupapo" width="100%" height="300" frameborder="0"></iframe>
+<iframe style="border:none" src="https://frame.mapy.cz/s/gobokanehe" width="100%" height="300" frameborder="0"></iframe>
