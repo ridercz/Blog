@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2024/10/co-po-jmenu</guid>
+      <title>Co po jménu? Lidská edice</title>
+      <description>Chcete si zvolit druhé křestní jméno? Nebo pojmenovat svoje dítě jménem které není v kalendáři? Chcete přijmout druhé jméno, třeba X AE A-XII, jako syn Elona Muska? Nebo chete dceru pojmenovat po Pučálkovic Amině? Provedu vás nároky, které na vás český stát klade.</description>
+      <link>https://www.altair.blog/2024/10/co-po-jmenu</link>
+      <author>Michal Altair Valášek</author>
+      <category>Lidé a jiná zvěř</category>
+      <pubDate>2024-10-08T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/10/iot-workshop</guid>
       <title>Zvu vás na druhý běh IoT workshopu pro .NET programátory</title>
       <description>IoT hype je za námi a je tedy čas se jím začít seriózně zabývat. Připravil jsem pro vás workshop o programování mikrokontrolerů, ale hlavně o tom, jak je využít v běžné praxi a propojit je s "velkými" .NET aplikacemi.</description>
@@ -147,16 +156,6 @@
       <category>IT</category>
       <category>Bezpečnost</category>
       <pubDate>2023-12-12T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2023/10/pooka</guid>
-      <title>Pooka: Automatické vypnutí počítače při odchodu</title>
-      <description>Stihnete vypnout počítač, když vám zásahovka vyrazí dveře? Nebo ho jenom zapomínáte zamknout, když jdete na oběd? V obou případech vám pomůže trocha hardware a pomocník jménem Pooka.</description>
-      <link>https://www.altair.blog/2023/10/pooka</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <pubDate>2023-10-31T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
