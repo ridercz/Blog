@@ -1,5 +1,5 @@
 <!-- dcterms:title = Co po jménu? Lidská edice -->
-<!-- dcterms:abstract = Chcete si zvolit druhé křestní jméno? Nebo pojmenovat svoje dítě jménem které není v kalendáři? Chcete přijmout druhé jméno, třeba X AE A-XII, jako syn Elona Muska? Nebo chete dceru pojmenovat po Pučálkovic Amině? Provedu vás nároky, které na vás český stát klade. -->
+<!-- dcterms:abstract = Chcete si zvolit druhé křestní jméno? Nebo pojmenovat svoje dítě jménem které není v kalendáři? Třeba X AE A-XII, jako syn Elona Muska? Nebo chete dceru pojmenovat po Pučálkovic Amině? Provedu vás nároky, které na vás český stát klade. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- x4w:pictureUrl = /perex-pictures/20241008-co-po-jmenu.jpg -->
 <!-- x4w:coverUrl = /cover-pictures/20241008-co-po-jmenu.jpg -->
