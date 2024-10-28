@@ -11,7 +11,7 @@
 
 Když jsem byl malý, velmi jsem se těšil na předvečer oslav **Velké říjnové socialistické revoluce**. Národ vyrazil do ulic s lampióny. Plebs se svíčkou uvnitř, v technologicky pokročilejší domácnosti (jako ta naše) na štangli lepící páskou přilepili plochou baterii a dovnitř dali žárovičku.
 
-Moderní doba občanstvo s lampióny do ulic nevyhání. Namísto toho nám začátkem listopadu dopřává jiných kratochvilných povyražení. Příkladně pak voleb.
+Moderní doba občanstvo s lampióny do ulic nevyhání. Namísto toho nám začátkem listopadu dopřává jiných kratochvilných povyražení. Příkladmo pak voleb.
 
 Česká republika kráčí jako vždy v čele pokroku a prosazuje svobodu a demokracii - tzv. "českou cestou". Tzv. absolutní zastupitelské demokracie se dosahuje tím, že každý má funkci. Obyvatelstvo tuto myšlenku přijalo za svou a s bezpříkladnou horlivostí ji implementuje i na nižších úrovních. 
 
