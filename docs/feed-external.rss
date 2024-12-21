@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2024/12/stav-mysli</guid>
+      <title>Stav mysli</title>
+      <description>Pan ředitel Šťastný se rozhlédl a zjistil že je… že není. Že není nikde. Nacházel se v prostoru, který byl úplně prázdný. Ne jako když si představíte prázdnou místnost bez nábytku, ale byl někde, kde neexistovalo vůbec nic. Nebylo tam světlo, ale ani tma. Neexistovaly barvy. Nejspíš ani čas. Nebylo mu horko ani zima.</description>
+      <link>https://www.bdsm.cz/2024/12/stav-mysli</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2024-12-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://tech.hn.cz/c7-67384730-hdq8q-cb8aa8935c27efe</guid>
       <title>Bomba týden pro Hizballáh: Jak fungují pagery a proč vybuchovaly teroristům po celém Libanonu v rukou a po kapsách</title>
       <description>Bomba týden, který zažívají teroristé z hnutí Hizballáh v Libanonu je výbornou příležitostí, proč se podívat na to, jak fungují zařízení, která se po několika desetiletích díky němu vrátila do popředí veřejného zájmu: pagery. Proč se pagery příliš neuchytily v České republice a proč jsou naopak oblíbené mezi teroristy. Tedy, spíše byly, dá se očekávat, že nyní jejich popularita v těchto kruzích poněkud opadne.</description>
@@ -140,16 +149,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-14T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</guid>
-      <title>Dva internety místo jednoho. Rusko se připravuje na spuštění nové železné opony</title>
-      <description>Situace kolem blokování na Internetu je v těchto dnech poněkud nepřehledná. Různé technologické společnosti více či méně dobrovolně blokují využívání svých služeb z Ruska, potažmo klienty odtamtud. Rusko zase naopak blokuje přístup ze svých sítí do týchž nebo i jiných služeb. Časem patrně dojde k pokusu o odstřižení Ruska od globálního Internetu, ať už z té, či oné strany.</description>
-      <link>https://tech.hn.cz/c7-67042230-psms7-c4e334b35f9a82f</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-07T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

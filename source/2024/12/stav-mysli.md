@@ -1,0 +1,10 @@
+<!-- dcterms:title = Stav mysli -->
+<!-- dcterms:abstract = Pan ředitel Šťastný se rozhlédl a zjistil že je… že není. Že není nikde. Nacházel se v prostoru, který byl úplně prázdný. Ne jako když si představíte prázdnou místnost bez nábytku, ale byl někde, kde neexistovalo vůbec nic. Nebylo tam světlo, ale ani tma. Neexistovaly barvy. Nejspíš ani čas. Nebylo mu horko ani zima. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2024-12-21 -->
+<!-- x4w:pictureCredits = Lupus Pictures -->
+<!-- x4w:pictureUrl = /perex-pictures/20241221-stav-mysli.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2024/12/stav-mysli -->

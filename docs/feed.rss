@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2024/12/stav-mysli</guid>
+      <title>Stav mysli</title>
+      <description>Pan ředitel Šťastný se rozhlédl a zjistil že je… že není. Že není nikde. Nacházel se v prostoru, který byl úplně prázdný. Ne jako když si představíte prázdnou místnost bez nábytku, ale byl někde, kde neexistovalo vůbec nic. Nebylo tam světlo, ale ani tma. Neexistovaly barvy. Nejspíš ani čas. Nebylo mu horko ani zima.</description>
+      <link>https://www.bdsm.cz/2024/12/stav-mysli</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2024-12-21T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2024/10/co-po-jmenu</guid>
       <title>Co po jménu? Lidská edice</title>
       <description>Chcete si zvolit druhé křestní jméno? Nebo pojmenovat svoje dítě jménem které není v kalendáři? Třeba X AE A-XII, jako syn Elona Muska? Nebo chete dceru pojmenovat po Pučálkovic Amině? Provedu vás nároky, které na vás český stát klade.</description>
@@ -144,17 +153,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT historie</category>
       <pubDate>2024-06-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/iot-workshop</guid>
-      <title>Zvu vás na IoT workshop pro .NET programátory</title>
-      <description>IoT hype je za námi a je tedy čas se jím začít seriózně zabývat. Připravil jsem pro vás workshop o programování mikrokontrolerů, ale hlavně o tom, jak je využít v běžné praxi a propojit je s "velkými" .NET aplikacemi.</description>
-      <link>https://www.altair.blog/2024/06/iot-workshop</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Akce a události</category>
-      <category>Bastlení</category>
-      <pubDate>2024-06-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
