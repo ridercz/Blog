@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2024/12/misto-gauce-2</guid>
+      <title>...jenom se to musí umět</title>
+      <description>Letošní tradiční vánoční BDSM povídka je pokračováním povídky "Místo gauče", kterou jsem vydal téměř před dvěma lety. Skoro dva roky jsem ji tady měl rozepsanou, protože jsem pořád nemohl přijít na to, jak ji ukončit. A nakonec jsem přišel na hezký konec a zároveň mám rozepsané další pokračování. Uvidíme, kdy vydám to.</description>
+      <link>https://www.bdsm.cz/2024/12/misto-gauce-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Erotické povídky</category>
+      <category>BDSM</category>
+      <pubDate>2024-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2024/12/stav-mysli</guid>
       <title>Stav mysli</title>
       <description>Pan ředitel Šťastný se rozhlédl a zjistil že je… že není. Že není nikde. Nacházel se v prostoru, který byl úplně prázdný. Ne jako když si představíte prázdnou místnost bez nábytku, ale byl někde, kde neexistovalo vůbec nic. Nebylo tam světlo, ale ani tma. Neexistovaly barvy. Nejspíš ani čas. Nebylo mu horko ani zima.</description>
@@ -139,16 +149,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</guid>
-      <title>Rusko spustilo vlastní certifikační autoritu, pro webové prohlížeče budou ruské stránky nedůvěryhodné</title>
-      <description>Rusko pokračuje v přípravách na technické problémy které mohou vzniknout při odpojení jeho národních sítí od zbytku Internetu, ať už jeho vlastním rozhodnutím nebo zásahem zvenčí. Jedním z takových problémů jsou TLS certifikáty, určené pro provoz zabezpečených služeb, například webových stránek dostupných protokolem HTTPS. Zřejmě v obavách z dalších sankcí spustilo vlastní kořenovou certifikační autoritu, která má v případě výpadku nahradit ty zahraniční. Ale může být použita k dalším, mnohem méně nevinným účelům.</description>
-      <link>https://tech.hn.cz/c7-67044790-psms7-89f31abb2c90bcf</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

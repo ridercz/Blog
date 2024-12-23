@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2024/12/misto-gauce-2</guid>
+      <title>...jenom se to musí umět</title>
+      <description>Letošní tradiční vánoční BDSM povídka je pokračováním povídky "Místo gauče", kterou jsem vydal téměř před dvěma lety. Skoro dva roky jsem ji tady měl rozepsanou, protože jsem pořád nemohl přijít na to, jak ji ukončit. A nakonec jsem přišel na hezký konec a zároveň mám rozepsané další pokračování. Uvidíme, kdy vydám to.</description>
+      <link>https://www.bdsm.cz/2024/12/misto-gauce-2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Erotické povídky</category>
+      <category>BDSM</category>
+      <pubDate>2024-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2024/12/stav-mysli</guid>
       <title>Stav mysli</title>
       <description>Pan ředitel Šťastný se rozhlédl a zjistil že je… že není. Že není nikde. Nacházel se v prostoru, který byl úplně prázdný. Ne jako když si představíte prázdnou místnost bez nábytku, ale byl někde, kde neexistovalo vůbec nic. Nebylo tam světlo, ale ani tma. Neexistovaly barvy. Nejspíš ani čas. Nebylo mu horko ani zima.</description>
@@ -144,15 +154,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT historie</category>
       <pubDate>2024-06-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/osborne</guid>
-      <title>Osborne nebyl první, stručná historie notebooků</title>
-      <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
-      <link>https://www.altair.blog/2024/06/osborne</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2024-06-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
