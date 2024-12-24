@@ -1,9 +1,8 @@
 <!-- dcterms:title = ...jenom se to musí umět -->
 <!-- dcterms:abstract = Letošní tradiční vánoční BDSM povídka je pokračováním povídky "Místo gauče", kterou jsem vydal téměř před dvěma lety. Skoro dva roky jsem ji tady měl rozepsanou, protože jsem pořád nemohl přijít na to, jak ji ukončit. A nakonec jsem přišel na hezký konec a zároveň mám rozepsané další pokračování. Uvidíme, kdy vydám to. -->
-<!-- x4w:category = Erotické povídky -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:category = BDSM -->
 <!-- dcterms:date = 2024-12-24 -->
+<!-- x4w:category = BDSM -->
 <!-- x4w:pictureCredits = Keith Tanner on Unsplash -->
 <!-- x4w:pictureUrl = /perex-pictures/20241224-misto-gauce-2.jpg -->
 <!-- x4w:pictureWidth = 150 -->
