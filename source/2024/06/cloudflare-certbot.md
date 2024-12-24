@@ -93,7 +93,7 @@ Pozor, Cloudflarem nabídnutý příkaz bude fungovat jenom v Bashi. Ve Windows 
          -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" ^
          -H "Content-Type:application/json"
 
-V PowesShellu musíte název příkazu napsat včetně přípony `.exe` a pro pokračování řádku se používá zpětný apostrof:
+V PowerShellu musíte název příkazu napsat včetně přípony `.exe` a pro pokračování řádku se používá zpětný apostrof:
 
     curl.exe -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" `
              -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" `
