@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/02/hierarchyid-spatial</guid>
+      <title>Hierarchická a geografická data v SQL Serveru a Entity Frameworku</title>
+      <description>Na akci WUG Dev Day jsem měl přednášku o hierarchických a geografických datových typech v Microsoft SQL Serveru. Nabízím ke stažení materiály z této přednášky a zároveň odkazy na související videa.</description>
+      <link>https://www.altair.blog/2025/02/hierarchyid-spatial</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-02-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2024/12/misto-gauce-2</guid>
       <title>...jenom se to musí umět</title>
       <description>Letošní tradiční vánoční BDSM povídka je pokračováním povídky "Místo gauče", kterou jsem vydal téměř před dvěma lety. Skoro dva roky jsem ji tady měl rozepsanou, protože jsem pořád nemohl přijít na to, jak ji ukončit. A nakonec jsem přišel na hezký konec a zároveň mám rozepsané další pokračování. Uvidíme, kdy vydám to.</description>
@@ -144,15 +153,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT historie</category>
       <pubDate>2024-06-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/sapo</guid>
-      <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
-      <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
-      <link>https://www.altair.blog/2024/06/sapo</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2024-06-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
