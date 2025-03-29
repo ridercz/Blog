@@ -1,0 +1,9 @@
+<!-- dcterms:title = Signal pod drobnohledem: Pod povrchem zveřejněného chatu Trumpových poradců ve zdánlivě bezpečné aplikaci -->
+<!-- dcterms:abstract = Celý internet se baví tím, jak spolupracovníci amerického prezidenta Donalda Trumpa omylem vyzradili plány na vojenský zásah novináři. Jakkoliv je škodolibost nejčistší lidská radost, zkusme se od ní oprostit a podívat se na problém z jiného úhlu pohledu. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- dcterms:date = 2025-03-27 -->
+<!-- x4w:alternateUrl = https://archiv.hn.cz/c7-67676930-1-712e7da2a218ce2 -->

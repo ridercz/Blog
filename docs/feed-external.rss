@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://archiv.hn.cz/c7-67676930-1-712e7da2a218ce2</guid>
+      <title>Signal pod drobnohledem: Pod povrchem zveřejněného chatu Trumpových poradců ve zdánlivě bezpečné aplikaci</title>
+      <description>Celý internet se baví tím, jak spolupracovníci amerického prezidenta Donalda Trumpa omylem vyzradili plány na vojenský zásah novináři. Jakkoliv je škodolibost nejčistší lidská radost, zkusme se od ní oprostit a podívat se na problém z jiného úhlu pohledu.</description>
+      <link>https://archiv.hn.cz/c7-67676930-1-712e7da2a218ce2</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <pubDate>2025-03-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2024/12/misto-gauce-2</guid>
       <title>...jenom se to musí umět</title>
       <description>Letošní tradiční vánoční BDSM povídka je pokračováním povídky "Místo gauče", kterou jsem vydal téměř před dvěma lety. Skoro dva roky jsem ji tady měl rozepsanou, protože jsem pořád nemohl přijít na to, jak ji ukončit. A nakonec jsem přišel na hezký konec a zároveň mám rozepsané další pokračování. Uvidíme, kdy vydám to.</description>
@@ -138,16 +147,6 @@
       <category>Politika</category>
       <category>Bezpečnost</category>
       <pubDate>2022-03-24T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</guid>
-      <title>Varování NÚKIB před Ruskem? Je to méně absurdní, než se na první pohled zdá</title>
-      <description>Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB) vydal oficiální varování v souvislosti s ekonomickými sankcemi spojenými s Ruskou federací. Co to v praxi znamená? Že bychom měli přestat používat počítače ruské výroby? Realita je ale mnohem méně směšná a varování má svůj význam, i když z laického hlediska není úplně intuitivní.</description>
-      <link>https://tech.hn.cz/c7-67048200-psms7-c7d330d6e75e0b6</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-23T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
