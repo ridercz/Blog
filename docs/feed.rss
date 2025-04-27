@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/04/data</guid>
+      <title>Pozvánka na odpolední online školení Přístup k datům nejen z ASP.NET Core</title>
+      <description>Připravil jsem pro vás nové, prakticky zaměřené školení o přístupu k nejrůznějším druhům dat. Bude se konat 27. - 29. 5. 2025, online.</description>
+      <link>https://www.altair.blog/2025/04/data</link>
+      <author>Michal Altair Valášek</author>
+      <category>Akce a události</category>
+      <category>IT</category>
+      <pubDate>2025-04-27T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://archiv.hn.cz/c7-67676930-1-712e7da2a218ce2</guid>
       <title>Signal pod drobnohledem: Pod povrchem zveřejněného chatu Trumpových poradců ve zdánlivě bezpečné aplikaci</title>
       <description>Celý internet se baví tím, jak spolupracovníci amerického prezidenta Donalda Trumpa omylem vyzradili plány na vojenský zásah novináři. Jakkoliv je škodolibost nejčistší lidská radost, zkusme se od ní oprostit a podívat se na problém z jiného úhlu pohledu.</description>
@@ -141,18 +151,6 @@
       <category>IT historie</category>
       <category>Bezpečnost</category>
       <pubDate>2024-06-29T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/cloudflare-certbot</guid>
-      <title>Získání certifikátů od Let's Encrypt pomocí dns-01 challenge s Cloudflare</title>
-      <description>Při získávání certifikátů od CA Let's Encrypt se zpravidla používá http-01 challenge, kdy se ověřuje kontrola nad doménou pomocí HTTP requestu na definovanou URL. To je velice snadné a dá se to jednoduše automatizovat. Někdy se ale hodí dns-01 challenge, kdy se kontrola nad doménou ověřuje pomocí DNS záznamů. To je náročnější, ale umožňuje získat wildcard certifikáty nebo certifikáty pro server schovaný v neveřejné síti, případně ne webový. Nabízím podrobný návod, jak na to.</description>
-      <link>https://www.altair.blog/2024/06/cloudflare-certbot</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-06-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

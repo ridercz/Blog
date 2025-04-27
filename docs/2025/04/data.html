@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pozvánka na odpolední online školení Přístup k datům nejen z ASP.NET Core | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2025/04/data" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Pozvánka na odpolední online školení Přístup k datům nejen z ASP.NET Core" />
+    <meta name="twitter:description" content="Připravil jsem pro vás nové, prakticky zaměřené školení o přístupu k nejrůznějším druhům dat. Bude se konat 27. - 29. 5. 2025, online." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20250427-data.jpg" />
+    <meta property="article:published_time" content="2025-04-27" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Pozvánka na odpolední online školení Přístup k datům nejen z ASP.NET Core" />
+    <meta name="description" property="og:description" content="Připravil jsem pro vás nové, prakticky zaměřené školení o přístupu k nejrůznějším druhům dat. Bude se konat 27. - 29. 5. 2025, online." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20250427-data.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2025/04/data" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20250427-data.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Pozvánka na odpolední online školení Přístup k datům nejen z ASP.NET Core</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2025-04-27">27. dubna 2025 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Připravil jsem pro vás nové, prakticky zaměřené školení o přístupu k nejrůznějším druhům dat. Hlavní pozornost bude věnována datům relačním a Entity Frameworku Core, protože to je pořád majoritní druh dat, s nímž v .NETu pracujeme, ale bude řeč i o datech, která do databáze obvykle neukládáme. Kurz bude zaměřen velice prakticky, se spoustou cvičení (labů) na témata, se kterými se .NET vývojáři typicky setkávají. Toto školení vzniklo v podstatě na základě dotazů z mých ostatních kurzů. Školení bude používat aktuální verzi ASP.NET Core, ale používané techniky nejsou vhodné jenom pro web a ASP.NET, ale pro všechny aplikace v .NETu.</p>
+<h2 id="kdy-a-kde-se-bude-skoleni-konat">Kdy a kde se bude školení konat</h2>
+<p>Školení se bude konat <strong>online</strong> pomocí systému <a href="https://elearning.altairis.cz">Altairis eLearning</a>, s přenosem videa lektora k účastníkům a chatem pro dotazy (s možností individuální pomoci a konzultací). Účastníkům bude k dispozici záznam a výukové materiály i po skončení školení.</p>
+<p>Termín je <strong>27. - 29. května 2025</strong> vždy od 12:00 do 17:00. Tento termín umožňuje, aby účastník nebyl blokován celý pracovní den (resp. tři pracovní dny). Pokud byste se školení rádi zúčastnili, ale nevyhovuje vám termín, vyplňte <a href="https://forms.office.com/r/bvnEsCWBd3">objednací formulář</a> a napište to do poznámky - pokusím se vám vyjít vstříc. Stejně tak, pokud byste měli zájem o prezenční školení nebo privátní jenom pro vaši firmu.</p>
+<h2 id="kolik-skoleni-stoji">Kolik školení stojí</h2>
+<p>Cena školení je <strong>9 000 Kč</strong> za jednoho účastníka + DPH. V případě tří a více účastníků z jedné firmy (na jedné objednávce) je sleva 10 %.</p>
+<ul>
+<li><strong><a href="https://forms.office.com/r/bvnEsCWBd3">Objednávkový formulář</a></strong></li>
+</ul>
+<h2 id="planovana-osnova-skoleni">Plánovaná osnova školení</h2>
+<ul>
+<li>.NET a relační databáze
+<ul>
+<li>Entity Framework Core - tvorba modelu
+<ul>
+<li>Code First</li>
+<li>Database First</li>
+<li>Code second - převzetí existujícího modelu do EF</li>
+<li>Migrace</li>
+<li>Migrace z příkazové řádky a Visual Studia</li>
+<li>Migrace při spuštění aplikace, generování migrační SQL dávky</li>
+<li>Úpravy migrací, transformace dat</li>
+<li>Seeding dat, naplnění číselníků</li>
+<li>EF Core jako databázová abstrakce</li>
+</ul>
+</li>
+<li>Představení embedded databáze Sqlite, kdy ji použít a kdy ne
+<ul>
+<li>Databázová nezávislost - aplikace fungující proti MS SQL i Sqlite</li>
+<li>Zálohování Sqlite databázových souborů</li>
+</ul>
+</li>
+<li>Pokročilejší využití EF Core
+<ul>
+<li>Mapování na JSON struktury</li>
+<li>Mapování na uložené procedury</li>
+<li>Obecné využití uložených procedur z EF</li>
+</ul>
+</li>
+<li>Fulltextové vyhledávání v Microsoft SQL Serveru
+<ul>
+<li>Obecné fungování fulltextových indexů v MS SQL</li>
+<li>Dotazovací jazyk pro fulltext</li>
+<li>Překladač z Google-like syntaxe</li>
+<li>Napojení na Entity Framework</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>.NET a nerelační data
+<ul>
+<li>Ukládání binárních dat
+<ul>
+<li>Ukládání binárních dat do databáze</li>
+<li>Ukládání binárních dat do file systému</li>
+<li>Ukládání binárních dat do Azure Blob Storage</li>
+<li>Využití SAS (Shared Access Signatures)</li>
+<li>FluentStorage - abstrakce pro ukládání binárních dat a proč ji používat</li>
+</ul>
+</li>
+<li>Ukládání semistrukturovaných dat - Azure Table Storage</li>
+<li>Práce s frontami - Azure Queue Storage</li>
+</ul>
+</li>
+</ul>
+<h2 id="pozadavky-na-ucastniky">Požadavky na účastníky</h2>
+<p>Po technické stránce se předpokládá, že účastníci budou mít k dispozici:</p>
+<ul>
+<li>Počítač s připojením k Internetu umožňujícím přehrávání video streamu</li>
+<li>Windows 10 a novější, Visual Studio 2022 libovolné edice (včetně bezplatné Community Edition), Microsoft SQL Server (včetně bezplatné edice Express). Lze používat i jinou platformu (Linux, Mac OS) a vývojové prostředí (VS Code, JetBrains Rider...), ale návody počítají s Windows a VS 2022.</li>
+<li>Libovolné předplatné Microsoft Azure (včetně aktivního trialu). Není absolutně nezbytné, ale část o nerelačních datech Azure hojně využívá.</li>
+</ul>
+<p>Po stránce dovedností a vědomostí se očekává, že účastníci budou mít základní obecné povědnomí o programování v C#/.NET a ASP.NET Core, základní znalosti relačních databází (co je tabulka, primární klíč...) a základní povědomí o jazyku SQL.</p>
+<h2 id="objednavky-a-dotazy">Objednávky a dotazy</h2>
+<p>Školení si můžete <a href="https://forms.office.com/r/bvnEsCWBd3">objednat pomocí formuláře</a>. V případě dotazů napište poznámku do formuláře nebo <a href="https://www.rider.cz/#contact">mne kontaktujte jakkoliv jinak</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Pozv%c3%a1nka+na+odpoledn%c3%ad+online+%c5%a1kolen%c3%ad+P%c5%99%c3%adstup+k+dat%c5%afm+nejen+z+ASP.NET+Core&amp;body=https://www.altair.blog/2025/04/data">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2025/04/data.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2025/04/data.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2025/04/data">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2025/04/data">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2025</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
