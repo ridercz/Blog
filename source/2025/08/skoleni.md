@@ -31,7 +31,7 @@ Pokud byste se školení rádi zúčastnili, ale nevyhovuje vám termín, vyplň
 * Cena školení o AI je **3 000 Kč**.
 * Cena obou školení současně je **11 500 Kč**.
 
-V případě tří a více účastníků z jedné firmy (na jedné objednávce) je další sleva 10 %.
+V případě tří a více účastníků z jedné firmy (na jedné objednávce) je další sleva 10 %. Cena je uvedena bez DPH.
 
 * **[Objednávkový formulář](https://forms.office.com/r/bvnEsCWBd3)**
 
