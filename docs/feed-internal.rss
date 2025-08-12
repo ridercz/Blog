@@ -6,14 +6,14 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
-      <guid isPermaLink="true">https://www.altair.blog/2025/04/data</guid>
-      <title>Pozvánka na odpolední online školení Přístup k datům nejen z ASP.NET Core</title>
-      <description>Připravil jsem pro vás nové, prakticky zaměřené školení o přístupu k nejrůznějším druhům dat. Bude se konat 27. - 29. 5. 2025, online.</description>
-      <link>https://www.altair.blog/2025/04/data</link>
+      <guid isPermaLink="true">https://www.altair.blog/2025/08/skoleni</guid>
+      <title>AI pro programátory bez buzzwordů a Přístup k datům nejen z ASP.NET Core - pozvánka</title>
+      <description>Připravil jsem pro vás dvě nové, prakticky zaměřená online školení o přístupu k datům a AI pro programátory.</description>
+      <link>https://www.altair.blog/2025/08/skoleni</link>
       <author>Michal Altair Valášek</author>
       <category>Akce a události</category>
       <category>IT</category>
-      <pubDate>2025-04-27T00:00:00</pubDate>
+      <pubDate>2025-08-12T00:00:00</pubDate>
     </item>
     <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/02/hierarchyid-spatial</guid>
