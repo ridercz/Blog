@@ -113,7 +113,7 @@ Po technické stránce se předpokládá, že účastníci budou mít k dispozic
 * Windows 10 a novější, Visual Studio 2022 libovolné edice (včetně bezplatné Community Edition), Microsoft SQL Server (včetně bezplatné edice Express). Lze používat i jinou platformu (Linux, Mac OS) a vývojové prostředí (VS Code, JetBrains Rider...), ale návody počítají s Windows a VS 2022.
 * Libovolné předplatné Microsoft Azure (včetně aktivního trialu). Není absolutně nezbytné, ale část o nerelačních datech Azure hojně využívá.
 
-Po stránce dovedností a vědomostí se očekává, že účastníci budou mít základní obecné povědnomí o programování v C#/.NET a ASP.NET Core, základní znalosti relačních databází (co je tabulka, primární klíč...) a základní povědomí o jazyku SQL.
+Po stránce dovedností a vědomostí se očekává, že účastníci budou mít základní obecné povědnomí o programování v C#/.NET a ASP.NET Core, základní znalosti Entity Frameworku (co je DB context, co jsou entity, co je LINQ), základní znalosti relačních databází (co je tabulka, primární klíč...) a základní povědomí o jazyku SQL.
 
 ## Objednávky a dotazy
 
