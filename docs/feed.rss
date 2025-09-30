@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2025/10/ssc</guid>
+      <title>Safe, sane, consensual - největší lež v BDSM</title>
+      <description>Zkratka SSC je v BDSM prakticky nedotknutelným symbolem. Dodržování v ní obsažených zásad je to, co nás - hodné, ochočené, vědomé úchyly - odlišuje od těch zlých, divokých, kriminálních. Zní to hezky a je to líbivé vysvětlení pro každého začátečníka. Má jedinou nevýhodu: je to lež.</description>
+      <link>https://www.bdsm.cz/2025/10/ssc</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2025-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/08/skoleni</guid>
       <title>AI pro programátory bez buzzwordů a Přístup k datům nejen z ASP.NET Core - pozvánka</title>
       <description>Připravil jsem pro vás dvě nové, prakticky zaměřená online školení o přístupu k datům a AI pro programátory.</description>
@@ -141,16 +150,6 @@
       <category>Lab</category>
       <category>Linux</category>
       <pubDate>2024-07-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/michelangelo</guid>
-      <title>Covid a Michelangelo</title>
-      <description>Začalo to všechno vlastně zcela nenápadně. Psal se rok 1949 a jistý Neumann János Lajos na universitě v Illinois držel přednášku s komplikovaným názvem "Teorie a organizace složitých automatů". Tak se zrodil koncept počítačového viru. A ty klasické mají hodně společného s těmi organickými, jako druhdy populární koronavirus SARS-CoV-2.</description>
-      <link>https://www.altair.blog/2024/06/michelangelo</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <category>Bezpečnost</category>
-      <pubDate>2024-06-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

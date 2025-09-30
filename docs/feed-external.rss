@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2025/10/ssc</guid>
+      <title>Safe, sane, consensual - největší lež v BDSM</title>
+      <description>Zkratka SSC je v BDSM prakticky nedotknutelným symbolem. Dodržování v ní obsažených zásad je to, co nás - hodné, ochočené, vědomé úchyly - odlišuje od těch zlých, divokých, kriminálních. Zní to hezky a je to líbivé vysvětlení pro každého začátečníka. Má jedinou nevýhodu: je to lež.</description>
+      <link>https://www.bdsm.cz/2025/10/ssc</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2025-09-29T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://archiv.hn.cz/c7-67676930-1-712e7da2a218ce2</guid>
       <title>Signal pod drobnohledem: Pod povrchem zveřejněného chatu Trumpových poradců ve zdánlivě bezpečné aplikaci</title>
       <description>Celý internet se baví tím, jak spolupracovníci amerického prezidenta Donalda Trumpa omylem vyzradili plány na vojenský zásah novináři. Jakkoliv je škodolibost nejčistší lidská radost, zkusme se od ní oprostit a podívat se na problém z jiného úhlu pohledu.</description>
@@ -137,16 +146,6 @@
       <category>Bezpečnost</category>
       <category>Politika</category>
       <pubDate>2022-04-05T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</guid>
-      <title>Anonymous kvůli Ukrajině vyhrožují Raiffeisenbank a dalším firmám</title>
-      <description>Kyberútočné družstvo Anonymous vyhrožuje firmám, které se podle jeho názoru nedostatečně vymezují proti Rusku v souvislosti s válkou na Ukrajině. Nejnovějším cílem těchto výhrůžek je i Raiffeisen - jedna z největších bank u nás. Hrozí běžným klientům že přijdou o své peníze? Nikoliv, ale obecně je dobré udělat pár příprav.</description>
-      <link>https://tech.hn.cz/c7-67049020-psms7-064c6dbe0194d02</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>Bezpečnost</category>
-      <pubDate>2022-03-24T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

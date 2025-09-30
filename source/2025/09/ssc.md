@@ -1,0 +1,9 @@
+<!-- dcterms:title = Safe, sane, consensual - největší lež v BDSM -->
+<!-- dcterms:abstract = Zkratka SSC je v BDSM prakticky nedotknutelným symbolem. Dodržování v ní obsažených zásad je to, co nás - hodné, ochočené, vědomé úchyly - odlišuje od těch zlých, divokých, kriminálních. Zní to hezky a je to líbivé vysvětlení pro každého začátečníka. Má jedinou nevýhodu: je to lež. -->
+<!-- x4w:category = BDSM -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2025-09-29 -->
+<!-- x4w:pictureUrl = /perex-pictures/20250929-ssc.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2025/10/ssc -->
