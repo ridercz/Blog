@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/10/dp25</guid>
+      <title>Dokáže se FOSS ubránit insider útokům?</title>
+      <description>Na konferenci Dark Prague 2025 jsem měl přednášku 'XZ Utils: Can FOSS withstand new generation of insider attacks?'. Jak jsem slíbil, publikuji prezentaci z ní.</description>
+      <link>https://www.altair.blog/2025/10/dp25</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-10-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/08/skoleni</guid>
       <title>AI pro programátory bez buzzwordů a Přístup k datům nejen z ASP.NET Core - pozvánka</title>
       <description>Připravil jsem pro vás dvě nové, prakticky zaměřená online školení o přístupu k datům a AI pro programátory.</description>
@@ -145,17 +154,6 @@
       <category>Akce a události</category>
       <category>Bastlení</category>
       <pubDate>2024-06-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/05/syncthing-linux</guid>
-      <title>Jak rozběhnout synchronizační software Syncthing na Windows i na Linuxu</title>
-      <description>Na synchronizaci dat mezi počítači používám nástroj Syncthing. Na kanálu Z-TECH o něm vytvářím seriál a nabízím vám návod, jak ho rozběhnout na Windows i na Linuxu.</description>
-      <link>https://www.altair.blog/2024/05/syncthing-linux</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-05-14T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

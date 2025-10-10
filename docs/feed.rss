@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/10/dp25</guid>
+      <title>Dokáže se FOSS ubránit insider útokům?</title>
+      <description>Na konferenci Dark Prague 2025 jsem měl přednášku 'XZ Utils: Can FOSS withstand new generation of insider attacks?'. Jak jsem slíbil, publikuji prezentaci z ní.</description>
+      <link>https://www.altair.blog/2025/10/dp25</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-10-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2025/10/ssc</guid>
       <title>Safe, sane, consensual - největší lež v BDSM</title>
       <description>Zkratka SSC je v BDSM prakticky nedotknutelným symbolem. Dodržování v ní obsažených zásad je to, co nás - hodné, ochočené, vědomé úchyly - odlišuje od těch zlých, divokých, kriminálních. Zní to hezky a je to líbivé vysvětlení pro každého začátečníka. Má jedinou nevýhodu: je to lež.</description>
@@ -139,17 +148,6 @@
       <category>Lab</category>
       <category>Linux</category>
       <pubDate>2024-07-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/07/mosquitto-linux</guid>
-      <title>Instalace MQTT serveru Mosquitto na Linux</title>
-      <description>V prvním a druhém dílu seriálu o MQTT jsem používal veřejný MQTT broker. To se hodí pro demo, ale produkční systém na tom stavět nechcete. Pokud pro svůj MQTT server nechcete používat hostované řešení, můžete si rozjet vlastní server. Asi nejpoužívanějším softwarem pro tento účel je Mosquitto. Je to open source multiplatformní projekt, který funguje na Windows, Linuxu i Mac OS. Ukážu vám, jak Mosquitto nainstalovat na Linux, nastavit na něm TLS zabezpečení a WebSockets rozhraní.</description>
-      <link>https://www.altair.blog/2024/07/mosquitto-linux</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-07-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
