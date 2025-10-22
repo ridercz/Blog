@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/10/tisk</guid>
+      <title>Jak tisknout z .NETu na normální i pokladní tiskárně</title>
+      <description>Po letech budování bezpapírové společnosti potiskneme víc papíru, než když předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí.</description>
+      <link>https://www.altair.blog/2025/10/tisk</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-10-22T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/10/dp25</guid>
       <title>Dokáže se FOSS ubránit insider útokům?</title>
       <description>Na konferenci Dark Prague 2025 jsem měl přednášku 'XZ Utils: Can FOSS withstand new generation of insider attacks?'. Jak jsem slíbil, publikuji prezentaci z ní.</description>
@@ -137,17 +146,6 @@
       <category>Lab</category>
       <category>Linux</category>
       <pubDate>2024-07-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/07/ubuntu-upgrade</guid>
-      <title>Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS</title>
-      <description>V dubnu vyšla další long term support (LTS) verze Ubuntu Linuxu 24.04. Naučím vás, jak na ni rychle a bezbolestně upgradovat z předchozí LTS verze 22.04.</description>
-      <link>https://www.altair.blog/2024/07/ubuntu-upgrade</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-07-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
