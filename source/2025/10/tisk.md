@@ -1,5 +1,5 @@
 <!-- dcterms:title = Jak tisknout z .NETu na normální i pokladní tiskárně -->
-<!-- dcterms:abstract = Po letech budování bezpapírové společnosti potiskneme víc papíru, než když předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí. -->
+<!-- dcterms:abstract = Po letech budování bezpapírové společnosti potiskneme víc papíru, než kdy předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí. -->
 <!-- x4w:category = IT -->
 <!-- dcterms:creator = Michal Altair Valášek -->
 <!-- dcterms:date = 2025-10-22 -->
@@ -8,7 +8,7 @@
 <!-- x4w:pictureWidth = 150 -->
 <!-- x4w:pictureHeight = 150 -->
 
-Po letech budování bezpapírové společnosti potiskneme víc papíru, než když předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí.
+Po letech budování bezpapírové společnosti potiskneme víc papíru, než kdy předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí.
 
 ## Tisk na jakékoliv Windows tiskárně
 
