@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/10/win11</guid>
+      <title>Jak nainstalovat Windows 11 i bez Microsoft accountu</title>
+      <description>Microsoft se snaží, aby uživatelé Windows používali online účty. Obecně je to dobrý nápad, ale v některých případech se to nehodí. Ukážu vám způsob, jak Windows 11 nainstalovat i bez Microsoft účtu. A to takový, který by měl fungovat trvale, protože nejde o hack.</description>
+      <link>https://www.altair.blog/2025/10/win11</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-10-23T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/10/tisk</guid>
       <title>Jak tisknout z .NETu na normální i pokladní tiskárně</title>
       <description>Po letech budování bezpapírové společnosti potiskneme víc papíru, než kdy předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí.</description>
@@ -143,15 +152,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT historie</category>
       <pubDate>2024-06-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/osborne</guid>
-      <title>Osborne nebyl první, stručná historie notebooků</title>
-      <description>První počítače pro sebe potřebovaly vlastní budovu a nebylo jich mnoho. Thomasovi J. Watsonovi, tehdy šéfovi IBM, je připisován výrok že nevidí trh pro více než šest počítačů na celém světě. Ve skutečnosti nic takového neřekl, ale je pravdou, že poměrně dlouho panovalo přesvědčení, že počítače budou veliké a bude jich málo. Ostatně i Isaac Asimov, velmistr science fiction, takto počítače viděl i ve vzdálené budoucnosti a nástupem malých modelů byl překvapen.</description>
-      <link>https://www.altair.blog/2024/06/osborne</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2024-06-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
