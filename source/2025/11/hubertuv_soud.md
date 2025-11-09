@@ -1,0 +1,9 @@
+<!-- dcterms:title = Hubertův soud -->
+<!-- dcterms:abstract = Hubertova jízda je tradiční symbolické zakončení jezdecké sezóny, konané na přelomu října a listopadu. Sv. Hubert je patronem lovců a Hubertova jízda je symbolickým parforsním honem. Na závěr je velká oslava, v průběhu které se koná Hubertův soud, který projednává různé drobné prohřešky účastníků a udílí tresty. Ty bývají většinou symbolické a humorné. Většinou. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2025-11-10 -->
+<!-- x4w:category = BDSM -->
+<!-- x4w:pictureUrl = /perex-pictures/20251110-hubertuv-soud.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2025/11/hubertuv_soud -->

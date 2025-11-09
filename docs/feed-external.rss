@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2025/11/hubertuv_soud</guid>
+      <title>Hubertův soud</title>
+      <description>Hubertova jízda je tradiční symbolické zakončení jezdecké sezóny, konané na přelomu října a listopadu. Sv. Hubert je patronem lovců a Hubertova jízda je symbolickým parforsním honem. Na závěr je velká oslava, v průběhu které se koná Hubertův soud, který projednává různé drobné prohřešky účastníků a udílí tresty. Ty bývají většinou symbolické a humorné. Většinou.</description>
+      <link>https://www.bdsm.cz/2025/11/hubertuv_soud</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2025-11-10T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2025/10/ssc</guid>
       <title>Safe, sane, consensual - největší lež v BDSM</title>
       <description>Zkratka SSC je v BDSM prakticky nedotknutelným symbolem. Dodržování v ní obsažených zásad je to, co nás - hodné, ochočené, vědomé úchyly - odlišuje od těch zlých, divokých, kriminálních. Zní to hezky a je to líbivé vysvětlení pro každého začátečníka. Má jedinou nevýhodu: je to lež.</description>
@@ -135,17 +144,6 @@
       <category>Politika</category>
       <category>IT</category>
       <pubDate>2022-05-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</guid>
-      <title>Z Messengeru zprávy třeba do WhatsAppu. Umožnit to má nová regulace, nebude to mít ale snadné</title>
-      <description>Význam programů pro předávání zpráv (IM, instant messaging) za posledních několik let prudce vzrostl. Aplikace pro předávání zpráv téměř vytlačují standardizované způsoby komunikace, jako je e-mail nebo SMS. Trh si přitom mezi sebe rozdělilo několik populárních aplikací, Facebook Messenger, WhatsApp, iMessage, Signal či Telegram, které se snaží udržet uživatele ve vlastním rybníku a ještě k tomu podchytit SMS a získat co nejvíce dalších kontaktů. A s tím je podle Evropské komise potřeba něco udělat.</description>
-      <link>https://tech.hn.cz/c7-67053730-psms7-763ae5b8b048229</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Bezpečnost</category>
-      <category>Politika</category>
-      <pubDate>2022-04-05T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
