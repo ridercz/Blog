@@ -11,6 +11,11 @@
 
 <!-- $ -->
 Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží (na některých běží [.NET NanoFramework](https://nanoframework.net/), ale to je jiná pohádka). Ale jiná pohádka je i nejnovější [Arduino Uno Q](https://www.arduino.cc/product-uno-q). To totiž na jedné desce kombinuje mikrokontroler (MCU, STM32U585) a ARM mikroprocesor (MPU, Qualcomm Dragonwing QRB2210). A na MPU běží Linux (v tomto případě Debian) a na Linuxu běží .NET. Nedalo mi a desku jsem si za zhruba tisícovku musel koupit a vyzkoušet na tom ASP.NET rozjet. A to rovnou v nejnovější, před pár dny vydané verzi 10.0.
+
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube-nocookie.com/embed/lcs9npMNFM4" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
 - - -
 ## Instalace nejnovějšího image Linuxu
 
