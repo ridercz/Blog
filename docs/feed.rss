@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/11/unoq-aspnet</guid>
+      <title>ASP.NET na Arduinu Uno Q</title>
+      <description>Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží. Ale novinka Uno Q kombinuje mikrokontroler s linuxovým mikropočítačem a já vás naučím, jak na tomto mikropočítači .NET a ASP.NET rozjet.</description>
+      <link>https://www.altair.blog/2025/11/unoq-aspnet</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-11-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2025/11/hubertuv_soud</guid>
       <title>Hubertův soud</title>
       <description>Hubertova jízda je tradiční symbolické zakončení jezdecké sezóny, konané na přelomu října a listopadu. Sv. Hubert je patronem lovců a Hubertova jízda je symbolickým parforsním honem. Na závěr je velká oslava, v průběhu které se koná Hubertův soud, který projednává různé drobné prohřešky účastníků a udílí tresty. Ty bývají většinou symbolické a humorné. Většinou.</description>
@@ -133,16 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>Bezpečnost</category>
       <pubDate>2024-09-20T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=1ZVSbOjW-5Y</guid>
-      <title>Černý pátek světového IT: Chyba v CrowdStrike Falcon, výpadek Azure a útoky APT41</title>
-      <description>Kombinace tří faktorů přinesla výpadky IT systémů po celém světě. Jde o chybu v bezpečnostním software CrowdStrike, výpadek jednoho regionu cloudu Microsoft Azure a útoky čínské skupiny APT41. Pokusil jsem se srozumitelně shrnout, co se vlastně děje.</description>
-      <link>https://www.youtube.com/watch?v=1ZVSbOjW-5Y</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Z-TECH</category>
-      <pubDate>2024-07-19T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

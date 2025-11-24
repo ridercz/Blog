@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ASP.NET na Arduinu Uno Q | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2025/11/unoq-aspnet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="ASP.NET na Arduinu Uno Q" />
+    <meta name="twitter:description" content="Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží. Ale novinka Uno Q kombinuje mikrokontroler s linuxovým mikropočítačem a já vás naučím, jak na tomto mikropočítači .NET a ASP.NET rozjet." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20251114-unoq.jpg" />
+    <meta property="article:published_time" content="2025-11-24" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="ASP.NET na Arduinu Uno Q" />
+    <meta name="description" property="og:description" content="Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží. Ale novinka Uno Q kombinuje mikrokontroler s linuxovým mikropočítačem a já vás naučím, jak na tomto mikropočítači .NET a ASP.NET rozjet." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20251114-unoq.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2025/11/unoq-aspnet" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20251114-unoq.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>ASP.NET na Arduinu Uno Q</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2025-11-24">24. listopadu 2025 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží (na některých běží <a href="https://nanoframework.net/">.NET NanoFramework</a>, ale to je jiná pohádka). Ale jiná pohádka je i nejnovější <a href="https://www.arduino.cc/product-uno-q">Arduino Uno Q</a>. To totiž na jedné desce kombinuje mikrokontroler (MCU, STM32U585) a ARM mikroprocesor (MPU, Qualcomm Dragonwing QRB2210). A na MPU běží Linux (v tomto případě Debian) a na Linuxu běží .NET. Nedalo mi a desku jsem si za zhruba tisícovku musel koupit a vyzkoušet na tom ASP.NET rozjet. A to rovnou v nejnovější, před pár dny vydané verzi 10.0.</p>
+<h2>Instalace nejnovějšího image Linuxu</h2>
+<p>Deska se nedodává s nejnovější verzí Linuxu, takže jako první je žádoucí aktualizovat Linux na nejnovější verzi.</p>
+<table class="steps">
+<tr data-step-seqid="1" data-step-sha256="8Nh30DE2wD5wm9erpgw54dTj+2CeDo2Eewal7yfiqZw">
+	<th>1.</th>
+	<td><p>Odpojte desku Arduino Uno Q od počítače.</p></td>
+</tr>
+<tr id="shortpins" data-step-seqid="2" data-step-sha256="5VWapDHZ0YyAehXr5eKQvZ06X2D6c3L70nD3FHJtaws">
+	<th>2.</th>
+	<td><p>Vyzkratujte dva piny podle následujícího obrázku. Použijte k tomu třeba F-F propojovací kabel nebo klasický jumper, používaný třeba na PC základních deskách.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-jumper.svg" alt="" /></p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Pokud jsou tyto dva piny propojené při zapnutí, přepne se deska do režimu EDL (Emergency Download) a je možné updatovat image.</p></td>
+</tr>
+<tr data-step-seqid="3" data-step-sha256="nGCnIDhLnFAUpVQ+D7WDMqPa4qzqGRBl8yGqScQZE1Q">
+	<th>3.</th>
+	<td><p>Připojte desku k počítači přes USB.</p></td>
+</tr>
+<tr data-step-seqid="4" data-step-sha256="daTFknRbIjIrc3R/xYDgHWCG1Pg3u/OzcH6Ov171fz4">
+	<th>4.</th>
+	<td><p>Stáhněte si <a href="https://www.arduino.cc/en/software/#flasher-tool">Arduino Flasher CLI</a> a ZIP soubor někam rozbalte.</p></td>
+</tr>
+<tr data-step-seqid="5" data-step-sha256="qMJ50AlcxeKHlry1qzUH5mwy9C5B85gCyEtiMPFxOl0">
+	<th>5.</th>
+	<td><p>Spusťte následující příkaz:</p>
+<pre><code>arduino-flasher-cli flash latest -y</code></pre></td>
+</tr>
+<tr data-step-seqid="6" data-step-sha256="jsnFIoJva12EAX3aCqQR9JWeu2eO51wERj9lm2oY4Yk">
+	<th>6.</th>
+	<td><p>Budete-li vyzvání k instalaci ovladače pro USB zařízení, udělejte to:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-driver.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="7" data-step-sha256="yg5ZH4YZyWTxz10tsej+utFI7dglHkmzeXLa5bU59WM">
+	<th>7.</th>
+	<td><p>Začne se stahovat nejnovější dostupný image. To bude chvíli trvat, soubor má cca. 2 GB.</p></td>
+</tr>
+<tr data-step-seqid="8" data-step-sha256="zXWWdhfsp39hqeKnbDkD3FgAZ9tRyS9tzkA2UcE26OA">
+	<th>8.</th>
+	<td><p>Poté se image nahraje do desky (což také nějakou dobu trvá) a program bude ukončen.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-flashdone.png" alt="" /></p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Image (2,3 GB) a jeho rozbalená verze (9 GB) se uloží do vašeho uživatelského profilu, do složky <code>%LOCALAPPDATA%\arduino-flasher-cli</code>. Pokud chcete ušetřit 11 GB místa na disku, můžete její obsah smazat, neplánujete-li flashovat znovu.</p>
+<p>Pokud plánujete flashovat tentýž image znovu, je poněkud nemilé, že aplikace bude nejnovější verzi stahovat znovu, neb si neumí ověřit, že ji už má. Chcete-li tomu zabránit, podívejte se do výše uvedené složky a najděte její podsložku, v níž je soubor <code>disk-sdcard.img.root</code>. Přesný název adresáře záleží na okamžiku stažení (<code>download-XXXXXXXXX</code>) a verze image (v době psaní tohoto návodu <code>arduino-unoq-debian-image-20251024-412</code>).</p>
+<p>Pokud použijete následující příkaz (s patřičným názvem adresáře), nebude se stahovat image znovu:</p>
+<pre><code>arduino-flasher-cli flash C:\Users\UserName\AppData\Local\arduino-flasher-cli\download-904505832\arduino-unoq-debian-image-20251024-412 -y</code></pre></td>
+</tr>
+<tr data-step-seqid="9" data-step-sha256="Y7iL26/ZK/J5mThr1fiQSDWFOXH0cpeaa+SjaXFGU3k">
+	<th>9.</th>
+	<td><p>Odpojte desku od počítače, odstraňte propojku přidanou v kroku <a href="#shortpins">2</a> a desku znovu připojte.</p></td>
+</tr>
+</table>
+<h2>Připojení k Wi-Fi síti</h2>
+<table class="steps">
+<tr data-step-seqid="10" data-step-sha256="cpIdURvOZ22BqFX4+EQJtwzDUEzl6f7L9f4yBBZGyS0">
+	<th>10.</th>
+	<td><p>Stáhněte si nástroj <a href="https://www.arduino.cc/en/software/#app-lab-section">Arduino App Lab</a> a nainstalujte jej.</p></td>
+</tr>
+<tr class="warning">
+	<th><i class="fal fa-exclamation-triangle"></i></th>
+	<td><p>Současná verze aplikace (0.2.0) není příliš stabilní a občas padá. Pokud se tak stane, spusťte ji znovu a pokračujte tam, kde jste přestali.</p></td>
+</tr>
+<tr data-step-seqid="11" data-step-sha256="3JVC9q6bbrcE4Wdb2zIhUGm7fVcAtfteEdb/Y/FkeA0">
+	<th>11.</th>
+	<td><p>Spusťte Arduino App Lab a vyčkejte, dokud není detekována deska připojená přes USB. Poté klepněte na její ikonu:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-lab01.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="12" data-step-sha256="yI1hhIn/eThuqGb9RKaQD8B91gLIJr1TARMzCdprORU">
+	<th>12.</th>
+	<td><p>Vyberte rozložení klávesnice, desku nějak pojmenujte a klepněte na Confirm:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-lab02.png" alt="" /></p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Rozložení klávesnice by mělo význam pouze tehdy, pokud byste klávesnici k zařízení fyzicky připojili pomocí USB-C hubu a pracovali na konzoli, což asi dělat nebudete.</p></td>
+</tr>
+<tr data-step-seqid="13" data-step-sha256="yUICCmZFTerwfzB90BMy2TaHJmzVtOtPfPn8p/hd6wA">
+	<th>13.</th>
+	<td><p>Klepněte na název Wi-Fi sítě, zadejte její heslo a klepněte na Confirm:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-lab03.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="14" data-step-sha256="7nJ8FTlGqXNOZB/r9HUNM39JSUoxwyf1rWfUMo5TfIg">
+	<th>14.</th>
+	<td><p>Aplikace vás nejspíše vyzve k aktualizaci balíčků, což proveďte. Opět to bude nějakou dobu trvat.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-lab04.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="15" data-step-sha256="QpTwk20rCzLaqoa+T6paCWlk4ow8uiKN7/AUtdY1rqU">
+	<th>15.</th>
+	<td><p>Poté klepněte na <em>Restart App Lab</em> a znovu se připojte přes USB.</p></td>
+</tr>
+<tr id="pwd" data-step-seqid="16" data-step-sha256="iOdcubzf20j7r9rBx9x9jp2YEoi4A1eWqq9n2lULohg">
+	<th>16.</th>
+	<td><p>Zadejte nové heslo pro uživatele <code>arduino</code> a klepněte na <em>Confirm</em>.</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-lab05.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="17" data-step-sha256="OSREGsL6Vc85AERqg9BMcwLOxAYlfP5n1p6zV/9Lhis">
+	<th>17.</th>
+	<td><p>Tím je nastavení desky ukončeno. Aplikaci Arduino App Lab můžete ukončit.</p></td>
+</tr>
+<tr id="getip" data-step-seqid="18" data-step-sha256="it1VeNuLrOEzlQf11sU6OYqlp2QQedc7raT7RD5x9zQ">
+	<th>18.</th>
+	<td><p>Zjistěte, např. na routeru, jaká IP adresa byla zařízení přidělena, např. <code>192.168.0.123</code>.</p></td>
+</tr>
+</table>
+<h2>Vytvoření a publikace aplikace</h2>
+<table class="steps">
+<tr data-step-seqid="19" data-step-sha256="e7ZIR4L1O7UqJMOG7R++TN2EjwhP/wbh9AsifjuAzck">
+	<th>19.</th>
+	<td><p>Vytvořte jakoukoliv ASP.NET Core aplikaci, např. ukázkovou aplikaci podle výchozí šablony.</p></td>
+</tr>
+<tr data-step-seqid="20" data-step-sha256="qeKida0vTwBc4tArOudSAQsXIe3wiOgpS+o+JcVWi+M">
+	<th>20.</th>
+	<td><p>V souboru <code>Program.cs</code> nastavte, aby Kestrel naslouchal na všech adresách na portu 5000 (standardně naslouchá pouze na localhostu):</p>
+<pre>
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+
+<ins>// Listen on port 5000 for HTTP on all network interfaces (0.0.0.0).
+builder.WebHost.ConfigureKestrel(options =&gt; {
+    options.ListenAnyIP(5000);
+});</ins>
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment()) {
+    app.UseExceptionHandler("/Error");
+}
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
+
+app.Run();
+</pre></td>
+</tr>
+<tr data-step-seqid="21" data-step-sha256="9AqH5DjaoH4dXnm/6IgQEyeDo1X/d/A5WfOhoOSEYG8">
+	<th>21.</th>
+	<td><p>V menu klepněte na <em>Build &gt; Publish</em>.</p></td>
+</tr>
+<tr data-step-seqid="22" data-step-sha256="SMSRyiTmFlHnfenDMp16rUFjfhapzXOXgtf5Ps7wqKc">
+	<th>22.</th>
+	<td><p>Zvolte jako <em>Target</em> možnost <em>Folder</em> a klepněte na <em>Next</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-publish01.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="23" data-step-sha256="gfVbTBDn4jOZN3eenNzcU5v9EZCxXGv2QYqbesmYQC0">
+	<th>23.</th>
+	<td><p>V dalším dialogu nastavte cestu pro vypublikování dle svých preferencí, případně nechte výchozí, a klepněte na <em>Finish</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-publish02.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="24" data-step-sha256="6VPGrxV95ZCov2iTGYdhT+HGq0QCTS+ShTzd+Ql7x2A">
+	<th>24.</th>
+	<td><p>V dalším dialogu klepněte na <em>Close</em>.</p></td>
+</tr>
+<tr data-step-seqid="25" data-step-sha256="e+k2Atx20j/we2CiK0sTfNmJ6ET0nqSzIE79g5qIsMY">
+	<th>25.</th>
+	<td><p>Klepněte na <em>Show all settings</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-publish03.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="26" data-step-sha256="rQdqABZbzU9LbEk/rdE8OsD1OktYX9H4QTV3Wk8g+Xk">
+	<th>26.</th>
+	<td><p>Nastavte následující parametry:</p>
+<ul>
+<li>Deplyment Mode: Self-contained</li>
+<li>Targer Runtime: linux-x64</li>
+<li>Produce single file: ano (není nezbytné, ale zjednoduší deployment)</li>
+<li>Delete all existing files prior to publish: ano (není nezbytné, ale zjednoduší deployment)</li>
+</ul>
+<p>Poté klepněte na <em>Save</em>:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-publish04.png" alt="" /></p></td>
+</tr>
+<tr class="information">
+	<th><i class="fal fa-info-circle"></i></th>
+	<td><p>Používám self-contained deployment, protože je to pro účely dema nejjednodušší a protože v této chvíli ještě nejsou v repozitářích pohodlně dostupné balíčky .NET 10.0, takže by instalace jeho runtime byla zbytečně komplikovaná. Obecně samozřejmě můžete použít jakýkoliv způsob deploymentu.</p></td>
+</tr>
+<tr id="getdir" data-step-seqid="27" data-step-sha256="D6yirXnsim6vVZWlqaXdBIotqyuOHwZjabjWUMH88uo">
+	<th>27.</th>
+	<td><p>Klepněte na tlačítko <em>Publish</em> a vyčkejte, dokud se projekt nevypublikuje. Poté si poznamenejte cestu, kam se tak stalo.</p></td>
+</tr>
+</table>
+<h2>Nakopírování aplikace na server</h2>
+<table class="steps">
+<tr data-step-seqid="28" data-step-sha256="PKDpjONecwOXFjdsMXwtD1OmSknV0VEjC84A8ivYikc">
+	<th>28.</th>
+	<td><p>Spusťte příkazovou řádku a připojte se přes SSH jako uživatel <code>arduino</code> k serveru s IP adresou zjištěnou v kroku <a href="#getip">18</a>:</p>
+<pre><code>ssh arduino@192.168.0.123</code></pre></td>
+</tr>
+<tr data-step-seqid="29" data-step-sha256="uJ0CSQihIgKTY3Wl6EjHDgP76w/cR5sxQJ727Nla/hg">
+	<th>29.</th>
+	<td><p>Při prvním přihlášení budete požádáni o potvrzení SSH klíče. Zadejte <code>yes</code> a potvrďte <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="30" data-step-sha256="wCtdmnjqXkJSbHVaIGhxPlGfwHrhXe0C/wKPUj960ps">
+	<th>30.</th>
+	<td><p>Zadejte heslo, které jste vytvořili v kroku <a href="#pwd">16</a> a potvrďte <em>Enter</em>.</p></td>
+</tr>
+<tr data-step-seqid="31" data-step-sha256="5gyHpxeZuRzp4tQMGgyxj6LsrIQqXahYSMgRVDzqJbo">
+	<th>31.</th>
+	<td><p>Zadáním následujících příkazů aktualizujte systém:</p>
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y</code></pre></td>
+</tr>
+<tr data-step-seqid="32" data-step-sha256="ahTyKFNcGPXDZoJfCiWcFOJuRXMkUUwNq415f/++Lik">
+	<th>32.</th>
+	<td><p>Následujícím příkazem vytvoříte ve své domácí složce <code>/home/arduino</code> složku <code>www</code>:</p>
+<pre><code>mkdir ~/www</code></pre></td>
+</tr>
+<tr data-step-seqid="33" data-step-sha256="j8JstmvoUKQhwkhm1p1PZnCAihRcgxqZlmY08kfiaNM">
+	<th>33.</th>
+	<td><p>Nyní je třeba zkopírovat vypublikovanou aplikaci z lokální složky z kroku <a href="#getdir">27</a> do nově vytvořené složky <code>~/www</code> na serveru. To uděláme pomocí SCP (Secure Copy).</p>
+<p>Otevřete si druhou záložku v okně terminálu a zadejte následující příkaz (nezapomeňte nahradit cestu tou z kroku <a href="#getdir">27</a> a IP adresu tou z <a href="#getip">18</a>):</p>
+<pre><code>scp -r X:\Projects\WebApplication1\bin\Release\net10.0\publish\* arduino@192.168.0.123:~/www</code></pre></td>
+</tr>
+<tr data-step-seqid="34" data-step-sha256="FYUZKU4F58WjmHNRVxmxUrx6VvTaE8GFBRK+qu02W8o">
+	<th>34.</th>
+	<td><p>Vyčkejte, dokud nebudou všechny soubory nahrány na server.</p></td>
+</tr>
+<tr data-step-seqid="35" data-step-sha256="fm05m6/Y+2WdQdRbaDV6yLwJh7zJ+ey7DY7r6u8AlH4">
+	<th>35.</th>
+	<td><p>Přepněte se na záložku terminálu, kde jste připojeni na server přes SSH.</p></td>
+</tr>
+<tr data-step-seqid="36" data-step-sha256="HFca0W5AjtyP41WHlAT462H98QW1m0/vUItTNKVR8VM">
+	<th>36.</th>
+	<td><p>Nastavte binárku vaší aplikace jako spustitelnou následujícím příkazem (název souboru může být jiný, podle názvu vaší assembly; soubor nemá příponu):</p>
+<pre><code>chmod +x ~/www/WebApplication1</code></pre></td>
+</tr>
+<tr data-step-seqid="37" data-step-sha256="jZF1wQm/JxbVMMWcTLm+ajJKA6rLjvo6XecO1k4FNJ0">
+	<th>37.</th>
+	<td><p>Aplikace je nyní spuštěna. Poznáte to podle toho, že vypisuje debugovací zprávy na konzoli:</p>
+<p><img src="https://www.cdn.altairis.cz/Blog/2025/20251114-unoq-publish06.png" alt="" /></p></td>
+</tr>
+<tr data-step-seqid="38" data-step-sha256="uOjE2orDmPGm3Dm1I3w8xRN0xjdYSi4asY+39678n+0">
+	<th>38.</th>
+	<td><p>Podívejte se z webového prohlížeče na IP vašeho zařízení, port 5000, např.:</p>
+<pre><code>http://192.168.0.123:5000/</code></pre></td>
+</tr>
+<tr data-step-seqid="39" data-step-sha256="+s120OKVOfFjljhoktOE+p52JyAsURrkdfL3723CChI">
+	<th>39.</th>
+	<td><p>Zobrazí se vám vaše aplikace.</p></td>
+</tr>
+</table>
+<p>Tímto jsme si ověřili, že je aplikace funkční a běží, jako na kterémkoliv jiném Linuxu. V této chvíli běží jenom dočasně, dokud je spuštěna z vaší uživatelské relace. Chcete-li, aby aplikace běžela plnohodnotně, podívejte se na bezplatný kurz <a href="https://elearning.altairis.cz/cs/courses/netlinux">Hosting ASP.NET Core aplikací na Linuxu</a> a použijte tam popsaný postup pro nasazení aplikace jako služby a publikaci pomocí Nginxu.</p>
+<p>V této chvíli jsem bohužel zatím nenašel pohodlný způsob, jak zajistit komunikaci mezi .NET kódem běžícím na ARM MPU a C++ kódem běžícím na STM MCU. Veškeré příklady jsou bohužel pouze pro Python, knihovna pro .NET neexistuje. Komunikace je však principiálně možná. Podle dostupných údajů se používá pro komunikaci mezi MPU a MCU technologie Unix Domain Sockets (kterou by .NET měl nativně podporovat) se zprávami formátovanými podle standardu <a href="https://msgpack.org/">MessagePack</a> pro kterou existuje <a href="https://www.nuget.org/packages/MessagePack">NuGet balíček</a>. Dle svých časových možností se budu touto problematikou dále zabývat nebo to udělá někdo jiný.</p>
+<p>Proč se tedy touto deskou zabývat, když je z hlediska .NET programátora pro většinu scénářů nejspíše výhodnější a jednodušší použít Raspberry Pi, které se dá ve srovnatelné hardwarové konfiguraci pořídit za stejné peníze? Jde především o možnosti do budoucna, kdy bude možné propojení s MCU na téže desce a využití podpory pro AI. V době psaní tohoto článku je Uno Q na trhu velice krátkou dobu a podpora není velká, ale to se v budoucnu změní. Další výhodou je napájení. Podle datasheetu si Uno Q verzme maximálně 3 A při 5 V (a většinou spíše méně), zatímco Raspberry Pi je z hlediska napájení komplikovanější, protože si umí sáhnout i na 5 A, což nemusí být vždy jednoduché zajistit, zejména při napájení třeba z powerbanky.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=ASP.NET+na+Arduinu+Uno+Q&amp;body=https://www.altair.blog/2025/11/unoq-aspnet">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2025/11/unoq-aspnet.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2025/11/unoq-aspnet.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2025/11/unoq-aspnet">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2025/11/unoq-aspnet">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2025</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

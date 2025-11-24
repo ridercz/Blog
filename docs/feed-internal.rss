@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2025/11/unoq-aspnet</guid>
+      <title>ASP.NET na Arduinu Uno Q</title>
+      <description>Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží. Ale novinka Uno Q kombinuje mikrokontroler s linuxovým mikropočítačem a já vás naučím, jak na tomto mikropočítači .NET a ASP.NET rozjet.</description>
+      <link>https://www.altair.blog/2025/11/unoq-aspnet</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2025-11-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/10/win11</guid>
       <title>Jak nainstalovat Windows 11 i bez Microsoft accountu</title>
       <description>Microsoft se snaží, aby uživatelé Windows používali online účty. Obecně je to dobrý nápad, ale v některých případech se to nehodí. Ukážu vám způsob, jak Windows 11 nainstalovat i bez Microsoft účtu. A to takový, který by měl fungovat trvale, protože nejde o hack.</description>
@@ -143,15 +152,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT historie</category>
       <pubDate>2024-06-26T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/sapo</guid>
-      <title>SAPO: první československý počítač, v němž se o výsledku hlasovalo</title>
-      <description>První univerzální československý počítač se jmenoval SAPO (Samočinný Počítač). Stavěl se sedm let a po dvou letech vyhořel. Zůstalo nám ale po něm dědictví v podobě technologie TMR (Triple Module Redundancy), kterou využívá třeba SpaceX.</description>
-      <link>https://www.altair.blog/2024/06/sapo</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2024-06-10T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
