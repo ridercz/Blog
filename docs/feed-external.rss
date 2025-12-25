@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2025/12/zazraky-do-tri-dnu</guid>
+      <title>Zázraky do tří dnů</title>
+      <description>Kreativita se rodí z omezení. Proto jsem i letos nechal lidi na Facebooku, abych mi zadali deset slov (nebo slovních spojení) s tím, že na jejich základě napíšu letošní vánoční povídku. Posuďte sami, jak moc se mi povedla.</description>
+      <link>https://www.bdsm.cz/2025/12/zazraky-do-tri-dnu</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2025-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.bdsm.cz/2025/11/hubertuv_soud</guid>
       <title>Hubertův soud</title>
       <description>Hubertova jízda je tradiční symbolické zakončení jezdecké sezóny, konané na přelomu října a listopadu. Sv. Hubert je patronem lovců a Hubertova jízda je symbolickým parforsním honem. Na závěr je velká oslava, v průběhu které se koná Hubertův soud, který projednává různé drobné prohřešky účastníků a udílí tresty. Ty bývají většinou symbolické a humorné. Většinou.</description>
@@ -134,16 +143,6 @@
       <category>Bezpečnost</category>
       <category>IT</category>
       <pubDate>2022-08-28T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</guid>
-      <title>CZ.NIC už neblokuje dezinformační weby; škody zůstaly a náprava je nepravděpodobná</title>
-      <description>Sdružení CZ.NIC přestalo blokovat „závadové“ domény, na kterých mělo docházet k šíření dezinformací. Bylo na čase, protože se vůbec nemělo snažit zabránit uživatelům v přístupu k nim. V tomto textu se podíváme nejen na technické náležitosti blokování nežádoucích webových serverů, ale také na unikátní postavení CZ.NIC a na možnosti, jak do budoucna zajistit ochranu webů před rozhodnutími správce české národní domény, která nemají oporu v legislativě.</description>
-      <link>https://tech.hn.cz/c7-67074880-psms7-e5185b2882209fe</link>
-      <author>Michal Altair Valášek</author>
-      <category>Politika</category>
-      <category>IT</category>
-      <pubDate>2022-05-27T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

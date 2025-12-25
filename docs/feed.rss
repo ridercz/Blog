@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.bdsm.cz/2025/12/zazraky-do-tri-dnu</guid>
+      <title>Zázraky do tří dnů</title>
+      <description>Kreativita se rodí z omezení. Proto jsem i letos nechal lidi na Facebooku, abych mi zadali deset slov (nebo slovních spojení) s tím, že na jejich základě napíšu letošní vánoční povídku. Posuďte sami, jak moc se mi povedla.</description>
+      <link>https://www.bdsm.cz/2025/12/zazraky-do-tri-dnu</link>
+      <author>Michal Altair Valášek</author>
+      <category>BDSM</category>
+      <pubDate>2025-12-24T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/11/unoq-aspnet</guid>
       <title>ASP.NET na Arduinu Uno Q</title>
       <description>Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží. Ale novinka Uno Q kombinuje mikrokontroler s linuxovým mikropočítačem a já vás naučím, jak na tomto mikropočítači .NET a ASP.NET rozjet.</description>
@@ -133,15 +142,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2024-10-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://tech.hn.cz/c7-67384730-hdq8q-cb8aa8935c27efe</guid>
-      <title>Bomba týden pro Hizballáh: Jak fungují pagery a proč vybuchovaly teroristům po celém Libanonu v rukou a po kapsách</title>
-      <description>Bomba týden, který zažívají teroristé z hnutí Hizballáh v Libanonu je výbornou příležitostí, proč se podívat na to, jak fungují zařízení, která se po několika desetiletích díky němu vrátila do popředí veřejného zájmu: pagery. Proč se pagery příliš neuchytily v České republice a proč jsou naopak oblíbené mezi teroristy. Tedy, spíše byly, dá se očekávat, že nyní jejich popularita v těchto kruzích poněkud opadne.</description>
-      <link>https://tech.hn.cz/c7-67384730-hdq8q-cb8aa8935c27efe</link>
-      <author>Michal Altair Valášek</author>
-      <category>Bezpečnost</category>
-      <pubDate>2024-09-20T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

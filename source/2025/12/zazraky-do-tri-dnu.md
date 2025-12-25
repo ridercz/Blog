@@ -1,0 +1,9 @@
+<!-- dcterms:title = Zázraky do tří dnů -->
+<!-- dcterms:abstract = Kreativita se rodí z omezení. Proto jsem i letos nechal lidi na Facebooku, abych mi zadali deset slov (nebo slovních spojení) s tím, že na jejich základě napíšu letošní vánoční povídku. Posuďte sami, jak moc se mi povedla. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2025-12-24 -->
+<!-- x4w:category = BDSM -->
+<!-- x4w:pictureUrl = /perex-pictures/20251224-zazraky-do-tri-dnu.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2025/12/zazraky-do-tri-dnu -->
