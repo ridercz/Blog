@@ -1,0 +1,9 @@
+<!-- dcterms:title = Rok a den -->
+<!-- dcterms:abstract = Drzý čeledín urazí bosorku s očima, co vidí až na dno duše. A za to ho čeká trest: rok a den jí musí sloužit jako její kůň. Z Vichra, co se vzpírá biči i kouzlu, se stane věrný společník ženy, která léčí zoufalství a sklízí jen strach a opovržení. Fantasy o úctě, která přežije kletbu. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2026-01-31 -->
+<!-- x4w:category = BDSM -->
+<!-- x4w:pictureUrl = /perex-pictures/20260131-rok-a-den.jpg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://www.bdsm.cz/2026/01/rok-a-den -->
