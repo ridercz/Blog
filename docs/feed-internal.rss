@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2026/02/wsl</guid>
+      <title>Windows Subsystem for Linux (WSL) a co o něm potřebujete vědět</title>
+      <description>Chcete na Windows spouštět aplikace pro Linux bez virtuálního počítače? WSL vám to umožní. V krátkém seriálu vám představím, jak WSL funguje a co umí.</description>
+      <link>https://www.altair.blog/2026/02/wsl</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2026-02-17T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2025/11/unoq-aspnet</guid>
       <title>ASP.NET na Arduinu Uno Q</title>
       <description>Značku Arduino máme tradičně spojenou s mikrokontrolery a na nich ASP.NET neběží. Ale novinka Uno Q kombinuje mikrokontroler s linuxovým mikropočítačem a já vás naučím, jak na tomto mikropočítači .NET a ASP.NET rozjet.</description>
@@ -143,15 +152,6 @@
       <category>Lab</category>
       <category>Linux</category>
       <pubDate>2024-06-27T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/06/basic</guid>
-      <title>Když BASIC vládnul světu</title>
-      <description>Když startoval (tehdy se tomu ještě neříkalo “bootoval”) můj první počítač, na pár sekund zobrazil hlášku “Testing memory”. Pak pípnul a přivítalo mě hlášení “BASIC G /V3.0”. Ten počítač byl československé výroby a jmenoval se PMD 85-3. A stejně jako většina malých počítačů té doby – včetně populárnějších a světově rozšířenějších modelů typu Sinclair ZX Spectrum, Commodore C64 nebo třeba Atari 800 – po startu automaticky nabídl prostředí programovacího jazyka BASIC.</description>
-      <link>https://www.altair.blog/2024/06/basic</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT historie</category>
-      <pubDate>2024-06-26T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
