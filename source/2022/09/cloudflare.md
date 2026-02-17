@@ -1,7 +1,7 @@
 <!-- dcterms:title = Jak zkonfigurovat Cloudflare proxy v ASP.NET -->
 <!-- dcterms:abstract = Cloudflare je populární služba zajišťující (mimo jiné) CDN a reverzní proxy. To znamená, že se postaví mezi váš server a klienta a zařizuje různé zajímavé služby, od geografické dostupnosti přes zabezpečení po cacheování. Skrývá ale IP adresu klienta. Napsal jsem knihovnu, která umožňuje ASP.NET Core aplikaci transparentně zjistit IP adresu klienta, i když je publikována přes Cloudflare. -->
 <!-- dcterms:creator = Michal Altair Valášek -->
-<!-- x4w:coverUrl = /cover-pictures/20220904-cloudflare.png -->
+<!-- x4w:coverUrl = /cover-pictures/20220904-cloudflare.jpg -->
 <!-- x4w:coverCredits = Midjourney AI -->
 <!-- x4w:pictureUrl = /perex-pictures/logo-cloudflare.svg -->
 <!-- x4w:pictureWidth = 150 -->
