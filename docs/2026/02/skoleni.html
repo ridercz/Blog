@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pozvánka na komplexní školení ASP.NET Core 10 | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2026/02/skoleni" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Pozvánka na komplexní školení ASP.NET Core 10" />
+    <meta name="twitter:description" content="Aktuální verze .NET 10 je už nějakou dobu venku a nadešel čas se mu pořádně podívat na kloub. Proto jsem připravil zcela novou verzi školení, která vás naučí mu doopravdy porozumět." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20250427-data.jpg" />
+    <meta property="article:published_time" content="2026-02-20" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Pozvánka na komplexní školení ASP.NET Core 10" />
+    <meta name="description" property="og:description" content="Aktuální verze .NET 10 je už nějakou dobu venku a nadešel čas se mu pořádně podívat na kloub. Proto jsem připravil zcela novou verzi školení, která vás naučí mu doopravdy porozumět." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20250427-data.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2026/02/skoleni" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20250427-data.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Pozvánka na komplexní školení ASP.NET Core 10</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/akce-a-udalosti" title="Rubrika">
+              <i class="fal fa-tag"> </i>Akce a události</a>
+          </li>
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2026-02-20">20. února 2026 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Aktuální verze .NET 10 je už nějakou dobu venku a nadešel čas se mu pořádně podívat na kloub. Proto jsem připravil školení, která vás naučí mu doopravdy porozumět.</p>
+<ul>
+<li><strong>Úvod do ASP.NET 10</strong> vám ukáže základy fungování .NETu jako takového a ASP.NET Core. Důkladně. Ukážeme si také, jak ASP.NET Core aplikace provozovat v různých scénářích.</li>
+<li><strong>ASP.NET 10 prakticky</strong> je přímým pokračováním, které staví na těchto základech a podrobně vysvětluje řešení praktických problémů v Razor Pages a MVC, včetně zabezpečení a autentizace.</li>
+</ul>
+<p>Ve své podstatě jde o jedno školení, které bylo pro velký objem rozděleno na dvě a vřele doporučuji se účastnit obou částí školení.</p>
+<h2 id="kdy-a-kde-se-budou-skoleni-konat">Kdy a kde se budou školení konat</h2>
+<p>Školení se budou konat <strong>online</strong> pomocí systému <a href="https://elearning.altairis.cz">Altairis eLearning</a>, s přenosem videa lektora k účastníkům a chatem pro dotazy (s možností individuální pomoci a konzultací). Účastníkům bude k dispozici záznam a výukové materiály i po skončení školení.</p>
+<ul>
+<li>Termín první části školení je <strong>09. - 13. března 2026</strong>.</li>
+<li>Termín druhé částí školení je <strong>23. - 27. března 2026</strong>.</li>
+</ul>
+<p>Čas je vždy od <strong>12:00 do 17:00</strong>. Tento termín umožňuje, aby účastník nebyl blokován celý pracovní den.</p>
+<p>Pokud byste se školení rádi zúčastnili, ale nevyhovuje vám termín, vyplňte <a href="https://forms.office.com/r/PfbJeNEi7U">objednací formulář</a> a napište to do poznámky - pokusím se vám vyjít vstříc. Stejně tak, pokud byste měli zájem o prezenční školení nebo privátní jenom pro vaši firmu.</p>
+<h2 id="kolik-skoleni-stoji">Kolik školení stojí</h2>
+<ul>
+<li>Cena jedné části školení je 18 000 Kč.</li>
+<li>Cena obou částí školení je 35 000 Kč.</li>
+</ul>
+<p>V případě tří a více účastníků z jedné firmy (na jedné objednávce) je další sleva 10 %. Cena je uvedena bez DPH.</p>
+<ul>
+<li><strong><a href="https://forms.office.com/r/PfbJeNEi7U">Objednávkový formulář</a></strong></li>
+</ul>
+<h2 id="obsah-prvni-casti-skoleni">Obsah první části školení</h2>
+<p>Platformu .NET používám po celé čtvrtstoletí její existence a prakticky stejnou dobu to učím ostatní. Toto školení je nejnovější verzí osvědčeného schématu, které pomohlo již mnoha lidem, která byla výrazně rozšířena a aktualizována.</p>
+<p>První část školení se zabývá tím, jak .NET a ASP.NET vlastně fungují a jak aplikace v nich provozovat. Začátečníkům pomůže se zorientovat v problematice. Zkušenějším programátorům pak uspořádat znalosti a dovednosti, protože se na ně podíváme systematicky, nejenom optikou toho, co momentálně hoří.</p>
+<p>Část věnuji i softwarové architektuře a SOLID principům, dependncy injection atd. protože na nich je moderní .NET založen a ze zkušenosti vím, že mnoho programátorů má s pochopením tohoto aspektu problémy.</p>
+<h3 id="zakladni-osnova">Základní osnova</h3>
+<ul>
+<li>.NET včera, dnes a zítra
+<ul>
+<li>Stručný přehled historie platformy</li>
+<li>Které technologie přežily a které ne</li>
+<li>Základní náhled na upgrade aplikací v .NET Frameworku</li>
+<li>Verzování, STS a LTS releases</li>
+<li>.NET Standard</li>
+</ul>
+</li>
+<li>NuGet
+<ul>
+<li>Balíčkovací systém pro .NET</li>
+<li>Jak vytvářet a publikovat vlastní balíčky</li>
+<li>.NET Tools, globální a lokální</li>
+</ul>
+</li>
+<li>.NET pro web
+<ul>
+<li>Dostupné vývojové frameworky</li>
+<li>Co s legacy aplikacemi</li>
+</ul>
+</li>
+<li>Spouštění a běh ASP.NET Core aplikací
+<ul>
+<li>Hosting aplikací, minimal hosting model</li>
+<li>Middleware</li>
+<li>Endpoint routing</li>
+<li>Route parametry, route constraints</li>
+</ul>
+</li>
+<li>Deployment ASP.NET Core aplikací
+<ul>
+<li>Základní režimy fungování (SDK, FDD, SCD)</li>
+<li>Hosting na Windows a IIS</li>
+<li>Hosting v Microsoft Azure</li>
+<li>Hosting na Linuxu</li>
+<li>Psaní multiplatformních aplikací</li>
+</ul>
+</li>
+<li>.NET nejen pro web
+<ul>
+<li>Konzolové aplikace</li>
+<li>Parkování příkazové řádky</li>
+<li>Background workers a proč je chcete používat</li>
+<li>Windows Services, Linux Daemons</li>
+</ul>
+</li>
+<li>Ideové principy programování
+<ul>
+<li>SOLID principy</li>
+<li>IoC/DI</li>
+<li>Použití vestavěného kontejneru</li>
+<li>Náhrada vestavěného kontejneru jiným</li>
+</ul>
+</li>
+<li>ASP.NET MVC a Razor View Engine
+<ul>
+<li>Model-View-Controller pattern v .NETu</li>
+<li>Razor View Engine</li>
+<li>Razor direktivy</li>
+<li>Layout pages a další speciální druhy views</li>
+</ul>
+</li>
+<li>Práce se statickými soubory
+<ul>
+<li>Obrázky, JavaScript a další</li>
+<li>Static Files a Static Assets, cacheování</li>
+<li>Práce s klientskými knihovnami různými způsoby</li>
+<li>SASS/SCSS, bundling, minifikace</li>
+<li>Správné a bezpečné použití CDN</li>
+</ul>
+</li>
+<li>Tag Helpers
+<ul>
+<li>Co jsou tag helpers a jak jsou užitečné</li>
+<li>Kompletní přehled vestavěných tag helperů</li>
+<li>Tvorba vlastních tag helperů, od jednoduchých ke složitým</li>
+</ul>
+</li>
+<li>Cookies a jejich alternativy
+<ul>
+<li>HTTP jako bezstavový protokol</li>
+<li>Cookies nánosu mýtů zbavené</li>
+<li>Alternativy k cookies</li>
+</ul>
+</li>
+<li>Logování
+<ul>
+<li>Použití logování z vlastní aplikace</li>
+<li>Logging providers</li>
+<li>Message templates, Event IDs, strukturované logování</li>
+</ul>
+</li>
+<li>Health checks
+<ul>
+<li>Monitoring aplikace</li>
+<li>Vnitřní kontrola funkčnosti a závislostí</li>
+<li>Kontrola background workerů</li>
+<li>Health Checks UI</li>
+</ul>
+</li>
+</ul>
+<h2 id="obsah-druhe-casti-skoleni">Obsah druhé části školení</h2>
+<p>Druhá část staví na základech první části; používá Razor Pages (ale popisované postupy jsou použitelné i v MVC a Blazoru). Jedná se principiálně o tvorbu jednoduché aplikace, při níž se řeší problémy obvyklé u typických webových aplikací. Ukazuje, jak to dělat správně a dodržovat best practices. Podstatná část - s důrazem na best practices - je věnována bezpečnosti aplikací a autentizaci pomocí ASP.NET Identity a dalších technik.</p>
+<h3 id="zakladni-osnova-1">Základní osnova</h3>
+<ul>
+<li>Razor Pages
+<ul>
+<li>Představení frameworku</li>
+<li>Model-View-ViewModel (MVVM)</li>
+<li>Porovnání s MVC</li>
+<li>Handler metody pro zpracování requestů</li>
+</ul>
+</li>
+<li>Konfigurace
+<ul>
+<li>Zdroje konfigurace</li>
+<li>Konfigurační soubory, proměnné prostředí a další</li>
+<li>Výchozí nastavení</li>
+<li>Objektová práce s konfiguračními hodnotami</li>
+<li>User secrets</li>
+<li>Keeping secrets in production</li>
+</ul>
+</li>
+<li>Maily v ASP.NET Core
+<ul>
+<li>Různé možnosti odesílání e-mailů</li>
+<li>Ukázka architekonického řešení</li>
+<li>Přijímání mailů a proč to nedělat</li>
+</ul>
+</li>
+<li>View Components
+<ul>
+<li>Základní představení VC</li>
+<li>Věci shodné a rozdílné od tag helperů a partial views</li>
+<li>Volání view components pomocí tag helperů</li>
+</ul>
+</li>
+<li>Validace uživatelského vstupu
+<ul>
+<li>Validace modelů</li>
+<li>Vestavěné validační atributy</li>
+<li>Logické datové typy</li>
+<li>Psaní jednoduchých a složitých validačních atributů</li>
+<li>Rozhraní <code>IValidatableObject</code></li>
+<li>Validace na straně klienta</li>
+</ul>
+</li>
+<li>Dynamické generování uživatelského rozhraní
+<ul>
+<li>Generování na úrovni pole</li>
+<li>Generování na úrovni modelu nebo jeho části</li>
+<li>Vlastní šablony pro generování</li>
+</ul>
+</li>
+<li>Internacionalizace webových aplikací
+<ul>
+<li>Lokalizace a globalizace</li>
+<li>Třída CultureInfo a její použití</li>
+<li>Uchovávání informace o jazyku na webu</li>
+<li>Resources v .NETu</li>
+<li>Lokalizace validačních atributů</li>
+<li>Lokalizace views</li>
+<li>Conventional Metadata Providers</li>
+<li>RESX Manager</li>
+<li>Rozsáhlejší internacionalizace v praxi</li>
+</ul>
+</li>
+<li>Upload a download souborů
+<ul>
+<li>Generování downloadu souborů</li>
+<li>Hlavičky <code>Content-Type</code> a <code>Content-Disposition</code></li>
+<li>Práce s CSV soubory</li>
+<li>Kódování češtiny</li>
+<li>Upload souborů pomocí formuláře</li>
+<li>Upload velkých souborů</li>
+<li>Jak a kam ukládat binární data</li>
+<li>Knihovna FLuentStorage</li>
+</ul>
+</li>
+<li>Zabezpečení
+<ul>
+<li>Ideologie identity</li>
+<li>Autentizační faktory</li>
+<li>Claims-based authentication</li>
+<li>Identity federation</li>
+<li>Cookie authentication middleware</li>
+</ul>
+</li>
+<li>ASP.NET Core Identity
+<ul>
+<li>Porovnání s předchozími technologiemi</li>
+<li>Přihlašování, odhlašování</li>
+<li>Reset hesla: jak to dělat správně</li>
+<li>Práce s rolemi</li>
+<li>Registrace uživatelů, ověření a změna e-mailu</li>
+<li>Dvoufaktorová autentizace, recovery keys</li>
+<li>Customizace ASP.NET Identity</li>
+<li>Úschova hesel a proč do toho raději nezasahovat</li>
+<li>Migrace z jiných technologií - pohodlně pro uživatele a bezpečně pro systém</li>
+<li>Sign-in Manager</li>
+<li>Security Stamp a odhlášení ze všech zařízení</li>
+<li>Passwordless autentizace</li>
+<li>Použití externích identity providerů</li>
+<li>Rozumná politika hesel</li>
+</ul>
+</li>
+<li>ASP.NET Data Protection
+<ul>
+<li>K čemu slouží v .NETu</li>
+<li>Vlastní využití</li>
+<li>Konfigurace a úschova klíčů</li>
+</ul>
+</li>
+</ul>
+<h2 id="pozadavky-na-ucastniky">Požadavky na účastníky</h2>
+<p>Po technické stránce se předpokládá, že účastníci budou mít k dispozici:</p>
+<ul>
+<li>Počítač s připojením k Internetu umožňujícím přehrávání video streamu</li>
+<li>Podporovaná verze Windows, Visual Studio 2026 libovolné edice (včetně bezplatné Community Edition), Microsoft SQL Server (včetně bezplatné edice Express). <em>Lze používat i jinou platformu (Linux, Mac OS) a vývojové prostředí (VS Code, JetBrains Rider...), ale návody počítají s Windows a VS 2026.</em></li>
+<li>Libovolné předplatné Microsoft Azure (včetně aktivního trialu). Není absolutně nezbytné, ale část školení ho využívá.</li>
+</ul>
+<p>Po stránce dovedností a vědomostí se očekává, že účastníci budou mít základní obecné povědnomí o programování v C#/.NET, HTML, CSS a JavaScriptu.</p>
+<h2 id="objednavky-a-dotazy">Objednávky a dotazy</h2>
+<p>Školení si můžete <a href="https://forms.office.com/r/PfbJeNEi7U">objednat pomocí formuláře</a>. V případě dotazů napište poznámku do formuláře nebo <a href="https://www.rider.cz/#contact">mne kontaktujte jakkoliv jinak</a>.</p>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Pozv%c3%a1nka+na+komplexn%c3%ad+%c5%a1kolen%c3%ad+ASP.NET+Core+10&amp;body=https://www.altair.blog/2026/02/skoleni">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2026/02/skoleni.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2026/02/skoleni.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2026/02/skoleni">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2026/02/skoleni">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2026</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
