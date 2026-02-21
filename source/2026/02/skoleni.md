@@ -20,8 +20,8 @@ Ve své podstatě jde o jedno školení, které bylo pro velký objem rozděleno
 
 Školení se budou konat **online** pomocí systému [Altairis eLearning](https://elearning.altairis.cz), s přenosem videa lektora k účastníkům a chatem pro dotazy (s možností individuální pomoci a konzultací). Účastníkům bude k dispozici záznam a výukové materiály i po skončení školení.
 
-* Termín první části školení je **09. - 13. března 2026**.
-* Termín druhé částí školení je **23. - 27. března 2026**.
+* Termín první části školení je **16. - 20. března 2026**.
+* Termín druhé částí školení je **30. března - 3. dubna 2026**.
 
 Čas je vždy od **12:00 do 17:00**. Tento termín umožňuje, aby účastník nebyl blokován celý pracovní den. 
 
