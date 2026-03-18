@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2026/03/taghelpers</guid>
+      <title>Altairis Tag Helpers: nová verze knihovny</title>
+      <description>Altairis Tag Helpers je knihovna pro ASP.NET MVC a Razor Pages, která rozšiřuje Razor o sadu užitečných tag helperů pro běžné scénáře. Jejím cílem je zkrátit opakující se kód ve views, zpřehlednit šablony a sjednotit chování UI prvků.</description>
+      <link>https://www.altair.blog/2026/03/taghelpers</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2026-03-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2026/02/kiwix</guid>
       <title>Projekt Kiwix: Wikipedia a další weby i bez Internetu</title>
       <description>Chcete mít kompletní Wikipedii dostupnou offline? Nebo celou řadu dalších webů? Pomůže vám projekt Kiwix.</description>
@@ -138,17 +147,6 @@
       <category>Lab</category>
       <category>Linux</category>
       <pubDate>2024-07-04T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/07/mosquitto-linux</guid>
-      <title>Instalace MQTT serveru Mosquitto na Linux</title>
-      <description>V prvním a druhém dílu seriálu o MQTT jsem používal veřejný MQTT broker. To se hodí pro demo, ale produkční systém na tom stavět nechcete. Pokud pro svůj MQTT server nechcete používat hostované řešení, můžete si rozjet vlastní server. Asi nejpoužívanějším softwarem pro tento účel je Mosquitto. Je to open source multiplatformní projekt, který funguje na Windows, Linuxu i Mac OS. Ukážu vám, jak Mosquitto nainstalovat na Linux, nastavit na něm TLS zabezpečení a WebSockets rozhraní.</description>
-      <link>https://www.altair.blog/2024/07/mosquitto-linux</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-07-02T00:00:00</pubDate>
     </item>
   </channel>
 </rss>

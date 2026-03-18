@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Altairis Tag Helpers: nová verze knihovny | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2026/03/taghelpers" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Altairis Tag Helpers: nová verze knihovny" />
+    <meta name="twitter:description" content="Altairis Tag Helpers je knihovna pro ASP.NET MVC a Razor Pages, která rozšiřuje Razor o sadu užitečných tag helperů pro běžné scénáře. Jejím cílem je zkrátit opakující se kód ve views, zpřehlednit šablony a sjednotit chování UI prvků." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20220710-taghelpers.jpg" />
+    <meta property="article:published_time" content="2026-03-18" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Altairis Tag Helpers: nová verze knihovny" />
+    <meta name="description" property="og:description" content="Altairis Tag Helpers je knihovna pro ASP.NET MVC a Razor Pages, která rozšiřuje Razor o sadu užitečných tag helperů pro běžné scénáře. Jejím cílem je zkrátit opakující se kód ve views, zpřehlednit šablony a sjednotit chování UI prvků." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20220710-taghelpers.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2026/03/taghelpers" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20220710-taghelpers.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Altairis Tag Helpers: nová verze knihovny</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/it" title="Rubrika">
+              <i class="fal fa-tag"> </i>IT</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2026-03-18">18. března 2026 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Dnes jsem vydal novou verzi 2.1 knihovny <a href="https://github.com/ridercz/Altairis.TagHelpers">Altairis Tag Helpers</a>. To je knihovna pro ASP.NET MVC a Razor Pages, která rozšiřuje Razor o sadu užitečných tag helperů pro běžné scénáře. Jejím cílem je zkrátit opakující se kód ve views, zpřehlednit šablony a sjednotit chování UI prvků.</p>
+<p>Knihovna obsahuje jak jednoduché helpery (zkracování textu, podmíněná viditelnost), tak pokročilejší komponenty (kalendář událostí, semantický bar chart, práce s rolemi, avatary). Je k dispozici zdarma pod otevřenou MIT licencí.</p>
+<h2 id="instalace-a-pouziti">Instalace a použití</h2>
+<p>Nainstalujte NuGet balíček:</p>
+<pre><code>Install-Package Altairis.TagHelpers
+</code></pre>
+<p>Zaregistrujte tag helpery do Razor views (typicky do <code>_ViewImports.cshtml</code>):</p>
+<pre><code>@addTagHelper *, Altairis.TagHelpers
+</code></pre>
+<p>Potom už můžete helpery používat přímo v <code>.cshtml</code> souborech.</p>
+<h2 id="dostupne-tag-helpery">Dostupné tag helpery</h2>
+<p>Zde je stručný popis tag helperů se základními příklady použití. Kompletní dokumentaci najdete na <a href="https://github.com/ridercz/Altairis.TagHelpers">wiki projektu</a>.</p>
+<h3 id="barcharttaghelper">BarChartTagHelper</h3>
+<p>Sada helperů pro vykreslení sloupcového grafu pomocí sémantického HTML a CSS (bez canvas/SVG). Hlavní kontejner je <code>bar-chart</code>, jednotlivé hodnoty jsou <code>bar</code>.</p>
+<pre><code class="language-html">&lt;bar-chart stacked=&quot;true&quot;&gt;
+    &lt;title&gt;My chart&lt;/title&gt;
+    &lt;data-table values-format-string=&quot;0.0&quot;
+                percent-format-string=&quot;0.0 %&quot;
+                total-text=&quot;Total&quot; /&gt;
+    &lt;bar label=&quot;Red&quot; value=&quot;30.123&quot; color=&quot;#f00&quot; /&gt;
+    &lt;bar label=&quot;Green&quot; value=&quot;20.456&quot; color=&quot;#0f0&quot; /&gt;
+    &lt;bar label=&quot;Blue&quot; value=&quot;10.789&quot; color=&quot;#00f&quot; /&gt;
+&lt;/bar-chart&gt;
+</code></pre>
+<p>Podporuje stacked režim, popisky, vlastní barvy, tabulku hodnot i přístupnost přes ARIA atributy.</p>
+<h3 id="calendartaghelper">CalendarTagHelper</h3>
+<p>Vytvoří kalendář s podobnou logikou a vzhledem jako měsíční zobrazení v Outlooku. Respektuje locale aplikace (názvy měsíců, dnů, první den týdne).</p>
+<pre><code class="language-html">&lt;calendar class=&quot;calendar&quot;
+          date-begin=&quot;new DateTime(2020, 4, 1)&quot;
+          date-end=&quot;new DateTime(2020, 4, 30)&quot;
+          day-name-style=&quot;Full&quot;
+          events=&quot;this.Model.Events&quot;
+          selected-days=&quot;this.Model.SelectedDays&quot;&gt;&lt;/calendar&gt;
+</code></pre>
+<p>Události se předávají jako kolekce <code>CalendarEvent</code>, kde lze řešit celodenní i časové akce, odkazy, popisy i barevné odlišení.</p>
+<h3 id="checkboxlisttaghelper">CheckboxListTagHelper</h3>
+<p>Alternativa k elementu <code>select</code>, která renderuje seznam checkboxů nebo radiobuttonů.</p>
+<pre><code class="language-html">&lt;checkbox-list
+    asp-for=&quot;Input.CheckboxSelectedValues&quot;
+    asp-items=&quot;Model.CheckboxListItems&quot;
+    control-type=&quot;CheckBox&quot;
+    class=&quot;checkboxlist&quot; /&gt;
+</code></pre>
+<h3 id="conditionalattributetaghelper">ConditionalAttributeTagHelper</h3>
+<p>Řeší častý problém v Razor views: podmíněné přidání atributu, jehož samotná přítomnost mění chování (např. <code>open</code>, <code>disabled</code>, <code>readonly</code>).</p>
+<pre><code class="language-html">&lt;details conditional-attribute-name=&quot;open&quot;
+         conditional-attribute-state=&quot;@Model.OpenDetails&quot;&gt;
+    ...
+&lt;/details&gt;
+</code></pre>
+<h3 id="confirmtaghelper">ConfirmTagHelper</h3>
+<p>Přidá potvrzení akce přes JavaScript <code>confirm</code> dialog. Hodí se pro akce typu odhlášení, smazání nebo reset.</p>
+<pre><code class="language-html">&lt;a href=&quot;/logout&quot; confirm-message=&quot;Do you really want to logout?&quot;&gt;Logout&lt;/a&gt;
+</code></pre>
+<h3 id="datalisttaghelper">DatalistTagHelper</h3>
+<p>Rozšiřuje <code>input</code> o atribut <code>items</code>, ze kterého vygeneruje <code>datalist</code> pro autocomplete hodnoty.</p>
+<pre><code class="language-html">&lt;input asp-for=&quot;PropertyName&quot; items=&quot;Model.PropertyValues&quot; /&gt;
+</code></pre>
+<h3 id="dicebearavatartaghelper">DicebearAvatarTagHelper</h3>
+<p>Generuje avatar přes <a href="https://www.dicebear.com/">DiceBear API</a>. Vhodné tam, kde nechcete ukládat nahrané profilové obrázky, ale přesto chcete vizuální odlišení uživatelů.</p>
+<pre><code class="language-html">&lt;dicebear seed=&quot;HelloWorld&quot; sprites=&quot;pixel-art&quot; /&gt;
+</code></pre>
+<h3 id="editortaghelper">EditorTagHelper</h3>
+<p>Tag helper alternativa k <code>Html.EditorFor</code>.</p>
+<pre><code class="language-html">&lt;editor asp-for=&quot;Model.Property&quot; template-name=&quot;MyTemplate&quot; /&gt;
+</code></pre>
+<h3 id="gravatartaghelper">GravatarTagHelper</h3>
+<p>Vykreslí profilový obrázek ze služby <a href="https://www.gravatar.com/">Gravatar</a> na základě e-mailu.</p>
+<pre><code class="language-html">&lt;gravatar email=&quot;someone@example.com&quot; size=&quot;80&quot; /&gt;
+</code></pre>
+<h3 id="rolestaghelper">RolesTagHelper</h3>
+<p>Podmíněně zobrazí obsah podle role uživatele. Můžete kombinovat whitelist i blacklist rolí.</p>
+<pre><code class="language-html">&lt;div include-roles=&quot;Users&quot;&gt;...&lt;/div&gt;
+&lt;div include-roles=&quot;Users,Admins&quot;&gt;...&lt;/div&gt;
+&lt;div exclude-roles=&quot;Admins&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<h3 id="timetaghelper">TimeTagHelper</h3>
+<p>Chytré vykreslení data/času v elementu <code>time</code> podle relativní vzdálenosti od aktuálního dne. Umí speciální formáty pro dnes/včera/zítra a automaticky doplňuje atribut <code>datetime</code> i tooltip <code>title</code>.</p>
+<pre><code class="language-html">&lt;time value=&quot;@Model.SomeDateTimeProperty&quot; null-text=&quot;Never&quot;&gt;&lt;/time&gt;
+</code></pre>
+<h3 id="trimlengthtaghelper">TrimLengthTagHelper</h3>
+<p>Zkrátí textový obsah elementu na definovanou délku a doplní výpustek.</p>
+<pre><code class="language-html">&lt;div trim-length=&quot;10&quot;&gt;This text will be shortened.&lt;/div&gt;
+</code></pre>
+<h3 id="visibletaghelper">VisibleTagHelper</h3>
+<p>Jednoduchá podmíněná viditelnost elementu pomocí bool atributu <code>visible</code>. Nahrazuje opakované <code>if</code> v šablonách a zvyšuje čitelnost Razor kódu.</p>
+<pre><code class="language-html">&lt;div visible=&quot;Model.SomeBooleanProperty&quot;&gt;...&lt;/div&gt;
+</code></pre>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=Altairis+Tag+Helpers%3a+nov%c3%a1+verze+knihovny&amp;body=https://www.altair.blog/2026/03/taghelpers">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2026/03/taghelpers.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2026/03/taghelpers.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2026/03/taghelpers">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2026/03/taghelpers">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2026</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
