@@ -1,0 +1,9 @@
+<!-- dcterms:title = Nečekané oběti podvodů: transparentní účty se mění v past na spolky a organizace přijímající veřejně dary či příspěvky -->
+<!-- dcterms:abstract = Jihomoravskému spolku přišlo na transparentní účet několik plateb. Každá ve výši několika tisíc korun od odesílatelů, se kterými spolek neměl nic společného. Jednatel spolku, vědom si toho, že transparentní účty jsou zneužívány k investičním podvodům, své podezření nahlásil na policii. Ta reagovala rychle a nečekaně: spolku zablokovala prostředky na účtu, včetně těch, které by na něj měly přijít v budoucnu. Tím zcela paralyzovala chod organizace, která se tak stala fakticky další obětí trestného činu. -->
+<!-- dcterms:creator = Michal Altair Valášek -->
+<!-- dcterms:date = 2026-03-17 -->
+<!-- x4w:category = Bezpečnost -->
+<!-- x4w:pictureUrl = /perex-pictures/logo-economia.svg -->
+<!-- x4w:pictureWidth = 150 -->
+<!-- x4w:pictureHeight = 150 -->
+<!-- x4w:alternateUrl = https://archiv.hn.cz/c1-67855450-necekane-obeti-podvodu-transparentni-ucty-se-meni-v-past-na-spolky-a-organizace-prijimajici-verejne-dary-ci-prispevky -->
