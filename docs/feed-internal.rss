@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2026/03/migrace-sln</guid>
+      <title>Dávková konverze solution souborů na formát SLNX</title>
+      <description>Visual Studio 2026 přináší kromě jiného i nový formát solution souborů. Jsou ve formátu XML a jsou výrazně jednodušší, než ten původní textový formát. Proto je chci hromadně začít používat kde to jenom jde, včetně příkladů a podobně. Jedná se ale o velké množství projektů. Proto jsem napsal skript, který umí celý proces migrace automatizovat.</description>
+      <link>https://www.altair.blog/2026/03/migrace-sln</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2026-03-26T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2026/03/taghelpers</guid>
       <title>Altairis Tag Helpers: nová verze knihovny</title>
       <description>Altairis Tag Helpers je knihovna pro ASP.NET MVC a Razor Pages, která rozšiřuje Razor o sadu užitečných tag helperů pro běžné scénáře. Jejím cílem je zkrátit opakující se kód ve views, zpřehlednit šablony a sjednotit chování UI prvků.</description>
@@ -136,17 +145,6 @@
       <category>Lab</category>
       <category>Linux</category>
       <pubDate>2024-07-09T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/07/ubuntu-upgrade</guid>
-      <title>Upgrade Ubuntu Linuxu z verze 22.04 LTS na verzi 24.04 LTS</title>
-      <description>V dubnu vyšla další long term support (LTS) verze Ubuntu Linuxu 24.04. Naučím vás, jak na ni rychle a bezbolestně upgradovat z předchozí LTS verze 22.04.</description>
-      <link>https://www.altair.blog/2024/07/ubuntu-upgrade</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-07-04T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
