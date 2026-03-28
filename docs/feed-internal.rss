@@ -6,6 +6,16 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2026/03/routery</guid>
+      <title>Americký zákaz cizích routerů: dobrý začátek, který ale sám o sobě nic neřeší</title>
+      <description>Americká FCC dne 23. března zakázala schvalování nových domácích routerů z dovozu, s odkazem na to, že představují neúnosné riziko kompromitace dodavatelského řetězce a hrozbu pro národní bezpečnost. Rozhodnutí i jeho důvody jsou poněkud kontroverzní, ale jisté meritum jim nelze upřít. Přesto jde v důsledku spíš o prázdné gesto než co jiného.</description>
+      <link>https://www.altair.blog/2026/03/routery</link>
+      <author>Michal Altair Valášek</author>
+      <category>Bezpečnost</category>
+      <category>IT</category>
+      <pubDate>2026-03-28T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2026/03/migrace-sln</guid>
       <title>Dávková konverze solution souborů na formát SLNX</title>
       <description>Visual Studio 2026 přináší kromě jiného i nový formát solution souborů. Jsou ve formátu XML a jsou výrazně jednodušší, než ten původní textový formát. Proto je chci hromadně začít používat kde to jenom jde, včetně příkladů a podobně. Jedná se ale o velké množství projektů. Proto jsem napsal skript, který umí celý proces migrace automatizovat.</description>
@@ -134,17 +144,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2024-10-02T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2024/07/vpn</guid>
-      <title>Vlastní VPN bez speciálního software - IKEv2 nebo L2TP/IPsec</title>
-      <description>Popularita VPN stoupá. Hodí se z důvodu bezpečnosti, z důvodu ochrany soukromí, nebo když se váš stát rozhodne, že bude cenzurovat přístup k Internetu. Většina běžných návodů předpokládá, že máte na svém počítači speciální klientský software. Já vám ukážu, jak vytvořit VPN server, na který se připojíte čistě pomocí toho, co máte k dispozici ve svém operačním systému.</description>
-      <link>https://www.altair.blog/2024/07/vpn</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <category>Lab</category>
-      <category>Linux</category>
-      <pubDate>2024-07-09T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
