@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2026/06/vibe-coding</guid>
+      <title>O vibe codingu, punku a svatém zákonu Ohmově</title>
+      <description>Před pár dny jsem na Facebook napsal krátkou glosu na téma, že se nebojím, že mne jako programátora AI připraví o práci. A že vibe coding je super na prototypování, ale na produkci to nepouštějte. Byl jsem obviněn z kdečeho, počínaje gatekeepingem, takže to pojďme probrat do větší hloubky.</description>
+      <link>https://www.altair.blog/2026/06/vibe-coding</link>
+      <author>Michal Altair Valášek</author>
+      <category>IT</category>
+      <pubDate>2026-06-18T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2026/03/routery</guid>
       <title>Americký zákaz cizích routerů: dobrý začátek, který ale sám o sobě nic neřeší</title>
       <description>Americká FCC dne 23. března zakázala schvalování nových domácích routerů z dovozu, s odkazem na to, že představují neúnosné riziko kompromitace dodavatelského řetězce a hrozbu pro národní bezpečnost. Rozhodnutí i jeho důvody jsou poněkud kontroverzní, ale jisté meritum jim nelze upřít. Přesto jde v důsledku spíš o prázdné gesto než co jiného.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2025-10-10T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.bdsm.cz/2025/10/ssc</guid>
-      <title>Safe, sane, consensual - největší lež v BDSM</title>
-      <description>Zkratka SSC je v BDSM prakticky nedotknutelným symbolem. Dodržování v ní obsažených zásad je to, co nás - hodné, ochočené, vědomé úchyly - odlišuje od těch zlých, divokých, kriminálních. Zní to hezky a je to líbivé vysvětlení pro každého začátečníka. Má jedinou nevýhodu: je to lež.</description>
-      <link>https://www.bdsm.cz/2025/10/ssc</link>
-      <author>Michal Altair Valášek</author>
-      <category>BDSM</category>
-      <pubDate>2025-09-29T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
