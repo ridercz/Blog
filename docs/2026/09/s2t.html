@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dávkový přepis videa na text pomocí Azure Speech | ALTAIR.blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs-CZ" />
+    <link rel="canonical" href="https://www.altair.blog/2026/09/s2t" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/content/styles.min.css?sha=86D6BE2BECADA8998ACB7999F797DEF1103C76B2" />
+    <link rel="stylesheet" type="text/css" href="/content/fa-6.5.1/css/all.min.css" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed.rss" title="RSS (všechny články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-internal.rss" title="RSS (pouze místní články)" />
+    <link rel="alternate" type="application/rss+xml" href="https://www.altair.blog/feed-external.rss" title="RSS (pouze odkazy)" />
+    <link rel="shortcut icon" href="https://www.altair.blog/favicon.ico" />
+    <link rel="icon" href="https://www.altair.blog/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ridercz" />
+    <meta name="twitter:title" content="Dávkový přepis videa na text pomocí Azure Speech" />
+    <meta name="twitter:description" content="Potřebuji řešit přepis video záznamu na text a dává smysl použít clouduvou službu v Azure. Bohužel, API pro dávkový přepis nemá žádného pohodlného klienta, tak jsem jednoho napsal a dávám ho jako open source k dispozici." />
+    <meta name="twitter:image" content="https://www.altair.blog/cover-pictures/20260916-s2t.jpg" />
+    <meta property="article:published_time" content="2026-09-16" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ALTAIR.blog" />
+    <meta name="author" content="Michal Altair Valášek" />
+    <meta name="title" property="og:title" content="Dávkový přepis videa na text pomocí Azure Speech" />
+    <meta name="description" property="og:description" content="Potřebuji řešit přepis video záznamu na text a dává smysl použít clouduvou službu v Azure. Bohužel, API pro dávkový přepis nemá žádného pohodlného klienta, tak jsem jednoho napsal a dávám ho jako open source k dispozici." />
+    <meta name="image" property="og:image" content="https://www.altair.blog/cover-pictures/20260916-s2t.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://www.altair.blog/2026/09/s2t" />
+    <script>
+      (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+          (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+      })(document, window, '//stats.altair.blog/tracker.js', 'fathom');
+      fathom('set', 'siteId', 'OBOTR');
+      fathom('trackPageview');
+    </script>
+    <script src="/content/scripts/autocorrect.js?sha=3D24FB150C3151FFF3B9BFCA112E1A8B2F32B377" defer="defer" onload="typo.runAutoCorrector({number: false})">//</script>
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="hascover" style="background-image: url(/cover-pictures/20260916-s2t.jpg)">
+    <header>
+      <div>
+        <a href="/">
+          <img src="/content/images/logo_onblack.svg" alt="altair.blog" style="max-height:100px;max-width:80%" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.rider.cz/" title="Autor: Michal Altair Valášek">
+            <i class="fal fa-fw fa-user"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/archive" title="Archiv článků">
+            <i class="fal fa-fw fa-archive"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/categories" title="Rubriky">
+            <i class="fal fa-fw fa-tags"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/serials" title="Seriály">
+            <i class="fal fa-fw fa-list-alt"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="/search" title="Vyhledávání">
+            <i class="fal fa-fw fa-search"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.rider.cz/#contact" title="Kontakt">
+            <i class="fal fa-fw fa-envelope"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/rider.cz" title="Facebook">
+            <i class="fab fa-fw fa-facebook"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/ridercz" title="Twitter">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ridercz" title="Github">
+            <i class="fab fa-fw fa-github"> </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://ask.fm/ridercz" title="Ask.fm">
+            <i class="fal fa-fw fa-question"> </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Dávkový přepis videa na text pomocí Azure Speech</h1>
+      <aside class="article-info">
+        <ul class="categories">
+          <li>
+            <a href="/categories/politika" title="Rubrika">
+              <i class="fal fa-tag"> </i>Politika</a>
+          </li>
+        </ul>
+        <div title="Autor">
+          <a href="https://www.rider.cz/">Michal Altair Valášek </a>
+          <i class="fal fa-fw fa-user">​</i>
+        </div>
+        <div title="Datum vydání">
+          <time datetime="2026-09-16">16. září 2026 <i class="fal fa-fw fa-calendar-lines">​</i></time>
+        </div>
+      </aside>
+      <section class="article-text">
+        <p>Potřebuji řešit přepis video záznamu na text. Nemám k dispozici dostatečně nabušený hardware, abych to mohl dělat lokálně (ve skutečnosti celá aplikace běží v Azure) a proto jsem se rozhodl použít <a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/index-speech-to-text">Azure Speech</a>, kde mi to udělají za pár korun bez námahy.</p>
+<p>Tato služba funguje ve dvou režimech. První je blízký reálnému času a druhý je dávkový. Překlad v reálném čase stojí dolar za hodinu a chcete-li nějaké pokročilejší služby (diarizace atd.), stojí každá z nich dalších 30 centů za hodinu. Dávkové zpracování stojí méně než pětinu: 0,18 $/hod a pokročilejší služby jsou v ceně. Pokud potřebujete zpracovávat existující záznamy a ne živý přenos, není co řešit.</p>
+<p>Bohužel, na živý přepis existuje od Microsoftu knihovna, na dávkový nikoliv. <a href="https://github.com/ridercz/Altairis.Services.AzureSpeechToTextBatch/">Tak jsem si jednu napsal</a>.</p>
+<h2 id="predehra-extrakce-audia-z-videa-pomoci-ffmpegcore">Předehra: Extrakce audia z videa pomocí FFMpegCore</h2>
+<p>API si umí poradit pouze s audio soubory (<a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription-audio-data?tabs=portal#supported-audio-formats-and-codecs">v řadě formátů</a>), ale mým vstupem je video. Potřebuji tedy vyextrahovat audio stopu z videa.</p>
+<p>K tomu používám knihovnu <a href="https://github.com/rosenbjerg/FFMpegCore">FFMpegCore</a>, což je C# wrapper okolo knihovny FFMpeg, která je defacto standardním nástrojem pro zpracování multimediálních dat. Kromě NuGet balíčku <code>FFMpegCore</code> se hodí i <code>FFMpegCore.Extensions.Downloader</code>, který umí stáhnout binárky, které tak nemusejí být na serveru, kde kód běží, nainstalované.</p>
+<p>Kód pro přípravu vypadá takto:</p>
+<pre><code class="language-csharp">// Adresář s binárkami FFMpeg
+var ffmpegBinDirInfo = new DirectoryInfo(Path.Combine(Path.GetTempPath(), &quot;s2t\\bin&quot;));
+ffmpegBinDirInfo.Create();
+
+// Adresář pro dočasné soubory
+var ffmpegTmpDirInfo = new DirectoryInfo(Path.Combine(Path.GetTempPath(), &quot;s2t\\data&quot;));
+ffmpegTmpDirInfo.Create();
+
+// Nastavit cesty pro FFMpegCore
+GlobalFFOptions.Configure(options =&gt; {
+    options.BinaryFolder = ffmpegBinDirInfo.FullName;
+    options.TemporaryFilesFolder = ffmpegTmpDirInfo.FullName;
+});
+
+// Stáhnout binárky, pokud je to pořeba
+if (ffmpegBinDirInfo.GetFiles().Length == 0) {
+    var results = await FFMpegCore.Extensions.Downloader.FFMpegDownloader.DownloadBinaries(binaries: FFMpegBinaries.FFMpeg);
+}
+</code></pre>
+<p>Poté lze jednoduše provést extrakci audio stopy z videa. Konkrétní parametry záleží na povaze vašeho videa, já beru první kanál a v případě potřeby ho překóduji do AAC:</p>
+<pre><code class="language-csharp">var videoFilePath = @&quot;D:\Downloads\demo.mp4&quot;;
+var audioFilePath = Path.ChangeExtension(videoFilePath, &quot;.aac&quot;);
+await FFMpegArguments
+    .FromFileInput(videoFilePath)
+    .OutputToFile(audioFilePath, overwrite: true, options =&gt; options
+        .WithCustomArgument(&quot;-vn&quot;)
+        .WithCustomArgument(&quot;-ac 1&quot;)
+        .WithCustomArgument(&quot;-c:a aac&quot;))
+    .ProcessAsynchronously();
+return audioFilePath;
+</code></pre>
+<h2 id="dejstvi-prvni-zpristupneni-audia-sluzbe">Dějství první: Zpřístupnění audia službě</h2>
+<p>Audio soubor je třeba nahrát někam, kde ho služba může získat prostým HTTP GET požadavkem. Pokud vaše aplikace běží v Azure, stejně ho asi budete mít uložený v BlobStorage, takže stačí vygenerovat SAS URI pouze pro čtení s krátkou platností. Ale může být kdekoliv, i mimo Azure.</p>
+<h2 id="dejstvi-druhe-vytvoreni-davky">Dějství druhé: Vytvoření dávky</h2>
+<p>Dávka může obsahovat jeden nebo více souborů. Pokud máte opravdu hodně souborů a potřebujete výsledky co nejrychleji, je třeba vhodným způsobem sestavit dávky a třeba je rozhodit mezi více regionů, což je pojednáno <a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription#best-practices-for-improving-performance">v dokumentaci</a>. Já jsem to ve svém scénáři nemusel řešit, takže jsem každý soubor dal do samostatné dávky, ale lze to dělat i jinak.</p>
+<p>Začněte tím, že si po instanaci NuGet balíčku <code>Altairis.Services.AzureSpeechToTextBatch</code> vytvoříte instanci třídy <code>TranscriptionRequest</code>. Nastavíte parametry přepisu (zejména jazyk) a pomocí vlastnosti <code>ContentUrls</code> zadáte cesty k audio souborům, které chcete přepsat.</p>
+<p>Alternativně můžete pomocí vlastnosti <code>ContentContainerUrl</code> dát SAS URI na blob container (s právy pro čtení a výpis seznamu souborů) a API zpracuje celý kontejner, což se také může hodit.</p>
+<pre><code class="language-csharp">var batch = new TranscriptionRequest {
+    ContentUrls = [ &quot;https://www.example.com/demo.aac&quot; ],
+    DisplayName = &quot;Moje davka&quot;,
+    Locale = &quot;cs-CZ&quot;,
+    Properties = new TranscriptionProperties {
+        ProfanityFilterMode = ProfanityFilterMode.None,
+        PunctuationMode = PunctuationMode.Automatic,
+        DiarizationEnabled = false,
+        DisplayFormWordLevelTimestampsEnabled = true,
+        WordLevelTimestampsEnabled = true
+    }
+};
+</code></pre>
+<blockquote>
+<p>Třída <code>TranscriptionProperties</code> zpřístupňuje volby z REST API, které jsou <a href="https://learn.microsoft.com/en-us/rest/api/speechtotext/transcriptions/create?view=rest-speechtotext-v3.2&amp;tabs=HTTP#transcriptionproperties">popsány v dokumentaci</a>.</p>
+</blockquote>
+<h2 id="dejstvi-treti-odeslani-na-server">Dějství třetí: Odeslání na server</h2>
+<p>Při vytváření služby si volíte klasicky Azure region (např. <code>WestEurope</code>) a je vám vygenerován API klíč, podobně jako třeba u Storage Accountu. Tyto údaje použijte pro vytvoření instance třídy <code>TranscriptionClient</code>. Potí zavolejte metodu <code>CreateTranscription</code>, která vám vrátí <code>TranscriptionResponse</code>. Pomocí metody <code>GetId()</code> pak získáte unikátní identifikátor dávky (je to GUID, ale nominálně je to obecný string):</p>
+<pre><code class="language-csharp">var tc = new TranscriptionClient(&quot;&lt;your-speech-key&gt;&quot;, &quot;&lt;your-speech-region&gt;&quot;);
+var response = await tc.CreateTranscription(batch, cancellationToken);
+var batchId = response.GetId();
+</code></pre>
+<h2 id="mezihra-plynuti-casu">Mezihra: Plynutí času</h2>
+<p>Dávkové zpracování může na základě vytížení služeb v daném regionu trvat až 24 hodin. U mne bylo při testech vždy rychlejší, než byla délka přepisovaného audia, ale zaručeno to není.</p>
+<p>Máte několik možností, jak sledovat průběh a zpracovat výsledek:</p>
+<ul>
+<li>Můžete se periodicky ptát na stav dané dávky a když je hotová, stáhnout si výsledek.</li>
+<li>Můžete nastavit <code>Properties.DestinationContainerUrl</code> na SAS URI umožňující zápis do kontejneru a služba vám výsledek nahraje do tohoto kontejneru.</li>
+<li>Můžete nastavit webhook, který se zavolá až bude dávka dokončena, a pak si stáhnout výsledek nebo ho najít v kontejneru. Moje knihovna webhooky nepodporuje, ale je open source, takže pokud to využijete, budu rád když to tam dopíšete a pošlete mi pull request. Alternativně mi můžete zaplatit abych to tam doprogramoval já.</li>
+</ul>
+<p>Třída <code>TranscriptionClient</code> nabízí metodu <code>ListTranscriptions</code>, pomocí které si můžete vypsat všechny dávky a jejich stavy (pozor, výpis je stránkovaný). Pokud znáte ID dávky, můžete použít metodu <code>GetTranscription</code>, která vám vráti informace pouze o ní. Pro vás je důležitá vlastnost <code>Status</code>, která může mít následující hodnoty:</p>
+<ul>
+<li><code>NotStarted</code> - čeká ve frontě</li>
+<li><code>Running</code> - zpracovává se</li>
+<li><code>Succeeded</code> - dokončeno</li>
+<li><code>Failed</code> - chyba</li>
+</ul>
+<h2 id="dejstvi-ctvrte-stazeni-vysledku">Dějství čtvrté: Stažení výsledku</h2>
+<p>Pokud byla dávka úspěšně dokončena, můžete si vyžádat seznam souborů, které tvoří výsledek. Třída <code>TranscriptionClient</code> nabízí metodu <code>ListFiles</code>, která vám dá seznam souborů pro danou dávku. Je také stránkovaná, což vás bude zajímat ve chvíli, kdy budete mít v dávce hodně souborů. Pokud tam budete mít jenom jeden, může vám to být vesměs jedno.</p>
+<p>Jeden vstupní audio soubor vytvoří několik výstupních souborů, které mohou obsahovat logy a další informace. Nás ale bude zajímat soubor, jehož <code>FileKind</code> je <code>Transcription</code>.</p>
+<p>Takhle může vypadat kód, který stáhne výsledek a smaže hotový job:</p>
+<pre><code class="language-csharp">var transcriptionId = &quot;00000000-0000-0000-0000-000000000000&quot;;
+
+// Create instance of the client
+var tc = new TranscriptionClient(&quot;&lt;your-speech-key&gt;&quot;, &quot;&lt;your-speech-region&gt;&quot;);
+
+// Get the status of the transcription job
+var job = await tc.GetTranscription(transcriptionId);
+if(job.Status != TranscriptionStatus.Succeeded) {
+    Console.WriteLine($&quot;Transcription status: {job.Status}&quot;);
+    return;
+}
+
+// Download the results of the transcription job
+Console.WriteLine($&quot;Transcription succeeded. Downloading results...&quot;);
+var files = await tc.ListFiles(transcriptionId);
+using var httpClient = new HttpClient();
+foreach(var file in files) {
+    // Get SAS download URL for the file
+    var downloadUrl = await tc.GetFileDownloadUrl(transcriptionId, file.GetId(), cancellationToken);
+
+    // Download the file using HttpClient
+    using var response = await httpClient.GetAsync(downloadUrl, cancellationToken);
+    response.EnsureSuccessStatusCode();
+    await using var fs = new FileStream(file.Name, FileMode.Create, FileAccess.Write, FileShare.None);
+    await response.Content.CopyToAsync(fs, cancellationToken);
+}
+
+// Delete transcription job
+await tc.DeleteTranscription(transcriptionId);
+</code></pre>
+<h2 id="dohra-zpracovani-vysledku">Dohra: Zpracování výsledku</h2>
+<p>Výsledek jsou data ve formátu JSON. Popis formátu najdete <a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription-get?pivots=rest-api#transcription-result-file">v dokumentaci</a> a v zásadě se jedná o přepsaný text, který získáte buďto jako prostý string anebo rozsekaný na jednotlivé fráze s časovými razítky, což se může hodit pro účely třeba vytváření titulků.</p>
+<p>Součástí mé knihovny je třída <code>Transcript</code>, do které můžete deserializovat získaný JSON a pracovat s ním objektovým způsobem.</p>
+<p>Třída <code>TranscriptionClient</code> má utility metodu <code>GetTranscript</code>, která umí přímo stáhnout a proparsovat daný soubor anebo jenom proparsovat JSON, který dostane. Kompletní přepsaný text najdete v kolekci <code>CombinedRecognizedPhrases</code> (podle kanálů) jako vlastnost <code>Display</code>:</p>
+<pre><code class="language-csharp">var transcript = tc.GetTranscript(transcriptionId, file.GetId());
+Console.WriteLine($&quot;Duration:           {TimeSpan.FromMilliseconds(transcript.DurationMilliseconds)}&quot;);
+Console.WriteLine($&quot;Recognized phrases: {transcript.RecognizedPhrases.Sum(x =&gt; x.NBest.Length)}&quot;);
+Console.WriteLine($&quot;Recognized text:    {transcript.CombinedRecognizedPhrases.First().Display?[..60]}...&quot;);
+</code></pre>
+<p>Přepis anglického textu je výborný. Přepis češtiny je, jak už to bývá, o něco slabší, ale přijde mi, že je zhruba srovnatelný se všemi ostatními metodami, které jsem zkoušel.</p>
+<blockquote>
+<p>Na <a href="https://github.com/ridercz/Altairis.Services.AzureSpeechToTextBatch/">GitHubu</a> najdete kromě samotné knihovny i ukázkovou aplikaci, která umožňuje vyzkoušet knihovnu pomocí konzolové aplikace.</p>
+</blockquote>
+
+      </section>
+      <section class="issues">
+        <header>
+          <i class="fab fa-github">​</i> Je v článku něco špatně? Chcete něco doplnit?</header>
+        <p>Komentáře zde nenajdete, ale pokud je v článku chyba nebo k němu chcete něco věcného doplnit, můžete na GitHubu <a href="https://github.com/ridercz/Blog/issues/new?title=D%c3%a1vkov%c3%bd+p%c5%99epis+videa+na+text+pomoc%c3%ad+Azure+Speech&amp;body=https://www.altair.blog/2026/09/s2t">otevřít nový issue</a> nebo <a href="https://github.com/ridercz/Blog/edit/master/source/2026/09/s2t.md">navrhnout změnu v textu</a> a poslat mi pull request.</p>
+        <p>Tamtéž také najdete <a href="https://github.com/ridercz/Blog/commits/master/source/2026/09/s2t.md">historii všech verzí článku</a>, pokud v něm byly provedeny nějaké změny či úpravy.</p>
+      </section>
+      <section class="sharing">
+        <span>Pošli to dál:</span>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text=https://www.altair.blog/2026/09/s2t">
+              <i class="fab fa-x-twitter">​</i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.altair.blog/2026/09/s2t">
+              <i class="fab fa-facebook-f">​</i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="logos">
+        <li>
+          <img src="/content/images/logo_onwhite.svg" alt="altair.blog" style="height:38px;" />
+        </li>
+      </ul>
+      <ul class="text">
+        <li>
+          Copyright © <a href="https://www.rider.cz/">Michal Altair Valášek</a>, 2003-2026</li>
+        <li>
+          Powered by <a href="https://www.xml4web.com/">XML4web</a> on <a href="https://www.github.com/">GitHub Pages</a></li>
+        <li>
+          <i class="fal fa-rss">​</i> RSS: <a href="/feed.rss">všechno</a> | <a href="/feed-internal.rss">místní</a> | <a href="/feed-external.rss">odkazy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

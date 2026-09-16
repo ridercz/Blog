@@ -6,6 +6,15 @@
     <description>Weblog Michala A. Valáška</description>
     <language>cs-CZ</language>
     <item>
+      <guid isPermaLink="true">https://www.altair.blog/2026/09/s2t</guid>
+      <title>Dávkový přepis videa na text pomocí Azure Speech</title>
+      <description>Potřebuji řešit přepis video záznamu na text a dává smysl použít clouduvou službu v Azure. Bohužel, API pro dávkový přepis nemá žádného pohodlného klienta, tak jsem jednoho napsal a dávám ho jako open source k dispozici.</description>
+      <link>https://www.altair.blog/2026/09/s2t</link>
+      <author>Michal Altair Valášek</author>
+      <category>Politika</category>
+      <pubDate>2026-09-16T00:00:00</pubDate>
+    </item>
+    <item>
       <guid isPermaLink="true">https://www.altair.blog/2026/08/kockopes</guid>
       <title>Centrálně evidenční kočkopes</title>
       <description>"Dej blbci funkci, vymyslí lejstro", říkalo se za mých mladých let. Pokrok nezastavíš, heslem doby je digitalizace, takže v jedenadvacátém století se nevymýšlí lejstro, ale rovnou informační systém, databáze, registr nebo evidence. Nejnovějším počinem v tomto směru je Centrální evidence psů, která začala fungovat k prvnímu červenci.</description>
@@ -132,15 +141,6 @@
       <author>Michal Altair Valášek</author>
       <category>IT</category>
       <pubDate>2025-10-23T00:00:00</pubDate>
-    </item>
-    <item>
-      <guid isPermaLink="true">https://www.altair.blog/2025/10/tisk</guid>
-      <title>Jak tisknout z .NETu na normální i pokladní tiskárně</title>
-      <description>Po letech budování bezpapírové společnosti potiskneme víc papíru, než kdy předtím. Chcete se přidat? Naučím vás, jak z .NETu tisknout na běžné Windows tiskárně i jak komunikovat s pokladní tiskárnou pomocí ESC/POS sekvencí.</description>
-      <link>https://www.altair.blog/2025/10/tisk</link>
-      <author>Michal Altair Valášek</author>
-      <category>IT</category>
-      <pubDate>2025-10-22T00:00:00</pubDate>
     </item>
   </channel>
 </rss>
