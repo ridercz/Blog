@@ -26,7 +26,7 @@ Je překvapivě těžké dohledat, co má být oficiálním cílem nově zaveden
 
 Poprvé byla tato myšlenka vtělena do veterinárního zákona novelou 368/2019 Sb. pozměňovacím návrhem komunistického poslance Pavla Kováčika, který bez dalšího stanovil povinnost chovatele sdělovat Státní veterinární správě údaje stanovené prováděcím právním předpisem. Jediné zdůvodnění, které se mi podařilo dohledat, je ve [stenozáznamu ze dne 11. září 2019](https://www.psp.cz/eknih/2017ps/stenprot/034schuz/s034066.htm) a je velmi stručné: má jím být snazší nalezení majitele zaběhlého psa, například při ohňostroji. 
 
-Povinnost v zákoně byla, ale nebyla žádná evidence. Ta vznikla až novelou 246/2022 Sb., jejíž důvodová zpráva suše konstatuje, že konkretizuje to, co už v zákoně je. Jako důvod přidává kontrolu očkování ze strany Státní veterinární zprávy a dohledávání ztracených psů. 
+Povinnost v zákoně byla, ale nebyla žádná evidence. Ta vznikla až novelou 246/2022 Sb., jejíž důvodová zpráva suše konstatuje, že konkretizuje to, co už v zákoně je. Jako důvod přidává kontrolu očkování ze strany Státní veterinární správy a dohledávání ztracených psů. 
 
 Ve veřejném prostoru pak volně plují rozličná jiná zdůvodnění, z nichž asi nejdůležitější je boj proti množírnám, tedy lidem kteří chovají psy populárních plemen ve velkém v nevhodných podmínkách.
 
